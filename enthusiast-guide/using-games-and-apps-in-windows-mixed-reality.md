@@ -1,0 +1,84 @@
+---
+title: Uso de juegos y aplicaciones en Windows Mixed Reality
+description: Cómo iniciar aplicaciones y juegos envolventes y 2D, ver el escritorio y experimentar el contenido de WebVR y SteamVR.
+ms.topic: article
+keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, aplicaciones, juegos, escritorio, SteamVR, WebVR, vapor
+ms.openlocfilehash: 0374b36af6d0007a020546678168440698146920
+ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92174359"
+---
+# <a name="using-games-and-apps-in-windows-mixed-reality"></a><span data-ttu-id="69b19-104">Uso de juegos y aplicaciones en Windows Mixed Reality</span><span class="sxs-lookup"><span data-stu-id="69b19-104">Using games and apps in Windows Mixed Reality</span></span>
+
+<span data-ttu-id="69b19-105">Windows Mixed Reality es solo Windows.</span><span class="sxs-lookup"><span data-stu-id="69b19-105">Windows Mixed Reality is just Windows.</span></span> <span data-ttu-id="69b19-106">Esto significa que puede ejecutar juegos envolventes diseñados para la realidad mixta, y puede ejecutar todas las aplicaciones 2D normales que conoce y le encanta en el escritorio (por ejemplo, la compresión de caramelo o Photoshop/AutoCAD).</span><span class="sxs-lookup"><span data-stu-id="69b19-106">That means you can run immersive games designed for mixed reality, and you can run all of the regular 2D apps you know and love on your Desktop (like Candy Crush or Photoshop/AutoCAD).</span></span>
+
+## <a name="how-to-get-into-your-first-immersive-game"></a><span data-ttu-id="69b19-107">Cómo llegar a su primer juego envolvente</span><span class="sxs-lookup"><span data-stu-id="69b19-107">How to get into your first immersive game</span></span>
+1. <span data-ttu-id="69b19-108">Vaya a la pizarra de la tienda que se encuentra en la Página principal de Windows Mixed Reality.</span><span class="sxs-lookup"><span data-stu-id="69b19-108">Go to the Store slate that is placed in the Windows Mixed Reality home.</span></span>
+2. <span data-ttu-id="69b19-109">Busque HoloTour.</span><span class="sxs-lookup"><span data-stu-id="69b19-109">Search for HoloTour.</span></span>
+3. <span data-ttu-id="69b19-110">Descárguelo e instálelo.</span><span class="sxs-lookup"><span data-stu-id="69b19-110">Download and install it.</span></span>
+4. <span data-ttu-id="69b19-111">Abra el menú Inicio de realidad mixta presionando el botón Windows del controlador (o tecla Windows en el teclado).</span><span class="sxs-lookup"><span data-stu-id="69b19-111">Open up the Mixed Reality Start menu by pressing the Windows button on your controller (or Windows Key on your keyboard).</span></span> <span data-ttu-id="69b19-112">Busque HoloTour.</span><span class="sxs-lookup"><span data-stu-id="69b19-112">Search for HoloTour.</span></span> <span data-ttu-id="69b19-113">Es posible que tenga que seleccionar todas las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="69b19-113">You may need to select All Apps.</span></span>
+5. <span data-ttu-id="69b19-114">Haga clic en HoloTour en Inicio y coloque el pizarra.</span><span class="sxs-lookup"><span data-stu-id="69b19-114">Click HoloTour in Start and place the slate.</span></span>
+6. <span data-ttu-id="69b19-115">HoloTour iniciará la experiencia en el casco.</span><span class="sxs-lookup"><span data-stu-id="69b19-115">HoloTour will launch the experience in your headset!</span></span>
+
+## <a name="how-to-place-your-first-2d-app-slate"></a><span data-ttu-id="69b19-116">Cómo colocar su primera pizarra de aplicación 2D</span><span class="sxs-lookup"><span data-stu-id="69b19-116">How to place your first 2D app slate</span></span>
+1. <span data-ttu-id="69b19-117">Vaya a la pizarra de la tienda que se encuentra en la Página principal de Windows Mixed Reality.</span><span class="sxs-lookup"><span data-stu-id="69b19-117">Go to the Store slate that is placed in the Windows Mixed Reality home.</span></span>
+2. <span data-ttu-id="69b19-118">Busque su aplicación de 2D favorita (por ejemplo, la aplasta de caramelo).</span><span class="sxs-lookup"><span data-stu-id="69b19-118">Search for your favorite 2D app (e.g. Candy Crush).</span></span>
+3. <span data-ttu-id="69b19-119">Descárguelo e instálelo.</span><span class="sxs-lookup"><span data-stu-id="69b19-119">Download and install it.</span></span>
+4. <span data-ttu-id="69b19-120">Abra el menú Inicio de realidad mixta presionando la tecla Inicio en el controlador (o tecla Windows en el teclado).</span><span class="sxs-lookup"><span data-stu-id="69b19-120">Open up the Mixed Reality Start menu by pressing the Start on your controller (or Windows Key on your keyboard).</span></span> <span data-ttu-id="69b19-121">Busque golosinas.</span><span class="sxs-lookup"><span data-stu-id="69b19-121">Search for Candy Crush.</span></span> <span data-ttu-id="69b19-122">Es posible que tenga que seleccionar todas las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="69b19-122">You may need to select All Apps.</span></span>
+5. <span data-ttu-id="69b19-123">Haga clic en golosinas en el inicio y colóquelo en el pizarra.</span><span class="sxs-lookup"><span data-stu-id="69b19-123">Click Candy Crush in Start and place the slate.</span></span>
+6. <span data-ttu-id="69b19-124">Ahora puede interactuar con el pizarra en 2D mediante los controladores y el mouse & teclado o controlador de juegos.</span><span class="sxs-lookup"><span data-stu-id="69b19-124">You can now interact with the 2D slate using your controllers/mouse & keyboard/gamepad!</span></span>
+
+## <a name="how-to-use-a-full-desktop-application"></a><span data-ttu-id="69b19-125">Cómo usar una aplicación de escritorio completa</span><span class="sxs-lookup"><span data-stu-id="69b19-125">How to use a full Desktop application</span></span>
+1. <span data-ttu-id="69b19-126">Abra el menú Inicio de realidad mixta presionando la tecla Inicio en el controlador (o tecla Windows en el teclado).</span><span class="sxs-lookup"><span data-stu-id="69b19-126">Open up the Mixed Reality Start menu by pressing the Start on your controller (or Windows Key on your keyboard).</span></span> <span data-ttu-id="69b19-127">Busque vista previa del escritorio.</span><span class="sxs-lookup"><span data-stu-id="69b19-127">Search for Desktop Preview.</span></span> <span data-ttu-id="69b19-128">Es posible que tenga que presionar todas las aplicaciones.</span><span class="sxs-lookup"><span data-stu-id="69b19-128">You may need to press All Apps.</span></span>
+2. <span data-ttu-id="69b19-129">Haga clic en vista previa del escritorio en Inicio y colóquela.</span><span class="sxs-lookup"><span data-stu-id="69b19-129">Click Desktop Preview in Start and place the slate.</span></span>
+3. <span data-ttu-id="69b19-130">Ahora puede ver el escritorio.</span><span class="sxs-lookup"><span data-stu-id="69b19-130">You can now see your Desktop!</span></span>
+4. <span data-ttu-id="69b19-131">Haga clic en la pizarra y use el mouse y el teclado para iniciar cualquier aplicación de escritorio que desee (por ejemplo, Photoshop o AutoCAD).</span><span class="sxs-lookup"><span data-stu-id="69b19-131">Click the slate and use your mouse and keyboard to launch any full desktop application you desire (like Photoshop or AutoCAD).</span></span>
+
+## <a name="how-to-get-into-your-first-webvr-experience"></a><span data-ttu-id="69b19-132">Cómo llegar a su primera experiencia de WebVR</span><span class="sxs-lookup"><span data-stu-id="69b19-132">How to get into your first WebVR experience</span></span>
+1. <span data-ttu-id="69b19-133">Asegúrese de que el casco está enchufado y de que los controladores están encendidos y conectados (si los tiene).</span><span class="sxs-lookup"><span data-stu-id="69b19-133">Ensure that your headset is plugged in and controllers are powered on and connected (if you have them).</span></span>
+2. <span data-ttu-id="69b19-134">Vaya a la pizarra de Microsoft Edge que se encuentra en la realidad mixta o en la aplicación Microsoft Edge en el escritorio de Windows.</span><span class="sxs-lookup"><span data-stu-id="69b19-134">Go to the Microsoft Edge slate that is placed in Mixed Reality, or Microsoft Edge application on the Windows desktop.</span></span>
+3. <span data-ttu-id="69b19-135">Navegue a un sitio web que admita WebVR.</span><span class="sxs-lookup"><span data-stu-id="69b19-135">Navigate to a website that supports WebVR.</span></span> <span data-ttu-id="69b19-136">Algunos ejemplos:</span><span class="sxs-lookup"><span data-stu-id="69b19-136">Some Examples:</span></span>
+   * [<span data-ttu-id="69b19-137">A-pintor</span><span class="sxs-lookup"><span data-stu-id="69b19-137">A-Painter</span></span>](https://aframe.io/a-painter/)
+   * [<span data-ttu-id="69b19-138">A-sacudida</span><span class="sxs-lookup"><span data-stu-id="69b19-138">A-Blast</span></span>](https://aframe.io/a-blast/)
+   * [<span data-ttu-id="69b19-139">Sketchfab</span><span class="sxs-lookup"><span data-stu-id="69b19-139">Sketchfab</span></span>](https://sketchfab.com/)
+   * [<span data-ttu-id="69b19-140">CNN/VR</span><span class="sxs-lookup"><span data-stu-id="69b19-140">CNN/VR</span></span>](https://cnn.com/vr)
+4. <span data-ttu-id="69b19-141">Haga clic en el botón "escribir VR" de la Página Web.</span><span class="sxs-lookup"><span data-stu-id="69b19-141">Click the 'Enter VR' button on the webpage.</span></span> <span data-ttu-id="69b19-142">Puede tener un aspecto similar a: </span><span class="sxs-lookup"><span data-stu-id="69b19-142">It may look similar to:</span></span>\
+   ![Imagen de la VR](images/75px-enter-vr.png)
+5. <span data-ttu-id="69b19-144">La primera vez que intente especificar VR en un dominio específico, el explorador solicitará consentimiento para usar la vista envolvente.</span><span class="sxs-lookup"><span data-stu-id="69b19-144">The first time you try to enter VR on a specific domain, the browser will ask for consent to use immersive view.</span></span> <span data-ttu-id="69b19-145">Haga clic en sí:</span><span class="sxs-lookup"><span data-stu-id="69b19-145">Click Yes:</span></span> ![Interfaz de usuario de consentimiento que se muestra en el primer intento de especificar VR en un dominio determinado](images/1053px-Webvr-consent-ui.png)
+6. <span data-ttu-id="69b19-147">El contenido de WebVR se iniciará en el casco.</span><span class="sxs-lookup"><span data-stu-id="69b19-147">The WebVR content will launch in your headset!</span></span>
+
+<span data-ttu-id="69b19-148">**Nota:** Puede iniciar experiencias de WebVR desde Microsoft Edge desde Windows Mixed Reality o en el escritorio de Windows.</span><span class="sxs-lookup"><span data-stu-id="69b19-148">**Note:** You can launch WebVR experiences from Microsoft Edge either from within Windows Mixed Reality, or on the Windows desktop.</span></span>
+
+![Especificación de VR desde Microsoft Edge en el escritorio](images/450px-webvr-desktop.png)
+
+<span data-ttu-id="69b19-150">Especificación de VR desde Microsoft Edge en el escritorio.</span><span class="sxs-lookup"><span data-stu-id="69b19-150">Entering VR from Microsoft Edge on the desktop.</span></span>
+
+![Especificación de VR desde Microsoft Edge en la cliffhouse de realidad mixta](images/450px-enter-vr-cliffhouse.jpg)
+
+<span data-ttu-id="69b19-152">Especificación de VR desde Microsoft Edge en la cliffhouse de realidad mixta.</span><span class="sxs-lookup"><span data-stu-id="69b19-152">Entering VR from Microsoft Edge within the Mixed Reality cliffhouse.</span></span>
+
+<span data-ttu-id="69b19-153">**Para dejar una experiencia de WebVR:**</span><span class="sxs-lookup"><span data-stu-id="69b19-153">**To leave a WebVR experience:**</span></span>
+* <span data-ttu-id="69b19-154">Presione la tecla Windows en un controlador de movimiento o el teclado.</span><span class="sxs-lookup"><span data-stu-id="69b19-154">Press the Windows key on a motion controller, or the keyboard.</span></span>
+* <span data-ttu-id="69b19-155">Presione la tecla escape del teclado.</span><span class="sxs-lookup"><span data-stu-id="69b19-155">Press the escape key on the keyboard.</span></span>
+* <span data-ttu-id="69b19-156">Es posible que algunas páginas ofrezcan una manera de salir de la VR desde su experiencia de envolvente.</span><span class="sxs-lookup"><span data-stu-id="69b19-156">Some pages may offer a way to exit VR from within their immersive experience.</span></span>
+* <span data-ttu-id="69b19-157">Para Desktop Microsoft Edge:</span><span class="sxs-lookup"><span data-stu-id="69b19-157">For desktop Microsoft Edge:</span></span>
+  * <span data-ttu-id="69b19-158">Saque el casco y vaya a otra pestaña del explorador</span><span class="sxs-lookup"><span data-stu-id="69b19-158">Take off your headset and go to a different browser tab</span></span>
+  * <span data-ttu-id="69b19-159">Es posible que algunas páginas ofrezcan un botón en el sitio web de 2D a "Exit VR".</span><span class="sxs-lookup"><span data-stu-id="69b19-159">Some pages may offer a button on the 2D website to "Exit VR".</span></span>
+
+## <a name="how-to-get-into-your-first-steamvr-experience"></a><span data-ttu-id="69b19-160">Cómo llegar a su primera experiencia de SteamVR</span><span class="sxs-lookup"><span data-stu-id="69b19-160">How to get into your first SteamVR experience</span></span>
+
+<span data-ttu-id="69b19-161">Windows Mixed Reality para SteamVR permite a los usuarios ejecutar experiencias de SteamVR en auriculares con micrófonos de realidad con Windows Mixed Reality.</span><span class="sxs-lookup"><span data-stu-id="69b19-161">Windows Mixed Reality for SteamVR allows users to run SteamVR experiences on Windows Mixed Reality immersive headsets.</span></span> <span data-ttu-id="69b19-162">Después de instalar Windows Mixed Reality para SteamVR, los usuarios pueden iniciar sus aplicaciones favoritas de SteamVR desde el escritorio o la biblioteca de vapor y reproducirlas directamente en el casco de Windows.</span><span class="sxs-lookup"><span data-stu-id="69b19-162">After installing  Windows Mixed Reality for SteamVR, users can launch their favorite SteamVR applications from their desktop or Steam library and play them directly on their Windows headset.</span></span>
+
+<span data-ttu-id="69b19-163">Para empezar, siga las [instrucciones de configuración de SteamVR para Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality).</span><span class="sxs-lookup"><span data-stu-id="69b19-163">To get started, follow the [SteamVR setup instructions for Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="69b19-164">Consulte también</span><span class="sxs-lookup"><span data-stu-id="69b19-164">See also</span></span>
+
+<span data-ttu-id="69b19-165">Si está interesado en obtener más información acerca de cómo funciona Windows Mixed Reality, puede que también desee obtener información acerca de:</span><span class="sxs-lookup"><span data-stu-id="69b19-165">If you're interested in learning more about how Windows Mixed Reality works, you may also want to read about:</span></span>
+* [<span data-ttu-id="69b19-166">Su página principal de realidad mixta</span><span class="sxs-lookup"><span data-stu-id="69b19-166">Your Mixed Reality home</span></span>](your-mixed-reality-home.md)
+* [<span data-ttu-id="69b19-167">Sistema de seguimiento</span><span class="sxs-lookup"><span data-stu-id="69b19-167">Tracking system</span></span>](tracking-system.md)
+* [<span data-ttu-id="69b19-168">Controladores de movimiento</span><span class="sxs-lookup"><span data-stu-id="69b19-168">Motion controllers</span></span>](controllers-in-wmr.md)
+* [<span data-ttu-id="69b19-169">WebVR</span><span class="sxs-lookup"><span data-stu-id="69b19-169">WebVR</span></span>](webvr.md)
+* [<span data-ttu-id="69b19-170">Uso de SteamVR con Windows Mixed Reality</span><span class="sxs-lookup"><span data-stu-id="69b19-170">Using SteamVR with Windows Mixed Reality</span></span>](using-steamvr-with-windows-mixed-reality.md)
+* [<span data-ttu-id="69b19-171">Enviar comentarios</span><span class="sxs-lookup"><span data-stu-id="69b19-171">Filing feedback</span></span>](filing-feedback.md)
