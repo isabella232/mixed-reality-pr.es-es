@@ -43,8 +43,7 @@
 ### [WebVR](webvr-questions.md)
 ### [Otras preguntas](other-questions.md)
 
-## Apéndice
+## Recursos
 ### [Registro de problemas y comentarios](filing-feedback.md)
 ### [Información general de software de Mixed Reality e historial de versiones](mixed-reality-software.md)
-### [Funcionamiento de los controladores de movimiento](motion-controllers.md)
 ### [Funcionamiento del seguimiento de la interacción directa](tracking-system.md)

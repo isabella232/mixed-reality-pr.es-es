@@ -13,6 +13,6 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 10/17/2020
 ms.locfileid: "92156616"
 ---
-# <a name="what-is-windows-mixed-reality"></a><span data-ttu-id="2e812-104">¿Qué es Windows Mixed Reality?</span><span class="sxs-lookup"><span data-stu-id="2e812-104">What is Windows Mixed Reality?</span></span>
+# <a name="what-is-windows-mixed-reality"></a><span data-ttu-id="0effa-104">¿Qué es Windows Mixed Reality?</span><span class="sxs-lookup"><span data-stu-id="0effa-104">What is Windows Mixed Reality?</span></span>
 
-<span data-ttu-id="2e812-105">[TODO: requerir imagen de encabezado]</span><span class="sxs-lookup"><span data-stu-id="2e812-105">[TODO: Need header image]</span></span>
+<span data-ttu-id="0effa-105">[TODO: requerir imagen de encabezado]</span><span class="sxs-lookup"><span data-stu-id="0effa-105">[TODO: Need header image]</span></span>
