@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, auriculares, configuración, introducción
 appliesto:
 - Windows 10
-ms.openlocfilehash: 46b40a09c88013515911026cbd03a6fc6d19e1ca
-ms.sourcegitcommit: 2cdc2e38990fff24972d98f9e74f0dabacbffa7d
+ms.openlocfilehash: 16c06e14566671e44b1424447b02493ba1ff1a83
+ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2020
-ms.locfileid: "92153501"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92292979"
 ---
 # <a name="plug-in-your-headset"></a>Conexión del casco
 
@@ -32,13 +32,14 @@ Identifique el puerto de salida de HDMI en el equipo y conecte el cable HDMI del
 A menos que haya adquirido un auricular de Samsung HMD Odyssey, HP reverberation o HP Reverberate G2 (que han integrado auriculares de AKG y un micrófono de matriz dual integrado), deberá conectar los auriculares (preferiblemente con un micrófono en línea) que pueda conectarse al conector de audio de 3,5 mm del casco.
 
 ## <a name="common-issues"></a>Problemas comunes
+
 * Conectó el cable HDMI antes de conectar el cable USB 3,0.  Asegúrese de que conecta el cable USB 3,0 **antes** de conectar el cable HDMI.
 * Conectó un adaptador Bluetooth junto al cable USB de su HMD.  Si usa un adaptador de Bluetooth, **no** Conecte el cable USB del casco junto a ese adaptador, ya que las interferencias de radio resultantes pueden afectar negativamente al rendimiento de Bluetooth.
 * Ha enchufado el cable HDMI en el puerto HDMI de iGPU en lugar de su puerto HDMI dGPU (para PC con ambos). Algunos equipos de escritorio tienen una unidad de procesamiento de gráficos (iGPU) integrada y una unidad de procesamiento de gráficos discretos (dGPU) y, a menudo, se deshabilitan los puertos iGPU. Si el equipo tiene un dGPU, el casco debe estar conectado a dGPU.  
-* Si el equipo no tiene un puerto HDMI, es posible que necesite un adaptador. [Vea la lista completa de adaptadores recomendados aquí](recommended-adapters-for-windows-mixed-reality-capable-pcs.md). 
+* Si el equipo no tiene un puerto HDMI, es posible que necesite un adaptador. [Vea la lista completa de adaptadores recomendados aquí](recommended-adapters-for-windows-mixed-reality-capable-pcs.md).
 * Está conectando los auriculares a un dispositivo Surface. Lea [uso de Surface con Windows Mixed Reality](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md#windows-mixed-reality-and-surface).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Solución de problemas de conectividad con auriculares](headset-connectivity.md)
 * [Instalación de Windows Mixed Reality](install-windows-mixed-reality.md)

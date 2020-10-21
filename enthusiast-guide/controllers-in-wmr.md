@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: 56238f302074bb4de21acbc0575f4ab913cb84b1
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: 360b8fea1744e2753aaa5310d79e82f978d92f67
+ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174410"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92293119"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Controladores de movimiento en Windows Mixed Reality
 
@@ -42,7 +42,6 @@ La mayoría de los auriculares se emparejan previamente directamente con los aur
 4. Siga las instrucciones que aparecen en pantalla.
 
 > [!NOTE]
-
 > * En el caso de los controladores que se emparejan directamente con el equipo, tendrá que colocarlos en modo de emparejamiento, para lo que debe encenderlos y presionar el botón de emparejamiento dentro del compartimiento de la batería hasta que las luces empiecen a parpadear.  
 > * Los controladores de movimiento solo admiten emparejarse con un equipo o PC a la vez. Si tiene que usarlos con un casco diferente, deberá pasar por el proceso de emparejamiento. Consulte [configurar Windows Mixed Reality](set-up-windows-mixed-reality.md)
 

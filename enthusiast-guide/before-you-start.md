@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, compatible, compatibilidad, introducción, configuración, equipos, requisitos del sistema
 appliesto:
 - Windows 10
-ms.openlocfilehash: c76f670230a4a19b53b7e8f938b13e79bb7c8db7
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: b10fc9962d899b0a2c2ee15e6d039fc6bfb6d503
+ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174441"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92293058"
 ---
 # <a name="before-you-start"></a>Antes de empezar
 
@@ -52,7 +52,7 @@ Compruebe que el equipo está conectado a Internet. Tendrá que descargar los co
 
 ## <a name="make-sure-you-have-a-compatible-graphics-driver"></a>Asegúrese de que tiene un controlador de gráficos compatible
 
-El equipo debe tener un controlador de gráficos WDDM 2,2 o posterior para poder completar la configuración de la realidad mixta. Si aún no tiene un controlador de gráficos compatible, pruebe estos orígenes:
+El equipo debe tener un controlador de gráficos WDDM 2,2 o posterior para poder completar la instalación de Windows Mixed Reality. Si aún no tiene un controlador de gráficos compatible, pruebe estos orígenes:
 
 * Busque las actualizaciones de controladores críticas más recientes mediante Windows Update (**inicio > configuración de Windows > actualización y seguridad > buscar actualizaciones**)
 * Busque las actualizaciones de controladores opcionales más recientes:
@@ -64,7 +64,7 @@ El equipo debe tener un controlador de gráficos WDDM 2,2 o posterior para poder
 
 ## <a name="make-sure-that-you-have-any-required-adapters"></a>Asegúrese de que tiene los adaptadores necesarios
 
-Es posible que el equipo compatible con Windows Mixed Reality no tenga los puertos HDMI y USB 3,0 de tamaño completo necesarios para conectar los auriculares que se incluyen. O bien, puede que necesite un adaptador de Bluetooth para cumplir con los requisitos del portal de realidad mixta.  En ese caso, necesitará adaptadores para conectar los auriculares y los controladores de movimiento. Encontrará una lista de tipos de adaptador que puede necesitar y algunas recomendaciones sobre [los modelos de](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)adaptador específicos.
+Es posible que el equipo compatible con Windows Mixed Reality no tenga los puertos HDMI y USB 3,0 de tamaño completo necesarios para conectar los auriculares que se incluyen. O bien, puede que necesite un adaptador de Bluetooth para cumplir los requisitos del portal de Windows Mixed Reality.  En ese caso, necesitará adaptadores para conectar los auriculares y los controladores de movimiento. Asegúrese de revisar una lista de [tipos de adaptador que puede necesitar y algunas recomendaciones sobre modelos de adaptador específicos](recommended-adapters-for-windows-mixed-reality-capable-pcs.md).
 
 ## <a name="make-sure-that-you-have-input-devices"></a>Asegúrese de que tiene dispositivos de entrada
 
@@ -76,7 +76,7 @@ A menos que haya adquirido un Odyssey Samsung HMD, HP reverberation o HP reverbe
 
 ## <a name="make-sure-that-you-have-a-large-open-space"></a>Asegúrese de que tiene un espacio de apertura grande
 
-Si desea desplazarse mientras usa Windows Mixed Reality, deberá tener un espacio abierto grande.  Durante la instalación se le pedirá que elija entre "sentado y permanente" o "todas las experiencias". Seleccione "todas las experiencias" y configure un límite Si desea desplazarse.
+Si desea desplazarse mientras usa Windows Mixed Reality, deberá tener un espacio abierto grande.  Durante la instalación se le pedirá que elija entre "sentado y permanente" o "todas las experiencias". Seleccione "todas las experiencias" y configure un límite Si desea desplazarse. Revise las [directrices de mantenimiento, seguridad y confort del casco envolvente](wmr-health-safety-comfort.md) para comprender los requisitos de espacio.
 
 ### <a name="seated-and-standing-no-boundary"></a>Sentado y permanente (sin límite)
 
