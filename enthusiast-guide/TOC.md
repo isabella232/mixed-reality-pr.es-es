@@ -14,7 +14,6 @@
 ### [Instalación de Windows Mixed Reality](install-windows-mixed-reality.md)
 ### [Configuración de Windows Mixed Reality](set-up-windows-mixed-reality.md)
 ### [Preguntas más frecuentes sobre la configuración de Windows Mixed Reality](wmr-setup-faq.md)
-### [Estado, seguridad y comodidad del casco envolvente](wmr-health-safety-comfort.md)
 
 ## Uso de Windows Mixed Reality
 ### [Información sobre Mixed Reality](learn-mixed-reality.md)
@@ -28,6 +27,7 @@
 ### [Preguntas más frecuentes sobre el uso de Windows Mixed Reality](using-wmr-faq.md)
 
 ## Preguntas frecuentes sobre la solución de problemas
+### [Registro de problemas y comentarios](filing-feedback.md)
 ### [Preguntas más frecuentes generales](troubleshooting-windows-mixed-reality.md)
 ### [Errores de instalación](installation_errors.md)
 ### [Configuración](set-up-questions.md)
@@ -44,6 +44,6 @@
 ### [Otras preguntas](other-questions.md)
 
 ## Recursos
-### [Registro de problemas y comentarios](filing-feedback.md)
+### [Estado, seguridad y comodidad del casco envolvente](wmr-health-safety-comfort.md)
 ### [Información general de software de Mixed Reality e historial de versiones](mixed-reality-software.md)
 ### [Funcionamiento del seguimiento de la interacción directa](tracking-system.md)
