@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 398b9ee312c8d49e3468980e5e2c1be556c17162
-ms.sourcegitcommit: 252b52f7541a6e15aa33322286855af8a3924fc1
+ms.openlocfilehash: 98030e55736d423d1fb84d2b965f6ed40246d8f4
+ms.sourcegitcommit: 9c88703a832fb8ca8476e808499d06239ea5d2cd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91862996"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92011462"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso de Portal de dispositivos Windows
 
@@ -374,3 +374,20 @@ Haz clic o pulsa en la región de debajo de **Teclado virtual** para habilitar e
 ## <a name="device-portal-rest-apis"></a>API de REST del Portal de dispositivos
 
 Todo lo que contiene Portal de dispositivos Windows se basa en las [API de REST](device-portal-api-reference.md) que puedes usar para acceder a los datos y controlar el dispositivo mediante programación.
+
+## <a name="troubleshooting"></a>Solución de problemas
+
+### <a name="how-to-fix-the-its-lonely-here-message"></a>Cómo corregir el mensaje "It's lonely here" (No hay nada aquí)
+
+> [!NOTE]
+> El cambio de HoloLens 2 a HoloLens (primera generación) puede provocar que las páginas se muestren vacías si se han usado en HoloLens 2 antes que en HoloLens (primera generación).
+
+![Mensaje It's lonely here (No hay nada aquí) de la página Portal de dispositivos](images/using-windows-portal-img-19.png)
+
+1. Seleccione **Reset layout** (Restablecer diseño) en el menú superior izquierdo:
+
+![Selección de Reset layout (Restablecer diseño) en el menú del Portal de dispositivos](images/using-windows-portal-img-20.png)
+
+2. Haga clic en **Reset Layout** (Restablecer diseño) en el encabezado **Reset workspace** (Restablecer área de trabajo). La página del portal se actualizará automáticamente y mostrará el contenido.
+
+![Selección de Reset layout (Restablecer diseño) desde la página Reset workspace (Restablecer área de trabajo)](images/using-windows-portal-img-21.png)
