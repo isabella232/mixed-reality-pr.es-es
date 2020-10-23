@@ -8,29 +8,20 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: 360b8fea1744e2753aaa5310d79e82f978d92f67
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: d1cf8e56d19ef9ae62d9f83811e843f34b1c2d8c
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293119"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434582"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Controladores de movimiento en Windows Mixed Reality
 
 Los controladores de movimiento son accesorios de hardware que permiten a los usuarios tomar medidas en realidad mixta. Una ventaja de los controladores de movimiento a través de gestos es que los controladores tienen una posición precisa en el espacio, lo que permite una interacción específica con objetos digitales. En el caso de los auriculares de la realidad mixta de Windows, los controladores de movimiento son la manera principal en que los usuarios realizarán acciones en su mundo.
+
 Los controladores de movimiento de Windows Mixed Reality ofrecen un seguimiento preciso y con capacidad de respuesta del movimiento en el campo de la vista con los sensores en el casco envolvente, lo que significa que no es necesario instalar hardware en las paredes del espacio. Estos controladores de movimiento ofrecen la misma facilidad de configuración y portabilidad que los auriculares de la realidad mixta de Windows.
 
-Windows Mixed Reality está diseñado para funcionar mejor con los controladores de movimiento de realidad mixta, que proporcionan interacciones precisas y naturales sin necesidad de instalar hardware en las paredes.
-
-También puede usar una controladora Xbox, un mouse y un teclado, o bien, [con solo la voz](using-speech-in-wmr.md).
-
-**Características**
-
-* Seguimiento óptico
-* Desencadenador
-* Botón de arrastre
-* Palanca
-* Panel táctil
+También puede usar una controladora Xbox, un mouse y un teclado, o bien desplazarse por [el uso de la voz](using-speech-in-wmr.md).
 
 ## <a name="motion-controller-setup"></a>Configuración del controlador de movimiento
 
@@ -38,12 +29,12 @@ La mayoría de los auriculares se emparejan previamente directamente con los aur
 
 1. Inicie el **portal de realidad mixta** con los auriculares conectados.  
 2. En la esquina inferior izquierda, seleccione **... > configurar controladores**.
-3. Inserte dos baterías AA en cada controlador y ponga el controlador en modo de emparejamiento (consulte las instrucciones en la sección emparejar controladores de movimiento).
+3. Inserte dos baterías AA en cada controlador y ponga el controlador en modo de emparejamiento (consulte las instrucciones en la [sección sobre controladores de movimiento en pares](controllers-in-wmr.md#Pair-motion-controllers) ).
 4. Siga las instrucciones que aparecen en pantalla.
 
 > [!NOTE]
-> * En el caso de los controladores que se emparejan directamente con el equipo, tendrá que colocarlos en modo de emparejamiento, para lo que debe encenderlos y presionar el botón de emparejamiento dentro del compartimiento de la batería hasta que las luces empiecen a parpadear.  
-> * Los controladores de movimiento solo admiten emparejarse con un equipo o PC a la vez. Si tiene que usarlos con un casco diferente, deberá pasar por el proceso de emparejamiento. Consulte [configurar Windows Mixed Reality](set-up-windows-mixed-reality.md)
+> * En el caso de los controladores que se emparejan directamente con el equipo, tendrá que colocarlos en modo de emparejamiento, para lo que debe encenderlos y presionar el botón de emparejamiento dentro del compartimiento de la batería hasta que las luces empiecen a parpadear.
+> * Los controladores de movimiento solo admiten emparejarse a un equipo a la vez. Si tiene que usarlos con un casco diferente, deberá pasar por el proceso de emparejamiento. Consulte [configurar Windows Mixed Reality](set-up-windows-mixed-reality.md)
 
 [Obtener ayuda para conectarse](wmr-setup-faq.md#my-motion-controllers-arent-working)
 
@@ -58,20 +49,29 @@ La mayoría de los auriculares se emparejan previamente directamente con los aur
 
 ## <a name="pair-motion-controllers"></a>Controladores de movimiento de pares
 
+Si usa un casco que incluye un controlador Bluetooth integrado, como la reverberación Samsung Odyssey + o HP, los controladores ya deben estar emparejados. Sin embargo, puede seguir emparejando los controladores mediante la aplicación de configuración (ya debe estar instalado durante la configuración de HMD. También puede obtenerlo en Microsoft Store).
+
+### <a name="pair-motion-controllers-to-hmd"></a>Emparejar controladores de movimiento a HMD
+
 Encienda los controladores presionando el botón de Windows durante 2 segundos hasta que se iluminen los LED.
 
 Quite la tapa de la batería de los controladores y busque el pequeño botón de emparejamiento en el borde del controlador. Mantenga presionado este botón para emparejar con el equipo.
+    ![Emparejamiento de controlador de movimiento](images/connect_controller.png)
 
-Si usa la reverberación de HP G2, los controladores deben estar ya emparejados. Sin embargo, puede emparejar los controladores mediante el uso de la aplicación Set up de HP reverberada G2 VR (ya debe estar instalado durante la configuración). También puede obtenerlo en Microsoft Store). Además, puede emparejar el controlador a un PV agregando otro dispositivo Bluetooth:
+Inicie el **portal de realidad mixta** con los auriculares conectados.  
+En la esquina inferior izquierda, seleccione **... > configurar controladores**.
+Siga las instrucciones de la pantalla.
+
+### <a name="pair-motion-controllers-to-pc"></a>Emparejar controladores de movimiento al equipo
+
+Puede emparejar el controlador a un equipo mediante la adición de otro dispositivo Bluetooth.
+
+Encienda los controladores y colóquelos en el modo de emparejamiento como se describió anteriormente.
 
 * Vaya a configuración del equipo
 * Dispositivo/agregar Bluetooth u otro dispositivo.
 
-![Emparejamiento de controlador de movimiento](images/connect_controller.png)
-
-Es posible que vea un mensaje en la esquina inferior derecha de la pantalla a medida que se actualice el firmware de los controladores. Mientras esto sucede, puede avanzar al siguiente paso del tutorial, pero no desactive los controladores.
-
-Una vez completada la actualización del firmware del controlador, se reiniciará y volverá a conectarse al equipo host. Los LED serán sólidos y brillantes.
+Una vez completado el emparejamiento, los LED serán sólidos y brillantes.
 
 ### <a name="common-issues"></a>Problemas comunes
 
@@ -129,8 +129,8 @@ El controlador se comunica con usted lo que está haciendo vibrando y parpadeand
 * Si hay un auricular envolvente conectado al equipo y hay disponible un nuevo firmware de controlador, el firmware se insertará automáticamente en los controladores de movimiento la próxima vez que se activen.
 * Las actualizaciones de firmware del controlador se indican mediante un patrón de cuadrantes LED de iluminación en un movimiento circular y tardan 1-2 minutos. En ocasiones, las actualizaciones de firmware pueden tardar más tiempo, hasta 10 minutos, lo que puede indicar una mala conectividad Bluetooth o interferencias de radio.
 * En caso de que se interrumpa la actualización de firmware (controlador apagado o batería agotada), se volverá a intentar en el siguiente encendido.
-* Una vez finalizada la actualización del firmware, los controladores se reinician y se vuelven a conectar. 
-* Ambos controladores deben estar conectados ahora. (Compruebe Bluetooth y otros dispositivos para lo siguiente): ![Controladores conectados](images/cyk-connected.jpg)
+* Una vez finalizada la actualización del firmware, los controladores se reinician y se vuelven a conectar.
+* Ambos controladores deben estar conectados ahora. Vaya al portal de realidad mixta para comprobar el estado de los controladores.
 * Compruebe que los controladores funcionan correctamente:
   * Inicie el **portal de realidad mixta** y escriba su hogar de realidad mixta.
   * Mueva los controladores y compruebe el seguimiento, los botones de prueba y la comprobación de la teleportabilidad. Si no es así, consulte [la sección solución de problemas del controlador de movimiento](motion-controller-problems.md) .
@@ -155,4 +155,4 @@ Envíenos sus comentarios en la central de comentarios, usando la categoría de 
 * [Póngase en contacto con nosotros para obtener soporte técnico](https://support.microsoft.com/contactus/)
 * [Solución de problemas](troubleshooting-windows-mixed-reality.md)
 
-¿Tiene problemas con los controladores de movimiento? [Obtener ayuda](using-wmr-faq.md#im-having-trouble-with-my-motion-controllers)
+¿Tiene problemas con los controladores de movimiento? [Obtener ayuda](motion-controller-problems.md)

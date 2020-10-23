@@ -3,12 +3,12 @@ title: Funcionamiento del seguimiento de la interacción directa
 description: Información sobre el sistema de seguimiento interno basado en la cámara que se usa en los auriculares con Windows Mixed Reality.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, Inside-Out, interior Out, Tracking, Camera
-ms.openlocfilehash: a91b5fba399e9bb328fd579811a64aee03b49efd
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: eda1b323915788f72ae6f4a2efcf51850734eac9
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174338"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434601"
 ---
 # <a name="inside-out-tracking"></a>Seguimiento interno
 
@@ -72,6 +72,6 @@ El sistema de seguimiento almacena algunos datos de entorno para que pueda recup
 
 ## <a name="see-also"></a>Consulte también
 * [Solución de problemas del sistema de seguimiento](tracking.md)
-* [Funcionamiento de los controladores de movimiento](controller-in-wmr.md)
+* [Controladores de movimiento](controller-in-wmr.md)
 * [Ambiente principal de Windows Mixed Reality](your-mixed-reality-home.md)
 * [Uso de juegos y aplicaciones en Windows Mixed Reality](using-games-and-apps-in-windows-mixed-reality.md)

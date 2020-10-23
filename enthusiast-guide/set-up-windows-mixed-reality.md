@@ -3,12 +3,12 @@ title: Configuración de Windows Mixed Reality
 description: Cómo configurar los controladores de movimiento, la voz y el audio de Windows Mixed Reality, y definir el límite de la habitación para un espacio de juego seguro.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, introducción, configuración, controlador de movimiento, controlador, voz, audio, sentado, posición, límite, controladores de gráficos, Microsoft Edge, cromo
-ms.openlocfilehash: 71775ba03cb143b83f1a4514f62f20df903df96d
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: cd59fd34dd00edc98d209681cc1239895c36ada2
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174463"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434636"
 ---
 # <a name="set-up-windows-mixed-reality"></a>Configuración de Windows Mixed Reality
 
@@ -86,7 +86,7 @@ No se requieren pasos adicionales si elige esta opción.
 
 ## <a name="what-is-the-maximum-size-of-the-boundary"></a>¿Cuál es el tamaño máximo del límite?
 
-El tamaño máximo de límite admitido actualmente en Windows Mixed Reality es 18x18ft (5.7 x 5.7 m) o 13ft (4) RADIUS del centro.  El tamaño del límite depende del punto de anclaje y de la distancia desde el punto de anclaje que puede moverse antes de arriesgar la estabilidad del límite.  Windows Mixed Reality se basa en una abstracción de fase en la plataforma, la fase es el espacio en el que se desplaza y esa fase depende de un solo delimitador (que casi todas las aplicaciones también asume, es el funcionamiento de Naopak y Oculus, ya que solo tienen un único sistema de coordenadas).  La razón por la que esto es importante es que, con el seguimiento interior, a medida que se aleja de un punto de anclaje, el seguimiento del casco es confiable a la vez que se mantiene el límite estable.  En los casos en los que el límite esté diseñado para evitar obstáculos físicos, se vuelve más allá de un problema desde el centro.  Dos factores entraron en la decisión sobre el tamaño máximo del límite. la distancia máxima a la que los auriculares de la realidad mixta de Windows podrían proporcionar la mejor experiencia de escala de sala con un límite y la longitud del cable del casco, que para la mayoría de los auriculares de la realidad mixta de Windows es 10ft (3m). 
+El tamaño máximo de límite admitido actualmente en Windows Mixed Reality es 18x18ft (5.7 x 5.7 m) o 13ft (4) RADIUS del centro.  El tamaño del límite depende del punto de anclaje y de la distancia desde el punto de anclaje que puede moverse antes de arriesgar la estabilidad del límite.  Windows Mixed Reality se basa en una abstracción de fase en la plataforma, la fase es el espacio en el que se desplaza y esa fase depende de un solo delimitador (que casi todas las aplicaciones también asume, es el funcionamiento de Naopak y Oculus, ya que solo tienen un único sistema de coordenadas).  La razón por la que esto es importante es que, con el seguimiento interior, a medida que se aleja de un punto de anclaje, el seguimiento del casco es confiable a la vez que se mantiene el límite estable.  En los casos en los que el límite esté diseñado para evitar obstáculos físicos, se vuelve más allá de un problema desde el centro.  Dos factores entraron en la decisión sobre el tamaño máximo del límite. la distancia máxima a la que los auriculares de la realidad mixta de Windows podrían proporcionar la mejor experiencia de escala de sala con un límite y la longitud del cable del casco, que para la mayoría de los auriculares de la realidad mixta de Windows es 10ft (3m).
 
 ## <a name="set-up-speech"></a>Configurar voz
 
@@ -112,7 +112,7 @@ La resolución nativa del casco se muestra aquí.
 
 Si conecta un casco con pantallas de mayor resolución (por ejemplo, con auriculares con 4320x2160 muestra) al equipo, verá una configuración para ajustar la resolución de pantalla de realidad mixta.
 
-* Esta configuración proporciona la opción para que la pila de composición de la realidad mixta de Windows se represente de forma nativa (por ejemplo, en 4320x2160), o para que la pila de composición se represente en una resolución más baja y una escalabilidad vertical (por ejemplo, se represente en 2880x1440 y escale a 4320x2160.
+* Esta configuración proporciona la opción para que la pila de composición de la realidad mixta de Windows se represente de forma nativa (por ejemplo, en 4320x2160), o para que la pila de composición se represente en una resolución y escalado inferiores (por ejemplo, se represente en 2880x1440 y escale a 4320x2160).
 * La configuración predeterminada es representar de forma nativa (por ejemplo, la opción **4320 x 2160 (calidad óptima)** para proporcionar la mejor calidad visual posible desde los auriculares.
 * Si su equipo no cumple los requisitos mínimos de hardware de gráficos para los auriculares con pantallas de mayor resolución, o si ve problemas de rendimiento de gráficos, puede intentar usar la opción de **escalado automático (mejor rendimiento)** .
 
@@ -131,9 +131,7 @@ Esta configuración avanzada invalida la experiencia predeterminada de frecuenci
 * **90Hz**
 
 >[!Note]
->La configuración de frecuencia de actualización automática para la reverberación de HP G2 es 90Hz
-
-Ciertas características de Windows Mixed Reality, incluida la vista previa del portal de realidad mixta y un subproceso de visualización de auriculares más grande, solo están disponibles con la experiencia de 90Hz.
+>Al configurar por primera vez la HP reverberada G2, la experiencia cambiará a 90Hz para garantizar la mejor experiencia.  Si es necesario, puede volver a cambiar esto a automático.
 
 ### <a name="input-switching"></a>Conmutación de entrada
 
@@ -180,5 +178,5 @@ Escribir la realidad mixta una segunda vez es tan sencillo como volver a colocar
 * [Solución de problemas de instalación](installation_errors.md)
 * [Solución de problemas de configuración](set-up-questions.md)
 * [Información sobre Mixed Reality](learn-mixed-reality.md)
-* [Funcionamiento de los controladores de movimiento](controllers-in-wmr.md)
+* [Controladores de movimiento](controllers-in-wmr.md)
 * [Funcionamiento del seguimiento de la interacción directa](tracking-system.md)

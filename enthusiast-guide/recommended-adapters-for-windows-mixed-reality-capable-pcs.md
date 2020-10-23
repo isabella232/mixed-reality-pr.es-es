@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, adaptador, dongle, HDMI, USB, DisplayPort
 appliesto:
 - Windows 10
-ms.openlocfilehash: bcdc25c0f6e678666a713d01aaa4fb15da31e90c
-ms.sourcegitcommit: 5eb27475f8616c9d4f95b4b386a5bd0d22f41125
+ms.openlocfilehash: ea0cd3c87fecda310ec72ba50d8f5982d1782b31
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92174409"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434593"
 ---
 # <a name="recommended-adapters"></a>Adaptadores recomendados
 > [!NOTE]
@@ -78,7 +78,7 @@ Estas tablas le ayudarán a determinar si necesitará adaptadores USB o de panta
     <td style="text-align: center;  vertical-align: middle; border: 1px solid black">✔️</td><td style="text-align: center;  vertical-align: middle; border: 1px solid black"> -</td>
     <td style="text-align: center;  vertical-align: middle; border: 1px solid black"> -</td><td style="text-align: center;  vertical-align: middle; border: 1px solid black"> -</td>
     <td style="text-align: center;  vertical-align: middle; border: 1px solid black">✔️</td><td style="text-align: center;  vertical-align: middle; border: 1px solid black"> -</td>
-    <td style="border: 1px solid black">None</td>
+    <td style="border: 1px solid black">Ninguno</td>
   </tr>
   <tr style="border: 1px solid black">
     <td style="text-align: center;  vertical-align: middle; border: 1px solid black">✔️</td>
@@ -165,7 +165,7 @@ Estas tablas le ayudarán a determinar si necesitará adaptadores USB o de panta
     <td style="text-align: center; vertical-align: middle; border: 1px solid black"> -</td>
     <td style="text-align: center; vertical-align: middle; border: 1px solid black">✔️</td>
     <td style="text-align: center; vertical-align: middle; border: 1px solid black"> -</td>
-    <td style="border: 1px solid black;">None</td>
+    <td style="border: 1px solid black;">Ninguno</td>
 </tr>
   <tr style="border: 1px solid black;">
     <td style="text-align: center; vertical-align: middle; border: 1px solid black">✔️</td>
@@ -185,7 +185,7 @@ Estas tablas le ayudarán a determinar si necesitará adaptadores USB o de panta
     <td style="text-align: center; vertical-align: middle; border: 1px solid black"> -</td>
     <td style="text-align: center; vertical-align: middle; border: 1px solid black">✔️</td>
     <td style="text-align: center; vertical-align: middle; border: 1px solid black"> -</td>
-    <td style="border: 1px solid black;">None</td>
+    <td style="border: 1px solid black;">Ninguno</td>
   </tr>
   <tr style="border: 1px solid black;">
     <td style="text-align: center; vertical-align: middle; border: 1px solid black"> -</td>
@@ -263,7 +263,7 @@ Estas tablas le ayudarán a determinar si necesitará adaptadores USB o de panta
 
 Si el casco se lanzó después de 2018, los adaptadores no son necesarios y los controladores se emparejan con los auriculares.
 
-Los dispositivos enviados en 2017 o una versión anterior necesitan un adaptador para los controladores. Si el equipo no incluye Bluetooth para emparejar [controladores de movimiento de la realidad mixta de Windows](controllers-in-wmr.md), puede usar un adaptador como el adaptador USB Bluetooth 4,0 Low Energy micro.
+Los dispositivos enviados en 2017 o una versión anterior necesitan un adaptador para los controladores. Si el equipo no incluye Bluetooth para emparejar [controladores de movimiento de la realidad mixta de Windows](controllers-in-wmr.md#Pair-motion-controllers), puede usar un adaptador como el adaptador USB Bluetooth 4,0 Low Energy micro.
 
 > [!NOTE]
 > Microsoft no fabrica, prueba, certifica ni garantiza la funcionalidad, la confiabilidad o la calidad de ningún adaptador. Si tiene preguntas, problemas o problemas con cualquier adaptador, debe ponerse en contacto con el vendedor o el fabricante del adaptador.

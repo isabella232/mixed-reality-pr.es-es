@@ -3,18 +3,18 @@ title: Su página principal de realidad mixta
 description: Cómo navegar y transportar dentro de la Página principal de Windows Mixed Reality, iniciar aplicaciones y juegos, personalizar la Página principal y cambiar la configuración de objetos visuales, de audio y de voz.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, Home, navegar, ponerse en marcha, aplicaciones, juegos
-ms.openlocfilehash: 6537bca13a7eb133d7f78e7922ea91304fdc90f2
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: 177a9db67f304c163356a814b5c4d2e54ba4867d
+ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293082"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92434620"
 ---
 # <a name="your-windows-mixed-reality-home"></a>Ambiente principal de Windows Mixed Reality
 
 ## <a name="what-is-the-windows-mixed-reality-home"></a>¿Qué es la Página principal de Windows Mixed Reality?
 
-Windows Mixed Reality es el primer sistema operativo espacial. En lugar de usar una pantalla plana y una interfaz 2D, aprovecha nuestra capacidad de instinctual para navegar por el espacio de tres dimensiones. Cada lugar tiene un propósito y el contenido tiene contexto. Del mismo modo que el equipo se inicia en la interfaz de escritorio y el teléfono comienza con una pantalla de inicio, Windows Mixed Reality se inicia en la Página principal de realidad mixta. Es un entorno en el que puede navegar y personalizar para crear el suyo propio. Es el lienzo de las miles de aplicaciones disponibles en el Microsoft Store. Puede realizar tareas multitarea con estas aplicaciones, como nunca antes, en 3D, donde el espacio es casi ilimitado.
+Windows Mixed Reality es el primer sistema operativo espacial. En lugar de usar una pantalla plana y una interfaz 2D, aprovecha nuestra capacidad de instinctual para navegar por el espacio de tres dimensiones. Cada lugar tiene un propósito y el contenido tiene contexto. Del mismo modo que el equipo se inicia en la interfaz de escritorio y el teléfono comienza con una pantalla de inicio, Windows Mixed Reality se inicia en la Página principal de realidad mixta. Es un entorno en el que puede navegar y personalizar para crear el suyo propio. Es el lienzo para las miles de aplicaciones disponibles en la Microsoft Store o SteamVR. Puede realizar tareas multitarea con estas aplicaciones, como nunca antes, en 3D, donde el espacio es casi ilimitado.
 
 ## <a name="move-through-the-windows-mixed-reality-home"></a>Desplazarse por la Página principal de Windows Mixed Reality
 
@@ -26,7 +26,7 @@ Windows Mixed Reality es el primer sistema operativo espacial. En lugar de usar 
   * Una útil característica se denomina "ajustar a la aplicación", que le permite saltar a la posición ideal para interactuar con las ventanas de la aplicación. Simplemente apunte el arco de teletraslado a una ventana y suéltelo. El sistema lo colocará automáticamente en la ubicación ideal para disfrutar del contenido de la ventana de destino.
 * **Tutorial:** Puede desplazarse prácticamente al presionar el Stick (debe sentirlo) en los controladores de movimiento o en el controlador de juegos y, a continuación, mover en la dirección deseada.
 
-## <a name="launch-an-app"></a>iniciar una aplicación
+## <a name="launch-an-app"></a>Iniciar una aplicación
 
 1. En la Página principal de Windows Mixed Reality, presione el botón de Windows del controlador para abrir el menú Inicio.
 2. Seleccione la aplicación que desea iniciar.
@@ -73,7 +73,7 @@ Vaya a **configuración > realidad mixta > entorno > restablecer el** ![ Panel d
 
 ## <a name="turn-off-the-boundary"></a>Desactivar el límite
 
-Vaya al portal de Windows Mixed Reality y abra el menú en la parte superior izquierda de la pantalla. Seleccione **Ejecutar configuración > límite de la habitación**. Cambie el control de alternancia a desactivado. Debe permanecer sentado en el escritorio si desactiva el límite.
+Vaya al portal de realidad mixta y abra el menú en la parte superior izquierda de la pantalla. Seleccione **Ejecutar configuración > límite de la habitación**. Cambie el control de alternancia a desactivado. Debe permanecer sentado en el escritorio si desactiva el límite.
 
 ## <a name="spatial-sound-in-the-windows-mixed-reality-home"></a>Sonido espacial en la Página principal de Windows Mixed Reality
 
