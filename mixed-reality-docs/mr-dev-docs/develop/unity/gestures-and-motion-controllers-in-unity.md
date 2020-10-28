@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: gestos, controladores de movimiento, Unity, mirados, entrada
-ms.openlocfilehash: 6b132e56e5d60e59fda53b95328580ed861ce75c
-ms.sourcegitcommit: 4bb5544a0c74ac4e9766bab3401c9b30ee170a71
+ms.openlocfilehash: 6c41de0a0b5d2879b2f3a0be90c9456100599d2b
+ms.sourcegitcommit: 8b16945d6a551f174a65fa3980ba392682ca45d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638562"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92886278"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gestos y controladores de movimiento en Unity
 
@@ -68,32 +68,32 @@ Las asignaciones de identificador de botón/eje para Windows Mixed Reality difie
 >[!NOTE]
 >Estos ID. de botón o eje difieren de los identificadores que usa Unity para OpenVR debido a colisiones en las asignaciones que usan los controladores de juegos, Oculus Touch y OpenVR.
 
-### <a name="using-hp-reverb-g2-controllers"></a>Uso de los controladores de HP reverberación G2
+<!-- ### Using HP Reverb G2 controllers
 
-Si usa los controladores de HP reverberación G2, consulte la tabla siguiente para obtener los identificadores de botón y de eje.
+If you're using the HP Reverb G2 controllers, refer to the table below for button and axis IDs.
 
 <table>
 <tr>
-<th rowspan="2"><a href="https://docs.unity3d.com/ScriptReference/XR.CommonUsages.html">Entrada </th><th colspan="2">API de Unity comunes</a><br />(Input. GetButton/GetAxis) </th><th rowspan="2">API de entrada de HP reverberación G2</a></th>
+<th rowspan="2"><a href="https://docs.unity3d.com/ScriptReference/XR.CommonUsages.html">Input </th><th colspan="2">Common Unity APIs</a><br />(Input.GetButton/GetAxis) </th><th rowspan="2">HP Reverb G2 Input API</a></th>
 </tr><tr>
-<th> Mano izquierda </th><th> Mano derecha</th>
+<th> Left hand </th><th> Right hand</th>
 </tr><tr>
-<td> Primary2DAxis </td><td> Eje 1 (X)/eje 2 (Y) </td><td> Eje 4 (X)/eje 5 (Y) </td><td> Palanca</td>
+<td> Primary2DAxis </td><td> Axis 1 (X) / Axis 2 (Y) </td><td> Axis 4 (X) / Axis 5(Y) </td><td> Thumbstick</td>
 </tr><tr>
-<td> Desencadenador presionado </td><td> Eje 9 </td><td> Eje 10 </td><td> Desencadenador de índice</td>
+<td> Trigger pressed </td><td> Axis 9 </td><td> Axis 10 </td><td> Index trigger</td>
 </tr><tr>
-<td> Sujeta </td><td> Eje 11d </td><td> Eje 12 </td><td> Desencadenador de control</td>
+<td> Grip </td><td> Axis 11d </td><td> Axis 12 </td><td> Grip trigger</td>
 </tr><tr>
-<td> PrimaryButton presionado </td><td> Botón 2 </td><td> Botón 0 </td><td> Botón de menú presionado</td>
+<td> PrimaryButton pressed </td><td> Button 2 </td><td> Button 0 </td><td> Menu button pressed</td>
 </tr><tr>
-<td> SecondaryButton presionado </td><td> Botón 3 </td><td> Botón 1 </td><td> Botón A/X</td>
+<td> SecondaryButton pressed </td><td> Button 3 </td><td> Button 1 </td><td> A/X button</td>
 </tr><tr>
-<td> GripButton </td><td> Botón 4 </td><td> Botón 5 </td><td> Desencadenador de control</td>
+<td> GripButton </td><td> Button 4 </td><td> Button 5 </td><td> Grip trigger</td>
 </tr><tr>
-<td> TriggerButton </td><td> Botón 14 </td><td> Botón 15 </td><td> Desencadenador de índice</td>
+<td> TriggerButton </td><td> Button 14 </td><td> Button 15 </td><td> Index trigger</td>
 </tr><tr>
 </tr>
-</table>
+</table> -->
 
 
 ## <a name="grip-pose-vs-pointing-pose"></a>Replanteamiento de control frente a pose de puntero

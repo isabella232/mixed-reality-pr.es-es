@@ -1,0 +1,19 @@
+# - name: Overview 
+- name: "Iniciadores de aplicaciones\_3D"
+  items:
+    - name: Guía de diseño
+      href: 3d-app-launcher-design-guidance.md
+    - name: Creación de modelos 3D para su uso en el hogar
+      href: creating-3d-models-for-use-in-the-windows-mixed-reality-home.md
+    - name: "Implementación de iniciadores de aplicaciones\_3D"
+      items:
+        - name: Aplicaciones para UWP
+          href: implementing-3d-app-launchers.md
+        - name: Aplicaciones Win32
+          href: implementing-3d-app-launchers-win32.md
+    - name: Habilitación de la colocación de modelos 3D en el ambiente principal
+      href: enable-placement-of-3d-models-in-the-home.md
+- name: Compras desde la aplicación
+  href: in-app-purchases.md
+- name: Envío de aplicaciones a Microsoft Store
+  href: submitting-an-app-to-the-microsoft-store.md
