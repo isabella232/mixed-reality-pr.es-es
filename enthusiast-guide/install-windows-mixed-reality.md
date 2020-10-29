@@ -1,5 +1,5 @@
 ---
-title: Instalar el software de Windows Mixed Reality
+title: Instale el software de Windows Mixed Reality
 description: Después de conectar el casco de la realidad mixta de Windows, use la aplicación del portal de realidad mixta para empezar a trabajar y descargar las características de Windows Mixed Reality.
 author: hferrone
 ms.author: v-hferrone
@@ -8,14 +8,17 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, introducción, configuración, portal de realidad mixta
 appliesto:
 - Windows 10
-ms.openlocfilehash: 5e04f29f834b2220f51f1748aa59e4188d8ad38d
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: b07e1a90247072952969cb2e2fc845bdb906bcae
+ms.sourcegitcommit: b0b5e109c16bcff7b9c098620467c8b9685e9597
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692826"
+ms.lasthandoff: 10/29/2020
+ms.locfileid: "92915570"
 ---
-# <a name="install-windows-mixed-reality-software"></a>Instalar el software de Windows Mixed Reality
+# <a name="install-windows-mixed-reality-software"></a>Instale el software de Windows Mixed Reality
+
+> [!div class="nextstepaction"]
+> [Obtener portal de realidad mixta](https://www.microsoft.com/p/mixed-reality-portal/9ng1h8b3zc7m?activetab=pivot:overviewtab)
 
 ## <a name="launch-mixed-reality-portal"></a>Inicio del portal de realidad mixta
 
@@ -87,9 +90,9 @@ Verá un mensaje de "preparación para configurar" en la pantalla con un icono d
 
 ![Preparación para configurar](images/1050px-gettingsetup.png)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Preguntar a la comunidad](https://answers.microsoft.com)
 * [Póngase en contacto con nosotros para obtener soporte técnico](https://support.microsoft.com/contactus/)
 * [Solución de problemas de instalación](installation_errors.md)
 * [Solución de problemas de configuración](set-up-questions.md)
-* [Configurar Windows Mixed Reality](set-up-windows-mixed-reality.md)
+* [Configuración de Windows Mixed Reality](set-up-windows-mixed-reality.md)
