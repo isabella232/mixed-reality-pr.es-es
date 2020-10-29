@@ -1,0 +1,12 @@
+- name: Le damos la bienvenida a Mixed Reality
+  href: index.yml
+- name: Descubra
+  href: discover/toc.yml
+- name: Diseño
+  href: design/toc.yml
+- name: Desarrollar
+  href: develop/toc.yml
+- name: Distribución
+  href: distribute/toc.yml
+- name: Novedades
+  href: whats-new/toc.yml

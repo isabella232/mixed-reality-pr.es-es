@@ -1,0 +1,152 @@
+- name: Empezar a diseñar y a crear prototipos
+  href: design.md
+- name: Acerca de esta guía de diseño
+  href: about-this-design-guidance.md
+- name: Conceptos principales
+  items:
+    - name: Información general
+      href: core-concepts-landingpage.md
+    - name: Modelo de aplicación
+      href: app-model.md
+    - name: Vistas de aplicación
+      href: app-views.md
+    - name: Comodidad
+      href: comfort.md
+    - name: Sistemas de coordenadas
+      href: coordinate-systems.md
+    - name: Seguimiento de los ojos
+      href: eye-tracking.md
+    - name: Marco holográfico
+      href: holographic-frame.md
+    - name: Visualización de la exploración de la sala
+      href: room-scan-visualization.md
+    - name: Descripción de escenas
+      href: scene-understanding.md
+    - name: Delimitadores espaciales
+      href: spatial-anchors.md
+    - name: Sonido
+      href: spatial-sound.md
+    - name: Asignación espacial
+      href: spatial-mapping.md
+    - name: Gesto del sistema
+      href: system-gesture.md
+    - name: Tipos de aplicaciones de Mixed Reality
+      href: types-of-mixed-reality-apps.md
+    - name: Diseño de contenido para la pantalla holográfica
+      href: designing-content-for-holographic-display.md
+- name: Modelos de interacción
+  items:
+    - name: Interacciones instintivas
+      href: interaction-fundamentals.md
+    - name: Modelo de controladores de manos y movimiento
+      items:
+        - name: Manipulación directa con las manos
+          href: direct-manipulation.md
+        - name: Controladores de manos y movimiento
+          href: hands-and-tools.md
+        - name: Controladores de movimiento
+          href: motion-controllers.md
+        - name: Apuntar y confirmar con las manos
+          href: point-and-commit.md
+    - name: Modelo de manos libres
+      items:
+        - name: Manos libres
+          href: hands-free.md
+        - name: Entrada de voz
+          href: voice-input.md
+        - name: Mirada y permanencia
+          items:
+            - name: Mirada y permanencia
+              href: gaze-and-dwell.md
+            - name: Control con los ojos y permanencia
+              href: gaze-and-dwell-eyes.md
+            - name: Mirada con la cabeza y permanencia
+              href: gaze-and-dwell-head.md
+    - name: Mirada y confirmación
+      items:
+        - name: Mirada y confirmación
+          href: gaze-and-commit.md
+        - name: Mirada con los ojos y confirmación
+          href: gaze-and-commit-eyes.md
+        - name: Mirada con la cabeza y confirmación
+          href: gaze-and-commit-head.md
+    - name: Interacción basada en el control con los ojos
+      href: eye-gaze-interaction.md
+- name: Elementos de la experiencia del usuario
+  items:
+    - name: Información general
+      href: app-patterns-landingpage.md
+    - name: Elementos fundamentales
+      items:
+        - name: 'Color, luz y materiales'
+          href: color-light-and-materials.md
+        - name: Escala
+          href: scale.md
+        - name: Tipografía
+          href: typography.md
+        - name: Sonido
+          items:
+            - name: Sonido
+              href: spatial-sound-design.md
+            - name: 'Caso práctico: Holotour'
+              href: case-study-spatial-sound-design-for-holotour.md
+            - name: 'Caso práctico: Roboraid'
+              href: case-study-using-spatial-sound-in-roboraid.md
+    - name: Controles y comportamientos
+      items:
+        - name: Cursores
+          href: cursors.md
+        - name: Haces de mano
+          href: point-and-commit.md
+        - name: Botón
+          href: button.md
+        - name: Objeto con el que se puede interactuar
+          href: interactable-object.md
+        - name: Cuadro de límite y barra de la aplicación
+          href: app-bar-and-bounding-box.md
+        - name: Manipulación
+          href: direct-manipulation.md
+        - name: Menú Mano
+          href: hand-menu.md
+        - name: Menú Cerca
+          href: near-menu.md
+        - name: Colección de objetos
+          href: object-collection.md
+        - name: Entrada de voz
+          href: voice-input.md
+        - name: Teclado
+          href: keyboard.md
+        - name: Información sobre herramientas
+          href: tooltip.md
+        - name: Claqueta
+          href: slate.md
+        - name: Control deslizante
+          href: slider.md
+        - name: Sombreador
+          href: shader.md
+        - name: Diálogo
+          href: dialog-ui.md
+        - name: Asesor manual
+          href: hand-coach.md
+        - name: Malla espacial
+          href: spatial-mesh-ux.md
+        - name: Etiquetado y vista frontal continua
+          href: billboarding-and-tag-along.md
+        - name: Indicación del progreso
+          href: progress.md
+        - name: Magnetismo de superficie
+          href: surface-magnetism.md
+- name: Recursos
+  items:
+    - name: Información sobre Unity
+      href: 'https://learn.unity.com/'
+    - name: Mixed Reality Toolkit
+      href: 'https://github.com/Microsoft/MixedRealityToolkit-Unity'
+    - name: Laboratorios de diseño de realidad mixta
+      href: 'https://github.com/microsoft/MixedRealityDesignLabs_Unity'
+    - name: Microsoft Maquette
+      href: 'https://www.maquette.ms/'
+    - name: Proceso de creación de recursos
+      href: asset-creation-process.md
+    - name: Diseñar entornos envolventes propios
+      href: add-custom-home-environments.md
