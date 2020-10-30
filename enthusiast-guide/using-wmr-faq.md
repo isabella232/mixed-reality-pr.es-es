@@ -1,5 +1,5 @@
 ---
-title: Uso de preguntas más frecuentes sobre Windows Mixed Reality
+title: Preguntas más frecuentes sobre el uso de Windows Mixed Reality
 description: Obtenga respuestas a preguntas habituales al trabajar con Windows Mixed Reality.
 author: hferrone
 ms.author: v-hferrone
@@ -8,14 +8,14 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: 62b6b61f74abfd77ba61563639ff719576551f07
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: cf02ccfc92d80ee1d1a8f6ca3d4ab55650f4a62c
+ms.sourcegitcommit: feceb21018ce1d966188a34bd1faeddfdc1b9544
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692375"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93044442"
 ---
-# <a name="using-windows-mixed-reality-faq"></a>Uso de preguntas más frecuentes sobre Windows Mixed Reality
+# <a name="using-windows-mixed-reality-faq"></a>Preguntas más frecuentes sobre el uso de Windows Mixed Reality
 
 Si necesita ayuda con el uso de un auricular envolvente de Windows Mixed Reality, consulte estos temas para obtener información general y solucionar problemas.
 
@@ -61,7 +61,7 @@ Si los controladores de movimiento no funcionan correctamente, no se conectan, o
     * Listo: todos los controladores están establecidos.
     * Seguimiento perdido: el portal de realidad mixta no puede encontrar los controladores. Manténgalos delante del casco y reinícielos presionando el botón **Windows** durante 4 segundos y, luego, de nuevo durante 2 segundos.
     * Batería baja: Reemplace las baterías del controlador.
-* Si usa Wi-Fi, intente conectar el equipo a una red Wi-Fi de 5 GHz para reducir las interferencias inalámbricas. 
+* Si usa Wi-Fi, intente conectar el equipo a una red de 5 GHz Wi-Fi para reducir las interferencias inalámbricas. 
 * Para los auriculares más recientes que se emparejan directamente con los controladores, seleccione el **"..."** en el **portal de realidad mixta** y elija **configurar controladores** . Esto le llevará a la aplicación de auriculares para emparejar los controladores con los auriculares.  
 * Para auriculares más antiguos que no tienen Bluetooth integrado para que los controladores se emparejen directamente:  
     * Seleccione configuración > dispositivos > Bluetooth & otros dispositivos del equipo y asegúrese de que los controladores aparecen como emparejados.Si no es así, deberá emparejarlos. 
@@ -95,7 +95,7 @@ Si el piso parece estar desactivado (por ejemplo, parece que está flotando), se
 
 ## <a name="i-got-a-message-that-said-to-plug-in-and-charge-my-pc-why"></a>Aparece un mensaje que indica que se ha incorporado el equipo. ¿Por qué?
 
-Si usa un equipo portátil, Windows Mixed Reality funciona mejor cuando el equipo está totalmente cargado y conectado. 
+Si usa un equipo portátil, Windows Mixed Reality funciona mejor cuando el equipo está totalmente cargado y conectado.
 
 ## <a name="how-do-i-uninstall-windows-mixed-reality"></a>Cómo desinstalar Windows Mixed Reality
 
@@ -106,14 +106,14 @@ Cuando esté listo para empezar a usar el casco de nuevo, conéctelo y el portal
 > [!NOTE]
 > Si ve un mensaje que dice "no pudimos acabar de quitar Windows Mixed Reality", esto significa que algunos archivos, incluida la información sobre su entorno, pueden seguir estando en el equipo. Esto puede causar problemas si decide volver a instalar Windows Mixed Reality más adelante.
 > 
-> Para obtener información sobre cómo quitar manualmente cualquier información restante de Windows mixed reality de su equipo, consulte **[este artículo](troubleshooting-windows-mixed-reality.md#how-to-uninstall-windows-mixed-reality)** . 
+> Para obtener información sobre cómo quitar manualmente cualquier información restante de Windows mixed reality de su equipo, consulte **[este artículo](installation_errors.md)** .
 
 ## <a name="my-wi-fi-slows-down-when-im-using-windows-mixed-reality"></a>Mi Wi-Fi se ralentiza cuando utilizo Windows Mixed Reality
 
 Si usa una conexión Wi-Fi de 2,4 GHz, los controladores de movimiento pueden ralentizar la red Wi-Fi. Pruebe una de las siguientes opciones:
 
 <!-- TODO: Use Windows Mixed Reality PC hardware guidelines interlink -->
-* Cambie a una conexión Wi-Fi de 5 GHz, si hay alguna disponible. [Más información](https://support.microsoft.com/help/4000461)
+* Cambie a una conexión Wi-Fi 5 GHz, si hay alguna disponible. [Más información](https://support.microsoft.com/help/4000461)
 * Use un adaptador Bluetooth independiente para conectar sus controladores de movimiento al equipo. [Consulte los adaptadores recomendados](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
 
 ## <a name="what-is-the-experience-options-setting"></a>¿Cuál es la configuración de opciones de experiencia?

@@ -1,24 +1,25 @@
 ---
 title: Otras preguntas
-description: Solución avanzada de problemas de realidad mixta de Windows que va más allá de nuestra documentación de soporte técnico estándar para el consumidor.
+description: Sugerencias de solución de problemas adicionales de Windows Mixed Reality que van más allá de nuestra documentación de soporte técnico de consumidor estándar.
 ms.author: v-hferrone
 ms.date: 09/15/2020
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, desinstalación de Windows Mixed Reality, idiomas admitidos
 appliesto:
 - Windows 10
-ms.openlocfilehash: a8a035a4d113a0a53f41079709660f65bfa278a0
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: aa61148a115ae295c1dc64b575a2fae7b0111470
+ms.sourcegitcommit: feceb21018ce1d966188a34bd1faeddfdc1b9544
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692471"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "93044464"
 ---
 # <a name="other-questions"></a>Otras preguntas
 
 ## <a name="my-graphics-driver-isnt-supported-im-getting-graphics-driver-failure-errors"></a>No se admite el controlador de gráficos (obtengo errores de controlador de gráficos).
 
 Busque y ejecute "dxdiag":
+
 1.  Si el resultado es "Rendering básico", el controlador de gráficos no está instalado. Para solucionar este error:
     * Vaya a **Device Manager > acción > buscar cambios de hardware** .
     * Use Windows Update para actualizar el controlador.
@@ -60,7 +61,7 @@ Si su equipo tiene una GPU híbrida de NVIDIA, el problema puede deberse al disp
 ## <a name="my-wi-fi-slows-down-when-im-using-windows-mixed-reality"></a>Mi Wi-Fi se ralentiza cuando utilizo Windows Mixed Reality.
 
 Si usa una conexión Wi-Fi de 2,4 GHz, los controladores de movimiento pueden ralentizar la red Wi-Fi. Pruebe una de las siguientes opciones:
-* Cambie a una conexión Wi-Fi de 5 GHz, si hay alguna disponible. [Más información](https://support.microsoft.com/en-us/help/4000461).
+* Cambie a una conexión Wi-Fi 5 GHz, si hay alguna disponible. [Más información](https://support.microsoft.com/en-us/help/4000461).
 * Use un adaptador Bluetooth independiente para conectar sus controladores de movimiento al equipo. Consulte [adaptadores recomendados](https://support.microsoft.com/en-us/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines).
 
 ## <a name="i-got-a-message-that-said-to-plug-in-and-charge-my-pc-why"></a>Aparece un mensaje que indica que se ha incorporado el equipo. ¿Por qué?
@@ -119,16 +120,16 @@ Para desinstalar Windows Mixed Reality con estos comandos:
 2. En el cuadro de **búsqueda** , escriba "regedit" y, a continuación, seleccione "sí".
 3. Quite estos valores del registro:
    <ul>
-    <li><b>HKEY_CURRENT_USER \software\microsoft\windows\currentversion\holographic</b>y, a continuación, elimine "FirstRunSucceeded".</li> 
-    <li><b>HKEY_CURRENT_USER \software\microsoft\windows\currentversion\holographic\speechandaudio</b>, elimine "PreferDesktopSpeaker" y "PreferDesktopMic".</li> 
-    <li><b>HKEY_CURRENT_USER \software\microsoft\ Speech_OneCore &gt; Settings\Holographic</b>y, a continuación, elimine "DisableSpeechInput". Nota: los elementos del registro en HHKEY_CURRENT_USER deben eliminarse para cada cuenta de usuario del equipo que haya usado Windows Mixed Reality.</li> 
-    <li><b>HKEY_LOCAL_MACHINE \software\microsoft\windows\currentversion\perceptionsimulationextensions</b>, elimine "DeviceID" y "MODE".</li> 
-    <li><b>HKEY_CURRENT_USER \software\microsoft\windows\currentversion\holographic</b>y, a continuación, elimine "OnDeviceLearningCompleted".</li> 
+    <li><b>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Holographic</b>y, a continuación, elimine "FirstRunSucceeded".</li> 
+    <li><b>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Holographic\SpeechAndAudio</b>, elimine "PreferDesktopSpeaker" y "PreferDesktopMic".</li> 
+    <li><b>HKEY_CURRENT_USER\Software\Microsoft\Speech_OneCore&gt; Settings\Holographic</b>y, a continuación, elimine "DisableSpeechInput". Nota: los elementos del registro en HHKEY_CURRENT_USER deben eliminarse para cada cuenta de usuario del equipo que haya usado Windows Mixed Reality.</li> 
+    <li><b>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\PerceptionSimulationExtensions</b>, elimine "DeviceID" y "MODE".</li> 
+    <li><b>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Holographic</b>y, a continuación, elimine "OnDeviceLearningCompleted".</li> 
    </ul>
 4. Quite las claves del registro siguientes: <ul>
-   <li> <b>HKEY_CURRENT_USER \Software\Microsoft\Windows\CurrentVersion\HoloSI</b></li> 
-   <li> <b>HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion\HoloSI</b></li> 
-   <li> <b>HKEY_CURRENT_USER \Software\Microsoft\ Speech_OneCore \Settings\HolographicPreferences</b></li><br/></ul>
+   <li> <b>HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\HoloSI</b></li> 
+   <li> <b>HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\HoloSI</b></li> 
+   <li> <b>HKEY_CURRENT_USER\Software\Microsoft\Speech_OneCore\Settings\HolographicPreferences</b></li><br/></ul>
 5. Cierre el editor del registro.
 6. Vaya a **C:\Users\nombre name\appdata\local\packages\ Microsoft.Windows.HolographicFirstRun_cw5n1h2txyewy \localstate** y elimine "RoomBounds.jsen". Repita este paso para cada usuario que haya usado Windows Mixed Reality.
 7. Abra el símbolo del sistema de administrador y vaya a **C:\ProgramData\WindowsHolographicDevices\SpatialStore\HoloLensSensors** . Elimine el contenido de la carpeta "HeadTracking Data" (pero no la carpeta).
