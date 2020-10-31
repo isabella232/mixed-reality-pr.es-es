@@ -3,12 +3,12 @@ title: Su página principal de realidad mixta
 description: Cómo navegar y transportar dentro de la Página principal de Windows Mixed Reality, iniciar aplicaciones y juegos, personalizar la Página principal y cambiar la configuración de objetos visuales, de audio y de voz.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, Home, navegar, ponerse en marcha, aplicaciones, juegos
-ms.openlocfilehash: 177a9db67f304c163356a814b5c4d2e54ba4867d
-ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
+ms.openlocfilehash: ce4774f4a8f752d5e508d8daa66c050b2a6f28ca
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434620"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93132119"
 ---
 # <a name="your-windows-mixed-reality-home"></a>Ambiente principal de Windows Mixed Reality
 
@@ -73,7 +73,7 @@ Vaya a **configuración > realidad mixta > entorno > restablecer el** ![ Panel d
 
 ## <a name="turn-off-the-boundary"></a>Desactivar el límite
 
-Vaya al portal de realidad mixta y abra el menú en la parte superior izquierda de la pantalla. Seleccione **Ejecutar configuración > límite de la habitación**. Cambie el control de alternancia a desactivado. Debe permanecer sentado en el escritorio si desactiva el límite.
+Vaya al portal de realidad mixta y abra el menú en la parte superior izquierda de la pantalla. Seleccione **Ejecutar configuración > límite de la habitación** . Cambie el control de alternancia a desactivado. Debe permanecer sentado en el escritorio si desactiva el límite.
 
 ## <a name="spatial-sound-in-the-windows-mixed-reality-home"></a>Sonido espacial en la Página principal de Windows Mixed Reality
 
@@ -84,7 +84,7 @@ La Página principal de Windows Mixed Reality incluye una simulación de sonido 
 
 ## <a name="see-also"></a>Consulte también
 
-* [Solución de problemas de la Página principal de Windows Mixed Reality](set-up-questions.md#my-controllers-arent-showing-in-my-windows-mixed-reality-home)
+* [Solución de problemas de la Página principal de Windows Mixed Reality](wmr-setup-faq.md#my-motion-controllers-arent-working)
 * [Uso de juegos y aplicaciones en Windows Mixed Reality](using-games-and-apps-in-windows-mixed-reality.md)
 * [Funcionamiento del seguimiento de la interacción directa](tracking-system.md)
 * [Funcionamiento de los controladores de movimiento](controllers-in-wmr.md)

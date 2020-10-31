@@ -3,12 +3,12 @@ title: Configuración de Windows Mixed Reality
 description: Cómo configurar los controladores de movimiento, la voz y el audio de Windows Mixed Reality, y definir el límite de la habitación para un espacio de juego seguro.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, introducción, configuración, controlador de movimiento, controlador, voz, audio, sentado, posición, límite, controladores de gráficos, Microsoft Edge, cromo
-ms.openlocfilehash: cd59fd34dd00edc98d209681cc1239895c36ada2
-ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
+ms.openlocfilehash: 95ca5b8d86e26061e565a74efa36e49cc3d1b92b
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434636"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93132149"
 ---
 # <a name="set-up-windows-mixed-reality"></a>Configuración de Windows Mixed Reality
 
@@ -40,7 +40,7 @@ Si tiene un casco sin una radio integrada, tendrá que configurar los controlado
 
 Si solo piensa usar un teclado y un mouse de Xbox, no es necesario emparejar los controladores.  Si alguna vez planea usar controladores, probablemente debería emparejarlos.
 
-**Nota**: los controladores de movimiento de Windows Mixed Reality requieren Bluetooth 4,0. Si su equipo no tiene Bluetooth integrado, tendrá que conectar un adaptador de Bluetooth USB que admita Bluetooth 4,0 para habilitar los controladores de movimiento. Si usa la radio integrada en el casco, no necesita un adaptador Bluetooth.
+**Nota** : los controladores de movimiento de Windows Mixed Reality requieren Bluetooth 4,0. Si su equipo no tiene Bluetooth integrado, tendrá que conectar un adaptador de Bluetooth USB que admita Bluetooth 4,0 para habilitar los controladores de movimiento. Si usa la radio integrada en el casco, no necesita un adaptador Bluetooth.
 
 ![Familiarícese con los controladores de movimiento](images/get_to_know_controllers.png)
 
@@ -100,7 +100,7 @@ A menos que haya adquirido un Odyssey de Samsung HMD (que tiene conectores de AK
 
 ## <a name="adjusting-your-headsets-display-settings"></a>Ajuste de la configuración de pantalla del casco
 
-Windows Mixed Reality elige automáticamente la configuración de pantalla que equilibra la calidad y el rendimiento en función de la configuración de hardware del equipo. Para ajustar esta configuración, vaya a **configuración > realidad mixta > pantalla de auriculares**.
+Windows Mixed Reality elige automáticamente la configuración de pantalla que equilibra la calidad y el rendimiento en función de la configuración de hardware del equipo. Para ajustar esta configuración, vaya a **configuración > realidad mixta > pantalla de auriculares** .
 
 ### <a name="visuals"></a>Objetos visuales
 
@@ -126,7 +126,7 @@ Esta opción es ajustar la calibración de IPD para los auriculares con compatib
 
 Esta configuración avanzada invalida la experiencia predeterminada de frecuencia de actualización de la pantalla de auriculares.
 
-* **Automático (valor predeterminado)**: seleccione automáticamente la experiencia de 60Hz o 90Hz en función de la configuración de hardware de su equipo.
+* **Automático (valor predeterminado)** : seleccione automáticamente la experiencia de 60Hz o 90Hz en función de la configuración de hardware de su equipo.
 * **Hz**
 * **90Hz**
 
@@ -138,7 +138,7 @@ Esta configuración avanzada invalida la experiencia predeterminada de frecuenci
 Esta configuración controla el comportamiento de Windows Mixed Reality en respuesta al sensor de presencia del casco:
 
 * **Cambiar automáticamente mediante el sensor de presencia de auriculares** (valor predeterminado): Windows dirigirá automáticamente la entrada (teclado, mouse...) a Windows Mixed Reality siempre que esté usando el casco. Puede invalidar esto en cualquier momento con Win + Y.
-* **Cambiar manualmente mediante la tecla del logotipo de Windows + Y**: Windows no usará el sensor de presencia de auriculares para detectar cuándo se usa el casco. Tendrá que usar Win + Y para cambiar la entrada entre su PC Desktop y Windows Mixed Reality.
+* **Cambiar manualmente mediante la tecla del logotipo de Windows + Y** : Windows no usará el sensor de presencia de auriculares para detectar cuándo se usa el casco. Tendrá que usar Win + Y para cambiar la entrada entre su PC Desktop y Windows Mixed Reality.
 
 Esta opción está disponible en Windows 10, versión 1903 o posterior.
 
@@ -165,7 +165,7 @@ Para usar el nuevo Microsoft Edge basado en cromo en la Página principal de Win
 - Los sitios web abiertos en Windows Mixed Reality se perderán cuando se cierre el portal de realidad mixta, aunque las ventanas de Microsoft Edge permanecerán donde se colocaron en la Página principal de la realidad mixta.
 - El audio de las ventanas de Microsoft Edge no está espacial.
 - Se corrigió en la versión de extensión de 360 Viewer 2.3.8: abrir un vídeo de 360 desde YouTube en Windows Mixed Reality puede dar lugar a que el vídeo se distorsione en el casco. El reinicio de Edge debe actualizar de manera invisible la extensión del visor de 360 para resolver este problema. Puede confirmar qué versión de la extensión tiene escribiendo `edge://system/` en la barra de direcciones y seleccionando el botón "expandir" situado junto a "extensiones".
-- Durante las sesiones de realidad mixta de Windows, los monitores virtuales aparecerán como monitores físicos genéricos en **configuración > pantalla de > del sistema**.
+- Durante las sesiones de realidad mixta de Windows, los monitores virtuales aparecerán como monitores físicos genéricos en **configuración > pantalla de > del sistema** .
 
 ## <a name="launching-mixed-reality-after-the-first-time"></a>Iniciar la realidad mixta después de la primera vez
 
@@ -176,7 +176,7 @@ Escribir la realidad mixta una segunda vez es tan sencillo como volver a colocar
 * [Preguntar a la comunidad](https://answers.microsoft.com)
 * [Póngase en contacto con nosotros para obtener soporte técnico](https://support.microsoft.com/contactus/)
 * [Solución de problemas de instalación](installation_errors.md)
-* [Solución de problemas de configuración](set-up-questions.md)
+* [Solución de problemas de configuración](wmr-setup-faq.md)
 * [Información sobre Mixed Reality](learn-mixed-reality.md)
 * [Controladores de movimiento](controllers-in-wmr.md)
 * [Funcionamiento del seguimiento de la interacción directa](tracking-system.md)
