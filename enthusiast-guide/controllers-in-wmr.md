@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: d1cf8e56d19ef9ae62d9f83811e843f34b1c2d8c
-ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
+ms.openlocfilehash: 892236c632d21620e48ced55d594bd059704a423
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434582"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93132059"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Controladores de movimiento en Windows Mixed Reality
 
@@ -28,8 +28,8 @@ También puede usar una controladora Xbox, un mouse y un teclado, o bien desplaz
 La mayoría de los auriculares se emparejan previamente directamente con los auriculares, pero algunos auriculares iniciales requieren que los controladores de movimiento se emparejen al equipo con Bluetooth 4,0. Cuando conecte el casco envolvente por primera vez, se le guiará a través de la activación de los controladores de movimiento durante la instalación. Pero si necesita volver a emparejarlos más adelante, aquí se muestra cómo:
 
 1. Inicie el **portal de realidad mixta** con los auriculares conectados.  
-2. En la esquina inferior izquierda, seleccione **... > configurar controladores**.
-3. Inserte dos baterías AA en cada controlador y ponga el controlador en modo de emparejamiento (consulte las instrucciones en la [sección sobre controladores de movimiento en pares](controllers-in-wmr.md#Pair-motion-controllers) ).
+2. En la esquina inferior izquierda, seleccione **... > configurar controladores** .
+3. Inserte dos baterías AA en cada controlador y ponga el controlador en modo de emparejamiento (consulte las instrucciones en la [sección sobre controladores de movimiento en pares](controllers-in-wmr.md#pair-motion-controllers) ).
 4. Siga las instrucciones que aparecen en pantalla.
 
 > [!NOTE]
@@ -45,7 +45,7 @@ La mayoría de los auriculares se emparejan previamente directamente con los aur
 > 
 > Si tiene un controlador Xbox con cable, conéctelo a su PC.
 > 
-> Algunos juegos y aplicaciones usan el controlador Xbox de forma distinta a como se usa en la realidad mixta. Para usar el controlador para un juego o una aplicación, selecciona **usar como** controlador de juegos en la barra de la aplicación o decir "usar como controlador de juegos". Para volver a cambiar el controlador a la realidad mixta, seleccione **usar como controlador para juegos**, de nuevo o decir, "usar con mirarme".  
+> Algunos juegos y aplicaciones usan el controlador Xbox de forma distinta a como se usa en la realidad mixta. Para usar el controlador para un juego o una aplicación, selecciona **usar como** controlador de juegos en la barra de la aplicación o decir "usar como controlador de juegos". Para volver a cambiar el controlador a la realidad mixta, seleccione **usar como controlador para juegos** , de nuevo o decir, "usar con mirarme".  
 
 ## <a name="pair-motion-controllers"></a>Controladores de movimiento de pares
 
@@ -59,7 +59,7 @@ Quite la tapa de la batería de los controladores y busque el pequeño botón de
     ![Emparejamiento de controlador de movimiento](images/connect_controller.png)
 
 Inicie el **portal de realidad mixta** con los auriculares conectados.  
-En la esquina inferior izquierda, seleccione **... > configurar controladores**.
+En la esquina inferior izquierda, seleccione **... > configurar controladores** .
 Siga las instrucciones de la pantalla.
 
 ### <a name="pair-motion-controllers-to-pc"></a>Emparejar controladores de movimiento al equipo
@@ -95,8 +95,8 @@ Aquí se muestra cómo desplazarse por la realidad mixta con controladores de mo
 | --- | --- | --- | --- |
 | Te | Presione el stick analógico hacia delante y luego señale el controlador al que desea ir. Suelte el stick. | Presione el stick analógico izquierdo hacia delante y luego mire dónde quiere ir. Suelte el stick. | Haga clic y mantenga presionado el botón secundario y, a continuación, señale el mouse donde desea ir. Suelte el botón. |
 | Seleccionar | Señale el controlador y, a continuación, extraiga el desencadenador o haga clic en el panel táctil. | Mira el destino y después presiona. | Señale el mouse y haga clic con el botón primario. |
-| Abrir el menú Inicio | Presione el botón **Windows** . | Presione el botón **Xbox** . | Presione la **tecla del logotipo de Windows**. |
-| Dejar una aplicación envolvente | Presione el botón **Windows** . A continuación, seleccione **Inicio de realidad mixta** en el menú acciones rápidas. | Presione el botón **Xbox** . A continuación, seleccione el botón **Inicio de realidad mixta** en el menú acciones rápidas. | Presione la **tecla del logotipo de Windows**. Después, seleccione el botón **Inicio de realidad mixta** en el menú acciones rápidas que aparece. |
+| Abrir el menú Inicio | Presione el botón **Windows** . | Presione el botón **Xbox** . | Presione la **tecla del logotipo de Windows** . |
+| Dejar una aplicación envolvente | Presione el botón **Windows** . A continuación, seleccione **Inicio de realidad mixta** en el menú acciones rápidas. | Presione el botón **Xbox** . A continuación, seleccione el botón **Inicio de realidad mixta** en el menú acciones rápidas. | Presione la **tecla del logotipo de Windows** . Después, seleccione el botón **Inicio de realidad mixta** en el menú acciones rápidas que aparece. |
 | Girar | Mueve el Stick a la izquierda o a la derecha. | Mueve el stick derecho a la izquierda o a la derecha. | No está disponible. |
 | Copia de seguridad | Mueve el stick hacia atrás. | Mueve el stick izquierdo hacia atrás. | No está disponible. |
 | A pie | Inserte el stick analógico hacia abajo y luego presiónelo en la dirección que desea recorrer. | Inserte el stick izquierdo hacia abajo y, a continuación, haga clic en la dirección que desea recorrer. | No está disponible. |
@@ -151,8 +151,10 @@ Envíenos sus comentarios en la central de comentarios, usando la categoría de 
 
 ## <a name="see-also"></a>Consulte también
 
-* [Preguntar a la comunidad](https://answers.microsoft.com)
-* [Póngase en contacto con nosotros para obtener soporte técnico](https://support.microsoft.com/contactus/)
-* [Solución de problemas](troubleshooting-windows-mixed-reality.md)
+- [Controladores de HP en Unity](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
+- [Controladores de HP en la realidad](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
+- [Preguntar a la comunidad](https://answers.microsoft.com)
+- [Póngase en contacto con nosotros para obtener soporte técnico](https://support.microsoft.com/contactus/)
+- [Solución de problemas](troubleshooting-windows-mixed-reality.md)
 
 ¿Tiene problemas con los controladores de movimiento? [Obtener ayuda](motion-controller-problems.md)

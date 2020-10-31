@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: cf02ccfc92d80ee1d1a8f6ca3d4ab55650f4a62c
-ms.sourcegitcommit: feceb21018ce1d966188a34bd1faeddfdc1b9544
+ms.openlocfilehash: 9c31f772baa434a4c14157ae91c97454f1910a3c
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93044442"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93131829"
 ---
 # <a name="using-windows-mixed-reality-faq"></a>Preguntas más frecuentes sobre el uso de Windows Mixed Reality
 
@@ -40,7 +40,7 @@ Windows Mixed Reality está diseñado para reproducir sonido a través de los au
 
 ## <a name="speech-commands-arent-working"></a>Los comandos de voz no funcionan
 
-Para usar comandos de voz, la configuración de idioma y voz del equipo debe establecerse en una [región e idioma de Windows Mixed Reality compatible](wmr-setup-faq.md#what-languages-are-supported-in-windows-mixed-reality). Para comprobar la región y el idioma de Windows, seleccione **configuración > tiempo & idioma > región & idioma** . Para comprobar el idioma de la voz, seleccione **configuración > tiempo & idioma > la voz** .
+Para usar comandos de voz, la configuración de idioma y voz del equipo debe establecerse en una [región e idioma de Windows Mixed Reality compatible](other-questions.md#what-languages-are-supported-in-windows-mixed-reality). Para comprobar la región y el idioma de Windows, seleccione **configuración > tiempo & idioma > región & idioma** . Para comprobar el idioma de la voz, seleccione **configuración > tiempo & idioma > la voz** .
 
 Si el casco no tiene un micrófono integrado, conecte auriculares con un micrófono al casco o a su PC. Para que la entrada de MIC cambie automáticamente al casco cuando los auriculares estén conectados directamente a él, seleccione **configuración > realidad mixta > audio y voz** , y asegúrese de que, **cuando se haya gastado el casco, cambie a micrófono de auriculares** activada.
 

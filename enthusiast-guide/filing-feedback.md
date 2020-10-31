@@ -1,5 +1,5 @@
 ---
-title: Archivar errores y comentarios
+title: Registro de problemas y comentarios
 description: Ayúdenos a mejorar Windows Mixed Reality mediante la presentación de comentarios mediante las categorías correctas en la aplicación de centro de comentarios.
 author: hferrone
 ms.author: v-hferrone
@@ -8,14 +8,14 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: e0fdebf10ef7370964b0831f898dc151b3e243a0
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: c0e2da59e64973c954cc880504a021a2835ed204
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691726"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93132129"
 ---
-# <a name="filing-bugs-and-feedback"></a>Archivar errores y comentarios
+# <a name="filing-bugs-and-feedback"></a>Registro de problemas y comentarios
 
 ## <a name="why-its-important"></a>Por qué es importante
 
@@ -24,6 +24,7 @@ El equipo de ingeniería usa el mismo mecanismo internamente para realizar el se
 ## <a name="before-you-file-feedback"></a>Antes de enviar los comentarios
 
 Asegúrese de que su equipo está configurado para proporcionarnos datos completos de comentarios y diagnósticos. Aquí se muestra cómo comprobar la configuración en el equipo antes de enviar comentarios:
+
 1. Abra la aplicación **configuración** de Windows.
 2. Haga clic en **privacidad** .
 3. Vaya a **comentarios & diagnósticos** en el panel izquierdo (tenga en cuenta que se ha cambiado el nombre a **Diagnotics & comentarios** en las compilaciones recientes de Windows Insider de Windows.
@@ -31,6 +32,7 @@ Asegúrese de que su equipo está configurado para proporcionarnos datos complet
 5. Asegúrese de reiniciar el equipo y repita los pasos para reproducir el problema antes de enviar los comentarios.
 
 ## <a name="how-to-file-feedback-for-windows-mixed-reality-immersive-headsets-on-pc"></a>Cómo archivar los comentarios de los auriculares con micrófonos de Windows Mixed Reality en PC
+
 1. Asegúrese de que tiene el casco envolvente conectado al equipo.
 2. Inicie el **centro de comentarios** en el escritorio con el HMD conectado.
 3. Vaya a la **pestaña comentarios** en el panel izquierdo. ![Pestaña comentarios](images/feedback1.png) 
@@ -50,13 +52,12 @@ Asegúrese de que su equipo está configurado para proporcionarnos datos complet
    | Configurar           | Cualquier cosa que le impida configurar el dispositivo.                           |
    | Todos los demás problemas | Algo más.                                                                        |
 
-
 9. Para ayudarnos a identificar y corregir el error más rápido, es muy útil capturar los seguimientos y el vídeo. Para empezar a recopilar seguimientos, haga clic en **Iniciar captura** . Esto iniciará la recopilación de seguimientos y una captura de vídeo del escenario de realidad mixta. ![ Iniciar captura](images/feedback4.png)
 10. Deje la aplicación de comentarios y ejecute el escenario roto. No cierre la aplicación del centro de comentarios en este momento.
 11. Cuando haya terminado con el escenario, vuelva a la aplicación de comentarios y haga clic en **Detener captura** . Una vez hecho esto, debería ver que se ha agregado un archivo que contiene los seguimientos.
 12. Haga clic en **Enviar** . ![ Enviar](images/feedback5.png)
 
-Esto le llevará a la página "agradecimiento". En este momento, los comentarios se enviaron correctamente. 
+Esto le llevará a la página "agradecimiento". En este momento, los comentarios se enviaron correctamente.
 
 Después de enviar los comentarios, para dirigir fácilmente a otras personas (por ejemplo, compañeros de trabajo, personal de Microsoft, lectores de [foros](https://forums.hololens.com/) , etc.) al problema, vaya a **comentarios > mis comentarios** , haga clic en el problema y use el icono de uso **compartido** para obtener una dirección URL abreviada que puede asignar a otros usuarios al nivel de voto o a escala.
 
@@ -65,12 +66,10 @@ Después de enviar los comentarios, para dirigir fácilmente a otras personas (p
 >    * Tener un mínimo de 3 GB de espacio libre en disco disponible en la unidad principal del dispositivo.
 >    * Asegúrese de que haya una red no de uso medido disponible para cargar los CAB.
 
-
 ## <a name="after-filing-feedback"></a>Después de enviar comentarios
 
 Asegúrese de volver a consultar regularmente el centro de comentarios después de enviar los comentarios. En la mayoría de los casos, intentaremos responder tan pronto como podamos. Si aún no está en contacto con nosotros cuando envía comentarios, la única manera en que podemos acceder a usted con las sugerencias de solución de problemas o con más preguntas es a través del sistema de comentarios de la central de comentarios. Desafortunadamente, en este momento, no se le envían notificaciones fuera del centro de comentarios.
 
-
 ## <a name="see-also"></a>Vea también
-* [Solución de problemas](troubleshooting-windows-mixed-reality.md)
 
+* [Solución de problemas](troubleshooting-windows-mixed-reality.md)

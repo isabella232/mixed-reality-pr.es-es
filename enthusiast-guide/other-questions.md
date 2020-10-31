@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, desinstalación de Windows Mixed Reality, idiomas admitidos
 appliesto:
 - Windows 10
-ms.openlocfilehash: aa61148a115ae295c1dc64b575a2fae7b0111470
-ms.sourcegitcommit: feceb21018ce1d966188a34bd1faeddfdc1b9544
+ms.openlocfilehash: a49008cb7d6a51385cb0d4ece7dfae3018aefe88
+ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93044464"
+ms.lasthandoff: 10/31/2020
+ms.locfileid: "93131870"
 ---
 # <a name="other-questions"></a>Otras preguntas
 
@@ -29,7 +29,7 @@ Busque y ejecute "dxdiag":
     * Use Windows Update para actualizar el controlador.
     * Si esa actualización no soluciona el problema, vaya al sitio web del fabricante e instale la actualización del controlador más reciente. 
     * Si no hay ninguna actualización disponible para la GPU, es posible que WMR no sea compatible con el dispositivo. Si cree que debería ser, póngase en contacto [con el soporte técnico](https://support.microsoft.com).
-    
+
 Si la instalación de Windows Mixed Reality indica que la tarjeta gráfica no cumple los requisitos y cree que lo hace, asegúrese de que el casco esté conectado a la tarjeta correcta.
 
 ## <a name="my-samsung-odyssey-or-odyssey-headset-firmware-update-is-stuck"></a>La actualización de firmware de Samsung Odyssey o Odyssey + auriculares está bloqueada.
@@ -37,6 +37,7 @@ Si la instalación de Windows Mixed Reality indica que la tarjeta gráfica no cu
 Samsung posee y publica las actualizaciones de firmware de los auriculares que se entregan a través de las aplicaciones complementarias "Samsung HMD Odyssey Setup" y "Samsung HMD Odyssey + Setup". Para obtener más detalles y obtener ayuda con los problemas de actualización de firmware de Samsung, póngase en contacto con el servicio de atención al cliente de Samsung.
 
 Si el proceso de actualización de firmware se está bloqueando y no ha habido ningún progreso durante más de cinco minutos:
+
 * Desconecte temporalmente todos los demás dispositivos USB y vuelva a intentar la actualización del firmware.
 * Conecte sus auriculares Samsung a otro puerto USB 3,0 en su PC.
 * Deshabilite o desinstale cualquier software instalado que pueda interferir con las actualizaciones de firmware, como App Center AORUS de Gigabyte.
@@ -46,27 +47,31 @@ Si el proceso de actualización de firmware se está bloqueando y no ha habido n
 Inicie la aplicación de escritorio en el botón auriculares desde **Windows > todas las aplicaciones > Desktop** para tener acceso al escritorio de su PC en realidad mixta.
 
 ## <a name="how-can-i-see-multiple-monitors-in-mixed-reality"></a>¿Cómo puedo ver varios monitores en realidad mixta?
-De forma predeterminada, la aplicación de escritorio cambia automáticamente para mostrar el monitor con el foco. Si desea ver todos los monitores en realidad mixta: 
+
+De forma predeterminada, la aplicación de escritorio cambia automáticamente para mostrar el monitor con el foco. Si desea ver todos los monitores en realidad mixta:
+
 * Haga clic en el icono de monitor en la esquina superior izquierda de la aplicación.
 * Deshabilitar "cambiar automáticamente el monitor".
 * Elija el monitor que desea ver.
 * Inicie otra instancia de la aplicación de escritorio.
 * Elija el monitor que desea ver en la instancia.
 * Repita el procedimiento para todos los monitores físicos.
-Tenga en cuenta que tendrá que volver a seleccionar el monitor para que se muestre en cada aplicación de escritorio cada vez que reinicie la realidad mixta. 
+Tenga en cuenta que tendrá que volver a seleccionar el monitor para que se muestre en cada aplicación de escritorio cada vez que reinicie la realidad mixta.
 
-## <a name="my-desktop-app-only-shows-a-black-screen"></a>La aplicación de escritorio solo muestra una pantalla en negro.
+## <a name="my-desktop-app-only-shows-a-black-screen"></a>La aplicación de escritorio solo muestra una pantalla en negro
+
 Si su equipo tiene una GPU híbrida de NVIDIA, el problema puede deberse al dispositivo NVIDIA que ejecuta el runtimebroker.exe en la GPU discreta en lugar de la integrada. Para corregir este problema, siga estas instrucciones en "[Cómo crear la configuración de Optimus para un nuevo programa?](http://nvidia.custhelp.com/app/answers/detail/a_id/2615/~/how-do-i-customize-optimus-profiles-and-settings%3F)". para agregar C:\windows\system32\runtimebroker.exe y forzarlo a que se ejecute en el procesador de "gráficos integrados". 
 
 ## <a name="my-wi-fi-slows-down-when-im-using-windows-mixed-reality"></a>Mi Wi-Fi se ralentiza cuando utilizo Windows Mixed Reality.
 
 Si usa una conexión Wi-Fi de 2,4 GHz, los controladores de movimiento pueden ralentizar la red Wi-Fi. Pruebe una de las siguientes opciones:
-* Cambie a una conexión Wi-Fi 5 GHz, si hay alguna disponible. [Más información](https://support.microsoft.com/en-us/help/4000461).
-* Use un adaptador Bluetooth independiente para conectar sus controladores de movimiento al equipo. Consulte [adaptadores recomendados](https://support.microsoft.com/en-us/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines).
+
+* Cambie a una conexión Wi-Fi 5 GHz, si hay alguna disponible. [Obtenga más información](https://support.microsoft.com/help/4000461).
+* Use un adaptador Bluetooth independiente para conectar sus controladores de movimiento al equipo. Consulte [adaptadores recomendados](https://support.microsoft.com/help/4039260/windows-10-mixed-reality-pc-hardware-guidelines).
 
 ## <a name="i-got-a-message-that-said-to-plug-in-and-charge-my-pc-why"></a>Aparece un mensaje que indica que se ha incorporado el equipo. ¿Por qué?
 
-Si usa un equipo portátil, Windows Mixed Reality funciona mejor cuando el equipo está totalmente cargado y conectado. 
+Si usa un equipo portátil, Windows Mixed Reality funciona mejor cuando el equipo está totalmente cargado y conectado.
 
 ## <a name="what-is-the-experience-options-setting"></a>¿Cuál es la configuración de opciones de experiencia?
 
@@ -75,9 +80,10 @@ Esta opción de configuración ( **configuración > la realidad mixta > las opci
 * 60Hz: establece la frecuencia de actualización en 60 Hz y desactiva ciertas características, como captura de vídeo y vista previa en el portal de realidad mixta.
 * 90Hz: establece la frecuencia de actualización en 90Hz.
 
-## <a name="what-languages-are-supported-in-windows-mixed-reality"></a>¿Qué idiomas se admiten en Windows Mixed Reality?
+## <a name="what-languages-are-supported-in-windows-mixed-reality"></a>Qué idiomas se admiten en Windows Mixed Reality
 
 Windows Mixed Reality está disponible en los idiomas siguientes:
+
 * Chino simplificado (China)
 * Inglés (Australia)
 * Inglés (Canadá)
