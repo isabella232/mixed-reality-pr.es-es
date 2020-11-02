@@ -2,6 +2,8 @@
   href: development.md
 - name: Azure Cloud Services
   href: mixed-reality-cloud-services.md
+- name: Introducción al aprendizaje de Mixed Reality
+  href: mr-learning-overview.md
 - name: Instalar las herramientas
   href: install-the-tools.md
 - name: Migración de aplicaciones
