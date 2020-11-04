@@ -7,12 +7,12 @@ ms.date: 08/04/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, realidad mixta, desarrollo, introducción, nuevo proyecto, migración, funcionalidad, cámara, simulación, emulación, documentación
-ms.openlocfilehash: ed6e3482194b17ec3b6dfa2abe309f3519c64662
-ms.sourcegitcommit: 9ab467e36d7d9fad51b0e93a56038a6421a7b09d
+ms.openlocfilehash: 006814c17d7e2e7c343f28b83de845674c079a95
+ms.sourcegitcommit: 4bb5544a0c74ac4e9766bab3401c9b30ee170a71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91980316"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92638572"
 ---
 # <a name="unity-development-overview"></a>Introducción al desarrollo de Unity
 
@@ -21,7 +21,7 @@ ms.locfileid: "91980316"
 La forma más rápida de crear una [aplicación de realidad mixta](../../design/app-views.md) en [Unity](https://unity.com) es mediante Mixed Reality Toolkit. Si no está familiarizado con Unity, le recomendamos que explore los [tutoriales](https://unity3d.com/learn/tutorials) de nivel principiante en la plataforma de aprendizaje de Unity antes de continuar. También puede resultarle útil visitar la exhaustiva tienda [Asset Store](https://www.assetstore.unity3d.com/) y los [foros de realidad mixta de Unity](https://forum.unity3d.com/forums/hololens.102/) a fin de interactuar con la comunidad en línea que crea aplicaciones de realidad mixta. Nunca se sabe qué recursos o soluciones interesantes pueden encontrarse allí. Cuando esté listo para empezar a usar MRTK, diríjase a los puntos de control de desarrollo siguientes.
 
 > [!IMPORTANT]
-> Eche un vistazo a nuestras **[guías de migración](../porting-apps/porting-guides.md)** si tiene un proyecto de Unity existente que quiere llevar a HoloLens 2. Contamos con guías para los proyectos que usan HTK, MRTK v1, SteamVR o que se desarrollaron para cascos envolventes, como Oculus Rift o HTC Vive.
+> Eche un vistazo a nuestras **[guías de migración](../porting-apps/porting-overview.md)** si tiene un proyecto de Unity existente que quiere llevar a HoloLens 2. Contamos con guías para los proyectos que usan HTK, MRTK v1, SteamVR o que se desarrollaron para cascos envolventes, como Reverb G2, Oculus Rift o HTC Vive.
 
 ## <a name="development-checkpoints"></a>Puntos de control de desarrollo
 
