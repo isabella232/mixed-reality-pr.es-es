@@ -6,22 +6,27 @@ ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: WebXR, WinMR, WebAR, WebVR, WindowsMixedReality, HoloLens, Windows Mixed Reality, Web VR, Web XR, Web Mr, ar website, 360, 360 video, 360 videos, 360 Photo, 360 photos, 360 Content, Web inmersivo, immersiveweb, IW
-ms.openlocfilehash: 01e6cd44e9879cd7fd9b11e178134eaf364cc53c
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: b72d4968e59e3e631138b1ecfd17ca9bbdd95c84
+ms.sourcegitcommit: 8fd127aff85b77778bd7a75c5ec5215d27ecf21a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91695155"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "93416876"
 ---
 # <a name="webxr-overview"></a>Información general de WebXR
 
 ## <a name="what-is-webxr"></a>Qué es WebXR
 
-La **API de dispositivo WebXR** es para tener acceso a dispositivos de **realidad virtual (VR)** y de **realidad aumentada (ar)** , incluidos los **sensores** y las **pantallas montadas** por el cabezal en la **Web** . WebXR API de dispositivo está disponible actualmente en Microsoft Edge y Chrome versión 79 y versiones posteriores admite WebXR como valor predeterminado. Puede comprobar el estado de compatibilidad más reciente del explorador para WebXR en [Caniuse.com](https://caniuse.com/#search=webxr).
+La **API de dispositivo WebXR** es para tener acceso a dispositivos de **realidad virtual (VR)** y de **realidad aumentada (ar)** , incluidos los **sensores** y las **pantallas montadas** por el cabezal en la **Web**. WebXR API de dispositivo está disponible actualmente en Microsoft Edge y Chrome versión 79 y versiones posteriores admite WebXR como valor predeterminado. Puede comprobar el estado de compatibilidad más reciente del explorador para WebXR en [Caniuse.com](https://caniuse.com/#search=webxr).
 
 Obtenga más información sobre [Windows Mixed Reality y la nueva Microsoft Edge en la](https://docs.microsoft.com/windows/mixed-reality/new-microsoft-edge#introducing-the-new-microsoft-edge)sección [novedades](https://docs.microsoft.com/windows/mixed-reality/mrtk-porting-guide) .
 
 ## <a name="viewing-webxr"></a>Ver WebXR
+
+> [!IMPORTANT]
+> Microsoft Edge (heredado) solo admite WebVR, una API desusada que no está disponible en los exploradores actuales. Sin embargo, el nuevo **[Explorador Edge basado en cromo](../../whats-new/new-microsoft-edge.md)** es compatible con WebXR y está disponible para el prototipo de VR en Windows Mixed Reality. WebVR no estará disponible en el nuevo explorador Edge basado en cromo.
+> 
+> Si está buscando una forma de prototipo de WebXR en HoloLens 2 en la actualidad, consulte la [realidad de Firefox](https://mixedreality.mozilla.org/firefox-reality/).
 
 Para probar si el explorador admite WebXR, puede ir a los [ejemplos de WebXR](https://immersive-web.github.io/webxr-samples/) en el explorador.
 
