@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/25/2020
 ms.topic: article
 keywords: HoloLens, Windows Mixed Reality, marco holográfica, campo de vista
-ms.openlocfilehash: 516d9255fbc8067f42e17125d41240c9ba49a33b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 649cacfaf40f226a84f1b9b928cb47e468f3f146
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692950"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340643"
 ---
 # <a name="holographic-frame"></a>Marco holográfico
 
@@ -21,7 +21,7 @@ Los usuarios ven el mundo de la realidad mixta a través de una ventanilla recta
 
 A menudo, los diseñadores sienten la necesidad de limitar el ámbito de su experiencia a lo que el usuario puede ver de inmediato, sacrificando el escalado real para asegurarse de que el usuario ve un objeto en su totalidad. De igual forma, los diseñadores con aplicaciones complejas suelen sobrecargar el fotograma holográfica con contenido, abrumar a los usuarios con interacciones difíciles e interfaces abarrotadas. No es necesario que los diseñadores que crean contenido de realidad mixta limiten su experiencia directamente frente al usuario y en su vista inmediata. Si se asigna el mundo físico alrededor del usuario, todas estas superficies deben considerarse un lienzo potencial para interacciones y contenido digital. Un diseño adecuado de las interacciones y el contenido de una experiencia debe animar al usuario a desplazarse por el espacio, dirigir su atención al contenido clave y ayudar a ver todo el potencial de la realidad mixta.
 
-Quizás la técnica más importante para animar el movimiento y la exploración dentro de una aplicación consiste en **permitir que los usuarios se ajusten a la experiencia** . Proporcione a los usuarios un breve período de tiempo de ' tarea ' sin el dispositivo. Esto puede ser tan sencillo como colocar un objeto en el espacio y permitir a los usuarios desplazarse por él o narrar una introducción a la experiencia. Este tiempo debe ser gratuito de cualquier tarea crítica o de gestos específicos (como el punteo aéreo), en su lugar para permitir que los usuarios puedan ver el contenido a través del dispositivo antes de requerir la interactividad o avanzar por las fases de la aplicación. Si se trata de la primera vez que el usuario tiene el dispositivo, esto es especialmente importante, ya que se siente cómodo viendo el contenido a través del marco holográfica y la naturaleza de los hologramas.
+Quizás la técnica más importante para animar el movimiento y la exploración dentro de una aplicación consiste en **permitir que los usuarios se ajusten a la experiencia**. Proporcione a los usuarios un breve período de tiempo de ' tarea ' sin el dispositivo. Esto puede ser tan sencillo como colocar un objeto en el espacio y permitir a los usuarios desplazarse por él o narrar una introducción a la experiencia. Este tiempo debe ser gratuito de cualquier tarea crítica o de gestos específicos (como el punteo aéreo), en su lugar para permitir que los usuarios puedan ver el contenido a través del dispositivo antes de requerir la interactividad o avanzar por las fases de la aplicación. Si se trata de la primera vez que el usuario tiene el dispositivo, esto es especialmente importante, ya que se siente cómodo viendo el contenido a través del marco holográfica y la naturaleza de los hologramas.
 
 ### <a name="large-objects"></a>Objetos grandes
 
@@ -139,7 +139,14 @@ Como experiencia envolvente, se recomienda que estos usuarios examinen, moviendo
 
 La representación realista de los rumores proporcionó un punto focal eficaz, junto con técnicas sutiles para convertir los rumores al usuario como si estuviera allí, hablando. A medida que el usuario se mueve sobre la experiencia, los zumbidos pasarán a un umbral antes de volver a un estado neutro si el usuario se mueve demasiado allá de la periferia. Si el usuario mira por los rumores por completo (por ejemplo, para ver algo en otro lugar de la escena) y, a continuación, vuelve a rumores, la posición direccional del narrador volverá a centrarse en el usuario. Las técnicas como esta proporcionan una gran sensación de inmersión y creación de un punto focal dentro del marco holográfica, lo que reduce el movimiento excesivo y promueve la [comodidad del usuario](comfort.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="next-discovery-checkpoint"></a>Siguiente punto de comprobación de detección
+
+Si está siguiendo el [viaje de detección](../discover/get-started-with-mr.md) que hemos diseñado, está en medio de explorar los aspectos básicos de la realidad mixta. Desde aquí, puede continuar con el siguiente tema básico: 
+
+> [!div class="nextstepaction"]
+> [Hacer que objetos holográficos parezcan reales (asignación espacial)](../design/spatial-mapping.md)
+
+## <a name="see-also"></a>Vea también
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [Comodidad](comfort.md)
 * [Escala](scale.md)

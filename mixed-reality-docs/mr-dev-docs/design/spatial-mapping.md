@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: asignación espacial, HoloLens, realidad mixta, reconstrucción superficial, malla
-ms.openlocfilehash: 83c235cb7a5111be2b7e01d6c5864c1d06e9c6dc
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 6ca545327e412eaba5ee79959dfa9d01380b18c6
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692610"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340673"
 ---
 # <a name="spatial-mapping"></a>Asignación espacial
 
@@ -256,9 +256,9 @@ Cada aplicación que utiliza la asignación espacial debe considerar la posibili
 
 La naturaleza de esta experiencia de análisis puede variar en gran medida en función de las necesidades de cada aplicación, pero dos principios principales deben guiar su diseño.
 
-En primer lugar, **la comunicación clara con el usuario es la principal preocupación** . El usuario siempre debe tener en cuenta si se cumplen los requisitos de la aplicación. Cuando no se cumplan, se debe aclarar inmediatamente al usuario por qué es así y se debe llevar a cabo rápidamente para realizar la acción adecuada.
+En primer lugar, **la comunicación clara con el usuario es la principal preocupación**. El usuario siempre debe tener en cuenta si se cumplen los requisitos de la aplicación. Cuando no se cumplan, se debe aclarar inmediatamente al usuario por qué es así y se debe llevar a cabo rápidamente para realizar la acción adecuada.
 
-En segundo lugar, **las aplicaciones deben intentar lograr un equilibrio entre la eficacia y la confiabilidad** . Cuando sea posible hacerlo de manera **confiable** , las aplicaciones deben analizar automáticamente los datos de asignación espacial para ahorrar tiempo al usuario. Cuando no es posible hacerlo de manera confiable, las aplicaciones deben permitir que el usuario proporcione rápidamente la aplicación con la información adicional que requiere.
+En segundo lugar, **las aplicaciones deben intentar lograr un equilibrio entre la eficacia y la confiabilidad**. Cuando sea posible hacerlo de manera **confiable** , las aplicaciones deben analizar automáticamente los datos de asignación espacial para ahorrar tiempo al usuario. Cuando no es posible hacerlo de manera confiable, las aplicaciones deben permitir que el usuario proporcione rápidamente la aplicación con la información adicional que requiere.
 
 Para ayudar a diseñar la experiencia de examen adecuada, tenga en cuenta cuál de las siguientes posibilidades es aplicable a su aplicación:
 
@@ -369,7 +369,14 @@ Estos son algunos ejemplos de los diferentes tipos de procesamiento de mallas qu
 * Para que las mallas de superficie se orienten correctamente, cada GameObject debe estar activo antes de enviarse a SurfaceObserver para que se construya su malla. De lo contrario, las mallas se mostrarán en el espacio, pero girarán en ángulos extraños.
 * El GameObject que ejecuta el script que se comunica con SurfaceObserver debe establecerse en el origen. De lo contrario, todos los GameObjects que cree y envíe a SurfaceObserver para que sus mallas se construyan tendrán un desplazamiento igual al desplazamiento del objeto primario Game. Esto puede hacer que las mallas muestren varios medidores, lo que hace que sea muy difícil depurar lo que está ocurriendo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="next-discovery-checkpoint"></a>Siguiente punto de comprobación de detección
+
+Si está siguiendo el [viaje de detección](../discover/get-started-with-mr.md) que hemos diseñado, está en medio de explorar los aspectos básicos de la realidad mixta. Desde aquí, puede continuar con el siguiente tema básico: 
+
+> [!div class="nextstepaction"]
+> [Sugerir la escala de un objeto (escala)](../design/scale.md)
+
+## <a name="see-also"></a>Vea también
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Asignación espacial en DirectX](../develop/native/spatial-mapping-in-directx.md)
 * [Asignación espacial en Unity](../develop/unity/spatial-mapping-in-unity.md)

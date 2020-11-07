@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, caso práctico, visión, escenarios
-ms.openlocfilehash: 9e142d72866079e34e6f4a8df78b79d6f846275e
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: e08026dbb490f8581118b1bf6351231eeffba92a
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693139"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340683"
 ---
 # <a name="case-study---the-pursuit-of-more-personal-computing"></a>Caso práctico: el logro de más informática personal
 
@@ -148,14 +148,26 @@ El entretenimiento es en muchas formas de insertar los límites de la realidad m
 
 ## <a name="start-building-today"></a>Empiece a crear hoy mismo
 
-Es difícil decir cuál será el futuro de la realidad mixta en lo que se refiere a los consumidores, pero se centrará en los problemas únicos, en la obtención de un hardware real y en **la experimentación *actual* con la intersección entre la realidad mixta, la voz y el AI** . Microsoft se acaba de empezar a trabajar con la realidad mixta, pero aprender de los éxitos que han realizado las empresas hoy le ayudará a crear las experiencias de mañana.
+Es difícil decir cuál será el futuro de la realidad mixta en lo que se refiere a los consumidores, pero se centrará en los problemas únicos, en la obtención de un hardware real y en **la experimentación *actual* con la intersección entre la realidad mixta, la voz y el AI**. Microsoft se acaba de empezar a trabajar con la realidad mixta, pero aprender de los éxitos que han realizado las empresas hoy le ayudará a crear las experiencias de mañana.
+
+## <a name="next-discovery-checkpoint"></a>Siguiente punto de comprobación de detección
+
+Si está siguiendo el [viaje de detección](../discover/get-started-with-mr.md) que hemos diseñado, está en medio de explorar los aspectos básicos de la realidad mixta. Desde aquí, puede continuar con el siguiente tema básico: 
+
+> [!div class="nextstepaction"]
+> [Dispositivo envolvente, ergonómico, instintivo y sin cables](https://www.microsoft.com//hololens/hardware)
+
+O salten experiencias principales de realidad mixta:
+
+> [!div class="nextstepaction"]
+> [Preservar la comodidad del usuario (confort)](../design/comfort.md)
 
 ## <a name="about-the-author"></a>Acerca del autor
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60" padding-left="0px"><img alt="Picture of Mark Vitazko" width="60" height="60" src="images/mark-vitazko.jpg"></td>
-<td style="border-style: none"><b>Marcar Vitazko</b><br>Diseñador de la experiencia del usuario @Microsoft</td>
+<td style="border-style: none"><b>Marcar Vitazko</b><br>Diseñador de experiencias de usuario @Microsoft</td>
 </tr>
 </table>
  

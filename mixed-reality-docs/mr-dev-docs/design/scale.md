@@ -6,12 +6,12 @@ ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, estilo, diseño
-ms.openlocfilehash: a9a02d681986df3d73c7990fc975e659e5326981
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 7d35da2d86d8d3b7f444974d87e5aa10e58ed2c8
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691567"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340663"
 ---
 # <a name="scale"></a>Escala
 
@@ -80,7 +80,19 @@ Sin embargo, esto puede crear algunos artefactos posibles en la experiencia:
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="next-discovery-checkpoint"></a>Siguiente punto de comprobación de detección
+
+Si está siguiendo el [viaje de detección](../discover/get-started-with-mr.md) que hemos diseñado, está al final de su incursión inicial en bases de realidad mixta. Puede comprobar qué asociados del sector están haciendo con la realidad mixta en el mundo real: 
+
+> [!div class="nextstepaction"]
+> [Observa cómo usan los asociados del sector la realidad mixta](../discover/get-started-with-mr.md#see-how-industry-partners-are-using-mixed-reality)
+
+O continúe con el recorrido del diseño:
+
+> [!div class="nextstepaction"]
+> [Inicio del recorrido del diseño](../design/design.md)
+
+## <a name="see-also"></a>Vea también
 * [Color, luz y materiales](../color,-light-and-materials.md)
 * [Tipografía](typography.md)
 * [Diseño de sonido espacial](spatial-sound-design.md)
