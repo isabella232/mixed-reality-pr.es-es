@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, hologramas, diseño, interacción
-ms.openlocfilehash: 5e0ef2768b6e79136f8144492d6825107a6ed88e
-ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
+ms.openlocfilehash: c26cbbaa011c9e7ec92ea45dfd9491dbd178a025
+ms.sourcegitcommit: 83c9373fe5b2e07cdab921b6cab3fdd418307003
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94340703"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94386241"
 ---
 # <a name="what-is-a-hologram"></a>¿Qué es un holograma?
 
@@ -131,14 +131,8 @@ Los hologramas también pueden ser ocluidosdos por objetos del mundo real. Por e
 Si está siguiendo el [viaje de detección](get-started-with-mr.md) que hemos diseñado, está en medio de explorar los aspectos básicos de la realidad mixta. Desde aquí, puede continuar con el siguiente tema básico: 
 
 > [!div class="nextstepaction"]
-> [Una nueva visión del trabajo](https://dynamics.microsoft.com//mixed-reality/overview/)
-
-O salte a:
-
-> [!div class="nextstepaction"]
-> [Intento de conseguir una informática más personal](../out-of-scope/case-study-the-pursuit-of-more-personal-computing.md)
+> [Ampliar el proceso de diseño](case-study-expanding-the-design-process-for-mixed-reality.md)
 
 ## <a name="see-also"></a>Vea también
-* [Ampliar el proceso de diseño](case-study-expanding-the-design-process-for-mixed-reality.md)
 * [Sonido espacial](../design/spatial-sound.md)
 * [Color, luz y materiales](../color,-light-and-materials.md)

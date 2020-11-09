@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 04/08/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, proceso, caso práctico
-ms.openlocfilehash: ee6bf2ad9f76e25c678458ca00505a95b406bfc6
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: f08115879d09d0be7ef8cae12ea0a4c15991a576
+ms.sourcegitcommit: 83c9373fe5b2e07cdab921b6cab3fdd418307003
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293175"
+ms.lasthandoff: 11/09/2020
+ms.locfileid: "94386251"
 ---
 # <a name="thinking-differently-for-mixed-reality"></a>Pensamiento diferente para la realidad mixta
 Cuando Microsoft lanzó la HoloLens (1ª generación) a una audiencia de desarrolladores ansiosos en 2016, el equipo ya se ha asociado con estudios dentro y fuera de Microsoft para crear las experiencias de inicio del dispositivo. Estos equipos aprendieron con la práctica y la búsqueda de oportunidades y retos en el nuevo campo del diseño de realidad mixta.
@@ -128,6 +128,13 @@ Los sencillos suministros de arte económico son esenciales para proporcionar a 
 * Lápices
 * Nitidez
 
-## <a name="see-also"></a>Consulte también
+## <a name="next-discovery-checkpoint"></a>Siguiente punto de comprobación de detección
+
+Si está siguiendo el [viaje de detección](get-started-with-mr.md) que hemos diseñado, está en medio de explorar los aspectos básicos de la realidad mixta. Desde aquí, puede continuar con el siguiente tema básico: 
+
+> [!div class="nextstepaction"]
+> [Comodidad del usuario](../design/comfort.md)
+
+## <a name="see-also"></a>Vea también
 * [Caso práctico: mi primer año en el equipo de diseño de HoloLens](../out-of-scope/case-study-my-first-year-on-the-hololens-design-team.md)
 * [Caso práctico: AfterNow de procesos, creación de prototipos y compilación](https://developer.microsoft.com/windows/mixed-reality/case_study_-_afternow's_process_-_envisioning,_prototyping,_building)
