@@ -7,12 +7,12 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidad mixta, detectar, distribuir, índice, página de aterrizaje, diseño, desarrollo, tutoriales, aplicaciones de ejemplo, aspectos básicos, casos prácticos, recursos, procedimientos de HoloLens, proyectos de código abierto, conceptos principales, interacción
-ms.openlocfilehash: 7333163a01496f41c4cb3cd98f54012e5c58a8d4
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: 2ee127b05a8ad88e49eda6d088f84e895aeaf511
+ms.sourcegitcommit: 4e618948e1e2e0baf4bb3e8b67513fa7716aa815
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293129"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94361736"
 ---
 # <a name="start-designing-and-prototyping"></a>Empezar a diseñar y a crear prototipos
 
@@ -88,17 +88,17 @@ Nunca se realiza un trabajo de diseñadores, especialmente cuando se aprende a c
         Aprende a crear experiencias interactivas con Unity. Aprende con la práctica, de principio a fin.
     :::column-end:::    
     :::column:::    
-        [![Mixed Reality Toolkit (MRTK)](images/Final_mrtk-small_logo.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
+        [![Mixed Reality Toolkit (MRTK)](images/74-12.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
         **[Mixed Reality Toolkit (MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity)**<br>  
         Con la interacción espacial y los bloques de creación de la interfaz de usuario, pon en marcha el diseño y desarrollo de la realidad mixta con Unity.   
     :::column-end:::
     :::column:::    
-        [![Laboratorios de diseño de realidad mixta](images/Final_mrdl_logo.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
+        [![Laboratorios de diseño de realidad mixta](images/74-13.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
         **[Laboratorios de diseño de realidad mixta](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)**<br>  
         Obtén aplicaciones de ejemplo que te muestren cómo usar los bloques de creación de MRTK para crear experiencias de realidad mixta.
     :::column-end:::        
     :::column:::    
-        [![Microsoft Maquette](images/Final_maquette_logo.png)](https://www.maquette.ms/)<br>
+        [![Microsoft Maquette](images/74-14.png)](https://www.maquette.ms/)<br>
         **[Microsoft Maquette](https://www.maquette.ms/)**<br>  
         Diseño para VR. Microsoft Maquette hace que la creación de prototipos espaciales sea fácil, rápida y envolvente. 
     :::column-end:::    
@@ -112,22 +112,22 @@ Nunca se realiza un trabajo de diseñadores, especialmente cuando se aprende a c
 
 :::row:::
     :::column:::
-       [![Comprender los conceptos básicos](images/icon-lightbulb.png)](../discover/get-started-with-mr.md#understand-the-basics)<br>
+       [![Comprender los conceptos básicos](images/74-15.png)](../discover/get-started-with-mr.md#understand-the-basics)<br>
         **[Comprender los conceptos básicos](../discover/get-started-with-mr.md#understand-the-basics)**<br>
         Obtén una mejor comprensión de lo que define la realidad mixta y cómo se usa.
     :::column-end:::
     :::column:::
-        [![Asistir a un evento](images/icon-calendar.jpg)](../whats-new/sf-academy-events.md)<br>
+        [![Asistir a un evento](images/74-16.png)](../whats-new/sf-academy-events.md)<br>
          **[Asistir a un evento](../whats-new/sf-academy-events.md)**<br>
         Observa el hardware y obtén un tutorial práctico para crear tu primera aplicación de HoloLens 2.
     :::column-end:::
     :::column:::
-        [![Instalar las herramientas](images/icon-design.png)](../develop/install-the-tools.md)<br>
+        [![Instalar las herramientas](images/74-17.png)](../develop/install-the-tools.md)<br>
          **[Instalar las herramientas](../develop/install-the-tools.md)**<br>
         Usa la lista de comprobación de instalación para obtener las herramientas que necesitas para crear aplicaciones para HoloLens y realidad mixta.
     :::column-end:::
     :::column:::
-        [![Empezar a desarrollar](images/icon-developer.png)](../develop/development.md)<br>
+        [![Empezar a desarrollar](images/74-18.png)](../develop/development.md)<br>
         **[Empezar a desarrollar](../develop/development.md)**<br>
         Elige un método de desarrollo en función de tu nivel de aptitud, estilo de trabajo o preferencia de plataforma.
     :::column-end:::
