@@ -22,7 +22,7 @@
       href: unity/unity-development-overview.md
     - name: Introducción
       items:
-        - name: Introducción a Mixed Reality Toolkit v2
+        - name: Introducción a MRTK
           href: unity/mrtk-getting-started.md
         - name: Configuración del proyecto de Unity para Windows Mixed Reality
           href: unity/configure-unity-project.md
@@ -170,7 +170,7 @@
               href: unity/tutorials/mr-azure-301.md
     - name: Bloques de creación principales
       items:
-        - name: "MRTK\_(101): cómo usar Mixed Reality Toolkit Unity para interacciones básicas"
+        - name: 'MRTK 101: Creación de interacciones básicas con Mixed Reality Toolkit Unity'
           href: unity/mrtk-101.md
         - name: Cámara en Unity
           href: unity/camera-in-unity.md
