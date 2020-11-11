@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, rendimiento
 appliesto:
 - Windows 10
-ms.openlocfilehash: 82f9accc8e24574faf7c826aff1908bea7350b08
-ms.sourcegitcommit: feceb21018ce1d966188a34bd1faeddfdc1b9544
+ms.openlocfilehash: c24f6766cab242332e79a0c5cf5ed3cd92c4687d
+ms.sourcegitcommit: f459c7deb254409fd5db3967bcc875bcbc367e77
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93049481"
+ms.lasthandoff: 11/10/2020
+ms.locfileid: "94482403"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>Preguntas más frecuentes de la reverberación de HP G2
 
@@ -73,3 +73,16 @@ Aunque muchos juegos funcionarán inmediatamente con los controladores de movimi
 - Se muestra un modelo incorrecto: la corrección requiere una actualización del juego. Por lo general, esto no bloquea ninguna característica del juego, pero podría provocar confusión o incluso artefactos visuales.
 - Dependencia en el panel táctil o más general en el diseño de entrada del controlador. SteamVR permite crear enlaces personalizados para evitar este tipo de problema:
     - Windows Mixed Reality para SteamVR incluye enlaces personalizados para algunos juegos. Estos enlaces se usan automáticamente cuando se inicia el juego y no se necesita ninguna acción del usuario.
+
+## <a name="my-steamvr-games-dont-appear-to-work-correctly-with-my-hp-motion-controllers"></a>Mis juegos de SteamVR no parecen funcionar correctamente con los controladores de movimiento de HP
+
+Mientras los desarrolladores trabajan para actualizar sus juegos para la compatibilidad con HP Motion Controller, hemos proporcionado enlaces de controlador personalizados para muchos de los juegos más populares en vapor. Con "Windows Mixed Reality for SteamVR" totalmente actualizado a la versión 1.2.444, estos enlaces se deben recoger automáticamente cuando se ejecuta el juego. Sin embargo, si el juego no parece registrar las acciones en este momento, puede buscar manualmente perfiles de enlace personalizados mediante el menú de configuración de SteamVR.
+Para
+
+- Abra el menú SteamVR presionando el botón de menú del controlador de movimiento derecho.
+- Seleccione el icono "configuración" en la esquina inferior derecha del menú SteamVR
+- Selección de la pestaña "controladores"
+- Selección de la opción "administrar enlaces de controlador"
+
+Desde aquí puede cambiar el enlace del controlador activo a "personalizado", que abrirá la opción para probar los enlaces de juegos de la comunidad.
+Si aún no se ha compartido ningún enlace de juego personalizado para este juego (o si no está totalmente satisfecho con los que ha intentado), también puede crear sus propios enlaces de juego personalizados e incluso ayudar al resto de la comunidad compartiendo estos archivos después de algunas sesiones de juego.
