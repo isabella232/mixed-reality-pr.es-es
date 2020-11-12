@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: 7d840c3f4f12f679dc7ca7622f906f3282ec785b
-ms.sourcegitcommit: 83c9373fe5b2e07cdab921b6cab3fdd418307003
+ms.openlocfilehash: af9055c4e6074c4d4b10b4f0a6ac135c858b57a7
+ms.sourcegitcommit: 520c69eb761ad6083b36f448bbcfab89e343e40d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94386426"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94549118"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>Días de desarrollo de realidad mixta Japón
 
@@ -29,37 +29,35 @@ Esperamos que se una a nosotros en Mixed Reality dev Day. Prepárese para oír a
 
 ## <a name="registration"></a>Registro
 
-[Regístrese ahora](https://mixedrealityprod.microsoftcrmportals.com/MRDDRegistration/)
-
-Estamos muy entusiasmados por abrir el registro de los días de desarrollo de la realidad mixta en Japón.  El evento es gratuito y se mantiene en línea en los eventos en directo de Microsoft Teams.  Solicitamos que los asistentes se registren para que podamos enviar actualizaciones de correo electrónico a medida que el evento se acerque y para que pueda participar en los elementos interactivos del evento.
-
+Próximamente
 
 ## <a name="schedule---subject-to-change"></a>Programación: sujeto a cambio
 
 **Todas las horas son la hora estándar de Japón (UTC + 9)** 
 
 
+
 ### <a name="december-16th"></a>16 de diciembre
 |**Time**|**Título de la sesión**|**Participante**|**Lenguaje**|**Level**|
 |---------|---------|---------|---------|---------|
-|10: a.m.-10:50am|Apertura del discurso|TBD|JA/EN|N/D|
+|10: a.m.-10:50am|Apertura del discurso|TBD|JA/EN|No aplicable|
 |10:50am-11: a.m.|**Eliminar**||||
-|11: a.m.-11:25am|*Sesión 1* ¿Qué es la realidad mixta?¿Qué puede hacer con HL2?MR Tech Stack|TBD|JA|100|
-|11:9:30-11:55am|*Sesión 2* Actualización del momento del mercado de Japón en los casos prácticos de clientes y asociados|TBD|JA|200|
-|12: p.m.-12:50pm|*Sesión del almuerzo* Panel: análisis interactivo gratuito, Q y A, MRTK + Oculus Quest 2|TBD|JA|200|
+|11: a.m.-11:25am|*Sesión 1* ¿Qué es la realidad mixta?¿Qué puede hacer con HL2?MR Tech Stack|Atsushi Suzuki|JA|100|
+|11:9:30-11:55am|*Sesión 2* Actualización del momento del mercado de Japón en los casos prácticos de clientes y asociados|Tetsu Muranaka|JA|200|
+|12: p.m.-12:50pm|*Sesión del almuerzo* Panel: análisis interactivo gratuito, Q y A, MRTK + Oculus Quest 2|Madoka Chiyoda + MVP de Microsoft|JA|200|
 |12:50pm-1: p.m.|**Eliminar**||||
-|1: p.m.-1:25pm|*Sesión 3* Información general sobre el desarrollo de HoloLens 2|TBD|JA|200|
-|1: las 16:30-1:55pm|*Sesión 4* HoloLens 2 & MRTK v 2.5 (MRTK-Unity)|TBD|JA|300|
-|2: p.m.-2:20pm|*Sesión 5* Introducción a HoloLens 2 e inreal Engine (MRTK-nonreal)|TBD|ES|300|
-|2: las 16:30-2:55pm|*Sesión 6* Diseño de aplicaciones MR (procedimiento recomendado para crear la interfaz de usuario/UX para la aplicación HL2)|TBD|ES|300|
+|1: p.m.-1:25pm|*Sesión 3* Información general sobre el desarrollo de HoloLens 2|Madoka Chiyoda|JA|200|
+|1: las 16:30-1:55pm|*Sesión 4* HoloLens 2 & MRTK v 2.5 (MRTK-Unity)|Yoon Park|JA|300|
+|2: p.m.-2:20pm|*Sesión 5* Introducción a HoloLens 2 e inreal Engine (MRTK-nonreal)|Cameron Micka|ES|300|
+|2: las 16:30-2:55pm|*Sesión 6* Diseño de aplicaciones MR (procedimiento recomendado para crear la interfaz de usuario/UX para la aplicación HL2)|Daniel Escudero|ES|300|
 |2:55pm-3:13:15|**Eliminar**||||
 |3:13:15-3:40pm|*Sesión 7* Delimitadores de objeto de Azure|TBD|ES|300|
-|3:5:45-4:10pm|*Sesión 8* Representación remota de Azure|TBD|JA|300|
+|3:5:45-4:10pm|*Sesión 8* Representación remota de Azure|Atsushi Suzuki|JA|300|
 |4:13:15-4:40pm|*Sesión 9* Anclajes espaciales de Azure|TBD|ES|300|
-|4:5:45-5:10pm|*Sesión 10* Herramienta de bloqueo mundial|TBD|ES|300|
-|5:13:15-5:40pm|*Sesión 11* Análisis detallado de Azure Kinect DK, caso práctico|TBD|JA|400|
-|5:5:45-6: p.m.|Cierre|TBD|JA|NA|
-||||||
+<!--|4:5:45-5:10pm|*Sesión 10* Unity + PiXYZ|(Unity Japón)|JA|200|-->
+|4:5:45-5:10pm|*Sesión 10* DISCRECIÓN|TBD|JA|200|
+|5:13:15-5:40pm|*Sesión 11* Análisis detallado de Azure Kinect DK, caso práctico|Shinji Chiba|JA|400|
+|5:5:45-6: p.m.|Cierre|Madoka Chiyoda|JA|N/D|
 
 #### <a name="contributors-english-subtitle-reviewers"></a>Colaboradores (revisores de subtítulos en inglés)
 
