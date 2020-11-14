@@ -7,16 +7,16 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: realidad mixta, unity, tutorial, hololens, hololens 2, azure custom vision, azure cognitive services
 ms.localizationpriority: high
-ms.openlocfilehash: baf5ddb805e6bff6fd41d2fb7cc8ea64b55944e6
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 9a6cccf9c1a7d2547ed5ddacfc4841d2f4d1609b
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91700206"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353273"
 ---
 # <a name="3-integrating-azure-custom-vision"></a>3. Integración de Azure Custom Vision
 
-En este tutorial, aprenderá a usar **Azure Custom Vision** . Cargará un conjunto de fotos para asociarlo a un *objeto con seguimiento* , las cargará en el servicio **Custom Vision** y comenzará el proceso de entrenamiento. A continuación, usará el servicio para detectar el *objeto con seguimiento* al capturar las fotos de la fuente de la cámara web.
+En este tutorial, aprenderá a usar **Azure Custom Vision**. Cargará un conjunto de fotos para asociarlo a un *objeto con seguimiento* , las cargará en el servicio **Custom Vision** y comenzará el proceso de entrenamiento. A continuación, usará el servicio para detectar el *objeto con seguimiento* al capturar las fotos de la fuente de la cámara web.
 
 ## <a name="objectives"></a>Objetivos
 
@@ -26,7 +26,7 @@ En este tutorial, aprenderá a usar **Azure Custom Vision** . Cargará un conjun
 
 ## <a name="understanding-azure-custom-vision"></a>Descripción de Azure Custom Vision
 
-**Azure Custom Vision** forma parte de la familia **Cognitive Services** y se usa para entrenar clasificadores de imágenes. El clasificador de imágenes es un servicio de IA que usa el modelo entrenado para aplicar etiquetas coincidentes. Nuestra aplicación usará esta característica de clasificación para detectar *objetos con seguimiento* .
+**Azure Custom Vision** forma parte de la familia **Cognitive Services** y se usa para entrenar clasificadores de imágenes. El clasificador de imágenes es un servicio de IA que usa el modelo entrenado para aplicar etiquetas coincidentes. Nuestra aplicación usará esta característica de clasificación para detectar *objetos con seguimiento*.
 
 Más información sobre [Azure Custom Vision](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/home).
 
@@ -34,20 +34,20 @@ Más información sobre [Azure Custom Vision](https://docs.microsoft.com/azure/c
 
 Antes de empezar, tiene que crear un proyecto de Custom Vision, la manera más rápida es usar el portal web.
 
-Siga este [tutorial de inicio rápido](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier#choose-training-images) para configurar la cuenta y el proyecto hasta la sección *Carga y etiquetado de imágenes* .
+Siga este [tutorial de inicio rápido](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier#choose-training-images) para configurar la cuenta y el proyecto hasta la sección *Carga y etiquetado de imágenes*.
 
 > [!WARNING]
 > Para entrenar un modelo, debe tener al menos 2 etiquetas y 5 imágenes por etiqueta. Para usar esta aplicación, debe crear al menos una etiqueta con 5 imágenes, de modo que el proceso de entrenamiento no genere errores más adelante.
 
 ## <a name="preparing-the-scene"></a>Preparación de la escena
 
-En la ventana Proyecto, navega hasta la carpeta **Assets** > **MRTK.Tutorials.AzureCloudServices** > **Prefabs** > **Manager** .
+En la ventana Proyecto, navega hasta la carpeta **Assets** > **MRTK.Tutorials.AzureCloudServices** > **Prefabs** > **Manager**.
 
-![mr-learning-azure](images/mr-learning-azure/tutorial3-section4-step1-1.png)
+![Unity con la ventana Project (Proyecto) que muestra la ruta de acceso al objeto prefabricado ObjectDetectionManager](images/mr-learning-azure/tutorial3-section4-step1-1.png)
 
 Desde ahí, arrastre el recurso prefabricado **ObjectDetectionManager** hasta la jerarquía de la escena.
 
-![mr-learning-azure](images/mr-learning-azure/tutorial3-section4-step1-2.png)
+![Unity con los campos de configuración del componente de script ObjectDetectionManager que aparecen en Inspector](images/mr-learning-azure/tutorial3-section4-step1-2.png)
 
 En la ventana Hierarchy (Jerarquía), busque el objeto **ObjectDetectionManager** y selecciónelo.
 El recurso prefabricado **ObjectDetectionManager** contiene el componente **ObjectDetectionManager (script)** y, como puede ver en la ventana Inspector, depende de varios valores.
@@ -66,11 +66,11 @@ En el panel de [Custom Vision](https://www.customvision.ai/projects), abra el pr
 
 Ahora con **ObjectDetectionManager (script)** configurado correctamente, busque el objeto de **SceneController** en la jerarquía de escenas y selecciónelo.
 
-![mr-learning-azure](images/mr-learning-azure/tutorial3-section4-step1-3.png)
+![Unity con los campos de configuración del componente de script SceneController que aparecen en el Inspector](images/mr-learning-azure/tutorial3-section4-step1-3.png)
 
 Se ve que el campo *Object Detection Manager* (Administrador de detección de objetos) en el componente **SceneController** está vacío, arrastre **ObjectDetectionManager** desde la jerarquía hasta ese campo y guarde la escena.
 
-![mr-learning-azure](images/mr-learning-azure/tutorial3-section4-step1-4.png)
+![Unity con el componente de script SceneController configurado](images/mr-learning-azure/tutorial3-section4-step1-4.png)
 
 ## <a name="take-and-upload-images"></a>Toma y carga de imágenes
 
@@ -88,7 +88,7 @@ Una vez que tenga suficientes imágenes, haga clic en el botón **Train** (Entre
 
 ## <a name="detect-objects"></a>Detección de objetos
 
-Ahora puede poner a prueba el modelo entrenado; ejecute la aplicación y, en el *menú principal* haga clic en **Search Object** (Buscar objeto) y escriba el nombre del **objeto con seguimiento** en cuestión. Aparecerá **Object Card** (Tarjeta de objeto) y haga clic en el botón **Custom Vision** . Desde aquí, **ObjectDetectionManager** comenzará a tomar capturas de imagen en segundo plano desde la cámara, y el progreso se indicará en el menú. Apunte la cámara al objeto que usó para entrenar el modelo y verá que, después de un breve lapso, detectará el objeto.
+Ahora puede poner a prueba el modelo entrenado; ejecute la aplicación y, en el *menú principal* haga clic en **Search Object** (Buscar objeto) y escriba el nombre del **objeto con seguimiento** en cuestión. Aparecerá **Object Card** (Tarjeta de objeto) y haga clic en el botón **Custom Vision**. Desde aquí, **ObjectDetectionManager** comenzará a tomar capturas de imagen en segundo plano desde la cámara, y el progreso se indicará en el menú. Apunte la cámara al objeto que usó para entrenar el modelo y verá que, después de un breve lapso, detectará el objeto.
 
 ## <a name="congratulations"></a>Enhorabuena
 

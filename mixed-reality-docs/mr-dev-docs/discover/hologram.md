@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, hologramas, diseño, interacción
-ms.openlocfilehash: c26cbbaa011c9e7ec92ea45dfd9491dbd178a025
-ms.sourcegitcommit: 83c9373fe5b2e07cdab921b6cab3fdd418307003
+ms.openlocfilehash: f902639e66246c9184750ebc58dbad1c04b2bb5a
+ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94386241"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631473"
 ---
 # <a name="what-is-a-hologram"></a>¿Qué es un holograma?
 
@@ -72,7 +72,7 @@ Cuando tenga una ubicación concreta en la que desee un holograma, puede [coloca
 
 Algunos hologramas siguen al usuario en su lugar. Estas etiquetas a lo largo de los hologramas se colocan en relación con el usuario, independientemente de dónde se recorran. Incluso puede optar por un holograma y colocarlo en la pared una vez que llegue a otra habitación.
 
-**procedimientos recomendados**
+**Procedimientos recomendados**
 * Algunos escenarios pueden exigir que los hologramas se mantengan fácilmente reconocibles o visibles a lo largo de la experiencia. Hay dos enfoques de alto nivel para este tipo de posicionamiento. Vamos a llamarlos **"display-locked"** y **"Body-locked"**.
    * Mostrar el contenido bloqueado está "bloqueado" en la pantalla del dispositivo. Esto es complicado por una serie de motivos, entre los que se incluyen una sensación poco natural de "clingyness" que hace que muchos usuarios se sienten frustrados y desean "sacudirlos". En general, muchos diseñadores lo han descubierto mejor para evitar el contenido de bloqueo de pantalla.
    * El enfoque de cuerpo bloqueado es mucho más forgivable. El bloqueo de cuerpo es cuando un holograma está anclado al cuerpo del usuario o al vector de miración, pero se coloca en el espacio 3D alrededor del usuario. Muchas experiencias han adoptado un comportamiento de bloqueo de cuerpo en el que el holograma "sigue" a los usuarios mirados, lo que permite al usuario girar su cuerpo y desplazarse por el espacio sin perder el holograma. Incorporar un retraso ayuda a que el movimiento de hologramas parezca más natural. Por ejemplo, algunas interfaces de usuario principales del sistema operativo Holographic de Windows usan una variación en el bloqueo del cuerpo que sigue al mirador con un retraso suave y elástico mientras el usuario cambia la cabeza.
@@ -128,11 +128,8 @@ Los hologramas también pueden ser ocluidosdos por objetos del mundo real. Por e
 
 ## <a name="next-discovery-checkpoint"></a>Siguiente punto de comprobación de detección
 
-Si está siguiendo el [viaje de detección](get-started-with-mr.md) que hemos diseñado, está en medio de explorar los aspectos básicos de la realidad mixta. Desde aquí, puede continuar con el siguiente tema básico: 
+Si está siguiendo el [recorrido de detección](get-started-with-mr.md) hemos diseñado, está a mitad de explorar los aspectos básicos de la realidad mixta. Desde aquí, puede continuar con el siguiente tema básico: 
 
 > [!div class="nextstepaction"]
 > [Ampliar el proceso de diseño](case-study-expanding-the-design-process-for-mixed-reality.md)
 
-## <a name="see-also"></a>Vea también
-* [Sonido espacial](../design/spatial-sound.md)
-* [Color, luz y materiales](../color,-light-and-materials.md)

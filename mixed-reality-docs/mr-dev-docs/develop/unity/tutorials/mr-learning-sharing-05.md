@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales sobre las funcionalidades multiusuario: 5. Integración de Azure Spatial Anchors en una experiencia compartida'
-description: Completa este curso para aprender a implementar experiencias compartidas con varios usuarios en una aplicación de HoloLens 2.
+description: Siga este curso para aprender a usar Azure Spatial Anchors para anclar objetos en una aplicación de HoloLens 2 multiusuario compartida.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: fc8e20a9ddaa595db0a3d59975e7c785d01c0a6d
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 65672bad9a967e11e7feb7efc45759608e9c9e76
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91701613"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353433"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. Integración de Azure Spatial Anchors en una experiencia compartida
 
@@ -27,11 +27,11 @@ En este tutorial, aprenderás a integrar Azure Spatial Anchors (ASA) en la exper
 
 En la ventana Jerarquía, expande el objeto **SharedPlayground** y, a continuación, expande el objeto **TableAnchor** para exponer sus objetos secundarios:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section1-step1-1.png)
+![Unity con los objetos SharedPlayground y TableAnchor expandidos](images/mr-learning-sharing/sharing-05-section1-step1-1.png)
 
 En la ventana Proyecto, navegue hasta **Assets** (Recursos)  > **MRTK.Tutorials.MultiUserCapabilities** > carpeta **Prefabs** (Recursos prefabricados) y arrastre el elemento prefabricado **Buttons** para colocarlo encima del objeto secundario **TableAnchor** y agregarlo a la escena como elemento secundario del objeto TableAnchor:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section1-step1-2.png)
+![Unity con el objeto prefabricado Buttons recién agregado seleccionado](images/mr-learning-sharing/sharing-05-section1-step1-2.png)
 
 ## <a name="configuring-the-buttons-to-operate-the-scene"></a>Configuración de los botones para el funcionamiento de la escena
 
@@ -39,56 +39,56 @@ En esta sección, configurará una serie de eventos de botón que muestran los a
 
 En la ventana Jerarquía, expande el objeto **Button** y selecciona el primer objeto de botón secundario denominado **StartAzureSession** :
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section2-step1-1.png)
+![Unity con el objeto de botón StartAzureSession seleccionado](images/mr-learning-sharing/sharing-05-section2-step1-1.png)
 
 En la ventana Inspector, busca el componente **Interactable (Script)** (Interactivo [script]) y configura el evento **OnClick ()** como se indica a continuación:
 
-* En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor** .
+* En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor**.
 * En el menú desplegable **Ninguna función** , seleccione la función **AnchorModuleScript** > **StartAzureSession ()** .
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section2-step1-2.png)
+![Unity con el evento OnClick del botón StartAzureSession configurado](images/mr-learning-sharing/sharing-05-section2-step1-2.png)
 
 En la ventana Jerarquía, selecciona el segundo objeto de botón secundario denominado **CreateAzureAnchor** y, a continuación, en la ventana Inspector, busca el componente **Interactable (Script)** (Interactivo [script]) y configura el evento **OnClick ()** de la siguiente manera:
 
-* En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor** .
+* En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor**.
 * En el menú desplegable **Ninguna función** , seleccione la función **AnchorModuleScript** > **CreateAzureAnchor ()** .
-* En el nuevo campo **None (Game Object)** (Ninguno [objeto de juego]) que aparece, asigna el objeto **TableAnchor** .
+* En el nuevo campo **None (Game Object)** (Ninguno [objeto de juego]) que aparece, asigna el objeto **TableAnchor**.
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section2-step1-3.png)
+![Unity con el evento OnClick del botón CreateAzureAnchor configurado](images/mr-learning-sharing/sharing-05-section2-step1-3.png)
 
 En la ventana Jerarquía, selecciona el tercer objeto de botón secundario denominado **ShareAzureAnchor** y, a continuación, en la ventana Inspector, busca el componente **Interactable (Script)** (Interactivo [script]) y configura el evento **OnClick ()** de la siguiente manera:
 
-* En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor** .
+* En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor**.
 * En el menú desplegable **Ninguna función** , seleccione **SharingModuleScript** > función **ShareAzureAnchor ()** .
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section2-step1-4.png)
+![Unity con el evento OnClick del botón ShareAzureAnchor configurado](images/mr-learning-sharing/sharing-05-section2-step1-4.png)
 
 En la ventana Jerarquía, seleccione el cuarto objeto de botón secundario denominado **GetAzureAnchor** y, a continuación, en la ventana Inspector, busque el componente **Interactable (Script)** (Interactivo [script]) y configure el evento **OnClick ()** de la siguiente manera:
 
-* En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor** .
+* En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor**.
 * En el menú desplegable **Ninguna función** , seleccione **SharingModuleScript** > función **GetAzureAnchor ()** .
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section2-step1-5.png)
+![Unity con el evento OnClick del botón GetAzureAnchor configurado](images/mr-learning-sharing/sharing-05-section2-step1-5.png)
 
 ## <a name="connecting-the-scene-to-the-azure-resource"></a>Conexión de la escena al recurso de Azure
 
-En la ventana Jerarquía, expande el objeto **SharedPlayground** y, a continuación, selecciona el objeto **TableAnchor** .
+En la ventana Jerarquía, expande el objeto **SharedPlayground** y, a continuación, selecciona el objeto **TableAnchor**.
 
 En la ventana Inspector, busque el componente **Spatial Anchor Manager (Script)** (Administrador de anclaje espacial [script]) y configure la sección **Credenciales** con las credenciales de la cuenta de Azure Spatial Anchors que se creó como parte de los [requisitos previos](mr-learning-sharing-01.md#prerequisites) de esta serie de tutoriales:
 
 * En el campo **Spatial Anchors Account ID** (Id. de la cuenta de Spatial Anchors), pega el valor **Id. de cuenta** de la cuenta de Azure Spatial Anchors.
 * En el campo **Spatial Anchors Account ID** (Id. de la cuenta de Spatial Anchors), pega la **clave de acceso** primaria o secundaria de la cuenta de Azure Spatial Anchors.
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section3-step1-1.png)
+![Unity con Spatial Anchor Manager (Administrador de anclaje espacial) configurado](images/mr-learning-sharing/sharing-05-section3-step1-1.png)
 
 > [!TIP]
 > En lugar de configurar el id. y la clave de la cuenta de Spatial Anchors en la escena, puede establecerlos para todo el proyecto, lo que puede resultar ventajoso si tiene varias escenas con ASA. Para ello, en la ventana Proyecto, desplácese a Assets (Recursos) > AzureSpatialAnchors.SDK > Resources (Recursos) > recurso **SpatialAnchorConfig** , y después establezca los valores en la ventana Inspector.
 
-En la ventana Jerarquía, seleccione el objeto **TableAnchor** . A continuación, en la ventana Inspector, busque el componente **Anchor Module (Script)** (Módulo de anclaje [script]) y configúrelo de la manera siguiente:
+En la ventana Jerarquía, seleccione el objeto **TableAnchor**. A continuación, en la ventana Inspector, busque el componente **Anchor Module (Script)** (Módulo de anclaje [script]) y configúrelo de la manera siguiente:
 
 * Cambie algunos dígitos en el campo **Public Sharing Pin** (PIN de uso compartido público), de modo que el PIN sea único para el proyecto.
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section3-step1-2.png)
+![Unity con Anchor Module Script (Script del módulo de anclaje) configurado](images/mr-learning-sharing/sharing-05-section3-step1-2.png)
 
 Con el objeto **TableAnchor** aún seleccionado, en la ventana Inspector, asegúrese de que todos los componentes de script estén **habilitados** :
 
@@ -96,7 +96,7 @@ Con el objeto **TableAnchor** aún seleccionado, en la ventana Inspector, asegú
 * Selecciona la casilla situada junto al componente **Anchor Module Script (Script)** (Script del módulo de anclaje [script]) para habilitarla.
 * Selecciona la casilla situada junto al componente **Sharing Module Script (Script)** (Script del módulo de uso compartido [script]) para habilitarla.
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-05-section3-step1-3.png)
+![Unity con todos los componentes de script TableAnchor habilitados](images/mr-learning-sharing/sharing-05-section3-step1-3.png)
 
 ## <a name="trying-the-experience-with-spatial-alignment"></a>Prueba de la experiencia con la alineación espacial
 

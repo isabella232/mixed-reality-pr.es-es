@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales de introducción: 4. Posicionamiento de los objetos en la escena'
-description: En este curso le mostramos cómo usar Mixed Reality Toolkit (MRTK) para crear una aplicación de realidad mixta.
+description: En este curso se muestra cómo colocar objetos en la escena y cómo usar Mixed Reality Toolkit (MRTK) para organizar los objetos en una cuadrícula.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 4254b15f4c15e491f81f99438389a6e3bf772868
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: 849de7c50adc8ff1da5262ad46fae50cce48e953
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293225"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353223"
 ---
 # <a name="4-positioning-objects-in-the-scene"></a>4. Posicionamiento de los objetos en la escena
 
@@ -33,7 +33,7 @@ Descargue e importe el paquete personalizado de Unity siguiente:
 
 Después de importar los recursos del tutorial, la ventana Project (Proyecto) debería tener un aspecto similar al siguiente:
 
-![mr-learning-base](images/mr-learning-base/base-04-section1-step1-1.png)
+![Ventanas Hierarchy (Jerarquía), Scene (Escena) y Project (Proyecto) después de importar los recursos del tutorial](images/mr-learning-base/base-04-section1-step1-1.png)
 
 > [!TIP]
 > Para obtener un recordatorio sobre cómo importar un paquete personalizado de Unity, consulta las instrucciones de [Importación de MRTK](mr-learning-base-02.md#importing-the-mixed-reality-toolkit).
@@ -42,14 +42,14 @@ Después de importar los recursos del tutorial, la ventana Project (Proyecto) de
 
 En la ventana Hierarchy (Jerarquía), haga clic con el botón derecho en un lugar vacío y seleccione **Create Empty** (Crear vacío) para agregar un objeto vacío a la escena:
 
-![mr-learning-base](images/mr-learning-base/base-04-section2-step1-1.png)
+![Menú contextual emergente de Create Empty (Crear vacío) de Unity](images/mr-learning-base/base-04-section2-step1-1.png)
 
 > [!TIP]
 > Para mostrar las ventanas Scene (Escena) y Game (Juego) una al lado de otra como se muestra en la imagen anterior, arrastra la ventana Game (Juego) al lado derecho de la ventana Scene (Escena). Para obtener más información sobre cómo personalizar el área de trabajo, puedes consultar la documentación sobre la <a href="https://docs.unity3d.com/Manual/CustomizingYourWorkspace.html" target="_blank">personalización del área de trabajo</a> de Unity.
 
 Haga clic con el botón derecho en el objeto recién creado, seleccione **Rename** (Cambiar nombre) y cambie el nombre a **RoverExplorer** :
 
-![mr-learning-base](images/mr-learning-base/base-04-section2-step1-2.png)
+![Menú contextual emergente Rename (Cambiar nombre) de Unity](images/mr-learning-base/base-04-section2-step1-2.png)
 
 Con el objeto RoverExplorer todavía seleccionado, en la ventana Inspector, configure el componente **Transform** (Transformación) como se indica a continuación:
 
@@ -57,7 +57,7 @@ Con el objeto RoverExplorer todavía seleccionado, en la ventana Inspector, conf
 * **Rotación** : X = 0, Y = 0, Z = 0
 * **Escala** : X = 1, Y = 1, Z = 1
 
-![mr-learning-base](images/mr-learning-base/base-04-section2-step1-3.png)
+![Unity con el objeto RoverExplorer seleccionado y colocado](images/mr-learning-base/base-04-section2-step1-3.png)
 
 > [!NOTE]
 > La cámara representa la cabeza del usuario y se coloca en el origen, X = 0, Y = 0, Z = 0. En general, 1 unidad en Unity es aproximadamente 1 metro en el mundo físico. Sin embargo, existen excepciones; por ejemplo, cuando los objetos son elementos secundarios de los objetos con escala. En el escenario anterior, el objeto RoverExplorer se coloca a 2 metros por delante y 0,6 metros por debajo de la cabeza del usuario.
@@ -66,7 +66,7 @@ Con el objeto RoverExplorer todavía seleccionado, en la ventana Inspector, conf
 
 En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK.Tutorials.GettingStarted** > **Prefabs** :
 
-![mr-learning-base](images/mr-learning-base/base-04-section3-step1-1.png)
+![Ventana Project (Proyecto) de Unity con la carpeta Prefabs seleccionada](images/mr-learning-base/base-04-section3-step1-1.png)
 
 > [!TIP]
 > Un <a href="https://docs.unity3d.com/Manual/Prefabs.html" target="_blank">objeto prefabricado</a> es un objeto GameObject preconfigurado almacenado como un recurso de Unity que se puede reutilizar en todo el proyecto.
@@ -77,7 +77,7 @@ En la ventana Project (Proyecto), haga clic y arrastre el elemento prefabricado 
 * **Rotación** : X = 0, Y = 0, Z = 0
 * **Escala** : X = 1.2, Y = 0.01, Z = 1.2
 
-![mr-learning-base](images/mr-learning-base/base-04-section3-step1-2.png)
+![Unity con el objeto prefabricado Table recién agregado seleccionado y colocado](images/mr-learning-base/base-04-section3-step1-2.png)
 
 > [!TIP]
 > Para mostrar la escena tal y como se muestra en la imagen anterior, use <a href="https://docs.unity3d.com/Manual/SceneViewNavigation.html" target="_blank">Scene Gizmo</a> (Gizmo de escena), situado en la esquina superior derecha de la ventana Scene (Escena) para ajustar el ángulo de visualización a lo largo del eje Z, haga doble clic en el objeto MixedRealityPlayspace para enfocar la cámara y acérquese según sea necesario.
@@ -88,7 +88,7 @@ En la ventana Project (Proyecto), haga clic y arrastre el elemento prefabricado 
 * **Rotación** : X = 0, Y = 135, Z = 0
 * **Escala** : X = 1, Y = 1, Z = 1
 
-![mr-learning-base](images/mr-learning-base/base-04-section3-step1-3.png)
+![Unity con el objeto prefabricado RoverAssembly recién agregado seleccionado y colocado](images/mr-learning-base/base-04-section3-step1-3.png)
 
 ## <a name="organizing-objects-in-a-collection"></a>Organización de los objetos de una colección
 
@@ -98,33 +98,33 @@ En la ventana Hierarchy (Jerarquía), haga clic con el botón derecho en el obje
 * **Rotación** : X = 0, Y = 90, Z = 0
 * **Escala** : X = 1, Y = 1, Z = 1
 
-![mr-learning-base](images/mr-learning-base/base-04-section4-step1-1.png)
+![Unity con el objeto RoverParts recién creado seleccionado y colocado](images/mr-learning-base/base-04-section4-step1-1.png)
 
 En la ventana Hierarchy (Jerarquía), seleccione todos los objetos secundarios de RoverExplorer > RoverAssembly > RoverModel > **Parts** , haga clic derecho en ellos y seleccione **Duplicate** (Duplicar) para crear una copia de cada una de las partes:
 
-![mr-learning-base](images/mr-learning-base/base-04-section4-step1-2.png)
+![Unity con todos los objetos Parts seleccionados y el menú contextual emergente Duplicate](images/mr-learning-base/base-04-section4-step1-2.png)
 
 > [!TIP]
 > Para seleccionar varios objetos adyacentes, mantenga presionada la tecla Mayús mientras usa el mouse para seleccionar el primer y el último objeto.
 
 Con los objetos secundarios de Parts recién duplicados todavía seleccionados, haga clic en ellos y arrástrelos sobre el objeto **RoverParts** para convertirlos en objetos secundarios del objeto RoverParts:
 
-![mr-learning-base](images/mr-learning-base/base-04-section4-step1-3.png)
+![Unity con los objetos Parts recién duplicados como elementos secundarios del objeto RoverParts](images/mr-learning-base/base-04-section4-step1-3.png)
 
-Para que resulte más fácil trabajar con esta escena, en la ventana Jerarquía, haga clic en el icono del **ojo** situado a la izquierda del objeto para desactivar la **visibilidad de la escena** del objeto **RoverExplorer** . Esto oculta el objeto en la ventana Scene (Escena) sin cambiar su visibilidad en el juego:
+Para que resulte más fácil trabajar con esta escena, en la ventana Jerarquía, haga clic en el icono del **ojo** situado a la izquierda del objeto para desactivar la **visibilidad de la escena** del objeto **RoverExplorer**. Esto oculta el objeto en la ventana Scene (Escena) sin cambiar su visibilidad en el juego:
 
-![mr-learning-base](images/mr-learning-base/base-04-section4-step1-4.png)
+![Unity con visibilidad de la escena RoverAssembly desactivada](images/mr-learning-base/base-04-section4-step1-4.png)
 
 > [!TIP]
 > Para obtener más información sobre los controles de visibilidad de la escena y cómo puede usarlos para optimizar la vista de la escena y el flujo de trabajo, puede consultar la documentación sobre la <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">visibilidad de la escena </a> de Unity.
 
 En la ventana Hierarchy (Jerarquía), borre los nombres de los objetos secundarios de RoverParts reemplazando el **(1)** anexado por **_Part** :
 
-![mr-learning-base](images/mr-learning-base/base-04-section4-step1-5.png)
+![Unity con el nombre de las partes duplicadas borrado](images/mr-learning-base/base-04-section4-step1-5.png)
 
 En la ventana Hierarchy (Jerarquía), seleccione el objeto **RoverParts** ; a continuación, en la ventana Inspector, haga clic en el botón **Add Component** (Agregar componente) y busque y seleccione **GridObjectCollection** para agregar el componente GridObjectCollection al objeto RoverParts:
 
-![mr-learning-base](images/mr-learning-base/base-04-section4-step1-6.png)
+![Objeto RoverParts de Unity con Add Component (Agregar componente) GridObjectCollection en curso](images/mr-learning-base/base-04-section4-step1-6.png)
 
 Configure los valores del componente **GridObjectCollection** como se indica a continuación:
 
@@ -133,11 +133,11 @@ Configure los valores del componente **GridObjectCollection** como se indica a c
 * **Ancho de celda** : 0.25
 * **Distancia desde el elemento principal** : 0.38
 
-![mr-learning-base](images/mr-learning-base/base-04-section4-step1-7.png)
+![Unity con el componente GridObjectCollection configurado](images/mr-learning-base/base-04-section4-step1-7.png)
 
 A continuación, haga clic en el botón **Update Collection** (Actualizar colección) para actualizar la posición de los objetos secundarios de RoverParts:
 
-![mr-learning-base](images/mr-learning-base/base-04-section4-step1-8.png)
+![Unity con el componente GridObjectCollection aplicado](images/mr-learning-base/base-04-section4-step1-8.png)
 
 ## <a name="congratulations"></a>Enhorabuena
 

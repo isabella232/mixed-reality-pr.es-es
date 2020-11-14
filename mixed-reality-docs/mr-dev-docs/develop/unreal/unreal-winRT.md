@@ -6,12 +6,12 @@ ms.author: jacksonf
 ms.date: 07/08/2020
 ms.topic: article
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms, game development
-ms.openlocfilehash: d7c94ebb7fc6cc16916f1f577b8e54e374b9db1f
-ms.sourcegitcommit: e1de7caa7bd46afe9766186802fa4254d33d1ca6
+ms.openlocfilehash: 09d90af95d9433772563fdc292f31d118b3dd846
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92240765"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573299"
 ---
 # <a name="winrt-in-unreal"></a>WinRT en Unreal
 
@@ -46,7 +46,7 @@ En el transcurso del desarrollo de HoloLens, puede que tenga que escribir una ca
 3. Antes de agregar cualquier código, debe actualizar las propiedades del proyecto para asegurarse de que el código de WinRT que necesita puede compilar: 
     * Haga clic con el botón derecho en el proyecto HoloLensWinrtDLL y seleccione **propiedades** .  
     * Cambie la lista desplegable **configuración** a **todas las configuraciones** y la lista desplegable **plataforma** a **todas las plataformas** .  
-    * En **propiedades de configuración> C/C++> todas las opciones**:
+    * En **propiedades de configuración> C/C++> todas las opciones** :
         * Agregue **Await** a **opciones adicionales** para asegurarse de que se puede esperar en tareas asincrónicas  
         * Cambiar **estándar de lenguaje c++** a **estándar ISO C++ 17 (/STD: C++ 17)** para incluir cualquier código WinRT
 
@@ -87,7 +87,7 @@ public:
 > [!NOTE]
 > Todo el código de WinRT se almacena en **HoloLensWinrtDLL. cpp** , por lo que no se intenta incluir código winrt al hacer referencia al encabezado. 
 
-3. Todavía en **HoloLensWinrtDLL. cpp**, agregue el cuerpo de la función para OpenFileDialogue () y todo el código admitido: 
+3. Todavía en **HoloLensWinrtDLL. cpp** , agregue el cuerpo de la función para OpenFileDialogue () y todo el código admitido: 
 
 ```cpp
 // sgm is declared outside of OpenFileDialogue so it doesn't
@@ -180,12 +180,12 @@ La vinculación y el uso de una DLL en inreal requiere un proyecto de C++. Si ut
 > [!NOTE]
 > Ahora se ha creado una solución en el mismo directorio que el archivo uproject, junto con un nuevo script de compilación denominado Source/ConsumeWinRT/ConsumeWinRT. Build. cs.
 
-2. Abra la solución, busque la carpeta **Games/ConsumeWinRT/Source/ConsumeWinRT** y Abra **ConsumeWinRT.Build.CS**:
+2. Abra la solución, busque la carpeta **Games/ConsumeWinRT/Source/ConsumeWinRT** y Abra **ConsumeWinRT.Build.CS** :
 
 ![Abrir el archivo ConsumeWinRT.build.cs](images/unreal-winrt-img-05.png)
 
 ### <a name="linking-the-dll"></a>Vincular el archivo DLL
-1. En **ConsumeWinRT.Build.CS**, agregue una propiedad para buscar la ruta de acceso de inclusión para el archivo DLL (el directorio que contiene HoloLensWinrtDLL. h). El archivo DLL se encuentra en un directorio secundario de la ruta de acceso de inclusión, por lo que esta propiedad se usará como el directorio raíz binario:
+1. En **ConsumeWinRT.Build.CS** , agregue una propiedad para buscar la ruta de acceso de inclusión para el archivo DLL (el directorio que contiene HoloLensWinrtDLL. h). El archivo DLL se encuentra en un directorio secundario de la ruta de acceso de inclusión, por lo que esta propiedad se usará como el directorio raíz binario:
 
 ```cs
 using System.IO;
@@ -240,17 +240,32 @@ public ConsumeWinRT(ReadOnlyTargetRules target) : base(Target)
 }
 ```
 
-3. Abra **WinrtActor. h** y agregue dos definiciones de función, una que puede usar un plano y otra que usa el código dll: 
+3. Abra **WinrtActor. h** y agregue una definición de función, una a la que llamará un Blueprint: 
+
 ```cpp
 public:
     UFUNCTION(BlueprintCallable)
-    static void OpenFileDialogue;
+    static void OpenFileDialogue();
 ```
 
-4. Abra **WinrtActor. cpp** y cargue el archivo dll en BeginPlay: 
+4. Abra **WinrtActor. cpp** y actualice BeginPlay para cargar el archivo dll: 
 
 ```cpp
-void AWinfrtActor::BeginPlay()
+void AWinrtActor::BeginPlay()
+{
+    Super::BeginPlay();
+
+    // Gets path to DLL location
+    const FString BinDir = FPaths::ProjectDir() / 
+        "ThirdParty" / "HoloLensWinrtDLL" / 
+        "arm64" / "Release" / "HoloLensWinrtDLL";
+
+    // Loads DLL into application
+    void * dllHandle = FPlatformProcess::GetDllHandle(
+        *(BinDir / "HoloLensWinrtDLL.dll"));
+}
+
+void AWinrtActor::OpenFileDialogue()
 {
 #if PLATFORM_HOLOLENS
     HoloLensWinrtDLL::OpenFileDialogue();
@@ -268,11 +283,11 @@ void AWinfrtActor::BeginPlay()
 
 ![Colocar WinrtActor en la escena](images/unreal-winrt-img-06.png)
 
-2. En el **contorno mundial**, busque el **WindrtActor** previamente colocado en la escena y arrástrelo al plano de nivel: 
+2. En el **contorno mundial** , busque el **WindrtActor** previamente colocado en la escena y arrástrelo al plano de nivel: 
 
 ![Arrastrar WinrtActor al plano de nivel](images/unreal-winrt-img-07.png)
 
-3. En el plano de nivel, arrastre el nodo de salida desde WinrtActor, busque el **cuadro de diálogo Abrir archivo**y, a continuación, enrute el nodo desde cualquier entrada del usuario.  En este caso, se llama al cuadro de diálogo Abrir archivo desde un evento de voz: 
+3. En el plano de nivel, arrastre el nodo de salida desde WinrtActor, busque el **cuadro de diálogo Abrir archivo** y, a continuación, enrute el nodo desde cualquier entrada del usuario.  En este caso, se llama al cuadro de diálogo Abrir archivo desde un evento de voz: 
 
 ![Configuración de nodos en el plano de nivel](images/unreal-winrt-img-08.png)
 
@@ -291,7 +306,7 @@ Si sigue el recorrido de puntos de control de desarrollo de Unreal que hemos dis
 > [!div class="nextstepaction"]
 > [Implementación en el dispositivo](unreal-deploying.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [API/WinRT de C++](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)
 * [FileSavePicker (clase)](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 
 * [Bibliotecas de terceros no reales](https://docs.unrealengine.com/Programming/BuildTools/UnrealBuildTool/ThirdPartyLibraries/index.html) 

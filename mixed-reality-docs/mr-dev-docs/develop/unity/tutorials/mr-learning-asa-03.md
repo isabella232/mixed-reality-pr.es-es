@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales sobre Azure Spatial Anchors: 3. Guardar, recuperar y compartir Azure Spatial Anchors'
-description: Siga este curso para aprender a implementar Azure Spatial Anchors dentro de una aplicación de realidad mixta.
+description: Siga este curso para aprender a guardar, recuperar y compartir Azure Spatial Anchors en una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: edbbfa6bb4027e6d0d0d37a46575eafdb1d6e631
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 2fbf9b849cec62c5281396fcb1e2f8e6e26b4621
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91700327"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353303"
 ---
 # <a name="3-saving-retrieving-and-sharing-azure-spatial-anchors"></a>3. Guardar, recuperar y compartir Azure Spatial Anchors
 
@@ -25,13 +25,13 @@ En este tutorial, aprenderás cómo guardar Azure Spatial Anchors en varias sesi
 
 ## <a name="preparing-the-scene"></a>Preparación de la escena
 
-En la ventana Hierarchy (Jerarquía), expanda el objeto **ButtonParent** . Seleccione los **cuatro últimos objetos de botones secundarios** . En la ventana Inspector, **active** la casilla situada junto al campo de nombre para activar todos los objetos activos.
+En la ventana Hierarchy (Jerarquía), expanda el objeto **ButtonParent**. Seleccione los **cuatro últimos objetos de botones secundarios**. En la ventana Inspector, **active** la casilla situada junto al campo de nombre para activar todos los objetos activos.
 
-![mr-learning-asa](images/mr-learning-asa/asa-03-section1-step1-1.png)
+![Unity con objetos de botón anteriormente inactivos seleccionados y activos](images/mr-learning-asa/asa-03-section1-step1-1.png)
 
-En la ventana Hierarchy (Jerarquía), expanda los objetos **ButtonParent** . A continuación, en la ventana Inspector, busque el componente **GridObjectCollection** y haga clic en el botón **Update Collection** (Actualizar colección) para actualizar la posición de todos los objetos secundarios del objeto **ButtonParent** .
+En la ventana Hierarchy (Jerarquía), expanda los objetos **ButtonParent**. A continuación, en la ventana Inspector, busque el componente **GridObjectCollection** y haga clic en el botón **Update Collection** (Actualizar colección) para actualizar la posición de todos los objetos secundarios del objeto **ButtonParent**.
 
-![mr-learning-asa](images/mr-learning-asa/asa-03-section1-step1-2.png)
+![Unity con el componente GridObjectCollection actualizado](images/mr-learning-asa/asa-03-section1-step1-2.png)
 
 ## <a name="persisting-azure-spatial-anchors-between-app-sessions"></a>Persistencia de Azure Spatial Anchors entre sesiones de la aplicación
 
@@ -39,7 +39,7 @@ En esta sección, aprenderá a guardar y recuperar el identificador de anclaje d
 
 En la ventana Hierarchy (Jerarquía), expanda el objeto **ButtonParent** y busque los dos botones denominados **SaveAzureAnchorIdToDisk** y **GetAzureAnchorIdFromDisk** :
 
-![mr-learning-asa](images/mr-learning-asa/asa-03-section2-step1-1.png)
+![Unity con los objetos de botón SaveAzureAnchorIdToDisk y GetAzureAnchorIdFromDisk seleccionados](images/mr-learning-asa/asa-03-section2-step1-1.png)
 
 Siga los mismos pasos de las instrucciones proporcionadas en [Configuración de los botones para el funcionamiento de la escena](mr-learning-asa-02.md#configuring-the-buttons-to-operate-the-scene) del tutorial anterior para configurar el componente **Interactable (Script)** (Interactuable [script]) en cada uno de los dos botones:
 
@@ -66,9 +66,9 @@ En esta sección, obtendrás información sobre cómo compartir el identificador
 
 Hay muchas formas de transferir identificadores de anclaje de Azure entre dispositivos, incluidos los métodos descritos en la serie [Tutoriales de funcionalidades de varios usuarios](mr-learning-sharing-02.md). En este ejemplo, usarás un servicio web simple para cargar y descargar los id. de anclaje entre dispositivos.
 
-En la ventana Hierarchy (Jerarquía), expanda el objeto **ButtonParent** .   Busque los dos botones denominados **ShareAzureAnchorIdToNetwork** y **GetAzureAnchorIdFromNetwork** :
+En la ventana Hierarchy (Jerarquía), expanda el objeto **ButtonParent**.   Busque los dos botones denominados **ShareAzureAnchorIdToNetwork** y **GetAzureAnchorIdFromNetwork** :
 
-![mr-learning-asa](images/mr-learning-asa/asa-03-section3-step1-1.png)
+![Unity con los objetos de botón ShareAzureAnchorIdToNetwork y GetAzureAnchorIdFromNetwork seleccionados](images/mr-learning-asa/asa-03-section3-step1-1.png)
 
 Siga los mismos pasos de las instrucciones proporcionadas en [Configuración de los botones para el funcionamiento de la escena](mr-learning-asa-02.md#configuring-the-buttons-to-operate-the-scene) del tutorial anterior para configurar el componente **Interactable (Script)** (Interactuable [script]) en cada uno de los dos botones:
 

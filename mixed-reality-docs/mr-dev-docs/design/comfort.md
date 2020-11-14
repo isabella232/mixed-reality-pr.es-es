@@ -7,12 +7,12 @@ ms.date: 06/25/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidad mixta, diseño, comodidad, HoloLens 2, HoloLens (1.ª generación)
-ms.openlocfilehash: 6528dca71a1e0cd92b621cab8b1b7ba547fcb71e
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: f53c91b10f9dfc37678356c914e486f61eea6382
+ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91700775"
+ms.lasthandoff: 11/07/2020
+ms.locfileid: "94340653"
 ---
 # <a name="comfort"></a>Comodidad
 
@@ -40,17 +40,17 @@ Las pantallas de HoloLens están fijadas a una distancia óptica de aproximadame
 
 ### <a name="best-practices-for-hololens-1st-gen-and-hololens-2"></a>Procedimientos recomendados para HoloLens (1.ª generación) y HoloLens 2
 
-Para obtener la máxima comodidad, **la zona óptima para la colocación del holograma está entre 1,25 m y 5 m** . En cada caso, los diseñadores deben intentar estructurar las escenas de contenido para animar a los usuarios a interactuar a 1 m o más lejos del contenido (por ejemplo, ajustar los [parámetros de tamaño del contenido y la ubicación predeterminada](gaze-and-commit.md)). 
+Para obtener la máxima comodidad, **la zona óptima para la colocación del holograma está entre 1,25 m y 5 m**. En cada caso, los diseñadores deben intentar estructurar las escenas de contenido para animar a los usuarios a interactuar a 1 m o más lejos del contenido (por ejemplo, ajustar los [parámetros de tamaño del contenido y la ubicación predeterminada](gaze-and-commit.md)). 
 
 Aunque en ocasiones es posible que sea necesario mostrar el contenido más cerca de 1 m, se recomienda no presentar ningún holograma más cerca de 40 cm. Por lo tanto, recomendamos empezar a **atenuar el contenido a 40 cm y colocar un plano de recorte de representación a 30 cm** para evitar cualquier objeto más cercano.
 
-Los objetos que se mueven en profundidad tienen más probabilidad que los objetos estáticos de producir incomodidad debida al conflicto entre vergencia y acomodación. Del mismo modo, requerir que los usuarios cambien rápidamente entre un enfoque cercano y uno lejano (por ejemplo, debido a que un holograma emergente requiere una interacción directa) puede provocar molestias y fatiga visuales. Por lo tanto, se debe prestar **atención adicional para minimizar la frecuencia que los usuarios ven contenido que se mueve en profundidad o cambian rápidamente de enfoque entre hologramas cercanos y lejanos** . 
+Los objetos que se mueven en profundidad tienen más probabilidad que los objetos estáticos de producir incomodidad debida al conflicto entre vergencia y acomodación. Del mismo modo, requerir que los usuarios cambien rápidamente entre un enfoque cercano y uno lejano (por ejemplo, debido a que un holograma emergente requiere una interacción directa) puede provocar molestias y fatiga visuales. Por lo tanto, se debe prestar **atención adicional para minimizar la frecuencia que los usuarios ven contenido que se mueve en profundidad o cambian rápidamente de enfoque entre hologramas cercanos y lejanos**. 
 
 ### <a name="additional-considerations-for-hololens-2-and-near-interaction-distances"></a>Consideraciones adicionales para HoloLens 2 y las distancias de interacción cercanas
 
-Al diseñar contenido para la interacción directa (cercana) en HoloLens 2 o **en cualquier aplicación en la que el contenido se deba colocar más cerca de 1 m, se debe prestar más atención para garantizar la comodidad del usuario** . La probabilidad de que se produzcan molestias debidas al conflicto entre la vergencia y la acomodación aumenta exponencialmente con una distancia de visualización menor. Además, los usuarios pueden experimentar un mayor desenfoque al ver el contenido a distancias de interacción cercanas, por lo que se recomienda probar el contenido representado tanto en la zona de ubicación óptima del holograma como más cerca (menos de 1 m hasta el plano de recorte) para garantizar que sigue siendo claro y cómodo de ver. 
+Al diseñar contenido para la interacción directa (cercana) en HoloLens 2 o **en cualquier aplicación en la que el contenido se deba colocar más cerca de 1 m, se debe prestar más atención para garantizar la comodidad del usuario**. La probabilidad de que se produzcan molestias debidas al conflicto entre la vergencia y la acomodación aumenta exponencialmente con una distancia de visualización menor. Además, los usuarios pueden experimentar un mayor desenfoque al ver el contenido a distancias de interacción cercanas, por lo que se recomienda probar el contenido representado tanto en la zona de ubicación óptima del holograma como más cerca (menos de 1 m hasta el plano de recorte) para garantizar que sigue siendo claro y cómodo de ver. 
 
-**Se recomienda crear una "asignación de profundidad" para las aplicaciones en función de la cantidad de tiempo que se espera que un usuario vea el contenido que está cerca (menos de 1 m) y que se mueve en profundidad** . Un ejemplo es evitar poner al usuario en esas situaciones más del 25 % del tiempo. Si se supera la asignación de profundidad, se recomienda realizar pruebas de usuario minuciosas para garantizar que la experiencia sigue siendo cómoda. 
+**Se recomienda crear una "asignación de profundidad" para las aplicaciones en función de la cantidad de tiempo que se espera que un usuario vea el contenido que está cerca (menos de 1 m) y que se mueve en profundidad**. Un ejemplo es evitar poner al usuario en esas situaciones más del 25 % del tiempo. Si se supera la asignación de profundidad, se recomienda realizar pruebas de usuario minuciosas para garantizar que la experiencia sigue siendo cómoda. 
 
 En general, también se recomienda realizar pruebas minuciosas para asegurarse de que todos los requisitos de interacción (por ejemplo, la velocidad de movimiento, la capacidad de alcance, etc.) a distancias de interacción cercanas sigan resultando cómodos para los usuarios. 
 
@@ -100,7 +100,7 @@ Hay una gran variedad de herramientas que se pueden usar para realizar pruebas c
 
 ## <a name="self-motion-and-user-locomotion"></a>Automovimiento y locomoción del usuario
 
-La única limitación es el tamaño del espacio físico. Si quieres permitir que los usuarios se muevan más en el entorno virtual de lo que pueden en sus salas reales, se debe implementar una forma de movimiento puramente virtual. Sin embargo, el movimiento virtual continuado que no coincide con el movimiento físico real del usuario a menudo puede provocar mareos. Esto se debe a que las *indicaciones visuales* del automovimiento provenientes del *mundo virtual* entran en conflicto con las [indicaciones vestibulares](https://en.wikipedia.org/wiki/Vestibular_system) del *mundo real* .
+La única limitación es el tamaño del espacio físico. Si quieres permitir que los usuarios se muevan más en el entorno virtual de lo que pueden en sus salas reales, se debe implementar una forma de movimiento puramente virtual. Sin embargo, el movimiento virtual continuado que no coincide con el movimiento físico real del usuario a menudo puede provocar mareos. Esto se debe a que las *indicaciones visuales* del automovimiento provenientes del *mundo virtual* entran en conflicto con las [indicaciones vestibulares](https://en.wikipedia.org/wiki/Vestibular_system) del *mundo real*.
 
 Afortunadamente, tenemos algunas sugerencias para implementar la locomoción del usuario que pueden ayudar a evitar el problema:
 * Otorga siempre al usuario el control de sus movimientos. El automovimiento inesperado es especialmente problemático.
@@ -144,7 +144,7 @@ Para las experiencias de realidad mixta con objetos grandes o muchos objetos, es
 Siempre que sea posible, limite la mayoría de las interacciones a las categorías horizontal o vertical; lo ideal es que la mayoría de las experiencias tengan lugar en el centro del marco holográfico con la cabeza del usuario en una posición neutra. Evite las interacciones que hagan que el usuario mueva la vista constantemente a una posición de la cabeza no natural (por ejemplo, siempre mirando hacia arriba para acceder a una interacción del menú clave).
 
 ![La región óptima del contenido es de 0 a 35 grados por debajo del horizonte](images/optimal-field-of-view-2.png).<br>
-*La región óptima del contenido es de 0 a 35 grados por debajo del horizonte* .
+*La región óptima del contenido es de 0 a 35 grados por debajo del horizonte*.
 
 El movimiento horizontal de la cabeza es más para las interacciones frecuentes, mientras que los movimientos verticales se deben reservar para eventos poco comunes. Por ejemplo, una experiencia que implique una escala de tiempo horizontal larga debe limitar el movimiento vertical de la cabeza para las interacciones (como mirar hacia abajo un menú).
 
@@ -162,6 +162,13 @@ Se considera que el ángulo de mirada óptimo (en reposo) está entre 10-20 grad
 ## <a name="arm-positions"></a>Posiciones de los brazos
 
 Los usuarios pueden acumular fatiga muscular en los casos en los que deben mantener una mano levantada a lo largo de una experiencia. Así mismo, pueden encontrar agotador el hecho de tener que realizar gestos de pulsación en el aire de forma repetida durante largos períodos de tiempo. Por lo tanto, te recomendamos diseñar experiencias que eviten la necesidad de realizar gestos de manera constante y repetida. Este objetivo puede lograrse mediante la incorporación de pausas breves y al ofrecer una combinación de gestos y voz para interactuar con la aplicación.
+
+## <a name="next-discovery-checkpoint"></a>Siguiente punto de comprobación de detección
+
+Si está siguiendo el [recorrido de detección](../discover/get-started-with-mr.md) hemos diseñado, está a mitad de explorar los aspectos básicos de la realidad mixta. Desde aquí, puede continuar con el siguiente tema básico: 
+
+> [!div class="nextstepaction"]
+> [Cómo ve el mundo el usuario (trama holográfica)](../design/holographic-frame.md)
 
 ## <a name="see-also"></a>Consulta también
 * [Gaze](gaze-and-commit.md)

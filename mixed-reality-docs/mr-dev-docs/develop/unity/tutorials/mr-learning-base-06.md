@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales de introducción: 6. Creación de interfaces de usuario'
-description: En este curso le mostramos cómo usar Mixed Reality Toolkit (MRTK) para crear una aplicación de realidad mixta.
+description: En este curso se muestra cómo usar Mixed Reality Toolkit (MRTK) para crear interfaces de usuario.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 3d8cfa7206aa6004cdf62db977ca760daed9a27c
-ms.sourcegitcommit: adbdb0a38e0dc5ac82f847c7b2ef87f27c16b5f6
+ms.openlocfilehash: 2d3a826ba3bf8fdf1299038a7964278f0d57dbb7
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92493241"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353543"
 ---
 # <a name="6-creating-user-interfaces"></a>6. Creación de interfaces de usuario
 
@@ -36,11 +36,11 @@ En la ventana Hierarchy (Jerarquía), haga clic con el botón derecho en el obje
 * **Rotación** : X = 90, Y = 0, Z = 0
 * **Escala** : X = 1, Y = 1, Z = 1
 
-![mr-learning-base](images/mr-learning-base/base-06-section1-step1-1.png)
+![Unity con el objeto Buttons recién creado seleccionado y colocado](images/mr-learning-base/base-06-section1-step1-1.png)
 
 En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK.Tutorials.GettingStarted** > **Prefabs** , haga clic y arrastre el elemento prefabricado **PressableRoundButton** sobre el objeto **Buttons** y, a continuación, haga clic con el botón derecho en PressableRoundButton, seleccione **Duplicate** (Duplicar) para crear una copia y repita el proceso hasta que tenga un total de tres objetos PressableRoundButton:
 
-![mr-learning-base](images/mr-learning-base/base-06-section1-step1-2.png)
+![Unity con los objetos prefabricados PressableRoundButton recién agregados](images/mr-learning-base/base-06-section1-step1-2.png)
 
 En la ventana Hierarchy (Jerarquía), seleccione el objeto **Buttons** y, a continuación, en la ventana Inspector, use el botón **Add Component** (Agregar componente) para agregar el componente **GridObjectCollection** y configúrelo del modo siguiente:
 
@@ -51,13 +51,13 @@ En la ventana Hierarchy (Jerarquía), seleccione el objeto **Buttons** y, a cont
 
 A continuación, haga clic en el botón **Update Collection** (Actualizar colección) para actualizar la posición de los objetos secundarios del objeto Buttons:
 
-![mr-learning-base](images/mr-learning-base/base-06-section1-step1-3.png)
+![Objeto Buttons de Unity con el componente GridObjectCollection agregado, configurado y aplicado](images/mr-learning-base/base-06-section1-step1-3.png)
 
 En la ventana Hierarchy (Jerarquía), asigne el nombre **Hints** , **Explode** y **Reset** a los botones.
 
 Para cada botón, seleccione el objeto secundario **SeeItSayItLabel** > **TextMeshPro** y, a continuación, en la ventana Inspector, cambie el texto del componente **TextMeshPro - Text** respectivo para que coincida con los nombres de los botones:
 
-![mr-learning-base](images/mr-learning-base/base-06-section1-step1-4.png)
+![Unity con etiquetas de texto de botón configuradas](images/mr-learning-base/base-06-section1-step1-4.png)
 
 Una vez hecho esto, contraiga los objetos secundarios del objeto Buttons.
 
@@ -66,22 +66,22 @@ En la ventana Hierarchy (Jerarquí)a, seleccione el objeto del botón **Hints** 
 * Asigne el objeto **RoverAssembly** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No function** (Ninguna función), seleccione **PlacementHintsController** > **TogglePlacementHints ()** para establecer esta función como la acción que se va a ejecutar cuando se desencadene el evento.
 
-![mr-learning-base](images/mr-learning-base/base-06-section1-step1-5.png)
+![Unity con el evento OnClick del objeto de botón Hints configurado](images/mr-learning-base/base-06-section1-step1-5.png)
 
 En la ventana Hierarchy (Jerarquí)a, seleccione el objeto del botón **Explode** y, a continuación, en la ventana Inspector, configure el evento **OnClick ()** de la siguiente manera:
 
 * Asigne el objeto **RoverAssembly** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No function** (Ninguna función), seleccione **ExplodedViewController** > **ToggleExplodedView ()** para establecer esta función como la acción que se va a ejecutar cuando se desencadene el evento.
 
-![mr-learning-base](images/mr-learning-base/base-06-section1-step1-6.png)
+![Unity con el evento OnClick del objeto de botón Explode configurado](images/mr-learning-base/base-06-section1-step1-6.png)
 
 Presione el botón Play (Reproducir) para entrar en el modo de juego y, a continuación, mantenga presionada la barra espaciadora para activar la mano y use el mouse para presionar el botón **Hints** para activar y desactivar la visibilidad de los objetos de sugerencia de colocación:
 
-![mr-learning-base](images/mr-learning-base/base-06-section1-step1-7.png)
+![Vista dividida del modo de reproducción de Unity con el botón Hints presionado](images/mr-learning-base/base-06-section1-step1-7.png)
 
 y el botón **Explode** para activar y desactivar la vista seccionada:
 
-![mr-learning-base](images/mr-learning-base/base-06-section1-step1-8.png)
+![Vista dividida del modo de reproducción de Unity con el botón Explode presionado](images/mr-learning-base/base-06-section1-step1-8.png)
 
 ## <a name="creating-a-dynamic-menu-that-follows-the-user"></a>Creación de un menú dinámico que sigue al usuario
 
@@ -90,28 +90,28 @@ En la ventana Proyecto, vaya a la carpeta **Recursos** > **MRTK** > **SDK** > **
 * Compruebe que el **Tracked Target Type** (Tipo de objetivo de seguimiento) del componente **SolverHandler** esté establecido en **Head** (Cabeza).
 * Marque la casilla junto al componente **RadialView** del solucionador para que esté habilitado de forma predeterminada
 
-![mr-learning-base](images/mr-learning-base/base-06-section2-step1-1.png)
+![Unity con el objeto prefabricado Menu recién agregado seleccionado](images/mr-learning-base/base-06-section2-step1-1.png)
 
 En la ventana Hierarchy (Jerarquía), cambie el nombre del objeto a **Menu** y, a continuación, expanda el objeto secundario **ButtonCollection** para mostrar los cuatro botones:
 
-![mr-learning-base](images/mr-learning-base/base-06-section2-step1-2.png)
+![Unity con el objeto Menu seleccionado y el objeto ButtonCollection expandido](images/mr-learning-base/base-06-section2-step1-2.png)
 
 Cambie el nombre del primer botón por **Indicator** y, a continuación, en la ventana Inspector, configure el componente **Button Config Helper (Script)** (Asistente de configuración del botón [script]) de la siguiente manera:
 
 * Cambie el **texto de la etiqueta principal** para que coincida con el nombre del botón.
 * Asigne el objeto **Indicator** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **GameObject** > **SetActive (bool)** para establecer esta función como la acción que se va a ejecutar cuando se desencadene el evento.
-* Compruebe que la casilla del argumento esté **activada** .
+* Compruebe que la casilla del argumento esté **activada**.
 * Cambie el **icono** al icono de "búsqueda".
 
-![mr-learning-base](images/mr-learning-base/base-06-section2-step1-3.png)
+![Unity con el objeto de botón Indicator con Button Config Helper configurado](images/mr-learning-base/base-06-section2-step1-3.png)
 
 En la ventana Jerarquía, seleccione el objeto **Indicador** y, a continuación, en la ventana del Inspector:
 
 * Desactive la casilla situada junto a su nombre para que esté inactivo de forma predeterminada.
 * Use el botón **Agregar componente** para agregar el componente **Controlador del indicador de dirección (Script)** .
 
-![mr-learning-base](images/mr-learning-base/base-06-section2-step1-4.png)
+![Unity con el objeto Indicator seleccionado, deshabilitado, y el componente DirectionalIndicatorController agregado](images/mr-learning-base/base-06-section2-step1-4.png)
 
 > [!NOTE]
 > Ahora, cuando se inicia la aplicación, el objeto Indicator está deshabilitado de forma predeterminada y se puede habilitar presionando el botón Indicator.
@@ -121,10 +121,10 @@ Cambie el nombre del segundo botón por **TapToPlace** y, a continuación, en la
 * Cambie el **texto de la etiqueta principal** para que coincida con el nombre del botón.
 * Asigne el objeto RoverExplorer > **RoverAssembly** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **TapToPlace** > **bool Enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento.
-* Compruebe que la casilla del argumento esté **activada** .
+* Compruebe que la casilla del argumento esté **activada**.
 * Cambie el **icono** al icono de "mano con rayo".
 
-![mr-learning-base](images/mr-learning-base/base-06-section2-step1-5.png)
+![Unity con el objeto de botón TapToPlace con Button Config Helper configurado](images/mr-learning-base/base-06-section2-step1-5.png)
 
 En la ventana Jerarquía, seleccione el objeto **RoverAssembly** y, a continuación, en la ventana Inspector, configure el componente **Tap To Place (Script)** (Pulsar para colocar [Script]) del modo siguiente:
 
@@ -132,9 +132,9 @@ En la ventana Jerarquía, seleccione el objeto **RoverAssembly** y, a continuaci
 * En la sección del evento **On Placing Stopped ()** , haga clic en el icono **+** para agregar un nuevo evento:
 * Asigne el objeto RoverExplorer > **RoverAssembly** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **TapToPlace** > **bool Enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento.
-* Compruebe que la casilla del argumento esté **desactivada** .
+* Compruebe que la casilla del argumento esté **desactivada**.
 
-![mr-learning-base](images/mr-learning-base/base-06-section2-step1-6.png)
+![Unity con el componente TapToPlace reconfigurado](images/mr-learning-base/base-06-section2-step1-6.png)
 
 > [!NOTE]
 > Ahora, cuando se inicia la aplicación, la funcionalidad Tap to Place (Tocar para colocar) está deshabilitada de forma predeterminada y se puede habilitar presionando el botón Tap to Place. Además, cuando se complete la acción de tocar para colocar, se deshabilitará.
@@ -148,7 +148,7 @@ En la ventana Hierarchy (Jerarquía), haga clic con el botón derecho en el obje
 * Cambie **Height** (Altura) a 1.
 * Cambie **Rotation X** (Rotación X) a 90.
 
-![mr-learning-base](images/mr-learning-base/base-06-section3-step1-1.png)
+![Unity con el objeto TextMeshPro recién creado seleccionado](images/mr-learning-base/base-06-section3-step1-1.png)
 
 A continuación, configure el componente **TextMeshPro - Text** como se indica a continuación:
 
@@ -157,39 +157,39 @@ A continuación, configure el componente **TextMeshPro - Text** como se indica a
 * Cambie **Font Size** (Tamaño de fuente) a 1.
 * Cambie Extra Settings > **Margins** (Configuración adicional > Márgenes) a 0.03.
 
-![mr-learning-base](images/mr-learning-base/base-06-section3-step1-2.png)
+![Unity con el componente TextMeshPro configurado](images/mr-learning-base/base-06-section3-step1-2.png)
 
 ## <a name="adding-tooltips"></a>Agregación de información sobre herramientas
 
 En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK** > **SDK** > **Features** > **UX** > **Prefabs** > **ToolTip** para buscar los objetos prefabricados de información sobre herramientas:
 
-![mr-learning-base](images/mr-learning-base/base-06-section4-step1-1.png)
+![Ventana Project (Proyecto) de Unity con la carpeta ToolTips seleccionada](images/mr-learning-base/base-06-section4-step1-1.png)
 
 En la ventana Hierarchy (Jerarquía), expanda el objeto RoverExplorer > **RoverParts** y seleccione todos los objetos secundarios de partes, y, a continuación, en la ventana Inspector, use el botón **Add Component** (Agregar componente) para agregar el componente **ToolTipSpawner** y configúrelo de la forma siguiente:
 
 * Asegúrese de que la casilla de verificación **Focus enabled** (Enfoque habilitado) está activada para requerir que el usuario mire la parte para que aparezca la información sobre herramientas.
 * Asigne el elemento prefabricado **Simple Line ToolTip** (Información sobre herramientas de línea simple) desde la ventana Project (Proyecto) al campo **Tool Tip Prefab** (Elemento prefabricado de información de herramientas).
 * Cambie ToolTip Override Settings > **Settings Mode** (Configuración de invalidación de información sobre herramientas > Modo de configuración) a **Override** (Invalidar).
-* Cambie ToolTip Override Settings > **Manual Pivot Local Position Y** (Configuración de invalidación de información sobre herramientas > Posición Y local del pivote manual) a **1.5** .
+* Cambie ToolTip Override Settings > **Manual Pivot Local Position Y** (Configuración de invalidación de información sobre herramientas > Posición Y local del pivote manual) a **1.5**.
 
-![mr-learning-base](images/mr-learning-base/base-06-section4-step1-2.png)
+![Unity con todos los objetos de partes del róver seleccionados y el componente ToolTipSpawner agregado y configurado](images/mr-learning-base/base-06-section4-step1-2.png)
 
 En la ventana Hierarchy (Jerarquía), seleccione la primera parte del rover, RoverParts > **Camera_Part** y configure el componente **ToolTipSpawner** como se indica a continuación:
 
-* Cambie **Tool Tip Text** para reflejar el nombre de la parte; por ejemplo, **Camera** .
+* Cambie **Tool Tip Text** para reflejar el nombre de la parte; por ejemplo, **Camera**.
 
-![mr-learning-base](images/mr-learning-base/base-06-section4-step1-3.png)
+![Unity con ToolTipText Camera configurado](images/mr-learning-base/base-06-section4-step1-3.png)
 
 **Repita** este paso para cada uno de los objetos de parte del rover para configurar el componente **ToolTipSpawner** como se indica a continuación:
 
-* Para **Generator_Part** , cambie **Tool Tip Text** a **Generator** .
-* Para **Lights_Part** , cambie **Tool Tip Text** a **Lights** .
-* Para **UHFAntenna_Part** , cambie **Tool Tip Text** a **UHF Antenna** .
-* Para **Spectrometer_Part** , cambie **Tool Tip Text** a **Spectrometer** .
+* Para **Generator_Part** , cambie **Tool Tip Text** a **Generator**.
+* Para **Lights_Part** , cambie **Tool Tip Text** a **Lights**.
+* Para **UHFAntenna_Part** , cambie **Tool Tip Text** a **UHF Antenna**.
+* Para **Spectrometer_Part** , cambie **Tool Tip Text** a **Spectrometer**.
 
 Presione el botón Play (Reproducir) para entrar en el modo de juego y, a continuación, mantenga presionado el botón derecho del mouse mientras mueve el mouse hasta que la mirada entre en contacto con una de las partes y la información sobre herramientas de la parte se mostrará:
 
-![mr-learning-base](images/mr-learning-base/base-06-section4-step1-4.png)
+![Vista dividida del modo de reproducción de Unity con información sobre herramientas desencadenada por la mirada](images/mr-learning-base/base-06-section4-step1-4.png)
 
 ## <a name="congratulations"></a>Enhorabuena
 

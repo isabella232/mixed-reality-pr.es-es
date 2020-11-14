@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/15/2020
 ms.topic: overview
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR,
-ms.openlocfilehash: def16b5bff13fec13ce0ebb503ec88dfca22e0b8
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: c2a00b88992fde3e599020d930ef950222e87099
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293064"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573219"
 ---
 # <a name="start-your-vr-journey"></a>Empezar el recorrido de VR
 
@@ -41,7 +41,7 @@ Una vez que tenga el dispositivo, deberá configurarlo y configurarlo correctame
 
 |  Punto de control  |  Resultado  |
 | --- | --- |
-| [Configuración de Windows Mixed Reality](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) | Familiarícese con los controladores, los límites de la habitación, la entrada de voz y Microsoft Edge en el nuevo dispositivo VR |
+| [Configuración de Windows Mixed Reality](set-up-windows-mixed-reality.md) | Familiarícese con los controladores, los límites de la habitación, la entrada de voz y Microsoft Edge en el nuevo dispositivo VR |
 | [Preguntas más frecuentes sobre la instalación de Windows Mixed Reality](wmr-setup-faq.md) | Obtener respuestas y solucionar problemas relacionados con problemas conocidos al configurar Windows Mixed Reality |
 | [Directrices de mantenimiento, seguridad y confort](wmr-health-safety-comfort.md) | Recomendaciones para mantener la seguridad al usar Windows Mixed Reality antes de usar el casco  |
 
@@ -58,7 +58,7 @@ Hay una variedad de características y servicios disponibles a través de Window
 | [Uso de controladores](controllers-in-wmr.md) | Configuración, comprensión y uso de los controladores de movimiento |
 | [Uso de la entrada de voz](using-speech-in-wmr.md) | Familiarícese con una variedad de comandos de voz que pueden interactuar con objetos 3D, la barra de la aplicación, el menú Inicio y Cortana. |
 | [Juegos, vídeo de 360 y aplicaciones](using-games-and-apps-in-windows-mixed-reality.md) | Empiece a trabajar con su primer juego envolvente, pizarras de tiendas en 2D, aplicaciones de escritorio y experiencias de WebVR |
-| [Usar SteamVR](using-steamvr-with-windows-mixed-reality.md) | Conectar el dispositivo y reproducir SteamVR Games y obtener información sobre el programa Windows Insider |
+| [Uso de SteamVR](using-steamvr-with-windows-mixed-reality.md) | Conectar el dispositivo y reproducir SteamVR Games y obtener información sobre el programa Windows Insider |
 | [Uso de Microsoft Edge](using-microsoft-edge.md) | Instalación de la versión más reciente de Microsoft Edge en el dispositivo envolvente |
 | [Usar WebVR](webvr.md) | Obtener el programa de instalación para experimentar VR en el entorno del explorador |
 

@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales de introducción: 3. Configuración de los perfiles de MRTK'
-description: En este curso le mostramos cómo usar Mixed Reality Toolkit (MRTK) para crear una aplicación de realidad mixta.
+description: En este curso se muestra cómo configurar los perfiles Mixed Reality Toolkit (MRTK).
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 028da6e0dd920e90cb353c22d22ab985de56bb81
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 15fa4285fd6dd60aac9ba3869430649db5b40f91
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91699999"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353263"
 ---
 # <a name="3-configuring-the-mrtk-profiles"></a>3. Configuración de los perfiles de MRTK
 
@@ -20,7 +20,11 @@ ms.locfileid: "91699999"
 
 En este tutorial, aprenderá a personalizar y configurar los perfiles de MRTK.
 
+Los <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Profiles/Profiles.html" target="_blank">perfiles de MRTK</a> constituyen un árbol de perfiles anidados que componen la información de configuración sobre cómo se deben inicializar los sistemas y las características de MRTK. El perfil de nivel superior, el perfil Configuration (Configuración), contiene perfiles anidados para cada uno de los sistemas básicos principales. Cada perfil anidado está diseñado para configurar el comportamiento de su sistema correspondiente.
+
 En este ejemplo concreto se muestra cómo ocultar la malla de reconocimiento espacial cambiando la configuración del observador de la malla espacial. Puedes seguir estos mismos principios para personalizar cualquier parámetro o valor de los perfiles de MRTK.
+
+Como lo visto al implementar el proyecto en HoloLens 2 durante el [tutorial anterior](mr-learning-base-02.md#congratulations), la malla <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">Spatial Awareness</a> es una colección de mallas que representan la geometría del entorno. Es una visualización útil para ver inicialmente, pero normalmente está desactivada para evitar la distracción visual y el impacto adicional en el rendimiento al tenerla activada.
 
 ## <a name="objectives"></a>Objetivos
 
@@ -47,19 +51,19 @@ Los principales pasos que se deben seguir para ocultar la malla de reconocimient
 
 En la ventana Jerarquía, seleccione el objeto **MixedRealityToolkit** ; después, en la ventana Inspector, cambie el valor del perfil de configuración **MixedRealityToolkit** a **DefaultHoloLens2ConfigurationProfile** :
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step1-1.png)
+![Componente MixedRealityToolkit de Unity con DefaultHoloLens2ConfigurationProfile seleccionado](images/mr-learning-base/base-03-section1-step1-1.png)
 
 Con el objeto **MixedRealityToolkit** todavía seleccionado, en la ventana Inspector, haz clic en el botón **Copy & Customize** (Copiar y personalizar) para abrir la ventana Clone Profile (Clonar perfil):
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step1-2.png)
+![Botón Copy & Customize (Copiar y personalizar) del componente MixedRealityToolkit de Unity](images/mr-learning-base/base-03-section1-step1-2.png)
 
-En la ventana para clonar perfil, escriba un **Nombre de perfil** adecuado; por ejemplo, _GettingStarted_HoloLens2ConfigurationProfiley_ . A continuación, haga clic en el botón **Clonar** para crear una copia modificable de **DefaultHololens2ConfigurationProfile** :
+En la ventana para clonar perfil, escriba un **Nombre de perfil** adecuado; por ejemplo, _GettingStarted_HoloLens2ConfigurationProfiley_. A continuación, haga clic en el botón **Clonar** para crear una copia modificable de **DefaultHololens2ConfigurationProfile** :
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step1-3.png)
+![Ventana emergente para clonar el perfil de configuración de MixedRealityToolkit de Unity](images/mr-learning-base/base-03-section1-step1-3.png)
 
 El perfil de configuración recién creado se asigna ahora como perfil de configuración de la escena:
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step1-4.png)
+![Componente MixedRealityToolkit de Unity con HoloLens2ConfigurationProfile personalizado recién creado aplicado](images/mr-learning-base/base-03-section1-step1-4.png)
 
 En el menú de Unity, selecciona **File** > **Save** (Archivo > Guardar) para guardar la escena.
 
@@ -70,41 +74,44 @@ En el menú de Unity, selecciona **File** > **Save** (Archivo > Guardar) para gu
 
 En la ventana Jerarquía, seleccione el objeto **MixedRealityToolkit** ; después, en la ventana Inspector, seleccione la pestaña **Spatial Awareness** (Reconocimiento espacial) y, a continuación, active la casilla **Enable Spatial Awareness System** (Habilitar el sistema de reconocimiento espacial):
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step2-1.png)
+![Componente MixedRealityToolkit de Unity con el sistema de reconocimiento espacial habilitado](images/mr-learning-base/base-03-section1-step2-1.png)
+
+> [!NOTE]
+> En el caso de los proyectos futuros, si la aplicación no necesita responder al entorno ni interactuar con él, se recomienda mantener el reconocimiento espacial desactivado para reducir el costo de rendimiento.
 
 ### <a name="3-clone-the-default-spatial-awareness-system-profile"></a>3. Clonar el perfil del sistema de reconocimiento espacial predeterminado
 
 En la pestaña **Spatial Awareness** (Reconocimiento espacial), haz clic en el botón **Clone** (Clonar) para abrir la ventana Clone Profile (Clonar perfil):
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step3-1.png)
+![Componente MixedRealityToolkit de Unity con la pestaña Spatial Awareness (Reconocimiento espacial) seleccionada](images/mr-learning-base/base-03-section1-step3-1.png)
 
-En la ventana para clonar perfil, escriba un **Nombre de perfil** adecuado; por ejemplo, _GettingStarted_MixedRealitySpatialAwarenessSystemProfile_ . A continuación, haga clic en el botón **Clonar** para crear una copia modificable de **DefaultMixedRealitySpatialAwarenessSystemProfile** :
+En la ventana para clonar perfil, escriba un **Nombre de perfil** adecuado; por ejemplo, _GettingStarted_MixedRealitySpatialAwarenessSystemProfile_. A continuación, haga clic en el botón **Clonar** para crear una copia modificable de **DefaultMixedRealitySpatialAwarenessSystemProfile** :
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step3-2.png)
+![Ventana emergente para clonar el perfil del sistema de reconocimiento espacial de MixedRealityToolkit de Unity](images/mr-learning-base/base-03-section1-step3-2.png)
 
 Ahora, el perfil del sistema de reconocimiento espacial recién creado se asigna automáticamente al perfil de configuración:
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step3-3.png)
+![Componente MixedRealityToolkit de Unity con MixedRealitySpatialAwarenessSystemProfile personalizado recién creado aplicado](images/mr-learning-base/base-03-section1-step3-3.png)
 
 ### <a name="4-clone-the-default-spatial-awareness-mesh-observer-profile"></a>4. Clonar el perfil del observador de la malla de reconocimiento espacial predeterminado
 
 Con la pestaña **Spatial Awareness** (Reconocimiento espacial) aún seleccionada, expande la sección **Windows Mixed Reality Spatial Mesh Observer** (Observador de malla espacial de Windows Mixed Reality) y, a continuación, haz clic en el botón **Clone** (Clonar) para abrir la ventana Clone Profile (Clonar perfil):
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step4-1.png)
+![Componente MixedRealityToolkit de Unity con la sección Windows Mixed Reality Spatial Mesh Observer (Observador de malla espacial de Windows Mixed Reality) expandida](images/mr-learning-base/base-03-section1-step4-1.png)
 
-En la ventana para clonar perfil, escriba un **Nombre de perfil** adecuado; por ejemplo, _GettingStarted_MixedRealitySpatialAwarenessMeshObserverProfile_ . A continuación, haga clic en el botón **Clonar** para crear una copia modificable de **DefaultMixedRealitySpatialAwarenessMeshObserverProfile** :
+En la ventana para clonar perfil, escriba un **Nombre de perfil** adecuado; por ejemplo, _GettingStarted_MixedRealitySpatialAwarenessMeshObserverProfile_. A continuación, haga clic en el botón **Clonar** para crear una copia modificable de **DefaultMixedRealitySpatialAwarenessMeshObserverProfile** :
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step4-2.png)
+![Ventana emergente para clonar el perfil del observador de la malla espacial de MixedRealityToolkit de Unity](images/mr-learning-base/base-03-section1-step4-2.png)
 
 Ahora, el perfil del observador de malla de reconocimiento espacial recién creado se asigna automáticamente al perfil del sistema de reconocimiento espacial:
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step4-3.png)
+![Componente MixedRealityToolkit de Unity con MixedRealitySpatialAwarenessMeshObserverProfile personalizado recién creado aplicado](images/mr-learning-base/base-03-section1-step4-3.png)
 
 ### <a name="5-change-the-visibility-of-the-spatial-awareness-mesh"></a>5. Cambiar la visibilidad de la malla de reconocimiento espacial
 
 En **Spatial Mesh Observer Settings** (Configuración del observador de malla espacial), cambie **Opción de visualización** a **Oclusión** para que la malla de asignación espacial sea invisible y funcional a la vez:
 
-![mr-learning-base](images/mr-learning-base/base-03-section1-step5-1.png)
+![Componente de MixedRealityToolkit de Unity con Display Option (Opción de visualización) de Spatial Mesh Observer (Observador de malla espacial) establecida en Occlusion (Oclusión)](images/mr-learning-base/base-03-section1-step5-1.png)
 
 > [!NOTE]
 > Aunque la malla de asignación espacial no está visible, sigue existiendo y es funcional. Por ejemplo, los hologramas situados detrás de la malla de asignación espacial, como un holograma detrás de un muro físico, no estarán visibles.

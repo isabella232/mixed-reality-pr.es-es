@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales de la comunicación remota holográfica del equipo: 2. Creación de una aplicación para equipos de comunicación remota holográfica'
-description: Complete este curso para aprender cómo crear una experiencia de realidad mixta remota del PC a HoloLens 2.
+description: Siga este curso para aprender cómo crear una aplicación de PC para la comunicación remota de una experiencia de realidad mixta remota del equipo a HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 6d11d91a0e08c48c09f676171dcb9bb8a0ff74de
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 30ef793511285fe2fe52810912f6c5c06c8550dc
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91701712"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353463"
 ---
 # <a name="2-creating-a-holographic-remoting-pc-application"></a>2. Creación de una aplicación para PC de comunicación remota holográfica
 
@@ -30,7 +30,7 @@ En esta sección, configurará el proyecto para que transmita la experiencia de 
 
 En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK.Tutorials.PCHolograhicRemoting** > **Prefabs** y haga clic y arrastre el elemento prefabricado **HolographicRemoting** a la escena.
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section1-Step1-1.png)
+![Unity con el objeto prefabricado HolographicRemoting recién agregado aún seleccionado](images/mrlearning-pc-holographic-remoting/Tutorial2-Section1-Step1-1.png)
 
 ## <a name="build-your-application-to-pc"></a>Compilación de la aplicación para PC
 
@@ -42,38 +42,38 @@ En el menú de Unity, seleccione Edit > Project Settings (Editar > Configuració
 
 En la sección **XR Settings** (Configuración de XR), seleccione la casilla **WSA Holographic Remoting Supported** (Admitir la comunicación remota holográfica de WSA) y habilite la comunicación remota holográfica.
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step1-1.png)
+![Ventana XR Settings (Configuración de XR) de Unity con WSA Holographic Remoting Supported (Admitir la comunicación remota holográfica de WSA) habilitado](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step1-1.png)
 
 ### <a name="2-build-the-unity-project"></a>2. Compilación del proyecto de Unity
 
 En el menú de Unity, seleccione File > Build Settings (Archivo > Configuración de compilación) para abrir la ventana Build Settings (Configuración de compilación).
 
-En la ventana Build Settings (Configuración de compilación), haga clic en el botón ***Add Open Scenes*** (Agregar escenas abiertas) para agregar la escena actual a las escenas. En la lista Build (Compilación), haga clic en el ***botón Build*** (Compilar) para abrir la ventana Build Universal Windows Platform (Compilar Plataforma universal de Windows):
+En la ventana Build Settings (Configuración de compilación), haga clic en el botón * *_Add Open Scenes_* _ (Agregar escenas abiertas) para agregar la escena actual a las escenas. En la lista Build (Compilación), haga clic en el _*_botón Build_*_ (Compilar) para abrir la ventana Build Universal Windows Platform (Compilar Plataforma universal de Windows):
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-1.png)
+![Ventana Build Settings (Configuración de compilación) de Unity con la escena agregada](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-1.png)
 
-En la ventana Build Universal Windows Platform (Compilar Plataforma universal de Windows), elija una ubicación adecuada para almacenar la compilación, como por ejemplo, Mis Documentos\AprendizajeRealidadMixta. Cree una nueva carpeta y asígnele un nombre adecuado, por ejemplo, ComunicaciónRemotaHolográficaPC. A continuación, haga clic en el botón ***Select Folder*** (Seleccionar carpeta) para iniciar el proceso de compilación:
+En la ventana Build Universal Windows Platform (Compilar Plataforma universal de Windows), elija una ubicación adecuada para almacenar la compilación, como por ejemplo, Mis Documentos\AprendizajeRealidadMixta. Cree una nueva carpeta y asígnele un nombre adecuado, por ejemplo, ComunicaciónRemotaHolográficaPC. A continuación, haga clic en el botón _*_Select Folder_*_ (Seleccionar carpeta) para iniciar el proceso de compilación:
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-2.png)
+![Ventana Build Settings (Configuración de compilación) de Unity con la ventana de solicitud Select Folder (Seleccionar carpeta)](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-2.png)
 
 Espere a que Unity finalice el proceso de compilación.
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-3.png)
+![Proceso de compilación de Unity en curso](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-3.png)
 
 ### <a name="3-build-and-deploy-the-application"></a>3. Compilar e implementar la aplicación
 
 Cuando se complete el proceso de compilación, Unity solicitará al Explorador de archivos de Windows que abra la ubicación en la que almacenó la compilación. Navegue dentro de la carpeta y haga doble clic en el archivo .sln para abrirlo en Visual Studio:
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step3-1.png)
+![Explorador de Windows con la solución de Visual Studio recién creada seleccionada](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step3-1.png)
 
 > [!NOTE]
 > Si Visual Studio solicita que instale nuevos componentes, dedique un momento a comprobar que todos los componentes de los requisitos previos estén instalados, tal como se especifica en la documentación Instalación de herramientas.
 
 Configure Visual Studio para PC. Para ello, selecciona la configuración Publicación, la arquitectura x64 y la opción Equipo local como destino:
 
-![mrlearning-pc-holographic-remoting](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step3-2.png)
+![Visual Studio configurado para el equipo local](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step3-2.png)
 
-Haga clic en el botón que indica ***Equipo local*** . Comienza la compilación e implementación de la aplicación en el PC. La aplicación se instalará de forma predeterminada en su PC.
+Haga clic en el botón que indica _*_Equipo local_*_. Comienza la compilación e implementación de la aplicación en el PC. La aplicación se instalará de forma predeterminada en su PC.
 
 ## <a name="testing-holographic-remoting-remote-application"></a>Prueba de la aplicación remota de comunicación remota holográfica
 
@@ -81,8 +81,8 @@ Para conectar la aplicación de PC a HoloLens 2, siga el proceso siguiente:
 
 ### <a name="1-install-the-remoting-player-application-on-hololens-2-device"></a>1. Instalación de la aplicación Remoting Player en el dispositivo HoloLens 2
 
-* En HoloLens 2, visite la aplicación Store y busque " **Remoting Player** ".
-* Seleccione la aplicación **Remoting Player** .
+_ En HoloLens 2, visite la aplicación Store y busque " **Remoting Player** ".
+* Seleccione la aplicación **Remoting Player**.
 * Pulse **Instalar** una vez para descargar e instalar la aplicación.
 
 ### <a name="2-connect-the-holographic-remoting-pc-app-to-the-remoting-player"></a>2. Conexión de la aplicación de comunicación remota holográfica para PC a Remoting Player

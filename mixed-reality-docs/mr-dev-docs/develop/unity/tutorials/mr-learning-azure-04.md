@@ -7,16 +7,16 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, hololens 2, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: 2c10d7458fc956cb8974319cd5355260179f10b4
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: f8271fe3b3b9549d6c95707466db9af3d312fab7
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91700087"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353253"
 ---
 # <a name="4-integrating-azure-spatial-anchors"></a>4. Integración de Azure Spatial Anchors
 
-En este tutorial, aprenderá a usar **Azure Spatial Anchors** . Almacenará la ubicación de un **objeto del que realiza un seguimiento** como un anclaje espacial de Azure. Una vez que haya consultado el anclaje, aparecerá una flecha que le guiará hacia la ubicación.
+En este tutorial, aprenderá a usar **Azure Spatial Anchors**. Almacenará la ubicación de un **objeto del que realiza un seguimiento** como un anclaje espacial de Azure. Una vez que haya consultado el anclaje, aparecerá una flecha que le guiará hacia la ubicación.
 
 ## <a name="objectives"></a>Objetivos
 
@@ -41,17 +41,17 @@ En esta sección, aprenderá a configurar la escena y realizar los cambios neces
 
 En la ventana Proyecto, navegue a **Assets > MRTK.Tutorials.AzureCloudServices > Prefabs > Manager** (Recursos > MRTK.Tutorials.AzureCloudServices > Objetos prefabricados > Administrador).
 
-![mr-learning-azure](images/mr-learning-azure/tutorial4-section1-step1-1.png)
+![Unity con el objeto prefabricado AnchorManager seleccionado](images/mr-learning-azure/tutorial4-section1-step1-1.png)
 
 En la carpeta **Manager** (Administrador), arrastre y coloque el objeto prefabricado **Anchor Manager** (Administrador de anclajes) en la jerarquía de la escena.
 
 Seleccione el objeto Game (Juego) de **Anchor Manager** (Administrador de anclajes) en la jerarquía y, en la sección Inspector, encontrará la opción **Spatial Anchor Manager** (Script) (Administrador de anclajes espacial [script]). Busque el campo del identificador de la cuenta y la clave y agregue las credenciales que creó en el requisito previo de la fase anterior.
 
-![mr-learning-azure](images/mr-learning-azure/tutorial4-section1-step2-1.png)
+![Unity con el objeto prefabricado AnchorManager recién agregado aún seleccionado](images/mr-learning-azure/tutorial4-section1-step2-1.png)
 
 Ahora, busque el objeto **Scene Controller** (Controlador de escenas) en la jerarquía de escenas y selecciónelo. Verá **Scene Controller** (Controlador de escenas) en la sección de Inspector.
 
-![mr-learning-azure](images/mr-learning-azure/tutorial4-section1-step3-1.png)
+![Unity con el componente de script SceneController configurado](images/mr-learning-azure/tutorial4-section1-step3-1.png)
 
 Observará que el campo **Anchor Manager** (Administrador de anclajes) del componente **Scene Controller** (Controlador de escenas) está vacío. Arrastre y coloque el elemento **Anchor Manager** (Administrador de anclajes) de la jerarquía de escenas en ese campo y guarde la escena.
 
@@ -74,7 +74,7 @@ Asigne el **nombre** del objeto que quiera guardar y haga clic en **Set Object**
 
 Para guardar la ubicación, haga clic en **Sabe Location** (Guardar ubicación).
 
-Verá un **puntero de anclaje** que puede desplazar y colocar en la ubicación que quiera guardar. Después, se le mostrará una ventana emergente de confirmación. Si quiere confirmar y guardar la ubicación, haga clic en **Sí** . De lo contrario, puede cambiar la ubicación haciendo clic en **No** y seleccionándola de nuevo.
+Verá un **puntero de anclaje** que puede desplazar y colocar en la ubicación que quiera guardar. Después, se le mostrará una ventana emergente de confirmación. Si quiere confirmar y guardar la ubicación, haga clic en **Sí**. De lo contrario, puede cambiar la ubicación haciendo clic en **No** y seleccionándola de nuevo.
 
 Una vez haya hecho clic en **Sí** para confirmar la ubicación, dicha ubicación y el identificador de anclaje se guardarán en el almacenamiento en la nube de Azure. Una vez guardados, verá la **etiqueta del objeto** en el anclaje con el nombre del objeto.
 

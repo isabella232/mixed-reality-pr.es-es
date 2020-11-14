@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, rendimiento
 appliesto:
 - Windows 10
-ms.openlocfilehash: 77d1d7273d1e73af4655ef45bd102220e15d2355
-ms.sourcegitcommit: af1e5c9003fc3b7dd0a2f67531f91f954b6a9ea3
+ms.openlocfilehash: 7d6d5a1eeabffdd7ad6d4ddd070a14c6dcf0d5ee
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94498290"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573209"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>Preguntas más frecuentes de la reverberación de HP G2
 
@@ -36,13 +36,15 @@ Hay algunas cosas que puede probar si cree que la pantalla tiene un aspecto un p
 
 ## <a name="i-am-getting-a-7-14-something-went-wrong-error-when-i-plug-in-my-headset"></a>Obtengo un error 7-14 "algo ha ido mal" al conectar mis auriculares
 
+El Código 7-14 algo ha salido mal, lo que significa que no se encontraron algunos componentes USB2 necesarios.  Debido al cable extra largo de la reverberación de HP G2, algunas de las tolerancias para las señales USB son más estrictas.  Esto significa que un puerto del equipo puede funcionar de forma más confiable que otro.
+
 Si ve un error 7-14 "algo ha ido mal", realice los pasos siguientes:
 
-- Asegúrese de que tiene los controladores más recientes instalados.
-- Intente conectar el cable a otro puerto USB-3,0.
-- Use USB C en un adaptador incluido para probar distintos puertos.
-
-Intente conectar el cable a un concentrador USB diferente.  
+- Asegúrese de que tiene los controladores más recientes instalados para el casco y la controladora USB.
+- Asegúrese de que está usando un controlador USB de Microsoft. Debe haber una "Microsoft" en el nombre del dispositivo "controlador de host extensible".
+- Intente conectar el cable a un puerto USB-3,0 diferente en el equipo. (Pruebe los puertos USB tipo-C y tipo a)
+- Use el USB C incluido en un adaptador incluido para probar distintos puertos.
+- Intente conectar los auriculares a través de un concentrador USB al equipo.
 
 > [!NOTE]
 > HP recomienda usar solo controladores USB integrados en la placa base con dispositivos de reverberación G2.

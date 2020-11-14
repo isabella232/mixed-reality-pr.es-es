@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: af9055c4e6074c4d4b10b4f0a6ac135c858b57a7
-ms.sourcegitcommit: 520c69eb761ad6083b36f448bbcfab89e343e40d
-ms.translationtype: MT
+ms.openlocfilehash: 746b6257e6a3ab28424d7b74e43a1b6541d6fad0
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/12/2020
-ms.locfileid: "94549118"
+ms.locfileid: "94573289"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>Días de desarrollo de realidad mixta Japón
 
@@ -48,18 +48,17 @@ Próximamente
 |12:50pm-1: p.m.|**Eliminar**||||
 |1: p.m.-1:25pm|*Sesión 3* Información general sobre el desarrollo de HoloLens 2|Madoka Chiyoda|JA|200|
 |1: las 16:30-1:55pm|*Sesión 4* HoloLens 2 & MRTK v 2.5 (MRTK-Unity)|Yoon Park|JA|300|
-|2: p.m.-2:20pm|*Sesión 5* Introducción a HoloLens 2 e inreal Engine (MRTK-nonreal)|Cameron Micka|ES|300|
+|2: p.m.-2:25pm|*Sesión 5* Introducción a HoloLens 2 e inreal Engine (MRTK-nonreal)|Cameron Micka|ES|300|
 |2: las 16:30-2:55pm|*Sesión 6* Diseño de aplicaciones MR (procedimiento recomendado para crear la interfaz de usuario/UX para la aplicación HL2)|Daniel Escudero|ES|300|
-|2:55pm-3:13:15|**Eliminar**||||
-|3:13:15-3:40pm|*Sesión 7* Delimitadores de objeto de Azure|TBD|ES|300|
-|3:5:45-4:10pm|*Sesión 8* Representación remota de Azure|Atsushi Suzuki|JA|300|
-|4:13:15-4:40pm|*Sesión 9* Anclajes espaciales de Azure|TBD|ES|300|
-<!--|4:5:45-5:10pm|*Sesión 10* Unity + PiXYZ|(Unity Japón)|JA|200|-->
-|4:5:45-5:10pm|*Sesión 10* DISCRECIÓN|TBD|JA|200|
-|5:13:15-5:40pm|*Sesión 11* Análisis detallado de Azure Kinect DK, caso práctico|Shinji Chiba|JA|400|
-|5:5:45-6: p.m.|Cierre|Madoka Chiyoda|JA|N/D|
+|2:55pm-3:10pm|**Eliminar**||||
+|3:10pm-3:35pm|*Sesión 7* Delimitadores de objeto de Azure|TBD|ES|300|
+|3:40pm-4:05pm|*Sesión 8* Representación remota de Azure|Atsushi Suzuki|JA|300|
+|4:10pm-4:35pm|*Sesión 9* Anclajes espaciales de Azure|TBD|ES|300|
+|4:40pm-5:05pm|*Sesión 10* DISCRECIÓN|TBD|JA|200|
+|5:10pm-5:35pm|*Sesión 11* Análisis detallado de Azure Kinect DK, caso práctico|Shinji Chiba|JA|400|
+|5:35pm-5:50pm|Cierre|Madoka Chiyoda|JA|N/D|
 
-#### <a name="contributors-english-subtitle-reviewers"></a>Colaboradores (revisores de subtítulos en inglés)
+#### <a name="contributors-technical-reviewers-for-the-subtitles"></a>Colaboradores (revisores técnicos para los subtítulos)
 
 Futo Hori ( [@Futo_Horio](https://twitter.com/Futo_Horio) ), Takahiro Miyaura ( [@takabrz1](https://twitter.com/takabrz1) ), Akihiro Ueyama ( [@akihiro01051](https://twitter.com/akihiro01051) ), Kaoru Nakamura ( [@kaorun55](https://twitter.com/kaorun55) ), brillantea Tachihara ( [@deco_c_](https://twitter.com/deco_c_) )
 

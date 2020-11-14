@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales sobre Azure Spatial Anchors: 4. Visualización de comentarios de Azure Spatial Anchors'
-description: Siga este curso para aprender a implementar Azure Spatial Anchors dentro de una aplicación de realidad mixta.
+description: Siga este curso para aprender a mostrar comentarios de Azure Spatial Anchors en una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: c36fa20ae6438aee92d5d853febd683e01e81ea7
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 4c35af1f5a2a723df6603fbdf41dd18a2e9ee45d
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91700311"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353343"
 ---
 # <a name="4-displaying-feedback-from-azure-spatial-anchors"></a>4. Visualización de comentarios de Azure Spatial Anchors
 
@@ -25,9 +25,9 @@ En este tutorial, aprenderá a proporcionar a los usuarios comentarios sobre la 
 
 ## <a name="setting-up-asa-feedback-panel"></a>Configurar el panel de comentarios de ASA
 
-En la ventana Hierarchy (Jerarquía), haga clic con el botón derecho en el objeto **Instructions** (Instrucciones)  > **TextContent** . Seleccione **Objeto 3D** > **Text - TextMeshPro** (Texto: TextMeshPro) para crear un objeto de texto TextMeshPro como elemento secundario del objeto Instructions (Instrucciones) > TextContent:
+En la ventana Hierarchy (Jerarquía), haga clic con el botón derecho en el objeto **Instructions** (Instrucciones)  > **TextContent**. Seleccione **Objeto 3D** > **Text - TextMeshPro** (Texto: TextMeshPro) para crear un objeto de texto TextMeshPro como elemento secundario del objeto Instructions (Instrucciones) > TextContent:
 
-![mr-learning-asa](images/mr-learning-asa/asa-04-section1-step1-1.png)
+![Unity con el objeto TextMeshPro recién creado seleccionado](images/mr-learning-asa/asa-04-section1-step1-1.png)
 
 > [!TIP]
 > Para que resulte más fácil trabajar con la escena, define <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">Scene Visibility</a> (Visibilidad de la escena) como desactivada para el objeto ParentAnchor haciendo clic en el icono de ojo situado a la izquierda del objeto. Esto oculta el objeto en la ventana Scene (Escena) sin cambiar su visibilidad en el juego.
@@ -44,13 +44,13 @@ A continuación, elija las propiedades de la fuente para que el texto encaje bie
 * Cambie el **tamaño de fuente** del componente TextMeshPro - Text (TextMeshPro: texto) a 0,17.
 * Cambie la **alineación** del componente TextMeshPro - Text (TextMeshPro: texto) a Center (Centro) y Middle (Medio).
 
-![mr-learning-asa](images/mr-learning-asa/asa-04-section1-step1-2.png)
+![Unity con el objeto Feedback (Comentarios) configurado](images/mr-learning-asa/asa-04-section1-step1-2.png)
 
 En la ventana Hierarchy (Jerarquía), seleccione el objeto **Feedback** (Comentarios) y, a continuación, en la ventana Inspector, use el botón **Add Component** (Agregar componente) para agregar el componente **Anchor Feedback Script (Script)** (Script de comentarios de anclaje [script]) y configúrelo del modo siguiente:
 
 * Asigne el objeto **Feedback** (Comentarios) al campo **Feedback Text** (Texto de comentarios) del componente **Anchor Feedback Script (Script)** (Script de comentarios de anclaje [script]).
 
-![mr-learning-asa](images/mr-learning-asa/asa-04-section1-step1-3.png)
+![Unity con el componente Anchor Feedback Script (Script de comentarios de anclaje) configurado](images/mr-learning-asa/asa-04-section1-step1-3.png)
 
 ## <a name="congratulations"></a>Enhorabuena
 

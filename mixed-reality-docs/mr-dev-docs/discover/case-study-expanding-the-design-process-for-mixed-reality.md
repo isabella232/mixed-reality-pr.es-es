@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 04/08/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, proceso, caso práctico
-ms.openlocfilehash: f08115879d09d0be7ef8cae12ea0a4c15991a576
-ms.sourcegitcommit: 83c9373fe5b2e07cdab921b6cab3fdd418307003
+ms.openlocfilehash: 4cde36c8b5c3914c63e0c588e76dc4b782dcdcb9
+ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94386251"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631513"
 ---
 # <a name="thinking-differently-for-mixed-reality"></a>Pensamiento diferente para la realidad mixta
 Cuando Microsoft lanzó la HoloLens (1ª generación) a una audiencia de desarrolladores ansiosos en 2016, el equipo ya se ha asociado con estudios dentro y fuera de Microsoft para crear las experiencias de inicio del dispositivo. Estos equipos aprendieron con la práctica y la búsqueda de oportunidades y retos en el nuevo campo del diseño de realidad mixta.
@@ -130,11 +130,10 @@ Los sencillos suministros de arte económico son esenciales para proporcionar a 
 
 ## <a name="next-discovery-checkpoint"></a>Siguiente punto de comprobación de detección
 
-Si está siguiendo el [viaje de detección](get-started-with-mr.md) que hemos diseñado, está en medio de explorar los aspectos básicos de la realidad mixta. Desde aquí, puede continuar con el siguiente tema básico: 
+Enhorabuena, ha completado el proceso de detección de la realidad mixta. Puede volver a la Página principal de [recorrido de detección](get-started-with-mr.md) y [ver cómo los asociados del sector usan la realidad mixta](get-started-with-mr.md#see-how-industry-partners-are-using-mixed-reality) y [explorar la HoloLens](get-started-with-mr.md#explore-hololens-and-mixed-reality-services), o iniciar los recorridos de diseño o desarrollo:
 
 > [!div class="nextstepaction"]
-> [Comodidad del usuario](../design/comfort.md)
+> [Inicio del recorrido del diseño](../design/design.md)
 
-## <a name="see-also"></a>Vea también
-* [Caso práctico: mi primer año en el equipo de diseño de HoloLens](../out-of-scope/case-study-my-first-year-on-the-hololens-design-team.md)
-* [Caso práctico: AfterNow de procesos, creación de prototipos y compilación](https://developer.microsoft.com/windows/mixed-reality/case_study_-_afternow's_process_-_envisioning,_prototyping,_building)
+> [!div class="nextstepaction"]
+> [Comience su recorrido de desarrollo](../develop/development.md)

@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales sobre las funcionalidades multiusuario: 2. Configuración de Photon Unity Networking'
-description: Completa este curso para aprender a implementar experiencias compartidas con varios usuarios en una aplicación de HoloLens 2.
+description: Siga este curso para aprender a implementar Photon Unity Networking en una aplicación de HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 23498938815bd5bb2e200639ae89c62699a01774
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: aeda463610f1fb1205eade556a2c2b9bc07a4fde
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91702212"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353483"
 ---
 # <a name="2-setting-up-photon-unity-networking"></a>2. Configuración de Photon Unity Networking
 
@@ -41,14 +41,14 @@ Para ello, antes debe seguir las instrucciones de [Inicialización de su proyect
 
 A continuación, siga las instrucciones de la sección [Cambio de la opción de visualización de reconocimiento espacial](mr-learning-base-03.md#changing-the-spatial-awareness-display-option) para:
 
-1. Cambiar el **perfil de configuración de MRTK** por **DefaultHoloLens2ConfigurationProfile** .
-1. Cambiar las **opciones de visualización de la malla de reconocimiento espacial** a **Oclusión** .
+1. Cambiar el **perfil de configuración de MRTK** por **DefaultHoloLens2ConfigurationProfile**.
+1. Cambiar las **opciones de visualización de la malla de reconocimiento espacial** a **Oclusión**.
 
 ## <a name="enabling-additional-capabilities"></a>Habilitación de funcionalidades adicionales
 
 En el menú de Unity, selecciona **Edit** > **Project Settings...** (Editar > Configuración del proyecto...) para abrir la ventana Player Settings (Configuración del jugador). A continuación, busca la sección **Player** >  **Publishing Settings** (Jugador > Configuración de publicación):
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section2-step1-1.png)
+![Player Settings (Configuración del reproductor) de Unity](images/mr-learning-sharing/sharing-02-section2-step1-1.png)
 
 En **Configuración de publicación** , desplácese hasta la sección **Funcionalidades** y compruebe que las funcionalidades **InternetClient** , **Microphone** , **SpatialPerception** y **GazeInput** que habilitó durante el paso anterior titulado [Configuración del proyecto de Unity](mr-learning-base-02.md#configuring-the-unity-project), estén habilitadas.
 
@@ -57,13 +57,13 @@ A continuación, habilite las siguientes funcionalidades adicionales:
 * Funcionalidad **InternetClientServer**
 * Funcionalidad **PrivateNetworkClientServer**
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section2-step1-2.png)
+![Capabilities Settings (Configuración de funcionalidades) de Unity](images/mr-learning-sharing/sharing-02-section2-step1-2.png)
 
 ## <a name="installing-inbuilt-unity-packages"></a>Instalación de paquetes de Unity integrados
 
 En el menú de Unity, seleccione **Ventana** > **Administrador de paquetes** para abrir la ventana Administrador de paquetes y, a continuación, seleccione **AR Foundation** y haga clic en el botón **Instalar** para instalar el paquete:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section3-step1-1.png)
+![Unity Package Manager con AR Foundation seleccionado](images/mr-learning-sharing/sharing-02-section3-step1-1.png)
 
 > [!NOTE]
 > Se instalará el paquete de AR Foundation porque así lo requiere el SDK de Azure Spatial Anchors que se importará en la siguiente sección.
@@ -79,7 +79,7 @@ Descarga e **importa** los siguientes paquetes personalizados de Unity **en el o
 
 Después de importar los recursos del tutorial, la ventana Project (Proyecto) debería tener un aspecto similar al siguiente:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section4-step1-1.png)
+![Ventanas Hierarchy (Jerarquía), Scene (Escena) y Project (Proyecto) después de importar los recursos del tutorial](images/mr-learning-sharing/sharing-02-section4-step1-1.png)
 
 > [!TIP]
 > Para obtener un recordatorio sobre cómo importar un paquete personalizado de Unity, consulte las instrucciones de [Importación de Mixed Reality Toolkit](mr-learning-base-02.md#importing-the-mixed-reality-toolkit).
@@ -93,15 +93,15 @@ En el menú de Unity, seleccione **Ventana** > **Asset Store** (Almacén de recu
 
 Una vez completada la descarga, haz clic en el botón **Importar** para abrir la ventana Import Unity Package (Importar paquete de Unity):
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section5-step1-1.png)
+![Asset Store (Almacén de recursos) de Unity con PUN 2 - Free](images/mr-learning-sharing/sharing-02-section5-step1-1.png)
 
 En la ventana Import Unity Package (Importar paquete de Unity), haz clic en el botón **All** (Todos) para asegurarte de que todos los recursos están seleccionados y, a continuación, haz clic en el botón **Import** (Importar) para importar los recursos:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section5-step1-2.png)
+![Ventana de importación de Unity con PUN 2](images/mr-learning-sharing/sharing-02-section5-step1-2.png)
 
 Una vez que Unity haya completado el proceso de importación, se mostrará la ventana Pun Wizard (Asistente para PUN) con el menú de configuración de PUN cargado. Por ahora, puedes omitir o cerrar esta ventana:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section5-step1-3.png)
+![Ventana de importación de Unity con PUN Setup (Instalación de PUN)](images/mr-learning-sharing/sharing-02-section5-step1-3.png)
 
 ## <a name="creating-the-pun-application"></a>Creación de la aplicación de PUN
 
@@ -109,26 +109,26 @@ En esta sección, creará una cuenta de Photon, si aún no tiene ninguna, y crea
 
 Ve al <a href="https://dashboard.photonengine.com/account/signin" target="_blank">panel</a> de Photon e inicia sesión si ya tienes una cuenta que quieras usar. De lo contrario, haz clic en el vínculo **Crear una** y sigue las instrucciones para registrar una cuenta nueva:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section6-step1-1.png)
+![Página de inicio de sesión de Photon](images/mr-learning-sharing/sharing-02-section6-step1-1.png)
 
 Una vez que hayas iniciado sesión, haz clic en el botón **Crear una nueva aplicación** :
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section6-step1-2.png)
+![Página de bienvenida del panel de Photon](images/mr-learning-sharing/sharing-02-section6-step1-2.png)
 
 En la página Crear una nueva aplicación, escribe los valores siguientes:
 
 * En Photon Type (Tipo de Photon), seleccione PUN.
-* En Nombre, escribe un nombre adecuado, por ejemplo, _Tutoriales de MRTK_ .
+* En Nombre, escribe un nombre adecuado, por ejemplo, _Tutoriales de MRTK_.
 * En Descripción, puedes escribir una descripción adecuada.
 * En URL, deja el campo vacío.
 
 A continuación, haga clic en el botón **Crear** para crear la nueva aplicación:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section6-step1-3.png)
+![Página de creación de aplicaciones de Photon](images/mr-learning-sharing/sharing-02-section6-step1-3.png)
 
 Una vez que Photon haya finalizado el proceso de creación, la nueva aplicación de PUN se mostrará en el panel:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section6-step1-4.png)
+![Página de la aplicación de Photon](images/mr-learning-sharing/sharing-02-section6-step1-4.png)
 
 ## <a name="connecting-the-unity-project-to-the-pun-application"></a>Conexión del proyecto de Unity con la aplicación de PUN
 
@@ -136,7 +136,7 @@ En esta sección, conectará el proyecto de Unity a la aplicación de PUN que cr
 
 En el panel de Photon, haz clic en el campo **Id. de la aplicación** para mostrar el identificador de la aplicación y, a continuación, cópialo en el portapapeles:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section7-step1-1.png)
+![Página de la aplicación de Photon con el identificador de aplicación seleccionado](images/mr-learning-sharing/sharing-02-section7-step1-1.png)
 
 En el menú de Unity, selecciona **Ventana** > **Photon Unity Networking** > **Pun Wizard** (Asistente para PUN) para abrir la ventana del asistente para PUN, haz clic en el botón **Proyecto de instalación** para abrir el menú de configuración de PUN y configúralo de la siguiente manera:
 
@@ -144,11 +144,11 @@ En el menú de Unity, selecciona **Ventana** > **Photon Unity Networking** > **P
 
 A continuación, haz clic en el botón **Proyecto de instalación** para aplicar el id. de la aplicación:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section7-step1-2.png)
+![Ventana PUN Setup (Instalación de PUN) de Unity con AppId rellenado](images/mr-learning-sharing/sharing-02-section7-step1-2.png)
 
 Una vez que Unity termine el proceso de configuración de PUN, se mostrará el mensaje **Listo** en el menú de configuración de PUN. Asimismo, se seleccionará automáticamente el recurso **PhotonServerSettings** en la ventana Proyecto para que sus propiedades se muestren en la ventana Inspector:
 
-![mr-learning-sharing](images/mr-learning-sharing/sharing-02-section7-step1-3.png)
+![Ventana PUN Setup (Instalación de PUN) de Unity con el proyecto de instalación aplicado](images/mr-learning-sharing/sharing-02-section7-step1-3.png)
 
 ## <a name="congratulations"></a>Enhorabuena
 

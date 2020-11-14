@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales de introducción: 9. Uso de los comandos de voz'
-description: Aprenda a usar Mixed Reality Toolkit (MRTK) para crear una aplicación de realidad mixta.
+description: En este curso se muestra cómo usar comandos de voz con Mixed Reality Toolkit (MRTK).
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: d9ddf3d234b68dfe4ce3ab5c9272566479edd71d
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: c5d7297b8c8153270cd6ccf40eff64eab4afb49e
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91700911"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353513"
 ---
 # <a name="9-using-speech-commands"></a>9. Uso de los comandos de voz
 
@@ -39,7 +39,7 @@ En el menú de Unity, seleccione Mixed Reality Toolkit > Utilities (Utilidades) 
 En la ventana jerarquía, seleccione el objeto **MixedRealityToolkit** , a continuación, en la ventana Inspector, seleccione MixedRealityToolkit > pestaña **Input** (Entrada) y siga los pasos a continuación:
 
 * Expanda la sección **Speech** (Voz).
-* Clone **DefaultMixedRealitySpeechCommandsProfile** y asígnele un nombre adecuado, por ejemplo, _GettingStarted_MixedRealitySpeechCommandsProfile_ .
+* Clone **DefaultMixedRealitySpeechCommandsProfile** y asígnele un nombre adecuado, por ejemplo, _GettingStarted_MixedRealitySpeechCommandsProfile_.
 * Verifique que **Start Behaviour** (Iniciar comportamiento) está establecido en **Auto Start** (Inicio automático).
 
 ![Creación de comandos de voz](images/mr-learning-base/base-09-section2-step1-1.png)
@@ -84,7 +84,7 @@ Expanda **Element 0** (Elemento 0) y configúrelo de la siguiente manera:
 * Haga clic en el icono **+** pequeño para agregar un evento.
 * En la ventana Hierarchy (Jerarquía), asigne el objeto **Indicator** al campo **None (Object)** (Ninguno objeto).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **GameObject** > **SetActive (bool)** para establecer esta función como la acción que se va a ejecutar cuando se desencadene el evento.
-* Marque la casilla del argumento para que esté **activada** .
+* Marque la casilla del argumento para que esté **activada**.
 
 ![Configuración del elemento de palabra clave 0](images/mr-learning-base/base-09-section3-step1-4.png)
 
@@ -94,11 +94,11 @@ Expanda **Element 1** (Elemento 1) y configúrelo de la siguiente manera:
 * Haga clic en el icono **+** pequeño para agregar un evento.
 * En la ventana Hierarchy (Jerarquía), asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno objeto).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **BoundingBox** > **bool enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento.
-* Marque la casilla del argumento para que esté **activada** .
+* Marque la casilla del argumento para que esté **activada**.
 * Haga clic en el icono **+** pequeño para agregar otro evento.
 * En la ventana Hierarchy (Jerarquía), asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno objeto).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **ObjectManipulator** > **bool enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento.
-* Marque la casilla del argumento para que esté **activada** .
+* Marque la casilla del argumento para que esté **activada**.
 
 ![Configuración del elemento de palabra clave 1](images/mr-learning-base/base-09-section3-step1-5.png)
 
@@ -108,11 +108,11 @@ Expanda **Element 2** (Elemento 2) y configúrelo de la siguiente manera:
 * Haga clic en el icono **+** pequeño para agregar un evento.
 * En la ventana Hierarchy (Jerarquía), asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno objeto).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **BoundingBox** > **bool enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento.
-* Verifique que la casilla del argumento esté **desactivada** .
+* Verifique que la casilla del argumento esté **desactivada**.
 * Haga clic en el icono **+** pequeño para agregar otro evento.
 * En la ventana Hierarchy (Jerarquía), asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno objeto).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **ObjectManipulator** > **bool enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento.
-* Verifique que la casilla del argumento esté **desactivada** .
+* Verifique que la casilla del argumento esté **desactivada**.
 
 ![Configuración del elemento de palabra clave 2](images/mr-learning-base/base-09-section3-step1-6.png)
 
@@ -129,7 +129,7 @@ En el componente SpeechInputHandler, haga clic en el icono **+** pequeño para a
 * Haga clic en el icono **+** pequeño para agregar un evento.
 * En la ventana Hierarchy (Jerarquía), asigne el propio objeto, es decir, el mismo objeto **RoverAssembly** , al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **TapToPlace** > **bool enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento.
-* Marque la casilla del argumento para que esté **activada** .
+* Marque la casilla del argumento para que esté **activada**.
 
 ![Configuración del controlador de entrada de voz en el ensamblado del róver](images/mr-learning-base/base-09-section3-step1-8.png)
 

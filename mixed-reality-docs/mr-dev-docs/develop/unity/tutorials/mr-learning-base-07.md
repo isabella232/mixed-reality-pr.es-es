@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales de introducción: 7. Interacción con objetos 3D'
-description: En este curso le mostramos cómo usar Mixed Reality Toolkit (MRTK) para crear una aplicación de realidad mixta.
+description: En este curso se muestra cómo usar Mixed Reality Toolkit (MRTK) para interactuar con objetos 3D.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 0cedd731fc795341532a8a330f4fdcce9fba47b0
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 1e91cc97f68a4d4b5bcb015184e96582533d1f96
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91699798"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353523"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7. Interacción con objetos 3D
 
@@ -53,7 +53,7 @@ En la ventana Hierarchy (Jerarquía), expanda el objeto RoverExplorer > **RoverP
 * Componente **NearInteractionGrabbable**
 * Componente **Part Assembly Controller (Script)** (Controlador de ensamblado de partes [script])
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-1.png)
+![Unity con RoverAssembly y todos los objetos de partes del róver seleccionados y los componentes agregados](images/mr-learning-base/base-07-section1-step1-1.png)
 
 > [!TIP]
 > Para seleccionar varios objetos que no estén juntos entre sí, mantenga presionada la tecla Control mientras usa el mouse para seleccionar cualquier objeto.
@@ -66,30 +66,30 @@ En la ventana Hierarchy (Jerarquía), expanda el objeto RoverExplorer > **RoverP
 
 Con todos los objetos de las partes de róver y el objeto RoverAssembly todavía seleccionados, en la ventana Inspector, configure el componente **Object Manipulator (Script)** (Manipulador de objetos [script]) como se indica a continuación:
 
-* En la lista desplegable **Two Handed Manipulation Type** (Tipo de manipulación con dos manos), desactive la escala, de modo que solo queden habilitadas las opciones **Mover** y **Girar** .
+* En la lista desplegable **Two Handed Manipulation Type** (Tipo de manipulación con dos manos), desactive la escala, de modo que solo queden habilitadas las opciones **Mover** y **Girar**.
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-2.png)
+![Unity con Two Handed Manipulation Type (Tipo de manipulación con dos manos) configurado](images/mr-learning-base/base-07-section1-step1-2.png)
 
 > [!NOTE]
 > En este punto, ha habilitado la manipulación de objetos para todos los objetos de las piezas de Rover y el objeto RoverAssembly.
 
 En la ventana Proyecto, navegue hasta la carpeta **Recursos** > **MRTK** > **SDK** > **StandardAssets** > **Audio** para buscar los clips de audio:
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-3.png)
+![Ventana Project (Proyecto) de Unity con la carpeta Audio seleccionada](images/mr-learning-base/base-07-section1-step1-3.png)
 
 En la ventana Hierarchy (Jerarquía), seleccione todos los **objetos de las partes del róver** y, a continuación, en la ventana Inspector, use el botón **Add Component** (Agregar componente) para agregar el componente **Audio sources** (Orígenes de audio) y configurarlo del modo siguiente:
 
-* Asigne el clip de audio **MRTK_Scale_Start** al campo **AudioClip** .
+* Asigne el clip de audio **MRTK_Scale_Start** al campo **AudioClip**.
 * Desactive la casilla **Play On Awake** (Reproducir al reactivar).
 * Cambie **Spatial Blend** a 1.
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-4.png)
+![Unity con todas las partes del róver seleccionadas y el componente Audio Source (Origen de audio) agregado y configurado](images/mr-learning-base/base-07-section1-step1-4.png)
 
 En la ventana Hierarchy (Jerarquía), expanda el objeto RoverAssembly > RoverModel_PlacementHints_XRay > **Parts_PlacementHints** para mostrar todos los objetos de sugerencia de selección de ubicación y, a continuación, seleccione la primera parte de róver, RoverParts > **Camera_Part** y configure el componente **Part Assembly Controller (Script)** (Controlador de ensamblado de partes [script]) de la siguiente manera:
 
 * Asigne el objeto **Camera_PlacementHint** al campo **Location To Place** (Ubicación de colocación).
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-5.png)
+![Unity con el componente Camera_Part PartAssemblyController configurado](images/mr-learning-base/base-07-section1-step1-5.png)
 
 **Repita** este paso para cada uno de los objetos de las partes de róver restantes y el objeto RoverAssembly con tal de configurar el componente **Part Assembly Controller (Script)** (Controlador de ensamblado de partes [script]) de la manera siguiente:
 
@@ -104,11 +104,11 @@ En la ventana Hierarchy (Jerarquía), seleccione el objeto del botón RoverExplo
 * Asigne el objeto **RoverAssembly** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **PartAssemblyController** > **ResetPlacement ()** para establecer esta función como la acción que se va a ejecutar cuando se desencadene el evento.
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-6.png)
+![Unity con el evento OnClick del objeto de botón Reset configurado](images/mr-learning-base/base-07-section1-step1-6.png)
 
 Si ahora entra en el Modo Juego, podrá usar la interacción cercana o lejana para colocar las partes en el róver. Una vez que la parte esté cerca de la sugerencia de ubicación correspondiente, se ajustará en su lugar y pasará a ser una parte del róver. Para restablecer las ubicaciones, puede presionar el botón Restablecer:
 
-![mr-learning-base](images/mr-learning-base/base-07-section1-step1-7.png)
+![Vista dividida del modo de reproducción de Unity con el botón Reset presionado](images/mr-learning-base/base-07-section1-step1-7.png)
 
 Para obtener más información sobre el componente Object Manipulator (Manipulador de objetos) y sus propiedades asociadas, consulte la guía [Manipulador de objetos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
@@ -125,7 +125,7 @@ En la ventana Hierarchy (Jerarquía), seleccione el objeto **RoverExplorer** y, 
 
 A continuación, **desactive** la casilla situada junto a ambos componentes para que **estén deshabilitados** de forma predeterminada:
 
-![mr-learning-base](images/mr-learning-base/base-07-section2-step1-1.png)
+![Unity con el objeto RoverExplorer seleccionado y los componentes agregados y deshabilitados](images/mr-learning-base/base-07-section2-step1-1.png)
 
 > [!NOTE]
 > La visualización del cuadro de límite se crea en tiempo de ejecución y, por tanto, no es visible antes de entrar en el Modo Juego.
@@ -135,35 +135,35 @@ A continuación, **desactive** la casilla situada junto a ambos componentes para
 
 En la ventana Hierarchy (Jerarquía), expanda el objeto Menu (Menú) > **ButtonCollection** para mostrar los cuatro botones. Cambie el nombre del tercer botón a **BoundingBox_Enable** y, a continuación, en la ventana Inspector, configure el componente **Button Config Helper (Script)** (Asistente de configuración del botón [script]) como se indica a continuación:
 
-* Cambie el valor **Main Label Text** (Texto de la etiqueta principal) a **Habilitar** .
+* Cambie el valor **Main Label Text** (Texto de la etiqueta principal) a **Habilitar**.
 * Asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **BoundingBox** > **bool Enabled** (Booleano habilitado) para actualizar el valor de esta propiedad cuando se desencadene el evento.
-* Verifique que la casilla del argumento esté **activada** .
+* Verifique que la casilla del argumento esté **activada**.
 * Haga clic en el icono **+** pequeño para agregar otro evento.
 * Asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **ObjectManipulator** > **bool Enabled** (Booleano habilitado) para actualizar el valor de esta propiedad cuando se desencadene el evento.
-* Verifique que la casilla del argumento esté **activada** .
+* Verifique que la casilla del argumento esté **activada**.
 * Deje el **icono** como el icono "cubo con cuadro de límite".
 
-![mr-learning-base](images/mr-learning-base/base-07-section2-step1-2.png)
+![Unity con el objeto de botón BoundingBox_Enable seleccionado y el componente Button Config Helper (Asistente de configuración del botón) configurado](images/mr-learning-base/base-07-section2-step1-2.png)
 
 Cambie el nombre del cuarto y el último botón por **BoundingBox_Disable** y, a continuación, en la ventana Inspector, configure el componente **Button Config Helper (Script)** (Asistente de configuración del botón [script]) de la siguiente manera:
 
-* Cambie el valor **Main Label Text** (Texto de la etiqueta principal) a **Deshabilitar** .
+* Cambie el valor **Main Label Text** (Texto de la etiqueta principal) a **Deshabilitar**.
 * Asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **BoundingBox** > **bool Enabled** (Booleano habilitado) para actualizar el valor de esta propiedad cuando se desencadene el evento.
-* Verifique que la casilla del argumento esté **desactivada** .
+* Verifique que la casilla del argumento esté **desactivada**.
 * Haga clic en el icono **+** pequeño para agregar otro evento.
 * Asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **ObjectManipulator** > **bool Enabled** (Booleano habilitado) para actualizar el valor de esta propiedad cuando se desencadene el evento.
-* Verifique que la casilla del argumento esté **desactivada** .
+* Verifique que la casilla del argumento esté **desactivada**.
 * Deje el **icono** como el icono "cubo con cuadro de límite".
 
-![mr-learning-base](images/mr-learning-base/base-07-section2-step1-3.png)
+![Unity con el objeto de botón BoundingBox_Disable seleccionado y el componente Button Config Helper (Asistente de configuración del botón) configurado](images/mr-learning-base/base-07-section2-step1-3.png)
 
 Si ahora entra en el Modo Juego y habilita el cuadro de límite haciendo clic en el botón Habilitar, podrá usar la interacción cercana o lejana para desplazar, girar y escalar el cuadro de límite, así como usar el botón Deshabilitar para deshabilitar de nuevo el cuadro de límite:
 
-![mr-learning-base](images/mr-learning-base/base-07-section2-step1-4.png)
+![Vista dividida del modo de reproducción de Unity con el cuadro de límite manipulado](images/mr-learning-base/base-07-section2-step1-4.png)
 
 Para obtener más información sobre el componente de cuadro de límite y sus propiedades asociadas, puedes visitar la guía sobre el [cuadro de límite](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 

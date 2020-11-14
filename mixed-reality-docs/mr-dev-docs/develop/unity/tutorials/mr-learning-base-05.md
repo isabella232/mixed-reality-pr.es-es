@@ -1,18 +1,18 @@
 ---
 title: 'Tutoriales de introducción: 5. Creación de contenido dinámico mediante solucionadores'
-description: En este curso le mostramos cómo usar Mixed Reality Toolkit (MRTK) para crear una aplicación de realidad mixta.
+description: En este curso se muestra cómo usar los solucionadores de Mixed Reality Toolkit (MRTK) para crear contenido dinámico.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: c6ddbbd8bb65aa93c80f1e4499e976c7c24af7ec
-ms.sourcegitcommit: d8f39c0b95d9e61d645d64f27baabc7a1c300dc1
+ms.openlocfilehash: 64b5c3c719ce72260a10226d22c178d4016e403b
+ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92293216"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "93353533"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5. Creación de contenido dinámico mediante solucionadores
 
@@ -30,7 +30,7 @@ En este tutorial, explorará distintas formas de colocar hologramas de forma din
 
  Los solucionadores de MRTK se encuentran en la carpeta del SDK de MRTK. Para ver los solucionadores disponibles en el proyecto, en la ventana Project (Proyecto), navegue a **Assets** (Recursos)  > **MRTK** > **SDK** > **Features** (Características)  > **Utilities** (Utilidades)  > **Solvers** (Solucionadores):
 
-![mr-learning-base](images/mr-learning-base/base-05-section1-step1-1.png)
+![Ventana Project (Proyecto) de Unity con la carpeta Solvers seleccionada](images/mr-learning-base/base-05-section1-step1-1.png)
 
 En este tutorial, revisaremos la implementación de los solucionadores Directional Indicator (Indicador direccional) y Tap To Place (Pulsar para colocar). Para obtener más información acerca de la gama completa de solucionadores disponibles en MRTK, puede consultar la guía [Solucionadores](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
@@ -41,14 +41,14 @@ En este tutorial, revisaremos la implementación de los solucionadores Direction
 
 En la ventana Proyecto, navegue hasta **Assets** (Recursos)  > **MRTK.Tutorials.GettingStarted** > carpeta **Prefabs** (Recursos prefabricados), haga clic y arrastre el elemento prefabricado **Chevron** (Botón de contenido adicional) a la ventana Jerarquía y establezca su **Posición** de transformación en X = 0, Y = 0, Z = 2 para colocarlo cerca del objeto RoverExplorer:
 
-![mr-learning-base](images/mr-learning-base/base-05-section2-step1-1.png)
+![Unity con el objeto prefabricado Chevron recién agregado seleccionado](images/mr-learning-base/base-05-section2-step1-1.png)
 
 > [!TIP]
 > Si observa que la cámara u otros iconos de la escena ocultan otros objetos o son distracciones, puede ocultarlos al <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">desactivar el menú Gizmos</a>, tal como se muestra en la imagen anterior. Para obtener más información sobre el menú Gizmos y cómo puede usarlo para optimizar la vista de escenas, consulte la documentación sobre el <a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">menú de Gizmos </a> de Unity.
 
 Cambie el nombre del objeto de botón de contenido adicional **Indicador** recién agregado y, a continuación, en la ventana Inspector, use el botón **Agregar componente** para agregar el componente **DirectionalIndicator** :
 
-![mr-learning-base](images/mr-learning-base/base-05-section2-step1-2.png)
+![Unity con el componente solucionador DirectionalIndicator agregado](images/mr-learning-base/base-05-section2-step1-2.png)
 
 > [!NOTE]
 > Al agregar un solucionador (en este caso, el componente DirectionalIndicator), se agrega automáticamente el componente SolverHandler porque los solucionadores lo requieren.
@@ -58,17 +58,17 @@ Cambie el nombre del objeto de botón de contenido adicional **Indicador** reci�
 
 Configure los componentes DirectionalIndicator y SolverHandler como se indica a continuación:
 
-* Compruebe que el **Tracked Target Type** (Tipo de objetivo de seguimiento) del componente **SolverHandler** esté establecido en **Cabeza** .
+* Compruebe que el **Tracked Target Type** (Tipo de objetivo de seguimiento) del componente **SolverHandler** esté establecido en **Cabeza**.
 * Asigne **RoverExplorer** al campo **Directional Target** (Objetivo direccional) del componente **DirectionalIndicator** ; para ello, arrástrelo desde la ventana Jerarquía hasta el campo **None (Transform)** (Ninguno [transformación]).
 * Cambie el valor de **View Offset** (Desplazamiento de vista) a 0,2.
 
-![mr-learning-base](images/mr-learning-base/base-05-section2-step1-3.png)
+![Unity con el componente solucionador DirectionalIndicator configurado](images/mr-learning-base/base-05-section2-step1-3.png)
 
 Presione el botón Play (Jugar) para entrar en el modo de juego y mantenga presionado el botón derecho del mouse mientras mueve el mouse hacia la izquierda o derecha para girar la dirección de la mirada y observe lo siguiente:
 
 * Cuando aparte la mirada del objeto RoverExplorer, el objeto Indicator aparecerá y apuntará hacia el objeto RoverExplorer.
 
-![mr-learning-base](images/mr-learning-base/base-05-section2-step1-4.png)
+![Vista dividida del modo de reproducción de Unity con el solucionador DirectionalIndicator en uso](images/mr-learning-base/base-05-section2-step1-4.png)
 
 > [!NOTE]
 > Si no ve el rayo de la cámara en la ventana de la escena, asegúrese de que el menú Gizmos esté habilitado como se muestra en la imagen anterior.
@@ -83,11 +83,11 @@ Presione el botón Play (Jugar) para entrar en el modo de juego y mantenga presi
 
 En la ventana Jerarquía, seleccione RoverExplorer > objeto **RoverAssembly** y, a continuación, en la ventana Inspector, use el botón **Agregar componente** para agregar el componente **Tap To Place (Script)** (Pulsar para colocar [script]) y configúrelo del modo siguiente:
 
-* Compruebe que el **Tracked Target Type** (Tipo de objetivo de seguimiento) del componente **SolverHandler** esté establecido en **Cabeza** .
+* Compruebe que el **Tracked Target Type** (Tipo de objetivo de seguimiento) del componente **SolverHandler** esté establecido en **Cabeza**.
 * Active la casilla **Keep Orientation Vertical** (Mantener la orientación vertical).
 * En la lista desplegable **Magnetic Surfaces** (Superficies magnéticas)  > **Elemento 0** , desactive todas las opciones excepto **Spatial Awareness** (Reconocimiento espacial).
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-1.png)
+![Unity con el componente solucionador TapToPlace agregado y configurado](images/mr-learning-base/base-05-section3-step1-1.png)
 
 > [!NOTE]
 > La configuración de superficies magnéticas determina qué objetos puede detectar el componente Tap to Place (Pulsar para colocar) al colocar un objeto. Al cambiar la configuración a solo Reconocimiento espacial, el componente Tap To Place (Script) (Pulsar para colocar [script]) solo podrá colocar el Rover en objetos de la capa de Unity denominada Spatial Awareness, que de forma predeterminada es la malla de reconocimiento espacial generada por HoloLens.
@@ -99,7 +99,7 @@ En la ventana Jerarquía, seleccione RoverExplorer > objeto **RoverAssembly** y,
 
 Con el objeto RoverAssembly aún seleccionado en la ventana Jerarquía, desde la ventana Inspector, busque el evento **On Placing Started ()** y haga clic en el icono **+** para agregar un nuevo evento:
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-2.png)
+![Unity con el evento TapToPlace OnPlacingStarted agregado](images/mr-learning-base/base-05-section3-step1-2.png)
 
 Configure el evento de la siguiente manera:
 
@@ -107,7 +107,7 @@ Configure el evento de la siguiente manera:
 * En la lista desplegable **Ninguna función** , seleccione **TapToPlace** > **float SurfaceNormalOffset** (SurfaceNormalOffset tipo float) para actualizar el valor de esta propiedad cuando se desencadene el evento.
 * Compruebe que el argumento esté establecido en **0**
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-3.png)
+![Unity con el evento TapToPlace OnPlacingStarted configurado](images/mr-learning-base/base-05-section3-step1-3.png)
 
 En la ventana Jerarquía, haga clic con el botón secundario en una zona vacía y seleccione **Objeto 3D** > **Cubo** , para crear un objeto temporal que represente el suelo y configure el componente **Transform** (Transformación) como se indica a continuación:
 
@@ -115,27 +115,27 @@ En la ventana Jerarquía, haga clic con el botón secundario en una zona vacía 
 * **Rotación** : X = 0, Y = 0, Z = 0
 * **Escala** : X = 10, Y = 0,2, Z = 10
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-4.png)
+![Unity con objeto de cubo de fondo temporal agregado y colocado](images/mr-learning-base/base-05-section3-step1-4.png)
 
 Con el cubo temporal seleccionado todavía en la ventana Jerarquía, desde la ventana Inspector, use la lista desplegable **Capas** para cambiar la configuración de la capa del cubo únicamente para incluir la capa **Spatial Awareness** (Reconocimiento espacial):
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-5.png)
+![Unity con la capa del objeto de cubo de fondo temporal establecida en Spatial Awareness (Reconocimiento espacial)](images/mr-learning-base/base-05-section3-step1-5.png)
 
 Presione el botón Play (Reproducir) para entrar en el modo de juego y, a continuación, mantenga presionado el botón derecho del mouse mientras mueve el mouse hacia abajo hasta que la mirada entre en contacto con el objeto RoverAssembly:
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-6.png)
+![Vista dividida del modo de reproducción de Unity con la mirada en contacto con el objeto RoverAssembly](images/mr-learning-base/base-05-section3-step1-6.png)
 
 Haga clic en el botón izquierdo del mouse para iniciar el proceso para pulsar y colocar:
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-7.png)
+![Vista dividida del modo de reproducción de Unity con la colocación de TapToPlace iniciada](images/mr-learning-base/base-05-section3-step1-7.png)
 
 Mantenga presionado el botón derecho del mouse mientras mueve el mouse hacia la izquierda o derecha para girar la dirección de la mirada; cuando esté satisfecho con su ubicación, haga clic con el botón izquierdo del mouse:
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-8.png)
+![Vista dividida del modo de reproducción de Unity con la colocación de TapToPlace iniciada](images/mr-learning-base/base-05-section3-step1-8.png)
 
 Una vez que haya terminado de probar la característica en el modo de juego, haga clic con el botón derecho en el objeto de cubo y seleccione **Eliminar** para quitarlo de la escena:
 
-![mr-learning-base](images/mr-learning-base/base-05-section3-step1-9.png)
+![Unity con el cubo de fondo temporal seleccionado y menú emergente contextual Delete (Eliminar)](images/mr-learning-base/base-05-section3-step1-9.png)
 
 ## <a name="congratulations"></a>Enhorabuena
 

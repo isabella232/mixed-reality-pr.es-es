@@ -6,27 +6,32 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, aplicación de ejemplo, controles
-ms.openlocfilehash: 2f7120aaf92a6e3d7b6ace301aae7392b67fa00b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 82ffa19b27c1d2687b67df659cb3bb50544748fc
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91694643"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573269"
 ---
 # <a name="periodic-table-of-the-elements"></a>Tabla periódica de los elementos
 
 >[!NOTE]
 >En este artículo se describe un ejemplo de exploración que hemos creado en los [laboratorios de diseño de realidad mixta](https://github.com/Microsoft/MRDesignLabs_Unity), un lugar donde compartimos nuestros aprendizajes sobre y sugerencias para el desarrollo de aplicaciones de realidad mixta. Los artículos y el código relacionados con el diseño evolucionarán a medida que se realizan nuevas detecciones.
 
-[La tabla periódica de los elementos](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) es una aplicación de ejemplo de código abierto de los laboratorios de diseño de la realidad mixta de Microsoft. Con este proyecto, puede obtener información sobre cómo diseñar una matriz de objetos en el espacio 3D con varios tipos de superficie mediante una **[colección de objetos](../../design/object-collection.md)** . También aprenderá a crear objetos interactivos que respondan a entradas estándar de HoloLens. Puede usar los componentes de este proyecto para crear su propia experiencia de aplicación de realidad mixta.
+[La tabla periódica de los elementos](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) es una aplicación de ejemplo de código abierto de los laboratorios de diseño de la realidad mixta de Microsoft. Con este proyecto, puede obtener información sobre cómo diseñar una matriz de objetos en el espacio 3D con varios tipos de superficie mediante una **[colección de objetos](../../design/object-collection.md)**. También aprenderá a crear objetos interactivos que respondan a entradas estándar de HoloLens. Puede usar los componentes de este proyecto para crear su propia experiencia de aplicación de realidad mixta.
 
 ![Tabla de puntos de la aplicación Elements](images/640px-periodictable-hero.jpg)
+
+## <a name="demo-video"></a>Vídeo de demostración 
+> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4IkCF]
+
+Grabado con HoloLens 2 mediante la captura de realidad mixta
 
 ## <a name="about-the-app"></a>Acerca de la aplicación
 
 La tabla periódica de los elementos visualiza los elementos químicos y cada una de sus propiedades en un espacio 3D. Incorpora las interacciones básicas de HoloLens, como mira fijamente y el aire TAP. Los usuarios pueden obtener información sobre los elementos con modelos 3D animados. Pueden comprender visualmente el shell de electrones de un elemento y su núcleo, que se compone de protoneladas y neutrons.
 
-## <a name="background"></a>Segundo plano
+## <a name="background"></a>Información previa
 
 Después de la primera vez que se experimentó HoloLens, una aplicación de tabla periódica era una idea de la que quería experimentar en realidad mixta. Puesto que cada elemento tiene muchos puntos de datos que se muestran con texto, pensé que sería una buena cuestión para explorar la composición tipográfica en un espacio 3D. Ser capaz de visualizar el modelo de electrones del elemento fue otra parte interesante de este proyecto.
 
@@ -60,52 +65,31 @@ El usuario puede cambiar el tipo de superficie mediante la pulsación de los bot
 
 ![Colección de objetos](images/640px-periodictable-collections.jpg)
 
-### <a name="fitbox"></a>Fitbox
-
-De forma predeterminada, los hologramas se colocarán en la ubicación donde se Gazing el usuario en el momento en que se inicia la aplicación. En ocasiones, esto da lugar a resultados no deseados, como los hologramas que se colocan detrás de un muro o en el medio de una tabla. Un fitbox permite al usuario usar miradamente para determinar la ubicación donde se colocará el holograma. Se crea con una textura de imagen PNG simple que se puede personalizar fácilmente con sus propias imágenes o objetos 3D.
-
-![Fitbox](../../design/images/450px-periodictable-fitbox.jpg)
-
 ## <a name="technical-details"></a>Detalles técnicos
 
 Puede encontrar scripts y Prefabs para la tabla periódica de la aplicación Elements en el laboratorio de diseño de la [realidad mixta de github](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable).
 
-## <a name="application-examples"></a>Ejemplos de aplicaciones
+## <a name="porting-story-for-hololens-2"></a>Portabilidad de la historia de HoloLens 2
 
-Estas son algunas ideas sobre lo que podría crear aprovechando los componentes de este proyecto.
+Lea el artículo sobre cómo se actualizó la tabla periódica de la aplicación Elements con las interacciones instinctual de HoloLens 2.
 
-### <a name="stock-data-visualization-app"></a>Aplicación de visualización de datos bursátiles
+[Tabla periódica de los elementos 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
 
-Con los mismos controles y el mismo modelo de interacción que la tabla periódica del ejemplo de elementos, podría crear una aplicación que visualiza los datos de los mercados de acciones. En este ejemplo se usa el control de colección de objetos para diseñar los datos bursátiles en una forma esférica. Puede imaginarse una vista de detalle en la que se pueda mostrar información adicional sobre cada acción de forma interesante.
 
-![Ejemplo de aplicación: Finance (1 de 3)](images/640px-periodictable-applicationexamples-finance1.jpg)
 
-![Ejemplo de aplicación: Finance (2 de 3)](images/640px-periodictable-applicationexamples-finance2.jpg)
-
-![Ejemplo de aplicación: Finance (3 de 3)](images/640px-periodictable-applicationexamples-finance3.jpg)<br>
-*Un ejemplo de cómo se puede usar la colección de objetos utilizada en la tabla periódica de la aplicación de ejemplo Elements en una aplicación Finance*
-
-### <a name="sports-app"></a>Aplicación Sports
-
-Este es un ejemplo de visualización de datos deportivos mediante la colección de objetos y otros componentes de la tabla periódica de la aplicación de ejemplo Elements.
-
-![Ejemplo de aplicación: deportes (1 de 3)](images/640px-periodictable-applicationexamples-sports0.jpg)
-
-![Ejemplo de aplicación: deportes (2 de 3)](images/640px-periodictable-applicationexamples-sports1.jpg)
-
-![Ejemplo de aplicación: deportes (3 de 3)](images/640px-periodictable-applicationexamples-sports3.jpg)<br>
-*Un ejemplo de cómo se usa la colección de objetos en la tabla periódica de los elementos de ejemplo appcould en una aplicación Sports*
 
 ## <a name="about-the-author"></a>Acerca del autor
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60px"><img alt="Picture of Dong Yoon Park" width="60" height="60" src="images/dongyoonpark.jpg"></td>
-<td style="border-style: none"><b>Dong Yoon Park</b><br>Diseñador de la experiencia del usuario @Microsoft</td>
+<td style="border-style: none"><b>Dong Yoon Park</b><br>Diseñador de experiencias de usuario @Microsoft</td>
 </tr>
 </table>
 
 ## <a name="see-also"></a>Consulte también
 
-* [Objeto con el que se puede interactuar](../../design/interactable-object.md)
-* [Colección de objetos](../../design/object-collection.md)
+* [MRTK Examples Hub](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ExampleHub.html) - [(descarga desde Microsoft Store en HoloLens 2)](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4)
+* [Surfaces](sampleapp-surfaces.md) - [(descarga desde Microsoft Store en HoloLens 2)](https://www.microsoft.com/en-us/p/surfaces/9nvkpv3sk3x0)
+* [Tabla periódica de los elementos 2.0](https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158)
+* [Galaxy Explorer 2.0](galaxy-explorer-update.md)
