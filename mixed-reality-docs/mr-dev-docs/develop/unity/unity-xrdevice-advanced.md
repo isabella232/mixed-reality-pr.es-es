@@ -5,13 +5,13 @@ author: vladkol
 ms.author: vladkol
 ms.date: 05/20/2018
 ms.topic: article
-keywords: Unity, Mixed Reality, Native, xrdevice, spatialcoordinatesystem, holographicframe, holographiccamera, ispatialcoordinatesystem, iholographicframe, iholographiccamera, getnativeptr
-ms.openlocfilehash: 36a26bbc16c6b854cd2fa5f36b063b9014a28d97
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unity, Mixed Reality, Native, xrdevice, spatialcoordinatesystem, holographicframe, holographiccamera, ispatialcoordinatesystem, iholographicframe, iholographiccamera, getnativeptr, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: a64deb46db82e6d0401a803e45dcbbd854476745
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693194"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679934"
 ---
 # <a name="mixed-reality-native-objects-in-unity"></a>Objetos nativos de realidad mixta en Unity
 

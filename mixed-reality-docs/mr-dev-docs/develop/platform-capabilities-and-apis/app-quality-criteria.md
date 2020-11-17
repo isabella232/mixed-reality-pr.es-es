@@ -5,13 +5,13 @@ author: cjdgit
 ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Criterios de calidad de la aplicación, realidad mixta, aplicación de realidad mixta
-ms.openlocfilehash: 96d446e1f6f5649f842d674ea4692d619894cc32
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Criterios de calidad de la aplicación, realidad mixta, aplicación de realidad mixta, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: c18f4e8470f7f183fdf250472fd3a977f925dfbf
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691459"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677994"
 ---
 # <a name="app-quality-criteria"></a>Criterios de calidad de aplicaciones
 
@@ -49,7 +49,7 @@ La velocidad de fotogramas es el primer pilar de estabilidad del holograma y la 
 
 ### <a name="quality-criteria"></a>Criterios de calidad
 
-|  Óptima  |  Reúne |  Incorrecto |
+|  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
 | La aplicación cumple de forma coherente el objetivo de fotogramas por segundo (FPS) para el dispositivo de destino: 60fps en HoloLens; 90fps en ultra PCs; y 60fps en equipos estándar. | La aplicación tiene caídas de fotogramas intermitentes que no impiden la experiencia básica; o FPS es constantemente inferior al objetivo deseado, pero no impide la experiencia de la aplicación. | La aplicación está experimentando una caída en la velocidad de fotogramas como promedio cada diez segundos o menos. |
 
@@ -112,7 +112,7 @@ Los hologramas estables aumentarán la facilidad de uso y la increíble capacida
 
 ### <a name="quality-criteria"></a>Criterios de calidad
 
-|  Óptima  |  Reúne |  Incorrecto |
+|  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
 |  Los hologramas aparecen de forma coherente. | El contenido secundario exhibe un movimiento inesperado. o el movimiento inesperado no impide la experiencia general de la aplicación. | El contenido principal del marco exhibe un movimiento inesperado. |
 
@@ -174,7 +174,7 @@ Las alineaciones de los hologramas con objetos físicos (si se prevé que se col
 
 ### <a name="quality-criteria"></a>Criterios de calidad
 
-|  Óptima  |  Reúne |  Incorrecto |
+|  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
 | Los hologramas se alinean a la superficie normalmente en el intervalo de centímetros a pulgadas. Si se requiere más precisión, la aplicación debe proporcionar un medio eficaz para la colaboración dentro de la especificación de la aplicación deseada. | N/D | Los hologramas aparecen sin alinear con el objeto de destino físico, ya que separan el plano de la superficie o parecen flotar fuera de la superficie. Si se requiere precisión, los hologramas deben cumplir las especificaciones de proximidad del escenario. | 
 
@@ -245,7 +245,7 @@ Los desarrolladores de aplicaciones controlan el lugar en el que los usuarios co
 </tr><tr>
 <td> Reúne</td><td> El contenido está dentro de la guía de visualización y movimiento, pero se usa inadecuadamente o no se usa el plano de recorte.</td>
 </tr><tr>
-<td> Incorrecto </td><td> El contenido se presenta demasiado cerca (normalmente &lt; 1,25 m o &lt; 50CM para los hologramas estacionales que requieren una observación más detallada).</td>
+<td> Suspenso </td><td> El contenido se presenta demasiado cerca (normalmente &lt; 1,25 m o &lt; 50CM para los hologramas estacionales que requieren una observación más detallada).</td>
 </tr>
 </table>
 
@@ -294,7 +294,7 @@ Sin tener en cuenta los problemas de la zona de confort, las demandas del usuari
 
 ### <a name="quality-criteria"></a>Criterios de calidad
 
-|  Óptima  |  Reúne |  Incorrecto |
+|  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
 |  Cambio de profundidad limitado o natural que no hace que el usuario se recentre sin ningún problema. | Cambio de profundidad abrupta: este es el núcleo y está diseñado en la experiencia de la aplicación, o en el modificador de profundidad abrupta causado por contenido real inesperado. | Conmutador de profundidad coherente o cambio de profundidad brusco que no es necesario ni básico para la experiencia de la aplicación. | 
 
@@ -337,7 +337,7 @@ En Windows Mixed Reality, el motor de audio proporciona el componente aural de l
 
 ### <a name="quality-criteria"></a>Criterios de calidad
 
-|  Óptima  |  Reúne |  Incorrecto |
+|  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
 |  El sonido está espacial lógicamente y la experiencia de usuario usa correctamente el sonido para ayudar con la detección de objetos y los comentarios de los usuarios. El sonido es natural y relevante para los objetos y se normaliza en el escenario. | El audio espacial se utiliza de forma adecuada para aumentar la capacidad de respuesta, pero falta como medio para ayudar con los comentarios de los usuarios y la detectabilidad. | El sonido no está espacialmente como se esperaba o falta de sonido para ayudar al usuario dentro de la experiencia de usuario. O el audio espacial no se consideró ni usó en el diseño del escenario. | 
 
@@ -395,7 +395,7 @@ Las experiencias de usuario bien diseñadas pueden crear y mantener un contexto 
 
 ### <a name="quality-criteria"></a>Criterios de calidad
 
-|  Óptima  |  Reúne |  Incorrecto |
+|  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
 |  El usuario nunca pierde el contexto y se siente cómodo. Se proporciona asistencia contextual para objetos grandes. Se proporcionan instrucciones de detección y visualización para los objetos que se encuentran fuera del marco. En general, el diseño de movimiento y la escala de los hologramas son adecuados para una experiencia de visualización cómoda. | El usuario nunca pierde el contexto, pero es posible que se requiera movimiento de cuello adicional en situaciones limitadas. En situaciones limitadas, la escala hace que los hologramas interrumpan el fotograma vertical u horizontal, lo que produce un movimiento de cuello para ver los hologramas. | Es necesario que el usuario pierda el contexto o el movimiento de cuello coherente para ver los hologramas. No hay ninguna guía de contexto para objetos holográficas grandes, el movimiento de objetos es fácil de perder fuera del marco sin ninguna guía de detección, o bien un holograma alto requiere un movimiento de cuello normal para verlo. | 
 
@@ -457,7 +457,7 @@ Los hologramas deben reaccionar a la posición del usuario aproximadamente de la
 </tr><tr>
 <td> Reúne </td><td> La interfaz de usuario se adapta a la posición del usuario, pero puede impedir la vista de contenido clave que requiere que el usuario ajuste su posición.</td>
 </tr><tr>
-<td> Incorrecto </td><td><ol>
+<td> Suspenso </td><td><ol>
 <li>Los elementos de la interfaz de usuario se pierden o se bloquean durante el movimiento, lo que provoca que el usuario vuelva a los controles (o los busque) de una misma.</li><li>Los elementos de la interfaz de usuario limitan la vista del contenido principal.</li><li>El movimiento de la interfaz de usuario no está optimizado para ver la distancia y el momento, especialmente con elementos de interfaz <a href="../../design/billboarding-and-tag-along.md">de usuario de etiquetas</a> .</li>
 </ol></td>
 </tr>
@@ -510,7 +510,7 @@ La claridad de la interacción de entrada es fundamental para el uso de una apli
 
 ### <a name="quality-criteria"></a>Criterios de calidad
 
-|  Óptima  |  Reúne |  Incorrecto |
+|  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
 |  Los métodos de interacción de entrada son coherentes con las [instrucciones](../../design/interaction-fundamentals.md)proporcionadas por Windows Mixed Reality. Cualquier entrada personalizada no debe ser redundante con entrada estándar (en lugar de usar la interacción estándar) y se debe comunicar y demostrar claramente al usuario. | Similar a lo mejor, pero las entradas personalizadas son redundantes con los métodos de entrada estándar. El usuario puede seguir logrando el objetivo y el progreso a través de la experiencia de la aplicación. | Es difícil comprender la asignación de botones o métodos de entrada. La entrada está muy personalizada, no es compatible con la entrada estándar, no hay instrucciones o probablemente cause problemas de fatiga y confort. | 
 
@@ -585,7 +585,7 @@ Un botón ha sido una metáfora usada para desencadenar un evento en el mundo ab
 
 ### <a name="quality-criteria"></a>Criterios de calidad
 
-|  Óptima  |  Reúne |  Incorrecto |
+|  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
 |  Independientemente del formulario, los objetos interactuables se pueden reconocer a través de las indicaciones de audio y visual en tres Estados: inactivo, dirigido y seleccionado. "Lo veo, por ejemplo, está claro y se usa de forma coherente en toda la experiencia. Los objetos se escalan y distribuyen para permitir la finalización de errores de forma gratuita. | El usuario puede reconocer objetos como interactivos a través de comentarios de audio o visuales, y puede tener como destino y activar el objeto. | No se proporcionan indicaciones visuales o de audio, el usuario no puede reconocer un objeto interactuable. Las interacciones son propensas a errores debido a la escala de objetos o a la distancia entre los objetos. | 
 
@@ -640,7 +640,7 @@ Las aplicaciones que requieren datos de asignación espacial se basan en el disp
 
 ### <a name="quality-criteria"></a>Criterios de calidad
 
-|  Óptima  |  Reúne |  Incorrecto |
+|  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
 |  Visualización de la malla espacial indique a los usuarios que el análisis está en curso. El usuario sabe claramente qué hacer y cuándo se inicia y se detiene el examen. | Se proporciona la visualización de la malla espacial, pero es posible que el usuario no sepa claramente qué hacer y que no se proporcione información de progreso. | Ninguna visualización de malla. No se proporciona información de orientación al usuario sobre dónde buscar, o Cuándo se inicia o se detiene el examen. |
 
@@ -695,7 +695,7 @@ En una aplicación de realidad mixta, el contenido puede estar fuera del campo d
 
 ### <a name="quality-criteria"></a>Criterios de calidad
 
-|  Óptima  |  Reúne |  Incorrecto |
+|  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
 |  Las guías de audio y visual guían directamente al usuario al contenido relevante fuera del campo de vista. | Una flecha o algún indicador que apunta al usuario en la dirección general del contenido. | El contenido relevante está fuera del campo de vista y no se proporciona ninguna guía de ubicación para el usuario. | 
 
@@ -738,7 +738,7 @@ Un control de progreso proporciona información al usuario sobre el hecho de que
 
 ### <a name="quality-criteria"></a>Criterios de calidad
 
-|  Óptima  |  Reúne |  Incorrecto |
+|  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
 |  Indicador visual animado, en forma de una barra de progreso o un anillo, que muestra el progreso durante cualquier carga o procesamiento de datos. El indicador visual proporciona instrucciones sobre cuánto tiempo puede ser la espera. | Se informa al usuario de que la carga de datos está en curso, pero no hay ninguna indicación de cuánto tiempo podría ser la espera. | No hay ningún indicador de carga de datos o de proceso para que la tarea tarde más de 5 segundos. |
 

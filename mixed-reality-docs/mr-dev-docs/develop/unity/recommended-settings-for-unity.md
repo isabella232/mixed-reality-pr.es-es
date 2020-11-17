@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 07/29/2020
 ms.topic: article
-keywords: Unity, configuración, realidad mixta
-ms.openlocfilehash: 0e0f8649525c84bdc479dbcee92f737e877a60ca
-ms.sourcegitcommit: e1de7caa7bd46afe9766186802fa4254d33d1ca6
+keywords: Unity, configuración, realidad mixta, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, rendimiento, configuración de calidad, configuración de iluminación, búfer de profundidad, XR, pérdida de seguimiento
+ms.openlocfilehash: b560e75043cbf4a3cb93837938fdb65324cb16bb
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92240754"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677374"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -27,7 +27,7 @@ En Unity 2019 LTS +, se puede establecer el nivel de calidad del proyecto; para 
 
 ### <a name="lighting-settings"></a>Configuración de iluminación
 
-Similar a la configuración de la escena de calidad, es importante establecer una configuración de iluminación óptima para la aplicación de realidad mixta. En Unity, la configuración de iluminación que normalmente tendrá el mayor impacto en el rendimiento de la escena es la **iluminación global en tiempo real**. Para desactivarlo, vaya a la **ventana**  >  **representación**de  >  **luz configuración de iluminación**  >  **global en tiempo real**.
+Similar a la configuración de la escena de calidad, es importante establecer una configuración de iluminación óptima para la aplicación de realidad mixta. En Unity, la configuración de iluminación que normalmente tendrá el mayor impacto en el rendimiento de la escena es la **iluminación global en tiempo real**. Para desactivarlo, vaya a la **ventana**  >  **representación** de  >  **luz configuración de iluminación**  >  **global en tiempo real**.
 
 Hay otro valor de iluminación, **iluminación global horneada**. Esta configuración puede proporcionar resultados visualmente impactantes y sorprendentes en auriculares envolventes, pero generalmente no es aplicable para el desarrollo de HoloLens. La **Illumniation global cocida** solo se calcula para GameObjects estáticas que normalmente no se encuentran en escenas de HoloLens debido a la naturaleza de un entorno desconocido y cambiante.
 
@@ -62,7 +62,7 @@ Para lograr una mejor estabilidad del holograma a partir de la percepción del u
 Para habilitar esta característica en el proyecto de Unity
 
 1) Abre **Player XR Settings** (Configuración del reproductor XR) (ve a **Editar** > **Configuración del proyecto** > **Reproductor** > **XR Settings** [Configuración de XR]).
-2) Active la casilla **Habilitar uso compartido de búfer de profundidad** en SDK de **realidad virtual**Windows la expansión de la  >  **realidad mixta** (se debe activar la casilla se**admite la realidad virtual** )
+2) Active la casilla **Habilitar uso compartido de búfer de profundidad** en SDK de **realidad virtual** Windows la expansión de la  >  **realidad mixta** (se debe activar la casilla se **admite la realidad virtual** )
 
 Además, se recomienda seleccionar profundidad de **16 bits** en la configuración de **formato de profundidad** de este panel, especialmente para el desarrollo de HoloLens. Si selecciona 16 bits en comparación con 24 bits, se reducirán significativamente los requisitos de ancho de banda, ya que será necesario desplace o procese menos datos.
 
@@ -106,7 +106,7 @@ HoloLens tiene una CPU y una GPU de clase móvil, lo que significa que las aplic
 
 Para alternar la pantalla de presentación de Holographic:
 
-1) Vaya a **Editar**  >  **configuración de proyecto**  >  página del**reproductor**
+1) Vaya a **Editar**  >  **configuración de proyecto**  >  página del **reproductor**
 2) Haga clic en la pestaña **tienda Windows** y abra la sección **imagen de bienvenida** .
 3) Aplique la imagen deseada en la propiedad **imagen de bienvenida de Windows holographic > Holographic** .
     - Al alternar la opción **Mostrar pantalla de presentación de Unity** , se habilitará o deshabilitará la pantalla de presentación con la marca Unity. Si no tiene una licencia de Unity Pro, siempre se mostrará la pantalla de presentación con la marca Unity.
@@ -116,8 +116,8 @@ Para alternar la pantalla de presentación de Holographic:
 |----------|----------|----------|
 |  Activado  |  Ninguno  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
 |  Activado  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
-|  Off  |  Ninguno  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
-|  Off  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Desactivado  |  Ninguno  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
+|  Desactivado  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
 
 Lea [la documentación de la pantalla de presentación de Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) para obtener más información.
 
@@ -129,7 +129,7 @@ Si se produce una pérdida de seguimiento, el comportamiento predeterminado de U
 
 Para personalizar la imagen de seguimiento perdida:
 
-1) Vaya a **Editar**  >  **configuración de proyecto**  >  página del**reproductor**
+1) Vaya a **Editar**  >  **configuración de proyecto**  >  página del **reproductor**
 2) Haga clic en la pestaña **tienda Windows** y abra la sección **imagen de bienvenida** .
 3) Aplique la imagen deseada en la propiedad **imagen de pérdida de seguimiento de > de Windows Holographic** .
 
@@ -139,7 +139,7 @@ Es posible que algunas aplicaciones no requieran seguimiento (por ejemplo, [apli
 
 Para no participar en el comportamiento de pausa automática:
 
-1) Vaya a la página **Editar**  >  **configuración de proyecto**del  >  **reproductor**
+1) Vaya a la página **Editar**  >  **configuración de proyecto** del  >  **reproductor**
 2) Haga clic en la pestaña **tienda Windows** y abra la sección **imagen de bienvenida** .
 3) Modifique la casilla **de verificación de Windows Holographic > en el seguimiento de pérdida y Mostrar imagen** .
 
@@ -153,7 +153,7 @@ Para que una aplicación aproveche ciertas funciones, debe declarar las capacida
 
 Las capacidades se pueden habilitar para una aplicación de realidad mixta:
 
-1) Vaya a **Editar**  >  **configuración de proyecto**  >  página del**reproductor**
+1) Vaya a **Editar**  >  **configuración de proyecto**  >  página del **reproductor**
 2) Haga clic en la pestaña **tienda Windows** , abra la sección **configuración de publicación** y busque la lista de **capacidades** .
 
 Las funcionalidades aplicables para habilitar las API de uso frecuente para aplicaciones holográficas son:
@@ -167,7 +167,7 @@ Las funcionalidades aplicables para habilitar las API de uso frecuente para apli
 |  Micrófono  |  VideoCapture (al capturar audio), DictationRecognizer, GrammarRecognizer y KeywordRecognizer |
 |  InternetClient  |  DictationRecognizer (y para usar el generador de perfiles de Unity) |
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción al desarrollo de Unity](unity-development-overview.md)
 * [Análisis de rendimiento de la realidad mixta](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)

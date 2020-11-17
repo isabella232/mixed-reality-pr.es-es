@@ -5,13 +5,13 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, uso compartido, redes, Academia, tutorial
-ms.openlocfilehash: 886b8b3ef449dc2872358fffd67b6af4c661de0e
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, uso compartido, redes, Academia, tutorial, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, Windows 10
+ms.openlocfilehash: f57629e37463c9a05219ebae92bff8870728d688
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91694943"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678264"
 ---
 # <a name="mr-sharing-240-multiple-hololens-devices"></a>Uso compartido de la realidad mixta (240): Varios dispositivos HoloLens
 
@@ -37,9 +37,9 @@ En este tutorial, veremos lo siguiente:
 </tr>
 </table>
 
-## <a name="before-you-start"></a>Antes de comenzar
+## <a name="before-you-start"></a>Antes de empezar
 
-### <a name="prerequisites"></a>Requisitos previos
+### <a name="prerequisites"></a>Prerrequisitos
 
 * Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](../../../develop/install-the-tools.md) con acceso a Internet.
 * Al menos dos dispositivos HoloLens [configurados para el desarrollo](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode).
@@ -50,7 +50,7 @@ En este tutorial, veremos lo siguiente:
   * Si sigue necesitando compatibilidad con Unity 5,6, use [esta versión](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.6-240.zip).
   * Si sigue necesitando compatibilidad con Unity 5,5, use [esta versión](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.5-240.zip).
   * Si sigue necesitando compatibilidad con Unity 5,4, use [esta versión](https://github.com/Microsoft/HolographicAcademy/archive/v1.5.4-240.zip).
-* Elimine el archivo de los archivos en el escritorio o en otra ubicación de fácil acceso. Mantenga el nombre de la carpeta como **SharedHolograms** .
+* Elimine el archivo de los archivos en el escritorio o en otra ubicación de fácil acceso. Mantenga el nombre de la carpeta como **SharedHolograms**.
 
 >[!NOTE]
 >Si desea examinar el código fuente antes de la descarga, está [disponible en github](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-240-SharedHolograms).
@@ -66,48 +66,48 @@ En este capítulo, se configurará el primer proyecto de Unity y se recorrerá e
 * Configure Unity para desarrollar aplicaciones holográficas.
 * Vea su holograma.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * Inicie Unity.
-* seleccione **Open** (Abrir).
+* seleccione **Open**(Abrir).
 * Escriba Location como la carpeta **SharedHolograms** que ha desarchivado anteriormente.
-* Seleccione **nombre del proyecto** y haga clic en **Seleccionar carpeta** .
-* En la **jerarquía** , haga clic con el botón secundario en la **cámara principal** y seleccione **eliminar** .
+* Seleccione **nombre del proyecto** y haga clic en **Seleccionar carpeta**.
+* En la **jerarquía**, haga clic con el botón secundario en la **cámara principal** y seleccione **eliminar**.
 * En la carpeta **HoloToolkit-Sharing-240/Prefabs/cámara** , busque la **cámara principal** recurso prefabricado.
-* Arrastre y coloque la **cámara principal** en la **jerarquía** .
-* En la **jerarquía** , haga clic en **crear** y **crear vacío** .
-* Haga clic con el botón derecho en el nuevo **GameObject** y seleccione **cambiar nombre** .
-* Cambie el nombre de GameObject a **HologramCollection** .
-* Seleccione el objeto **HologramCollection** en la **jerarquía** .
-* En el **Inspector** , establezca la posición de la **transformación** en: **X: 0, y:-0,25, Z: 2** .
-* En la carpeta **hologramas** del **panel Proyecto** , busque el recurso **EnergyHub** .
-* Arrastre y coloque el objeto **EnergyHub** desde el **panel Proyecto** hasta la **jerarquía** como **elemento secundario de HologramCollection** .
+* Arrastre y coloque la **cámara principal** en la **jerarquía**.
+* En la **jerarquía**, haga clic en **crear** y **crear vacío**.
+* Haga clic con el botón derecho en el nuevo **GameObject** y seleccione **cambiar nombre**.
+* Cambie el nombre de GameObject a **HologramCollection**.
+* Seleccione el objeto **HologramCollection** en la **jerarquía**.
+* En el **Inspector** , establezca la posición de la **transformación** en: **X: 0, y:-0,25, Z: 2**.
+* En la carpeta **hologramas** del **panel Proyecto**, busque el recurso **EnergyHub** .
+* Arrastre y coloque el objeto **EnergyHub** desde el **panel Proyecto** hasta la **jerarquía** como **elemento secundario de HologramCollection**.
 * Seleccione el **archivo > guardar la escena como...**
-* Asigne a la escena el nombre **SharedHolograms** y haga clic en **Guardar** .
+* Asigne a la escena el nombre **SharedHolograms** y haga clic en **Guardar**.
 * Presione el botón **reproducir** en Unity para obtener una vista previa de los hologramas.
 * Presione **reproducir** una segunda vez para detener el modo de vista previa.
 
 **Exportar el proyecto de Unity a Visual Studio**
 
-* En Unity, seleccione **archivo > configuración de compilación** .
+* En Unity, seleccione **archivo > configuración de compilación**.
 * Haga clic en **Agregar escenas abiertas** para agregar la escena.
-* Seleccione **plataforma universal de Windows** en la lista **plataforma** y haga clic en **cambiar plataforma** .
-* Establezca **SDK** en **universal 10** .
-* Establezca **el dispositivo de destino** en **HoloLens** y el tipo de **compilación de UWP** en **D3D** .
-* Compruebe los **proyectos de C# de Unity** .
-* Haga clic en **Generar** .
+* Seleccione **plataforma universal de Windows** en la lista **plataforma** y haga clic en **cambiar plataforma**.
+* Establezca **SDK** en **universal 10**.
+* Establezca **el dispositivo de destino** en **HoloLens** y el tipo de **compilación de UWP** en **D3D**.
+* Compruebe los **proyectos de C# de Unity**.
+* Haga clic en **Generar**.
 * En la ventana del explorador de archivos que aparece, cree una **nueva carpeta** denominada "app".
 * Haga clic en la carpeta de la **aplicación** .
-* Presione **Seleccionar carpeta** .
+* Presione **Seleccionar carpeta**.
 * Cuando se haya realizado Unity, aparecerá una ventana del explorador de archivos.
 * Abra la carpeta de la **aplicación** .
 * Abra **SharedHolograms. sln** para iniciar Visual Studio.
-* Con la barra de herramientas superior de Visual Studio, cambie el destino de Debug a **Release** y de ARM a **x86** .
-* Haga clic en la flecha desplegable situada junto a equipo local y seleccione **dispositivo remoto** .
+* Con la barra de herramientas superior de Visual Studio, cambie el destino de Debug a **Release** y de ARM a **x86**.
+* Haga clic en la flecha desplegable situada junto a equipo local y seleccione **dispositivo remoto**.
     * Establezca la **Dirección** en el nombre o la dirección IP de HoloLens. Si no conoce la dirección IP del dispositivo, consulte **configuración > redes & Internet > opciones avanzadas** o pregunte a Cortana **, ¿cuál es mi dirección IP? "** .
-    * Deje el **modo de autenticación** establecido en **universal** .
+    * Deje el **modo de autenticación** establecido en **universal**.
     * Haga clic en **seleccionar**
-* Haga clic en **Depurar > iniciar sin depurar** o presione **Ctrl + F5** . Si esta es la primera vez que se implementa en el dispositivo, tendrá que [emparejarla con Visual Studio](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device).
+* Haga clic en **Depurar > iniciar sin depurar** o presione **Ctrl + F5**. Si esta es la primera vez que se implementa en el dispositivo, tendrá que [emparejarla con Visual Studio](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device).
 * Pon en tu HoloLens y busca el holograma de EnergyHub.
 
 ## <a name="chapter-2---interaction"></a>Capítulo 2: interacción
@@ -121,25 +121,25 @@ En este capítulo, Interactuaremos con los hologramas. En primer lugar, vamos a 
 * Use la entrada de fijamente para controlar un cursor.
 * Use la entrada de gestos para interactuar con los hologramas.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 **Gaze**
 
 * En el **Panel jerarquía** , seleccione el objeto **HologramCollection** .
 * En el **panel Inspector** , haga clic en el botón **Agregar componente** .
-* En el menú, escriba en el cuadro de búsqueda, **mira el administrador** . Seleccione el resultado de la búsqueda.
+* En el menú, escriba en el cuadro de búsqueda, **mira el administrador**. Seleccione el resultado de la búsqueda.
 * En la carpeta **HoloToolkit-Sharing-240\Prefabs\Input** , busque el recurso **cursor** .
-* Arrastre y coloque el activo del **cursor** en la **jerarquía** .
+* Arrastre y coloque el activo del **cursor** en la **jerarquía**.
 
 **Gesto**
 
 * En el **Panel jerarquía** , seleccione el objeto **HologramCollection** .
 * Haga clic en **Agregar componente** y escriba **Administrador de gestos** en el campo de búsqueda. Seleccione el resultado de la búsqueda.
-* En el **Panel jerarquía** , expanda **HologramCollection** .
+* En el **Panel jerarquía**, expanda **HologramCollection**.
 * Seleccione el objeto **EnergyHub** secundario.
 * En el **panel Inspector** , haga clic en el botón **Agregar componente** .
 * En el menú, escriba en la ubicación del **holograma** del cuadro de búsqueda. Seleccione el resultado de la búsqueda.
-* Guarde la escena seleccionando **archivo > guardar escena** .
+* Guarde la escena seleccionando **archivo > guardar escena**.
 
 **Implementación y disfrute**
 
@@ -168,25 +168,25 @@ Es divertido ver los hologramas e interactuar con ellos, pero vamos a continuar.
 >2. Haga clic en la pestaña "tienda Windows"
 >3. En la sección "configuración de publicación > funcionalidades", Compruebe la funcionalidad de **InternetClientServer** y la capacidad de **PrivateNetworkClientServer**
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En el **panel Proyecto** , vaya a la carpeta **HoloToolkit-Sharing-240\Prefabs\Sharing** .
-* Arrastre y coloque el recurso prefabricado de **uso compartido** en el **Panel jerarquía** .
+* Arrastre y coloque el recurso prefabricado de **uso compartido** en el **Panel jerarquía**.
 
 A continuación, es necesario iniciar el servicio de uso compartido. Solo **un equipo** en la experiencia compartida debe realizar este paso.
 
-* En Unity: en el menú de la parte superior, seleccione el **menú HoloToolkit-Sharing-240** .
+* En Unity: en el menú de la parte superior, seleccione el **menú HoloToolkit-Sharing-240**.
 * Seleccione el elemento **servicio de uso compartido de inicio** en la lista desplegable.
 * Active la opción **red privada** y haga clic en **permitir el acceso** cuando aparezca el mensaje del firewall.
 * Anote la dirección IPv4 que se muestra en la ventana de la consola del servicio de uso compartido. Se trata de la misma dirección IP que el equipo en el que se ejecuta el servicio.
 
 Siga el resto de las instrucciones en **todos los equipos** que se unirán a la experiencia compartida.
 
-* En la **jerarquía** , seleccione el objeto de **uso compartido** .
-* En el **Inspector** , en el componente de la **fase de uso compartido** , cambie la **dirección del servidor** de "localhost" a la dirección IPv4 del equipo que ejecuta SharingService.exe.
+* En la **jerarquía**, seleccione el objeto de **uso compartido** .
+* En el **Inspector**, en el componente de la **fase de uso compartido** , cambie la **dirección del servidor** de "localhost" a la dirección IPv4 del equipo que ejecuta SharingService.exe.
 * En la **jerarquía** , seleccione el objeto **HologramCollection** .
 * En el **Inspector** , haga clic en el botón **Agregar componente** .
-* En el cuadro de búsqueda, escriba **Import Export Anchor Manager** . Seleccione el resultado de la búsqueda.
+* En el cuadro de búsqueda, escriba **Import Export Anchor Manager**. Seleccione el resultado de la búsqueda.
 * En el **panel Proyecto** , vaya a la carpeta **scripts** .
 * Haga doble clic en el script **HologramPlacement** para abrirlo en Visual Studio.
 * Reemplace el contenido por el código siguiente.
@@ -295,9 +295,9 @@ public class HologramPlacement : Singleton<HologramPlacement>
 }
 ```
 
-* De nuevo en Unity, seleccione el **HologramCollection** en el **Panel de jerarquías** .
+* De nuevo en Unity, seleccione el **HologramCollection** en el **Panel de jerarquías**.
 * En el **panel Inspector** , haga clic en el botón **Agregar componente** .
-* En el menú, escriba en el cuadro de búsqueda **App State Manager** . Seleccione el resultado de la búsqueda.
+* En el menú, escriba en el cuadro de búsqueda **App State Manager**. Seleccione el resultado de la búsqueda.
 
 **Implementación y disfrute**
 
@@ -319,10 +319,10 @@ Ahora todo el mundo puede ver el mismo holograma. Ahora, vamos a ver a todos los
 * Elegir y compartir un avatar de reproductor.
 * Adjunte el avatar del jugador junto a los cabezales de todos.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En el **panel Proyecto** , vaya a la carpeta **hologramas** .
-* Arrastre y coloque **PlayerAvatarStore** en la **jerarquía** .
+* Arrastre y coloque **PlayerAvatarStore** en la **jerarquía**.
 * En el **panel Proyecto** , vaya a la carpeta **scripts** .
 * Haga doble clic en el script **AvatarSelector** para abrirlo en Visual Studio.
 * Reemplace el contenido por el código siguiente.
@@ -368,11 +368,11 @@ public class AvatarSelector : MonoBehaviour
 ```
 
 * En la **jerarquía** , seleccione el objeto **HologramCollection** .
-* En el **Inspector** , haga clic en **Agregar componente** .
-* En el cuadro de búsqueda, escriba **Administrador del reproductor local** . Seleccione el resultado de la búsqueda.
+* En el **Inspector** , haga clic en **Agregar componente**.
+* En el cuadro de búsqueda, escriba **Administrador del reproductor local**. Seleccione el resultado de la búsqueda.
 * En la **jerarquía** , seleccione el objeto **HologramCollection** .
-* En el **Inspector** , haga clic en **Agregar componente** .
-* En el cuadro de búsqueda, escriba **Administrador de reproductores remotos** . Seleccione el resultado de la búsqueda.
+* En el **Inspector** , haga clic en **Agregar componente**.
+* En el cuadro de búsqueda, escriba **Administrador de reproductores remotos**. Seleccione el resultado de la búsqueda.
 * Abra el script **HologramPlacement** en Visual Studio.
 * Reemplace el contenido por el código siguiente.
 
@@ -618,10 +618,10 @@ En este capítulo, haremos que el anclaje sea capaz de colocarse en superficies 
 
 * Coloque los hologramas en la malla de asignación espacial basada en la posición principal de los jugadores.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En el **panel Proyecto** , vaya a la carpeta **hologramas** .
-* Arrastre y coloque el recurso prefabricado de **CustomSpatialMapping** en la **jerarquía** .
+* Arrastre y coloque el recurso prefabricado de **CustomSpatialMapping** en la **jerarquía**.
 * En el **panel Proyecto** , vaya a la carpeta **scripts** .
 * Haga doble clic en el script **AppStateManager** para abrirlo en Visual Studio.
 * Reemplace el contenido por el código siguiente.
@@ -986,7 +986,7 @@ public class HologramPlacement : Singleton<HologramPlacement>
 * Puntee para colocar el EnergyHub.
 * Pruebe el comando de voz "restablecer destino" para elegir la copia de seguridad de EnergyHub y trabajar conjuntamente como un grupo para trasladar el holograma a una nueva ubicación.
 
-## <a name="chapter-6---real-world-physics"></a>Capítulo 6: física del mundo real
+## <a name="chapter-6---real-world-physics"></a>Capítulo 6: Real-World física
 
 >[!VIDEO https://www.youtube.com/embed/XNpQVSyXwMo]
 
@@ -997,11 +997,11 @@ En este capítulo, vamos a agregar hologramas que rebotan las superficies del mu
 * Inicie los proyectiles que rebotan las superficies del mundo real.
 * Comparta los proyectiles para que otros jugadores puedan verlos.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En la **jerarquía** , seleccione el objeto **HologramCollection** .
-* En el **Inspector** , haga clic en **Agregar componente** .
-* En el cuadro de búsqueda, escriba **selector de proyectil** . Seleccione el resultado de la búsqueda.
+* En el **Inspector** , haga clic en **Agregar componente**.
+* En el cuadro de búsqueda, escriba **selector de proyectil**. Seleccione el resultado de la búsqueda.
 
 **Implementación y disfrute**
 
@@ -1019,14 +1019,14 @@ En este capítulo, se descubrirá un portal que solo se puede detectar con colab
 
 * Trabaje de forma conjunta para iniciar suficientes proyectiles en el anclaje para descubrir un portal secreto.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En el **panel Proyecto** , vaya a la carpeta **hologramas** .
-* Arrastre y coloque el activo de **submundo** como **elemento secundario de HologramCollection** .
-* Con **HologramCollection** seleccionado, haga clic en el botón **Agregar componente** en el **Inspector** .
-* En el menú, escriba en el cuadro de búsqueda **ExplodeTarget** . Seleccione el resultado de la búsqueda.
-* Con **HologramCollection** seleccionado, en la **jerarquía** , arrastre el objeto **EnergyHub** hasta el campo de **destino** en el **Inspector** .
-* Con **HologramCollection** seleccionado, en la **jerarquía** , arrastre el objeto de **submundo** al campo de **submundo** del **Inspector** .
+* Arrastre y coloque el activo de **submundo** como **elemento secundario de HologramCollection**.
+* Con **HologramCollection** seleccionado, haga clic en el botón **Agregar componente** en el **Inspector**.
+* En el menú, escriba en el cuadro de búsqueda **ExplodeTarget**. Seleccione el resultado de la búsqueda.
+* Con **HologramCollection** seleccionado, en la **jerarquía** , arrastre el objeto **EnergyHub** hasta el campo de **destino** en el **Inspector**.
+* Con **HologramCollection** seleccionado, en la **jerarquía** , arrastre el objeto de **submundo** al campo de **submundo** del **Inspector**.
 
 **Implementación y disfrute**
 

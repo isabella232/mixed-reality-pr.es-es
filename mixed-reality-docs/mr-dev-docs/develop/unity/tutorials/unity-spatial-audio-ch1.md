@@ -5,13 +5,13 @@ author: kegodin
 ms.author: kegodin
 ms.date: 12/01/2019
 ms.topic: article
-keywords: realidad mixta, Unity, tutorial, hololens2, audio espacial
-ms.openlocfilehash: 9ddfd1644a20ac063551b8140f9f8950ae172196
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: mixed reality, Unity, tutorial, hololens2, audio espacial, MRTK, kit de herramientas de realidad mixta, UWP, Windows 10, HRTF, función de transferencia relacionada con el encabezado, reverberación, Microsoft Spatializer
+ms.openlocfilehash: fc657eb22034c1c3fd31aadedfe7b8ea7bb8447d
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91694491"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679714"
 ---
 # <a name="adding-spatial-audio-to-your-unity-project"></a>Incorporación de audio espacial al proyecto de Unity
 
@@ -51,7 +51,7 @@ A continuación, busque e instale el paquete de **Windows Mixed Reality** :
 
 ## <a name="install-mrtk-and-microsoft-spatializer"></a>Instalación de MRTK y Microsoft Spatializer
 Con NuGet para Unity, instale los complementos de MRTK y Microsoft Spatializer:
-1. En la barra de menús de Unity, haga clic en **Nuget-> administrar paquetes NuGet** .
+1. En la barra de menús de Unity, haga clic en **Nuget-> administrar paquetes NuGet**.
 
 ![Administrar paquetes NuGet](images/spatial-audio/manage-nuget-packages.png)
 
@@ -67,14 +67,14 @@ El [paquete NuGet de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity
 
 ## <a name="set-up-mrtk-in-your-project"></a>Configuración de MRTK en el proyecto
 
-1. Para abrir la ventana Configuración de compilación, vaya a **archivo-> configuración de compilación** .
+1. Para abrir la ventana Configuración de compilación, vaya a **archivo-> configuración de compilación**.
 
-2. Seleccione la _plataforma universal de Windows_ y haga clic en **cambiar plataforma** .
+2. Seleccione la _plataforma universal de Windows_ y haga clic en **cambiar plataforma**.
 
 3. Haga clic en **configuración del reproductor** en la **ventana compilar** para abrir las propiedades de **configuración del reproductor** en el panel **Inspector** .
-    * En **configuración de XR** , active la casilla **compatible con realidad virtual**
-    * En **configuración de XR** , cambie el **modo de representación de estéreo** a instancia de **paso único** .
-    * En **configuración de publicación** , active la casilla **percepción espacial** en la sección **capacidades** .
+    * En **configuración de XR**, active la casilla **compatible con realidad virtual**
+    * En **configuración de XR**, cambie el **modo de representación de estéreo** a instancia de **paso único**.
+    * En **configuración de publicación**, active la casilla **percepción espacial** en la sección **capacidades** .
 
 4. En la barra de menús, haga clic en **Kit de herramientas de realidad mixta: > agregar a la escena y configurar.** para agregar MRTK a la escena.
 
@@ -86,7 +86,7 @@ Habilite el complemento de **Microsoft Spatializer** . Abra **editar > configura
 ![Configuración del proyecto que muestra el complemento spatializer](images/spatial-audio/project-settings.png)
 
 ## <a name="enable-spatial-audio-on-your-workstation"></a>Habilitación del audio espacial en la estación de trabajo
-En las versiones de escritorio de Windows, el audio espacial está deshabilitado de forma predeterminada. Habilítelo haciendo clic con el botón derecho en el icono de volumen en la barra de tareas. Para obtener la mejor representación de lo que escuchará en HoloLens 2, elija **sonido espacial > Windows Sonic para auriculares** .
+En las versiones de escritorio de Windows, el audio espacial está deshabilitado de forma predeterminada. Habilítelo haciendo clic con el botón derecho en el icono de volumen en la barra de tareas. Para obtener la mejor representación de lo que escuchará en HoloLens 2, elija **sonido espacial > Windows Sonic para auriculares**.
 
 ![Configuración de audio espacial de escritorio](images/spatial-audio/desktop-audio-settings.png)
 

@@ -5,13 +5,13 @@ author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, machine learning, ml, machine learning Studio, hololens, envolventes, VR
-ms.openlocfilehash: 7c2a580a5d8af6875e29f06edfd2d3cfc5728cff
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, machine learning, ml, machine learning Studio, hololens, envolventes, VR, Windows 10, Visual Studio
+ms.openlocfilehash: 3bb50c146e11a340f4223d71dd401ac2b84dd6d4
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91694919"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679484"
 ---
 # <a name="mr-and-azure-307-machine-learning"></a>Realidad mixta y Azure (307): Aprendizaje automático
 
@@ -31,7 +31,7 @@ En este curso, aprenderá a agregar funcionalidades de Machine Learning (ML) a u
 Una vez completado este curso, tendrá una aplicación de auriculares con un casco de realidad mixta y habrá aprendido lo siguiente:
 
 1.  Proporcione una tabla de datos de ventas al portal de *Azure machine learning Studio (clásico)* y diseñe un algoritmo para predecir las ventas futuras de los artículos más populares.
-2.  Cree un **proyecto de Unity** , que puede recibir e interpretar los datos de predicción del servicio de ml.
+2.  Cree un **proyecto de Unity**, que puede recibir e interpretar los datos de predicción del servicio de ml.
 3.  Mostrar visualmente los datos de predication en el **proyecto de Unity** a través de la entrega de los artículos de ventas más populares, en una estantería.
 
 En su aplicación, depende del modo en que va a integrar los resultados con el diseño. Este curso está diseñado para enseñarle a integrar un servicio de Azure con su proyecto de Unity. Es su trabajo usar el conocimiento que obtiene de este curso para mejorar su aplicación de realidad mixta.
@@ -51,7 +51,7 @@ Este curso es un tutorial independiente, que no implica directamente ningún otr
 > [!NOTE]
 > Aunque este curso se centra principalmente en los auriculares de Windows Mixed Reality inmersivo (VR), también puede aplicar lo que aprenda en este curso a Microsoft HoloLens. A medida que siga con el curso, verá notas sobre cualquier cambio que deba usar para admitir HoloLens. Al usar HoloLens, puede observar algún Eco durante la captura de voz.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 > [!NOTE]
 > Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#. Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de mayo). Puede usar el software más reciente, como se indica en el [artículo instalar las herramientas](../../install-the-tools.md), aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se indica a continuación.
@@ -66,7 +66,7 @@ Se recomienda el siguiente hardware y software para este curso:
 - Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](../../../hololens-hardware-details.md) con el modo de desarrollador habilitado
 - Acceso a Internet para la configuración de Azure y la recuperación de datos de ML
 
-## <a name="before-you-start"></a>Antes de comenzar
+## <a name="before-you-start"></a>Antes de empezar
 
 Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación). 
 
@@ -83,21 +83,21 @@ Para usar la API de traductor de Azure, tendrá que configurar una instancia del
     ![Configuración de Azure Storage cuenta](images/AzureLabs-Lab7-1.png)
 
     > [!NOTE]
-    > Es posible que la palabra **nuevo** se haya reemplazado por **crear un recurso** , en portales más recientes.
+    > Es posible que la palabra **nuevo** se haya reemplazado por **crear un recurso**, en portales más recientes.
 
-3.  En la pestaña **cuentas de almacenamiento** , haga clic en **Agregar** .
+3.  En la pestaña **cuentas de almacenamiento** , haga clic en **Agregar**.
 
     ![Configuración de Azure Storage cuenta](images/AzureLabs-Lab7-2.png)
 
 4.  En el panel **crear cuenta de almacenamiento** :
 
     1.  Inserte un **nombre** para la cuenta. tenga en cuenta que este campo solo acepta números y letras minúsculas.
-    2.  En **modelo de implementación,** seleccione **Resource Manager** .
-    3.  En **tipo de cuenta** , seleccione **almacenamiento (uso general V1)** .
-    4.  En **Rendimiento** , seleccione **Estándar** .
-    5.  En **replicación** , seleccione **almacenamiento con redundancia geográfica con acceso de lectura (RA-grs)** .
-    6.  Deje la **transferencia segura requerida** como **deshabilitada** .
-    7.  Seleccione una opción en **Suscripción** .
+    2.  En **modelo de implementación,** seleccione **Resource Manager**.
+    3.  En **tipo de cuenta**, seleccione **almacenamiento (uso general V1)**.
+    4.  En **Rendimiento**, seleccione **Estándar**.
+    5.  En **replicación** , seleccione **almacenamiento con redundancia geográfica con acceso de lectura (RA-grs)**.
+    6.  Deje la **transferencia segura requerida** como **deshabilitada**.
+    7.  Seleccione una opción en **Suscripción**.
     4. Elija un **grupo de recursos** o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común).
 
         > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
@@ -108,7 +108,7 @@ Para usar la API de traductor de Azure, tendrá que configurar una instancia del
 
     ![Configuración de Azure Storage cuenta](images/AzureLabs-Lab7-3.png)
 
-6.  Una vez que haya hecho clic en **crear** , tendrá que esperar a que se cree el servicio, lo que puede tardar un minuto.
+6.  Una vez que haya hecho clic en **crear**, tendrá que esperar a que se cree el servicio, lo que puede tardar un minuto.
 
 7.  Una vez que se crea la instancia de servicio, aparecerá una notificación en el portal.
 
@@ -116,19 +116,19 @@ Para usar la API de traductor de Azure, tendrá que configurar una instancia del
 
 ## <a name="chapter-2---the-azure-machine-learning-studio--classic"></a>Capítulo 2: el Azure Machine Learning Studio (clásico)
 
-Para usar el *Azure machine learning* , deberá configurar una instancia del servicio machine learning para que esté disponible para la aplicación.
+Para usar el *Azure machine learning*, deberá configurar una instancia del servicio machine learning para que esté disponible para la aplicación.
 
-1.  En Azure portal, haga clic en **nuevo** en la esquina superior izquierda y busque **machine learning Studio área de trabajo** , presione **entrar** .
+1.  En Azure portal, haga clic en **nuevo** en la esquina superior izquierda y busque **machine learning Studio área de trabajo**, presione **entrar**.
 
     ![Azure Machine Learning Studio (clásico)](images/AzureLabs-Lab7-5.png)
 
 2.  La nueva página proporcionará una descripción de la **machine learning Studio**  servicio del área de trabajo. En la parte inferior izquierda de este mensaje, haga clic en el botón **crear** para crear una asociación con este servicio.
 
-3.  Una vez que haya hecho clic en **crear** , aparecerá un panel donde debe proporcionar algunos detalles sobre el nuevo servicio de **machine learning Studio** :
+3.  Una vez que haya hecho clic en **crear**, aparecerá un panel donde debe proporcionar algunos detalles sobre el nuevo servicio de **machine learning Studio**:
 
     1.  Inserte el **nombre de área de trabajo** que desee para esta instancia de servicio.
 
-    2.  Seleccione una opción en **Suscripción** .
+    2.  Seleccione una opción en **Suscripción**.
 
     3. Elija un **grupo de recursos** o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común). 
 
@@ -136,7 +136,7 @@ Para usar el *Azure machine learning* , deberá configurar una instancia del ser
 
     4.  Determine la **Ubicación** del grupo de recursos (si va a crear un nuevo grupo de recursos). Idealmente, la ubicación estará en la región donde se ejecutará la aplicación. Algunos recursos de Azure solo están disponibles en determinadas regiones. Debe usar el mismo grupo de recursos que utilizó para crear el Azure Storage en el capítulo anterior.
 
-    5.  En la sección **cuenta de almacenamiento** , haga clic en **usar existente** , haga clic en el menú desplegable y, desde allí, haga clic en la **cuenta de almacenamiento** que creó en el último capítulo.
+    5.  En la sección **cuenta de almacenamiento** , haga clic en **usar existente**, haga clic en el menú desplegable y, desde allí, haga clic en la **cuenta de almacenamiento** que creó en el último capítulo.
 
     6.  Seleccione el **plan de tarifa del área de trabajo** adecuado en el menú desplegable.
 
@@ -146,11 +146,11 @@ Para usar el *Azure machine learning* , deberá configurar una instancia del ser
 
     9.  También deberá confirmar que ha comprendido los términos y condiciones que se aplican a este servicio.
 
-    10. Haga clic en **Crear** .
+    10. Haga clic en **Crear**.
 
         ![Azure Machine Learning Studio (clásico)](images/AzureLabs-Lab7-6.png)
 
-4.  Una vez que haya hecho clic en **crear** , tendrá que esperar a que se cree el servicio, lo que puede tardar un minuto.
+4.  Una vez que haya hecho clic en **crear**, tendrá que esperar a que se cree el servicio, lo que puede tardar un minuto.
 
 5.  Una vez que se crea la instancia de servicio, aparecerá una notificación en el portal.
 
@@ -162,7 +162,7 @@ Para usar el *Azure machine learning* , deberá configurar una instancia del ser
 
 7.  Haga clic en el botón **ir a recurso** de la notificación para explorar la nueva instancia de servicio.
 
-8.  En la página que se muestra, en la sección **vínculos adicionales** , haga clic en **iniciar machine learning Studio** , que dirigirá el explorador al portal de **machine learning Studio** .
+8.  En la página que se muestra, en la sección **vínculos adicionales** , haga clic en **iniciar machine learning Studio**, que dirigirá el explorador al portal de **machine learning Studio** .
 
     ![Azure Machine Learning Studio (clásico)](images/AzureLabs-Lab7-9.png)
 
@@ -178,7 +178,7 @@ Una de las formas en que Machine Learning funcionan los algoritmos es analizar l
 Se le proporciona una tabla de ejemplo, para este curso, denominada [ProductsTableCSV, que se puede descargar aquí](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20307%20-%20Machine%20learning/MR%20and%20Azure%20307%20-%20Machine%20learning.zip).
 
 > [!IMPORTANT]
-> El archivo. zip anterior contiene **ProductsTableCSV** y **. unitypackage Tools** , que necesitará en el [capítulo 6](#chapter-6---importing-the-mlproducts-unity-package). Este paquete también se proporciona en ese capítulo, aunque sea independiente del archivo CSV.
+> El archivo. zip anterior contiene **ProductsTableCSV** y **. unitypackage Tools**, que necesitará en el [capítulo 6](#chapter-6---importing-the-mlproducts-unity-package). Este paquete también se proporciona en ese capítulo, aunque sea independiente del archivo CSV.
 
 Este conjunto de datos de ejemplo contiene un registro de los objetos que mejor se venden cada hora de cada día del año 2017.
         
@@ -192,7 +192,7 @@ Esta tabla de ejemplo contiene 9998 entradas.
 
     ![La Machine Learning Studio (clásica): configuración del conjunto de](images/AzureLabs-Lab7-12.png)
 
-2.  Una sección aparecerá en la parte inferior y, dentro de ella, en el panel de navegación de la izquierda. Haga clic en **conjunto** de archivos y, a la derecha de, **desde archivo local** .
+2.  Una sección aparecerá en la parte inferior y, dentro de ella, en el panel de navegación de la izquierda. Haga clic en **conjunto** de archivos y, a la derecha de, **desde archivo local**.
 
     ![La Machine Learning Studio (clásica): configuración del conjunto de](images/AzureLabs-Lab7-13.png)
 
@@ -206,7 +206,7 @@ Esta tabla de ejemplo contiene 9998 entradas.
 
     3.  En el campo de texto que aparece a continuación, escriba **ProductsTableCSV.csv** como nombre del conjunto de los (aunque debe agregarse automáticamente).
 
-    4.  En el menú desplegable de **tipo** , seleccione **archivo CSV genérico con un encabezado (. csv)** .
+    4.  En el menú desplegable de **tipo**, seleccione **archivo CSV genérico con un encabezado (. csv)**.
 
     5.  Presione la marca de verificación en la parte inferior derecha de la ventana de carga y se cargará el **conjunto** de resultados.
 
@@ -216,21 +216,21 @@ Antes de poder compilar el sistema de aprendizaje automático, deberá compilar 
 
 Para empezar a crear un experimento:
 
-1.  Haga clic de nuevo en el botón **+ nuevo** situado en la parte inferior izquierda de la página y, a continuación, haga clic en experimento en blanco de **experimento**  >  **Blank Experiment** .
+1.  Haga clic de nuevo en el botón **+ nuevo** situado en la parte inferior izquierda de la página y, a continuación, haga clic en experimento en blanco de **experimento**  >  **Blank Experiment**.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-15.png)
 
 2.  Se mostrará una nueva página con un experimento en blanco:
 
-3.  En el panel de la izquierda, expanda **Saved datasets**  >  **My datasets** y arrastre **ProductsTableCSV** al **lienzo del experimento** .
+3.  En el panel de la izquierda, expanda **Saved datasets**  >  **My datasets** y arrastre **ProductsTableCSV** al **lienzo del experimento**.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-16.png)
 
-4.  En el panel de la izquierda, expanda ejemplo de **transformación de datos**  >  **y dividir** . A continuación, arrastre el elemento **Split Data** al **lienzo del experimento** . El elemento dividir datos dividirá el conjunto de datos en dos partes. Una parte que se utilizará para entrenar el algoritmo de aprendizaje automático. La segunda parte se usará para evaluar la precisión del algoritmo generado.
+4.  En el panel de la izquierda, expanda ejemplo de **transformación de datos**  >  **y dividir**. A continuación, arrastre el elemento **Split Data** al **lienzo del experimento**. El elemento dividir datos dividirá el conjunto de datos en dos partes. Una parte que se utilizará para entrenar el algoritmo de aprendizaje automático. La segunda parte se usará para evaluar la precisión del algoritmo generado.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-17.png)
 
-5.  En el panel derecho (mientras está seleccionado el elemento dividir datos en el lienzo), edite la **fracción de filas del primer conjunto de** datos de salida a **0,7** . Esto dividirá los datos en dos partes, la primera parte será del 70% de los datos y la segunda parte será el 30% restante. Para asegurarse de que los datos se dividen de forma aleatoria, asegúrese de que la casilla **División aleatoria** permanece activada.
+5.  En el panel derecho (mientras está seleccionado el elemento dividir datos en el lienzo), edite la **fracción de filas del primer conjunto de** datos de salida a **0,7**. Esto dividirá los datos en dos partes, la primera parte será del 70% de los datos y la segunda parte será el 30% restante. Para asegurarse de que los datos se dividen de forma aleatoria, asegúrese de que la casilla **División aleatoria** permanece activada.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-18.png)
 
@@ -238,17 +238,17 @@ Para empezar a crear un experimento:
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-19.png)
 
-7.  En el panel **experimentos** en el lado izquierdo, expanda **machine learning**  >  **entrenar** . Arrastre el elemento **entrenar modelo** hacia el lienzo del experimento. El lienzo debería tener el mismo aspecto que el siguiente.
+7.  En el panel **experimentos** en el lado izquierdo, expanda **machine learning**  >  **entrenar**. Arrastre el elemento **entrenar modelo** hacia el lienzo del experimento. El lienzo debería tener el mismo aspecto que el siguiente.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-20.png)
 
-8.  En la ***parte inferior izquierda*** del elemento **dividir datos** , arrastre una conexión a la **parte superior derecha** del elemento **entrenar modelo** . El modelo de entrenamiento usará la primera división del 70% del conjunto de filas para entrenar el algoritmo.
+8.  Desde la **_parte inferior izquierda_*del elemento _* Split Data** , arrastre una conexión a la **parte superior derecha** del elemento **Train Model (entrenar modelo** ). El modelo de entrenamiento usará la primera división del 70% del conjunto de filas para entrenar el algoritmo.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-21.png)
 
 9.  Seleccione el elemento **entrenar modelo** en el lienzo y, en el panel **propiedades** (en el lado derecho de la ventana del explorador), haga clic en el botón **iniciar selector de columnas** .
 
-10. En el cuadro de texto escriba **Product** y, a continuación, presione **entrar** ; *Product* se establecerá como una columna para entrenar las predicciones. Después, haga clic en la **marca** de verificación en la esquina inferior derecha para cerrar el cuadro de diálogo de selección.
+10. En el cuadro de texto escriba **Product** y, a continuación, presione **entrar**; *Product* se establecerá como una columna para entrenar las predicciones. Después, haga clic en la **marca** de verificación en la esquina inferior derecha para cerrar el cuadro de diálogo de selección.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-22.png)
 
@@ -256,21 +256,21 @@ Para empezar a crear un experimento:
 
 12. En el panel elementos del experimento de la izquierda, expanda **machine learning**  >  **inicializar**  >  **clasificación** del modelo y arrastre el elemento de **regresión logística multiclase** al lienzo del experimento.
 
-13. Conecte la salida, desde la parte inferior de la **regresión logística multiclase** , a la entrada superior izquierda del elemento **entrenar modelo** .
+13. Conecte la salida, desde la parte inferior de la **regresión logística multiclase**, a la entrada superior izquierda del elemento **entrenar modelo** .
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-23.png)
 
 14. En la lista de elementos del experimento en el panel de la izquierda, expanda **machine learning**  >  **puntuación** y arrastre el elemento **puntuar modelo** al lienzo.
 
-15. Conecte la salida, desde la parte inferior del **modelo de tren** , a la entrada superior izquierda del **modelo de puntuación** .
+15. Conecte la salida, desde la parte inferior del **modelo de tren**, a la entrada superior izquierda del **modelo de puntuación**.
 
-16. Conecte la salida inferior derecha de **Split Data (dividir datos** ) a la entrada superior derecha del elemento **score Model (puntuar modelo** ).
+16. Conecte la salida inferior derecha de **Split Data (dividir datos**) a la entrada superior derecha del elemento **score Model (puntuar modelo** ).
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-24.png)
 
 17. En la lista de elementos del **experimento** en el panel de la izquierda, expanda **machine learning**  >  **evaluar** y arrastre el elemento **Evaluar modelo** al lienzo.
 
-18. Conecte el resultado del **modelo de puntuación** a la entrada superior izquierda del modelo de **evaluación** .
+18. Conecte el resultado del **modelo de puntuación** a la entrada superior izquierda del modelo de **evaluación**.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-25.png)
 
@@ -284,7 +284,7 @@ Para empezar a crear un experimento:
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-27.png)
 
-21. Haga clic con el botón derecho en el elemento **Evaluar modelo** del lienzo y, en el menú contextual, mantenga el mouse sobre **los resultados** de la evaluación y seleccione **visualizar** .
+21. Haga clic con el botón derecho en el elemento **Evaluar modelo** del lienzo y, en el menú contextual, mantenga el mouse sobre **los resultados** de la evaluación y seleccione **visualizar**.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-28.png)
 
@@ -292,15 +292,15 @@ Para empezar a crear un experimento:
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-29.png)
 
-23. Cierre los **resultados** .
+23. Cierre los **resultados**.
 
-24. Para usar el modelo de Machine Learning recién entrenado, debe exponerlo como un **servicio Web** . Para ello, haga clic en el elemento de menú **configurar servicio Web** en el menú de la parte inferior de la página y haga clic en **servicio Web predictivo** .
+24. Para usar el modelo de Machine Learning recién entrenado, debe exponerlo como un **servicio Web**. Para ello, haga clic en el elemento de menú **configurar servicio Web** en el menú de la parte inferior de la página y haga clic en **servicio Web predictivo**.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-30.png)
 
 25. Se creará una nueva pestaña y se combinará el modelo de entrenamiento para crear el nuevo servicio Web. 
 
-26. En el menú de la parte inferior de la página, haga clic en **Guardar** y, a continuación, haga clic en **Ejecutar** . Verá el estado actualizado en la esquina superior derecha del lienzo del experimento.
+26. En el menú de la parte inferior de la página, haga clic en **Guardar** y, a continuación, haga clic en **Ejecutar**. Verá el estado actualizado en la esquina superior derecha del lienzo del experimento.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-31.png)
 
@@ -308,14 +308,14 @@ Para empezar a crear un experimento:
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-32.png)
 
-    > Es posible que el explorador le solicite que permita un elemento emergente, que debe **permitir** , aunque es posible que tenga que volver a presionar **implementar servicio Web** si no se muestra la página implementar. 
+    > Es posible que el explorador le solicite que permita un elemento emergente, que debe **permitir**, aunque es posible que tenga que volver a presionar **implementar servicio Web** si no se muestra la página implementar. 
 
 28. Una vez creado el experimento, se le redirigirá a una página de **Panel** en la que se mostrará la **clave de API** . Cópielo en un bloc de notas por el momento, lo necesitará en el código muy pronto. Una vez que haya anotado la clave de API, haga clic en el botón **solicitud/respuesta** en la sección **punto de conexión predeterminado** debajo de la clave.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-33.png)
 
     > [!NOTE] 
-    > Si hace clic en probar en esta página, podrá especificar los datos de entrada y ver la salida. Especifique el **día** y la **hora** . Deje la entrada del **producto** en blanco. A continuación, haga clic en el botón **confirmar** . La salida en la parte inferior de la página mostrará el JSON que representa la probabilidad de que cada producto sea la elección.
+    > Si hace clic en probar en esta página, podrá especificar los datos de entrada y ver la salida. Especifique el **día** y la **hora**. Deje la entrada del **producto** en blanco. A continuación, haga clic en el botón **confirmar** . La salida en la parte inferior de la página mostrará el JSON que representa la probabilidad de que cada producto sea la elección.
 
 29. Se abrirá una nueva página web, en la que se mostrarán las instrucciones y algunos ejemplos sobre la estructura de la solicitud requerida por el Machine Learning Studio (clásico). Copie el **URI de solicitud** que se muestra en esta página en el Bloc de notas.
 
@@ -334,25 +334,25 @@ Configure y pruebe sus auriculares de la realidad mixta.
 > [!NOTE]
 >  **No** necesitará controladores de movimiento para este curso. Si necesita ayuda para configurar el casco envolvente, haga clic [aquí](https://support.microsoft.com/help/4043101/windows-10-set-up-windows-mixed-reality).
 
-1.  Abra **Unity** y cree un nuevo proyecto de Unity denominado **Mr \_ MachineLearning.** Asegúrese de que el tipo de proyecto está establecido en **3D** .
+1.  Abra **Unity** y cree un nuevo proyecto de Unity denominado **Mr \_ MachineLearning.** Asegúrese de que el tipo de proyecto está establecido en **3D**.
 
-2.  Con Unity abierto, merece la pena comprobar que el **Editor de scripts** predeterminado está establecido en **Visual Studio** . Vaya a **Editar**  >  **preferencias** y, a continuación, en la nueva ventana, vaya a **herramientas externas** . Cambie el **Editor de script externo** a **Visual Studio 2017** . Cierre la ventana **preferencias** .
+2.  Con Unity abierto, merece la pena comprobar que el **Editor de scripts** predeterminado está establecido en **Visual Studio**. Vaya a **Editar**  >  **preferencias** y, a continuación, en la nueva ventana, vaya a **herramientas externas**. Cambie el **Editor de script externo** a **Visual Studio 2017**. Cierre la ventana **preferencias** .
 
-3.  A continuación, vaya **File** a  >  **configuración de compilación** de archivos y cambie la plataforma a **plataforma universal de Windows** , haciendo clic en el botón ***cambiar plataforma*** .
+3.  A continuación, vaya a configuración de compilación de **archivos**  >  **Build Settings** y cambie la plataforma a **plataforma universal de Windows**; para ello, haga clic en el botón **_cambiar plataforma_* _.
 
 4.  Asegúrese también de que:
 
-    1.  El **dispositivo de destino** se establece en **cualquier dispositivo** .
+    1.  _ *Dispositivo de destino** está establecido en **cualquier dispositivo**.
 
-        > Para Microsoft HoloLens, establezca el **dispositivo de destino** en *hololens* .
+        > Para Microsoft HoloLens, establezca el **dispositivo de destino** en *hololens*.
 
-    2.  El **tipo de compilación** se establece en **D3D** .
+    2.  El **tipo de compilación** se establece en **D3D**.
 
     3.  **SDK** está establecido en **instalado más** recientemente.
 
-    4.  La **versión de Visual Studio** está establecida en **instalación más reciente** .
+    4.  La **versión de Visual Studio** está establecida en **instalación más reciente**.
 
-    5.  **Compilar y ejecutar** está establecido en **equipo local** .
+    5.  **Compilar y ejecutar** está establecido en **equipo local**.
 
     6.  No se preocupe por la configuración de **escenas** ahora, ya que se proporcionan más adelante.
 
@@ -368,19 +368,19 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
         1.  La versión de **scripting** **en tiempo de ejecución** debe ser **experimental** (.net 4,6 equivalente)
 
-        2. El **back-end de scripting** debe ser ***.net***
+        2. El **back-end de scripting** debe ser **_.net_* _
 
-        3. El **nivel de compatibilidad de API** debe ser **.net 4,6**
+        3. _ El *nivel de compatibilidad* de la API * debe ser **.net 4,6**
 
             ![Configuración del proyecto de Unity](images/AzureLabs-Lab7-36.png)
 
-    2.  En la pestaña **configuración de publicación** , en **capacidades** , seleccione:
+    2.  En la pestaña **configuración de publicación** , en **capacidades**, seleccione:
 
         - **InternetClient**
 
             ![Configuración del proyecto de Unity](images/AzureLabs-Lab7-37.png)
 
-    3.  Más abajo en el panel, en la **configuración de XR** (se encuentra debajo de **configuración de publicación** ), tick **Virtual Reality compatible** , asegúrese de que se ha agregado el **SDK de Windows Mixed Reality** .
+    3.  Más abajo en el panel, en la **configuración de XR** (se encuentra debajo de **configuración de publicación**), tick **Virtual Reality compatible**, asegúrese de que se ha agregado el **SDK de Windows Mixed Reality** .
 
         ![Configuración del proyecto de Unity](images/AzureLabs-Lab7-38.png)
 
@@ -390,7 +390,7 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
 7.  Cierre la ventana Build Settings (Configuración de compilación).
 
-8.  Guarde el proyecto ( **archivo > guardar proyecto** ).
+8.  Guarde el proyecto (**archivo > guardar proyecto**).
 
 ## <a name="chapter-6---importing-the-mlproducts-unity-package"></a>Capítulo 6: importar el paquete de Unity de MLProducts
 
@@ -398,13 +398,13 @@ En este curso, tendrá que descargar un paquete de recursos de Unity llamado [**
 
 Para importar este paquete:
 
-1.  Con el panel de Unity delante de usted, haga clic en **recursos** en el menú de la parte superior de la pantalla y, luego, haga clic en **importar paquete, paquete personalizado** .
+1.  Con el panel de Unity delante de usted, haga clic en **recursos** en el menú de la parte superior de la pantalla y, luego, haga clic en **importar paquete, paquete personalizado**.
 
     ![Importación del paquete Unity de MLProducts](images/AzureLabs-Lab7-39.png)
 
-2.  Use el selector de archivos para seleccionar el paquete **Azure-Mr-307. unitypackage Tools** y haga clic en **abrir** .
+2.  Use el selector de archivos para seleccionar el paquete **Azure-Mr-307. unitypackage Tools** y haga clic en **abrir**.
 
-3.  Se le mostrará una lista de los componentes de este recurso. Confirme la importación haciendo clic en **importar** .
+3.  Se le mostrará una lista de los componentes de este recurso. Confirme la importación haciendo clic en **importar**.
 
     ![Importación del paquete Unity de MLProducts](images/AzureLabs-Lab7-40.png)
 
@@ -412,7 +412,7 @@ Para importar este paquete:
 
     ![Importación del paquete Unity de MLProducts](images/AzureLabs-Lab7-41.png)
 
-5.  Dentro de la carpeta **panel del proyecto** , haga clic en la carpeta **escenas** y haga doble clic en la escena dentro de (llamado **MR_MachineLearningScene** ). La escena se abrirá (consulte la imagen siguiente). Si faltan los rombos rojos, simplemente haga clic en el botón **Gizmos** , en la parte superior derecha del **Panel de juego** .
+5.  Dentro de la carpeta **panel del proyecto** , haga clic en la carpeta **escenas** y haga doble clic en la escena dentro de (llamado **MR_MachineLearningScene**). La escena se abrirá (consulte la imagen siguiente). Si faltan los rombos rojos, simplemente haga clic en el botón **Gizmos** , en la parte superior derecha del **Panel de juego**.
 
     ![Importación del paquete Unity de MLProducts](images/AzureLabs-Lab7-44.png)
 
@@ -422,7 +422,7 @@ Para aprovechar el uso de las bibliotecas JSON (que se usan para serializar y de
 
 Para ello:
 
--  Haga clic con el botón izquierdo en el archivo Newtonsoft dentro de la carpeta plugins y mire en el **panel Inspector** . Asegúrese de que se realiza una marca en **cualquier plataforma** . Vaya a la **pestaña UWP** y asegúrese también de que no se ha activado el **proceso** .
+-  Haga clic con el botón izquierdo en el archivo Newtonsoft dentro de la carpeta plugins y mire en el **panel Inspector**. Asegúrese de que se realiza una marca en **cualquier plataforma** . Vaya a la **pestaña UWP** y asegúrese también de que no se ha activado el **proceso** .
 
     ![Importación de los archivos dll en Unity](images/AzureLabs-Lab7-48.png)
 
@@ -432,7 +432,7 @@ La clase **ShelfKeeper** hospeda métodos que controlan la interfaz de usuario y
 
 Como parte del paquete importado, se le proporcionará esta clase, aunque está incompleta. Ahora es el momento de completar esa clase:
 
-1.  Haga doble clic en el script **ShelfKeeper** , dentro de la carpeta **scripts** , para abrirlo con **Visual Studio 2017** .
+1.  Haga doble clic en el script **ShelfKeeper** , dentro de la carpeta **scripts** , para abrirlo con **Visual Studio 2017**.
 
 2.  Reemplace todo el código existente en el script con el código siguiente, que establece la fecha y la hora, y tiene un método para mostrar un producto.
 
@@ -495,18 +495,18 @@ Como parte del paquete importado, se le proporcionará esta clase, aunque está 
     }
     ```
 
-3.  Asegúrese de guardar los cambios en **Visual Studio** antes de volver a **Unity** .
+3.  Asegúrese de guardar los cambios en **Visual Studio** antes de volver a **Unity**.
 
 4.  De nuevo en el editor de Unity, compruebe que la clase **ShelfKeeper** es similar a la siguiente:
 
     ![Crear la clase ShelfKeeper](images/AzureLabs-Lab7-51.png)
 
     > [!IMPORTANT]
-    > Si el script no tiene destinos de referencia (es decir, *Date (malla de texto)* ), simplemente arrastre los objetos correspondientes del **Panel jerarquía** a los campos de destino. Consulte a continuación la explicación, si es necesario:
+    > Si el script no tiene destinos de referencia (es decir, *Date (malla de texto)*), simplemente arrastre los objetos correspondientes del **Panel jerarquía** a los campos de destino. Consulte a continuación la explicación, si es necesario:
     > 
-    > 1.  Abra la matriz de **puntos de generación** dentro del script del componente **ShelfKeeper** . para ello, haga clic en ella. Una subsección aparecerá denominada **size** , que indica el tamaño de la matriz. Escriba **3** en el cuadro de texto junto a **tamaño** y presione **entrar** ; se crearán tres ranuras debajo.
-    > 2. Dentro de la **jerarquía** , expanda el objeto **Time display** (haciendo clic con el botón izquierdo en la flecha situada junto a él). A continuación, haga clic en la ***cámara principal*** desde dentro de la **jerarquía** para que el **Inspector** muestre su información.
-    > 3. Seleccione la **cámara principal** en el **Panel jerarquía** . Arrastre los objetos de **fecha** y **hora** desde **el panel jerarquía** hasta las ranuras de **texto** de **fecha** y hora del **Inspector** de la **cámara principal** en el componente **ShelfKeeper** .
+    > 1.  Abra la matriz de **puntos de generación** dentro del script del componente **ShelfKeeper** . para ello, haga clic en ella. Una subsección aparecerá denominada **size**, que indica el tamaño de la matriz. Escriba **3** en el cuadro de texto junto a **tamaño** y presione **entrar**; se crearán tres ranuras debajo.
+    > 2. Dentro de la **jerarquía** , expanda el objeto **Time display** (haciendo clic con el botón izquierdo en la flecha situada junto a él). A continuación, haga clic en la **_cámara principal_*_ desde dentro de la* jerarquía** de, para que el **Inspector** muestre su información.
+    > 3. Seleccione la **cámara principal** en el **Panel jerarquía**. Arrastre los objetos de **fecha** y **hora** desde **el panel jerarquía** hasta las ranuras de **texto** de **fecha** y hora del **Inspector** de la **cámara principal** en el componente **ShelfKeeper** .
     > 4. Arrastre los **puntos de generación** desde el **Panel de jerarquía** (debajo del objeto de *estantería* ) hasta los **tres** destinos de referencia de **elemento** debajo de la matriz de **puntos de generación** , como se muestra en la imagen.
     > 
     >     ![Crear la clase ShelfKeeper](images/AzureLabs-Lab7-52.png)
@@ -527,13 +527,13 @@ Esta clase es responsable de:
 
 Para crear esta clase:
 
-1.  Vaya a la carpeta **scripts** , en el **panel Proyecto** .
+1.  Vaya a la carpeta **scripts** , en el **panel Proyecto**.
 
-2.  Haga clic con el botón derecho en la carpeta, **cree** un  >  **script de C#** . Llame al script **ProductPrediction** .
+2.  Haga clic con el botón derecho en la carpeta, **cree** un  >  **script de C#**. Llame al script **ProductPrediction**.
 
-3.  Haga doble clic en el nuevo script **ProductPrediction** para abrirlo con **Visual Studio 2017** .
+3.  Haga doble clic en el nuevo script **ProductPrediction** para abrirlo con **Visual Studio 2017**.
 
-4.  Si aparece el cuadro de diálogo se **ha detectado la modificación del archivo** , haga clic en * **volver a cargar la solución** .
+4.  Si aparece el cuadro de diálogo se **ha detectado la modificación del archivo** , haga clic en **_volver a cargar la solución_*.
 
 5.  Agregue los siguientes espacios de nombres en la parte superior de la clase ProductPrediction:
 
@@ -648,7 +648,7 @@ Para crear esta clase:
     ```
 
     > [!IMPORTANT]
-    > Asegúrese de insertar la **clave principal** y el **punto de conexión de solicitud-respuesta** , desde el portal de machine learning, en las variables aquí. Las siguientes imágenes muestran dónde habría tomado la clave y el punto de conexión de. 
+    > Asegúrese de insertar la **clave principal** y el **punto de conexión de solicitud-respuesta**, desde el portal de machine learning, en las variables aquí. Las siguientes imágenes muestran dónde habría tomado la clave y el punto de conexión de. 
     >  
     > ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-53-1.png)
     >
@@ -809,11 +809,11 @@ Para crear esta clase:
         }
     ```
 
-13. Guarde **Visual Studio** y vuelva a la sección **Unity** .
+13. Guarde **Visual Studio** y vuelva a la sección **Unity**.
 
 14. Arrastre el script de la clase **ProductPrediction** desde la carpeta **script** hasta el objeto **Camera principal** .
 
-15. Guarde la escena y el **archivo** de proyecto  >  **Guardar escena/archivo**  >  **Guardar proyecto** .
+15. Guarde la escena y el **archivo** de proyecto  >  **Guardar escena/archivo**  >  **Guardar proyecto**.
 
 ## <a name="chapter-10---build-the-uwp-solution"></a>Capítulo 10: compilar la solución UWP
 
@@ -821,15 +821,15 @@ Ahora es el momento de compilar el proyecto como una solución de UWP, de modo q
 
 Para compilar:
 
-1.  Guarde la escena actual haciendo clic en **archivo**  >  **Guardar escenas** .
+1.  Guarde la escena actual haciendo clic en **archivo**  >  **Guardar escenas**.
 
 2.  Ir a **File** la  >  **configuración de compilación** de archivos
 
 3.  Active la casilla denominada **proyectos de C# de Unity** (esto es importante porque le permitirá editar las clases una vez completada la compilación).
 
-4.  Haga clic en **Agregar escenas abiertas** ,
+4.  Haga clic en **Agregar escenas abiertas**,
 
-5.  Haga clic en **Generar** .
+5.  Haga clic en **Generar**.
 
     ![Compilar la solución de UWP](images/AzureLabs-Lab7-54.png)
 
@@ -849,19 +849,19 @@ Para compilar:
 
 Para implementar la aplicación:
 
-1.  Vaya a la nueva compilación de Unity (la carpeta de la **aplicación** ) y abra el archivo de solución con **Visual Studio** .
+1.  Vaya a la nueva compilación de Unity (la carpeta de la **aplicación** ) y abra el archivo de solución con **Visual Studio**.
 
 2.  Con Visual Studio abierto, debe restaurar los paquetes NuGet, lo que se puede hacer al hacer clic con el botón derecho en la solución de MachineLearningLab_Build, desde el Explorador de soluciones (que se encuentra a la derecha de Visual Studio) y, a continuación, hacer clic en restaurar paquetes NuGet:
 
     ![Agregar paquetes NuGet](images/AzureLabs-Lab7-57.png)
 
-3.  En la configuración de soluciones, seleccione **depurar** .
+3.  En la configuración de soluciones, seleccione **depurar**.
 
-4.  En la plataforma de la solución, seleccione **x86** , **equipo local** . 
+4.  En la plataforma de la solución, seleccione **x86**, **equipo local**. 
 
-    > En el caso de Microsoft HoloLens, es posible que le resulte más fácil establecer esto en el *equipo remoto* , de modo que no esté anclado al equipo. Sin embargo, también tendrá que hacer lo siguiente:
-    > - Conozca la **dirección IP** de HoloLens, que puede encontrarse en la *configuración > red & Internet > Wi-Fi > opciones avanzadas* ; IPv4 es la dirección que debe usar. 
-    > - Asegurarse de que el **modo de desarrollador** está **activado** ; se encuentra en *configuración > actualizar & > de seguridad para desarrolladores* .
+    > En el caso de Microsoft HoloLens, es posible que le resulte más fácil establecer esto en el *equipo remoto*, de modo que no esté anclado al equipo. Sin embargo, también tendrá que hacer lo siguiente:
+    > - Conozca la **dirección IP** de HoloLens, que puede encontrarse en la *configuración > red & Internet > Wi-Fi > opciones avanzadas*. IPv4 es la dirección que debe usar. 
+    > - Asegurarse de que el **modo de desarrollador** está **activado**; se encuentra en *configuración > actualizar & > de seguridad para desarrolladores*.
 
     ![Agregar paquetes NuGet](images/AzureLabs-Lab7-58.png)
 

@@ -5,13 +5,13 @@ author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, comunicación remota, comunicación remota holográfica, reproductor remoto Holographic
-ms.openlocfilehash: 4239eba84bd94c0bdc596392fdf7a0c780778850
-ms.sourcegitcommit: 520c69eb761ad6083b36f448bbcfab89e343e40d
+keywords: Unity, comunicación remota, comunicación remota holográfica, reproductor de comunicación remota holográfica, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, modo de reproducción de Unity
+ms.openlocfilehash: 88ffa172c03dea6544ce8475612426e126415908
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94549098"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679064"
 ---
 # <a name="unity-play-mode"></a>Modo de reproducción de Unity
 
@@ -24,7 +24,7 @@ Con Holographic Remoting, puedes experimentar tu aplicación en HoloLens mientra
 2. En HoloLens, inicie la aplicación de **reproductor de comunicación remota holográfica** .
 3. En Unity, vaya al menú **ventana** , expanda el submenú **XR** y seleccione **emulación holográfica**.
 4. Establezca el **modo de emulación** en **remoto en dispositivo**.
-5. En **equipo remoto** , escriba la dirección IP de su HoloLens.
+5. En **equipo remoto**, escriba la dirección IP de su HoloLens.
 6. Haga clic en **Conectar**. Debería ver el cambio de estado de la **conexión** a **conectado** y ver que la pantalla aparece en blanco en HoloLens.
 7. Haga clic en el botón **reproducir** para iniciar el modo de reproducción y experimentar la aplicación en su HoloLens.
 

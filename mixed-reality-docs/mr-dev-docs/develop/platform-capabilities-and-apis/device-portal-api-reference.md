@@ -5,13 +5,13 @@ author: hamalawi
 ms.author: moelhama
 ms.date: 08/03/2020
 ms.topic: article
-keywords: HoloLens, portal de dispositivos de Windows, API
-ms.openlocfilehash: 6b8f99fbc6f1965639ceef218f5c516d2e6ba467
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: HoloLens, portal de dispositivos de Windows, API, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: 1085f6c948ab7fe0ff8cb3801ebb0b883570acbc
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691446"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677974"
 ---
 # <a name="device-portal-api-reference"></a>Referencia de la API del Portal de dispositivos
 
@@ -33,7 +33,7 @@ Instala una aplicación
 Parámetros
 * paquete: nombre de archivo del paquete que se va a instalar.
 
-Payload
+Carga
 * cuerpo http compatible con varias partes
 
 **/API/App/packagemanager/packages (GET)**
@@ -159,7 +159,7 @@ Parámetros
 
 Obtener la fase térmica del dispositivo (0 normal, 1 cálido, 2 crítico)
 
-## <a name="map-manager"></a>Administrador de mapas
+## <a name="map-manager"></a>Map Manager (Administrador de mapas)
 
 **/api/holographic/mapmanager/mapFiles (GET)**
 
@@ -355,7 +355,7 @@ Establece la configuración de captura de realidad mixta predeterminada.  Alguno
 
 Obtiene el estado de la captura de realidad mixta en el portal de dispositivos de Windows.
 
-***Respuesta***
+**_Respuesta_* _
 
 La respuesta contiene una propiedad JSON que indica si el portal de dispositivos de Windows está grabando vídeo o no.
 
@@ -363,7 +363,7 @@ La respuesta contiene una propiedad JSON que indica si el portal de dispositivos
 {"IsRecording" : boolean}
 ```
 
-**/API/Holographic/MRC/Thumbnail (GET)**
+_ */API/Holographic/MRC/Thumbnail (GET)**
 
 Obtiene la imagen en miniatura del archivo especificado.
 
@@ -663,7 +663,7 @@ Parámetros
 
 Carga un perfil de WPR e inicia el seguimiento con el perfil cargado.
 
-Payload
+Carga
 * cuerpo http compatible con varias partes
 
 Devolver datos

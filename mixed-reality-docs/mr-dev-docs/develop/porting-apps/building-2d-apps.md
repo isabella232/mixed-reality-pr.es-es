@@ -1,19 +1,19 @@
 ---
-title: Actualización de aplicaciones para UWP bidimensionales para la realidad mixta
+title: Actualización de aplicaciones para UWP en 2D para la realidad mixta
 description: En este artículo se describe la actualización de la aplicación de Plataforma universal de Windows de 2D existente para que se ejecute en HoloLens y en los auriculares de Windows Mixed Reality.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: aplicación 2D, UWP, aplicación plana, HoloLens, auriculares envolvente, modelo de aplicación, botón atrás, barra de la aplicación, PPP, resolución, escala
-ms.openlocfilehash: af262527c957dda57f0c8a3252a2f63207d6ca39
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: aplicación 2D, UWP, aplicación plana, HoloLens, auriculares envolventes, modelo de aplicación, botón atrás, barra de la aplicación, PPP, resolución, escala, portabilidad, HoloLens primera generación, HoloLens 2, auriculares de realidad mixta, auriculares de realidad mixta de Windows, migración, Windows 10
+ms.openlocfilehash: 4103ee1e5a7169759dfd823b41b5e3fd18011956
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691311"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677804"
 ---
-# <a name="updating-2d-uwp-apps-for-mixed-reality"></a>Actualización de aplicaciones para UWP bidimensionales para la realidad mixta
+# <a name="updating-2d-uwp-apps-for-mixed-reality"></a>Actualización de aplicaciones para UWP en 2D para la realidad mixta
 
 Windows Mixed Reality permite a los usuarios ver los hologramas como si fueran más adecuados en su mundo físico o digital. En su núcleo, tanto HoloLens como los equipos de escritorio que se adjuntan a los accesorios de auriculares envolvente son dispositivos de Windows 10. Esto significa que puede ejecutar prácticamente todas las aplicaciones de Plataforma universal de Windows (UWP) en el almacén como aplicaciones 2D.
 
@@ -51,7 +51,7 @@ Solo tiene que ir al menú Inicio dentro del casco de realidad mixta e iniciar l
 
 ## <a name="targeting-both-immersive-headsets-and-hololens"></a>Establecer como destino los auriculares que se envolverán y HoloLens
 
-Felicidades. La aplicación está usando Windows 10 Plataforma universal de Windows (UWP).
+¡Enhorabuena! La aplicación está usando Windows 10 Plataforma universal de Windows (UWP).
 
 La aplicación ahora es capaz de ejecutarse en los dispositivos Windows de hoy en día, como escritorio, móviles, Xbox, la realidad mixta de Windows y los auriculares que se envolverán, y HoloLens, así como los futuros dispositivos Windows. Sin embargo, para tener como destino realmente todos esos dispositivos, deberá asegurarse de que la aplicación esté destinada a la familia de dispositivos Windows. universal.
 
@@ -74,11 +74,11 @@ Si no usa Visual Studio para su entorno de desarrollo, puede abrir **AppXManifes
 ### <a name="run-in-the-hololens-emulator"></a>Ejecutar en el emulador de HoloLens
 
 Ahora que la aplicación para UWP tiene como destino "Windows. universal", vamos a compilar la aplicación y ejecutarla en el [emulador de HoloLens](../platform-capabilities-and-apis/using-the-hololens-emulator.md).
-* Asegúrate de que tienes [instalado el emulador de HoloLens](../install-the-tools.md).
+* Asegúrate de que tienes [instalado el emulador de HoloLens](../install-the-tools.md) .
 * En Visual Studio, seleccione la configuración de compilación **x86** para la aplicación.
 
   ![Configuración de compilación x86 en Visual Studio](../platform-capabilities-and-apis/images/x86setting.png)<br>
-* Seleccione **emulador de HoloLens** en el menú desplegable destino de implementación.
+* Selecciona **Emulador de HoloLens** en el menú desplegable de destino de la implementación.
 
   ![Emulador de HoloLens en la lista de destinos de implementación](images/deployemulator-500px.png)<br>
 * Seleccione **Depurar > iniciar depuración** para implementar la aplicación e iniciar la depuración.
@@ -98,7 +98,7 @@ Para llegar a la parte inferior de lo que puede estar causando que la aplicació
 ### <a name="running-your-uwp-app-in-the-debugger"></a>Ejecutar la aplicación para UWP en el depurador
 
 Estos pasos le guiarán a través de la depuración de la aplicación para UWP mediante el depurador de Visual Studio.
-* Si todavía no lo ha hecho, abra la solución en Visual Studio. Cambie el destino al **emulador de HoloLens** y la configuración de compilación a **x86** .
+* Si todavía no lo ha hecho, abra la solución en Visual Studio. Cambie el destino al **emulador de HoloLens** y la configuración de compilación a **x86**.
 * Seleccione **Depurar > iniciar depuración** para implementar la aplicación e iniciar la depuración.
 * Coloque la aplicación en el mundo con el mouse, el teclado o la controladora Xbox.
 * Visual Studio ahora debería interrumpir en algún lugar del código de la aplicación.
@@ -108,7 +108,7 @@ Estos pasos le guiarán a través de la depuración de la aplicación para UWP m
 
 ## <a name="update-your-ui"></a>Actualizar la interfaz de usuario
 
-Ahora que la aplicación para UWP se está ejecutando en auriculares más envolventes y/o HoloLens como un holograma de 2D, vamos a asegurarnos de que parece bonito. Estos son algunos aspectos que hay que tener en cuenta:
+Ahora que la aplicación para UWP se está ejecutando en auriculares más envolventes y/o HoloLens como un holograma de 2D, vamos a asegurarnos de que parece bonito. Algunos aspectos que debe considerar:
 * Windows Mixed Reality ejecutará todas las aplicaciones 2D con una resolución fija y un PPP equivalentes a los píxeles efectivos de 853x480. Considere la posibilidad de que su diseño necesite perfeccionarse a esta escala y revise las instrucciones de diseño que se indican a continuación para mejorar su experiencia en HoloLens y en auriculares de gran tamaño.
 * Windows Mixed Reality [no admite](../../design/app-model.md) mosaicos dinámicos 2D. Si la funcionalidad principal muestra información sobre un icono dinámico, considere la posibilidad de mover esa información de nuevo a la aplicación o explore los [iniciadores de aplicaciones 3D](../../distribute/3d-app-launcher-design-guidance.md).
 
@@ -116,7 +116,7 @@ Ahora que la aplicación para UWP se está ejecutando en auriculares más envolv
 
 ![Del diseño con capacidad de respuesta](images/scale-500px.png)
 
-Windows 10 mueve todo el diseño visual de píxeles de pantalla reales a **píxeles efectivos** . Esto significa que los desarrolladores diseñan su interfaz de usuario siguiendo las directrices de la interfaz de usuario de Windows 10 para píxeles efectivos y el escalado de Windows garantiza que los píxeles efectivos son el tamaño adecuado para la facilidad de uso en dispositivos, resoluciones, PPP, etc. Vea esta [excelente lectura en MSDN](https://msdn.microsoft.com/library/windows/apps/Dn958435.aspx) para obtener más información, así como esta [presentación de compilación](https://video.ch9.ms/sessions/build/2015/2-63_Build_2015_Windows_Scaling.pptx).
+Windows 10 mueve todo el diseño visual de píxeles de pantalla reales a **píxeles efectivos**. Esto significa que los desarrolladores diseñan su interfaz de usuario siguiendo las directrices de la interfaz de usuario de Windows 10 para píxeles efectivos y el escalado de Windows garantiza que los píxeles efectivos son el tamaño adecuado para la facilidad de uso en dispositivos, resoluciones, PPP, etc. Vea esta [excelente lectura en MSDN](https://msdn.microsoft.com/library/windows/apps/Dn958435.aspx) para obtener más información, así como esta [presentación de compilación](https://video.ch9.ms/sessions/build/2015/2-63_Build_2015_Windows_Scaling.pptx).
 
 Incluso con la capacidad exclusiva para colocar aplicaciones en su mundo a una gran distancia, se recomiendan distancias de visualización similares a las de la televisión para obtener la mejor legibilidad y la interacción con la función de toque y gesto. Por eso, una pizarra virtual en la Página principal de la realidad mixta mostrará la vista plana de UWP en:
 

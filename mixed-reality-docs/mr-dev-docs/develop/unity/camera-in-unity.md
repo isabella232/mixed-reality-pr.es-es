@@ -5,13 +5,13 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, representación holográfica, Holographic, envolvente, punto de enfoque, búfer de profundidad, solo orientación, posicional, opaco, transparente, clip
-ms.openlocfilehash: 7e606232f626c64407ced75481deb3055326f760
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, representación holográfica, holográfica, envolvente, punto de enfoque, búfer de profundidad, solo orientación, posicional, opaco, transparente, recorte, auriculares de realidad mixta, auriculares mixto de realidad de Windows, auriculares de realidad virtual
+ms.openlocfilehash: c3c470634e2c5c9445ae8c0a29621971de22a92b
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691260"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677624"
 ---
 # <a name="camera-in-unity"></a>Cámara en Unity
 
@@ -28,7 +28,7 @@ Sin embargo, para optimizar completamente la calidad visual y la [estabilidad de
 
 La configuración predeterminada en el componente de cámara Unity es para las aplicaciones 3D tradicionales que necesitan un fondo similar a SkyBOX, ya que no tienen un mundo real.
 
-* Cuando se ejecuta en un **[auricular envolvente](../../discover/immersive-headset-hardware-details.md)** , está representando todo lo que ve el usuario y, por lo tanto, es probable que quiera mantener el skybox.
+* Cuando se ejecuta en un **[auricular envolvente](../../discover/immersive-headset-hardware-details.md)**, está representando todo lo que ve el usuario y, por lo tanto, es probable que quiera mantener el skybox.
 * Sin embargo, cuando se ejecuta en un **casco holográfica** como [HoloLens](../../hololens-hardware-details.md), el mundo real debe aparecer detrás de todo lo que se representa en la cámara. Para ello, configure el fondo de la cámara para que sea transparente (en HoloLens, la representación en negro es transparente) en lugar de una textura SKYBOX:
     1. Seleccionar la cámara principal en el panel de jerarquías
     2. En el panel Inspector, busque el componente Camera y cambie la lista desplegable Clear flags de SKYBOX a Solid color.
@@ -81,7 +81,7 @@ Compartir el búfer de profundidad de la aplicación en Windows cada fotograma p
 
 Para establecer si la aplicación de Unity proporcionará un búfer de profundidad a Windows:
 
-1. Vaya a **Editar**  >  **configuración de proyecto**  >  **reproductor**  >  **plataforma universal de Windows pestaña**  >  **XR configuración** .
+1. Vaya a **Editar**  >  **configuración de proyecto**  >  **reproductor**  >  **plataforma universal de Windows pestaña**  >  **XR configuración**.
 2. Expanda el elemento **SDK de Windows Mixed Reality** .
 3. Active o desactive la casilla **Habilitar uso compartido del búfer de profundidad** .  Se comprobará de forma predeterminada en los proyectos nuevos creados desde que esta característica se agregó a Unity y se desactivará de forma predeterminada para los proyectos anteriores que se actualizaron.
 
@@ -93,17 +93,17 @@ Siga la guía [paso a paso](https://microsoft.github.io/MixedRealityToolkit-Unit
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de creación:
+Si sigue el recorrido de puntos de control de desarrollo de Unity que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Gaze](gaze-in-unity.md)
 
-O salte a las funcionalidades y API de la plataforma de realidad mixta:
+O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:
 
 > [!div class="nextstepaction"]
 > [Experiencias compartidas](shared-experiences-in-unity.md)
 
-Siempre puede volver a los puntos de [control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
 
 ## <a name="see-also"></a>Consulte también
 

@@ -5,18 +5,18 @@ author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 08/04/2020
 ms.topic: article
-keywords: manos, controladores de movimiento, DirectX, entrada, hologramas
-ms.openlocfilehash: faa9abe224b554c45cf0175b62da40c297122ad1
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: manos, controladores de movimiento, DirectX, entrada, hologramas, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: 3dcf3767a537ccc64cb06c6f44d765425a5578b9
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692519"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678064"
 ---
 # <a name="hands-and-motion-controllers-in-directx"></a>Manos y controladores de movimiento en DirectX
 
 > [!NOTE]
-> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](openxr-getting-started.md)** .
+> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](openxr-getting-started.md)**.
 
 En Windows Mixed Reality, la entrada de [controlador de movimiento](../../design/motion-controllers.md) y la mano se administra a través de las API de entrada espaciales, que se encuentran en el espacio de nombres [Windows. UI. Input. Spatial](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial) . Esto le permite controlar fácilmente acciones comunes, como **selecciones** , de la misma manera en los controladores de manos y de movimiento.
 
@@ -104,26 +104,26 @@ La API de SpatialInteractionSource admite controladores y sistemas de seguimient
 
 | Propiedad | Descripción | Gestos de HoloLens (primera generación) | Controladores de movimiento | Manos articuladas|
 |--- |--- |--- |--- |--- |
-| [SpatialInteractionSource:: **Handl**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | Mano derecha o izquierda/controlador. | No compatible | Compatible | Compatible |
-| [SpatialInteractionSourceState:: **IsSelectPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | Estado actual del botón principal. | TAP del aire | Desencadenador | Pulsación aérea relajada (bajo contacto vertical) |
-| [SpatialInteractionSourceState:: **IsGrasped**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isgrasped) | Estado actual del botón de arrastre. | No compatible | Botón de arrastre | Alejar o cerrar mano |
-| [SpatialInteractionSourceState:: **IsMenuPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.ismenupressed) | Estado actual del botón de menú.    | No compatible | Botón de menú | No compatible |
-| [SpatialInteractionSourceLocation:: **Position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.position) | Ubicación XYZ de la mano o posición del puño en el controlador. | Ubicación de Palm | Posición de la postura de control | Ubicación de Palm |
-| [SpatialInteractionSourceLocation:: **Orientation**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.orientation) | Cuaternión que representa la orientación de la mano o del puño en el controlador. | No compatible | Orientación de la pose de puño | Orientación de Palm |
-| [SpatialPointerInteractionSourcePose:: **Position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.position#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_Position) | Origen del rayo señalador. | No compatible | Compatible | Compatible |
-| [SpatialPointerInteractionSourcePose:: **ForwardDirection**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.forwarddirection#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_ForwardDirection) | Dirección del rayo señalador. | No compatible | Compatible | Compatible |
+| [SpatialInteractionSource::**Handl**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | Mano derecha o izquierda/controlador. | No compatible | Compatible | Compatible. |
+| [SpatialInteractionSourceState::**IsSelectPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | Estado actual del botón principal. | TAP del aire | Desencadenador | Pulsación aérea relajada (bajo contacto vertical) |
+| [SpatialInteractionSourceState::**IsGrasped**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isgrasped) | Estado actual del botón de arrastre. | No compatible | Botón de arrastre | Alejar o cerrar mano |
+| [SpatialInteractionSourceState::**IsMenuPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.ismenupressed) | Estado actual del botón de menú.    | No compatible | Botón de menú | No compatible |
+| [SpatialInteractionSourceLocation::**Position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.position) | Ubicación XYZ de la mano o posición del puño en el controlador. | Ubicación de Palm | Posición de la postura de control | Ubicación de Palm |
+| [SpatialInteractionSourceLocation::**Orientation**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation.orientation) | Cuaternión que representa la orientación de la mano o del puño en el controlador. | No compatible | Orientación de la pose de puño | Orientación de Palm |
+| [SpatialPointerInteractionSourcePose::**Position**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.position#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_Position) | Origen del rayo señalador. | No compatible | Compatible | Compatible. |
+| [SpatialPointerInteractionSourcePose::**ForwardDirection**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerinteractionsourcepose.forwarddirection#Windows_UI_Input_Spatial_SpatialPointerInteractionSourcePose_ForwardDirection) | Dirección del rayo señalador. | No compatible | Compatible | Compatible. |
 
 Algunas de las propiedades anteriores no están disponibles en todos los dispositivos y la API proporciona un medio para probar esto. Por ejemplo, puede inspeccionar la propiedad [SpatialInteractionSource:: IsGraspSupported](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.isgraspsupported) para determinar si el origen proporciona una acción de agarre.
 
 ### <a name="grip-pose-vs-pointing-pose"></a>Replanteamiento de control frente a pose de puntero
 
-Windows Mixed Reality admite controladores de movimiento en diversos factores de forma.  También admite sistemas de seguimiento de mano articulados.  Todos estos sistemas tienen relaciones diferentes entre la posición de la mano y la dirección de "avance" natural que las aplicaciones deben usar para señalar o representar objetos en la mano del usuario.  Para admitir todo esto, se proporcionan dos tipos de supuestos 3D para el seguimiento y los controladores de movimiento de la mano.  La primera es la postura de control, que representa la posición del usuario.  La segunda es el representador que señala, que representa un rayo señalador que se origina desde la mano o el controlador del usuario. Por lo tanto, si desea presentar **la mano del usuario** o **un objeto mantenido en la mano del usuario** , por ejemplo, un arma o un cañón, utilice la postura de control. Si desea Raycast del controlador o de la mano, por ejemplo, cuando el usuario **apunta a la interfaz** de usuario, use la pose de puntero.
+Windows Mixed Reality admite controladores de movimiento en diversos factores de forma.  También admite sistemas de seguimiento de mano articulados.  Todos estos sistemas tienen relaciones diferentes entre la posición de la mano y la dirección de "avance" natural que las aplicaciones deben usar para señalar o representar objetos en la mano del usuario.  Para admitir todo esto, se proporcionan dos tipos de supuestos 3D para el seguimiento y los controladores de movimiento de la mano.  La primera es la postura de control, que representa la posición del usuario.  La segunda es el representador que señala, que representa un rayo señalador que se origina desde la mano o el controlador del usuario. Por lo tanto, si desea presentar **la mano del usuario** o **un objeto mantenido en la mano del usuario**, por ejemplo, un arma o un cañón, utilice la postura de control. Si desea Raycast del controlador o de la mano, por ejemplo, cuando el usuario **apunta a la interfaz** de usuario, use la pose de puntero.
 
 Puede tener acceso a la **pose de control** a través de [SpatialInteractionSourceState::P ropiedades:: TryGetLocation (...)](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourceproperties.trygetlocation#Windows_UI_Input_Spatial_SpatialInteractionSourceProperties_TryGetLocation_Windows_Perception_Spatial_SpatialCoordinateSystem_).  Se define de la siguiente manera:
-* La **posición del puño** : Palm centroide cuando mantiene el controlador de forma natural, se ajusta hacia la izquierda o derecha para centrar la posición dentro del control.
-* **Eje derecho de la orientación del puño** : cuando se abre por completo la mano para formar una postura plana de 5 dedos, el rayo perpendicular a la palma (hacia delante de la mano izquierda y hacia atrás desde la mano derecha)
-* El **eje hacia delante de la orientación del puño** : al cerrar la mano (como si contiene el controlador), el rayo que señala "reenviar" a través del tubo formado por los dedos no Thumb.
-* **Eje hacia arriba de la orientación del puño** : el eje hacia arriba implícito por las definiciones derecha y hacia delante.
+* La **posición del puño**: Palm centroide cuando mantiene el controlador de forma natural, se ajusta hacia la izquierda o derecha para centrar la posición dentro del control.
+* **Eje derecho de la orientación del puño**: cuando se abre por completo la mano para formar una postura plana de 5 dedos, el rayo perpendicular a la palma (hacia delante de la mano izquierda y hacia atrás desde la mano derecha)
+* El **eje hacia delante de la orientación del puño**: al cerrar la mano (como si contiene el controlador), el rayo que señala "reenviar" a través del tubo formado por los dedos no Thumb.
+* **Eje hacia arriba de la orientación del puño**: el eje hacia arriba implícito por las definiciones derecha y hacia delante.
 
 Puede tener acceso al **replanteamiento del puntero** a través de [SpatialInteractionSourceState::P ropiedades:: TryGetLocation (...):: SourcePointerPose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsourcelocation#Windows_UI_Input_Spatial_SpatialInteractionSourceLocation_SourcePointerPose) o [SpatialInteractionSourceState:: TryGetPointerPose (...):: TryGetInteractionSourcePose](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialpointerpose#Windows_UI_Input_Spatial_SpatialPointerPose_TryGetInteractionSourcePose_Windows_UI_Input_Spatial_SpatialInteractionSource_).
 
@@ -179,7 +179,7 @@ if (handPose)
 
 La API de seguimiento de mano articulada permite una malla de mano de triángulo totalmente deformable.  Esta malla puede deformarse en tiempo real junto con el esqueleto manual y resulta útil para la visualización, así como técnicas de física avanzadas.  Para acceder a la malla de mano, primero debe crear un objeto [HandMeshObserver](https://docs.microsoft.com//uwp/api/windows.perception.people.handmeshobserver) llamando a [TryCreateHandMeshObserverAsync](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.trycreatehandmeshobserverasync) en [SpatialInteractionSource](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource).  Esto solo debe realizarse una vez por origen, normalmente la primera vez que lo ve.  Esto significa que se llamará a esta función para crear un objeto HandMeshObserver siempre que una mano entre en el subobjeto.  Tenga en cuenta que se trata de una función asincrónica, por lo que tendrá que tratar un poco de simultaneidad aquí.  Una vez disponible, puede solicitar al objeto HandMeshObserver el búfer de índice de triángulo llamando a [GetTriangleIndices](https://docs.microsoft.com//uwp/api/windows.perception.people.handmeshobserver.gettriangleindices#Windows_Perception_People_HandMeshObserver_GetTriangleIndices_System_UInt16___).  Los índices no cambian el marco sobre el marco, de modo que puede obtenerlos una vez y almacenarlos en memoria caché durante el tiempo de vida del origen.  Los índices se proporcionan en el orden de bobinado hacia la derecha.
 
-El siguiente código pone en marcha un STD:: Thread separado para crear el observador de la malla y extrae el búfer de índice una vez que el observador de la malla esté disponible.  Se inicia a partir de una variable denominada *CurrentState* , que es una instancia de [SpatialInteractionSourceState](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) que representa una mano a la que se ha realizado un seguimiento.
+El siguiente código pone en marcha un STD:: Thread separado para crear el observador de la malla y extrae el búfer de índice una vez que el observador de la malla esté disponible.  Se inicia a partir de una variable denominada *CurrentState*, que es una instancia de [SpatialInteractionSourceState](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) que representa una mano a la que se ha realizado un seguimiento.
 
 ```cpp
 using namespace Windows::Perception::People;
@@ -231,7 +231,7 @@ Para usar SpatialGestureRecognizer, controle el evento [InteractionDetected](htt
 
 En HoloLens (primera generación), las interacciones y gestos generalmente deben derivar sus destinatarios del encabezado del usuario, en lugar de intentar representar o interactuar directamente en la ubicación de la mano. Una vez que se ha iniciado una interacción, se pueden usar movimientos relativos de la mano para controlar el gesto, al igual que con la manipulación o el gesto de navegación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [Control con la cabeza y los ojos de DirectX](gaze-in-directx.md)
 * [Modelo de entrada de manipulación directa](../../design/direct-manipulation.md)
 * [Modelo de entrada de punto y confirmación](../../design/point-and-commit.md)

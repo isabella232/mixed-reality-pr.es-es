@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: miras hacia abajo, hacia abajo, Unity, holograma, realidad mixta
-ms.openlocfilehash: 8c1a6cb0847cd0e6e776c6d4e1f7c1efdc126279
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: miras hacia abajo, a la punta, por la cabeza, el holograma, la realidad mixta, el casco de realidad mixta, el casco de realidad mixta de Windows, el casco de realidad virtual, MRTK, el kit de herramientas de realidad mixta
+ms.openlocfilehash: 0c62de9cb1b7ea892831ea2cedbeb23be5ea7b37
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691914"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677514"
 ---
 # <a name="head-gaze-in-unity"></a>Encabezado de la mirada en Unity
 
@@ -58,17 +58,17 @@ Puede obtener acceso a la parte principal del [Administrador de entrada](https:/
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de creación:
+Si sigue el recorrido de puntos de control de desarrollo de Unity que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Gestos y controladores de movimiento](gestures-and-motion-controllers-in-unity.md)
 
-O salte a las funcionalidades y API de la plataforma de realidad mixta:
+O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:
 
 > [!div class="nextstepaction"]
 > [Experiencias compartidas](shared-experiences-in-unity.md)
 
-Siempre puede volver a los puntos de [control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
 
 ## <a name="see-also"></a>Consulte también
 * [Cámara](camera-in-unity.md)

@@ -5,13 +5,13 @@ author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, WinRT, Windows Mixed Reality, API, tutorial
-ms.openlocfilehash: 80f950d7571a936e93eb08490ad83dbb34a50b3a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unity, WinRT, Windows Mixed Reality, API, tutorial, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, API de realidad mixta
+ms.openlocfilehash: fb8d63a44a05f639becd96fc9198c57dd10aaafd
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693187"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679684"
 ---
 # <a name="winrt-apis-with-unity-for-hololens"></a>API de WinRT con Unity para HoloLens
 

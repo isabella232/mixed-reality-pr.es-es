@@ -1,17 +1,17 @@
 ---
-title: Sr Basics 100-Introducción a Unity
+title: 'Aspectos básicos de realidad mixta (100): introducción a Unity'
 description: Aprenda a crear su primera aplicación básica "Hola a todos" de realidad mixta.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: realidad mixta, Windows Mixed Reality, HoloLens, inmersivo, VR, Mr, introducción, holograma, Academia, tutorial
-ms.openlocfilehash: b2992f59970aaba44505d64de06e4ea57f400e1b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: realidad mixta, Windows Mixed Reality, HoloLens, envolventes, VR, Mr, introducción, holograma, Academia, tutorial, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: 83ca133e341688f42fa2d53b4d50f1aefa9bb39b
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692815"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678414"
 ---
 # <a name="mr-basics-100-getting-started-with-unity"></a>Aspectos básicos de realidad mixta (100): Introducción a Unity
 
@@ -30,7 +30,7 @@ Este tutorial le guiará a través de la creación de una aplicación básica de
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 * Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](../../install-the-tools.md).
 
@@ -43,7 +43,7 @@ Para compilar una aplicación con Unity, primero debe crear un proyecto. Este pr
 Para compilar e implementar aplicaciones UWP, Unity puede exportar el proyecto como una solución de Visual Studio que contendrá todos los archivos de recursos y de código necesarios.
 
 1. Iniciar Unity
-2. Seleccione **Nuevo paso** .
+2. Seleccione **Nuevo paso**.
 3. Escriba un nombre de proyecto (por ejemplo, "MixedRealityIntroduction")
 4. Escriba una ubicación para guardar el proyecto
 5. Asegúrese de que la opción alternancia **3D** está seleccionada
@@ -59,33 +59,33 @@ La cámara principal de Unity controla el seguimiento de los cabezales y la repr
 
 1. Seleccionar archivo > nueva escena
 
-En primer lugar, será más fácil diseñar la aplicación si imagina la posición inicial del usuario como ( **X** : 0, **y** : 0, **Z** : 0). Dado que la cámara principal está realizando el seguimiento del movimiento del usuario, la posición inicial del usuario se puede establecer estableciendo la posición inicial de la cámara principal.
+En primer lugar, será más fácil diseñar la aplicación si imagina la posición inicial del usuario como (**X**: 0, **y**: 0, **Z**: 0). Dado que la cámara principal está realizando el seguimiento del movimiento del usuario, la posición inicial del usuario se puede establecer estableciendo la posición inicial de la cámara principal.
 
 1. Seleccionar **cámara principal** en el panel **jerarquía**
-2. En el panel **Inspector** , busque el componente de **transformación** y cambie **la posición** de **(x** : 0, **y** : 1, **z** :-10) a ( **x** : 0, **y** : 0, **z** : 0)
+2. En el panel **Inspector** , busque el componente de **transformación** y cambie **la posición** de **(x**: 0, **y**: 1, **z**:-10) a (**x**: 0, **y**: 0, **z**: 0)
 
 En segundo lugar, hay que pensar en el fondo de la cámara predeterminada.
 
-**En el caso de las aplicaciones de HoloLens** , el mundo real debe aparecer detrás de todo lo que representa la cámara, no una textura SKYBOX.
+**En el caso de las aplicaciones de HoloLens**, el mundo real debe aparecer detrás de todo lo que representa la cámara, no una textura SKYBOX.
 
-1. Con la **cámara principal** aún seleccionada en el **Panel jerarquía** , busque el **componente cámara** en el panel **Inspector** y cambie la lista desplegable **Borrar marcas** de **SKYBOX** a **color sólido** .
+1. Con la **cámara principal** aún seleccionada en el **Panel jerarquía** , busque el **componente cámara** en el panel **Inspector** y cambie la lista desplegable **Borrar marcas** de **SKYBOX** a **color sólido**.
 2. Seleccione el selector de colores de **fondo** y cambie los valores **RGBA** a (0, 0, 0, 0)
 
-**En el caso de las aplicaciones de realidad mixta destinadas a auriculares envolventes** , podemos usar la textura SKYBOX predeterminada que proporciona Unity.
+**En el caso de las aplicaciones de realidad mixta destinadas a auriculares envolventes**, podemos usar la textura SKYBOX predeterminada que proporciona Unity.
 
-1. Con la **cámara principal** aún seleccionada en el panel **jerarquía** , busque el componente **cámara** en el panel **Inspector** y mantenga la lista desplegable **Borrar marcas** en **SKYBOX** .
+1. Con la **cámara principal** aún seleccionada en el panel **jerarquía** , busque el componente **cámara** en el panel **Inspector** y mantenga la lista desplegable **Borrar marcas** en **SKYBOX**.
 
 En tercer lugar, permítanos considerar el plano de recorte cercano en Unity y evitar que los objetos se representen demasiado cerca de los ojos de los usuarios cuando un usuario se aproxime a un objeto o un objeto se aproxime a un usuario.
 
-**En el caso de las aplicaciones de hololens** , el plano de recorte cercano se puede establecer en los contadores de 0,85 [recomendados de hololens](../camera-in-unity.md#clip-planes) .
+**En el caso de las aplicaciones de hololens**, el plano de recorte cercano se puede establecer en los contadores de 0,85 [recomendados de hololens](../camera-in-unity.md#clip-planes) .
 
-1. Con la **cámara principal** aún seleccionada en el **Panel jerarquía** , busque el componente **cámara** en el panel **Inspector** y cambie el campo **Near Clip plano** del valor predeterminado **0,3** a HoloLens recomendado **0,85** .
+1. Con la **cámara principal** aún seleccionada en el **Panel jerarquía** , busque el componente **cámara** en el panel **Inspector** y cambie el campo **Near Clip plano** del valor predeterminado **0,3** a HoloLens recomendado **0,85**.
 
-**En el caso de las aplicaciones de realidad mixta destinadas a auriculares envolventes** , podemos usar la configuración predeterminada que proporciona Unity.
+**En el caso de las aplicaciones de realidad mixta destinadas a auriculares envolventes**, podemos usar la configuración predeterminada que proporciona Unity.
 
-1. Con la **cámara principal** aún seleccionada en el panel de **jerarquías** , busque el componente de **cámara** en el panel **Inspector** y mantenga el campo de **plano de clip cercano** al valor predeterminado **0,3** .
+1. Con la **cámara principal** aún seleccionada en el panel de **jerarquías** , busque el componente de **cámara** en el panel **Inspector** y mantenga el campo de **plano de clip cercano** al valor predeterminado **0,3**.
 
-Por último, permítanos ahorrar nuestro progreso hasta ahora. Para guardar los cambios de la escena, seleccione **archivo > guardar escena como** , asigne un nombre a la escena **principal** y seleccione **Guardar** .
+Por último, permítanos ahorrar nuestro progreso hasta ahora. Para guardar los cambios de la escena, seleccione **archivo > guardar escena como**, asigne un nombre a la escena **principal** y seleccione **Guardar**.
 
 ## <a name="chapter-3---setup-the-project-settings"></a>Capítulo 3: configuración del proyecto
 
@@ -102,9 +102,9 @@ En este capítulo, se establecerá una configuración de proyecto de Unity que n
 Dado que mantener una velocidad de fotogramas elevada en HoloLens es tan importante, queremos que la configuración de calidad esté optimizada para un rendimiento más rápido. Para obtener información más detallada sobre el rendimiento, [recomendaciones de rendimiento para Unity](../performance-recommendations-for-unity.md).
 
 1. Seleccione **editar > configuración del proyecto > calidad**
-2. Seleccione la **lista desplegable** en el logotipo de **plataforma universal de Windows** y seleccione **muy baja** . Sabrá que la configuración se aplica correctamente cuando el cuadro de la columna Plataforma universal de Windows y una fila **muy baja** es verde.
+2. Seleccione la **lista desplegable** en el logotipo de **plataforma universal de Windows** y seleccione **muy baja**. Sabrá que la configuración se aplica correctamente cuando el cuadro de la columna Plataforma universal de Windows y una fila **muy baja** es verde.
 
-En el **caso de las aplicaciones de realidad mixta destinadas a ocluidos** , puede dejar la configuración de calidad a sus valores predeterminados.
+En el **caso de las aplicaciones de realidad mixta destinadas a ocluidos**, puede dejar la configuración de calidad a sus valores predeterminados.
 
 ### <a name="target-windows-10-sdk"></a>SDK de Windows 10 de destino
 
@@ -114,10 +114,10 @@ En el **caso de las aplicaciones de realidad mixta destinadas a ocluidos** , pue
 
 Necesitamos que Unity sepa que la aplicación que se está intentando exportar debe crear una [vista envolvente](../../../design/app-views.md) en lugar de una vista 2D. Para ello, se habilita la compatibilidad con la realidad virtual en Unity que tiene como destino el SDK de Windows 10.
 
-1. Vaya a **editar > configuración del proyecto > Player** .
+1. Vaya a **editar > configuración del proyecto > Player**.
 2. En el **panel Inspector** de configuración del reproductor, seleccione el icono de **plataforma universal de Windows** .
 3. Expanda el grupo **XR Settings** (Configuración de XR).
-4. En la sección **Rendering** (Representación), active la casilla **Virtual Reality Supported** (Se admite Virtual Reality) para agregar una nueva lista de **SDK de Virtual Reality** .
+4. En la sección **Rendering** (Representación), active la casilla **Virtual Reality Supported** (Se admite Virtual Reality) para agregar una nueva lista de **SDK de Virtual Reality**.
 5. Compruebe que **Windows Mixed Reality** (Mixed Reality de Windows) aparece en la lista. En caso contrario, seleccione el botón **+** situado en la parte inferior de la lista y elija **Windows Mixed Reality** (Mixed Reality de Windows).
 
 >[!NOTE]
@@ -131,11 +131,11 @@ Trabajo maravilla en la obtención de la configuración del proyecto aplicada. A
 
 La creación de un cubo en el proyecto de Unity es igual que crear cualquier otro objeto en Unity. Colocar un cubo delante del usuario es fácil porque el sistema de coordenadas de Unity está asignado al mundo real, donde un medidor en Unity es aproximadamente un medidor del mundo real.
 
-1. En la esquina superior izquierda del panel de **jerarquías** , seleccione la lista desplegable **crear** y elija **objeto 3D > cubo** .
+1. En la esquina superior izquierda del panel de **jerarquías** , seleccione la lista desplegable **crear** y elija **objeto 3D > cubo**.
 2. Seleccionar el **cubo** recién creado en el panel **jerarquía**
-3. En el **Inspector** , busque el componente de **transformación** y cambie la **posición** a ( **X** : 0, **y** : 0, **Z** : 2). *Esto coloca los medidores del cubo 2 delante de la posición inicial del usuario.*
-4. En el componente de **transformación** , cambie **rotación** a ( **x** : 45 **, y** : 45, **z** : 45) y cambie la **escala** a ( **x** : 0,25, **y** : 0,25, **z** : 0,25). *Esto escala el cubo a 0,25 metros.*
-5. Para guardar los cambios de la escena, seleccione **archivo > guardar escena** .
+3. En el **Inspector** , busque el componente de **transformación** y cambie la **posición** a (**X**: 0, **y**: 0, **Z**: 2). *Esto coloca los medidores del cubo 2 delante de la posición inicial del usuario.*
+4. En el componente de **transformación** , cambie **rotación** a (**x**: 45 **, y**: 45, **z**: 45) y cambie la **escala** a (**x**: 0,25, **y**: 0,25, **z**: 0,25). *Esto escala el cubo a 0,25 metros.*
+5. Para guardar los cambios de la escena, seleccione **archivo > guardar escena**.
 
 ## <a name="chapter-5---verify-on-device-from-unity-editor"></a>Capítulo 5: comprobar en el dispositivo desde el editor de Unity
 
@@ -143,7 +143,7 @@ La creación de un cubo en el proyecto de Unity es igual que crear cualquier otr
 
 Ahora que hemos creado el cubo, es el momento de realizar una comprobación rápida del dispositivo. Puede hacerlo directamente desde el editor de Unity.
 
-### <a name="initial-setup"></a>Configuración inicial
+### <a name="initial-setup"></a>Instalación inicial
 
 1. En el equipo de desarrollo, en Unity, Abra **archivo >** ventana de configuración de compilación.
 2. Cambie **plataforma** a **plataforma universal de Windows** y haga clic en **cambiar plataforma**
@@ -151,11 +151,11 @@ Ahora que hemos creado el cubo, es el momento de realizar una comprobación ráp
 ### <a name="for-hololens-use-unity-remoting"></a>Para HoloLens, use Unity Remoting
 
 1. En HoloLens, instale y ejecute el [reproductor de comunicación remota holográfica](../../platform-capabilities-and-apis/holographic-remoting-player.md), disponible en la tienda Windows. Inicie la aplicación en el dispositivo y se especificará un estado de espera y se mostrará la dirección IP del dispositivo. Anote la dirección IP.
-2. Abra **Window > XR > la emulación holográfica** .
-3. Cambiar el **modo de emulación** de **ninguno** a **remoto a dispositivo** .
-4. En **equipo remoto** , escriba la dirección IP de su HoloLens indicada anteriormente.
-5. Haga clic en **Conectar** .
-6. Asegúrese de que el estado de la **conexión** cambia a verde **conectado** .
+2. Abra **Window > XR > la emulación holográfica**.
+3. Cambiar el **modo de emulación** de **ninguno** a **remoto a dispositivo**.
+4. En **equipo remoto**, escriba la dirección IP de su HoloLens indicada anteriormente.
+5. Haga clic en **Conectar**.
+6. Asegúrese de que el estado de la **conexión** cambia a verde **conectado**.
 7. Ahora puede hacer clic en **reproducir** en el editor de Unity.
 
 Ahora podrá ver el cubo en el dispositivo y en el editor. Puede pausar, inspeccionar objetos y depurar del mismo modo que está ejecutando una aplicación en el editor, ya que esto es esencialmente lo que está ocurriendo, pero con vídeo, audio y entrada de dispositivo transmitidos entre la red entre el equipo host y el dispositivo.
@@ -178,12 +178,12 @@ Ahora estamos listos para compilar el proyecto en Visual Studio e implementarlo 
 
 1. Abra el **archivo > ventana Configuración de compilación** .
 1. Haga clic en **Agregar escenas abiertas** para agregar la escena.
-1. Cambie **plataforma** a **plataforma universal de Windows** y haga clic en **cambiar plataforma** .
-1. En **plataforma universal de Windows** configuración, asegúrese de que el **SDK** es **universal 10** .
-1. En dispositivo de destino, deje en **cualquier dispositivo** para ocluidos muestra o cambie a **HoloLens** .
-1. El **tipo de compilación de UWP** debe ser **D3D** .
-1. El **SDK de UWP** podría dejarse en la **versión más reciente instalada** .
-1. Haga clic en **Generar** .
+1. Cambie **plataforma** a **plataforma universal de Windows** y haga clic en **cambiar plataforma**.
+1. En **plataforma universal de Windows** configuración, asegúrese de que el **SDK** es **universal 10**.
+1. En dispositivo de destino, deje en **cualquier dispositivo** para ocluidos muestra o cambie a **HoloLens**.
+1. El **tipo de compilación de UWP** debe ser **D3D**.
+1. El **SDK de UWP** podría dejarse en la **versión más reciente instalada**.
+1. Haga clic en **Generar**.
 1. En el explorador de archivos, haga clic en **nueva carpeta** y asigne el nombre **"app"** a la carpeta.
 1. Con la carpeta de **aplicaciones** seleccionada, haga clic en el botón **Seleccionar carpeta** .
 1. Cuando Unity termine de compilar, aparecerá una ventana del explorador de archivos de Windows.
@@ -194,36 +194,36 @@ Ahora estamos listos para compilar el proyecto en Visual Studio e implementarlo 
 
 Por último, se compilará la solución de Visual Studio exportada, se implementará y se probará en el dispositivo.
 
-1. Con la barra de herramientas superior de Visual Studio, cambie el destino de **Debug** a **Release** y de **ARM** a **x86** .
+1. Con la barra de herramientas superior de Visual Studio, cambie el destino de **Debug** a **Release** y de **ARM** a **x86**.
 
 Las instrucciones difieren en cuanto a la implementación en un dispositivo frente al emulador. Siga las instrucciones que coincidan con la configuración.
 
-### <a name="deploy-to-mixed-reality-device-over-wi-fi"></a>Implementación en dispositivo de realidad mixta a través de Wi-Fi
+### <a name="deploy-to-mixed-reality-device-over-wi-fi"></a>Implementación en dispositivo de realidad mixta en Wi-Fi
 
-1. Haga clic en la flecha situada junto al botón **equipo local** y cambie el destino de implementación a **equipo remoto** .
+1. Haga clic en la flecha situada junto al botón **equipo local** y cambie el destino de implementación a **equipo remoto**.
 2. Escriba la dirección IP del dispositivo de realidad mixta y cambie el **modo de autenticación** a universal (protocolo sin cifrar) para HoloLens y **Windows** para otros dispositivos.
-3. Haga clic en **Depurar > iniciar sin depurar** .
+3. Haga clic en **Depurar > iniciar sin depurar**.
 
-**En el caso de HoloLens** , si esta es la primera vez que se implementa en el dispositivo, tendrá que emparejar [con Visual Studio](../../platform-capabilities-and-apis/using-visual-studio.md).
+**En el caso de HoloLens**, si esta es la primera vez que se implementa en el dispositivo, tendrá que emparejar [con Visual Studio](../../platform-capabilities-and-apis/using-visual-studio.md).
 
 ### <a name="deploy-to-mixed-reality-device-over-usb"></a>Implementación en dispositivo de realidad mixta a través de USB
 
 Asegúrese de que el dispositivo está conectado a través del cable USB.
 
-1. **Para HoloLens** , haga clic en la flecha situada junto al botón **equipo local** y cambie el destino de implementación a **dispositivo** .
-2. **Para dirigirse a dispositivos ocluidos conectados al equipo** , mantenga la configuración en equipo local. Asegúrese de que tiene el **portal de realidad mixta** en ejecución.
-3. Haga clic en **Depurar > iniciar sin depurar** .
+1. **Para HoloLens**, haga clic en la flecha situada junto al botón **equipo local** y cambie el destino de implementación a **dispositivo**.
+2. **Para dirigirse a dispositivos ocluidos conectados al equipo**, mantenga la configuración en equipo local. Asegúrese de que tiene el **portal de realidad mixta** en ejecución.
+3. Haga clic en **Depurar > iniciar sin depurar**.
 
 ### <a name="deploy-to-emulator"></a>Implementar en el emulador
 
-1. Haga clic en la flecha situada junto al botón **dispositivo** y, en la lista desplegable, seleccione **emulador de HoloLens** .
-2. Haga clic en **Depurar > iniciar sin depurar** .
+1. Haga clic en la flecha situada junto al botón **dispositivo** y, en la lista desplegable, seleccione **emulador de HoloLens**.
+2. Haga clic en **Depurar > iniciar sin depurar**.
 
 ### <a name="try-out-your-app"></a>Probar la aplicación
 
 Ahora que la aplicación está implementada, intente mover todo el cubo y observe que permanece en todo el mundo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Introducción al desarrollo de Unity](../unity-development-overview.md)
 * [Procedimientos recomendados para trabajar con Unity y Visual Studio](../best-practices-for-working-with-unity-and-visual-studio.md)

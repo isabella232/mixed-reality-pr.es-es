@@ -5,13 +5,13 @@ author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
-keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: 12fa47b6b3a46521a9e6029cab61fa1c628c06e9
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: HoloLens, comunicación remota, comunicación remota holográfica, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, canales de datos
+ms.openlocfilehash: bbbf0e1dd48e1e6872243b2ea562b0729d53ebae
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691411"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677914"
 ---
 # <a name="custom-holographic-remoting-data-channels"></a>Canales de datos personalizados de control remoto de holografías
 

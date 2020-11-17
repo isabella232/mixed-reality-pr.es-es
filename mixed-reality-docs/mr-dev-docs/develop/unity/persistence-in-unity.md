@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: HoloLens, persistencia, Unity
-ms.openlocfilehash: bb1a9b0544f9325a60c86c7424b7b451b6b4335b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: HoloLens, persistencia, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: cff7f05a5a5695ae8e379ed681c3b7320622968c
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91694599"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678534"
 ---
 # <a name="persistence-in-unity"></a>Persistencia en Unity
 
@@ -109,17 +109,17 @@ Una vez que esté en funcionamiento con los anclajes espaciales de Azure, puede 
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar los bloques de creación principales de realidad mixta. Desde aquí, puede continuar con el siguiente bloque de creación:
+Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar los bloques de creación principales de realidad mixta. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Asignación espacial](spatial-mapping-in-unity.md)
 
-O salte a las funcionalidades y API de la plataforma de realidad mixta:
+O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:
 
 > [!div class="nextstepaction"]
 > [Experiencias compartidas](shared-experiences-in-unity.md)
 
-Siempre puede volver a los puntos de [control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
 
 ## <a name="see-also"></a>Consulte también
 * [Persistencia del delimitador espacial](../../design/coordinate-systems.md#spatial-anchor-persistence)

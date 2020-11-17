@@ -5,18 +5,18 @@ author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
-keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: 7b2a0166fd7d239222f9742e0f5f2f6dfd3a7ffb
-ms.sourcegitcommit: 24d96bf3bb9a3143445e018195edae99d91684c6
+keywords: HoloLens, comunicación remota, comunicación remota holográfica, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, NuGet
+ms.openlocfilehash: 8494387b99352866632b46a98a449d173395b85d
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92683191"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677944"
 ---
 # <a name="writing-a-holographic-remoting-remote-app"></a>Escritura de una aplicación remota de control remoto de holografías
 
 >[!IMPORTANT]
->En este documento se describe la creación de una aplicación remota para HoloLens 2. Las aplicaciones remotas para **HoloLens (1ª generación)** deben usar el paquete NuGet versión **1. x. x** . Esto implica que las aplicaciones remotas escritas para HoloLens 2 no son compatibles con HoloLens 1 y viceversa. La documentación de HoloLens 1 se puede encontrar [aquí](add-holographic-remoting.md).
+>En este documento se describe la creación de una aplicación remota para HoloLens 2. Las aplicaciones remotas para **HoloLens (1ª generación)** deben usar el paquete NuGet versión **1. x. x**. Esto implica que las aplicaciones remotas escritas para HoloLens 2 no son compatibles con HoloLens 1 y viceversa. La documentación de HoloLens 1 se puede encontrar [aquí](add-holographic-remoting.md).
 
 Al crear una aplicación remota Holographic Remoting, el contenido remoto que se representa en un equipo remoto se puede transmitir a HoloLens 2. En este artículo se describe cómo se puede lograr esto. Todo el código de esta página y los proyectos de trabajo se pueden encontrar en el repositorio de github de ejemplos de la [comunicación remota de Holographic](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
 
@@ -24,7 +24,7 @@ Holographic Remoting permite que una aplicación tenga como destino HoloLens 2 c
 
 Una conexión remota típica tendrá un mínimo de 50 ms de latencia. La aplicación de reproducción puede informar de la latencia en tiempo real.
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 Un buen punto de partida es una aplicación de escritorio o UWP basada en DirectX que funciona como destino de la API de Windows Mixed Reality. Para obtener más información, vea [Introducción al desarrollo de DirectX](../native/directx-development-overview.md). La [plantilla de proyecto Holographic de C++](../native/creating-a-holographic-directx-project.md) es un buen punto de partida.
 
@@ -39,8 +39,8 @@ Los pasos siguientes son necesarios para agregar el paquete NuGet a un proyecto 
 1. Abra el proyecto en Visual Studio.
 2. Haga clic con el botón derecho en el nodo del proyecto y seleccione **administrar paquetes NuGet...**
 3. En el panel que aparece, haga clic en **examinar** y busque "Holographic Remoting".
-4. Seleccione **Microsoft. Holographic. Remoting** , asegúrese de elegir la versión **2. x. x** más reciente y haga clic en **instalar** .
-5. Si aparece el cuadro de diálogo **vista previa** , haga clic en **Aceptar** .
+4. Seleccione **Microsoft. Holographic. Remoting**, asegúrese de elegir la versión **2. x. x** más reciente y haga clic en **instalar**.
+5. Si aparece el cuadro de diálogo **vista previa** , haga clic en **Aceptar**.
 6. El siguiente cuadro de diálogo que aparece es el contrato de licencia. Haga clic en **acepto para aceptar el contrato de licencia** .
 
 >[!NOTE]
@@ -89,7 +89,7 @@ La conexión puede realizarse de una de estas dos maneras.
 1) La aplicación remota se conecta al reproductor que se ejecuta en el dispositivo.
 2) El reproductor que se ejecuta en el dispositivo se conecta a la aplicación remota.
 
-Para establecer una conexión desde la aplicación remota a HoloLens 2, llame al ```Connect``` método en el contexto remoto y especifique el nombre de host y el puerto. El puerto que usa el reproductor de comunicación remota holográfica es **8265** .
+Para establecer una conexión desde la aplicación remota a HoloLens 2, llame al ```Connect``` método en el contexto remoto y especifique el nombre de host y el puerto. El puerto que usa el reproductor de comunicación remota holográfica es **8265**.
 
 ```cpp
 try

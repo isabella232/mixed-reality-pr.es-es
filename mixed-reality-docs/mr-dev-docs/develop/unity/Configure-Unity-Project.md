@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 07/29/2020
 ms.topic: article
-keywords: Unity, realidad mixta, desarrollo, introducción, nuevo proyecto
-ms.openlocfilehash: f1465dcb31718b9d3faeb64d24e33d9f9ffeb7cc
-ms.sourcegitcommit: 83c9373fe5b2e07cdab921b6cab3fdd418307003
+keywords: Unity, realidad mixta, desarrollo, introducción, nuevo proyecto, Windows Mixed Reality, UWP, XR, rendimiento
+ms.openlocfilehash: cd7e6c5681c717c37368393a605998a2ab8e4175
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94386221"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677674"
 ---
 # <a name="configure-a-new-unity-project-for-windows-mixed-reality"></a>Configuración de un nuevo proyecto de Unity para Windows Mixed Reality 
 
@@ -54,7 +54,7 @@ La aplicación ahora puede controlar la representación holográfica y la entrad
 
 Se recomienda que realice las declaraciones de manifiesto en Unity para incluirlas en todos los proyectos futuros que exporte. Las capacidades aplicables para habilitar las API de Unity usadas con frecuencia para la realidad mixta son:
 
-|  Funcionalidad  |  API que requieren funcionalidad | 
+|  Capacidad  |  API que requieren funcionalidad | 
 |----------|----------|
 |  SpatialPerception  |  SurfaceObserver (acceso a mallas de [asignación espacial](../../design/spatial-mapping.md) en HoloLens) &mdash; *no se necesita ninguna funcionalidad para el seguimiento espacial general de los auriculares* | 
 |  Web  |  Fotocaptura y videocaptura | 
@@ -78,7 +78,7 @@ HoloLens tiene una GPU de clase móvil. Si su aplicación tiene como destino Hol
 Con la **realidad virtual compatible** activada, el componente de [cámara Unity](camera-in-unity.md) controla el [seguimiento de los cabezales y la representación Stereoscopic](../platform-capabilities-and-apis/rendering.md). Esto significa que no es necesario reemplazar el objeto de cámara principal por una cámara personalizada.
 
 Si su aplicación tiene como destino HoloLens específicamente, debe cambiar algunas opciones de configuración para optimizar las pantallas transparentes del dispositivo. Esta configuración permite que el contenido holográfica se muestre a través del mundo físico:
-1. En la **jerarquía** , seleccione la **cámara principal** .
+1. En la **jerarquía**, seleccione la **cámara principal** .
 2. En el panel **Inspector** , establezca la **posición** de la transformación en **0, 0, 0** para que la ubicación del encabezado del usuario se inicie en el origen del mundo Unity.
 3. Cambie las **marcas de borrado** a **color sólido**.
 4. Cambie el color de **fondo** a **RGBA 0, 0, 0 y 0**. Los negros se representan como transparentes en HoloLens.
@@ -90,8 +90,8 @@ Si su aplicación tiene como destino HoloLens específicamente, debe cambiar alg
 > [!IMPORTANT]
 > Si elimina y crea una nueva cámara, asegúrese de que la nueva cámara esté etiquetada como **MainCamera**.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [MRTK: Guía de instalación (GitHub)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html)
-* [MRTK-Página principal de la documentación (GitHub)](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
+* [MRTK: Página principal de documentación (GitHub)](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html)
 * [Instalación de las herramientas](../install-the-tools.md)
 * [Introducción al desarrollo de Unity](unity-development-overview.md)

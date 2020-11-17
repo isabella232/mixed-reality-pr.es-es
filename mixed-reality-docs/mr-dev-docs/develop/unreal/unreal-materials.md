@@ -1,19 +1,19 @@
 ---
-title: Recomendaciones de material en no real
+title: Recomendaciones de material en Unreal
 description: Información general de los materiales en el motor inreal.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/18/2020
 ms.topic: article
-keywords: No real, en el motor 4, UE4, HoloLens, HoloLens 2, desarrollo, materiales, documentación, guías, características, hologramas, desarrollo de juegos
-ms.openlocfilehash: bfce6e6bf8acd58821dba1213e1f1ab571d85a0c
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unreal, UE4, inreal Engine 4,, HoloLens, HoloLens 2, desarrollo, materiales, documentación, guías, características, hologramas, desarrollo de juegos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: d57689e9427ab5877e3afb49b0d19f35df6c47d2
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691834"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678944"
 ---
-# <a name="material-recommendations-in-unreal"></a>Recomendaciones de material en no real
+# <a name="material-recommendations-in-unreal"></a>Recomendaciones de material en Unreal
 
 Los materiales pueden hacer o interrumpir el rendimiento en un motor inreal. Esta página actúa como una guía de inicio rápido de la configuración básica que debe usar para obtener el mejor rendimiento.
 
@@ -73,7 +73,7 @@ Al crear parámetros, es preferible usar "parámetros estáticos" siempre que se
 
 Al crear instancias de materiales, se debe aplicar la preferencia a la **constante de instancia de material** en la instancia de material dinámica. La **constante de instancia de material** es un material con instancias que calcula solo una vez, antes del tiempo de ejecución.
 
-La instancia de material creada mediante el explorador de contenido ( **haga clic con el botón derecho en > crear instancia de material** ) es una constante de instancia de material. La instancia de material dinámica se crea mediante código. Puede encontrar más detalles sobre las instancias de material en la [documentación del motor inreal](https://docs.unrealengine.com/Engine/Rendering/Materials/MaterialInstances/index.html).
+La instancia de material creada mediante el explorador de contenido (**haga clic con el botón derecho en > crear instancia de material**) es una constante de instancia de material. La instancia de material dinámica se crea mediante código. Puede encontrar más detalles sobre las instancias de material en la [documentación del motor inreal](https://docs.unrealengine.com/Engine/Rendering/Materials/MaterialInstances/index.html).
 
 ![Crear instancias de material en no real](images/unreal-materials-img-08.png)
 

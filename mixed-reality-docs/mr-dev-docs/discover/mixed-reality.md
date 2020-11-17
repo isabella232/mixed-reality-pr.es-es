@@ -7,18 +7,18 @@ ms.date: 08/26/2020
 ms.topic: article
 keywords: realidad mixta, holográfico, AR, VR, MR, XR, realidad aumentada, realidad virtual, explicación
 ms.localizationpriority: high
-ms.openlocfilehash: a55b05f8edfeedfff3313844428b9af4cf7a2fc0
-ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
+ms.openlocfilehash: 44914decd9530a11d11127b43af527d995f6c252
+ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94340713"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631493"
 ---
 # <a name="what-is-mixed-reality"></a>¿Qué es Mixed Reality?
 
 ![Apuntar y confirmar con las manos en HoloLens 2](images/02_MixedRealitySlashMixedReality.png)
 
-La realidad mixta es una mezcla de universos físicos y digitales, que liberan los vínculos entre la interacción humana, informática y del entorno. Esta nueva realidad se basa en Computer Vision, la potencia del procesamiento gráfico, la tecnología de visualización y los sistemas de entrada. Sin embargo, el término *realidad mixta* se introdujo originalmente en un documento de 1994 de Paul Milgram y Fumio Kishino, " [A Taxonomy of Mixed Reality Visual Displays](https://search.ieice.org/bin/summary.php?id=e77-d_12_1321)" (Una taxonomía de pantallas visuales de realidad mixta). En este documento se exploró el concepto del *continuum de la virtualización* y la categorización de la taxonomía aplicada a las pantallas. Desde entonces, la aplicación de realidad mixta ha ido más allá de las pantallas a fin de incluir lo siguiente:
+La realidad mixta es una mezcla de universos físicos y digitales, que liberan los vínculos entre la interacción humana, informática y del entorno. Esta nueva realidad se basa en Computer Vision, la potencia del procesamiento gráfico, la tecnología de visualización y los sistemas de entrada. Sin embargo, el término *realidad mixta* se introdujo originalmente en un documento de 1994 de Paul Milgram y Fumio Kishino, "[A Taxonomy of Mixed Reality Visual Displays](https://search.ieice.org/bin/summary.php?id=e77-d_12_1321)" (Una taxonomía de pantallas visuales de realidad mixta). En este documento se exploró el concepto del *continuum de la virtualización* y la categorización de la taxonomía aplicada a las pantallas. Desde entonces, la aplicación de realidad mixta ha ido más allá de las pantallas a fin de incluir lo siguiente:
 * Entrada del ambiente
 * Sonido espacial
 * Ubicaciones y posicionamiento en los espacios reales y virtuales
@@ -43,7 +43,7 @@ Los avances en los sensores y el procesamiento dan lugar a una nueva área de en
 
 <br>
 
-Ahora, la combinación de los tres ( **el procesamiento del equipo, la entrada del usuario y la entrada del entorno** ) ofrece la oportunidad de crear auténticas experiencias de realidad mixta. El movimiento a través del mundo físico puede traducirse al movimiento en el mundo digital. Los límites del mundo físico pueden influir en las experiencias de la aplicación, como jugar a un juego, en el mundo digital. Sin la entrada del entorno, las experiencias no pueden combinar la realidad física y la digital.<br>
+Ahora, la combinación de los tres (**el procesamiento del equipo, la entrada del usuario y la entrada del entorno**) ofrece la oportunidad de crear auténticas experiencias de realidad mixta. El movimiento a través del mundo físico puede traducirse al movimiento en el mundo digital. Los límites del mundo físico pueden influir en las experiencias de la aplicación, como jugar a un juego, en el mundo digital. Sin la entrada del entorno, las experiencias no pueden combinar la realidad física y la digital.<br>
 
 <br>
 
@@ -62,7 +62,7 @@ Dado que la realidad mixta combina los mundos físico y digital, estas dos reali
 
 ### <a name="augmented-vs-virtual-reality"></a>Realidad aumentada frente a virtual
 
-La mayoría de los teléfonos móviles del mercado de hoy en día tienen poca o ninguna funcionalidad de reconocimiento de entorno. Las experiencias que ofrecen no pueden combinar la realidad física y la digital. Las experiencias que superponen los gráficos en secuencias de vídeo del mundo físico son de *realidad aumentada*. Las experiencias que tapan tu visión para presentar una experiencia digital son de *realidad virtual*. Las experiencias habilitadas entre la realidad aumentada y virtual forman la *realidad mixta* :
+La mayoría de los teléfonos móviles del mercado de hoy en día tienen poca o ninguna funcionalidad de reconocimiento de entorno. Las experiencias que ofrecen no pueden combinar la realidad física y la digital. Las experiencias que superponen los gráficos en secuencias de vídeo del mundo físico son de *realidad aumentada*. Las experiencias que tapan tu visión para presentar una experiencia digital son de *realidad virtual*. Las experiencias habilitadas entre la realidad aumentada y virtual forman la *realidad mixta*:
 * A partir del mundo físico, se coloca un objeto digital, como un holograma, como si estuviera realmente ahí.
 * A partir del mundo físico, una representación digital de otra persona, un avatar, muestra la ubicación en la que estaban al dejar notas. Es decir, experiencias que representan la colaboración asincrónica en distintos momentos en el tiempo.
 * A partir de un mundo digital, los límites físicos del mundo físico, como las paredes y el mobiliario, aparecen de forma digital dentro de la experiencia para ayudar a los usuarios a evitar los objetos físicos.
@@ -119,10 +119,4 @@ Si está siguiendo el [recorrido de detección](get-started-with-mr.md) hemos di
 > [!div class="nextstepaction"]
 > [¿Qué es un holograma?](hologram.md)
 
-## <a name="see-also"></a>Consulte también
-
-* [¿Qué es un holograma?](hologram.md)
-* [Descripción de los conceptos básicos de la realidad mixta](get-started-with-mr.md#understand-the-basics)
-* [Empezar a crear y a generar prototipos](../design/design.md)
-* [Conocer las herramientas y la arquitectura](../develop/development.md)
 

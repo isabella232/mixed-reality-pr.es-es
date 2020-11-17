@@ -5,13 +5,13 @@ author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Foto, vídeo, hololens, cámara, Unity, localizable
-ms.openlocfilehash: dfbbcc21db1247a7250e5049bfd1c4f89976ac15
-ms.sourcegitcommit: 8e91ff47ef70e80a41137f80aa1093e711d27bf7
+keywords: Foto, vídeo, hololens, cámara, Unity, localizable, PVC, cámara de vídeo fotográfico, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, cámara web, captura de fotos, captura de vídeo
+ms.openlocfilehash: c41ff88650da4aa6dc0d98c05b1b881362123a4f
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957805"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678604"
 ---
 # <a name="locatable-camera-in-unity"></a>Cámara localizable en Unity
 
@@ -128,7 +128,7 @@ Al capturar datos en un Texture2D, el proceso es muy similar a la captura en dis
 
 Siga el proceso de configuración anterior.
 
-En *OnPhotoModeStarted* , Capture un fotograma en la memoria.
+En *OnPhotoModeStarted*, Capture un fotograma en la memoria.
 
 ```cs
 private void OnPhotoModeStarted(PhotoCapture.PhotoCaptureResult result)
@@ -205,7 +205,7 @@ void OnCapturedPhotoToMemory(PhotoCapture.PhotoCaptureResult result, PhotoCaptur
 **Espacio de nombres:** *UnityEngine. XR. WSA. webcam*<br>
 **Tipo:** *VideoCapture*
 
-*VideoCapture* funciona de manera muy similar a la *fotocaptura* . Las únicas dos diferencias son que debe especificar un valor de fotogramas por segundo (FPS) y solo puede guardar directamente en el disco como un archivo. MP4. Los pasos para usar *VideoCapture* son los siguientes:
+*VideoCapture* funciona de manera muy similar a la *fotocaptura*. Las únicas dos diferencias son que debe especificar un valor de fotogramas por segundo (FPS) y solo puede guardar directamente en el disco como un archivo. MP4. Los pasos para usar *VideoCapture* son los siguientes:
 1. Creación de un objeto de *VideoCapture*
 2. Cree un objeto *CameraParameters* con los valores que desee.
 3. Iniciar el modo de vídeo a través de *StartVideoModeAsync*

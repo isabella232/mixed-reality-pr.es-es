@@ -5,15 +5,15 @@ author: sw5813
 ms.author: suwu
 ms.date: 7/10/2020
 ms.topic: article
-keywords: No real, no real Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, implementación en dispositivo, equipo, documentación
+keywords: No real, no real Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, implementación en dispositivo, PC, documentación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: abd5e5c28ec5e66c4f73df8edf5e0ac0212d170a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 9d32dff121899d40175af813fac4f7be1acc66c3
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691955"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679124"
 ---
 # <a name="deploy-to-device-in-unreal"></a>Implementación en el dispositivo en Unreal
 
@@ -30,11 +30,11 @@ Ambas opciones requieren la configuración de HoloLens para usar el portal de [d
 
 ![Iniciar opciones de lista desplegable](images/unreal/launch-dropdown.png)
 
-2. Abra el **Device Manager** . Tenga en cuenta que HoloLens no aparecerá automáticamente en la lista de dispositivos.
+2. Abra el **Device Manager**. Tenga en cuenta que HoloLens no aparecerá automáticamente en la lista de dispositivos.
 
 3. Expanda la sección **Agregar un dispositivo** que no está en la lista.
 
-4. Seleccione **HoloLens** como **plataforma** .
+4. Seleccione **HoloLens** como **plataforma**.
 
 5. Escriba la dirección IP y la información de puerto de los dispositivos separadas por un signo de dos puntos como identificador de dispositivo. Por ejemplo, "127.0.0.1:10080" (cuando se conecta a través de USB). Use las credenciales de nombre de usuario y contraseña del portal de dispositivos.
 
@@ -59,4 +59,4 @@ Si está siguiendo el viaje de punto de control de desarrollo no real que hemos 
 > [!div class="nextstepaction"]
 > [Servicios avanzados](unreal-development-overview.md#5-adding-services)
 
-Siempre puede volver a los puntos de [control de desarrollo no reales](unreal-development-overview.md#4-deploying-to-a-device) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unreal](unreal-development-overview.md#4-deploying-to-a-device) en cualquier momento.

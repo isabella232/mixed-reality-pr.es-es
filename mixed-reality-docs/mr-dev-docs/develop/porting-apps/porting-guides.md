@@ -5,13 +5,13 @@ author: JBrentJ
 ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
-keywords: puerto, portabilidad, Unity, middleware, motor, UWP, Win32
-ms.openlocfilehash: 9822976ab7dac9ae7567e5f38ca44ceee646d098
-ms.sourcegitcommit: 4bb5544a0c74ac4e9766bab3401c9b30ee170a71
+keywords: puerto, Unity, no real, middleware, motor, UWP, Win32, portabilidad, HoloLens primera generación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, migración, Windows 10, asignación de entrada
+ms.openlocfilehash: 18129151b1e3d11f9e9c7bb3c3420c23b5fd1dd0
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638552"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677734"
 ---
 # <a name="porting-guides"></a>Guías de migración
 
@@ -23,7 +23,7 @@ En un nivel alto, los siguientes pasos están relacionados con el traslado de co
 1. **Asegúrese de que el equipo ejecuta Windows 10 Fall Creators Update (16299).** Ya no se recomienda recibir compilaciones de vista previa del anillo de Insider SKIP Preview, ya que esas compilaciones no serán las más estables para el desarrollo de realidad mixta.
 2. **Actualice a la versión más reciente de los gráficos o del motor de juegos.** Los motores de juegos deberán admitir la versión 10.0.15063.0 del SDK de Windows 10 (Publicada en el 2017 de abril) o superior.
 3. **Actualice cualquier middleware, complemento o componente.** Si la aplicación contiene componentes, es una buena idea actualizar a la versión más reciente.
-4. **Quite las dependencias de los SDK duplicados** . En función del dispositivo al que se dirija el contenido, deberá quitar o compilar condicionalmente ese SDK (por ejemplo, SteamVR) para que pueda establecer como destino las API de Windows en su lugar.
+4. **Quite las dependencias de los SDK duplicados**. En función del dispositivo al que se dirija el contenido, deberá quitar o compilar condicionalmente ese SDK (por ejemplo, SteamVR) para que pueda establecer como destino las API de Windows en su lugar.
 5. **Trabaje con problemas de compilación.** En este momento, el ejercicio de portabilidad es específico de la aplicación, el motor y las dependencias de componentes que tiene.
 
 ## <a name="common-porting-steps"></a>Pasos de portabilidad comunes

@@ -5,13 +5,13 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, asignación espacial, representador, Colisionador, malla, exploración, componente
-ms.openlocfilehash: 15948870d3150614aefa071ce07cf51c29d284fc
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unity, asignación espacial, representador, Colisionador, malla, escaneo, componente, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
+ms.openlocfilehash: 60196a85689ce6c4c190acdfe305fc12982ace4c
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91694594"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677404"
 ---
 # <a name="spatial-mapping-in-unity"></a>Asignación espacial en Unity
 
@@ -64,7 +64,7 @@ La asignación espacial también requiere un MaxVersionTested de al menos 10.0.1
 
 ## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a>Introducción a los componentes de asignación espacial integrados de Unity
 
-Unity ofrece 2 componentes para agregar fácilmente la asignación espacial a la aplicación, el **representador de asignación espacial** y el **Colisionador de asignación espacial** .
+Unity ofrece 2 componentes para agregar fácilmente la asignación espacial a la aplicación, el **representador de asignación espacial** y el **Colisionador de asignación espacial**.
 
 ### <a name="spatial-mapping-renderer"></a>Representador de asignación espacial
 
@@ -84,13 +84,13 @@ Puede Agregar ambos componentes a la aplicación si desea visualizar y interactu
 
 Para usar estos dos componentes en la aplicación de Unity:
 1. Seleccione un GameObject en el centro del área en la que desea detectar mallas de superficie espacial.
-2. En la ventana del inspector, **agregue el elemento**  >  **XR**  >  **Colisionador de asignación espacial** del componente XR   o el **representador de asignación espacial** .
+2. En la ventana del inspector, **agregue el elemento**  >  **XR**  >  **Colisionador de asignación espacial** del componente XR o el **representador de asignación espacial**.
 
 Puede encontrar más detalles sobre cómo usar estos componentes en el sitio de <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">documentación de Unity</a>.
 
 ### <a name="going-beyond-the-built-in-spatial-mapping-components"></a>Ir más allá de los componentes de asignación espacial integrados
 
-Estos componentes facilitan la tarea de arrastrar y colocar para empezar a trabajar con la asignación espacial. Si desea continuar, hay dos rutas principales para explorar:
+Estos componentes facilitan la tarea de arrastrar y colocar para empezar a trabajar con la asignación espacial.  Si desea continuar, hay dos rutas principales para explorar:
 * Para realizar su propio procesamiento de malla de nivel inferior, consulte la sección siguiente sobre la API de script de asignación espacial de bajo nivel.
 * Para realizar análisis de malla de nivel superior, consulte la sección siguiente sobre la biblioteca SpatialUnderstanding en <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>.
 
@@ -99,7 +99,7 @@ Estos componentes facilitan la tarea de arrastrar y colocar para empezar a traba
 Si necesita más control de los que obtiene del representador de asignación espacial y los componentes de Colisionador de asignación espacial, puede usar las API de script de asignación espacial de bajo nivel.
 
 **Espacio de nombres:** *UnityEngine. XR. WSA*<br>
-**Tipos** : *SurfaceObserver* , *SurfaceChange* , *SurfaceData* , *SurfaceId*
+**Tipos**: *SurfaceObserver*, *SurfaceChange*, *SurfaceData*, *SurfaceId*
 
 A continuación se describe el flujo sugerido para una aplicación que usa las API de asignación espacial.
 
@@ -479,17 +479,17 @@ Para obtener más información sobre el uso de la asignación espacial con el ki
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de creación: 
+Si sigue el recorrido de puntos de control de desarrollo de Unity que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación: 
 
 > [!div class="nextstepaction"]
 > [Texto](text-in-unity.md)
 
-O salte a las funcionalidades y API de la plataforma de realidad mixta:
+O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:
 
 > [!div class="nextstepaction"]
 > [Experiencias compartidas](shared-experiences-in-unity.md)
 
-Siempre puede volver a los puntos de [control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
 
 ## <a name="see-also"></a>Consulte también
 * [Sistemas de coordenadas](../../design/coordinate-systems.md)

@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: sistema de coordenadas, sistema de coordenadas espaciales, solo orientación, escalado colocado, escalado permanente, escalado de habitación, escala mundial, grado de 360, colocada, permanente, habitación, mundo, escala, posición, orientación, Unity, delimitador, delimitador espacial, límite mundial, bloqueo mundial, bloqueo de cuerpo, bloqueo de cuerpo, la pérdida de seguimiento, localización, límites, recentro
-ms.openlocfilehash: 59fae57f3ca5048f4027ed96fca03255683c1fe3
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: sistema de coordenadas, sistema de coordenadas espaciales, solo orientación, escalado colocado, escalado permanente, escalado de sala, de escala mundial, 360 Degree, sentada, permanente, habitación, mundo, escala, posición, orientación, Unity, delimitador, anclaje espacial, delimitador mundial, límite mundial, bloqueo mundial, bloqueo de la realidad mixta, bloqueo del cuerpo de la realidad, pérdida de seguimiento, uso de la realidad
+ms.openlocfilehash: 92b132bb75e88711fb4bf9fda3dee5b778a0be6e
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691250"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678684"
 ---
 # <a name="coordinate-systems-in-unity"></a>Sistemas de coordenadas de Unity
 
@@ -24,7 +24,7 @@ El primer paso para crear una experiencia de realidad mixta en Unity es determin
 **Espacio de nombres:** *UnityEngine. XR*<br>
 **Tipo:** *XRDevice*
 
-Para compilar una experiencia de **solo orientación** o **de escalado original** , debe establecer Unity en el tipo de espacio de seguimiento de la estación. Esto establece el sistema de coordenadas universal de Unity para realizar el seguimiento del [marco estacionario de referencia](../../design/coordinate-systems.md#spatial-coordinate-systems). En el modo de seguimiento estacionario, el contenido colocado en el editor justo delante de la ubicación predeterminada de la cámara (el avance es-Z) aparecerá delante del usuario cuando se inicie la aplicación.
+Para compilar una experiencia de **solo orientación** o **de escalado original**, debe establecer Unity en el tipo de espacio de seguimiento de la estación. Esto establece el sistema de coordenadas universal de Unity para realizar el seguimiento del [marco estacionario de referencia](../../design/coordinate-systems.md#spatial-coordinate-systems). En el modo de seguimiento estacionario, el contenido colocado en el editor justo delante de la ubicación predeterminada de la cámara (el avance es-Z) aparecerá delante del usuario cuando se inicie la aplicación.
 
 ```cs
 XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
@@ -50,7 +50,7 @@ InputTracking.Recenter();
 **Espacio de nombres:** *UnityEngine. XR*<br>
 **Tipo:** *XRDevice*
 
-En el caso de una experiencia de escalado **permanente** o de **escalado de habitación** , deberá colocar contenido en relación con el piso. Por lo tanto, se trata del piso del usuario mediante la **[fase espacial](../../design/coordinate-systems.md#spatial-coordinate-systems)** , que representa el origen del nivel de suelo definido por el usuario y el límite de sala opcional, configurado durante la primera ejecución.
+En el caso de una experiencia de escalado **permanente** o de **escalado de habitación**, deberá colocar contenido en relación con el piso. Por lo tanto, se trata del piso del usuario mediante la **[fase espacial](../../design/coordinate-systems.md#spatial-coordinate-systems)**, que representa el origen del nivel de suelo definido por el usuario y el límite de sala opcional, configurado durante la primera ejecución.
 
 Para asegurarse de que Unity funcione con su sistema de coordenadas universal en el nivel inferior, puede establecer Unity en el tipo de espacio de seguimiento de RoomScale y asegurarse de que el conjunto se realiza correctamente:
 
@@ -170,17 +170,17 @@ Una vez que esté en funcionamiento con los anclajes espaciales de Azure, puede 
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar los bloques de creación principales de realidad mixta. Desde aquí, puede continuar con el siguiente bloque de creación:
+Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar los bloques de creación principales de realidad mixta. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Gaze](gaze-in-unity.md)
 
-O salte a las funcionalidades y API de la plataforma de realidad mixta:
+O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:
 
 > [!div class="nextstepaction"]
 > [Experiencias compartidas](shared-experiences-in-unity.md)
 
-Siempre puede volver a los puntos de [control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
 
 ## <a name="see-also"></a>Consulte también
 * [Escalas de experiencia](../../design/coordinate-systems.md#mixed-reality-experience-scales)

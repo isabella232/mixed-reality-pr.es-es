@@ -5,13 +5,13 @@ author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
-keywords: SteamVR, compatibilidad
-ms.openlocfilehash: 4a1439bed8743396cba13fa4d65debc62487ab46
-ms.sourcegitcommit: 4bb5544a0c74ac4e9766bab3401c9b30ee170a71
+keywords: SteamVR, compatibilidad, portabilidad, HoloLens de la primera generación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, migración, Windows 10, controladores de streaming de movimiento, hápticos
+ms.openlocfilehash: be510203b928cc1871b505d184e1aba05ec99abc
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638512"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677664"
 ---
 # <a name="updating-your-steamvr-application"></a>Actualización de la aplicación SteamVR
 Animamos a los desarrolladores a probar y optimizar sus experiencias de SteamVR para que se ejecuten en auriculares Windows Mixed Reality. En esta documentación se describen las mejoras comunes que los desarrolladores pueden hacer para asegurarse de que su experiencia se ejecute de manera excelente en Windows Mixed Reality.
@@ -29,10 +29,10 @@ Para empezar a probar su juego o aplicación en Windows Mixed Reality, asegúres
 ## <a name="controls"></a>Controles
 
 Al diseñar o ajustar el diseño del control, tenga en cuenta el siguiente conjunto de comandos reservados:
-1. Hacer clic en el **stick analógico izquierdo y derecho** está reservado para el **Panel de vapor** .
+1. Hacer clic en el **stick analógico izquierdo y derecho** está reservado para el **Panel de vapor**.
 
 > [!NOTE]
-> Si usa un controlador de HP reverberación G2, al hacer clic en el botón de menú de la derecha se reserva el **Panel de vapor** .
+> Si usa un controlador de HP reverberación G2, al hacer clic en el botón de menú de la derecha se reserva el **Panel de vapor**.
 
 2. El **botón Windows** siempre devolverá los usuarios a la Página principal de Windows Mixed Reality.
 

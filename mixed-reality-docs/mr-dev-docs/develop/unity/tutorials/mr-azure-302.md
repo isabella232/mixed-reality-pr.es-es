@@ -1,17 +1,17 @@
 ---
-title: MR y Azure 302-Computer Vision
+title: 'Realidad mixta y Azure (302): Computer Vision'
 description: Complete este curso para aprender a reconocer contenido visual dentro de una imagen proporcionada, con Azure Computer Vision en una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
-keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Computer Vision, hololens, envolventes, VR
-ms.openlocfilehash: 4c8566a2654eb92a4dab2a933bd8afb0b745cfce
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Computer Vision, hololens, envolventes, VR, Windows 10, Visual Studio
+ms.openlocfilehash: f972ba57bc27bff32aba70972fad2e6374d0c574
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693711"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679534"
 ---
 # <a name="mr-and-azure-302-computer-vision"></a>Realidad mixta y Azure (302): Computer Vision
 
@@ -51,7 +51,7 @@ En su aplicación, depende del modo en que va a integrar los resultados con el d
 > [!NOTE]
 > Aunque este curso se centra principalmente en HoloLens, también puede aplicar lo que aprenda en este curso a los auriculares con Windows Mixed Reality inmersivo (VR). Dado que los auriculares envolventes (VR) no tienen cámaras accesibles, necesitará una cámara externa conectada al equipo. A medida que siga con el curso, verá notas sobre cualquier cambio que deba usar para admitir auriculares envolventes (VR).
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 > [!NOTE]
 > Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#. Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de mayo). Puede usar el software más reciente, como se indica en el artículo [instalar las herramientas](../../install-the-tools.md) , aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se indica a continuación.
@@ -67,7 +67,7 @@ Se recomienda el siguiente hardware y software para este curso:
 - Una cámara conectada al equipo (para el desarrollo de auriculares envolvente)
 - Acceso a Internet para la configuración y recuperación de Computer Vision API de Azure
 
-## <a name="before-you-start"></a>Antes de comenzar
+## <a name="before-you-start"></a>Antes de empezar
 
 1.  Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).
 2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
@@ -86,21 +86,21 @@ Para usar el servicio de *Computer Vision API* en Azure, tendrá que configurar 
     > [!NOTE]
     > Si aún no tiene una cuenta de Azure, tendrá que crear una. Si sigue este tutorial en una situación de aula o de laboratorio, pregunte al instructor o a uno de los Proctors para obtener ayuda para configurar la nueva cuenta.
 
-2.  Una vez que haya iniciado sesión, haga clic en **nuevo** en la esquina superior izquierda y busque *Computer Vision API* y haga clic en **entrar** .
+2.  Una vez que haya iniciado sesión, haga clic en **nuevo** en la esquina superior izquierda y busque *Computer Vision API* y haga clic en **entrar**.
 
     ![Creación de un nuevo recurso en Azure](images/AzureLabs-Lab2-00.png)
 
     > [!NOTE]
-    > Es posible que la palabra **nuevo** se haya reemplazado por **crear un recurso** , en portales más recientes.
+    > Es posible que la palabra **nuevo** se haya reemplazado por **crear un recurso**, en portales más recientes.
  
 3.  La nueva página proporcionará una descripción del servicio *Computer Vision API* . En la parte inferior izquierda de esta página, seleccione el botón **crear** para crear una asociación con este servicio.
 
     ![Acerca del servicio Computer Vision API](images/AzureLabs-Lab2-01.png)
  
-4.  Una vez que haya hecho clic en **crear** :
+4.  Una vez que haya hecho clic en **crear**:
 
     1. Inserte el **nombre** que desee para esta instancia de servicio.
-    2. Seleccione una opción en **Suscripción** .
+    2. Seleccione una opción en **Suscripción**.
     3. Seleccione el **plan de tarifa** adecuado para usted; si es la primera vez que crea un servicio de *Computer Vision API* , debe tener a su disposición un nivel gratis (denominado F0).
     4. Elija un **grupo de recursos** o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común). 
 
@@ -113,7 +113,7 @@ Para usar el servicio de *Computer Vision API* en Azure, tendrá que configurar 
 
         ![Información de creación del servicio](images/AzureLabs-Lab2-02.png)
 
-5.  Una vez que haya hecho clic en **crear** , tendrá que esperar a que se cree el servicio, lo que puede tardar un minuto.
+5.  Una vez que haya hecho clic en **crear**, tendrá que esperar a que se cree el servicio, lo que puede tardar un minuto.
 6.  Una vez que se crea la instancia de servicio, aparecerá una notificación en el portal.
 
     ![Vea la nueva notificación del nuevo servicio](images/AzureLabs-Lab2-03.png) 
@@ -141,15 +141,15 @@ Para usar el servicio de *Computer Vision API* en Azure, tendrá que configurar 
 
 Lo siguiente es una configuración típica para desarrollar con la realidad mixta y, como tal, es una buena plantilla para otros proyectos.
 
-1.  Abra *Unity* y haga clic en **nuevo** . 
+1.  Abra *Unity* y haga clic en **nuevo**. 
 
     ![Inicie el nuevo proyecto de Unity.](images/AzureLabs-Lab2-06.png)
 
-2.  Ahora tendrá que proporcionar un nombre de proyecto de Unity. Inserte **MR_ComputerVision** . Asegúrese de que el tipo de proyecto está establecido en **3D** . Establezca la **Ubicación** en algún lugar adecuado para usted (Recuerde que, más cerca de los directorios raíz es mejor). A continuación, haga clic en **crear proyecto** .
+2.  Ahora tendrá que proporcionar un nombre de proyecto de Unity. Inserte **MR_ComputerVision**. Asegúrese de que el tipo de proyecto está establecido en **3D**. Establezca la **Ubicación** en algún lugar adecuado para usted (Recuerde que, más cerca de los directorios raíz es mejor). A continuación, haga clic en **crear proyecto**.
 
     ![Proporcione los detalles del nuevo proyecto de Unity.](images/AzureLabs-Lab2-07.png)
 
-3.  Con Unity abierto, merece la pena comprobar que el **Editor de scripts** predeterminado está establecido en **Visual Studio** . Vaya a **editar > preferencias** y, a continuación, en la nueva ventana, vaya a **herramientas externas** . Cambie el **Editor de script externo** a **Visual Studio 2017** . Cierre la ventana **preferencias** .
+3.  Con Unity abierto, merece la pena comprobar que el **Editor de scripts** predeterminado está establecido en **Visual Studio**. Vaya a **editar > preferencias** y, a continuación, en la nueva ventana, vaya a **herramientas externas**. Cambie el **Editor de script externo** a **Visual Studio 2017**. Cierre la ventana **preferencias** .
 
     ![Actualice las preferencias del editor de scripts.](images/AzureLabs-Lab2-08.png)
 
@@ -161,7 +161,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 
     1. El **dispositivo de destino** está establecido en **HoloLens**
 
-        > Para los auriculares envolventes, establezca el **dispositivo de destino** en *cualquier dispositivo* .
+        > Para los auriculares envolventes, establezca el **dispositivo de destino** en *cualquier dispositivo*.
 
     2. El **tipo de compilación** se establece en **D3D**
     3. **SDK** está establecido en la **versión más reciente instalada**
@@ -169,21 +169,21 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
     5. **Compilar y ejecutar** está establecido en **equipo local**
     6. Guarde la escena y agréguela a la compilación.
 
-        1. Para ello, seleccione **Agregar escenas abiertas** . Aparecerá una ventana de guardar.
+        1. Para ello, seleccione **Agregar escenas abiertas**. Aparecerá una ventana de guardar.
         
             ![Haga clic en el botón Agregar escenas abiertas](images/AzureLabs-Lab2-11.png)
 
-        2. Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígnele el nombre **Scenes** .
+        2. Cree una nueva carpeta para este, y en cualquier momento, en el futuro, seleccione el botón **nueva carpeta** para crear una nueva carpeta, asígnele el nombre **Scenes**.
 
             ![Crear nueva carpeta de scripts](images/AzureLabs-Lab2-12.png)
 
-        3. Abra la carpeta **Scenes** recién creada y, a continuación, en el campo *nombre de archivo* :, escriba **MR_ComputerVisionScene** y, a continuación, haga clic en **Guardar** .
+        3. Abra la carpeta **Scenes** recién creada y, a continuación, en el campo *nombre de archivo*:, escriba **MR_ComputerVisionScene** y, a continuación, haga clic en **Guardar**.
 
             ![Asigne un nombre a la nueva escena.](images/AzureLabs-Lab2-13.png)
 
             > Tenga en cuenta que debe guardar las escenas de Unity dentro de la carpeta *assets* , ya que deben estar asociadas con el proyecto Unity. La creación de la carpeta Scenes (y otras carpetas similares) es una forma habitual de estructurar un proyecto de Unity.
 
-    7. El resto de la configuración, en la *configuración de compilación* , debe dejarse como predeterminada por ahora.
+    7. El resto de la configuración, en la *configuración de compilación*, debe dejarse como predeterminada por ahora.
 
 6. En la ventana *configuración de compilación* , haga clic en el botón Configuración del **reproductor** ; se abrirá el panel relacionado en el espacio donde se encuentra el *Inspector* . 
 
@@ -199,28 +199,28 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 
             ![Actualice otras opciones de configuración.](images/AzureLabs-Lab2-15.png)
       
-    2. En la pestaña **configuración de publicación** , en **capacidades** , seleccione:
+    2. En la pestaña **configuración de publicación** , en **capacidades**, seleccione:
 
         1. **InternetClient**
         2. **Cámara web**
 
             ![Actualizando la configuración de publicación.](images/AzureLabs-Lab2-16.png)
 
-    3. Más abajo en el panel, en la **configuración de XR** (se encuentra debajo de **configuración de publicación** ), tick **Virtual Reality compatible** , asegúrese de que se agrega el **SDK de Windows Mixed Reality** .
+    3. Más abajo en el panel, en la **configuración de XR** (se encuentra debajo de **configuración de publicación**), tick **Virtual Reality compatible**, asegúrese de que se agrega el **SDK de Windows Mixed Reality** .
 
         ![Actualice la configuración de X R.](images/AzureLabs-Lab2-17.png)
 
 8.  De nuevo en la *configuración de compilación* , los proyectos de _C# de Unity_ ya no están atenuados; Marque la casilla situada junto a este. 
 9.  Cierre la ventana Build Settings (Configuración de compilación).
-10. Guarde la escena y el proyecto ( **archivo > guardar la escena o el archivo > guardar proyecto** ).
+10. Guarde la escena y el proyecto (**archivo > guardar la escena o el archivo > guardar proyecto**).
 
 ## <a name="chapter-3--main-camera-setup"></a>Capítulo 3: configuración de la cámara principal
 
 > [!IMPORTANT]
 > Si desea omitir el componente *de configuración de Unity* de este curso y continuar directamente en el código, no dude en descargar este [. unitypackage Tools](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302%20-%20Computer%20vision/Azure-MR-302.unitypackage), impórtelo en el proyecto como un [paquete personalizado](https://docs.unity3d.com/Manual/AssetPackages.html)y, después, continúe con el [capítulo 5](#chapter-5--create-the-resultslabel-class).
 
-1.  En el *Panel jerarquía* , seleccione la **cámara principal** . 
-2.  Una vez seleccionado, podrá ver todos los componentes de la **cámara principal** en el *panel del inspector* .
+1.  En el *Panel jerarquía*, seleccione la **cámara principal**. 
+2.  Una vez seleccionado, podrá ver todos los componentes de la **cámara principal** en el *panel del inspector*.
 
     1. El **objeto de cámara** debe tener el nombre de la **cámara principal** (tenga en cuenta la ortografía).
     2. La **etiqueta** de cámara principal se debe establecer en **MainCamera** (tenga en cuenta la ortografía).
@@ -230,17 +230,17 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 
         ![Actualice los componentes de la cámara.](images/AzureLabs-Lab2-18.png)
  
-3.  A continuación, tendrá que crear un objeto de "cursor" simple adjunto a la **cámara principal** , lo que le ayudará a colocar la salida del análisis de la imagen cuando la aplicación se esté ejecutando. Este cursor determinará el punto central del foco de la cámara.
+3.  A continuación, tendrá que crear un objeto de "cursor" simple adjunto a la **cámara principal**, lo que le ayudará a colocar la salida del análisis de la imagen cuando la aplicación se esté ejecutando. Este cursor determinará el punto central del foco de la cámara.
 
 Para crear el cursor:
 
-1.  En el *Panel jerarquía* , haga clic con el botón secundario en la **cámara principal** . En **objeto 3D** , haga clic en **Sphere** .
+1.  En el *Panel jerarquía*, haga clic con el botón secundario en la **cámara principal**. En **objeto 3D**, haga clic en **Sphere**.
 
     ![Seleccione el objeto Cursor.](images/AzureLabs-Lab2-19.png)
  
-2.  Cambie el nombre de la **esfera** a **cursor** (haga doble clic en el objeto cursor o presione el botón de teclado ' F2 ' con el objeto seleccionado) y asegúrese de que se encuentra como elemento secundario de la **cámara principal** .
+2.  Cambie el nombre de la **esfera** a **cursor** (haga doble clic en el objeto cursor o presione el botón de teclado ' F2 ' con el objeto seleccionado) y asegúrese de que se encuentra como elemento secundario de la **cámara principal**.
 
-3.  En el *Panel jerarquía* , haga clic con el botón izquierdo en el **cursor** . Con el cursor seleccionado, ajuste las siguientes variables en el *panel del inspector* :
+3.  En el *Panel jerarquía*, haga clic con el botón izquierdo en el **cursor**. Con el cursor seleccionado, ajuste las siguientes variables en el *panel del inspector*:
 
     1. Establecer la *posición* de la transformación en **0,** 0,5
     2. Establezca la *escala* en **0,02, 0,02, 0,02**
@@ -251,22 +251,22 @@ Para crear el cursor:
 
 Una vez que haya capturado una imagen con la cámara de HoloLens, esa imagen se enviará a la instancia de servicio de *Azure Computer Vision API* para su análisis. 
 
-Los resultados de ese análisis serán una lista de objetos reconocidos denominados **etiquetas** . 
+Los resultados de ese análisis serán una lista de objetos reconocidos denominados **etiquetas**. 
 
 Usará etiquetas (como texto en 3D en el espacio universal) para mostrar estas etiquetas en la ubicación en la que se tomó la foto.
 
 En los pasos siguientes se muestra cómo configurar el objeto de **etiqueta** .
 
-1.  Haga clic con el botón secundario en cualquier lugar del panel jerarquía (la ubicación no importa en este momento), en **objeto 3D** , agregue un **texto 3D** . Asígnele el nombre **LabelText** .
+1.  Haga clic con el botón secundario en cualquier lugar del panel jerarquía (la ubicación no importa en este momento), en **objeto 3D**, agregue un **texto 3D**. Asígnele el nombre **LabelText**.
 
     ![Cree un objeto de texto 3D.](images/AzureLabs-Lab2-21.png)
  
-2.  En el *Panel jerarquía* , haga clic con el botón izquierdo en el **LabelText** . Con el **LabelText** seleccionado, ajuste las siguientes variables en el *panel del inspector* :
+2.  En el *Panel jerarquía*, haga clic con el botón izquierdo en el **LabelText**. Con el **LabelText** seleccionado, ajuste las siguientes variables en el *panel del inspector*:
 
     1. Establezca la **posición** en **0, 0,0**
     2. Establezca la **escala** en **0,01, 0,01, 0,01**
     3. En la **malla de texto** del componente:
-    4. Reemplace todo el texto dentro del **texto** , con "..."        
+    4. Reemplace todo el texto dentro del **texto**, con "..."        
     5. Establecer el **anclaje** en el **Centro central**
     6. Establecer la **alineación** en **Center**
     7. Establecer el **tamaño de tabulación** en **4**
@@ -275,11 +275,11 @@ En los pasos siguientes se muestra cómo configurar el objeto de **etiqueta** .
 
     ![Componente de texto](images/AzureLabs-Lab2-21-5.png)
 
-3.  Arrastre **LabelText** desde el *Panel jerarquía* , a la *carpeta Asset* , dentro del *panel Proyecto* . Esto hará que el **LabelText** sea recurso prefabricado, de modo que se puedan crear instancias en el código.
+3.  Arrastre **LabelText** desde el *Panel jerarquía*, a la *carpeta Asset*, dentro del *panel Proyecto*. Esto hará que el **LabelText** sea recurso prefabricado, de modo que se puedan crear instancias en el código.
 
     ![Cree un recurso prefabricado del objeto LabelText.](images/AzureLabs-Lab2-22.png)
  
-4.  Debe eliminar el **LabelText** del panel de *jerarquías* , de modo que no se muestre en la escena de apertura. Como es ahora un recurso prefabricado, al que se llamará para las instancias individuales de la carpeta Assets, no hay necesidad de mantenerla dentro de la escena. 
+4.  Debe eliminar el **LabelText** del panel de *jerarquías*, de modo que no se muestre en la escena de apertura. Como es ahora un recurso prefabricado, al que se llamará para las instancias individuales de la carpeta Assets, no hay necesidad de mantenerla dentro de la escena. 
 5.  La estructura final del objeto en el *Panel jerarquía* debe ser como la que se muestra en la imagen siguiente:
 
     ![Estructura final del panel de jerarquía.](images/AzureLabs-Lab2-23.png)
@@ -293,13 +293,13 @@ El primer script que necesita crear es la clase *ResultsLabel* , que es responsa
 
 Para crear esta clase: 
 
-1.  Haga clic con el botón derecho en el *panel Proyecto* y, a continuación, **cree > carpeta** . Asigne a la carpeta el nombre **scripts** . 
+1.  Haga clic con el botón derecho en el *panel Proyecto* y, a continuación, **cree > carpeta**. Asigne a la carpeta el nombre **scripts**. 
 
     ![Crear carpeta de scripts.](images/AzureLabs-Lab2-24.png)
 
-2.  Con la carpeta **scripts** creada, haga doble clic en ella para abrirla. Después, dentro de esa carpeta, haga clic con el botón derecho y seleccione **crear >** después **script de C#** . Asigne al script el nombre *ResultsLabel* . 
+2.  Con la carpeta **scripts** creada, haga doble clic en ella para abrirla. Después, dentro de esa carpeta, haga clic con el botón derecho y seleccione **crear >** después **script de C#**. Asigne al script el nombre *ResultsLabel*. 
 
-3.  Haga doble clic en el nuevo script *ResultsLabel* para abrirlo con **Visual Studio** .
+3.  Haga doble clic en el nuevo script *ResultsLabel* para abrirlo con **Visual Studio**.
 
 4.  Dentro de la clase, inserte el siguiente código en la clase *ResultsLabel* :
 
@@ -359,14 +359,14 @@ Para crear esta clase:
         }
     ```
 
-6.  Asegúrese de guardar los cambios en *Visual Studio* antes de volver a *Unity* .
-7.  De nuevo en el *Editor de Unity* , haga clic y arrastre la clase *ResultsLabel* desde la carpeta **scripts** hasta el objeto **cámara principal** en el *Panel jerarquía* .
-8.  Haga clic en la **cámara principal** y mire en el *panel del inspector* .
+6.  Asegúrese de guardar los cambios en *Visual Studio* antes de volver a *Unity*.
+7.  De nuevo en el *Editor de Unity*, haga clic y arrastre la clase *ResultsLabel* desde la carpeta **scripts** hasta el objeto **cámara principal** en el *Panel jerarquía*.
+8.  Haga clic en la **cámara principal** y mire en el *panel del inspector*.
 
-Observará que, desde el script que acaba de arrastrar a la cámara, hay dos campos: **cursor** y **etiqueta recurso prefabricado** .
+Observará que, desde el script que acaba de arrastrar a la cámara, hay dos campos: **cursor** y **etiqueta recurso prefabricado**.
 
-9.  Arrastre el objeto denominado **cursor** desde el *Panel jerarquía* hasta la ranura denominada **cursor** , tal como se muestra en la imagen siguiente.
-10. Arrastre el objeto llamado **LabelText** desde la *carpeta assets* del *panel Proyecto* hasta la ranura denominada **etiqueta recurso prefabricado** , tal como se muestra en la imagen siguiente. 
+9.  Arrastre el objeto denominado **cursor** desde el *Panel jerarquía* hasta la ranura denominada **cursor**, tal como se muestra en la imagen siguiente.
+10. Arrastre el objeto llamado **LabelText** desde la *carpeta assets* del *panel Proyecto* hasta la ranura denominada **etiqueta recurso prefabricado**, tal como se muestra en la imagen siguiente. 
 
     ![Establezca los destinos de referencia en Unity.](images/AzureLabs-Lab2-25.png)
 
@@ -380,8 +380,8 @@ La clase siguiente que va a crear es la clase *ImageCapture* . Esta clase es res
 Para crear esta clase: 
 
 1.  Vaya a la carpeta **scripts** que creó anteriormente. 
-2.  Haga clic con el botón derecho dentro de la carpeta, **cree > script de C#** . Llame al script *ImageCapture* . 
-3.  Haga doble clic en el nuevo script *ImageCapture* para abrirlo con **Visual Studio** .
+2.  Haga clic con el botón derecho dentro de la carpeta, **cree > script de C#**. Llame al script *ImageCapture*. 
+3.  Haga doble clic en el nuevo script *ImageCapture* para abrirlo con **Visual Studio**.
 4.  Agregue los siguientes espacios de nombres al principio del archivo:
 
     ```csharp
@@ -533,7 +533,7 @@ Esta clase es responsable de:
 Para crear esta clase:
 
 1.  Haga doble clic en la carpeta **scripts** para abrirla. 
-2.  Haga clic con el botón derecho en la carpeta **scripts** y haga clic en **crear > script de C#** . Asigne al script el nombre *VisionManager* . 
+2.  Haga clic con el botón derecho en la carpeta **scripts** y haga clic en **crear > script de C#**. Asigne al script el nombre *VisionManager*. 
 3.  Haga doble clic en el nuevo script para abrirlo con Visual Studio.
 4.  Actualice los espacios de nombres para que sean los mismos que los que se indican a continuación, en la parte superior de la clase *VisionManager* :
 
@@ -678,8 +678,8 @@ Para crear esta clase:
         }  
     ```
 
-9.  Asegúrese de guardar los cambios en *Visual Studio* antes de volver a *Unity* .
-10. De nuevo en el editor de Unity, haga clic y arrastre las clases *VisionManager* y *ImageCapture* desde la carpeta **scripts** hasta el objeto **cámara principal** en el *Panel jerarquía* . 
+9.  Asegúrese de guardar los cambios en *Visual Studio* antes de volver a *Unity*.
+10. De nuevo en el editor de Unity, haga clic y arrastre las clases *VisionManager* y *ImageCapture* desde la carpeta **scripts** hasta el objeto **cámara principal** en el *Panel jerarquía*. 
 
 ## <a name="chapter-8--before-building"></a>Capítulo 8: antes de compilar
 
@@ -696,12 +696,12 @@ Antes de hacerlo, asegúrese de que:
 Ya se ha completado todo lo necesario para la sección Unity de este proyecto, por lo que es el momento de compilarla desde Unity.
 
 1.  Vaya a la *configuración de compilación*  -  **archivo > configuración de compilación...**
-2.  En la ventana *configuración de compilación* , haga clic en **compilar** .
+2.  En la ventana *configuración de compilación* , haga clic en **compilar**.
 
     ![Compilar la aplicación desde Unity](images/AzureLabs-Lab2-26.png)
 
-3.  Si aún no lo está, marque los **proyectos de C# de Unity** .
-4.  Haga clic en **Generar** . Unity iniciará una ventana del *Explorador de archivos* , donde tendrá que crear y seleccionar una carpeta en la que compilar la aplicación. Cree esa carpeta ahora y asígnele el nombre *App* . Después, con la carpeta de la *aplicación* seleccionada, presione **Seleccionar carpeta** . 
+3.  Si aún no lo está, marque los **proyectos de C# de Unity**.
+4.  Haga clic en **Generar**. Unity iniciará una ventana del *Explorador de archivos* , donde tendrá que crear y seleccionar una carpeta en la que compilar la aplicación. Cree esa carpeta ahora y asígnele el nombre *App*. Después, con la carpeta de la *aplicación* seleccionada, presione **Seleccionar carpeta**. 
 5.  Unity comenzará a compilar el proyecto en la carpeta de la *aplicación* . 
 6.  Una vez que Unity termine de compilar (puede tardar algún tiempo), se abrirá una ventana del *Explorador de archivos* en la ubicación de la compilación (Compruebe la barra de tareas, ya que es posible que no aparezca siempre por encima de las ventanas, pero le notificará la adición de una nueva ventana).
 
@@ -709,17 +709,17 @@ Ya se ha completado todo lo necesario para la sección Unity de este proyecto, p
 
 Para implementar en HoloLens:
 
-1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador** . Para ello, siga estos pasos:
+1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador**. Para hacerlo:
 
-    1. Mientras se contenga HoloLens, abra la **configuración** .
-    2. Vaya a **Network & Internet > Wi-Fi > opciones avanzadas** .
+    1. Mientras se contenga HoloLens, abra la **configuración**.
+    2. Vaya a **red & Internet > Wi-Fi > opciones avanzadas**
     3. Anote la dirección **IPv4** .
     4. A continuación, vuelva a **configuración** y, a continuación, **actualice & seguridad > para desarrolladores** 
     5. Establezca el modo de Desarrollador en.
 
-2.  Vaya a la nueva compilación de Unity (la carpeta de la *aplicación* ) y abra el archivo de solución con *Visual Studio* .
-3.  En la configuración de soluciones, seleccione **depurar** .
-4.  En la plataforma de la solución, seleccione **x86** , **equipo remoto** . 
+2.  Vaya a la nueva compilación de Unity (la carpeta de la *aplicación* ) y abra el archivo de solución con *Visual Studio*.
+3.  En la configuración de soluciones, seleccione **depurar**.
+4.  En la plataforma de la solución, seleccione **x86**, **equipo remoto**. 
 
     ![Implemente la solución desde Visual Studio.](images/AzureLabs-Lab2-27.png)
  
@@ -727,7 +727,7 @@ Para implementar en HoloLens:
 6.  La aplicación debe aparecer ahora en la lista de aplicaciones instaladas en HoloLens, lista para su lanzamiento.
 
 > [!NOTE]
-> Para implementar en auriculares inmersivo, establezca la **plataforma** de la solución en el *equipo local* y establezca la **configuración** en *depurar* , con *x86* como **plataforma** . A continuación, implemente en el equipo local, mediante el **menú compilar** , seleccionando *implementar solución* . 
+> Para implementar en auriculares inmersivo, establezca la **plataforma** de la solución en el *equipo local* y establezca la **configuración** en *depurar*, con *x86* como **plataforma**. A continuación, implemente en el equipo local, mediante el **menú compilar**, seleccionando *implementar solución*. 
 
 ## <a name="your-finished-computer-vision-api-application"></a>La aplicación Computer Vision API finalizada
 
@@ -739,7 +739,7 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha el Comput
 
 ### <a name="exercise-1"></a>Ejercicio 1
 
-Del mismo modo que ha usado el parámetro *Tags* (como se evidencia en el *punto de conexión* usado dentro del *VisionManager* ), extienda la aplicación para detectar otra información; Observe a qué otros parámetros tiene acceso [aquí](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa).
+Del mismo modo que ha usado el parámetro *Tags* (como se evidencia en el *punto de conexión* usado dentro del *VisionManager*), extienda la aplicación para detectar otra información; Observe a qué otros parámetros tiene acceso [aquí](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa).
 
 ### <a name="exercise-2"></a>Ejercicio 2
 

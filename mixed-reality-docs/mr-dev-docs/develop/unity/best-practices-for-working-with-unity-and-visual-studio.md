@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: implementación, Unity, Visual Studio, HoloLens, HoloLens 2, auriculares envolventes
-ms.openlocfilehash: 4d145568190ea43cf2ec43442a1c3d5ca4d92251
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: implementación, Unity, Visual Studio, HoloLens, HoloLens 2, auriculares envolvente, procedimientos recomendados, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, UWP, Visual Studio Tools, Windows SDK
+ms.openlocfilehash: 5e00b24c7a36ae83a281800e2c7d8b2fc377f178
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691277"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678854"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Procedimientos recomendados para trabajar con Unity y Visual Studio
 
@@ -55,7 +55,7 @@ Las soluciones de Visual Studio de UWP protegidas en el control de código fuent
 
 ## <a name="use-text-format-assets-for-easy-comparison-of-content-changes"></a>Usar recursos en formato de texto para facilitar la comparación de los cambios de contenido
 
-El almacenamiento de recursos en formato de texto permite revisar más fácilmente las diferencias de cambio de contenido en Visual Studio. Puede habilitarlo en "editar > configuración del proyecto > editor" cambiando el modo de **serialización de activos** para **forzar el texto** . Sin embargo, la combinación de cambios en el archivo de recursos de texto es propensa a errores y no se recomienda, por lo que considere habilitar desprotecciones binarias exclusivas en el sistema de control de código fuente.
+El almacenamiento de recursos en formato de texto permite revisar más fácilmente las diferencias de cambio de contenido en Visual Studio. Puede habilitarlo en "editar > configuración del proyecto > editor" cambiando el modo de **serialización de activos** para **forzar el texto**. Sin embargo, la combinación de cambios en el archivo de recursos de texto es propensa a errores y no se recomienda, por lo que considere habilitar desprotecciones binarias exclusivas en el sistema de control de código fuente.
 
 ## <a name="see-also"></a>Consulte también
 - [Visual Studio Tools para Unity](https://visualstudiogallery.msdn.microsoft.com/8d26236e-4a64-4d64-8486-7df95156aba9)

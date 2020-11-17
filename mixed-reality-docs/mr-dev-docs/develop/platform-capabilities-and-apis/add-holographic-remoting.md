@@ -5,18 +5,18 @@ author: mikeriches
 ms.author: mriches
 ms.date: 05/24/2019
 ms.topic: article
-keywords: Windows Mixed Reality, hologramas, comunicación remota holográfica, representación remota, representación en red, HoloLens, hologramas remotos
-ms.openlocfilehash: 0a6cdf34a797a7113c780dee0049125861dd7c32
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality, hologramas, Holographic Remoting, representación remota, representación en red, HoloLens, hologramas remotos, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: ec03a349959f9bde71a2c8a600d513fb21c533a8
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692511"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679634"
 ---
 # <a name="add-holographic-remoting-hololens-1st-gen"></a>Incorporación de la comunicación remota holográfica (HoloLens (1ª generación))
 
 >[!IMPORTANT]
->En este documento se describe la creación de una aplicación host para HoloLens 1. La aplicación host para **HoloLens (1ª generación)** debe usar el paquete NuGet versión **1. x. x** . Esto implica que las aplicaciones host escritas para HoloLens 1 no son compatibles con HoloLens 2 y viceversa.
+>En este documento se describe la creación de una aplicación host para HoloLens 1. La aplicación host para **HoloLens (1ª generación)** debe usar el paquete NuGet versión **1. x. x**. Esto implica que las aplicaciones host escritas para HoloLens 1 no son compatibles con HoloLens 2 y viceversa.
 
 ## <a name="hololens-2"></a>HoloLens 2
 
@@ -43,8 +43,8 @@ Siga estos pasos para obtener el paquete NuGet para la comunicación remota de H
 1. Vaya al proyecto en Visual Studio.
 2. Haga clic con el botón derecho en el nodo del proyecto y seleccione **administrar paquetes NuGet...**
 3. En el panel que aparece, haga clic en **examinar** y busque "Holographic Remoting".
-4. Seleccione **Microsoft. Holographic. Remoting** y haga clic en **instalar** .
-5. Si aparece el cuadro de diálogo **vista previa** , haga clic en **Aceptar** .
+4. Seleccione **Microsoft. Holographic. Remoting** y haga clic en **instalar**.
+5. Si aparece el cuadro de diálogo **vista previa** , haga clic en **Aceptar**.
 6. El siguiente cuadro de diálogo que aparece es el contrato de licencia. Haga clic en **acepto para aceptar el contrato de licencia** .
 
 ### <a name="create-the-holographicstreamerhelpers"></a>Crear HolographicStreamerHelpers

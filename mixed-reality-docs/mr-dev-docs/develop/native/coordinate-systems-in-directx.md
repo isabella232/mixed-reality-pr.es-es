@@ -5,18 +5,18 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
-keywords: Realidad mixta, localizador espacial, marco de referencia espacial, sistema de coordenadas espaciales, fase espacial, código de ejemplo, estabilización de imágenes, delimitador espacial, almacén de delimitador espacial, pérdida de seguimiento, tutorial
-ms.openlocfilehash: 5ae60d5696d40a07ad350d0de097eb2f82f1dde1
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Realidad mixta, localizador espacial, marco de referencia espacial, sistema de coordenadas espaciales, fase espacial, código de ejemplo, estabilización de imágenes, delimitador espacial, almacén de delimitador espacial, pérdida de seguimiento, tutorial, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: 4ab97df0d0ce87f86b3b561edb544d503e479e96
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691519"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679664"
 ---
 # <a name="coordinate-systems-in-directx"></a>Sistemas de coordenadas de DirectX
 
 > [!NOTE]
-> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](openxr-getting-started.md)** .
+> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](openxr-getting-started.md)**.
 
 [Los sistemas de coordenadas](../../design/coordinate-systems.md) constituyen la base para la comprensión espacial ofrecida por las API de Windows Mixed Reality.
 
@@ -593,14 +593,14 @@ En estas secciones se habla sobre lo que hemos cambiado en la plantilla de aplic
 
 En primer lugar, hemos cambiado la plantilla para almacenar un SpatialLocatorAttachedFrameOfReference en lugar de un SpatialStationaryFrameOfReference:
 
-Desde **HolographicTagAlongSampleMain. h** :
+Desde **HolographicTagAlongSampleMain. h**:
 
 ```
    // A reference frame attached to the holographic camera.
    Windows::Perception::Spatial::SpatialLocatorAttachedFrameOfReference^   m_referenceFrame;
 ```
 
-Desde **HolographicTagAlongSampleMain. cpp** :
+Desde **HolographicTagAlongSampleMain. cpp**:
 
 ```
    // In this example, we create a reference frame attached to the device.
@@ -629,7 +629,7 @@ Este SpatialPointerPose tiene la información necesaria para colocar el hologram
 
 Por motivos de comodidad del usuario, usamos la interpolación lineal ("lerp") para suavizar el cambio en la posición de modo que se produzca durante un período de tiempo. Esto es más cómodo para el usuario que bloquear el holograma a su mirada. Lerping la posición de la etiqueta en el holograma también nos permite estabilizar el holograma mediante la amortiguación del movimiento. Si no se realiza esta amortiguación, el usuario verá la vibración del holograma debido a lo que se suele considerar como movimientos imperceptibles del encabezado del usuario.
 
-Desde **StationaryQuadRenderer::P ositionhologram** :
+Desde **StationaryQuadRenderer::P ositionhologram**:
 
 ```
    const float& dtime = static_cast<float>(timer.GetElapsedSeconds());
@@ -656,7 +656,7 @@ Desde **StationaryQuadRenderer::P ositionhologram** :
 >[!NOTE]
 >En el caso de un panel de depuración, puede optar por volver a colocar el holograma en la parte lateral un poco para que no obstruya la vista. Este es un ejemplo de cómo podría hacerlo.
 
-Para **StationaryQuadRenderer::P ositionhologram** :
+Para **StationaryQuadRenderer::P ositionhologram**:
 
 ```
        // If you're making a debug view, you might not want the tag-along to be directly in the
@@ -673,7 +673,7 @@ Para **StationaryQuadRenderer::P ositionhologram** :
 
 No basta con colocar simplemente el holograma, que en este caso es un cuádruple; También debemos girar el objeto para que se enfrente al usuario. Tenga en cuenta que esta rotación se produce en el espacio universal, ya que este tipo de cartelera permite que el holograma siga siendo parte del entorno del usuario. La cartelera de espacio de vista no es tan cómoda porque el holograma se bloquea en la orientación de la pantalla. en ese caso, también tendría que interpolar entre las matrices de la vista izquierda y derecha para adquirir una transformación de la cartelera de espacio de vista que no interrumpa la representación en estéreo. Aquí, giramos en los ejes X y Z para que se enfrente al usuario.
 
-Desde **StationaryQuadRenderer:: Update** :
+Desde **StationaryQuadRenderer:: Update**:
 
 ```
    // Seconds elapsed since previous frame.
@@ -720,7 +720,7 @@ Desde **StationaryQuadRenderer:: Update** :
 
 En este ejemplo, también optamos por representar el holograma en el sistema de coordenadas de SpatialLocatorAttachedReferenceFrame, que es donde colocamos el holograma. (Si se hubiera decidido representar con otro sistema de coordenadas, es necesario adquirir una transformación del sistema de coordenadas del fotograma de referencia conectado al dispositivo a ese sistema de coordenadas).
 
-Desde **HolographicTagAlongSampleMain:: Render** :
+Desde **HolographicTagAlongSampleMain:: Render**:
 
 ```
    // The view and projection matrices for each holographic camera will change

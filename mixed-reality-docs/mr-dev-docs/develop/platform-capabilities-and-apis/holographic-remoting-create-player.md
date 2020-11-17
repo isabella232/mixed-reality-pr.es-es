@@ -5,24 +5,24 @@ author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
-keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: 51e9125ab5baee63ca193c6a75701b6dda9a16cb
-ms.sourcegitcommit: 24d96bf3bb9a3143445e018195edae99d91684c6
+keywords: HoloLens, comunicación remota, Holographic Remoting, NuGet, manifiesto de la aplicación, contexto del reproductor, aplicación remota, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: f55973e74abc60f62599375aebf278224865a5c1
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92683201"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677924"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>Escritura de una aplicación de reproductor de control remoto de holografías personalizada
 
 >[!IMPORTANT]
->En este documento se describe la creación de una aplicación de reproductor personalizada para HoloLens 2. Los reproductores personalizados escritos para HoloLens 2 no son compatibles con las aplicaciones remotas escritas para HoloLens 1. Esto implica que ambas aplicaciones deben usar el paquete NuGet versión **2. x. x** .
+>En este documento se describe la creación de una aplicación de reproductor personalizada para HoloLens 2. Los reproductores personalizados escritos para HoloLens 2 no son compatibles con las aplicaciones remotas escritas para HoloLens 1. Esto implica que ambas aplicaciones deben usar el paquete NuGet versión **2. x. x**.
 
 Mediante la creación de una aplicación de reproductor de acceso remoto holográfica personalizada, puede crear una aplicación personalizada capaz de mostrar [vistas envolventes](../../design/app-views.md) desde en una máquina remota de HoloLens 2. En este artículo se describe cómo se puede lograr esto. Todo el código de esta página y los proyectos de trabajo se pueden encontrar en el repositorio de github de ejemplos de la [comunicación remota de Holographic](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
 
 Un reproductor remoto holográfica permite a la aplicación mostrar el contenido holográfica [representado](rendering.md) en un equipo de escritorio o en un dispositivo UWP, como la Xbox One, lo que permite el acceso a más recursos del sistema. Una aplicación de reproductor de comunicación remota holográfica transmite datos de entrada a una aplicación remota de Holographic Remoting y recibe una vista envolvente como flujo de audio y vídeo. La conexión se realiza mediante Wi-Fi estándar. Para crear una aplicación de reproductor, usará un paquete NuGet para agregar la comunicación remota holográfica a la aplicación para UWP y escribir código para controlar la conexión y mostrar una vista envolvente. 
 
-## <a name="prerequisites"></a>Requisitos previos
+## <a name="prerequisites"></a>Prerrequisitos
 
 Un buen punto de partida es una aplicación UWP basada en DirectX que ya tiene como destino la API de Windows Mixed Reality. Para obtener más información, vea [Introducción al desarrollo de DirectX](../native/directx-development-overview.md). Si no tiene una aplicación existente y desea comenzar desde el principio, la [plantilla de proyecto de C++ Holographic](../native/creating-a-holographic-directx-project.md) es un buen punto de partida.
 
@@ -35,8 +35,8 @@ Los pasos siguientes son necesarios para agregar el paquete NuGet a un proyecto 
 1. Abra el proyecto en Visual Studio.
 2. Haga clic con el botón derecho en el nodo del proyecto y seleccione **administrar paquetes NuGet...**
 3. En el panel que aparece, haga clic en **examinar** y busque "Holographic Remoting".
-4. Seleccione **Microsoft. Holographic. Remoting** , asegúrese de elegir la versión **2. x. x** más reciente y haga clic en **instalar** .
-5. Si aparece el cuadro de diálogo **vista previa** , haga clic en **Aceptar** .
+4. Seleccione **Microsoft. Holographic. Remoting**, asegúrese de elegir la versión **2. x. x** más reciente y haga clic en **instalar**.
+5. Si aparece el cuadro de diálogo **vista previa** , haga clic en **Aceptar**.
 6. El siguiente cuadro de diálogo que aparece es el contrato de licencia. Haga clic en **acepto para aceptar el contrato de licencia** .
 
 >[!IMPORTANT]
@@ -108,7 +108,7 @@ La conexión se puede establecer de una de las siguientes maneras:
 1) La aplicación de reproducción que se ejecuta en HoloLens 2 se conecta a la aplicación remota.
 2) La aplicación remota se conecta a la aplicación de reproductor que se ejecuta en HoloLens 2.
 
-Para conectarse desde la aplicación de reproducción a la aplicación remota, llame al ```Connect``` método en el contexto del reproductor y especifique el nombre de host y el puerto. El puerto predeterminado es **8265** .
+Para conectarse desde la aplicación de reproducción a la aplicación remota, llame al ```Connect``` método en el contexto del reproductor y especifique el nombre de host y el puerto. El puerto predeterminado es **8265**.
 
 ```cpp
 try

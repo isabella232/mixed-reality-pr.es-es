@@ -7,12 +7,12 @@ ms.date: 07/29/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Realidad mixta, detectar, distribuir, índice, página de inicio, diseño, desarrollo, tutoriales, aplicaciones de ejemplo, aspectos básicos, casos prácticos, recursos, procedimientos de HoloLens, proyectos de código abierto
-ms.openlocfilehash: 34c78c277e0b184c0421c2bdd56ef13411a5bf29
-ms.sourcegitcommit: bd359c269add7ac76f0c2c26ca7caedba14749b1
+ms.openlocfilehash: 7c8fc83fd2b5542909fd2ea6ab4dca288175c56c
+ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94417840"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631523"
 ---
 # <a name="get-started-with-mixed-reality"></a>Introducción a Mixed Reality
 
@@ -143,11 +143,6 @@ Si tiene curiosidad por ver cómo funcionan los distintos hardware y servicios d
 
 <br>
 
-
 >[!IMPORTANT]
 >Todos los materiales de desarrollo de realidad mixta que se proporcionan en este sitio son únicamente para consulta. La aplicación, el uso de esta y su efecto en los usuarios finales es responsabilidad exclusivamente suya como desarrollador de la aplicación. Esto incluye la garantía de que la aplicación no causará molestias, lesiones ni ningún otro daño a un usuario final y la inclusión de las declinaciones de responsabilidad y advertencias adecuadas. Deberá en todo momento dar los pasos apropiados en el desarrollo y publicación de la aplicación para asegurarse de que esta es segura, y cumplir con todas las obligaciones que se indican en el [acuerdo para desarrolladores de aplicaciones con Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
 
-## <a name="see-also"></a>Vea también
-* [Detalles del hardware de los cascos envolventes](immersive-headset-hardware-details.md)
-* [Recursos de la comunidad](community.md)
-* [Guía para entusiastas de la realidad virtual](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/)

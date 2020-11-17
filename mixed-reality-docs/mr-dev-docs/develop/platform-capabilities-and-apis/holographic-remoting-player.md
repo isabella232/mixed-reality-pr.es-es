@@ -1,24 +1,24 @@
 ---
 title: Holographic Remoting Player
-description: Holographic Remoting Player es una aplicación complementaria que se conecta a aplicaciones y juegos de equipos que admiten la comunicación remota holográfica. Holographic Remoting transmite contenido holográfica desde un equipo a Microsoft HoloLens en tiempo real mediante una conexión Wi-Fi.
+description: Holographic Remoting Player es una aplicación complementaria que se conecta a aplicaciones y juegos de equipos que admiten la comunicación remota holográfica. Holographic Remoting transmite contenido holográfica desde un equipo a su Microsoft HoloLens en tiempo real, mediante una conexión de Wi-Fi.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 03/11/2020
 ms.topic: article
-keywords: HoloLens, comunicación remota, comunicación remota de Holographic
-ms.openlocfilehash: f678931098f6518885a83ea7c06d4e9a3074465c
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: HoloLens, comunicación remota, comunicación remota holográfica, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, diagnósticos, rendimiento
+ms.openlocfilehash: c65b10079ffbc40602ebbd25b1e493c19b2a6078
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691390"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677934"
 ---
 # <a name="holographic-remoting-player"></a>Holographic Remoting Player
 
 >[!IMPORTANT]
->Holographic Remoting para HoloLens 2 es un cambio de versión principal. [Las aplicaciones remotas para **hololens (1ª generación)**](add-holographic-remoting.md) deben usar el paquete NuGet versión **1. x.** x y [las aplicaciones remotas para **hololens 2**](holographic-remoting-create-host.md) deben usar **2. x** . x. Esto implica que las aplicaciones remotas escritas para HoloLens 2 no son compatibles con HoloLens (1º gen) y viceversa.
+>Holographic Remoting para HoloLens 2 es un cambio de versión principal. [Las aplicaciones remotas para **hololens (1ª generación)**](add-holographic-remoting.md) deben usar el paquete NuGet versión **1. x.** x y [las aplicaciones remotas para **hololens 2**](holographic-remoting-create-host.md) deben usar **2. x**. x. Esto implica que las aplicaciones remotas escritas para HoloLens 2 no son compatibles con HoloLens (1º gen) y viceversa.
 
-[Holographic Remoting Player](https://www.microsoft.com/p/holographic-remoting-player/9nblggh4sv40) es una aplicación complementaria que se conecta a aplicaciones y juegos de equipos que admiten la comunicación remota holográfica. Holographic Remoting transmite contenido holográfica desde un equipo a Microsoft HoloLens en tiempo real mediante una conexión Wi-Fi.
+[Holographic Remoting Player](https://www.microsoft.com/p/holographic-remoting-player/9nblggh4sv40) es una aplicación complementaria que se conecta a aplicaciones y juegos de equipos que admiten la comunicación remota holográfica. Holographic Remoting transmite contenido holográfica desde un equipo a su Microsoft HoloLens en tiempo real, mediante una conexión de Wi-Fi.
 
 El reproductor de comunicación remota holográfica solo se puede usar con aplicaciones de PC diseñadas específicamente para admitir la comunicación remota holográfica.
 
@@ -35,14 +35,14 @@ Siga las instrucciones de la aplicación para conectarse al reproductor de acces
 
 Siempre que vea la pantalla principal, sabrá que no tiene una aplicación conectada.
 
-Tenga en cuenta que la conexión de Holographic Remoting **no está cifrada** . Siempre debe usar la comunicación remota holográfica a través de una conexión Wi-Fi segura en la que confíe.
+Tenga en cuenta que la conexión de Holographic Remoting **no está cifrada**. Siempre debe usar la comunicación remota holográfica a través de una conexión segura Wi-Fi en la que confíe.
 
 ## <a name="quality-and-performance"></a>Calidad y rendimiento
 
 La calidad y el rendimiento de su experiencia variarán en función de tres factores:
 * **La experiencia holográfica que está ejecutando: las** aplicaciones que presentan contenido de alta resolución o muy detallado pueden requerir un equipo más rápido o una conexión inalámbrica más rápida.
 * **El hardware del equipo** : su PC debe ser capaz de ejecutar y codificar la experiencia holográfica en 60 fotogramas por segundo. En el caso de una tarjeta gráfica, generalmente se recomienda una GeForce GTX 970 o AMD Radeon R9 290 o superior. Una vez más, su experiencia en particular puede requerir una tarjeta superior o inferior.
-* **La conexión Wi-Fi** : su experiencia con Holographic se transmite a través de Wi-Fi. Use una red rápida con poca congestión para maximizar la calidad. El uso de un equipo conectado a través de un cable Ethernet, en lugar de Wi-Fi, también puede mejorar la calidad.
+* **La conexión Wi-Fi** : su experiencia holográfica se transmite a través de Wi-Fi. Use una red rápida con poca congestión para maximizar la calidad. El uso de un equipo conectado a través de un cable Ethernet, en lugar de Wi-Fi, también puede mejorar la calidad.
 
 ## <a name="diagnostics"></a>Diagnóstico
 
@@ -55,7 +55,7 @@ En **HoloLens 2** , la aplicación le mostrará:
 
 ![Diagnóstico del reproductor remoto Holographic](images/holographicremotingplayer-diag.png)
 
-* **Render** : el número de marcos que el reproductor remoto representa en el último segundo. Tenga en cuenta que esto es independiente del número de fotogramas que llegaron a través de la red (consulte **fotogramas de vídeo** ). Además, se muestra el tiempo de Delta de representación promedio/máximo en milisegundos en el último segundo entre los fotogramas representados.
+* **Render** : el número de marcos que el reproductor remoto representa en el último segundo. Tenga en cuenta que esto es independiente del número de fotogramas que llegaron a través de la red (consulte **fotogramas de vídeo**). Además, se muestra el tiempo de Delta de representación promedio/máximo en milisegundos en el último segundo entre los fotogramas representados.
 
 * **Fotogramas de vídeo** : el primer número que se muestra es los fotogramas de vídeo omitidos, el segundo es fotogramas de vídeo reutilizados y el tercero recibe fotogramas de vídeo. Todos los números representan el recuento en el último segundo.
     * ```Received frames``` es el número de fotogramas de vídeo que llegaron en el último segundo. En condiciones normales, debe ser 60 pero, si no es así, es un indicador de que los fotogramas se han quitado debido a problemas de red o a que el lado remoto o remoto no produce fotogramas con la tasa esperada.
@@ -68,8 +68,6 @@ En **HoloLens 2** , la aplicación le mostrará:
 * **Fotogramas de vídeo Delta** : diferencia mínima/máxima entre fotogramas de vídeo recibidos en el último segundo. Este número normalmente se correlaciona con los marcos omitidos o reutilizados en caso de problemas causados por la vibración de la red.
 * **Latencia** : el plazo medio en milisegundos durante el último segundo. El intervalo de tiempo en este contexto hace referencia a la hora de enviar datos de representadores/sensores desde HoloLens al lado remoto/remoto hasta que se muestre el fotograma de vídeo para los datos de representación y telemetría en la pantalla de HoloLens.
 * **Fotogramas de vídeo descartados** : el número de fotogramas de vídeo descartados en el último segundo y dado que se ha establecido una conexión. La causa principal de los fotogramas de vídeo descartados es cuando un fotograma de vídeo no llega por orden y, por ese motivo, se debe descartar porque ya hay una versión más reciente. Esto es similar a los *fotogramas descartados* , pero la causa está en un nivel inferior de la pila de comunicación remota. Los fotogramas de vídeo descartados solo se esperan en condiciones de red bastante incorrectas.
-
-
 
 En la pantalla principal, puede decir **"deshabilitar diagnósticos"** para desactivar los diagnósticos.
 

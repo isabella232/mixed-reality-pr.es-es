@@ -5,13 +5,13 @@ author: l-garrett
 ms.author: grbury
 ms.date: 06/30/2019
 ms.topic: article
-keywords: Explorador de Galaxy, caso práctico, proyecto, ejemplo
-ms.openlocfilehash: 1e04b27ff0382d87f8e6a15ae2b7b2284fa020e6
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Explorador de Galaxy, caso práctico, proyecto, ejemplo, MRTK, kit de herramientas de realidad mixta, Unity, aplicaciones de ejemplo, aplicaciones de ejemplo, código abierto, Microsoft Store, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: 00bf30224a820bd85394c4b97136f81b52fe4128
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692911"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677634"
 ---
 # <a name="the-making-of-galaxy-explorer-for-hololens-2"></a>La creación del explorador de Galaxy para HoloLens 2
 
@@ -96,7 +96,7 @@ Pensamos en los comentarios visuales y de audio que se proporcionaron los usuari
 ![Prestaciones visuales en planetas](images/ge-update-planet-affordances.png)
 
 ### <a name="adding-affordances-for-force-grab"></a>Agregar prestaciones para forzar la toma
- 
+ 
 Una vez que teníamos el mecanismo básico de captación de fuerza con prestaciones visuales y de audio, analizamos cómo hacer que la selección de planetas sea más fácil de usar. Había dos aspectos principales que abordar: dado que el sistema solar es una interfaz en movimiento 3D, hay más complejidad para que los usuarios aprendan a dirigirse a los objetos de forma coherente. Esto se ha compuesto por el hecho de que el rayo de mano es muy rápido al seleccionar un objeto, lo que hace que los planetas se muevan hacia el usuario increíblemente rápidamente.
 
 Lo hemos aproximado con una solución de tres clavijas. La primera era bastante intuitiva: ralentiza el proceso de selección para que los planetas se acerquen al usuario a un ritmo más natural. Una vez que se ha ajustado la velocidad, tuvimos que volver a visitar las prestaciones de audio y visuales, agregando comentarios de audio adicionales a medida que se realiza un seguimiento del planeta hacia el usuario.
@@ -151,7 +151,7 @@ Ahora que se ha establecido la composición visual de Júpiter, es necesario ase
 Los flujos que giran individualmente proporcionan una buena impresión visual, pero que faltan en detalle cuando se observan en el intervalo de cierre.
 
 La parte más atractiva es la excelente zona roja, por lo que creamos un conjunto de mallas y texturas específicamente para exhibirlas.
- 
+ 
 Usamos un mecanismo similar al de las bandas de Júpiter: un conjunto de piezas giratorias se creó entre sí, a la vez que se agrupaba bajo su ' capa maestra ' para asegurarse de que permanecen en la posición independientemente de la rapidez con que se mueva el resto.
 
 Una vez configuradas y colocadas las mallas, se aplicaron diferentes capas del Vortex de Storm y cada disco se animaría individualmente, las piezas centrales se mueven con más rapidez, con lo que el resto se ralentiza gradualmente a medida que se mueve hacia afuera.
@@ -202,4 +202,4 @@ No destacado: Tim Gerken (responsable técnico) e Oscar Salandin (diseñador vis
 
 ### <a name="mixed-reality-studios"></a>Estudios de realidad mixta
 
-Los equipos de Microsoft Mixed Reality Studio (ubicados en América, Europa y Asia Pacífico) son expertos en el diseño de la experiencia del usuario, la informática Holographic, las tecnologías de AR/VR y el desarrollo en 3D. incluye la creación de activos en 3D, DirectX, Unity y no real. Ayudamos a imaginar futuros, diseñar, compilar y ofrecer soluciones, a la vez que permite a los clientes crear un impacto medible en su organización. Los estudios trabajan en estrecha colaboración con más de 22.000 profesionales de servicios de Microsoft para la integración, adopción, operaciones y soporte técnico de aplicaciones empresariales.
+Los equipos de Microsoft Mixed Reality Studio (ubicados en América, Europa y Asia-Pacific) son expertos en el diseño de la experiencia del usuario, la informática Holographic, las tecnologías de AR/VR y el desarrollo en 3D. incluye la creación de activos en 3D, DirectX, Unity y no real. Ayudamos a imaginar futuros, diseñar, compilar y ofrecer soluciones, a la vez que permite a los clientes crear un impacto medible en su organización. Los estudios trabajan en estrecha colaboración con más de 22.000 profesionales de servicios de Microsoft para la integración, adopción, operaciones y soporte técnico de aplicaciones empresariales.

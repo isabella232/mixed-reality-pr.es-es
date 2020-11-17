@@ -5,13 +5,13 @@ author: kegodin
 ms.author: kegodin
 ms.date: 12/01/2019
 ms.topic: article
-keywords: realidad mixta, Unity, tutorial, hololens2, audio espacial
-ms.openlocfilehash: cd684944bdd618dcf435ef91566d6d4f18aa87a3
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: mixed reality, Unity, tutorial, hololens2, audio espacial, MRTK, kit de herramientas de realidad mixta, UWP, Windows 10, HRTF, función de transferencia relacionada con el encabezado, reverberación, Microsoft Spatializer, vídeo, importación, reproductor de vídeo
+ms.openlocfilehash: 43297fc4148600cc820111e6c206313560224ac9
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91694454"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679724"
 ---
 # <a name="spatializing-audio-from-a-video"></a>Espacialización del audio de un vídeo
 En este tercer capítulo del módulo de audio espacial de los tutoriales de Unity de HoloLens 2, hará lo siguiente:
@@ -40,7 +40,7 @@ A continuación, agregue un objeto de **reproductor de vídeo** a la **jerarquí
 ![Reproductor de vídeo en jerarquía](images/spatial-audio/video-player-in-hierarchy.png)
 
 ## <a name="play-video-onto-a-quadrangle"></a>Reproducir vídeo en un Quadrangle
-El objeto **reproductor de vídeo** necesita un objeto de juego con textura en el que representar el vídeo. En primer lugar, agregue un **cuádruple** a la **jerarquía** ; para ello, haga clic con el botón derecho en el panel de **jerarquías** y elija **objeto 3D > cuádruple** :
+El objeto **reproductor de vídeo** necesita un objeto de juego con textura en el que representar el vídeo. En primer lugar, agregue un **cuádruple** a la **jerarquía** ; para ello, haga clic con el botón derecho en el panel de **jerarquías** y elija **objeto 3D > cuádruple**:
 
 ![Agregar cuatro a la jerarquía](images/spatial-audio/add-quad-to-hierarchy.png)
 
@@ -48,17 +48,17 @@ Para asegurarse de que el **cuádruple** aparece delante del usuario cuando se i
 
 ![Transformación cuádruple](images/spatial-audio/quad-transform.png)
 
-Para crear una textura entre el **cuádruple** y el vídeo, cree una nueva **textura de representación** . En el panel **proyecto** , haga clic con el botón derecho y seleccione **crear-> Mostrar textura** :
+Para crear una textura entre el **cuádruple** y el vídeo, cree una nueva **textura de representación**. En el panel **proyecto** , haga clic con el botón derecho y seleccione **crear-> Mostrar textura**:
 
 ![Crear textura de representación](images/spatial-audio/create-render-texture.png)
 
-En el panel **Inspector** de la **textura de representación** , establezca la propiedad **size** para que coincida con la resolución nativa del vídeo de 1280x720. A continuación, para garantizar un buen rendimiento de la representación en HoloLens 2, establezca la propiedad de **búfer de profundidad** en una **profundidad de 16 bits como mínimo** . Después de esta configuración, el panel del **Inspector** para la **textura de representación** tendrá el siguiente aspecto:
+En el panel **Inspector** de la **textura de representación**, establezca la propiedad **size** para que coincida con la resolución nativa del vídeo de 1280x720. A continuación, para garantizar un buen rendimiento de la representación en HoloLens 2, establezca la propiedad de **búfer de profundidad** en una **profundidad de 16 bits como mínimo**. Después de esta configuración, el panel del **Inspector** para la **textura de representación** tendrá el siguiente aspecto:
 
 ![Representar propiedades de textura](images/spatial-audio/render-texture-properties.png)
 
-A continuación, use la nueva **textura de representación** como textura para la **cuádruple** :
+A continuación, use la nueva **textura de representación** como textura para la **cuádruple**:
 1. Arrastre la **textura de representación** desde el panel **proyecto** hasta el **cuádruple** de la **jerarquía** .
-2. Para garantizar un buen rendimiento en HoloLens 2, en el panel **Inspector** de la serie **, seleccione** el **sombreador estándar del kit de herramientas de realidad mixta** .
+2. Para garantizar un buen rendimiento en HoloLens 2, en el panel **Inspector** de la serie **, seleccione** el **sombreador estándar del kit de herramientas de realidad mixta**.
 
 Con esta configuración, el componente de **textura** en el panel del **Inspector** de la **cuádruple** tendrá el siguiente aspecto:
 
@@ -74,11 +74,11 @@ El panel del **Inspector** del **reproductor de vídeo** tendrá ahora el siguie
 ![Propiedades del reproductor de vídeo](images/spatial-audio/video-player-properties.png)
 
 ## <a name="spatialize-the-audio-from-the-video"></a>Spatial el audio del vídeo
-En el panel **Inspector** del **cuádruple** , cree un **origen de audio** al que enrutará el audio desde el vídeo:
+En el panel **Inspector** del **cuádruple**, cree un **origen de audio** al que enrutará el audio desde el vídeo:
 * Haga clic en **Agregar componente** en la parte inferior del panel.
 * Agregar un **origen de audio**
 
-Después, en el **origen de audio** :
+Después, en el **origen de audio**:
 * Establecer el **resultado** en el mezclador
 * Active la casilla **Spatial**
 * Mueve el control deslizante de **mezcla espacial** a 1 (3D)
@@ -87,7 +87,7 @@ Después de estos cambios, el componente **origen de audio** del panel **Inspect
 
 ![Inspector de fuente de audio cuádruple](images/spatial-audio/quad-audio-source-inspector.png)
 
-Para configurar el **reproductor de vídeo** para que enrute su audio a la **fuente de audio** en el **cuádruple** , abra el panel del **Inspector** para el **reproductor de vídeo** y:
+Para configurar el **reproductor de vídeo** para que enrute su audio a la **fuente de audio** en el **cuádruple**, abra el panel del **Inspector** para el **reproductor de vídeo** y:
 * Establecer el **modo de salida de audio** en "origen de audio"
 * Establezca la propiedad **origen de audio** en su cuádruple
 

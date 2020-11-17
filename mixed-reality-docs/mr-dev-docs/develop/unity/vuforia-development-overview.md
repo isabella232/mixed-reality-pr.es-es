@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 12/20/2019
 ms.topic: article
-keywords: Vuforia, marcadores, coordenadas, marco de referencia, seguimiento
-ms.openlocfilehash: 270588bb317b0c083500dfaaca80c075a35410b9
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Vuforia, marcadores, coordenadas, fotogramas de referencia, seguimiento, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, Unity, HoloLens, seguimiento de dispositivos, modo de rendimiento, portal para desarrolladores de Vuforia
+ms.openlocfilehash: 930f23d5bbc4115476c337dcb99f40096039d78f
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692743"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679674"
 ---
 # <a name="using-vuforia-engine-with-unity"></a>Uso del motor Vuforia con Unity
 
@@ -46,7 +46,7 @@ El desarrollo de una aplicación de motor de Vuforia para HoloLens es fundamenta
 1.  Descargar el [ejemplo de Vuforia Engine para HoloLens](https://assetstore.unity.com/packages/templates/packs/vuforia-hololens-sample-101553) del almacén de recursos de Unity
 2.  Aplicar las [Opciones de motor de Unity recomendadas para potencia y rendimiento](performance-recommendations-for-unity.md)
 3.  Agregue escenas de ejemplo a **escenas** en la **compilación.**
-4.  En **configuración de compilación** , cambie crear plataforma a **UWP** haciendo clic en el botón **Agregar escenas abiertas** .
+4.  En **configuración de compilación**, cambie crear plataforma a **UWP** haciendo clic en el botón **Agregar escenas abiertas** .
 ![image](https://user-images.githubusercontent.com/45470042/89573103-173daa80-d7f8-11ea-9284-931a7b6c913d.png)
 5.  Haga clic en el botón **configuración del reproductor** .  
    * Seleccione el icono de **UWP** y expanda la sección **configuración de XR** .
@@ -58,7 +58,7 @@ El desarrollo de una aplicación de motor de Vuforia para HoloLens es fundamenta
 6.  Expanda la sección **configuración de publicación** .
    * En **capacidades** , asegúrese de que esté seleccionado **cliente de Internet, cámara web, micrófono** y **SpatialPerception** .
    * **Nota: SpatialPerception** solo debe seleccionarse si tiene previsto usar la API de la superficie de observador.
-   * En **familias de dispositivos compatibles** , asegúrese de que **Holographic** esté seleccionado. 
+   * En **familias de dispositivos compatibles**, asegúrese de que **Holographic** esté seleccionado. 
 7.  Expanda la sección **resolución y presentación** .
    * Deshabilite la **ejecución en segundo plano** para que el motor de Vuforia se ponga en pausa cuando la aplicación esté en segundo plano y pueda acceder a la cámara de nuevo cuando se reanude la aplicación. 
    * En la lista desplegable **orientación predeterminada** , asegúrese de que está seleccionado **horizontalmente** a la izquierda.

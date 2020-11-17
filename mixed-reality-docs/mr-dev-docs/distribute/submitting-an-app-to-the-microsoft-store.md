@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 11/13/2020
 ms.topic: article
 keywords: Microsoft Store, HoloLens, auriculares envolventes, aplicación, UWP, envío, envío, filtros, metadatos, requisitos del sistema, palabras clave, Wack, certificación, paquete, appx, comercialización
-ms.openlocfilehash: 1ea3a125bed26cabbf617585c0e87399c772e24a
-ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
+ms.openlocfilehash: f5dae379deee54056595c291363b5b1e3e83f25e
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631483"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678794"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>Envío de aplicaciones a Microsoft Store
 
@@ -67,7 +67,7 @@ Cuando cree un nuevo proyecto universal de Windows en Visual Studio, se le pedir
 
 ### <a name="specifying-target-device-families"></a>Especificación de las familias de dispositivos de destino
 
-Las aplicaciones de realidad mixta de Windows (tanto para [HoloLens](../hololens-hardware-details.md) como para [auriculares envolvente](../discover/immersive-headset-hardware-details.md)) forman parte del plataforma universal de Windows, por lo que cualquier paquete de la aplicación con un archivo CAB de la [familia de dispositivos de destino](https://msdn.microsoft.com/library/windows/apps/dn986903.aspx) universal de **Windows** se ejecuta en equipos HoloLens o Windows 10 con auriculares más inmersivo. Si no especifica una familia de dispositivos de destino en el manifiesto de la aplicación, puede abrir la aplicación accidentalmente en dispositivos Windows 10 imprevistos. Siga los pasos que se indican a continuación para especificar la familia de dispositivos Windows 10 deseada y, después, [Compruebe que se han establecido las familias de dispositivos correctas al cargar el paquete de la aplicación en el centro de partners para el envío de Microsoft Store.](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
+Las aplicaciones de realidad mixta de Windows (tanto para [HoloLens](../hololens-hardware-details.md) como para [auriculares envolventes](../discover/immersive-headset-hardware-details.md)) forman parte de la plataforma universal de Windows, por lo que cualquier paquete de aplicación con una [familia de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn986903.aspx) **Windows. universal** de destino puede ejecutarse en equipos HoloLens o Windows 10 con auriculares envolventes. Si no especifica una familia de dispositivos de destino en el manifiesto de la aplicación, puede abrir la aplicación accidentalmente en dispositivos Windows 10 imprevistos. Siga los pasos que se indican a continuación para especificar la familia de dispositivos Windows 10 deseada y, después, [Compruebe que se han establecido las familias de dispositivos correctas al cargar el paquete de la aplicación en el centro de partners para el envío de Microsoft Store.](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
 
 * Para establecer este campo en Visual Studio, haga clic con el botón derecho en **Package. appxmanifest** y seleccione **Ver código** y, a continuación, busque el campo **nombre de TargetDeviceFamily** . De forma predeterminada, debería ser similar a la siguiente entrada:
 
@@ -77,7 +77,7 @@ Las aplicaciones de realidad mixta de Windows (tanto para [HoloLens](../hololens
 </Dependencies>
 ```
 
-* Si va a crear una aplicación de **hololens** , puede asegurarse de que solo está instalada en HoloLens estableciendo la familia de dispositivos de destino en **Windows. Holographic** : 
+* Si va a crear una aplicación de **hololens** , puede asegurarse de que solo está instalada en HoloLens estableciendo la familia de dispositivos de destino en **Windows. Holographic**: 
 
 ```
 <Dependencies>
@@ -93,7 +93,7 @@ Las aplicaciones de realidad mixta de Windows (tanto para [HoloLens](../hololens
 </Dependencies>
 ```
 
-* Si la aplicación se crea para **auriculares con Windows Mixed Reality** , puede asegurarse de que solo está instalado en equipos con Windows 10 con Windows 10 Fall Creators Update (necesario para Windows Mixed Reality). para ello, establezca la familia de dispositivos de destino en **Windows. Desktop** con un **MinVersion** de 10.0.16299.0:
+* Si la aplicación se crea para **auriculares con Windows Mixed Reality**, puede asegurarse de que solo está instalado en equipos con Windows 10 con Windows 10 Fall Creators Update (necesario para Windows Mixed Reality). para ello, establezca la familia de dispositivos de destino en **Windows. Desktop** con un **MinVersion** de 10.0.16299.0:
 
 ```
 <Dependencies>
@@ -101,7 +101,7 @@ Las aplicaciones de realidad mixta de Windows (tanto para [HoloLens](../hololens
 </Dependencies>
 ```
 
-* Por último, si la aplicación está diseñada para ejecutarse tanto en **HoloLens** como en **auriculares de Windows Mixed Reality** , puede asegurarse de que la aplicación solo esté disponible para esas dos familias de dispositivos y, de forma simultánea, asegurarse de que cada destino tiene la versión mínima de Windows correcta incluyendo una línea para cada familia de dispositivos de destino con su MinVersion correspondiente:
+* Por último, si la aplicación está diseñada para ejecutarse tanto en **HoloLens** como en **auriculares de Windows Mixed Reality**, puede asegurarse de que la aplicación solo esté disponible para esas dos familias de dispositivos y, de forma simultánea, asegurarse de que cada destino tiene la versión mínima de Windows correcta incluyendo una línea para cada familia de dispositivos de destino con su MinVersion correspondiente:
 
 ```
 <Dependencies>
@@ -263,8 +263,8 @@ Agregar "Windows Mixed Reality" a los términos de búsqueda
 
 En muchos casos, los consumidores se limitarán a no tener experiencia con la realidad virtual antes de adquirir un casco de realidad más envolvente de Windows Mixed Reality. Es posible que no sepan qué esperan de juegos intensivos o que estén familiarizados con su propio umbral de confort en experiencias envolventes. Muchos clientes también pueden probar con un casco con Windows Mixed Reality en equipos que no están identificados como [equipos con Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines). Debido a estas consideraciones, le recomendamos encarecidamente que considere la posibilidad de ofrecer una [evaluación gratuita](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#free-trial) para su aplicación o juego de realidad mixta.
 
-## <a name="see-also"></a>Consulte también
-* [¿Qué es la realidad mixta?](../discover/mixed-reality.md)
+## <a name="see-also"></a>Vea también
+* [¿Qué es Mixed Reality?](../discover/mixed-reality.md)
 * [Introducción al desarrollo](../develop/development.md)
 * [Vistas de aplicación](../design/app-views.md)
 * [Descripción del rendimiento de la realidad mixta](../develop/platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)

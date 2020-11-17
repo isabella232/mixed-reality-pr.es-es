@@ -5,15 +5,15 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 07/08/2020
 ms.topic: article
-keywords: hologramas, estabilidad, hololens
+keywords: hologramas, estabilidad, hololens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, velocidad de fotogramas, representación, Reproyección, separación de colores
 appliesto:
 - HoloLens
-ms.openlocfilehash: 21a9f7cff655ff35d32e3ca701219d4a1e41a0e2
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 081a080c73a1c78eb762b94291027cf7ebcbed45
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691439"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679604"
 ---
 # <a name="hologram-stability"></a>Estabilidad de hologramas
 
@@ -32,7 +32,7 @@ La siguiente terminología puede ayudarle a identificar problemas con el entorno
 * **Fase.** Los usuarios ven el desplazamiento a medida que un holograma desaparece de donde se colocó originalmente. El desplazamiento se produce cuando los hologramas se colocan lejos de los [delimitadores espaciales](../../design/spatial-anchors.md), especialmente en las partes del entorno que no están totalmente asignadas. La creación de hologramas cercanos a los delimitadores espaciales reduce la probabilidad de derivación.
 * **Puesta en marcha.** Cuando un holograma "extrae" o "salta" fuera de su ubicación ocasionalmente. La puesta en marcha puede producirse cuando el seguimiento ajusta los hologramas para que coincidan con el conocimiento actualizado de su entorno.
 * **Nada.** Cuando aparece un holograma en Sway que corresponde al movimiento del encabezado del usuario. Nadar se produce cuando la aplicación no ha implementado completamente la [Reproyección](hologram-stability.md#reprojection)y si HoloLens no está [calibrado](../../calibration.md) para el usuario actual. El usuario puede volver a ejecutar la aplicación de [calibración](../../calibration.md) para corregir el problema. Los desarrolladores pueden actualizar el plano de estabilización para mejorar la estabilidad.
-* **Separación de colores.** Las pantallas en HoloLens son pantallas secuenciales de color, que son canales de color rojo, verde y azul-verde a 60 Hz (los campos de color individuales se muestran a 240 Hz). Cada vez que un usuario realiza un seguimiento de un holograma móvil con sus ojos, los bordes inicial y final del holograma se separan en sus colores constituyentes, lo que produce un efecto de arco iris. El grado de separación depende de la velocidad del holograma. En algunos casos menos raros, el movimiento de una cabeza rápida mientras se examina un holograma estacionario también puede producir un efecto de arco iris, que se denomina *[separación de colores](hologram-stability.md#color-separation)* .
+* **Separación de colores.** Las pantallas en HoloLens son pantallas secuenciales de color, que son canales de color rojo, verde y azul-verde a 60 Hz (los campos de color individuales se muestran a 240 Hz). Cada vez que un usuario realiza un seguimiento de un holograma móvil con sus ojos, los bordes inicial y final del holograma se separan en sus colores constituyentes, lo que produce un efecto de arco iris. El grado de separación depende de la velocidad del holograma. En algunos casos menos raros, el movimiento de una cabeza rápida mientras se examina un holograma estacionario también puede producir un efecto de arco iris, que se denomina *[separación de colores](hologram-stability.md#color-separation)*.
 
 ## <a name="frame-rate"></a>Velocidad de fotogramas
 
@@ -74,7 +74,7 @@ Colocar contenido en 2,0 m también es ventajoso porque las dos pantallas están
 
 **Distancia óptima para colocar hologramas respecto al usuario**
 
-![Distancia óptima para colocar hologramas del usuario](images/distanceguiderendering-750px.png)
+![Distancia óptima para colocar hologramas respecto al usuario](images/distanceguiderendering-750px.png)
 
 **Planos de recortes** Para obtener la máxima comodidad, se recomienda recortar la distancia de representación en 85 cm y atenuar el contenido a partir de 1 m. En las aplicaciones en las que los hologramas y los usuarios son ambos estacionarios, los hologramas se pueden ver de forma cómoda como cerca de 50 cm. En estos casos, las aplicaciones deben colocar un plano de recorte de un máximo de 30 cm y un fundido de salida debe empezar al menos 10 cm fuera del plano de recorte. Siempre que el contenido se aproxime a más de 85 cm, es importante asegurarse de que los usuarios no se mueven con frecuencia más cerca o más lejos de los hologramas o que los hologramas no se mueven más cerca o más lejos del usuario, ya que es más probable que estas situaciones resulten molestas en el conflicto de alojamiento de vergence. El contenido debe diseñarse para minimizar la necesidad de interacción más cercana a 85 cm del usuario, pero cuando el contenido se debe presentar más cerca de 85 cm, una buena regla general para los desarrolladores es diseñar escenarios en los que los usuarios o los hologramas no se mueven en profundidad más del 25% del tiempo.
 
@@ -91,7 +91,7 @@ Hay cuatro tipos principales de Reproyección
 * **Ninguno:** Si la aplicación no realiza ninguna acción, la Reproyección plana se utiliza con el plano de estabilización fijado a 2 metros en la dirección del cabezal del usuario, lo que suele producir resultados de subestándar.
 
 Las aplicaciones deben realizar acciones específicas para habilitar los distintos tipos de Reproyección.
-* **Reproyección de profundidad:** La aplicación envía su búfer de profundidad al sistema para cada fotograma representado.  En Unity, la reproyección de profundidad se realiza con la opción **búfer de profundidad compartido** en el panel **configuración de Windows Mixed Reality** en la **Administración de complementos de XR** .  Las aplicaciones de DirectX llaman a CommitDirect3D11DepthBuffer.  La aplicación no debe llamar a SetFocusPoint.
+* **Reproyección de profundidad:** La aplicación envía su búfer de profundidad al sistema para cada fotograma representado.  En Unity, la reproyección de profundidad se realiza con la opción **búfer de profundidad compartido** en el panel **configuración de Windows Mixed Reality** en la **Administración de complementos de XR**.  Las aplicaciones de DirectX llaman a CommitDirect3D11DepthBuffer.  La aplicación no debe llamar a SetFocusPoint.
 * **Reproyección plana:** En cada fotograma, las aplicaciones indican al sistema la ubicación de un plano para estabilizar.  Las aplicaciones de Unity llaman a SetFocusPointForFrame y deben tener el **búfer de profundidad compartido** deshabilitado.  Las aplicaciones de DirectX llaman a SetFocusPoint y no deben llamar a CommitDirect3D11DepthBuffer.
 * **Reproyección plana automática:** Para habilitar, la aplicación debe enviar su búfer de profundidad al sistema como lo haría para la reproyección de profundidad.  En HoloLens 2, la aplicación necesita SetFocusPoint con un punto de 0, 0 para cada fotograma.  En el caso de la generación 1 de HoloLens, la aplicación no debe llamar a SetFocusPoint.
 

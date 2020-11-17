@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens
-ms.openlocfilehash: 18e2a6128a5fa07fe2ddcd3c0eab192ccdedb4b4
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 8141bc588247be15174d4a85992b74911ffc002e
+ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91700687"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631543"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulación directa con las manos
 
@@ -34,7 +34,7 @@ La manipulación directa utiliza prestaciones, lo que significa que es fácil de
 <tr>
      <td><strong>Modelo de entrada</strong></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
-     <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
+     <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></a></td>
      <td><a href="https://docs.microsoft.com/windows/mixed-reality/immersive-headset-hardware-details"><strong>Cascos envolventes</strong></a></td>
 </tr>
 <tr>
@@ -259,7 +259,7 @@ La manipulación con prestaciones te permite manipular el objeto 3D a través de
 
 La manipulación sin prestaciones no acopla ninguna prestación al rectángulo de selección. Los usuarios solo pueden mostrar el rectángulo de selección e interactuar directamente con él. Si el rectángulo de selección se agarra con una mano, la traslación y rotación del objeto se asocian con el movimiento y la orientación de la mano. Cuando el objeto se agarra con dos manos, los usuarios pueden trasladarlo, escalarlo y girarlo en función de los movimientos relativos de las dos manos.
 
-La manipulación específica requiere precisión. Se recomienda usar la **manipulación con prestaciones** , ya que proporciona un alto nivel de granularidad. Para la manipulación flexible, se recomienda usar la **manipulación sin prestaciones** , ya que permite experiencias instantáneas y divertidas.
+La manipulación específica requiere precisión. Se recomienda usar la **manipulación con prestaciones**, ya que proporciona un alto nivel de granularidad. Para la manipulación flexible, se recomienda usar la **manipulación sin prestaciones**, ya que permite experiencias instantáneas y divertidas.
 
 <br>
 
@@ -307,18 +307,18 @@ Es posible que hayas observado que hay paralelos de interacción que podemos dib
 
 La manipulación directa puede parecer mágica si funciona según lo previsto. No obstante, también puede resultar frustrante si no se puede mover la mano a ningún lugar sin desencadenar involuntariamente un holograma. El seguimiento de los ojos puede ayudar a identificar mejor la intención del usuario.
 
-* **Cuándo** : se reduce accidentalmente, lo que desencadena una respuesta de manipulación. El seguimiento de los ojos permite saber mejor lo que hace un usuario en cada momento.
+* **Cuándo**: se reduce accidentalmente, lo que desencadena una respuesta de manipulación. El seguimiento de los ojos permite saber mejor lo que hace un usuario en cada momento.
 Por ejemplo, imagina que estás leyendo un texto (con instrucciones) de una holografía cuando te dispones a agarrar tu herramienta del mundo real.
 
 Al hacerlo, mueves la mano accidentalmente por unos botones holográficos interactivos que no te habías percatado de que estaban ahí (por ejemplo, pueden estar fuera del campo de visión del usuario).
 
   Un resumen: si el usuario lleva un tiempo sin mirar un holograma, pero se ha detectado un evento de tocar o agarrar para él, es probable que el usuario no tuviera realmente intención de interactuar con el holograma.
 
-* **Cuál** :  además de solucionar activaciones positivas falsas, otro ejemplo incluye una mejor identificación de qué hologramas agarrar o usar, ya que es posible que el punto de intersección preciso no esté claro desde tu perspectiva, sobre todo si hay varios hologramas colocados unos cerca de otros.
+* **Cuál**:  además de solucionar activaciones positivas falsas, otro ejemplo incluye una mejor identificación de qué hologramas agarrar o usar, ya que es posible que el punto de intersección preciso no esté claro desde tu perspectiva, sobre todo si hay varios hologramas colocados unos cerca de otros.
 
   Aunque en HoloLens 2 el seguimiento de los ojos tiene limitaciones en función de la precisión con la que puede determinar la mirada con los ojos, puede resultar muy útil para las interacciones cercanas debido a la disparidad de profundidad al interactuar con la entrada a mano. Esto significa que a veces es difícil determinar si la mano está detrás o delante de un holograma, por ejemplo, para agarrar con precisión un widget de manipulación.
 
-* **A dónde** : usa información acerca de lo que mira un usuario con gestos que se realizan rápidamente. Agarra un holograma y tíralo hacia su destino previsto.  
+* **A dónde**: usa información acerca de lo que mira un usuario con gestos que se realizan rápidamente. Agarra un holograma y tíralo hacia su destino previsto.  
 
     Aunque es posible que a veces esto funcione, la realización rápida de gestos con la mano puede dar lugar a destinos muy imprecisos. Sin embargo, el seguimiento de los ojos podría mejorar la precisión del gesto.
 
@@ -327,7 +327,7 @@ Al hacerlo, mueves la mano accidentalmente por unos botones holográficos intera
 ---
 
 ## <a name="manipulation-in-mrtk-mixed-reality-toolkit-for-unity"></a>Manipulación en MRTK (Mixed Reality Toolkit) para Unity
-Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede conseguir un comportamiento de manipulación común con el script **ObjectManipulator** . Con ManipulationHandler, puede agarrar y mover objetos directamente con las manos o con el haz de mano. También admite la manipulación con dos manos para escalar y girar un objeto.
+Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede conseguir un comportamiento de manipulación común con el script **ObjectManipulator**. Con ManipulationHandler, puede agarrar y mover objetos directamente con las manos o con el haz de mano. También admite la manipulación con dos manos para escalar y girar un objeto.
 
 * [MRTK: manipulación](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)
 

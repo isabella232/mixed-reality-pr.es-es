@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Explorador de Galaxy, caso práctico, proyecto, ejemplo
-ms.openlocfilehash: 3d3995bb7e43f49423901a92ce7ec1e7b31f8f4d
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Explorador de Galaxy, caso práctico, proyecto, ejemplo, MRTK, kit de herramientas de realidad mixta, Unity, aplicaciones de ejemplo, aplicaciones de ejemplo, código abierto, Microsoft Store, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: a58d07cd50679154fe68d3b8b7d424ea6cfbf39e
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693215"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678624"
 ---
 # <a name="galaxy-explorer"></a>Explorador de la galaxia
 
@@ -104,6 +104,6 @@ Tendremos un evaluador a tiempo completo: Lena, que probó nuestras compilacione
 
 Somos parte de un estudio más grande en Microsoft (piense en el equipo en el desarrollo que no es de juegos). También había una gran cantidad de personas involucradas: llamamos en el talento de nuestro Director de arte, el ingeniero de audio y el liderazgo de estudio con frecuencia a lo largo del proyecto, pero esas personas eran recursos compartidos con otros proyectos que el equipo más amplio tiene.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [Caso práctico: creación de una galaxia en una realidad mixta](../../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md)
 * [Repositorio de GitHub de Galaxy Explorer](https://github.com/Microsoft/GalaxyExplorer)

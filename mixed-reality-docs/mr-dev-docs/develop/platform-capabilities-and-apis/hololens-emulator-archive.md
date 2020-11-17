@@ -5,13 +5,13 @@ author: hamalawi
 ms.author: moelhama
 ms.date: 11/10/2020
 ms.topic: article
-keywords: HoloLens, emulador, compilaciones, versiones
-ms.openlocfilehash: c80017fcad1d79080b0782cc6c580d788c229748
-ms.sourcegitcommit: c300518d76e5723a46729bc02d65bcb5293cf2b1
+keywords: HoloLens, emulador, compilaciones, versiones, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, archivo
+ms.openlocfilehash: e6030328a85525851fa8f4f5129f4544a3136b68
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2020
-ms.locfileid: "94447071"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679564"
 ---
 # <a name="hololens-2-emulator-archive"></a>Archivo de emulador de HoloLens 2
 
@@ -41,7 +41,7 @@ Las compilaciones del emulador de HoloLens (1ª generación) y de HoloLens 2 se 
 |  [10.0.18362.1031 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2103724) | 11 de septiembre de 2019 | Actualización de Windows Holographic, versión 1903 de septiembre de 2019.  La pestaña Red aparecerá en la ventana herramientas del emulador al ejecutar el emulador en la actualización de Windows 10 de mayo de 2019 o más reciente. |
 |  [10.0.18362.1028 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2101019) | 14 de agosto de 2019 | Actualización de Windows Holographic, versión 1903 de agosto de 2019.  Las plantillas de aplicación holográfica ya no se incluyen, pero están disponibles en el Visual Studio Marketplace.  El emulador ahora funcionará cuando se instalen los SDK en una ubicación personalizada. |
 |  [10.0.18362.1021 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2098508) | 8 de julio de 2019 | Actualización de Windows Holographic, versión 1903 de julio de 2019.  Soluciona un problema de firma con DiskStream.dll |
-|  [10.0.18362.1019 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2095316) | 11 de junio de 2019 | Actualización de Windows Holographic, versión 1903 de junio de 2019.  Ya no es necesario ejecutar como administrador.  Acceso directo del menú Inicio agregado. |
+|  [10.0.18362.1019 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2095316) | 11 de junio de 2019 | Actualización de Windows Holographic, versión 1903 de junio de 2019.  Ya no es necesario ejecutar como administrador.  Acceso directo del menú Inicio agregado. |
 |  [10.0.18362.1005 de compilación del emulador de HoloLens 2](https://go.microsoft.com/fwlink/?linkid=2087187) | 16 de abril de 2019 |  Windows Holographic, versión 1903. |
 
 ## <a name="hololens-emulator-1st-gen-archive"></a>Archivo del emulador de HoloLens (1º generación)

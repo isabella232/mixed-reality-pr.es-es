@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
-keywords: Windows Mixed Reality, seguimiento de mano, inreal, no real Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, desarrollo, características, documentación, guías, hologramas, desarrollo de juegos
-ms.openlocfilehash: 5bc120f802c2160282befd1ce6cb8025be21cbaa
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality, seguimiento de mano, inreal, inreal Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, desarrollo, características, documentación, guías, hologramas, desarrollo de juegos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: 0a16a0291261277cb09e736e60b25f8ba71382e3
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691237"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679214"
 ---
 # <a name="hand-tracking-in-unreal"></a>Seguimiento de las manos en Unreal
 
@@ -68,7 +68,7 @@ Puede encontrar los valores numéricos de cada caso de enumeración en la tabla 
  
 ### <a name="supporting-hand-tracking"></a>Compatibilidad con el seguimiento de la mano
 
-Puede usar el seguimiento de manos en Blueprints agregando **compatibilidad con** el seguimiento de la mano **> Windows Mixed Reality** :
+Puede usar el seguimiento de manos en Blueprints agregando **compatibilidad con** el seguimiento de la mano **> Windows Mixed Reality**:
 
 ![Seguimiento de mano BP](images/unreal/hand-tracking-bp.png)
 
@@ -115,7 +115,7 @@ Después de habilitar el origen y abrir un recurso de animación, expanda la sec
 
 ![Animación de vínculos dinámicos](images/unreal/live-link-animation.png)
  
-La jerarquía de animaciones a mano es la misma que en `EWMRHandKeypoint` . La animación se puede redestinar mediante **WindowsMixedRealityHandTrackingLiveLinkRemapAsset** :
+La jerarquía de animaciones a mano es la misma que en `EWMRHandKeypoint` . La animación se puede redestinar mediante **WindowsMixedRealityHandTrackingLiveLinkRemapAsset**:
 
 ![Animación de vínculos en directo 2](images/unreal/live-link-animation2.png)
  
@@ -128,7 +128,7 @@ También se puede crear una subclase en el editor:
 ![Malla de mano](images/unreal/hand-mesh.png)
 
 Para poder acceder a los datos de malla a mano, deberá:
-- Seleccione el recurso **ARSessionConfig** , expanda **configuración de ar-> configuración de asignación de mundo** y active la opción **generar datos de malla a partir de la geometría sometida a seguimiento** . 
+- Seleccione el recurso **ARSessionConfig** , expanda **configuración de ar-> configuración de asignación de mundo** y active la opción **generar datos de malla a partir de la geometría sometida a seguimiento**. 
 
 A continuación se muestran los parámetros de malla predeterminados:
 
@@ -196,14 +196,14 @@ Puede usar un rayo de mano como dispositivo señalador en C++ y blueprints, que 
 
 Es importante mencionar que, dado que los resultados de todas las funciones cambian cada fotograma, todos ellos se pueden llamar. Para obtener más información sobre las funciones puras e inpuras o que se puede llamar, consulte el GUID de usuario de Blueprint en [Functions](https://docs.unrealengine.com/en-US/Engine/Blueprints/UserGuide/Functions/index.html#purevs.impure) .
 
-Para usar rayos de mano en blueprints, busque cualquiera de las acciones en **Windows Mixed Reality HMD** :
+Para usar rayos de mano en blueprints, busque cualquiera de las acciones en **Windows Mixed Reality HMD**:
 
 ![Rayos de mano BP](images/unreal/hand-rays-bp.png)
  
 Para tener acceso a ellos en C++, incluya `WindowsMixedRealityFunctionLibrary.h` en la parte superior del archivo de código que realiza la llamada.
 
 ### <a name="enum"></a>Enumeración
-También tiene acceso a los casos de entrada en **EHMDInputControllerButtons** , que se pueden usar en Blueprints:
+También tiene acceso a los casos de entrada en **EHMDInputControllerButtons**, que se pueden usar en Blueprints:
 
 ![Botones del controlador de entrada](images/unreal/input-controller-buttons.png)
 
@@ -263,7 +263,7 @@ struct FPointerPoseInfo
 };
 ```
 
-### <a name="functions"></a>Functions
+### <a name="functions"></a>Funciones
 
 Todas las funciones que se enumeran a continuación se pueden llamar en cada fotograma, lo que permite la supervisión continua. 
 
@@ -407,14 +407,14 @@ const FKey FSpatialInputKeys::RightNavigationZGesture(RightNavigationZGestureNam
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo no real que hemos diseñado, está en medio de explorar los bloques de creación de MRTK Core. Desde aquí, puede continuar con el siguiente bloque de creación: 
+Si sigue el recorrido de puntos de control de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación: 
 
 > [!div class="nextstepaction"]
 > [Anclajes espaciales locales](unreal-spatial-anchors.md)
 
-O salte a las funcionalidades y API de la plataforma de realidad mixta:
+O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:
 
 > [!div class="nextstepaction"]
 > [Cámara de HoloLens](unreal-hololens-camera.md)
 
-Siempre puede volver a los puntos de [control de desarrollo no reales](unreal-development-overview.md#2-core-building-blocks) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unreal](unreal-development-overview.md#2-core-building-blocks) en cualquier momento.

@@ -5,13 +5,13 @@ author: bstrukus
 ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, hologramas, estabilización, caso práctico
-ms.openlocfilehash: 4eb61cb37ef087dc5fbeb6b4ef6ca1c507719205
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality, hologramas, estabilización, caso práctico, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: c268e7ee83fdcbb8c5ddd09cd643f4354d05ec29
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691458"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679614"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>Caso práctico: uso del plano de estabilización para reducir la turbulencia holográfica
 
@@ -97,7 +97,7 @@ Vaya a la derecha una vez más hasta que vea una nueva configuración de puntos.
 </tr>
 </table>
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [MR Basics 100: introducción a Unity](../unity/tutorials/holograms-100.md)
 * [Punto de enfoque en Unity](../unity/focus-point-in-unity.md)
 * [Estabilidad de hologramas](hologram-stability.md)

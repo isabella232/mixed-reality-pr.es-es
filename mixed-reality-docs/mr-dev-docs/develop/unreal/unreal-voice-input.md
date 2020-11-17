@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
-keywords: Windows Mixed Reality, inreal, inreal Engine 4, UE4, HoloLens 2, voz, entrada de voz, reconocimiento de voz, realidad mixta, desarrollo, características, documentación, guías, hologramas, desarrollo de juegos
-ms.openlocfilehash: 88ab39de5f219691a6c3fe5b4ad3008d9614668e
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality, inreal, no real, motor 4, UE4, HoloLens 2, voz, entrada de voz, reconocimiento de voz, realidad mixta, desarrollo, características, documentación, guías, hologramas, desarrollo de juegos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: 79a6043511cc4658ae2451dd8aa6350d8e8037fe
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91694382"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678784"
 ---
 # <a name="voice-input-in-unreal"></a>Entrada de voz en inreal
 
@@ -21,8 +21,8 @@ La entrada de voz en no real permite interactuar con un holograma sin tener que 
 ## <a name="enabling-speech-recognition"></a>Habilitación del reconocimiento de voz
 
 Para habilitar el reconocimiento de voz en HoloLens:
-1. Seleccione **configuración del proyecto > plataforma > HoloLens > funcionalidades** y habilite el **micrófono** . 
-2. Habilitado el reconocimiento de voz en **configuración > privacidad > voz** y seleccione **Inglés** .
+1. Seleccione **configuración del proyecto > plataforma > HoloLens > funcionalidades** y habilite el **micrófono**. 
+2. Habilitado el reconocimiento de voz en **configuración > privacidad > voz** y seleccione **Inglés**.
 
 > [!NOTE]
 > El reconocimiento de voz siempre funciona en el idioma de visualización de Windows configurado en la aplicación de **configuración** . Se recomienda habilitar también el reconocimiento de **voz en línea** para obtener la mejor calidad de servicio.
@@ -35,7 +35,7 @@ La entrada de voz no requiere ninguna API especial de Windows Mixed Reality; se 
 
 ## <a name="adding-speech-mappings"></a>Agregar asignaciones de voz
 La conexión de voz a la acción es un paso importante cuando se usa la entrada de voz. Estas asignaciones supervisan las palabras clave de la aplicación para la voz que un usuario podría decir y, a continuación, activa una acción vinculada. Puede buscar las asignaciones de voz:
-1. Seleccione **editar > configuración del proyecto** , desplácese hasta la sección **motor** y haga clic en **entrada** .
+1. Seleccione **editar > configuración del proyecto**, desplácese hasta la sección **motor** y haga clic en **entrada**.
 
 Para agregar una nueva asignación de voz para un comando de salto:
 1. Haga clic en el **+** icono situado junto a **elementos** de la matriz y rellene los siguientes valores:
@@ -49,8 +49,8 @@ Para agregar una nueva asignación de voz para un comando de salto:
 
 Las asignaciones de voz se pueden usar como componentes de entrada como asignaciones de acción o de eje o como nodos de plano en el gráfico de eventos. Por ejemplo, puede vincular el comando de salto para imprimir dos registros diferentes en función de Cuándo se pronuncia la palabra:
 
-1. Haga doble clic en un plano para abrirlo en el **gráfico de eventos** .
-2. **Haga clic con el botón derecho** y busque el nombre de la **acción** de la asignación de voz (en este caso, **jumpWord** ) y presione **entrar** . Esto agrega un nodo de **acción de entrada** al gráfico.
+1. Haga doble clic en un plano para abrirlo en el **gráfico de eventos**.
+2. **Haga clic con el botón derecho** y busque el nombre de la **acción** de la asignación de voz (en este caso, **jumpWord**) y presione **entrar**. Esto agrega un nodo de **acción de entrada** al gráfico.
 3. Arrastre y coloque el anclaje **presionado** en el nodo de la **cadena de impresión** , tal como se muestra en la imagen siguiente. Puede dejar el PIN **liberado** vacío, no ejecutará nada para las asignaciones de voz.
  
 ![Acción simple para voz](images/unreal/voice-input-img-03.png)
@@ -66,9 +66,9 @@ Si está siguiendo el viaje de punto de control de desarrollo no real que hemos 
 > [!div class="nextstepaction"]
 > [Cámara de HoloLens](unreal-hololens-camera.md)
 
-Siempre puede volver a los puntos de [control de desarrollo no reales](unreal-development-overview.md#2-core-building-blocks) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unreal](unreal-development-overview.md#2-core-building-blocks) en cualquier momento.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Entrada de voz](../../design/voice-input.md)
 * [Mirada y confirmación](../../design/gaze-and-commit.md)
 * [Interacciones instintivas](../../design/interaction-fundamentals.md)

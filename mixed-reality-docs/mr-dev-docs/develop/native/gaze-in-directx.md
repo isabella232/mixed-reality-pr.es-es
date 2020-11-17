@@ -5,18 +5,18 @@ author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 08/04/2020
 ms.topic: article
-keywords: miras hacia abajo, hacia abajo, seguimiento del cabezal, seguimiento ocular, DirectX, entrada, hologramas
-ms.openlocfilehash: 06f725f3560d2c05e15c2e1362e820262986a192
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: miras hacia abajo, hacia abajo, seguimiento del cabezal, seguimiento ocular, DirectX, entrada, hologramas, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: 9ec54f5db33346c499582b54a0b3e36c129bf7ab
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691495"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678084"
 ---
 # <a name="head-gaze-and-eye-gaze-input-in-directx"></a>Entrada de ojo y mira fijamente en DirectX
 
 > [!NOTE]
-> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](openxr-getting-started.md)** .
+> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](openxr-getting-started.md)**.
 
 En Windows Mixed Reality, se usa la entrada de ojo y mirarnos para determinar lo que el usuario está examinando. Se puede usar para controlar los modelos de entrada principales, como el [encabezado y la confirmación](../../design/gaze-and-commit.md), y también para proporcionar contexto para tipos de interacciones. Hay dos tipos de vectores de miración disponibles a través de la API: encabezado y ojo.  Ambos se proporcionan como un rayo tridimensional con un origen y una dirección. A continuación, las aplicaciones pueden Raycast en sus escenas, o en el mundo real, y determinar el destino del usuario.
 
@@ -47,7 +47,7 @@ Se puede acceder a los rayos de mira y hacia la vista a través de la API de  [S
      <td>✔️</td>
 </tr>
 <tr>
-     <td>Control con los ojos</td>
+     <td>Miras hacia abajo</td>
      <td>❌</td>
      <td>✔️</td>
      <td>❌</td>
@@ -84,7 +84,7 @@ Usa la misma API de [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Win
 2. Habilite la funcionalidad de "entrada de Miración" en el manifiesto del paquete.
 
 ### <a name="requesting-access-to-eye-gaze-input"></a>Solicitud de acceso a la entrada de mirada
-Cuando se inicia la aplicación, llame a [EyesPose:: RequestAccessAsync](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.requestaccessasync#Windows_Perception_People_EyesPose_RequestAccessAsync) para solicitar acceso al seguimiento ocular. El sistema solicitará al usuario si es necesario y devolverá [GazeInputAccessStatus:: allowed](https://docs.microsoft.com//uwp/api/windows.ui.input.gazeinputaccessstatus) una vez que se haya concedido el acceso. Se trata de una llamada asincrónica, por lo que requiere un poco de administración adicional. En el ejemplo siguiente se pone en marcha un método STD:: Thread separado para esperar el resultado, que almacena en una variable miembro denominada *m_isEyeTrackingEnabled* .
+Cuando se inicia la aplicación, llame a [EyesPose:: RequestAccessAsync](https://docs.microsoft.com//uwp/api/windows.perception.people.eyespose.requestaccessasync#Windows_Perception_People_EyesPose_RequestAccessAsync) para solicitar acceso al seguimiento ocular. El sistema solicitará al usuario si es necesario y devolverá [GazeInputAccessStatus:: allowed](https://docs.microsoft.com//uwp/api/windows.ui.input.gazeinputaccessstatus) una vez que se haya concedido el acceso. Se trata de una llamada asincrónica, por lo que requiere un poco de administración adicional. En el ejemplo siguiente se pone en marcha un método STD:: Thread separado para esperar el resultado, que almacena en una variable miembro denominada *m_isEyeTrackingEnabled*.
 
 ```cpp
 using namespace winrt::Windows::Perception::People;
@@ -134,7 +134,7 @@ if (Windows::Perception::People::EyesPose::IsSupported() &&
 
 ### <a name="declaring-the-gaze-input-capability"></a>Declarar la capacidad de *entrada de mira*
 
-Haga doble clic en el archivo appxmanifest en *Explorador de soluciones* .  A continuación, vaya a la sección *funcionalidades* y Compruebe la capacidad de *entrada de mira* . 
+Haga doble clic en el archivo appxmanifest en *Explorador de soluciones*.  A continuación, vaya a la sección *funcionalidades* y Compruebe la capacidad de *entrada de mira* . 
 
 ![Función de entrada de mirada](images/gaze-input-capability.png)
 
@@ -205,7 +205,7 @@ Los desarrolladores deben asegurarse de proporcionar soporte técnico adecuado a
 
 <br>
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [Calibración](../../calibration.md)
 * [Sistemas de coordenadas de DirectX](coordinate-systems-in-directx.md)
 * [Miras a la vista de HoloLens 2](../../design/eye-tracking.md)
