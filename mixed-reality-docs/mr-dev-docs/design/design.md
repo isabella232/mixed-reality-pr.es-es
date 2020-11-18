@@ -7,12 +7,12 @@ ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Realidad mixta, detectar, distribuir, índice, página de aterrizaje, diseño, desarrollo, tutoriales, aplicaciones de ejemplo, aspectos básicos, casos prácticos, recursos, procedimientos de HoloLens, proyectos de código abierto, conceptos principales, interacción
-ms.openlocfilehash: 2ee127b05a8ad88e49eda6d088f84e895aeaf511
-ms.sourcegitcommit: 4e618948e1e2e0baf4bb3e8b67513fa7716aa815
+ms.openlocfilehash: 19a83a132cca08573f1066a2f7b87bd383ca79f4
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94361736"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573279"
 ---
 # <a name="start-designing-and-prototyping"></a>Empezar a diseñar y a crear prototipos
 
@@ -35,7 +35,7 @@ Al igual que con todos los recorridos, la aventura para diseñar aplicaciones de
 | [Ampliar el proceso de diseño](../discover/case-study-expanding-the-design-process-for-mixed-reality.md) | Obtenga una vista de primera mano del proceso de diseño de Mixed Reality, recopilado de diseñadores de dentro y fuera de Microsoft. |
 | [Tipos de aplicaciones de realidad mixta](types-of-mixed-reality-apps.md) | Decida dónde residirá su experiencia de la aplicación en el espectro de realidad mixta. |
 | [Aplicación Designing Holograms](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd) | Conozca los aspectos básicos del diseño de la experiencia de usuario de Mixed Reality a través de su propia experiencia al profundizar en los comportamientos de Mixed Reality, las sugerencias y las recomendaciones para crear fantásticas aplicaciones de HoloLens (disponible para su descarga en HoloLens 2 de Microsoft Store). |
-
+| [Centro de conectividad de ejemplos de MRTK](https://www.microsoft.com/en-us/p/mrtk-examples-hub/9mv8c39l2sj4) | Experimente interacciones espaciales comunes y bloques de creación de experiencia de usuario para Mixed Reality (disponible para su descarga desde Microsoft Store en HoloLens 2) |
 ### <a name="2-core-concepts"></a>2. Conceptos principales
 
 Tanto si desarrolla contenido para realidad virtual como para realidad aumentada, existen varios conceptos básicos que se aplican al diseño de experiencias envolventes fluidas. Comprender el punto de vista de los usuarios, colocar los objetos y asegurarse de que todo el mundo se siente cómodo y seguro son las prioridades principales en esta fase del recorrido. Al final de esta sección contará con una base sólida para llevar a cabo el diseño de interacción.

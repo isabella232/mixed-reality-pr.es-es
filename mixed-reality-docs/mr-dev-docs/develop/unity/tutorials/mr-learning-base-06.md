@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 2d3a826ba3bf8fdf1299038a7964278f0d57dbb7
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: f4530cb6519434f8eb74e5335fecbe82ac2cd2c2
+ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353543"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631533"
 ---
 # <a name="6-creating-user-interfaces"></a>6. Creación de interfaces de usuario
 
@@ -32,28 +32,28 @@ En este tutorial, obtendrá información sobre cómo crear una interfaz de usuar
 
 En la ventana Hierarchy (Jerarquía), haga clic con el botón derecho en el objeto **RoverExplorer** y seleccione **Create Empty** ( Crear vacío)para agregar un objeto vacío como elemento secundario de RoverExplorer, asigne el nombre **Buttons** al objeto y configure el componente **Transform** (Transformación) como se indica a continuación:
 
-* **Posición** : X = 0.6, Y = 0.036, Z = 0.5
-* **Rotación** : X = 90, Y = 0, Z = 0
-* **Escala** : X = 1, Y = 1, Z = 1
+* **Posición**: X = 0.6, Y = 0.036, Z = 0.5
+* **Rotación**: X = 90, Y = 0, Z = 0
+* **Escala**: X = 1, Y = 1, Z = 1
 
 ![Unity con el objeto Buttons recién creado seleccionado y colocado](images/mr-learning-base/base-06-section1-step1-1.png)
 
-En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK.Tutorials.GettingStarted** > **Prefabs** , haga clic y arrastre el elemento prefabricado **PressableRoundButton** sobre el objeto **Buttons** y, a continuación, haga clic con el botón derecho en PressableRoundButton, seleccione **Duplicate** (Duplicar) para crear una copia y repita el proceso hasta que tenga un total de tres objetos PressableRoundButton:
+En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK.Tutorials.GettingStarted** > **Prefabs**, haga clic y arrastre el elemento prefabricado **PressableRoundButton** sobre el objeto **Buttons** y, a continuación, haga clic con el botón derecho en PressableRoundButton, seleccione **Duplicate** (Duplicar) para crear una copia y repita el proceso hasta que tenga un total de tres objetos PressableRoundButton:
 
 ![Unity con los objetos prefabricados PressableRoundButton recién agregados](images/mr-learning-base/base-06-section1-step1-2.png)
 
 En la ventana Hierarchy (Jerarquía), seleccione el objeto **Buttons** y, a continuación, en la ventana Inspector, use el botón **Add Component** (Agregar componente) para agregar el componente **GridObjectCollection** y configúrelo del modo siguiente:
 
-* **Tipo de orden** : Orden secundario
-* **Diseño** : Horizontal
-* **Ancho de celda** : 0.2
-* **Ancla** : Centro a la izquierda
+* **Tipo de orden**: Orden secundario
+* **Diseño**: Horizontal
+* **Ancho de celda**: 0.2
+* **Ancla**: Centro a la izquierda
 
 A continuación, haga clic en el botón **Update Collection** (Actualizar colección) para actualizar la posición de los objetos secundarios del objeto Buttons:
 
 ![Objeto Buttons de Unity con el componente GridObjectCollection agregado, configurado y aplicado](images/mr-learning-base/base-06-section1-step1-3.png)
 
-En la ventana Hierarchy (Jerarquía), asigne el nombre **Hints** , **Explode** y **Reset** a los botones.
+En la ventana Hierarchy (Jerarquía), asigne el nombre **Hints**, **Explode** y **Reset** a los botones.
 
 Para cada botón, seleccione el objeto secundario **SeeItSayItLabel** > **TextMeshPro** y, a continuación, en la ventana Inspector, cambie el texto del componente **TextMeshPro - Text** respectivo para que coincida con los nombres de los botones:
 
@@ -61,14 +61,17 @@ Para cada botón, seleccione el objeto secundario **SeeItSayItLabel** > **TextMe
 
 Una vez hecho esto, contraiga los objetos secundarios del objeto Buttons.
 
-En la ventana Hierarchy (Jerarquí)a, seleccione el objeto del botón **Hints** y, a continuación, en la ventana Inspector, configure el evento **OnClick ()** de la siguiente manera:
+En la ventana Hierarchy (Jerarquí)a, seleccione el objeto del botón **Hints** y, a continuación, en la ventana Inspector, configure el evento **Interactable.OnClick ()** de la siguiente manera:
 
 * Asigne el objeto **RoverAssembly** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No function** (Ninguna función), seleccione **PlacementHintsController** > **TogglePlacementHints ()** para establecer esta función como la acción que se va a ejecutar cuando se desencadene el evento.
 
 ![Unity con el evento OnClick del objeto de botón Hints configurado](images/mr-learning-base/base-06-section1-step1-5.png)
 
-En la ventana Hierarchy (Jerarquí)a, seleccione el objeto del botón **Explode** y, a continuación, en la ventana Inspector, configure el evento **OnClick ()** de la siguiente manera:
+> [!TIP]
+> El componente Interactable es un contenedor todo en uno que hace que se puede interactuar fácilmente con cualquier objeto y que este tenga capacidad de respuesta a las entradas. Interactable actúa como una instrucción comodín para todos los tipos de entradas como, por ejemplo, entradas táctiles, haces de mano, voz, etc., y canaliza estas interacciones en eventos y respuestas de tema visual. Para aprender a configurarlo para diferentes tipos de entrada y personalizar su tema visual, puede consultar la guía sobre [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) en el [Portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+
+En la ventana Hierarchy (Jerarquía), seleccione el objeto del botón **Explode** y, a continuación, en la ventana Inspector, configure el evento **OnClick ()** de la siguiente manera:
 
 * Asigne el objeto **RoverAssembly** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No function** (Ninguna función), seleccione **ExplodedViewController** > **ToggleExplodedView ()** para establecer esta función como la acción que se va a ejecutar cuando se desencadene el evento.
@@ -85,7 +88,7 @@ y el botón **Explode** para activar y desactivar la vista seccionada:
 
 ## <a name="creating-a-dynamic-menu-that-follows-the-user"></a>Creación de un menú dinámico que sigue al usuario
 
-En la ventana Proyecto, vaya a la carpeta **Recursos** > **MRTK** > **SDK** > **Características** > **Experiencia del usuario** > **Prefabs (Elementos prefabricados)**  > **Menús** , haga clic y arrastre el elemento prefabricado **NearMenu4x1** en la ventana Jerarquía, establezca su **posición** de transformación en X = 0, Y = -0.4, Z = 0 y configúrelo de la forma siguiente:
+En la ventana Proyecto, vaya a la carpeta **Recursos** > **MRTK** > **SDK** > **Características** > **Experiencia del usuario** > **Prefabs (Elementos prefabricados)**  > **Menús**, haga clic y arrastre el elemento prefabricado **NearMenu4x1** en la ventana Jerarquía, establezca su **posición** de transformación en X = 0, Y = -0.4, Z = 0 y configúrelo de la forma siguiente:
 
 * Compruebe que el **Tracked Target Type** (Tipo de objetivo de seguimiento) del componente **SolverHandler** esté establecido en **Head** (Cabeza).
 * Marque la casilla junto al componente **RadialView** del solucionador para que esté habilitado de forma predeterminada
@@ -182,10 +185,10 @@ En la ventana Hierarchy (Jerarquía), seleccione la primera parte del rover, Rov
 
 **Repita** este paso para cada uno de los objetos de parte del rover para configurar el componente **ToolTipSpawner** como se indica a continuación:
 
-* Para **Generator_Part** , cambie **Tool Tip Text** a **Generator**.
-* Para **Lights_Part** , cambie **Tool Tip Text** a **Lights**.
-* Para **UHFAntenna_Part** , cambie **Tool Tip Text** a **UHF Antenna**.
-* Para **Spectrometer_Part** , cambie **Tool Tip Text** a **Spectrometer**.
+* Para **Generator_Part**, cambie **Tool Tip Text** a **Generator**.
+* Para **Lights_Part**, cambie **Tool Tip Text** a **Lights**.
+* Para **UHFAntenna_Part**, cambie **Tool Tip Text** a **UHF Antenna**.
+* Para **Spectrometer_Part**, cambie **Tool Tip Text** a **Spectrometer**.
 
 Presione el botón Play (Reproducir) para entrar en el modo de juego y, a continuación, mantenga presionado el botón derecho del mouse mientras mueve el mouse hasta que la mirada entre en contacto con una de las partes y la información sobre herramientas de la parte se mostrará:
 

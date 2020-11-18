@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, hololens 2, azure storage
 ms.localizationpriority: high
-ms.openlocfilehash: e01796dd99982bb749d59108bcc972e5bc361770
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: 64e4aaadf13c03272a4fc9c552a7e4b31e82fdbb
+ms.sourcegitcommit: 520c69eb761ad6083b36f448bbcfab89e343e40d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353333"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94549108"
 ---
 # <a name="2-integrating-azure-storage"></a>2. Integración de Azure Storage
 
@@ -32,7 +32,7 @@ Obtenga más información sobre los [servicios de Azure Storage](https://docs.mi
 
 ### <a name="azure-table-storage"></a>Azure Table Storage
 
-Estos servicios nos permiten almacenar los datos mediante un mecanismo NoSQL. En este proyecto, lo usaremos para almacenar información sobre el *objeto del que se realiza un seguimiento* , p. ej., el nombre, la descripción, el identificador del delimitador espacial, etc.
+Estos servicios nos permiten almacenar los datos mediante un mecanismo NoSQL. En este proyecto, lo usaremos para almacenar información sobre el *objeto del que se realiza un seguimiento*, p. ej., el nombre, la descripción, el identificador del delimitador espacial, etc.
 
 En el contexto de la aplicación de demostración, necesita dos tablas, una para almacenar información sobre el proyecto con información sobre el estado de los modelos entrenados (puede obtener más información al respecto en el tutorial [Integración de Azure Custom Vision](mr-learning-azure-03.md)) y una segunda tabla para almacenar información sobre los *objetos de los que se realiza un seguimiento*.
 
@@ -57,7 +57,7 @@ Aunque puede ver y comprobar todos los cambios de datos de la interfaz de usuari
 
 > [!TIP]
 > Para realizar pruebas desde el editor de Unity, puede usar un emulador local:
-> * En Windows 10, puede usar el [emulador de Azure Storage.](https://docs.microsoft.com/azure/storage/common/storage-use-emulator)
+> * En Windows 10, puede usar el [emulador de Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-use-emulator).
 > * En MacOS/Linux, puede usar la [imagen de Docker de Azurite](https://hub.docker.com/_/microsoft-azure-storage-azurite) para Docker.
 
 ## <a name="preparing-the-scene"></a>Preparación de la escena
@@ -68,7 +68,7 @@ En la ventana Hierarchy (Jerarquía), busque el objeto **DataManager** y selecci
 
 En la ventana Inspector verá que el componente **DataManager (script)** es el sitio donde se conservan todos los valores de configuración relacionados con **Azure Storage**. Ya se han establecido todos los valores de configuración pertinentes. Ahora, solo tiene que reemplazar el campo *Connection String* (Cadena de conexión) por el que puede recuperar en Azure Portal. Si usa una solución de emulador de Azure Storage local, puede mantener la *cadena de conexión* que ya proporcionó.
 
-El componente **DataManager (script)** es responsable de comunicarse con **Table Storage** y **Blob Storage** , que consumen otros scripts del controlador en los componentes de la interfaz de usuario.
+El componente **DataManager (script)** es responsable de comunicarse con **Table Storage** y **Blob Storage**, que consumen otros scripts del controlador en los componentes de la interfaz de usuario.
 
 ## <a name="writing-and-reading-data-from-azure-table-storage"></a>Escritura y lectura de datos de Azure Table Storage
 
@@ -82,7 +82,7 @@ Ahora, haga clic en el *cuadro de texto* de la descripción y escriba "Coche", d
 
 Ahora, haga clic en **Search Object** (Buscar objeto) y escriba en la *barra de búsqueda* el nombre que ha utilizado antes al crear el *objeto del que se realiza un seguimiento*. Verá que se recupera la **tarjeta del objeto** con todos los datos de **Azure Table Storage**.
 
-No dude en cerrar la **tarjeta del objeto** y crear nuevos *objetos de los que se realice un seguimiento* , así como editar sus datos.
+No dude en cerrar la **tarjeta del objeto** y crear nuevos *objetos de los que se realice un seguimiento*, así como editar sus datos.
 
 > [!TIP]
 > Si instaló el [Explorador de Azure Storage](https://azure.microsoft.com/features/storage-explorer/), a continuación, examine la tabla de *objetos* y verá el *objeto del que se realiza un seguimiento*.

@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 30ef793511285fe2fe52810912f6c5c06c8550dc
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: ded881290de0167b7ffe26fc86b573d9b9ebb0b6
+ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353463"
+ms.lasthandoff: 11/14/2020
+ms.locfileid: "94631503"
 ---
 # <a name="2-creating-a-holographic-remoting-pc-application"></a>2. Creación de una aplicación para PC de comunicación remota holográfica
 
@@ -40,6 +40,11 @@ La aplicación de comunicación remota holográfica ya está lista para compilar
 
 En el menú de Unity, seleccione Edit > Project Settings (Editar > Configuración del proyecto) para abrir la ventana Player Settings (Configuración del reproductor):
 
+En la ventana Project Settings (Configuración del proyecto), expanda **Publishing Settings** (Configuración de la publicación), desplácese hacia abajo a la sección **Funcionalidades** y seleccione la casilla de funcionalidad que aparece a continuación además de las funcionalidades ya existentes.
+
+* Servidor cliente de Internet
+* Servidor cliente de red privada
+
 En la sección **XR Settings** (Configuración de XR), seleccione la casilla **WSA Holographic Remoting Supported** (Admitir la comunicación remota holográfica de WSA) y habilite la comunicación remota holográfica.
 
 ![Ventana XR Settings (Configuración de XR) de Unity con WSA Holographic Remoting Supported (Admitir la comunicación remota holográfica de WSA) habilitado](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step1-1.png)
@@ -48,7 +53,7 @@ En la sección **XR Settings** (Configuración de XR), seleccione la casilla **W
 
 En el menú de Unity, seleccione File > Build Settings (Archivo > Configuración de compilación) para abrir la ventana Build Settings (Configuración de compilación).
 
-En la ventana Build Settings (Configuración de compilación), haga clic en el botón * *_Add Open Scenes_* _ (Agregar escenas abiertas) para agregar la escena actual a las escenas. En la lista Build (Compilación), haga clic en el _*_botón Build_*_ (Compilar) para abrir la ventana Build Universal Windows Platform (Compilar Plataforma universal de Windows):
+En la ventana Build Settings (Configuración de compilación), haga clic en el botón **_Add Open Scenes_* _ (Agregar escenas abiertas) para agregar la escena actual a las escenas. En la lista Build (Compilación), haga clic en el _*_botón Build_*_ (Compilar) para abrir la ventana Build Universal Windows Platform (Compilar Plataforma universal de Windows):
 
 ![Ventana Build Settings (Configuración de compilación) de Unity con la escena agregada](images/mrlearning-pc-holographic-remoting/Tutorial2-Section2-Step2-1.png)
 
@@ -81,7 +86,7 @@ Para conectar la aplicación de PC a HoloLens 2, siga el proceso siguiente:
 
 ### <a name="1-install-the-remoting-player-application-on-hololens-2-device"></a>1. Instalación de la aplicación Remoting Player en el dispositivo HoloLens 2
 
-_ En HoloLens 2, visite la aplicación Store y busque " **Remoting Player** ".
+_ En HoloLens 2, visite la aplicación Store y busque "**Remoting Player**".
 * Seleccione la aplicación **Remoting Player**.
 * Pulse **Instalar** una vez para descargar e instalar la aplicación.
 

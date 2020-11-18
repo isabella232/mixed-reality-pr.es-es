@@ -7,12 +7,12 @@ ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, performance, optimization, settings, documentation
-ms.openlocfilehash: 64c8cdf4900234a4486cf9b575671321a8430160
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 21bd3ee9fb7db23eab9365e41adfd0033aa0046e
+ms.sourcegitcommit: 520c69eb761ad6083b36f448bbcfab89e343e40d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91699287"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94549133"
 ---
 # <a name="performance-recommendations-for-unreal"></a>Recomendaciones de rendimiento para Unreal
 
@@ -34,30 +34,34 @@ Puede encontrar cada una de las siguientes opciones en **Edit > Project Settings
 
 ![Representación progresiva](images/unreal/performance-recommendations-img-04.png)
 
-3. Deshabilitación de la niebla de los vértices: 
+3. Uso del modo multivista móvil:
+    * Desplácese hasta la sección **Engine** (Motor), seleccione **Rendering** (Representación), expanda la sección **VR** y habilite ambas opciones, **Instanced Stereo** (Estéreo con instancias) y **Mobile Multi-View** (Multivista móvil). La opción Mobile HDR (Alto rango dinámico móvil) debe estar desactivada.
+
+![Configuración de representación de VR](images/unreal/performance-recommendations-img-03.png)
+
+4. Asegúrese de que **Predeterminado** o **D3D12** son los valores de **RHI predeterminado** al usar OpenXR.
+    * Si selecciona **D3D11** tendrá un efecto negativo en el rendimiento debido a que la plataforma tiene que realizar una fase de representación adicional. Puede que **D3D12** proporcione mejoras en el rendimiento de la representación, además de evitar la fase de representación adicional.
+
+![RHI predeterminado](images/unreal/performance-recommendations-img-09.png)
+
+5. Deshabilitación de la niebla de los vértices: 
     * Con la niebla de los vértices se aplican cálculos de niebla en cada vértice de un polígono y, a continuación, se interpolan los resultados a lo largo del polígono. Si el juego no usa niebla, debe elegir esta opción para deshabilitar la niebla con el fin de aumentar el rendimiento del sombreado.
 
 ![Opciones de la niebla de los vértices](images/unreal/performance-recommendations-img-05.png)
 
-4. Deshabilitación de la selección de la oclusión:
+6. Deshabilitación de la selección de la oclusión:
     * Desplácese hasta la sección **Engine** (Motor), seleccione **Rendering** (Representación), expanda la sección **Culling** (Selección) y quite la marca de **Occlusion Culling** (Selección de la oclusión).
         + Si necesita la selección de la oclusión para una escena detallada que se está representando, se recomienda que habilite **Support Software Occlusion Culling** (Compatibilidad de la selección de la oclusión del software) en **Engine > Rendering** (Motor > Representación). Esto permite que Unreal realice el trabajo en la CPU y evita las consultas de oclusión de GPU, que tienen un rendimiento bajo en HoloLens 2.
     * La selección de la oclusión en la GPU en dispositivos móviles es un proceso lento. Por lo general, le recomendamos que la GPU esté principalmente relacionada con la representación. Si cree que la oclusión permitirá mejorar el rendimiento, intente habilitar la oclusión de software en su lugar. Tenga en cuenta que la habilitación de la oclusión de software podría empeorar el rendimiento si ya está limitado por la CPU debido a un gran número de llamadas de dibujo.
 
 ![Deshabilitación de la selección de la oclusión](images/unreal/performance-recommendations-img-02.png)
 
-    
-5. Deshabilitación de la galería de símbolos de profundidad:
+7. Deshabilitación de la fase de la galería de símbolos de profundidad personalizada:
     * Esta característica requiere un paso adicional, lo que significa que su procesamiento es lento. La translucidez también es un proceso lento en Unreal. Puede encontrar más información en la [documentación de Unreal](https://docs.unrealengine.com/Engine/Performance/Guidelines/index.html).
 
 ![Galería de símbolos de profundidad](images/unreal/performance-recommendations-img-06.png)
 
-6. Uso del modo multivista móvil:
-    * Desplácese hasta la sección **Engine** (Motor), seleccione **Rendering** (Representación), expanda la sección **VR** y habilite ambas opciones, **Instanced Stereo** (Estéreo con instancias) y **Mobile Multi-View** (Multivista móvil). La opción Mobile HDR (Alto rango dinámico móvil) debe estar desactivada.
-
-![Configuración de representación de VR](images/unreal/performance-recommendations-img-03.png)
-
-7. Reducción de mapas de sombras en cascada: 
+8. Reducción de mapas de sombras en cascada: 
     * La reducción del número de mapas de sombras mejorará el rendimiento. Por lo general, debe establecerse en 1 a menos que haya una pérdida de calidad visible. 
 
 ![Mapas de instantáneas en cascada](images/unreal/performance-recommendations-img-07.png)

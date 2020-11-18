@@ -7,18 +7,21 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, camera, PV camera, MRC
-ms.openlocfilehash: e66583d46d64361621303e36a5fbcc209300f5d8
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 6302a64fcde2a16b6ae1cb570215629a3e6ea9e5
+ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91699270"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "94573239"
 ---
 # <a name="hololens-photovideo-camera-in-unreal"></a>Cámara de foto y vídeo HoloLens en Unreal
 
 ## <a name="overview"></a>Introducción
 
-HoloLens tiene una cámara de foto y vídeo (PV) que se usa para la Captura de realidad mixta (MRC) y que una aplicación puede usar para acceder a los objetos visuales del mundo real.
+HoloLens tiene una cámara de foto y vídeo (PV) que se usa para la Captura de realidad mixta (MRC) y que una aplicación puede usar para acceder a los objetos visuales del mundo real. 
+
+> [!IMPORTANT]
+> La cámara de foto y vídeo no es compatible con el control remoto de holografías, pero es posible usar una cámara web conectada a su equipo para simular la funcionalidad de dicha cámara de HoloLens.
 
 ## <a name="render-from-the-pv-camera-for-mrc"></a>Representación de la cámara PV para MRC
 
@@ -43,8 +46,8 @@ Unreal controlará las solicitudes de MRC para representarlas desde la perspecti
 
 ## <a name="using-the-pv-camera"></a>Uso de la cámara PV
 
-La textura de la cámara web se puede recuperar en el juego en tiempo de ejecución, pero debe habilitarse en la opción del editor **Editar > Configuración del proyecto** :
-1. Vaya a **Plataformas > HoloLens > Capacidades** y marca **Cámara Web** .
+La textura de la cámara web se puede recuperar en el juego en tiempo de ejecución, pero debe habilitarse en la opción del editor **Editar > Configuración del proyecto**:
+1. Vaya a **Plataformas > HoloLens > Capacidades** y marca **Cámara Web**.
     * Use la función **StartCameraCapture** para usar la cámara web en tiempo de ejecución y la función **StopCameraCapture** para detener la grabación.
 
 ![Inicio y detención de la cámara](images/unreal-camera-startstop.PNG)
@@ -52,13 +55,13 @@ La textura de la cámara web se puede recuperar en el juego en tiempo de ejecuci
 ## <a name="rendering-an-image"></a>Representación de una imagen
 Para representar la imagen de la cámara:
 1. Cree una instancia de material dinámico basada en un material del proyecto, que se denomine **PVCamMat** en la siguiente captura de pantalla.  
-2. Establezca la instancia de material dinámico en una variable de **referencia de objeto dinámico de instancia de material** .  
+2. Establezca la instancia de material dinámico en una variable de **referencia de objeto dinámico de instancia de material**.  
 3. Establezca el material del objeto en la escena que representará la fuente de la cámara para esta nueva instancia de material dinámico.
     * Inicie un temporizador que se usará para enlazar la imagen de la cámara al material.
 
 ![Representación de la cámara](images/unreal-camera-render.PNG)
 
-4. Cree una nueva función para este temporizador, en este caso **MaterialTimer** , y llame a **GetARCameraImage** para obtener la textura de la cámara web.  
+4. Cree una nueva función para este temporizador, en este caso **MaterialTimer**, y llame a **GetARCameraImage** para obtener la textura de la cámara web.  
 5. Si esta textura es válida, defina un parámetro de textura en el sombreador para esta imagen.  De lo contrario, vuelve a iniciar el temporizador de materiales.
 
 ![Textura de cámara desde la cámara web](images/unreal-camera-texture.PNG)
