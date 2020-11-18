@@ -5,13 +5,13 @@ author: shengkait
 ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
-keywords: activo, creación, proceso, presupuesto, polígonos, texturas, sombreadores, rendimiento
-ms.openlocfilehash: 56be236086a6947549af6199dc3d01ba7c555375
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: activos, creación, proceso, presupuesto, polígonos, texturas, sombreadores, rendimiento, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, recursos
+ms.openlocfilehash: 0c6f592dd813c06613801510ad8c8a936ad0de65
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692147"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702881"
 ---
 # <a name="asset-creation-process"></a>Proceso de creación de recursos
 
@@ -77,7 +77,7 @@ Comenzaremos con las formas de obtener recursos para el proyecto:
 ### <a name="creating-assets"></a>Crear recursos
 
 **Herramientas de creación**<br>
-En primer lugar, puede crear sus propios recursos de varias maneras diferentes. los artistas 3D usan varias aplicaciones y herramientas para crear modelos que se componen de **mallas** , **texturas** y **materiales** . A continuación, se guarda en un formato de archivo que se puede importar o usar mediante el motor de gráficos que usa la aplicación, como **. FBX** o **. OBJ** . Cualquier herramienta que genere un modelo compatible con el motor de gráficos elegido funcionará en **HoloLens** . Entre los artistas 3D, muchos optan por usar [Maya de Autodesk, que es capaz de usar HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) para transformar el modo en que se crean los recursos. Si desea obtener algo rápidamente, también puede usar el [generador 3D](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) incluido en Windows para exportar. OBJ para su uso en la aplicación.
+En primer lugar, puede crear sus propios recursos de varias maneras diferentes. los artistas 3D usan varias aplicaciones y herramientas para crear modelos que se componen de **mallas**, **texturas** y **materiales**. A continuación, se guarda en un formato de archivo que se puede importar o usar mediante el motor de gráficos que usa la aplicación, como **. FBX** o **. OBJ**. Cualquier herramienta que genere un modelo compatible con el motor de gráficos elegido funcionará en **HoloLens**. Entre los artistas 3D, muchos optan por usar [Maya de Autodesk, que es capaz de usar HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) para transformar el modo en que se crean los recursos. Si desea obtener algo rápidamente, también puede usar el [generador 3D](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) incluido en Windows para exportar. OBJ para su uso en la aplicación.
 
 **Captura de objeto**<br>
 También hay la opción de capturar objetos en 3D. La captura de objetos inanimados en 3D y su edición con el software de creación de contenido digital es cada vez más popular con el aumento de la impresión en 3D. Con el sensor de **Kinect 2** y el [generador 3D](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) , puede usar la característica de captura para crear recursos a partir de objetos del mundo real. Esto también es un [conjunto de herramientas](https://en.wikipedia.org/wiki/Comparison_of_photogrammetry_software) para hacer lo mismo con **Photogrammetry** mediante el procesamiento de una serie de imágenes que se unen y la malla y las texturas.

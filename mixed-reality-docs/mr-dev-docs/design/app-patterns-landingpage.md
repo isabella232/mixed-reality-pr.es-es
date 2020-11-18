@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: overview
-keywords: Diseño de la experiencia del usuario, experiencia mixta UX, experiencia del usuario, patrones de la aplicación, controles, estilo, HoloLens, interacción, interacción espacial, IU espacial, elementos de la experiencia de usuario, comportamientos, bloques de creación, tipografía, color
-ms.openlocfilehash: c070d05f40cb3bf0376809fd684a05fd74f86fd5
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Diseño de la experiencia del usuario, experiencia mixta UX, experiencia del usuario, patrones de aplicaciones, controles, estilo, HoloLens, interacción, interacción espacial, IU espacial, elementos de la experiencia de usuario, comportamientos, bloques de creación, tipografía, color, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
+ms.openlocfilehash: c75856362f0e68eba2736105c028bff736c5932c
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692166"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703141"
 ---
 # <a name="ux-elements-overview"></a>Información general sobre elementos UX
 ## <a name="foundational-elements"></a>Elementos fundamentales

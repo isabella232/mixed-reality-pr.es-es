@@ -5,13 +5,13 @@ author: shengkait
 ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
-keywords: Realidad mixta, gestos, interacción, diseño
-ms.openlocfilehash: 909472abfec34f75a2f5fa810f87003978cc6a5e
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Realidad mixta, gestos, interacción, diseño, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, floración
+ms.openlocfilehash: 1994b38341dfdb2ef1cdb326cf7747c0af5f9c34
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692578"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703271"
 ---
 # <a name="start-gesture"></a>Movimiento de inicio
 
@@ -97,7 +97,7 @@ En HoloLens 2, reemplazamos el gesto de floración con un botón de muñeca virt
 > 1. Debe actualizar a la actualización de noviembre de 2019 (compilación 18363,1039) o posterior.
 > 1. Los ojos deben calibrarse en el dispositivo para que el seguimiento ocular funcione correctamente. Si no ve puntos en órbita alrededor del icono de inicio al mirarlo, los ojos no se calibrarán en el dispositivo.
 
-También puede realizar el gesto de inicio con una sola mano. Para ello, mantenga su mano con la palma y mire el **icono de inicio** en su muñeca interna. **Mientras mantiene el ojo del icono** , acerque el dedo y el dedo del índice.<br>
+También puede realizar el gesto de inicio con una sola mano. Para ello, mantenga su mano con la palma y mire el **icono de inicio** en su muñeca interna. **Mientras mantiene el ojo del icono**, acerque el dedo y el dedo del índice.<br>
 :::row:::
     :::column:::
         ![Botón de pulsera listo](images/wrist-button-ready.png)<br>
@@ -116,5 +116,5 @@ También puede realizar el gesto de inicio con una sola mano. Para ello, manteng
 ## <a name="see-also"></a>Consulte también
 
 * [Interacciones instintivas](interaction-fundamentals.md)
-* [Control con los ojos](eye-tracking.md)
+* [Miras hacia abajo](eye-tracking.md)
 * [Entrada de voz](voice-input.md)

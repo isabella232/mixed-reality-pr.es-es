@@ -5,17 +5,17 @@ author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
-keywords: Realidad mixta, premiración, destino, interacción, diseño, seguimiento ocular, seguimiento del cabezal
-ms.openlocfilehash: 887d1a30a974bdd643889959a1fee55e96d7b16a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Realidad mixta, miración de miración, interacción, diseño, seguimiento ocular, seguimiento de cabezales, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
+ms.openlocfilehash: a901e505d8e282e52078f5635627fbc2018a27b5
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693079"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702411"
 ---
 # <a name="gaze-and-commit"></a>Mirada y confirmación
 
-La acción de _mirar y confirmar_ es un modelo de entrada fundamental que está estrechamente relacionado con la forma en que estamos interactuando con nuestros equipos mediante el mouse: _punto & clic_ .
+La acción de _mirar y confirmar_ es un modelo de entrada fundamental que está estrechamente relacionado con la forma en que estamos interactuando con nuestros equipos mediante el mouse: _punto & clic_.
 En esta página, se presentan dos tipos de entradas de miradas (de encabezado y ojo) y distintos tipos de acciones de confirmación. 
 La acción de _mirar y confirmar_ se considera un modelo de entrada lejano con manipulación indirecta.
 Esto significa que es mejor usar para interactuar con el contenido holográfica que no está disponible.
@@ -133,7 +133,7 @@ Tanto si usa la vista de encabezado o miras hacia abajo para el modelo de entrad
 ---
 
 ## <a name="commit"></a>Commit
-Después de hablar sobre las distintas formas de _mirarnos_ en un destino, vamos a hablar un poco más sobre la parte de _confirmación_ en la _mirada y la confirmación_ .
+Después de hablar sobre las distintas formas de _mirarnos_ en un destino, vamos a hablar un poco más sobre la parte de _confirmación_ en la _mirada y la confirmación_.
 Después de establecer como destino un objeto o un elemento de la interfaz de usuario, el usuario puede interactuar o hacer clic en él mediante una entrada secundaria. Esto se conoce como el paso de confirmación del modelo de entrada. 
 
 Se admiten los siguientes métodos de confirmación:

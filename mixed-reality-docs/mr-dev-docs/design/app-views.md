@@ -5,17 +5,17 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: vista envolvente, vista 2D, pizarra, aplicación
-ms.openlocfilehash: e625eca3adb7cd4a9dcd1f971917f008d5daa7d2
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: vista envolvente, vista en 2D, pizarra, aplicación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
+ms.openlocfilehash: 1380c32dc89e472428c86be30b2fce82a946f3cc
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692146"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702927"
 ---
 # <a name="app-views"></a>Vistas de aplicación
 
-Las aplicaciones de Windows pueden contener dos tipos de vistas: vistas **envolventes** y **vistas 2D** . Las aplicaciones pueden cambiar entre las distintas vistas de envolvente y las vistas 2D, mostrando sus vistas 2D en un monitor como una ventana o en un casco como pizarra. Las aplicaciones que tienen al menos una vista envolvente se clasifican como **aplicaciones de realidad mixta** . Las aplicaciones que nunca tienen una vista envolvente son **aplicaciones 2D** .
+Las aplicaciones de Windows pueden contener dos tipos de vistas: vistas **envolventes** y **vistas 2D**. Las aplicaciones pueden cambiar entre las distintas vistas de envolvente y las vistas 2D, mostrando sus vistas 2D en un monitor como una ventana o en un casco como pizarra. Las aplicaciones que tienen al menos una vista envolvente se clasifican como **aplicaciones de realidad mixta**. Las aplicaciones que nunca tienen una vista envolvente son **aplicaciones 2D**.
 
 ## <a name="immersive-views"></a>Vistas envolventes
 

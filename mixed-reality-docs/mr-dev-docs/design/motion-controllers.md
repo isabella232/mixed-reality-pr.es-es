@@ -5,13 +5,13 @@ author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Controladores de 6DOF, controladores de movimiento
-ms.openlocfilehash: 74ea6c8879d5deb1271e9a2169cae013b03bab5b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Controladores de 6DOF, controladores de movimiento, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, desplazamiento, control, estado
+ms.openlocfilehash: a1af86ca174bc574ab8030d8aebd128649b6515f
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691623"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703161"
 ---
 # <a name="motion-controllers"></a>Controladores de movimiento
 
@@ -69,7 +69,7 @@ Los controladores de movimiento de Windows Mixed Reality ofrecen un seguimiento 
 * Palanca
 * Panel táctil
 
-## <a name="setup"></a>Configurar
+## <a name="setup"></a>Configuración
 
 ### <a name="before-you-begin"></a>Antes de empezar
 
@@ -104,7 +104,7 @@ Los controladores de movimiento pueden estar enlazados con el equipo host median
     :::column-end:::
 :::row-end:::
    
-8. Verá que el controlador aparece en la configuración de Bluetooth en la **categoría "Mouse, teclado, & lápiz"** como **conectado** . Llegados a este punto, puede obtener una actualización de firmware (consulte la [sección siguiente](motion-controllers.md#updating-controller-firmware)).
+8. Verá que el controlador aparece en la configuración de Bluetooth en la **categoría "Mouse, teclado, & lápiz"** como **conectado**. Llegados a este punto, puede obtener una actualización de firmware (consulte la [sección siguiente](motion-controllers.md#updating-controller-firmware)).
 9. Vuelva a adjuntar la cubierta de batería.
 10. Repita los pasos 1-9 para el segundo controlador.
 
@@ -146,9 +146,9 @@ Si los controladores están desactivados después del emparejamiento, su estado 
 
 ## <a name="gazing-and-pointing"></a>Gazing y apuntando
 
-Windows Mixed Reality admite dos modelos clave para la interacción; **mira y confirma** y **apunta y confirma** :
-* Con las opciones de **mirar y confirmar** , los usuarios destinan un objeto con su [miración](gaze-and-commit.md) y, a continuación, seleccionan objetos con pulsaciones aéreas, un controlador para juegos, un clic o la voz.
-* Con **Point y commit** , un usuario puede dirigirse a un controlador de movimiento compatible con el puntero en el objeto de destino y, a continuación, seleccionar objetos con el desencadenador del controlador.
+Windows Mixed Reality admite dos modelos clave para la interacción; **mira y confirma** y **apunta y confirma**:
+* Con las opciones de **mirar y confirmar**, los usuarios destinan un objeto con su [miración](gaze-and-commit.md) y, a continuación, seleccionan objetos con pulsaciones aéreas, un controlador para juegos, un clic o la voz.
+* Con **Point y commit**, un usuario puede dirigirse a un controlador de movimiento compatible con el puntero en el objeto de destino y, a continuación, seleccionar objetos con el desencadenador del controlador.
 
 Las aplicaciones que admiten apuntar a controladores de movimiento también deben habilitar las interacciones basadas en la mirada siempre que sea posible, para ofrecer a los usuarios la opción de qué dispositivos de entrada usan.
 
@@ -162,25 +162,25 @@ Para administrar este tipo de rebobinado que se puede producir cuando los usuari
 
 Windows Mixed Reality admite controladores de movimiento en diversos factores de forma, con el diseño de cada controlador diferente en su relación entre la posición del usuario y la dirección de "avance" natural que deben usar las aplicaciones para apuntar al representar el controlador.
 
-Para representar mejor estos controladores, hay dos tipos de supuestos que puede investigar para cada origen de interacción. la **pose de control** y el **puntero representan** .
+Para representar mejor estos controladores, hay dos tipos de supuestos que puede investigar para cada origen de interacción. la **pose de control** y el **puntero representan**.
 
 ### <a name="grip-pose"></a>Replanteamiento de control
 
 El **puño** representa la ubicación de la palma de una mano detectada por una HoloLens o la palma que contiene un controlador de movimiento.
 
-En los auriculares envolventes, la representación del puño es la que mejor se usa para representar **la mano del usuario** o **un objeto que se mantiene en la mano del usuario** , como un arma o un cañón. La representación de control también se usa al visualizar un controlador de movimiento, ya que el **modelo representable** proporcionado por Windows para un controlador de movimiento utiliza la representación del puño como su origen y el centro de rotación.
+En los auriculares envolventes, la representación del puño es la que mejor se usa para representar **la mano del usuario** o **un objeto que se mantiene en la mano del usuario**, como un arma o un cañón. La representación de control también se usa al visualizar un controlador de movimiento, ya que el **modelo representable** proporcionado por Windows para un controlador de movimiento utiliza la representación del puño como su origen y el centro de rotación.
 
 La pose de control se define específicamente de la siguiente manera:
-* La **posición del puño** : Palm centroide cuando mantiene el controlador de forma natural, se ajusta hacia la izquierda o derecha para centrar la posición dentro del control. En el controlador de movimiento de Windows Mixed Reality, esta posición generalmente se alinea con el botón de agarre.
-* **Eje derecho de la orientación del puño** : cuando se abre por completo la mano para formar una postura plana de 5 dedos, el rayo perpendicular a la palma (hacia delante de la mano izquierda y hacia atrás desde la mano derecha)
-* El **eje hacia delante de la orientación del puño** : al cerrar la mano (como si contiene el controlador), el rayo que señala "reenviar" a través del tubo formado por los dedos no Thumb.
-* **Eje hacia arriba de la orientación del puño** : el eje hacia arriba implícito por las definiciones derecha y hacia delante.
+* La **posición del puño**: Palm centroide cuando mantiene el controlador de forma natural, se ajusta hacia la izquierda o derecha para centrar la posición dentro del control. En el controlador de movimiento de Windows Mixed Reality, esta posición generalmente se alinea con el botón de agarre.
+* **Eje derecho de la orientación del puño**: cuando se abre por completo la mano para formar una postura plana de 5 dedos, el rayo perpendicular a la palma (hacia delante de la mano izquierda y hacia atrás desde la mano derecha)
+* El **eje hacia delante de la orientación del puño**: al cerrar la mano (como si contiene el controlador), el rayo que señala "reenviar" a través del tubo formado por los dedos no Thumb.
+* **Eje hacia arriba de la orientación del puño**: el eje hacia arriba implícito por las definiciones derecha y hacia delante.
 
 ### <a name="pointer-pose"></a>Representar puntero
 
 La **pose de puntero** representa la punta del controlador que señala hacia delante.
 
-La representación de puntero proporcionada por el sistema se usa mejor para Raycast cuando se **representa el propio modelo de controlador** . Si está representando algún otro objeto virtual en lugar del controlador, como un cañón virtual, debe apuntar con un rayo más natural para ese objeto virtual, como un rayo que viaja a lo largo del barril del modelo de pistola definido por la aplicación. Dado que los usuarios pueden ver el objeto virtual y no el controlador físico, es probable que apunte con el objeto virtual sea más natural para los que usan su aplicación.
+La representación de puntero proporcionada por el sistema se usa mejor para Raycast cuando se **representa el propio modelo de controlador**. Si está representando algún otro objeto virtual en lugar del controlador, como un cañón virtual, debe apuntar con un rayo más natural para ese objeto virtual, como un rayo que viaja a lo largo del barril del modelo de pistola definido por la aplicación. Dado que los usuarios pueden ver el objeto virtual y no el controlador físico, es probable que apunte con el objeto virtual sea más natural para los que usan su aplicación.
 
 ## <a name="controller-tracking-state"></a>Estado de seguimiento del controlador
 
@@ -209,7 +209,7 @@ Las aplicaciones que quieren tratar las posiciones de manera diferente según el
 </tr><tr>
 <td> <b>Precisión aproximada</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Ninguna posición</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: orange"> false</td>
+<td> <b>Ninguna posición</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: orange"> False</td>
 </tr>
 </table>
 
@@ -223,7 +223,7 @@ Estos Estados de seguimiento del controlador de movimiento se definen de la sigu
 
 ## <a name="interactions-low-level-spatial-input"></a>Interacciones: entrada espacial de bajo nivel
 
-Las interacciones principales entre los controladores de manos y de movimiento son **Select** , **Menu** , **agarre** , **touchpad** , **Stick** y **Home** .
+Las interacciones principales entre los controladores de manos y de movimiento son **Select**, **Menu**, **agarre**, **touchpad**, **Stick** y **Home**.
 * **Select** es la interacción principal para activar un holograma, que consta de una prensa seguida de una versión. En el caso de los controladores de movimiento, se realiza una presión Select mediante el desencadenador del controlador. Otras maneras de realizar una selección consisten en hablar del [comando de voz](voice-input.md) "Select". Se puede usar la misma interacción SELECT en cualquier aplicación. Piense en seleccionar como equivalente a un clic del mouse; una acción universal que aprenderá una vez y luego se aplicará a todas las aplicaciones.
 * El **menú** es la interacción secundaria para actuar en un objeto, que se usa para extraer un menú contextual o realizar alguna otra acción secundaria. Con los controladores de movimiento, puede realizar una acción de menú mediante el botón de *menú* del controlador. (es decir, el botón con el icono "menú" de la hamburguesa)
 * El **agarre** es el modo en que los usuarios pueden realizar acciones directamente en los objetos para manipularlos. Con los controladores de movimiento, puede llevar a cabo una acción de agarre al apretar el puño. Un controlador de movimiento puede detectar un agarre con un botón de agarre, un desencadenador de Palm u otro sensor.
@@ -233,13 +233,13 @@ Las interacciones principales entre los controladores de manos y de movimiento s
 
 ## <a name="composite-gestures-high-level-spatial-input"></a>Gestos compuestos: entrada espacial de alto nivel
 
-Se puede realizar un seguimiento de los [gestos de mano](gaze-and-commit.md#composite-gestures) y los controladores de movimiento a lo largo del tiempo para detectar un conjunto común de **[gestos compuestos](gaze-and-commit.md#composite-gestures)** de alto nivel. Esto permite que la aplicación detecte gestos **de pulsación de alto nivel,** de **suspensión** , de **manipulación** y **navegación** , tanto si los usuarios acaban usando manos o controladores.
+Se puede realizar un seguimiento de los [gestos de mano](gaze-and-commit.md#composite-gestures) y los controladores de movimiento a lo largo del tiempo para detectar un conjunto común de **[gestos compuestos](gaze-and-commit.md#composite-gestures)** de alto nivel. Esto permite que la aplicación detecte gestos **de pulsación de alto nivel,** de **suspensión**, de **manipulación** y **navegación** , tanto si los usuarios acaban usando manos o controladores.
 
 ## <a name="rendering-the-motion-controller-model"></a>Representación del modelo de controlador de movimiento
 
 **modelos de controlador 3D** Windows pone a disposición de las aplicaciones un modelo representable de cada controlador de movimiento activo actualmente en el sistema. Al hacer que la aplicación cargue dinámicamente y articular estos modelos de controlador proporcionados por el sistema en tiempo de ejecución, puede asegurarse de que la aplicación sea compatible con versiones posteriores a cualquier diseño de controlador futuro.
 
-Estos modelos representables deben representarse en la representación del controlador, ya que el origen del modelo se alinea con este **punto del mundo** físico. Si está representando modelos de controlador, puede que desee Raycast en la escena desde la representación del **puntero** , que representa el rayo a lo largo del que los usuarios esperarán de forma natural, dado el diseño físico del controlador.
+Estos modelos representables deben representarse en la representación del controlador, ya que el origen del modelo se alinea con este **punto del mundo** físico. Si está representando modelos de controlador, puede que desee Raycast en la escena desde la representación del **puntero**, que representa el rayo a lo largo del que los usuarios esperarán de forma natural, dado el diseño físico del controlador.
 
 Para más información sobre cómo cargar modelos de controlador de forma dinámica en Unity, consulte la sección [representación del modelo de controlador de movimiento en Unity](../develop/unity/gestures-and-motion-controllers-in-unity.md#rendering-the-motion-controller-model-in-unity) .
 
@@ -283,4 +283,4 @@ Envíenos [sus comentarios](../give-us-feedback.md) en la central de comentarios
 * [Gestos](gaze-and-commit.md#composite-gestures)
 * [Guía del entusiasta: su página principal de Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
 * [Guía del entusiasta: uso de juegos & aplicaciones en Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
-* [Cómo funciona el seguimiento interno](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system)
+* [Funcionamiento del seguimiento de la interacción directa](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system)

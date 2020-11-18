@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, patrones de aplicaciones, diseño, HoloLens, examen de salón, asignación espacial, malla
-ms.openlocfilehash: 25de181bbb2dedaba9e4917f51cc80bac77cc5f1
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality, patrones de aplicaciones, diseño, HoloLens, exploración de salón, asignación espacial, malla, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens
+ms.openlocfilehash: f912ddcff5ef1d14468cec1e63c8153ae6460476
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691575"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703361"
 ---
 # <a name="room-scan-visualization"></a>Visualización de la exploración de la sala
 
@@ -66,7 +66,7 @@ El análisis activo durante una experiencia puede ser beneficioso o perjudicial,
 
 En el caso de la asignación espacial almacenada en caché, la aplicación normalmente toma una instantánea de los datos de asignación espacial y usa esta instantánea para la duración de la experiencia.
 
-**Ventajas**
+**Beneficios**
 * Reducción de la sobrecarga en el sistema mientras se ejecuta la experiencia, lo que supone una mejora considerable en el rendimiento de la CPU, el térmico y la potencia.
 * Una implementación más sencilla de la experiencia principal, ya que no se ve interrumpida por los cambios en los datos espaciales.
 * Un único costo de tiempo en cualquier procesamiento posterior de los datos espaciales para la física, los gráficos y otros propósitos.
@@ -81,7 +81,7 @@ Un buen caso para este método es un entorno controlado o una tabla principal de
 
 Algunas aplicaciones pueden basarse en el análisis continuo para actualizar los datos de asignación espacial.
 
-**Ventajas**
+**Beneficios**
 * No es necesario compilar en una experiencia de exploración o exploración independiente de antemano en la aplicación.
 * El movimiento de objetos del mundo real puede reflejarse en el juego, aunque con algún retraso.
 

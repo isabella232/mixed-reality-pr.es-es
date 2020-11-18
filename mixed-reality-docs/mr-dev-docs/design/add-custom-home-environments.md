@@ -5,13 +5,13 @@ author: thmignon
 ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
-keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, Home, entornos personalizados, lugares, acantilado House, Skyloft, User, Create
-ms.openlocfilehash: 69fac9fcc0b3d7f199f4277c5d1b5a0c7df5f8c2
-ms.sourcegitcommit: 838bebf6bacac4047feff493c0847d4e6371976f
+keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, Home, entornos personalizados, lugares, acantilado House, Skyloft, usuario, creación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
+ms.openlocfilehash: 3b5862c6ba4ec1a0549b751cf2982247b6501201
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781525"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703021"
 ---
 # <a name="design-your-own-immersive-environments"></a>Diseñar entornos envolventes propios
 
@@ -53,11 +53,11 @@ Hemos creado un entorno de ejemplo que muestra algunas de las posibilidades crea
 2. Ejecute el archivo de **Fantasy_Island.exe** que acaba de descargar.
 
     > [!NOTE]
-    > Al intentar ejecutar un archivo. exe descargado de la web (como este), es posible que aparezca un mensaje emergente "Windows protegió su PC". Para ejecutar Fantasy_Island.exe desde esta ventana emergente, seleccione **más información** y, a continuación, **ejecute de todos modos** . Esta configuración de seguridad está destinada a protegerle de la descarga de archivos que no quiera confiar, por lo que solo debe elegir esta opción cuando confíe en el origen del archivo.
+    > Al intentar ejecutar un archivo. exe descargado de la web (como este), es posible que aparezca un mensaje emergente "Windows protegió su PC". Para ejecutar Fantasy_Island.exe desde esta ventana emergente, seleccione **más información** y, a continuación, **ejecute de todos modos**. Esta configuración de seguridad está destinada a protegerle de la descarga de archivos que no quiera confiar, por lo que solo debe elegir esta opción cuando confíe en el origen del archivo.
 
 3. Abra el **Explorador de archivos** y vaya a la carpeta entornos; para ello, pegue lo siguiente en la barra de direcciones: `%LOCALAPPDATA%\Packages\EnvironmentsApp_cw5n1h2txyewy\LocalState` .
 4. Copie el entorno de ejemplo que descargó en esta carpeta.
-5. Reinicie el **portal de realidad mixta** . Esto actualizará la lista de entornos en el selector de ubicaciones.
+5. Reinicie el **portal de realidad mixta**. Esto actualizará la lista de entornos en el selector de ubicaciones.
 6. Coloque el casco. Una vez que esté en el hogar, abra el **menú Inicio** con el botón Windows del controlador.
 7. Seleccione el icono de **lugares** situado encima de la lista de aplicaciones ancladas para elegir un entorno de inicio.
 8. Encontrará el entorno de la isla de fantasía que descargó en la lista de lugares. Seleccione **isla de fantasía** para entrar en el nuevo entorno de inicio personalizado.
@@ -96,7 +96,7 @@ Para facilitar este proceso, hemos creado el convertidor de [activos de Windows 
 
 El convertidor admite actualmente varias marcas para retocar el comportamiento exacto de las optimizaciones. Se recomienda ejecutar con las siguientes marcas para obtener los mejores resultados:
 
-Marca|Valores recomendados|Description
+Marca|Valores recomendados|Descripción
 ---|---|---
 -Max-Texture-size|1024 o 2048| Ajustar esto para mejorar la calidad de las texturas, el valor predeterminado es 512 x 512. Tenga en cuenta que un valor mayor afectará significativamente al tamaño del archivo del entorno, por lo que debe tener en cuenta el límite de 256 MB.
 -min-versión|1803|Los entornos personalizados solo se admiten en las versiones de Windows >= 1803. Esta marca quitará las texturas de las versiones anteriores y reducirá el tamaño de archivo del activo final.

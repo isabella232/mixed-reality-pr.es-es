@@ -5,20 +5,20 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, HoloLens, hologramas, diseño, interacción
-ms.openlocfilehash: f902639e66246c9184750ebc58dbad1c04b2bb5a
-ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
+keywords: Windows Mixed Reality, HoloLens, hologramas, diseño, interacción, auriculares de realidad mixta, auriculares Windows Mixed Reality, qué es realidad aumentada
+ms.openlocfilehash: 6407770a818bc294cf615201a837218173b963d0
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631473"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702251"
 ---
 # <a name="what-is-a-hologram"></a>¿Qué es un holograma?
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/MVXH5V8MVQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-HoloLens le permite crear **hologramas** , objetos de luz y sonido que aparecen en el mundo, al igual que si fueran objetos reales. Los hologramas responden a los comandos de [mirados](../design/gaze-and-commit.md), [gestos](../design/gaze-and-commit.md#composite-gestures) y [voz](../design/voice-input.md), y pueden interactuar con las [superficies del mundo real](../design/spatial-mapping.md) . Con los hologramas, puedes crear objetos digitales que formen parte de tu mundo.
+HoloLens le permite crear **hologramas**, objetos de luz y sonido que aparecen en el mundo, al igual que si fueran objetos reales. Los hologramas responden a los comandos de [mirados](../design/gaze-and-commit.md), [gestos](../design/gaze-and-commit.md#composite-gestures) y [voz](../design/voice-input.md), y pueden interactuar con las [superficies del mundo real](../design/spatial-mapping.md) . Con los hologramas, puedes crear objetos digitales que formen parte de tu mundo.
 
 <br>
 

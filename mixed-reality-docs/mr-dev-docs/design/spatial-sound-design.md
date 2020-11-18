@@ -5,13 +5,13 @@ author: kegodin
 ms.author: kegodin
 ms.date: 11/02/2019
 ms.topic: article
-keywords: Windows Mixed Reality, sonido espacial, diseño, estilo
-ms.openlocfilehash: 8bb48aad2d4582696241bc5444beabc88ca5a7d9
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality, sonido espacial, diseño, estilo, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, gestos, interacciones, atenuación
+ms.openlocfilehash: 503a59eb6a71aea0e1ec043ca6e3196f821f211a
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692603"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703290"
 ---
 # <a name="how-to-use-sound-in-mixed-reality-applications"></a>Cómo usar sonido en aplicaciones de realidad mixta
 
@@ -68,7 +68,7 @@ A menudo, las interacciones de voz tienen elementos visuales sutiles. Use sonido
 
 * Use un tono de sonido positivo para las *confirmaciones* de comandos de voz. Los tonos ascendentes e intervalos musicales principales son eficaces.
 * Use un tono de sonido menos corto y positivo para *errores* de comandos de voz. Evite sonidos negativos. En su lugar, use un sonido más percussive, que sea neutro para comunicar que la aplicación está pasando de la interacción.
-* Si la aplicación tiene una palabra de reactivación, use un tono corto y suave cuando el dispositivo *empiece a escuchar* . Use un sonido de bucle sutil mientras la aplicación *está* escuchando.
+* Si la aplicación tiene una palabra de reactivación, use un tono corto y suave cuando el dispositivo *empiece a escuchar*. Use un sonido de bucle sutil mientras la aplicación *está* escuchando.
 
 ### <a name="notifications"></a>Notificaciones
 Las notificaciones comunican los cambios de estado de aplicación y otros eventos que no inicia el usuario, como finalizaciones de procesos, mensajes y llamadas telefónicas.
@@ -99,7 +99,7 @@ La espacialización incluye algún costo de la CPU. Muchas aplicaciones tienen c
 ### <a name="when-and-how-to-apply-distance-based-attenuation"></a>Cuándo y cómo aplicar la atenuación basada en la distancia
 En el mundo físico, los sonidos que están más lejos son más silenciosos. El motor de audio puede modelar esta atenuación en función de la distancia de origen. Use la atenuación basada en la distancia cuando comunique la información pertinente.
 
-Las distancias a los *indicadores visuales* , los *hologramas animados* y otros sonidos informativos suelen ser relevantes para el usuario. Use la atenuación basada en la distancia para proporcionar indicaciones de manera intuitiva.
+Las distancias a los *indicadores visuales*, los *hologramas animados* y otros sonidos informativos suelen ser relevantes para el usuario. Use la atenuación basada en la distancia para proporcionar indicaciones de manera intuitiva.
 
 Ajuste la curva de atenuación de cada origen para ajustarse al tamaño de los espacios del mundo de la realidad mixta. La curva predeterminada del motor de audio suele estar pensada para espacios muy grandes (hasta el medio kilómetro).
 

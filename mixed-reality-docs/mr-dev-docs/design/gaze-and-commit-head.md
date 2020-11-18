@@ -5,13 +5,13 @@ author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
-keywords: Mixed Reality, gaze, gaze targeting, interaction, design
-ms.openlocfilehash: 76223dd375e76d943183bc745792e2cb9d3d0601
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Realidad mixta, miración rápida, interacción, diseño, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, destino, enfoque, suavizado
+ms.openlocfilehash: d913ac81e20962d38178223a050fdccfb51d8632
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692098"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702391"
 ---
 # <a name="head-gaze-and-commit"></a>Mirada con la cabeza y confirmación
 La acción de _mirar y confirmar_ es un caso especial del modelo de entrada de la mano [y de confirmación](gaze-and-commit.md) que implica apuntar a un objeto con la dirección del encabezado hacia delante (dirección del encabezado) y, a continuación, actuar en él con una entrada secundaria, como la pulsación aérea de gesto de mano o el comando de voz "seleccionar". 

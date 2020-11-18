@@ -1,19 +1,19 @@
 ---
-title: Diseño de contenido para pantalla holográfica
+title: Diseño de contenido para la pantalla holográfica
 description: Instrucciones de diseño y prácticas recomendadas para la visualización holográfica
 author: yoonpark
 ms.author: dongpark
 ms.date: 06/18/2020
 ms.topic: article
-keywords: Diseño de la interfaz de usuario, pantalla holográfica, diseño de contenido, tema oscuro, tema claro
-ms.openlocfilehash: 627ffdd0a413ad3140c29e9b1c7bb69c9dc249cf
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Diseño de la interfaz de usuario, pantalla holográfica, diseño de contenido, tema oscuro, tema claro, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, diseño, píxeles
+ms.openlocfilehash: ea3fbda7aff80f0878521deb433c88b16abeab19
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692615"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702641"
 ---
-# <a name="designing-content-for-holographic-display"></a>Diseño de contenido para pantalla holográfica
+# <a name="designing-content-for-holographic-display"></a>Diseño de contenido para la pantalla holográfica
 
 ![Ubicación del lado de ulnar](images/UX_Hero_DarkTheme.jpg)
 

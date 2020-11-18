@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: UWP, modelo de aplicación, ciclo de vida, suspender, reanudar, mosaico, vistas, contratos
-ms.openlocfilehash: 67b883517ae17422bf7c27227c33882cf8a9f7ef
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: UWP, modelo de aplicación, ciclo de vida, suspensión, reanudación, icono, vistas, contratos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
+ms.openlocfilehash: 332556a5118f0c69a83654d345119995e4262cb5
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692182"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703111"
 ---
 # <a name="app-model"></a>Modelo de aplicación
 
@@ -68,7 +68,7 @@ A veces, la aplicación debe seguir trabajando en segundo plano o reproduciendo 
 
 ## <a name="app-views"></a>Vistas de aplicación
 
-Cuando se activa la aplicación, puede elegir el tipo de vista que le gustaría mostrar. En el caso de una aplicación de **CoreApplication** , siempre hay una [vista de aplicación](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationView) principal y cualquier número de vistas de aplicación adicionales que quiera crear. En el escritorio, puede pensar en una vista de la aplicación como una ventana. Nuestras plantillas de aplicaciones de realidad mixta crean un proyecto de Unity en el que la vista de la aplicación principal es [envolvente](app-views.md). 
+Cuando se activa la aplicación, puede elegir el tipo de vista que le gustaría mostrar. En el caso de una aplicación de **CoreApplication**, siempre hay una [vista de aplicación](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationView) principal y cualquier número de vistas de aplicación adicionales que quiera crear. En el escritorio, puede pensar en una vista de la aplicación como una ventana. Nuestras plantillas de aplicaciones de realidad mixta crean un proyecto de Unity en el que la vista de la aplicación principal es [envolvente](app-views.md). 
 
 La aplicación puede crear una vista de aplicación 2D adicional mediante tecnología como XAML, para usar características de Windows 10 como la compra desde la aplicación. Si la aplicación se inicia como una aplicación para UWP para otros dispositivos de Windows 10, la vista principal es 2D, pero podría "iluminarse" en realidad mixta agregando una vista de aplicación adicional que es envolvente para mostrar una experiencia de forma volumétrica. Imagine que compila una aplicación de visor de fotos en XAML donde el botón de presentación de diapositivas cambió a una vista de aplicación envolvente que voló fotos de la aplicación en todo el mundo y Surfaces.
 

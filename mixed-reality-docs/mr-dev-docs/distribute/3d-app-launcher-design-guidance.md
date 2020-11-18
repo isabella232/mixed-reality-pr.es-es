@@ -5,13 +5,13 @@ author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, diseño, iniciador de aplicaciones 3D, auriculares envolvente, cubo activo
-ms.openlocfilehash: 884d05b8b8ef7e15f5c65a411cf500b0d4dc598c
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality, diseño, iniciador de aplicaciones 3D, auriculares envolventes, cubo activo, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, UWP, Win32, iluminación, color
+ms.openlocfilehash: a501b4bdc86df17f6d005c2f7ccf4fe6a94a4b43
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692838"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703481"
 ---
 # <a name="3d-app-launcher-design-guidance"></a>Guía de diseño del iniciador de aplicaciones 3D
 

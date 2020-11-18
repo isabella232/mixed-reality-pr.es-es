@@ -5,17 +5,17 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: sistema de coordenadas, sistema de coordenadas espaciales, solo orientación, con ajuste de escala, escalado permanente, escalado de sala, escalado a gran escala, 360 grado, sentado, de posición, de habitación, de escala, de posición, de orientación, de fondo, de bloqueo, de almacenamiento, de cierre, de persistencia, de uso compartido y de bloqueo de la nube
-ms.openlocfilehash: bf7641d13302620a32aac260332c3be694ea324b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: sistema de coordenadas, sistema de coordenadas espaciales, solo orientación, escalado colocado, escalado permanente, escala de habitación, escala mundial, 360 Degree, sentado, posición, habitación, mundo, escala, posición, orientación, estacionaria, conectado, fase, delimitador, delimitador espacial, bloqueo mundial, bloqueo mundial, bloqueado por el cuerpo, bloqueo de cuerpo, límites, persistencia, uso compartido, pérdida de seguimiento, el anclaje espacial de la nube, auriculares de realidad mixta
+ms.openlocfilehash: afffffae5d23309b2ab9124b9f74b7818fd4adf6
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692642"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702541"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 
-En su núcleo, las aplicaciones de realidad mixta colocan [hologramas](../discover/hologram.md) en su mundo que buscan y suenan como objetos reales. Esto implica el posicionamiento y la orientación precisos de esos hologramas en lugares del mundo que son significativos para el usuario, tanto si el mundo es su habitación física como si es un dominio virtual que ha creado. Cuando se trata sobre la posición y la orientación de los hologramas, o de cualquier otra geometría como [el rayo o](gaze-and-commit.md) las [posiciones de mano](hands-and-tools.md), Windows proporciona varios sistemas de coordenadas del mundo real en los que se puede expresar la geometría, conocido como **sistemas de coordenadas espaciales** .
+En su núcleo, las aplicaciones de realidad mixta colocan [hologramas](../discover/hologram.md) en su mundo que buscan y suenan como objetos reales. Esto implica el posicionamiento y la orientación precisos de esos hologramas en lugares del mundo que son significativos para el usuario, tanto si el mundo es su habitación física como si es un dominio virtual que ha creado. Cuando se trata sobre la posición y la orientación de los hologramas, o de cualquier otra geometría como [el rayo o](gaze-and-commit.md) las [posiciones de mano](hands-and-tools.md), Windows proporciona varios sistemas de coordenadas del mundo real en los que se puede expresar la geometría, conocido como **sistemas de coordenadas espaciales**.
 
 <br>
 
@@ -105,7 +105,7 @@ Tenga en cuenta que el marco de fase de referencia todavía no se admite en Holo
 
 Todas las aplicaciones de gráficos 3D usan [sistemas de coordenadas cartesianos](https://docs.microsoft.com/windows/uwp/graphics-concepts/coordinate-systems) para motivar las posiciones y las orientaciones de los objetos en los mundos virtuales que representan. Estos sistemas de coordenadas establecen tres ejes perpendiculares para colocar los objetos: un eje X, Y y Z.
 
-En [realidad](../discover/mixed-reality.md), las aplicaciones tendrán en común los sistemas de coordenadas virtuales y físicos. Windows llama a un sistema de coordenadas que tiene un significado real en el mundo físico, un **sistema de coordenadas espaciales** .
+En [realidad](../discover/mixed-reality.md), las aplicaciones tendrán en común los sistemas de coordenadas virtuales y físicos. Windows llama a un sistema de coordenadas que tiene un significado real en el mundo físico, un **sistema de coordenadas espaciales**.
 
 Los sistemas de coordenadas espaciales expresan sus valores de coordenadas en metros. Esto significa que los objetos colocados en 2 unidades separadas en el eje X, Y o Z aparecerán 2 metros de distancia entre sí cuando se representen en realidad mixta. Esto le permite representar fácilmente objetos y entornos a escala real.
 
@@ -115,9 +115,9 @@ En ambos tipos de sistemas de coordenadas, el eje X positivo apunta a la derecha
 
 ## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Creación de una experiencia de solo orientación o de escalado
 
-La clave para la [representación](../develop/platform-capabilities-and-apis/rendering.md) holográfica es cambiar la vista de la aplicación de sus hologramas cada fotograma a medida que el usuario se desplaza, para que coincida con el movimiento de cabeza previsto. Puede crear **experiencias de escalado colocadas** que respeten los cambios en la posición principal y la orientación del encabezado del usuario mediante un **marco estacionario de referencia** .
+La clave para la [representación](../develop/platform-capabilities-and-apis/rendering.md) holográfica es cambiar la vista de la aplicación de sus hologramas cada fotograma a medida que el usuario se desplaza, para que coincida con el movimiento de cabeza previsto. Puede crear **experiencias de escalado colocadas** que respeten los cambios en la posición principal y la orientación del encabezado del usuario mediante un **marco estacionario de referencia**.
 
-Algunos contenidos deben omitir las actualizaciones de la posición principal, que permanecen fijas en el encabezado y la distancia elegidos del usuario en todo momento. El ejemplo principal es el vídeo de 360 grados: dado que el vídeo se captura desde una sola perspectiva fija, estropearía la ilusión de que la posición de la vista se desplazará en relación con el contenido, aunque la orientación de la vista deba cambiar cuando el usuario se desplace. Puede compilar estas **experiencias solo de orientación** mediante un **marco de referencia asociado** .
+Algunos contenidos deben omitir las actualizaciones de la posición principal, que permanecen fijas en el encabezado y la distancia elegidos del usuario en todo momento. El ejemplo principal es el vídeo de 360 grados: dado que el vídeo se captura desde una sola perspectiva fija, estropearía la ilusión de que la posición de la vista se desplazará en relación con el contenido, aunque la orientación de la vista deba cambiar cuando el usuario se desplace. Puede compilar estas **experiencias solo de orientación** mediante un **marco de referencia asociado**.
 
 ### <a name="stationary-frame-of-reference"></a>Marco estacionario de referencia
 
@@ -137,17 +137,17 @@ Cuando el casco no puede averiguar dónde se encuentra en el mundo, un marco de 
 
 ## <a name="building-a-standing-scale-or-room-scale-experience"></a>Creación de una experiencia de escalado permanente o a escala de habitación
 
-Para ir más allá de la escala colocada en un casco inmersivo y crear una **experiencia de escalado permanente** , puede usar el **marco de ensayo de referencia** .
+Para ir más allá de la escala colocada en un casco inmersivo y crear una **experiencia de escalado permanente**, puede usar el **marco de ensayo de referencia**.
 
-Para proporcionar una **experiencia de escalado a sala** , lo que permite a los usuarios desplazarse por el límite de 5 metros que están predefinidos, puede comprobar también los límites de la **fase** .
+Para proporcionar una **experiencia de escalado a sala**, lo que permite a los usuarios desplazarse por el límite de 5 metros que están predefinidos, puede comprobar también los límites de la **fase** .
 
 ### <a name="stage-frame-of-reference"></a>Marco de la fase de referencia
 
-Cuando se configura por primera vez un auricular envolvente, el usuario define una **fase** , que representa el salón en el que experimentará una realidad mixta. La fase define mínimamente un **origen** de la fase, un sistema de coordenadas espaciales centrado en la posición y orientación hacia delante elegidos por el usuario en el que pretenden usar el dispositivo. Al colocar el contenido en este sistema de coordenadas de fase en el plano Y = 0, puede asegurarse de que los hologramas aparecen de forma cómoda en el suelo cuando el usuario está de pie, lo que proporciona a los usuarios una **experiencia de escalado permanente** .
+Cuando se configura por primera vez un auricular envolvente, el usuario define una **fase**, que representa el salón en el que experimentará una realidad mixta. La fase define mínimamente un **origen** de la fase, un sistema de coordenadas espaciales centrado en la posición y orientación hacia delante elegidos por el usuario en el que pretenden usar el dispositivo. Al colocar el contenido en este sistema de coordenadas de fase en el plano Y = 0, puede asegurarse de que los hologramas aparecen de forma cómoda en el suelo cuando el usuario está de pie, lo que proporciona a los usuarios una **experiencia de escalado permanente**.
 
 ### <a name="stage-bounds"></a>Límites de fase
 
-Opcionalmente, el usuario también puede definir **límites de fase** , un área dentro de la habitación en la que han borrado el mobiliario en el que pretenden desplazarse por la realidad mixta. Si es así, la aplicación puede crear una **experiencia de escalado de habitación** y usar estos límites para asegurarse de que los hologramas siempre se colocan donde el usuario puede tener acceso a ellos.
+Opcionalmente, el usuario también puede definir **límites de fase**, un área dentro de la habitación en la que han borrado el mobiliario en el que pretenden desplazarse por la realidad mixta. Si es así, la aplicación puede crear una **experiencia de escalado de habitación** y usar estos límites para asegurarse de que los hologramas siempre se colocan donde el usuario puede tener acceso a ellos.
 
 Dado que el marco de la fase de referencia proporciona un único sistema de coordenadas fijo en el que colocar el contenido relativo al suelo, es la ruta más sencilla para portar aplicaciones de escalado permanente y a escala de sala desarrolladas para auriculares de realidad virtual. Sin embargo, al igual que con esas plataformas de VR, un único sistema de coordenadas solo puede estabilizar el contenido en un diámetro de 5 metros (16 pies), antes de que los efectos de la palanca de la maneta hagan que el contenido alejado del centro se desplace de forma notable a medida que el sistema se ajuste. Para ir más allá de 5 metros, se necesitan delimitadores espaciales.
 

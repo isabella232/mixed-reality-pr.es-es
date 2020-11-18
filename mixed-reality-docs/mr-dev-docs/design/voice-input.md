@@ -5,13 +5,13 @@ author: hak0n
 ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
-keywords: GGV, voz, Cortana, voz, entrada
-ms.openlocfilehash: 206fd1b304d1b0f376ec1d45a6d5ba852b0bc4f2
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: GGV, voz, Cortana, voz, entrada, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, mira fijamente
+ms.openlocfilehash: f4f81383f942961857b088b05c4e8cac07ab7dfe
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692535"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703211"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -19,13 +19,13 @@ ms.locfileid: "91692535"
 
 La voz es una de las formas clave de entrada en HoloLens. Permite comandos directamente de un holograma sin tener que usar [gestos de mano](gaze-and-commit.md#composite-gestures). La entrada de voz es una manera natural de comunicar tus intenciones. La voz es especialmente adecuada en el recorrido de interfaces complejas, ya que permite a los usuarios cortar menús anidados con un comando.
 
-La entrada de voz se basa en el [mismo motor](https://msdn.microsoft.com/library/windows/apps/mt185615.aspx) que admite la voz en todas las demás _aplicaciones universales de Windows_ . En HoloLens, el reconocimiento de voz siempre funcionará en el idioma de visualización de Windows configurado en configuración. 
+La entrada de voz se basa en el [mismo motor](https://msdn.microsoft.com/library/windows/apps/mt185615.aspx) que admite la voz en todas las demás _aplicaciones universales de Windows_. En HoloLens, el reconocimiento de voz siempre funcionará en el idioma de visualización de Windows configurado en configuración. 
 
 <br>
 
 ## <a name="voice-and-gaze"></a>Voz y miras
 
-Cuando se usan comandos de voz, se usa normalmente (encabezado o ojo) para hacer clic en el mecanismo de destino, ya sea con un cursor ("Select") o para canalizar implícitamente el comando a una aplicación que se está viendo. En este caso, es posible que no sea necesario que muestre ningún cursor de miras _("verlo, decirlo")_ . Por supuesto, algunos comandos de voz no requieren un destino, como "ir a Inicio" o "Hola Cortana".
+Cuando se usan comandos de voz, se usa normalmente (encabezado o ojo) para hacer clic en el mecanismo de destino, ya sea con un cursor ("Select") o para canalizar implícitamente el comando a una aplicación que se está viendo. En este caso, es posible que no sea necesario que muestre ningún cursor de miras _("verlo, decirlo")_. Por supuesto, algunos comandos de voz no requieren un destino, como "ir a Inicio" o "Hola Cortana".
 
 <br>
 
@@ -159,8 +159,8 @@ Hay una serie de comandos de voz que puede decir mientras Gazing en un holograma
 * Mayor | Enhance
 * Disminuye
 
-En HoloLens 2, también puede crear interacciones más naturales en combinación con la mirada, lo que proporciona implícitamente información contextual sobre lo que se está haciendo referencia. Por ejemplo, podría simplemente mirar un holograma y decir "colocarlo" y, a continuación, buscar _el_ lugar en el que desea colocarlo y decir " _aquí_ ".
-O bien, podría ver una pieza holográfica en una máquina compleja y decir: "proporcione más información acerca de _esto_ ".
+En HoloLens 2, también puede crear interacciones más naturales en combinación con la mirada, lo que proporciona implícitamente información contextual sobre lo que se está haciendo referencia. Por ejemplo, podría simplemente mirar un holograma y decir "colocarlo" y, a continuación, buscar _el_ lugar en el que desea colocarlo y decir " _aquí_".
+O bien, podría ver una pieza holográfica en una máquina compleja y decir: "proporcione más información acerca de _esto_".
 
 
 
@@ -188,21 +188,21 @@ Considera la posibilidad de agregar comandos de voz a cualquier experiencia que 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
 A continuación se muestran algunas prácticas que te ayudarán a realizar sin problemas las tareas de reconocimiento de voz.
-* **Usa comandos concisos** : cuando sea posible, elige palabras clave de dos o más sílabas. Las palabras de una sílaba tienden a tener diferentes pronunciaciones de las vocales dependiendo del acento de la persona. Ejemplo: "reproducir vídeo" es mejor que "reproducir el vídeo seleccionado actualmente"
+* **Usa comandos concisos**: cuando sea posible, elige palabras clave de dos o más sílabas. Las palabras de una sílaba tienden a tener diferentes pronunciaciones de las vocales dependiendo del acento de la persona. Ejemplo: "reproducir vídeo" es mejor que "reproducir el vídeo seleccionado actualmente"
 * **Usar vocabulario simple** : por ejemplo, "show Note" es mejor que "show letrero"
-* **Asegúrate de que los comandos no sean destructivos** : haz que cualquier acción que se puede realizar mediante un comando de voz no sea destructiva, y se pueda deshacer fácilmente, en caso de que otra persona que esté hablando cerca del usuario pueda desencadenar accidentalmente un comando.
-* **Evita los comandos que tengan un sonido similar** : evita registrar varios comandos de voz que suenen de forma parecida. Ejemplo: "Mostrar más" y "Mostrar tienda" puede ser un sonido muy similar.
-* **Anula el registro de la aplicación cuando no esté en uso** : cuando la aplicación no está en un estado en el que un comando de voz determinado es válido, considera la posibilidad de anular el registro de modo que otros comandos no se confundan con ese.
-* **Prueba con diferentes acentos** : prueba la aplicación con usuarios con diferentes acentos.
-* **Mantén la coherencia en los comandos de voz** : si "Volver" va a la página anterior, mantén este comportamiento en tus aplicaciones.
-* **Evita el uso de comandos del sistema** : los siguientes comandos de voz están reservados para el sistema. Las aplicaciones no deben utilizar estos comandos.
+* **Asegúrate de que los comandos no sean destructivos**: haz que cualquier acción que se puede realizar mediante un comando de voz no sea destructiva, y se pueda deshacer fácilmente, en caso de que otra persona que esté hablando cerca del usuario pueda desencadenar accidentalmente un comando.
+* **Evita los comandos que tengan un sonido similar**: evita registrar varios comandos de voz que suenen de forma parecida. Ejemplo: "Mostrar más" y "Mostrar tienda" puede ser un sonido muy similar.
+* **Anula el registro de la aplicación cuando no esté en uso**: cuando la aplicación no está en un estado en el que un comando de voz determinado es válido, considera la posibilidad de anular el registro de modo que otros comandos no se confundan con ese.
+* **Prueba con diferentes acentos**: prueba la aplicación con usuarios con diferentes acentos.
+* **Mantén la coherencia en los comandos de voz**: si "Volver" va a la página anterior, mantén este comportamiento en tus aplicaciones.
+* **Evita el uso de comandos del sistema**: los siguientes comandos de voz están reservados para el sistema. Las aplicaciones no deben utilizar estos comandos.
    * "Hola Cortana"
    * "Seleccionar"
    * "Ir a Inicio"
 
 ### <a name="advantages-of-voice-input"></a>Ventajas de la entrada de voz
 
-Las entradas de voz son una manera natural de comunicar nuestras intenciones. La voz es especialmente útil en los recorridos de la interfaz, ya que puede ayudar a los usuarios a **resaltar** varios pasos de una interfaz (un usuario podría decir "volver atrás" mientras mira una página web, en lugar de tener que subir y presionar el botón atrás en la aplicación). Esta pequeña hora de guardar tiene un **efecto emocional** eficaz sobre la percepción del usuario de la experiencia y les da una pequeña cantidad de mejorar enormemente. El uso de la voz es también un método práctico de entrada cuando tenemos las manos ocupadas o estamos **realizando varias tareas a la vez** . En los dispositivos en los que es difícil escribir en un teclado, el **dictado de voz** puede ser una forma alternativa eficaz de escribir texto. Por último, en algunos casos en los que el **intervalo de precisión** de la mirada y el gesto es limitado, la voz puede ayudar a eliminar la ambigüedad de la intención del usuario. 
+Las entradas de voz son una manera natural de comunicar nuestras intenciones. La voz es especialmente útil en los recorridos de la interfaz, ya que puede ayudar a los usuarios a **resaltar** varios pasos de una interfaz (un usuario podría decir "volver atrás" mientras mira una página web, en lugar de tener que subir y presionar el botón atrás en la aplicación). Esta pequeña hora de guardar tiene un **efecto emocional** eficaz sobre la percepción del usuario de la experiencia y les da una pequeña cantidad de mejorar enormemente. El uso de la voz es también un método práctico de entrada cuando tenemos las manos ocupadas o estamos **realizando varias tareas a la vez**. En los dispositivos en los que es difícil escribir en un teclado, el **dictado de voz** puede ser una forma alternativa eficaz de escribir texto. Por último, en algunos casos en los que el **intervalo de precisión** de la mirada y el gesto es limitado, la voz puede ayudar a eliminar la ambigüedad de la intención del usuario. 
 
 **Cómo puede beneficiar al usuario la utilización de la voz**
 * Reduce el tiempo: debe hacer que el objetivo final sea más eficaz.
@@ -237,7 +237,7 @@ Un desafío asociado a un gran conjunto de comandos de voz es cómo enseñarlas 
 
 ### <a name="voice-feedback-states"></a>Estados de la respuesta a la voz
 
-Cuando la voz se aplica correctamente, el usuario entiende **lo que puede decir y obtiene una respuesta clara** de que el sistema **le ha oído correctamente** . Estas dos señales hacen que el usuario se sienta seguro utilizando la voz como entrada principal. A continuación se muestra un diagrama que muestra lo que sucede con el cursor cuando se reconoce la entrada de voz y cómo se lo comunica al usuario.
+Cuando la voz se aplica correctamente, el usuario entiende **lo que puede decir y obtiene una respuesta clara** de que el sistema **le ha oído correctamente**. Estas dos señales hacen que el usuario se sienta seguro utilizando la voz como entrada principal. A continuación se muestra un diagrama que muestra lo que sucede con el cursor cuando se reconoce la entrada de voz y cómo se lo comunica al usuario.
 
 
 :::row:::
@@ -284,7 +284,7 @@ En el caso de las aplicaciones que desean aprovechar las opciones de procesamien
 
 Todo este procesamiento de audio se acelera en hardware, lo que significa que las características agotan una gran cantidad de energía que si se realizara el mismo procesamiento en la CPU de HoloLens. Evite ejecutar otro procesamiento de entrada de audio en la CPU para maximizar la duración de la batería del sistema y aprovechar el procesamiento de entrada de audio descargado integrado.
 
-## <a name="languages"></a>Lenguajes
+## <a name="languages"></a>Idiomas
 
 HoloLens 2 [es compatible con varios idiomas](https://docs.microsoft.com/hololens/hololens2-language-support). Tenga en cuenta que los comandos de voz siempre se ejecutarán en el idioma para mostrar del sistema aunque se instalen varios teclados o cuando las aplicaciones intenten crear un reconocedor de voz en otro idioma.
 
@@ -299,7 +299,7 @@ En el caso de la versión 2017 de Windows Mixed Reality Developer Edition, la l�
 ---
 
 ## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>Entrada de voz en MRTK (kit de herramientas de realidad mixta) para Unity
-Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede asignar fácilmente comandos de voz en cualquier objeto. Use el **Perfil de entrada de voz** de MRTK para definir sus palabras clave. Mediante la asignación del script **SpeechInputHandler** , puede hacer que cualquier objeto responda a las palabras clave definidas en el perfil de entrada de voz. SpeechInputHandler también proporciona una etiqueta de confirmación de voz para mejorar la confianza del usuario.
+Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**, puede asignar fácilmente comandos de voz en cualquier objeto. Use el **Perfil de entrada de voz** de MRTK para definir sus palabras clave. Mediante la asignación del script **SpeechInputHandler** , puede hacer que cualquier objeto responda a las palabras clave definidas en el perfil de entrada de voz. SpeechInputHandler también proporciona una etiqueta de confirmación de voz para mejorar la confianza del usuario.
 
 * [Comando MRTK-Voice](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
 

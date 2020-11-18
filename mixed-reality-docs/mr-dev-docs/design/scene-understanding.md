@@ -5,13 +5,13 @@ author: szymons
 ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
-keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 6185d434b1687675f9ae46313277f61cf6d5e1f8
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, oclusión, SDK
+ms.openlocfilehash: 80fb01707d3265aa3dac23d75ea92034115d3c94
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691559"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703371"
 ---
 # <a name="scene-understanding"></a>Descripción de escenas
 
@@ -40,7 +40,7 @@ Si no tiene un dispositivo y desea tener acceso a escenas de ejemplo para probar
 Si busca detalles específicos sobre cómo desarrollar para la comprensión de escenas o detalles sobre cómo funciona la comprensión de escenas y cómo desarrollar para ello, consulte la documentación de [información general sobre el SDK de introducción](../develop/platform-capabilities-and-apis/scene-understanding-SDK.md) a la escena.
 
 
-### <a name="sample"></a>Muestra
+### <a name="sample"></a>Ejemplo
 
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos

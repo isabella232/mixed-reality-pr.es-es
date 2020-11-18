@@ -5,13 +5,13 @@ author: jessemcculloch
 ms.author: ishitak
 ms.date: 08/03/2020
 ms.topic: article
-keywords: realidad mixta, VR, LBE, ubicación
-ms.openlocfilehash: 6ee013a576041a71d92307523dbfbaefa6c7d24a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: realidad mixta, VR, LBE, ubicación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, hardware, HoloLens, varios jugadores, servicios en la nube, Azure
+ms.openlocfilehash: b082153d3d32b2ecee1eb4430cab008819d50ba3
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91694726"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702101"
 ---
 # <a name="location-based-entertainment-with-windows-mixed-reality"></a>Entretenimiento basado en la ubicación con Windows Mixed Reality
 
@@ -49,7 +49,7 @@ En el caso de las experiencias de VR con tethering de PC, nuestros OEM ofrecen u
 
 HP acaba de lanzar su mochila de HP VR de la versión G2, el equipo portátil más eficaz del mundo, optimizado para experiencias de movilidad gratuita, ahora con un 30% más de energía con una GPU de RTX 2080 dentro de. [Detalles](https://www8.hp.com/us/en/vr/vr-backpack.html)
 
-### <a name="setup"></a>Configurar
+### <a name="setup"></a>Configuración
 
 **P: ¿Cómo puedo configurar más fácilmente el programa de instalación y personalizar el portal de realidad mixta para LBE?**
 

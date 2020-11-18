@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 05/13/2019
 ms.topic: article
-keywords: Mixed Reality, gaze, dwell, interaction, design
-ms.openlocfilehash: 825623b00107eec400b4df926c8980c92b065902
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Realidad mixta, miradas, viviendas, interacción, diseño, auriculares de realidad mixta, auriculares Windows Mixed Reality, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, experiencia de usuario, directrices, vista de lista
+ms.openlocfilehash: abedff5a273816f49419c7823b96eda1d474e336
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693066"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702321"
 ---
 # <a name="head-gaze-and-dwell"></a>Mirada con la cabeza y permanencia
 

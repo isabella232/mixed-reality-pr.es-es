@@ -5,13 +5,13 @@ author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
-keywords: Seguimiento ocular, realidad mixta, entrada, ojo
-ms.openlocfilehash: 57b90142fc47b72030f9b767370fd84a5c7d5b14
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Seguimiento ocular, realidad mixta, entrada, ojo, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, diseño, interacciones
+ms.openlocfilehash: 59dded6ca23b9adc075dc02d642ce7761f93bcfb
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692106"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702551"
 ---
 # <a name="eye-gaze-based-interaction-on-hololens-2"></a>Interacción mirada en la vista en HoloLens 2
 
@@ -40,7 +40,7 @@ En función de estas, se proporcionan varias recomendaciones de diseño para ayu
      <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
 </tr>
 <tr>
-     <td>Control con los ojos</td>
+     <td>Miras hacia abajo</td>
      <td>❌</td>
      <td>✔️</td>
      <td>❌</td>
@@ -70,7 +70,7 @@ Con una gran cantidad de energía, supone una gran responsabilidad.
 A pesar de que la mirada se puede usar para crear experiencias de usuario satisfactorias, lo que hace que se sienta como un Superhero, también es importante saber lo que no es adecuado para la consideración adecuada. A continuación se explican algunos de los *desafíos* que se deben tener en cuenta y cómo solucionarlos al trabajar con la entrada de mirada: 
 
 - **La mirada está "Always On"** En el momento en que se abre el Lids, los ojos comienzan fixating sobre las cosas en el entorno. Al reaccionar a cada una de las búsquedas que realiza y emite acciones accidentalmente, porque ha examinado algo durante demasiado tiempo, se producirá una experiencia incumplida.
-Por lo tanto, se recomienda combinar el ojo con un *comando de voz* , un gesto de *mano* , un *clic de botón* o una permanencia extendida para desencadenar la selección de un destino (para obtener más información, consulte [miras y confirmaciones](gaze-and-commit-eyes.md)).
+Por lo tanto, se recomienda combinar el ojo con un *comando de voz*, un gesto de *mano*, un *clic de botón* o una permanencia extendida para desencadenar la selección de un destino (para obtener más información, consulte [miras y confirmaciones](gaze-and-commit-eyes.md)).
 Esta solución también permite un modo en el que el usuario puede mirar libremente sin saturarse mediante la activación involuntaria de algo. Este problema también se debe tener en cuenta a la hora de diseñar comentarios visuales y acústicos al mirar un objetivo.
 Intente no sobrecargar al usuario con efectos emergentes inmediatos o desplazarse por los sonidos. El detalle es clave. Hablaremos de algunas prácticas recomendadas para esta información más adelante al hablar acerca de las [recomendaciones de diseño](eye-gaze-interaction.md#design-recommendations).
 

@@ -4,13 +4,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: article
-keywords: Realidad mixta, HoloLens, controles de IU, interacción, UI, experiencia de usuario, diseño de la experiencia del usuario, interfaz de usuario espacial, interacción espacial, interfaz de usuario 3D, UX en 3D
-ms.openlocfilehash: 2c811edc14fbcc7c917fe9fa724f1cab23179a96
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Realidad mixta, HoloLens, controles de IU, interacción, IU, experiencia de usuario, diseño de la experiencia del usuario, interfaz de usuario espacial, interacción espacial, interfaz de usuario 3D, experiencia en 3D, auriculares
+ms.openlocfilehash: ec887f73b8561e0a91740d612227411683707364
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692606"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703301"
 ---
 # <a name="spatial-mesh"></a>Malla espacial
 
@@ -26,11 +26,11 @@ Dado que es importante permitir que el usuario se Centre e interactúe con el co
 ## <a name="spatial-mesh-visualization-in-mrtk-mixed-reality-toolkit-for-unity"></a>Visualización de malla espacial en MRTK (kit de herramientas de realidad mixta) para Unity
 MRTK proporciona varios materiales para la visualización de la malla espacial.
 
-- **MRTK_Wireframe. MAT, MRTK_Wireframe. MAT** : material de malla espacial estático predeterminado que muestra los contornos de la malla sin animación. Este material es útil para la depuración, ya que muestra todas las geometrías espaciales de la malla. Sin embargo, no se recomienda para la producción.
+- **MRTK_Wireframe. MAT, MRTK_Wireframe. MAT**: material de malla espacial estático predeterminado que muestra los contornos de la malla sin animación. Este material es útil para la depuración, ya que muestra todas las geometrías espaciales de la malla. Sin embargo, no se recomienda para la producción.
 <br>
 <img src="images/SurfaceReconstruction.jpg" alt="Wireframe spatial mesh visualization" width="640px">
 
-- **MRTK_SurfaceReconstruction. MAT** : este material proporciona un efecto de pulso animado en la malla espacial. Puede usar este material para visualizar el entorno en un momento concreto de su experiencia o en la entrada de punteo de aire del usuario. Consulte **PulseShaderExamples. Unity** Scene para ver los ejemplos.
+- **MRTK_SurfaceReconstruction. MAT**: este material proporciona un efecto de pulso animado en la malla espacial. Puede usar este material para visualizar el entorno en un momento concreto de su experiencia o en la entrada de punteo de aire del usuario. Consulte **PulseShaderExamples. Unity** Scene para ver los ejemplos.
 <br>
 <img src="images/MRTK_SRMesh_Pulse.jpg" alt="Pulse spatial mesh visualization" width="640px">
 * Para más información, consulte [MRTK-Spatial awareing](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html) y [MRTK-Pulse Shader](https://microsoft.github.io/MixedRealityToolkit-Unity/Assets/MRTK/SDK/Experimental/PulseShader/README.html) .

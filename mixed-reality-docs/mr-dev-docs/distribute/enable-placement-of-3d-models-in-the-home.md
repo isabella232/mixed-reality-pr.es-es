@@ -5,15 +5,15 @@ author: thmignon
 ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
-keywords: 3D, modelo, lugar en casa, lugar, mundo, modelado, Página principal de la realidad mixta, Web, aplicación
-ms.openlocfilehash: 4ea720fd9fc404d4730733b6b65df13acdf1a51a
-ms.sourcegitcommit: 838bebf6bacac4047feff493c0847d4e6371976f
+keywords: 3D, modelo, lugar en casa, lugar, mundo, modelado, Inicio de la realidad mixta, Web, aplicación, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: 192c403ce50c3a47fb19f644af78d1150bb9aa3f
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781571"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703191"
 ---
-# <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>Habilitar la selección de ubicación de modelos 3D en la Página principal de realidad mixta
+# <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>Habilitación de la colocación de modelos 3D en el ambiente principal
 
 > [!NOTE]
 > Esta característica se agregó como parte de la [actualización 2018 de abril de Windows 10](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-april-2018). Las versiones anteriores de Windows no son compatibles con esta característica.
@@ -42,7 +42,7 @@ Por ejemplo, si está desarrollando una aplicación que muestra un catálogo de 
     </tr>
 </table>
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 Hay 2 pasos para habilitar la selección de ubicación de modelos 3D en la Página principal de Windows Mixed Reality:
 1. [Asegúrese de que el modelo 3D es compatible con la Página principal de Windows Mixed Reality](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md).
@@ -88,7 +88,7 @@ private async void launchURI_Click(object sender, RoutedEventArgs e)
 
 ## <a name="considerations-for-immersive-vr-headsets"></a>Consideraciones sobre los auriculares envolventes (VR)
 
-* En el caso de los auriculares envolventes (VR), el portal de realidad mixta no tiene que estar en ejecución antes de invocar el *Protocolo de adición del modelo* . En este caso, el *Protocolo de adición del modelo* iniciará el portal de realidad mixta y colocará el objeto directamente, donde el casco está mirando una vez que llega a la Página principal de la realidad mixta. 
+* En el caso de los auriculares envolventes (VR), el portal de realidad mixta no tiene que estar en ejecución antes de invocar el *Protocolo de adición del modelo*. En este caso, el *Protocolo de adición del modelo* iniciará el portal de realidad mixta y colocará el objeto directamente, donde el casco está mirando una vez que llega a la Página principal de la realidad mixta. 
 * Al invocar el *Protocolo agregar modelo* desde el escritorio con el portal de realidad mixta que ya se está ejecutando, asegúrese de que el casco esté "activo". Si no es así, la selección de ubicación no se realizará correctamente. 
 
 ## <a name="see-also"></a>Consulte también

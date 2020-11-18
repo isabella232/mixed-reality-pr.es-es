@@ -5,13 +5,13 @@ author: danielescudero
 ms.author: daescu
 ms.date: 04/08/2018
 ms.topic: article
-keywords: Windows Mixed Reality, diseño, proceso, caso práctico
-ms.openlocfilehash: 4cde36c8b5c3914c63e0c588e76dc4b782dcdcb9
-ms.sourcegitcommit: cc27d31f0cebaf9fc4221a3300a9e3d73230b367
+keywords: Windows Mixed Reality, diseño, proceso, caso práctico, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, qué es realidad virtual, qué es la realidad más ampliada, bodystorming, guiones gráficos, comentarios
+ms.openlocfilehash: 5f1cc6efd7d1fa8dda043575562bfaf94ea812a9
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94631513"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702211"
 ---
 # <a name="thinking-differently-for-mixed-reality"></a>Pensamiento diferente para la realidad mixta
 Cuando Microsoft lanzó la HoloLens (1ª generación) a una audiencia de desarrolladores ansiosos en 2016, el equipo ya se ha asociado con estudios dentro y fuera de Microsoft para crear las experiencias de inicio del dispositivo. Estos equipos aprendieron con la práctica y la búsqueda de oportunidades y retos en el nuevo campo del diseño de realidad mixta.

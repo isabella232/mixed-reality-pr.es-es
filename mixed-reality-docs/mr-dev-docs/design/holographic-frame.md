@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/25/2020
 ms.topic: article
-keywords: HoloLens, Windows Mixed Reality, marco holográfica, campo de vista
-ms.openlocfilehash: 649cacfaf40f226a84f1b9b928cb47e468f3f146
-ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
+keywords: HoloLens, Windows Mixed Reality, fotograma holográfica, campo de vista, campo de subconjuntos, auricular de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, interacciones, navegación, menú
+ms.openlocfilehash: c1786af43bacc414b5ffcf6f59753d7f8fa92fef
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94340643"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702221"
 ---
 # <a name="holographic-frame"></a>Marco holográfico
 
@@ -139,14 +139,7 @@ Como experiencia envolvente, se recomienda que estos usuarios examinen, moviendo
 
 La representación realista de los rumores proporcionó un punto focal eficaz, junto con técnicas sutiles para convertir los rumores al usuario como si estuviera allí, hablando. A medida que el usuario se mueve sobre la experiencia, los zumbidos pasarán a un umbral antes de volver a un estado neutro si el usuario se mueve demasiado allá de la periferia. Si el usuario mira por los rumores por completo (por ejemplo, para ver algo en otro lugar de la escena) y, a continuación, vuelve a rumores, la posición direccional del narrador volverá a centrarse en el usuario. Las técnicas como esta proporcionan una gran sensación de inmersión y creación de un punto focal dentro del marco holográfica, lo que reduce el movimiento excesivo y promueve la [comodidad del usuario](comfort.md).
 
-## <a name="next-discovery-checkpoint"></a>Siguiente punto de comprobación de detección
-
-Si está siguiendo el [viaje de detección](../discover/get-started-with-mr.md) que hemos diseñado, está en medio de explorar los aspectos básicos de la realidad mixta. Desde aquí, puede continuar con el siguiente tema básico: 
-
-> [!div class="nextstepaction"]
-> [Hacer que objetos holográficos parezcan reales (asignación espacial)](../design/spatial-mapping.md)
-
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [Comodidad](comfort.md)
 * [Escala](scale.md)

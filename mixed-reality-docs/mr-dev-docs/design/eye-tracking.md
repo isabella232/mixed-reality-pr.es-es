@@ -5,13 +5,13 @@ author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
-keywords: Seguimiento ocular, realidad mixta, entrada, ojo y calibración
-ms.openlocfilehash: 20e76188c6b64776d818f340f6aca0a725454dd8
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Seguimiento ocular, realidad mixta, entrada, ojo ocular, calibración, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, conjunto de herramientas de realidad mixta, intención, acciones
+ms.openlocfilehash: c6167fc48a98de8f400400475c2057a2b4773b29
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692103"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702591"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Seguimiento de los ojos en HoloLens 2
 
@@ -37,7 +37,7 @@ La API de seguimiento ocular se ha diseñado pensando en la privacidad del usuar
      <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
 </tr>
 <tr>
-     <td>Control con los ojos</td>
+     <td>Miras hacia abajo</td>
      <td>❌</td>
      <td>✔️</td>
      <td>❌</td>
@@ -63,7 +63,7 @@ Para obtener más información sobre la calibración y cómo garantizar una expe
 <br>
 
 ## <a name="available-eye-tracking-data"></a>Datos de seguimiento ocular disponibles
-Antes de entrar en detalles sobre los casos de uso específicos de la entrada ocular y mirarnos, queremos señalar brevemente las funcionalidades que proporciona la [API de seguimiento](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose) de la vista de HoloLens 2. Los desarrolladores obtienen acceso a un solo rayo de mira fijamente (miran el origen y la dirección) a aproximadamente _30 fps (30 Hz)_ .
+Antes de entrar en detalles sobre los casos de uso específicos de la entrada ocular y mirarnos, queremos señalar brevemente las funcionalidades que proporciona la [API de seguimiento](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose) de la vista de HoloLens 2. Los desarrolladores obtienen acceso a un solo rayo de mira fijamente (miran el origen y la dirección) a aproximadamente _30 fps (30 Hz)_.
 Para obtener información más detallada sobre cómo obtener acceso a los datos de seguimiento de los ojos, consulte nuestras guías para desarrolladores para usar [miras en DirectX](../develop/native/gaze-in-directx.md) y [mirarnos en Unity](https://aka.ms/mrtk-eyes).
 
 El ojo de miración predicho es aproximadamente de 1,5 grados en el ángulo visual alrededor del destino real (vea la ilustración siguiente). A medida que se esperan ligeras inprecisións, los desarrolladores deben planear algún margen alrededor de este valor de límite inferior (por ejemplo, 2,0-3.0 grados pueden dar lugar a una experiencia mucho más cómoda). Veremos cómo abordar la selección de destinos pequeños con más detalle a continuación. Para que el seguimiento de los ojos funcione con precisión, cada usuario debe realizar una calibración de seguimiento de los ojos. 
@@ -79,9 +79,9 @@ Tenga en cuenta que estos casos de uso todavía no forman parte de la experienci
 Puede probar algunas de ellas en el [Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Main.html), que proporciona varios ejemplos interesantes y eficaces para usar el seguimiento ocular, como selecciones de destino compatibles con la vista rápida y sin esfuerzo, así como desplazarse automáticamente por el texto en función de la apariencia del usuario. 
 
 ### <a name="user-intent"></a>Intento del usuario    
-Información sobre dónde y qué mira un usuario proporciona un contexto eficaz **para otras entradas** , como voz, manos y controladores.
+Información sobre dónde y qué mira un usuario proporciona un contexto eficaz **para otras entradas**, como voz, manos y controladores.
 Esta información puede utilizarse para varias tareas.
-Por ejemplo, esto puede variar de forma rápida y sin **problemas a través de** la escena con solo mirar un holograma y decir *"seleccionar"* (vea también [mirarnos y confirmar](gaze-and-commit.md)) o *"poner esto..."* y, después, buscar dónde desea colocar el holograma y decir *"... allí "* . Puedes consultar varios ejemplos en [Mixed Reality Toolkit: Selección de objetivos con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) y [Mixed Reality Toolkit: Posicionamiento de objetivos con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
+Por ejemplo, esto puede variar de forma rápida y sin **problemas a través de** la escena con solo mirar un holograma y decir *"seleccionar"* (vea también [mirarnos y confirmar](gaze-and-commit.md)) o *"poner esto..."* y, después, buscar dónde desea colocar el holograma y decir *"... allí "*. Puedes consultar varios ejemplos en [Mixed Reality Toolkit: Selección de objetivos con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_TargetSelection.html) y [Mixed Reality Toolkit: Posicionamiento de objetivos con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Positioning.html).
 
 Además, un ejemplo de intención del usuario podría incluir el uso de información sobre lo que los usuarios ven para mejorar la interacción con agentes virtuales incorporados y hologramas interactivos. Por ejemplo, los agentes virtuales pueden adaptar las opciones disponibles y su comportamiento, en función del contenido que se vea actualmente. 
 
@@ -92,7 +92,7 @@ Un aspecto clave de esto es que la velocidad de desplazamiento se adapta a la ve
 Otro ejemplo es el **zoom y la panorámica que se admiten,** donde el usuario puede sentir como sumergir exactamente en lo que se centra. La activación y el control de la velocidad de zoom se pueden controlar con una entrada de voz o de forma manual, lo que es importante para proporcionar al usuario la sensación de control mientras evita estar abrumado. Hablaremos sobre estas consideraciones de diseño con más detalle a continuación. Una vez que se ha ampliado, el usuario puede seguir sin problemas, por ejemplo, en el transcurso de una calle para explorar su entorno con solo ver la mirada.
 Puedes consultar ejemplos de demostración de estos tipos de interacciones en el ejemplo [Mixed Reality Toolkit - Navegación con los ojos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Navigation.html).
 
-A continuación, se indican algunos otros casos de uso para _acciones implícitas_ :
+A continuación, se indican algunos otros casos de uso para _acciones implícitas_:
 - **Notificaciones inteligentes:** ¿Alguna vez le molestan las notificaciones que se exponen en el lugar donde está buscando? Teniendo en cuenta la atención de un usuario, puede mejorar esta experiencia mediante el desplazamiento de notificaciones desde donde el usuario está Gazing actualmente. Esto limita las distracciones y las descarta automáticamente una vez que el usuario haya terminado de leer. 
 - **Attentive hologramas:** Hologramas que reaccionan sutilmente cuando se miran. Esto puede oscilar entre elementos de la interfaz de usuario ligeramente iluminados, una flor de floración lenta hasta un perro virtual que empieza a volver al usuario y wagging su cola. Esta interacción podría proporcionar una sensación interesante de conectividad y satisfacción en la aplicación.
 

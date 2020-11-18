@@ -1,19 +1,19 @@
 ---
-title: Mira fijamente y viviendas
+title: Mirada y permanencia
 description: Información general sobre el modelo de entrada de mira y disponibilidad (ojo)
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
-keywords: Realidad mixta, mirada, permanencia, interacción, diseño, seguimiento ocular, seguimiento de encabezado
-ms.openlocfilehash: ee8b6487079a071fe84606949314f2dd315df45f
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Realidad mixta, miradas, viviendas, interacción, diseño, seguimiento ocular, seguimiento de cabezales, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
+ms.openlocfilehash: d47401b65f7d62e1fe59655c42efe72ac68acfc6
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693050"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702201"
 ---
-# <a name="gaze-and-dwell"></a>Mira fijamente y viviendas
+# <a name="gaze-and-dwell"></a>Mirada y permanencia
 
 Si tienes las manos ocupadas con herramientas y piezas, hacer gestos puede ser engorroso o imposible.
 Los comandos de voz también pueden ser poco confiables en determinados contextos, por ejemplo, en condiciones excesivamente altas.

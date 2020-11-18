@@ -5,13 +5,13 @@ author: jsyltebo
 ms.author: jsylte
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, HoloLens, HoloTour, sonido espacial, caso práctico
-ms.openlocfilehash: 6cf2d18661924276f1ea75efb88e29acd4709f37
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Windows Mixed Reality, HoloLens, HoloTour, sonido espacial, caso práctico, auricular de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, audio
+ms.openlocfilehash: 31e38f6f5ce309bba11515ab09303593af0a328b
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692138"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702841"
 ---
 # <a name="case-study-spatial-sound-design-for-holotour"></a>Caso práctico: diseño de sonido espacial para HoloTour
 
@@ -56,7 +56,7 @@ Cuando se indexa en el audio de captura de cámara, colocamos emisores de audio 
 
 En un enfoque diferente, a veces se reproduce ambiente estéreo en bucle junto con los emisores de sonido espacial que se colocan alrededor de la escena. Estos emisores juegan un sonido único de volumen aleatorio, tono y frecuencia del desencadenador. Esta técnica crea ambiente que tiene un sentido mejorado de direccionalidad. En aguas Alienates, por ejemplo, puede oír cómo cada cuadrante de la panorámica tiene emisores específicos que resaltan áreas específicas de la geografía pero colaboran para crear un ambiente envolvente general.
 
-## <a name="tips-and-tricks"></a>Trucos y sugerencias
+## <a name="tips-and-tricks"></a>Sugerencias y trucos
 
 Hay algunas maneras adicionales de resaltar la direccionalización y mejorar la inmersión para hacer un uso completo de las capacidades de sonido espacial de HoloLens. Hemos proporcionado una lista aquí. Escuche estos efectos la próxima vez que intente HoloTour.
 * **Buscar destinos:** Estos sonidos se desencadenan cuando se observa un objeto o área específica del marco holográfica. Por ejemplo, mire hacia el café de la calle del Navona de Piazza de Roma para desencadenar sutilmente los sonidos de los restaurantes ocupados.

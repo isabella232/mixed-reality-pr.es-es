@@ -5,13 +5,13 @@ author: thmignon
 ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
-keywords: 3D, modelado, guía de modelado, requisitos de recursos, directrices de creación, iniciador, selector 3D, textura, materiales, complejidad, triángulos, malla, polígonos, polinúmero, límites
-ms.openlocfilehash: 606726b9c205ccdf3eacafca96b2bd9ccae43e82
-ms.sourcegitcommit: 838bebf6bacac4047feff493c0847d4e6371976f
+keywords: 3D, modelado, guía de modelado, requisitos de recursos, directrices de creación, iniciador, selector 3D, textura, materiales, complejidad, triángulos, malla, polígonos, polinúmero, límites, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
+ms.openlocfilehash: fb2f2718497781a2d38a0a061016e146ff077488
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91781561"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703471"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Creación de modelos 3D para su uso en el hogar
 
@@ -193,7 +193,7 @@ La Página principal de realidad mixta admite objetos glTF animados en cascos Ho
 
 ### <a name="tools"></a>Herramientas
 En primer lugar, descargue las herramientas siguientes si aún no las tiene. Estas herramientas facilitan el proceso de abrir cualquier modelo de glTF, obtener una vista previa del mismo, realizar cambios y volver a guardarlos como glTF o. glb:
-1. Tener [Visual Studio Code](https://code.visualstudio.com/)
+1. [Visual Studio Code](https://code.visualstudio.com/)
 2. [Herramientas de glTF para Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=cesium.gltf-vscode)
 
 

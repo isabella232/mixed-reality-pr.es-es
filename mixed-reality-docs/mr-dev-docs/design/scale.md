@@ -5,13 +5,13 @@ author: shengkait
 ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, estilo, diseño
-ms.openlocfilehash: 7d35da2d86d8d3b7f444974d87e5aa10e58ed2c8
-ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
+keywords: Windows Mixed Reality, estilo, diseño, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, escala, hologramas
+ms.openlocfilehash: e82211b0bee2214df7542d3129f95ea207f4b0e3
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94340663"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703381"
 ---
 # <a name="scale"></a>Escala
 
@@ -80,19 +80,7 @@ Sin embargo, esto puede crear algunos artefactos posibles en la experiencia:
 
 ---
 
-## <a name="next-discovery-checkpoint"></a>Siguiente punto de comprobación de detección
-
-Si está siguiendo el [viaje de detección](../discover/get-started-with-mr.md) que hemos diseñado, está al final de su incursión inicial en bases de realidad mixta. Puede comprobar qué asociados del sector están haciendo con la realidad mixta en el mundo real: 
-
-> [!div class="nextstepaction"]
-> [Observa cómo usan los asociados del sector la realidad mixta](../discover/get-started-with-mr.md#see-how-industry-partners-are-using-mixed-reality)
-
-O continúe con el recorrido del diseño:
-
-> [!div class="nextstepaction"]
-> [Inicio del recorrido del diseño](../design/design.md)
-
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Color, luz y materiales](../color,-light-and-materials.md)
 * [Tipografía](typography.md)
 * [Diseño de sonido espacial](spatial-sound-design.md)

@@ -5,13 +5,13 @@ author: kegodin
 ms.author: kegodin
 ms.date: 11/07/2019
 ms.topic: article
-keywords: sonido espacial, sonido envolvente, audio 3D, sonido 3D, audio espacial
-ms.openlocfilehash: fb3517307dccd7e41c39c012c69f1e1d141fa218
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: sonido espacial, sonido envolvente, audio 3D, sonido en 3D, audio espacial, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, casos prácticos, acústicos
+ms.openlocfilehash: 50a5b4a634eec5a326158975f70fa385ce7af6a8
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692587"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703261"
 ---
 # <a name="audio-in-mixed-reality"></a>Audio en realidad mixta
 El audio es una parte esencial del diseño y la productividad en la realidad mixta. El sonido puede:
@@ -91,8 +91,8 @@ La compatibilidad con Windows ' HRTFs está disponible para los siguientes motor
 * Un [complemento de motor de audio de Unity](../develop/unity/spatial-sound-in-unity.md)
 * Un [complemento de Wwise Audio Engine](https://www.audiokinetic.com/products/plug-ins/msspatial/)
 
-## <a name="acoustics"></a>Acústicas
-El audio espacial está sobre más que la dirección. Otras dimensiones incluyen las oclusión, los obstáculos, la reverberación, el portal y el modelado de origen. Colectivamente, estas dimensiones se denominan *acústicas* . Sin acústica, los sonidos espaciales carecen de distancia aparente.
+## <a name="acoustics"></a>Acústica
+El audio espacial está sobre más que la dirección. Otras dimensiones incluyen las oclusión, los obstáculos, la reverberación, el portal y el modelado de origen. Colectivamente, estas dimensiones se denominan *acústicas*. Sin acústica, los sonidos espaciales carecen de distancia aparente.
 
 Los tratamientos acústicos van desde simple a muy complejo. Puede usar una reverberación simple compatible con cualquier motor de audio para enviar sonidos espaciales en el entorno del agente de escucha. Los sistemas acústicos, como los [acústicos del proyecto](https://aka.ms/acoustics)  , proporcionan un tratamiento acústico más rico y atractivo. Los sonidos acústicos del proyecto pueden modelar el efecto de las paredes, las puertas y otras geometrías de la escena en un sonido. Es una opción eficaz para los casos en los que la geometría de la escena pertinente se conoce en tiempo de desarrollo.
 

@@ -5,13 +5,13 @@ author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Shell, so, plataforma, acantilado House, casa, Inicio, entorno, Inicio, menú Inicio, menú Inicio, PIN, aplicación, iniciar aplicaciones, colocar aplicaciones, teletransportar, trasladar, navegar
-ms.openlocfilehash: 1f2ec91edca100e9253a6c8e65f4b3f9d2b2feeb
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Shell, so, plataforma, acantilado House, casa, Inicio, entorno, Inicio, menú Inicio, menú Inicio, PIN, aplicación, iniciar aplicaciones, colocar aplicaciones, desplazarse, moverse, navegar, auriculares de realidad mixta, auriculares de realidad virtual, qué es realidad virtual
+ms.openlocfilehash: 590e52de7caacc515e703da19e9efdc0a2b9c535
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693351"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703451"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>Desplazamiento por la página principal de Windows Mixed Reality
 
@@ -48,11 +48,11 @@ Las aplicaciones también se pueden iniciar a través de una API de aplicación 
 
 ## <a name="moving-and-adjusting-apps"></a>Mover y ajustar aplicaciones
 
-Seleccione **ajustar** en la barra de la aplicación para mostrar los controles que mueven, escalan y giran el contenido de la realidad mixta. Cuando haya terminado, seleccione **listo** .
+Seleccione **ajustar** en la barra de la aplicación para mostrar los controles que mueven, escalan y giran el contenido de la realidad mixta. Cuando haya terminado, seleccione **listo**.
 
 ![La pizarra de la tienda en modo de ajuste (fotograma azul). Tenga en cuenta que la barra de la aplicación (superior) ha cambiado para incluir los botones ' listo ' y ' quitar '.](images/adjust-500px.png)
 
-Distintas aplicaciones pueden tener opciones adicionales en la barra de la aplicación. Por ejemplo, Microsoft Edge tiene opciones de *desplazamiento* , *arrastre* y *zoom* . 
+Distintas aplicaciones pueden tener opciones adicionales en la barra de la aplicación. Por ejemplo, Microsoft Edge tiene opciones de *desplazamiento*, *arrastre* y *zoom* . 
 
 ![Barra de la aplicación para aplicaciones 2D que se ejecutan en HoloLens](images/holobar-500px.png)
 
@@ -60,7 +60,7 @@ El botón **atrás** navega de nuevo a las pantallas que se vieron anteriormente
 
 ## <a name="getting-around-your-home"></a>Desplazarse por su hogar
 
-Con **HoloLens** , puede desplazarse por el espacio físico para moverse por su hogar.
+Con **HoloLens**, puede desplazarse por el espacio físico para moverse por su hogar.
 
 Con **auriculares** más ajustados, puede empezar de forma similar en su Playspace para moverse dentro de una zona similar del mundo virtual. Para desplazarse a través de distancias largas, puede usar el stick analógico en el controlador para "caminar", o bien puede usar la *teleportabilidad* para saltar inmediatamente distancias más largas.
 
@@ -122,7 +122,7 @@ También puede usar comandos de voz para hacer todo su hogar. Por ejemplo, seña
 Windows Mixed Reality tiene varias aplicaciones integradas, como:
 * **Microsoft Store** para obtener aplicaciones y juegos
 * **Centro de comentarios** para enviar comentarios sobre las aplicaciones del sistema y del sistema
-* **Configuración** para configurar las opciones del sistema ( [incluidas las redes](../connecting-to-wi-fi-on-hololens.md) y las actualizaciones del sistema)
+* **Configuración** para configurar las opciones del sistema ([incluidas las redes](../connecting-to-wi-fi-on-hololens.md) y las actualizaciones del sistema)
 * **Microsoft Edge** para examinar sitios web
 * **Fotos** para ver y compartir fotos y vídeos
 * **Calibración** (solo HoloLens) para ajustar la experiencia de HoloLens al usuario actual

@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Realidad mixta, controles, interacción, IU, experiencia de usuario
-ms.openlocfilehash: 917f62ff3c066896751adceeeefc0c5856e418c9
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, HoloLens, pizarra, MRTK, kit de herramientas de realidad mixta
+ms.openlocfilehash: 85aa91793da9022080c95775bbfd1e4775ea05d8
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691551"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703340"
 ---
 # <a name="slate"></a>Claqueta
 
