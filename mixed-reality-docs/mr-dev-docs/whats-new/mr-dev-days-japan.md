@@ -1,19 +1,19 @@
 ---
-title: Días de desarrollo de realidad mixta Japón
+title: Mixed Reality Dev Days (Japón)
 description: Página de eventos de los días de desarrollo de la realidad mixta Japón
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: 170c0ebfeee2b6305c5d52c8aba143badaffa5e2
-ms.sourcegitcommit: 53c6d27781ed12e2899c72087d317a62b2fad8cb
+ms.openlocfilehash: e120582e6184b9b105221aeddb5bcb42629ccb0c
+ms.sourcegitcommit: fae413a2b0420e787671af90f14ee39cde51640f
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/19/2020
-ms.locfileid: "94897360"
+ms.locfileid: "94933270"
 ---
-# <a name="mixed-reality-dev-days-japan"></a>Días de desarrollo de realidad mixta Japón
+# <a name="mixed-reality-dev-days-japan"></a>Mixed Reality Dev Days (Japón)
 
 ![Mixed Reality Dev Days](images/MRDD/MRDevDaysJapanBanner.png)
 
@@ -55,12 +55,12 @@ Estamos muy entusiasmados por abrir el registro de los días de desarrollo de la
 |2: p.m.-2:25pm|*Sesión 5* Introducción a HoloLens 2 e inreal Engine (MRTK-nonreal)|Cameron Micka|ES|300|
 |2: las 16:30-2:55pm|*Sesión 6* Creación de la aplicación "diseño de hologramas". Profundizaremos en las características, los desafíos y otros divertidos aprendizajes que hemos descubierto al crear esta nueva aplicación de HoloLens 2.|Daniel Escudero|ES|300|
 |2:55pm-3:10pm|**Eliminar**||||
-|3:10pm-3:35pm|*Sesión 7* Delimitadores de objeto de Azure|TBD|ES|300|
+|3:10pm-3:35pm|*Sesión 7* Delimitadores de objeto de Azure|Jesse McCulloch|ES|300|
 |3:40pm-4:05pm|*Sesión 8* Representación remota de Azure|Atsushi Suzuki|JA|300|
-|4:10pm-4:35pm|*Sesión 9* Anclajes espaciales de Azure|TBD|ES|300|
-|4:40pm-5:05pm|*Sesión 10* DISCRECIÓN|TBD|JA|200|
+|4:10pm-4:35pm|*Sesión 9* Anclajes espaciales de Azure|TBD|JA|300|
+|4:40pm-5:05pm|*Sesión 10* Unity + PiXYZ|Shinobu Takahashi (Unity)|JA|200|
 |5:10pm-5:35pm|*Sesión 11* Análisis detallado de Azure Kinect DK, caso práctico|Shinji Chiba|JA|400|
-|5:35pm-5:50pm|Cierre|Madoka Chiyoda|JA|N/D|
+|5:35pm-5:50pm|Cierre|Madoka Chiyoda|JA|NA|
 
 #### <a name="contributors-technical-reviewers-for-the-subtitles"></a>Colaboradores (revisores técnicos para los subtítulos)
 
