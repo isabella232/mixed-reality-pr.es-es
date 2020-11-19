@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: 746b6257e6a3ab28424d7b74e43a1b6541d6fad0
-ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
-ms.translationtype: HT
+ms.openlocfilehash: 170c0ebfeee2b6305c5d52c8aba143badaffa5e2
+ms.sourcegitcommit: 53c6d27781ed12e2899c72087d317a62b2fad8cb
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94573289"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "94897360"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>Días de desarrollo de realidad mixta Japón
 
@@ -27,9 +27,13 @@ Esperamos que se una a nosotros en Mixed Reality dev Day. Prepárese para oír a
 
 **SIN registro**
 
+**Idioma principal: Japonés**
+
 ## <a name="registration"></a>Registro
 
-Próximamente
+[Registro: ahora abierto](https://mixedrealityprod.microsoftcrmportals.com/event/sessions?id=MR_Dev_Days_Japan864059683)
+
+Estamos muy entusiasmados por abrir el registro de los días de desarrollo de la realidad mixta en Japón.  El evento es gratuito y se mantiene en línea en los eventos en directo de Microsoft Teams.  Solicitamos que los asistentes se registren para que podamos enviar actualizaciones de correo electrónico a medida que el evento se acerque y para que pueda participar en los elementos interactivos del evento.
 
 ## <a name="schedule---subject-to-change"></a>Programación: sujeto a cambio
 
@@ -40,7 +44,7 @@ Próximamente
 ### <a name="december-16th"></a>16 de diciembre
 |**Time**|**Título de la sesión**|**Participante**|**Lenguaje**|**Level**|
 |---------|---------|---------|---------|---------|
-|10: a.m.-10:50am|Apertura del discurso|TBD|JA/EN|No aplicable|
+|10: a.m.-10:50am|Apertura del discurso|TBD|JA/EN|N/D|
 |10:50am-11: a.m.|**Eliminar**||||
 |11: a.m.-11:25am|*Sesión 1* ¿Qué es la realidad mixta?¿Qué puede hacer con HL2?MR Tech Stack|Atsushi Suzuki|JA|100|
 |11:9:30-11:55am|*Sesión 2* Actualización del momento del mercado de Japón en los casos prácticos de clientes y asociados|Tetsu Muranaka|JA|200|
@@ -49,7 +53,7 @@ Próximamente
 |1: p.m.-1:25pm|*Sesión 3* Información general sobre el desarrollo de HoloLens 2|Madoka Chiyoda|JA|200|
 |1: las 16:30-1:55pm|*Sesión 4* HoloLens 2 & MRTK v 2.5 (MRTK-Unity)|Yoon Park|JA|300|
 |2: p.m.-2:25pm|*Sesión 5* Introducción a HoloLens 2 e inreal Engine (MRTK-nonreal)|Cameron Micka|ES|300|
-|2: las 16:30-2:55pm|*Sesión 6* Diseño de aplicaciones MR (procedimiento recomendado para crear la interfaz de usuario/UX para la aplicación HL2)|Daniel Escudero|ES|300|
+|2: las 16:30-2:55pm|*Sesión 6* Creación de la aplicación "diseño de hologramas". Profundizaremos en las características, los desafíos y otros divertidos aprendizajes que hemos descubierto al crear esta nueva aplicación de HoloLens 2.|Daniel Escudero|ES|300|
 |2:55pm-3:10pm|**Eliminar**||||
 |3:10pm-3:35pm|*Sesión 7* Delimitadores de objeto de Azure|TBD|ES|300|
 |3:40pm-4:05pm|*Sesión 8* Representación remota de Azure|Atsushi Suzuki|JA|300|
