@@ -8,14 +8,14 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, preventa, investigación, compra, antes de comprar
 appliesto:
 - Windows 10
-ms.openlocfilehash: a38b6ed8625fbb419ad24f2e27acec881d7b85a7
-ms.sourcegitcommit: ea7d806c9aa88d1295493a25f47e58bb72a4000a
+ms.openlocfilehash: 20a585088c9bea9d01754f78e9934a4022c0e34c
+ms.sourcegitcommit: c7b5790a26472c5a08c959189a574fb15f9046d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907447"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "95002980"
 ---
-# <a name="frequently-asked-questions"></a>Preguntas más frecuentes
+# <a name="before-you-buy-frequently-asked-questions"></a>Antes de comprar las preguntas más frecuentes
 
 ## <a name="general-questions"></a>Preguntas generales
 
@@ -29,7 +29,7 @@ ms.locfileid: "92907447"
 
 * Busque eventos de Microsoft reactor en Meetup.com: <https://www.meetup.com/pro/microsoft-reactor>
 
-### <a name="which-manufacturers-are-selling-windows-mixed-reality-devices"></a>¿Qué fabricantes venden dispositivos Windows Mixed Reality?
+### <a name="which-manufacturers-are-selling-windows-mixed-reality-devices"></a>Qué fabricantes venden dispositivos Windows Mixed Reality
 
 **Respuesta rápida:** Los auriculares y los controladores de movimiento están disponibles actualmente en HP. Consulta <https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1>.
 
@@ -37,11 +37,11 @@ ms.locfileid: "92907447"
 
 **Respuesta rápida:** Desafortunadamente, no sabemos que los distribuidores que venden controladores de movimiento independientes en este momento.
 
-### <a name="what-is-the-difference-between-a-windows-mixed-reality-pc-and-a-windows-mixed-reality-ultra-pc"></a>¿Cuál es la diferencia entre un equipo con Windows Mixed Reality y un ultra PC de realidad mixta de Windows?
+### <a name="what-is-the-difference-between-a-windows-mixed-reality-pc-and-a-windows-mixed-reality-ultra-pc"></a>¿Cuál es la diferencia entre un equipo con Windows Mixed Reality y un ultra PC con Windows Mixed Reality?
 
 **Respuesta rápida:** Los detalles sobre los equipos de Windows Mixed Reality y ultra PC se capturan aquí: <https://aka.ms/mrcompat>
 
-### <a name="why-is-this-called-windows-mixed-reality-when-the-devices-look-like-they-provide-a-virtual-reality-experience"></a>¿Por qué se denomina "realidad mixta" de Windows cuando los dispositivos tienen la apariencia de que proporcionan una experiencia de "realidad virtual"?
+### <a name="why-is-this-called-windows-mixed-reality-when-the-devices-look-like-they-provide-a-virtual-reality-experience"></a>¿Por qué se denomina "realidad mixta" de Windows cuando los dispositivos tienen el mismo aspecto que proporcionan una experiencia de "realidad virtual"
 
 **Respuesta rápida:** La realidad mixta hace referencia al espectro completo de la informática espacial, desde la realidad aumentada y los hologramas hasta la realidad virtual. La plataforma Windows Mixed Reality es compatible con dispositivos entre la realidad virtual (VR) y la realidad aumentada (AR). Actualmente se admiten dos tipos de dispositivos con tecnología similar en ese espectro: cascos de HoloLens (AR) y Windows Mixed Reality (VR) con controladores de movimiento.
 
@@ -51,13 +51,13 @@ Obtenga más información sobre la realidad mixta aquí: <https://docs.microsoft
 
 **Respuesta rápida:** Los auriculares con Windows Mixed Reality incluyen el seguimiento interno (las cámaras de seguimiento están en el casco) y la configuración de plug and Play con Windows 10.
 
-**Más detalles** : Windows Mixed Reality ofrece varias características, entre las que se incluye la instalación sencilla (no es necesario que los sensores externos realicen un seguimiento de su equipo y sus controladores), la elección de los auriculares para satisfacer su comodidad y el punto de precio, los auriculares con resoluciones competitivas y, por último, una experiencia de usuario única que incluye una interfaz espacial que le permite usar miles Microsoft Store de
+**Más detalles**: Windows Mixed Reality ofrece varias características, entre las que se incluye la instalación sencilla (no es necesario que los sensores externos realicen un seguimiento de su equipo y sus controladores), la elección de los auriculares para satisfacer su comodidad y el punto de precio, los auriculares con resoluciones competitivas y, por último, una experiencia de usuario única que incluye una interfaz espacial que le permite usar miles Microsoft Store de
 
-### <a name="does-mixed-reality-mean-that-inside-out-cameras-are-passthrough-can-you-experience-augmented-reality-in-addition-to-virtual-reality"></a>¿La realidad mixta significa que las cámaras internas son de paso a través? ¿Puede experimentar una realidad aumentada además de la realidad virtual?
+### <a name="does-mixed-reality-mean-that-inside-out-cameras-are-passthrough-can-you-experience-augmented-reality-in-addition-to-virtual-reality"></a>¿La realidad mixta significa que las cámaras internas son de paso a través? ¿Puede experimentar la realidad aumentada además de la realidad virtual?
 
-**Respuesta rápida:** No, las cámaras internas en auriculares con Windows Mixed Reality solo se usan para el seguimiento posicional. Los auriculares Windows Mixed Reality son ocluidos, lo que significa que son para realidad virtual y no proporcionan una vista del mundo real ni de la realidad aumentada. 
+**Respuesta rápida:** No, las cámaras internas en auriculares con Windows Mixed Reality solo se usan para el seguimiento posicional. Los auriculares Windows Mixed Reality son ocluidos, lo que significa que son para realidad virtual y no proporcionan una vista del mundo real ni de la realidad aumentada.
 
-### <a name="what-is-inside-out-tracking-how-is-it-different-than-outside-in-tracking-or-lighthouse-tracking"></a>¿Qué es el seguimiento interno? ¿En qué se diferencia el seguimiento externo o el seguimiento de Lighthouse?
+### <a name="what-is-inside-out-tracking-how-is-it-different-than-outside-in-tracking-or-lighthouse-tracking"></a>¿Qué es el seguimiento interno? ¿En qué se diferencia el seguimiento externo o el seguimiento de Lighthouse
 
 * **Seguimiento interno** Windows Mixed Reality usa el seguimiento interno. Con las cámaras de seguimiento Inside-Out están integradas en el casco y realizan un seguimiento de los cambios en el entorno con el fin de determinar la posición de los auriculares en relación con el entorno a medida que se desplaza.
 
@@ -65,7 +65,7 @@ Obtenga más información sobre la realidad mixta aquí: <https://docs.microsoft
 
 Para obtener más información sobre el seguimiento interno, puede ir aquí: <https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system>
 
-### <a name="can-inside-out-tracking-of-motion-controllers-impact-my-game-play-due-to-camera-fov"></a>¿Puede el seguimiento interior de los controladores de movimiento afectar a la reproducción del juego debido al subjuego de la cámara?
+### <a name="can-inside-out-tracking-of-motion-controllers-impact-my-game-play-due-to-camera-fov"></a>Puede realizar un seguimiento interior de los controladores de movimiento que afectan a mi juego debido a la cámara.
 
  Al igual que los auriculares, los controladores de movimiento de Windows Mixed Reality no requieren ninguna configuración de sensores de seguimiento externos. En su lugar, el seguimiento de los controladores se realiza mediante sensores en el propio casco. Si el usuario mueve los controladores fuera del campo de vista del casco, en la mayoría de los casos Windows seguirá inferencia de las posiciones del controlador y las proporcionará a la aplicación. Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se quitarán de las posiciones de precisión aproximada. En este punto, el sistema bloqueará el controlador al usuario, realizará un seguimiento de la posición del usuario a medida que se mueven, mientras se expone la verdadera orientación del controlador mediante sus sensores de orientación internos. Muchas aplicaciones que usan Controladores para apuntar a los elementos de la interfaz de usuario y activarlos pueden funcionar con normalidad mientras tienen una precisión aproximada sin que el usuario lo note. La mejor manera de hacerse una idea es probarlo.
 
@@ -99,7 +99,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Hasta 90Hz </td>
 <td> 100 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.acer.com/ac/en/US/content/windows-mixed-reality-home">Acer</a> </td>
@@ -125,7 +125,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Hasta 90Hz </td>
 <td> 95 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.asus.com/us/Headset/ASUS-Windows-Mixed-Reality-Headset-HC102/">ASU</a> </td>
@@ -138,7 +138,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Hasta 90Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.dell.com/en-us/shop/accessories/apd/536-bbbr?~ck=mn">Proyector</a> </td>
@@ -151,7 +151,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Hasta 90Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="http://pr.fujitsu.com/jp/news/2017/10/17.html">Fujitsu</a> </td>
@@ -177,7 +177,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Hasta 90Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://store.hp.com/us/en/pdp/hp-windows-mixed-reality-headset-vr1000-100">FABRICANTES</a> </td>
@@ -190,7 +190,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Hasta 90Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.lenovo.com/us/en/virtual-reality-and-smart-devices/virtual-and-augmented-reality/lenovo-explorer/Lenovo-Explorer/p/G10NREAG0A2">Lenovo</a> </td>
@@ -203,7 +203,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Hasta 90Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.medion.com/be/shop/monitoren-medion-erazer-mr-x1000-vr-headset-controllers-30023616a1.html">Medion</a> </td>
@@ -216,7 +216,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Hasta 90Hz </td>
 <td> 110 ° </td>
 <td> Integrado </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Mecánica</td>
 <td> 2017 </td>
 <td> <a href="https://www.samsung.com/us/computing/hmd/windows-mixed-reality/xe800zaa-hc1us-xe800zaa-hc1us/?redir=windows%20mixed%20reality">Samsung</a> </td>
@@ -242,7 +242,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Hasta 90Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="http://3glasses.com/goods.action?gid=30">3Glasses</a> </td>
@@ -257,7 +257,7 @@ Se hace referencia a los detalles técnicos mencionados en las especificaciones 
 
 ### <a name="do-the-mixed-reality-headsets-have-ipd-adjustment"></a>¿Los auriculares de realidad mixta tienen ajuste de IPD?
 
-**Respuesta rápida:** En función del casco, algunos auriculares de realidad mixta incluyen un ajuste de IPD mecánico. Otros auriculares tienen el ajuste IPD de software, lo que mejora la distorsión de la imagen y la precisión de profundidad en función de su IPD. Los usuarios pueden establecer su configuración personalizada de IPD a través de la **configuración > realidad mixta > la visualización de los auriculares > la calibración** .
+**Respuesta rápida:** En función del casco, algunos auriculares de realidad mixta incluyen un ajuste de IPD mecánico. Otros auriculares tienen el ajuste IPD de software, lo que mejora la distorsión de la imagen y la precisión de profundidad en función de su IPD. Los usuarios pueden establecer su configuración personalizada de IPD a través de la **configuración > realidad mixta > la visualización de los auriculares > la calibración**.
 
 ### <a name="do-the-mixed-reality-headsets-have-eye-relief-adjustment"></a>¿Los auriculares de realidad mixta tienen ajuste de la mirada?
 

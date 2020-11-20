@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, rendimiento
 appliesto:
 - Windows 10
-ms.openlocfilehash: 7d6d5a1eeabffdd7ad6d4ddd070a14c6dcf0d5ee
-ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
+ms.openlocfilehash: 241fb95d92c771af727cc50287e4d1b2526123a5
+ms.sourcegitcommit: c7b5790a26472c5a08c959189a574fb15f9046d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94573209"
+ms.lasthandoff: 11/20/2020
+ms.locfileid: "95002979"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>Preguntas más frecuentes de la reverberación de HP G2
 
@@ -43,7 +43,7 @@ Si ve un error 7-14 "algo ha ido mal", realice los pasos siguientes:
 - Asegúrese de que tiene los controladores más recientes instalados para el casco y la controladora USB.
 - Asegúrese de que está usando un controlador USB de Microsoft. Debe haber una "Microsoft" en el nombre del dispositivo "controlador de host extensible".
 - Intente conectar el cable a un puerto USB-3,0 diferente en el equipo. (Pruebe los puertos USB tipo-C y tipo a)
-- Use el USB C incluido en un adaptador incluido para probar distintos puertos.
+- Use el USB C incluido en un adaptador para probar distintos puertos.
 - Intente conectar los auriculares a través de un concentrador USB al equipo.
 
 > [!NOTE]
@@ -75,7 +75,7 @@ Aunque la mayoría de los juegos no muestran los controladores ni usan los model
 ## <a name="my-steamvr-games-dont-appear-to-work-correctly-with-my-hp-motion-controllers"></a>Mis juegos de SteamVR no parecen funcionar correctamente con los controladores de movimiento de HP
 
 Mientras los desarrolladores trabajan para actualizar sus juegos para la compatibilidad con HP Motion Controller, hemos proporcionado enlaces de controlador personalizados para muchos de los juegos más populares en vapor. Con "Windows Mixed Reality for SteamVR" totalmente actualizado a la versión 1.2.444, estos enlaces se deben recoger automáticamente cuando se ejecuta el juego. Sin embargo, si el juego no parece registrar las acciones en este momento, puede buscar manualmente perfiles de enlace personalizados mediante el menú de configuración de SteamVR.
-Para
+Para hacer esto
 
 - Abra el menú SteamVR presionando el botón de menú del controlador de movimiento derecho.
 - Seleccione el icono "configuración" en la esquina inferior derecha del menú SteamVR
