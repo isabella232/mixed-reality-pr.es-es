@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: e120582e6184b9b105221aeddb5bcb42629ccb0c
-ms.sourcegitcommit: fae413a2b0420e787671af90f14ee39cde51640f
+ms.openlocfilehash: 6f673c78004f94692fcb09d304d6d40d2f97f1c3
+ms.sourcegitcommit: 893d7df2df66316e881dfba578a2810c203d9aa3
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/19/2020
-ms.locfileid: "94933270"
+ms.locfileid: "94941861"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>Mixed Reality Dev Days (Japón)
 
@@ -51,7 +51,7 @@ Estamos muy entusiasmados por abrir el registro de los días de desarrollo de la
 |12: p.m.-12:50pm|*Sesión del almuerzo* Panel: análisis interactivo gratuito, Q y A, MRTK + Oculus Quest 2|Madoka Chiyoda + MVP de Microsoft|JA|200|
 |12:50pm-1: p.m.|**Eliminar**||||
 |1: p.m.-1:25pm|*Sesión 3* Información general sobre el desarrollo de HoloLens 2|Madoka Chiyoda|JA|200|
-|1: las 16:30-1:55pm|*Sesión 4* HoloLens 2 & MRTK v 2.5 (MRTK-Unity)|Yoon Park|JA|300|
+|1: las 16:30-1:55pm|*Sesión 4* Bloques de creación de la experiencia de usuario de MRTK (v 2.5.0)|Yoon Park|JA|300|
 |2: p.m.-2:25pm|*Sesión 5* Introducción a HoloLens 2 e inreal Engine (MRTK-nonreal)|Cameron Micka|ES|300|
 |2: las 16:30-2:55pm|*Sesión 6* Creación de la aplicación "diseño de hologramas". Profundizaremos en las características, los desafíos y otros divertidos aprendizajes que hemos descubierto al crear esta nueva aplicación de HoloLens 2.|Daniel Escudero|ES|300|
 |2:55pm-3:10pm|**Eliminar**||||
