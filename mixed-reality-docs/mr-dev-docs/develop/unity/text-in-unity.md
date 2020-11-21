@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, controles, fuentes, tipografía, IU, experiencia de usuario, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 9778b1b11db7ac1c330b0ede4f6153deff45a95a
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 04b62cd0989042856dbd15d467d042f67df69931
+ms.sourcegitcommit: 5d6dbbb94e60cf10786d0fbbaf4239a1541e9e29
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677364"
+ms.lasthandoff: 11/21/2020
+ms.locfileid: "95008138"
 ---
 # <a name="text-in-unity"></a>Texto en Unity
 
@@ -93,7 +93,7 @@ En función de estos factores de escala, hemos creado [texto Prefabs con texto d
 
 ### <a name="shader-with-occlusion-support"></a>Sombreador con compatibilidad con oclusión
 
-El material de fuente predeterminado de Unity no admite la oclusión. Por este motivo, verá el texto detrás de los objetos de forma predeterminada. Hemos incluido un [sombreador simple que admite la oclusión](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MRTK/Core/StandardAssets/Shaders/Text3DShader.shader). La imagen siguiente muestra el texto con el material de fuente predeterminado (izquierda) y el texto con una oclusión adecuada (derecha).
+El material de fuente predeterminado de Unity no admite la oclusión. Por este motivo, verá el texto detrás de los objetos de forma predeterminada. Hemos incluido un [sombreador simple que admite la oclusión](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MRTK/StandardAssets/Shaders/Text3DShader.shader). La imagen siguiente muestra el texto con el material de fuente predeterminado (izquierda) y el texto con una oclusión adecuada (derecha).
 
 ![Sombreador con compatibilidad con oclusión](images/hug-text-07-1000px.png)<br>
 *Sombreador con compatibilidad con oclusión*
