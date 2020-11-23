@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/15/2020
 ms.topic: overview
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR,
-ms.openlocfilehash: 429a1130d628f54f12eb8ff6eed3f48d4712143a
-ms.sourcegitcommit: 893d7df2df66316e881dfba578a2810c203d9aa3
+ms.openlocfilehash: 9426a85611cf53a349ca5bc8f3727ee8a784940e
+ms.sourcegitcommit: a129039d8ed228ed0305aa312006cadf403f0831
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94941871"
+ms.lasthandoff: 11/23/2020
+ms.locfileid: "95417209"
 ---
 # <a name="start-your-vr-journey"></a>Empezar el recorrido de VR
 
@@ -29,7 +29,7 @@ Es importante que el equipo pueda controlar el hardware de VR que está comprand
 
 |  Punto de control  |  Resultado  |
 | --- | --- |
-| [Antes de empezar](before-you-start.md) |  |
+| [Antes de empezar](before-you-start.md) | Asegúrese de que tiene todo lo que necesita para iniciar el recorrido de la VR |
 | [Directrices mínimas de hardware de PC](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) | Todo lo que necesita saber acerca de la ejecución de Windows Mixed Reality, Windows Mixed Reality ultra y la aplicación del portal de Windows Mixed Reality |
 | [Obtención de ayuda con la compatibilidad de equipos](get-help-with-pc-compatibility.md) | Descripción del informe generado desde la comprobación de PC de Windows Mixed Reality |
 | [Preguntas más frecuentes sobre compras](before-you-buy-faqs.md) | Obtenga respuestas a todas sus preguntas sobre las especificaciones técnicas, los dispositivos y los controladores |
@@ -64,11 +64,16 @@ Hay una variedad de características y servicios disponibles a través de Window
 
 ## <a name="4-discover-apps-and-content"></a>4. detectar aplicaciones y contenido
 
-Busque juegos envolventes, aplicaciones de escritorio y contenido de VR y use el explorador Microsoft Edge en los recursos siguientes. 
+Busque juegos envolventes, aplicaciones de escritorio y contenido de VR en los recursos siguientes. 
 
 <br>
 
-| [Juegos, vídeo de 360 y aplicaciones](using-games-and-apps-in-windows-mixed-reality.md) | Empiece a trabajar con su primer juego envolvente, pizarras de tiendas en 2D, aplicaciones de escritorio y experiencias de WebVR | | [Usar SteamVR](using-steamvr-with-windows-mixed-reality.md) | Conecte el dispositivo y juegue a SteamVR Games y obtenga información sobre el programa Windows Insider | | [Uso de Microsoft Edge](using-microsoft-edge.md) | Instale la versión más reciente de Microsoft Edge en el dispositivo envolvente | | [Usar WebVR](webvr.md) | Obtener la configuración para experimentar en el entorno del explorador |
+|  Punto de control  |  Característica  |
+| --- | --- |
+| [Juegos, vídeo de 360 y aplicaciones](using-games-and-apps-in-windows-mixed-reality.md) | Empiece a trabajar con su primer juego envolvente, pizarras de tiendas en 2D, aplicaciones de escritorio y experiencias de WebVR |
+| [Uso de SteamVR](using-steamvr-with-windows-mixed-reality.md) | Conectar el dispositivo y reproducir SteamVR Games y obtener información sobre el programa Windows Insider |
+| [Uso de Microsoft Edge](using-microsoft-edge.md) | Instalación de la versión más reciente de Microsoft Edge en el dispositivo envolvente |
+| [Usar WebVR](webvr.md) | Obtener el programa de instalación para experimentar VR en el entorno del explorador |
 
 ## <a name="troubleshooting-tips--resources"></a>Solución de problemas, sugerencias & recursos
 
