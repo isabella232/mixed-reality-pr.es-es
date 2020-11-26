@@ -7,13 +7,13 @@ ms.author: suwu
 ms.date: 09/29/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, ejemplos, complemento UX Tools, MRTK-Unreal, mixedrealitytoolkit, mixedrealitytoolkit-unreal, unreal engine, código abierto
-ms.openlocfilehash: b87ae1a3186cb487ca0a609ab663c3a41128ceb3
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: unreal, samples, UX Tools plugin, MRTK-Unreal, mixedrealitytoolkit, mixedrealitytoolkit-unreal, unreal engine, open source, mixed reality headset, windows mixed reality headset, virtual reality headset
+ms.openlocfilehash: 404b0319ddf1dfc6954df5fef30607bc0b53f536
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91699519"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679794"
 ---
 # <a name="unreal-sample-apps"></a>Aplicaciones de ejemplo de Unreal
 
