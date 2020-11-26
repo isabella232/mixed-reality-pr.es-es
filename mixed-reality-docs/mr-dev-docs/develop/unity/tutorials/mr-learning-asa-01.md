@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, ios, android, Windows 10, ARCore, macOS, Android Build Support, ARKit
 ms.localizationpriority: high
-ms.openlocfilehash: fcea8bd02c81437dd7337ee94838f44f299f1927
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: 005bbf3f9ecb7ed7f15f78d4042b4090f00edca7
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353403"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679404"
 ---
 # <a name="1-introduction-to-the-azure-spatial-anchors-tutorials"></a>1. Introducción a los tutoriales sobre Azure Spatial Anchors
 

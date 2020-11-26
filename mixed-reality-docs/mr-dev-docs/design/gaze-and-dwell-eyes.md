@@ -6,19 +6,19 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Seguimiento de los ojos, Mixed Reality, Entrada, Control con los ojos, Enfoque con los ojos, HoloLens 2, Selección basada en los ojos, Permanencia
-ms.openlocfilehash: b7c2b22c24336813231e7e5ea4742f03b9d78004
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Eye Tracking, Mixed Reality, Input, Eye Gaze, Eye Targeting, HoloLens 2, Eye-based Selection, Dwell, mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit, design
+ms.openlocfilehash: 2d17b93b09b204e6ebb94a51bcc709ee043b5018
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91700967"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702311"
 ---
 # <a name="eye-gaze-and-dwell"></a>Control con los ojos y permanencia
 
 El modelo de interacción de _"control con los ojos y permanencia"_ es un caso especial del modelo de interacción de [control con los ojos y confirmación](gaze-and-commit.md):
 1. Solo tienes que buscar el destino y 
-2. Para confirmar tu intención de seleccionar el objetivo, realiza una entrada explícita secundaria: _simplemente sigue mirando el objetivo que quieras seleccionar_ .
+2. Para confirmar tu intención de seleccionar el objetivo, realiza una entrada explícita secundaria: _simplemente sigue mirando el objetivo que quieras seleccionar_.
 
 ## <a name="advantages-of-the-eye-gaze-and-dwell-interaction-model"></a>Ventajas del modelo de interacción de "control con los ojos y permanencia" 
 Cuando tengas las manos ocupadas en una tarea o en herramientas, quizá no puedas usarlas para interactuar con los hologramas.
@@ -32,7 +32,7 @@ Si el tiempo de permanencia es demasiado corto: El usuario puede sentirse abruma
 
 ## <a name="design-recommendations"></a>Recomendaciones de diseño
 Se recomienda usar un enfoque de dos estados para los informes de permanencia:
-1. *Retraso del inicio* : cuando el usuario empieza a mirar un objetivo, no se debe producir nada inmediatamente, ya que podría generar una experiencia de usuario desagradable y abrumadora. En su lugar, inicia un temporizador para detectar si el usuario está mirando intencionadamente el objetivo o simplemente pasa la mirada sobre él.
+1. *Retraso del inicio*: cuando el usuario empieza a mirar un objetivo, no se debe producir nada inmediatamente, ya que podría generar una experiencia de usuario desagradable y abrumadora. En su lugar, inicia un temporizador para detectar si el usuario está mirando intencionadamente el objetivo o simplemente pasa la mirada sobre él.
 Se recomienda un tiempo de inicio de 150 a 250 ms en una proximidad determinada (lo que significa que el usuario se está fijando en un objetivo grande en lugar mirar a su alrededor).  
 2. *Inicio de los informes de permanencia:* después de asegurarte de que el usuario mira intencionadamente el objetivo, empieza a mostrar informes de permanencia para comunicarle que se está iniciando la activación de la permanencia. 
 3. *Informes continuos:* Mientras el usuario sigue mirando el objetivo, se muestra un indicador de progreso continuo para que sepa que tiene que seguir mirando el objetivo. En particular, en el caso de entrada de control con los ojos, se recomienda _llamar la atención visual del usuario_ mostrando un círculo o esfera más grande que se contrae en una versión más pequeña. Mostrar un indicador para el estado final (círculo pequeño) ayuda a comunicar al usuario de cuándo terminará la permanencia. A continuación, se muestra una ilustración de ejemplo. 

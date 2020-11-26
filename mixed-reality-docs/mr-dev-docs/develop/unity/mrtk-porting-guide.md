@@ -6,13 +6,13 @@ ms.author: grbury
 ms.date: 07/29/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2
-ms.openlocfilehash: 88bee12196099837f46164552c690a6b326f9ba7
-ms.sourcegitcommit: 83c9373fe5b2e07cdab921b6cab3fdd418307003
+keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2, unity, porting, HoloLens 1st gen, mixed reality headset, windows mixed reality headset, virtual reality headset, migration, best practices, ARM
+ms.openlocfilehash: 84edf3b029140884443c23d685fe03a12161d1b8
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94386231"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94677394"
 ---
 # <a name="get-your-existing-app-ready-for-hololens-2"></a>Preparar una aplicación existente para HoloLens 2
 
@@ -107,7 +107,7 @@ Para más información sobre las diferencias de API específicas entre HTK/MRTK 
 - Use experiencias de usuario de MRTK predeterminadas (botones, tabletas táctiles, etc.) cuando sea posible.
 - Intenta evitar la modificación de los archivos de MRTK directamente; en su lugar, crea contenedores en torno a los componentes de MRTK.
     - Esta acción facilita las futuras ingestas y actualizaciones de MRTK.
-- Revisa y explora escenas de ejemplo proporcionadas en MRTK (especialmente *HandInteractionExamples.scene* ).
+- Revisa y explora escenas de ejemplo proporcionadas en MRTK (especialmente *HandInteractionExamples.scene*).
 - Vuelve a generar la interfaz de usuario basada en lienzo con cuadrángulos, colisionadores y texto TextMeshPro.
 - Habilita el [uso compartido del búfer de profundidad](camera-in-unity.md#sharing-your-depth-buffers-with-windows) o [establece el punto de enfoque](focus-point-in-unity.md); es preferible usar un búfer de profundidad de 16 bits para mejorar el rendimiento. Al representar el color, asegúrate de representar también la profundidad. Por lo general, Unity no escribe la profundidad de objetos GameObject de texto y transparentes. 
 - Establece la ruta de representación de instancia de paso único.

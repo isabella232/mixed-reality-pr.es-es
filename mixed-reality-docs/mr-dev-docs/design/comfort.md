@@ -6,13 +6,13 @@ ms.author: erpau
 ms.date: 06/25/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Realidad mixta, diseño, comodidad, HoloLens 2, HoloLens (1.ª generación)
-ms.openlocfilehash: f53c91b10f9dfc37678356c914e486f61eea6382
-ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
+keywords: Mixed Reality, design, comfort, HoloLens 2, HoloLens (1st gen), mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit, locomotion
+ms.openlocfilehash: f4edc048086e933a451290a8ca9f19f588797963
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94340653"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702661"
 ---
 # <a name="comfort"></a>Comodidad
 
@@ -162,13 +162,6 @@ Se considera que el ángulo de mirada óptimo (en reposo) está entre 10-20 grad
 ## <a name="arm-positions"></a>Posiciones de los brazos
 
 Los usuarios pueden acumular fatiga muscular en los casos en los que deben mantener una mano levantada a lo largo de una experiencia. Así mismo, pueden encontrar agotador el hecho de tener que realizar gestos de pulsación en el aire de forma repetida durante largos períodos de tiempo. Por lo tanto, te recomendamos diseñar experiencias que eviten la necesidad de realizar gestos de manera constante y repetida. Este objetivo puede lograrse mediante la incorporación de pausas breves y al ofrecer una combinación de gestos y voz para interactuar con la aplicación.
-
-## <a name="next-discovery-checkpoint"></a>Siguiente punto de comprobación de detección
-
-Si está siguiendo el [recorrido de detección](../discover/get-started-with-mr.md) hemos diseñado, está a mitad de explorar los aspectos básicos de la realidad mixta. Desde aquí, puede continuar con el siguiente tema básico: 
-
-> [!div class="nextstepaction"]
-> [Cómo ve el mundo el usuario (trama holográfica)](../design/holographic-frame.md)
 
 ## <a name="see-also"></a>Consulta también
 * [Gaze](gaze-and-commit.md)

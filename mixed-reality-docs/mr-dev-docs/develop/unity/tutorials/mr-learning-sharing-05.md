@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, multi-user capabilities, Photon, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: 65672bad9a967e11e7feb7efc45759608e9c9e76
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: ec24a8dcdc8708e61184056df6d282f4496cb453
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353433"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94678254"
 ---
 # <a name="5-integrating-azure-spatial-anchors-into-a-shared-experience"></a>5. Integración de Azure Spatial Anchors en una experiencia compartida
 
@@ -37,21 +37,21 @@ En la ventana Proyecto, navegue hasta **Assets** (Recursos)  > **MRTK.Tutorials.
 
 En esta sección, configurará una serie de eventos de botón que muestran los aspectos básicos de cómo se puede usar Azure Spatial Anchors para lograr la alineación espacial en una experiencia compartida.
 
-En la ventana Jerarquía, expande el objeto **Button** y selecciona el primer objeto de botón secundario denominado **StartAzureSession** :
+En la ventana Jerarquía, expande el objeto **Button** y selecciona el primer objeto de botón secundario denominado **StartAzureSession**:
 
 ![Unity con el objeto de botón StartAzureSession seleccionado](images/mr-learning-sharing/sharing-05-section2-step1-1.png)
 
 En la ventana Inspector, busca el componente **Interactable (Script)** (Interactivo [script]) y configura el evento **OnClick ()** como se indica a continuación:
 
 * En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor**.
-* En el menú desplegable **Ninguna función** , seleccione la función **AnchorModuleScript** > **StartAzureSession ()** .
+* En el menú desplegable **Ninguna función**, seleccione la función **AnchorModuleScript** > **StartAzureSession ()** .
 
 ![Unity con el evento OnClick del botón StartAzureSession configurado](images/mr-learning-sharing/sharing-05-section2-step1-2.png)
 
 En la ventana Jerarquía, selecciona el segundo objeto de botón secundario denominado **CreateAzureAnchor** y, a continuación, en la ventana Inspector, busca el componente **Interactable (Script)** (Interactivo [script]) y configura el evento **OnClick ()** de la siguiente manera:
 
 * En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor**.
-* En el menú desplegable **Ninguna función** , seleccione la función **AnchorModuleScript** > **CreateAzureAnchor ()** .
+* En el menú desplegable **Ninguna función**, seleccione la función **AnchorModuleScript** > **CreateAzureAnchor ()** .
 * En el nuevo campo **None (Game Object)** (Ninguno [objeto de juego]) que aparece, asigna el objeto **TableAnchor**.
 
 ![Unity con el evento OnClick del botón CreateAzureAnchor configurado](images/mr-learning-sharing/sharing-05-section2-step1-3.png)
@@ -59,14 +59,14 @@ En la ventana Jerarquía, selecciona el segundo objeto de botón secundario deno
 En la ventana Jerarquía, selecciona el tercer objeto de botón secundario denominado **ShareAzureAnchor** y, a continuación, en la ventana Inspector, busca el componente **Interactable (Script)** (Interactivo [script]) y configura el evento **OnClick ()** de la siguiente manera:
 
 * En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor**.
-* En el menú desplegable **Ninguna función** , seleccione **SharingModuleScript** > función **ShareAzureAnchor ()** .
+* En el menú desplegable **Ninguna función**, seleccione **SharingModuleScript** > función **ShareAzureAnchor ()** .
 
 ![Unity con el evento OnClick del botón ShareAzureAnchor configurado](images/mr-learning-sharing/sharing-05-section2-step1-4.png)
 
 En la ventana Jerarquía, seleccione el cuarto objeto de botón secundario denominado **GetAzureAnchor** y, a continuación, en la ventana Inspector, busque el componente **Interactable (Script)** (Interactivo [script]) y configure el evento **OnClick ()** de la siguiente manera:
 
 * En el campo **None (Object)** (Ninguno [objeto]), asigne el objeto **TableAnchor**.
-* En el menú desplegable **Ninguna función** , seleccione **SharingModuleScript** > función **GetAzureAnchor ()** .
+* En el menú desplegable **Ninguna función**, seleccione **SharingModuleScript** > función **GetAzureAnchor ()** .
 
 ![Unity con el evento OnClick del botón GetAzureAnchor configurado](images/mr-learning-sharing/sharing-05-section2-step1-5.png)
 
@@ -82,7 +82,7 @@ En la ventana Inspector, busque el componente **Spatial Anchor Manager (Script)*
 ![Unity con Spatial Anchor Manager (Administrador de anclaje espacial) configurado](images/mr-learning-sharing/sharing-05-section3-step1-1.png)
 
 > [!TIP]
-> En lugar de configurar el id. y la clave de la cuenta de Spatial Anchors en la escena, puede establecerlos para todo el proyecto, lo que puede resultar ventajoso si tiene varias escenas con ASA. Para ello, en la ventana Proyecto, desplácese a Assets (Recursos) > AzureSpatialAnchors.SDK > Resources (Recursos) > recurso **SpatialAnchorConfig** , y después establezca los valores en la ventana Inspector.
+> En lugar de configurar el id. y la clave de la cuenta de Spatial Anchors en la escena, puede establecerlos para todo el proyecto, lo que puede resultar ventajoso si tiene varias escenas con ASA. Para ello, en la ventana Proyecto, desplácese a Assets (Recursos) > AzureSpatialAnchors.SDK > Resources (Recursos) > recurso **SpatialAnchorConfig**, y después establezca los valores en la ventana Inspector.
 
 En la ventana Jerarquía, seleccione el objeto **TableAnchor**. A continuación, en la ventana Inspector, busque el componente **Anchor Module (Script)** (Módulo de anclaje [script]) y configúrelo de la manera siguiente:
 
@@ -90,7 +90,7 @@ En la ventana Jerarquía, seleccione el objeto **TableAnchor**. A continuación,
 
 ![Unity con Anchor Module Script (Script del módulo de anclaje) configurado](images/mr-learning-sharing/sharing-05-section3-step1-2.png)
 
-Con el objeto **TableAnchor** aún seleccionado, en la ventana Inspector, asegúrese de que todos los componentes de script estén **habilitados** :
+Con el objeto **TableAnchor** aún seleccionado, en la ventana Inspector, asegúrese de que todos los componentes de script estén **habilitados**:
 
 * Selecciona la casilla situada junto a **Spatial Anchor Manager (Script)** (Spatial Anchor Manager [script]) para habilitarla.
 * Selecciona la casilla situada junto al componente **Anchor Module Script (Script)** (Script del módulo de anclaje [script]) para habilitarla.

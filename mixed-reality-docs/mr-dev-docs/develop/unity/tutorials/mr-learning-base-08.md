@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, eye-tracking
 ms.localizationpriority: high
-ms.openlocfilehash: 490a131bb196941d2ae581b97d88a104c0c212e2
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: 2b572a106cba904231ed124260cd879cd3a9a944
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353503"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679754"
 ---
 # <a name="8-using-eye-tracking"></a>8. Uso del seguimiento ocular
 
@@ -63,7 +63,7 @@ En la ventana Jerarquía, seleccione el objeto **MixedRealityToolkit** y, a cont
 
 ## <a name="adding-eye-tracking-to-objects"></a>Agregar seguimiento ocular a los objetos
 
-En la ventana Jerarquía, expanda el objeto RoverExplorer > **Botones** y, a continuación, para cada uno de los tres objetos de botón secundarios, expanda y seleccione el objeto SeeItSayItLabel > **TextMeshPro** :
+En la ventana Jerarquía, expanda el objeto RoverExplorer > **Botones** y, a continuación, para cada uno de los tres objetos de botón secundarios, expanda y seleccione el objeto SeeItSayItLabel > **TextMeshPro**:
 
 ![Unity con el objeto TextMeshPro seleccionado](images/mr-learning-base/base-08-section4-step1-1.png)
 
@@ -78,13 +78,13 @@ En la ventana Jerarquía, seleccione el objeto **Hints** (Sugerencias) > SeeItSa
 
 * En la sección de eventos **On Look At Start ()**
   * Haga clic en el icono **+** pequeño para agregar otro evento.
-  * Asigne el propio objeto, es decir, el mismo objeto **TextMeshPro** , al campo **None (Object)** (Ninguno [objeto]).
-  * En la lista desplegable **Ninguna función** , seleccione **TextMeshPro** > **float fontSize** (fontSize tipo float) para actualizar el valor de esta propiedad cuando se desencadene el evento.
+  * Asigne el propio objeto, es decir, el mismo objeto **TextMeshPro**, al campo **None (Object)** (Ninguno [objeto]).
+  * En la lista desplegable **Ninguna función**, seleccione **TextMeshPro** > **float fontSize** (fontSize tipo float) para actualizar el valor de esta propiedad cuando se desencadene el evento.
   * Establezca el argumento en **0,06** para aumentar el tamaño de fuente actual de 0,04 por el 50 %.
 * En la sección de eventos **On Look Away ()**
   * Haga clic en el icono **+** pequeño para agregar otro evento.
-  * Asigne el propio objeto, es decir, el mismo objeto **TextMeshPro** , al campo **None (Object)** (Ninguno [objeto]).
-  * En la lista desplegable **Ninguna función** , seleccione **TextMeshPro** > **float fontSize** (fontSize tipo float) para actualizar el valor de esta propiedad cuando se desencadene el evento.
+  * Asigne el propio objeto, es decir, el mismo objeto **TextMeshPro**, al campo **None (Object)** (Ninguno [objeto]).
+  * En la lista desplegable **Ninguna función**, seleccione **TextMeshPro** > **float fontSize** (fontSize tipo float) para actualizar el valor de esta propiedad cuando se desencadene el evento.
   * Establezca el argumento en **0,04** para restablecer el tamaño de fuente en 0,04.
 
 ![Unity con el objeto TextMeshPro de Hints seleccionado y el componente EyeTrackingTarget configurado](images/mr-learning-base/base-08-section4-step1-3.png)

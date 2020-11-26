@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, solvers
 ms.localizationpriority: high
-ms.openlocfilehash: 64b5c3c719ce72260a10226d22c178d4016e403b
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: fb86cdfe82e8d89c65e8513b52e2de49f52a2f04
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353533"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679304"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5. Creación de contenido dinámico mediante solucionadores
 
@@ -46,7 +46,7 @@ En la ventana Proyecto, navegue hasta **Assets** (Recursos)  > **MRTK.Tutorials.
 > [!TIP]
 > Si observa que la cámara u otros iconos de la escena ocultan otros objetos o son distracciones, puede ocultarlos al <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">desactivar el menú Gizmos</a>, tal como se muestra en la imagen anterior. Para obtener más información sobre el menú Gizmos y cómo puede usarlo para optimizar la vista de escenas, consulte la documentación sobre el <a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">menú de Gizmos </a> de Unity.
 
-Cambie el nombre del objeto de botón de contenido adicional **Indicador** recién agregado y, a continuación, en la ventana Inspector, use el botón **Agregar componente** para agregar el componente **DirectionalIndicator** :
+Cambie el nombre del objeto de botón de contenido adicional **Indicador** recién agregado y, a continuación, en la ventana Inspector, use el botón **Agregar componente** para agregar el componente **DirectionalIndicator**:
 
 ![Unity con el componente solucionador DirectionalIndicator agregado](images/mr-learning-base/base-05-section2-step1-2.png)
 
@@ -59,7 +59,7 @@ Cambie el nombre del objeto de botón de contenido adicional **Indicador** reci�
 Configure los componentes DirectionalIndicator y SolverHandler como se indica a continuación:
 
 * Compruebe que el **Tracked Target Type** (Tipo de objetivo de seguimiento) del componente **SolverHandler** esté establecido en **Cabeza**.
-* Asigne **RoverExplorer** al campo **Directional Target** (Objetivo direccional) del componente **DirectionalIndicator** ; para ello, arrástrelo desde la ventana Jerarquía hasta el campo **None (Transform)** (Ninguno [transformación]).
+* Asigne **RoverExplorer** al campo **Directional Target** (Objetivo direccional) del componente **DirectionalIndicator**; para ello, arrástrelo desde la ventana Jerarquía hasta el campo **None (Transform)** (Ninguno [transformación]).
 * Cambie el valor de **View Offset** (Desplazamiento de vista) a 0,2.
 
 ![Unity con el componente solucionador DirectionalIndicator configurado](images/mr-learning-base/base-05-section2-step1-3.png)
@@ -85,7 +85,7 @@ En la ventana Jerarquía, seleccione RoverExplorer > objeto **RoverAssembly** y,
 
 * Compruebe que el **Tracked Target Type** (Tipo de objetivo de seguimiento) del componente **SolverHandler** esté establecido en **Cabeza**.
 * Active la casilla **Keep Orientation Vertical** (Mantener la orientación vertical).
-* En la lista desplegable **Magnetic Surfaces** (Superficies magnéticas)  > **Elemento 0** , desactive todas las opciones excepto **Spatial Awareness** (Reconocimiento espacial).
+* En la lista desplegable **Magnetic Surfaces** (Superficies magnéticas)  > **Elemento 0**, desactive todas las opciones excepto **Spatial Awareness** (Reconocimiento espacial).
 
 ![Unity con el componente solucionador TapToPlace agregado y configurado](images/mr-learning-base/base-05-section3-step1-1.png)
 
@@ -104,16 +104,16 @@ Con el objeto RoverAssembly aún seleccionado en la ventana Jerarquía, desde la
 Configure el evento de la siguiente manera:
 
 * Asigne el objeto **RoverAssembly** como cliente de escucha para el evento On Placing Started () arrastrándolo desde la ventana Jerarquía hasta el campo **None (Object)** (Ninguno [objeto]).
-* En la lista desplegable **Ninguna función** , seleccione **TapToPlace** > **float SurfaceNormalOffset** (SurfaceNormalOffset tipo float) para actualizar el valor de esta propiedad cuando se desencadene el evento.
+* En la lista desplegable **Ninguna función**, seleccione **TapToPlace** > **float SurfaceNormalOffset** (SurfaceNormalOffset tipo float) para actualizar el valor de esta propiedad cuando se desencadene el evento.
 * Compruebe que el argumento esté establecido en **0**
 
 ![Unity con el evento TapToPlace OnPlacingStarted configurado](images/mr-learning-base/base-05-section3-step1-3.png)
 
-En la ventana Jerarquía, haga clic con el botón secundario en una zona vacía y seleccione **Objeto 3D** > **Cubo** , para crear un objeto temporal que represente el suelo y configure el componente **Transform** (Transformación) como se indica a continuación:
+En la ventana Jerarquía, haga clic con el botón secundario en una zona vacía y seleccione **Objeto 3D** > **Cubo**, para crear un objeto temporal que represente el suelo y configure el componente **Transform** (Transformación) como se indica a continuación:
 
-* **Posición** : X = 0, Y = -1,65, Z = 6
-* **Rotación** : X = 0, Y = 0, Z = 0
-* **Escala** : X = 10, Y = 0,2, Z = 10
+* **Posición**: X = 0, Y = -1,65, Z = 6
+* **Rotación**: X = 0, Y = 0, Z = 0
+* **Escala**: X = 10, Y = 0,2, Z = 10
 
 ![Unity con objeto de cubo de fondo temporal agregado y colocado](images/mr-learning-base/base-05-section3-step1-4.png)
 

@@ -6,13 +6,13 @@ ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 5af888fe57afce21e9ff0ccfe8144533e7368acf
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
+ms.openlocfilehash: 82e210aff35f1c41547f022b91114cbca1419830
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91701563"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679884"
 ---
 # <a name="3-setting-up-your-project-for-mixed-reality"></a>3. Configuración del proyecto para la realidad mixta
 
@@ -29,7 +29,7 @@ En el tutorial anterior, ha dedicado tiempo a configurar el proyecto de aplicaci
 Las sesiones de AR en Unreal no aparecen por sí mismas. Para usar una sesión, necesita un recurso de datos ARSessionConfig con el que trabajar, que será la tarea siguiente:
 
 1. Haga clic en **Add New > Miscellaneous > Data Asset** (Agregar nuevo > Varios > Recursos de datos) en **Content Browser** (Explorador de contenido). Asegúrese de que se encuentra en el nivel raíz de la carpeta **Content** (Contenido). 
-    * Seleccione **ARSessionConfig** , haga clic en **Select** (Seleccionar) y asigne al recurso el nombre **ARSessionConfig** .
+    * Seleccione **ARSessionConfig**, haga clic en **Select** (Seleccionar) y asigne al recurso el nombre **ARSessionConfig**.
 
 ![Crear un recurso de datos](images/unreal-uxt/3-createasset.PNG)
 
@@ -44,11 +44,11 @@ Una vez hecho esto, el paso siguiente consiste en asegurarse de que la sesión d
 ![Abrir plano técnico de nivel](images/unreal-uxt/3-level-blueprint.PNG)
 
 5. Arrastre el nodo de ejecución (icono de flecha hacia la izquierda) fuera de **Event BeginPlay** (Evento BeginPlay) y suéltelo. Busque el nodo **Start AR Session** (Iniciar sesión de AR) y presione Entrar.  
-    * Haga clic en la lista desplegable **Select Asset** (Seleccionar recurso) en **Session Config** (Configuración de sesión) y elija el recurso **ARSessionConfig** . 
+    * Haga clic en la lista desplegable **Select Asset** (Seleccionar recurso) en **Session Config** (Configuración de sesión) y elija el recurso **ARSessionConfig**. 
 
 ![Iniciar sesión de AR](images/unreal-uxt/3-start-ar-session.PNG)
 
-6. Haga clic con el botón derecho en EventGraph y cree un nuevo nodo **Event EndPlay** . Arrastre la marca de ejecución y suéltela. Busque el nodo **Start AR Session** (Iniciar sesión de AR) y presione Entrar. Si la sesión de AR no se detiene cuando el nivel finaliza, algunas características pueden dejar de funcionar si reinicia la aplicación durante el streaming a un casco de realidad mixta. 
+6. Haga clic con el botón derecho en EventGraph y cree un nuevo nodo **Event EndPlay**. Arrastre la marca de ejecución y suéltela. Busque el nodo **Start AR Session** (Iniciar sesión de AR) y presione Entrar. Si la sesión de AR no se detiene cuando el nivel finaliza, algunas características pueden dejar de funcionar si reinicia la aplicación durante el streaming a un casco de realidad mixta. 
     * Pulse en **Compile** (Compilar), luego en **Save** (Guardar) y vuelva a la ventana principal.
 
 ![Detener sesión de AR](images/unreal-uxt/3-stoparsession.PNG)
@@ -57,7 +57,7 @@ Una vez hecho esto, el paso siguiente consiste en asegurarse de que la sesión d
 En este punto, el proyecto todavía necesita un objeto que sea el jugador. En Unreal, **Pawn** (Peón) representa al usuario del juego; pero, en este caso, será la experiencia de HoloLens 2.
 
 1. Haga clic en **Add New > Blueprint Class** (Agregar nuevo > Clase de plano técnico) en la carpeta **Content** (Contenido) y expanda la sección **All Classes** (Todas las clases) en la parte inferior. 
-    * Busque **DefaultPawn** , haga clic en **Select** (Seleccionar), asígnele el nombre **MRPawn** y haga doble clic en el recurso para abrirlo. 
+    * Busque **DefaultPawn**, haga clic en **Select** (Seleccionar), asígnele el nombre **MRPawn** y haga doble clic en el recurso para abrirlo. 
 
 ![Crear un nuevo peón que herede de DefaultPawn](images/unreal-uxt/3-defaultpawn.PNG)
 
@@ -65,12 +65,15 @@ En este punto, el proyecto todavía necesita un objeto que sea el jugador. En Un
 > De forma predeterminada, los peones tienen componentes de malla y colisión. En la mayoría de los proyectos de Unreal, los peones son objetos sólidos que pueden colisionar con otros componentes. Dado que el peón y el usuario son los mismos en la realidad mixta, querrá poder pasar a través de hologramas sin colisiones. 
 
 2. Seleccione **CollisionComponent** en el panel **Components** (Componentes) y desplácese hacia abajo hasta la sección **Collision** (Colisión) del panel **Details** (Detalles). 
-    * Haga clic en la lista desplegable **Collision Presets** (Valores preestablecidos de colisión) y cambie el valor a **NoCollision** . 
-    * Haga lo mismo con **MeshComponent** .
+    * Haga clic en la lista desplegable **Collision Presets** (Valores preestablecidos de colisión) y cambie el valor a **NoCollision**. 
+    * Haga lo mismo con **MeshComponent**.
 
 ![Ajustar los valores preestablecidos de colisión del peón](images/unreal-uxt/3-nocollision.PNG)
 
-3. Haga clic en **Add Component > Camera**  (Agregar componente > Cámara) en el panel **Components** (Componentes) y asígnele el nombre **Camera** . Esto permite que la cámara del reproductor se mueva con el dispositivo HoloLens 2.
+3. Haga clic en **Add Component > Camera**  (Agregar componente > Cámara) en el panel **Components** (Componentes) y asígnele el nombre **Camera**. Esto permite que la cámara del reproductor se mueva con el dispositivo HoloLens 2.
+
+> [!NOTE]
+> Asegúrese de que el componente **Camera** (Cámara) sea un elemento secundario directo del elemento raíz (**CollisionComponent**).
 
 4. **Compile** y **guarde** el plano técnico.
 
@@ -84,13 +87,13 @@ La última pieza del rompecabezas de la configuración de la realidad mixta es e
 
 ![MRGameMode en el explorador de contenido](images/unreal-uxt/3-gamemode.PNG)
 
-2.  Vaya a la sección **Classes** (Clases) en el panel **Details** (Detalles) y cambie **Default Pawn Class** (Clase de peón predeterminado) a **MRPawn** . 
+2.  Vaya a la sección **Classes** (Clases) en el panel **Details** (Detalles) y cambie **Default Pawn Class** (Clase de peón predeterminado) a **MRPawn**. 
     * Pulse en **Compile** (Compilar), luego en **Save** (Guardar) y vuelva a la ventana principal. 
 
 ![Establecer la clase de peón predeterminada](images/unreal-uxt/3-setpawn.PNG)
 
 3.  Seleccione **Edit > Projects Settings** (Editar > Configuración de proyectos) y haga clic en **Maps & Modes** (Mapas y modos) en la lista de la izquierda. 
-    * Expanda **Default Modes** (Modos predeterminados) y cambie **Default Game Mode** (Modo de juego predeterminado) a **MRGameMode** . 
+    * Expanda **Default Modes** (Modos predeterminados) y cambie **Default Game Mode** (Modo de juego predeterminado) a **MRGameMode**. 
     * Expanda **Default Maps** (Mapas predeterminados) y cambie **EditorStartupMap** y **GameDefaultMap** a **Main** (Principal). De este modo, cuando cierre el editor y vuelva a abrirlo o cuando juegue una partida, se seleccionará el mapa principal de forma predeterminada.
 
 ![Configuración del proyecto: mapas y modos](images/unreal-uxt/3-mapsandmodes.PNG)

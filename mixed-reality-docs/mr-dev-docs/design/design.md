@@ -6,13 +6,13 @@ ms.author: grbury
 ms.date: 08/24/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Realidad mixta, detectar, distribuir, índice, página de aterrizaje, diseño, desarrollo, tutoriales, aplicaciones de ejemplo, aspectos básicos, casos prácticos, recursos, procedimientos de HoloLens, proyectos de código abierto, conceptos principales, interacción
-ms.openlocfilehash: 19a83a132cca08573f1066a2f7b87bd383ca79f4
-ms.sourcegitcommit: 8a80613f025b05a83393845d4af4da26a7d3ea9c
+keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects, core concepts, interaction, mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: 3c28991fa35052a8b5cf5a071899ec14f2fec226
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94573279"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94702721"
 ---
 # <a name="start-designing-and-prototyping"></a>Empezar a diseñar y a crear prototipos
 

@@ -6,13 +6,13 @@ ms.author: v-hferrone
 ms.date: 08/18/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: a4ad1879e73c85e25e5de675a4180f57361691a9
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
+ms.openlocfilehash: dc17b878255a3d6a8e0efc3a4c5bd7aa7d57373d
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91702393"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679854"
 ---
 # <a name="4-making-your-scene-interactive"></a>4. Creación de escenas interactivas
 
@@ -30,13 +30,13 @@ En el tutorial anterior, agregó ARSession, un peón y un modo de juego para com
 ## <a name="downloading-the-mrtk-ux-tools-plugin"></a>Descarga del complemento UX Tools de MRTK
 Antes de empezar a trabajar con la entrada del usuario, debe agregar el complemento al proyecto.
 
-1.  En la [página de versiones](https://github.com/microsoft/MixedReality-UXTools-Unreal/releases) de Mixed Reality UX Tools de GitHub, vaya a la versión v0.9.0 de UX Tools for Unreal y descargue **UXTools.0.9.0.zip** . Descomprima el archivo.
+1.  En la [página de versiones](https://github.com/microsoft/MixedReality-UXTools-Unreal/releases) de Mixed Reality UX Tools de GitHub, vaya a la versión v0.9.0 de UX Tools for Unreal y descargue **UXTools.0.9.0.zip**. Descomprima el archivo.
 
 2.  Cree una nueva carpeta denominada **Plugins** en la carpeta del proyecto. Copie el complemento UXTools descomprimido en esta carpeta y reinicie el editor de Unreal. 
 
 ![Crear una carpeta de complementos del proyecto](images/unreal-uxt/4-plugins.PNG)
 
-3.  El complemento UXTools incluye una carpeta de contenido con subcarpetas para los componentes, como **botones** , la **simulación de entrada** y **punteros** , así como una carpeta de clases en C++ con código adicional.  
+3.  El complemento UXTools incluye una carpeta de contenido con subcarpetas para los componentes, como **botones**, la **simulación de entrada** y **punteros**, así como una carpeta de clases en C++ con código adicional.  
 
 > [!NOTE]
 > Si no ve la sección **UXTools Content** (Contenido de UXTools) en **Content Browser** (Explorador de contenido), haga clic en **View Options > Show Plugin Content** (Opciones de vista > Mostrar contenido del complemento). 
@@ -62,7 +62,7 @@ Cuando esté listo, abra el plano técnico **MRPawn** y vaya a **Event Graph** (
 1. Arrastre la marca de ejecución de **Event BeginPlay** (Evento BeginPlay) y suéltela para colocar un nuevo nodo. 
     * Seleccione **Spawn Actor from Class** (Generar actor a partir de clase), haga clic en el menú desplegable situado junto a la marca de **Class (Clase)** y busque **Uxt Hand Interaction Actor** (Actor de interacción con la mano de UXT).  
 
-2. Genere un segundo valor de **Uxt Hand Interaction Actor** (Actor de interacción con la mano de UXT), pero esta vez establezca la **mano** en **Derecha** . Cuando se inicia el evento, se generará un actor de interacción con la mano de UXT en cada mano. 
+2. Genere un segundo valor de **Uxt Hand Interaction Actor** (Actor de interacción con la mano de UXT), pero esta vez establezca la **mano** en **Derecha**. Cuando se inicia el evento, se generará un actor de interacción con la mano de UXT en cada mano. 
 
 **Event Graph** (Gráfico de eventos) debe coincidir con la captura de pantalla siguiente:
 
@@ -77,7 +77,7 @@ Ambos actores de interacción con la mano de UXT necesitan propietarios y ubicac
     * Arrastra la marca de las marcas de **Owner** (Propietario) y suéltala para colocar un nuevo nodo. 
     * Busque **self** (propio) y seleccione la variable **Get a reference to self** (Obtener una autoreferencia) y, a continuación, cree un vínculo entre el nodo de referencia de objeto **Self** (Propio) y la marca de **Owner** (Propietario) del actor de interacción con la mano de la otra mano. 
 3. Por último , active el cuadro **Show Near Cursor on Grab Targets** (Mostrar el cursor cercano en los destinos de agarre) de ambos actores de interacción de mano. De este modo, se mostrará un cursor en el destino del agarre a medida que el dedo del índice se aproxime a este, lo que permitirá ver mejor dónde está el dedo en relación con el destino.
-    * **Compila** , **guarda** y vuelve a la ventana principal. 
+    * **Compila**, **guarda** y vuelve a la ventana principal. 
 
 Asegúrese de que las conexiones coinciden con la siguiente captura de pantalla, pero no dude en arrastrar los nodos para que el plano técnico sea más legible.
 
@@ -99,15 +99,15 @@ Un manipulador es un componente que responde a la entrada con la mano articulada
 
 ![Establecer el modo](images/unreal-uxt/4-setrotmode.PNG)
 
-3. Repita los pasos anteriores para el actor **WhiteKing** .
+3. Repita los pasos anteriores para el actor **WhiteKing**.
 
 Puede encontrar más información sobre los componentes del manipulador proporcionados con el complemento UX Tools de MRTK en la [documentación](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/Manipulator.html).
 
 ## <a name="testing-the-scene"></a>Prueba de la escena
 Buenas noticias para todos. Está listo para probar la aplicación con sus nuevas manos virtuales y la entrada del usuario. Pulse en **Play** (Jugar) en la ventana principal y verá dos manos de malla que proporciona el complemento UX Tools de MRTK, con haces de mano que se extienden desde la palma de cada mano. Puede controlar las manos y sus interacciones de la manera siguiente:
-- Mantenga presionada la tecla **Alt izquierda** para controlar la **mano izquierda** y la tecla **Mayús izquierda** para controlar la **mano derecha** . 
-- Mueva el ratón para mover la mano y desplácese con la **rueda del mouse** para mover la mano **hacia adelante** o **hacia atrás** . 
-- Haga clic con el botón primario del mouse para **reducir** o haga clic en el botón central del ratón para **tocar** . 
+- Mantenga presionada la tecla **Alt izquierda** para controlar la **mano izquierda** y la tecla **Mayús izquierda** para controlar la **mano derecha**. 
+- Mueva el ratón para mover la mano y desplácese con la **rueda del mouse** para mover la mano **hacia adelante** o **hacia atrás**. 
+- Haga clic con el botón primario del mouse para **reducir** o haga clic en el botón central del ratón para **tocar**. 
 
 > [!NOTE]
 > Es posible que la simulación de entrada no funcione si tiene varios cascos conectados al equipo. Si tiene problemas, pruebe a desconectar los otros casos. 

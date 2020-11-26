@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, app sessions
 ms.localizationpriority: high
-ms.openlocfilehash: 2fbf9b849cec62c5281396fcb1e2f8e6e26b4621
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: c085aecef1ce32565d2f3bbbf1d5fdb2da91c217
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353303"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679414"
 ---
 # <a name="3-saving-retrieving-and-sharing-azure-spatial-anchors"></a>3. Guardar, recuperar y compartir Azure Spatial Anchors
 
@@ -37,14 +37,14 @@ En la ventana Hierarchy (Jerarquía), expanda los objetos **ButtonParent**. A co
 
 En esta sección, aprenderá a guardar y recuperar el identificador de anclaje de Azure desde y hasta el disco local de HoloLens. De este modo, podrá consultar Azure para el mismo identificador de anclaje entre distintas sesiones de la aplicación. Se habilitarán los hologramas anclados para que se puedan colocar en la misma ubicación que en la sesión de aplicación anterior.
 
-En la ventana Hierarchy (Jerarquía), expanda el objeto **ButtonParent** y busque los dos botones denominados **SaveAzureAnchorIdToDisk** y **GetAzureAnchorIdFromDisk** :
+En la ventana Hierarchy (Jerarquía), expanda el objeto **ButtonParent** y busque los dos botones denominados **SaveAzureAnchorIdToDisk** y **GetAzureAnchorIdFromDisk**:
 
 ![Unity con los objetos de botón SaveAzureAnchorIdToDisk y GetAzureAnchorIdFromDisk seleccionados](images/mr-learning-asa/asa-03-section2-step1-1.png)
 
 Siga los mismos pasos de las instrucciones proporcionadas en [Configuración de los botones para el funcionamiento de la escena](mr-learning-asa-02.md#configuring-the-buttons-to-operate-the-scene) del tutorial anterior para configurar el componente **Interactable (Script)** (Interactuable [script]) en cada uno de los dos botones:
 
-* Para el objeto del botón **SaveAzureAnchorIdToDisk** , asigne la función AnchorModuleScript > **SaveAzureAnchorIdToDisk ()** .
-* Para el objeto del botón **GetAzureAnchorIdFromDisk** , asigne la función AnchorModuleScript > **GetAzureAnchorIdFromDisk ()** .
+* Para el objeto del botón **SaveAzureAnchorIdToDisk**, asigne la función AnchorModuleScript > **SaveAzureAnchorIdToDisk ()** .
+* Para el objeto del botón **GetAzureAnchorIdFromDisk**, asigne la función AnchorModuleScript > **GetAzureAnchorIdFromDisk ()** .
 
 Si compila la aplicación actualizada en HoloLens, puede conservar Azure Spatial Anchors entre sesiones de aplicación si guarda el identificador del anclaje de Azure. Para probarlo, puedes seguir estos pasos:
 
@@ -66,14 +66,14 @@ En esta sección, obtendrás información sobre cómo compartir el identificador
 
 Hay muchas formas de transferir identificadores de anclaje de Azure entre dispositivos, incluidos los métodos descritos en la serie [Tutoriales de funcionalidades de varios usuarios](mr-learning-sharing-02.md). En este ejemplo, usarás un servicio web simple para cargar y descargar los id. de anclaje entre dispositivos.
 
-En la ventana Hierarchy (Jerarquía), expanda el objeto **ButtonParent**.   Busque los dos botones denominados **ShareAzureAnchorIdToNetwork** y **GetAzureAnchorIdFromNetwork** :
+En la ventana Hierarchy (Jerarquía), expanda el objeto **ButtonParent**.   Busque los dos botones denominados **ShareAzureAnchorIdToNetwork** y **GetAzureAnchorIdFromNetwork**:
 
 ![Unity con los objetos de botón ShareAzureAnchorIdToNetwork y GetAzureAnchorIdFromNetwork seleccionados](images/mr-learning-asa/asa-03-section3-step1-1.png)
 
 Siga los mismos pasos de las instrucciones proporcionadas en [Configuración de los botones para el funcionamiento de la escena](mr-learning-asa-02.md#configuring-the-buttons-to-operate-the-scene) del tutorial anterior para configurar el componente **Interactable (Script)** (Interactuable [script]) en cada uno de los dos botones:
 
-* Para el objeto **ShareAzureAnchorIdToNetwork** , asigna la función AnchorModuleScript > **ShareAzureAnchorIdToNetwork ()** .
-* Para el objeto **GetAzureAnchorIdFromNetwork** , asigna la función AnchorModuleScript > **GetAzureAnchorIdFromNetwork ()** .
+* Para el objeto **ShareAzureAnchorIdToNetwork**, asigna la función AnchorModuleScript > **ShareAzureAnchorIdToNetwork ()** .
+* Para el objeto **GetAzureAnchorIdFromNetwork**, asigna la función AnchorModuleScript > **GetAzureAnchorIdFromNetwork ()** .
 
 Si compilas la aplicación actualizada en dos dispositivos HoloLens, ahora puede lograr la alineación espacial al compartir el identificador de anclaje de Azure. Para probarlo, puedes seguir estos pasos:
 

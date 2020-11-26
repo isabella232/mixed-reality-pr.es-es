@@ -6,13 +6,13 @@ ms.author: v-hferrone
 ms.date: 08/14/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: f7b57cf8a023874aa14118ff5cd50076bbf344e0
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
+ms.openlocfilehash: f903848b8d5c9c1dccfc00cd7bd6d16d2e491a5e
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91702352"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679844"
 ---
 # <a name="5-adding-a-button--resetting-piece-locations"></a>5. Adición de un botón y restablecimiento de la ubicación de las piezas
 
@@ -30,13 +30,13 @@ En el tutorial anterior, agregó actores de interacción manual a los componente
 ## <a name="creating-a-reset-function"></a>Creación de una función de restablecimiento
 La primera tarea consiste en crear un plano técnico de función que reestablezca una pieza de ajedrez a su posición original en la escena. 
 
-1.  Abra **WhiteKing** , haga clic en el icono **+** situado junto a la sección **Functions** (Funciones) de **My Blueprint** (Mi plano técnico) y asígnele el nombre **Reset Location** . 
+1.  Abra **WhiteKing**, haga clic en el icono **+** situado junto a la sección **Functions** (Funciones) de **My Blueprint** (Mi plano técnico) y asígnele el nombre **Reset Location**. 
 
-2.  Arrastre la ejecución desde **Reset Location** y suéltela en la cuadrícula del plano técnico para crear un nodo **SetActorRelativeTransform** . 
+2.  Arrastre la ejecución desde **Reset Location** y suéltela en la cuadrícula del plano técnico para crear un nodo **SetActorRelativeTransform**. 
     * Esta función define la transformación (ubicación, rotación y escala) de un actor en relación con su elemento principal. Usará esta función para restablecer la posición del rey en el tablero, incluso si la posición original del tablero ha cambiado. 
     
-3. Haga clic con el botón derecho en el gráfico de eventos, seleccione **Make Transform** (Realizar transformación) y cambie su **Location** (Ubicación) a **X =-26** , **Y = 4** , **Z = 0** .
-    * Conecte su **Return Value** (Valor devuelto) a la marca de **New Relative Transform** (Nueva transformación relativa) en **SetActorRelativeTransform** . 
+3. Haga clic con el botón derecho en el gráfico de eventos, seleccione **Make Transform** (Realizar transformación) y cambie su **Location** (Ubicación) a **X =-26**, **Y = 4**, **Z = 0**.
+    * Conecte su **Return Value** (Valor devuelto) a la marca de **New Relative Transform** (Nueva transformación relativa) en **SetActorRelativeTransform**. 
 
 ![Función Reset Location (Restablecer ubicación)](images/unreal-uxt/5-function.PNG)
 
@@ -47,7 +47,7 @@ La primera tarea consiste en crear un plano técnico de función que reestablezc
 Ahora que la función está configurada correctamente, la siguiente tarea consiste en crear un botón que la desencadene cuando se toque. 
 
 
-1.  Haga clic en **Agregar nuevo > Blueprint Class (Clase de plano técnico)** , expanda la sección **Todas las clases** y busque **SimpleButton** . 
+1.  Haga clic en **Agregar nuevo > Blueprint Class (Clase de plano técnico)** , expanda la sección **Todas las clases** y busque **SimpleButton**. 
     * Asigne a este botón el nombre **ResetButton** y haga doble clic para abrir el plano técnico.
 
 > [!NOTE]
@@ -55,7 +55,7 @@ Ahora que la función está configurada correctamente, la siguiente tarea consis
 
 ![Subclase del nuevo plano técnico del botón de estilo HoloLens 2](images/unreal-uxt/5-subclass.PNG)
 
-2. Asegúrese de que la opción **ResetButton(self)** está seleccionada en el panel **Componentes** . En el panel **Detalles** , desplácese hasta la sección **Botón** . Cambie el valor **Etiqueta de botón** predeterminado a "Restablecer". Expanda la sección **Button Icon Brush** (Pincel de icono del botón ) y presione el botón **Open Icon Brush Editor** (Abrir editor del pincel de icono). 
+2. Asegúrese de que la opción **ResetButton(self)** está seleccionada en el panel **Componentes**. En el panel **Detalles**, desplácese hasta la sección **Botón**. Cambie el valor **Etiqueta de botón** predeterminado a "Restablecer". Expanda la sección **Button Icon Brush** (Pincel de icono del botón ) y presione el botón **Open Icon Brush Editor** (Abrir editor del pincel de icono). 
 
 ![Establecimiento de la etiqueta y el icono en el botón](images/unreal-uxt/5-buttonconfig.PNG)
 
@@ -65,12 +65,12 @@ Se abrirá Icon Brush Editor (Editor del pincel de icono), que es una utilidad q
 
 Hay muchas otras opciones de configuración que puede ajustar para configurar el botón. Para obtener más información acerca del componente UXT Pressable Button, consulte la [documentación](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/PressableButton.html).
 
-3. Haga clic en **PressableButton (Inherited)** [PressableButton (heredado)] del panel **Componentes** y desplácese hacia abajo en el panel **Detalles** hasta la sección **Eventos** . 
+3. Haga clic en **PressableButton (Inherited)** [PressableButton (heredado)] del panel **Componentes** y desplácese hacia abajo en el panel **Detalles** hasta la sección **Eventos**. 
     * Haga clic en el botón verde **+** situado junto a **On Button Pressed** (Al presionar un botón) para agregar un evento al gráfico de eventos, que se llamará cuando se presione el botón. 
     
-Desde aquí, llamará a la función **Reset Location** de **WhiteKing** , que necesita una referencia al actor **WhiteKing** en el nivel. 
+Desde aquí, llamará a la función **Reset Location** de **WhiteKing**, que necesita una referencia al actor **WhiteKing** en el nivel. 
 
-4.  En el panel **My Blueprint** (My plano técnico), vaya a la sección **Variables** , haga clic en el botón **+** y asigne a la variable el nombre **WhiteKing** . 
+4.  En el panel **My Blueprint** (My plano técnico), vaya a la sección **Variables**, haga clic en el botón **+** y asigne a la variable el nombre **WhiteKing**. 
     * En el panel **Details** (Detalles), seleccione la lista desplegable situada junto a **Variable Type** (Tipo de variable), busque **WhiteKing** y seleccione **Object Reference** (Referencia de objetos). 
     * Marque la casilla situada junto a **Instance Editable** (Instance editable). Esto permitirá que la variable se defina desde el nivel principal. 
 
@@ -85,7 +85,7 @@ Lo único que queda es activar oficialmente la función de restablecimiento cuan
 
 ![Llamar a la función Reset Location (Restablecer ubicación) desde On Button Pressed (Al presionar un botón)](images/unreal-uxt/5-callresetloc.PNG)
 
-2.  Arrastre **ResetButton** a la ventanilla y establezca su ubicación en **X = 50** , **Y =-25** y **Z = 10** . Establezca su rotación en **Z = 180** . En **Default** (Valor predeterminado), establezca el valor de la variable **WhiteKing** en **WhiteKing** .
+2.  Arrastre **ResetButton** a la ventanilla y establezca su ubicación en **X = 50**, **Y =-25** y **Z = 10**. Establezca su rotación en **Z = 180**. En **Default** (Valor predeterminado), establezca el valor de la variable **WhiteKing** en **WhiteKing**.
 
 ![Definir la variable](images/unreal-uxt/5-buttonlevel.PNG)
 

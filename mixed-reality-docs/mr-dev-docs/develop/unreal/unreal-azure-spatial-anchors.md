@@ -6,13 +6,13 @@ ms.author: v-hferrone
 ms.date: 07/01/2020
 ms.topic: tutorial
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens 2, azure, desarrollo de azure, anclajes espaciales, realidad mixta, desarrollo, características, nuevo proyecto, emulador, documentación, guías, hologramas, desarrollo de juegos
-ms.openlocfilehash: 5f1f7ef0cb55714ed87bbc3e827d77d3e2694084
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens 2, azure, azure development, spatial anchors, mixed reality, development, features, new project, emulator, documentation, guides, holograms, game development, mixed reality headset, windows mixed reality headset, virtual reality headset
+ms.openlocfilehash: 05a4b221961fa9b3a150eb8ef9f8bd2f77f5b955
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91701232"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679874"
 ---
 # <a name="azure-spatial-anchors-in-unreal"></a>Azure Spatial Anchors en Unreal
 
@@ -47,7 +47,7 @@ Para obtener más información, consulte los documentos de [autenticación de Az
 ## <a name="adding-azure-spatial-anchors-plugins"></a>Adición de complementos de Azure Spatial Anchors
 
 Para habilitar los complementos de Azure Spatial Anchors en el editor de Unreal:
-1. Haga clic en **Edit > Plugins** (Editar > Complementos) y busque **AzureSpatialAnchors** y **AzureSpatialAnchorsForWMR** .
+1. Haga clic en **Edit > Plugins** (Editar > Complementos) y busque **AzureSpatialAnchors** y **AzureSpatialAnchorsForWMR**.
 2. Active la casilla **Enabled** (Habilitado) en ambos complementos para permitir el acceso a las bibliotecas de planos técnicos de Azure Spatial Anchors en la aplicación.
 
 ![Complementos de Spatial Anchors](images/asa-unreal/unreal-spatial-anchors-img-01.png)
@@ -132,7 +132,7 @@ Después de configurar el Azure Spatial Anchor con sus parámetros, llame a **Sa
 ![Complementos de Spatial Anchors](images/asa-unreal/unreal-spatial-anchors-img-15.png)
 
 > [!NOTE]
-> Save Cloud Anchor es una función asincrónica y solo se puede llamar desde un evento de subproceso de juego, como **EventTick** . Es posible que Save Cloud Anchor no aparezca como una función de plano técnico en el plano técnico personalizado Functions (Funciones). Sin embargo, debe estar disponible en el editor de planos técnicos Event Graph (Gráfico de eventos) del Pawn (Peón).
+> Save Cloud Anchor es una función asincrónica y solo se puede llamar desde un evento de subproceso de juego, como **EventTick**. Es posible que Save Cloud Anchor no aparezca como una función de plano técnico en el plano técnico personalizado Functions (Funciones). Sin embargo, debe estar disponible en el editor de planos técnicos Event Graph (Gráfico de eventos) del Pawn (Peón).
 
 En el ejemplo siguiente, el Azure Spatial Anchor se almacena en un conjunto durante una devolución de llamada del evento de entrada. Después, el elemento se guarda en EventTick. Se pueden necesitar varios intentos para guardar un Azure Spatial Anchor, en función de la cantidad de datos espaciales que se hayan creado en la sesión de Azure Spatial Anchors. Por eso es conveniente comprobar si la llamada de guardado se realizó correctamente.
 
@@ -172,7 +172,7 @@ Además de crear Azure Spatial Anchors, puede detectar anclajes creados por pare
 
 ![Complementos de Spatial Anchors](images/asa-unreal/unreal-spatial-anchors-img-19.png)
 
-3. Suscríbase a **ASAAnchor Located Delegate** (Delegado detectado de ASAAnchor) para el componente **AzureSpatialAnchorsEvent** .
+3. Suscríbase a **ASAAnchor Located Delegate** (Delegado detectado de ASAAnchor) para el componente **AzureSpatialAnchorsEvent**.
     * El delegado permite que la aplicación sepa cuándo se han encontrado nuevos anclajes asociados con la cuenta de Azure Spatial Anchors.
     * Con la devolución de llamada del evento, no se crearán de forma predeterminada AR Pins (Marcas de AR) para los Azure Spatial Anchors creados por pares mediante la sesión de Azure Spatial Anchors. Para crear una AR Pin (Marca de AR) para el Spatial Anchor de Azure detectado, los desarrolladores pueden llamar a **Create ARPin Around Azure Cloud Spatial Anchor** (Crear ARPin en función del anclaje espacial en la nube de Azure).
 
@@ -180,9 +180,9 @@ Además de crear Azure Spatial Anchors, puede detectar anclajes creados por pare
 
 Para buscar los Azure Spatial Anchors creados por los pares mediante el servicio de Azure Spatial Anchors, la aplicación tendrá que crear un **Azure Spatial Anchors Watcher** (Monitor de Azure Spatial Anchors):
 1. Compruebe que haya una sesión de Azure Spatial Anchors en ejecución.
-2. Cree un **AzureSpatialAnchorsLocateCriteria** .
+2. Cree un **AzureSpatialAnchorsLocateCriteria**.
     * Puede especificar varios parámetros de ubicación, como la distancia desde el usuario o la distancia desde otro anclaje.
-3. Declare el identificador del Azure Spatial Anchor que desee en **AzureSpatialAnchorsLocateCritieria** .
+3. Declare el identificador del Azure Spatial Anchor que desee en **AzureSpatialAnchorsLocateCritieria**.
 4. Llame a **Create Watcher** (Crear monitor).
 
 ![Complementos de Spatial Anchors](images/asa-unreal/unreal-spatial-anchors-img-21.png)

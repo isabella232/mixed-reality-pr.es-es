@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/29/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, PC holographic remoting, tooltips, eye-tracking
 ms.localizationpriority: high
-ms.openlocfilehash: d88d3e17e26ddd361f2cbe1a32f22025255303f0
-ms.sourcegitcommit: 8fd127aff85b77778bd7a75c5ec5215d27ecf21a
+ms.openlocfilehash: eae7b57544b8a544d3df926296ad5f2a720d5529
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93417001"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679774"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1. Introducción a la comunicación remota holográfica para PC
 
@@ -131,11 +131,11 @@ Para cada uno de los botones restantes, complete el proceso descrito anteriormen
 
 Ahora los botones están configurados para mostrar la funcionalidad de cambio y recorte del modelo. Es el momento de agregar los modelos 3D y los objetos de recorte al script.
 
-Hemos incluido seis modelos 3D distintos para la demostración; expanda el objeto * *_ModelParentobject_* _ para exponer estos modelos 3D.
+Hemos incluido seis modelos 3D distintos para la demostración; expanda el objeto **_ModelParentobject_* _ para exponer estos modelos 3D.
 
 Con el objeto ButtonParent aún seleccionado en la ventana Jerarquía, en la ventana Inspector, busque el componente _ *View Button Control (Script)* * (Ver control de botón [script]) y expanda la variable **Models**.
 
-En el campo **Size** , escriba el número de modelos 3D que quiere tener en la escena. En este caso, sería seis. Se crearán los campos para agregar nuevos modelos 3D.
+En el campo **Size**, escriba el número de modelos 3D que quiere tener en la escena. En este caso, sería seis. Se crearán los campos para agregar nuevos modelos 3D.
 
 ![Unity con los campos de componente del script ViewButtonControl](images/mrlearning-pc-holographic-remoting/Tutorial1-Section4-Step3-1.png)
 
@@ -157,7 +157,7 @@ En esta sección, agregará el representador de objetos secundarios del objeto M
 
 En la ventana Jerarquía, expanda el objeto **ClippingObjects** para exponer los tres objetos de recorte diferentes que usará en este proyecto.
 
-Para configurar el objeto **ClippingSphere** , haga clic en él y, en la ventana Inspector, busque el componente **Clipping Sphere (Script)** (Esfera de recorte [script]). Escriba el número de representadores en el campo de tamaño que necesita agregar al modelo 3D. En este caso, agregue 10 objetos secundarios MarsCuriosityRover. De este modo, se crearán campos para agregar los representadores; después, arrastre y coloque los objetos del modelo secundario del objeto MarsCuriosityRover en estos campos.
+Para configurar el objeto **ClippingSphere**, haga clic en él y, en la ventana Inspector, busque el componente **Clipping Sphere (Script)** (Esfera de recorte [script]). Escriba el número de representadores en el campo de tamaño que necesita agregar al modelo 3D. En este caso, agregue 10 objetos secundarios MarsCuriosityRover. De este modo, se crearán campos para agregar los representadores; después, arrastre y coloque los objetos del modelo secundario del objeto MarsCuriosityRover en estos campos.
 
 ![Unity con los campos de componente del script ClippingSphere configurados](images/mrlearning-pc-holographic-remoting/Tutorial1-Section5-Step1-1.png)
 
@@ -171,7 +171,7 @@ En esta sección, explorarás cómo habilitar el seguimiento ocular en el proyec
 
 ### <a name="1-identify-target-objects-and-associated-tooltips"></a>1. Identificación de los objetos de destino y la información sobre herramientas asociada
 
-En la ventana Jerarquía, expanda el objeto ModelParent. Expanda **_MarsCuriosity -> Rover_ *_ para buscar cinco partes principales de MarsCuriosityRover: _* POI-Camera** , **POI-Wheels** , **POI-Antena** , **POI-Spectrometer** , **POI-RUHF Antenna**.
+En la ventana Jerarquía, expanda el objeto ModelParent. Expanda **_MarsCuriosity -> Rover_ *_ para buscar cinco partes principales de MarsCuriosityRover: _* POI-Camera**, **POI-Wheels**, **POI-Antena**, **POI-Spectrometer**, **POI-RUHF Antenna**.
 
 * Observe los cinco objetos de información sobre herramientas correspondientes con las piezas de MarsCuriosityRover en la ventana Jerarquía.
 * Configurará estos objetos para mejorar la experiencia al mirar las piezas de MarsCuriosityRover.
@@ -180,7 +180,7 @@ En la ventana Jerarquía, expanda el objeto ModelParent. Expanda **_MarsCuriosit
 
 ### <a name="2-implement-while-looking-at-target-----on-look-away--events"></a>2. Implementación de los eventos While Looking At Target () y On Look Away ()
 
-En la ventana Hierarchy (Jerarquía), seleccione el objeto * **POI-Camera** _. En la ventana Inspector, busque el componente _ *Eye Tracking Target (Script)* * (Objetivo de seguimiento ocultar [script]) y configure los eventos **While Looking At Target ()**  & **On Look Away ()** como se indica a continuación:
+En la ventana Hierarchy (Jerarquía), seleccione el objeto ***POI-Camera** _. En la ventana Inspector, busque el componente _ *Eye Tracking Target (Script)* * (Objetivo de seguimiento ocultar [script]) y configure los eventos **While Looking At Target ()**  & **On Look Away ()** como se indica a continuación:
 
 * Asigne el objeto **POI-Camera ToolTip** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **Ninguna función** del evento **While Looking At Target ()** , seleccione **GameObject** > **SetActive (bool)** . Active la **Casilla** debajo para que, al mirar el objeto de destino, la acción desencadenada sea resaltar la información sobre herramientas.

@@ -5,18 +5,18 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: realidad mixta, unity, tutorial, hololens, hololens 2, azure custom vision, azure cognitive services
+keywords: mixed reality, unity, tutorial, hololens, hololens 2, azure custom vision, azure cognitive services, azure cloud services, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 9a6cccf9c1a7d2547ed5ddacfc4841d2f4d1609b
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: d30d409752c8b7f9728a4a6576829d175f91506d
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353273"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679354"
 ---
 # <a name="3-integrating-azure-custom-vision"></a>3. Integración de Azure Custom Vision
 
-En este tutorial, aprenderá a usar **Azure Custom Vision**. Cargará un conjunto de fotos para asociarlo a un *objeto con seguimiento* , las cargará en el servicio **Custom Vision** y comenzará el proceso de entrenamiento. A continuación, usará el servicio para detectar el *objeto con seguimiento* al capturar las fotos de la fuente de la cámara web.
+En este tutorial, aprenderá a usar **Azure Custom Vision**. Cargará un conjunto de fotos para asociarlo a un *objeto con seguimiento*, las cargará en el servicio **Custom Vision** y comenzará el proceso de entrenamiento. A continuación, usará el servicio para detectar el *objeto con seguimiento* al capturar las fotos de la fuente de la cámara web.
 
 ## <a name="objectives"></a>Objetivos
 

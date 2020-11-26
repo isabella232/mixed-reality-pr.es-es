@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: azure, realidad mixta, unity, tutorial, hololens, hololens 2, azure blob storage, azure table storage, azure spatial anchors, azure bot framework
+keywords: azure, mixed reality, unity, tutorial, hololens, hololens 2, azure blob storage, azure table storage, azure spatial anchors, azure bot framework, azure cloud services, azure custom vision, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 878fd92a946b70ba3b0a867722f86ab801a79032
-ms.sourcegitcommit: 8fd127aff85b77778bd7a75c5ec5215d27ecf21a
+ms.openlocfilehash: 98ca849722feeaa307cb43e568570897b48ed850
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93416981"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679424"
 ---
 # <a name="1-azure-cloud-services-for-hololens-2"></a>1. Servicios en la nube de Azure para HoloLens 2
 
@@ -21,7 +21,7 @@ ms.locfileid: "93416981"
 Le damos la bienvenida a esta serie de tutoriales centrados en incorporar **servicios en la nube de Azure** a una aplicación de **HoloLens 2**. En esta serie de tutoriales de cinco partes, aprenderá a integrar varios **servicios en la nube de Azure** en un proyecto de **Unity** para **HoloLens 2**. Con cada capítulo consecutivo, agregará nuevos **servicios en la nube de Azure** para ampliar las características de la aplicación y la experiencia del usuario, al tiempo que le enseñará los aspectos básicos de cada **servicio en la nube de Azure**.
 
 > [!NOTE]
-> Esta serie de tutoriales se centrará en el **HoloLens 2** , pero, debido a la naturaleza multiplataforma de Unity, la mayoría de los aprendizajes también se aplicarán a las aplicaciones de escritorio y smartphone.
+> Esta serie de tutoriales se centrará en el **HoloLens 2**, pero, debido a la naturaleza multiplataforma de Unity, la mayoría de los aprendizajes también se aplicarán a las aplicaciones de escritorio y smartphone.
 
 En el primer tutorial, se presentarán los objetivos de la serie y cada servicio en la nube de Azure que va a usar, así como la configuración del proyecto de Unity inicial.
 
@@ -106,7 +106,7 @@ En el menú de Unity, seleccione **Window** > **Package Manager** (Ventana > Adm
 
 ## <a name="importing-the-tutorial-assets"></a>Importación de los recursos del tutorial
 
-Descarga e **importa** los siguientes paquetes personalizados de Unity **en el orden en que aparecen** :
+Descarga e **importa** los siguientes paquetes personalizados de Unity **en el orden en que aparecen**:
 
 * [AzureSpatialAnchors.unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.2.1/AzureSpatialAnchors.unitypackage)
 * [AzureStorageForUnity.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-cloud-services-v2.4.0/AzureStorageForUnity.unitypackage)
@@ -127,7 +127,7 @@ Después de importar los recursos del tutorial, la ventana Project (Proyecto) de
 
 En esta sección, agregarás algunos objetos prefabricados del tutorial para preparar la escena.
 
-En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK.Tutorials.AzureCloudServices** > **Prefabs** > **Manager**. Mientras mantiene presionado la tecla CTRL, haga clic en **SceneController** , **RootMenu** y **DataManager** para seleccionar los tres objetos prefabricados:
+En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK.Tutorials.AzureCloudServices** > **Prefabs** > **Manager**. Mientras mantiene presionado la tecla CTRL, haga clic en **SceneController**, **RootMenu** y **DataManager** para seleccionar los tres objetos prefabricados:
 
 ![Unity con los objetos prefabricados SceneController, RootMenu y DataManager seleccionados](images/mr-learning-azure/tutorial1-section5-step1-1.png)
 
@@ -150,7 +150,7 @@ Para centrarse en los objetos de la escena, puede hacer doble clic en el objeto 
 
 ## <a name="configuring-the-scene"></a>Configuración de la escena
 
-En esta sección, conectará *SceneManager* , *SceneManager* y *RootMenu* juntos para tener una escena en funcionamiento preparada para el siguiente tutorial, [Integración de Azure Storage](mr-learning-azure-01.md).
+En esta sección, conectará *SceneManager*, *SceneManager* y *RootMenu* juntos para tener una escena en funcionamiento preparada para el siguiente tutorial, [Integración de Azure Storage](mr-learning-azure-01.md).
 
 ### <a name="connect-the-objects"></a>Conexión de los objetos
 
@@ -166,7 +166,7 @@ Observará que el menú desplegable del evento se ha activado, haga clic en el m
 
 ![Unity con la acción de evento de DataManager agregada](images/mr-learning-azure/tutorial1-section6-step1-3.png)
 
-En la ventana Hierarchy (Jerarquía), seleccione el objeto **SceneController** , en Inspector encontrará el componente **SceneController** (script).
+En la ventana Hierarchy (Jerarquía), seleccione el objeto **SceneController**, en Inspector encontrará el componente **SceneController** (script).
 
 ![Unity con el elemento SceneController seleccionado](images/mr-learning-azure/tutorial1-section6-step1-4.png)
 
@@ -190,7 +190,7 @@ En la ventana Project Settings (Configuración del proyecto), seleccione **Playe
 
 ![Configuración de publicación de Unity](images/mr-learning-azure/tutorial1-section7-step1-2.png)
 
-En **Publishing Settings** (Configuración de publicación), desplácese hasta la sección **Capabilities** (Funcionalidades) y comprueba que las funcionalidades **InternetClient** , **Microphone** y **SpatialPerception** que habilitó al crear el proyecto al principio del tutorial estén habilitadas. A continuación, habilite las funcionalidades **InternetClientServer** , **PrivateNetworkClientServer** y **Webcam** :
+En **Publishing Settings** (Configuración de publicación), desplácese hasta la sección **Capabilities** (Funcionalidades) y comprueba que las funcionalidades **InternetClient**, **Microphone** y **SpatialPerception** que habilitó al crear el proyecto al principio del tutorial estén habilitadas. A continuación, habilite las funcionalidades **InternetClientServer**, **PrivateNetworkClientServer** y **Webcam**:
 
 ![Funcionalidades de Unity](images/mr-learning-azure/tutorial1-section7-step1-3.png)
 

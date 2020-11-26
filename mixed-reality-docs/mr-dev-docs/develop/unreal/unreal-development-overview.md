@@ -6,13 +6,13 @@ ms.author: v-hferrone
 ms.date: 08/04/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms, game development
-ms.openlocfilehash: a8e345831167362745a45a8fa81ddae858083ca7
-ms.sourcegitcommit: 9a489e8a3bf90b20f1b61606eea42c859c833424
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms, game development, mixed reality headset, windows mixed reality headset, virtual reality headset
+ms.openlocfilehash: b810ad7500f8bb2a70ef18ad29fb32df8801a2de
+ms.sourcegitcommit: 2759aba06e643d70004023b105ed26b33ce3dbfa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2020
-ms.locfileid: "94340693"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "94810451"
 ---
 # <a name="unreal-development-overview"></a>Introducción al desarrollo con Unreal
 
@@ -29,7 +29,7 @@ La introducción a <a href="https://docs.microsoft.com/windows/mixed-reality" ta
 Si no está familiarizado con el desarrollo en Unreal, no empiece a ciegas. Explore la <a href="https://docs.unrealengine.com/GettingStarted/index.html" target="_blank">serie de tutoriales</a> de Unreal para ponerse al día y buscar recursos y soporte técnico en <a href="https://www.unrealengine.com/marketplace/store" target="_blank">marketplace</a> de Unreal y en los <a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">foros</a> de la realidad mixta. Estos recursos son vínculos a la comunidad de creadores y solucionadores de problemas en el mercado de realidad mixta de hoy en día.
 
 > [!IMPORTANT]
-> Eche un vistazo a nuestras **[guías de migración](../porting-apps/porting-overview.md)** si tiene un proyecto de Unreal existente que quiere llevar a HoloLens 2 o a un casco envolvente, como Reverb G2.
+> Eche un vistazo a nuestra **[guía de migración](unreal-reverb-g2-controllers.md)** si tiene un proyecto de Unreal existente que quiere utilizar con cascos envolventes, como Reverb G2.
 
 ## <a name="development-checkpoints"></a>Puntos de control de desarrollo
 

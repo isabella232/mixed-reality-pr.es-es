@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, multi-user capabilities, Photon, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: 5ebb3ffd66422a5e38bc62ada0f040e00f52671d
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: c16182fe2363b4682a25d70715f5ee8cb65d5886
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353473"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679764"
 ---
 # <a name="3-connecting-multiple-users"></a>3. Conexión de varios usuarios
 
@@ -51,7 +51,7 @@ En la ventana Jerarquía, haz clic con el botón derecho en un área vacía y se
 
 ![Unity con el objeto PhotonUser recién creado seleccionado](images/mr-learning-sharing/sharing-03-section2-step1-1.png)
 
-En la ventana Jerarquía, seleccione el objeto **PhotonUser** ; después, en la ventana Inspector, usa el botón **Agregar componente** para agregar el componente **Photon User (Script)** (Usuario de Photon [script]) al objeto PhotonUser:
+En la ventana Jerarquía, seleccione el objeto **PhotonUser**; después, en la ventana Inspector, usa el botón **Agregar componente** para agregar el componente **Photon User (Script)** (Usuario de Photon [script]) al objeto PhotonUser:
 
 ![Unity con el componente PhotonUser agregado](images/mr-learning-sharing/sharing-03-section2-step1-2.png)
 
@@ -75,13 +75,13 @@ Después, en la ventana Jerarquía, haga clic con el botón derecho en el objeto
 
 * Asegúrate de que el valor **Posición** de Transformación esté establecido en X = 0, Y = 0 y Z = 0.
 * Cambia el valor **Escala** de Transformación a un tamaño adecuado; por ejemplo, X = 0,15, Y = 0,15 y Z = 0,15.
-* En el campo MeshRenderer > Materials (Materiales) > **Elemento 0** , asigne el material **MRTK_Standard_White**.
+* En el campo MeshRenderer > Materials (Materiales) > **Elemento 0**, asigne el material **MRTK_Standard_White**.
 
 ![Unity con la esfera de avatar recién creada y configurada](images/mr-learning-sharing/sharing-03-section2-step2-1.png)
 
 ### <a name="3-create-the-prefab"></a>3. Creación del elemento prefabricado
 
-En la ventana Proyecto, navega hasta la carpeta **Recursos** > **MRTK.Tutorials.MultiUserCapabilities** > **Recursos** :
+En la ventana Proyecto, navega hasta la carpeta **Recursos** > **MRTK.Tutorials.MultiUserCapabilities** > **Recursos**:
 
 ![Ventana Project (Proyecto) de Unity con la carpeta Resource (Recurso) seleccionada](images/mr-learning-sharing/sharing-03-section2-step3-1.png)
 

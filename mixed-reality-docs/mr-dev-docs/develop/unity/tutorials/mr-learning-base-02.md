@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, TextMeshPro,
 ms.localizationpriority: high
-ms.openlocfilehash: 2fb742f71baef50881a4a3279e7b0a1b969f0306
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: 62f79e1a50f8a2f0d2c8829b968e2c3bf5ee7403
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353443"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679384"
 ---
 # <a name="2-initializing-your-project-and-deploying-your-first-application"></a>2. Inicialización de su proyecto e implementación de su primera aplicación
 
@@ -28,7 +28,7 @@ En este tutorial, aprenderá a crear un nuevo proyecto de Unity, configurarlo pa
 
 ## <a name="creating-the-unity-project"></a>Creación del proyecto de Unity
 
-Inicia **Unity Hub** , selecciona la pestaña **Projects** (Proyectos) y haz clic en la **flecha hacia abajo** situada junto al botón **New** (Nuevo):
+Inicia **Unity Hub**, selecciona la pestaña **Projects** (Proyectos) y haz clic en la **flecha hacia abajo** situada junto al botón **New** (Nuevo):
 
 ![Unity Hub con el botón New (Nuevo) resaltado](images/mr-learning-base/base-02-section1-step1-1.png)
 
@@ -152,7 +152,7 @@ En la ventana Project Settings (Configuración del proyecto), seleccione **Playe
 > [!TIP]
 > Reducir el formato de profundidad a 16 bits es opcional, pero puede ayudar a mejorar el rendimiento de los gráficos en el proyecto. Para obtener más información sobre este tema, puede consultar la sección [Depth buffer sharing (HoloLens)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Performance/PerfGettingStarted.html#depth-buffer-sharing-hololens) (Uso compartido del búfer de profundidad [HoloLens]) de la documentación [Performance](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Performance/PerfGettingStarted.html) (Rendimiento) de MRTK.
 
-En la ventana Project Settings (Configuración del proyecto), seleccione **Player** > **Publishing Settings** (Reproductor > Configuración de publicación) y en el campo **Package name** (Nombre del paquete), escriba un nombre adecuado, por ejemplo, _TutorialesDeMRTK-Introducción_ :
+En la ventana Project Settings (Configuración del proyecto), seleccione **Player** > **Publishing Settings** (Reproductor > Configuración de publicación) y en el campo **Package name** (Nombre del paquete), escriba un nombre adecuado, por ejemplo, _TutorialesDeMRTK-Introducción_:
 
 ![Publishing Settings (Configuración de publicación) de Unity con Package name (Nombre del paquete) configurado](images/mr-learning-base/base-02-section5-step2-5.png)
 
@@ -172,7 +172,7 @@ En el menú de Unity, seleccione **Mixed Reality Toolkit** > **Add to Scene and 
 
 ![Ruta del menú Add to Scene and Configure… (Agregar a escena y configurar…) de Unity](images/mr-learning-base/base-02-section6-step1-2.png)
 
-Con el objeto **MixedRealityToolkit** seleccionado en la ventana Hierarchy (Jerarquía), en la ventana Inspector, compruebe que el perfil de configuración **MixedRealityToolkit** se haya definido como **DefaultMixedRealityToolkitConfigurationProfile** :
+Con el objeto **MixedRealityToolkit** seleccionado en la ventana Hierarchy (Jerarquía), en la ventana Inspector, compruebe que el perfil de configuración **MixedRealityToolkit** se haya definido como **DefaultMixedRealityToolkitConfigurationProfile**:
 
 ![Componente MixedRealityToolkit de Unity con DefaultMixedRealityTookitConfigurationProfile seleccionado](images/mr-learning-base/base-02-section6-step1-3.png)
 
@@ -183,7 +183,7 @@ En el menú de Unity, selecciona **File** > **Save As...** (Archivo > Guardar co
 
 ![Ruta del menú Save As… (Guardar como…) de Unity](images/mr-learning-base/base-02-section6-step1-4.png)
 
-En la ventana Save Scene (Guardar escena), desplázate hasta la carpeta **Scenes** (Escenas) del proyecto, asígnale un nombre adecuado (por ejemplo, _GettingStarted_ ), y haz clic en el botón **Save** (Guardar) para guardar la escena:
+En la ventana Save Scene (Guardar escena), desplázate hasta la carpeta **Scenes** (Escenas) del proyecto, asígnale un nombre adecuado (por ejemplo, _GettingStarted_), y haz clic en el botón **Save** (Guardar) para guardar la escena:
 
 ![Ventana de solicitud Save Scene (Guardar escena) de Unity](images/mr-learning-base/base-02-section6-step1-5.png)
 
@@ -197,7 +197,7 @@ En la ventana Build Settings (Configuración de compilación), haz clic en el bo
 
 ![Ventana Build Settings (Configuración de compilación) de Unity con UWP seleccionado](images/mr-learning-base/base-02-section7-step1-1.png)
 
-En la ventana Build Universal Windows Platform (Compilar la Plataforma universal de Windows), elige una ubicación adecuada para almacenar la compilación, por ejemplo, _D:\MixedRealityLearning\Builds_ , crea una carpeta nueva y asígnale un nombre adecuado, por ejemplo, _Introducción_ , y haz clic en el botón **Select Folder** (Seleccionar carpeta) para iniciar el proceso de compilación:
+En la ventana Build Universal Windows Platform (Compilar la Plataforma universal de Windows), elige una ubicación adecuada para almacenar la compilación, por ejemplo, _D:\MixedRealityLearning\Builds_, crea una carpeta nueva y asígnale un nombre adecuado, por ejemplo, _Introducción_, y haz clic en el botón **Select Folder** (Seleccionar carpeta) para iniciar el proceso de compilación:
 
 ![Ventana Build Settings (Configuración de compilación) de Unity con la ventana de solicitud Select Folder (Seleccionar carpeta)](images/mr-learning-base/base-02-section7-step1-2.png)
 
@@ -214,7 +214,7 @@ Cuando se complete el proceso de compilación, Unity solicitará al Explorador d
 > [!NOTE]
 > Si Visual Studio solicita que instale nuevos componentes, dedique un momento a comprobar que tiene todos los componentes de requisitos previos de la documentación **[Instalación de herramientas](../../install-the-tools.md)** .
 
-Configure Visual Studio para HoloLens 2. Para ello, selecciona la configuración **Maestro** o **Publicación** , la arquitectura **ARM64** y la opción **Dispositivo** como destino:
+Configure Visual Studio para HoloLens 2. Para ello, selecciona la configuración **Maestro** o **Publicación**, la arquitectura **ARM64** y la opción **Dispositivo** como destino:
 
 ![Visual Studio configurado para implementar en HoloLens 2](images/mr-learning-base/base-02-section8-step1-2.png)
 

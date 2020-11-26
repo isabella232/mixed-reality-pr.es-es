@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, multi-user capabilities, Photon, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, PUN
 ms.localizationpriority: high
-ms.openlocfilehash: aeda463610f1fb1205eade556a2c2b9bc07a4fde
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: 062c39ab6973c7c71e305cfc7a695fb250c76596
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353483"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679264"
 ---
 # <a name="2-setting-up-photon-unity-networking"></a>2. Configuración de Photon Unity Networking
 
@@ -50,7 +50,7 @@ En el menú de Unity, selecciona **Edit** > **Project Settings...** (Editar > Co
 
 ![Player Settings (Configuración del reproductor) de Unity](images/mr-learning-sharing/sharing-02-section2-step1-1.png)
 
-En **Configuración de publicación** , desplácese hasta la sección **Funcionalidades** y compruebe que las funcionalidades **InternetClient** , **Microphone** , **SpatialPerception** y **GazeInput** que habilitó durante el paso anterior titulado [Configuración del proyecto de Unity](mr-learning-base-02.md#configuring-the-unity-project), estén habilitadas.
+En **Configuración de publicación**, desplácese hasta la sección **Funcionalidades** y compruebe que las funcionalidades **InternetClient**, **Microphone**, **SpatialPerception** y **GazeInput** que habilitó durante el paso anterior titulado [Configuración del proyecto de Unity](mr-learning-base-02.md#configuring-the-unity-project), estén habilitadas.
 
 A continuación, habilite las siguientes funcionalidades adicionales:
 
@@ -70,7 +70,7 @@ En el menú de Unity, seleccione **Ventana** > **Administrador de paquetes** par
 
 ## <a name="importing-the-tutorial-assets"></a>Importación de los recursos del tutorial
 
-Descarga e **importa** los siguientes paquetes personalizados de Unity **en el orden en que aparecen** :
+Descarga e **importa** los siguientes paquetes personalizados de Unity **en el orden en que aparecen**:
 
 * [AzureSpatialAnchors.unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.2.1/AzureSpatialAnchors.unitypackage) (versión 2.2.1)
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage)
@@ -111,7 +111,7 @@ Ve al <a href="https://dashboard.photonengine.com/account/signin" target="_blank
 
 ![Página de inicio de sesión de Photon](images/mr-learning-sharing/sharing-02-section6-step1-1.png)
 
-Una vez que hayas iniciado sesión, haz clic en el botón **Crear una nueva aplicación** :
+Una vez que hayas iniciado sesión, haz clic en el botón **Crear una nueva aplicación**:
 
 ![Página de bienvenida del panel de Photon](images/mr-learning-sharing/sharing-02-section6-step1-2.png)
 

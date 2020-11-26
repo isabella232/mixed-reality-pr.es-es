@@ -6,19 +6,19 @@ ms.author: cmeekhof
 ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Mixed Reality, interacción, diseño, HoloLens, manos, lejos, apuntar y confirmar
-ms.openlocfilehash: 5baf625127b1c1757bb6ae82473adcb8329746cd
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Mixed Reality, interaction, design, HoloLens, hands, far, point and commit , mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, hand rays, object manipulation, MRTK, Mixed Reality Toolkit, DoF
+ms.openlocfilehash: 91befcec2d9b020c58d3ed02fd181122ce715936
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91699447"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703461"
 ---
 # <a name="point-and-commit-with-hands"></a>Apuntar y confirmar con las manos
 
 ![Cursores](images/UX_Hero_HandRay.jpg)
 
-Apuntar y confirmar con las manos es un modelo de entrada que permite a los usuarios seleccionar como destino, seleccionar y manipular contenidos 2D y objetos 3D que están fuera de su alcance. Esta técnica de interacción "lejana" es única de la realidad mixta y no es la forma en que los seres humanos interactúan de forma natural con el mundo real. Por ejemplo, en la película de superhéroes *X-Men* , el personaje [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) es capaz de llegar a objetos lejanos y manipularlos a distancia con las manos. Esto no es algo que los seres humanos pueden hacer en el mundo real. Tanto en HoloLens (AR) como en Mixed Reality (MR), dotamos a los usuarios con poderes mágicos y eliminamos la limitación física del mundo real, no solo para tener una magnífica experiencia con contenido holográfico, sino también para aumentar la eficacia y eficiencia de las interacciones.
+Apuntar y confirmar con las manos es un modelo de entrada que permite a los usuarios seleccionar como destino, seleccionar y manipular contenidos 2D y objetos 3D que están fuera de su alcance. Esta técnica de interacción "lejana" es única de la realidad mixta y no es la forma en que los seres humanos interactúan de forma natural con el mundo real. Por ejemplo, en la película de superhéroes *X-Men*, el personaje [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) es capaz de llegar a objetos lejanos y manipularlos a distancia con las manos. Esto no es algo que los seres humanos pueden hacer en el mundo real. Tanto en HoloLens (AR) como en Mixed Reality (MR), dotamos a los usuarios con poderes mágicos y eliminamos la limitación física del mundo real, no solo para tener una magnífica experiencia con contenido holográfico, sino también para aumentar la eficacia y eficiencia de las interacciones.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -60,12 +60,12 @@ Este comando gestual básico se desencadena al usar los dedos pulgar e índice p
     :::column:::
         ![haces de mano que apuntan](images/hand-rays-pointing.jpg)<br>
         **Estado de apuntar**<br>
-        En el estado *señalar* , el rayo es una línea discontinua y el cursor tiene forma de anillo.
+        En el estado *señalar*, el rayo es una línea discontinua y el cursor tiene forma de anillo.
     :::column-end:::
     :::column:::
         ![haces de mano que confirman](images/hand-rays-commit.jpg)<br>
         **Estado de confirmación**<br>
-        En el estado *confirmar* , el rayo se convierte en una línea sólida y el cursor se reduce a un punto.
+        En el estado *confirmar*, el rayo se convierte en una línea sólida y el cursor se reduce a un punto.
     :::column-end:::
 :::row-end:::
 

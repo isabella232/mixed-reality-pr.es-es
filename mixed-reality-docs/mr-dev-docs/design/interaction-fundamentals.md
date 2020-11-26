@@ -6,13 +6,13 @@ ms.author: shentan
 ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
-keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hololens, MMR, multimodal
-ms.openlocfilehash: 2f680a6682f848b6e6f12be599cc8a7fda35b1a6
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hololens, MMR, multimodal , mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens
+ms.openlocfilehash: a4b4c8fed9bb74b12bfa4390e1675acab44b3eec
+ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91699510"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94703171"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introducción a las interacciones instintivas
 

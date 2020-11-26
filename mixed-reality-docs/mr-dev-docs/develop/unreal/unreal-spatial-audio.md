@@ -6,13 +6,13 @@ ms.author: v-hferrone
 ms.date: 06/15/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms, game development
-ms.openlocfilehash: 9b953cd0ea9aab92b2306da63a948b470363d0e6
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms, game development, mixed reality headset, windows mixed reality headset, virtual reality headset, spatial audio
+ms.openlocfilehash: 25fa60b4e55ec0f3bd0875ad88834981d198f7f5
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91702113"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679804"
 ---
 # <a name="spatial-audio-in-unreal"></a>Audio espacial en Unreal
 
@@ -27,7 +27,7 @@ El procesamiento de sonido espacial de alta calidad es complejo, por lo que Holo
 El primer paso para agregar sonido espacial a su proyecto es instalar el complemento de sonido espacial de Microsoft, que puede buscar de la siguiente manera:
 
 1. Haga clic en **Editar > Complementos** y busque **MicrosoftSpatialSound** en el cuadro de búsqueda.
-2. Active la casilla **Habilitado** en el complemento **MicrosoftSpatialSound** .
+2. Active la casilla **Habilitado** en el complemento **MicrosoftSpatialSound**.
 3. Reinicie el editor de Unreal mediante la opción **Reiniciar ahora** desde la página de complementos.
 
 > [!NOTE]
@@ -40,12 +40,12 @@ Cuando se reinicia el editor, el proyecto ya está preparado.
 
 ## <a name="setting-the-spatialization-plugin-for-hololens-2-platform"></a>Configuración del complemento de espacialización para la plataforma HoloLens 2
 La configuración del complemento de espacialización se realiza por plataforma.  Puede habilitar el complemento de sonido espacial de Microsoft para HoloLens 2 de la siguiente manera:
-1. Seleccione **Edit > Projects Settings** (Editar > Configuración del proyecto), desplácese a **Platforms** (Plataformas) y haga clic en **HoloLens** .
+1. Seleccione **Edit > Projects Settings** (Editar > Configuración del proyecto), desplácese a **Platforms** (Plataformas) y haga clic en **HoloLens**.
 2. Expanda las propiedades **Audio** y establezca el campo **Spatialization Plugin** (Complemento de la espacialización) en **Microsoft Spatial Sound** (Sonido espacial de Microsoft).
 
 ![Complemento de espacialización para la plataforma HoloLens](images/unreal-spatial-audio-img-02.png)
 
-Si va a obtener una vista previa de la aplicación en el editor de Unreal en un equipo de escritorio, deberá repetir los pasos anteriores para la plataforma **Windows** :
+Si va a obtener una vista previa de la aplicación en el editor de Unreal en un equipo de escritorio, deberá repetir los pasos anteriores para la plataforma **Windows**:
 
 ![Complemento de espacialización para la plataforma Windows](images/unreal-spatial-audio-img-05.png)
 
@@ -73,7 +73,7 @@ Después de instalar y configurar los complementos necesarios:
 ![Creación de un recurso de atenuación de sonido](images/unreal-spatial-audio-img-06.png)
 
 4. Haga clic con el botón derecho en el recurso **Sound Attenuation** (Atenuación de sonido) en la ventana **Content Browser** (Explorador de contenido) y seleccione la opción **Edit** (Editar) para abrir la ventana de propiedades.
-    * Cambie el valor de **Spatialization Method** (Método de espacialización) a **Binaural** .
+    * Cambie el valor de **Spatialization Method** (Método de espacialización) a **Binaural**.
 
 ![Establecimiento del método de espacialización](images/unreal-spatial-audio-img-03.png)
 

@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, speech commands, voice input
 ms.localizationpriority: high
-ms.openlocfilehash: c5d7297b8c8153270cd6ccf40eff64eab4afb49e
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: e51f9e816acbc2f98415deaec2c0885c97e40442
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353513"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679254"
 ---
 # <a name="9-using-speech-commands"></a>9. Uso de los comandos de voz
 
@@ -36,7 +36,7 @@ En el menú de Unity, seleccione Mixed Reality Toolkit > Utilities (Utilidades) 
 
 ## <a name="creating-speech-commands"></a>Creación de comandos de voz
 
-En la ventana jerarquía, seleccione el objeto **MixedRealityToolkit** , a continuación, en la ventana Inspector, seleccione MixedRealityToolkit > pestaña **Input** (Entrada) y siga los pasos a continuación:
+En la ventana jerarquía, seleccione el objeto **MixedRealityToolkit**, a continuación, en la ventana Inspector, seleccione MixedRealityToolkit > pestaña **Input** (Entrada) y siga los pasos a continuación:
 
 * Expanda la sección **Speech** (Voz).
 * Clone **DefaultMixedRealitySpeechCommandsProfile** y asígnele un nombre adecuado, por ejemplo, _GettingStarted_MixedRealitySpeechCommandsProfile_.
@@ -127,7 +127,7 @@ En el componente SpeechInputHandler, haga clic en el icono **+** pequeño para a
 
 * En el campo **Keyword** (Palabra clave), escriba **Enable Tap to Place** (Habilitar pulsar para colocar) para hacer referencia al comando de voz Enable Tap to Place que creó en la sección anterior.
 * Haga clic en el icono **+** pequeño para agregar un evento.
-* En la ventana Hierarchy (Jerarquía), asigne el propio objeto, es decir, el mismo objeto **RoverAssembly** , al campo **None (Object)** (Ninguno [objeto]).
+* En la ventana Hierarchy (Jerarquía), asigne el propio objeto, es decir, el mismo objeto **RoverAssembly**, al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **TapToPlace** > **bool enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento.
 * Marque la casilla del argumento para que esté **activada**.
 

@@ -6,13 +6,13 @@ ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation
-ms.openlocfilehash: 07b1012f364b8dc157ac29b5be442561757bb4dc
-ms.sourcegitcommit: 8e91ff47ef70e80a41137f80aa1093e711d27bf7
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
+ms.openlocfilehash: 869b947d23c3fbd1e561cef2c3ec41322fefd6a2
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957835"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679914"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inicialización de tu proyecto y primera aplicación
 
@@ -58,7 +58,7 @@ Antes de empezar a agregar objetos a la escena, deberá habilitar dos complement
 ![Habilitación de complementos de HoloLens](images/unreal-uxt/2-plugins.PNG)
 
 2. Seleccione **Realidad virtual** en la lista opciones integradas. 
-    * Desplácese hacia abajo hasta **Microsoft Windows Mixed Reality** , marque **Habilitado** y reinicie el editor. 
+    * Desplácese hacia abajo hasta **Microsoft Windows Mixed Reality**, marque **Habilitado** y reinicie el editor. 
 
 ![Habilitación del complemento Windows Mixed Reality](images/unreal-uxt/2-virtual-reality-plugin.PNG)
 
@@ -73,13 +73,13 @@ La siguiente tarea consiste en crear una configuración sencilla de un jugador c
 1. Seleccione **File > New Level** (Archivo > Nuevo nivel) y elija **Empty Level** (Nivel vacío). Ahora, la escena predeterminada en la ventanilla debe estar vacía.
 
 2. Seleccione **Basic** (Básico) en la pestaña **Modes** (Modos) y arrastre **PlayerStart** a la escena. 
-    * Establezca **Location** (Ubicación) en **X = 0** , **Y = 0** y **Z = 0** en la pestaña **Details** (Detalles). De este modo se establece al usuario en el centro de la escena cuando se inicia la aplicación.
+    * Establezca **Location** (Ubicación) en **X = 0**, **Y = 0** y **Z = 0** en la pestaña **Details** (Detalles). De este modo se establece al usuario en el centro de la escena cuando se inicia la aplicación.
 
 ![Ventanilla con PlayerStart](images/unreal-uxt/2-playerstart.PNG)
 
 3. Arrastre un **Cube** (Cubo) desde la pestaña **Basic** (Básico) a la escena. 
-    * Establezca **Location** (Ubicación) en **X = 50** , **Y = 0** y **Z = 0** . Así, se coloca el cubo a 50 cm del jugador en el momento del inicio. 
-    * Cambie **Scale** (Escala) a **X = 0,2** , **Y = 0,2** y **Z = 0,2** para reducir el cubo. 
+    * Establezca **Location** (Ubicación) en **X = 50**, **Y = 0** y **Z = 0**. Así, se coloca el cubo a 50 cm del jugador en el momento del inicio. 
+    * Cambie **Scale** (Escala) a **X = 0,2**, **Y = 0,2** y **Z = 0,2** para reducir el cubo. 
 
 No podrá ver el cubo a menos que agregue una luz a la escena, que es la última tarea antes de probar la escena.
 
@@ -100,7 +100,7 @@ La escena está un poco vacía en este momento, pero se solucionará al importar
 
 1. Descargue y descomprima la carpeta de recursos de [GitHub](https://github.com/microsoft/MixedReality-Unreal-Samples/blob/master/ChessApp/ChessAssets.7z) mediante [7-zip](https://www.7-zip.org/).
 
-2. Haga clic en **Add New > New Folder** (Agregar nuevo > Nueva carpeta) en **Content Browser** (Explorador de contenido) y asígnele el nombre **ChessAssets** . 
+2. Haga clic en **Add New > New Folder** (Agregar nuevo > Nueva carpeta) en **Content Browser** (Explorador de contenido) y asígnele el nombre **ChessAssets**. 
     * Haga doble clic en la nueva carpeta; ahí es donde importará los recursos 3D.
 
 ![Mostrar u ocultar el panel de orígenes](images/unreal-uxt/2-showhidesources.PNG)
@@ -117,7 +117,7 @@ Es todo lo que debe hacer para los recursos. El siguiente conjunto de tareas con
 
 ## <a name="adding-blueprints"></a>Adición de planos técnicos
 
-1. Haga clic en **Agregar nuevo > Nueva carpeta** en **Content Browser** (Explorador de contenido) y asígnele el nombre **Planos técnicos** . 
+1. Haga clic en **Agregar nuevo > Nueva carpeta** en **Content Browser** (Explorador de contenido) y asígnele el nombre **Planos técnicos**. 
 
 > [!NOTE]
 > Los [planos técnicos](https://docs.unrealengine.com/en-US/Engine/Blueprints/index.html) son recursos especiales que proporcionan una interfaz basada en nodos para crear nuevos tipos de actores y eventos de nivel de script. 
@@ -138,7 +138,7 @@ Los objetos que ha creado son de color gris de forma predeterminada, lo que no e
 
 1. Haga doble clic en **Board** para abrir el editor de planos técnicos. 
 
-2. Haga clic en **Add Component > Scene**  (Agregar componente > Escena) en el panel **Components** (Componentes) y asígnele el nombre **Root** . Observe que **Root** se muestra como un elemento secundario de **DefaultSceneRoot** en la siguiente captura de pantalla:
+2. Haga clic en **Add Component > Scene**  (Agregar componente > Escena) en el panel **Components** (Componentes) y asígnele el nombre **Root**. Observe que **Root** se muestra como un elemento secundario de **DefaultSceneRoot** en la siguiente captura de pantalla:
 
 ![Reemplazo de la raíz en el plano técnico](images/unreal-uxt/2-root-blueprint.PNG)
 
@@ -148,16 +148,16 @@ Los objetos que ha creado son de color gris de forma predeterminada, lo que no e
 ![Reemplazar la raíz](images/unreal-uxt/2-root.PNG)
 
 
-4. Haga clic en **Add Component > Static Mesh** (Agregar componente > Malla estática) en el panel **Components** (Componentes) y asígnele el nombre **SM_Board** . Aparecerá como un objeto secundario en **Root** .
+4. Haga clic en **Add Component > Static Mesh** (Agregar componente > Malla estática) en el panel **Components** (Componentes) y asígnele el nombre **SM_Board**. Aparecerá como un objeto secundario en **Root**.
 
 ![Adición de una malla estática](images/unreal-uxt/2-sm-board.PNG)
 
-4. Haga clic en **SM_Board** , desplácese hacia abajo hasta la sección **Static Mesh** (Malla estática) del panel **Details** (Detalles) y seleccione **ChessBoard** en la lista desplegable. 
+4. Haga clic en **SM_Board**, desplácese hacia abajo hasta la sección **Static Mesh** (Malla estática) del panel **Details** (Detalles) y seleccione **ChessBoard** en la lista desplegable. 
 
 ![Malla del tablero en la ventanilla](images/unreal-uxt/2-sm-board-view.PNG)
 
 5.  En el panel **Details** (Detalles), expanda la sección **Materials** (Materiales) y haga clic en **Create New Asset > Material** (Crear nuevo recurso > Material) en la lista desplegable. 
-    * Asigne al material el nombre **M_ChessBoard** y guárdelo en la carpeta **ChessAssets** . 
+    * Asigne al material el nombre **M_ChessBoard** y guárdelo en la carpeta **ChessAssets**. 
 
 ![Crear un material nuevo](images/unreal-uxt/2-newmat.PNG)
 
@@ -166,51 +166,51 @@ Los objetos que ha creado son de color gris de forma predeterminada, lo que no e
 ![Apertura del editor de materiales](images/unreal-uxt/2-material-editor.PNG)
 
 7. En el editor de materiales, haga clic con el botón derecho y busque **Texture Sample** (Muestra de textura). 
-    * Expanda la sección **Material Expression Texture Base** (Base de textura de expresión de material) del panel **Details** (Detalles) y defina **Texture** (Textura) en **ChessBoard_Albedo** . 
-    * Arrastre la marca de salida de **RGB** a la marca de color base de **M_ChessBoard** . 
+    * Expanda la sección **Material Expression Texture Base** (Base de textura de expresión de material) del panel **Details** (Detalles) y defina **Texture** (Textura) en **ChessBoard_Albedo**. 
+    * Arrastre la marca de salida de **RGB** a la marca de color base de **M_ChessBoard**. 
 
 ![Establecer el color de base](images/unreal-uxt/2-boardalbedomat.PNG)
 
 8.  Repita el paso anterior cuatro veces más para crear cuatro nodos de **Texture Sample** (Muestra de textura) con la siguiente configuración:
     * Establezca **Texture** (Textura) en **ChessBoard_AO** y vincule **RGB** a la marca de **Ambient Occlusion** (Oclusión ambiental).
     * Establezca **Texture** (Textura) en **ChessBoard_Metal** y vincule **RGB** a la marca de **Metallic** (Metálico). 
-    * Establezca **Texture** (Textura) en **ChessBoard_Normal** y vincule **RGB** a la marca de **Normal** .
+    * Establezca **Texture** (Textura) en **ChessBoard_Normal** y vincule **RGB** a la marca de **Normal**.
     * Establezca **Texture** (Textura) en **ChessBoard_Rough** y vincule **RGB** a la marca de **Roughness** (Rugosidad). 
-    * Haga clic en **Guardar** . 
+    * Haga clic en **Guardar**. 
 
 ![Enlazar las texturas restantes](images/unreal-uxt/2-boardmat.PNG)
 
 Asegúrese de que la configuración del material sea similar a la captura de pantalla anterior antes de continuar.
 
 ## <a name="populating-the-scene"></a>Rellenado de la escena
-Si vuelve al plano técnico **Board** , verá que se ha aplicado el material que acaba de crear. Lo único que queda es configurar la escena. En primer lugar, cambie las siguientes propiedades para asegurarse de que el tablero tiene un tamaño razonable y que tiene el ángulo correcto cuando se coloca en la escena:
-1.  Establezca **Scale** (Escala) en **(0,05, 0,05, 0,05)** y **Z Rotation** (Rotación Z) en **90** . 
+Si vuelve al plano técnico **Board**, verá que se ha aplicado el material que acaba de crear. Lo único que queda es configurar la escena. En primer lugar, cambie las siguientes propiedades para asegurarse de que el tablero tiene un tamaño razonable y que tiene el ángulo correcto cuando se coloca en la escena:
+1.  Establezca **Scale** (Escala) en **(0,05, 0,05, 0,05)** y **Z Rotation** (Rotación Z) en **90**. 
     * Haga clic en **Compile** (Compilar) en la barra de herramientas superior, luego en **Save** (Guardar) y vuelva a la ventana principal. 
 
 ![Tablero de ajedrez con el material aplicado](images/unreal-uxt/2-chessboard.PNG)
 
 2.  Haga clic con el botón derecho en **Cube > Edit > Delete** (Cubo > Editar > Eliminar) y arrastre **Board** desde **Content Browser** (Explorador de contenido) a la ventanilla. 
-    * Establezca **Location** (Ubicación) en **X = 80** , **Y = 0** y **Z = 20** . 
+    * Establezca **Location** (Ubicación) en **X = 80**, **Y = 0** y **Z = 20**. 
 
 3.  Haga clic en el botón **Play** (Jugar) para ver el nuevo tablero en el nivel. Presiona **Esc** para volver al editor. 
 
 Ahora seguirá los mismos pasos para crear una pieza de ajedrez como hizo con el tablero:
 
-1. Vaya a la carpeta **Blueprints** (Planos técnicos), haga clic con el botón derecho, seleccione **Blueprint Class** (Clase de plano técnico) y elija **Actor** . Asigne al actor el nombre **WhiteKing** .
+1. Vaya a la carpeta **Blueprints** (Planos técnicos), haga clic con el botón derecho, seleccione **Blueprint Class** (Clase de plano técnico) y elija **Actor**. Asigne al actor el nombre **WhiteKing**.
 
-2. Haga doble clic en **WhiteKing** para abrirlo en el editor de planos técnicos, haga clic en **Add Component > Scene** (Agregar componente > Escena) y asígnele el nombre **Root** . 
+2. Haga doble clic en **WhiteKing** para abrirlo en el editor de planos técnicos, haga clic en **Add Component > Scene** (Agregar componente > Escena) y asígnele el nombre **Root**. 
     * Arrastre y coloque **Root** en **DefaultSceneRoot** para reemplazarlo. 
 
-3. Haga clic en **Add Component > Static Mesh** (Agregar componente > Malla estática) y asígnele el nombre **SM_King** . 
+3. Haga clic en **Add Component > Static Mesh** (Agregar componente > Malla estática) y asígnele el nombre **SM_King**. 
     * Establezca **Static Mesh** (Malla estática) en **Chess_King** y **Material** en un nuevo material denominado **M_ChessWhite** en el panel de detalles. 
 
 4. Abra **M_ChessWhite** en el editor de materiales y enlace los siguientes nodos de **Texture Sample** (Muestra de textura) a lo siguiente:
    * Establezca **Textura** en **ChessWhite_Albedo** y vincule **RGB** a la marca de **Base Color** (Color de base).
     * Establezca **Texture** (Textura) en **ChessWhite_AO** y vincule **RGB** a la marca de **Ambient Occlusion** (Oclusión ambiental).
     * Establezca **Texture** (Textura) en **ChessWhite_Metal** y vincule **RGB** a la marca de **Metallic** (Metálico). 
-    * Establezca **Texture** (Textura) en **ChessWhite_Metal** y vincule **RGB** a la marca de **Normal** .
+    * Establezca **Texture** (Textura) en **ChessWhite_Metal** y vincule **RGB** a la marca de **Normal**.
     * Establezca **Texture** (Textura) en **ChessWhite_Rough** y vincule **RGB** a la marca de **Roughness** (Rugosidad). 
-    * Haga clic en **Guardar** . 
+    * Haga clic en **Guardar**. 
 
 El material de **M_ChessKing** debe parecerse a la siguiente imagen antes de continuar.
 
@@ -218,14 +218,14 @@ El material de **M_ChessKing** debe parecerse a la siguiente imagen antes de con
 
 Casi está, solo tiene que agregar la nueva pieza de ajedrez a la escena: 
 
-1. Abra el plano técnico **WhiteKing** , cambie el valor de **Scale** (Escala) a **(0,05, 0,05, 0,05)** y de **Z Rotation** (Rotación Z) a **90** .
+1. Abra el plano técnico **WhiteKing**, cambie el valor de **Scale** (Escala) a **(0,05, 0,05, 0,05)** y de **Z Rotation** (Rotación Z) a **90**.
     * Compile y guarde el plano técnico y, a continuación, vuelva a la ventana principal. 
 
 2.  Arrastre **WhiteKing** a la ventanilla, cambie al panel **World Outliner** (Esquematizador del mundo), arrastre **WhiteKing** a **Board** para convertirlo en un objeto secundario.
 
 ![World Outliner (Esquematizador del mundo)](images/unreal-uxt/2-child.PNG)
 
-3.  En el panel **Details** (Detalles) en **Transform** (Transformar), establezca el valor de **Location** (Ubicación) de **WhiteKing** en **X = -26** , **Y = 4** y **Z = 0** .
+3.  En el panel **Details** (Detalles) en **Transform** (Transformar), establezca el valor de **Location** (Ubicación) de **WhiteKing** en **X = -26**, **Y = 4** y **Z = 0**.
 
 Ya está. Haga clic en **Play** (Jugar) para ver el nivel rellenado en acción y presione **Esc** cuando esté listo para salir. En este tutorial se ha tratado una gran cantidad de información sobre la creación de un proyecto sencillo, pero el proyecto está listo para pasar a la siguiente parte de la serie: configuración de la realidad mixta. 
 

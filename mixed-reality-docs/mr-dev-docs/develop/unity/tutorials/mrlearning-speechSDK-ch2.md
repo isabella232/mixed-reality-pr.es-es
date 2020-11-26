@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, speech recognition, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: a7fa1bdaa72d341eaa49ac70dfa926d8f9bbad7a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: d5b0e5140c698996c051eab10064d99280482886
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91702203"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679734"
 ---
 # <a name="2-using-speech-recognition-to-execute-commands"></a>2. Usar el reconocimiento de voz para ejecutar comandos
 

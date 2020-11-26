@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: realidad mixta, unity, tutorial, hololens, hololens 2, azure bot service, luis, lenguaje natural, bot de conversación
+keywords: mixed reality, unity, tutorial, hololens, hololens 2, azure bot service, luis, natural language, conversation bot, azure cloud services, azure custom vision, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 417b534223427b491d900ad767d9fd797698ac71
-ms.sourcegitcommit: b0b5e109c16bcff7b9c098620467c8b9685e9597
+ms.openlocfilehash: d9884fc135a38e610df9faceb8cf4b24c21f7982
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92915560"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679364"
 ---
 # <a name="5-integrating-azure-bot-service"></a>5. Integración de Azure Bot Service
 
@@ -44,11 +44,11 @@ El objetivo del bot es tener las capacidades para indicar cuántos *objetos con 
 
 ### <a name="a-quick-look-into-tracked-objects-azure-function"></a>Vista rápida de la función de Azure de objetos con seguimiento
 
-Está a punto de empezar a crear el bot, pero para que resulte útil, debe proporcionarle un recurso del que pueda extraer datos. Dado que el *bot* podrá contar la cantidad de **objetos con seguimiento** , buscar objetos específicos por nombre e indicar detalles, usará una función de Azure sencilla que tenga acceso al **almacenamiento de tablas de Azure**.
+Está a punto de empezar a crear el bot, pero para que resulte útil, debe proporcionarle un recurso del que pueda extraer datos. Dado que el *bot* podrá contar la cantidad de **objetos con seguimiento**, buscar objetos específicos por nombre e indicar detalles, usará una función de Azure sencilla que tenga acceso al **almacenamiento de tablas de Azure**.
 
 Descargue el proyecto de la función de Azure para objetos con seguimiento [AzureFunction_TrackedObjectsService.zip](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-cloud-services-v2.4.0/AzureFunction_TrackedObjectsService.zip) y extráigalo en el disco duro.
 
-Esta función de Azure tiene dos acciones, **Count** y **Find** , que se pueden invocar a través de llamadas *HTTP* *GET* básicas. Puede inspeccionar el código en **Visual Studio**.
+Esta función de Azure tiene dos acciones, **Count** y **Find**, que se pueden invocar a través de llamadas *HTTP* *GET* básicas. Puede inspeccionar el código en **Visual Studio**.
 
 Obtenga más información sobre [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview).
 
@@ -57,7 +57,7 @@ La función **Count** consulta en el **almacenamiento de tablas** todos los elem
 Puede implementar esta **función de Azure** directamente desde **Visual Studio**.
 Aquí encontrará toda la información relacionada con la [implementación de la función de Azure](https://docs.microsoft.com/azure/devops/pipelines/targets/azure-functions?view=azure-devops&tabs=dotnet-core%2Cyaml&preserve-view=true).
 
-Una vez que haya completado la implementación, en el **portal de Azure** , abra el recurso correspondiente y haga clic en **Configuración** , que se encuentra en la sección *Configuración*. En **Configuración de la aplicación** debe proporcionar la *cadena de conexión* a **Azure Storage** donde se almacenan los **objetos con seguimiento**. Haga clic en **Nueva configuración de la aplicación** y use para el nombre: **AzureStorageConnectionString** y para el valor proporcione la *cadena de conexión* correcta. Después de ello, haga clic en **Guardar** y la **función de Azure** está lista para hacer funcionar el *bot* que creará a continuación.
+Una vez que haya completado la implementación, en el **portal de Azure**, abra el recurso correspondiente y haga clic en **Configuración**, que se encuentra en la sección *Configuración*. En **Configuración de la aplicación** debe proporcionar la *cadena de conexión* a **Azure Storage** donde se almacenan los **objetos con seguimiento**. Haga clic en **Nueva configuración de la aplicación** y use para el nombre: **AzureStorageConnectionString** y para el valor proporcione la *cadena de conexión* correcta. Después de ello, haga clic en **Guardar** y la **función de Azure** está lista para hacer funcionar el *bot* que creará a continuación.
 
 ### <a name="creating-a-conversation-bot"></a>Creación de un bot de conversación
 
@@ -65,7 +65,7 @@ Hay varias maneras de desarrollar un bot de conversación basado en Bot Framewor
 
 Puede descargar las últimas versiones desde el [repositorio de GitHub](https://github.com/microsoft/BotFramework-Composer/releases). Está disponible para Windows, Mac y Linux.
 
-Una vez que se haya instalado **Bot Framework Composer** , inicie la aplicación y debería ver esta interfaz:
+Una vez que se haya instalado **Bot Framework Composer**, inicie la aplicación y debería ver esta interfaz:
 
 ![Página principal de Bot Framework Composer](images/mr-learning-azure/tutorial5-section4-step1-1.png)
 
@@ -99,7 +99,7 @@ Estas son las frases que lo desencadenan:
 
 Gracias a [LUIS](https://docs.microsoft.com/composer/how-to-use-luis), el *usuario* no tiene que formular las frases de la manera exacta, lo que permite una conversación natural para el *usuario*.
 
-En este diálogo, el *bot* también se comunicará con la función de Azure **Count** , lo que de detallará más adelante.
+En este diálogo, el *bot* también se comunicará con la función de Azure **Count**, lo que de detallará más adelante.
 
 #### <a name="unknown-intent"></a>Intención desconocida
 
@@ -114,17 +114,17 @@ Solicita al usuario el *nombre* del **objeto con seguimiento** del que quiere sa
 
 ![Desencadenador FindEntity del cuadro de diálogo del proyecto TrackedObjectsBot](images/mr-learning-azure/tutorial5-section4-step1-6.png)
 
-Si no se encuentra el **objeto con seguimiento** , se informa al usuario y finaliza la conversación. Cuando se encuentra el **objeto con seguimiento** en cuestión, el bot comprobará qué propiedades están disponibles e informará sobre ellas.
+Si no se encuentra el **objeto con seguimiento**, se informa al usuario y finaliza la conversación. Cuando se encuentra el **objeto con seguimiento** en cuestión, el bot comprobará qué propiedades están disponibles e informará sobre ellas.
 
 ### <a name="adapting-the-bot"></a>Adaptación del bot
 
 Los desencadenadores **AskingForCount** y **FindEntity** deben comunicarse con el back-end, lo que significa que tiene que agregar la dirección URL correcta de la **función de Azure** que implementó anteriormente.
 
-En el panel de diálogos, haga clic en **AskingForCount** y busque la acción *Enviar una solicitud HTTP* ; aquí puede ver el campo **URL** que necesita para cambiar la URL correcta para el punto de conexión de la función **Count**.
+En el panel de diálogos, haga clic en **AskingForCount** y busque la acción *Enviar una solicitud HTTP*; aquí puede ver el campo **URL** que necesita para cambiar la URL correcta para el punto de conexión de la función **Count**.
 
 ![Configuración de puntos de conexión del desencadenador AskingForCount del cuadro de diálogo del proyecto TrackedObjectsBot](images/mr-learning-azure/tutorial5-section5-step1-1.png)
 
-Por último, busque el desencadenador **FindEntity** y busque la acción *Enviar una solicitud HTTP* ; en el campo **URL** , cambie la dirección URL por el punto de conexión de la función **Find**.
+Por último, busque el desencadenador **FindEntity** y busque la acción *Enviar una solicitud HTTP*; en el campo **URL**, cambie la dirección URL por el punto de conexión de la función **Find**.
 
 ![Configuración de puntos de conexión del desencadenador FindEntity del cuadro de diálogo del proyecto TrackedObjectsBot](images/mr-learning-azure/tutorial5-section5-step1-2.png)
 
@@ -157,9 +157,9 @@ Ahora, conectará el objeto **ChatBotManager** con el componente **ChatBotContro
 
 ![Unity con el panel ChatBotPanel configurado](images/mr-learning-azure/tutorial5-section6-step1-3.png)
 
-A continuación, necesita una manera de abrir **ChatBotPanel** para que el usuario pueda interactuar con él. En la ventana Scene (Escena) es posible que haya observado que hay un botón secundario *Chat bot* (Bot de chat) en el objeto **MainMenu** , que usará para resolver este problema.
+A continuación, necesita una manera de abrir **ChatBotPanel** para que el usuario pueda interactuar con él. En la ventana Scene (Escena) es posible que haya observado que hay un botón secundario *Chat bot* (Bot de chat) en el objeto **MainMenu**, que usará para resolver este problema.
 
-En la jerarquía, busque **RootMenu** > **MainMenu** > **SideButtonCollection** > **ButtonChatBot** y busque en el Inspector el script *ButtonConfigHelper*. Allí verá una ranura vacía en la devolución de llamada del evento **OnClick()** . Arrastre y coloque **ChatBotPanel** en la ranura del evento, en la lista desplegable vaya a *GameObject* , seleccione en el submenú *SetActive (bool)* y active la casilla.
+En la jerarquía, busque **RootMenu** > **MainMenu** > **SideButtonCollection** > **ButtonChatBot** y busque en el Inspector el script *ButtonConfigHelper*. Allí verá una ranura vacía en la devolución de llamada del evento **OnClick()** . Arrastre y coloque **ChatBotPanel** en la ranura del evento, en la lista desplegable vaya a *GameObject*, seleccione en el submenú *SetActive (bool)* y active la casilla.
 
 ![Unity con el elemento ButtonChatBot configurado](images/mr-learning-azure/tutorial5-section6-step1-4.png)
 
@@ -180,7 +180,7 @@ Debe indicarle la cantidad y finalizar la conversación.
 
 #### <a name="asking-about-a-tracked-object"></a>Pregunta sobre un objeto con seguimiento
 
-Vuelva a ejecutar la aplicación y, esta vez, pregunte **busca un objeto con seguimiento** ; el bot le pedirá el nombre, al que debe responder con "coche" o el nombre de otro *objeto con seguimiento* que sepa que existe en la base de datos. El bot le indicará detalles como la descripción y si tiene un anclaje espacial asignado.
+Vuelva a ejecutar la aplicación y, esta vez, pregunte **busca un objeto con seguimiento**; el bot le pedirá el nombre, al que debe responder con "coche" o el nombre de otro *objeto con seguimiento* que sepa que existe en la base de datos. El bot le indicará detalles como la descripción y si tiene un anclaje espacial asignado.
 
 > [!TIP]
 > Pruebe de preguntar por un **objeto con seguimiento** que no exista y escuche cómo responde el bot.
@@ -192,4 +192,4 @@ En este tutorial ha aprendido cómo se puede usar Azure Bot Framework para inter
 ## <a name="conclusion"></a>Conclusión
 
 A lo largo de esta serie de tutoriales, ha experimentado cómo **Azure Cloud Services** ha incorporado características nuevas y emocionantes a la aplicación.
-Ahora puede almacenar datos e imágenes en la nube con **Azure Storage** , usar **Azure Custom Vision** para asociar imágenes y entrenar un modelo, incorporar objetos a un contexto local con **anclajes espaciales de Azure** e implementar **Azure Bot Framework con tecnología de LUIS** para agregar un bot de conversación para un patrón de interacción nuevo y natural.
+Ahora puede almacenar datos e imágenes en la nube con **Azure Storage**, usar **Azure Custom Vision** para asociar imágenes y entrenar un modelo, incorporar objetos a un contexto local con **anclajes espaciales de Azure** e implementar **Azure Bot Framework con tecnología de LUIS** para agregar un bot de conversación para un patrón de interacción nuevo y natural.

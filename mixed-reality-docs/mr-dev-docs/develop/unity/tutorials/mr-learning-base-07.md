@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, object interactions, bounding boxes
 ms.localizationpriority: high
-ms.openlocfilehash: 1e91cc97f68a4d4b5bcb015184e96582533d1f96
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: 5e2857a7baf85187902bd98de6271e53dcc3539e
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353523"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679274"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7. Interacción con objetos 3D
 
@@ -34,20 +34,20 @@ Los principales pasos que debes seguir para lograrlo son:
 3. Configurar el componente Object Manipulator (Script) (Manipulador de objetos [script])
 
 > [!NOTE]
-> Para poder **manipular un objeto** , el objeto debe tener los siguientes componentes:
+> Para poder **manipular un objeto**, el objeto debe tener los siguientes componentes:
 >
-> * Componente **Collider** ; por ejemplo, un colisionador de cuadro
+> * Componente **Collider**; por ejemplo, un colisionador de cuadro
 > * Componente **Object Manipulator (Script)** (Manipulador de objetos [script])
 >
-> Para poder **manipular** y **agarrar un objeto con seguimiento de manos** , el objeto debe tener los componentes siguientes:
+> Para poder **manipular** y **agarrar un objeto con seguimiento de manos**, el objeto debe tener los componentes siguientes:
 >
-> * Componente **Collider** ; por ejemplo, un colisionador de cuadro
+> * Componente **Collider**; por ejemplo, un colisionador de cuadro
 > * Componente **Object Manipulator (Script)** (Manipulador de objetos [script])
 > * Componente **NearInteractionGrabbable**
 
 Además, configurará el explorador del róver a fin de poder colocarle las partes y crear un ensamblado completo.
 
-En la ventana Hierarchy (Jerarquía), expanda el objeto RoverExplorer > **RoverParts** y seleccione todos los objetos secundarios de la parte, así como el objeto **RoverAssembly** , y, a continuación, en la ventana Inspector, use el botón **Add Component** (Agregar componente) para agregar los siguientes componentes a todos los objetos seleccionados:
+En la ventana Hierarchy (Jerarquía), expanda el objeto RoverExplorer > **RoverParts** y seleccione todos los objetos secundarios de la parte, así como el objeto **RoverAssembly**, y, a continuación, en la ventana Inspector, use el botón **Add Component** (Agregar componente) para agregar los siguientes componentes a todos los objetos seleccionados:
 
 * Componente **Object Manipulator (Script)** (Manipulador de objetos [script])
 * Componente **NearInteractionGrabbable**
@@ -93,11 +93,11 @@ En la ventana Hierarchy (Jerarquía), expanda el objeto RoverAssembly > RoverMod
 
 **Repita** este paso para cada uno de los objetos de las partes de róver restantes y el objeto RoverAssembly con tal de configurar el componente **Part Assembly Controller (Script)** (Controlador de ensamblado de partes [script]) de la manera siguiente:
 
-* Para la parte **Generator_Part** , asigne el objeto **Generator_PlacementHint** al campo **Location To Place** (Ubicación de colocación).
-* Para la parte **Lights_Partt** , asigne el objeto **Lights_PlacementHint** al campo **Location To Place** (Ubicación de colocación).
-* Para la parte **UHFAntenna_Part** , asigne el objeto **UHFAntenna_PlacementHint** al campo **Location To Place** (Ubicación de colocación).
-* Para la parte **Spectrometer_Part** , asigne el objeto **Spectrometer_PlacementHint** al campo **Location To Place** (Ubicación de colocación).
-* Para el elemento **RoverAssembly** , asigne el propio objeto, es decir, el mismo objeto **RoverAssembly** , en el campo **Location To Place** (Ubicación de colocación).
+* Para la parte **Generator_Part**, asigne el objeto **Generator_PlacementHint** al campo **Location To Place** (Ubicación de colocación).
+* Para la parte **Lights_Partt**, asigne el objeto **Lights_PlacementHint** al campo **Location To Place** (Ubicación de colocación).
+* Para la parte **UHFAntenna_Part**, asigne el objeto **UHFAntenna_PlacementHint** al campo **Location To Place** (Ubicación de colocación).
+* Para la parte **Spectrometer_Part**, asigne el objeto **Spectrometer_PlacementHint** al campo **Location To Place** (Ubicación de colocación).
+* Para el elemento **RoverAssembly**, asigne el propio objeto, es decir, el mismo objeto **RoverAssembly**, en el campo **Location To Place** (Ubicación de colocación).
 
 En la ventana Hierarchy (Jerarquía), seleccione el objeto del botón RoverExplorer > Buttons > **Reset** (RoverExplorer > Botones > Restablecer) y, a continuación, en la ventana Inspector, configure el evento **OnClick ()** de interacción de la siguiente manera:
 

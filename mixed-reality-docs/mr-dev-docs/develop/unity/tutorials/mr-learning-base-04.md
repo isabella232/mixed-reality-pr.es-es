@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, solvers, grid object collection
 ms.localizationpriority: high
-ms.openlocfilehash: 849de7c50adc8ff1da5262ad46fae50cce48e953
-ms.sourcegitcommit: 63c228af55379810ab2ee4f09f20eded1bb76229
+ms.openlocfilehash: b49d1b93b98a68e253239647262edc737fdbeb58
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/04/2020
-ms.locfileid: "93353223"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679314"
 ---
 # <a name="4-positioning-objects-in-the-scene"></a>4. Posicionamiento de los objetos en la escena
 
@@ -47,15 +47,15 @@ En la ventana Hierarchy (Jerarquía), haga clic con el botón derecho en un luga
 > [!TIP]
 > Para mostrar las ventanas Scene (Escena) y Game (Juego) una al lado de otra como se muestra en la imagen anterior, arrastra la ventana Game (Juego) al lado derecho de la ventana Scene (Escena). Para obtener más información sobre cómo personalizar el área de trabajo, puedes consultar la documentación sobre la <a href="https://docs.unity3d.com/Manual/CustomizingYourWorkspace.html" target="_blank">personalización del área de trabajo</a> de Unity.
 
-Haga clic con el botón derecho en el objeto recién creado, seleccione **Rename** (Cambiar nombre) y cambie el nombre a **RoverExplorer** :
+Haga clic con el botón derecho en el objeto recién creado, seleccione **Rename** (Cambiar nombre) y cambie el nombre a **RoverExplorer**:
 
 ![Menú contextual emergente Rename (Cambiar nombre) de Unity](images/mr-learning-base/base-04-section2-step1-2.png)
 
 Con el objeto RoverExplorer todavía seleccionado, en la ventana Inspector, configure el componente **Transform** (Transformación) como se indica a continuación:
 
-* **Posición** : X = 0, Y = -0.6, Z = 2
-* **Rotación** : X = 0, Y = 0, Z = 0
-* **Escala** : X = 1, Y = 1, Z = 1
+* **Posición**: X = 0, Y = -0.6, Z = 2
+* **Rotación**: X = 0, Y = 0, Z = 0
+* **Escala**: X = 1, Y = 1, Z = 1
 
 ![Unity con el objeto RoverExplorer seleccionado y colocado](images/mr-learning-base/base-04-section2-step1-3.png)
 
@@ -64,7 +64,7 @@ Con el objeto RoverExplorer todavía seleccionado, en la ventana Inspector, conf
 
 ## <a name="adding-the-tutorial-prefabs"></a>Adición de los elementos prefabricados del tutorial
 
-En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK.Tutorials.GettingStarted** > **Prefabs** :
+En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK.Tutorials.GettingStarted** > **Prefabs**:
 
 ![Ventana Project (Proyecto) de Unity con la carpeta Prefabs seleccionada](images/mr-learning-base/base-04-section3-step1-1.png)
 
@@ -73,9 +73,9 @@ En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK.Tutorial
 
 En la ventana Project (Proyecto), haga clic y arrastre el elemento prefabricado **Table** (Tabla) sobre el objeto **RoverExplorer** para convertirlo en un elemento secundario del objeto RoverExplorer y, a continuación, en la ventana Inspector, configure el componente **Transform** (Transformación) como se indica a continuación:
 
-* **Posición** : X = 0, Y = -0.005, Z = 0
-* **Rotación** : X = 0, Y = 0, Z = 0
-* **Escala** : X = 1.2, Y = 0.01, Z = 1.2
+* **Posición**: X = 0, Y = -0.005, Z = 0
+* **Rotación**: X = 0, Y = 0, Z = 0
+* **Escala**: X = 1.2, Y = 0.01, Z = 1.2
 
 ![Unity con el objeto prefabricado Table recién agregado seleccionado y colocado](images/mr-learning-base/base-04-section3-step1-2.png)
 
@@ -84,9 +84,9 @@ En la ventana Project (Proyecto), haga clic y arrastre el elemento prefabricado 
 
 En la ventana Project (Proyecto), haga clic y arrastre el elemento prefabricado **RoverAssembly** sobre el objeto **RoverExplorer** para convertirlo en un elemento secundario del objeto RoverExplorer y, a continuación, en la ventana Inspector, configure el componente **Transform** (Transformación) como se indica a continuación:
 
-* **Posición** : X = -0.1, Y = 0, Z = 0
-* **Rotación** : X = 0, Y = 135, Z = 0
-* **Escala** : X = 1, Y = 1, Z = 1
+* **Posición**: X = -0.1, Y = 0, Z = 0
+* **Rotación**: X = 0, Y = 135, Z = 0
+* **Escala**: X = 1, Y = 1, Z = 1
 
 ![Unity con el objeto prefabricado RoverAssembly recién agregado seleccionado y colocado](images/mr-learning-base/base-04-section3-step1-3.png)
 
@@ -94,13 +94,13 @@ En la ventana Project (Proyecto), haga clic y arrastre el elemento prefabricado 
 
 En la ventana Hierarchy (Jerarquía), haga clic con el botón derecho en el objeto **RoverExplorer** y seleccione **Create Empty** (Crear vacío) para agregar un objeto vacío como elemento secundario de RoverExplorer, asigne el nombre **RoverParts** al objeto y configure el componente **Transform** (Transformación) como se indica a continuación:
 
-* **Posición** : X = 0, Y = 0.06, Z = 0
-* **Rotación** : X = 0, Y = 90, Z = 0
-* **Escala** : X = 1, Y = 1, Z = 1
+* **Posición**: X = 0, Y = 0.06, Z = 0
+* **Rotación**: X = 0, Y = 90, Z = 0
+* **Escala**: X = 1, Y = 1, Z = 1
 
 ![Unity con el objeto RoverParts recién creado seleccionado y colocado](images/mr-learning-base/base-04-section4-step1-1.png)
 
-En la ventana Hierarchy (Jerarquía), seleccione todos los objetos secundarios de RoverExplorer > RoverAssembly > RoverModel > **Parts** , haga clic derecho en ellos y seleccione **Duplicate** (Duplicar) para crear una copia de cada una de las partes:
+En la ventana Hierarchy (Jerarquía), seleccione todos los objetos secundarios de RoverExplorer > RoverAssembly > RoverModel > **Parts**, haga clic derecho en ellos y seleccione **Duplicate** (Duplicar) para crear una copia de cada una de las partes:
 
 ![Unity con todos los objetos Parts seleccionados y el menú contextual emergente Duplicate](images/mr-learning-base/base-04-section4-step1-2.png)
 
@@ -118,20 +118,20 @@ Para que resulte más fácil trabajar con esta escena, en la ventana Jerarquía,
 > [!TIP]
 > Para obtener más información sobre los controles de visibilidad de la escena y cómo puede usarlos para optimizar la vista de la escena y el flujo de trabajo, puede consultar la documentación sobre la <a href="https://docs.unity3d.com/Manual/SceneVisibility.html" target="_blank">visibilidad de la escena </a> de Unity.
 
-En la ventana Hierarchy (Jerarquía), borre los nombres de los objetos secundarios de RoverParts reemplazando el **(1)** anexado por **_Part** :
+En la ventana Hierarchy (Jerarquía), borre los nombres de los objetos secundarios de RoverParts reemplazando el **(1)** anexado por **_Part**:
 
 ![Unity con el nombre de las partes duplicadas borrado](images/mr-learning-base/base-04-section4-step1-5.png)
 
-En la ventana Hierarchy (Jerarquía), seleccione el objeto **RoverParts** ; a continuación, en la ventana Inspector, haga clic en el botón **Add Component** (Agregar componente) y busque y seleccione **GridObjectCollection** para agregar el componente GridObjectCollection al objeto RoverParts:
+En la ventana Hierarchy (Jerarquía), seleccione el objeto **RoverParts**; a continuación, en la ventana Inspector, haga clic en el botón **Add Component** (Agregar componente) y busque y seleccione **GridObjectCollection** para agregar el componente GridObjectCollection al objeto RoverParts:
 
 ![Objeto RoverParts de Unity con Add Component (Agregar componente) GridObjectCollection en curso](images/mr-learning-base/base-04-section4-step1-6.png)
 
 Configure los valores del componente **GridObjectCollection** como se indica a continuación:
 
-* **Tipo de orden** : Alfabético
-* **Diseño** : Horizontal
-* **Ancho de celda** : 0.25
-* **Distancia desde el elemento principal** : 0.38
+* **Tipo de orden**: Alfabético
+* **Diseño**: Horizontal
+* **Ancho de celda**: 0.25
+* **Distancia desde el elemento principal**: 0.38
 
 ![Unity con el componente GridObjectCollection configurado](images/mr-learning-base/base-04-section4-step1-7.png)
 

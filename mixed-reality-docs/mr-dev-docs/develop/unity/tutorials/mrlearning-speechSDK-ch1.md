@@ -5,14 +5,14 @@ author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
-keywords: mixed reality, unity, tutorial, hololens
+keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, speech recognition, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 07130f7d8f10464219458be4ddd5c420a0512b51
-ms.sourcegitcommit: 8fd127aff85b77778bd7a75c5ec5215d27ecf21a
+ms.openlocfilehash: ec158de1aa8b8e6401802b68098eb7acd883d7e6
+ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2020
-ms.locfileid: "93416991"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "94679284"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Integración y uso del reconocimiento de voz y la transcripción
 
@@ -72,13 +72,13 @@ En el menú de Unity, selecciona **Edit** > **Project Settings...** (Editar > Co
 
 ![mrlearning-speech](images/mrlearning-speech/tutorial1-section3-step1-1.png)
 
-En **Publishing Settings** (Configuración de publicación), desplázate hasta la sección **Capabilities** (Funcionalidades) y comprueba que las funcionalidades **InternetClient** , **Microphone** y **SpatialPerception** que habilitaste al crear el proyecto al principio del tutorial estén habilitadas. A continuación, habilita las funcionalidades **InternetClientServer** y **PrivateNetworkClientServer** :
+En **Publishing Settings** (Configuración de publicación), desplázate hasta la sección **Capabilities** (Funcionalidades) y comprueba que las funcionalidades **InternetClient**, **Microphone** y **SpatialPerception** que habilitaste al crear el proyecto al principio del tutorial estén habilitadas. A continuación, habilita las funcionalidades **InternetClientServer** y **PrivateNetworkClientServer**:
 
 ![mrlearning-speech](images/mrlearning-speech/tutorial1-section3-step1-2.png)
 
 ## <a name="importing-the-tutorial-assets"></a>Importación de los recursos del tutorial
 
-Descarga e **importa** los siguientes paquetes personalizados de Unity **en el orden en que aparecen** :
+Descarga e **importa** los siguientes paquetes personalizados de Unity **en el orden en que aparecen**:
 
 * [Microsoft.CognitiveServices.Speech.N.N.N.unitypackage](https://aka.ms/csspeech/unitypackage) (versión más reciente)
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.3.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.3.0.3/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.3.0.3.unitypackage)
@@ -114,7 +114,7 @@ Con el objeto **Lunarcom** todavía seleccionado, expande el objeto Terminal par
 
 ![mrlearning-speech](images/mrlearning-speech/tutorial1-section5-step1-4.png)
 
-Con el objeto **Lunarcom** todavía seleccionado, expande el objeto Buttons para mostrar sus objetos secundarios y, a continuación, en la ventana Inspector, expande la lista **Buttons** (Botones), establece su valor de **Size** (Tamaño) en 3 y arrastra los objetos **MicButton** , **SatelliteButton** y **RocketButton** a los campos de **Element** (Elemento) 0, 1 y 2, respectivamente:
+Con el objeto **Lunarcom** todavía seleccionado, expande el objeto Buttons para mostrar sus objetos secundarios y, a continuación, en la ventana Inspector, expande la lista **Buttons** (Botones), establece su valor de **Size** (Tamaño) en 3 y arrastra los objetos **MicButton**, **SatelliteButton** y **RocketButton** a los campos de **Element** (Elemento) 0, 1 y 2, respectivamente:
 
 ![mrlearning-speech](images/mrlearning-speech/tutorial1-section5-step1-5.png)
 
