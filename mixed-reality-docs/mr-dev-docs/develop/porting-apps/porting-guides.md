@@ -1,23 +1,23 @@
 ---
-title: Guías de migración
+title: Portabilidad de aplicaciones de VR a Windows Mixed Reality
 description: Un tutorial paso a paso que explica cómo migrar una aplicación envolvente existente a Windows Mixed Reality.
 author: JBrentJ
 ms.author: alexturn
 ms.date: 07/07/2020
 ms.topic: article
 keywords: puerto, Unity, no real, middleware, motor, UWP, Win32, portabilidad, HoloLens primera generación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, migración, Windows 10, asignación de entrada
-ms.openlocfilehash: 18129151b1e3d11f9e9c7bb3c3420c23b5fd1dd0
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: aa9d45a4413fd8e0f5c7eec61f830635c2db6f4b
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677734"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443668"
 ---
-# <a name="porting-guides"></a>Guías de migración
+# <a name="porting-vr-apps-to-windows-mixed-reality"></a>Portabilidad de aplicaciones de VR a Windows Mixed Reality
 
 Windows 10 incluye compatibilidad directa con auriculares envolventes y holográficas. Si ha creado contenido para otros dispositivos, como Oculus Rift o HTC Naopak, tienen dependencias en las bibliotecas que existen por encima de la API de la plataforma del sistema operativo. La incorporación de aplicaciones de la aplicación existente de Win32 Unity a Windows Mixed Reality implica la redestinación del uso de los SDK de VR específicos del proveedor a las API de VR entre proveedores de Unity.
 
-## <a name="porting-overview"></a>Introducción a la migración
+## <a name="porting-requirements"></a>Requisitos de portabilidad
 
 En un nivel alto, los siguientes pasos están relacionados con el traslado de contenido existente:
 1. **Asegúrese de que el equipo ejecuta Windows 10 Fall Creators Update (16299).** Ya no se recomienda recibir compilaciones de vista previa del anillo de Insider SKIP Preview, ya que esas compilaciones no serán las más estables para el desarrollo de realidad mixta.
@@ -56,7 +56,7 @@ La plataforma Windows Mixed Reality todavía está en desarrollo activo. Se reco
 > [!IMPORTANT]
 > Si usa controladores de HP reverberación G2, consulte [este artículo](../unreal/unreal-reverb-g2-controllers.md) para obtener instrucciones adicionales de asignación de entrada.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [Instrucciones de compatibilidad de hardware de equipo mínima de Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Descripción del rendimiento de la realidad mixta](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)
 * [Recomendaciones de rendimiento para Unity](../unity/performance-recommendations-for-unity.md)

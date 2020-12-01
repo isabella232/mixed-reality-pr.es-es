@@ -1,17 +1,17 @@
 ---
 title: Incorporación de Holographic Remoting
 description: Explica cómo usar la comunicación remota holográfica para representar hologramas en una HoloLens a través de la red.
-author: mikeriches
-ms.author: mriches
-ms.date: 05/24/2019
+author: florianbagarmicrosoft
+ms.author: flbagar
+ms.date: 12/01/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, Holographic Remoting, representación remota, representación en red, HoloLens, hologramas remotos, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: ec03a349959f9bde71a2c8a600d513fb21c533a8
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 7aafb7a764a062efcca2c5a3cd9f77d4395516a2
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679634"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443654"
 ---
 # <a name="add-holographic-remoting-hololens-1st-gen"></a>Incorporación de la comunicación remota holográfica (HoloLens (1ª generación))
 
@@ -23,7 +23,7 @@ ms.locfileid: "94679634"
 Los desarrolladores de HoloLens que usen la comunicación remota de Holographic deberán actualizar sus aplicaciones para que sean compatibles con HoloLens 2. Esto requiere una nueva versión del paquete NuGet de Holographic Remoting. Si una aplicación que usa el paquete NuGet de Holographic Remoting con un número de versión menor que 2.0.0.0 intenta conectarse al reproductor de acceso remoto holográfica en HoloLens 2, se producirá un error en la conexión.
 
 >[!NOTE]
->Las instrucciones específicas de HoloLens 2 se pueden encontrar [aquí](holographic-remoting-create-host.md).
+>Las instrucciones específicas de HoloLens 2 se pueden encontrar [aquí](holographic-remoting-create-remote-wmr.md).
 
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>Adición de Holographic Remoting a su aplicación de escritorio o UWP

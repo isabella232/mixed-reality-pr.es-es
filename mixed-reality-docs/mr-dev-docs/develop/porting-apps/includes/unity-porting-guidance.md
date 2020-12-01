@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bcc899a178917a8ef184b4c11bd724df71f7b5c0
-ms.sourcegitcommit: 4bb5544a0c74ac4e9766bab3401c9b30ee170a71
+ms.openlocfilehash: bf6b98eca850d2b280e7a016799c4287955159a6
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/27/2020
-ms.locfileid: "92638551"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443675"
 ---
 # <a name="project-settings"></a>[Configuración del proyecto](#tab/project)
 
@@ -62,7 +62,7 @@ XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
 
 En el código anterior se establece el sistema de coordenadas universal de Unity para realizar el seguimiento del [marco estacionario de referencia](../../../design/coordinate-systems.md#spatial-coordinate-systems). En el modo de seguimiento estacional, el contenido colocado en el editor justo delante de la ubicación predeterminada de la cámara (el avance es-Z) aparece delante del usuario cuando se inicia la aplicación. Para recentrar el origen del usuario, puede llamar a la XR de Unity [. Método InputTracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) .
 
-Si va a migrar una experiencia **de escalado permanente** o una **experiencia a escala de habitación** , colocará contenido en relación con el piso. Por lo tanto, se trata del piso del usuario mediante la **[fase espacial](../../../design/coordinate-systems.md#spatial-coordinate-systems)** , que representa el origen del nivel de suelo definido por el usuario y el límite de sala opcional, configurado durante la primera ejecución. Para estas experiencias, debe asegurarse de que Unity está establecido en el tipo de espacio de seguimiento de **RoomScale** . Aunque RoomScale es el valor predeterminado, querrá establecerlo explícitamente y asegurarse de que se devuelve true para detectar situaciones en las que el usuario ha desplazado el equipo fuera del salón que han calibrado:
+Si va a migrar una experiencia **de escalado permanente** o una **experiencia a escala de habitación**, colocará contenido en relación con el piso. Por lo tanto, se trata del piso del usuario mediante la **[fase espacial](../../../design/coordinate-systems.md#spatial-coordinate-systems)**, que representa el origen del nivel de suelo definido por el usuario y el límite de sala opcional, configurado durante la primera ejecución. Para estas experiencias, debe asegurarse de que Unity está establecido en el tipo de espacio de seguimiento de **RoomScale** . Aunque RoomScale es el valor predeterminado, querrá establecerlo explícitamente y asegurarse de que se devuelve true para detectar situaciones en las que el usuario ha desplazado el equipo fuera del salón que han calibrado:
 
 ```cs
 if (XRDevice.SetTrackingSpaceType(TrackingSpaceType.RoomScale))
@@ -95,9 +95,6 @@ El algoritmo se basa en un blog de Daniel Smilkov: [el rectángulo más grande d
 
 Cada juego o aplicación que tiene como destino un HMD existente tendrá un conjunto de entradas que controla, los tipos de entradas que necesita para la experiencia y las API específicas a las que llama para obtener esas entradas. Hemos invertido en intentar que sea tan sencillo y sencillo como sea posible para aprovechar las ventajas de las entradas disponibles en Windows Mixed Reality.
 1. Lea la **Guía de portabilidad de entrada para Unity** en la pestaña adyacente para obtener detalles sobre cómo Windows Mixed Reality expone la entrada y cómo se asigna a lo que la aplicación puede hacer hoy.
-2. Decida si va a usar la API de entrada de SDK entre las plataformas de la de Unity o la API de entrada específica de la MR. Las API Input. GetButton/Input. GetAxis generales se usan en las aplicaciones de Unity VR hoy en día para [Oculus INPUT](https://docs.unity3d.com/Manual/OculusControllers.html) y [OpenVR INPUT](https://docs.unity3d.com/Manual/OpenVRControllers.html). Si las aplicaciones ya usan estas API para los controladores de movimiento, esta es la ruta más sencilla; debe volver a asignar botones y ejes en el administrador de entrada.
-    * Puede tener acceso a los datos del controlador de movimiento en Unity mediante las API de entrada. GetButton/Input. GetAxis generales de la unidad de vídeo, o bien las API UnityEngine. XR. WSA.. (anteriormente en el espacio de nombres UnityEngine. XR. WSA. Input en Unity 5,6)
-    * Vea el [ejemplo del kit de herramientas](https://github.com/Microsoft/HoloToolkit-Unity/pull/572) que combina controladores de mandos y de movimiento.
 
 ### <a name="9-performance-testing-and-tuning"></a>9. pruebas y ajuste del rendimiento
 
@@ -112,7 +109,13 @@ Puede trasladar la lógica de entrada a Windows Mixed Reality mediante uno de es
 > [!IMPORTANT]
 > Si usa controladores de HP reverberación G2, consulte [este artículo](../../unity/unity-reverb-g2-controllers.md) para obtener instrucciones adicionales de asignación de entrada.
 
-## <a name="general-inputgetbuttongetaxis-apis"></a>API de entrada general. GetButton/GetAxis
+## <a name="unity-xr-input-apis"></a>API de entrada de Unity XR
+
+En el caso de los proyectos nuevos, se recomienda usar las nuevas API de entrada de XR desde el principio. 
+
+Puede encontrar más información sobre las [API de XR aquí](https://docs.unity3d.com/Manual/xr_input.html).
+
+## <a name="inputgetbuttongetaxis-apis"></a>API de entrada. GetButton/GetAxis
 
 Unity usa actualmente sus API de entrada general. GetButton/Input. GetAxis para exponer la entrada para [el SDK de Oculus](https://docs.unity3d.com/Manual/OculusControllers.html) y [el SDK de OpenVR](https://docs.unity3d.com/Manual/OpenVRControllers.html). Si las aplicaciones ya usan estas API para la entrada, esta es la ruta más sencilla para admitir controladores de movimiento en Windows Mixed Reality: solo debe reasignar botones y ejes en el administrador de entrada.
 
@@ -120,10 +123,13 @@ Para obtener más información, consulte la [tabla de asignación de ejes y boto
 
 ## <a name="windows-specific-xrwsainput-apis"></a>XR específico de Windows. WSA. API de entrada
 
+> [!CAUTION]
+> Si el proyecto usa cualquiera de las de XR. Las API de WSA, se están desinstalando en favor del SDK de XR en futuras versiones de Unity. En el caso de los proyectos nuevos, se recomienda usar el SDK de XR desde el principio. Puede encontrar más información sobre el [sistema de entrada de XR y las API aquí](https://docs.unity3d.com/Manual/xr_input.html).
+
 Si la aplicación ya compila la lógica de entrada personalizada para cada plataforma, puede optar por usar las API de entrada espacial específicas de Windows en el espacio de nombres **UnityEngine. XR. WSA. Input** . Esto le permite tener acceso a información adicional, como la precisión de la posición o el tipo de origen, lo que permite indicar a las manos y controladores de HoloLens.
 
 > [!NOTE]
-> Si usa controladores de reverberación de HP G2, todas las API de entrada seguirán funcionando excepto para **InteractionSource. supportsTouchpad** , que devolverá FALSE sin datos de Touchpad.
+> Si usa controladores de reverberación de HP G2, todas las API de entrada seguirán funcionando excepto para **InteractionSource. supportsTouchpad**, que devolverá FALSE sin datos de Touchpad.
 
 Para obtener más información, vea la información [General de las API de UnityEngine. XR. WSA. Input](../../unity/gestures-and-motion-controllers-in-unity.md#windows-specific-apis-xrwsainput).
 
@@ -133,15 +139,15 @@ Windows Mixed Reality admite controladores de movimiento en diversos factores de
 
 Para representar mejor estos controladores, hay dos tipos de supuestos que puede investigar para cada origen de interacción:
 
-* La representación del **control** , que representa la ubicación de la palma de una mano detectada por un HoloLens o la palma que contiene un controlador de movimiento.
-    * En los auriculares más envolventes, este planteamiento se usa mejor para presentar **la mano del usuario** o **un objeto mantenido en la mano del usuario** , como un arma o una pistola.
-    * La **posición del puño** : Palm centroide cuando mantiene el controlador de forma natural, se ajusta hacia la izquierda o derecha para centrar la posición dentro del control.
-    * **Eje derecho de la orientación del puño** : cuando se abre por completo la mano para formar una postura plana de 5 dedos, el rayo perpendicular a la palma (hacia delante de la mano izquierda y hacia atrás desde la mano derecha)
-    * El **eje hacia delante de la orientación del puño** : al cerrar la mano (como si contiene el controlador), el rayo que señala "reenviar" a través del tubo formado por los dedos no Thumb.
-    * **Eje hacia arriba de la orientación del puño** : el eje hacia arriba implícito por las definiciones derecha y hacia delante.
-    * Puede acceder a la representación del puño a través de la API de entrada entre proveedores (XR) de Unity **[. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html). GetLocalPosition/Rotation** ) o a través de la API específica de Windows ( **SourceState. SourcePose. TryGetPosition/Rotation** , que solicita la pose de control).
+* La representación del **control**, que representa la ubicación de la palma de una mano detectada por un HoloLens o la palma que contiene un controlador de movimiento.
+    * En los auriculares más envolventes, este planteamiento se usa mejor para presentar **la mano del usuario** o **un objeto mantenido en la mano del usuario**, como un arma o una pistola.
+    * La **posición del puño**: Palm centroide cuando mantiene el controlador de forma natural, se ajusta hacia la izquierda o derecha para centrar la posición dentro del control.
+    * **Eje derecho de la orientación del puño**: cuando se abre por completo la mano para formar una postura plana de 5 dedos, el rayo perpendicular a la palma (hacia delante de la mano izquierda y hacia atrás desde la mano derecha)
+    * El **eje hacia delante de la orientación del puño**: al cerrar la mano (como si contiene el controlador), el rayo que señala "reenviar" a través del tubo formado por los dedos no Thumb.
+    * **Eje hacia arriba de la orientación del puño**: el eje hacia arriba implícito por las definiciones derecha y hacia delante.
+    * Puede acceder a la representación del puño a través de la API de entrada entre proveedores (XR) de Unity **[. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html). GetLocalPosition/Rotation**) o a través de la API específica de Windows (**SourceState. SourcePose. TryGetPosition/Rotation**, que solicita la pose de control).
 * Representación del **puntero** que representa la punta del controlador que señala hacia delante.
     * Esta representación se usa mejor para Raycast cuando se **señala a la interfaz de usuario** cuando se representa el propio modelo del controlador.
-    * Actualmente, la pose de puntero solo está disponible a través de la API específica de Windows ( **sourceState. sourcePose. TryGetPosition/Rotation** , lo que solicita la pose de puntero).
+    * Actualmente, la pose de puntero solo está disponible a través de la API específica de Windows (**sourceState. sourcePose. TryGetPosition/Rotation**, lo que solicita la pose de puntero).
 
 Estas coordenadas de pose se expresan en coordenadas universales de Unity.
