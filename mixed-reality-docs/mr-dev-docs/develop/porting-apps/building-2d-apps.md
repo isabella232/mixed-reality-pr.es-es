@@ -1,19 +1,19 @@
 ---
-title: Actualización de aplicaciones para UWP en 2D para la realidad mixta
+title: Actualización de aplicaciones para UWP en 2D para Windows Mixed Reality
 description: En este artículo se describe la actualización de la aplicación de Plataforma universal de Windows de 2D existente para que se ejecute en HoloLens y en los auriculares de Windows Mixed Reality.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: aplicación 2D, UWP, aplicación plana, HoloLens, auriculares envolventes, modelo de aplicación, botón atrás, barra de la aplicación, PPP, resolución, escala, portabilidad, HoloLens primera generación, HoloLens 2, auriculares de realidad mixta, auriculares de realidad mixta de Windows, migración, Windows 10
-ms.openlocfilehash: 4103ee1e5a7169759dfd823b41b5e3fd18011956
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: f4dcc022fced0b3e22eb42751dc596e1b334a01a
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677804"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443634"
 ---
-# <a name="updating-2d-uwp-apps-for-mixed-reality"></a>Actualización de aplicaciones para UWP en 2D para la realidad mixta
+# <a name="updating-2d-uwp-apps-for-windows-mixed-reality"></a>Actualización de aplicaciones para UWP en 2D para Windows Mixed Reality
 
 Windows Mixed Reality permite a los usuarios ver los hologramas como si fueran más adecuados en su mundo físico o digital. En su núcleo, tanto HoloLens como los equipos de escritorio que se adjuntan a los accesorios de auriculares envolvente son dispositivos de Windows 10. Esto significa que puede ejecutar prácticamente todas las aplicaciones de Plataforma universal de Windows (UWP) en el almacén como aplicaciones 2D.
 
@@ -51,7 +51,7 @@ Solo tiene que ir al menú Inicio dentro del casco de realidad mixta e iniciar l
 
 ## <a name="targeting-both-immersive-headsets-and-hololens"></a>Establecer como destino los auriculares que se envolverán y HoloLens
 
-¡Enhorabuena! La aplicación está usando Windows 10 Plataforma universal de Windows (UWP).
+Felicidades. La aplicación está usando Windows 10 Plataforma universal de Windows (UWP).
 
 La aplicación ahora es capaz de ejecutarse en los dispositivos Windows de hoy en día, como escritorio, móviles, Xbox, la realidad mixta de Windows y los auriculares que se envolverán, y HoloLens, así como los futuros dispositivos Windows. Sin embargo, para tener como destino realmente todos esos dispositivos, deberá asegurarse de que la aplicación esté destinada a la familia de dispositivos Windows. universal.
 
@@ -175,7 +175,7 @@ La [entrada de voz](../../design/voice-input.md) es una parte fundamental de la 
 
 Una vez que la aplicación esté en funcionamiento, empaquete la aplicación para [enviarla a la Microsoft Store](../../distribute/submitting-an-app-to-the-microsoft-store.md).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [Modelo de aplicaciones](../../design/app-model.md)
 * [Mirada-cabeza y confirmación](../../design/gaze-and-commit.md)
 * [Controladores de movimiento](../../design/motion-controllers.md)

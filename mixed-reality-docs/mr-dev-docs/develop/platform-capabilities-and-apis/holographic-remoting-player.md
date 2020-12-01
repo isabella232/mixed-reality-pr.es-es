@@ -3,20 +3,20 @@ title: Holographic Remoting Player
 description: Holographic Remoting Player es una aplicación complementaria que se conecta a aplicaciones y juegos de equipos que admiten la comunicación remota holográfica. Holographic Remoting transmite contenido holográfica desde un equipo a su Microsoft HoloLens en tiempo real, mediante una conexión de Wi-Fi.
 author: florianbagarmicrosoft
 ms.author: flbagar
-ms.date: 03/11/2020
+ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota holográfica, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, diagnósticos, rendimiento
-ms.openlocfilehash: c65b10079ffbc40602ebbd25b1e493c19b2a6078
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 990143a6d0c51f5f817ca0636573c3479a7e1682
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677934"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443617"
 ---
 # <a name="holographic-remoting-player"></a>Holographic Remoting Player
 
 >[!IMPORTANT]
->Holographic Remoting para HoloLens 2 es un cambio de versión principal. [Las aplicaciones remotas para **hololens (1ª generación)**](add-holographic-remoting.md) deben usar el paquete NuGet versión **1. x.** x y [las aplicaciones remotas para **hololens 2**](holographic-remoting-create-host.md) deben usar **2. x**. x. Esto implica que las aplicaciones remotas escritas para HoloLens 2 no son compatibles con HoloLens (1º gen) y viceversa.
+>Holographic Remoting para HoloLens 2 es un cambio de versión principal. [Las aplicaciones remotas para **hololens (1ª generación)**](add-holographic-remoting.md) deben usar el paquete NuGet versión **1. x.** x y [las aplicaciones remotas para **hololens 2**](holographic-remoting-create-remote-wmr.md) deben usar **2. x**. x. Esto implica que las aplicaciones remotas escritas para HoloLens 2 no son compatibles con HoloLens (1º gen) y viceversa.
 
 [Holographic Remoting Player](https://www.microsoft.com/p/holographic-remoting-player/9nblggh4sv40) es una aplicación complementaria que se conecta a aplicaciones y juegos de equipos que admiten la comunicación remota holográfica. Holographic Remoting transmite contenido holográfica desde un equipo a su Microsoft HoloLens en tiempo real, mediante una conexión de Wi-Fi.
 
@@ -26,6 +26,9 @@ El reproductor de comunicación remota holográfica está disponible para HoloLe
 
 >[!TIP]
 >A partir de la versión [2.2.0](holographic-remoting-version-history.md#v2.2.0) , el reproductor de comunicación remota holográfica también está disponible para equipos Windows que ejecutan [Windows Mixed Reality](../../discover/navigating-the-windows-mixed-reality-home.md).
+
+>[!TIP]
+>A partir de la versión [2.4.0](holographic-remoting-version-history.md#v2.4.0) , se pueden crear aplicaciones remotas con la [API de OpenXR](../native/openxr.md) . Para empezar, consulte [escritura de una aplicación remota Holographic Remoting con las API de OpenXR](holographic-remoting-create-remote-openxr.md).
 
 ## <a name="connecting-to-the-holographic-remoting-player"></a>Conexión al reproductor de acceso remoto holográfica
 
@@ -78,6 +81,7 @@ En la pantalla principal, puede decir **"deshabilitar diagnósticos"** para desa
 
 ## <a name="see-also"></a>Consulte también
 * [HoloLens (1ª generación): agregar la comunicación remota holográfica](add-holographic-remoting.md)
-* [HoloLens 2: escritura de una aplicación remota Holographic Remoting](holographic-remoting-create-host.md)
+* [Escritura de una aplicación remota Holographic Remoting con las API Realiy de Windows Mixed](holographic-remoting-create-remote-wmr.md)
+* [Escritura de una aplicación remota de Holographic Remoting con las API de OpenXR](holographic-remoting-create-remote-openxr.md)
 * [Términos de licencia del software de control remoto de holografías](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

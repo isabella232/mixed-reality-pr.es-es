@@ -1,17 +1,17 @@
 ---
 title: Habilitación de la seguridad de conexión para Holographic Remoting
 description: En esta página se explica cómo configurar la comunicación remota holográfica para usar conexiones cifradas y autenticadas entre el reproductor y las aplicaciones remotas.
-author: markkeinz
-ms.author: makei
-ms.date: 10/29/2020
+author: florianbagarmicrosoft
+ms.author: flbagar
+ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota holográfica, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, seguridad, autenticación, servidor a cliente
-ms.openlocfilehash: 4004c7534092c73fe478130b9d957461bb34bcfa
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: b2c054d19044b89b487331806b8256de1379fd53
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679594"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443459"
 ---
 # <a name="enabling-connection-security-for-holographic-remoting"></a>Habilitación de la seguridad de conexión para Holographic Remoting
 
@@ -38,8 +38,11 @@ La seguridad de Holographic Remoting, cuando se configura correctamente para su 
 * **Confidencialidad:** ningún tercero puede leer la información intercambiada entre el reproductor y la aplicación remota
 * **Integridad:** el reproductor y el remoto pueden detectar cualquier cambio en tránsito a su comunicación
 
->[!TIP]
->Para poder usar las características de seguridad, debe implementar un [reproductor personalizado](holographic-remoting-create-player.md) y una [aplicación remota personalizada](holographic-remoting-create-host.md).
+>[!IMPORTANT]
+>Para poder usar las características de seguridad, debe implementar un [reproductor personalizado](holographic-remoting-create-player.md) y una aplicación remota personalizada mediante [Windows Mixed Reality](holographic-remoting-create-remote-wmr.md) o las API de [OpenXR](holographic-remoting-create-remote-openxr.md) .
+
+>[!NOTE]
+> A partir de la versión [2.4.0](holographic-remoting-version-history.md#v2.4.0) , se pueden crear aplicaciones remotas con la [API de OpenXR](../native/openxr.md) . [A continuación](#secure-connection-using-the-openxr-api)encontrará información general sobre cómo establecer una conexión segura en un entorno de OpenXR.
 
 ## <a name="planning-the-security-implementation"></a>Planeación de la implementación de seguridad
 
@@ -168,8 +171,26 @@ Implemente la `ICertificateValidator` interfaz de la siguiente manera:
 >[!NOTE]
 >Si el caso de uso requiere una forma de validación diferente (consulte el caso de uso de certificados #1 anterior), omita completamente la validación del sistema. En su lugar, use cualquier API o biblioteca que pueda controlar los certificados X. 509 con codificación DER para descodificar la cadena de certificados y realizar las comprobaciones necesarias para su caso de uso.
 
+## <a name="secure-connection-using-the-openxr-api"></a>Conexión segura mediante la API de OpenXR
+
+Cuando se usa la API [OPENXR API](../native/openxr.md) relacionada con la conexión segura, está disponible como parte de la `XR_MSFT_holographic_remoting` extensión OpenXR.
+
+>[!IMPORTANT]
+>Para obtener información acerca de la API de extensión OpenXR de Holographic Remoting, consulte la [especificación](https://htmlpreview.github.io/?https://github.com/microsoft/MixedReality-HolographicRemoting-Samples/blob/master/remote_openxr/specification.html) que se encuentra en el repositorio de github de ejemplos de la [comunicación remota de Holographic](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
+
+Los elementos clave para la conexión segura mediante la `XR_MSFT_holographic_remoting` extensión OpenXR son las siguientes devoluciones de llamada.
+- `xrRemotingRequestAuthenticationTokenCallbackMSFT`, genera o recupera el token de autenticación que se va a enviar.
+- `xrRemotingValidateServerCertificateCallbackMSFT`, valida la cadena de certificados.
+- `xrRemotingValidateAuthenticationTokenCallbackMSFT`, valida el token de autenticación del cliente.
+- `xrRemotingRequestServerCertificateCallbackMSFT`, proporcione la aplicación de servidor con el certificado que se va a usar.
+
+Estas devoluciones de llamada se pueden proporcionar al tiempo de ejecución de OpenXR remoto a través `xrRemotingSetSecureConnectionClientCallbacksMSFT` de y `xrRemotingSetSecureConnectionServerCallbacksMSFT` . Además, la conexión segura debe habilitarse mediante el parámetro secureConnection en la `XrRemotingConnectInfoMSFT` estructura o la `XrRemotingListenInfoMSFT` estructura, dependiendo de si se usa `xrRemotingConnectMSFT` o `xrRemotingListenMSFT` .
+
+Esta API es bastante similar a la API basada en IDL que se describe en implementación de la seguridad de la [comunicación remota holográfica](#implementing-holographic-remoting-security) , pero en lugar de implementar interfaces, se supone que proporcionan implementaciones de devolución de llamada. Puede encontrar un ejemplo detallado como parte de la aplicación de ejemplo OpenXR que se encuentra en el [repositorio de github de ejemplos de Holographic Remoting](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
+
 ## <a name="see-also"></a>Consulte también
-* [Escritura de una aplicación remota de control remoto de holografías](holographic-remoting-create-host.md)
+* [Escritura de una aplicación remota Holographic Remoting con las API Realiy de Windows Mixed](holographic-remoting-create-remote-wmr.md)
+* [Escritura de una aplicación remota de Holographic Remoting con las API de OpenXR](holographic-remoting-create-remote-openxr.md)
 * [Escritura de una aplicación de reproductor de control remoto de holografías personalizada](holographic-remoting-create-player.md)
 * [Solución de problemas y limitaciones de la comunicación remota holográfica](holographic-remoting-troubleshooting.md)
 * [Términos de licencia del software de control remoto de holografías](https://docs.microsoft.com//legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

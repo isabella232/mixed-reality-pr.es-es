@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: 3D, modelado, guía de modelado, requisitos de recursos, directrices de creación, iniciador, selector 3D, textura, materiales, complejidad, triángulos, malla, polígonos, polinúmero, límites, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: fb2f2718497781a2d38a0a061016e146ff077488
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 6baf8bd4faf6bb9994806e846602c91b83a1530b
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703471"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443664"
 ---
 # <a name="create-3d-models-for-use-in-the-home"></a>Creación de modelos 3D para su uso en el hogar
 
@@ -97,6 +97,9 @@ Indica al sombreador si algo es metal o no. Metal sin procesar = 1,0 blanco no m
 ## <a name="optimizations"></a>Optimizaciones
 
 Windows Mixed Reality Home ofrece una serie de optimizaciones sobre la especificación de glTF básica definida mediante extensiones personalizadas. Estas optimizaciones son necesarias en las versiones de Windows <= 1709 y se recomiendan en las versiones más recientes de Windows. Puede optimizar fácilmente cualquier modelo de glTF 2,0 con el [convertidor de activos de Windows Mixed Reality disponible en github](https://github.com/Microsoft/glTF-Toolkit/releases). Esta herramienta llevará a cabo las optimizaciones y el empaquetado correctos de las texturas, tal y como se especifica a continuación. Para el uso general, se recomienda usar WindowsMRAssetConverter, pero si necesita más control sobre la experiencia y desea crear su propia canalización de optimización, puede hacer referencia a la especificación detallada que aparece a continuación.  
+
+> [!NOTE]
+> Para obtener una lista definitiva de las posibilidades de los límites de modelos exactos, consulte el artículo sobre [optimización de modelos 3D](https://docs.microsoft.com/dynamics365/mixed-reality/guides/3d-content-guidelines/optimize-models) para su uso en aplicaciones de Dynamics 365.
 
 ### <a name="materials"></a>Materiales
 
@@ -277,7 +280,7 @@ Solo se admite un atributo de vértice UV.
 * [Especificación de extensiones de empaquetado de textura de realidad mixta de HoloLens](https://github.com/KhronosGroup/glTF/blob/master/extensions/2.0/Vendor/MSFT_packing_normalRoughnessMetallic/README.md)
 * [Especificación de extensiones de Microsoft DDS Textures glTF](https://github.com/KhronosGroup/glTF/tree/master/extensions/2.0/Vendor/MSFT_texture_dds)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Implementación de iniciadores de aplicaciones 3D (aplicaciones para UWP)](implementing-3d-app-launchers.md)
 * [Implementación de iniciadores de aplicaciones 3D (aplicaciones Win32)](implementing-3d-app-launchers-win32.md)

@@ -1,23 +1,29 @@
 ---
 title: Gestos y controladores de movimiento en Unity
 description: Obtenga información sobre cómo realizar una acción en Unity en Unity con gestos de mano y controladores de movimiento.
-author: thetuvix
+author: hferrone
 ms.author: alexturn
-ms.date: 03/21/2018
+ms.date: 12/1/2020
 ms.topic: article
 keywords: gestos, controladores de movimiento, Unity, mira, entrada, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: e1a2ae10638bb8dbd35eed7e9a0a1d2a05181f0c
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 122642bb7fc561e505098bca00b8bf65bfd4552e
+ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678654"
+ms.lasthandoff: 12/01/2020
+ms.locfileid: "96443577"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gestos y controladores de movimiento en Unity
 
 Hay dos formas clave de tomar medidas en su [mirada en Unity](gaze-in-unity.md), [gestos de mano](../../design/gaze-and-commit.md#composite-gestures) y [controladores de movimiento](../../design/motion-controllers.md) en HoloLens y HMDs envolventes. Puede tener acceso a los datos de los dos orígenes de entrada espacial a través de las mismas API en Unity.
 
 Unity proporciona dos formas principales de acceder a los datos de entrada espacial para Windows Mixed Reality, las API de *Input. GetButton/Input. GetAxis* comunes que funcionan en varios SDK de Unity XR y una API de *InteractionManager/GestureRecognizer* específica de Windows Mixed Reality que expone el conjunto completo de datos de entrada espaciales disponibles.
+
+## <a name="unity-xr-input-apis"></a>API de entrada de Unity XR
+
+En el caso de los proyectos nuevos, se recomienda usar las nuevas API de entrada de XR desde el principio. 
+
+Puede encontrar más información sobre las [API de XR aquí](https://docs.unity3d.com/Manual/xr_input.html).
 
 ## <a name="unity-buttonaxis-mapping-table"></a>Tabla de asignación de ejes y botones de Unity
 
@@ -213,6 +219,9 @@ Tenga en cuenta que esto representa la representación del puño del controlador
 Tenga en cuenta que la relación entre esta postura de control y el representador de puntero (donde está señalando la punta del controlador) puede diferir entre los controladores. En este momento, el acceso a la pose de puntero del controlador solo es posible a través de la API de entrada específica de MR, que se describe en las secciones siguientes.
 
 ## <a name="windows-specific-apis-xrwsainput"></a>API específicas de Windows (XR. WSA. Entradas
+
+> [!CAUTION]
+> Si el proyecto usa cualquiera de las de XR. Las API de WSA, se están desinstalando en favor del SDK de XR en futuras versiones de Unity. En el caso de los proyectos nuevos, se recomienda usar el SDK de XR desde el principio. Puede encontrar más información sobre el [sistema de entrada de XR y las API aquí](https://docs.unity3d.com/Manual/xr_input.html).
 
 **Espacio de nombres:** *UnityEngine. XR. WSA. Input*<br>
 **Tipos**: *InteractionManager*, *InteractionSourceState*, *InteractionSource*, *InteractionSourceProperties*, *InteractionSourceKind*, *InteractionSourceLocation*
