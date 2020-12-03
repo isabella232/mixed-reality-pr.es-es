@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: c0111c03d2350627106a53af7c1e04d448a08fe6
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 01447b6122dae1c449e85b9bc7a9ad2cfc678f24
+ms.sourcegitcommit: 59c23d1ea5009e1929660a9a97c6131c353cd57e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443488"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96538722"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>Mixed Reality Dev Days (Japón)
 
@@ -57,7 +57,7 @@ Estamos muy entusiasmados por abrir el registro de los días de desarrollo de la
 |2:55pm-3:10pm|**Eliminar**||||
 |3:10pm-3:35pm|*Sesión 7* Delimitadores de objeto de Azure|Jesse McCulloch|ES|300|
 |3:40pm-4:05pm|*Sesión 8* Representación remota de Azure|Atsushi Suzuki|JA|300|
-|4:10pm-4:35pm|*Sesión 9* Anclajes espaciales de Azure|TBD|JA|300|
+|4:10pm-4:35pm|*Sesión 9* Alinear el holograma y el mundo real a través de los anclajes espaciales de Azure|Yingguang Mei|ES|300|
 |4:40pm-5:05pm|*Sesión 10* Unity + PiXYZ|Shinobu Takahashi (Unity)|JA|200|
 |5:10pm-5:35pm|*Sesión 11* Análisis detallado de Azure Kinect DK, caso práctico|Shinji Chiba|JA|400|
 |5:35pm-5:50pm|Cierre|Madoka Chiyoda|JA|N/D|
