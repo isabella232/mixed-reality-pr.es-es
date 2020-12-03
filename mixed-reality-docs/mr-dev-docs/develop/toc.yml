@@ -8,13 +8,15 @@
   href: install-the-tools.md
 - name: Migración de aplicaciones
   items:
-    - name: "Preparar una aplicación existente para HoloLens\_2"
-      href: unity/mrtk-porting-guide.md
-    - name: Guía de portabilidad para aplicaciones envolventes
+    - name: Introducción a la portabilidad
+      href: porting-apps/porting-overview.md
+    - name: "Portabilidad de aplicaciones de HoloLens (1.ª\_generación) a HoloLens\_2"
+      href: porting-apps/porting-hl1-hl2.md
+    - name: Portabilidad de aplicaciones de VR a Windows Mixed Reality
       href: porting-apps/porting-guides.md
-    - name: Actualización para SteamVR
+    - name: Actualización de aplicaciones de SteamVR para Windows Mixed Reality
       href: porting-apps/updating-your-steamvr-application-for-windows-mixed-reality.md
-    - name: Actualización de aplicaciones para UWP bidimensionales para Mixed Reality
+    - name: Actualización de aplicaciones para UWP en 2D para Windows Mixed Reality
       href: porting-apps/building-2d-apps.md
 - name: Unity
   items:
@@ -26,8 +28,6 @@
           href: unity/mrtk-getting-started.md
         - name: Configuración del proyecto de Unity para Windows Mixed Reality
           href: unity/configure-unity-project.md
-        - name: "Preparar una aplicación existente para HoloLens\_2"
-          href: unity/mrtk-porting-guide.md
     - name: Tutoriales
       items:
         - name: Información general
@@ -399,7 +399,11 @@
         - name: Holographic Remoting Player
           href: platform-capabilities-and-apis/holographic-remoting-player.md
         - name: Escritura de una aplicación remota de control remoto de holografías
-          href: platform-capabilities-and-apis/holographic-remoting-create-host.md
+          items:
+            - name: API de HolographicSpace
+              href: platform-capabilities-and-apis/holographic-remoting-create-remote-wmr.md
+            - name: API de OpenXR
+              href: platform-capabilities-and-apis/holographic-remoting-create-remote-openxr.md
         - name: Escritura de una aplicación de reproductor de control remoto de holografías personalizada
           href: platform-capabilities-and-apis/holographic-remoting-create-player.md
         - name: Canales de datos personalizados de control remoto de holografías

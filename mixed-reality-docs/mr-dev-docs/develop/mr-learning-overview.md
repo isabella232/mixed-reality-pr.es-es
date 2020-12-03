@@ -3,22 +3,40 @@ title: Introducción al aprendizaje de Mixed Reality
 description: Eche un vistazo a los módulos de Learn para Mixed Reality disponibles.
 author: hferrone
 ms.author: jemccull
-ms.date: 10/28/2020
+ms.date: 11/30/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, learn, mixed reality headset, windows mixed reality headset, virtual reality headset, what is virtual reality, what is augmented reality, MRTK, mixed reality toolkit, language translation, Azure, Azure cognitive services
 ms.localizationpriority: high
-ms.openlocfilehash: 70114e25003368263c6e2fecad5a4fe8e2f96de0
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: e6c1cc878558c5ce74be7018f6d59cbfc4bcd09a
+ms.sourcegitcommit: 83d0aa2c9a626a203b25de30d8ae9da8585d05ce
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678094"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96324202"
 ---
 # <a name="mixed-reality-learning-overview"></a>Introducción al aprendizaje de Mixed Reality
 
 Cuantas más herramientas tenga al desarrollar para Mixed Reality, mejor. Aunque la documentación y los tutoriales escritos son fundamentales, si prefiere un aprendizaje visual, lo encontrará en nuestro contenido de vídeo de Microsoft Learn. Se agregan módulos nuevos continuamente: vuelva para ver si hay más actualizaciones.
 
 Nuestros módulos de Learn son una oportunidad de convertirse en experto en desarrollo para Mixed Reality, ya que ofrecen una estructura basada en módulos que puede ayudarle a empezar a trabajar con herramientas clave, como Mixed Reality Toolkit, Unity y los servicios de realidad mixta de Azure. Llegar al paso Hola mundo nunca ha sido más fácil, ya que presentamos los objetivos de aprendizaje, los requisitos previos y el tiempo definido para cumplir las expectativas en la misma interfaz. Comience a usar los módulos de Learn para Mixed Reality ya o vea nuestro [vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/What-is-Microsoft-Learn) de introducción a Microsoft Learn.
+
+## <a name="general-modules"></a>Módulos generales
+
+Si tiene curiosidad para conocer los aspectos básicos de Mixed Reality o todavía no ha elegido ninguna ruta de desarrollo, comience con nuestros módulos de aprendizaje independientes de la tecnología.
+
+### <a name="introduction-to-mixed-reality"></a>[Introducción a Mixed Reality](https://docs.microsoft.com/learn/modules/intro-to-mixed-reality/)
+
+Aprenda los conceptos básicos, la terminología y los procesos de diseño exclusivos del espacio de desarrollo de Mixed Reality.
+
+**Objetivos de aprendizaje**
+
+Al término de este módulo, sabrá hacer lo siguiente:
+
+* Defina Mixed Reality y diferencie entre la realidad virtual y aumentada.
+* Describa las ideas básicas de los hologramas.
+* Empiece a diseñar y desarrollar aplicaciones 3D.
+* Comprenda qué ofrece Mixed Reality en las aplicaciones reales.
+* Aproveche la eficacia de la nube para Mixed Reality.
 
 ## <a name="unity-modules"></a>Módulos de Unity
 
@@ -28,7 +46,9 @@ Tanto si está empezando como si es un profesional experimentado, nuestro enfoqu
 
 Importe el kit de herramientas de Mixed Reality en su proyecto de Unity para acelerar su desarrollo de realidad mixta.
 
-**Objetivos de aprendizaje** Al finalizar el módulo, sabrá:
+**Objetivos de aprendizaje**
+
+Al final de este módulo, podrá hacer lo siguiente:
 
 * Configurar Unity para el desarrollo para Windows Mixed Reality.
 * Importar el paquete base del kit de herramientas de Mixed Reality (MRTK) en Unity.
@@ -40,7 +60,9 @@ Importe el kit de herramientas de Mixed Reality en su proyecto de Unity para ace
 
 Cree una aplicación de traductor de idiomas para el dispositivo Mixed Reality (Windows Mixed Reality, HoloLens 2, etc.) mediante Cognitive Services.
 
-**Objetivos de aprendizaje** Al finalizar el módulo, sabrá:
+**Objetivos de aprendizaje**
+
+Al término de este módulo, podrá hacer lo siguiente:
 
 * Configurar un proyecto de Unity para el servicio de Voz en Azure Cognitive Services
 * Integrar el servicio de Voz de Azure con una aplicación de Windows Mixed Reality

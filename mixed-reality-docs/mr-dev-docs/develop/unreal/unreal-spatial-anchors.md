@@ -7,18 +7,21 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, spatial anchors, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 3ce83160f745fc48f082776caa3cfa87d23a1844
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 8be1521d44a9dda521c1570d3ac55955e475bc30
+ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678834"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "96354519"
 ---
 # <a name="local-spatial-anchors-in-unreal"></a>Anclajes espaciales locales en Unreal
 
 ## <a name="overview"></a>Introducción
 
 Los anclajes espaciales se usan para guardar los hologramas en el espacio del mundo real entre sesiones de aplicación. Aparecen mediante Unreal en forma de elementos **ARPin** y se guardan en el almacén de anclajes de HoloLens, que se carga en futuras sesiones. Los anclajes locales son ideales como plan B para cuando no hay conectividad a Internet.
+
+> [!NOTE]
+> Las funciones de anclaje de UE 4.25 han quedado obsoletas en la versión 4.26 y deben reemplazarse por otras más recientes. 
 
 > [!IMPORTANT]
 > Los anclajes locales se almacenan en el dispositivo, mientras que los Azure Spatial Anchors se almacenan en la nube. Si desea usar servicios en la nube de Azure para almacenar los anclajes, existe un documento que le guiará por la integración de [Azure Spatial Anchors](unreal-azure-spatial-anchors.md). Tenga en cuenta que puede tener anclajes locales y de Azure en el mismo proyecto sin que existan conflictos.
@@ -27,13 +30,13 @@ Los anclajes espaciales se usan para guardar los hologramas en el espacio del mu
 
 Antes de guardar o cargar anclajes, debe comprobar si el almacén de anclajes está listo.  Si se llama a cualquiera de las funciones de anclaje de HoloLens antes de que el almacén de anclajes esté listo, la llamada no se completará correctamente.  
 
-![Almacén de anclajes espaciales listo](images/unreal-spatialanchors-store-ready.PNG)
+[!INCLUDE[](includes/tabs-sa-1.md)]
 
 ## <a name="saving-anchors"></a>Guardar anclajes
 
 Cuando la aplicación tenga un componente que se necesite anclar en el mundo, se puede guardar en el almacén de anclajes con la siguiente secuencia: 
 
-![Guardar anclaje espacial](images/unreal-spatialanchors-save.PNG)
+[!INCLUDE[](includes/tabs-sa-2.md)]
 
 Desglose:
 1. Genere un actor en una ubicación conocida.
@@ -47,7 +50,7 @@ Desglose:
 
 Cuando se inicia una aplicación, se puede usar el siguiente plano técnico para restaurar los componentes en sus ubicaciones de anclaje:
 
-![Carga de anclajes espaciales](images/unreal-spatialanchors-load.PNG)
+[!INCLUDE[](includes/tabs-sa-3.md)]
 
 Desglose:
 1. Recorra en iteración todos los anclajes del almacén de anclajes. 
@@ -62,7 +65,7 @@ También se consulta el identificador del anclaje para que se puedan generar dif
 
 Cuando haya terminado con un anclaje, puede borrar delimitadores individuales o todo el almacén de anclajes con los componentes **Remove ARPin from WMRAnchor Store** (Quitar ARPin del almacén WMRAnchor) y **Remove All ARPins from WMRAnchor Store** (Quitar todos los ARPin del almacén WMRAnchor).
 
-![Quitar anclajes espaciales](images/unreal-spatialanchors-remove.PNG)
+[!INCLUDE[](includes/tabs-sa-4.md)]
 
 > [!NOTE]
 > Tenga en cuenta que Spatial Anchors todavía están en versión beta, por lo que debe asegurarse de consultar la información y las características actualizadas.
