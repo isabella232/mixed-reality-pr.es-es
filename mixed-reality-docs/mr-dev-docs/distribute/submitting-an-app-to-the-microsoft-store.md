@@ -6,14 +6,17 @@ ms.author: mazeller
 ms.date: 11/13/2020
 ms.topic: article
 keywords: Microsoft Store, HoloLens, auriculares envolventes, aplicación, UWP, envío, envío, filtros, metadatos, requisitos del sistema, palabras clave, Wack, certificación, paquete, appx, comercialización, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: b5d25817afeb2d8d970d329c802b7eaabcdf7f35
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 1d37337279e46e5f0f9d5cea82813af8de9d0f76
+ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703121"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96578904"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>Envío de aplicaciones a Microsoft Store
+
+> [!IMPORTANT]
+> Si va a enviar una aplicación inreal, asegúrese de seguir las instrucciones de **[publicación aquí](../develop/unreal/unreal-publishing-to-store.md)** antes de continuar.
 
 Tanto [HoloLens](../hololens-hardware-details.md) como el equipo con Windows 10 que encienden el [casco envolvente](../discover/immersive-headset-hardware-details.md) se ejecutan plataforma universal de Windows aplicaciones. Tanto si va a enviar una aplicación que admite HoloLens, equipo o ambos, el envío de aplicaciones pasa por el [centro de Partners](https://partner.microsoft.com/dashboard).
 
@@ -263,7 +266,7 @@ Agregar "Windows Mixed Reality" a los términos de búsqueda
 
 En muchos casos, los consumidores se limitarán a no tener experiencia con la realidad virtual antes de adquirir un casco de realidad más envolvente de Windows Mixed Reality. Es posible que no sepan qué esperan de juegos intensivos o que estén familiarizados con su propio umbral de confort en experiencias envolventes. Muchos clientes también pueden probar con un casco con Windows Mixed Reality en equipos que no están identificados como [equipos con Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines). Debido a estas consideraciones, le recomendamos encarecidamente que considere la posibilidad de ofrecer una [evaluación gratuita](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#free-trial) para su aplicación o juego de realidad mixta.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [¿Qué es Mixed Reality?](../discover/mixed-reality.md)
 * [Introducción al desarrollo](../develop/development.md)
 * [Vistas de aplicación](../design/app-views.md)

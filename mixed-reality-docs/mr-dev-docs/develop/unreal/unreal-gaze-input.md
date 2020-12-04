@@ -2,16 +2,16 @@
 title: Mira fijamente inrealmente
 description: Tutorial sobre la configuración de la entrada de fijamente para HoloLens y el motor no real
 author: hferrone
-ms.author: v-hferrone
+ms.author: jacksonf
 ms.date: 06/10/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, HoloLens 2, seguimiento ocular, entrada de mirada, pantalla montada de cabeza, motor no real, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: f89638cef6b90e004f097c701c3df13edaf74fac
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: d0470c5abbefce797254aa9f2030519d3347aaab
+ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96354357"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96578894"
 ---
 # <a name="gaze-input"></a>Entrada de mira
 

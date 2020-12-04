@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/02/2020
 ms.topic: article
 keywords: HoloLens, realidad mixta, auriculares envolventes, aplicación, UWP, envío, envío, filtros, metadatos, requisitos del sistema, palabras clave, Wack, certificación, paquete, appx, comercialización
-ms.openlocfilehash: f52109792e174a0b0fbdd9738539b5fc88f190a1
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 4ea60d2111f99924eaa417d4ff6fa8830934588c
+ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443499"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96578884"
 ---
 # <a name="distributing-your-apps"></a>Distribución de las aplicaciones
 
@@ -81,7 +81,7 @@ La obtención de las aplicaciones en manos de los usuarios o en el mundo es la m
     <td>✔️</td>
 </tr>
 <tr>
-    <td><a href="#additional-scenarios"><strong>Implementación personalizada de Win32</strong></a> (solo Windows Mixed Reality; vea más abajo)</td>
+    <td><a href="#additional-scenarios"><strong>Implementación personalizada de Win32</strong></a> (no está disponible para dispositivos HoloLens; consulte a continuación).</td>
     <td>✔️</td>
     <td>✔️</td>
     <td>❌</td>

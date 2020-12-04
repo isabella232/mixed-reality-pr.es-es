@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, rendimiento
 appliesto:
 - Windows 10
-ms.openlocfilehash: 7712641bad36b8759b9237abf14593f8c121e81b
-ms.sourcegitcommit: 3eb4c1a79e9173a5c9b6d2284f34c0bceced402c
+ms.openlocfilehash: 0c0bc508772fe32af9edc21ca62ba5e46125fe88
+ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96501713"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96578620"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>Preguntas más frecuentes de la reverberación de HP G2
 
@@ -57,6 +57,10 @@ A veces, durante el proceso de reanudación, la tarjeta de vídeo no puede estab
 ## <a name="my-hp-motion-controller-joystick-will-sometimes-stick-to-one-side"></a>Mi joystick de controlador de movimiento de HP a veces se centrará en un lado
 
 Este problema se ha corregido al presionar completamente el joystick hasta que haga clic en él y se moverá libremente.
+
+## <a name="others-state-i-am-very-loud-or-that-my-audio-is-clipping-while-i-am-using-the-microphone-with-some-applications"></a>Otros Estados soy muy alto o que mi audio se recorta mientras utilizo el micrófono con algunas aplicaciones
+
+Los niveles de volumen de entrada se establecen automáticamente en el 100% cuando un equipo Windows reconoce primero el micrófono de la reverberación de HP. Debido a los micrófonos de alta calidad G2's de reverberación, la sensibilidad de entrada es mucho mayor que la configuración predeterminada de Windows 10 esperada. Se recomienda establecer el nivel de entrada de la reverberación G2 a partir del 50% y escalar verticalmente desde allí. Una configuración óptima es específica para el usuario, especialmente cuando se usan aplicaciones que no tienen una configuración de micrófono de "obtención automática". Ejemplos de aplicaciones que tienen "ganancia automática" son Skype, zoom, equipos y Cisco WebEx, pero no todas las aplicaciones de detección de redes sociales o de difusión de VR tienen esta característica.
 
 ## <a name="the-mixed-reality-portal-says-cant-run-mixed-reality-on-this-headset-but-this-worked-fine-with-my-previous-wmr-headset"></a>En el portal de realidad mixta se dice "no se puede ejecutar la realidad mixta en este casco", pero funciona bien con mis auriculares de WMR anteriores
 
