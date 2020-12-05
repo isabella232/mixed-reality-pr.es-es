@@ -1,52 +1,56 @@
 ---
-ms.openlocfilehash: fd44d63ad502b6807c6aa18ce6fc63493fc254dc
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: be267da576e020e88f08d475395b144d42285383
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96354452"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609415"
 ---
-# <a name="425"></a>[<span data-ttu-id="7c1bc-101">4.25</span><span class="sxs-lookup"><span data-stu-id="7c1bc-101">4.25</span></span>](#tab/425)
+# <a name="425"></a>[<span data-ttu-id="9a5e5-101">4.25</span><span class="sxs-lookup"><span data-stu-id="9a5e5-101">4.25</span></span>](#tab/425)
 
-<span data-ttu-id="7c1bc-102">No real no compila de forma nativa código WinRT en la versión 4,25, por lo que es su trabajo crear un binario independiente y que puede ser consumido por el sistema de compilación no real.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-102">Unreal doesn't natively compile WinRT code in version 4.25, so it's your job to build a separate binary and that can be consumed by Unreal’s build system.</span></span> <span data-ttu-id="7c1bc-103">Este tutorial le guiará a través de este escenario.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-103">This tutorial will walk you through just such a scenario.</span></span>
+<span data-ttu-id="9a5e5-102">No real no compila de forma nativa el código WinRT en la versión 4,25, por lo que es su trabajo crear un binario independiente que el sistema de compilación no real puede consumir.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-102">Unreal doesn't natively compile WinRT code in version 4.25, so it's your job to build a separate binary that Unreal’s build system can consume.</span></span> 
 
-## <a name="objectives"></a><span data-ttu-id="7c1bc-104">Objetivos</span><span class="sxs-lookup"><span data-stu-id="7c1bc-104">Objectives</span></span>
-- <span data-ttu-id="7c1bc-105">Crear un archivo DLL de Windows universal que abra un FileSaveDialogue</span><span class="sxs-lookup"><span data-stu-id="7c1bc-105">Create a Universal Windows DLL that opens a FileSaveDialogue</span></span>
-- <span data-ttu-id="7c1bc-106">Vincular el archivo DLL a un proyecto de juego inreal</span><span class="sxs-lookup"><span data-stu-id="7c1bc-106">Link that DLL to an Unreal game project</span></span>
-- <span data-ttu-id="7c1bc-107">Guardar un archivo en HoloLens desde un Blueprint real mediante el nuevo archivo DLL</span><span class="sxs-lookup"><span data-stu-id="7c1bc-107">Save a file on the HoloLens from an Unreal blueprint using the new DLL</span></span>
+## <a name="objectives"></a><span data-ttu-id="9a5e5-103">Objetivos</span><span class="sxs-lookup"><span data-stu-id="9a5e5-103">Objectives</span></span>
 
-## <a name="getting-started"></a><span data-ttu-id="7c1bc-108">Introducción</span><span class="sxs-lookup"><span data-stu-id="7c1bc-108">Getting started</span></span>
-1. <span data-ttu-id="7c1bc-109">Compruebe que tiene instaladas todas las [herramientas necesarias](../tutorials/unreal-uxt-ch1.md) .</span><span class="sxs-lookup"><span data-stu-id="7c1bc-109">Check that you have all [required tools](../tutorials/unreal-uxt-ch1.md) installed</span></span>
-2. <span data-ttu-id="7c1bc-110">[Cree un nuevo proyecto inreal](../tutorials/unreal-uxt-ch2.md#creating-a-new-unreal-project) y asígnele el nombre **Consumewinrt**</span><span class="sxs-lookup"><span data-stu-id="7c1bc-110">[Create a new Unreal project](../tutorials/unreal-uxt-ch2.md#creating-a-new-unreal-project) and name it **Consumewinrt**</span></span>
-3. <span data-ttu-id="7c1bc-111">Habilitación de los [Complementos necesarios](../tutorials/unreal-uxt-ch2.md#enabling-required-plugins) para el desarrollo de HoloLens</span><span class="sxs-lookup"><span data-stu-id="7c1bc-111">Enable the [required plugins](../tutorials/unreal-uxt-ch2.md#enabling-required-plugins) for HoloLens development</span></span>
-4. <span data-ttu-id="7c1bc-112">[Configuración para la implementación](../tutorials/unreal-uxt-ch6.md) en un dispositivo o emulador</span><span class="sxs-lookup"><span data-stu-id="7c1bc-112">[Setup for deployment](../tutorials/unreal-uxt-ch6.md) to a device or emulator</span></span>
+- <span data-ttu-id="9a5e5-104">Crear un archivo DLL de Windows universal que abra un FileSaveDialogue</span><span class="sxs-lookup"><span data-stu-id="9a5e5-104">Create a Universal Windows DLL that opens a FileSaveDialogue</span></span>
+- <span data-ttu-id="9a5e5-105">Vincular el archivo DLL a un proyecto de juego inreal</span><span class="sxs-lookup"><span data-stu-id="9a5e5-105">Link that DLL to an Unreal game project</span></span>
+- <span data-ttu-id="9a5e5-106">Guardar un archivo en HoloLens desde un Blueprint real mediante el nuevo archivo DLL</span><span class="sxs-lookup"><span data-stu-id="9a5e5-106">Save a file on the HoloLens from an Unreal blueprint using the new DLL</span></span>
 
-## <a name="creating-a-winrt-dll"></a><span data-ttu-id="7c1bc-113">Creación de un archivo DLL de WinRT</span><span class="sxs-lookup"><span data-stu-id="7c1bc-113">Creating a WinRT DLL</span></span> 
-1. <span data-ttu-id="7c1bc-114">Abra un nuevo proyecto de Visual Studio y cree un proyecto **dll (universal Windows)** en el mismo directorio que el archivo **uproject** del juego no real.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-114">Open a new Visual Studio project and create a **DLL (Universal Windows)** project in the same directory to the Unreal game’s **uproject** file.</span></span> 
+## <a name="getting-started"></a><span data-ttu-id="9a5e5-107">Introducción</span><span class="sxs-lookup"><span data-stu-id="9a5e5-107">Getting started</span></span>
+
+1. <span data-ttu-id="9a5e5-108">Compruebe que tiene instaladas todas las [herramientas necesarias](../tutorials/unreal-uxt-ch1.md) .</span><span class="sxs-lookup"><span data-stu-id="9a5e5-108">Check that you have all [required tools](../tutorials/unreal-uxt-ch1.md) installed</span></span>
+2. <span data-ttu-id="9a5e5-109">[Cree un nuevo proyecto inreal](../tutorials/unreal-uxt-ch2.md#creating-a-new-unreal-project) y asígnele el nombre **Consumewinrt**</span><span class="sxs-lookup"><span data-stu-id="9a5e5-109">[Create a new Unreal project](../tutorials/unreal-uxt-ch2.md#creating-a-new-unreal-project) and name it **Consumewinrt**</span></span>
+3. <span data-ttu-id="9a5e5-110">Habilitación de los [Complementos necesarios](../tutorials/unreal-uxt-ch2.md#enabling-required-plugins) para el desarrollo de HoloLens</span><span class="sxs-lookup"><span data-stu-id="9a5e5-110">Enable the [required plugins](../tutorials/unreal-uxt-ch2.md#enabling-required-plugins) for HoloLens development</span></span>
+4. <span data-ttu-id="9a5e5-111">[Configuración para la implementación](../tutorials/unreal-uxt-ch6.md) en un dispositivo o emulador</span><span class="sxs-lookup"><span data-stu-id="9a5e5-111">[Setup for deployment](../tutorials/unreal-uxt-ch6.md) to a device or emulator</span></span>
+
+## <a name="creating-a-winrt-dll"></a><span data-ttu-id="9a5e5-112">Creación de un archivo DLL de WinRT</span><span class="sxs-lookup"><span data-stu-id="9a5e5-112">Creating a WinRT DLL</span></span> 
+
+1. <span data-ttu-id="9a5e5-113">Abra un nuevo proyecto de Visual Studio y cree un proyecto de **dll (Windows universal)** en el mismo directorio que el archivo **uproject** del juego no real.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-113">Open a new Visual Studio project and create a **DLL (Universal Windows)** project in the same directory as the Unreal game’s **uproject** file.</span></span> 
 
 ![Crear un archivo DLL](../images/unreal-winrt-img-01.png)
 
-2. <span data-ttu-id="7c1bc-116">Asigne al proyecto el nombre **HoloLensWinrtDLL** y establezca la ubicación como un subdirectorio **ThirdParty** en el archivo uproject del juego inreal.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-116">Name the project **HoloLensWinrtDLL** and set the location as a **ThirdParty** subdirectory to the Unreal game’s uproject file.</span></span> 
-    * <span data-ttu-id="7c1bc-117">Seleccione **colocar solución y proyecto en el mismo directorio** para simplificar la búsqueda de rutas de acceso más adelante.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-117">Select **Place solution and project in the same directory** to simplify looking for paths later.</span></span> 
+2. <span data-ttu-id="9a5e5-115">Asigne al proyecto el nombre **HoloLensWinrtDLL** y establezca la ubicación como un subdirectorio **ThirdParty** en el archivo uproject del juego inreal.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-115">Name the project **HoloLensWinrtDLL** and set the location as a **ThirdParty** subdirectory to the Unreal game’s uproject file.</span></span> 
+    * <span data-ttu-id="9a5e5-116">Seleccione **colocar solución y proyecto en el mismo directorio** para simplificar la búsqueda de rutas de acceso más adelante.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-116">Select **Place solution and project in the same directory** to simplify looking for paths later.</span></span> 
 
 ![Configurar el archivo DLL](../images/unreal-winrt-img-02.png)
 
 > [!IMPORTANT]
-> <span data-ttu-id="7c1bc-119">Una vez que se compila el nuevo proyecto, desea prestar especial atención a los archivos CPP y de encabezado en blanco, denominados **HoloLensWinrtDLL. cpp** y **HoloLensWinrtDLL. h** , respectivamente.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-119">After the new project compiles, you want to pay special attention to the blank cpp and header files, named **HoloLensWinrtDLL.cpp** and **HoloLensWinrtDLL.h** respectively.</span></span> <span data-ttu-id="7c1bc-120">El encabezado es el archivo de inclusión que usa el archivo DLL en el modo inreal, mientras que el CPP contiene el cuerpo de las funciones exportadas e incluye cualquier código de WinRT que no se pueda compilar de otra manera.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-120">The header is the include file that uses the DLL in Unreal, while the cpp holds the body of any functions you export and includes any WinRT code that Unreal wouldn't otherwise be able to compile.</span></span> 
+> <span data-ttu-id="9a5e5-118">Una vez que se compila el nuevo proyecto, preste especial atención a los archivos CPP y de encabezado en blanco, denominados **HoloLensWinrtDLL. cpp** y **HoloLensWinrtDLL. h** , respectivamente.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-118">After the new project compiles, pay special attention to the blank cpp and header files, named **HoloLensWinrtDLL.cpp** and **HoloLensWinrtDLL.h** respectively.</span></span> <span data-ttu-id="9a5e5-119">El encabezado es el archivo de inclusión que usa el archivo DLL en el modo inreal, mientras que el CPP contiene el cuerpo de las funciones exportadas e incluye cualquier código de WinRT que no se pueda compilar de otra manera.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-119">The header is the include file that uses the DLL in Unreal, while the cpp holds the body of any functions you export and includes any WinRT code that Unreal wouldn't otherwise be able to compile.</span></span> 
 
-3. <span data-ttu-id="7c1bc-121">Antes de agregar cualquier código, debe actualizar las propiedades del proyecto para asegurarse de que el código de WinRT que necesita puede compilar:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-121">Before you add any code, you need to update the project properties to ensure the WinRT code you need can compile:</span></span> 
-    * <span data-ttu-id="7c1bc-122">Haga clic con el botón derecho en el proyecto HoloLensWinrtDLL y seleccione **propiedades** .</span><span class="sxs-lookup"><span data-stu-id="7c1bc-122">Right click on the HoloLensWinrtDLL project and select **properties**</span></span>  
-    * <span data-ttu-id="7c1bc-123">Cambie la lista desplegable **configuración** a **todas las configuraciones** y la lista desplegable **plataforma** a **todas las plataformas** .</span><span class="sxs-lookup"><span data-stu-id="7c1bc-123">Change the **Configuration** dropdown to **All Configurations** and the **Platform** dropdown to **All Platforms**</span></span>  
-    * <span data-ttu-id="7c1bc-124">En **propiedades de configuración> C/C++> todas las opciones**:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-124">Under **Configuration Properties> C/C++> All Options**:</span></span>
-        * <span data-ttu-id="7c1bc-125">Agregue **Await** a **opciones adicionales** para asegurarse de que se puede esperar en tareas asincrónicas</span><span class="sxs-lookup"><span data-stu-id="7c1bc-125">Add **await** to **Additional Options** to ensure we can wait on async tasks</span></span>  
-        * <span data-ttu-id="7c1bc-126">Cambiar **estándar de lenguaje c++** a **estándar ISO C++ 17 (/STD: C++ 17)** para incluir cualquier código WinRT</span><span class="sxs-lookup"><span data-stu-id="7c1bc-126">Change **C++ Language Standard** to **ISO C++17 Standard (/std:c++17)** to include any WinRT code</span></span>
+3. <span data-ttu-id="9a5e5-120">Antes de agregar cualquier código, debe actualizar las propiedades del proyecto para asegurarse de que el código de WinRT que necesita puede compilar:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-120">Before you add any code, you need to update the project properties to ensure the WinRT code you need can compile:</span></span> 
+    * <span data-ttu-id="9a5e5-121">Haga clic con el botón derecho en el proyecto HoloLensWinrtDLL y seleccione **propiedades** .</span><span class="sxs-lookup"><span data-stu-id="9a5e5-121">Right-click on the HoloLensWinrtDLL project and select **properties**</span></span>  
+    * <span data-ttu-id="9a5e5-122">Cambie la lista desplegable **configuración** a **todas las configuraciones** y la lista desplegable **plataforma** a **todas las plataformas** .</span><span class="sxs-lookup"><span data-stu-id="9a5e5-122">Change the **Configuration** dropdown to **All Configurations** and the **Platform** dropdown to **All Platforms**</span></span>  
+    * <span data-ttu-id="9a5e5-123">En **propiedades de configuración> C/C++> todas las opciones**:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-123">Under **Configuration Properties> C/C++> All Options**:</span></span>
+        * <span data-ttu-id="9a5e5-124">Agregue **Await** a **opciones adicionales** para asegurarse de que se puede esperar en tareas asincrónicas</span><span class="sxs-lookup"><span data-stu-id="9a5e5-124">Add **await** to **Additional Options** to ensure we can wait on async tasks</span></span>  
+        * <span data-ttu-id="9a5e5-125">Cambiar **estándar de lenguaje c++** a **estándar ISO C++ 17 (/STD: C++ 17)** para incluir cualquier código WinRT</span><span class="sxs-lookup"><span data-stu-id="9a5e5-125">Change **C++ Language Standard** to **ISO C++17 Standard (/std:c++17)** to include any WinRT code</span></span>
 
 ![Actualización de las propiedades del proyecto](../images/unreal-winrt-img-03.png)
 
-<span data-ttu-id="7c1bc-128">El proyecto está listo para actualizar el origen del archivo DLL con código de WinRT que abre un cuadro de diálogo de archivos y guarda un archivo en el disco de HoloLens.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-128">Your project is ready to update the DLL’s source with WinRT code that opens a file dialogue and saves a file to the HoloLens disk.</span></span>  
+<span data-ttu-id="9a5e5-127">El proyecto está listo para actualizar el origen del archivo DLL con código de WinRT que abre un cuadro de diálogo de archivos y guarda un archivo en el disco de HoloLens.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-127">Your project is ready to update the DLL’s source with WinRT code that opens a file dialogue and saves a file to the HoloLens disk.</span></span>  
 
-## <a name="adding-the-dll-code"></a><span data-ttu-id="7c1bc-129">Agregar el código DLL</span><span class="sxs-lookup"><span data-stu-id="7c1bc-129">Adding the DLL code</span></span>
-1. <span data-ttu-id="7c1bc-130">Abra **HoloLensWinrtDLL. h** y agregue una función exportada de dll para que sea no real para consumir:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-130">Open **HoloLensWinrtDLL.h** and add a dll exported function for Unreal to consume:</span></span> 
+## <a name="adding-the-dll-code"></a><span data-ttu-id="9a5e5-128">Agregar el código DLL</span><span class="sxs-lookup"><span data-stu-id="9a5e5-128">Adding the DLL code</span></span>
+
+1. <span data-ttu-id="9a5e5-129">Abra **HoloLensWinrtDLL. h** y agregue una función exportada de dll para que sea no real para consumir:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-129">Open **HoloLensWinrtDLL.h** and add a dll exported function for Unreal to consume:</span></span> 
 
 ```cpp
 #pragma once
@@ -58,7 +62,7 @@ public:
 };
 ```
 
-2. <span data-ttu-id="7c1bc-131">Abra **HoloLensWinrtDLL. cpp** y agregue todos los encabezados que usará la clase:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-131">Open **HoloLensWinrtDLL.cpp** and add all headers the class will use:</span></span>  
+2. <span data-ttu-id="9a5e5-130">Abra **HoloLensWinrtDLL. cpp** y agregue todos los encabezados que usará la clase:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-130">Open **HoloLensWinrtDLL.cpp** and add all headers the class will use:</span></span>  
 
 ```cpp
 #include "pch.h"
@@ -76,9 +80,9 @@ public:
 ```
 
 > [!NOTE]
-> <span data-ttu-id="7c1bc-132">Todo el código de WinRT se almacena en **HoloLensWinrtDLL. cpp** , por lo que no se intenta incluir código winrt al hacer referencia al encabezado.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-132">All WinRT code is stored in **HoloLensWinrtDLL.cpp** so Unreal doesn't try to include any WinRT code when referencing the header.</span></span> 
+> <span data-ttu-id="9a5e5-131">Todo el código de WinRT se almacena en **HoloLensWinrtDLL. cpp** , por lo que no se intenta incluir código winrt al hacer referencia al encabezado.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-131">All WinRT code is stored in **HoloLensWinrtDLL.cpp** so Unreal doesn't try to include any WinRT code when referencing the header.</span></span> 
 
-3. <span data-ttu-id="7c1bc-133">Todavía en **HoloLensWinrtDLL. cpp**, agregue el cuerpo de la función para OpenFileDialogue () y todo el código admitido:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-133">Still in **HoloLensWinrtDLL.cpp**, add a function body for OpenFileDialogue() and all supported code:</span></span> 
+3. <span data-ttu-id="9a5e5-132">Todavía en **HoloLensWinrtDLL. cpp**, agregue el cuerpo de la función para OpenFileDialogue () y todo el código admitido:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-132">Still in **HoloLensWinrtDLL.cpp**, add a function body for OpenFileDialogue() and all supported code:</span></span> 
 
 ```cpp
 // sgm is declared outside of OpenFileDialogue so it doesn't
@@ -91,7 +95,7 @@ void HoloLensWinrtDLL::OpenFileDialogue()
 }
 ```
 
-4. <span data-ttu-id="7c1bc-134">Agregue una clase SaveGameManager a **HoloLensWinrtDLL. cpp** para controlar el cuadro de diálogo de archivo y guardar el archivo:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-134">Add a SaveGameManager class to **HoloLensWinrtDLL.cpp** to handle the file dialogue and saving the file:</span></span> 
+4. <span data-ttu-id="9a5e5-133">Agregue una clase SaveGameManager a **HoloLensWinrtDLL. cpp** para controlar el cuadro de diálogo de archivo y guardar el archivo:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-133">Add a SaveGameManager class to **HoloLensWinrtDLL.cpp** to handle the file dialogue and saving the file:</span></span> 
 
 ```cpp
 class SaveGameManager
@@ -159,24 +163,24 @@ private:
 };
 ```
 
-5. <span data-ttu-id="7c1bc-135">Compile la solución para la **versión > ARM64** para compilar el archivo dll en el directorio secundario ARM64/Release/HoloLensWinrtDLL de la solución dll.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-135">Build the solution for **Release > ARM64** to build the DLL to the child directory ARM64/Release/HoloLensWinrtDLL from the DLL solution.</span></span> 
+5. <span data-ttu-id="9a5e5-134">Compile la solución para la **versión > ARM64** para compilar el archivo dll en el directorio secundario ARM64/Release/HoloLensWinrtDLL de la solución dll.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-134">Build the solution for **Release > ARM64** to build the DLL to the child directory ARM64/Release/HoloLensWinrtDLL from the DLL solution.</span></span> 
 
-## <a name="adding-the-winrt-binary-to-unreal"></a><span data-ttu-id="7c1bc-136">Agregar el archivo binario de WinRT a no real</span><span class="sxs-lookup"><span data-stu-id="7c1bc-136">Adding the WinRT binary to Unreal</span></span> 
-<span data-ttu-id="7c1bc-137">La vinculación y el uso de una DLL en inreal requiere un proyecto de C++.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-137">Linking and using a DLL in Unreal requires a C++ project.</span></span> <span data-ttu-id="7c1bc-138">Si utiliza un proyecto Blueprint, se puede convertir fácilmente en un proyecto de C++ agregando una clase de C++:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-138">If you're using a Blueprint project, it can be easily converted to a C++ project by adding a C++ class:</span></span>  
+## <a name="adding-the-winrt-binary-to-unreal"></a><span data-ttu-id="9a5e5-135">Agregar el archivo binario de WinRT a no real</span><span class="sxs-lookup"><span data-stu-id="9a5e5-135">Adding the WinRT binary to Unreal</span></span> 
+<span data-ttu-id="9a5e5-136">La vinculación y el uso de una DLL en inreal requiere un proyecto de C++.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-136">Linking and using a DLL in Unreal requires a C++ project.</span></span> <span data-ttu-id="9a5e5-137">Si utiliza un proyecto Blueprint, se puede convertir fácilmente en un proyecto de C++ agregando una clase de C++:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-137">If you're using a Blueprint project, it can be easily converted to a C++ project by adding a C++ class:</span></span>  
 
-1. <span data-ttu-id="7c1bc-139">En el editor desareal, Abra **archivo > nueva clase de C++...**</span><span class="sxs-lookup"><span data-stu-id="7c1bc-139">In the Unreal editor, open **File > New C++ Class…**</span></span> <span data-ttu-id="7c1bc-140">y cree un nuevo **actor** denominado **WinrtActor** para ejecutar el código en el archivo dll:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-140">and create a new **Actor** named **WinrtActor** to run the code in the DLL:</span></span> 
+1. <span data-ttu-id="9a5e5-138">En el editor desareal, Abra **archivo > nueva clase de C++...**</span><span class="sxs-lookup"><span data-stu-id="9a5e5-138">In the Unreal editor, open **File > New C++ Class…**</span></span> <span data-ttu-id="9a5e5-139">y cree un nuevo **actor** denominado **WinrtActor** para ejecutar el código en el archivo dll:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-139">and create a new **Actor** named **WinrtActor** to run the code in the DLL:</span></span> 
 
 ![Creación de un nuevo actor](../images/unreal-winrt-img-04.png)
 
 > [!NOTE]
-> <span data-ttu-id="7c1bc-142">Ahora se ha creado una solución en el mismo directorio que el archivo uproject, junto con un nuevo script de compilación denominado Source/ConsumeWinRT/ConsumeWinRT. Build. cs.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-142">A solution has now been created in the same directory as the uproject file along with a new build script named Source/ConsumeWinRT/ConsumeWinRT.Build.cs.</span></span>
+> <span data-ttu-id="9a5e5-141">Ahora se ha creado una solución en el mismo directorio que el archivo uproject, junto con un nuevo script de compilación denominado Source/ConsumeWinRT/ConsumeWinRT. Build. cs.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-141">A solution has now been created in the same directory as the uproject file along with a new build script named Source/ConsumeWinRT/ConsumeWinRT.Build.cs.</span></span>
 
-2. <span data-ttu-id="7c1bc-143">Abra la solución, busque la carpeta **Games/ConsumeWinRT/Source/ConsumeWinRT** y Abra **ConsumeWinRT.Build.CS**:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-143">Open the solution, browse for the **Games/ConsumeWinRT/Source/ConsumeWinRT** folder, and open **ConsumeWinRT.build.cs**:</span></span>
+2. <span data-ttu-id="9a5e5-142">Abra la solución, busque la carpeta **Games/ConsumeWinRT/Source/ConsumeWinRT** y Abra **ConsumeWinRT.Build.CS**:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-142">Open the solution, browse for the **Games/ConsumeWinRT/Source/ConsumeWinRT** folder, and open **ConsumeWinRT.build.cs**:</span></span>
 
 ![Abrir el archivo ConsumeWinRT.build.cs](../images/unreal-winrt-img-05.png)
 
-### <a name="linking-the-dll"></a><span data-ttu-id="7c1bc-145">Vincular el archivo DLL</span><span class="sxs-lookup"><span data-stu-id="7c1bc-145">Linking the DLL</span></span>
-1. <span data-ttu-id="7c1bc-146">En **ConsumeWinRT.Build.CS**, agregue una propiedad para buscar la ruta de acceso de inclusión para el archivo DLL (el directorio que contiene HoloLensWinrtDLL. h).</span><span class="sxs-lookup"><span data-stu-id="7c1bc-146">In **ConsumeWinRT.build.cs**, add a property to find the include path for the DLL (the directory containing HoloLensWinrtDLL.h).</span></span> <span data-ttu-id="7c1bc-147">El archivo DLL se encuentra en un directorio secundario de la ruta de acceso de inclusión, por lo que esta propiedad se usará como el directorio raíz binario:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-147">The DLL is in a child directory to the include path, so this property will be used as the binary root dir:</span></span>
+### <a name="linking-the-dll"></a><span data-ttu-id="9a5e5-144">Vincular el archivo DLL</span><span class="sxs-lookup"><span data-stu-id="9a5e5-144">Linking the DLL</span></span>
+1. <span data-ttu-id="9a5e5-145">En **ConsumeWinRT.Build.CS**, agregue una propiedad para buscar la ruta de acceso de inclusión para el archivo DLL (el directorio que contiene HoloLensWinrtDLL. h).</span><span class="sxs-lookup"><span data-stu-id="9a5e5-145">In **ConsumeWinRT.build.cs**, add a property to find the include path for the DLL (the directory containing HoloLensWinrtDLL.h).</span></span> <span data-ttu-id="9a5e5-146">El archivo DLL se encuentra en un directorio secundario de la ruta de acceso de inclusión, por lo que esta propiedad se usará como el directorio raíz binario:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-146">The DLL is in a child directory to the include path, so this property will be used as the binary root dir:</span></span>
 
 ```cs
 using System.IO;
@@ -200,7 +204,7 @@ public class ConsumeWinRT : ModuleRules
 }
 ```
 
-2. <span data-ttu-id="7c1bc-148">En el constructor de clase, agregue el código siguiente para actualizar la ruta de acceso de inclusión, vincule el nuevo lib y cargue el retardo y copie el archivo DLL en la ubicación de appx empaquetada:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-148">In the class constructor, add the following code to update the include path, link the new lib, and delay-load and copy the DLL to the packaged appx location:</span></span>
+2. <span data-ttu-id="9a5e5-147">En el constructor de clase, agregue el código siguiente para actualizar la ruta de acceso de inclusión, vincule el nuevo lib y cargue el retardo y copie el archivo DLL en la ubicación de appx empaquetada:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-147">In the class constructor, add the following code to update the include path, link the new lib, and delay-load and copy the DLL to the packaged appx location:</span></span>
 
 ```cs
 public ConsumeWinRT(ReadOnlyTargetRules target) : base(Target)
@@ -231,7 +235,7 @@ public ConsumeWinRT(ReadOnlyTargetRules target) : base(Target)
 }
 ```
 
-3. <span data-ttu-id="7c1bc-149">Abra **WinrtActor. h** y agregue una definición de función, una a la que llamará un Blueprint:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-149">Open **WinrtActor.h** and add one function definition, one that a blueprint will call:</span></span> 
+3. <span data-ttu-id="9a5e5-148">Abra **WinrtActor. h** y agregue una definición de función, una a la que llamará un Blueprint:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-148">Open **WinrtActor.h** and add one function definition, one that a blueprint will call:</span></span> 
 
 ```cpp
 public:
@@ -239,7 +243,7 @@ public:
     static void OpenFileDialogue();
 ```
 
-4. <span data-ttu-id="7c1bc-150">Abra **WinrtActor. cpp** y actualice BeginPlay para cargar el archivo dll:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-150">Open **WinrtActor.cpp** and update BeginPlay to load the DLL:</span></span> 
+4. <span data-ttu-id="9a5e5-149">Abra **WinrtActor. cpp** y actualice BeginPlay para cargar el archivo dll:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-149">Open **WinrtActor.cpp** and update BeginPlay to load the DLL:</span></span> 
 
 ```cpp
 void AWinrtActor::BeginPlay()
@@ -265,36 +269,36 @@ void AWinrtActor::OpenFileDialogue()
 ``` 
 
 >[!CAUTION]
-> <span data-ttu-id="7c1bc-151">El archivo DLL se debe cargar antes de llamar a cualquiera de sus funciones.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-151">The DLL must be loaded before calling any of its functions.</span></span>
+> <span data-ttu-id="9a5e5-150">El archivo DLL se debe cargar antes de llamar a cualquiera de sus funciones.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-150">The DLL must be loaded before calling any of its functions.</span></span>
 
-### <a name="building-the-game"></a><span data-ttu-id="7c1bc-152">Compilación del juego</span><span class="sxs-lookup"><span data-stu-id="7c1bc-152">Building the game</span></span>
-1. <span data-ttu-id="7c1bc-153">Compile la solución de juego para iniciar el editor inreal abierto en el proyecto de juego:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-153">Build the game solution to launch the Unreal editor opened to the game project:</span></span> 
-    * <span data-ttu-id="7c1bc-154">En la pestaña **colocar actores** , busque el nuevo **WinrtActor** y arrástrelo a la escena.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-154">In the **Place Actors** tab, search for the new **WinrtActor** and drag it into the scene</span></span> 
-    * <span data-ttu-id="7c1bc-155">Abra el plano de nivel para ejecutar la función de Blueprint Callable en **WinrtActor**</span><span class="sxs-lookup"><span data-stu-id="7c1bc-155">Open the level blueprint to execute the blueprint callable function in the **WinrtActor**</span></span> 
+### <a name="building-the-game"></a><span data-ttu-id="9a5e5-151">Compilación del juego</span><span class="sxs-lookup"><span data-stu-id="9a5e5-151">Building the game</span></span>
+1. <span data-ttu-id="9a5e5-152">Compile la solución de juego para iniciar el editor inreal abierto en el proyecto de juego:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-152">Build the game solution to launch the Unreal editor opened to the game project:</span></span> 
+    * <span data-ttu-id="9a5e5-153">En la pestaña **colocar actores** , busque el nuevo **WinrtActor** y arrástrelo a la escena.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-153">In the **Place Actors** tab, search for the new **WinrtActor** and drag it into the scene</span></span> 
+    * <span data-ttu-id="9a5e5-154">Abra el plano de nivel para ejecutar la función de Blueprint Callable en **WinrtActor**</span><span class="sxs-lookup"><span data-stu-id="9a5e5-154">Open the level blueprint to execute the blueprint callable function in the **WinrtActor**</span></span> 
 
 ![Colocar WinrtActor en la escena](../images/unreal-winrt-img-06.png)
 
-2. <span data-ttu-id="7c1bc-157">En el **contorno mundial**, busque el **WindrtActor** previamente colocado en la escena y arrástrelo al plano de nivel:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-157">In the **World Outliner**, find the **WindrtActor** previously dropped into the scene and drag it into the level blueprint:</span></span> 
+2. <span data-ttu-id="9a5e5-156">En el **contorno mundial**, busque el **WindrtActor** previamente colocado en la escena y arrástrelo al plano de nivel:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-156">In the **World Outliner**, find the **WindrtActor** previously dropped into the scene and drag it into the level blueprint:</span></span> 
 
 ![Arrastrar WinrtActor al plano de nivel](../images/unreal-winrt-img-07.png)
 
-3. <span data-ttu-id="7c1bc-159">En el plano de nivel, arrastre el nodo de salida desde WinrtActor, busque el **cuadro de diálogo Abrir archivo** y, a continuación, enrute el nodo desde cualquier entrada del usuario.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-159">In the level blueprint, drag the output node from WinrtActor, search for **Open File Dialogue**, then route the node from any user input.</span></span>  <span data-ttu-id="7c1bc-160">En este caso, se llama al cuadro de diálogo Abrir archivo desde un evento de voz:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-160">In this case, Open File Dialogue is being called from a speech event:</span></span> 
+3. <span data-ttu-id="9a5e5-158">En el plano de nivel, arrastre el nodo de salida desde WinrtActor, busque el **cuadro de diálogo Abrir archivo** y, a continuación, enrute el nodo desde cualquier entrada del usuario.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-158">In the level blueprint, drag the output node from WinrtActor, search for **Open File Dialogue**, then route the node from any user input.</span></span>  <span data-ttu-id="9a5e5-159">En este caso, se llama al cuadro de diálogo Abrir archivo desde un evento de voz:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-159">In this case, Open File Dialogue is being called from a speech event:</span></span> 
 
 ![Configuración de nodos en el plano de nivel](../images/unreal-winrt-img-08.png)
 
-4. <span data-ttu-id="7c1bc-162">[Empaquete este juego para HoloLens](../tutorials/unreal-uxt-ch6.md), impleméntelo y ejecútelo.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-162">[Package this game for HoloLens](../tutorials/unreal-uxt-ch6.md), deploy it, and run.</span></span>  
+4. <span data-ttu-id="9a5e5-161">[Empaquete este juego para HoloLens](../tutorials/unreal-uxt-ch6.md), impleméntelo y ejecútelo.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-161">[Package this game for HoloLens](../tutorials/unreal-uxt-ch6.md), deploy it, and run.</span></span>  
 
-<span data-ttu-id="7c1bc-163">Cuando el método no real llama a OpenFileDialogue, se abre un cuadro de diálogo de archivo en la solicitud de HoloLens para un nombre de archivo. txt.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-163">When Unreal calls OpenFileDialogue, a File Dialogue opens on the HoloLens prompting for a .txt file name.</span></span>  <span data-ttu-id="7c1bc-164">Una vez guardado el archivo, vaya a la pestaña **Explorador de archivos** en el portal de dispositivos para ver el contenido "Hello WinRT".</span><span class="sxs-lookup"><span data-stu-id="7c1bc-164">After the file is saved, go to the **File explorer** tab in the device portal to see the contents “Hello WinRT”.</span></span> 
+<span data-ttu-id="9a5e5-162">Cuando el método no real llama a OpenFileDialogue, se abre un cuadro de diálogo de archivo en la solicitud de HoloLens para un nombre de archivo. txt.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-162">When Unreal calls OpenFileDialogue, a File Dialogue opens on the HoloLens prompting for a .txt file name.</span></span>  <span data-ttu-id="9a5e5-163">Una vez guardado el archivo, vaya a la pestaña **Explorador de archivos** en el portal de dispositivos para ver el contenido "Hello WinRT".</span><span class="sxs-lookup"><span data-stu-id="9a5e5-163">After the file is saved, go to the **File explorer** tab in the device portal to see the contents “Hello WinRT”.</span></span> 
 
-## <a name="summary"></a><span data-ttu-id="7c1bc-165">Resumen</span><span class="sxs-lookup"><span data-stu-id="7c1bc-165">Summary</span></span> 
+## <a name="summary"></a><span data-ttu-id="9a5e5-164">Resumen</span><span class="sxs-lookup"><span data-stu-id="9a5e5-164">Summary</span></span> 
 
-<span data-ttu-id="7c1bc-166">Le recomendamos que use el código de este tutorial como punto de partida para el consumo de código de WinRT en un lugar inreal.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-166">We encourage you to use the code in this tutorial as a starting point for consuming WinRT code in Unreal.</span></span>  <span data-ttu-id="7c1bc-167">Permite a los usuarios guardar archivos en el disco de HoloLens con el mismo cuadro de diálogo de archivo que Windows.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-167">It allows users to save files to the HoloLens disk using the same file dialogue as Windows.</span></span>  <span data-ttu-id="7c1bc-168">Siga el mismo proceso para exportar las funciones adicionales del encabezado HoloLensWinrtDLL y usarlas en un momento no real.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-168">Follow the same process to export any additional functions from the HoloLensWinrtDLL header and used in Unreal.</span></span>  <span data-ttu-id="7c1bc-169">Tenga en cuenta el código DLL que espera en cualquier código asincrónico de WinRT en un subproceso MTA en segundo plano, lo que evita el interbloqueo del subproceso de juego inreal.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-169">Note the DLL code that waits on any async WinRT code in a background MTA thread, which avoids deadlocking the Unreal game thread.</span></span> 
+<span data-ttu-id="9a5e5-165">Le recomendamos que use este tutorial como punto de partida para consumir código de WinRT en un lugar inreal cuando necesite guardar archivos en el disco de HoloLens con el mismo cuadro de diálogo de archivo que Windows.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-165">We encourage you to use this tutorial as a starting point for consuming WinRT code in Unreal when you need to save files to the HoloLens disk using the same file dialogue as Windows.</span></span>  <span data-ttu-id="9a5e5-166">El mismo proceso se aplica a la exportación de funciones adicionales desde el encabezado HoloLensWinrtDLL y que se usa en el mismo.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-166">The same process applies to exporting additional functions from the HoloLensWinrtDLL header and used in Unreal.</span></span>  <span data-ttu-id="9a5e5-167">Preste especial atención al código DLL que espera en el código asincrónico de WinRT en un subproceso MTA en segundo plano, lo que evita el interbloqueo del subproceso de juego inreal.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-167">Pay special attention to the DLL code that waits on async WinRT code in a background MTA thread, which avoids deadlocking the Unreal game thread.</span></span> 
 
-# <a name="426"></a>[<span data-ttu-id="7c1bc-170">4,26</span><span class="sxs-lookup"><span data-stu-id="7c1bc-170">4.26</span></span>](#tab/426)
+# <a name="426"></a>[<span data-ttu-id="9a5e5-168">4.26</span><span class="sxs-lookup"><span data-stu-id="9a5e5-168">4.26</span></span>](#tab/426)
 
-## <a name="the-standard-winrt-apis"></a><span data-ttu-id="7c1bc-171">Las API estándar de WinRT</span><span class="sxs-lookup"><span data-stu-id="7c1bc-171">The standard WinRT APIs</span></span>
+## <a name="the-standard-winrt-apis"></a><span data-ttu-id="9a5e5-169">Las API estándar de WinRT</span><span class="sxs-lookup"><span data-stu-id="9a5e5-169">The standard WinRT APIs</span></span>
 
-<span data-ttu-id="7c1bc-172">La manera más común y más fácil de usar WinRT es llamar a métodos desde WinSDK.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-172">The most common and easiest way to use WinRT is to call methods from WinSDK.</span></span> <span data-ttu-id="7c1bc-173">Para ello, abra el archivo YourModule.Build.cs y agregue las líneas siguientes:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-173">To do so, open YourModule.Build.cs file and add the following lines:</span></span>
+<span data-ttu-id="9a5e5-170">La manera más común y más fácil de usar WinRT es llamar a métodos desde WinSDK.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-170">The most common and easiest way to use WinRT is to call methods from WinSDK.</span></span> <span data-ttu-id="9a5e5-171">Para ello, abra el archivo YourModule.Build.cs y agregue las líneas siguientes:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-171">To do so, open YourModule.Build.cs file and add the following lines:</span></span>
 
 ```cpp
 if (Target.Platform == UnrealTargetPlatform.Win64 || Target.Platform == UnrealTargetPlatform.HoloLens)
@@ -311,7 +315,7 @@ if (Target.Platform == UnrealTargetPlatform.Win64 || Target.Platform == UnrealTa
 }
 ```
 
-<span data-ttu-id="7c1bc-174">A continuación, debe agregar los siguientes encabezados de WinRT:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-174">Next, you need to add the following WinRT headers:</span></span> 
+<span data-ttu-id="9a5e5-172">A continuación, debe agregar los siguientes encabezados de WinRT:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-172">Next, you need to add the following WinRT headers:</span></span> 
 
 ```cpp
 #if (PLATFORM_WINDOWS || PLATFORM_HOLOLENS) 
@@ -330,21 +334,21 @@ if (Target.Platform == UnrealTargetPlatform.Win64 || Target.Platform == UnrealTa
 #endif
 ```
 
-<span data-ttu-id="7c1bc-175">El código de WinRT solo se puede compilar en las plataformas de Win64 y HoloLens, por lo que la instrucción If impide que las bibliotecas de WinRT se incluyan en otras plataformas.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-175">WinRT code can only be compiled in the Win64 and HoloLens platforms, so the if statement prevents WinRT libraries from being included on other platforms.</span></span> <span data-ttu-id="7c1bc-176">se agregó unknwn. h para tener la interfaz IUnknown.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-176">unknwn.h was added for having the IUnknown interface.</span></span> 
+<span data-ttu-id="9a5e5-173">El código de WinRT solo se puede compilar en las plataformas de Win64 y HoloLens, por lo que la instrucción If impide que las bibliotecas de WinRT se incluyan en otras plataformas.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-173">WinRT code can only be compiled in the Win64 and HoloLens platforms, so the if statement prevents WinRT libraries from being included on other platforms.</span></span> <span data-ttu-id="9a5e5-174">se agregó unknwn. h para tener la interfaz IUnknown.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-174">unknwn.h was added for having the IUnknown interface.</span></span> 
 
-<span data-ttu-id="7c1bc-177">Antes de escribir código, debe deshabilitar las advertencias comunes en los encabezados de WinRT mediante:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-177">Before writing any code, you need to disable common warnings in WinRT headers by using:</span></span>
+<span data-ttu-id="9a5e5-175">Antes de escribir código, debe deshabilitar las advertencias comunes en los encabezados de WinRT mediante:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-175">Before writing any code, you need to disable common warnings in WinRT headers by using:</span></span>
 
 ```cpp
 #pragma warning(disable : 5205 4265)
 ```
 
-## <a name="winrt-from-a-nuget-package"></a><span data-ttu-id="7c1bc-178">WinRT desde un paquete NuGet</span><span class="sxs-lookup"><span data-stu-id="7c1bc-178">WinRT from a NuGet package</span></span>
+## <a name="winrt-from-a-nuget-package"></a><span data-ttu-id="9a5e5-176">WinRT desde un paquete NuGet</span><span class="sxs-lookup"><span data-stu-id="9a5e5-176">WinRT from a NuGet package</span></span>
 
-<span data-ttu-id="7c1bc-179">Es un poco más complicado si necesita agregar un paquete de Nuget con compatibilidad con WinRT.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-179">It’s a little more complicated if you need to add a nuget package with WinRT support.</span></span> <span data-ttu-id="7c1bc-180">En este caso, Visual Studio puede realizar prácticamente todo el trabajo, pero el sistema de compilación no es posible.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-180">In this case, Visual Studio can do practically all job for you, but the Unreal build system can’t.</span></span> <span data-ttu-id="7c1bc-181">Afortunadamente, no es demasiado complicado.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-181">Luckily, it’s not too difficult.</span></span> <span data-ttu-id="7c1bc-182">A continuación se muestra un ejemplo de cómo se descargará el paquete Microsoft. MixedReality. QR.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-182">Below is an example of how you would go about downloading the Microsoft.MixedReality.QR package.</span></span> <span data-ttu-id="7c1bc-183">Puede reemplazarlo por otro, solo tiene que asegurarse de que no pierde el archivo winmd y copia la dll correcta.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-183">You can replace it with another, just make sure that you don’t lose the winmd file and copy the correct dll.</span></span> 
+<span data-ttu-id="9a5e5-177">Es un poco más complicado si necesita agregar un paquete de NuGet con compatibilidad con WinRT.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-177">It’s a little more complicated if you need to add a NuGet package with WinRT support.</span></span> <span data-ttu-id="9a5e5-178">En este caso, Visual Studio puede realizar prácticamente todo el trabajo, pero el sistema de compilación no es posible.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-178">In this case, Visual Studio can do practically all job for you, but the Unreal build system can’t.</span></span> <span data-ttu-id="9a5e5-179">Afortunadamente, no es demasiado complicado.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-179">Luckily, it’s not too difficult.</span></span> <span data-ttu-id="9a5e5-180">A continuación se muestra un ejemplo de cómo se descargará el paquete Microsoft. MixedReality. QR.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-180">Below is an example of how you would go about downloading the Microsoft.MixedReality.QR package.</span></span> <span data-ttu-id="9a5e5-181">Puede reemplazarlo por otro, solo tiene que asegurarse de no perder el archivo winmd y copiar la dll correcta.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-181">You can replace it with another, just make sure you don’t lose the winmd file and copy the correct dll.</span></span> 
 
-<span data-ttu-id="7c1bc-184">El sistema operativo controla Windows SDK dll de la sección anterior.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-184">Windows SDK dlls from the previous section are handled by the OS.</span></span> <span data-ttu-id="7c1bc-185">Los archivos dll de Nuget deben administrarse mediante el código del módulo.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-185">Nuget’s dlls must be managed by the code in your module.</span></span> <span data-ttu-id="7c1bc-186">Debe agregar código para descargarlos, copiarlos en la carpeta de archivos binarios y cargarlos en la memoria de proceso en el inicio del módulo.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-186">You should add code to download them, copy into binaries folder and load into the process memory at the module startup.</span></span>
+<span data-ttu-id="9a5e5-182">El sistema operativo controla Windows SDK dll de la sección anterior.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-182">Windows SDK dlls from the previous section are handled by the OS.</span></span> <span data-ttu-id="9a5e5-183">Los archivos dll de NuGet deben administrarse mediante el código del módulo.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-183">NuGet’s dlls must be managed by the code in your module.</span></span> <span data-ttu-id="9a5e5-184">Se recomienda agregar código para descargarlos, copiarlos en la carpeta de archivos binarios y cargarlos en la memoria de proceso en el inicio del módulo.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-184">We recommend adding code to download them, copying into binaries folder, and load into the process memory at the module startup.</span></span>
 
-<span data-ttu-id="7c1bc-187">En el primer paso, debe agregar un packages.config ( https://docs.microsoft.com/nuget/reference/packages-config) en la carpeta raíz del módulo).</span><span class="sxs-lookup"><span data-stu-id="7c1bc-187">At the first step, you should add a packages.config (https://docs.microsoft.com/nuget/reference/packages-config) into the root folder of your module.</span></span> <span data-ttu-id="7c1bc-188">Debe agregar todos los paquetes que quiera descargar, incluidas todas sus dependencias.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-188">There you should add all packages you want to download, including all their dependencies.</span></span> <span data-ttu-id="7c1bc-189">Aquí agregué Microsoft. MixedReality. QR como carga primaria y otros dos como dependencias.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-189">Here I added Microsoft.MixedReality.QR as a primary payload and two others as dependencies to it.</span></span> <span data-ttu-id="7c1bc-190">El formato de ese archivo es el mismo que en Visual Studio:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-190">The format of that file is same as in Visual Studio:</span></span>
+<span data-ttu-id="9a5e5-185">En el primer paso, debe agregar un packages.config ( https://docs.microsoft.com/nuget/reference/packages-config) en la carpeta raíz del módulo).</span><span class="sxs-lookup"><span data-stu-id="9a5e5-185">At the first step, you should add a packages.config (https://docs.microsoft.com/nuget/reference/packages-config) into the root folder of your module.</span></span> <span data-ttu-id="9a5e5-186">Debe agregar todos los paquetes que quiera descargar, incluidas todas sus dependencias.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-186">There you should add all packages you want to download, including all their dependencies.</span></span> <span data-ttu-id="9a5e5-187">Aquí agregué Microsoft. MixedReality. QR como carga primaria y otros dos como dependencias.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-187">Here I added Microsoft.MixedReality.QR as a primary payload and two others as dependencies to it.</span></span> <span data-ttu-id="9a5e5-188">El formato de ese archivo es el mismo que en Visual Studio:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-188">The format of that file is same as in Visual Studio:</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -355,9 +359,9 @@ if (Target.Platform == UnrealTargetPlatform.Win64 || Target.Platform == UnrealTa
 </packages>
 ```
 
-<span data-ttu-id="7c1bc-191">Ahora puede descargar NuGet, los paquetes necesarios o hacer referencia a la [documentación](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-nuget-cli)de Nuget.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-191">Now you can download the NuGet, the required packages, or refer to the NuGet [documentation](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-nuget-cli).</span></span>
+<span data-ttu-id="9a5e5-189">Ahora puede descargar NuGet, los paquetes necesarios o hacer referencia a la [documentación](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-nuget-cli)de Nuget.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-189">Now you can download the NuGet, the required packages, or refer to the NuGet [documentation](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-nuget-cli).</span></span>
 
-<span data-ttu-id="7c1bc-192">Abra YourModule.Build.cs y agregue el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-192">Open YourModule.Build.cs and add the following code:</span></span>
+<span data-ttu-id="9a5e5-190">Abra YourModule.Build.cs y agregue el código siguiente:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-190">Open YourModule.Build.cs and add the following code:</span></span>
 
 ```cpp
 if(Target.Platform == UnrealTargetPlatform.Win64 || Target.Platform == UnrealTargetPlatform.HoloLens)
@@ -483,7 +487,7 @@ if(Target.Platform == UnrealTargetPlatform.Win64 || Target.Platform == UnrealTar
     }
 ```
 
-<span data-ttu-id="7c1bc-193">Deberá definir el método SafeCopy de la siguiente manera:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-193">You'll need to define the SafeCopy method as follows:</span></span>
+<span data-ttu-id="9a5e5-191">Deberá definir el método SafeCopy de la siguiente manera:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-191">You'll need to define the SafeCopy method as follows:</span></span>
 
 ```cpp
 private void SafeCopy(string source, string destination)
@@ -512,7 +516,7 @@ private void SafeCopy(string source, string destination)
 }
 ```
 
-<span data-ttu-id="7c1bc-194">Los archivos dll de Nuget deben cargarse manualmente en la memoria de proceso de Win32.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-194">Nuget DLLs needs to load into your Win32 process memory manually.</span></span> <span data-ttu-id="7c1bc-195">Debe agregar la carga manual en el método de inicio del módulo:</span><span class="sxs-lookup"><span data-stu-id="7c1bc-195">You should add manual loading into the startup method of your module:</span></span>
+<span data-ttu-id="9a5e5-192">Los archivos dll de NuGet deben cargarse manualmente en la memoria de proceso de Win32. se recomienda agregar la carga manual en el método de inicio del módulo:</span><span class="sxs-lookup"><span data-stu-id="9a5e5-192">NuGet DLLs needs to load into your Win32 process memory manually; we recommend adding manual loading into the startup method of your module:</span></span>
 
 ```cpp
 void StartupModule() override
@@ -532,4 +536,4 @@ void StartupModule() override
 }
 ```
 
-<span data-ttu-id="7c1bc-196">Por último, puede incluir los encabezados de WinRT en el código tal y como se describe en la sección anterior.</span><span class="sxs-lookup"><span data-stu-id="7c1bc-196">Finally, you can include WinRT headers into your code as described in the previous section.</span></span>
+<span data-ttu-id="9a5e5-193">Por último, puede incluir los encabezados de WinRT en el código tal y como se describe en la sección anterior.</span><span class="sxs-lookup"><span data-stu-id="9a5e5-193">Finally, you can include WinRT headers into your code as described in the previous section.</span></span>
