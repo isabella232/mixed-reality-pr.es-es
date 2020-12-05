@@ -6,12 +6,12 @@ ms.author: jacksonf
 ms.date: 10/9/2020
 ms.topic: article
 keywords: Unreal, nonreal Engine 4, UE4, reverberation, reverberación G2, HP reverberación G2, realidad mixta, desarrollo, controladores de movimiento, entrada de usuario, características, nuevo proyecto, emulador, documentación, guías, características, hologramas, desarrollo de juegos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 6a56b11e6738dd6359508d0cdfc1560bddfaff2e
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 419f5b803a6abb2b19080807ef9f403b96758683
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678934"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609596"
 ---
 # <a name="hp-reverb-g2-controllers-in-unreal"></a>Controladores de HP reverberación G2 en la realidad 
 
@@ -24,7 +24,7 @@ ms.locfileid: "94678934"
 
 ## <a name="porting-an-existing-openxr-app"></a>Portabilidad de una aplicación existente de OpenXR 
 
-Si no existe ningún enlace de controlador en el juego para el controlador de la realidad de HP Mixed, el tiempo de ejecución de OpenXR intentará reasignar los enlaces existentes al controlador activo.  En este caso, el juego tiene enlaces de toque Oculus y ningún enlace de controlador de realidad de HP Mixed.
+Si no existe ningún enlace de controlador en el juego para el controlador HP Mixed Reality, el tiempo de ejecución de OpenXR intentará reasignar los enlaces existentes al controlador activo.  En este caso, el juego tiene enlaces de toque Oculus y ningún enlace de controlador de realidad de HP Mixed.
 
 ![Volver a asignar los enlaces existentes cuando no existe ningún enlace de controlador](images/reverb-g2-img-04.png)
 

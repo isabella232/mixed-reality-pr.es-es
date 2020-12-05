@@ -6,12 +6,12 @@ ms.author: jacksonf
 ms.date: 07/08/2020
 ms.topic: article
 keywords: No real, no real Engine 4, UE4, HoloLens, HoloLens 2, streaming, comunicación remota, realidad mixta, desarrollo, introducción, características, nuevo proyecto, emulador, documentación, guías, características, hologramas, desarrollo de juegos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, WinRT, DLL
-ms.openlocfilehash: ff0b235a45bf0e04b82e610384a290e8fc3a7525
-ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
+ms.openlocfilehash: f9001f3a9e36eb5d8553545f38cf10411bafd64b
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/04/2020
-ms.locfileid: "96578600"
+ms.locfileid: "96609416"
 ---
 # <a name="winrt-in-unreal"></a>WinRT en Unreal
 
@@ -21,12 +21,12 @@ En el transcurso del desarrollo de HoloLens, puede que tenga que escribir una ca
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido de puntos de control de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede pasar a cualquier [tema](unreal-development-overview.md#3-platform-capabilities-and-apis) o ir directamente a la implementación de la aplicación en un dispositivo o emulador.
+Si está siguiendo el viaje de desarrollo no real que hemos diseñado, está a la mitad de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con cualquier [tema](unreal-development-overview.md#3-platform-capabilities-and-apis) o ir directamente a la implementación de la aplicación en un dispositivo o emulador.
 
 > [!div class="nextstepaction"]
 > [Implementación en el dispositivo](unreal-deploying.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [API/WinRT de C++](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/)
 * [FileSavePicker (clase)](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) 
 * [Bibliotecas de terceros no reales](https://docs.unrealengine.com/Programming/BuildTools/UnrealBuildTool/ThirdPartyLibraries/index.html) 

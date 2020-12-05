@@ -8,16 +8,15 @@ ms.topic: article
 keywords: No real, no real Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, implementación en dispositivo, PC, documentación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: ef33e037d6ab6a69059c1452b71a428fe51836b9
-ms.sourcegitcommit: d56e7dd6c917ddc4ead0792ebff21891921174b9
+ms.openlocfilehash: e811bc1b82aa40e658f9c855b65446483dd8bef2
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "96564025"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609436"
 ---
 # <a name="deploy-to-device-in-unreal"></a>Implementación en el dispositivo en Unreal
 
-## <a name="overview"></a>Introducción
 Hay dos maneras de implementar una aplicación no real en HoloLens 2:
 * Directamente desde el editor desareal
 * Como un paquete cargado a través del portal de dispositivos
@@ -26,11 +25,11 @@ Ambas opciones requieren la configuración de HoloLens para usar el portal de [d
 
 ## <a name="deploying-to-device-from-the-unreal-editor"></a>Implementación en el dispositivo desde el editor desareal
 
-1. Haga clic en la flecha desplegable situada junto al botón **iniciar** . Inicialmente, la opción de dispositivo HoloLens estará atenuada.
+1. Seleccione la flecha desplegable situada junto al botón **iniciar** . Inicialmente, la opción de dispositivo HoloLens estará atenuada.
 
 ![Iniciar opciones de lista desplegable](images/unreal/launch-dropdown.png)
 
-2. Abra el **Device Manager**. Tenga en cuenta que HoloLens no aparecerá automáticamente en la lista de dispositivos.
+2. Abra el **Device Manager** y tenga en cuenta que HoloLens no aparecerá automáticamente en la lista de dispositivos.
 
 3. Expanda la sección **Agregar un dispositivo** que no está en la lista.
 
@@ -39,22 +38,22 @@ Ambas opciones requieren la configuración de HoloLens para usar el portal de [d
 5. Escriba la dirección IP y la información de puerto de los dispositivos separadas por un signo de dos puntos como identificador de dispositivo. Por ejemplo, "127.0.0.1:10080" (cuando se conecta a través de USB). Use las credenciales de nombre de usuario y contraseña del portal de dispositivos.
 
 6. Presione **Agregar** y cierre el administrador de dispositivos.
-    * En el caso de un error (por ejemplo, una dirección incorrecta, un nombre de usuario o una contraseña), se imprimirá un mensaje en el registro de salida.
+    * Si hay un error, como una dirección o credenciales de usuario incorrectas, se imprimirá un mensaje en el registro de salida.
 
 ![Agregar un dispositivo que no está en la lista](images/unreal/add-unlisted-device.png)
 
-7. Haga clic en la flecha desplegable situada junto al botón **Launch (iniciar** ) de nuevo; esta vez debería ver el dispositivo HoloLens que acaba de agregar. Seleccione el dispositivo HoloLens para compilar e implementar en HoloLens.
+7. Seleccione de nuevo la flecha desplegable situada junto al botón **iniciar** . esta vez debería ver el dispositivo HoloLens que acaba de agregar. Seleccione el dispositivo HoloLens para compilar e implementar en HoloLens.
 
 >[!NOTE]
 >La compilación para el dispositivo puede implicar la recompilación de los sombreadores (especialmente en la primera ejecución). esto puede tardar unos minutos. No deje que el dispositivo pase a suspensión hasta que la aplicación se esté ejecutando (es posible que tenga que hacerlo). De lo contrario, se producirá un error de compilación del sombreador.
 
 ## <a name="deploying-to-device-via-device-portal"></a>Implementación en el dispositivo a través del portal de dispositivos
 
-Puede encontrar instrucciones detalladas sobre cómo [empaquetar e implementar una aplicación](tutorials/unreal-uxt-ch6.md#packaging-and-deploying-the-app-via-device-portal) en la última sección del introducción con una serie de tutoriales inreal.
+Puede encontrar instrucciones detalladas sobre cómo empaquetar e implementar una aplicación en la [serie de tutoriales inreal](tutorials/unreal-uxt-ch6.md#packaging-and-deploying-the-app-via-device-portal).
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo no real que hemos diseñado, se encuentra en medio de la fase de implementación. Desde aquí, puede seguir agregando Advanced Services:
+Si está siguiendo el viaje de desarrollo no real que hemos diseñado, se encuentra en medio de la fase de implementación. Desde aquí, puede seguir agregando Advanced Services:
 
 > [!div class="nextstepaction"]
 > [Servicios avanzados](unreal-development-overview.md#5-adding-services)

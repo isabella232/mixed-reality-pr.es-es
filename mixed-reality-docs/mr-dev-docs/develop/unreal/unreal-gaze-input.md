@@ -6,16 +6,16 @@ ms.author: jacksonf
 ms.date: 06/10/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, HoloLens 2, seguimiento ocular, entrada de mirada, pantalla montada de cabeza, motor no real, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: d0470c5abbefce797254aa9f2030519d3347aaab
-ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
+ms.openlocfilehash: 0a011c3f5a7ad79e83e25c4c95c46d2a04ad555d
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/04/2020
-ms.locfileid: "96578894"
+ms.locfileid: "96609506"
 ---
 # <a name="gaze-input"></a>Entrada de mira
 
-Fijamente se usa para indicar lo que el usuario está examinando.  Esto usa las cámaras de seguimiento de ojo en el dispositivo para buscar un rayo en un espacio de mundo poco real que coincida con lo que está viendo actualmente el usuario.
+La entrada de miras en las aplicaciones de realidad mixta consiste en averiguar qué miran los usuarios. Cuando las cámaras de seguimiento ocular de su dispositivo coinciden con los rayos en el espacio mundial del usuario, la línea de datos de la vista del usuario está disponible. Fijamente se puede usar tanto en Blueprints como en C++, y es una característica principal para los mecanismos como interacción de objetos, búsqueda y controles de cámara.
 
 ## <a name="enabling-eye-tracking"></a>Habilitación del seguimiento ocular
 
@@ -25,34 +25,34 @@ Fijamente se usa para indicar lo que el usuario está examinando.  Esto usa las 
 
 - Cree un nuevo actor y agréguelo a su escena
 
-> [!NOTE] 
-> El seguimiento ocular de HoloLens en inreal solo tiene un único rayo de miración para ambos ojos en lugar de los dos rayos necesarios para el seguimiento de Stereoscopic, que no se admite.
+> [!NOTE]
+> El seguimiento ocular de HoloLens en inreal solo tiene un único rayo de miración para ambos ojos. No se admite el seguimiento de Stereoscopic, que requiere dos rayos.
 
 ## <a name="using-eye-tracking"></a>Uso del seguimiento ocular
 
-En primer lugar, compruebe que el dispositivo admite el seguimiento ocular con la función IsEyeTrackerConnected.  Si devuelve true, llame a GetGazeData para buscar el lugar en el que el usuario mira en el fotograma actual:
+En primer lugar, compruebe que el dispositivo admite el seguimiento ocular con la función **IsEyeTrackerConnected** .  Si la función devuelve true, llame a **GetGazeData** para buscar el lugar en el que el usuario mira en el fotograma actual:
 
 ![Blueprint de la función Connected Tracking](images/unreal-gaze-img-02.png)
 
 > [!NOTE]
 > El punto de fijación y el valor de confianza no están disponibles en HoloLens.
 
-Para encontrar lo que está buscando el usuario, use el origen y la dirección de mira en un seguimiento de línea.  El inicio de este vector es el origen de la mirada y el final es el origen más la dirección de miración multiplicada por la distancia deseada:
+Use el origen y la dirección de mira en un seguimiento de línea para averiguar exactamente dónde están buscando los usuarios.  El valor de mirar es un vector, comenzando en el origen de miras y terminando en el origen más la dirección de miración multiplicada por la distancia del seguimiento de línea:
 
 ![Blueprint de la función de datos de miras](images/unreal-gaze-img-03.png)
 
 ## <a name="getting-head-orientation"></a>Obtener orientación del encabezado
 
-Como alternativa, se puede utilizar la rotación HMD para representar la dirección del encabezado del usuario.  Esto no requiere la función de entrada fijamente, pero no le proporcionará información de seguimiento ocular.  Se debe agregar una referencia a Blueprint como contexto del mundo para obtener los datos de salida correctos:
+También puede usar el giro de la pantalla montada del cabezal (HMD) para representar la dirección del encabezado del usuario. Puede obtener la dirección del encabezado de los usuarios sin habilitar la función de entrada fijamente, pero no recibirá ninguna información de seguimiento ocular.  Agregue una referencia al plano como el contexto del mundo para obtener los datos de salida correctos:
 
 > [!NOTE]
 > La obtención de datos de HMD solo está disponible en 4,26 y versiones posteriores.
 
 ![Plano de la función get HMDData](images/unreal-gaze-img-04.png)
 
-## <a name="using-c"></a>Usar C++ 
+## <a name="using-c"></a>Usar C++
 
-- En el archivo build.cs del juego, agregue "EyeTracker" a la lista de PublicDependencyModuleNames:
+- En el archivo **Build.CS** del juego, agregue **EyeTracker** a la lista de **PublicDependencyModuleNames** :
 
 ```cpp
 PublicDependencyModuleNames.AddRange(
@@ -65,19 +65,19 @@ PublicDependencyModuleNames.AddRange(
 });
 ```
 
-- En "archivo/nueva clase de C++", cree un nuevo actor de C++ llamado "EyeTracker".
-    - Se abrirá una solución de Visual Studio en la nueva clase EyeTracker. Compile y ejecute para abrir el juego inreal con el nuevo actor EyeTracker.  Busque "EyeTracker" en la ventana "colocar actores".  Arrastre y coloque esta clase en la ventana del juego para agregarla al proyecto:
+- En **archivo/nueva clase de c++**, cree un nuevo actor de C++ denominado **EyeTracker**
+    - Una solución de Visual Studio abrirá la nueva clase EyeTracker. Compile y ejecute para abrir el juego inreal con el nuevo actor EyeTracker.  Busque "EyeTracker" en la ventana **colocar actores** y arrastre y coloque la clase en la ventana del juego para agregarla al proyecto:
 
 ![Captura de pantalla de un actor con la ventana colocar actor abierta](images/unreal-gaze-img-06.png)
 
-- En EyeTracker. cpp, agregue includes para EyeTrackerFunctionLibrary y DrawDebugHelpers:
+- En **EyeTracker. cpp**, agregue includes para **EyeTrackerFunctionLibrary** y **DrawDebugHelpers**:
 
 ```cpp
 #include "EyeTrackerFunctionLibrary.h"
 #include "DrawDebugHelpers.h"
 ```
 
-En marca, compruebe que el dispositivo admite el seguimiento ocular con UEyeTrackerFunctionLibrary:: IsEyeTrackerConnected.  A continuación, busque el inicio y el final de un rayo para un seguimiento de línea de UEyeTrackerFunctionLibrary:: GetGazeData:
+Compruebe que el dispositivo admite el seguimiento ocular con **UEyeTrackerFunctionLibrary:: IsEyeTrackerConnected** antes de intentar obtener los datos de miras.  Si se admite el seguimiento ocular, busque el inicio y el final de un rayo para un seguimiento de línea de **UEyeTrackerFunctionLibrary:: GetGazeData**. A partir de ahí, puede crear un vector de miración y pasar su contenido a **LineTraceSingleByChannel** para depurar los resultados de los aciertos de rayo:
 
 ```cpp
 void AEyeTracker::Tick(float DeltaTime)
@@ -104,7 +104,7 @@ void AEyeTracker::Tick(float DeltaTime)
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido de puntos de control de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación: 
+Si está siguiendo el viaje de desarrollo no real que hemos diseñado, se encuentra en medio de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de creación:
 
 > [!div class="nextstepaction"]
 > [Seguimiento de las manos](unreal-hand-tracking.md)

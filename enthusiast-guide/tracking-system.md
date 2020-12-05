@@ -3,14 +3,14 @@ title: Funcionamiento del seguimiento de la interacción directa
 description: Información sobre el sistema de seguimiento interno basado en la cámara que se usa en los auriculares con Windows Mixed Reality.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, Inside-Out, interior Out, Tracking, Camera
-ms.openlocfilehash: eda1b323915788f72ae6f4a2efcf51850734eac9
-ms.sourcegitcommit: 55a6a0b481238e7a2e3278a51583b6bda0eb259a
+ms.openlocfilehash: e299415d8f5a727d8005a9cb3a65dd5da0d9bdf6
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92434601"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609736"
 ---
-# <a name="inside-out-tracking"></a>Seguimiento interno
+# <a name="inside-out-tracking"></a>Seguimiento de la interacción directa
 
 ## <a name="how-does-inside-out-tracking-work"></a>¿Cómo funciona el seguimiento interno?
 
@@ -30,7 +30,7 @@ Hay dos preocupaciones para asegurarse de que el seguimiento funcione correctame
 
 ## <a name="how-much-light-is-enough-light"></a>¿Cuánta luz tiene suficiente luz?
 
-Una buena regla general es si puede moverse de forma cómoda en el entorno sin sentir que es demasiado oscuro y, si puede observar las características de otras personas a través de la habitación, es probable que el sistema de seguimiento tenga suficiente luz.
+Una buena regla general es si puede moverse de forma cómoda en el entorno sin sentir que es demasiado oscuro y, si puede observar las características de otras personas a través de la habitación, es probable que el sistema de seguimiento tenga suficiente luz. Tenga en cuenta que se trata de algo tan ligero: Si está mirando en el sol, las cámaras pueden saturarse y no podrán realizar un seguimiento confiable. 
 
 ## <a name="what-is-the-recommended-amount-of-environmental-features"></a>¿Cuál es la cantidad recomendada de características ambientales?
 
@@ -42,7 +42,7 @@ El dispositivo está diseñado para admitir el movimiento en exceso de lo que su
 
 ## <a name="where-will-tracking-not-work"></a>¿Dónde no funcionará el seguimiento?
 
-El seguimiento no funcionará en un salón oscuro en el que las cámaras no podrán ver suficientes características debido a la baja luz. Por lo general, el seguimiento no funcionará bien (o en ocasiones, en absoluto) en el traslado de vehículos como aviones, buses, trenes, automóviles o ascensores.
+El seguimiento no funcionará en un salón oscuro en el que las cámaras no podrán ver suficientes características debido a la baja luz. Por lo general, el seguimiento no funcionará bien (o en ocasiones, en absoluto) en el traslado de vehículos como aviones, buses, trenes, automóviles o ascensores. También puede producirse un error en situaciones en las que haya demasiada luz o una diferencia fuerte clara. Por ejemplo, si hay un flujo directo de luz solar en una habitación, las cámaras pueden reducir la exposición para reducir la saturación y no poder ver las características naturales normales. Se recomienda que se ajuste a la iluminación relativamente uniforme y, en caso de que tenga que Squint o encuentre cosas inadecuadamente brillantes, es posible que el sistema de seguimiento no sea correcto. 
 
 ## <a name="what-is-the-difference-between-3dof-and-6dof"></a>¿Cuál es la diferencia entre 3DOF y 6DOF?
 
@@ -72,6 +72,6 @@ El sistema de seguimiento almacena algunos datos de entorno para que pueda recup
 
 ## <a name="see-also"></a>Consulte también
 * [Solución de problemas del sistema de seguimiento](tracking.md)
-* [Controladores de movimiento](controller-in-wmr.md)
+* [Controladores de movimiento](controllers-in-wmr.md)
 * [Ambiente principal de Windows Mixed Reality](your-mixed-reality-home.md)
 * [Uso de juegos y aplicaciones en Windows Mixed Reality](using-games-and-apps-in-windows-mixed-reality.md)
