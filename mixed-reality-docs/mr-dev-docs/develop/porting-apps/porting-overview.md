@@ -1,19 +1,19 @@
 ---
-title: Introducción a la migración
+title: Introducción a la portabilidad
 description: Información general de las distintas opciones de portabilidad para incorporar aplicaciones existentes a la realidad mixta.
 author: hferrone
 ms.author: v-hferrone
-ms.date: 10/02/2020
+ms.date: 12/9/2020
 ms.topic: article
 keywords: portabilidad, Unity, middleware, motor, UWP, Win32
-ms.openlocfilehash: 074e0792a5ed43bb56b8f337613234efbd166eb7
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 1ec03610dd26e9f75162795cbdded77a8e0189ce
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443537"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96925827"
 ---
-# <a name="porting-overview"></a>Introducción a la migración
+# <a name="porting-overview"></a>Introducción a la portabilidad
 
 En lo que respecta a la migración o la actualización de los proyectos existentes para la realidad mixta, pueden aplicarse varios escenarios en función de si la aplicación se compiló con Unity o un motor no real, HoloLens (1º gen) o HoloLens 2 o SteamVR. Esta página de información general contiene nuestras recomendaciones actuales para cada plataforma y dispositivo. Asegúrese de volver a comprobar que estos procesos siempre cambian.
 

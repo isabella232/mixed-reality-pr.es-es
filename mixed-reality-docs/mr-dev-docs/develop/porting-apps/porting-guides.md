@@ -3,15 +3,15 @@ title: Portabilidad de aplicaciones de VR a Windows Mixed Reality
 description: Un tutorial paso a paso que explica cómo migrar una aplicación envolvente existente a Windows Mixed Reality.
 author: JBrentJ
 ms.author: alexturn
-ms.date: 07/07/2020
+ms.date: 12/9/2020
 ms.topic: article
 keywords: puerto, Unity, no real, middleware, motor, UWP, Win32, portabilidad, HoloLens primera generación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, migración, Windows 10, asignación de entrada
-ms.openlocfilehash: aa9d45a4413fd8e0f5c7eec61f830635c2db6f4b
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 9f3e064c4462fc3d12a23bd94885476bcd2f9466
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443668"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96925944"
 ---
 # <a name="porting-vr-apps-to-windows-mixed-reality"></a>Portabilidad de aplicaciones de VR a Windows Mixed Reality
 
@@ -56,7 +56,7 @@ La plataforma Windows Mixed Reality todavía está en desarrollo activo. Se reco
 > [!IMPORTANT]
 > Si usa controladores de HP reverberación G2, consulte [este artículo](../unreal/unreal-reverb-g2-controllers.md) para obtener instrucciones adicionales de asignación de entrada.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Instrucciones de compatibilidad de hardware de equipo mínima de Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Descripción del rendimiento de la realidad mixta](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)
 * [Recomendaciones de rendimiento para Unity](../unity/performance-recommendations-for-unity.md)

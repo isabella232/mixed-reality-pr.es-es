@@ -3,15 +3,15 @@ title: Distribución de las aplicaciones
 description: Información general de las diferentes opciones de distribución para distintas plataformas y almacenes de publicación compatibles.
 author: hferrone
 ms.author: v-hferrone
-ms.date: 10/02/2020
+ms.date: 12/9/2020
 ms.topic: article
 keywords: HoloLens, realidad mixta, auriculares envolventes, aplicación, UWP, envío, envío, filtros, metadatos, requisitos del sistema, palabras clave, Wack, certificación, paquete, appx, comercialización
-ms.openlocfilehash: 4ea60d2111f99924eaa417d4ff6fa8830934588c
-ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
+ms.openlocfilehash: 5c7a1d6e00610a4046bd71b07ca5184399c9e335
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96578884"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96925778"
 ---
 # <a name="distributing-your-apps"></a>Distribución de las aplicaciones
 
@@ -99,7 +99,7 @@ La obtención de las aplicaciones en manos de los usuarios o en el mundo es la m
 
 * También puede implementar compilaciones en el dispositivo y compartirlas con otros desarrolladores que tengan el modo de desarrollador habilitado mediante la [implementación y depuración con Visual Studio](../develop/platform-capabilities-and-apis/using-visual-studio.md) o [la instalación de un paquete de aplicación con el portal de dispositivos](https://docs.microsoft.com/hololens/holographic-custom-apps#installing-an-application-package-with-the-device-portal).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Buscar, instalar y desinstalar aplicaciones del Microsoft Store](https://docs.microsoft.com/hololens/holographic-store-apps)
 
 <!-- ## Submitting to the Microsoft Store

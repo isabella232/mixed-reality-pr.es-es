@@ -3,17 +3,17 @@ title: Implementación en el dispositivo en Unreal
 description: Guía para la implementación en el dispositivo de un equipo inreal a HoloLens 2
 author: sw5813
 ms.author: suwu
-ms.date: 7/10/2020
+ms.date: 12/9/2020
 ms.topic: article
 keywords: No real, no real Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, implementación en dispositivo, PC, documentación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: e811bc1b82aa40e658f9c855b65446483dd8bef2
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 390bd1a9f1bc643efb1a342421e8c96574e74334
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609436"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96925905"
 ---
 # <a name="deploy-to-device-in-unreal"></a>Implementación en el dispositivo en Unreal
 
