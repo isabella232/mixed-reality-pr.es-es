@@ -6,8 +6,6 @@
   items:
     - name: Introducción a los servicios en la nube de realidad mixta de Azure
       href: mixed-reality-cloud-services.md
-    - name: Introducción al aprendizaje de Mixed Reality
-      href: mr-learning-overview.md
     - name: Aplicaciones de ejemplo y características
       href: features-and-samples.md
 - name: Migración de aplicaciones
@@ -254,6 +252,8 @@
   items:
     - name: Introducción al desarrollo con Unreal
       href: unreal/unreal-development-overview.md
+    - name: Actualización de proyectos en Unreal
+      href: unreal/unreal-porting.md
     - name: Tutoriales
       items:
         - name: Compilación de una aplicación de ajedrez con las herramientas de experiencia del usuario de MRTK
@@ -310,8 +310,6 @@
           href: unreal/unreal-deploying.md
         - name: Publicación en Microsoft Store
           href: unreal/unreal-publishing-to-store.md
-        - name: Actualización de proyectos en Unreal
-          href: unreal/unreal-porting.md
         - name: Recomendaciones de rendimiento para Unreal
           href: unreal/performance-recommendations-for-unreal.md
         - name: Recomendaciones de material en Unreal
