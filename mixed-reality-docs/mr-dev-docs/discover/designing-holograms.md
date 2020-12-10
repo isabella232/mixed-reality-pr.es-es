@@ -1,17 +1,17 @@
 ---
-title: Diseñar hologramas
+title: Designing Holograms
 description: Obtenga información sobre la realidad mixta a través de la nueva aplicación de hologramas de diseño de Microsoft.
 author: hferrone
 ms.author: daescu
 ms.date: 11/24/2020
 ms.topic: article
 keywords: MRTK, kit de herramientas de realidad mixta, hologramas, diseño de hologramas, aprendizaje, aplicación de ejemplo, auriculares de realidad mixta, auriculares de realidad virtual, qué es realidad virtual
-ms.openlocfilehash: 243b6f28da7b074b3ff6d48794d525ac08281fa7
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: bf904b319ed5b452f254b659315d9b531832a4d5
+ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96355500"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97002590"
 ---
 # <a name="the-making-of-designing-holograms"></a>La realización del diseño de hologramas
 
@@ -122,6 +122,32 @@ En primer lugar, empezamos por agregar cierto grosor a los paneles e iconos, ade
 Obviamente, los iconos funcionan mucho mejor que el texto simple, por lo que, para proporcionar una guía aún más eficaz, se inició la creación de un conjunto de objetos y avatares animados, cada uno de ellos con una pequeña historia sobre lo que se hace en el escenario respectivo y cómo se usa.
 
 ![GIF animado de un sistema de menús de Holographic interactivo](images/designing-holograms/creative-process.gif)
+
+## <a name="core-concepts"></a>Conceptos principales
+
+**Marco holográfico**
+
+![GIF animado de un usuario que mira el dollhouse con el marco holográfica resaltado](images/designing-holograms/FOVandFOI.gif)
+
+**Sistemas de coordenadas**
+
+![GIF animado de un usuario que busca Dollhouse con los sistemas de coordenadas resaltados](images/designing-holograms/CoordinateSystems.gif)
+
+**Seguimiento de los ojos**
+
+![GIF animado de un usuario que mira los hologramas estacionales con el rayo ojo mirado](images/designing-holograms/EyeTracking.gif)
+
+**Visualización de detección de salón y asignación espacial**
+
+![GIF animado de todas las superficies dentro del dollhouse que se está asignando](images/designing-holograms/SpatialMapping.gif)
+
+**Descripción de escenas**
+
+![GIF animado de objetos en el dollhouse que se está reconociendo](images/designing-holograms/SceneUnderstanding.gif)
+
+**Punto y confirmación con rayos mano**
+
+![GIF animado de un usuario que levanta su mano con un rayo de mano resaltado](images/designing-holograms/HandRays.gif)
 
 ## <a name="try-it-out-moments"></a>Momentos "pruébelo"
 

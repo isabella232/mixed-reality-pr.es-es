@@ -2,16 +2,16 @@
 title: Audio en realidad mixta
 description: El audio en realidad mixta puede aumentar la confianza de los usuarios en las interacciones de la interfaz de usuario y sumergir a los usuarios en la experiencia.
 author: kegodin
-ms.author: kegodin
+ms.author: v-hferrone
 ms.date: 11/07/2019
 ms.topic: article
 keywords: sonido espacial, sonido envolvente, audio 3D, sonido en 3D, audio espacial, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, casos prácticos, acústicos
-ms.openlocfilehash: 50a5b4a634eec5a326158975f70fa385ce7af6a8
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 2fe40f1b271e7ae775c333951286e87c5196c20b
+ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703261"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97002500"
 ---
 # <a name="audio-in-mixed-reality"></a>Audio en realidad mixta
 El audio es una parte esencial del diseño y la productividad en la realidad mixta. El sonido puede:

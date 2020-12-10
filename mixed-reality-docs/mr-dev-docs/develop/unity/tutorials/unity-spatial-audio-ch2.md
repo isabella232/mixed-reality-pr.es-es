@@ -2,16 +2,16 @@
 title: 'Tutoriales de audio espacial: 2. Sonidos de interacción del botón de espacialización'
 description: Agregue un botón al proyecto y Spatial los sonidos de interacción del botón.
 author: kegodin
-ms.author: kegodin
+ms.author: v-hferrone
 ms.date: 12/01/2019
 ms.topic: article
 keywords: mixed reality, Unity, tutorial, hololens2, audio espacial, MRTK, kit de herramientas de realidad mixta, UWP, Windows 10, HRTF, función de transferencia relacionada con el encabezado, reverberación, Microsoft Spatializer, Prefabs, curva de volumen
-ms.openlocfilehash: eb550c3127e13926d73428b337abfd7cf9872eb7
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 62825ed8922cd904212160748018446cbc76b839
+ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678194"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97002600"
 ---
 # <a name="spatializing-button-interaction-sounds"></a>Sonidos de interacción del botón de espacialización
 

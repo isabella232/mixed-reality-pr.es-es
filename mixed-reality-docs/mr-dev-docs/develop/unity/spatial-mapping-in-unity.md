@@ -6,16 +6,16 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, asignación espacial, representador, Colisionador, malla, escaneo, componente, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 60196a85689ce6c4c190acdfe305fc12982ace4c
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 2e5518b1a54f967762143bb8602141b4199a2d54
+ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677404"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97002520"
 ---
 # <a name="spatial-mapping-in-unity"></a>Asignación espacial en Unity
 
-En este tema se describe cómo usar la [asignación espacial](../../design/spatial-mapping.md) en el proyecto de Unity, con lo que se recuperan mallas triangulares que representan las superficies del mundo en torno a un dispositivo HoloLens, para la selección de ubicación, la oclusión, el análisis de habitación y mucho más.
+la [asignación espacial](../../design/spatial-mapping.md) permite recuperar mallas de triángulo que representan las superficies del mundo en torno a un dispositivo HoloLens. Puede usar datos de superficie para la selección de ubicación, oclusión y análisis de habitación para dar a los proyectos de Unity una dosis adicional de inmersión.
 
 Unity incluye compatibilidad total con la asignación espacial, que se expone a los desarrolladores de las siguientes maneras:
 1. Componentes de asignación espacial disponibles en MixedRealityToolkit, que proporcionan una ruta de acceso cómoda y rápida para empezar a trabajar con la asignación espacial
@@ -34,7 +34,7 @@ Para usar la asignación espacial en la aplicación, debe establecerse la funcio
     </colgroup>
     <tr>
         <td><strong>Característica</strong></td>
-        <td><a href="../../hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><a href="../../hololens-hardware-details.md"><strong>HoloLens (primera generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -52,10 +52,11 @@ Para que una aplicación consuma datos de asignación espacial, la funcionalidad
 
 Cómo habilitar la funcionalidad SpatialPerception:
 1. En el editor de Unity, abra el panel de **configuración del reproductor** (editar > configuración del proyecto > Player).
-2. Haga clic en la pestaña **"tienda Windows"**
+2. Seleccione en la pestaña **"tienda Windows"**
 3. Expanda **"configuración de publicación"** y seleccione la funcionalidad **"SpatialPerception"** en la lista **"funcionalidades"** .
 
-Tenga en cuenta que si ya ha exportado el proyecto de Unity a una solución de Visual Studio, deberá exportar a una nueva carpeta o [establecer manualmente esta funcionalidad en el AppxManifest de Visual Studio](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).
+> [!NOTE]
+> Si ya ha exportado el proyecto de Unity a una solución de Visual Studio, deberá exportar a una nueva carpeta o establecer manualmente [esta funcionalidad en el AppxManifest de Visual Studio](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).
 
 La asignación espacial también requiere un MaxVersionTested de al menos 10.0.10586.0:
 1. En Visual Studio, haga clic con el botón derecho en **Package. appxmanifest** en el explorador de soluciones y seleccione **Ver código** .
@@ -64,7 +65,7 @@ La asignación espacial también requiere un MaxVersionTested de al menos 10.0.1
 
 ## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a>Introducción a los componentes de asignación espacial integrados de Unity
 
-Unity ofrece 2 componentes para agregar fácilmente la asignación espacial a la aplicación, el **representador de asignación espacial** y el **Colisionador de asignación espacial**.
+Unity ofrece dos componentes para agregar fácilmente la asignación espacial a la aplicación, el **representador de asignación espacial** y el **Colisionador de asignación espacial**.
 
 ### <a name="spatial-mapping-renderer"></a>Representador de asignación espacial
 
@@ -84,7 +85,7 @@ Puede Agregar ambos componentes a la aplicación si desea visualizar y interactu
 
 Para usar estos dos componentes en la aplicación de Unity:
 1. Seleccione un GameObject en el centro del área en la que desea detectar mallas de superficie espacial.
-2. En la ventana del inspector, **agregue el elemento**  >  **XR**  >  **Colisionador de asignación espacial** del componente XR o el **representador de asignación espacial**.
+2. En la ventana del inspector, **agregue el elemento**  >    >  **Colisionador de asignación espacial** del componente XR o el **representador de asignación espacial**.
 
 Puede encontrar más detalles sobre cómo usar estos componentes en el sitio de <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">documentación de Unity</a>.
 
@@ -96,12 +97,12 @@ Estos componentes facilitan la tarea de arrastrar y colocar para empezar a traba
 
 ## <a name="using-the-low-level-unity-spatial-mapping-api"></a>Uso de la API de asignación espacial de Unity de bajo nivel
 
-Si necesita más control de los que obtiene del representador de asignación espacial y los componentes de Colisionador de asignación espacial, puede usar las API de script de asignación espacial de bajo nivel.
+Si necesita más control que el representador de asignación espacial y la oferta de componentes de Colisionador de asignación espacial, use las API de asignación espacial de bajo nivel.
 
 **Espacio de nombres:** *UnityEngine. XR. WSA*<br>
 **Tipos**: *SurfaceObserver*, *SurfaceChange*, *SurfaceData*, *SurfaceId*
 
-A continuación se describe el flujo sugerido para una aplicación que usa las API de asignación espacial.
+Hemos descrito el flujo sugerido para una aplicación que usa las API de asignación espacial en las secciones siguientes.
 
 ### <a name="set-up-the-surfaceobservers"></a>Configuración de los SurfaceObserver
 
@@ -135,8 +136,8 @@ private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bou
 
 ### <a name="handling-surface-changes"></a>Control de cambios de superficie
 
-Hay varios casos principales que se deben controlar. Se ha agregado & actualizado que puede usar la misma ruta de código y se ha quitado.
-* En los casos agregados & actualizados en el ejemplo, se agrega u obtiene el GameObject que representa esta malla del diccionario, se crea un struct SurfaceData con los componentes necesarios y, después, se llama a RequestMeshDataAsync para rellenar el GameObject con los datos de la malla y la posición en la escena.
+Hay varios casos principales que se deben tratar: agregar y actualizar, que pueden utilizar la misma ruta de acceso del código y quitarse.
+* En los casos agregados y actualizados, se agrega u obtiene el GameObject que representa esta malla del diccionario, se crea un struct SurfaceData con los componentes necesarios y, después, se llama a RequestMeshDataAsync para rellenar el GameObject con los datos de la malla y la posición en la escena.
 * En el caso de que se quite, se quita el GameObject que representa esta malla del diccionario y se destruye.
 
 ```cs
@@ -189,7 +190,7 @@ System.Collections.Generic.Dictionary<SurfaceId, GameObject> spatialMeshObjects 
 
 ### <a name="handling-data-ready"></a>Controlar los datos preparados
 
-El controlador OnDataReady recibe un objeto SurfaceData. Los objetos WorldAnchor, MeshFilter y (opcionalmente) MeshCollider que contiene reflejan el estado más reciente de la superficie espacial asociada. Opcionalmente, realice el análisis y/o el [procesamiento](../../design/spatial-mapping.md#mesh-processing) de los datos de la malla mediante el acceso al miembro de la malla del objeto MeshFilter. Represente la superficie espacial con la malla más reciente y, opcionalmente, Úsela para las colisiones físicas y raycasts. Es importante confirmar que el contenido de SurfaceData no es NULL.
+El controlador OnDataReady recibe un objeto SurfaceData. Los objetos WorldAnchor, MeshFilter y (opcionalmente) MeshCollider que contiene reflejan el estado más reciente de la superficie espacial asociada. Opcionalmente, analice y/o [procese](../../design/spatial-mapping.md#mesh-processing) los datos de la malla mediante el acceso al miembro de la malla del objeto MeshFilter. Represente la superficie espacial con la malla más reciente y, opcionalmente, Úsela para las colisiones físicas y raycasts. Es importante confirmar que el contenido de SurfaceData no es NULL.
 
 ### <a name="start-processing-on-updates"></a>Iniciar el procesamiento en las actualizaciones
 
@@ -214,13 +215,13 @@ void Start () {
 
 ## <a name="higher-level-mesh-analysis-spatialunderstanding"></a>Análisis de malla de nivel superior: SpatialUnderstanding
 
-<a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a> es una colección de código de utilidad útil para el desarrollo holográfica basado en las API de Unity de Holographic.
+<a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a> es una colección de código de utilidad para el desarrollo holográfica basado en las API holográficas de Unity.
 
 ### <a name="spatial-understanding"></a>Descripción espacial
 
-Al colocar hologramas en el mundo físico, a menudo es conveniente ir más allá de los planos de malla y de superficie de la asignación espacial. Cuando la selección de ubicación se realiza con procedimientos, es deseable un nivel más alto de comprensión del entorno. Normalmente, esto requiere tomar decisiones sobre qué es el suelo, el techo y las paredes. Además, la capacidad de optimizar con respecto a un conjunto de restricciones de selección de ubicación para determinar las ubicaciones físicas más deseables de los objetos holográficas.
+Al colocar hologramas en el mundo físico, a menudo es conveniente ir más allá de los planos de malla y de superficie de la asignación espacial. Cuando la selección de ubicación se realiza con procedimientos, es deseable un nivel más alto de comprensión del entorno. Normalmente, esto requiere tomar decisiones sobre qué es el suelo, el techo y las paredes. También tiene la capacidad de optimizarse frente a un conjunto de restricciones de selección de ubicación para determinar las ubicaciones físicas más adecuadas para los objetos holográficas.
 
-Durante el desarrollo de conkers y fragmentos jóvenes, Asobo Studios se enfrentó a este problema en el desarrollo de una sala de Solver para este fin. Cada uno de estos juegos tenía necesidades específicas del juego, pero compartimos la tecnología de comprensión espacial básica. La biblioteca HoloToolkit. SpatialUnderstanding encapsula esta tecnología, lo que permite encontrar rápidamente espacios vacíos en las paredes, colocar objetos en el límite superior, identificar colocadas para que el carácter quede sentado y una gran cantidad de consultas espaciales.
+Durante el desarrollo de conkers y fragmentos jóvenes, Asobo Studios se enfrentó a este problema al desarrollar una sala de Solver. Cada uno de estos juegos tenía necesidades específicas del juego, pero compartimos la tecnología de comprensión espacial básica. La biblioteca HoloToolkit. SpatialUnderstanding encapsula esta tecnología, lo que permite encontrar rápidamente espacios vacíos en las paredes, colocar objetos en el límite superior, identificar colocadas para que el carácter quede sentado y una gran cantidad de consultas espaciales.
 
 Se incluye todo el código fuente, lo que le permite personalizarlo según sus necesidades y compartir sus mejoras con la comunidad. El código de Solver de C++ se ha encapsulado en un archivo dll de UWP y expuesto a Unity con una colocación en recurso prefabricado dentro de MixedRealityToolkit.
 
@@ -230,7 +231,7 @@ Hay tres interfaces principales que expone el módulo: la topología para las co
 
 ### <a name="ray-casting"></a>Conversión de rayos
 
-Una vez que se ha analizado y finalizado el salón, las etiquetas se generan internamente para las superficies como el piso, el techo y las paredes. La función "PlayspaceRaycast" toma un rayo y devuelve si el rayo entra en conflicto con una superficie conocida y, en caso afirmativo, información sobre esa superficie en forma de "RaycastResult".
+Una vez completado el examen del salón, las etiquetas se generan internamente para las superficies como el piso, el techo y las paredes. La función "PlayspaceRaycast" toma un rayo y devuelve si el rayo entra en conflicto con una superficie conocida y, en caso afirmativo, información sobre esa superficie en forma de "RaycastResult".
 
 ```cpp
 struct RaycastResult
@@ -258,7 +259,7 @@ struct RaycastResult
 };
 ```
 
-Internamente, el Raycast se calcula con la representación calculada de 8cm con cubo voxel de Playspace. Cada voxel contiene un conjunto de elementos Surface con datos de topología procesados (también conocido como surfels). Se comparan los surfels contenidos en la celda voxel intersectada y la mejor coincidencia utilizada para buscar la información de la topología. Estos datos de topología contienen la etiqueta devuelta en forma de enumeración "SurfaceTypes", así como el área expuesta de la superficie intersectada.
+Internamente, el Raycast se calcula con la representación de voxel en cubo de 8 cm calculada de Playspace. Cada voxel contiene un conjunto de elementos Surface con datos de topología procesados (también conocido como surfels). Se comparan los surfels contenidos en la celda voxel intersectada y la mejor coincidencia utilizada para buscar la información de la topología. Estos datos de topología contienen la etiqueta devuelta en forma de enumeración "SurfaceTypes", así como el área expuesta de la superficie intersectada.
 
 En el ejemplo de Unity, el cursor convierte un rayo en cada fotograma. En primer lugar, con los colisionadores de Unity. En segundo lugar, en la representación mundial del módulo de comprensión. Y, por último, los elementos de la interfaz de usuario. En esta aplicación, la interfaz de usuario obtiene prioridad, después del resultado de comprensión y, por último, los colisionadores de Unity. El SurfaceType se muestra como texto junto al cursor.
 
@@ -267,7 +268,10 @@ En el ejemplo de Unity, el cursor convierte un rayo en cada fotograma. En primer
 
 ### <a name="topology-queries"></a>Consultas de topología
 
-En el archivo DLL, el administrador de topología controla el etiquetado del entorno. Como se mencionó anteriormente, gran parte de los datos se almacenan en surfels, contenidos en un volumen de voxel. Además, la estructura "PlaySpaceInfos" se usa para almacenar información sobre Playspace, incluida la alineación del mundo (más detalles a continuación), piso y alto del techo. La heurística se usa para determinar el piso, el techo y las paredes. Por ejemplo, la superficie horizontal más grande y más baja con un área de superficie superior a 1 m2 se considera el piso. Tenga en cuenta que la ruta de acceso de la cámara durante el proceso de digitalización también se usa en este proceso.
+En el archivo DLL, el administrador de topología controla el etiquetado del entorno. Como se mencionó anteriormente, gran parte de los datos se almacenan en surfels, contenidos en un volumen de voxel. Además, la estructura "PlaySpaceInfos" se usa para almacenar información sobre Playspace, incluida la alineación del mundo (más detalles a continuación), piso y alto del techo. La heurística se usa para determinar el piso, el techo y las paredes. Por ejemplo, la superficie horizontal mayor y menor con una superficie mayor que 1-m2 se considera la planta. 
+
+> [!NOTE]
+> La ruta de acceso de la cámara durante el proceso de digitalización también se usa en este proceso.
 
 Un subconjunto de las consultas expuestas por el administrador de topología se expone a través de la dll. Las consultas de topologías expuestas son las siguientes.
 
@@ -306,13 +310,14 @@ struct TopologyResult
 };
 ```
 
-Tenga en cuenta que en el ejemplo de Unity, cada una de estas consultas está vinculada a un botón en el panel de interfaz de usuario virtual. En el ejemplo se codifican los parámetros de cada una de estas consultas en valores razonables. Vea SpaceVisualizer.cs en el código de ejemplo para obtener más ejemplos.
+> [!NOTE]
+> En el ejemplo de Unity, cada una de estas consultas se vincula a un botón en el panel de interfaz de usuario virtual. En el ejemplo se codifican los parámetros de cada una de estas consultas en valores razonables. Vea SpaceVisualizer.cs en el código de ejemplo para obtener más ejemplos.
 
 ### <a name="shape-queries"></a>Consultas de forma
 
-Dentro del archivo dll, el analizador de formas ("ShapeAnalyzer_W") utiliza el analizador de topología para buscar coincidencias con las formas personalizadas definidas por el usuario. En el ejemplo de Unity se define un conjunto de formas y se exponen los resultados a través del menú de consulta en la aplicación, dentro de la pestaña forma. La intención es que el usuario pueda definir sus propias consultas de forma de objeto y hacer uso de ellas, según las necesidades de su aplicación.
+En el archivo dll, el analizador de formas ("ShapeAnalyzer_W") utiliza el analizador de topología para buscar coincidencias con las formas personalizadas definidas por el usuario. En el ejemplo de Unity se define un conjunto de formas y se exponen los resultados a través del menú de consulta en la aplicación, dentro de la pestaña forma. La intención es que el usuario pueda definir sus propias consultas de forma de objeto y hacer uso de ellas, según las necesidades de su aplicación.
 
-Tenga en cuenta que el análisis de formas solo funciona en superficies horizontales. Por ejemplo, un sofá se define mediante la superficie de asiento plana y la parte superior plana del sofá. La consulta de forma busca dos superficies de un tamaño, alto y intervalo de aspecto específicos, con las dos superficies alineadas y conectadas. Con la terminología de las API, el asiento del sofá y la parte superior son componentes de forma y los requisitos de alineación son restricciones de componentes de forma.
+El análisis de formas solo funciona en superficies horizontales. Por ejemplo, un sofá se define mediante la superficie de asiento plana y la parte superior plana del sofá. La consulta de forma busca dos superficies de un tamaño, alto y intervalo de aspecto específicos, con las dos superficies alineadas y conectadas. Con la terminología de las API, el asiento del sofá y la parte superior son componentes de forma y los requisitos de alineación son restricciones de componentes de forma.
 
 A continuación se muestra una consulta de ejemplo definida en el ejemplo de Unity (ShapeDefinition.cs) para objetos "sittable".
 
@@ -333,7 +338,7 @@ AddShape("Sittable", shapeComponents);
 
 Cada consulta de forma se define mediante un conjunto de componentes de forma, cada uno con un conjunto de restricciones de componentes y un conjunto de restricciones de forma que enumeran las dependencias entre los componentes. En este ejemplo se incluyen tres restricciones en una definición de componente único y no hay restricciones de forma entre los componentes (como solo hay un componente).
 
-En cambio, la forma sofá tiene dos componentes de forma y cuatro restricciones de forma. Tenga en cuenta que los componentes se identifican por su índice en la lista de componentes del usuario (0 y 1 en este ejemplo).
+En cambio, la forma sofá tiene dos componentes de forma y cuatro restricciones de forma. Los componentes se identifican por su índice en la lista de componentes del usuario (0 y 1 en este ejemplo).
 
 ```cs
 shapeConstraints = new List<ShapeConstraint>()
@@ -465,7 +470,7 @@ El flujo de análisis, controlado por el comportamiento "SpatialUnderstanding" l
 
 ### <a name="understanding-mesh"></a>Descripción de la malla
 
-La dll de comprensión almacena internamente el Playspace como una cuadrícula de cubos voxel de 8cm de tamaño. Durante la parte inicial del análisis, se completa un análisis de componentes principales para determinar los ejes de la habitación. Internamente, almacena su espacio voxel alineado con estos ejes. Una malla se genera aproximadamente cada segundo mediante la extracción de la isosuperficie del volumen voxel. 
+La dll de comprensión almacena internamente el Playspace como una cuadrícula de voxel cubos de tamaño de 8 cm. Durante la parte inicial del análisis, se completa un análisis de componentes principales para determinar los ejes de la habitación. Internamente, almacena su espacio voxel alineado con estos ejes. Una malla se genera aproximadamente cada segundo mediante la extracción de la isosuperficie del volumen voxel. 
 
 ![Malla generada generada a partir del volumen voxel](images/su-custommesh.jpg)<br>
 *Malla generada generada a partir del volumen voxel*
@@ -479,7 +484,7 @@ Para obtener más información sobre el uso de la asignación espacial con el ki
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido de puntos de control de desarrollo de Unity que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación: 
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de creación: 
 
 > [!div class="nextstepaction"]
 > [Texto](text-in-unity.md)
