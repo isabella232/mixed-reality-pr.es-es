@@ -6,18 +6,19 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Explorador de Galaxy, caso práctico, proyecto, ejemplo, MRTK, kit de herramientas de realidad mixta, Unity, aplicaciones de ejemplo, aplicaciones de ejemplo, código abierto, Microsoft Store, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: a58d07cd50679154fe68d3b8b7d424ea6cfbf39e
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 7ab439a1248895975c5ebff676862515ee79ecf0
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678624"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010306"
 ---
 # <a name="galaxy-explorer"></a>Explorador de la galaxia
 
 **Compartimos sus ideas. Estamos compartiendo el código.**
 
-El proyecto del explorador de la galaxia está preparado. Has compartido tus ideas con la comunidad, elegiste una aplicación, viste a un equipo compilarla y ahora puedes obtener el código fuente. Si tiene un dispositivo, el proyecto de Galaxy Explorer también está disponible para su descarga desde la tienda Windows para Microsoft HoloLens.
+El proyecto del explorador de la galaxia está preparado. Ha compartido sus ideas con la comunidad, ha elegido una aplicación, ha visto que un equipo la ha creado y ahora puede obtener el código fuente. Si tiene un dispositivo, el proyecto de Galaxy Explorer está disponible para su descarga desde la tienda Windows para Microsoft HoloLens.
+
 >[!TIP]
 >[Obtención del código](https://github.com/Microsoft/GalaxyExplorer) en github
 
@@ -92,7 +93,7 @@ Puede encontrar más información y lecciones sobre el desarrollo de Galaxy Expl
 ![Equipo de desarrollo de Galaxy Explorer](images/syiteampic.jpg)<br>
 *Equipo de desarrollo de Galaxy Explorer*
 
-Hemos aprendido que la creación del equipo adecuado es una de las inversiones más importantes que podríamos tomar. Decidimos organizar de forma similar a Game Studio para aquellos con los que está familiarizado con ese modelo de desarrollo. Hemos optado por tener once miembros principales del equipo para controlar el ámbito, ya que disponíamos de un período de tiempo fijo (creamos algo frío antes de la compilación el 30 de marzo de 2016).
+Hemos aprendido que la creación del equipo adecuado es una de las inversiones más importantes que pudimos tomar y decidió organizarse de forma similar a un estudio de juego para aquellos con los que está familiarizado con ese modelo de desarrollo. Hemos optado por tener 11 miembros principales del equipo para controlar el ámbito, ya que disponíamos de un período de tiempo fijo (creamos algo frío antes de la compilación el 30 de marzo de 2016).
 
 Para este proyecto, comenzamos con un productor, Jessica quién llevó a cabo la planeación, la revisión del progreso y el mantenimiento de todo el día. Es la que tiene un pelo rosa. Teníamos un director de diseño (Jon) y un Diseñador Senior (Peter). Contenían la visión creativa del explorador de Galaxy. Jon es el en gafas de la fila de front-end y Peter es el segundo de la derecha de la parte posterior.
 
@@ -100,10 +101,10 @@ Teníamos tres desarrolladores: BJ (entre Jon y Jessica), Mike (segunda fila a l
 
 Comenzamos con cuatro artistas a tiempo completo: un intérprete de concepto (Jedd, segundo de la izquierda en atrás), un modelador (Andy, tercer de derecha en atrás), un intérprete técnico (Alex (persona derecha)) y un animador (Steve (el más a la izquierda). Cada una de ellas hace más que eso, pero son sus responsabilidades principales.
 
-Tendremos un evaluador a tiempo completo: Lena, que probó nuestras compilaciones cada día, configure nuestras revisiones de compilación y revise las características a medida que se ponen en línea. Sin embargo, todos los usuarios probaron constantemente, ya que siempre examinamos nuestras compilaciones. Lena es el que se encuentra en el chaqueta de piel.
+Teníamos un evaluador a tiempo completo: Lena: quién probó nuestras compilaciones cada día, configuró nuestras revisiones de compilación y revisó las características a medida que se ponen en línea. Sin embargo, todos los usuarios probaron constantemente, ya que siempre examinamos nuestras compilaciones. Lena es el que se encuentra en el chaqueta de piel.
 
-Somos parte de un estudio más grande en Microsoft (piense en el equipo en el desarrollo que no es de juegos). También había una gran cantidad de personas involucradas: llamamos en el talento de nuestro Director de arte, el ingeniero de audio y el liderazgo de estudio con frecuencia a lo largo del proyecto, pero esas personas eran recursos compartidos con otros proyectos que el equipo más amplio tiene.
+Somos parte de un estudio más grande aquí en Microsoft (piense en el equipo en el desarrollo que no es de juegos). También había una gran cantidad de personas involucradas: llamamos en el talento de nuestro Director de arte, el ingeniero de audio y el liderazgo de estudio con frecuencia a lo largo del proyecto, pero esas personas eran recursos compartidos con otros proyectos que el equipo más amplio tiene.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Caso práctico: creación de una galaxia en una realidad mixta](../../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md)
 * [Repositorio de GitHub de Galaxy Explorer](https://github.com/Microsoft/GalaxyExplorer)

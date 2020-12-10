@@ -6,16 +6,16 @@ ms.author: vladkol
 ms.date: 05/20/2018
 ms.topic: article
 keywords: Unity, Mixed Reality, Native, xrdevice, spatialcoordinatesystem, holographicframe, holographiccamera, ispatialcoordinatesystem, iholographicframe, iholographiccamera, getnativeptr, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: a64deb46db82e6d0401a803e45dcbbd854476745
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 8dda1152da9705147ca3a057faadb9edd8428df6
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679934"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010596"
 ---
 # <a name="mixed-reality-native-objects-in-unity"></a>Objetos nativos de realidad mixta en Unity
 
-[Obtener un HolographicSpace](../native/getting-a-holographicspace.md) es lo que hace cada aplicación de realidad mixta antes de empezar a recibir los datos de la cámara y los fotogramas de representación. En Unity, el motor se encarga de esos pasos, ya que controla los objetos holográficas y las actualizaciones internamente como parte de su bucle de representación.
+Cada aplicación de realidad mixta [obtiene un HolographicSpace antes de](../native/getting-a-holographicspace.md) empezar a recibir los datos de la cámara y los fotogramas de representación. En Unity, el motor se encarga de estos pasos, el control de los objetos holográficas y la actualización interna como parte de su bucle de representación.
 
 Sin embargo, en escenarios avanzados, puede que necesite obtener acceso a los objetos nativos subyacentes, como <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera" target="_blank">HolographicCamera</a> y <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a>actuales. <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.html" target="_blank">UnityEngine. XR. XRDevice</a> es lo que proporciona acceso a estos objetos nativos.
 
@@ -49,13 +49,13 @@ HolographicFrameNativeData hfd = Marshal.PtrToStructure<HolographicFrameNativeDa
 
 ### <a name="unmarshaling-native-pointers"></a>Anular serialización de punteros nativos
 
-Si usa [Microsoft. Windows. MixedReality. DotNetWinRT](https://www.nuget.org/packages/Microsoft.Windows.MixedReality.DotNetWinRT) , puede construir un objeto administrado a partir de un puntero nativo mediante el `FromNativePtr()` método:
+Si usa [Microsoft. Windows. MixedReality. DotNetWinRT](https://www.nuget.org/packages/Microsoft.Windows.MixedReality.DotNetWinRT), puede construir un objeto administrado a partir de un puntero nativo mediante el `FromNativePtr()` método:
 
 ```cs
 var worldOrigin = Microsoft.Windows.Perception.Spatial.SpatialCoordinateSystem.FromNativePtr(hfd.ISpatialCoordinateSystemPtr);
 ```
 
-De lo contrario, use `Marshal.GetObjectForIUnknown()` y convierta al tipo deseado:
+De lo contrario, use `Marshal.GetObjectForIUnknown()` y convierta al tipo que desee:
 
 ```cs
 #if ENABLE_WINMD_SUPPORT
@@ -96,9 +96,10 @@ namespace NumericsConversion
 > [!NOTE]
 > Cambiar el estado de los objetos nativos recibidos a través de HolographicFrameNativeData puede producir artefactos de representación y comportamiento imprevisibles, especialmente si Unity también tiene por objeto el mismo estado.  Por ejemplo, no debe llamar a HolographicFrame. UpdateCurrentPrediction o, de lo contrario, la predicción de supuestos que Unity representa con ese marco no estará sincronizada con la que espera Windows, lo que reducirá la [estabilidad del holograma](../platform-capabilities-and-apis/hologram-stability.md).
 
-Puede usar datos de HolographicFrameNativeData cuando se necesita acceso a interfaces nativas para la representación o la depuración, en los complementos nativos o en el código de C#. 
+Si necesita tener acceso a interfaces nativas para la representación o la depuración, use los datos de HolographicFrameNativeData en los complementos nativos o en el código de C#. 
 
-Este es un ejemplo de cómo se puede usar HolographicFrameNativeData para obtener la predicción del fotograma actual para la hora de Photon. 
+A continuación se muestra un ejemplo de cómo se puede usar HolographicFrameNativeData para obtener la predicción del fotograma actual para la hora de Photon. 
+
 ```cs
 using System;
 using System.Runtime.InteropServices;

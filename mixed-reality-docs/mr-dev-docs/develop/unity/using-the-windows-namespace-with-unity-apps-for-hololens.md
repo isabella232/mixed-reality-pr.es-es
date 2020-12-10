@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, WinRT, Windows Mixed Reality, API, tutorial, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, API de realidad mixta
-ms.openlocfilehash: fb8d63a44a05f639becd96fc9198c57dd10aaafd
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: ff12df7eb41350fe1f842b3450f3532e4ab8ffa1
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679684"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010586"
 ---
 # <a name="winrt-apis-with-unity-for-hololens"></a>API de WinRT con Unity para HoloLens
 
@@ -19,7 +19,7 @@ En esta página se describe cómo hacer uso de las API de WinRT en el proyecto d
 
 ## <a name="mixed-reality-apis"></a>API de realidad mixta
 
-Un subconjunto centrado en la realidad mixta del Windows SDK se ha puesto a disposición en una proyección compatible con .NET Standard 2,0, que puede usar en el proyecto sin las directivas de preprocesador. Esto incluye la mayoría de las API de los espacios de nombres Windows. imception y Windows. UI. Input. Spatial, y puede expandirse para incluir más API en el futuro. Las API proyectadas se pueden usar mientras se ejecutan en el editor, lo que permite el uso del [modo de reproducción](https://docs.microsoft.com//windows/mixed-reality/unity-play-mode). Para usar esta proyección, realice las siguientes modificaciones en el proyecto:
+Un subconjunto centrado en la realidad mixta del Windows SDK se ha puesto a disposición en una proyección compatible con .NET Standard 2,0, que puede usar en el proyecto sin las directivas de preprocesador. La mayoría de las API de Windows. Los espacios de nombres imception y Windows. UI. Input. Spatial se incluyen y se pueden expandir para incluir API adicionales en el futuro. Las API proyectadas se pueden usar mientras se ejecutan en el editor, lo que permite el uso del [modo de reproducción](https://docs.microsoft.com//windows/mixed-reality/unity-play-mode). Para usar esta proyección, realice las siguientes modificaciones en el proyecto:
 
 1) Agregue una referencia al paquete de Nuget [Microsoft. Windows. MixedReality. DotNetWinRT](https://www.nuget.org/packages/Microsoft.Windows.MixedReality.DotNetWinRT) mediante [Nuget para Unity](https://github.com/GlitchEnzo/NuGetForUnity).
 2) Referencias de prefijo al `Windows` espacio de nombres con `Microsoft.` :
@@ -33,7 +33,7 @@ var worldOrigin = SpatialCoordinateSystem.FromNativePtr(unityWorldOriginPtr);
 
 ## <a name="conditionally-include-winrt-api-calls"></a>Inclusión condicional de llamadas API de WinRT
 
-Como alternativa, se pueden aprovechar las API de WinRT para los proyectos de Unity creados para el Plataforma universal de Windows y la plataforma Xbox One mediante directivas de preprocesador. cualquier código que escriba en scripts de Unity que tengan como destino las API de WinRT debe incluirse condicionalmente solo para esas compilaciones. 
+También puede usar las API de WinRT en proyectos de Unity creados para el Plataforma universal de Windows y la plataforma Xbox One mediante directivas de preprocesador. Cualquier código que escriba en scripts de Unity que tengan como destino las API de WinRT debe incluirse condicionalmente solo para esas compilaciones. 
 
 Esto puede hacerse a través de dos pasos en Unity:
 1) El nivel de compatibilidad de API debe establecerse en **.net 4,6** o **.net Standard 2,0** en la configuración del reproductor.
@@ -62,7 +62,7 @@ public class WinRTAPI : MonoBehaviour {
 
 ## <a name="edit-your-scripts-in-a-unity-c-project"></a>Editar los scripts en un proyecto de C# de Unity
 
-Al hacer doble clic en un script en el editor de Unity, se iniciará el script de forma predeterminada en un proyecto de editor. Parece que las API de WinRT son desconocidas porque el proyecto de Visual Studio no hace referencia al Windows Runtime. Además, la Directiva de **ENABLE_WINMD_SUPPORT** será undefined y cualquier código ajustado *#if* se omitirá hasta que compile el proyecto en una solución de Visual Studio para UWP.
+Al hacer doble clic en un script en el editor de Unity, se iniciará el script de forma predeterminada en un proyecto de editor. Parece que las API de WinRT son desconocidas porque el proyecto de Visual Studio no hace referencia al Windows Runtime. La directiva **ENABLE_WINMD_SUPPORT** no está definida y cualquier código ajustado *#if* se omite hasta que compile el proyecto en una solución de Visual Studio para UWP.
 
 ## <a name="see-also"></a>Consulte también
 * [Exportación y creación de una solución de Visual Studio para Unity](exporting-and-building-a-unity-visual-studio-solution.md)

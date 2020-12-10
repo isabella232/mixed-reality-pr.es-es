@@ -6,38 +6,38 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, pérdida de seguimiento, imagen de pérdida de seguimiento, sondeo, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 52b81069e6b9f94a2a6a4fb552be4234cf43d1f0
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 1df9f579abf43576284d065afa091bb26c631482
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678424"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010056"
 ---
 # <a name="tracking-loss-in-unity"></a>Pérdida de seguimiento en Unity
 
-Cuando el dispositivo no se encuentra en el mundo, la aplicación experimenta "pérdida de seguimiento". De forma predeterminada, Unity pausará el bucle de actualización y mostrará una imagen de bienvenida al usuario. Cuando se recupera el seguimiento, la imagen de la pantalla de presentación desaparece y el bucle de actualización continúa.
+Cuando el dispositivo no se encuentra en el mundo, la aplicación experimenta "pérdida de seguimiento". De forma predeterminada, Unity pausará el bucle de actualización y mostrará una imagen de bienvenida al usuario en cualquier momento en que se pierda el seguimiento. Una vez que se recupera el seguimiento, la imagen de la pantalla de presentación desaparece y el bucle de actualización continúa.
 
 Como alternativa, el usuario puede controlar manualmente esta transición mediante la opción de configuración. Todo el contenido parecerá quedar bloqueado durante la pérdida del seguimiento si no se hace nada para controlarlo.
 
 ## <a name="default-handling"></a>Control predeterminado
 
-De forma predeterminada, el bucle de actualización de la aplicación, así como todos los mensajes y eventos se detendrán durante la pérdida de seguimiento. Al mismo tiempo, se mostrará una imagen al usuario. Puede personalizar esta imagen; para ello, vaya a editar >Configuración->Player, haga clic en imagen de bienvenida y establezca la imagen de pérdida del seguimiento de holográfica.
+El bucle de actualización y todos los mensajes y eventos se detendrán por la duración de la pérdida de seguimiento de forma predeterminada. Al mismo tiempo, se mostrará una imagen al usuario. Puede personalizar esta imagen; para ello, vaya a editar >Configuración->Player, haga clic en imagen de bienvenida y establezca la imagen de pérdida del seguimiento de holográfica.
 
 ## <a name="manual-handling"></a>Control manual
 
-Para controlar manualmente la pérdida de seguimiento, debe ir a **Editar**  >  **configuración de proyecto**  >  **Player**  >  **plataforma universal de Windows de la pestaña Configuración**  >  de la **imagen de bienvenida**  >  de **Windows Holographic** y desactive "en el seguimiento de pérdida pausar y Mostrar imagen". Después, debe controlar los cambios de seguimiento con las API especificadas a continuación.
+Para controlar manualmente la pérdida de seguimiento, debe ir a **Editar**  >  **configuración de proyecto**  >    >  **plataforma universal de Windows de la pestaña Configuración**  >  de la **imagen de bienvenida**  >  de **Windows Holographic** y desactive "en el seguimiento de pérdida pausar y Mostrar imagen". Después, debe controlar los cambios de seguimiento con las API especificadas a continuación.
 
 **Espacio de nombres:** *UnityEngine. XR. WSA*<br>
 **Tipo:** *WorldManager*
 
 * El administrador mundial expone un evento para detectar el seguimiento perdido/ganado (*WorldManager. OnPositionalLocatorStateChanged*) y una propiedad para consultar el estado actual (*WorldManager. State*)
-* Cuando el estado de seguimiento no está activo, la cámara no parecerá que se traduzca en el mundo virtual, ni siquiera cuando el usuario se traduce. Esto significa que los objetos ya no se correspondan con ninguna ubicación física y todos aparecerán como cuerpo bloqueado.
+* Cuando el estado de seguimiento no está activo, la cámara no parece traducirse en el mundo virtual, ni siquiera cuando el usuario se traduce. Los objetos dejarán de corresponder a cualquier ubicación física y todos aparecerán como cuerpo bloqueado.
 
 Al controlar los cambios de seguimiento por su cuenta, debe sondear la propiedad State de cada fotograma o controlar el evento *OnPositionalLocatorStateChanged* .
 
 ### <a name="polling"></a>Sondeo
 
-El estado más importante es *PositionalLocatorState. Active* , lo que significa que el seguimiento es totalmente funcional. Cualquier otro estado solo producirá diferencias de rotación en la cámara principal. Por ejemplo:
+El estado más importante es *PositionalLocatorState. Active*, lo que significa que el seguimiento es totalmente funcional. Cualquier otro estado solo producirá diferencias de rotación en la cámara principal. Por ejemplo:
 
 ```cs
 void Update()
@@ -60,7 +60,7 @@ void Update()
 
 ### <a name="handling-the-onpositionallocatorstatechanged-event"></a>Controlar el evento OnPositionalLocatorStateChanged
 
-Como alternativa y más conveniente, también puede suscribirse a *OnPositionalLocatorStateChanged* para controlar las transiciones:
+Además, también puede suscribirse a *OnPositionalLocatorStateChanged* para controlar las transiciones:
 
 ```cs
 void Start()
@@ -81,5 +81,5 @@ private void WorldManager_OnPositionalLocatorStateChanged(PositionalLocatorState
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Control de la pérdida de seguimiento en DirectX](../native/coordinate-systems-in-directx.md#handling-tracking-loss)

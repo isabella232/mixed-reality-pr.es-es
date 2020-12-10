@@ -6,21 +6,21 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, punto de enfoque, plano de enfoque, plano de estabilización, punto de estabilización, Reproyección, LSR, búfer de profundidad, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 48c0d26e89124b9dbfc1d108354fb6e751e51783
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: d2708dcf39f1d2c67ab1abf69f8330f9dd536ab0
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678694"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010276"
 ---
 # <a name="focus-point-in-unity"></a>Punto de enfoque en Unity
 
 **Espacio de nombres:** *UnityEngine. XR. WSA*<br>
 **Tipo**: *HolographicSettings*
 
-Se puede establecer el [punto de enfoque](../platform-capabilities-and-apis/hologram-stability.md#reprojection) para proporcionar a HoloLens una sugerencia sobre cómo realizar mejor la estabilización en los hologramas que se muestran actualmente.
+Use el [punto de enfoque](../platform-capabilities-and-apis/hologram-stability.md#reprojection) para proporcionar a HoloLens una sugerencia sobre cómo estabilizar mejor los hologramas que se muestran actualmente.
 
-Si desea establecer el punto de enfoque en Unity, debe establecer cada fotograma mediante *HolographicSettings. SetFocusPointForFrame ()*. Si no se establece el punto de enfoque para un marco, se usará el plano de estabilización predeterminado.
+Si desea establecer el punto de enfoque en Unity, debe establecer cada fotograma mediante *HolographicSettings. SetFocusPointForFrame ()*. Cuando no se establece el punto de enfoque para un marco, se utiliza el plano de estabilización predeterminado.
 
 > [!NOTE]
 > De forma predeterminada, los nuevos proyectos de Unity tienen establecida la opción "habilitar el uso compartido del búfer de profundidad".  Con esta opción, una aplicación de Unity que se ejecute en un casco de escritorio envolvente o en una HoloLens que ejecute la actualización 2018 de abril de Windows 10 (RS4) o posterior enviará el búfer de profundidad a Windows para optimizar la estabilidad del holograma automáticamente, sin que la aplicación especifique un punto de enfoque:
@@ -48,11 +48,12 @@ void Update()
 }
 ```
 
-Tenga en cuenta que el código anterior puede acabar reduciendo la estabilidad del holograma si el objeto que tiene el foco termina detrás del usuario.  Este es el motivo por el que normalmente debería establecer "habilitar el uso compartido del búfer de profundidad" en lugar de especificar manualmente un punto de enfoque.
+> [!NOTE]
+> El código más anterior puede reducir la estabilidad de los hologramas si el objeto que tiene el foco termina detrás del usuario. Por lo general, se recomienda establecer **[Habilitar el uso compartido del búfer de profundidad](camera-in-unity.md#sharing-your-depth-buffers-with-windows)** en lugar de especificar manualmente un punto de enfoque.
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con el tema siguiente:
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con el tema siguiente:
 
 > [!div class="nextstepaction"]
 > [Pérdida de seguimiento](tracking-loss-in-unity.md)

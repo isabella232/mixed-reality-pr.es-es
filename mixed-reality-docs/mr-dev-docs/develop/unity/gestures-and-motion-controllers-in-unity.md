@@ -6,18 +6,18 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: gestos, controladores de movimiento, Unity, mira, entrada, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 122642bb7fc561e505098bca00b8bf65bfd4552e
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 8941fa05af21a7b2c7302f4a76f27cf38e1d5a65
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443577"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010326"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gestos y controladores de movimiento en Unity
 
 Hay dos formas clave de tomar medidas en su [mirada en Unity](gaze-in-unity.md), [gestos de mano](../../design/gaze-and-commit.md#composite-gestures) y [controladores de movimiento](../../design/motion-controllers.md) en HoloLens y HMDs envolventes. Puede tener acceso a los datos de los dos orígenes de entrada espacial a través de las mismas API en Unity.
 
-Unity proporciona dos formas principales de acceder a los datos de entrada espacial para Windows Mixed Reality, las API de *Input. GetButton/Input. GetAxis* comunes que funcionan en varios SDK de Unity XR y una API de *InteractionManager/GestureRecognizer* específica de Windows Mixed Reality que expone el conjunto completo de datos de entrada espaciales disponibles.
+Unity proporciona dos maneras principales de tener acceso a los datos de entrada espacial para Windows Mixed Reality. Las API de *Input. GetButton/Input. GetAxis* comunes funcionan en varios SDK de Unity XR, mientras que la API *InteractionManager/GestureRecognizer* específica de Windows Mixed Reality expone el conjunto completo de datos de entrada espacial.
 
 ## <a name="unity-xr-input-apis"></a>API de entrada de Unity XR
 
@@ -27,13 +27,13 @@ Puede encontrar más información sobre las [API de XR aquí](https://docs.unity
 
 ## <a name="unity-buttonaxis-mapping-table"></a>Tabla de asignación de ejes y botones de Unity
 
-Los identificadores de botón y de eje de la tabla siguiente se admiten en el administrador de entrada de Unity para controladores de movimiento de Windows Mixed Reality a través de las API *Input. GetButton/GetAxis* , mientras que la columna "específico de Windows Mr" hace referencia a las propiedades disponibles del tipo *InteractionSourceState* . Cada una de estas API se describe en detalle en las secciones siguientes.
+El administrador de entrada de Unity para los controladores de movimiento de Windows Mixed Reality es compatible con los identificadores de botón y de eje que se enumeran a continuación a través de las API *Input. GetButton/GetAxis* . La columna "específico de Windows MR" hace referencia a las propiedades disponibles fuera del tipo *InteractionSourceState* . Cada una de estas API se describe en detalle en las secciones siguientes.
 
 Las asignaciones de identificador de botón/eje para Windows Mixed Reality suelen coincidir con los identificadores del botón o del eje Oculus.
 
 Las asignaciones de identificador de botón/eje para Windows Mixed Reality difieren de las asignaciones de OpenVR de dos maneras:
 1. La asignación usa identificadores de Touchpad distintos del stick analógico para admitir controladores con thumbsticks y Touchpad.
-2. La asignación evita la sobrecarga de los identificadores de botón A y X de los botones de menú, para dejarlos disponibles para los botones de ABXY físicos.
+2. La asignación evita la sobrecarga de los identificadores de botón A y X de los botones de menú para dejarlos a disposición de los botones de ABXY físicos.
 
 <table>
 <tr>
@@ -104,15 +104,15 @@ If you're using the HP Reverb G2 controllers, refer to the table below for butto
 
 ## <a name="grip-pose-vs-pointing-pose"></a>Replanteamiento de control frente a pose de puntero
 
-Windows Mixed Reality admite controladores de movimiento en diversos factores de forma, con el diseño de cada controlador diferente en su relación entre la posición del usuario y la dirección de "avance" natural que deben usar las aplicaciones para apuntar al representar el controlador.
+Windows Mixed Reality admite controladores de movimiento en diversos factores de forma. El diseño de cada controlador difiere en su relación entre la posición del usuario y la dirección de "avance" natural que las aplicaciones deben usar para apuntar al representar el controlador.
 
 Para representar mejor estos controladores, hay dos tipos de supuestos que puede investigar para cada origen de interacción, la representación del **control** y la representación del **puntero**. Las coordenadas de reposición de control y de posición de puntero se expresan en todas las API de Unity en coordenadas globales de Unity.
 
 ### <a name="grip-pose"></a>Replanteamiento de control
 
-El **puño** representa la ubicación de la palma de una mano detectada por una HoloLens o la palma que contiene un controlador de movimiento.
+El **puño** representa la ubicación de la palma de los usuarios, detectada por HoloLens o manteniendo un controlador de movimiento.
 
-En los auriculares envolventes, la representación del puño es la que mejor se usa para representar **la mano del usuario** o **un objeto que se mantiene en la mano del usuario**, como un arma o un cañón. La representación de control también se usa al visualizar un controlador de movimiento, ya que el **modelo representable** proporcionado por Windows para un controlador de movimiento utiliza la representación del puño como su origen y el centro de rotación.
+En los auriculares envolventes, la representación del puño es la que mejor se usa para representar **la mano del usuario** o **un objeto mantenido en la mano del usuario**. El replanteamiento de control también se usa al visualizar un controlador de movimiento. El **modelo representable** proporcionado por Windows para un controlador de movimiento utiliza la representación del puño como su origen y centro de rotación.
 
 La pose de control se define específicamente de la siguiente manera:
 * La **posición del puño**: Palm centroide cuando mantiene el controlador de forma natural, se ajusta hacia la izquierda o derecha para centrar la posición dentro del control. En el controlador de movimiento de Windows Mixed Reality, esta posición generalmente se alinea con el botón de agarre.
@@ -126,7 +126,7 @@ Puede acceder a la representación del puño a través de la API de entrada entr
 
 La **pose de puntero** representa la punta del controlador que señala hacia delante.
 
-La representación de puntero proporcionada por el sistema se usa mejor para Raycast cuando se **representa el propio modelo de controlador**. Si está representando algún otro objeto virtual en lugar del controlador, como un cañón virtual, debe apuntar con un rayo más natural para ese objeto virtual, como un rayo que viaja a lo largo del barril del modelo de pistola definido por la aplicación. Dado que los usuarios pueden ver el objeto virtual y no el controlador físico, es probable que apunte con el objeto virtual sea más natural para los que usan su aplicación.
+La representación de puntero proporcionada por el sistema se usa mejor para Raycast cuando se **representa el propio modelo de controlador**. Si está representando algún otro objeto virtual en lugar del controlador, como un cañón virtual, debe apuntar con un rayo que sea más natural para ese objeto virtual, como un rayo que viaja a lo largo del barril del modelo de pistola definido por la aplicación. Dado que los usuarios pueden ver el objeto virtual y no el controlador físico, es probable que apunte con el objeto virtual sea más natural para los que usan su aplicación.
 
 Actualmente, la pose de puntero solo está disponible en Unity a través de la API específica de Windows MR, *sourceState. sourcePose. TryGetPosition/Rotation*, pasando *InteractionSourceNode. Pointer* como argumento.
 
@@ -134,7 +134,7 @@ Actualmente, la pose de puntero solo está disponible en Unity a través de la A
 
 Al igual que los auriculares, el controlador de movimiento de Windows Mixed Reality no requiere la configuración de sensores de seguimiento externos. En su lugar, el seguimiento de los controladores se realiza mediante sensores en el propio casco.
 
-Si el usuario mueve los controladores fuera del campo de vista del casco, en la mayoría de los casos Windows seguirá inferencia de las posiciones del controlador y las proporcionará a la aplicación. Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se quitarán de las posiciones de precisión aproximada.
+Si el usuario mueve los controladores fuera del campo de vista del casco, Windows continúa inferencia de las posiciones del controlador en la mayoría de los casos. Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se quitarán de las posiciones de precisión aproximada.
 
 En este punto, el sistema bloqueará el controlador al usuario, realizará un seguimiento de la posición del usuario a medida que se mueven, mientras se expone la verdadera orientación del controlador mediante sus sensores de orientación internos. Muchas aplicaciones que usan Controladores para apuntar a los elementos de la interfaz de usuario y activarlos pueden funcionar con normalidad mientras tienen una precisión aproximada sin que el usuario lo note.
 
@@ -158,15 +158,15 @@ Las aplicaciones que quieren tratar las posiciones de manera diferente según el
 </tr><tr>
 <td> <b>Precisión aproximada</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Ninguna posición</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: orange"> False</td>
+<td> <b>Ninguna posición</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: orange"> false</td>
 </tr>
 </table>
 
 Estos Estados de seguimiento del controlador de movimiento se definen de la siguiente manera:
-* **Alta precisión:** Aunque el controlador de movimiento está en el campo de vista del casco, normalmente proporcionará posiciones de alta precisión en función del seguimiento visual. Tenga en cuenta que un controlador de movimiento que deja momentáneamente el campo de vista o que se oculta momentáneamente de los sensores de auriculares (por ejemplo, por la otra mano del usuario) seguirá devolviendo supuestos de alta precisión durante un breve período de tiempo, basado en el seguimiento inerte del propio controlador.
+* **Alta precisión:** Aunque el controlador de movimiento está en el campo de vista del casco, normalmente proporcionará posiciones de alta precisión en función del seguimiento visual. Un controlador de movimiento que deja momentáneamente el campo de vista o que se oculta momentáneamente de los sensores de auriculares (por ejemplo, por la otra mano del usuario) seguirá devolviendo resultados de alta precisión durante un breve período de tiempo, en función del seguimiento inerte del propio controlador.
 * **Alta precisión (riesgo de pérdida):** Cuando el usuario mueve el controlador de movimiento más allá del borde del campo de vista del casco, el casco pronto no podrá realizar un seguimiento visual de la posición del controlador. La aplicación sabe cuándo el controlador ha alcanzado este límite de hiperapartados; para ello, vea el **SourceLossRisk** Reach 1,0. En ese momento, la aplicación puede optar por pausar los gestos del controlador que requieren un flujo estable de planteamientos de alta calidad.
 * **Precisión aproximada:** Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se quitarán de las posiciones de precisión aproximada. En este punto, el sistema bloqueará el controlador al usuario, realizará un seguimiento de la posición del usuario a medida que se mueven, mientras se expone la verdadera orientación del controlador mediante sus sensores de orientación internos. Muchas aplicaciones que usan Controladores para apuntar a los elementos de la interfaz de usuario y activarlos pueden funcionar de la manera normal, pero con una precisión aproximada sin que los usuarios lo noten. Las aplicaciones con requisitos de entrada más pesados pueden optar por detectar este descenso de **alta** precisión a una precisión **aproximada** mediante la inspección de la propiedad **PositionAccuracy** , por ejemplo, para proporcionar al usuario una hitbox más amplia en los destinos de la pantalla durante este tiempo.
-* **Ninguna posición:** Aunque el controlador puede funcionar con una precisión aproximada durante mucho tiempo, a veces el sistema sabe que incluso una posición bloqueada por el cuerpo no es significativa en este momento. Por ejemplo, un controlador que se acaba de activar puede que nunca se haya observado visualmente, o que un usuario pueda poner un controlador que recoja otro usuario. En ese momento, el sistema no proporcionará ninguna posición a la aplicación y *TryGetPosition* devolverá FALSE.
+* **Ninguna posición:** Aunque el controlador puede funcionar con una precisión aproximada durante mucho tiempo, a veces el sistema sabe que incluso una posición bloqueada por el cuerpo no es significativa en este momento. Por ejemplo, un controlador que se ha activado puede que nunca se haya observado visualmente, o que un usuario pueda poner un controlador que recoja otro usuario. En ese momento, el sistema no proporcionará ninguna posición a la aplicación y *TryGetPosition* devolverá FALSE.
 
 ## <a name="common-unity-apis-inputgetbuttongetaxis"></a>API de Unity comunes (Input. GetButton/GetAxis)
 
@@ -214,9 +214,10 @@ Vector3 leftPosition = InputTracking.GetLocalPosition(XRNode.LeftHand);
 Quaternion leftRotation = InputTracking.GetLocalRotation(XRNode.LeftHand);
 ```
 
-Tenga en cuenta que esto representa la representación del puño del controlador (donde el usuario mantiene el controlador), lo que resulta útil para representar un arma o un cañón en la mano del usuario, o un modelo del propio controlador.
-
-Tenga en cuenta que la relación entre esta postura de control y el representador de puntero (donde está señalando la punta del controlador) puede diferir entre los controladores. En este momento, el acceso a la pose de puntero del controlador solo es posible a través de la API de entrada específica de MR, que se describe en las secciones siguientes.
+> [!NOTE] 
+> El código anterior representa la representación del puño del controlador (donde el usuario contiene el controlador), que es útil para representar un arma o un cañón en la mano del usuario, o un modelo del propio controlador.
+> 
+> La relación entre esta postura de control y el representador de puntero (donde está señalando la punta del controlador) puede diferir entre los controladores. En este momento, el acceso a la pose de puntero del controlador solo es posible a través de la API de entrada específica de MR, que se describe en las secciones siguientes.
 
 ## <a name="windows-specific-apis-xrwsainput"></a>API específicas de Windows (XR. WSA. Entradas
 
@@ -265,7 +266,7 @@ Cada *InteractionSourceState* que recibe representa un origen de interacción en
 
 ### <a name="polling-for-forward-predicted-rendering-poses"></a>Sondeo de representación de representación de predicción de reenvío
 
-* Cuando se realiza un sondeo de los datos de origen de interacción de las manos y los controladores, las supuestos que obtiene son supuestos predichos en el momento en que las fotos de este fotograma llegarán a los ojos del usuario.  Estas supuestos predichos se utilizan mejor para **representar** el controlador o un objeto mantenido en cada fotograma.  Si el destino es una determinada pulsación o versión con el controlador, será más preciso si usa las API de eventos históricos que se describen a continuación.
+* Cuando se realiza un sondeo de los datos de origen de interacción de las manos y los controladores, las supuestos que obtiene son supuestos predichos en el momento en que las fotos de este fotograma llegarán a los ojos del usuario.  Los planteamientos de predicción se usan mejor para **representar** el controlador o un objeto mantenido en cada fotograma.  Si el destino es una determinada pulsación o versión con el controlador, será más preciso si usa las API de eventos históricos que se describen a continuación.
 
    ```cs
    var sourcePose = interactionSourceState.sourcePose;
@@ -334,10 +335,10 @@ Los eventos de origen de interacción disponibles son:
 ### <a name="events-for-historical-targeting-poses-that-most-accurately-match-a-press-or-release"></a>Los eventos de destinatarios históricos suponen que coinciden con más precisión con una prensa o una versión
 
 Las API de sondeo descritas anteriormente proporcionan a la aplicación las supuestos predecidas.  Aunque los planteamientos predichos son idóneos para representar el controlador o un objeto de dispositivo de mano virtual, los planteamientos futuros no son óptimos para el destino, por dos motivos clave:
-* Cuando el usuario presiona un botón en un controlador, puede haber 20 ms de la latencia inalámbrica a través de Bluetooth antes de que el sistema reciba la prensa.
-* A continuación, si usa una pose de predicción, se aplicarían otros 10 20 ms de predicción hacia delante para dirigirse a la hora en que las fotos del fotograma actual llegarán a los ojos del usuario.
+* Cuando el usuario presiona un botón en un controlador, puede haber aproximadamente 20 ms de latencia inalámbrica a través de Bluetooth antes de que el sistema reciba la prensa.
+* A continuación, si usa una pose de predicción, se aplicará otro 10-20 ms de predicción hacia delante para dirigirse a la hora en que las fotos del fotograma actual llegarán a los ojos del usuario.
 
-Esto significa que el sondeo le proporciona una postura de origen o un representador de cabezales de 30 40 ms hacia delante desde donde se reenvían el encabezado del usuario y las manecillas al presionar o soltar.  Para la entrada de la mano de HoloLens, aunque no hay ningún retraso de la transmisión inalámbrica, hay un retraso de procesamiento similar para detectar la prensa.
+Esto significa que el sondeo le proporciona una pose de origen o un representador de cabeza que es 30-40 ms hacia delante desde donde el encabezado del usuario y las manecillas se han vuelto realmente cuando se produjo la prensa o la versión.  Para la entrada de la mano de HoloLens, aunque no hay ningún retraso de la transmisión inalámbrica, hay un retraso de procesamiento similar para detectar la prensa.
 
 Para establecer como destino con precisión en función de la intención original del usuario de una mano o de un controlador, debe usar la representación de origen histórica o la representación del encabezado de ese evento de entrada *InteractionSourcePressed* o *InteractionSourceReleased* .
 
@@ -458,7 +459,7 @@ GestureRecognizer recognizer = new GestureRecognizer();
 
 ### <a name="specify-which-gestures-to-watch-for"></a>Especificar los gestos que se van a inspeccionar
 
-Especifique qué gestos le interesan a través de *SetRecognizableGestures ()*:
+Especifique los gestos que le interesan a través de *SetRecognizableGestures ()*:
 
 ```cs
 recognizer.SetRecognizableGestures(GestureSettings.Tap | GestureSettings.Hold);
@@ -466,7 +467,7 @@ recognizer.SetRecognizableGestures(GestureSettings.Tap | GestureSettings.Hold);
 
 ### <a name="subscribe-to-events-for-those-gestures"></a>Suscripción a eventos para esos gestos
 
-Suscríbase a eventos de los gestos que le interesen.
+Suscríbase a eventos para los gestos que le interesan.
 
 ```cs
 void Start()
@@ -483,7 +484,7 @@ void Start()
 
 ### <a name="start-capturing-gestures"></a>Iniciar la captura de gestos
 
-De forma predeterminada, un *GestureRecognizer* no supervisa la entrada hasta que se llama a *StartCapturingGestures ()* . Es posible que se genere un evento de gesto después de que se llame a *StopCapturingGestures ()* si la entrada se realizó antes que el marco en el que se procesó *StopCapturingGestures ()* . El *GestureRecognizer* recordará si está activado o desactivado durante el fotograma anterior en el que se ha producido realmente el gesto y, por tanto, es confiable iniciar y detener la supervisión de gestos según el destino de la mirada a este fotograma.
+De forma predeterminada, un *GestureRecognizer* no supervisa la entrada hasta que se llama a *StartCapturingGestures ()* . Es posible que se genere un evento de gesto después de que se llame a *StopCapturingGestures ()* si la entrada se realizó antes que el marco en el que se procesó *StopCapturingGestures ()* . El *GestureRecognizer* recordará si está activado o desactivado durante el fotograma anterior en el que se produjo realmente el gesto, por lo que es confiable iniciar y detener la supervisión de gestos según el destino de la mirada a este fotograma.
 
 ```cs
 recognizer.StartCapturingGestures();
@@ -519,26 +520,26 @@ void OnDestroy()
 Para representar los controladores de movimiento en la aplicación que coincidan con las controladoras físicas que están manteniendo los usuarios y articular a medida que se presionan varios botones, puede usar **MotionController recurso prefabricado** en el [Kit de herramientas de realidad mixta](https://github.com/Microsoft/MixedRealityToolkit-Unity/).  Este recurso prefabricado carga dinámicamente el modelo de glTF correcto en tiempo de ejecución desde el controlador de controlador de movimiento instalado del sistema.  Es importante cargar estos modelos dinámicamente en lugar de importarlos manualmente en el editor, de modo que la aplicación muestre modelos 3D físicamente precisos para cualquier controlador actual y futuro que puedan tener los usuarios.
 
 1. Siga las instrucciones [Introducción](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/GettingStarted.md) para descargar el kit de herramientas de realidad mixta y agréguelo al proyecto de Unity.
-2. Si ha reemplazado la cámara con el recurso prefabricado de *MixedRealityCameraParent* como parte de los pasos introducción, está listo para empezar.  Ese recurso prefabricado incluye la representación del controlador de movimiento.  En caso contrario, agregue *assets/HoloToolkit/INPUT/Prefabs/MotionControllers. recurso prefabricado* a la escena desde el panel Proyecto.  Querrá agregar ese recurso prefabricado como elemento secundario del objeto primario que usa para mover la cámara cuando el usuario teletransporta dentro de la escena, de modo que los controladores entren junto con el usuario.  Si la aplicación no implica teleportabilidad, solo tiene que agregar el recurso prefabricado en la raíz de la escena.
+2. Si ha reemplazado la cámara con el recurso prefabricado de *MixedRealityCameraParent* como parte de los pasos introducción, está listo para empezar.  Ese recurso prefabricado incluye la representación del controlador de movimiento.  En caso contrario, agregue *assets/HoloToolkit/INPUT/Prefabs/MotionControllers. recurso prefabricado* a la escena desde el panel Proyecto.  Querrá agregar ese recurso prefabricado como elemento secundario del objeto primario que usa para mover la cámara cuando el usuario teletransporta dentro de la escena, de modo que los controladores entren junto con el usuario.  Si la aplicación no implica teletransportarse, solo tiene que agregar el recurso prefabricado en la raíz de la escena.
 
 ## <a name="throwing-objects"></a>Producir objetos
 
-La generación de objetos en realidad es un problema más difícil, por lo que puede parecer al principio. Al igual que con la mayoría de las interacciones basadas físicamente, al iniciar el juego funciona de forma inesperada, es evidente de inmediato e interrumpe la inmersión. Hemos dedicado mucho tiempo a pensar en el modo de representar un comportamiento de lanzamiento que se ha corregido físicamente y han llegado unas cuantas instrucciones, habilitadas a través de las actualizaciones de nuestra plataforma, que nos gustaría compartir con usted.
+Lanzar objetos en realidad virtual es un problema más difícil de lo que puede parecer al principio. Al igual que con la mayoría de las interacciones basadas físicamente, al iniciar el juego funciona de forma inesperada, es evidente de inmediato e interrumpe la inmersión. Hemos dedicado mucho tiempo a pensar en el modo de representar un comportamiento de lanzamiento que se ha corregido físicamente y han llegado algunas directrices, habilitadas a través de las actualizaciones de nuestra plataforma, que nos gustaría compartir con usted.
 
 Puede encontrar un ejemplo de cómo se recomienda implementar el lanzamiento [aquí](https://github.com/keluecke/MixedRealityToolkit-Unity/blob/master/External/Unitypackages/ThrowingStarter.unitypackage). Este ejemplo sigue estas cuatro instrucciones:
-* **Use la *velocidad* del controlador en lugar de la posición**. En la actualización de noviembre de Windows, se presentó un cambio de comportamiento en el [Estado de seguimiento posicional ' ' aproximado](../../design/motion-controllers.md#controller-tracking-state)' '. Cuando se encuentra en este estado, se seguirá informando de la información de velocidad de la controladora mientras creemos que es de alta precisión, lo que suele ser más largo que la posición.
+* **Use la *velocidad* del controlador en lugar de la posición**. En la actualización de noviembre de Windows, se presentó un cambio de comportamiento en el [Estado de seguimiento posicional ' ' aproximado](../../design/motion-controllers.md#controller-tracking-state)' '. Cuando se encuentra en este estado, se seguirá informando de la información de velocidad de la controladora mientras creemos su alta precisión, que suele ser mayor que la posición es una precisión alta.
 * **Incorpore la *velocidad angular* del controlador**. Esta lógica está contenida en el `throwing.cs` archivo en el `GetThrownObjectVelAngVel` método estático, dentro del paquete vinculado anteriormente:
    1. A medida que se conserva la velocidad angular, el objeto producido debe mantener la misma velocidad angular que tenía en el momento del lanzamiento: `objectAngularVelocity = throwingControllerAngularVelocity;`
-   2. Dado que es probable que el centro de la masa del objeto iniciado no sea el origen de la representación del puño, es probable que tenga una velocidad diferente a la del controlador en el marco de referencia del usuario. La parte de la velocidad del objeto aportada de esta manera es la velocidad tangencial instantánea del centro de la masa del objeto producido en torno al origen del controlador. Esta velocidad tangencial es el producto cruzado de la velocidad angular del controlador con el vector que representa la distancia entre el origen del controlador y el centro de la masa del objeto iniciado.
+   2. Dado que es probable que el centro de la masa del objeto iniciado no sea el origen de la representación del puño, es probable que tenga una velocidad distinta a la del controlador en el marco de referencia del usuario. La parte de la velocidad del objeto aportada de esta manera es la velocidad tangencial instantánea del centro de la masa del objeto producido en torno al origen del controlador. Esta velocidad tangencial es el producto cruzado de la velocidad angular del controlador con el vector que representa la distancia entre el origen del controlador y el centro de la masa del objeto iniciado.
 
       ```cs
       Vector3 radialVec = thrownObjectCenterOfMass - throwingControllerPos;
       Vector3 tangentialVelocity = Vector3.Cross(throwingControllerAngularVelocity, radialVec);
       ```
 
-   3. La velocidad total del objeto generado es, por tanto, la suma de la velocidad del controlador y esta velocidad tangencial: `objectVelocity = throwingControllerVelocity + tangentialVelocity;`
+   3. La velocidad total del objeto generado es la suma de la velocidad del controlador y esta velocidad tangencial: `objectVelocity = throwingControllerVelocity + tangentialVelocity;`
 
-* **Preste mucha atención a la *hora* a la que se aplica la velocidad**. Cuando se presiona un botón, puede tardar hasta 20 ms para ese evento a pasar a través de Bluetooth al sistema operativo. Esto significa que, si sondea un cambio de estado del controlador de presionado a no presionado, o viceversa, el controlador de la información de la que se obtiene se obtiene en realidad de este cambio en el estado. Además, la causa del controlador presentada por nuestra API de sondeo se prevé para reflejar una posible suposición en el momento en que se muestra el fotograma, lo que podría ser más 20 MS en el futuro. Esto es adecuado para la *representación* de objetos retenidos, pero proporciona un problema de tiempo para el *objetivo* del objeto a medida que calculamos la trayectoria en el momento en que el usuario lanzó su lanzamiento. Afortunadamente, con la actualización de noviembre, cuando se envía un evento de Unity, como *InteractionSourcePressed* o *InteractionSourceReleased* , el estado incluye los datos del representador histórico cuando el botón se ha presionado o liberado realmente.  Para obtener la representación del controlador y el destino del controlador más precisos durante las throws, debe usar correctamente el sondeo y los eventos, según corresponda:
+* **Preste mucha atención a la *hora* a la que se aplica la velocidad**. Cuando se presiona un botón, puede tardar hasta 20 ms para ese evento en pasar a través de Bluetooth al sistema operativo. Esto significa que, si sondea un cambio de estado del controlador de presionado a no presionado o viceversa, el controlador de la información de la forma que se obtiene se encuentra realmente por encima de este cambio en el estado. Además, la causa del controlador presentada por nuestra API de sondeo se predice para reflejar una posible suposición en el momento en que se muestra el fotograma, lo que podría ser superior a 20 MS en el futuro. Esto es adecuado para la *representación* de objetos retenidos, pero proporciona un problema de tiempo para el *objetivo* del objeto a medida que calculamos la trayectoria en el momento en que el usuario liberó el lanzamiento. Afortunadamente, con la actualización de noviembre, cuando se envía un evento de Unity, como *InteractionSourcePressed* o *InteractionSourceReleased* , el estado incluye los datos de la representación histórica al presionar o soltar el botón.  Para obtener la representación del controlador y el destino del controlador más precisos durante las throws, debe usar correctamente el sondeo y los eventos, según corresponda:
    * Para que el **controlador presente** cada fotograma, la aplicación debe colocar el *GameObject* del controlador en la representación del controlador de predicción para la hora de Photon del marco actual.  Estos datos se obtienen de las API de sondeo de Unity como *[XR. InputTracking. GetLocalPosition](https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html)* o *[XR. WSA. Input. InteractionManager. GetCurrentReading](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.GetCurrentReading.html)*.
    * En el caso de que el **controlador se dirija** a una imprenta o una versión, la aplicación debe Raycast y calcular las trayectorias en función de la suposición del controlador histórico para ese evento Press o Release.  Estos datos se obtienen de las API de eventos de Unity, como *[InteractionManager. InteractionSourcePressed](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.InteractionSourcePressed.html)*.
 * **Utilice la postura de control**. La velocidad y la velocidad de angular se registran en relación con la pose de control, no con la función de puntero.
@@ -564,7 +565,7 @@ Los tutoriales paso a paso, con ejemplos de personalización más detallados, es
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido de puntos de control de desarrollo de Unity que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de creación:
 
 > [!div class="nextstepaction"]
 > [Seguimiento de manos y ocular](hand-eye-in-unit.md)

@@ -1,24 +1,24 @@
 ---
 title: Tabla periódica de los elementos
-description: La tabla periódica de los elementos es una aplicación de ejemplo de código abierto de los laboratorios de diseño de la realidad mixta de Microsoft, donde puede aprender a diseñar una matriz de objetos en el espacio 3D con varios tipos de superficie mediante una colección de objetos.
+description: La tabla periódica de los elementos es una aplicación de ejemplo de código abierto de los laboratorios de diseño de la realidad mixta de Microsoft. Aprende cómo diseñar una matriz de objetos en el espacio 3D con distintos tipos de superficie mediante una colección de objetos.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, aplicación de ejemplo, controles, MRTK, kit de herramientas de realidad mixta, Unity, aplicaciones de ejemplo, aplicaciones de ejemplo, código abierto, Microsoft Store, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 4b85631fb044ee0b24c003f7808fd0455b87deec
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: a4099c889fee886e63d3a8b773398a250621f26e
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677684"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010186"
 ---
 # <a name="periodic-table-of-the-elements"></a>Tabla periódica de los elementos
 
 >[!NOTE]
 >En este artículo se describe un ejemplo de exploración que hemos creado en los [laboratorios de diseño de realidad mixta](https://github.com/Microsoft/MRDesignLabs_Unity), un lugar donde compartimos nuestros aprendizajes sobre y sugerencias para el desarrollo de aplicaciones de realidad mixta. Los artículos y el código relacionados con el diseño evolucionarán a medida que se realizan nuevas detecciones.
 
-[La tabla periódica de los elementos](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) es una aplicación de ejemplo de código abierto de los laboratorios de diseño de la realidad mixta de Microsoft. Con este proyecto, puede obtener información sobre cómo diseñar una matriz de objetos en el espacio 3D con varios tipos de superficie mediante una **[colección de objetos](../../design/object-collection.md)**. También aprenderá a crear objetos interactivos que respondan a entradas estándar de HoloLens. Puede usar los componentes de este proyecto para crear su propia experiencia de aplicación de realidad mixta.
+[La tabla periódica de los elementos](https://github.com/Microsoft/MRDesignLabs_Unity_PeriodicTable) es una aplicación de ejemplo de código abierto de los laboratorios de diseño de la realidad mixta de Microsoft. Obtenga información sobre cómo diseñar una matriz de objetos en el espacio 3D con varios tipos de superficie mediante una **[colección de objetos](../../design/object-collection.md)**. También aprenderá a crear objetos interactivos que respondan a entradas estándar de HoloLens. Puede usar los componentes de este proyecto para crear su propia experiencia de aplicación de realidad mixta.
 
 ![Tabla de puntos de la aplicación Elements](images/640px-periodictable-hero.jpg)
 
@@ -31,9 +31,9 @@ Grabado con HoloLens 2 mediante la captura de realidad mixta
 
 La tabla periódica de los elementos visualiza los elementos químicos y cada una de sus propiedades en un espacio 3D. Incorpora las interacciones básicas de HoloLens, como mira fijamente y el aire TAP. Los usuarios pueden obtener información sobre los elementos con modelos 3D animados. Pueden comprender visualmente el shell de electrones de un elemento y su núcleo, que se compone de protoneladas y neutrons.
 
-## <a name="background"></a>Fondo
+## <a name="background"></a>Información previa
 
-Después de la primera vez que se experimentó HoloLens, una aplicación de tabla periódica era una idea de la que quería experimentar en realidad mixta. Puesto que cada elemento tiene muchos puntos de datos que se muestran con texto, pensé que sería una buena cuestión para explorar la composición tipográfica en un espacio 3D. Ser capaz de visualizar el modelo de electrones del elemento fue otra parte interesante de este proyecto.
+Después de haber experimentado HoloLens, sabía que quería experimentar con una aplicación de tabla periódica en realidad mixta. Puesto que cada elemento tiene muchos puntos de datos que se muestran con texto, pensé que sería una buena cuestión para explorar la composición tipográfica en un espacio 3D. Dar a los usuarios la oportunidad de visualizar el modelo de electrones del elemento fue otra parte interesante de este proyecto.
 
 ## <a name="design"></a>Diseño
 
@@ -55,13 +55,13 @@ El usuario puede cambiar el tipo de superficie mediante la pulsación de los bot
 
 ### <a name="interactable-object-button"></a>Objeto interactuable (botón)
 
-[Objeto interactuable](../../design/interactable-object.md) es un objeto que puede responder a entradas básicas de HoloLens. Se proporciona como recurso prefabricado/script, que se puede aplicar fácilmente a cualquier objeto. Por ejemplo, puede hacer que una copa de café en la escena sea interactuable y responder a entradas como, por ejemplo, gestos de toque, pulsación de aire, navegación y manipulación. [Más información](../../design/interactable-object.md)
+El [objeto interactuable](../../design/interactable-object.md) es un objeto, que puede responder a entradas básicas de HoloLens. Se proporciona como recurso prefabricado/script, que se puede aplicar fácilmente a cualquier objeto. Por ejemplo, puede hacer que una copa de café en la escena sea interactuable y responder a entradas como, por ejemplo, gestos de mira, navegación y manipulación. [Más información](../../design/interactable-object.md)
 
 ![objeto nteractable](images/640px-periodictable-interactableobject.jpg)
 
 ### <a name="object-collection"></a>Colección de objetos
 
-[Colección de objetos](../../design/object-collection.md) es un objeto que ayuda a diseñar varios objetos en varias formas. Admite plano, cilindro, esfera y dispersión. Puede configurar propiedades adicionales como RADIUS, el número de filas y el espaciado. [Más información](../../design/object-collection.md)
+[Colección de objetos](../../design/object-collection.md) es un objeto, que le ayuda a diseñar varios objetos en varias formas. Admite plano, cilindro, esfera y dispersión. Puede configurar propiedades adicionales como RADIUS, el número de filas y el espaciado. [Más información](../../design/object-collection.md)
 
 ![Colección de objetos](images/640px-periodictable-collections.jpg)
 

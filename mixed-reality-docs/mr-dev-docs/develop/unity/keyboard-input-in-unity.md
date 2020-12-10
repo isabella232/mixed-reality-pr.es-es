@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: teclado, entrada, Unity, touchscreenkeyboard, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: aa9bb3059a8d0cc5b829bf14d92928511259b7f9
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 613c9327b517205c340555b6423a3809906f9b9f
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677424"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010516"
 ---
 # <a name="keyboard-input-in-unity"></a>Entrada desde teclado en Unity
 
@@ -24,11 +24,11 @@ Unity proporciona la clase *[TouchScreenKeyboard](https://docs.unity3d.com/Scrip
 
 ## <a name="hololens-system-keyboard-behavior-in-unity"></a>Comportamiento del teclado del sistema HoloLens en Unity
 
-En HoloLens, el *TouchScreenKeyboard* aprovecha el teclado en pantalla del sistema. El teclado en pantalla del sistema no se puede superponer sobre una vista volumétrica, por lo que Unity tiene que crear una vista XAML 2D secundaria para mostrar el teclado y volver a la vista volumétrica una vez que se ha enviado la entrada. El flujo de usuario es similar al siguiente:
+En HoloLens, el *TouchScreenKeyboard* aprovecha el teclado en pantalla del sistema. El teclado en pantalla del sistema no se puede superponer sobre una vista volumétrica. Unity tiene que crear una vista XAML 2D secundaria para mostrar el teclado y volver a la vista volumétrica una vez que se ha enviado la entrada. El flujo de usuario es similar al siguiente:
 1. El usuario realiza una acción que hace que el código de la aplicación llame a *TouchScreenKeyboard*
     * La aplicación es responsable de pausar el estado de la aplicación antes de llamar a *TouchScreenKeyboard*
     * La aplicación puede finalizar antes de volver a cambiar a la vista volumétrica.
-2. Unity cambia a una vista XAML 2D que se coloca automáticamente en el mundo.
+2. Unity cambia a una vista XAML 2D, que se coloca en el mundo.
 3. El usuario escribe texto mediante el teclado del sistema y lo envía o cancela.
 4. Unity vuelve a cambiar a la vista volumétrica
     * La aplicación es responsable de reanudar el estado de la aplicación cuando se realiza la *TouchScreenKeyboard*
@@ -49,7 +49,7 @@ Hay seis vistas de teclado diferentes disponibles:
 El teclado del sistema HoloLens solo está disponible para las aplicaciones de Unity que se exportan con el "tipo de compilación de UWP" establecido en "XAML". Hay inconvenientes que debe realizar al elegir "XAML" como "tipo de compilación de UWP" sobre "D3D". Si no está familiarizado con esos inconvenientes, puede que desee explorar una [solución de entrada alternativa](#alternative-keyboard-options) al teclado del sistema.
 1. Abra el menú **archivo** y seleccione **configuración de compilación..** .
 2. Asegúrese de que la **plataforma** esté establecida en **tienda Windows**, que el **SDK** esté establecido en **universal 10** y establezca el **tipo de compilación de UWP** en **XAML**.
-3. En el cuadro de diálogo **configuración de compilación** , haga clic en el botón **configuración del reproductor...**
+3. En el cuadro de diálogo **configuración de compilación** , seleccione el botón **configuración del reproductor...**
 4. Seleccionar la **configuración de la pestaña de la tienda Windows**
 5. Expandir el grupo **otras configuraciones**
 6. En la sección **representación** , active la casilla **compatibilidad con realidad virtual** para agregar una nueva lista de **dispositivos de realidad virtual**
@@ -71,7 +71,7 @@ public static string keyboardText = "";
 
 ### <a name="invoke-the-keyboard"></a>Invocar el teclado
 
-Cuando se produce un evento que solicita una entrada de teclado, llame a una de estas funciones según el tipo de entrada que desee. Tenga en cuenta que el título se especifica en el parámetro textPlaceholder.
+Cuando se produce un evento que solicita una entrada de teclado, llame a una de estas funciones según el tipo de entrada que desee mediante el título en el parámetro textPlaceholder.
 
 ```cs
 // Single-line textbox
@@ -118,7 +118,7 @@ Las alternativas actuales para aprovechar el teclado del sistema mediante Unity 
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede pasar a cualquier [tema](unity-development-overview.md#3-platform-capabilities-and-apis) o ir directamente a la implementación de la aplicación en un dispositivo o emulador.
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con cualquier [tema](unity-development-overview.md#3-platform-capabilities-and-apis) o ir directamente a la implementación de la aplicación en un dispositivo o emulador.
 
 > [!div class="nextstepaction"]
 > [Implementación en HoloLens o con auriculares de Windows Mixed Reality](../platform-capabilities-and-apis/using-visual-studio.md)
