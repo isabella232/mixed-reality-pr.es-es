@@ -1,22 +1,20 @@
 ---
 title: 6. Empaquetado e implementación en el dispositivo o emulador
-description: Parte 6 de 6 de una serie de tutoriales para crear una aplicación de ajedrez sencilla con Unreal Engine 4 y el complemento UX Tools de Mixed Reality Toolkit
+description: Parte 6 de 6 de una serie de tutoriales para compilar una aplicación de ajedrez con Unreal Engine 4 y el complemento UX Tools de Mixed Reality Toolkit
 author: hferrone
 ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: cbdbf87d75dcfc56c8eea52f7dff4a646f3b6a5d
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 4319b1171090b8ca7a320e98867bfb3635bab005
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679824"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609496"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Empaquetado e implementación en el dispositivo o emulador
-
-## <a name="overview"></a>Introducción
 
 En el tutorial anterior, agregó un botón sencillo que restablece la pieza de ajedrez a su posición original. En esta última sección, preparará la aplicación para que se ejecute en HoloLens 2 o en un emulador. Si tiene HoloLens 2, puede transmitir en secuencias desde el equipo o el paquete la aplicación para ejecutarla directamente en el dispositivo. Si no tiene un dispositivo, deberá empaquetar la aplicación para que se ejecute en el emulador. Al final de esta sección, tendrá una aplicación de realidad mixta implementada que se puede reproducir, terminada con interacciones e interfaz de usuario.
 
@@ -26,7 +24,8 @@ En el tutorial anterior, agregó un botón sencillo que restablece la pieza de a
 * Empaquetado e implementación de la aplicación en un dispositivo o emulador de HoloLens 2
 
 ## <a name="device-only-streaming"></a>[Solo dispositivo] Transmisión en secuencias
-En este caso, el [control remoto de holografías](https://docs.microsoft.com/windows/mixed-reality/add-holographic-remoting) significa la transmisión en secuencias de datos desde un equipo o dispositivo UWP independiente a HoloLens 2, sin cambiar el canal. La manera en que funciona es que una aplicación host de control remoto recibe una transmisión en secuencias de datos de entrada de HoloLens, representa el contenido en una vista envolvente virtual y vuelve a transmitir en secuencia los fotogramas de contenido a HoloLens a través de Wi-Fi. La transmisión en secuencias permite agregar vistas envolventes remotas al software del equipo de escritorio existente y tener acceso a más recursos del sistema.
+
+El [control remoto de holografías](https://docs.microsoft.com/windows/mixed-reality/add-holographic-remoting) significa la transmisión en secuencias de datos desde un equipo o dispositivo UWP independiente a HoloLens 2, sin cambiar el canal. Una aplicación host de control remoto recibe una transmisión en secuencias de datos de entrada de HoloLens, representa el contenido en una vista envolvente virtual y vuelve a transmitir en secuencia los fotogramas de contenido a HoloLens a través de Wi-Fi. La transmisión en secuencias le permite agregar vistas envolventes remotas al software del equipo de escritorio existente y tener acceso a más recursos del sistema.
 
 Si va a realizar esta ruta con la aplicación de ajedrez, necesitará algunos elementos:
 
@@ -36,7 +35,7 @@ Si va a realizar esta ruta con la aplicación de ajedrez, necesitará algunos el
 
 3.  Reinicie el editor y, a continuación, escriba la dirección IP del dispositivo (como se muestra en la aplicación Holographic Remoting Player) y haga clic en **Conectar**.
 
-Una vez conectado, haga clic en la flecha desplegable situada a la derecha del botón **Play** (Jugar) y seleccione **VR Preview** (Vista previa de VR). La aplicación se ejecutará en la ventana VR Preview (Vista previa de VR), de la que se hace streaming al casco de HoloLens.
+Una vez conectado, haga clic en la flecha desplegable situada a la derecha del botón **Play** (Jugar) y seleccione **VR Preview** (Vista previa de VR). La aplicación se ejecutará en la ventana Vista previa de VR, de la que se hace streaming al casco de HoloLens.
 
 ## <a name="packaging-and-deploying-the-app-via-device-portal"></a>Empaquetado e implementación de la aplicación mediante el Portal de dispositivos
 
@@ -79,17 +78,17 @@ Una vez conectado, haga clic en la flecha desplegable situada a la derecha del b
 
 7.  Haga clic en **Examinar...** , vaya al archivo **ChessApp.appxbundle** y haga clic en **Abrir**.
 
-    * Active la casilla situada junto a **Allow me to select framework packages** (Permitirme seleccionar paquetes de marcos) si es la primera vez que instala la aplicación en el dispositivo.
-    * En el siguiente cuadro de diálogo, incluya los archivos **VCLibs** y **appx** adecuados (arm64 para el dispositivo, x64 para el emulador). Puede encontrarlos en **HoloLens** dentro de la carpeta donde ha guardado el paquete.
+    * Active la casilla situada junto a **Permitirme seleccionar paquetes de marcos** si es la primera vez que instala la aplicación en el dispositivo.
+    * En el siguiente cuadro de diálogo, incluya los archivos **VCLibs** y **appx** adecuados (**arm64** para el dispositivo y **x64** para el emulador). Puede encontrar los archivos en **HoloLens** dentro de la carpeta donde ha guardado el paquete.
 
 8.  Haz clic en **Instalar**
-    * Ahora puede ir a **Todas las aplicaciones** y pulsar la aplicación recién instalada para ejecutarla, o puede iniciar la aplicación directamente desde el **Portal de dispositivos Windows**. 
+    * Ahora puede ir a **Todas las aplicaciones** y pulsar la aplicación recién instalada para ejecutarla, o inicie la aplicación directamente desde el **Portal de dispositivos Windows**. 
 
-Enhorabuena. La aplicación de realidad mixta de HoloLens está finalizada y lista para utilizarse. Sin embargo, este no es el final del camino. MRTK tiene muchas características independientes que puede agregar a los proyectos, como el mapeo espacial, la entrada de mirada y voz, e incluso los códigos QR. Puede encontrar más información sobre estas características en [Introducción al desarrollo con Unreal](https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview).
+Enhorabuena. La aplicación de realidad mixta de HoloLens está finalizada y lista para utilizarse. Sin embargo, esto no es todo. MRTK tiene muchas características independientes que puede agregar a los proyectos, como el mapeo espacial, la entrada de mirada y voz, e incluso los códigos QR. Puede encontrar más información sobre estas características en [Introducción al desarrollo con Unreal](https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview).
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido de puntos de control de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
+Si sigue el recorrido de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Entrada de mirada](../unreal-gaze-input.md)

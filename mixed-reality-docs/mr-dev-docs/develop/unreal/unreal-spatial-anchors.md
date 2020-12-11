@@ -7,18 +7,16 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, spatial anchors, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 8be1521d44a9dda521c1570d3ac55955e475bc30
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: b517b1d89ddf7a35864db45a17336f4493816526
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96354519"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609636"
 ---
 # <a name="local-spatial-anchors-in-unreal"></a>Anclajes espaciales locales en Unreal
 
-## <a name="overview"></a>Introducción
-
-Los anclajes espaciales se usan para guardar los hologramas en el espacio del mundo real entre sesiones de aplicación. Aparecen mediante Unreal en forma de elementos **ARPin** y se guardan en el almacén de anclajes de HoloLens, que se carga en futuras sesiones. Los anclajes locales son ideales como plan B para cuando no hay conectividad a Internet.
+Los anclajes espaciales sirven para guardar los hologramas en el espacio del mundo real entre sesiones de aplicación como **ARPin**. Una vez guardados en el almacén de anclajes de HoloLens,los ARPin se pueden cargar en futuras sesiones y es una opción de reserva ideal cuando no hay conectividad a Internet.
 
 > [!NOTE]
 > Las funciones de anclaje de UE 4.25 han quedado obsoletas en la versión 4.26 y deben reemplazarse por otras más recientes. 
@@ -44,7 +42,7 @@ Desglose:
 3. Agregue el actor al elemento **ARPin** y guarde el marcador en el almacén de anclajes de HoloLens.  
     * El nombre del anclaje que elija debe ser único, en este ejemplo, es la marca de tiempo actual. 
 
-4. Si el anclaje se guarda correctamente en el almacén de anclajes, se puede inspeccionar en el portal de dispositivos de HoloLens en **System > Map manager > Anchor Files Saved On Device** (Sistema > Administrador de mapas > Archivos de anclajes guardados en el dispositivo). 
+4. Si el anclaje se guarda correctamente en el almacén de anclajes, se puede establecer en el portal de dispositivos de HoloLens en **Sistema > Administrador de mapas > Archivos de anclajes guardados en el dispositivo**. 
 
 ## <a name="loading-anchors"></a>Carga de anclajes
 
@@ -63,7 +61,7 @@ También se consulta el identificador del anclaje para que se puedan generar dif
 
 ## <a name="removing-anchors"></a>Eliminación de anclajes 
 
-Cuando haya terminado con un anclaje, puede borrar delimitadores individuales o todo el almacén de anclajes con los componentes **Remove ARPin from WMRAnchor Store** (Quitar ARPin del almacén WMRAnchor) y **Remove All ARPins from WMRAnchor Store** (Quitar todos los ARPin del almacén WMRAnchor).
+Cuando haya terminado con un anclaje, puede borrar anclajes individuales o todo el almacén de anclajes con los componentes **Quitar ARPin del almacén WMRAnchor** y **Quitar todos los ARPin del almacén WMRAnchor**.
 
 [!INCLUDE[](includes/tabs-sa-4.md)]
 
@@ -72,7 +70,7 @@ Cuando haya terminado con un anclaje, puede borrar delimitadores individuales o 
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido de puntos de control de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación: 
+Si sigue el recorrido de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación: 
 
 > [!div class="nextstepaction"]
 > [Azure Spatial Anchors](unreal-azure-spatial-anchors.md)

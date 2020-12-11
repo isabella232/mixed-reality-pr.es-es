@@ -7,20 +7,18 @@ ms.date: 06/15/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms, game development, mixed reality headset, windows mixed reality headset, virtual reality headset, spatial audio
-ms.openlocfilehash: 25fa60b4e55ec0f3bd0875ad88834981d198f7f5
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: fa87862f6a6af456ea344b67e22f1640c9cfafb4
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679804"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609546"
 ---
 # <a name="spatial-audio-in-unreal"></a>Audio espacial en Unreal
 
-## <a name="overview"></a>Introducción
+A diferencia de la visión, los seres humanos escuchan el sonido envolvente en 360 grados. El sonido espacial emula el funcionamiento de la audición humana y proporciona las indicaciones necesarias para identificar las ubicaciones del sonido en el espacio real. Al agregar sonido espacial en las aplicaciones de realidad mixta, mejora el nivel de inmersión de la experiencia de los usuarios.  
 
-A diferencia de la visión, los seres humanos escuchan el sonido envolvente en 360 grados. El sonido espacial emula el funcionamiento de la audición humana y proporciona las indicaciones necesarias para identificar las ubicaciones del sonido en el espacio real. Al agregar sonido espacial en las aplicaciones de realidad mixta, mejora el nivel de inmersión de la experiencia de los usuarios.  
-
-El procesamiento de sonido espacial de alta calidad es complejo, por lo que HoloLens 2 incluye hardware dedicado para procesar esos objetos de sonido.  Para poder acceder a este soporte de procesamiento de hardware, debe instalar el complemento **MicrosoftSpatialSound** en su proyecto de Unreal. Este artículo le guiará a través de la instalación y configuración de ese complemento y le indicará recursos más detallados para usar el sonido espacial en Unreal Engine.
+El procesamiento de sonido espacial de alta calidad es complejo, por lo que HoloLens 2 incluye hardware dedicado para procesar esos objetos de sonido.  Para poder acceder a este soporte de procesamiento de hardware, debe instalar el complemento **MicrosoftSpatialSound** en su proyecto de Unreal. Este artículo le guiará a través de la instalación y configuración de ese complemento y le indicará recursos más detallados.
 
 ## <a name="installing-the-microsoft-spatial-sound-plugin"></a>Instalación del complemento de sonido espacial de Microsoft
 
@@ -39,8 +37,9 @@ Cuando se reinicia el editor, el proyecto ya está preparado.
 
 
 ## <a name="setting-the-spatialization-plugin-for-hololens-2-platform"></a>Configuración del complemento de espacialización para la plataforma HoloLens 2
+
 La configuración del complemento de espacialización se realiza por plataforma.  Puede habilitar el complemento de sonido espacial de Microsoft para HoloLens 2 de la siguiente manera:
-1. Seleccione **Edit > Projects Settings** (Editar > Configuración del proyecto), desplácese a **Platforms** (Plataformas) y haga clic en **HoloLens**.
+1. Seleccione **Editar > Configuración del proyecto**, desplácese a **Plataformas y haga clic en **HoloLens**.
 2. Expanda las propiedades **Audio** y establezca el campo **Spatialization Plugin** (Complemento de la espacialización) en **Microsoft Spatial Sound** (Sonido espacial de Microsoft).
 
 ![Complemento de espacialización para la plataforma HoloLens](images/unreal-spatial-audio-img-02.png)
@@ -50,6 +49,7 @@ Si va a obtener una vista previa de la aplicación en el editor de Unreal en un 
 ![Complemento de espacialización para la plataforma Windows](images/unreal-spatial-audio-img-05.png)
 
 ## <a name="enabling-spatial-audio-on-your-workstation"></a>Habilitación del audio espacial en la estación de trabajo
+
 El audio espacial está deshabilitado de forma predeterminada en las versiones de escritorio de Windows. Puede habilitarlo de la siguiente manera:
 * Haga clic con el botón derecho en el icono de **volumen** de la barra de tareas.
     + Elija **Sonido espacial > Windows Sonic para auriculares** para obtener la mejor representación de lo que escuchará en HoloLens 2.
@@ -60,6 +60,7 @@ El audio espacial está deshabilitado de forma predeterminada en las versiones d
 >Esta opción solo es necesaria si tiene previsto probar el proyecto en el editor de Unreal.
 
 ## <a name="creating-attenuation-objects"></a>Creación de objetos de atenuación
+
 Después de instalar y configurar los complementos necesarios:
 1. Busque un actor de **Ambient Sound** (Sonido ambiental) actor en la ventana **Place Actors** (Colocar actores) y arrástrelo a la ventana **Scene** (Escena).
 
@@ -82,7 +83,8 @@ Después de instalar y configurar los complementos necesarios:
 
 ![Establecimiento de la configuración de atenuación](images/unreal-spatial-audio-img-08.png)
 
-6. Establezca la opción de **Sound Asset** (Recurso de sonido) que desea asociar al actor de sonido ambiental mediante la actualización de la propiedad **Sound** (Sonido) de dicho actor para especificar el archivo SoundAsset que se va a usar.
+6. Establezca el **recurso de sonido** que quiere conectar al actor de sonido ambiental:
+    * Actualice la propiedad de **sonido** del actor de sonido ambiental para especificar el archivo SoundAsset que se va a usar.
 
 ![Establecimiento del recurso de sonido](images/unreal-spatial-audio-img-09.png)
 
@@ -91,9 +93,10 @@ Después de instalar y configurar los complementos necesarios:
 
 ![Nuevo recurso de atenuación de sonido](images/unreal-spatial-audio-img-10.png)
 
-Una vez configurado todo esto, el sonido ambiental se puede espacializar con el soporte de descarga de hardware dedicado en HoloLens 2.
+Una vez configurado el recurso de sonido, el sonido ambiental se puede espacializar con el soporte de descarga de hardware dedicado en HoloLens 2.
 
 ## <a name="configuring-objects-for-spatialization"></a>Configuración de objetos para la espacialización
+
 Trabajar con audio espacial significa responsabilizarse de administrar el comportamiento del sonido en un entorno virtual. El enfoque principal es crear objetos de sonido que parezcan más altos cuando el usuario esté cerca y más silenciosos cuando el usuario esté lejos. Esto se conoce como atenuación de sonido y hace que los sonidos se oigan como si estuvieran en una posición fija.
 
 Todos los objetos de atenuación tienen valores modificables de:
@@ -108,7 +111,7 @@ La [atenuación de sonido en Unreal](https://docs.unrealengine.com/Engine/Audio/
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido de puntos de control de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
+Si sigue el recorrido de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Entrada de voz](unreal-voice-input.md)

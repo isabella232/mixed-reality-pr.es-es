@@ -3,54 +3,51 @@ title: Introducción al desarrollo con Unreal
 description: Información general sobre el desarrollo para realidad mixta con Unreal Engine 4
 author: hferrone
 ms.author: v-hferrone
-ms.date: 08/04/2020
+ms.date: 12/7/2020
 ms.topic: article
 ms.localizationpriority: high
-keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms, game development, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: b810ad7500f8bb2a70ef18ad29fb32df8801a2de
-ms.sourcegitcommit: 2759aba06e643d70004023b105ed26b33ce3dbfa
+keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, comunicación remota, realidad mixta, desarrollo, introducción, características, nuevo proyecto, emulador, documentación, guías, hologramas, desarrollo del juego, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, OpenXR
+ms.openlocfilehash: 1dcc5d6b00e1fdd51126e334cd28a10319b77af3
+ms.sourcegitcommit: f31f3a54c7c46e21884d62b4a696acf122a3c2b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94810451"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96781975"
 ---
 # <a name="unreal-development-overview"></a>Introducción al desarrollo con Unreal
 
 ![Logotipo del banner de Unreal](../images/unreal_logo_banner.png)
 
-La introducción a <a href="https://docs.microsoft.com/windows/mixed-reality" target="_blank" title="los documentos de realidad mixta"> aplicaciones de realidad mixta</a> es una gran tarea. Los nuevos conceptos, las plataformas y el hardware de vanguardia pueden parecer un obstáculo. Sin embargo, si es un desarrollador de Unreal, tiene suerte. Ahora se incluye compatibilidad con los <a href="https://www.microsoft.com/windows/windows-mixed-reality" target="_blank" title="documentos de Windows Mixed Reality">Windows Mixed Reality</a> (VR) y con los <a href="https://www.microsoft.com/hololens/hardware" target="_blank" title="documentos de HoloLens 2">HoloLens 2</a> (AR) en <a href="https://docs.unrealengine.com/Support/Builds/ReleaseNotes/4_25/index.html" target="_blank" title="las notas de la versión de Unreal Engine 4.25 más reciente</a>la versión más reciente">. En esta actualización se incluye:
-* Compatibilidad del complemento UX Tools de Mixed Reality
-* Compatibilidad con OpenXR
-* Control remoto de la aplicación desde una aplicación de escritorio
-* Un mejor rendimiento
-* Captura de realidad mixta
-* Compatibilidad inicial con Azure Spatial Anchors
+La introducción a <a href="https://docs.microsoft.com/windows/mixed-reality" target="_blank" title="los documentos de realidad mixta"> aplicaciones de realidad mixta</a> es una gran tarea. Los nuevos conceptos, las plataformas y el hardware de vanguardia pueden parecer un obstáculo. Sin embargo, si es un desarrollador de Unreal, tiene suerte. Unreal Engine 4 tiene compatibilidad total con los dispositivos de <a href="https://www.microsoft.com/windows/windows-mixed-reality" target="_blank" title="documentos de Windows Mixed Reality">Windows Mixed Reality</a> (VR) y <a href="https://www.microsoft.com/hololens/hardware" target="_blank" title="documentos de HoloLens 2">HoloLens 2</a> (AR).
 
-Si no está familiarizado con el desarrollo en Unreal, no empiece a ciegas. Explore la <a href="https://docs.unrealengine.com/GettingStarted/index.html" target="_blank">serie de tutoriales</a> de Unreal para ponerse al día y buscar recursos y soporte técnico en <a href="https://www.unrealengine.com/marketplace/store" target="_blank">marketplace</a> de Unreal y en los <a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">foros</a> de la realidad mixta. Estos recursos son vínculos a la comunidad de creadores y solucionadores de problemas en el mercado de realidad mixta de hoy en día.
+[!INCLUDE[](includes/tabs-unreal-features.md)]
+
+Si no está familiarizado con el desarrollo en Unreal, no empiece a ciegas. Explore la <a href="https://docs.unrealengine.com/GettingStarted/index.html" target="_blank">serie de tutoriales</a> de Unreal y busque recursos en el <a href="https://www.unrealengine.com/marketplace/store" target="_blank">marketplace</a> de Unreal. También puede encontrar soporte en los <a href="https://forums.unrealengine.com/development-discussion/vr-ar-development" target="_blank">foros</a> de realidad mixta. Estos recursos son vínculos a la comunidad de creadores y solucionadores de problemas en el mercado de realidad mixta de hoy en día.
 
 > [!IMPORTANT]
 > Eche un vistazo a nuestra **[guía de migración](unreal-reverb-g2-controllers.md)** si tiene un proyecto de Unreal existente que quiere utilizar con cascos envolventes, como Reverb G2.
 
 ## <a name="development-checkpoints"></a>Puntos de control de desarrollo
 
-Use los siguientes puntos de control para incorporar sus aplicaciones y juegos de Unreal en el mundo de la realidad mixta. Si aún no ha explorado la [aplicación de ejemplo Designing Holograms](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd), le recomendamos que la descargue y la use para familiarizarse con los aspectos básicos de la experiencia de usuario de realidad mixta.
+Use los siguientes puntos de control para incorporar sus aplicaciones y juegos de Unreal en el mundo de la realidad mixta. Si no ha explorado la [aplicación de ejemplo Designing Holograms](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd), le recomendamos que la descargue para familiarizarse con los aspectos básicos de la experiencia de usuario de realidad mixta.
 
 ### <a name="1-getting-started"></a>1. Introducción
 
-[Mixed Reality Toolkit para Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal) es un conjunto de componentes diseñados para acelerar el desarrollo en Unreal. Cada componente incluye complementos, ejemplos y documentación para configurar experiencias envolventes.
-
-* [UX Tools para Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal) es el primer componente que se va a publicar y actualmente solo se admite en HoloLens 2. El complemento de componente incluye código, planos técnicos y recursos de ejemplo de características de experiencia del usuario comunes para la simulación de entrada, los actores de interacción con manos, componentes de botones que se pueden presionar, componentes de manipulador y componentes de comportamiento de seguimiento.
-
-Al final de esta sección, habrá adquirido conocimientos básicos sobre Mixed Reality Toolkit, un entorno de desarrollo configurado correctamente para aplicaciones de realidad mixta y un proyecto de MRTK de trabajo en Unity.
+En primer lugar, debe instalar las herramientas para el desarrollo de HoloLens 2. A continuación, revise nuestra serie de tutoriales para adquirir conocimientos básicos sobre Mixed Reality Toolkit, un entorno de desarrollo configurado correctamente para aplicaciones de realidad mixta y un proyecto de MRTK de trabajo en Unreal. A partir de la versión 4.26 de Unreal, también tiene la opción de desarrollar una aplicación de OpenXR para HoloLens 2.
 
 |  Punto de control  |  Resultado  |
 | --- | --- |
 | [Instale las actualizaciones más recientes.](../install-the-tools.md) | Descargue e instale la versión más reciente de Unreal Engine y configure el proyecto para la realidad mixta. |
-| [Serie de tutoriales de HoloLens 2](tutorials/unreal-uxt-ch1.md) | Profundice en los tutoriales de MRTK de nivel principiante para el hardware de HoloLens 2. |
+| [Serie de tutoriales de HoloLens 2](tutorials/unreal-uxt-ch1.md) | Prepárese para el desarrollo de realidad mixta en Unreal, compile su primera aplicación con MRTK e implemente la aplicación en HoloLens 2. |
+| (Opcional) Introducción a [OpenXR](../native/openxr.md) en Unreal | Si está pensando en compilar una aplicación de OpenXR en Unreal, debe deshabilitar el siguiente complemento de motor:<ul><li>Windows Mixed Reality</li></ul><br>Descargue y habilite el siguiente complemento en el proyecto desde GitHub:<ul><li> [Microsoft OpenXR](https://github.com/microsoft/Microsoft-OpenXR-Unreal)</li></ul><br>La lista completa de las características admitidas actualmente en OpenXR se incluye [a continuación](#supported-features).|
 
 ### <a name="2-core-building-blocks"></a>2. Bloques de creación principales
 
-Hay varias características clave del desarrollo de la realidad mixta que nuestra serie de tutoriales no cubre. Estos bloques de creación están disponibles como características independientes y a través de Mixed Reality Toolkit. Es posible que no los necesite todos a la vez, pero le recomendamos que los explore desde el principio. Después de profundizar en los principales bloques de creación que se enumeran a continuación, contará con herramientas que ofrecen muchas características y que puede integrar en sus proyectos de realidad mixta.
+Hay varias características clave de la realidad mixta que nuestra serie de tutoriales no cubre. Estos bloques de creación están disponibles como características independientes y a través de Mixed Reality Toolkit. Es posible que no los necesite todos a la vez, pero le recomendamos que los explore desde el principio. Después de profundizar en los principales bloques de creación que se enumeran a continuación, contará con herramientas que ofrecen muchas características y que puede integrar en sus proyectos de realidad mixta.
+
+[Mixed Reality Toolkit para Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal) es un conjunto de complementos diseñados para acelerar el desarrollo en Unreal. Cada complemento incluye componentes, ejemplos y documentación para configurar experiencias envolventes.
+
+* [UX Tools para Unreal](https://www.unrealengine.com/marketplace/en-US/product/mixed-reality-ux-tools) es el primer complemento que se va a publicar y actualmente solo se admite en HoloLens 2. El complemento incluye código C++, planos técnicos y recursos de ejemplo de las características comunes de la experiencia de usuario para la simulación de entradas, las interacciones con la mano, el magnetismo de superficie y mucho más.
 
 [!INCLUDE[](../includes/unreal-building-blocks.md)]
 
@@ -67,13 +64,15 @@ Hay otras características clave que desempeñan un rol en las aplicaciones de r
 | [Códigos QR](unreal-qr-codes.md) | Represente códigos QR como hologramas mediante un sistema de coordenadas en la posición del mundo real de cada código. |
 | [WinRT](unreal-winrt.md) | Cree un archivo binario independiente con código de WinRT que el sistema de compilación de Unreal pueda usar. |
 
-### <a name="4-deploying-to-a-device"></a>4. Implementación en un dispositivo
+### <a name="4-streaming-and-deploying-to-a-device"></a>4. Streaming e implementación en un dispositivo
 
-Si esta es la primera vez que crea o implementa una aplicación de Unreal para HoloLens, deberá [descargar los archivos auxiliares](tutorials/unreal-uxt-ch6.md#packaging-and-deploying-the-app-via-device-portal) desde el iniciador de Epic. Una vez que haya instalado los archivos, estará listo para realizar la implementación desde el [editor de Unreal](unreal-deploying.md) o el [Portal de dispositivos](tutorials/unreal-uxt-ch6.md#packaging-and-deploying-the-app-via-device-portal).
+Si quiere probar la aplicación en un dispositivo HoloLens mientras esta sigue en desarrollo, puede [hacer streaming de ella directamente desde su PC](unreal-streaming.md) mediante el editor de Unreal o el archivo ejecutable de Windows empaquetado.
+
+Si esta es la primera vez que implementa una aplicación de Unreal para HoloLens 2, deberá [descargar los archivos auxiliares](tutorials/unreal-uxt-ch6.md#packaging-and-deploying-the-app-via-device-portal) desde el iniciador de Epic. Una vez que haya instalado los archivos, estará listo para realizar la implementación desde el [editor de Unreal](unreal-deploying.md) o el [Portal de dispositivos](tutorials/unreal-uxt-ch6.md#packaging-and-deploying-the-app-via-device-portal).
 
 ### <a name="5-adding-services"></a>5. Adición de servicios
 
-En este momento del recorrido de desarrollo, es posible que quiera agregar servicios o obtener ayuda con la implementación comercial. La integración de las características de [Azure Cloud Services](../mixed-reality-cloud-services.md) y Dynamics 365 pueden mejorar sus los proyectos de una manera significativa. Hemos recopilado algunos puntos de partida para que pueda explorar y ampliar su conocimiento de realidad mixta.
+En este momento del recorrido de desarrollo, es posible que quiera agregar servicios u obtener ayuda con la implementación comercial. La integración de las características de [Azure Cloud Services](../mixed-reality-cloud-services.md) y Dynamics 365 pueden mejorar sus los proyectos de una manera significativa. Hemos recopilado algunos puntos de partida para que pueda explorar y ampliar su conocimiento de realidad mixta.
 
 [!INCLUDE[](../includes/unreal-cloud-services-d365.md)]
 
@@ -81,40 +80,44 @@ En este momento del recorrido de desarrollo, es posible que quiera agregar servi
 
 Nunca se realiza un trabajo de desarrollador, especialmente cuando se aprende a usar una nueva herramienta o un SDK. En las secciones siguientes se le proporcionará contenido más ampliado sobre lo que ha visto en el nivel principiante, junto con recursos útiles por si se queda bloqueado. Tenga en cuenta que estos temas y recursos no están ordenados de forma secuencial, de modo que no dude en consultar los que le interesen y explorarlos.
 
-### <a name="streaming--debugging"></a>Streaming y depuración
+### <a name="debugging"></a>Depuración
 
-Si quiere probar la aplicación en un dispositivo HoloLens mientras esta sigue en desarrollo, puede [hacer streaming de ella directamente desde su PC](unreal-streaming.md) mediante el editor de Unreal o el archivo ejecutable de Windows empaquetado.
-
-Si está pensando en la posibilidad de depurar la aplicación con Visual Studio, siga estas [instrucciones](https://docs.microsoft.com/visualstudio/debugger/debug-installed-app-package#remote).
+Si está pensando en la posibilidad de depurar la aplicación mientras se ejecuta en el dispositivo con Visual Studio, siga estas [instrucciones](https://docs.microsoft.com/visualstudio/debugger/debug-installed-app-package#remote).
 
 ### <a name="performance"></a>Rendimiento
 
-El desarrollo para la realidad mixta incluye puntos de control de rendimiento que dependen de la plataforma. Una aplicación de HoloLens 2 debe ejecutarse a 60 fotogramas por segundo para que los hologramas presenten estabilidad y capacidad de respuesta. Afortunadamente, tenemos [recomendaciones de rendimiento](performance-recommendations-for-unreal.md) para lograrlo en sus aplicaciones de Unreal.
+El desarrollo para la realidad mixta incluye puntos de control de rendimiento que dependen de la plataforma. Una aplicación de HoloLens 2 debe ejecutarse a 60 fotogramas por segundo para que los hologramas presenten estabilidad y capacidad de respuesta. Afortunadamente, tenemos [recomendaciones](performance-recommendations-for-unreal.md) para actualizar el rendimiento en las aplicaciones de Unreal.
 
 ## <a name="supported-features"></a>Funciones admitidas
 
-| Característica de HoloLens 2 | Versión anterior de Unreal Engine admitida |
-| ----------- | ----------- |
-| Compatibilidad con ARM64 | 4.23 |
-| Streaming desde un equipo | 4.23 |
-| Asignación espacial | 4.23 |
-| Seguimiento de manos y articulaciones | 4.23 |
-| Seguimiento de los ojos | 4.23 |
-| Entrada de voz | 4.23 |
-| Delimitadores espaciales | 4.23 |
+| Característica de HoloLens 2 | Versión anterior de Unreal Engine admitida | Compatible con OpenXR (4.26) |
+| ----------- | ----------- | ----------- |
+| Compatibilidad con ARM64 | 4.23 | ✔️ |
+| Streaming desde un equipo | 4.23 | ✔️ |
+| Asignación espacial | 4.23 | ✔️ |
+| Seguimiento de manos y articulaciones | 4.23 | ✔️ |
+| Seguimiento de los ojos | 4.23 | ✔️ |
+| Entrada de voz | 4.23 | ✔️ |
+| Delimitadores espaciales | 4.23 | ✔️ |
 | Acceso a la cámara | 4.23 |
-| Códigos QR | 4.23 |
-| Audio espacial | 4.23 |
+| Códigos QR | 4.23 | ✔️ |
+| Audio espacial | 4.23 | ✔️ |
 | Compatibilidad con la pantalla de espectador para streaming | 4.24 |
 | LSR plana por streaming | 4.24 |
-| Las aplicaciones de muestra ([HoloLens2Example](https://github.com/microsoft/MixedReality-Unreal-Samples) y [Mission AR](https://docs.unrealengine.com/Resources/Showcases/MissionAR/index.html)) | 4.24 |
-| Modo multivista móvil: resultados de rendimiento de 60 fps | 4.25 |
+| [Aplicaciones de ejemplo](unreal-samples.md) | 4.24 | ✔️ |
+| Modo multivista móvil: resultados de rendimiento de 60 fps | 4.25 | ✔️ |
 | Representación de tercera cámara | 4.25 |
-| Streaming desde una aplicación de escritorio empaquetada | 4.25.1 |
+| Streaming desde una aplicación de escritorio empaquetada | 4.25.1 | ✔️ |
 | Azure Spatial Anchors para HoloLens 2 (beta) | 4.25 |
-| Compatibilidad con OpenXR (beta) | 4.25 |
-| Compatibilidad con UX Tools (0.8) | 4.25 |
-| Tutoriales y documentación para desarrolladores | 4.25 |
+| Compatibilidad de UX Tools de Mixed Reality | 4.25 | ✔️ |
+| Tutoriales y documentación para desarrolladores | 4.25 | ✔️ |
+| Teclado del sistema | 4.26 | ✔️ |
+| Complemento de Media Player de HoloLens | 4.26 | ✔️ |
+| Azure Spatial Anchors para iOS y Android (beta) | 4.26 |
+| Complemento de Microsoft OpenXR con extensiones de OpenXR específicas del proveedor de Microsoft | 4.26 | ✔️ |
+| Streaming de Azure a HoloLens 2 | 4.26 | ✔️ |
+| Compatibilidad del kit para la certificación de aplicaciones en Windows para aplicaciones empaquetadas | 4.26 | ✔️ |
+| Compatibilidad con el controlador de HP Reverb G2 | 4.26 | ✔️ |
 
 > [!div class="nextstepaction"]
 > [Instalación de las herramientas](../install-the-tools.md)

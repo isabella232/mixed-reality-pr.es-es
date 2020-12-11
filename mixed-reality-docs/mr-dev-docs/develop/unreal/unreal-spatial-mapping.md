@@ -2,21 +2,21 @@
 title: Mapeo espacial en Unreal
 description: Guía para el uso del mapeo espacial en Unreal
 author: hferrone
-ms.author: v-hferrone
+ms.author: jacksonf
 ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, spatial mapping, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 878eae5f5fd0b7a1630511faa23c1477455ed988
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: bde5a1b53f6ad90bc84f54bd3e4f1237b78f2abe
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96354391"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609426"
 ---
 # <a name="spatial-mapping-in-unreal"></a>Mapeo espacial en Unreal
 
-El mapeo espacial permite colocar objetos sobre superficies del mundo físico mediante la visualización del mundo de alrededor de HoloLens, lo que hace que los hologramas parezcan más reales al usuario. El mapeo espacial también ancla objetos en el mundo del usuario aprovechando las indicaciones detalladas del mundo real. Con ello, se ayuda a convencer al usuario de que estos hologramas están realmente en su espacio; los hologramas que flotan en el espacio o se mueven con el usuario no se verán como reales. Es aconsejable colocar elementos para mayor confort, siempre que sea posible.
+La asignación espacial permite colocar objetos en superficies físicas del mundo real. Cuando se asigna el mundo de HoloLens, los hologramas parecen más reales al usuario. La asignación espacial también delimita objetos en el mundo del usuario mediante el uso de indicadores de profundidad, lo que ayuda a convencerles de que estos hologramas están realmente en su espacio. Los hologramas que flotan en el espacio o se mueven con el usuario no se sienten como si fuesen reales, por lo que siempre que sea posible puede colocar elementos para su comodidad.
 
 Puede encontrar más información sobre la calidad del mapeo espacial, la ubicación, la oclusión, la representación, etc., en el documento [Asignación espacial](../../design/spatial-mapping.md).
 
@@ -40,13 +40,13 @@ Para participar en el mapeo espacial y depurar **MRMesh** en un juego HoloLens:
 ## <a name="spatial-mapping-at-runtime"></a>Mapeo espacial en tiempo de ejecución
 Puede modificar los parámetros siguientes para actualizar el comportamiento en tiempo de ejecución del mapeo espacial:
 
-- Abra **Editar > Configuración del proyecto**, desplácese hacia abajo hasta la sección **Plataformas** y seleccione **HoloLens > Spatial Mapping (Mapeo espacial)** : 
+- Abra **Editar > Configuración del proyecto**, desplácese hacia abajo hasta la sección **Plataformas** y seleccione **HoloLens > Mapeo espacial**: 
 
 ![Configuración del proyecto de anclajes espaciales](images/unreal-spatialmapping-projectsettings.PNG)
 
 - **Max Triangles Per Cubic Meter** (Máximo de triángulos por metro cúbico) actualice la densidad de los triángulos en la malla de mapeo espacial.  
 - **Spatial Meshing Volume Size** (Tamaño del volumen de la malla espacial) es el tamaño del cubo alrededor del jugador para representar y actualizar los datos de mapeo espacial.  
-    + Si se espera que el entorno en tiempo de ejecución de la aplicación sea elevado, es posible que este valor tenga que ser grande para que coincida con el espacio del mundo real.  Por otro lado, este valor puede ser menor si la aplicación solo necesita colocar hologramas en superficies inmediatamente alrededor del usuario. A medida que el usuario se desplaza por el mundo, el volumen de mapeo espacial se moverá con él. 
+    + Si se espera que el entorno en tiempo de ejecución de la aplicación sea elevado, es posible que este valor tenga que ser grande para que coincida con el espacio del mundo real. El valor puede ser menor si la aplicación solo necesita colocar hologramas en superficies inmediatamente alrededor del usuario. A medida que el usuario se desplaza por el mundo, el volumen de mapeo espacial se moverá con él. 
 
 ## <a name="working-with-mrmesh"></a>Utilización de MRMesh
 
@@ -62,7 +62,7 @@ Para obtener acceso a **MRMesh** en tiempo de ejecución:
 ![Notificaciones supervisadas de AR de anclajes espaciales](images/unreal-spatialmapping-artrackablenotify.PNG)
 
 2. Seleccione el componente **ARTrackableNotify** y expanda la sección **Eventos** en el panel **Detalles**. 
-    - Haga clic en el botón **+** en los eventos que quiera supervisar. 
+    - Seleccione el botón **+** en los eventos que quiera supervisar. 
 
 ![Eventos de Spatial Anchors](images/unreal-spatialmapping-events.PNG)
 

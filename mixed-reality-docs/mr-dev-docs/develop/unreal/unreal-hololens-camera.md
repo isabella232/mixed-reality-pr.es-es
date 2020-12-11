@@ -2,21 +2,21 @@
 title: Cámara de foto y vídeo HoloLens en Unreal
 description: Guía para usar la cámara de foto y vídeo HoloLens en Unreal
 author: hferrone
-ms.author: v-hferrone
+ms.author: jacksonf
 ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, camera, PV camera, MRC, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: ef557bc6492ced6bb9b3c47a8cccc897e33b76c1
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: c0c6e06e66e03934912906dbff5a93f9271a68b6
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96354613"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609615"
 ---
 # <a name="hololens-photovideo-camera-in-unreal"></a>Cámara de foto y vídeo HoloLens en Unreal
 
-HoloLens tiene una cámara de fotos y vídeo en el visor que se puede usar tanto en la Captura de realidad mixta (MRC) como en una aplicación para localizar objetos de un espacio global de Unreal desde coordenadas de píxeles en el enfoque de la cámara.
+HoloLens tiene una cámara de fotos y vídeo en el visor que se puede usar tanto en la Captura de realidad mixta (MRC) como para localizar objetos de un espacio global de Unreal desde coordenadas de píxeles en el enfoque de la cámara.
 
 > [!IMPORTANT]
 > La cámara de foto y vídeo no es compatible con el control remoto de holografías, pero es posible usar una cámara web conectada a su equipo para simular la funcionalidad de dicha cámara de HoloLens.
@@ -25,7 +25,7 @@ HoloLens tiene una cámara de fotos y vídeo en el visor que se puede usar tanto
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido de puntos de control de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con el tema siguiente:
+Si sigue el recorrido de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con el siguiente tema:
 
 > [!div class="nextstepaction"]
 > [Códigos QR](unreal-qr-codes.md)

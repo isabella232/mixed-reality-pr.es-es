@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: cdd2b613535080b371807020670a2785274c29f5
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: f4f9a04a2de5e2c10bc43770bb1bfe9d00f3a4b6
+ms.sourcegitcommit: d56e7dd6c917ddc4ead0792ebff21891921174b9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91699559"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "96564084"
 ---
 # <a name="available-in-mrtk"></a>[Disponible en MRTK](#tab/mrtk)
 
 |  Característica  |  Funcionalidades  |
 | --- | --- |
-| [Simulación de entrada](https://github.com/microsoft/MixedReality-UXTools-Unreal/blob/public/0.8.x/Docs/InputSimulation.md) | Permite usar la entrada del mouse y del teclado en el editor para simular las características del casco de realidad virtual y el seguimiento de manos. |
-| [Interacción con las manos](https://github.com/microsoft/MixedReality-UXTools-Unreal/blob/public/0.8.x/Docs/HandInteraction.md) | Permite interactuar con los componentes de la experiencia del usuario mediante las entradas de manos articuladas. |
-| [Componente de botón presionable](https://github.com/microsoft/MixedReality-UXTools-Unreal/blob/public/0.8.x/Docs/PressableButton.md) | Permite impulsar los planos técnicos del estado del botón a través de componentes de bajo nivel. |
-| [Componente de manipulador](https://github.com/microsoft/MixedReality-UXTools-Unreal/blob/public/0.8.x/Docs/Manipulator.md) | Permite mover y girar un actor mediante una entrada de manipulación con una o dos manos. |
-| [Componente de seguimiento del comportamiento](https://github.com/microsoft/MixedReality-UXTools-Unreal/blob/public/0.8.x/Docs/FollowComponent.md) | Permite mantener un actor o componente dentro del alcance de visión de otro componente. |
+| [Simulación de entrada](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/InputSimulation.html) | Permite usar la entrada del mouse y del teclado en el editor para simular las características del casco de realidad virtual y el seguimiento de manos. |
+| [Interacción con las manos](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/HandInteraction.html) | Permite interactuar con los componentes de la experiencia del usuario mediante las entradas de manos articuladas. |
+| [Botón presionable](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/PressableButton.html) | Permite impulsar los planos técnicos del estado del botón a través de componentes de bajo nivel. |
+| [Manipulador](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/Manipulator.html) | Permite mover y girar un actor mediante una entrada de manipulación con una o dos manos. |
+| [Seguimiento del comportamiento](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/FollowComponent.html) | Permite mantener un actor o componente dentro del alcance de visión de otro componente. |
 
 # <a name="standalone-features"></a>[Características independientes](#tab/standalone)
 

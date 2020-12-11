@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5952cf94ba07a6d92903050a2a813cc911d4d70f
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: a8258f1ba99fdd1607014624c4ad4d6ec0a8e330
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96354673"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609616"
 ---
 # <a name="425"></a>[4.25](#tab/425)
 
@@ -13,9 +13,9 @@ ms.locfileid: "96354673"
 > [!NOTE]
 > Se requiere **Unreal Engine 4.25** o versión posterior.
 
-El sistema y las grabadoras de MRC personalizadas crean capturas de realidad mixta mediante la combinación de la cámara PV con hologramas representados por la aplicación inmersiva.
+El sistema y las grabadoras de MRC personalizadas crean capturas de realidad mixta mediante la combinación de la cámara PV con hologramas representados por la aplicación.
 
-De forma predeterminada, la captura de realidad mixta usa la salida holográfica del ojo derecho. Si una aplicación inmersiva elige la [representación de la cámara PV](../../platform-capabilities-and-apis/mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in), se usará en su lugar. Esto mejora el mapeo entre el mundo real y los hologramas en el vídeo de MRC.
+De forma predeterminada, la captura de realidad mixta usa la salida holográfica del ojo derecho. Si una aplicación inmersiva elige la [representación de la cámara PV](../../platform-capabilities-and-apis/mixed-reality-capture-for-developers.md#render-from-the-pv-camera-opt-in), se usará en su lugar. La representación de la cámara PV mejora el mapeo entre el mundo real y los hologramas en el vídeo de MRC.
 
 Para participar en la representación de la cámara PV:
 
@@ -51,7 +51,7 @@ Para representar la imagen de la cámara:
 
 ![Textura de cámara desde la cámara web](../images/unreal-camera-texture.PNG)
 
-5. Asegúrese de que el material tiene un parámetro que coincide con el nombre de **SetTextureParameterValue** que está enlazado a una entrada de color. Sin esto, la imagen de la cámara no puede mostrarse correctamente.
+5. Asegúrese de que el material tiene un parámetro que coincide con el nombre de **SetTextureParameterValue** que está enlazado a una entrada de color. Sin el parámetro, la imagen de la cámara no puede mostrarse correctamente.
 
 ![Textura de cámara](../images/unreal-camera-material.PNG)
 
@@ -91,13 +91,13 @@ Para representar la imagen de la cámara:
 
 ## <a name="find-camera-positions-in-world-space"></a>Búsqueda de posiciones de la cámara en el espacio global
 
-La cámara de HoloLens 2 se desplaza verticalmente desde el seguimiento del cabezal del dispositivo.  Para llevar esto a cabo, existen algunas funciones que permiten ubicar la cámara en el espacio global.
+La cámara de HoloLens 2 se desplaza verticalmente desde el seguimiento del cabezal del dispositivo.  Existen algunas funciones que permiten ubicar la cámara en el espacio global para tenerlo en cuenta para el desplazamiento.
 
-GetPVCameraToWorldTransform obtiene la transformación en el espacio global de la cámara de fotos y vídeo.  Se colocará en la lente de la cámara:
+GetPVCameraToWorldTransform obtiene la transformación en el espacio global de la cámara PV y se coloca en la lente de la cámara:
 
 ![Plano técnico de la función Get PVCamera to World Transform](../images/unreal-pvc-img-08.png)
 
-GetWorldSpaceRayFromCameraPoint envía un rayo desde la lente de la cámara en la escena del espacio global de Unreal a fin de buscar lo que hay en un píxel determinado del encuadre de la cámara:
+GetWorldSpaceRayFromCameraPoint envía un rayo desde la lente de la cámara en la escena del espacio global de Unreal a fin de buscar el contenido de un píxel del encuadre de la cámara:
 
 ![Plano técnico de la obtención del rayo del espacio global desde el punto de mira de la cámara](../images/unreal-pvc-img-09.png)
 
@@ -105,7 +105,7 @@ GetPVCameraIntrinsics devuelve los valores intrínsecos de la cámara, que se pu
 
 ![Plano técnico de la obtención de las funciones intrínsecas de la cámara de fotos y vídeo](../images/unreal-pvc-img-10.png)
 
-Para buscar lo que hay en el espacio global de una coordenada de píxeles determinada, puede usar un seguimiento de líneas con el rayo del espacio global:
+Para buscar lo que hay en el espacio global de una coordenada de píxeles determinada, use un seguimiento de líneas con el rayo del espacio global:
 
 ![Plano técnico del rayo de espacio global que se usa para averiguar qué hay en el espacio global de una coordenada determinada](../images/unreal-pvc-img-11.png)
 

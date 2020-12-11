@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: gráficos, CPU, GPU, representación, recolección de elementos no utilizados, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 2c5a459f673889dd4c52043f9b9df6a3fe43a93a
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 6fd12bec31bb721def8801a8f2bacb8c3cb75745
+ms.sourcegitcommit: d11275796a1f65c31dd56b44a8a1bbaae4d7ec76
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91699759"
+ms.lasthandoff: 12/07/2020
+ms.locfileid: "96761777"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recomendaciones de rendimiento para Unity
 
@@ -120,9 +120,9 @@ public class ExampleClass : MonoBehaviour
 
 3) **Ten cuidado con la conversión boxing**
 
-    [La conversión boxing](https://docs.microsoft.com/dotnet/csharp/programming-guide/types/boxing-and-unboxing) es un concepto básico del lenguaje C# y del tiempo de ejecución. Es el proceso de encapsular variables con tipo de valor como char, int, bool, etc. en variables con tipo de referencia. Cuando a una variable con tipo de valor se le aplica la "conversión boxing", se encapsula dentro de un objeto System.Object que se almacena en el montón administrado. Por lo tanto, se asigna memoria y, en el momento en el que se elimina, el recolector de elementos no utilizados la debe procesar. Estas asignaciones y anulaciones de asignación incurren en un costo de rendimiento y en muchos escenarios no son necesarias o se pueden reemplazar fácilmente por una alternativa menos costosa.
+    [La conversión boxing](https://docs.microsoft.com/dotnet/csharp/programming-guide/types/boxing-and-unboxing) es un concepto básico del lenguaje C# y del tiempo de ejecución. Es el proceso de encapsular variables con tipo de valor como `char`, `int`, `bool`, etc. en variables con tipo de referencia. Cuando a una variable con tipo de valor se le aplica la "conversión boxing", se encapsula dentro de un objeto `System.Object` que se almacena en el montón administrado. Por lo tanto, se asigna memoria y, en el momento en el que se elimina, el recolector de elementos no utilizados la debe procesar. Estas asignaciones y anulaciones de asignación incurren en un costo de rendimiento y en muchos escenarios no son necesarias o se pueden reemplazar fácilmente por una alternativa menos costosa.
 
-    Una de las formas más comunes de conversión boxing en el desarrollo es el uso de [tipos de valor que aceptan valores NULL](https://docs.microsoft.com//dotnet/csharp/programming-guide/nullable-types/). Es habitual querer tener la posibilidad de devolver null para un tipo de valor en una función, sobre todo cuando la operación puede producir un error al intentar obtener el valor. El posible problema con este enfoque es que la asignación se produce ahora en el montón y, por consiguiente, debe recolectarse como elemento no utilizado más adelante.
+    Para evitar la conversión boxing, asegúrese de que las variables, los campos y las propiedades en los que almacena los tipos numéricos y las estructuras (incluido `Nullable<T>`) están fuertemente tipados como tipos específicos, como `int`, `float?` o `MyStruct`, en lugar de utilizar el objeto.  Si coloca estos objetos en una lista, asegúrese de usar una lista fuertemente tipada, como `List<int>`, en lugar de `List<object>` o `ArrayList`.
 
     **Ejemplo de conversión boxing en C#**
 
@@ -130,21 +130,6 @@ public class ExampleClass : MonoBehaviour
     // boolean value type is boxed into object boxedMyVar on the heap
     bool myVar = true;
     object boxedMyVar = myVar;
-    ```
-
-    **Ejemplo de conversión boxing problemática mediante tipos de valor que aceptan valores NULL**
-
-    Este código muestra una clase de partícula ficticia que se puede crear en un proyecto de Unity. Una llamada a `TryGetSpeed()` producirá la asignación de objetos en el montón que se deberán recolectar como elementos no utilizados en un momento posterior. Este ejemplo es especialmente problemático, ya que puede haber 1000 o más partículas en una escena, a cada una de las cuales se solicita su velocidad actual. Por lo tanto, se asignarán miles de objetos y, por consiguiente, se anulará su asignación en cada fotograma, lo que reducirá considerablemente el rendimiento. Volver a escribir la función para devolver un valor negativo como -1 para indicar un error evitará este problema y conservará la memoria en la pila.
-
-    ```csharp
-        public class MyParticle
-        {
-            // Example of function returning nullable value type
-            public int? TryGetSpeed()
-            {
-                // Returns current speed int value or null if fails
-            }
-        }
     ```
 
 #### <a name="repeating-code-paths"></a>Rutas de acceso al código repetitivas
@@ -249,7 +234,7 @@ Lee *Procesamiento por lotes estático* en [Procesamiento por lotes de llamadas 
 
 #### <a name="dynamic-batching"></a>Procesamiento por lotes dinámico
 
-Dado que es problemático marcar objetos como *estáticos* para el desarrollo de HoloLens, el procesamiento por lotes dinámico puede ser una herramienta excelente para compensar esta característica que falta. Por supuesto, también puede ser útil en los cascos envolventes. Sin embargo, el procesamiento por lotes dinámico en Unity puede ser difícil de habilitar porque los objetos GameObject deben **a) compartir el mismo material** y **b) cumplir una larga lista de otros criterios** .
+Dado que es problemático marcar objetos como *estáticos* para el desarrollo de HoloLens, el procesamiento por lotes dinámico puede ser una herramienta excelente para compensar esta característica que falta. Por supuesto, también puede ser útil en los cascos envolventes. Sin embargo, el procesamiento por lotes dinámico en Unity puede ser difícil de habilitar porque los objetos GameObject deben **a) compartir el mismo material** y **b) cumplir una larga lista de otros criterios**.
 
 Lee *Procesamiento por lotes dinámico* en [Procesamiento por lotes de llamadas a draw en Unity](https://docs.unity3d.com/Manual/DrawCallBatching.html) para obtener la lista completa. Normalmente, los objetos GameObject dejan de ser válidos para el procesamiento por lotes dinámico, porque los datos de malla asociados no pueden ser más de 300 vértices.
 
@@ -268,7 +253,7 @@ Más información acerca de la [optimización de la representación de gráficos
 
 ### <a name="optimize-depth-buffer-sharing"></a>Optimización del uso compartido del búfer de profundidad
 
-Por lo general, se recomienda habilitar **Depth buffer sharing** (Uso compartido del búfer de profundidad) en **Player XR Settings** (Configuración del reproductor XR) para optimizar la [estabilidad del holograma](../platform-capabilities-and-apis/Hologram-stability.md). Sin embargo, al habilitar la reproyección en etapa posterior basada en la profundidad con esta configuración, se recomienda seleccionar el **formato de profundidad de 16 bits** en lugar del **formato de profundidad de 24 bits** . Los búferes de profundidad de 16 bits reducirán drásticamente el ancho de banda (y, por lo tanto, la energía) asociado con el tráfico del búfer de profundidad. Puede ser una gran victoria tanto en la reducción de energía como en la mejora del rendimiento. Sin embargo, hay dos posibles resultados negativos al usar el *formato de profundidad de 16 bits* .
+Por lo general, se recomienda habilitar **Depth buffer sharing** (Uso compartido del búfer de profundidad) en **Player XR Settings** (Configuración del reproductor XR) para optimizar la [estabilidad del holograma](../platform-capabilities-and-apis/Hologram-stability.md). Sin embargo, al habilitar la reproyección en etapa posterior basada en la profundidad con esta configuración, se recomienda seleccionar el **formato de profundidad de 16 bits** en lugar del **formato de profundidad de 24 bits**. Los búferes de profundidad de 16 bits reducirán drásticamente el ancho de banda (y, por lo tanto, la energía) asociado con el tráfico del búfer de profundidad. Puede ser una gran victoria tanto en la reducción de energía como en la mejora del rendimiento. Sin embargo, hay dos posibles resultados negativos al usar el *formato de profundidad de 16 bits*.
 
 **Z-Fighting**
 
@@ -288,7 +273,7 @@ La [iluminación global en tiempo real](https://docs.unity3d.com/Manual/GIIntro.
 
 Además, se recomienda deshabilitar todas las proyecciones de sombras, ya que también agregan pasadas de GPU costosas a una escena de Unity. Las sombras se pueden deshabilitar por iluminación, pero también se pueden controlar holísticamente a través de la configuración de la calidad.
 
-**Editar** > **Configuración del proyecto** , luego selecciona la categoría **Calidad** > selecciona **Calidad baja** para la Plataforma UWP. También puedes establecer solo la propiedad **Sombras** en **Disable Shadows** (Deshabilitar sombras).
+**Editar** > **Configuración del proyecto**, luego selecciona la categoría **Calidad** > selecciona **Calidad baja** para la Plataforma UWP. También puedes establecer solo la propiedad **Sombras** en **Disable Shadows** (Deshabilitar sombras).
 
 Se recomienda usar la iluminación posterior con los modelos en Unity.
 

@@ -2,25 +2,25 @@
 title: Actualización de proyectos en Unreal
 description: Información general de los pasos de actualización de la versión y las API en desuso en proyectos de Unreal.
 author: hferrone
-ms.author: v-hferrone
+ms.author: jacksonf
 ms.date: 11/23/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, desarrollo, características, documentación, guías, hologramas, códigos qr, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual
-ms.openlocfilehash: efad783ee199ed42c7355917a180855b3ec4f11b
-ms.sourcegitcommit: 09522ab15a9008ca4d022f9e37fcc98f6eaf6093
+ms.openlocfilehash: 0ba10b8ee1067da4494f147d43f8834010e1250f
+ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "96355768"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "96609666"
 ---
 # <a name="upgrading-projects-in-unreal"></a>Actualización de proyectos en Unreal
 
-Cuando se realice una actualización a una nueva versión de Unreal, las funciones en desuso se mostrarán como advertencias al compilar el plano técnico o empaquetar el proyecto.  Las funciones pasan a estar en desuso cuando se ha agregado una nueva función que se debe usar en su lugar. 
+Cuando se realice una actualización a una nueva versión de Unreal, las funciones en desuso se muestran como advertencias al compilar los planos técnicos o empaquetar el proyecto.  Las funciones pasan a estar en desuso cuando se ha agregado una nueva función que se debe usar en su lugar. 
 
 ## <a name="426-upgrades"></a>Actualizaciones de la versión 4.26
  
-En la versión 4.26, todas las plataformas de AR y VR se han refactorizado a fin de agregar interfaces comunes y mantener la plataforma de código de aplicación independiente.  Debido a esta refactorización, es posible que los proyectos de HoloLens que se actualicen a la versión 4.26 vean más advertencias de lo habitual.  Se recomienda realizar la actualización a las nuevas API para que el proyecto se pueda migrar más fácilmente a otras plataformas.
+En la versión 4.26, todas las plataformas de AR y VR se han refactorizado a fin de agregar interfaces comunes y mantener la plataforma de código de aplicación independiente, por lo que puede ver más advertencias de lo habitual.  Se recomienda realizar la actualización a las nuevas API para que el proyecto se pueda migrar más fácilmente a otras plataformas.
 
 Los mensajes de advertencia mostrarán qué función se encuentra en desuso y la función que se va a utilizar en su lugar.  Todas las funciones en desuso seguirán funcionando en esta versión, pero es posible que no funcionen en versiones futuras.  Las funciones en desuso ya no aparecerán en la lista al buscar funciones de un plano técnico.
 
