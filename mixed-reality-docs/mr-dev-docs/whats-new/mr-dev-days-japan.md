@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: df7b6837653b309189e44d36853430b89b8b56a9
-ms.sourcegitcommit: 2eeee7bb1589148f5c9fe7f76ade58d3e08b5817
+ms.openlocfilehash: 94f38ff122826dfaea6282403c5958b127c81739
+ms.sourcegitcommit: ee87915132cf2874d4642ce2fe383f5eba6c49c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/11/2020
-ms.locfileid: "97104209"
+ms.locfileid: "97111887"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>Mixed Reality Dev Days (Japón)
 
@@ -44,7 +44,7 @@ Estamos muy entusiasmados por abrir el registro de los días de desarrollo de la
 ### <a name="december-16th"></a>16 de diciembre
 |**Time**|**Título de la sesión**|**Participante**|**Idioma**|**Level**|
 |---------|---------|---------|---------|---------|
-|10: a.m.-10:50am|Apertura del discurso|Madoka Chiyoda, Alex Kipman, Jesse McCulloch, Kaoru Nakamura, Tetsu Muranaka|JA/EN|N/D|
+|10: a.m.-10:50am|Apertura del discurso|Madoka Chiyoda, Jesse McCulloch, Kaoru Nakamura, Tetsu Muranaka|JA/EN|N/D|
 |10:50am-11: a.m.|**Interrumpir (10min)**||||
 |11: a.m.-11:25am|*Sesión 1* Introducción a la realidad mixta|Atsushi Suzuki|JA|100|
 |11:9:30-11:55am|*Sesión 2* Momento del negocio de realidad mixta|Tetsu Muranaka|JA|200|
