@@ -1,26 +1,26 @@
 ---
 title: Escritura de un reproductor de control remoto de holografías personalizado
-description: Mediante la creación de una aplicación de reproductor remoto holográfica personalizada, puede crear una aplicación personalizada capaz de mostrar el contenido representado en una máquina remota a HoloLens 2. En este artículo se describe cómo se puede lograr esto.
+description: Mediante la creación de una aplicación de reproductor de comunicación remota holográfica personalizada, puede crear una aplicación personalizada capaz de mostrar el contenido representado en una máquina remota a HoloLens 2.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, Holographic Remoting, NuGet, manifiesto de la aplicación, contexto del reproductor, aplicación remota, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 69dc382873eb4fe0dc50f6f55e074c3491b02c02
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: ac3ee68cf3cff3e024ce40acceac61a2fe123399
+ms.sourcegitcommit: 99ae85159b7cf75f919021771ebb8299868beea9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443635"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97102900"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>Escritura de una aplicación de reproductor de control remoto de holografías personalizada
 
 >[!IMPORTANT]
 >En este documento se describe la creación de una aplicación de reproductor personalizada para HoloLens 2. Los reproductores personalizados escritos para HoloLens 2 no son compatibles con las aplicaciones remotas escritas para HoloLens 1. Esto implica que ambas aplicaciones deben usar el paquete NuGet versión **2. x. x**.
 
-Mediante la creación de una aplicación de reproductor de acceso remoto holográfica personalizada, puede crear una aplicación personalizada capaz de mostrar [vistas envolventes](../../design/app-views.md) desde en una máquina remota de HoloLens 2. En este artículo se describe cómo se puede lograr esto. Todo el código de esta página y los proyectos de trabajo se pueden encontrar en el repositorio de github de ejemplos de la [comunicación remota de Holographic](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
+Mediante la creación de una aplicación de reproductor de comunicación remota holográfica personalizada, puede crear una aplicación personalizada capaz de mostrar [vistas envolventes](../../design/app-views.md) desde en una máquina remota de HoloLens 2. Todo el código de esta página y los proyectos de trabajo se pueden encontrar en el repositorio de github de ejemplos de la [comunicación remota de Holographic](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
 
-Un reproductor remoto holográfica permite a la aplicación mostrar el contenido holográfica [representado](rendering.md) en un equipo de escritorio o en un dispositivo UWP, como la Xbox One, lo que permite el acceso a más recursos del sistema. Una aplicación de reproductor de comunicación remota holográfica transmite datos de entrada a una aplicación remota de Holographic Remoting y recibe una vista envolvente como flujo de audio y vídeo. La conexión se realiza mediante Wi-Fi estándar. Para crear una aplicación de reproductor, usará un paquete NuGet para agregar la comunicación remota holográfica a la aplicación para UWP y escribir código para controlar la conexión y mostrar una vista envolvente. 
+Un reproductor remoto holográfica permite que la aplicación muestre el contenido holográfica [representado](rendering.md) en un equipo de escritorio o un dispositivo UWP como la Xbox One con acceso a más recursos del sistema. Una aplicación de reproductor de comunicación remota holográfica transmite datos de entrada a una aplicación remota de Holographic Remoting y recibe una vista envolvente como flujo de audio y vídeo. La conexión se realiza mediante Wi-Fi estándar. Para crear una aplicación de reproductor, use un paquete NuGet para agregar la comunicación remota holográfica a la aplicación de UWP. A continuación, escriba el código para controlar la conexión y mostrar una vista envolvente. 
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
@@ -34,10 +34,10 @@ Un buen punto de partida es una aplicación UWP basada en DirectX que ya tiene c
 Los pasos siguientes son necesarios para agregar el paquete NuGet a un proyecto en Visual Studio.
 1. Abra el proyecto en Visual Studio.
 2. Haga clic con el botón derecho en el nodo del proyecto y seleccione **administrar paquetes NuGet...**
-3. En el panel que aparece, haga clic en **examinar** y busque "Holographic Remoting".
-4. Seleccione **Microsoft. Holographic. Remoting**, asegúrese de elegir la versión **2. x. x** más reciente y haga clic en **instalar**.
-5. Si aparece el cuadro de diálogo **vista previa** , haga clic en **Aceptar**.
-6. El siguiente cuadro de diálogo que aparece es el contrato de licencia. Haga clic en **acepto para aceptar el contrato de licencia** .
+3. En el panel que aparece, seleccione **examinar** y busque "Holographic Remoting".
+4. Seleccione **Microsoft. Holographic. Remoting**, asegúrese de elegir la versión **2. x. x** más reciente y seleccione **instalar**.
+5. Si aparece el cuadro de diálogo **vista previa** , seleccione **Aceptar**.
+6. Seleccione **acepto** cuando aparezca el cuadro de diálogo contrato de licencia.
 
 >[!IMPORTANT]
 ><a name="idl"></a>```build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl```En el paquete NuGet se incluye documentación detallada para la API expuesta por la comunicación remota holográfica.
@@ -47,7 +47,7 @@ Los pasos siguientes son necesarios para agregar el paquete NuGet a un proyecto 
 Para que la aplicación tenga en cuenta los Microsoft.Holographic.AppRemoting.dll agregados por el paquete de NuGet, es necesario realizar los siguientes pasos en el proyecto:
 
 1. En el Explorador de soluciones haga clic con el botón derecho en el archivo **Package. appxmanifest** y seleccione **abrir con.** ..
-2. Seleccione **Editor XML (texto)** y haga clic en Aceptar.
+2. Seleccione **Editor XML (texto)** y haga clic en **Aceptar** .
 3. Agregue las líneas siguientes al archivo y guárdela
 ```xml
   </Capabilities>
@@ -206,15 +206,15 @@ Si se ejecuta correctamente, ```BlitRemoteFrame``` devuelve ```BlitResult::Succe
 - La aplicación remota ha confirmado un búfer de profundidad a través de [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_).
 - La aplicación de reproductor personalizada ha enlazado un búfer de profundidad válido antes de llamar a ```BlitRemoteFrame``` .
 
-Si se cumplen estas condiciones ```BlitRemoteFrame``` , la profundidad remota se convertirá en el búfer de profundidad local actualmente enlazado. Después, puede representar contenido local adicional que tendrá una intersección de profundidad con el contenido representado remoto. Además, puede confirmar el búfer de profundidad local a través de [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_) en el reproductor personalizado para tener una reproyección de profundidad para el contenido representado de forma local y remota. Consulte [reproyección de profundidad](hologram-stability.md#reprojection) para obtener más información.
+Si se cumplen estas condiciones ```BlitRemoteFrame``` , la profundidad remota se convertirá en el búfer de profundidad local actualmente enlazado. Después, puede representar contenido local adicional, que tendrá una intersección de profundidad con el contenido representado remoto. Además, puede confirmar el búfer de profundidad local a través de [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_) en el reproductor personalizado para tener una reproyección de profundidad para el contenido representado de forma local y remota. Consulte [reproyección de profundidad](hologram-stability.md#reprojection) para obtener más información.
 
 ### <a name="projection-transform-mode"></a>Modo de transformación de proyección
 
-Un problema que se produce al usar la reproyección de profundidad a través de la comunicación remota de Holographic es que el contenido remoto se puede representar con una transformación de proyección diferente que el contenido local que representa directamente la aplicación de reproductor personalizada. Un caso de uso común es especificar valores diferentes para el plano Near y Far (a través de [HolographicCamera:: SetNearPlaneDistance](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.setnearplanedistance) y [HolographicCamera:: SetFarPlaneDistance](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.setfarplanedistance)) en el lado del reproductor y en el lado remoto. En este caso, no está claro si la transformación de proyección en el lado del reproductor debe reflejar las distancias de plano Near/Far remoto o las locales.
+Un problema, que se muestra al usar la reproyección de profundidad a través de la comunicación remota de Holographic, es que el contenido remoto se puede representar con una transformación de proyección diferente que el contenido local que representa directamente la aplicación de reproductor personalizada. Un caso de uso común es especificar valores diferentes para el plano Near y Far (a través de [HolographicCamera:: SetNearPlaneDistance](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.setnearplanedistance) y [HolographicCamera:: SetFarPlaneDistance](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.setfarplanedistance)) en el lado del reproductor y en el lado remoto. En este caso, no está claro si la transformación de proyección en el lado del reproductor debe reflejar las distancias de plano Near/Far remoto o las locales.
 
 A partir de la versión [2.1.0](holographic-remoting-version-history.md#v2.1.0) , puede controlar el modo de transformación de proyección a través de ```PlayerContext::ProjectionTransformConfig``` . Los valores admitidos son:
 
-- ```Local``` - [HolographicCameraPose::P rojectiontransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.projectiontransform) devuelve una transformación de proyección que refleja las distancias de plano Near/Far establecidas por la aplicación de reproductor personalizada en el HolographicCamera.
+- ```Local``` - [HolographicCameraPose::P rojectiontransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.projectiontransform) devuelve una transformación de proyección, que refleja las distancias de plano Near/Far establecidas por la aplicación de reproductor personalizada en el HolographicCamera.
 - ```Remote``` -La transformación de proyección refleja las distancias de plano Near y Far especificadas por la aplicación remota.
 - ```Merged``` -Las distancias de plano Near y Far desde la aplicación remota y la aplicación de reproductor personalizada se combinan. De forma predeterminada, esto se realiza tomando el mínimo de las distancias de plano cercanos y el máximo de las distancias de plano lejano. En caso de que se invierta el lado remoto o el local, por ejemplo, < Near, se voltean las distancias de plano Near/Far remoto.
 
@@ -226,7 +226,7 @@ La ```PlayerContext::BlitRemoteFrameTimeout``` propiedad especifica la cantidad 
 
 Un caso de uso común es habilitar el tiempo de espera de BlitRemoteFrame para mostrar una pantalla en blanco si no se recibe ningún fotograma nuevo durante un período de tiempo determinado. Cuando está habilitado, el tipo de valor devuelto del ```BlitRemoteFrame``` método también se puede utilizar para cambiar a un contenido de reserva representado localmente. 
 
-Para habilitar el tiempo de espera, establezca el valor de la propiedad en una duración igual o superior a 100 ms. Para deshabilitar el tiempo de espera, establezca la propiedad en cero Duration. Si el tiempo de espera está habilitado y no se recibe ningún marco remoto durante el tiempo establecido, BlitRemoteFrame producirá un error y devolverá ```Failed_RemoteFrameTooOld``` hasta que se reciba un nuevo marco remoto.
+Para habilitar el tiempo de espera, establezca el valor de la propiedad en una duración igual o mayor que 100 ms. Para deshabilitar el tiempo de espera, establezca la propiedad en cero Duration. Si el tiempo de espera está habilitado y no se recibe ningún marco remoto durante el tiempo establecido, BlitRemoteFrame producirá un error y devolverá ```Failed_RemoteFrameTooOld``` hasta que se reciba un nuevo marco remoto.
 
 ```cpp
 using namespace std::chrono_literals;
@@ -251,7 +251,7 @@ Para obtener más información, consulte la ```PlayerFrameStatistics``` document
 Los canales de datos personalizados se pueden usar para enviar datos de usuario a través de la conexión remota ya establecida. Vea [canales de datos personalizados](holographic-remoting-custom-data-channels.md) para obtener más información.
 
 ## <a name="see-also"></a>Consulte también
-* [Escritura de una aplicación remota Holographic Remoting con las API Realiy de Windows Mixed](holographic-remoting-create-remote-wmr.md)
+* [Escritura de una aplicación remota Holographic Remoting con las API de Windows Mixed Reality](holographic-remoting-create-remote-wmr.md)
 * [Escritura de una aplicación remota de Holographic Remoting con las API de OpenXR](holographic-remoting-create-remote-openxr.md)
 * [Canales de datos personalizados de control remoto de holografías](holographic-remoting-custom-data-channels.md)
 * [Establecimiento de una conexión segura con Control remoto de holografías](holographic-remoting-secure-connection.md)

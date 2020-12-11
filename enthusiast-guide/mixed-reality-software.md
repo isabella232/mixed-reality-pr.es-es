@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, componentes de software, historial de versiones, notas de la versión, historial de versiones
 appliesto:
 - Windows 10
-ms.openlocfilehash: 76a913ae5890c908dda4e25d5b5c21554fdae7f0
-ms.sourcegitcommit: 9c88703a832fb8ca8476e808499d06239ea5d2cd
+ms.openlocfilehash: 0dd2ef30252189d006bfaf5702c47dce72f2798d
+ms.sourcegitcommit: d8db38647cf45f05b9445ceaf057d4cd01721ee6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92011421"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97091309"
 ---
 # <a name="mixed-reality-software-overview-and-release-history"></a>Información general de software de Mixed Reality e historial de versiones
 
@@ -42,7 +42,7 @@ Administrar el casco de la realidad mixta de Windows:
 
 La **actualización 2020 de Windows 10 de mayo (v2004)** incluye nuevas características para los auriculares de Windows Mixed Reality (VR), como la capacidad de iniciar aplicaciones Win32 en la Página principal de la realidad mixta. HoloLens (1ª generación) está en el servicio a largo plazo (LTS), con actualizaciones de servicio que se publican mensualmente.
 
-Para actualizar a la versión más reciente en el equipo para auriculares con Windows Mixed Reality (VR), abra la aplicación de **configuración** , vaya a **Actualizar & seguridad**y, luego, seleccione el botón **Buscar actualizaciones** . En un equipo con Windows 10, también puede instalar manualmente la **actualización de Windows 10 de mayo de 2020** mediante la [herramienta de creación de Windows Media](https://www.microsoft.com/software-download/windows10).
+Para actualizar a la versión más reciente en el equipo para auriculares con Windows Mixed Reality (VR), abra la aplicación de **configuración** , vaya a **Actualizar & seguridad** y, luego, seleccione el botón **Buscar actualizaciones** . En un equipo con Windows 10, también puede instalar manualmente la **actualización de Windows 10 de mayo de 2020** mediante la [herramienta de creación de Windows Media](https://www.microsoft.com/software-download/windows10).
 
 **Versión más reciente del escritorio**: Windows 10 v2004 (10.0.19041.264)
 
@@ -100,6 +100,7 @@ Este controlador se descarga e instala automáticamente a través de Windows Upd
 
    | Versión          | Fecha de la versión          | Principales cambios                                                 |
    |------------------|-----------------------|---------------------------------------------------------------|
+   | [10.0.19041.2037](https://www.microsoft.com/en-us/download/details.aspx?id=102527)  | 10 de diciembre de 2020  | Compatible con Windows 10, la versión 1903 y versiones más recientes.<br/><ul><li>Nuevo firmware del controlador para el controlador de HP para solucionar un problema en el que algunos controladores tienen desencadenadores no en funcionamiento.</li>|
    | [10.0.19041.2034](https://www.microsoft.com/en-us/download/details.aspx?id=102156)  | 8 de octubre de 2020  | Compatible con Windows 10, la versión 1903 y versiones más recientes.<br/><ul><li>Compatibilidad oficial con la reverberación de HP G2, HP Omnicept y el nuevo controlador de HP.</li><li>Correcciones de pantalla secundarias para la reverberación de HP y los auriculares de Samsung Odyssey +. (Requiere la [compilación de so 19041,546](https://support.microsoft.com/en-us/help/4577063/windows-10-update-kb4577063) o posterior o las [compilaciones de sistema operativo 18362,1110 y 18363,1110](https://support.microsoft.com/en-us/help/4577062/windows-10-update-kb4577062) o posterior).</li><li>Las mejoras en el estado de la alimentación del equipo pasan de la suspensión para reducir los errores de SWW 1-4.</li><li>Correcciones secundarias y mejoras de confiabilidad de la plataforma con auriculares de realidad mixta de Windows.|
    | [10.0.19041.1009](https://www.microsoft.com/en-us/download/details.aspx?id=101260)  | 7 de mayo de 2020      | Compatible con Windows 10, la versión 1903 y versiones más recientes.<br/><ul><li>Correcciones secundarias y mejoras de confiabilidad de la plataforma con auriculares de realidad mixta de Windows.</li></ul>  |
 
