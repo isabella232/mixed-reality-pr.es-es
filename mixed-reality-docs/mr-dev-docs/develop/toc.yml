@@ -452,11 +452,13 @@
           href: platform-capabilities-and-apis/hololens-emulator-archive.md
         - name: Simulación de percepción
           href: platform-capabilities-and-apis/perception-simulation.md
-    - name: Herramientas de investigación
+    - name: Portal de dispositivos
       items:
         - name: Uso de Portal de dispositivos Windows
           href: platform-capabilities-and-apis/using-the-windows-device-portal.md
         - name: Referencia de la API del Portal de dispositivos
           href: platform-capabilities-and-apis/device-portal-api-reference.md
+    - name: Herramientas de investigación
+      items:
         - name: Modo de investigación de HoloLens
           href: platform-capabilities-and-apis/research-mode.md
