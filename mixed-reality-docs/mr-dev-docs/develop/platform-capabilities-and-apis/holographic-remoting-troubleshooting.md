@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, Holographic Remoting, representación remota, representación en red, HoloLens, hologramas remotos, solución de problemas, ayuda, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: ca0e4b3a43eae5be09f2c0bfbee9056cd847787c
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 9b900238abc79b0f2f93691d4b4a67cce67a201a
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443599"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530192"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Solución de problemas de Holographic Remoting
 
@@ -22,40 +22,40 @@ ms.locfileid: "96443599"
 
 Las aplicaciones de ejemplo de Holographic Remoting tienen habilitada la mitigación de Spectre (/Qspectre) en la configuración de versión.
 
-Si obtiene un error irrecuperable del enlazador que indica que no se puede abrir ' vccorlib. lib ', asegúrese de que la carga de trabajo de Visual Studio incluye las bibliotecas mitigadas de Spectre. Consulte https://aka.ms/Ofhn4c para obtener más información.
+Si obtiene el error irrecuperable de *vccorlib. lib* , asegúrese de que la carga de trabajo de Visual Studio incluye las [bibliotecas mitigadas de Spectre](https://aka.ms/Ofhn4c)
 
 ## <a name="speech"></a>Voz
 
-El reproductor de comunicación remota holográfica es compatible con una superposición de diagnósticos que se puede habilitar diciendo ```Enable Diagnostics``` y deshabilitando ```Disable Diagnostics``` . Si tiene problemas con estos comandos de voz, también puede iniciar el reproductor de acceso remoto holográfica a través de un explorador Web usando ```ms-holographic-remoting:?stats``` como dirección URL.
+El reproductor de comunicación remota holográfica es compatible con una superposición de diagnósticos, que se puede habilitar diciendo ```Enable Diagnostics``` y deshabilitando ```Disable Diagnostics``` . Si tiene problemas con estos comandos de voz, también puede iniciar el reproductor de acceso remoto holográfica a través de un explorador Web usando ```ms-holographic-remoting:?stats``` como dirección URL.
 
 ## <a name="h265-video-codec-not-available"></a>Códec de vídeo de H265 no disponible
 
-Debe instalar las extensiones de [vídeo de HEVC](https://www.microsoft.com/p/hevc-video-extensions/9nmzlz57r3t7) al usar el códec de vídeo H265 en la aplicación remota. Si surgen problemas en los que el códec está instalado pero no se pueden usar, consulte la guía de [solución de problemas](https://docs.microsoft.com/azure/remote-rendering/resources/troubleshoot#h265-codec-not-available) .
+Instale las [extensiones de vídeo de HEVC](https://www.microsoft.com/p/hevc-video-extensions/9nmzlz57r3t7) al usar el códec de vídeo H265 en la aplicación remota. Si surgen problemas en los que el códec está instalado pero no se pueden usar, consulte la guía de [solución de problemas](https://docs.microsoft.com/azure/remote-rendering/resources/troubleshoot#h265-codec-not-available) .
 
 ## <a name="limitations"></a>Limitaciones
 
-Las siguientes API **no** se admiten actualmente cuando se usa Holographic Remoting para HoloLens 2 y generarán un ```ERROR_NOT_SUPPORTED``` error a menos que se indique lo contrario:
+Actualmente **no** se admiten las siguientes API cuando se usa Holographic Remoting para HoloLens 2 y se producirá un ```ERROR_NOT_SUPPORTED``` error a menos que se indique lo contrario:
 
 [Windows.Graphics.Holographic](https://docs.microsoft.com/uwp/api/windows.graphics.holographic)
 
 * [HolographicCamera.ViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.viewconfiguration)
   - Se admite a partir de la versión [2.0.18](holographic-remoting-version-history.md#v2.0.18)
-  - En versiones anteriores siempre produce un error.
+  - En versiones anteriores, siempre genera un error.
 * [HolographicCamera.IsHardwareContentProtectionEnabled](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.ishardwarecontentprotectionenabled#Windows_Graphics_Holographic_HolographicCamera_IsHardwareContentProtectionEnabled)
 * [HolographicViewConfiguration.RequestRenderTargetSize](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicviewconfiguration.requestrendertargetsize#Windows_Graphics_Holographic_HolographicViewConfiguration_RequestRenderTargetSize_Windows_Foundation_Size_)
   - Se admite a partir de la versión [2.2.0](holographic-remoting-version-history.md#v2.2.0)
-  - En versiones anteriores, no se produce un error, pero no se cambia el tamaño del destino de representación.
+  - En versiones anteriores, no se produce un error, pero no se cambia el tamaño de destino de representación.
 * [HolographicCameraPose.OverrideProjectionTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideprojectiontransform)
 * [HolographicCameraPose.OverrideViewport](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewport)
 * [HolographicCameraPose.OverrideViewTransform](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose.overrideviewtransform)
   - Se admite a partir de la versión [2.2.0](holographic-remoting-version-history.md#v2.2.0)
 * [HolographicCameraRenderingParameters.CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer#Windows_Graphics_Holographic_HolographicCameraRenderingParameters_CommitDirect3D11DepthBuffer_Windows_Graphics_DirectX_Direct3D11_IDirect3DSurface_)
-  - No genera ningún error, pero el búfer de profundidad no se realizará de forma remota.
+  - Bermejo.
   - Compatible a partir de la versión [2.1.0](holographic-remoting-version-history.md#v2.1.0)
 * [HolographicDisplay.TryGetViewConfiguration](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.trygetviewconfiguration)
   - Al consultar HolographicViewConfigurationKind. PhotoVideoCamera, siempre se devolverá un ```nullptr``` .
   - Se admite a partir de la versión [2.0.18](holographic-remoting-version-history.md#v2.0.18)
-  - En versiones anteriores siempre produce un error.
+  - En versiones anteriores, siempre genera un error.
 * [HolographicSpace.CreateFramePresentationMonitor](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createframepresentationmonitor)
 * [HolographicDisplay.GetDefault](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay.getdefault#Windows_Graphics_Holographic_HolographicDisplay_GetDefault)
   - Notificará un error si se llama antes de que se establezca una conexión.
@@ -71,14 +71,14 @@ Las siguientes API **no** se admiten actualmente cuando se usa Holographic Remot
 * [SpatialLocation. AbsoluteLinearVelocity](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocation.absolutelinearvelocity)
 * [SpatialStageFrameOfReference. Current](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current)
   - Se admite a partir de la versión [2.2.0](holographic-remoting-version-history.md#v2.2.0)
-  - En versiones anteriores, siempre devuelve ```nullptr``` .
+  - En versiones anteriores, siempre devuelven ```nullptr``` .
 * [SpatialStageFrameOfReference.RequestNewStageAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.requestnewstageasync)
   - Se admite a partir de la versión [2.2.0](holographic-remoting-version-history.md#v2.2.0)
 * [SpatialAnchor.RemovedByUser](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor.removedbyuser)
 * [SpatialAnchorExporter.GetDefault](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchorexporter.getdefault
 )
   - Se admite a partir de la versión [2.0.9](holographic-remoting-version-history.md#v2.0.9). 
-  - En versiones anteriores, siempre devuelve ```nullptr``` . 
+  - En versiones anteriores, siempre devuelven ```nullptr``` . 
 * [SpatialAnchorExporter.RequestAccessAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchorexporter.requestaccessasync
 )
   - Se admite a partir de la versión [2.0.9](holographic-remoting-version-history.md#v2.0.9). 
@@ -105,7 +105,7 @@ Las siguientes API **no** se admiten actualmente cuando se usa Holographic Remot
 
 ## <a name="see-also"></a>Consulte también
 * [Historial de versiones de Holographic Remoting](holographic-remoting-version-history.md)
-* [Escritura de una aplicación remota Holographic Remoting con las API Realiy de Windows Mixed](holographic-remoting-create-remote-wmr.md)
+* [Escritura de una aplicación remota Holographic Remoting con las API de Windows Mixed Reality](holographic-remoting-create-remote-wmr.md)
 * [Escritura de una aplicación remota de Holographic Remoting con las API de OpenXR](holographic-remoting-create-remote-openxr.md)
 * [Escritura de una aplicación de reproductor de control remoto de holografías personalizada](holographic-remoting-create-player.md)
 * [Términos de licencia del software de control remoto de holografías](https://docs.microsoft.com/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
