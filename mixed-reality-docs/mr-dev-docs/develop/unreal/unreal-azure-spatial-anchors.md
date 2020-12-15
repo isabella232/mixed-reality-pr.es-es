@@ -3,16 +3,16 @@ title: Azure Spatial Anchors en Unreal
 description: Información general sobre la creación de Azure Spatial Anchors en Unreal Engine.
 author: hferrone
 ms.author: jacksonf
-ms.date: 07/01/2020
+ms.date: 12/9/2020
 ms.topic: tutorial
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens 2, azure, azure development, spatial anchors, mixed reality, development, features, new project, emulator, documentation, guides, holograms, game development, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 4714957c3ddab188a776c86f839208759c9d20de
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 18ec9db03341ad4fc6a5c10ea6f8fdd38c61c537
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609746"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96926029"
 ---
 # <a name="azure-spatial-anchors-in-unreal"></a>Azure Spatial Anchors en Unreal
 

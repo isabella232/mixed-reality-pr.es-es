@@ -3,16 +3,16 @@ title: Introducción al desarrollo de Unity
 description: Empezar a crear aplicaciones de realidad mixta en Unity.
 author: thetuvix
 ms.author: kurtie
-ms.date: 08/04/2020
+ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, mixed reality, development, getting started, new project, porting, capability, camera, simulation, emulation, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset, what is virtual reality, what is augmented reality, MRTK, mixed reality toolkit, spatial mapping, voice input, locatable camera, emulator, Azure, tutorials
-ms.openlocfilehash: 9a9a5bc47327b3bd23ac6212b8b9f12787b74e4c
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 4eeec1544315ff2b9a43fc725d5bbd83c8cea89f
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679904"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96926037"
 ---
 # <a name="unity-development-overview"></a>Introducción al desarrollo de Unity
 

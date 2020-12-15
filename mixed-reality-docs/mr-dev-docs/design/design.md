@@ -3,16 +3,16 @@ title: Empezar a diseñar y a crear prototipos
 description: Si estás listo para crear, aprende los conceptos básicos que necesitas para empezar a diseñar y a crear prototipos.
 author: grbury
 ms.author: grbury
-ms.date: 08/24/2019
+ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects, core concepts, interaction, mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: 3c28991fa35052a8b5cf5a071899ec14f2fec226
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: a11283ad4a7931c9e061cdbf25d4659fa4760822
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702721"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96926003"
 ---
 # <a name="start-designing-and-prototyping"></a>Empezar a diseñar y a crear prototipos
 

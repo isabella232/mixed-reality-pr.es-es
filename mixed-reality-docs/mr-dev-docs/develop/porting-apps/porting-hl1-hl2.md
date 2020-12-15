@@ -3,16 +3,16 @@ title: Portabilidad de aplicaciones de HoloLens (1.ª generación) a HoloLens 
 description: Diseñado para desarrolladores que ya tienen una aplicación en HoloLens (1.ª generación) o una versión anterior de MRTK, y quieren realizar la portabilidad a MRTK versión 2 y HoloLens 2.
 author: hferrone
 ms.author: grbury
-ms.date: 07/29/2020
+ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2, unity, porting, HoloLens 1st gen, mixed reality headset, windows mixed reality headset, virtual reality headset, migration, best practices, ARM
-ms.openlocfilehash: 9d76dcdb6fedb3297a781b9bf905b9d74521ad58
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 7a4c05ce4918ff3868265c40096bd37016d4546a
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96469732"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96925960"
 ---
 # <a name="porting-hololens-1st-gen-apps-to-hololens-2"></a>Portabilidad de aplicaciones de HoloLens (1.ª generación) a HoloLens 2
 
