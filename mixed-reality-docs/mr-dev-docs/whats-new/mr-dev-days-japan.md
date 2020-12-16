@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: 94f38ff122826dfaea6282403c5958b127c81739
-ms.sourcegitcommit: ee87915132cf2874d4642ce2fe383f5eba6c49c2
+ms.openlocfilehash: 7ca5357c9d7f3536fc165d0663813ae98f45004f
+ms.sourcegitcommit: 1b5a5ce89f2edc86985a73e4f3828bb761e7543a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97111887"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "97564260"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>Mixed Reality Dev Days (Japón)
 
@@ -31,9 +31,9 @@ Esperamos que se una a nosotros en Mixed Reality dev Day. Prepárese para oír a
 
 ## <a name="registration"></a>Registro
 
-[Registro: ahora abierto](https://mixedrealityprod.microsoftcrmportals.com/event/sessions?id=MR_Dev_Days_Japan864059683)
+[VER ahora: eventos en directo de Microsoft Teams](https://aka.ms/MRDDJPLive)
 
-Estamos muy entusiasmados por abrir el registro de los días de desarrollo de la realidad mixta en Japón.  El evento es gratuito y se mantiene en línea en los eventos en directo de Microsoft Teams.  Solicitamos que los asistentes se registren para que podamos enviar actualizaciones de correo electrónico a medida que el evento se acerque y para que pueda participar en los elementos interactivos del evento.
+Se recomienda verlo en la aplicación de equipo de equipos y también puede participar en la aplicación móvil Teams o en el explorador de escritorio. Si, por alguna razón, no puede iniciar sesión en los equipos, consulte [YouTube Live](https://youtu.be/zxZu1uHjyo4). Sin embargo, no podrá participar en QA con los oradores.
 
 ## <a name="schedule---subject-to-change"></a>Programación: sujeto a cambio
 
@@ -44,7 +44,7 @@ Estamos muy entusiasmados por abrir el registro de los días de desarrollo de la
 ### <a name="december-16th"></a>16 de diciembre
 |**Time**|**Título de la sesión**|**Participante**|**Idioma**|**Level**|
 |---------|---------|---------|---------|---------|
-|10: a.m.-10:50am|Apertura del discurso|Madoka Chiyoda, Jesse McCulloch, Kaoru Nakamura, Tetsu Muranaka|JA/EN|N/D|
+|10: a.m.-10:50am|Apertura del discurso|Madoka Chiyoda, Jesse McCulloch, Kaoru Nakamura, Tetsu Muranaka|JA/EN|N/A|
 |10:50am-11: a.m.|**Interrumpir (10min)**||||
 |11: a.m.-11:25am|*Sesión 1* Introducción a la realidad mixta|Atsushi Suzuki|JA|100|
 |11:9:30-11:55am|*Sesión 2* Momento del negocio de realidad mixta|Tetsu Muranaka|JA|200|
@@ -60,7 +60,7 @@ Estamos muy entusiasmados por abrir el registro de los días de desarrollo de la
 |4:13:15-4:40pm|*Sesión 9* Alinear el holograma y el mundo real a través de los anclajes espaciales de Azure|Yingguang Mei|ES|300|
 |4:5:45-5:10pm|*Sesión 10* Unity + PiXYZ|Shinobu Takahashi (tecnologías de Unity Japón)|JA|200|
 |5:13:15-5:40pm|*Sesión 11* Análisis detallado de Azure Kinect DK, caso práctico|Shinji Chiba|JA|400|
-|5:5:45-6: p.m.|Cierre|Madoka Chiyoda|JA|N/D|
+|5:5:45-6: p.m.|Cierre|Madoka Chiyoda|JA|N/A|
 
 #### <a name="contributors-technical-reviewers-for-the-subtitles"></a>Colaboradores (revisores técnicos para los subtítulos)
 
