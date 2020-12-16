@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 10/30/2020
 ms.topic: article
 keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: 7ca5357c9d7f3536fc165d0663813ae98f45004f
-ms.sourcegitcommit: 1b5a5ce89f2edc86985a73e4f3828bb761e7543a
+ms.openlocfilehash: 925e94931adab767fbca2544d781c9ba1c095216
+ms.sourcegitcommit: cecb76c6a9b4b2c4e9769a5829a7146c99086e85
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/16/2020
-ms.locfileid: "97564260"
+ms.locfileid: "97580551"
 ---
 # <a name="mixed-reality-dev-days-japan"></a>Mixed Reality Dev Days (Japón)
 
@@ -39,28 +39,29 @@ Se recomienda verlo en la aplicación de equipo de equipos y también puede part
 
 **Todas las horas son la hora estándar de Japón (UTC + 9)** 
 
-
-
 ### <a name="december-16th"></a>16 de diciembre
+
+**Hemos retrasado una hora de nuestra programación original.**
+
 |**Time**|**Título de la sesión**|**Participante**|**Idioma**|**Level**|
 |---------|---------|---------|---------|---------|
-|10: a.m.-10:50am|Apertura del discurso|Madoka Chiyoda, Jesse McCulloch, Kaoru Nakamura, Tetsu Muranaka|JA/EN|N/A|
-|10:50am-11: a.m.|**Interrumpir (10min)**||||
-|11: a.m.-11:25am|*Sesión 1* Introducción a la realidad mixta|Atsushi Suzuki|JA|100|
-|11:9:30-11:55am|*Sesión 2* Momento del negocio de realidad mixta|Tetsu Muranaka|JA|200|
-|12: p.m.-12:50pm|*Sesión del almuerzo* Panel: análisis interactivo gratuito, Q y A, MRTK + Oculus Quest 2|Madoka Chiyoda + MVP de Microsoft|JA|200|
-|12:50pm-1: p.m.|**Interrumpir (10min)**||||
-|1: p.m.-1:25pm|*Sesión 3* Información general sobre el desarrollo de HoloLens 2|Madoka Chiyoda|JA|200|
-|1: las 16:30-1:55pm|*Sesión 4* Componentes de MRTK UX v 2.5.0|Yoon Park|JA|300|
-|2: p.m.-2:25pm|*Sesión 5* Introducción a HoloLens 2 e inreal Engine (MRTK-nonreal)|Cameron Micka|ES|300|
-|2: las 16:30-2:55pm|*Sesión 6* Crear hologramas de diseño|Daniel Escudero|ES|300|
-|2:55pm-3:13:15|**Interrumpir (20min)**||||
-|3:13:15-3:40pm|*Sesión 7* Delimitadores de objeto de Azure|Jesse McCulloch|ES|300|
-|3:5:45-4:10pm|*Sesión 8* Representación remota de Azure|Atsushi Suzuki|JA|300|
-|4:13:15-4:40pm|*Sesión 9* Alinear el holograma y el mundo real a través de los anclajes espaciales de Azure|Yingguang Mei|ES|300|
-|4:5:45-5:10pm|*Sesión 10* Unity + PiXYZ|Shinobu Takahashi (tecnologías de Unity Japón)|JA|200|
-|5:13:15-5:40pm|*Sesión 11* Análisis detallado de Azure Kinect DK, caso práctico|Shinji Chiba|JA|400|
-|5:5:45-6: p.m.|Cierre|Madoka Chiyoda|JA|N/A|
+|11: a.m.-11:50am|Apertura del discurso|Madoka Chiyoda, Jesse McCulloch, Kaoru Nakamura, Tetsu Muranaka|JA/EN|N/A|
+|11:50am-12: p.m.|**Interrumpir (10min)**||||
+|12: p.m.-12:25pm|*Sesión 1* Introducción a la realidad mixta|Atsushi Suzuki|JA|100|
+|12: las 16:30-12:55pm|*Sesión 2* Momento del negocio de realidad mixta|Tetsu Muranaka|JA|200|
+|1: p.m.-1:50pm|*Sesión del almuerzo* Panel: análisis interactivo gratuito, Q y A, MRTK + Oculus Quest 2|Madoka Chiyoda + MVP de Microsoft|JA|200|
+|1:50pm-2: p.m.|**Interrumpir (10min)**||||
+|2: p.m.-2:25pm|*Sesión 3* Información general sobre el desarrollo de HoloLens 2|Madoka Chiyoda|JA|200|
+|2: las 16:30-2:55pm|*Sesión 4* Componentes de MRTK UX v 2.5.0|Yoon Park|JA|300|
+|3: p.m.-3:25pm|*Sesión 5* Introducción a HoloLens 2 e inreal Engine (MRTK-nonreal)|Cameron Micka|ES|300|
+|3: las 16:30-3:55pm|*Sesión 6* Crear hologramas de diseño|Daniel Escudero|ES|300|
+|3:55pm-4:13:15|**Interrumpir (20min)**||||
+|4:13:15-4:40pm|*Sesión 7* Delimitadores de objeto de Azure|Jesse McCulloch|ES|300|
+|4:5:45-5:10pm|*Sesión 8* Representación remota de Azure|Atsushi Suzuki|JA|300|
+|5:13:15-5:40pm|*Sesión 9* Alinear el holograma y el mundo real a través de los anclajes espaciales de Azure|Yingguang Mei|ES|300|
+|5:5:45-6:10pm|*Sesión 10* Unity + PiXYZ|Shinobu Takahashi (tecnologías de Unity Japón)|JA|200|
+|6:13:15-6:40pm|*Sesión 11* Análisis detallado de Azure Kinect DK, caso práctico|Shinji Chiba|JA|400|
+|6:5:45-7: p.m.|Cierre|Madoka Chiyoda|JA|N/A|
 
 #### <a name="contributors-technical-reviewers-for-the-subtitles"></a>Colaboradores (revisores técnicos para los subtítulos)
 
