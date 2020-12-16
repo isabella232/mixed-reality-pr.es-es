@@ -6,16 +6,16 @@ ms.author: crderr
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Criterios de calidad de la aplicación, realidad mixta, aplicación de realidad mixta, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: c18f4e8470f7f183fdf250472fd3a977f925dfbf
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 788a2e8ac1a364f8c33e3895992fd99fa220a26a
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677994"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530287"
 ---
 # <a name="app-quality-criteria"></a>Criterios de calidad de aplicaciones
 
-En este documento se describen los principales factores que afectan a la calidad de las aplicaciones de realidad mixta. Para cada factor se proporciona la siguiente información:
+En este documento se describen los principales factores que afectan a la calidad de las aplicaciones de realidad mixta. Para cada factor, se proporciona la siguiente información:
 * Información general: breve descripción del factor de calidad y por qué es importante.
 * Impacto en el dispositivo: Qué tipo de dispositivo de realidad mixta de ventana se ve afectado.
 * Criterios de calidad: Cómo evaluar el factor de calidad.
@@ -25,7 +25,7 @@ En este documento se describen los principales factores que afectan a la calidad
 
 ## <a name="frame-rate"></a>Velocidad de fotogramas
 
-La velocidad de fotogramas es el primer pilar de estabilidad del holograma y la comodidad del usuario. La velocidad de fotogramas por debajo de los objetivos recomendados puede hacer que los hologramas parezcan vibrantes, lo que afecta negativamente a la increíble potencia de la experiencia y, potencialmente, a la fatiga ocular. La velocidad de fotogramas de destino para su experiencia en los auriculares de la realidad mixta de Windows será de 60Hz o 90Hz, según los equipos compatibles con Windows Mixed Reality que desee admitir. Para HoloLens, la velocidad de fotogramas de destino es 60 Hz.
+La velocidad de fotogramas es el primer pilar de estabilidad del holograma y la comodidad del usuario. La velocidad de fotogramas por debajo de los objetivos recomendados puede hacer que los hologramas parezcan vibrantes, lo que afecta negativamente a la increíble potencia de la experiencia y, potencialmente, a la fatiga ocular. La velocidad de fotogramas de destino para su experiencia en los auriculares con micrófonos de Windows Mixed Reality es de 60 Hz o 90 Hz, en función de los equipos compatibles con Windows Mixed Reality que admita. En el caso de HoloLens, la velocidad de fotogramas de destino es de 60 Hz.
 
 ### <a name="device-impact"></a>Impacto del dispositivo
 
@@ -51,7 +51,7 @@ La velocidad de fotogramas es el primer pilar de estabilidad del holograma y la 
 
 |  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
-| La aplicación cumple de forma coherente el objetivo de fotogramas por segundo (FPS) para el dispositivo de destino: 60fps en HoloLens; 90fps en ultra PCs; y 60fps en equipos estándar. | La aplicación tiene caídas de fotogramas intermitentes que no impiden la experiencia básica; o FPS es constantemente inferior al objetivo deseado, pero no impide la experiencia de la aplicación. | La aplicación está experimentando una caída en la velocidad de fotogramas como promedio cada diez segundos o menos. |
+| La aplicación cumple de forma coherente el objetivo de fotogramas por segundo (FPS) para el dispositivo de destino: 60 fps en HoloLens; 90 FPS en ultra PC; y 60 fps en equipos estándar. | La aplicación tiene caídas de fotogramas intermitentes que no impiden la experiencia principal, o bien FPS es constantemente inferior al objetivo deseado, pero no impide la experiencia de la aplicación. | La aplicación está experimentando una caída en la velocidad de fotogramas como promedio cada 10 segundos o menos. |
 
 ### <a name="how-to-measure"></a>Cómo medir
 
@@ -75,8 +75,8 @@ La velocidad de fotogramas es el primer pilar de estabilidad del holograma y la 
 
 #### <a name="tools-and-tutorials"></a>Herramientas y tutoriales
 
-* [MRToolkit, pantalla de contador de FPS](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Utilities/README.md)
-* [MRToolkit, sombreadores](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Utilities/Shaders)
+* [Kit de herramientas de realidad mixta, pantalla de contador de FPS](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Utilities/README.md)
+* [Kit de herramientas de realidad mixta, sombreadores](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/Utilities/Shaders)
 
 #### <a name="external-references"></a>Referencias externas
 
@@ -114,13 +114,13 @@ Los hologramas estables aumentarán la facilidad de uso y la increíble capacida
 
 |  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
-|  Los hologramas aparecen de forma coherente. | El contenido secundario exhibe un movimiento inesperado. o el movimiento inesperado no impide la experiencia general de la aplicación. | El contenido principal del marco exhibe un movimiento inesperado. |
+|  Los hologramas aparecen de forma coherente. | El contenido secundario muestra el movimiento inesperado. o el movimiento inesperado no impide la experiencia general de la aplicación. | El contenido principal de Frame muestra un movimiento inesperado. |
 
 ### <a name="how-to-measure"></a>Cómo medir
 
 Con el dispositivo y la visualización de la experiencia:
 
-* Mover el encabezado de lado a lado, si los hologramas muestran un movimiento inesperado, la velocidad de fotogramas baja o la alineación incorrecta del plano de estabilidad al plano focal es la causa probable.
+* Mueva el dedo de lado a lado. Si los hologramas muestran un movimiento inesperado, la velocidad de fotogramas baja o la alineación incorrecta del plano de estabilidad al plano focal es la causa probable.
 * Desplazarse por los hologramas y el entorno, busque comportamientos como nadar y salto. Este tipo de movimiento probablemente se debe a que el dispositivo no realiza un seguimiento del entorno o a la distancia al delimitador espacial.
 * Si hay varios hologramas en el marco, observe el comportamiento de holograma en varias profundidades al mover la posición principal de lado a lado, en caso de que la irregularidad parezca que esto se debe a un plano de estabilización.
 
@@ -150,7 +150,7 @@ Con el dispositivo y la visualización de la experiencia:
 
 ## <a name="holograms-position-on-real-surfaces"></a>Posición de hologramas en superficies reales
 
-Las alineaciones de los hologramas con objetos físicos (si se prevé que se colocarán en relación con otras) son una indicación clara de la no Unión de los hologramas y del mundo real. La precisión de la selección de ubicación debe ser relativa a las necesidades del escenario; por ejemplo, la selección de ubicación de superficie general puede usar el mapa espacial, pero la selección de ubicación más precisa requerirá el uso de marcadores y calibración.
+Las diferencias de los hologramas con objetos físicos (si se prevé que se colocarán en relación entre sí) son una indicación clara de la no Unión de los hologramas y del mundo real. La precisión de la selección de ubicación debe ser relativa a las necesidades del escenario; por ejemplo, la selección de ubicación de superficie general puede usar el mapa espacial, pero la selección de ubicación más precisa requerirá el uso de marcadores y calibración.
 
 ### <a name="device-impact"></a>Impacto del dispositivo
 
@@ -176,7 +176,7 @@ Las alineaciones de los hologramas con objetos físicos (si se prevé que se col
 
 |  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
-| Los hologramas se alinean a la superficie normalmente en el intervalo de centímetros a pulgadas. Si se requiere más precisión, la aplicación debe proporcionar un medio eficaz para la colaboración dentro de la especificación de la aplicación deseada. | N/D | Los hologramas aparecen sin alinear con el objeto de destino físico, ya que separan el plano de la superficie o parecen flotar fuera de la superficie. Si se requiere precisión, los hologramas deben cumplir las especificaciones de proximidad del escenario. | 
+| Los hologramas se alinean a la superficie normalmente en el intervalo de centímetros a pulgadas. Si necesita más precisión, la aplicación debe proporcionar un medio eficaz para la colaboración dentro de la especificación de la aplicación. | N/D | Los hologramas aparecen sin alinear con el objeto de destino físico, ya que separan el plano de la superficie o parecen flotar fuera de la superficie. Si se requiere precisión, los hologramas deben cumplir las especificaciones de proximidad del escenario. | 
 
 ### <a name="how-to-measure"></a>Cómo medir
 
@@ -213,7 +213,7 @@ Las alineaciones de los hologramas con objetos físicos (si se prevé que se col
 
 ## <a name="viewing-zone-of-comfort"></a>Ver la zona de confort
 
-Los desarrolladores de aplicaciones controlan el lugar en el que los usuarios convergen colocando contenido y hologramas a varias profundidades. Los usuarios que contengan HoloLens siempre se acomodarán a 2,0 m para mantener una imagen clara porque las pantallas de HoloLens se fijan a una distancia óptica aproximadamente a 2,0 m del usuario. Una profundidad de contenido incorrecta puede conducir a la molestia visual o a la fatiga.
+Los desarrolladores de aplicaciones controlan el lugar en el que los usuarios convergen colocando contenido y hologramas a varias profundidades. Los usuarios que contengan HoloLens siempre se acomodarán a 2,0 m para mantener una imagen clara porque las pantallas de HoloLens se fijan a una distancia óptica de aproximadamente 2,0 m del usuario. Una profundidad de contenido incorrecta puede conducir a la molestia visual o a la fatiga.
 
 ### <a name="device-impact"></a>Impacto del dispositivo
 
@@ -240,26 +240,26 @@ Los desarrolladores de aplicaciones controlan el lugar en el que los usuarios co
 <table>
 <tr>
 <td> Óptima </td><td><ul>
-<li>Coloque el contenido en 2m.</li><li>Cuando los hologramas no se pueden colocar en 2m y no se pueden evitar conflictos entre convergencia y ajuste, la zona óptima para la colocación de hologramas se encuentra entre 1,25 m y 5 m.</li><li>En todos los casos, los diseñadores deben estructurar el contenido para animar a los usuarios a interactuar con 1 + m (por ejemplo, ajustar el tamaño del contenido y los parámetros de ubicación predeterminados).</li><li>A menos que el escenario no requiera específicamente, se debe implementar un plano de recorte con fadeout a partir de 1m.</li><li>En los casos en los que se requiere una observación más detallada de un holograma de motionless, el contenido no debe estar más cerca que 50CM.</li>
+<li>Coloque el contenido en 2 m.</li><li>Cuando los hologramas no se pueden colocar en 2 m y no se pueden evitar los conflictos entre convergencia y ajuste, la zona óptima para la colocación de hologramas se encuentra entre 1,25 m y 5 m.</li><li>En todos los casos, los diseñadores deben estructurar el contenido para animar a los usuarios a interactuar con 1 + m (por ejemplo, ajustar el tamaño del contenido y los parámetros de ubicación predeterminados).</li><li>A menos que el escenario no lo requiera, un plano de recorte debe implementarse con fundido de salida a partir de 1 m.</li><li>En los casos en los que se requiere una observación más detallada de un holograma de motionless, el contenido no debe ser más cercano a 50 cm.</li>
 </ul></td>
 </tr><tr>
 <td> Reúne</td><td> El contenido está dentro de la guía de visualización y movimiento, pero se usa inadecuadamente o no se usa el plano de recorte.</td>
 </tr><tr>
-<td> Suspenso </td><td> El contenido se presenta demasiado cerca (normalmente &lt; 1,25 m o &lt; 50CM para los hologramas estacionales que requieren una observación más detallada).</td>
+<td> Suspenso </td><td> El contenido se presenta demasiado cerca (normalmente &lt; 1,25 m o &lt; 50 cm para los hologramas estacionales que requieren una observación más detallada).</td>
 </tr>
 </table>
 
 ### <a name="how-to-measure"></a>Cómo medir
 
-* Normalmente, el contenido debe ser de 2 m, pero no más cercano a 1,25 o superior a 5 m.
-* Con pocas excepciones, la distancia de representación de recorte de HoloLens debe establecerse en. 85CM con fadeout de contenido que empieza en 1m. Acerque el contenido y observe el efecto del plano de recorte.
-* El contenido estacionario no debe estar más cerca de 50CM.
+* Normalmente, el contenido debe ser de 2 m de distancia, pero no más próximo a 1,25 o superior a 5 m.
+* Con pocas excepciones, la distancia de representación de recorte de HoloLens debe establecerse en 85CM con un fundido de salida de contenido a partir de 1 m. Acerque el contenido y observe el efecto del plano de recorte.
+* El contenido estacionario no debe estar más cerca de 50 cm de distancia.
 
 ### <a name="recommendations"></a>Recomendaciones
 
-* Diseñe el contenido para obtener la distancia de visualización óptima de 2 m.
-* Establezca la distancia de representación de recorte en 85cm con fadeout de contenido a partir de 1m.
-* En el caso de los hologramas estacionales que necesitan una visualización más estrecha, el plano de recorte no debe estar más cerca de 30cm y fadeout debe iniciar al menos 10cm fuera del plano de recorte.
+* Diseñe el contenido de la distancia de visualización óptima de 2 m.
+* Establezca la distancia de representación de recorte en 85 cm con atenuación del contenido a partir de 1 m.
+* En el caso de los hologramas estacionales que necesitan una visualización más estrecha, el plano de recorte no debe estar más cerca de 30 cm y el fundido de salida debe empezar al menos 10 cm fuera del plano de recorte.
 
 ### <a name="resources"></a>Recursos
 
@@ -313,7 +313,7 @@ Sin tener en cuenta los problemas de la zona de confort, las demandas del usuari
 
 ## <a name="use-of-spatial-sound"></a>Uso de sonido espacial
 
-En Windows Mixed Reality, el motor de audio proporciona el componente aural de la experiencia de realidad mixta mediante la simulación de un sonido 3D mediante simulaciones de dirección, distancia y entorno. El uso de un sonido espacial en una aplicación permite a los desarrolladores colocar los sonidos de forma convincente en un espacio tridimensional (esfera) alrededor del usuario. Después, esos sonidos parecerán como si provinieran de objetos físicos reales o los hologramas de realidad mixta en el entorno del usuario. El sonido espacial es una herramienta eficaz para la inmersión, accesibilidad y diseño de la experiencia del usuario en aplicaciones de realidad mixta.
+En Windows Mixed Reality, el motor de audio proporciona el componente aural de la experiencia de realidad mixta mediante la simulación de un sonido 3D mediante simulaciones de dirección, distancia y entorno. El uso de sonido espacial en una aplicación permite a los desarrolladores colocar de forma convincente los sonidos en un espacio tridimensional (esfera) alrededor del usuario. Después, esos sonidos parecerán como si provinieran de objetos físicos reales o los hologramas de realidad mixta en el entorno del usuario. El sonido espacial es una herramienta eficaz para la inmersión, accesibilidad y diseño de la experiencia del usuario en aplicaciones de realidad mixta.
 
 ### <a name="device-impact"></a>Impacto del dispositivo
 
@@ -367,7 +367,7 @@ En Windows Mixed Reality, el motor de audio proporciona el componente aural de l
 
 #### <a name="tools-and-tutorials"></a>Herramientas y tutoriales
 
-* [MRToolkit, audio espacial](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
+* [Kit de herramientas de realidad mixta (audio espacial)](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/SpatialSound/README.md)
 
 ## <a name="focus-on-holographic-frame-fov-boundaries"></a>Centrarse en los límites de trama holográfica (hipertema)
 
@@ -402,7 +402,7 @@ Las experiencias de usuario bien diseñadas pueden crear y mantener un contexto 
 ### <a name="how-to-measure"></a>Cómo medir
 
 * El contexto de un holograma (grande) se pierde o no se entiende debido a que se recortan en los límites.
-* La ubicación de los hologramas es difícil de encontrar debido a la falta de directores de atención o al contenido que mueve y sale rápidamente del marco holográfica.
+* Las ubicaciones de los hologramas son difíciles de encontrar debido a la falta de directores de atención o al contenido que mueve y sale rápidamente del marco holográfica.
 * El escenario requiere un movimiento de cabezal normal y repetitivo hacia arriba y hacia abajo para ver por completo un holograma que dé lugar a una fatiga del cuello.
 
 ### <a name="recommendations"></a>Recomendaciones
@@ -486,7 +486,7 @@ Los hologramas deben reaccionar a la posición del usuario aproximadamente de la
 
 ## <a name="input-interaction-clarity"></a>Claridad de interacción de entrada
 
-La claridad de la interacción de entrada es fundamental para el uso de una aplicación e incluye la coherencia de entrada, la capacidad de enfoque, la detectabilidad de los métodos de interacción. El usuario debe poder usar las interacciones comunes de toda la plataforma sin tener que reaprender. Si la aplicación tiene una entrada personalizada, debe comunicarse claramente y mostrarse.
+La claridad de la interacción de entrada es fundamental para el uso de una aplicación e incluye la coherencia de entrada, la capacidad de enfoque, la detectabilidad de los métodos de interacción. El usuario puede usar interacciones comunes en toda la plataforma sin tener que reaprender. Si la aplicación tiene una entrada personalizada, debe comunicarse claramente y mostrarse.
 
 ### <a name="device-impact"></a>Impacto del dispositivo
 
@@ -512,7 +512,7 @@ La claridad de la interacción de entrada es fundamental para el uso de una apli
 
 |  Óptima  |  Reúne |  Suspenso |
 --- | --- | ---
-|  Los métodos de interacción de entrada son coherentes con las [instrucciones](../../design/interaction-fundamentals.md)proporcionadas por Windows Mixed Reality. Cualquier entrada personalizada no debe ser redundante con entrada estándar (en lugar de usar la interacción estándar) y se debe comunicar y demostrar claramente al usuario. | Similar a lo mejor, pero las entradas personalizadas son redundantes con los métodos de entrada estándar. El usuario puede seguir logrando el objetivo y el progreso a través de la experiencia de la aplicación. | Es difícil comprender la asignación de botones o métodos de entrada. La entrada está muy personalizada, no es compatible con la entrada estándar, no hay instrucciones o probablemente cause problemas de fatiga y confort. | 
+|  Los métodos de interacción de entrada son coherentes con las [instrucciones](../../design/interaction-fundamentals.md)proporcionadas por Windows Mixed Reality. Cualquier entrada personalizada no debe ser redundante con entrada estándar (en lugar de usar interacción estándar) y se debe comunicar y mostrar claramente al usuario. | Similar a lo mejor, pero las entradas personalizadas son redundantes con los métodos de entrada estándar. El usuario puede seguir logrando el objetivo y el progreso a través de la experiencia de la aplicación. | Es difícil comprender la asignación de botones o métodos de entrada. La entrada está muy personalizada, no admite la entrada estándar, no hay instrucciones o es probable que cause problemas de fatiga y confort. | 
 
 ### <a name="how-to-measure"></a>Cómo medir
 
@@ -591,7 +591,7 @@ Un botón ha sido una metáfora usada para desencadenar un evento en el mundo ab
 
 ### <a name="how-to-measure"></a>Cómo medir
 
-* Los objetos interactuables son reconocibles como ' interactuable '; incluir botones, menús y contenido específico de la aplicación. Como regla general, debe haber una indicación visual y de audio cuando el destino es objetos interactivos.
+* Los objetos interactuables son reconocibles como ' interactuable '; incluye botones, menús y contenido específico de la aplicación. Como regla general, debe haber una indicación visual y de audio cuando el destino es objetos interactivos.
 
 ### <a name="recommendations"></a>Recomendaciones
 
@@ -646,7 +646,7 @@ Las aplicaciones que requieren datos de asignación espacial se basan en el disp
 
 ### <a name="how-to-measure"></a>Cómo medir
 
-* Durante un examen de habitación necesario, se proporciona orientación visual y de audio que indica dónde buscar y cuándo iniciar y detener el examen.
+* Durante un examen de habitación necesario, se proporcionan instrucciones visuales y de audio que indican dónde buscar y cuándo iniciar y detener el examen.
 
 ### <a name="recommendations"></a>Recomendaciones
 

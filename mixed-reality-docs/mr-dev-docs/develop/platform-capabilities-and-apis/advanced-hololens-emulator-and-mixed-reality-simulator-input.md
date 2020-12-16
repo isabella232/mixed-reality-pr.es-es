@@ -6,12 +6,12 @@ ms.author: pbarnett
 ms.date: 06/8/2020
 ms.topic: article
 keywords: HoloLens, emulador, simulación, Windows Mixed Reality, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 59e163c61b620fb1e203fe651d22cc45c2074d19
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: f5076e65ba1c5d95c1bb106d2d3181665177b43a
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679624"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530456"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Introducción de datos avanzada en el emulador de HoloLens y el simulador de realidad mixta
 
@@ -29,34 +29,34 @@ El movimiento se refiere a controlar y cambiar la posición y la orientación de
 * **Y**: subir o bajar.
 * **Z**: moverse hacia delante o hacia atrás.
 
-Los gestos y la entrada del controlador de movimiento se asignan estrechamente a la manera en que los dispositivos físicos:
-* **Acción**: esto simula la acción de presionar índice al control de posición o de extraer el botón de acción de un controlador. Por ejemplo, la entrada de acción se puede usar para simular el gesto de punteo de aire, desplazarse por el contenido y mantener presionado.
-* **Gesto o inicio del/System de [floración](../../design/system-gesture.md#bloom)**: el gesto de la floración/del sistema de HoloLens o el botón Inicio de un controlador se usa para volver al shell y realizar acciones del sistema.
+Los movimientos y la entrada del controlador de movimiento se asignan estrechamente a los dispositivos físicos:
+* **Acción**: simula la acción de presionar índice en el control de posición o de extraer el botón de acción de un controlador. Por ejemplo, la entrada de acción se puede usar para simular el gesto de punteo de aire, desplazarse por el contenido y mantener presionado.
+* **Gesto o inicio del/System de [floración](../../design/system-gesture.md#bloom)**: el gesto de la floración/del sistema de HoloLens o el botón Inicio de un controlador se usa para volver al shell y activar las acciones del sistema.
 
-Las manos tienen una representación enriquecida en HoloLens 2.  Además de ser sometidos a seguimiento y sin seguimiento, y que se pueden usar para llevar a cabo gestos, ahora tienen un modelo de esqueleto articulado y se exponen al desarrollador.  Esto introduce 26 puntos de seguimiento en cada mano.  
-* **Conjunto**: una de las veinte posiciones de las que se ha realizado un seguimiento para una mano controlada determinada. Esto tendrá un punto con el espacio 3D asociado.
-* **Pose**: colección completa de todas las uniones en una mano A la que se ha realizado un seguimiento. En este momento, se trata de una colección de 26 uniones. 
+Las manos tienen una representación enriquecida en HoloLens 2.  Además de ser sometidos a seguimiento y sin seguimiento, y que se pueden usar para los gestos de conducción, ahora tienen un modelo de esqueleto articulado que se ajusta a ellos y se exponen al desarrollador.  El modelo de esqueleto tiene 26 puntos de seguimiento en cada mano.  
+* **Conjunto**: una de las 20 posiciones de las que se ha realizado un seguimiento para una mano controlada determinada con un punto asociado en el espacio 3D.
+* **Pose**: una colección completa de todas las uniones en una mano con seguimiento, 26 uniones. 
 
-En este momento, no se expone el control directo de cada posición de la Unión a través de la interfaz de usuario del emulador, aunque se pueden establecer a través de la API de simulación. En su lugar, tenemos un conjunto de representativos útiles que el emulador le permite alternar entre.
+Actualmente no exponemos el control directo de las posiciones uniones individuales a través del emulador, pero puede establecerlas a través de la API de simulación. Tenemos un conjunto de representativos útiles que el emulador le permite alternar entre.
 
 También puede controlar el estado de la entrada de sensor simulado:
-* **Restablecer**: se devolverán todos los sensores simulados a sus valores predeterminados.  A partir del emulador de HoloLens 2, se puede establecer un restablecimiento para el ámbito de una o las dos manos mediante la participación de las manos deseadas mediante las teclas modificadoras apropiadas o los botones (de la izquierda o derecha, o del reboteador izquierdo y/o derecho en el controlador de juegos).
-* **Tracking**: recorre los modos de seguimiento posicional. Esto incluye:
+* **Restablecer**: devuelve todos los sensores simulados a sus valores predeterminados.  A partir del emulador de HoloLens 2, un restablecimiento puede tener como ámbito una o ambas manos. Interactúe con las manos deseadas mediante las teclas modificadoras o los botones (Alt izq o derecha, o el reboteador izquierdo y/o derecho en el controlador de juegos).
+* **Seguimiento**: recorre los modos de seguimiento posicional, incluidos:
   * **Valor predeterminado**: el sistema operativo elige el mejor modo de seguimiento en función de las solicitudes realizadas del sistema.
-   * **Orientation**: fuerza el seguimiento de solo orientación, independientemente de las solicitudes realizadas del sistema.
-   * **Posicional**: fuerza el seguimiento posicional, independientemente de las solicitudes realizadas del sistema.
+   * **Orientación**: fuerza el seguimiento de solo orientación, con independencia de las solicitudes del sistema.
+   * **Posicional**: fuerza el seguimiento posicional, con independencia de las solicitudes del sistema.
 
 ## <a name="types-of-input"></a>Tipos de entrada
 
-En la tabla siguiente se muestra cómo se asignan los tipos de entrada al teclado, el mouse y el controlador Xbox. Cada tipo tiene una asignación diferente en función del modo de control de entrada; más adelante en este documento se proporciona más información sobre los modos de control de entrada.
+En la tabla siguiente se muestra cómo se asignan los tipos de entrada al teclado, el mouse y el controlador Xbox. Cada tipo tiene una asignación diferente en función del modo de control de entrada. Puede encontrar más información sobre los modos de control de entrada más adelante en este documento.
 
-| Entrada |  Teclado |  Mouse |  Controladora Xbox | 
+| Entrada |  Keyboard |  Mouse |  Controladora Xbox | 
 |----------|----------|----------|----------|
 |  Eje |  Flechas izquierda/derecha |  Arrastrar a la izquierda o a la derecha |  Palanca derecha izquierda/derecha | 
 |  Inclinación |  Flechas arriba/abajo |  Arrastrar hacia arriba o hacia abajo |  Palanca derecha arriba/abajo | 
 |  Volver |  P/E |  |  DPad izquierda/derecha | 
 |  X |  A/D |  |  Stick izquierdo izquierdo/derecho | 
-|  S |  RE PÁG/AV pág |  |  DPad arriba/abajo | 
+|  Y |  RE PÁG/AV pág |  |  DPad arriba/abajo | 
 |  Z |  W/S |  |  Stick izquierdo hacia arriba/abajo | 
 |  Acción |  Escriba o espacio |  Botón derecho |  Un botón o cualquier desencadenador | 
 |  Floración/sistema |  F2 o tecla Windows |  |  Botón B | 
@@ -79,16 +79,16 @@ Nota: los botones del controlador pueden tener como destino una mano o un contro
 
 ## <a name="targeting"></a>Establecer destinos 
 
-Algunos de los conceptos de entrada anteriores se destacan por sí mismos.  Acción, floración/sistema, restablecimiento y seguimiento son conceptos completos, no necesitan y no se ven afectados por ningún modificador adicional para el destino.  Sin embargo, los conceptos restantes se pueden aplicar a uno de varios destinos. Hemos introducido maneras de especificar el destino al que debe aplicarse el comando.  En todos los casos, es posible especificar a través de la interfaz de usuario o a través de las pulsaciones de teclado, a qué objeto se va a dirigir.  En algunos casos, también es posible especificar con el controlador Xbox directamente. 
+Algunos de los conceptos de entrada anteriores se destacan por sí mismos.  Acción, floración/sistema, restablecimiento y seguimiento son conceptos completos, no es necesario y no se ven afectados por ningún modificador adicional para el destino.  Los conceptos restantes se pueden aplicar a uno de varios destinos. Hemos introducido maneras de especificar el destino al que debe aplicarse el comando.  En todos los casos, es posible especificar a través de la interfaz de usuario o a través de las pulsaciones de teclado, a qué objeto se va a dirigir.  En algunos casos, también es posible especificar con el controlador Xbox directamente. 
 
 En la tabla siguiente se describen las opciones de destino y la manera de activar cada una de ellas.
 
 | Object | Modificador de teclado | Modificador de controlador | Modificador de interfaz de usuario del emulador |
 |----------|----------|----------|----------|
-| Cuerpo | (predeterminado). | (predeterminado). | (predeterminado). |
+| Body | (predeterminado). | (predeterminado). | (predeterminado). |
 | Head | Mantener H | (No disponible) | (No disponible) |
-| Mano izquierda/controlador | Mantener presionado el botón Alt izq | Mantenga presionado el botón izquierdo del hombro | Marcador izquierdo | 
-| Mano derecha/controlador | Mantenga presionado el botón Alt derecho | Botón mantener el hombro derecho | Tachuela derecha |
+| Mano izquierda/controlador | Mantener presionado el botón Alt izq | Mantenga presionado el botón izquierdo del hombro | Chincheta Left-Hand | 
+| Mano derecha/controlador | Mantenga presionado el botón Alt derecho | Botón mantener el hombro derecho | Chincheta Right-Hand |
 | Perspectiva | Mantener Y | (No disponible) | Marcador de ojos |
   
 En la tabla siguiente se muestra cómo cada modificador de destino asigna cada uno de los conceptos de entrada de movimiento principales.
@@ -99,7 +99,7 @@ En la tabla siguiente se muestra cómo cada modificador de destino asigna cada u
 |  Inclinación |  Activar o desactivar el cabezal |  Subir o bajar |  Activar o desactivar el cabezal | El ojo mira hacia arriba o hacia abajo | 
 |  Volver |  Deshacer el cabezal izquierdo y derecho |  |  Deshacer el cabezal izquierdo y derecho | (Ninguna acción) |
 |  X |  Cuerpo de la diapositiva a la izquierda o a la derecha |  Movimiento de mano o controlador izquierda/derecha |  Desactivar la izquierda o la derecha | (Ninguna acción) |
-|  S |  Subir o bajar el cuerpo |  Subir o bajar el controlador |  Activar o desactivar el cabezal | (Ninguna acción) |
+|  Y |  Subir o bajar el cuerpo |  Subir o bajar el controlador |  Activar o desactivar el cabezal | (Ninguna acción) |
 |  Z |  Desplazar el cuerpo hacia delante o hacia atrás |  Avanzar o retroceder el controlador |  Activar o desactivar el cabezal | (Ninguna acción) |
  
  
@@ -134,7 +134,8 @@ Se sugiere el siguiente conjunto de controles para el uso cotidiano:
 
 Cuando se usa un auricular envolvente de Windows Mixed Reality con el emulador de HoloLens 2, el movimiento y la rotación se asignan automáticamente al movimiento y la rotación de los auriculares.  La posición y la orientación del controlador de movimiento se asignan automáticamente a la posición y orientación de la mano en el emulador.  En la tabla siguiente se enumeran las acciones adicionales disponibles cuando se usa un controlador de movimiento.
 
-Tenga en cuenta que cuando se usa un auricular, el teclado estándar, el mouse y los controles de controlador para juegos se omiten automáticamente.
+> [!NOTE]
+> Cuando se usa un auricular, el teclado estándar, el mouse y los controles de controlador para juegos se omiten automáticamente.
 
 |  Operación |  Acción |  Notas | 
 |----------|----------|----------|
@@ -150,7 +151,7 @@ Tenga en cuenta que cuando se usa un auricular, el teclado estándar, el mouse y
 
 ## <a name="perception-simulation-control-panel-keyboard-shortcuts"></a>Métodos abreviados de teclado del panel de control de simulación de percepción
 
-Los siguientes métodos abreviados de teclado están disponibles para tener acceso al panel de control de simulación de percepción y habilitar o deshabilitar dispositivos de entrada de equipo para su uso con la simulación.
+Puede tener acceso al panel de control de simulación de percepción y habilitar o deshabilitar dispositivos de entrada de equipo con los siguientes métodos abreviados de teclado.
 
 | Operación | Acceso directo | Descripción/Notas |
 |-----------|----------|-------------|

@@ -6,17 +6,17 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows Mixed Reality, teclado, Mouse, dispositivo de juego, controladora Xbox, HoloLens, escritorio, tutorial, código de ejemplo
-ms.openlocfilehash: 47d5ac7c7517d607d29d004497f62ac0755c3051
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: b7984c86b952612af020e2bd91063e0a9b0d92f6
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692079"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530048"
 ---
 # <a name="keyboard-mouse-and-controller-input-in-directx"></a>Entrada desde teclado, ratón y controlador en DirectX
 
 > [!NOTE]
-> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](../native/openxr-getting-started.md)** .
+> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](../native/openxr-getting-started.md)**.
 
 Los teclados, los mouse y los controladores de juego pueden ser formas útiles de entrada para dispositivos Windows Mixed Reality. Los teclados y ratones Bluetooth se admiten en HoloLens, para su uso con la depuración de la aplicación o como una forma alternativa de entrada. Windows Mixed Reality también admite auriculares envolventes conectados a equipos, donde los ratones, los teclados y los controladores de juegos han sido históricamente la norma.
 
@@ -51,7 +51,7 @@ Desde AppView. cpp:
 ```
 
 ### <a name="virtual-keyboard-input"></a>Entrada de teclado virtual
-En el caso de los auriculares de escritorio envolventes, también puede admitir Teclados virtuales representados por Windows sobre la vista envolvente. Para admitir esto, la aplicación puede implementar **CoreTextEditContext** . Esto permite a Windows comprender el estado de sus propios cuadros de texto presentados por la aplicación, por lo que el teclado virtual puede contribuir correctamente al texto.
+En el caso de los auriculares de escritorio envolventes, puede admitir los teclados virtuales representados por Windows sobre la vista envolvente implementando **CoreTextEditContext**. Esto permite a Windows comprender el estado de sus propios cuadros de texto presentados por la aplicación, por lo que el teclado virtual puede contribuir correctamente al texto.
 
 Para obtener más información sobre cómo implementar la compatibilidad con CoreTextEditContext, vea el [ejemplo CoreTextEditContext](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/CustomEditControl).
 
@@ -59,7 +59,8 @@ Para obtener más información sobre cómo implementar la compatibilidad con Cor
 
 También puede usar la entrada del mouse de nuevo a través de los controladores de eventos de entrada de CoreWindow de UWP. Aquí se muestra cómo modificar la plantilla de la aplicación holográfica de Windows para admitir los clics del mouse de la misma manera que los gestos presionados. Después de realizar esta modificación, al hacer clic con el mouse mientras se contenía un dispositivo con auriculares envolvente, cambiará la posición del cubo.
 
-Tenga en cuenta que las aplicaciones UWP también pueden obtener datos XY sin formato para el mouse mediante la API de [MouseDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDevice) .
+> [!NOTE]
+> Las aplicaciones UWP también pueden obtener datos XY sin formato para el mouse mediante la API de [MouseDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDevice) .
 
 Empiece por declarar un nuevo controlador OnPointerPressed en AppView. h:
 
@@ -103,7 +104,7 @@ Necesitará esta variable miembro privada también:
        bool m_pointerPressed = false;
 ```
 
-Por último, actualizaremos la clase principal con una nueva lógica para admitir los clics del mouse. Empiece por agregar este controlador de eventos. Asegúrese de actualizar el nombre de clase:
+Por último, actualizaremos la clase principal con una nueva lógica para admitir clics del mouse. Empiece por agregar este controlador de eventos. Asegúrese de actualizar el nombre de clase:
 
 ```
 void MyHolographicAppMain::OnPointerPressed()
@@ -128,13 +129,13 @@ SpatialInteractionSourceState^ pointerState = m_spatialInputHandler->CheckForInp
    m_pointerPressed = false;
 ```
 
-Vuelva a compilar e implementar. Tenga en cuenta que, al hacer clic con el mouse, se volverá a colocar el cubo en el casco envolvente, o HoloLens, con el mouse Bluetooth conectado.
+Vuelva a compilar e implementar. Tenga en cuenta que el clic del mouse ahora cambiará la posición del cubo en el casco envolvente, o HoloLens, con el mouse Bluetooth conectado.
 
 ### <a name="game-controller-support"></a>Compatibilidad con el dispositivo de juego
 
 Los dispositivos de juego pueden ser una forma divertida y cómoda de permitir al usuario controlar una experiencia de Windows Mixed Reality más envolvente.
 
-El primer paso para agregar compatibilidad con dispositivos de juego a la plantilla de aplicación de Windows Holographic es agregar las siguientes declaraciones de miembro privado a la clase de encabezado para el archivo principal:
+ Agregue las siguientes declaraciones de miembro privado a la clase de encabezado para el archivo principal:
 
 ```
 // Recognize gamepads that are plugged in after the app starts.
@@ -265,7 +266,7 @@ Hay algunas diferencias importantes en el modo en que este código se puede usar
 * No se puede confiar en que la entrada del mouse o del teclado esté presente. Toda la funcionalidad de la aplicación debe funcionar con la mirada, el gesto y la entrada de voz.
 * Cuando se adjunta un teclado Bluetooth, puede resultar útil habilitar la entrada del teclado para cualquier texto que la aplicación pueda solicitar. Este puede ser un complemento excelente para el dictado, por ejemplo.
 * En lo que respecta al diseño de la aplicación, no confíe en los controles WASD y de apariencia del mouse para el juego. HoloLens está diseñado para que el usuario pueda desplazarse por la habitación. En este caso, el usuario controla la cámara directamente. Una interfaz para impulsar la cámara en torno a la habitación con controles de movimiento y apariencia no proporciona la misma experiencia.
-* La entrada mediante teclado puede ser una manera excelente de controlar los aspectos de depuración de la aplicación o el motor de juegos, sobre todo porque el usuario no tendrá que usar el teclado. El cableado es el mismo que se usa con las API de eventos de CoreWindow. En este escenario, puede optar por implementar una manera de configurar la aplicación para que enrute los eventos de teclado a un modo de "depuración de solo entrada" durante las sesiones de depuración.
+* La entrada mediante teclado es una manera excelente de controlar la depuración de la aplicación o del motor de juegos, sobre todo porque el usuario no tendrá que usar el teclado. El cableado es el mismo que se usa con las API de eventos de CoreWindow. En este escenario, puede optar por implementar una manera de configurar la aplicación para que enrute los eventos de teclado a un modo de "depuración de solo entrada" durante las sesiones de depuración.
 * Los controladores Bluetooth también funcionan.
 
 ## <a name="see-also"></a>Consulte también

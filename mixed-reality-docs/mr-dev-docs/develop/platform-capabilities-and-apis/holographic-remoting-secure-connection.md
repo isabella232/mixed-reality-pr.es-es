@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota holográfica, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, seguridad, autenticación, servidor a cliente
-ms.openlocfilehash: b2c054d19044b89b487331806b8256de1379fd53
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 64eb54d9401f3fbc8b73ebb97b19de5a68cdc5c4
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443459"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530406"
 ---
 # <a name="enabling-connection-security-for-holographic-remoting"></a>Habilitación de la seguridad de conexión para Holographic Remoting
 
@@ -30,7 +30,7 @@ Holographic Remoting intercambia información a través de una red. Si no se apl
 
 Las aplicaciones de ejemplo y el reproductor de comunicación remota holográfica en la tienda Windows tienen la seguridad deshabilitada. Esto hace que los ejemplos sean más fáciles de entender. También le ayuda a empezar a trabajar más rápidamente con el desarrollo.
 
-Sin embargo, para las pruebas de campo o el uso de producción, se recomienda encarecidamente habilitar la seguridad en la solución de acceso remoto holográfica.
+En el caso de las pruebas de campo o de producción, se recomienda encarecidamente habilitar la seguridad en la solución de Holographic Remoting.
 
 La seguridad de Holographic Remoting, cuando se configura correctamente para su caso de uso, ofrece las siguientes garantías:
 
@@ -66,7 +66,7 @@ El modo en que el cliente valida el certificado de servidor y los tipos de certi
 
 **Caso de uso 1:** El nombre de host del servidor no es fijo, o bien el servidor no se dirige en absoluto.
 
-En este caso de uso, no es práctico (ni siquiera posible) emitir un certificado para el nombre de host del servidor. La recomendación aquí es validar la huella digital del certificado en su lugar. Al igual que una huella digital humana, la huella digital identifica de forma única un certificado.
+En este caso de uso, no es práctico (ni siquiera posible) emitir un certificado para el nombre de host del servidor. En su lugar, se recomienda validar la huella digital del certificado. Al igual que una huella digital humana, la huella digital identifica de forma única un certificado.
 
 Es importante comunicar la huella digital al cliente fuera de banda. Esto significa que no se puede enviar a través de la misma conexión de red que se usa para la comunicación remota. En su lugar, puede escribirlo manualmente en la configuración del cliente o para que el cliente examine un código QR.
 
@@ -173,7 +173,7 @@ Implemente la `ICertificateValidator` interfaz de la siguiente manera:
 
 ## <a name="secure-connection-using-the-openxr-api"></a>Conexión segura mediante la API de OpenXR
 
-Cuando se usa la API [OPENXR API](../native/openxr.md) relacionada con la conexión segura, está disponible como parte de la `XR_MSFT_holographic_remoting` extensión OpenXR.
+Cuando se usa la [API de OpenXR](../native/openxr.md) , todas las API relacionadas con la conexión segura están disponibles como parte de la `XR_MSFT_holographic_remoting` extensión OpenXR.
 
 >[!IMPORTANT]
 >Para obtener información acerca de la API de extensión OpenXR de Holographic Remoting, consulte la [especificación](https://htmlpreview.github.io/?https://github.com/microsoft/MixedReality-HolographicRemoting-Samples/blob/master/remote_openxr/specification.html) que se encuentra en el repositorio de github de ejemplos de la [comunicación remota de Holographic](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
@@ -184,12 +184,12 @@ Los elementos clave para la conexión segura mediante la `XR_MSFT_holographic_re
 - `xrRemotingValidateAuthenticationTokenCallbackMSFT`, valida el token de autenticación del cliente.
 - `xrRemotingRequestServerCertificateCallbackMSFT`, proporcione la aplicación de servidor con el certificado que se va a usar.
 
-Estas devoluciones de llamada se pueden proporcionar al tiempo de ejecución de OpenXR remoto a través `xrRemotingSetSecureConnectionClientCallbacksMSFT` de y `xrRemotingSetSecureConnectionServerCallbacksMSFT` . Además, la conexión segura debe habilitarse mediante el parámetro secureConnection en la `XrRemotingConnectInfoMSFT` estructura o la `XrRemotingListenInfoMSFT` estructura, dependiendo de si se usa `xrRemotingConnectMSFT` o `xrRemotingListenMSFT` .
+Estas devoluciones de llamada se pueden proporcionar al tiempo de ejecución de OpenXR remoto a través `xrRemotingSetSecureConnectionClientCallbacksMSFT` de y `xrRemotingSetSecureConnectionServerCallbacksMSFT` . Además, la conexión segura debe habilitarse mediante el parámetro secureConnection en la `XrRemotingConnectInfoMSFT` estructura o la `XrRemotingListenInfoMSFT` estructura, dependiendo de si usa `xrRemotingConnectMSFT` o `xrRemotingListenMSFT` .
 
-Esta API es bastante similar a la API basada en IDL que se describe en implementación de la seguridad de la [comunicación remota holográfica](#implementing-holographic-remoting-security) , pero en lugar de implementar interfaces, se supone que proporcionan implementaciones de devolución de llamada. Puede encontrar un ejemplo detallado como parte de la aplicación de ejemplo OpenXR que se encuentra en el [repositorio de github de ejemplos de Holographic Remoting](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
+Esta API es similar a la API basada en IDL que se describe en implementación de la seguridad de la [comunicación remota holográfica](#implementing-holographic-remoting-security). Sin embargo, en lugar de implementar interfaces, se supone que proporciona implementaciones de devolución de llamada. Puede encontrar un ejemplo detallado en la [aplicación de ejemplo OpenXR](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
 
 ## <a name="see-also"></a>Consulte también
-* [Escritura de una aplicación remota Holographic Remoting con las API Realiy de Windows Mixed](holographic-remoting-create-remote-wmr.md)
+* [Escritura de una aplicación remota Holographic Remoting con las API de Windows Mixed Reality](holographic-remoting-create-remote-wmr.md)
 * [Escritura de una aplicación remota de Holographic Remoting con las API de OpenXR](holographic-remoting-create-remote-openxr.md)
 * [Escritura de una aplicación de reproductor de control remoto de holografías personalizada](holographic-remoting-create-player.md)
 * [Solución de problemas y limitaciones de la comunicación remota holográfica](holographic-remoting-troubleshooting.md)

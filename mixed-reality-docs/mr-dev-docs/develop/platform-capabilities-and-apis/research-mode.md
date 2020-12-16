@@ -6,25 +6,25 @@ ms.author: v-hferrone
 ms.date: 07/31/2020
 ms.topic: article
 keywords: Modo de investigación, CV, RS4, Computer Vision, investigación, HoloLens, HoloLens 2
-ms.openlocfilehash: 327ee932dce99a2559e406630611dcc3c69a0002
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 6c40ac814a5dacfdbb942aec8200f46157bea161
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692043"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530085"
 ---
 # <a name="hololens-research-mode"></a>Modo de investigación de HoloLens
 
-El modo de investigación se presentó en la primera generación de HoloLens para dar acceso a los sensores de claves en el dispositivo, específicamente para las aplicaciones de investigación que no están pensadas para la implementación.  El modo de investigación de HoloLens 2 conserva las capacidades de HoloLens 1, agregando acceso a secuencias adicionales:
+El modo de investigación se presentó en los dispositivos de HoloLens (primera generación) para dar acceso a los sensores clave, específicamente para las aplicaciones de investigación que no están pensadas para la implementación.  El modo de investigación de HoloLens 2 mantiene las capacidades de HoloLens 1, pero agrega acceso a los siguientes flujos:
 
 * **Cámaras de seguimiento de entornos claros visibles** : cámaras de escala de grises usadas por el sistema para el seguimiento de los cabezales y el edificio de mapas.
 * **Cámara de profundidad** : funciona en dos modos:  
-    + Detección de profundidad de AHAT, alta frecuencia (45 FPS) utilizada para el seguimiento manual. De manera diferente del modo de inicio breve de la primera versión, AHAT proporciona una pseudo profundidad con ajuste de fase superior a 1 medidor. 
+    + Detección de profundidad de AHAT, alta frecuencia (45 FPS) utilizada para el seguimiento manual. De forma diferente al modo de inicio de la primera versión, AHAT proporciona una pseudo profundidad con ajuste de fase superior a 1 medidor. 
     + Detección de profundidad larga de baja frecuencia (1-5 FPS) usada por la [asignación espacial](../../design/spatial-mapping.md)
 
 * **Dos versiones de la secuencia ir-reflectividad** : usadas por HoloLens para calcular la profundidad. Estas imágenes se iluminan por infrarrojos y no se ven afectadas por la luz visible de ambiente.
 
-Si usa HoloLens 2 también tiene acceso a las entradas adicionales siguientes:
+Si usa HoloLens 2, también tiene acceso a las entradas adicionales siguientes:
 
 * **Acelerómetro** : lo usa el sistema para determinar la aceleración lineal a lo largo de los ejes X, y y Z y la gravedad.
 * **Gyro** : el sistema lo usa para determinar los giros.
@@ -40,11 +40,11 @@ Si usa HoloLens 2 también tiene acceso a las entradas adicionales siguientes:
 
 El modo de investigación está diseñado para investigadores académicos e industriales que exploran ideas nuevas en los campos de Computer Vision y robótica.  No está diseñado para aplicaciones implementadas en entornos empresariales o disponibles a través del Microsoft Store u otros canales de distribución.
 
-Además, Microsoft no proporciona garantías de que el modo de investigación o la funcionalidad equivalente se admitirán en futuras actualizaciones de hardware o del sistema operativo. Sin embargo, esto no debería impedir su uso para desarrollar y probar nuevas ideas.
+Además, Microsoft no proporciona garantías de que el modo de investigación o la funcionalidad equivalente se admitirán en futuras actualizaciones de hardware o del sistema operativo. Sin embargo, no deje que le dejen de usarlo para desarrollar y probar ideas nuevas.
 
 ## <a name="security-and-performance"></a>Seguridad y rendimiento
 
-Tenga en cuenta que la habilitación del modo de investigación usa más energía de la batería que el uso de HoloLens 2 en condiciones normales. Esto es así incluso si la aplicación que usa las características de modo de investigación no se está ejecutando.  Habilitar este modo también puede reducir la seguridad general del dispositivo, ya que las aplicaciones pueden hacer uso indebido de los datos del sensor.  Puede encontrar más información sobre la seguridad de los dispositivos en las [preguntas más frecuentes sobre seguridad de HoloLens](https://docs.microsoft.com/hololens/hololens-faq-security).  
+Al habilitar el modo de investigación se usa más energía de la batería que el uso de HoloLens 2 en condiciones normales, aunque no se esté ejecutando la aplicación que usa las características del modo de investigación.  Habilitar este modo también puede reducir la seguridad general del dispositivo, ya que las aplicaciones pueden hacer uso indebido de los datos del sensor.  Puede encontrar más información sobre la seguridad de los dispositivos en las [preguntas más frecuentes sobre seguridad de HoloLens](https://docs.microsoft.com/hololens/hololens-faq-security).  
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 <table>
@@ -54,7 +54,7 @@ Tenga en cuenta que la habilitación del modo de investigación usa más energí
     <col width="33%" /> </colgroup>
     <tr>
         <td><strong>Característica</strong></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens1-hardware"><strong>HoloLens 1.ª generación</strong></a></td>
+        <td><a href="https://docs.microsoft.com/hololens/hololens1-hardware"><strong>Primera generación de HoloLens</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></a></td>
     </tr>
      <tr>
@@ -84,18 +84,18 @@ Tenga en cuenta que la habilitación del modo de investigación usa más energí
     </tr>
 </table>
 
-## <a name="enabling-research-mode-hololens-1st-gen-and-hololens-2"></a>Habilitación del modo de investigación (HoloLens de la primera generación y HoloLens 2)
+## <a name="enabling-research-mode-hololens-first-gen-and-hololens-2"></a>Habilitación del modo de investigación (HoloLens First gen y HoloLens 2)
 
 El modo de investigación es una extensión del modo de programador. Antes de comenzar, las características del desarrollador del dispositivo deben estar habilitadas para tener acceso a la configuración del modo de investigación: 
 
-* Abra el **menú inicio > configuración** y seleccione **actualizaciones** .
-* Seleccione **para desarrolladores** y habilite el **modo de desarrollador** .
-* Desplázate hacia abajo y habilita **Portal de dispositivos** .
+* Abra el **menú inicio > configuración** y seleccione **actualizaciones**.
+* Seleccione **para desarrolladores** y habilite el **modo de desarrollador**.
+* Desplázate hacia abajo y habilita **Portal de dispositivos**.
 
 Una vez habilitadas las características de desarrollador, [Conéctese al portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens) para habilitar las características del modo de investigación:
 
-* Vaya al **modo System > Research** en el **portal de dispositivos** .
-* Seleccione **permitir el acceso a la secuencia del sensor** .
+* Vaya al **modo System > Research** en el **portal de dispositivos**.
+* Seleccione **permitir el acceso a la secuencia del sensor**.
 * Reinicie el dispositivo desde el elemento de menú de **energía** en la parte superior de la página.
 
 Una vez que haya reiniciado el dispositivo, las aplicaciones que se cargan a través del **portal de dispositivos** pueden acceder a los flujos del modo de investigación.
@@ -108,17 +108,17 @@ Una vez que haya reiniciado el dispositivo, las aplicaciones que se cargan a tra
 
 ### <a name="using-sensor-data-in-your-apps"></a>Uso de datos de sensor en las aplicaciones
 
-Las aplicaciones pueden tener acceso a los datos de la secuencia del sensor de la misma manera que se obtiene acceso a los flujos de cámara de fotos y vídeo a través de [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197). 
+Las aplicaciones pueden tener acceso a los datos del flujo del sensor de la misma manera que [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) accede a las secuencias de la cámara de vídeo y de fotos. 
 
 Todas las API que funcionan con el desarrollo de HoloLens también están disponibles en el modo de investigación. En concreto, la aplicación sabe exactamente dónde se encuentra HoloLens en el espacio 6DoF en cada tiempo de captura de fotogramas del sensor.
 
-Puede encontrar aplicaciones de ejemplo sobre el acceso a las diversas secuencias del modo de investigación, mediante los [intrínsecos y extrinsics](https://docs.microsoft.com/windows/mixed-reality/locatable-camera#locating-the-device-camera-in-the-world), y la grabación de flujos en el modo de investigación respectivo repositorios:
-* [HoloLens (1ª generación)](https://github.com/Microsoft/HoloLensForCV)
+Tenemos aplicaciones de ejemplo en las que se muestra el acceso a secuencias en modo de referencia, con los [intrínsecos y extrinsics](https://docs.microsoft.com/windows/mixed-reality/locatable-camera#locating-the-device-camera-in-the-world)y las secuencias de registro:
+* [HoloLens (primera generación)](https://github.com/Microsoft/HoloLensForCV)
 * [HoloLens 2](https://github.com/microsoft/HoloLens2ForCV)
 
 ## <a name="support"></a>Soporte técnico
 
-Para HoloLens (1ª generación), use el [seguimiento de problemas](https://github.com/Microsoft/HololensForCV/issues) en el repositorio de HoloLensForCV para publicar comentarios y realizar un seguimiento de los problemas conocidos.
+Para HoloLens (primera generación), use el [seguimiento de problemas](https://github.com/Microsoft/HololensForCV/issues) en el repositorio de HoloLensForCV para publicar comentarios y realizar un seguimiento de los problemas conocidos.
 
 Para HoloLens 2, use el [seguimiento de problemas](https://github.com/microsoft/HoloLens2ForCV/issues) en el repositorio de HoloLens2ForCV para publicar comentarios y realizar un seguimiento de los problemas conocidos.
 

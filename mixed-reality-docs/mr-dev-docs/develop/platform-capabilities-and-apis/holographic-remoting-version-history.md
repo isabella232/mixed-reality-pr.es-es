@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota holográfica, historial de versiones, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 5ac15c9af7f6cb2d0263b1ee20e0d2c490d353a0
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: bda4d4a304c6d13a55ad0433fcd248d8513fa6a0
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443466"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530387"
 ---
 # <a name="holographic-remoting-version-history"></a>Historial de versiones de Holographic Remoting
 
@@ -19,15 +19,15 @@ ms.locfileid: "96443466"
 > Esta guía es específica de Holographic Remoting en HoloLens 2.
 
 ## <a name="version-240-december-1-2020"></a>Versión 2.4.0 (1 de diciembre de 2020) <a name="v2.4.0"></a>
-* Holographic Remoting ahora admite la escritura de aplicaciones remotas mediante la [API de OpenXR](../native/openxr.md). Para empezar, consulte [escritura de una aplicación remota Holographic Remoting con las API de OpenXR](holographic-remoting-create-remote-openxr.md).
+* Holographic Remoting ahora admite la escritura de aplicaciones remotas mediante la [API de OpenXR](../native/openxr.md). Consulte [escritura de una aplicación remota de Holographic Remoting con las API de OpenXR](holographic-remoting-create-remote-openxr.md) para comenzar.
 * Correcciones de errores y mejoras de estabilidad.
 
 ## <a name="version-231-october-10-2020"></a>Versión 2.3.1 (10 de octubre de 2020) <a name="v2.3.1"></a>
-* Se corrigió la regresión con la predicción de supuestos remotas que produjeron vibraciones visuales.
-* Implementó PerceptionDeviceSetCreateFactoryOverride, que garantiza que PerceptionDevice.dll incluido con la comunicación remota holográfica no interfiere con la versión suministrada con Windows 10.
+* Se corrigió la regresión con la predicción de supuestos remotas, lo que causó vibraciones visuales.
+* Implementó PerceptionDeviceSetCreateFactoryOverride, que garantiza que PerceptionDevice.dll distribuidas con Holographic Remoting no interfiere con la versión que se incluye con Windows 10.
 
 ## <a name="version-230-october-2-2020"></a>Versión 2.3.0 (2 de octubre de 2020) <a name="v2.3.0"></a>
-* Se han corregido bloqueos que se pueden producir cuando se suspende el reproductor de comunicación remota holográfica.
+* Se han corregido bloqueos, que pueden producirse cuando se suspende el reproductor de comunicación remota holográfica.
 * Mejoras de estabilidad.
 
 ## <a name="version-223-august-28-2020"></a>Versión 2.2.3 (28 de agosto de 2020) <a name="v2.2.3"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "96443466"
 
 ## <a name="version-222-july-10-2020"></a>Versión 2.2.2 (10 de julio de 2020) <a name="v2.2.2"></a>
 * Se corrigió un problema con [HolographicCamera. LeftViewportParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.leftviewportparameters) y [HolographicCamera. RightViewportParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera.rightviewportparameters) que no devuelve ningún vértice de malla de área oculta cuando se transmite desde un casco de realidad mixta de Windows.
-* Se ha corregido un bloqueo que puede producirse cuando la conexión de red es deficiente.
+* Se ha corregido el bloqueo, lo que puede ocurrir cuando la conexión de red es deficiente.
 
 ## <a name="version-221-july-6-2020"></a>Versión 2.2.1 (6 de julio de 2020) <a name="v2.2.1"></a>
 > [!IMPORTANT]
@@ -44,19 +44,19 @@ ms.locfileid: "96443466"
 
 ## <a name="version-220-july-1-2020"></a>Versión 2.2.0 (1 de julio de 2020) <a name="v2.2.0"></a>
 * El reproductor de comunicación remota holográfica ahora se puede instalar en equipos que ejecutan [Windows Mixed Reality](../../discover/navigating-the-windows-mixed-reality-home.md), lo que permite la transmisión por secuencias a auriculares envolventes.
-* [Los controladores de movimiento](../../design/motion-controllers.md) ahora son compatibles con la comunicación remota holográfica y los datos específicos del controlador se pueden recuperar a través de [SpatialInteractionSource. Controller](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller).
+* [Los controladores de movimiento](../../design/motion-controllers.md) ahora se admiten en la comunicación remota de Holographic y los datos específicos del controlador se pueden recuperar a través de [SpatialInteractionSource. Controller](https://docs.microsoft.com/uwp/api/windows.ui.input.spatial.spatialinteractionsource.controller#Windows_UI_Input_Spatial_SpatialInteractionSource_Controller).
 * Ahora se admite [SpatialStageFrameOfReference](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference) y la fase actual se puede recuperar a través de [SpatialStageFrameOfReference. Current](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current). Además, se puede solicitar una nueva fase a través de [SpatialStageFrameOfReference. RequestNewStageAsync](https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.requestnewstageasync).
-* En las versiones anteriores, la predicción de supuestos se administraba completamente en el reproductor de Holographic Remoting. A partir de la versión 2.2.0, Holographic Remoting tiene sincronización de hora y la aplicación remota realiza la predicción por completo. Los usuarios también deben esperar una mejor estabilidad del holograma en situaciones de red difíciles.
+* En versiones anteriores, el reproductor remoto Holographic controlaba la predicción en el reproductor. A partir de la versión 2.2.0, Holographic Remoting tiene sincronización de hora y la aplicación remota realiza la predicción por completo. Los usuarios también deben esperar una mejor estabilidad del holograma en situaciones de red difíciles.
 
 ## <a name="version-213-may-25-2020"></a>Versión 2.1.3 (25 de mayo de 2020) <a name="v2.1.3"></a>
-* Se ha cambiado el comportamiento del evento [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded) . En versiones anteriores **no** se garantizaba que un [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera) agregado también tenga un [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose) válido al crear el siguiente fotograma a través de [HolographicSpace. CreateNextFrame](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createnextframe). A partir de la versión 2.1.3, [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded) se sincroniza con los datos de pose procedentes del reproductor de comunicación remota holográfica y los usuarios pueden esperar que cuando se agrega una cámara, también haya una [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose) válida disponible para esa cámara en el siguiente fotograma.
+* Se ha cambiado el comportamiento del evento [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded) . En versiones anteriores, **no** se garantizaba que un [HolographicCamera](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamera) agregado también tenga un [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose) válido al crear el siguiente fotograma a través de [HolographicSpace. CreateNextFrame](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.createnextframe). A partir de la versión 2.1.3, [HolographicSpace. CameraAdded](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace.cameraadded) se sincroniza con los datos de pose procedentes del reproductor remoto holográfica. Los usuarios pueden esperar que cuando se agrega una cámara, también haya un [HolographicCameraPose](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerapose) válido disponible para esa cámara en el fotograma siguiente.
 * Se ha agregado **deshabilitado** a DepthBufferStreamResolution, que se puede usar para deshabilitar el streaming de búfer de profundidad a través de RemoteContext.ConfigureDepthVideoStream. Tenga en cuenta que, si se usa [HolographicCameraRenderingParameters. CommitDirect3D11DepthBuffer](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer) , se producirá un error con *E_ILLEGAL_METHOD_CALL*.
 * La pantalla de inicio del reproductor remoto Holographic se ha rediseñado y ahora no bloquea la vista de usuarios.
 * Mejoras de estabilidad y correcciones de errores.
 
 ## <a name="version-212-april-5-2020"></a>Versión 2.1.2 (5 de abril de 2020) <a name="v2.1.2"></a>
 * Se corrigió el problema de compatibilidad con versiones anteriores de audio entre el reproductor remoto Holographic y las aplicaciones remotas con una versión inferior a la 2.1.0.
-* Problema fijo de delimitador espacial que cerró inesperadamente el reproductor de comunicación remota holográfica. Este problema también afecta a los reproductores personalizados.
+* Problema fijo de delimitador espacial, que cerró inesperadamente el reproductor de comunicación remota holográfica. Este problema también afecta a los reproductores personalizados.
 
 ## <a name="version-211-march-20-2020"></a>Versión 2.1.1 (20 de marzo de 2020) <a name="v2.1.1"></a>
 * Se corrigió el problema de codificación de vídeo con las aplicaciones remotas al usar GPU AMD.
@@ -76,7 +76,7 @@ ms.locfileid: "96443466"
 
 ## <a name="version-2016-november-11-2019"></a>Versión 2.0.16 (11 de noviembre de 2019) <a name="2.0.16"></a>
 * Se corrigió el interbloqueo en el seguimiento del código QR.
-* Excepción de unhandeled corregida debido a una espera de bloqueo en el subproceso principal.
+* Se corrigió la excepción unhandeled debido a una espera de bloqueo en el subproceso principal.
 
 ## <a name="version-2014-october-26-2019"></a>Versión 2.0.14 (26 de octubre de 2019) <a name="v2.0.14"></a>
 * Compatibilidad con las nuevas API de PerceptionDevice (actualización 2019 de noviembre de Windows 10).
@@ -106,7 +106,7 @@ ms.locfileid: "96443466"
 * Primera versión pública de Holographic Remoting para HoloLens 2.
 
 ## <a name="see-also"></a>Consulte también
-* [Escritura de una aplicación remota Holographic Remoting con las API Realiy de Windows Mixed](holographic-remoting-create-remote-wmr.md)
+* [Escritura de una aplicación remota Holographic Remoting con las API de Windows Mixed Reality](holographic-remoting-create-remote-wmr.md)
 * [Escritura de una aplicación remota de Holographic Remoting con las API de OpenXR](holographic-remoting-create-remote-openxr.md)
 * [Escritura de una aplicación de reproductor de control remoto de holografías personalizada](holographic-remoting-create-player.md)
 * [Solución de problemas y limitaciones de la comunicación remota holográfica](holographic-remoting-troubleshooting.md)

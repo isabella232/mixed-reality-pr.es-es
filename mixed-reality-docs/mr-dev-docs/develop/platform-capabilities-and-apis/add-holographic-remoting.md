@@ -6,31 +6,31 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, Holographic Remoting, representación remota, representación en red, HoloLens, hologramas remotos, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 7aafb7a764a062efcca2c5a3cd9f77d4395516a2
-ms.sourcegitcommit: 9664bcc10ed7e60f7593f3a7ae58c66060802ab1
+ms.openlocfilehash: 809258d3387b5e45885c0eb207544c176f891a1d
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96443654"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530307"
 ---
-# <a name="add-holographic-remoting-hololens-1st-gen"></a>Incorporación de la comunicación remota holográfica (HoloLens (1ª generación))
+# <a name="add-holographic-remoting-hololens-first-gen"></a>Incorporación de la comunicación remota holográfica (HoloLens (primera generación))
 
 >[!IMPORTANT]
->En este documento se describe la creación de una aplicación host para HoloLens 1. La aplicación host para **HoloLens (1ª generación)** debe usar el paquete NuGet versión **1. x. x**. Esto implica que las aplicaciones host escritas para HoloLens 1 no son compatibles con HoloLens 2 y viceversa.
+> En este documento se describe la creación de una aplicación host para HoloLens 1. La aplicación host para **HoloLens (1ª generación)** debe usar el paquete NuGet versión **1. x. x**. Esto implica que las aplicaciones host escritas para HoloLens 1 no son compatibles con HoloLens 2 y viceversa.
 
 ## <a name="hololens-2"></a>HoloLens 2
 
-Los desarrolladores de HoloLens que usen la comunicación remota de Holographic deberán actualizar sus aplicaciones para que sean compatibles con HoloLens 2. Esto requiere una nueva versión del paquete NuGet de Holographic Remoting. Si una aplicación que usa el paquete NuGet de Holographic Remoting con un número de versión menor que 2.0.0.0 intenta conectarse al reproductor de acceso remoto holográfica en HoloLens 2, se producirá un error en la conexión.
+Los desarrolladores de HoloLens que usen la comunicación remota de Holographic deberán actualizar sus aplicaciones para que sean compatibles con HoloLens 2. Esto requiere una nueva versión del paquete NuGet de Holographic Remoting. Asegúrese de usar la versión 2.0.0.0 o posterior del paquete NuGet de Holographic Remoting al conectarse al reproductor de Holographic Remoting en HoloLens 2 o se producirá un error en la conexión.
 
 >[!NOTE]
->Las instrucciones específicas de HoloLens 2 se pueden encontrar [aquí](holographic-remoting-create-remote-wmr.md).
+> Las instrucciones específicas de HoloLens 2 se pueden encontrar [aquí](holographic-remoting-create-remote-wmr.md).
 
 
 ## <a name="add-holographic-remoting-to-your-desktop-or-uwp-app"></a>Adición de Holographic Remoting a su aplicación de escritorio o UWP
 
 En esta página se describe cómo agregar la comunicación remota holográfica a una aplicación de escritorio o UWP.
 
-Holographic Remoting permite que la aplicación tenga como destino una HoloLens con contenido holográfica hospedado en un equipo de escritorio o en un dispositivo UWP, como la Xbox One, lo que permite el acceso a más recursos del sistema y permite integrar [vistas envolventes](../../design/app-views.md) remotas en software de equipo de escritorio existente. Una aplicación host de comunicación remota recibe un flujo de datos de entrada de HoloLens, representa el contenido en una vista envolvente virtual y transmite los fotogramas de contenido de nuevo a HoloLens. La conexión se realiza mediante Wi-Fi estándar. Para usar la comunicación remota, usará un paquete NuGet para agregar la comunicación remota holográfica a su aplicación de escritorio o UWP, y escribir código para controlar la conexión y representar en una vista envolvente. Las bibliotecas auxiliares se incluyen en el ejemplo de código que simplifican la tarea de controlar la conexión del dispositivo.
+Holographic Remoting permite que la aplicación se dirija a HoloLens con contenido holográfica hospedado en un equipo de escritorio o en un dispositivo UWP, como la Xbox One. También tiene acceso a más recursos del sistema, lo que permite integrar [vistas envolventes](../../design/app-views.md) remotas en el software de PC de escritorio existente. Una aplicación host de comunicación remota recibe un flujo de datos de entrada de HoloLens, representa el contenido en una vista envolvente virtual y transmite los fotogramas de contenido de nuevo a HoloLens. La conexión se realiza mediante Wi-Fi estándar. Para usar la comunicación remota, use un paquete NuGet para agregar la comunicación remota holográfica a su aplicación de escritorio o UWP y, después, escriba el código para controlar la conexión y representar una vista envolvente. Las bibliotecas auxiliares se incluyen en el ejemplo de código que simplifican la tarea de controlar la conexión del dispositivo.
 
 Una conexión remota típica tendrá un mínimo de 50 ms de latencia. La aplicación de reproducción puede informar de la latencia en tiempo real.
 
@@ -42,14 +42,14 @@ Una conexión remota típica tendrá un mínimo de 50 ms de latencia. La aplicac
 Siga estos pasos para obtener el paquete NuGet para la comunicación remota de Holographic y agregue una referencia desde el proyecto:
 1. Vaya al proyecto en Visual Studio.
 2. Haga clic con el botón derecho en el nodo del proyecto y seleccione **administrar paquetes NuGet...**
-3. En el panel que aparece, haga clic en **examinar** y busque "Holographic Remoting".
-4. Seleccione **Microsoft. Holographic. Remoting** y haga clic en **instalar**.
-5. Si aparece el cuadro de diálogo **vista previa** , haga clic en **Aceptar**.
-6. El siguiente cuadro de diálogo que aparece es el contrato de licencia. Haga clic en **acepto para aceptar el contrato de licencia** .
+3. En el panel que aparece, selecct **examine** y busque "Holographic Remoting".
+4. Seleccione **Microsoft. Holographic. Remoting** y selecct **install**.
+5. Si aparece el cuadro de diálogo **vista previa** , seleccione **Aceptar**.
+6. Seleccione **acepto** cuando aparezca el cuadro de diálogo contrato de licencia.
 
 ### <a name="create-the-holographicstreamerhelpers"></a>Crear HolographicStreamerHelpers
 
-En primer lugar, necesitamos una instancia de HolographicStreamerHelpers. Agregue esto a la clase que controlará la comunicación remota.
+En primer lugar, es necesario agregar una instancia de HolographicStreamerHelpers a la clase que controlará la comunicación remota.
 
 ```cpp
 #include <HolographicStreamerHelpers.h>
@@ -77,7 +77,7 @@ private:
 
 ### <a name="initialize-holographicstreamerhelpers-and-connect-to-hololens"></a>Inicializar HolographicStreamerHelpers y conectarse a HoloLens
 
-Para conectarse a un dispositivo HoloLens, cree una instancia de HolographicStreamerHelpers y conéctese a la dirección IP de destino. Tendrá que establecer el tamaño del fotograma de vídeo para que coincida con el ancho y el alto de la pantalla de HoloLens, ya que la biblioteca remota de Holographic espera que las resoluciones del codificador y el descodificador coincidan exactamente.
+Para conectarse a un dispositivo HoloLens, cree una instancia de HolographicStreamerHelpers y conéctese a la dirección IP de destino. Deberá establecer el tamaño del fotograma de vídeo para que coincida con el ancho y el alto de la pantalla de HoloLens, ya que la biblioteca remota holográfica espera que las resoluciones de codificador y descodificador coincidan exactamente.
 
 ```cpp
 m_streamerHelpers = ref new HolographicStreamerHelpers();
@@ -188,7 +188,7 @@ En lugar de crearlos usted mismo, el espacio holográfica y los componentes de v
 m_appView->Initialize(m_streamerHelpers->HolographicSpace, m_streamerHelpers->RemoteSpeech);
 ```
 
-En lugar de usar un bucle de actualización dentro de un método Run, se proporcionan actualizaciones por pasos desde el bucle principal de la aplicación de escritorio o UWP. Esto permite que la aplicación de escritorio o UWP permanezca en el control del procesamiento de mensajes.
+En lugar de usar un bucle de actualización en un método Run, se proporcionan actualizaciones por pasos desde el bucle principal de la aplicación de escritorio o UWP. Esto permite que la aplicación de escritorio o UWP permanezca en el control del procesamiento de mensajes.
 
 ```cpp
 void DesktopWindow::Tick()
@@ -258,7 +258,6 @@ internal:
        }
 ```
 
-**Código de ejemplo:** Hay disponible un ejemplo de código de Holographic Remoting completo, que incluye una vista de aplicación holográfica que es compatible con los proyectos de host remoto y de comunicación remota para escritorio Win32, UWP DirectX y UWP con XAML. Para obtenerlo, vaya aquí:
-* [Ejemplo de código Holographic de Windows para la comunicación remota](https://github.com/Microsoft/HoloLensCompanionKit/)
+**Código de ejemplo:** Hay disponible un [ejemplo de código de Holographic Remoting](https://github.com/Microsoft/HoloLensCompanionKit) completo, que incluye una vista de aplicación holográfica que es compatible con los proyectos de host remoto y de comunicación remota para escritorio Win32, UWP DirectX y UWP con XAML. 
 
 **Nota de depuración:** La biblioteca remota holográfica puede producir excepciones de primera oportunidad. Estas excepciones pueden ser visibles en las sesiones de depuración, en función de la configuración de excepciones de Visual Studio que esté activa en ese momento. Estas excepciones las detecta internamente la biblioteca de comunicación remota holográfica y se pueden omitir.

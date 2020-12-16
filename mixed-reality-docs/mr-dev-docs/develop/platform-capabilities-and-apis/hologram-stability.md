@@ -8,16 +8,14 @@ ms.topic: article
 keywords: hologramas, estabilidad, hololens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, velocidad de fotogramas, representación, Reproyección, separación de colores
 appliesto:
 - HoloLens
-ms.openlocfilehash: 081a080c73a1c78eb762b94291027cf7ebcbed45
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 345ba3608b77ed4d7b493985903295f5ee3f4863
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679604"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530424"
 ---
 # <a name="hologram-stability"></a>Estabilidad de hologramas
-
-## <a name="overview"></a>Información general
 
 Para lograr hologramas estables, HoloLens tiene una canalización de estabilización de imágenes integrada. La canalización de estabilización funciona automáticamente en segundo plano, por lo que no es necesario realizar ningún paso adicional para habilitarla. Sin embargo, debe utilizar técnicas que mejoren la estabilidad del holograma y eviten escenarios que reduzcan la estabilidad.
 
@@ -29,7 +27,7 @@ La siguiente terminología puede ayudarle a identificar problemas con el entorno
 * **Precisión.** Una vez que el holograma está bloqueado mundialmente y colocado en el mundo real, debe permanecer donde se colocará en relación con el entorno circundante e independiente del movimiento del usuario o de los cambios de entorno pequeños y dispersos. Si más adelante aparece un holograma en una ubicación inesperada, se trata de un problema de *precisión* . Estos escenarios pueden producirse si dos salones distintos parecen idénticos.
 * **Vibrante.** Los usuarios observan la vibración como una sacudida de alta frecuencia de un holograma, lo que puede ocurrir cuando el seguimiento del entorno se degrada. Para los usuarios, la solución está ejecutando el [ajuste del sensor](../../sensor-tuning.md).
 * **Judder.** Las frecuencias de representación bajas dan como resultado una imagen de movimiento y dos veces inuniformes de hologramas. Judder es especialmente perceptible en los hologramas con movimiento. Los desarrolladores necesitan mantener una [constante de 60 fps](hologram-stability.md#frame-rate).
-* **Fase.** Los usuarios ven el desplazamiento a medida que un holograma desaparece de donde se colocó originalmente. El desplazamiento se produce cuando los hologramas se colocan lejos de los [delimitadores espaciales](../../design/spatial-anchors.md), especialmente en las partes del entorno que no están totalmente asignadas. La creación de hologramas cercanos a los delimitadores espaciales reduce la probabilidad de derivación.
+* **Fase.** Los usuarios ven el desplazamiento a medida que un holograma desaparece de donde se colocó originalmente. El desplazamiento se produce cuando se colocan hologramas lejos de los [delimitadores espaciales](../../design/spatial-anchors.md), especialmente en las partes sin asignar del entorno. La creación de hologramas cercanos a los delimitadores espaciales reduce la probabilidad de derivación.
 * **Puesta en marcha.** Cuando un holograma "extrae" o "salta" fuera de su ubicación ocasionalmente. La puesta en marcha puede producirse cuando el seguimiento ajusta los hologramas para que coincidan con el conocimiento actualizado de su entorno.
 * **Nada.** Cuando aparece un holograma en Sway que corresponde al movimiento del encabezado del usuario. Nadar se produce cuando la aplicación no ha implementado completamente la [Reproyección](hologram-stability.md#reprojection)y si HoloLens no está [calibrado](../../calibration.md) para el usuario actual. El usuario puede volver a ejecutar la aplicación de [calibración](../../calibration.md) para corregir el problema. Los desarrolladores pueden actualizar el plano de estabilización para mejorar la estabilidad.
 * **Separación de colores.** Las pantallas en HoloLens son pantallas secuenciales de color, que son canales de color rojo, verde y azul-verde a 60 Hz (los campos de color individuales se muestran a 240 Hz). Cada vez que un usuario realiza un seguimiento de un holograma móvil con sus ojos, los bordes inicial y final del holograma se separan en sus colores constituyentes, lo que produce un efecto de arco iris. El grado de separación depende de la velocidad del holograma. En algunos casos menos raros, el movimiento de una cabeza rápida mientras se examina un holograma estacionario también puede producir un efecto de arco iris, que se denomina *[separación de colores](hologram-stability.md#color-separation)*.
@@ -70,7 +68,7 @@ Los usuarios que contengan HoloLens siempre se acomodarán a 2,0 m para mantener
 
 La descomodidad del conflicto de alojamiento de vergence se puede evitar o minimizar manteniendo el contenido convergente lo más cerca posible de 2,0 m (es decir, en una escena con mucha profundidad, coloque las áreas de interés cerca de 2,0 m, cuando sea posible). Cuando el contenido no se puede colocar cerca de 2,0 m, la molestia del conflicto de alojamiento de Vergence es mayor cuando el usuario mira hacia atrás y hacia delante entre distintas distancias. En otras palabras, es mucho más cómodo mirar un holograma estacionario que permanezca 50 cm fuera de la vista de un holograma de 50 cm que se desplaza hacia el usuario con el tiempo.
 
-Colocar contenido en 2,0 m también es ventajoso porque las dos pantallas están diseñadas para superponerse completamente a esta distancia. En el caso de las imágenes que se colocan fuera de este plano, cuando se mueven fuera del lado del fotograma holográfica aparecen de una pantalla mientras siguen siendo visibles en la otra. Este rival puede ser perjudicial para la percepción de profundidad del holorgam.
+Colocar contenido en 2,0 m también es ventajoso porque las dos pantallas están diseñadas para superponerse completamente a esta distancia. En el caso de las imágenes que se colocan fuera de este plano, cuando se mueven fuera del lado del fotograma holográfica aparecen de una pantalla mientras siguen siendo visibles en la otra. Este rival puede ser perjudicial para la percepción de profundidad del holograma.
 
 **Distancia óptima para colocar hologramas respecto al usuario**
 
@@ -81,7 +79,7 @@ Colocar contenido en 2,0 m también es ventajoso porque las dos pantallas están
 **Procedimientos recomendados** Cuando los hologramas no se pueden colocar en 2 m y no se pueden evitar conflictos entre convergencia y ajuste, la zona óptima para la colocación del holograma está entre 1,25 m y 5 m. En todos los casos, los diseñadores deben estructurar el contenido para animar a los usuarios a interactuar con 1 + m (por ejemplo, ajustar el tamaño del contenido y los parámetros de ubicación predeterminados).
 
 ## <a name="reprojection"></a>Reproyección
-HoloLens realiza una sofisticada técnica de estabilización holográfica asistida por hardware conocida como reproyecto. La Reproyección tiene en cuenta el movimiento y el cambio del punto de vista (CameraPose) a medida que la escena se anima y el usuario mueve el encabezado.  Las aplicaciones deben realizar acciones específicas para el mejor uso de la Reproyección.
+HoloLens tiene una técnica de estabilización holográfica asistida por hardware sofisticada conocida como Reproyección. La Reproyección tiene en cuenta el movimiento y el cambio del punto de vista (CameraPose) a medida que la escena se anima y el usuario mueve el encabezado.  Las aplicaciones deben realizar acciones específicas para el mejor uso de la Reproyección.
 
 
 Hay cuatro tipos principales de Reproyección
@@ -97,10 +95,10 @@ Las aplicaciones deben realizar acciones específicas para habilitar los distint
 
 ### <a name="choosing-reprojection-technique"></a>Elección de la técnica de Reproyección
 
-Tipo de estabilización |    Auriculares inmersivo |    Generación 1 de HoloLens | HoloLens 2
+Tipo de estabilización |    Cascos envolventes |    Generación 1 de HoloLens | HoloLens 2
 --- | --- | --- | ---
-Reproyección de profundidad |    Recomendado |   N/D |   Recomendado<br/><br/>Las aplicaciones de Unity deben usar Unity 2018.4.12 o posterior o Unity 2019,3 o posterior. De lo contrario, use la Reproyección plana automática.
-Reproyección plana automática | N/D |   Valor predeterminado recomendado |   Recomendado si la reproyección de profundidad no da los mejores resultados<br/><br/>Se recomienda que las aplicaciones de Unity usen Unity 2018.4.12 o posterior o Unity 2019,3 o posterior.  Las versiones anteriores de Unity funcionarán con resultados de Reproyección ligeramente reducidos.
+Reproyección de profundidad |    Recomendado |   N/A |   Recomendado<br/><br/>Las aplicaciones de Unity deben usar Unity 2018.4.12 o posterior o Unity 2019,3 o posterior. De lo contrario, use la Reproyección plana automática.
+Reproyección plana automática | N/A |   Valor predeterminado recomendado |   Recomendado si la reproyección de profundidad no da los mejores resultados<br/><br/>Se recomienda que las aplicaciones de Unity usen Unity 2018.4.12 o posterior o Unity 2019,3 o posterior.  Las versiones anteriores de Unity funcionarán con resultados de Reproyección ligeramente reducidos.
 Reproyección plana |   No recomendado |   Recomendado si el plan plano automático no da los mejores resultados | Use si ninguna de las opciones de profundidad proporciona los resultados deseados.    
 
 ### <a name="verifying-depth-is-set-correctly"></a>La comprobación de profundidad está establecida correctamente
