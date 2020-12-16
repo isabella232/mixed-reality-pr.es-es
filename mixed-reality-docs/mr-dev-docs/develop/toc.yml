@@ -312,6 +312,8 @@
           href: unreal/unreal-publishing-to-store.md
         - name: Recomendaciones de rendimiento para Unreal
           href: unreal/performance-recommendations-for-unreal.md
+        - name: Generación de perfiles con Unreal Insights
+          href: unreal/unreal-insights.md
         - name: Recomendaciones de material en Unreal
           href: unreal/unreal-materials.md
         - name: Streaming en Unreal
