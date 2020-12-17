@@ -6,18 +6,18 @@ ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
 keywords: portabilidad, Unity, middleware, motor, UWP, Win32
-ms.openlocfilehash: 1ec03610dd26e9f75162795cbdded77a8e0189ce
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: d8cbb62500a81a29a00f4d32eaed0c2df3f5149d
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925827"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97612839"
 ---
 # <a name="porting-overview"></a>Introducción a la portabilidad
 
-En lo que respecta a la migración o la actualización de los proyectos existentes para la realidad mixta, pueden aplicarse varios escenarios en función de si la aplicación se compiló con Unity o un motor no real, HoloLens (1º gen) o HoloLens 2 o SteamVR. Esta página de información general contiene nuestras recomendaciones actuales para cada plataforma y dispositivo. Asegúrese de volver a comprobar que estos procesos siempre cambian.
+En lo que respecta a la migración o la actualización de los proyectos existentes para la realidad mixta, el recorrido de portabilidad depende de si la aplicación está compilada con Unity o un motor no real, y tiene como destino HoloLens (1º gen) o HoloLens 2 o SteamVR. Esta página de información general contiene nuestras recomendaciones actuales para cada plataforma y dispositivo. Asegúrese de volver a comprobar que estos procesos siempre cambian.
 
-En primer lugar, configure el destino del proyecto en función de las recomendaciones de [Unity](#unity) y de las no [reales](#unreal) y luego siga uno o varios de nuestros escenarios de migración:
+En primer lugar, configure el destino del proyecto en función de las recomendaciones de [Unity](#unity) y no [reales](#unreal) y luego siga uno o varios de nuestros escenarios de migración:
 
 - [HoloLens (1ª generación) a HoloLens 2](#hololens-1st-gen-unity-apps-to-hololens-2)
 - [Cascos de Windows Mixed Reality](#windows-mixed-reality-headsets)
@@ -26,7 +26,7 @@ En primer lugar, configure el destino del proyecto en función de las recomendac
 
 ## <a name="recommended-project-targets"></a>Objetivos de proyecto recomendados
 
-Es importante mantener los proyectos actualizados, tanto si se traslada una aplicación a otro dispositivo de destino como si no. Consulte los recursos basados en el motor que se enumeran a continuación para ver nuestras recomendaciones actuales.
+Es importante mantener los proyectos actualizados, tanto si se traslada una aplicación a otro dispositivo de destino. Consulte los recursos basados en el motor que se enumeran a continuación para ver nuestras recomendaciones actuales.
 
 ### <a name="unity"></a>Unity
 
@@ -52,7 +52,7 @@ Si ya tiene una aplicación de Unity de HoloLens (primera generación) que le gu
 
 ### <a name="windows-mixed-reality-headsets"></a>Cascos de Windows Mixed Reality
 
-Si ha creado contenido para otros dispositivos, como Oculus Rift o HP reverberación G2, deberá volver a dirigirse a los SDK de VR específicos del proveedor y a las API de asignación de entradas posibles. Puede encontrar información sobre los escenarios de migración de Unity y no real en nuestra [Guía de migración de aplicaciones envolventes](porting-guides.md).
+Si ha creado contenido para otros dispositivos, como Oculus Rift o HP reverberación G2, deberá redestinar los SDK de VR específicos del proveedor y las API de asignación de entrada posibles. Puede encontrar información sobre los escenarios de migración de Unity y no real en nuestra [Guía de migración de aplicaciones envolventes](porting-guides.md).
 
 ### <a name="steamvr-applications"></a>Aplicaciones SteamVR
 
@@ -60,5 +60,5 @@ En el caso de las experiencias de SteamVR que quiera actualizar para los auricul
 
 ### <a name="2d-universal-windows-applications"></a>aplicaciones Windows universales en 2D
 
-Si tiene una aplicación de UWP en 2D existente que le gustaría trasladar a un auricular o a HoloLens de realidad mixta de Windows, siga las instrucciones que aparecen en el artículo sobre cómo [migrar aplicaciones para UWP en 2D para Windows](building-2d-apps.md) .
+Si tiene una aplicación de UWP en 2D existente que le gustaría trasladar a un auricular o a HoloLens de realidad mixta de Windows, siga las instrucciones [de migración de aplicaciones para UWP en 2D para Windows](building-2d-apps.md) .
 

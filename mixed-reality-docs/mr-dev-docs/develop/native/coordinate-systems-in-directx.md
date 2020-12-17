@@ -1,17 +1,17 @@
 ---
 title: Sistemas de coordenadas de DirectX
-description: Explica cómo usar los localizadores espaciales, los fotogramas de referencia, los delimitadores espaciales y los sistemas de coordenadas de Windows Mixed Reality, cómo usar SpatialStage, cómo controlar la pérdida de seguimiento, cómo guardar y cargar delimitadores, y cómo realizar la estabilización de la imagen.
+description: Obtenga información sobre los sistemas de coordenadas en DirectX y Mixed Reality con localizadores espaciales, fotogramas de referencia y delimitadores espaciales. Use SpatialStage y controle la pérdida de seguimiento, el guardado y la carga de delimitadores y la estabilización de imágenes.
 author: thetuvix
 ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Realidad mixta, localizador espacial, marco de referencia espacial, sistema de coordenadas espaciales, fase espacial, código de ejemplo, estabilización de imágenes, delimitador espacial, almacén de delimitador espacial, pérdida de seguimiento, tutorial, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 4ab97df0d0ce87f86b3b561edb544d503e479e96
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 7bf2309f3fb6264d6b1a5232f7ead78b771c1649
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679664"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613119"
 ---
 # <a name="coordinate-systems-in-directx"></a>Sistemas de coordenadas de DirectX
 
@@ -20,18 +20,18 @@ ms.locfileid: "94679664"
 
 [Los sistemas de coordenadas](../../design/coordinate-systems.md) constituyen la base para la comprensión espacial ofrecida por las API de Windows Mixed Reality.
 
-Los dispositivos actuales de VR o de una sola habitación establecen un sistema de coordenadas principal para representar el espacio del que se ha realizado el seguimiento. Los dispositivos de Windows Mixed Reality, como HoloLens, están diseñados para usarse en entornos de gran tamaño sin definir, con el dispositivo que detecta y aprende sobre su entorno a medida que el usuario se recorre. Esto permite que el dispositivo se adapte al conocimiento que se mejora continuamente sobre los salones del usuario, pero que los sistemas de coordenadas cambien su relación entre sí a través de la duración de la aplicación. Windows Mixed Reality es compatible con una amplia gama de dispositivos, desde los auriculares envolventes colocados a través de fotogramas de referencia conectados al mundo.
+Los dispositivos de la plataforma de VR de una sola habitación o de la primera sala establecen un sistema de coordenadas principal para su espacio de seguimiento. Los dispositivos de realidad mixta como HoloLens están diseñados para entornos de gran tamaño sin definir, con el dispositivo que detecta y aprende sobre su entorno a medida que el usuario se recorre. El dispositivo se adapta para mejorar continuamente el conocimiento sobre los salones del usuario, pero los sistemas de coordenadas cambian su relación entre sí a lo largo de la duración de las aplicaciones. Windows Mixed Reality es compatible con una amplia gama de dispositivos, desde los auriculares envolventes colocados a través de fotogramas de referencia conectados al mundo.
 
 >[!NOTE]
 >Los fragmentos de código de este artículo muestran actualmente el uso de C++/CX en lugar de C + +17 compatible con C++/WinRT tal y como se usa en la [plantilla de proyecto de C++ Holographic](creating-a-holographic-directx-project.md).  Los conceptos son equivalentes para un proyecto/WinRT de C++, aunque tendrá que traducir el código.
 
 ## <a name="spatial-coordinate-systems-in-windows"></a>Sistemas de coordenadas espaciales en Windows
 
-El tipo básico que se usa para los sistemas de coordenadas del mundo real en Windows es el <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a>. Una instancia de este tipo representa un sistema de coordenadas arbitrario y proporciona un método para obtener una matriz de transformación que se puede usar para transformar entre dos sistemas de coordenadas sin conocer los detalles de cada uno de ellos.
+El tipo básico que se usa para los sistemas de coordenadas del mundo real en Windows es el <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a>. Una instancia de este tipo representa un sistema de coordenadas arbitrario, que proporciona un método para obtener los datos de la matriz de transformación que se pueden usar para transformar entre dos sistemas de coordenadas sin conocer los detalles de cada uno de ellos.
 
-Los métodos que devuelven información espacial, representados como puntos, rayos o volúmenes en el entorno del usuario, aceptarán un parámetro SpatialCoordinateSystem para permitirle decidir el sistema de coordenadas en el que es más útil para las coordenadas que se van a devolver. Las unidades de estas coordenadas siempre estarán en metros.
+Los métodos que devuelven información espacial aceptarán un parámetro SpatialCoordinateSystem para permitirle decidir el sistema de coordenadas en el que es más útil para las coordenadas que se van a devolver. La información espacial se representa como puntos, rayos o volúmenes en el entorno del usuario, y las unidades de estas coordenadas siempre estarán en metros.
 
-Un SpatialCoordinateSystem tiene una relación dinámica con otros sistemas de coordenadas, incluidos los que representan la posición del dispositivo. En cualquier momento, es posible que el dispositivo pueda localizar algunos sistemas de coordenadas y no otros. Para la mayoría de los sistemas de coordenadas, la aplicación debe estar preparada para controlar los períodos de tiempo durante los cuales no se pueden encontrar.
+Un SpatialCoordinateSystem tiene una relación dinámica con otros sistemas de coordenadas, incluidos los que representan la posición del dispositivo. En cualquier momento, el dispositivo puede localizar algunos sistemas de coordenadas y no otros. Para la mayoría de los sistemas de coordenadas, la aplicación debe estar preparada para controlar los períodos de tiempo durante los cuales no se pueden encontrar.
 
 La aplicación no debe crear SpatialCoordinateSystems directamente, sino que se deben usar a través de las API de percepción. Existen tres orígenes principales de sistemas de coordenadas en las API de percepción, cada uno de los cuales se asigna a un concepto descrito en la página [sistemas de coordenadas](../../design/coordinate-systems.md) :
 * Para obtener un marco estacionario de referencia, cree un <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstationaryframeofreference" target="_blank">SpatialStationaryFrameOfReference</a> u obtenga uno de la <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference" target="_blank">SpatialStageFrameOfReference</a>actual.
@@ -43,11 +43,17 @@ Todos los sistemas de coordenadas devueltos por estos objetos son zurdos, con + 
 ![Sistemas de coordenadas del lado izquierdo y derecho](images/left-hand-right-hand.gif)<br>
 *Sistemas de coordenadas del lado izquierdo y derecho*
 
-Para arrancar en un SpatialCoordinateSystem en función de la posición de un HoloLens, use la clase <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> para crear un marco de referencia adjunto o estacionario, como se describe en las secciones siguientes.
+Use la clase <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> para crear un marco fijo o adjunto de referencia para arrancar en un SpatialCoordinateSystem basado en la posición de HoloLens. Continúe con la siguiente sección para obtener más información sobre este proceso.
 
 ## <a name="place-holograms-in-the-world-using-a-spatial-stage"></a>Colocar hologramas en el mundo mediante una fase espacial
 
-Se tiene acceso al sistema de coordenadas para los auriculares con forma de la realidad mixta de Windows con la que se usa la propiedad estática <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current" target="_blank">SpatialStageFrameOfReference:: Current</a> . Esta API proporciona un sistema de coordenadas, información acerca de si el jugador está sentado o es móvil, el límite de un área segura para desplazarse si el jugador es móvil y una indicación de si el casco es direccional. También hay un controlador de eventos para las actualizaciones de la fase espacial.
+Se tiene acceso al sistema de coordenadas para los auriculares con forma de la realidad mixta de Windows con la que se usa la propiedad estática <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current" target="_blank">SpatialStageFrameOfReference:: Current</a> . Esta API proporciona:
+
+* Un sistema de coordenadas
+* Información sobre si el reproductor está sentado o es móvil
+* El límite de un área segura para recorrer si el reproductor es móvil
+* Una indicación de si el casco es direccional. 
+* Un controlador de eventos para las actualizaciones de la fase espacial.
 
 En primer lugar, se obtiene la fase espacial y se suscriben las actualizaciones a ella: 
 
@@ -68,7 +74,7 @@ SpatialStageManager::SpatialStageManager(
 }
 ```
 
-En el método OnCurrentChanged, la aplicación debe inspeccionar la fase espacial y actualizar la experiencia del reproductor en consecuencia. En este ejemplo, se proporciona una visualización del límite de la fase, así como la posición inicial especificada por el usuario y el intervalo de vista y intervalo de propiedades de movimiento de la fase. También reviertemos a nuestro propio sistema de coordenadas estacionales, cuando no se puede proporcionar una fase.
+En el método OnCurrentChanged, la aplicación debe inspeccionar la fase espacial y actualizar la experiencia del reproductor. En este ejemplo, se proporciona una visualización del límite de fase y la posición de inicio especificada por el usuario, así como el intervalo de vista y rango de propiedades de movimiento de la fase. También reviertemos a nuestro propio sistema de coordenadas estacionales, cuando no se puede proporcionar una fase.
 
 
 Código para la actualización de la **fase espacial**
@@ -175,7 +181,7 @@ void SpatialStageManager::OnCurrentChanged(Object^ /*o*/)
 }
 ```
 
-El conjunto de vértices que definen el límite de la fase se proporciona en el orden de las agujas del reloj. El shell de Windows Mixed Reality dibuja una barrera en el límite cuando el usuario la trata; es posible que desee triangular el área que se puede examinar para sus propios fines. El siguiente algoritmo se puede usar para triangular de la fase.
+El conjunto de vértices que definen el límite de la fase se proporciona en el orden de las agujas del reloj. El shell de Windows Mixed Reality dibuja una barrera en el límite cuando el usuario la trata, pero es posible que desee triangular el área que se puede examinar para sus propios fines. El siguiente algoritmo se puede usar para triangular de la fase.
 
 
 Código para **triangulación en la fase espacial**
@@ -304,9 +310,9 @@ Los [delimitadores espaciales](../../design/coordinate-systems.md#spatial-anchor
 
 Puede crear un SpatialAnchor en cualquier posición y orientación dentro del SpatialCoordinateSystem de su elección. El dispositivo debe ser capaz de localizar ese sistema de coordenadas en el momento y el sistema no debe haber alcanzado el límite de delimitadores espaciales.
 
-Una vez definido, el sistema de coordenadas de un SpatialAnchor se ajusta continuamente para conservar la posición precisa y la orientación de su ubicación inicial. Después, puede usar esta SpatialAnchor para representar hologramas que aparecerán fijos en el entorno del usuario en esa ubicación exacta.
+Una vez definido, el sistema de coordenadas de un SpatialAnchor se ajusta continuamente para mantener la posición y orientación precisas de su ubicación inicial. Después, puede usar esta SpatialAnchor para representar hologramas que aparecerán fijos en el entorno del usuario en esa ubicación exacta.
 
-Los efectos de los ajustes que mantienen el anclaje en su lugar se amplían a medida que el delimitador aumenta. Por lo tanto, debe evitar la representación del contenido en relación con un delimitador que supere los 3 metros del origen de ese delimitador.
+Los efectos de los ajustes que mantienen el anclaje en su lugar se amplían a medida que el delimitador aumenta. Debe evitar la representación del contenido en relación con un delimitador que supere los 3 metros del origen de ese delimitador.
 
 La propiedad [coordenadas](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.coordinatesystem.aspx) obtiene un sistema de coordenadas que le permite colocar el contenido en relación con el delimitador, con una aceleración aplicada cuando el dispositivo ajusta la ubicación precisa del delimitador.
 
@@ -316,9 +322,9 @@ Use la propiedad [RawCoordinateSystem](https://msdn.microsoft.com/library/window
 
 Puede conservar un SpatialAnchor localmente mediante la clase [SpatialAnchorStore](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchorstore.aspx) y, a continuación, recuperarlo en una sesión de aplicación futura en el mismo dispositivo HoloLens.
 
-Mediante el uso de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">anclajes espaciales de Azure</a>, puede crear un delimitador de la nube durable desde un SpatialAnchor local, que la aplicación puede ubicar en varios dispositivos HoloLens, iOS y Android.  Al compartir un delimitador espacial común en varios dispositivos, cada usuario puede ver el contenido representado en relación con ese delimitador en la misma ubicación física.  Esto permite compartir experiencias en tiempo real.
+Mediante el uso de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">anclajes espaciales de Azure</a>, puede crear un delimitador de la nube durable desde un SpatialAnchor local, que la aplicación puede ubicar en varios dispositivos HoloLens, iOS y Android.  Al compartir un delimitador espacial común en varios dispositivos, cada usuario puede ver el contenido representado en relación con ese delimitador en la misma ubicación física en tiempo real. 
 
-También se puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> para la persistencia de hologramas asincrónicos en dispositivos Android, iOS y HoloLens.  Al compartir un delimitador espacial en la nube duradera, varios dispositivos pueden observar el mismo holograma persistente a lo largo del tiempo, aunque los dispositivos no estén presentes juntos simultáneamente.
+También puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a> para la persistencia asincrónica de hologramas en dispositivos de HoloLens, iOS y Android.  Al compartir un delimitador espacial en la nube duradero, varios dispositivos pueden observar el mismo holograma persistente con el tiempo, incluso si esos dispositivos no están presentes juntos al mismo tiempo.
 
 Para empezar a crear experiencias compartidas en la aplicación de HoloLens, pruebe la guía de inicio rápido de HoloLens de 5 minutos de <a href="https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-hololens" target="_blank">delimitadores espaciales de Azure</a>.
 
@@ -328,9 +334,10 @@ Una vez que esté en funcionamiento con los anclajes espaciales de Azure, puede 
 
 En este ejemplo de código, se modificó la plantilla de aplicación de Windows Holographic para crear delimitadores cuando se detecta el gesto **presionado** . Después, el cubo se coloca en el delimitador durante la fase de representación.
 
-Dado que la clase auxiliar admite varios delimitadores, se pueden colocar tantos cubos como se deseen con este ejemplo de código.
+Dado que la clase auxiliar admite varios delimitadores, podemos colocar tantos cubos como deseen usar este ejemplo de código.
 
-Tenga en cuenta que los identificadores de los delimitadores son algo que usted controla en la aplicación. En este ejemplo, se ha creado un esquema de nomenclatura que es secuencial en función del número de delimitadores almacenados actualmente en la colección de delimitadores de la aplicación.
+> [!NOTE]
+> Los identificadores de los delimitadores son algo que usted controla en la aplicación. En este ejemplo, se ha creado un esquema de nomenclatura que es secuencial en función del número de delimitadores almacenados actualmente en la colección de delimitadores de la aplicación.
 
 ```
    // Check for new input state since the last frame.
@@ -486,11 +493,11 @@ Cuando esté listo para intentar guardar los delimitadores en memoria en Spatial
 
 ### <a name="load-content-from-the-anchor-store-when-the-app-resumes"></a>Carga de contenido desde el almacén delimitado cuando se reanuda la aplicación
 
-Cuando se reanuda la aplicación, o en cualquier otro momento necesario para el implementaiton de la aplicación, puede restaurar los delimitadores que se guardaron previamente en el AnchorStore si los transfiere de la IMapView de la tienda Premium a su propia base de datos en memoria de SpatialAnchors.
+Puede restaurar los delimitadores guardados en el AnchorStore si los transfiere del IMapView del almacén delimitador a su propia base de datos en memoria de SpatialAnchors cuando se reanuda la aplicación o en cualquier momento.
 
-Para restaurar los delimitadores de SpatialAnchorStore, restaure cada uno que le interese en su propia colección en memoria.
+Para restaurar los delimitadores de SpatialAnchorStore, restaure cada uno que le interese a su propia colección en memoria.
 
-Necesita su propia base de datos en memoria de SpatialAnchors; alguna manera de asociar cadenas con el SpatialAnchors que cree. En el código de ejemplo, elegimos usar un Windows:: Foundation:: Collections:: IMap para almacenar los delimitadores, lo que facilita el uso de la misma clave y el mismo valor de datos para el SpatialAnchorStore.
+Necesita su propia base de datos en memoria de SpatialAnchors para asociar cadenas con el SpatialAnchors que cree. En el código de ejemplo, elegimos usar un Windows:: Foundation:: Collections:: IMap para almacenar los delimitadores, lo que facilita el uso de la misma clave y el mismo valor de datos para el SpatialAnchorStore.
 
 ```
    // This is an in-memory anchor list that is separate from the anchor store.
@@ -554,7 +561,7 @@ Con nuestra clase auxiliar, casi innecesaria para encapsular la función Clear. 
 
 ### <a name="example-relating-anchor-coordinate-systems-to-stationary-reference-frame-coordinate-systems"></a>Ejemplo: vinculación de sistemas de coordenadas de anclaje a sistemas de coordenadas de fotogramas de referencia estacionales
 
-Supongamos que tiene un delimitador y quiere relacionar algo en el sistema de coordenadas del delimitador con el SpatialStationaryReferenceFrame que ya está usando para la mayor parte de su contenido. Puede usar [TryGetTransformTo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.trygettransformto.aspx) para obtener una transformación del sistema de coordenadas del delimitador al marco de referencia estacionaria:
+Supongamos que tiene un delimitador y quiere relacionar algo en el sistema de coordenadas del delimitador con el SpatialStationaryReferenceFrame que ya está usando para el otro contenido. Puede usar [TryGetTransformTo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.trygettransformto.aspx) para obtener una transformación del sistema de coordenadas del delimitador al marco de referencia estacionaria:
 
 ```
    // In this code snippet, someAnchor is a SpatialAnchor^ that has been initialized and is valid in the current environment.
@@ -579,17 +586,17 @@ Para la representación, a menudo puede obtener mejores resultados mediante la a
 
 Hay ocasiones en las que desea representar un holograma que [permanece adjunto](../../design/coordinate-systems.md#attached-frame-of-reference) a la ubicación del dispositivo, por ejemplo un panel con información de depuración o un mensaje informativo cuando el dispositivo solo puede determinar su orientación y no su posición en el espacio. Para ello, usamos un marco de referencia asociado.
 
-La clase SpatialLocatorAttachedFrameOfReference define los sistemas de coordenadas que son relativos al dispositivo en lugar de al mundo real. Este marco tiene un encabezado fijo en relación con el entorno del usuario que apunta a la dirección a la que estaba situado el usuario cuando se creó el marco de referencia. A partir de entonces, todas las orientaciones de este marco de referencia son relativas a ese título fijo, incluso cuando el usuario gira el dispositivo.
+La clase SpatialLocatorAttachedFrameOfReference define los sistemas de coordenadas, que son relativos al dispositivo en lugar de al mundo real. Este marco tiene un encabezado fijo en relación con el entorno del usuario que apunta a la dirección a la que estaba situado el usuario cuando se creó el marco de referencia. A partir de entonces, todas las orientaciones de este marco de referencia son relativas a ese título fijo, incluso cuando el usuario gira el dispositivo.
 
 En el caso de HoloLens, el origen del sistema de coordenadas de este fotograma se encuentra en el centro de rotación del encabezado del usuario, de modo que su posición no se ve afectada por la rotación del cabezal. La aplicación puede especificar un desplazamiento relativo a este punto para colocar los hologramas delante del usuario.
 
 Para obtener un SpatialLocatorAttachedFrameOfReference, use la clase SpatialLocator y llame a CreateAttachedFrameOfReferenceAtCurrentHeading.
 
-Tenga en cuenta que esto se aplica a todo el intervalo de dispositivos de Windows Mixed Reality.
+Esto se aplica a todo el intervalo de dispositivos de Windows Mixed Reality.
 
 ### <a name="use-a-reference-frame-attached-to-the-device"></a>Uso de un marco de referencia conectado al dispositivo
 
-En estas secciones se habla sobre lo que hemos cambiado en la plantilla de aplicación de Windows Holographic para habilitar un marco de referencia de dispositivo de referencia mediante esta API. Tenga en cuenta que este holograma "adjunto" funcionará junto con los hologramas fijos o anclados, y también puede usarse cuando el dispositivo no pueda encontrar su posición en el mundo temporalmente.
+En estas secciones se habla sobre lo que hemos cambiado en la plantilla de aplicación de Windows Holographic para habilitar un marco de referencia de dispositivo de referencia mediante esta API. Este holograma "adjunto" funcionará junto con los hologramas fijos o anclados y también se puede usar cuando el dispositivo no pueda encontrar su posición en el mundo temporalmente.
 
 En primer lugar, hemos cambiado la plantilla para almacenar un SpatialLocatorAttachedFrameOfReference en lugar de un SpatialStationaryFrameOfReference:
 
@@ -627,7 +634,7 @@ SpatialPointerPose^ pose = SpatialPointerPose::TryGetAtTimestamp(currentCoordina
 
 Este SpatialPointerPose tiene la información necesaria para colocar el holograma según el [encabezado actual del usuario](gaze-in-directx.md).
 
-Por motivos de comodidad del usuario, usamos la interpolación lineal ("lerp") para suavizar el cambio en la posición de modo que se produzca durante un período de tiempo. Esto es más cómodo para el usuario que bloquear el holograma a su mirada. Lerping la posición de la etiqueta en el holograma también nos permite estabilizar el holograma mediante la amortiguación del movimiento. Si no se realiza esta amortiguación, el usuario verá la vibración del holograma debido a lo que se suele considerar como movimientos imperceptibles del encabezado del usuario.
+Para la comodidad del usuario, usamos la interpolación lineal ("lerp") para suavizar el cambio en la posición en un período de tiempo. Esto es más cómodo para el usuario que bloquear el holograma a su mirada. Lerping la posición de la etiqueta en el holograma también nos permite estabilizar el holograma mediante la amortiguación del movimiento. Si no hacemos esto, el usuario verá la vibración del holograma debido a lo que se suele considerar como movimientos imperceptibles del encabezado del usuario.
 
 Desde **StationaryQuadRenderer::P ositionhologram**:
 
@@ -671,7 +678,7 @@ Para **StationaryQuadRenderer::P ositionhologram**:
 
 ### <a name="rotate-the-hologram-to-face-the-camera"></a>Girar el holograma para que se enfrente a la cámara
 
-No basta con colocar simplemente el holograma, que en este caso es un cuádruple; También debemos girar el objeto para que se enfrente al usuario. Tenga en cuenta que esta rotación se produce en el espacio universal, ya que este tipo de cartelera permite que el holograma siga siendo parte del entorno del usuario. La cartelera de espacio de vista no es tan cómoda porque el holograma se bloquea en la orientación de la pantalla. en ese caso, también tendría que interpolar entre las matrices de la vista izquierda y derecha para adquirir una transformación de la cartelera de espacio de vista que no interrumpa la representación en estéreo. Aquí, giramos en los ejes X y Z para que se enfrente al usuario.
+No basta con colocar el holograma, que en este caso es un cuádruple; También debemos girar el objeto para que se enfrente al usuario. Esta rotación se produce en el espacio universal, ya que este tipo de cartelera permite que el holograma siga siendo parte del entorno del usuario. La cartelera de espacio de vista no es tan cómoda porque el holograma se bloquea a la orientación de la pantalla. en ese caso, también tendría que interpolar entre las matrices de la vista izquierda y derecha para adquirir una transformación de la cartelera de espacio de vista que no interrumpa la representación de estéreo. Aquí, giramos en los ejes X y Z para que se enfrente al usuario.
 
 Desde **StationaryQuadRenderer:: Update**:
 

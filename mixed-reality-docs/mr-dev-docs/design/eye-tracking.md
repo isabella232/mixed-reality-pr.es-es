@@ -6,12 +6,12 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Seguimiento ocular, realidad mixta, entrada, ojo ocular, calibración, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, conjunto de herramientas de realidad mixta, intención, acciones
-ms.openlocfilehash: c6167fc48a98de8f400400475c2057a2b4773b29
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 53a44fab72d3a15df3cf5929c6ddda4fec06af71
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702591"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97612869"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Seguimiento de los ojos en HoloLens 2
 
@@ -133,7 +133,7 @@ Esto puede deberse a diferentes motivos entre los que se enumeran los más comun
 * El usuario tiene anteojos únicos o alguna condición de ojo que el sistema todavía no admite.    
 * Factores externos que impiden el seguimiento de ojos fiables, como manchas en el parasol o anteojos de HoloLens, luz solar directa y oclusión, debido al pelo en la parte delantera de los ojos.   
 
-Por lo tanto, los desarrolladores deben asegurarse de que hay compatibilidad de reserva adecuada para estos usuarios. En la página [seguimiento ocular en DirectX](../develop/native/gaze-in-directx.md#fallback-when-eye-tracking-is-not-available) , se explican las API necesarias para detectar si hay datos de seguimiento ocular disponibles. 
+Por lo tanto, los desarrolladores deben asegurarse de que hay compatibilidad de reserva adecuada para estos usuarios. En la página [seguimiento ocular en DirectX](../develop/native/gaze-in-directx.md#fallback-when-eye-tracking-isnt-available) , se explican las API necesarias para detectar si hay datos de seguimiento ocular disponibles. 
 
 Aunque algunos usuarios pueden haber decidido revocar el acceso a sus datos de seguimiento ocular y son correctos con la desventaja de una experiencia de usuario inferior a la privacidad de no proporcionar acceso a los datos de seguimiento ocular, en algunos casos esto puede ser involuntaria.  
 Por lo tanto, si la aplicación usa el seguimiento ocular y esta es una parte importante de la experiencia, recomendamos que se comunique claramente al usuario.     

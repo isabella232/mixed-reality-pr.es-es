@@ -6,18 +6,18 @@ ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: DirectX, representación holográfica, nativa, aplicación nativa, WinRT, aplicación de WinRT, API de plataforma, motor personalizado, middleware, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 0d5e364fdb4faac73f28649f5c009823a74ac595
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 493715660ff8df79df25e09c82fe48b863053ed3
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679654"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613079"
 ---
 # <a name="native-development-overview"></a>Introducción al desarrollo con Native
 
 ![Logotipo de banner nativo](../images/native_logo_banner.png)
 
-los motores 3D como [Unity](../unity/unity-development-overview.md) o las no [reales](../unreal/unreal-development-overview.md) no son las únicas rutas de desarrollo de realidad mixta que se abren. También puede crear aplicaciones de realidad mixta mediante la codificación directa en las API de Windows Mixed Reality con DirectX 11 o DirectX 12. Al aprovechar la plataforma directamente, básicamente está creando su propio middleware o marco. 
+los motores 3D como [Unity](../unity/unity-development-overview.md) o las no [reales](../unreal/unreal-development-overview.md) no son las únicas rutas de desarrollo de realidad mixta que se abren. También puede crear aplicaciones de realidad mixtas con las API de Windows Mixed Reality con DirectX 11 o DirectX 12. Al ir al origen de la plataforma, básicamente está creando su propio middleware o marco. 
 
 > [!IMPORTANT]
 > Si tiene un proyecto de WinRT existente que le gustaría mantener, diríjase a nuestra documentación principal de [winrt](creating-a-holographic-directx-project.md). 
@@ -29,10 +29,10 @@ Use los siguientes puntos de control para incorporar sus aplicaciones y juegos d
 ### <a name="1-getting-started"></a>1. Introducción
 
 Windows Mixed Reality admite [dos tipos de aplicaciones](../../design/app-views.md):
-* **Aplicaciones de realidad mixta** (UWP o Win32) que usan la [API de HOLOGRAPHICSPACE](getting-a-holographicspace.md) o la [API de OpenXR](openxr.md) para presentar una [vista envolvente](../../design/app-views.md) al usuario que rellena la pantalla del casco
+* **Aplicaciones de realidad mixta** de UWP o Win32 que usan la API de [HOLOGRAPHICSPACE](getting-a-holographicspace.md) o la [API de OpenXR](openxr.md) para representar una [vista envolvente](../../design/app-views.md) que llena la pantalla de auriculares
 * **aplicaciones 2D** (UWP) que usan DirectX, XAML u otro marco de trabajo para representar [vistas 2D](../../design/app-views.md#2d-views) en pizarras en la Página principal de Windows Mixed Reality
 
-Las diferencias entre el desarrollo de DirectX para [vistas 2D y vistas envolventes](../../design/app-views.md) se refieren principalmente a la representación holográfica y la entrada espacial. El HWND de la aplicación de [UWP o el](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.iframeworkview.aspx) HWND de la aplicación de Win32 son necesarios y permanecen en gran medida. Lo mismo se aplica a las API de WinRT que están disponibles para la aplicación. Sin embargo, debe usar un subconjunto diferente de estas API para aprovechar las características holográficas. Por ejemplo, el sistema intercambio y el marco actual se administran mediante el sistema para aplicaciones holográficas con el fin de habilitar un bucle de trama de predicción de supuestos.
+Las diferencias entre el desarrollo de DirectX para [vistas 2D y vistas envolventes](../../design/app-views.md) se refieren principalmente a la representación holográfica y la entrada espacial. El HWND de la aplicación de [UWP o el](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.iframeworkview.aspx) HWND de la aplicación de Win32 son necesarios y permanecen en gran medida. Lo mismo se aplica a las API de WinRT que están disponibles para la aplicación. Sin embargo, debe usar un subconjunto diferente de estas API para aprovechar las características holográficas. Por ejemplo, el sistema para aplicaciones holográficas administra el intercambio y el marco presentes para habilitar un bucle de trama de predicción de supuestos.
 
 [!INCLUDE[](../includes/native-getting-started.md)]
 
@@ -54,11 +54,11 @@ Las aplicaciones de Windows Mixed Reality usan las siguientes API para compilar 
 
 ### <a name="3-deploying-and-testing"></a>3. implementación y prueba
 
-Puede desarrollar con OpenXR en un casco envolvente HoloLens 2 o de Windows Mixed Reality en el escritorio.  Si no tiene acceso a un casco, puede usar el [emulador de HoloLens 2](../platform-capabilities-and-apis/using-the-hololens-emulator.md) o el [simulador de realidad mixta de Windows](../platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md) en su lugar.
+Puede desarrollar en un escritorio mediante OpenXR en un casco con HoloLens 2 o Windows Mixed Reality.  Si no tiene acceso a un casco, puede usar el [emulador de HoloLens 2](../platform-capabilities-and-apis/using-the-hololens-emulator.md) o el [simulador de realidad mixta de Windows](../platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md) en su lugar.
 
 ## <a name="whats-next"></a>¿Qué sigue?
 
-Nunca se realiza un trabajo de desarrollador, especialmente cuando se aprende a usar una nueva herramienta o un SDK. En las secciones siguientes se le proporcionará contenido más ampliado sobre lo que ha visto en el nivel principiante, junto con recursos útiles por si se queda bloqueado. Tenga en cuenta que estos temas y recursos no están ordenados de forma secuencial, de modo que no dude en consultar los que le interesen y explorarlos.
+Nunca se realiza un trabajo de desarrollador, especialmente cuando se aprende a usar una nueva herramienta o un SDK. Las secciones siguientes pueden encontrarse en áreas más allá del material de nivel principiante que ya ha completado. Estos temas y recursos no se encuentran en ningún orden secuencial, así que no dude en desplazarse y explorar.
 
 ### <a name="additional-resources"></a>Recursos adicionales
 
@@ -68,6 +68,6 @@ Si desea realizar un seguimiento del juego de OpenXR, consulte los vínculos sig
 * [Rendimiento de OpenXR](openxr-performance.md)
 * [Solución de problemas de OpenXR](openxr-troubleshooting.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Modelo de aplicaciones](../../design/app-model.md)
 * [Vistas de aplicación](../../design/app-views.md)

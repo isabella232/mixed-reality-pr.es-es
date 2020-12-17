@@ -6,17 +6,17 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: tutorial, comando de voz, frase, reconocimiento, voz, DirectX, plataforma, Cortana, Windows Mixed Reality
-ms.openlocfilehash: bdd92f79b3dd9677ac5c2c64e532978477ac5bca
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: c917fbc4215442bc66f52dc2c527e01b2c446594
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691466"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613109"
 ---
 # <a name="voice-input-in-directx"></a>Entrada de voz en DirectX
 
 > [!NOTE]
-> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](openxr-getting-started.md)** .
+> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](openxr-getting-started.md)**.
 
 En este artículo se explica cómo implementar [comandos de voz](../../design/voice-input.md) más pequeñas frases y el reconocimiento de oraciones en una aplicación DirectX para Windows Mixed Reality.
 
@@ -29,7 +29,7 @@ En esta sección se describe cómo usar el reconocimiento de voz continuo para h
 
 En primer lugar, cree una nueva instancia de *Windows:: media:: SpeechRecognition:: SpeechRecognizer* .
 
-Desde *HolographicVoiceInputSampleMain:: CreateSpeechConstraintsForCurrentState* :
+Desde *HolographicVoiceInputSampleMain:: CreateSpeechConstraintsForCurrentState*:
 
 ```
 m_speechRecognizer = ref new SpeechRecognizer();
@@ -97,7 +97,7 @@ m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
 
 El controlador de eventos *OnResultGenerated* recibe datos de evento en una instancia de [SpeechContinuousRecognitionResultGeneratedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.aspx) . Si la confianza es mayor que el umbral definido, la aplicación debe tener en cuenta que se produjo el evento. Guarde los datos del evento para poder usarlos en un bucle de actualización posterior.
 
-Desde *HolographicVoiceInputSampleMain. cpp* :
+Desde *HolographicVoiceInputSampleMain. cpp*:
 
 ```
 // Change the cube color, if we get a valid result.
@@ -112,7 +112,7 @@ Desde *HolographicVoiceInputSampleMain. cpp* :
 
 En el código de ejemplo, se cambia el color del cubo de hologramas hilados según el comando del usuario.
 
-Desde *HolographicVoiceInputSampleMain:: Update* :
+Desde *HolographicVoiceInputSampleMain:: Update*:
 
 ```
 // Check for new speech input since the last frame.
@@ -367,7 +367,7 @@ Concurrency::task<void> HolographicSpeechPromptSampleMain::StopCurrentRecognizer
 
 Los ejemplos de voz holográfica usan síntesis de voz para proporcionar instrucciones auditivas al usuario. En esta sección se muestra cómo crear una muestra de voz sintetizada y reproducirla a través de las API de audio HRTF.
 
-Debe proporcionar sus propios mensajes de voz al solicitar la entrada de frases. Los mensajes también pueden ayudar a indicar cuándo se pueden hablar comandos de voz para un escenario de reconocimiento continuo. En el ejemplo siguiente se muestra cómo usar un sintetizador de voz para hacerlo. También puede usar un clip de voz grabado previamente, una interfaz de usuario visual u otro indicador de lo que debe decir, por ejemplo, en escenarios en los que el aviso no es dinámico.
+Se recomienda proporcionar sus propios mensajes de voz al solicitar la entrada de frases. Los mensajes también pueden ayudar a indicar cuándo se pueden hablar comandos de voz para un escenario de reconocimiento continuo. En el ejemplo siguiente se muestra cómo usar un sintetizador de voz para hacerlo. También puede usar un clip de voz grabado previamente, una interfaz de usuario visual u otro indicador de lo que debe decir, por ejemplo, en escenarios en los que el aviso no es dinámico.
 
 En primer lugar, cree el objeto SpeechSynthesizer.
 

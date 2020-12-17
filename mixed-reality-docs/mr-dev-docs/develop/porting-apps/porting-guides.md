@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 12/9/2020
 ms.topic: article
 keywords: puerto, Unity, no real, middleware, motor, UWP, Win32, portabilidad, HoloLens primera generación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, migración, Windows 10, asignación de entrada
-ms.openlocfilehash: 9f3e064c4462fc3d12a23bd94885476bcd2f9466
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: 4137ff4dcc9f72dd66b9078b0d86c2d06f01f2bc
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925944"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613229"
 ---
 # <a name="porting-vr-apps-to-windows-mixed-reality"></a>Portabilidad de aplicaciones de VR a Windows Mixed Reality
 
-Windows 10 incluye compatibilidad directa con auriculares envolventes y holográficas. Si ha creado contenido para otros dispositivos, como Oculus Rift o HTC Naopak, tienen dependencias en las bibliotecas que existen por encima de la API de la plataforma del sistema operativo. La incorporación de aplicaciones de la aplicación existente de Win32 Unity a Windows Mixed Reality implica la redestinación del uso de los SDK de VR específicos del proveedor a las API de VR entre proveedores de Unity.
+Windows 10 incluye compatibilidad con auriculares envolventes y holográficas. Si ha creado contenido para otros dispositivos, como Oculus Rift o HTC Naopak, tienen dependencias en las bibliotecas que existen por encima de la API de plataforma del sistema operativo. La incorporación de aplicaciones de la aplicación existente de Win32 Unity a Windows Mixed Reality implica la redestinación del uso de los SDK de VR específicos del proveedor a las API de VR entre proveedores de Unity.
 
 ## <a name="porting-requirements"></a>Requisitos de portabilidad
 
@@ -23,7 +23,7 @@ En un nivel alto, los siguientes pasos están relacionados con el traslado de co
 1. **Asegúrese de que el equipo ejecuta Windows 10 Fall Creators Update (16299).** Ya no se recomienda recibir compilaciones de vista previa del anillo de Insider SKIP Preview, ya que esas compilaciones no serán las más estables para el desarrollo de realidad mixta.
 2. **Actualice a la versión más reciente de los gráficos o del motor de juegos.** Los motores de juegos deberán admitir la versión 10.0.15063.0 del SDK de Windows 10 (Publicada en el 2017 de abril) o superior.
 3. **Actualice cualquier middleware, complemento o componente.** Si la aplicación contiene componentes, es una buena idea actualizar a la versión más reciente.
-4. **Quite las dependencias de los SDK duplicados**. En función del dispositivo al que se dirija el contenido, deberá quitar o compilar condicionalmente ese SDK (por ejemplo, SteamVR) para que pueda establecer como destino las API de Windows en su lugar.
+4. **Quite las dependencias de los SDK duplicados**. En función del dispositivo al que se dirija el contenido, tendrá que quitar o compilar de forma condicional ese SDK para que pueda establecer como destino las API de Windows en su lugar. Un ejemplo de este escenario sería SteamVR.
 5. **Trabaje con problemas de compilación.** En este momento, el ejercicio de portabilidad es específico de la aplicación, el motor y las dependencias de componentes que tiene.
 
 ## <a name="common-porting-steps"></a>Pasos de portabilidad comunes

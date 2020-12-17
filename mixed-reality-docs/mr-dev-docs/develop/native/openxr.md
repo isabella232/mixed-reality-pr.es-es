@@ -6,36 +6,36 @@ ms.author: alexturn
 ms.date: 7/29/2019
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, Native, aplicación nativa, motor personalizado, middleware
-ms.openlocfilehash: 519d363c49f86a47eeaa5872c6f7911e12276c99
-ms.sourcegitcommit: c199872c11adae7de24929ed043ea90dea087b3e
+ms.openlocfilehash: ba03799ff42d3a4c27799dcf2f4035d408360120
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92903106"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613138"
 ---
 # <a name="openxr"></a>OpenXR
 
 <img align="right" src="images/openxr.png" alt="OpenXR logo">
 
-OpenXR es un estándar de API abierto sin derechos de autor de <a href="https://www.khronos.org/" target="_blank">Khronos</a> que proporciona a los motores acceso nativo a una amplia gama de dispositivos de muchos proveedores que abarcan todo el espectro de la [realidad mixta](../../discover/mixed-reality.md).
+OpenXR es un estándar abierto de API sin derechos de autor de <a href="https://www.khronos.org/" target="_blank">Khronos</a>, que proporciona a los motores acceso nativo a una variedad de dispositivos en el [espectro de realidad mixta](../../discover/mixed-reality.md).
 
 Puede desarrollar con OpenXR en un casco envolvente HoloLens 2 o de Windows Mixed Reality en el escritorio.  Si no tiene acceso a un casco, puede usar el emulador de HoloLens 2 o el simulador de realidad mixta de Windows en su lugar.
 
 ## <a name="why-openxr"></a>¿Por qué OpenXR?
 
-Con OpenXR, puede compilar motores que tienen como destino dispositivos holográficas (como HoloLens 2) que colocan contenido digital en el mundo real como si estuvieran realmente allí, así como dispositivos envolventes (como los auriculares de realidad mixta de Windows para equipos de escritorio) que ocultan el mundo físico y lo reemplazan por una experiencia digital.  OpenXR le permite escribir código una vez que es portable a una amplia gama de plataformas de hardware.
+Con OpenXR, puede compilar motores que tengan como destino dispositivos holográficas, como HoloLens 2, y dispositivos envolventes, como los auriculares de realidad mixta de Windows para equipos de escritorio. OpenXR le permite escribir código una vez que es portable a una amplia gama de plataformas de hardware.
 
-La API de OpenXR usa un cargador que conecta la aplicación directamente a la compatibilidad con la plataforma nativa del casco.  Esto ofrece a los usuarios finales un rendimiento máximo y una latencia mínima, independientemente de si usan un casco de realidad mixta de Windows o cualquier otro casco.
+La API de OpenXR usa un cargador para conectar la aplicación directamente a la compatibilidad con la plataforma nativa del casco. Los usuarios finales obtienen el máximo rendimiento y la latencia mínima, tanto si usan una realidad mixta de Windows como cualquier otro casco.
 
 ## <a name="what-is-openxr"></a>¿Qué es OpenXR?
 
-La API de OpenXR proporciona la predicción de postura básica, la temporización de fotogramas y la funcionalidad de entrada espacial que necesitará para crear un motor que pueda tener como destino dispositivos holográficas como HoloLens 2 y dispositivos envolventes, como los auriculares de realidad mixta de Windows.
+La API de OpenXR proporciona la predicción de supuestos principales, la temporización de fotogramas y la funcionalidad de entrada espacial que necesitará para crear un motor que pueda tener como destino dispositivos holográficas y envolventes.
 
-Para obtener información sobre la API de OpenXR, consulte la <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html" target="_blank">especificación</a>de la <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html" target="_blank">api</a> de OpenXR 1,0, la referencia de API y la <a href="https://www.khronos.org/files/openxr-10-reference-guide.pdf" target="_blank">Guía de referencia rápida</a>.  Para obtener más información, consulte la <a href="https://www.khronos.org/openxr/" target="_blank">Página de OpenXR de Khronos</a>.
+Para obtener información sobre la API de OpenXR, consulte las <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html" target="_blank">Especificaciones</a>de OpenXR 1,0, <a href="https://www.khronos.org/registry/OpenXR/specs/1.0/man/html/openxr.html" target="_blank">referencia de API</a>y <a href="https://www.khronos.org/files/openxr-10-reference-guide.pdf" target="_blank">Guía de referencia rápida</a>.  Para obtener más información, consulte la <a href="https://www.khronos.org/openxr/" target="_blank">Página de OpenXR de Khronos</a>.
 
-Para tener como destino el conjunto completo de características de HoloLens 2, también usará extensiones de OpenXR específicas entre proveedores y proveedores que habilitan características adicionales más allá del OpenXR 1,0 núcleo, como el seguimiento de mano articulado, el seguimiento ocular, la asignación espacial y los delimitadores espaciales.  Consulte la [sección](#roadmap) de la guía a continuación para obtener más información sobre las extensiones que entrarán más adelante este año.
+Para tener como destino el conjunto completo de características de HoloLens 2, también usará extensiones de OpenXR específicas entre proveedores y proveedores que habilitan características adicionales más allá del OpenXR 1,0 núcleo, como el seguimiento de mano articulado, el seguimiento ocular, la asignación espacial y los delimitadores espaciales. Para obtener más información, consulte la sección sobre el [mapa de ruta](#roadmap) más adelante en las extensiones que entrarán más tarde este año.
 
-Tenga en cuenta que OpenXR no es en sí mismo un motor de realidad mixta.  En su lugar, OpenXR habilita motores como Unity y nonreal para escribir código portable una vez que pueda acceder a las características de la plataforma nativa del dispositivo Holographic o inmersivo del usuario, independientemente del proveedor que haya compilado esa plataforma.
+OpenXR no es en sí mismo un motor de realidad mixta.  En su lugar, OpenXR habilita motores como Unity y nonreal para escribir código portable una vez que pueda acceder a las características de la plataforma nativa del dispositivo Holographic o inmersivo del usuario, independientemente del proveedor que haya creado esa plataforma.
 
 ## <a name="roadmap"></a>Plan de desarrollo
 
@@ -43,7 +43,7 @@ La especificación OpenXR define un mecanismo de extensión que permite a los im
 
 Hay tres tipos de extensiones de OpenXR:
 * **Extensiones de proveedor (por ejemplo, `MSFT` ):** permite la innovación por proveedor en características de hardware o software.  Cualquier proveedor en tiempo de ejecución puede introducir y enviar una extensión de proveedor en cualquier momento.
-  * **Extensiones de proveedor experimentales (p. ej. `MSFT_preview` ):** se muestra una vista previa de las extensiones de proveedor experimental para recopilar comentarios.  `MSFT_preview` las extensiones son solo para dispositivos de desarrollador y se quitarán cuando se distribuya la extensión real.  Para experimentar con ellos, puede [habilitar las extensiones de vista previa en el dispositivo del desarrollador](openxr-getting-started.md#using-preview-extensions).
+  * **Extensiones de proveedor experimentales (por ejemplo, `MSFT_preview` ):** se muestra una vista previa de las extensiones de proveedor experimental para recopilar comentarios.  `MSFT_preview` las extensiones son solo para dispositivos de desarrollador y se quitarán cuando se distribuya la extensión real.  Para experimentar con ellos, puede [habilitar las extensiones de vista previa en el dispositivo del desarrollador](openxr-getting-started.md#using-preview-extensions).
 * **Extensiones entre proveedores `EXT` :** extensiones entre proveedores que varias empresas definen e implementan.  Los grupos de compañías interesadas pueden introducir extensiones EXT en cualquier momento.
 * **`KHR` Extensiones oficiales:** extensiones oficiales de Khronos ratificadas como parte de una versión de especificación básica.  Las extensiones KHR están contempladas por la misma licencia que la propia especificación principal.
 
@@ -72,9 +72,34 @@ A partir del 2020 de julio, el tiempo de ejecución de OpenXR mixed reality de W
 | [Comprensión de escenas (planos, mallas)](../../design/scene-understanding.md)<p>*Solo HoloLens 2*</p> | <p>**En el [tiempo de ejecución de versión preliminar 102 o posterior](openxr-getting-started.md#using-preview-extensions):**<br />Usar <code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_MSFT_spatial_graph_bridge">XR_MSFT_spatial_graph_bridge</a></code> con el [SDK de comprensión de escenas](../platform-capabilities-and-apis/scene-understanding-sdk.md)</p><p>**`MSFT_preview` extensión en tiempo de ejecución de vista previa futura** *(planeada)*</p> |
 | Otras extensiones entre proveedores | <p>**`KHR`Extensiones oficiales publicadas:**</p><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_composition_layer_depth" target="_blank">XR_KHR_composition_layer_depth</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_visibility_mask" target="_blank">XR_KHR_visibility_mask</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_KHR_win32_convert_performance_counter_time" target="_blank">XR_KHR_win32_convert_performance_counter_time</a></code><p>**`EXT` extensiones publicadas:**</p><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_win32_appcontainer_compatible" target="_blank">XR_EXT_win32_appcontainer_compatible</a></code><br /><code><a href="https://www.khronos.org/registry/OpenXR/specs/1.0/html/xrspec.html#XR_EXT_debug_utils" target="_blank">XR_EXT_debug_utils</a></code> |
 
-Aunque algunas de estas extensiones pueden comenzar como extensiones específicas del proveedor `MSFT` , Microsoft y otros proveedores de tiempo de ejecución de OpenXR trabajan juntos para diseñar `EXT` varios proveedores o `KHR` extensiones para muchas de estas áreas de características.  Esto permitirá que el código que escriba para esas características sea portable a los proveedores en tiempo de ejecución, al igual que con la especificación básica.
+Aunque algunas de estas extensiones pueden comenzar como extensiones específicas del proveedor `MSFT` , Microsoft y otros proveedores de tiempo de ejecución de OpenXR trabajan juntos para diseñar `EXT` varios proveedores o `KHR` extensiones para muchas de estas áreas de características. Las extensiones entre proveedores harán que el código que escriba para esas características portable entre proveedores en tiempo de ejecución, como con la especificación básica.
 
-## <a name="get-started-with-openxr"></a>Introducción a OpenXR
+## <a name="getting-started-with-openxr"></a>Introducción a OpenXR
+
+![Captura de pantalla de Minecraft que está jugando un usuario con auriculares de realidad mixta](images/openxr-minecraft.jpg)
+
+*El nuevo motor de RenderDragon de Minecraft está creando su compatibilidad con Desktop VR mediante OpenXR*
+
+Microsoft ha estado trabajando con juegos de Unity y Epic para asegurarse de que el futuro de la realidad mixta está abierto, no solo para HoloLens 2, sino a lo largo de toda la gama de equipos con la [nueva reverberación G2 de HP](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1).  Para obtener más información sobre el desarrollo de HoloLens (1ª generación), consulte las notas de la [versión](https://docs.microsoft.com/hololens/hololens1-release-notes).
+
+Para obtener información sobre cómo empezar a trabajar con OpenXR en Unity, en un motor no real o en su propio motor, siga leyendo.
+
+### <a name="openxr-in-unity"></a>OpenXR en Unity
+
+Hoy en día, la ruta de acceso de desarrollo de Unity admitida para los auriculares HoloLens 2, HoloLens (1º gen) y Windows Mixed Reality es **Unity 2019 lts** con el back-end de la API de WinRT existente.  Puede saltar a [OpenXR con Unity](../unity/openxr-getting-started.md). Si tiene como destino el nuevo controlador de HP reverberación G2 en una aplicación Unity 2019, consulte los [documentos de entrada de HP reverberación G2](../unity/unity-reverb-g2-controllers.md).
+
+A partir de **unity 2020 lts**, Unity enviará [un back-end de OpenXR](https://forum.unity.com/threads/unitys-plans-for-openxr.993225/) que admite los auriculares de la realidad de HoloLens 2 y Windows Mixed Reality.  Esto incluye la compatibilidad con las extensiones de OpenXR que imponen [toda la funcionalidad de los auriculares de realidad de HoloLens 2 y Windows Mixed Reality](#roadmap), como el seguimiento manual o ocular, los anclajes espaciales y los controladores de la reverberación de HP G2.  MRTK-Unity compatibilidad con OpenXR está actualmente en desarrollo en la [rama de mrtk_development](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development) y estará disponible junto con ese paquete de vista previa de OpenXR.
+
+A partir de **Unity 2021**, OpenXR se graduará para ser el único back-end de Unity admitido para el destino de los auriculares con HoloLens 2 y Windows Mixed Reality.
+
+### <a name="openxr-in-unreal-engine"></a>OpenXR en un motor inreal
+
+A partir de un **motor inreal 4,23**, la compatibilidad total con los auriculares HoloLens 2 y Windows Mixed Reality está disponible a través del complemento de Windows Mixed Reality (WinRT).
+
+Unreal Engine 4,23 también era la primera versión principal del motor de juegos para el envío de compatibilidad con la versión preliminar de OpenXR 1,0.  Ahora, en el **motor inreal 4,26**, la compatibilidad con HoloLens 2, Windows Mixed Reality y otros auriculares de escritorio VR estarán disponibles a través [del complemento OpenXR integrado del motor](https://github.com/microsoft/Microsoft-OpenXR-Unreal).  No real Engine 4,26 también se incluirá con su primer conjunto de complementos de [extensión de OpenXR](#roadmap), lo que permite la interacción con la mano y la compatibilidad con el controlador de HP reverberación G2.  Inreal Engine 4,26 está disponible en versión preliminar hoy mismo en el [iniciador de juegos de Epic](https://www.unrealengine.com/download/creators), con la versión oficial que llegará después este año.  También estará disponible MRTK-Unreal compatibilidad con OpenXR junto con esa versión.
+
+
+### <a name="openxr-for-native-development"></a>OpenXR para el desarrollo nativo
 
 Puede desarrollar con OpenXR en un casco envolvente HoloLens 2 o de Windows Mixed Reality en el escritorio.  Si no tiene acceso a un casco, puede usar el emulador de HoloLens 2 o el simulador de realidad mixta de Windows en su lugar.
 

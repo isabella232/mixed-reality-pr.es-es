@@ -6,19 +6,19 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, representación, gráficos 3D, HolographicFrame, bucle de representación, bucle de actualización, tutorial, código de ejemplo, Direct3D
-ms.openlocfilehash: 4c1e6207dd7e858a323ea5234f2849e6a3bdfab3
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 90d665e8054a185969a95e6ff6415979e728e9ab
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691470"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613189"
 ---
 # <a name="rendering-in-directx"></a>Representación en DirectX
 
 > [!NOTE]
-> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](openxr-getting-started.md)** .
+> Este artículo está relacionado con las API nativas de WinRT heredadas.  En el caso de los nuevos proyectos de aplicaciones nativas, se recomienda usar la **[API de OpenXR](openxr-getting-started.md)**.
 
-Windows Mixed Reality se basa en DirectX para generar experiencias gráficas 3D enriquecidas para los usuarios. La abstracción de representación se encuentra justo encima de DirectX y permite que una aplicación tenga en la posición y la orientación de uno o más observadores de una escena holográfica, tal y como lo predice el sistema. A continuación, el desarrollador puede localizar sus hologramas en relación con cada cámara, lo que permite que la aplicación represente estos hologramas en varios sistemas de coordenadas espaciales a medida que el usuario se desplaza.
+Windows Mixed Reality se basa en DirectX para generar experiencias gráficas 3D enriquecidas para los usuarios. La abstracción de representación se encuentra justo encima de DirectX, que permite que las aplicaciones demuestren la posición y la orientación de los observadores de la escena holográfica previstos por el sistema. A continuación, el desarrollador puede localizar sus hologramas en función de cada cámara, lo que permite que la aplicación represente estos hologramas en varios sistemas de coordenadas espaciales a medida que el usuario se desplaza.
 
 Nota: en este tutorial se describe la representación holográfica en Direct3D 11. También se proporciona una plantilla de aplicación de Windows mixed reality de Direct3D 12 con la extensión de plantillas de aplicación de realidad mixta.
 
@@ -33,11 +33,11 @@ Para representar vistas de cámara holográfica, una vez por fotograma, la aplic
 
 ### <a name="create-a-new-holographic-frame-and-get-its-prediction"></a>Crear un nuevo marco holográfica y obtener su predicción
 
-<a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> tiene información que la aplicación necesita para actualizar y representar el fotograma actual. La aplicación comienza cada nuevo fotograma llamando al método **CreateNextFrame** . Cuando se llama a este método, las predicciones se realizan utilizando los datos del sensor más recientes disponibles y se encapsulan en el objeto **CurrentPrediction** .
+<a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> tiene información que la aplicación necesita para actualizar y representar el marco actual. La aplicación comienza cada nuevo fotograma llamando al método **CreateNextFrame** . Cuando se llama a este método, las predicciones se realizan utilizando los datos del sensor más recientes disponibles y se encapsulan en el objeto **CurrentPrediction** .
 
 Se debe usar un nuevo objeto de marco para cada fotograma representado, ya que solo es válido para un momento dado. La propiedad **CurrentPrediction** contiene información como la posición de la cámara. La información se extrapola al momento exacto en que se espera que el marco sea visible para el usuario.
 
-El código siguiente se ha extraído de **AppMain:: Update** :
+El código siguiente se ha extraído de **AppMain:: Update**:
 
 ```cpp
 // The HolographicFrame has information that the app needs in order
@@ -54,13 +54,13 @@ HolographicFramePrediction prediction = holographicFrame.CurrentPrediction();
 
 Los búferes de reserva pueden cambiar de fotograma a fotograma. La aplicación debe validar el búfer de reserva de cada cámara y liberar y volver a crear las vistas de recursos y los búferes de profundidad según sea necesario. Observe que el conjunto de supuestos de la predicción es la lista autoritativa de cámaras que se usan en el marco actual. Normalmente, esta lista se usa para iterar en el conjunto de cámaras.
 
-Desde **AppMain:: Update** :
+Desde **AppMain:: Update**:
 
 ```cpp
 m_deviceResources->EnsureCameraResources(holographicFrame, prediction);
 ```
 
-De **DeviceResources:: EnsureCameraResources** :
+De **DeviceResources:: EnsureCameraResources**:
 
 ```cpp
 for (HolographicCameraPose const& cameraPose : prediction.CameraPoses())
@@ -73,9 +73,9 @@ for (HolographicCameraPose const& cameraPose : prediction.CameraPoses())
 
 ### <a name="get-the-coordinate-system-to-use-as-a-basis-for-rendering"></a>Obtención del sistema de coordenadas que se va a usar como base para la representación
 
-Windows Mixed Reality permite que la aplicación cree varios [sistemas de coordenadas](coordinate-systems-in-directx.md) según sea necesario, como el marco de referencia adjunto y el marco de referencia estacionario, que realizan un seguimiento de las ubicaciones del mundo físico. A continuación, la aplicación puede usar estos sistemas de coordenadas para pensar en dónde representar los hologramas en cada fotograma. Cuando se solicitan coordenadas de una API, siempre se pasa el <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a> en el que se desea expresar esas coordenadas.
+Windows Mixed Reality permite que la aplicación cree varios [sistemas de coordenadas](coordinate-systems-in-directx.md), como los fotogramas de referencia fijos y de referencia para realizar el seguimiento de las ubicaciones del mundo físico. A continuación, la aplicación puede usar estos sistemas de coordenadas para pensar en dónde representar los hologramas en cada fotograma. Cuando se solicitan coordenadas de una API, siempre se pasa el <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a> en el que se desea expresar esas coordenadas.
 
-Desde **AppMain:: Update** :
+Desde **AppMain:: Update**:
 
 ```cpp
 pose = SpatialPointerPose::TryGetAtTimestamp(
@@ -84,7 +84,7 @@ pose = SpatialPointerPose::TryGetAtTimestamp(
 
 Estos sistemas de coordenadas se pueden usar para generar matrices de vista estéreo al representar el contenido de la escena.
 
-Desde **CameraResources:: UpdateViewProjectionBuffer** :
+Desde **CameraResources:: UpdateViewProjectionBuffer**:
 
 ```cpp
 // Get a container object with the view and projection matrices for the given
@@ -94,16 +94,16 @@ auto viewTransformContainer = cameraPose.TryGetViewTransform(coordinateSystem);
 
 ### <a name="process-gaze-and-gesture-input"></a>Entrada de movimiento y miración de proceso
 
-La entrada de [mirada](gaze-in-directx.md) y la [mano](hands-and-motion-controllers-in-directx.md) no se basan en el tiempo y, por tanto, no tienen que actualizarse en la función **StepTimer** . Sin embargo, esta entrada es algo que la aplicación debe buscar en cada fotograma.
+La entrada de la [mirada](gaze-in-directx.md) y la [mano](hands-and-motion-controllers-in-directx.md) no se basa en el tiempo y no tiene que actualizarse en la función **StepTimer** . Sin embargo, esta entrada es algo que la aplicación debe buscar en cada fotograma.
 
 ### <a name="process-time-based-updates"></a>Procesar actualizaciones basadas en el tiempo
 
-Cualquier aplicación de representación en tiempo real necesitará alguna manera de procesar las actualizaciones basadas en el tiempo. Proporcionamos una forma de hacerlo en la plantilla de aplicación de Windows Holographic a través de una implementación de **StepTimer** . Esto es similar a la StepTimer que se proporciona en la plantilla de aplicación para UWP de DirectX 11, por lo que si ya ha examinado la plantilla, debe estar familiarizado con los conocimientos. Esta clase auxiliar de ejemplo StepTimer es capaz de proporcionar actualizaciones fijas de pasos temporales, así como actualizaciones de pasos temporales variables, y el modo predeterminado es pasos de tiempo variable.
+Cualquier aplicación de representación en tiempo real necesitará alguna manera de procesar las actualizaciones basadas en el tiempo: la plantilla de aplicación de Windows Holographic usa una implementación de **StepTimer** , similar a la StepTimer proporcionada en la plantilla de aplicación para UWP de DirectX 11. Esta clase auxiliar de ejemplo StepTimer puede proporcionar actualizaciones de pasos temporales fijas, actualizaciones de pasos temporales variables y el modo predeterminado es un paso de tiempo variable.
 
-En el caso de la representación holográfica, hemos elegido específicamente no incluir demasiado en la función de temporizador. Esto se debe a que puede configurarlo para que sea un paso de tiempo fijo, en cuyo caso se podría llamar a más de una vez por fotograma (o no, en absoluto) en algunos fotogramas, y las actualizaciones de datos holográficas deben realizarse una vez por fotograma.
+En la representación holográfica, hemos elegido no incluir demasiado en la función de temporizador porque puede configurarla para que sea un paso de tiempo fijo. Es posible que se le llame más de una vez por fotograma, o no, en algunos fotogramas, y que las actualizaciones de datos holográficas se realicen una vez por fotograma.
 
 
-Desde **AppMain:: Update** :
+Desde **AppMain:: Update**:
 
 ```cpp
 m_timer.Tick([this]()
@@ -114,9 +114,9 @@ m_timer.Tick([this]()
 
 ### <a name="position-and-rotate-holograms-in-your-coordinate-system"></a>Colocar y girar los hologramas en el sistema de coordenadas
 
-Si está trabajando en un único sistema de coordenadas, como hace la plantilla con el **SpatialStationaryReferenceFrame** , este proceso no es diferente de lo que se usa en los gráficos 3D. Aquí se gira el cubo y se establece la matriz del modelo en relación con la posición en el sistema de coordenadas estacionales.
+Si está trabajando en un único sistema de coordenadas, como hace la plantilla con el **SpatialStationaryReferenceFrame**, este proceso no es diferente de lo que se usa en los gráficos 3D. Aquí se gira el cubo y se establece la matriz del modelo en función de la posición en el sistema de coordenadas estacionales.
 
-Desde **SpinningCubeRenderer:: Update** :
+Desde **SpinningCubeRenderer:: Update**:
 
 ```cpp
 // Rotate the cube.
@@ -141,13 +141,13 @@ const XMMATRIX modelTransform = XMMatrixMultiply(modelRotation, modelTranslation
 XMStoreFloat4x4(&m_modelConstantBufferData.model, XMMatrixTranspose(modelTransform));
 ```
 
-**Tenga en cuenta los escenarios avanzados:** El cubo giratorio es un ejemplo muy sencillo de cómo colocar un holograma dentro de un solo fotograma de referencia. También es posible [usar varios SpatialCoordinateSystems](coordinate-systems-in-directx.md) en el mismo fotograma representado al mismo tiempo.
+**Tenga en cuenta los escenarios avanzados:** El cubo giratorio es un ejemplo sencillo de cómo colocar un holograma dentro de un solo fotograma de referencia. También es posible [usar varios SpatialCoordinateSystems](coordinate-systems-in-directx.md) en el mismo fotograma representado al mismo tiempo.
 
 ### <a name="update-constant-buffer-data"></a>Actualizar datos de búfer de constantes
 
 Las transformaciones del modelo para el contenido se actualizan de la forma habitual. De momento, habrá calculado las transformaciones válidas para el sistema de coordenadas en el que se va a representar.
 
-Desde **SpinningCubeRenderer:: Update** :
+Desde **SpinningCubeRenderer:: Update**:
 
 ```cpp
 // Update the model transform buffer for the hologram.
@@ -165,15 +165,15 @@ context->UpdateSubresource(
 
 ## <a name="render-the-current-frame"></a>Representar el marco actual
 
-La representación en Windows Mixed Reality no es muy diferente de la representación en una pantalla mono 2D, pero hay algunas diferencias que debe tener en cuenta:
+La representación en Windows Mixed Reality no es muy diferente de la representación en una pantalla mono 2D, pero hay algunas diferencias:
 * Las predicciones de tramas holográficas son importantes. Cuanto más se acerque la predicción a la presentación del fotograma, mejor se verán los hologramas.
-* Windows Mixed Reality controla las vistas de la cámara. Debe representar cada una de ellas, ya que el marco holográfica las presentará más adelante.
-* Se recomienda que la representación de estéreo se realice mediante el dibujo con instancias en una matriz de destino de representación. La plantilla de aplicación holográfica usa el enfoque recomendado del dibujo con instancias en una matriz de destino de representación, que usa una vista de destino de representación en un **Texture2DArray** .
-* Si desea representar sin usar la creación de instancias de estéreo, tendrá que crear dos RenderTargetViews que no sean de matriz (uno para cada ojo) que cada una de ellas haga referencia a uno de los dos segmentos del **Texture2DArray** proporcionado a la aplicación desde el sistema. Esto no se recomienda, ya que normalmente es significativamente más lento que el uso de la creación de instancias.
+* Windows Mixed Reality controla las vistas de la cámara. Se representan en cada una de ellas, ya que el marco holográfica las presentará más adelante.
+* Se recomienda realizar la representación en estéreo mediante un dibujo con instancias en una matriz de destino de representación. La plantilla de aplicación holográfica usa el enfoque recomendado del dibujo con instancias en una matriz de destino de representación, que usa una vista de destino de representación en un **Texture2DArray**.
+* Si desea representar sin usar la creación de instancias de estéreo, deberá crear dos RenderTargetViews que no sean de matriz, uno para cada ojo. Cada RenderTargetViews hace referencia a uno de los dos segmentos del **Texture2DArray** proporcionado a la aplicación desde el sistema. Esto no se recomienda, ya que suele ser más lento que el uso de la creación de instancias.
 
 ### <a name="get-an-updated-holographicframe-prediction"></a>Obtener una predicción HolographicFrame actualizada
 
-La actualización de la predicción de fotogramas mejora la eficacia de la estabilización de imágenes y permite un posicionamiento más preciso de los hologramas debido al tiempo más corto entre la predicción y el momento en el que el usuario puede ver el marco. Idealmente, actualice la predicción de fotogramas justo antes de la representación.
+La actualización de la predicción de fotogramas mejora la eficacia de la estabilización de la imagen. Obtiene un posicionamiento más preciso de los hologramas debido al tiempo más corto entre la predicción y el momento en el que el usuario puede ver el marco. Idealmente, actualice la predicción de fotogramas justo antes de la representación.
 
 ```cpp
 holographicFrame.UpdateCurrentPrediction();
@@ -186,11 +186,11 @@ Bucle en el conjunto de repeticiones de la cámara en la predicción y represent
 
 **Configurar el paso de representación**
 
-Windows Mixed Reality usa la representación Stereoscopic para mejorar la ilusión de profundidad y representar stereoscopically, por lo que tanto la pantalla izquierda como la derecha están activas. Con la representación Stereoscopic hay un desplazamiento entre las dos pantallas, que el cerebro puede conciliar como profundidad real. En esta sección se describe la representación de Stereoscopic mediante la creación de instancias, mediante el uso de código de la plantilla de aplicación de Windows Holographic.
+Windows Mixed Reality usa la representación Stereoscopic para mejorar la ilusión de profundidad y representar stereoscopically, por lo que tanto la pantalla izquierda como la derecha están activas. Con la representación Stereoscopic, hay un desplazamiento entre las dos pantallas, que el cerebro puede conciliar como profundidad real. En esta sección se describe la representación de Stereoscopic mediante la creación de instancias, mediante el uso de código de la plantilla de aplicación de Windows Holographic.
 
 Cada cámara tiene su propio destino de representación (búfer de reserva) y las matrices de vistas y proyección en el espacio holográfica. La aplicación tendrá que crear cualquier otro recurso basado en la cámara, como el búfer de profundidad, por cada cámara. En la plantilla de aplicación de Windows Holographic, se proporciona una clase auxiliar para agrupar estos recursos en DX:: CameraResources. Empiece por configurar las vistas de destino de representación:
 
-Desde **AppMain:: Render** :
+Desde **AppMain:: Render**:
 
 ```cpp
 // This represents the device-based resources for a HolographicCamera.
@@ -223,7 +223,7 @@ context->ClearDepthStencilView(
 
 Las matrices de vista y proyección de cada cámara holográfica cambiarán con cada fotograma. Actualice los datos en el búfer de constantes de cada cámara holográfica. Hágalo después de actualizar la predicción y antes de realizar cualquier llamada a Draw para esa cámara.
 
-Desde **AppMain:: Render** :
+Desde **AppMain:: Render**:
 
 ```cpp
 // The view and projection matrices for each holographic camera will change
@@ -242,7 +242,7 @@ bool cameraActive = pCameraResources->AttachViewProjectionBuffer(m_deviceResourc
 Aquí se muestra cómo se adquieren las matrices de la pose de la cámara. Durante este proceso, también se obtiene la ventanilla actual de la cámara. Observe cómo se proporciona un sistema de coordenadas: este es el mismo sistema de coordenadas que se usa para comprender la mirada y es el mismo que se usa para colocar el cubo giratorio.
 
 
-Desde **CameraResources:: UpdateViewProjectionBuffer** :
+Desde **CameraResources:: UpdateViewProjectionBuffer**:
 
 ```cpp
 // The system changes the viewport on a per-frame basis for system optimizations.
@@ -293,7 +293,7 @@ if (viewTransformAcquired)
 La ventanilla debe establecerse en cada fotograma. Normalmente, el sombreador de vértices (al menos) necesitará tener acceso a los datos de vista o proyección.
 
 
-Desde **CameraResources:: AttachViewProjectionBuffer** :
+Desde **CameraResources:: AttachViewProjectionBuffer**:
 
 ```cpp
 // Set the viewport for this camera.
@@ -307,15 +307,15 @@ context->VSSetConstantBuffers(
 );
 ```
 
-**Se representa en el búfer de reserva de la cámara y se confirma el búfer de profundidad** :
+**Se representa en el búfer de reserva de la cámara y se confirma el búfer de profundidad**:
 
-Es conveniente comprobar que **TryGetViewTransform** se ha ejecutado correctamente antes de intentar usar los datos de vista o proyección, porque si el sistema de coordenadas no es localizable (por ejemplo, se interrumpió el seguimiento), la aplicación no se puede representar con él para ese marco. La plantilla solo llama a **Render** en el cubo giratorio Si la clase **CameraResources** indica una actualización correcta.
+Es conveniente comprobar que **TryGetViewTransform** se ha ejecutado correctamente antes de intentar usar los datos de vista o proyección, porque si el sistema de coordenadas no es localizable (por ejemplo, se ha interrumpido el seguimiento), la aplicación no puede representarse con él para ese marco. La plantilla solo llama a **Render** en el cubo giratorio Si la clase **CameraResources** indica una actualización correcta.
 
-Para mantener los hologramas donde un desarrollador o un usuario los pone en el mundo, Windows Mixed Reality incluye características para la [estabilización](../platform-capabilities-and-apis/hologram-stability.md)de la imagen. La estabilización de imágenes ayuda a ocultar la latencia inherente en una canalización de representación para garantizar las mejores experiencias holográficas para los usuarios. se puede especificar un punto de enfoque para mejorar la estabilización de la imagen aún más, o se puede proporcionar un búfer de profundidad para calcular la estabilización de la imagen optimizada en tiempo real.
+Windows Mixed Reality incluye características para la [estabilización de imágenes](../platform-capabilities-and-apis/hologram-stability.md) con el fin de mantener los hologramas colocados donde un desarrollador o usuario los pone en el mundo. La estabilización de imágenes ayuda a ocultar la latencia inherente en una canalización de representación para garantizar las mejores experiencias holográficas para los usuarios. Se puede especificar un punto de enfoque para mejorar la estabilización de la imagen aún más, o se puede proporcionar un búfer de profundidad para calcular la estabilización de la imagen optimizada en tiempo real.
 
 Para obtener los mejores resultados, la aplicación debe proporcionar un búfer de profundidad mediante la API de <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.commitdirect3d11depthbuffer" target="_blank">CommitDirect3D11DepthBuffer</a> . Windows Mixed Reality puede usar la información de geometría del búfer de profundidad para optimizar la estabilización de la imagen en tiempo real. La plantilla de aplicación de Windows Holographic confirma el búfer de profundidad de la aplicación de forma predeterminada, lo que ayuda a optimizar la estabilidad del holograma.
 
-Desde **AppMain:: Render** :
+Desde **AppMain:: Render**:
 
 ```cpp
 // Only render world-locked content when positional tracking is active.
@@ -345,7 +345,7 @@ if (cameraActive)
 >[!NOTE]
 >Windows procesará la textura de profundidad en la GPU, por lo que debe ser posible usar el búfer de profundidad como un recurso de sombreador. El ID3D11Texture2D que cree debe tener un formato sin tipo y debe enlazarse como una vista de recursos del sombreador. Este es un ejemplo de cómo crear una textura de profundidad que se puede confirmar para la estabilización de la imagen.
 
-Código para la **creación de recursos de búfer de profundidad para CommitDirect3D11DepthBuffer** :
+Código para la **creación de recursos de búfer de profundidad para CommitDirect3D11DepthBuffer**:
 
 ```cpp
 // Create a depth stencil view for use with 3D rendering if needed.
@@ -381,7 +381,7 @@ winrt::check_hresult(
 
 La plantilla de aplicación de Windows Holographic representa el contenido en estéreo mediante el uso de la técnica recomendada de dibujar geometría con instancias en un Texture2DArray de tamaño 2. Echemos un vistazo a la parte de la creación de instancias de este y cómo funciona en Windows Mixed Reality.
 
-Desde **SpinningCubeRenderer:: Render** :
+Desde **SpinningCubeRenderer:: Render**:
 
 ```cpp
 // Draw the objects.
@@ -394,9 +394,9 @@ context->DrawIndexedInstanced(
 );
 ```
 
-Cada instancia tiene acceso a una matriz de vista/proyección diferente del búfer de constantes. Esta es la estructura de búfer de constantes, que es simplemente una matriz de 2 matrices.
+Cada instancia tiene acceso a una matriz de vista/proyección diferente del búfer de constantes. Esta es la estructura de búfer de constantes, que es simplemente una matriz de dos matrices.
 
-En **VertexShaderShared. HLSL** , incluido **VPRTVertexShader. HLSL** :
+En **VertexShaderShared. HLSL**, incluido **VPRTVertexShader. HLSL**:
 
 ```HLSL
 // A constant buffer that stores each set of view and projection matrices in column-major format.
@@ -406,9 +406,9 @@ cbuffer ViewProjectionConstantBuffer : register(b1)
 };
 ```
 
-El índice de la matriz de destino de representación se debe establecer para cada píxel. En el siguiente fragmento de código, Output. viewId se asigna a la semántica **SV_RenderTargetArrayIndex** . Tenga en cuenta que esto requiere compatibilidad con una característica opcional de Direct3D 11,3, que permite establecer la semántica de índice de la matriz de destino de representación desde cualquier fase del sombreador.
+El índice de la matriz de destino de representación se debe establecer para cada píxel. En el siguiente fragmento de código, Output. viewId se asigna a la semántica **SV_RenderTargetArrayIndex** . Esto requiere compatibilidad con una característica opcional de Direct3D 11,3, que permite establecer la semántica de índice de la matriz de destino de representación desde cualquier fase del sombreador.
 
-Desde **VPRTVertexShader. HLSL** :
+Desde **VPRTVertexShader. HLSL**:
 
 ```HLSL    
 // Per-vertex data passed to the geometry shader.
@@ -422,7 +422,7 @@ struct VertexShaderOutput
 };
 ```
 
-En **VertexShaderShared. HLSL** , incluido **VPRTVertexShader. HLSL** :
+En **VertexShaderShared. HLSL**, incluido **VPRTVertexShader. HLSL**:
 
 ```HLSL
 // Per-vertex data used as input to the vertex shader.
@@ -462,13 +462,13 @@ VertexShaderOutput main(VertexShaderInput input)
 }
 ```
 
-Si desea usar las técnicas de dibujo con instancias existentes con este método de dibujo en una matriz de destino de representación estéreo, lo único que tiene que hacer es dibujar el doble del número de instancias que tiene normalmente. En el sombreador, divida **Input. instId** por 2 para obtener el identificador de instancia original, que se puede indizar en (por ejemplo,) un búfer de datos por objeto: `int actualIdx = input.instId / 2;`
+Si desea usar las técnicas de dibujo con instancias existentes con este método de dibujo en una matriz de destino de representación estéreo, dibuje dos veces el número de instancias que tiene normalmente. En el sombreador, divida **Input. instId** por 2 para obtener el identificador de instancia original, que se puede indizar en (por ejemplo,) un búfer de datos por objeto: `int actualIdx = input.instId / 2;`
 
 ### <a name="important-note-about-rendering-stereo-content-on-hololens"></a>Nota importante sobre la representación de contenido estéreo en HoloLens
 
-Windows Mixed Reality admite la capacidad de establecer el índice de matriz de destino de representación desde cualquier fase del sombreador; Normalmente, se trata de una tarea que solo podría realizarse en la fase del sombreador de geometría debido a la manera en que se define la semántica para Direct3D 11. Aquí se muestra un ejemplo completo de cómo configurar una canalización de representación con solo las etapas del sombreador de vértices y píxeles establecidos. El código del sombreador es como se describió anteriormente.
+Windows Mixed Reality admite la capacidad de establecer el índice de matriz de destino de representación desde cualquier fase del sombreador. Normalmente, se trata de una tarea que solo podría realizarse en la fase del sombreador de geometría debido a la manera en que se define la semántica para Direct3D 11. Aquí se muestra un ejemplo completo de cómo configurar una canalización de representación con solo las etapas del sombreador de vértices y píxeles establecidos. El código del sombreador es como se describió anteriormente.
 
-Desde **SpinningCubeRenderer:: Render** :
+Desde **SpinningCubeRenderer:: Render**:
 
 ```cpp
 const auto context = m_deviceResources->GetD3DDeviceContext();
@@ -525,9 +525,9 @@ context->DrawIndexedInstanced(
 
 La configuración del índice de matriz de destino de representación en el sombreador de vértices requiere que el controlador de gráficos admita una característica de Direct3D 11,3 opcional, que es compatible con HoloLens. Es posible que la aplicación pueda implementar de forma segura solo esa técnica para la representación y que se cumplan todos los requisitos para ejecutarse en Microsoft HoloLens.
 
-También puede ser el caso de que quiera usar el emulador de HoloLens, que puede ser una herramienta de desarrollo eficaz para su aplicación holográfica, y que admiten dispositivos con auriculares de gran rendimiento con Windows Mixed Reality que están conectados a equipos con Windows 10. La compatibilidad con la ruta de representación que no es de HoloLens y, por lo tanto, para todo Windows Mixed Reality, también está integrada en la plantilla de aplicación de Windows Holographic. En el código de plantilla, encontrará código para permitir que la aplicación holográfica se ejecute en la GPU del equipo de desarrollo. Este es el modo en que la clase **DeviceResources** comprueba esta compatibilidad de características opcional.
+También puede ser el caso de que quiera usar el emulador de HoloLens, que puede ser una herramienta de desarrollo eficaz para su aplicación holográfica, y que admiten dispositivos con auriculares de gran rendimiento con Windows Mixed Reality que están conectados a equipos con Windows 10. La compatibilidad con la ruta de representación que no es de HoloLens (para todas las aplicaciones de realidad mixta de Windows) también está integrada en la plantilla de aplicación de Windows Holographic. En el código de plantilla, encontrará código para permitir que la aplicación holográfica se ejecute en la GPU del equipo de desarrollo. Este es el modo en que la clase **DeviceResources** comprueba esta compatibilidad de características opcional.
 
-De **DeviceResources:: CreateDeviceResources** :
+De **DeviceResources:: CreateDeviceResources**:
 
 ```cpp
 // Check for device support for the optional feature that allows setting the render target array index from the vertex shader stage.
@@ -541,7 +541,7 @@ if (options.VPAndRTArrayIndexFromAnyShaderFeedingRasterizer)
 
 Para admitir la representación sin esta característica opcional, la aplicación debe usar un sombreador de geometría para establecer el índice de la matriz de destino de representación. Este fragmento de código se agregaría *después* **de VSSetConstantBuffers** y *antes* de **PSSetShader** en el ejemplo de código mostrado en la sección anterior que explica cómo representar el estéreo en HoloLens.
 
-Desde **SpinningCubeRenderer:: Render** :
+Desde **SpinningCubeRenderer:: Render**:
 
 ```cpp
 if (!m_usingVprtShaders)
@@ -558,9 +558,9 @@ if (!m_usingVprtShaders)
 }
 ```
 
-**Nota HLSL** : en este caso, también debe cargar un sombreador de vértices ligeramente modificado que pase el índice de la matriz de destino de representación al sombreador de geometría mediante una semántica de sombreador siempre permitida, como TEXCOORD0. El sombreador de geometría no tiene que hacer ningún trabajo; el sombreador de geometría de la plantilla pasa todos los datos, con la excepción del índice de la matriz de destino de representación, que se usa para establecer la semántica SV_RenderTargetArrayIndex.
+**Nota HLSL**: en este caso, también debe cargar un sombreador de vértices ligeramente modificado que pase el índice de la matriz de destino de representación al sombreador de geometría mediante una semántica de sombreador siempre permitida, como TEXCOORD0. El sombreador de geometría no tiene que hacer ningún trabajo; el sombreador de geometría de la plantilla pasa todos los datos, con la excepción del índice de la matriz de destino de representación, que se usa para establecer la semántica SV_RenderTargetArrayIndex.
 
-Código de plantilla de aplicación para **GeometryShader. HLSL** :
+Código de plantilla de aplicación para **GeometryShader. HLSL**:
 
 ```HLSL
 // Per-vertex data from the vertex shader.
@@ -568,7 +568,7 @@ struct GeometryShaderInput
 {
     min16float4 pos     : SV_POSITION;
     min16float3 color   : COLOR0;
-    uint        instId  : TEXCOORD0;
+    uint instId         : TEXCOORD0;
 };
 
 // Per-vertex data passed to the rasterizer.
@@ -576,7 +576,7 @@ struct GeometryShaderOutput
 {
     min16float4 pos     : SV_POSITION;
     min16float3 color   : COLOR0;
-    uint        rtvId   : SV_RenderTargetArrayIndex;
+    uint rtvId          : SV_RenderTargetArrayIndex;
 };
 
 // This geometry shader is a pass-through that leaves the geometry unmodified 
@@ -602,17 +602,17 @@ void main(triangle GeometryShaderInput input[3], inout TriangleStream<GeometrySh
 
 Con Windows Mixed Reality, el sistema controla la cadena de intercambio. Después, el sistema administra la presentación de fotogramas a cada cámara holográfica para garantizar una experiencia de usuario de alta calidad. También proporciona una actualización de la ventanilla cada fotograma, para cada cámara, para optimizar aspectos del sistema, como la estabilización de imágenes o la captura de realidad mixta. Por lo tanto, una aplicación holográfica con DirectX no llama a **presente** en una cadena de intercambio de DXGI. En su lugar, use la clase <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> para mostrar todos los intercambio de un fotograma una vez que haya terminado de dibujarlo.
 
-De **DeviceResources::P reenviado** :
+De **DeviceResources::P reenviado**:
 
 ```
 HolographicFramePresentResult presentResult = frame.PresentUsingCurrentPrediction();
 ```
 
-De forma predeterminada, esta API espera a que el fotograma finalice antes de que se devuelva. Las aplicaciones holográficas deben esperar a que finalice el fotograma anterior antes de empezar a trabajar en un nuevo fotograma, ya que esto reduce la latencia y permite obtener mejores resultados de las predicciones de fotogramas holográficas. No es una regla rígida y, si tiene fotogramas que tardan más de una actualización de pantalla en representarse, puede deshabilitar esta espera Si pasa el parámetro HolographicFramePresentWaitBehavior a <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction" target="_blank">PresentUsingCurrentPrediction</a>. En este caso, podría usar un subproceso de representación asincrónico para mantener una carga continua en la GPU. Tenga en cuenta que la frecuencia de actualización del dispositivo HoloLens es de 60 Hz, donde un fotograma tiene una duración aproximada de 16 ms. Los auriculares envolventes pueden oscilar entre 60Hz y 90Hz; al actualizar la pantalla a 90 Hz, cada fotograma tendrá una duración aproximada de 11 ms.
+De forma predeterminada, esta API espera a que el fotograma finalice antes de que se devuelva. Las aplicaciones holográficas deben esperar a que finalice el fotograma anterior antes de empezar a trabajar en un nuevo fotograma, ya que esto reduce la latencia y permite obtener mejores resultados de las predicciones de fotogramas holográficas. No es una regla rígida y, si tiene fotogramas que tardan más de una actualización de pantalla en representarse, puede deshabilitar esta espera Si pasa el parámetro HolographicFramePresentWaitBehavior a <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe.presentusingcurrentprediction" target="_blank">PresentUsingCurrentPrediction</a>. En este caso, podría usar un subproceso de representación asincrónico para mantener una carga continua en la GPU. La frecuencia de actualización del dispositivo HoloLens es de 60 Hz, donde un fotograma tiene una duración aproximada de 16 ms. Los auriculares envolventes pueden oscilar entre 60 Hz y 90 Hz; al actualizar la pantalla a 90 Hz, cada fotograma tendrá una duración aproximada de 11 ms.
 
 ### <a name="handle-devicelost-scenarios-in-cooperation-with-the-holographicframe"></a>Controle los escenarios de DeviceLost en cooperación con HolographicFrame
 
-Las aplicaciones de DirectX 11 normalmente querrán comprobar el valor HRESULT devuelto por la función **present** de la cadena de intercambio de DXGI para averiguar si se produjo un error **DeviceLost** . La clase <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> se encarga de ello. Inspeccione el <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframepresentresult" target="_blank">HolographicFramePresentResult</a> que devuelve para averiguar si necesita liberar y volver a crear el dispositivo Direct3D y los recursos basados en dispositivos.
+Las aplicaciones de DirectX 11 normalmente querrán comprobar el valor HRESULT devuelto por la función **present** de la cadena de intercambio de DXGI para averiguar si se produjo un error **DeviceLost** . La clase <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframe" target="_blank">HolographicFrame</a> se encarga de ello. Inspeccione el <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicframepresentresult" target="_blank">HolographicFramePresentResult</a> devuelto para averiguar si necesita liberar y volver a crear el dispositivo Direct3D y los recursos basados en dispositivos.
 
 ```cpp
 // The PresentUsingCurrentPrediction API will detect when the graphics device
@@ -625,9 +625,9 @@ if (presentResult == HolographicFramePresentResult::DeviceRemoved)
 }
 ```
 
-Tenga en cuenta que si se perdió el dispositivo Direct3D y lo volvió a crear, debe indicar a <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a> que empiece a usar el nuevo dispositivo. La cadena de intercambio se volverá a crear para este dispositivo.
+Si se perdió el dispositivo Direct3D y lo volvió a crear, debe indicar a <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a> que empiece a usar el nuevo dispositivo. La cadena de intercambio se volverá a crear para este dispositivo.
 
-De **DeviceResources:: InitializeUsingHolographicSpace** :
+De **DeviceResources:: InitializeUsingHolographicSpace**:
 
 ```
 m_holographicSpace.SetDirect3D11Device(m_d3dInteropDevice);
@@ -641,9 +641,9 @@ Una vez que se presenta el fotograma, puede volver al bucle del programa princip
 
 La mayoría del código de ejemplo de Direct3D general muestra la creación de un dispositivo DirectX mediante el adaptador de hardware predeterminado, que en un sistema híbrido puede no ser el mismo que el usado para el casco.
 
-Para solucionar cualquier problema que esto pueda causar, use el <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicadapterid" target="_blank">HolographicAdapterId</a> de <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>. PrimaryAdapterId () o <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay" target="_blank">HolographicDisplay</a>. AdapterId (). Este adapterId se puede usar para seleccionar el DXGIAdapter adecuado mediante IDXGIFactory4. EnumAdapterByLuid.
+Para solucionar cualquier problema, use <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicadapterid" target="_blank">HolographicAdapterID</a> desde <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace" target="_blank">HolographicSpace</a>. PrimaryAdapterId () o <a href="https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicdisplay" target="_blank">HolographicDisplay</a>. AdapterId (). Este adapterId se puede usar para seleccionar el DXGIAdapter adecuado mediante IDXGIFactory4. EnumAdapterByLuid.
 
-De **DeviceResources:: InitializeUsingHolographicSpace** :
+De **DeviceResources:: InitializeUsingHolographicSpace**:
 
 ```cpp
 // The holographic space might need to determine which adapter supports
@@ -709,27 +709,27 @@ const HRESULT hr = D3D11CreateDevice(
 
 **Gráficos y Media Foundation híbridos**
 
-El uso de Media Foundation en sistemas híbridos puede causar problemas en los que el vídeo no se represente o que la textura de vídeo esté dañada. Esto puede ocurrir porque Media Foundation tiene como valor predeterminado un comportamiento del sistema, como se mencionó anteriormente. En algunos escenarios, se requiere la creación de un ID3D11Device independiente para admitir el subprocesamiento múltiple y se establecen las marcas de creación correctas.
+El uso de Media Foundation en sistemas híbridos puede causar problemas en los que el vídeo no se represente o la textura de vídeo está dañada porque Media Foundation tiene como valor predeterminado un comportamiento del sistema. En algunos escenarios, se requiere la creación de un ID3D11Device independiente para admitir el subprocesamiento múltiple y se establecen las marcas de creación correctas.
 
 Al inicializar ID3D11Device, se debe definir D3D11_CREATE_DEVICE_VIDEO_SUPPORT marca como parte de la D3D11_CREATE_DEVICE_FLAG. Una vez creado el dispositivo y el contexto, llame a <a href="https://docs.microsoft.com/windows/desktop/api/d3d10/nf-d3d10-id3d10multithread-setmultithreadprotected" target="_blank">SetMultithreadProtected</a> para habilitar el multithreading. Para asociar el dispositivo a <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nn-mfobjects-imfdxgidevicemanager" target="_blank">IMFDXGIDeviceManager</a>, use la función <a href="https://docs.microsoft.com/windows/desktop/api/mfobjects/nf-mfobjects-imfdxgidevicemanager-resetdevice" target="_blank">IMFDXGIDeviceManager:: ResetDevice</a> .
 
-Código para **asociar un ID3D11Device con IMFDXGIDeviceManager** :
+Código para **asociar un ID3D11Device con IMFDXGIDeviceManager**:
 
 ```cpp
 // create dx device for media pipeline
 winrt::com_ptr<ID3D11Device> spMediaDevice;
 
 // See above. Also make sure to enable the following flags on the D3D11 device:
-//   * D3D11_CREATE_DEVICE_VIDEO_SUPPORT
-//   * D3D11_CREATE_DEVICE_BGRA_SUPPORT
+//   * D3D11_CREATE_DEVICE_VIDEO_SUPPORT
+//   * D3D11_CREATE_DEVICE_BGRA_SUPPORT
 if (FAILED(CreateMediaDevice(spAdapter.get(), &spMediaDevice)))
-    return;                                                     
+    return;                                                     
 
-// Turn multithreading on 
+// Turn multithreading on 
 winrt::com_ptr<ID3D10Multithread> spMultithread;
 if (spContext.try_as(spMultithread))
 {
-    spMultithread->SetMultithreadProtected(TRUE);
+    spMultithread->SetMultithreadProtected(TRUE);
 }
 
 // lock the shared dxgi device manager
@@ -738,12 +738,12 @@ UINT uiResetToken;
 winrt::com_ptr<IMFDXGIDeviceManager> spDeviceManager;
 hr = MFLockDXGIDeviceManager(&uiResetToken, spDeviceManager.put());
 if (FAILED(hr))
-    return hr;
-    
+    return hr;
+    
 // associate the device with the manager
 hr = spDeviceManager->ResetDevice(spMediaDevice.get(), uiResetToken);
 if (FAILED(hr))
-    return hr;
+    return hr;
 ```
 
 ## <a name="see-also"></a>Consulte también
