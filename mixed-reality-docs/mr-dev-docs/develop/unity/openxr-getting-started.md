@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: openxr, Unity, hololens, hololens 2, reality Mixed, MRTK, kit de herramientas de realidad mixta, realidad aumentada, realidad virtual, auriculares de realidad mixta, información, tutorial, introducción
-ms.openlocfilehash: adb678d168d86dc2376ac46caa690e5db036099c
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 05adee2d88bc90dcfb5cf8b780212c7622aff786
+ms.sourcegitcommit: ce4975f584bb62075bcb66349237b77081fb982b
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/17/2020
-ms.locfileid: "97623017"
+ms.locfileid: "97644922"
 ---
 # <a name="using-the-mixed-reality-openxr-plugin-for-unity"></a>Uso del complemento OpenXR de realidad mixta para Unity
 
@@ -29,7 +29,7 @@ A partir de la versión 2020,2 de Unity, el paquete de complementos de OpenXR mi
 
 ## <a name="installing-the-mixed-reality-openxr-plugin"></a>Instalación del complemento OpenXR de realidad mixta
 
-Antes de usar el complemento Mixed Reality OpenXR, debe instalar los paquetes de **Administración de complementos** de Unity y del complemento de **OpenXR** :
+El proyecto debe instalar los paquetes de administración de **Complementos** de **OpenXR** y XR antes de usar el complemento Mixed Reality OpenXR. Si ya las ha instalado, ¡ genial! Si no es así, al instalar el complemento OpenXR de realidad mixta se instalarán automáticamente como dependencias:
 
 1. En el editor de Unity, vaya a **editar > configuración del proyecto > administrador de paquetes** .
 2. Expanda la sección **registros de ámbito** , escriba la información siguiente y seleccione **Guardar**:   

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/15/2020
 ms.topic: article
 keywords: openxr, Unity, hololens, hololens 2, reality Mixed, MRTK, kit de herramientas de realidad mixta, realidad aumentada, realidad virtual, auriculares de realidad mixta, información, tutorial, introducción
-ms.openlocfilehash: dc908762d6e44e04f56b8ff82b90394106ca42e5
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 5db08dee6b26de6fa3f44d92709e4903bb90a44c
+ms.sourcegitcommit: 7595db7438398b5c78cec41a6f8ab625711bf8ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/17/2020
-ms.locfileid: "97623009"
+ms.locfileid: "97664423"
 ---
 # <a name="mixed-reality-openxr-supported-features-in-unity"></a>Características admitidas de OpenXR de realidad mixta en Unity
 
@@ -25,12 +25,12 @@ Actualmente se admiten las siguientes características:
 * Optimiza el paquete UWP y la interacción con CoreWindow para aplicaciones de HoloLens 2.
 * Seguimiento de escala mundial con delimitadores y espacio sin enlazar.
 * Delimite la API de almacenamiento para conservar los delimitadores en el almacenamiento local de HoloLens 2.
-* Control de movimiento y interacciones de mano, incluido el nuevo controlador de HP reverberación G2.
+* Control de [movimiento y interacciones de mano](#motion-controller-and-hand-interactions), incluido el nuevo controlador de HP reverberación G2.
 * Seguimiento de mano articulado mediante 26 uniones y entradas de radio uniones.
 * Interacción de ojo mirada en HoloLens 2.
 * Buscar la cámara de foto/vídeo (PV) en HoloLens 2.
 * Captura de realidad mixta mediante la representación de la tercera vista a través de la cámara PV.
-* Admite "Play" para HoloLens 2 mediante la aplicación de comunicación remota holográfica, lo que permite a los desarrolladores depurar scripts sin compilar e implementar en el dispositivo.
+* Admite ["Play" en HoloLens 2 con la aplicación de comunicación remota holográfica](#holographic-remoting-in-unity-editor-play-mode), lo que permite a los desarrolladores depurar scripts sin compilar e implementar en el dispositivo.
 * Compatible con MRTK Unity 2.5.2 a través de MRTK paquete de adaptador OpenXR. <missing link>
 * Compatible con Unity [ARFoundation 4,0](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html) o posterior
 
