@@ -8,22 +8,22 @@ ms.date: 07/30/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial, mixed reality headset, windows mixed reality headset, virtual reality headset, unity, unreal, HoloLens, Azure spatial anchors, Azure speech services
-ms.openlocfilehash: 0e3b1749790e3c372570bdd1d8e68fe3fd593dd8
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: a85792ba082450fb01f3c6f7bb008d3c7b17560b
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677284"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010466"
 ---
-# <a name="tutorials"></a>Tutoriales 
+# <a name="tutorials"></a>Tutoriales
 
 ![Usuario de HoloLens 2](images/08_Tutorials.png)
 
-Actualmente, todos nuestros tutoriales y aplicaciones de muestra se basan en Unity o Unreal. A medida que desarrollamos contenido para otros motores y plataformas, los encontrarás en el encabezado correspondiente de la tabla de contenido.
+Actualmente, todos nuestros tutoriales y aplicaciones de muestra se basan en Unity o Unreal. A medida que desarrollamos contenido para otros motores y plataformas, los encontrará en el encabezado correspondiente de la tabla de contenido.
 
 ## <a name="hololens-2"></a>HoloLens 2 
 
-Los tutoriales de HoloLens 2 están diseñados para ayudar a los desarrolladores a obtener información sobre las técnicas y los procedimientos recomendados para desarrollar aplicaciones de realidad mixta. Los tutoriales de Unity se basan en [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity) y el tutorial de Unreal se basa en [UX Tools para Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
+Los tutoriales de HoloLens 2 están diseñados para enseñar sobre las técnicas y los procedimientos recomendados para desarrollar aplicaciones de realidad mixta. Los tutoriales de Unity se basan en [Mixed Reality Toolkit 2.0 (MRTK 2.0)](https://github.com/microsoft/MixedRealityToolkit-Unity) y el tutorial de Unreal se basa en [UX Tools para Unreal Engine 0.8](https://github.com/microsoft/MixedReality-UXTools-Unreal).
 
 * Tutoriales de introducción
     * Unity: [1 de 9 Introducción](tutorials/mr-learning-base-01.md)
@@ -39,7 +39,7 @@ Mixed Reality Academy es un conjunto de tutoriales detallados en línea con los 
 * Los tutoriales tratan los temas de nivel 100, 200 y 300, en los que: en el nivel 100 se describen los conceptos básicos de los proyectos, en el nivel 200 se tratan los principales bloques de creación de realidad mixta y, en el nivel 300, se trata la integración del servicio en la nube.
 * La mayoría de los cursos tratan conceptos que se aplican tanto a los cascos de HoloLens como los envolventes (VR).
 * Cada tutorial está organizado por capítulos y la mayoría incluyen demostraciones en vídeo de los conceptos clave.
-* Un equipo Windows 10 que tenga [instaladas las herramientas](../install-the-tools.md) correctas es un requisito previo habitual para completar cada tutorial.
+* Un equipo con Windows 10 que tenga [instaladas las herramientas](../install-the-tools.md) correctas es un requisito previo habitual para completar cada tutorial.
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta. Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos. Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2. Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](tutorials/mr-learning-base-01.md) para HoloLens 2.
@@ -107,7 +107,7 @@ Mixed Reality Academy es un conjunto de tutoriales detallados en línea con los 
 
 ## <a name="mixed-reality-and-azure-services-tutorials"></a>Tutoriales de realidad mixta y servicios de Azure
 
-Estos tutoriales independientes son excelentes para aprender a implementar diferentes servicios de Azure en tu proyecto de Unity. Se basan en HoloLens (1.ª generación) o en nuestros cascos envolventes, pero las lecciones sobre el uso de los servicios deberían poder aplicarse a la mayoría de dispositivos.
+Estos tutoriales independientes son excelentes para aprender a implementar diferentes servicios de Azure en tu proyecto de Unity. Se basan en HoloLens (primera generación) o en nuestros cascos envolventes, pero las lecciones sobre el uso de los servicios deberían poder aplicarse a la mayoría de dispositivos.
 
 <ul id="cardtypes-W" class="cardsW panelContent" style="display: flex; margin-top: 0px;">
     <li>
@@ -217,7 +217,7 @@ Estos tutoriales independientes son excelentes para aprender a implementar difer
                                           </div>
                                           <div class="cardText">
                                               <h3>Realidad mixta y Azure (305): Funciones y almacenamiento</h3>
-                                              <p>En este curso aprenderás a crear y usar Azure Functions y a almacenar datos en Azure Storage en una aplicación de realidad mixta.</p>
+                                              <p>En este curso aprenderá a crear y usar Azure Functions y a almacenar datos en Azure Storage en una aplicación de realidad mixta.</p>
                                           </div>
                                       </div>
                                   </div>
