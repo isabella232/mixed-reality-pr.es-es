@@ -6,12 +6,12 @@ ms.author: randyw
 ms.date: 10/22/2019
 ms.topic: article
 keywords: ninguno
-ms.openlocfilehash: 748685f89e44221ff50b90b57d871867b83f581c
-ms.sourcegitcommit: d4b96e5b51b64ff618dbf667e8b8eb069e1a2fe2
+ms.openlocfilehash: 1fc560d170c4e17f4d70b7068474a1aabda472a2
+ms.sourcegitcommit: 3762d207d3b5f4a1d932197aae7a4fae4baec960
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91717438"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "97676138"
 ---
 # <a name="title-be-as-specific-as-possible-use-human-terms"></a>Título (sea lo más específico posible, utilice términos humanos) 
 
@@ -65,7 +65,7 @@ Convenciones editoriales:
 *   No intente ser divertido.
 *   Escriba con ortografía y convenciones de en-US (Estados Unidos inglés).
 *   **Usar mayúsculas y minúsculas para los títulos, encabezados de sección y... todo.** En las oraciones, las únicas palabras que deben escribirse en mayúsculas son los nombres correctos (como ha aprendido en la escuela gramatical). Los nombres de marca (por ejemplo, Microsoft HoloLens) son nombres adecuados. Los nombres de las características (por ejemplo, la asignación espacial) no son nombres adecuados a menos que estén marcados.
-*   No escriba vínculos con el formato "para obtener más información [aquí](../whats-new/contributing.md)". En su lugar, coloque los vínculos [contextualmente](../whats-new/contributing.md) sin indicar al lector que vaya a otra parte.
+*   No escriba vínculos con el formato "para obtener más información [aquí](../contributing.md)". En su lugar, coloque los vínculos [contextualmente](../contributing.md) sin indicar al lector que vaya a otra parte.
 *   Esta documentación es el origen de la verdad. La información debe ser precisa y actual.
 
 <br>
@@ -192,7 +192,7 @@ Los Nabis de la acción de fotoel mundo de la pintura pintan el campo de color c
 
 Neo: estructural del usuario geográfico posterior a impressionism Die Brücke existentialism superplana, neo-Data idealmente Gründerzeit.
 
-| Distancia | Ángulo de visualización | Size |
+| Distancia | Ángulo de visualización | Tamaño |
 |---------|---------|---------|
 | 45cm  | no menor que 2 ° | 1,6 x 1,6 cm |
 
