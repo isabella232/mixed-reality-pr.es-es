@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 98030e55736d423d1fb84d2b965f6ed40246d8f4
-ms.sourcegitcommit: 9c88703a832fb8ca8476e808499d06239ea5d2cd
+ms.openlocfilehash: 4d945a6fbc61e56707d1e36e110a1108283b5add
+ms.sourcegitcommit: 99ae85159b7cf75f919021771ebb8299868beea9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92011462"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "97102949"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso de Portal de dispositivos Windows
 
@@ -117,6 +117,38 @@ Cada HoloLens genera un certificado autofirmado único para su conexión de SSL.
 >[!NOTE]
 > Este certificado solo será de confianza para el dispositivo y el usuario tendrá que volver a realizar el proceso si se instala una imagen en el dispositivo.
 
+## <a name="sideloading-applications"></a>Instalación de prueba de aplicaciones
+
+### <a name="installing-a-certificate"></a>Instalación de un certificado
+
+1. En el Portal de dispositivos Windows, vaya a la página del administrador de **aplicaciones**.
+2. En la sección Implementar aplicaciones, seleccione **Instalar certificado**.
+3. En la sección para seleccionar un archivo de certificado (.cer) para firmar el paquete de aplicación, seleccione Elegir archivo y busque el certificado asociado al paquete de la aplicación que quiere transferir localmente.
+4. Seleccione **Instalar** para iniciar la instalación.
+
+![Captura de pantalla de la página del administrador de aplicaciones abierta en el Portal de dispositivos Windows](images/sideloading-1.png)
+
+### <a name="installing-an-app"></a>Instalación de una aplicación
+
+> [!NOTE]
+> Para que una aplicación se instale correctamente a través del Portal de dispositivos, debe estar firmada por un certificado y este certificado debe instalarse en el dispositivo antes de intentar instalar la aplicación. Consulte la [sección anterior](#installing-a-certificate) para leer instrucciones.
+
+1. Cuando haya [creado un paquete de la aplicación desde Visual Studio](using-visual-studio.md), podrá instalarlo remotamente en el dispositivo desde los archivos generados:
+
+![Captura de pantalla del contenido del archivo del paquete de la aplicación](images/sideloading-2.png)
+
+2. En el Portal de dispositivos Windows, vaya a la página del administrador de **aplicaciones**.
+3. En la sección **Implementar** aplicaciones, seleccione **Almacenamiento local**.
+4. En la sección para seleccionar el paquete de aplicación, seleccione Elegir archivo y busque el paquete de la aplicación que quiere transferir localmente.
+5. Active las casillas correspondientes si quiere instalar paquetes opcionales o de marcos junto con la instalación de la aplicación y seleccione **Siguiente**:
+
+![Captura de pantalla de la página del administrador de aplicaciones abierta en el Portal de dispositivos Windows con la pestaña Almacenamiento local resaltada](images/sideloading-3.png)
+
+6. Seleccione **Instalar** para iniciar la instalación.
+ 
+![Captura de pantalla de la página del administrador de aplicaciones abierta en el Portal de dispositivos Windows con la instalación completada correctamente](images/sideloading-4.png) 
+
+Una vez finalizada la instalación, vuelva a la página **Todas las aplicaciones** de HoloLens e inicie la aplicación recién instalada.
 
 ## <a name="device-portal-pages"></a>Páginas de Device Portal
 

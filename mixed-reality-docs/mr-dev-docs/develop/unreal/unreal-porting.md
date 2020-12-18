@@ -7,12 +7,12 @@ ms.date: 11/23/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, desarrollo, características, documentación, guías, hologramas, códigos qr, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual
-ms.openlocfilehash: 0ba10b8ee1067da4494f147d43f8834010e1250f
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 5460ab55c887c44029e956545cf6a549f55716f7
+ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609666"
+ms.lasthandoff: 12/10/2020
+ms.locfileid: "97010626"
 ---
 # <a name="upgrading-projects-in-unreal"></a>Actualización de proyectos en Unreal
 
@@ -50,3 +50,7 @@ Los mensajes de advertencia mostrarán qué función se encuentra en desuso y la
 | IsTrackingAvailable | ![Plano técnico de la propiedad IsTrackingAvailable](images/unreal-porting-img-17.png) |
 | IsButtonClicked, IsButtonDown, IsGrasped, IsSelectPressed | Use el sistema de acciones de entrada de Unreal. |
 | SetFocusPointForFrame | Se quitó de la versión 4.26.  Anteriormente, se usaba para la reproyección al establecer una comunicación remota, pero ahora se admite la reproyección en profundidad. |
+
+## <a name="426-changes"></a>Cambios en la versión 4.26
+
+El cambio importante es que **Iniciar en VR** desde **Editar > Configuración del proyecto > Proyecto > Descripción > Configuración** es obligatorio para iniciar el complemento de Windows Mixed Reality. Sin ese parámetro, no verá los hologramas en el dispositivo.

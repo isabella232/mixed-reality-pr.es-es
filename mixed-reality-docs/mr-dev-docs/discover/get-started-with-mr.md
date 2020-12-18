@@ -3,16 +3,16 @@ title: Introducción a Mixed Reality
 description: Para ayudar a un usuario nuevo en el ámbito de la realidad mixta, descubre qué es y comprende sus capacidades.
 author: grbury
 ms.author: grbury
-ms.date: 07/29/2020
+ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: c085a60f78ef68e2139b8cc3dd2fdae24bce2a52
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: ef39848fea512df9fa61ca4d538354e11fb8e042
+ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702277"
+ms.lasthandoff: 12/09/2020
+ms.locfileid: "96926062"
 ---
 # <a name="get-started-with-mixed-reality"></a>Introducción a Mixed Reality
 
@@ -60,6 +60,7 @@ Antes de profundizar en el diseño o el desarrollo de aplicaciones, debe compren
 | --- | --- |
 | [La realidad mixta es un espectro](../discover/mixed-reality.md) | La realidad mixta combina lo físico con lo digital, es la próxima evolución en las interacciones entre personas, equipos y entornos. |
 | [¿Qué es un holograma?](../discover/hologram.md) | HoloLens te permite crear hologramas, que son objetos creados con luz y sonido que aparecen en el mundo que te rodea, como si fueran objetos reales. Los hologramas responden a la mirada, los gestos y los comandos de voz, y pueden interactuar con las superficies reales del entorno. |
+| [Introducción al aprendizaje de Mixed Reality](mr-learning-overview.md#general-modules) | Pruebe nuestro módulo de Mixed Reality seleccionado a través de Microsoft Learn. |
 | [Ampliar el proceso de diseño](../discover/case-study-expanding-the-design-process-for-mixed-reality.md) | Amplíe su actitud de diseño con pensamiento espacial, bodystorming y actuando al crear experiencias envolventes.  |
 
 <br>
