@@ -5,12 +5,12 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: dd84ba86af0b86b29510c4c317ad0a14fabc296b
-ms.sourcegitcommit: 3762d207d3b5f4a1d932197aae7a4fae4baec960
+ms.openlocfilehash: 0a71072a27befc4295b82e1235cbc75655743056
+ms.sourcegitcommit: 0b406ccbc7ce619e42809ba8dfdc47d83f4917ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 12/18/2020
-ms.locfileid: "97676268"
+ms.locfileid: "97691313"
 ---
 # <a name="contributing-to-mixed-reality-developer-documentation"></a>Contribución a la documentación para desarrolladores de realidad mixta
 
@@ -48,12 +48,12 @@ Use el siguiente flujo de trabajo para efectuar actualizaciones en *un artículo
    ![Edite un artículo.](images/editpage.png)
 3. Edite el contenido del artículo según los ["conceptos básicos de Markdown"](#markdown-basics).
 4. Actualice los metadatos en la parte superior de cada artículo:
-   * Título: título de la página que aparece en la pestaña del explorador cuando se está viendo el artículo. Los títulos de página se utilizan para SEO e indexación, por lo que no cambie el título a menos que sea necesario (aunque esto es menos crítico antes de que la documentación sea pública).
-   * Descripción: escriba una breve descripción del contenido del artículo, que aumenta la SEO y la detección.
-   * Autor: si es el propietario principal de la página, agregue aquí su alias de GitHub.
-   * MS. Author: si es el propietario principal de la página, agregue aquí su alias de Microsoft (no es necesario @microsoft.com , solo el alias).
-   * MS. Date: actualice la fecha Si va a agregar contenido principal a la página, pero no para correcciones como aclaración, formato, gramática o ortografía.
-   * Palabras clave: ayuda de palabras clave en SEO (optimización del motor de búsqueda). Agregue palabras clave, separadas por una coma y un espacio, específicas de su artículo, pero sin puntuación después de la última palabra clave de la lista. No es necesario agregar palabras clave globales que se apliquen a todos los artículos, ya que se administran en otro lugar. 
+   * **título**: título de la página que aparece en la pestaña del explorador cuando se está viendo el artículo. Los títulos de página se utilizan para SEO e indexación, por lo que no cambie el título a menos que sea necesario (aunque esto es menos crítico antes de que la documentación sea pública).
+   * **Descripción**: escriba una breve descripción del contenido del artículo, que aumenta la SEO y la detección.
+   * **autor**: si es el propietario principal de la página, agregue aquí su alias de github.
+   * **MS. Author**: si es el propietario principal de la página, agregue aquí su alias de Microsoft (no es necesario @microsoft.com , solo el alias).
+   * **MS. Date**: actualice la fecha Si va a agregar contenido principal a la página, pero no para correcciones como aclaración, formato, gramática o ortografía.
+   * **palabras clave**: ayuda de palabras clave en SEO (optimización del motor de búsqueda). Agregue palabras clave, separadas por una coma y un espacio, específicas de su artículo, pero sin puntuación después de la última palabra clave de la lista. No es necesario agregar palabras clave globales que se apliquen a todos los artículos, ya que se administran en otro lugar. 
 5. Cuando haya completado las ediciones del artículo, desplácese hacia abajo y seleccione **proponer cambio de archivo**.
 6. En la página siguiente, seleccione **crear solicitud de incorporación** de cambios para fusionar mediante combinación la rama creada automáticamente en ' maestra '.
 7. Repita los pasos anteriores para el siguiente artículo que desee editar.
