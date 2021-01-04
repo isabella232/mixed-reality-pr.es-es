@@ -1,13 +1,11 @@
 - name: Introducción al desarrollo con Mixed Reality
   href: development.md
-- name: Instalación de las herramientas
+- name: Introducción a los servicios en la nube de realidad mixta de Azure
+  href: mixed-reality-cloud-services.md
+- name: Aplicaciones de ejemplo y características
+  href: features-and-samples.md
+- name: Instalar las herramientas
   href: install-the-tools.md
-- name: Introducción
-  items:
-    - name: Introducción a los servicios en la nube de realidad mixta de Azure
-      href: mixed-reality-cloud-services.md
-    - name: Aplicaciones de ejemplo y características
-      href: features-and-samples.md
 - name: Migración de aplicaciones
   items:
     - name: Introducción a la portabilidad
@@ -24,19 +22,23 @@
   items:
     - name: Introducción al desarrollo de Unity
       href: unity/unity-development-overview.md
-    - name: Introducción
+    - name: Configuraciones de proyectos
       items:
         - name: Introducción a MRTK
           href: unity/mrtk-getting-started.md
-        - name: Configuración del proyecto de Unity para Windows Mixed Reality
+        - name: Configuración de un proyecto sin MRTK
           href: unity/configure-unity-project.md
+        - name: Uso del complemento OpenXR de Mixed Reality
+          href: unity/openxr-getting-started.md
+        - name: Características compatibles del complemento OpenXR
+          href: unity/openxr-supported-features.md
     - name: Tutoriales
       items:
         - name: Información general
           href: unity/tutorials.md
         - name: Tutoriales de HoloLens 2
           items:
-            - name: Tutoriales de introducción
+            - name: Tutoriales de MRTK
               items:
                 - name: 1. Introducción
                   href: unity/tutorials/mr-learning-base-01.md
@@ -312,6 +314,8 @@
           href: unreal/unreal-publishing-to-store.md
         - name: Recomendaciones de rendimiento para Unreal
           href: unreal/performance-recommendations-for-unreal.md
+        - name: Recomendaciones de material en Unreal
+          href: unreal/unreal-materials.md
         - name: Generación de perfiles con Unreal Insights
           href: unreal/unreal-insights.md
         - name: Recomendaciones de material en Unreal
