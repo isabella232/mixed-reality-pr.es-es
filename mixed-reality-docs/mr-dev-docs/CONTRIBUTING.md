@@ -5,22 +5,30 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 03/21/2018
 ms.topic: article
-ms.openlocfilehash: 0a71072a27befc4295b82e1235cbc75655743056
-ms.sourcegitcommit: 0b406ccbc7ce619e42809ba8dfdc47d83f4917ff
+ms.openlocfilehash: 47689a53557e6ce9b97d0e9d834a70fb0a7786d0
+ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97691313"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865420"
 ---
 # <a name="contributing-to-mixed-reality-developer-documentation"></a>Contribución a la documentación para desarrolladores de realidad mixta
 
 Este es el [repositorio público de la documentación para desarrolladores de realidad mixta](https://github.com/MicrosoftDocs/mixed-reality/tree/master/mixed-reality-docs). Los artículos que cree o edite en este repositorio **serán visibles para el público.** 
 
-Los documentos de realidad mixta se encuentran ahora en la plataforma docs.microsoft.com, que usa Markdown con funcionalidad de GitHub con características de Markdig. El contenido que se edita en este repositorio se formatea en páginas estilizadas que se muestran en https://docs.microsoft.com/windows/mixed-reality . Si desea contribuir a la documentación de HoloLens o de un entusiasta de la VR, visite sus respectivos repositorios de [hololens](https://github.com/MicrosoftDocs/Hololens) y [VR](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) .
+Los documentos de realidad mixta se encuentran ahora en la plataforma docs.microsoft.com, que usa Markdown con funcionalidad de GitHub con características de Markdig. El contenido que se edita en este repositorio se formatea en páginas estilizadas que se muestran en https://docs.microsoft.com/windows/mixed-reality . 
 
 En esta página se describen los pasos básicos y las directrices para contribuir y vínculos a los conceptos básicos de Markdown. Gracias por su contribución.
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="available-repos"></a>Repositorios disponibles
+
+| Nombre del repositorio | URL |
+| --- | --- |
+| Mixed Reality | [MicrosoftDocs/Mixed-Reality](https://docs.microsoft.com/windows/mixed-reality) |
+| Guía de entusiastas de la VR | [MicrosoftDocs/Mixed-Reality/entusiasta-Guide](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) |
+| HoloLens | [MicrosoftDocs/HoloLens](https://github.com/MicrosoftDocs/Hololens) |
+
+## <a name="before-you-start"></a>Antes de comenzar
 
 Si aún no tiene una, deberá [crear una cuenta de github](https://github.com/join).
 
@@ -76,7 +84,7 @@ Para agregar una redirección a .openpublishing.redirection.js, agregue una entr
 
 - `source_path`Es la ruta de acceso relativa del repositorio al artículo anterior que se va a quitar. Asegúrese de que la ruta de acceso comienza con `mixed-reality-docs` y termina con `.md` .
 - `redirect_url`Es la dirección URL pública relativa del artículo anterior al nuevo artículo. Asegúrese de que esta dirección URL **no** contiene `mixed-reality-docs` o `.md` , ya que hace referencia a la dirección URL pública y no a la ruta de acceso del repositorio. Se permite la vinculación a una sección del nuevo artículo con `#section` . También puede usar una ruta de acceso absoluta a otro sitio, si es necesario.
-- `redirect_document_id` indica si desea conservar el identificador de documento del archivo anterior. De manera predeterminada, es `false`. Use `true` si desea conservar el `ms.documentid` valor de atributo del artículo redirigido. Si conserva el identificador de documento, los datos, como las vistas de página y las clasificaciones, se transferirán al artículo de destino. Haga esto si el redireccionamiento es principalmente un cambio de nombre y no un puntero a un artículo diferente que solo trata parte del mismo contenido.
+- `redirect_document_id` indica si desea conservar el identificador de documento del archivo anterior. El valor predeterminado es `false`. Use `true` si desea conservar el `ms.documentid` valor de atributo del artículo redirigido. Si conserva el identificador de documento, los datos, como las vistas de página y las clasificaciones, se transferirán al artículo de destino. Haga esto si el redireccionamiento es principalmente un cambio de nombre y no un puntero a un artículo diferente que solo trata parte del mismo contenido.
 
 Si agrega un redireccionamiento, asegúrese de eliminar también el archivo antiguo.
 

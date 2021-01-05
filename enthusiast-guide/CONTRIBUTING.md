@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: d8b4e23603a09d39fef076b600364a55410d12c3
-ms.sourcegitcommit: 0b406ccbc7ce619e42809ba8dfdc47d83f4917ff
+ms.openlocfilehash: afb559937c2bde06d3c74c1c572aefec50502884
+ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97691439"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865440"
 ---
 # <a name="contributing-to-the-mixed-reality-enthusiast-guide"></a>Contribución a la guía del entusiasta de la realidad mixta
 
@@ -24,7 +24,7 @@ Gracias por su interés en la guía de entusiastas. Agradecemos sus comentarios,
 >
 > Las correcciones menores o aclaraciones de la documentación y los ejemplos de código de los repositorios públicos se rigen por los [Términos de uso del sitio docs.microsoft.com](https://docs.microsoft.com/legal/termsofuse). Los cambios importantes o nuevos generarán un comentario en la solicitud de incorporación de cambios para solicitarle que acepte el contrato de licencia de colaboración (CLA, por sus siglas en inglés) si no es un empleado de Microsoft. Necesitamos que rellene el formulario en línea para aceptar su solicitud de incorporación de cambios.
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 Si aún no tiene una, deberá [crear una cuenta de github](https://github.com/join).
 
@@ -85,7 +85,7 @@ Para agregar una redirección a .openpublishing.redirection.js, agregue una entr
 
 - `source_path`Es la ruta de acceso relativa del repositorio al artículo anterior que se va a quitar. Asegúrese de que la ruta de acceso comienza con `mixed-reality-docs/enthusiast-guide` y termina con `.md` .
 - `redirect_url`Es la dirección URL pública relativa del artículo anterior al nuevo artículo. Asegúrese de que esta dirección URL **no** contiene `mixed-reality-docs/enthusiast-guide` o `.md` , ya que hace referencia a la dirección URL pública y no a la ruta de acceso del repositorio. Se permite la vinculación a una sección del nuevo artículo con `#section` . También puede usar una ruta de acceso absoluta a otro sitio, si es necesario.
-- `redirect_document_id` indica si desea conservar el identificador de documento del archivo anterior. De manera predeterminada, es `false`. Use `true` si desea conservar el `ms.documentid` valor de atributo del artículo redirigido. Si conserva el identificador de documento, los datos, como las vistas de página y las clasificaciones, se transferirán al artículo de destino. Haga esto si el redireccionamiento es principalmente un cambio de nombre y no un puntero a un artículo diferente que solo trata parte del mismo contenido.
+- `redirect_document_id` indica si desea conservar el identificador de documento del archivo anterior. El valor predeterminado es `false`. Use `true` si desea conservar el `ms.documentid` valor de atributo del artículo redirigido. Si conserva el identificador de documento, los datos, como las vistas de página y las clasificaciones, se transferirán al artículo de destino. Haga esto si el redireccionamiento es principalmente un cambio de nombre y no un puntero a un artículo diferente que solo trata parte del mismo contenido.
 
 Si agrega un redireccionamiento, asegúrese de eliminar también el archivo antiguo.
 
@@ -167,7 +167,7 @@ Mientras edita en GitHub a través de un explorador Web, puede seleccionar la pe
 >[!NOTE]
 >La vista previa de los cambios en review.docs.microsoft.com solo está disponible para los empleados de Microsoft
 
-Empleados de Microsoft: una vez que las contribuciones se han combinado en la rama "principal", puede revisar el contenido antes de que se haga público en https://review.docs.microsoft.com/windows/mixed-reality?branch=master . Busque el artículo mediante la tabla de contenido de la columna izquierda.
+Empleados de Microsoft: una vez que las contribuciones se han combinado en la rama "principal", puede revisar el contenido antes de que se haga público en https://review.docs.microsoft.com/windows/mixed-reality/enthusiast-guide?branch=master . Busque el artículo mediante la tabla de contenido de la columna izquierda.
 
 ## <a name="editing-in-the-browser-vs-editing-with-a-desktop-client"></a>Edición en el explorador frente a edición con un cliente de escritorio
 

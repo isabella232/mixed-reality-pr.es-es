@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, controles, IU, experiencia de usuario, indicador de progreso, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: aa74ae1bf9dae9831743aeaf6ce18df196784ded
-ms.sourcegitcommit: bec6029b2780c54cc04a45ef7ae5df3f5b4727c1
+ms.openlocfilehash: 3f24f7095147a0d220df8adc42b67a1b8e4053c9
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96470517"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97848277"
 ---
 # <a name="progress-indicator"></a>Indicador de progreso
 
@@ -19,7 +19,7 @@ ms.locfileid: "96470517"
 
 <img src="images/MRTK_ProgressIndicator.gif" alt="Progress ring example in HoloLens" width="940px">
 
-Un control de progreso proporciona información al usuario sobre el hecho de que se está llevando a cabo una operación de ejecución larga. Esto puede significar que el usuario no puede interactuar con la aplicación cuando el indicador de progreso está visible y también puede indicar el tiempo de espera aproximado, según el indicador que usa.
+Un control de progreso proporciona comentarios de que se está llevando a cabo una operación de ejecución prolongada. Cuando un indicador de progreso está visible, los usuarios pueden ver el tiempo de espera y no pueden interactuar con la aplicación.
 
 <br>
 
@@ -27,7 +27,7 @@ Un control de progreso proporciona información al usuario sobre el hecho de que
 
 ## <a name="types-of-progress"></a>Tipos de progreso
 
-Es importante proporcionar información de usuario sobre lo que está ocurriendo. En realidad, los usuarios pueden distraerse fácilmente por el entorno físico u objetos si la aplicación no proporciona buenos comentarios visuales. En situaciones en las que se tardan unos segundos, como cuando se cargan datos o se actualiza una escena, es conveniente mostrar un indicador visual. Hay dos opciones para mostrar el usuario que está realizando una operación: una **barra de progreso** o un **anillo de progreso**.
+Es importante proporcionar información de usuario sobre lo que está ocurriendo. En realidad mixta, los usuarios pueden distraerse fácilmente por el entorno físico u objetos si la aplicación no tiene buenos comentarios visuales. En situaciones en las que se tardan unos segundos, como cuando se cargan los datos o se actualiza una escena, es una buena idea mostrar un indicador visual. Hay dos opciones para mostrar el usuario que está realizando una operación: una **barra de progreso** o un **anillo de progreso**.
 
 :::row:::
     :::column:::
@@ -49,13 +49,13 @@ Es importante proporcionar información de usuario sobre lo que está ocurriendo
 :::row:::
     :::column:::
         ### <a name="progress-ringbr"></a>Círculo de progreso<br>
-        Un anillo de progreso solo tiene un estado indeterminado y debe usarse cuando se bloquea cualquier interacción del usuario adicional hasta que se haya completado la operación.<br>
+        Un anillo de progreso solo tiene un estado indeterminado y debe usarse cuando se bloquea la interacción del usuario hasta que se haya completado la operación.<br>
         <br>
         *Imagen: ejemplo de anillo de progreso en HoloLens*
     :::column-end:::
         :::column:::
         ![space](images/spacer-20x582.png)<br>
-       ![Ejemplo de anillo de progreso en HoloLens](images/640px-progressring.jpg)<br>
+       ![Ejemplo de anillo de progreso en el dispositivo HoloLens](images/640px-progressring.jpg)<br>
     :::column-end:::
 :::row-end:::
 

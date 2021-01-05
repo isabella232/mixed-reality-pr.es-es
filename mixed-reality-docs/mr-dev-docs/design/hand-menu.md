@@ -1,17 +1,17 @@
 ---
 title: Menú Mano
-description: Los menús de mano permiten a los usuarios poner en marcha rápidamente la interfaz de usuario asociada a las funciones de uso frecuente. Estos son los procedimientos recomendados y las recomendaciones para los menús de la mano.
+description: Los menús de mano permiten a los usuarios poner en marcha rápidamente la interfaz de usuario asociada a las funciones de uso frecuente.
 author: nbarragan23
 ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: mano, menú, botón, acceso rápido, diseño, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 8f9adbdbebb826a79db037f48b233e3bc5e049de
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 77df5974f54323310a696ed6630fbdde0b0faeb0
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702301"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847806"
 ---
 # <a name="hand-menu"></a>Menú Mano
 
@@ -25,15 +25,15 @@ Encontrará las prácticas recomendadas para trabajar con menús de mano en la l
 
 <br>
 
-
 ---
 
 ## <a name="best-practices"></a>Procedimientos recomendados
+
 **Mantener el número de botones pequeños** 
 
-Debido a la distancia aproximada entre un menú bloqueado a mano y los ojos, y también la tendencia del usuario a centrarse en un área visual relativamente pequeña en cualquier momento (el cono de visión es aproximadamente de 10 grados), se recomienda mantener el número de botones pequeños. En función de la exploración, una columna con tres botones funciona bien manteniendo todo el contenido dentro del campo de vista (campo de visualización) incluso cuando un usuario mueve sus manos al centro del campo de contenido. 
+Debido a la distancia de cierre entre un menú bloqueado a mano y los ojos, y la tendencia de los usuarios a centrarse en un área visual relativamente pequeña en cualquier momento (el cono de visión es aproximadamente de 10 grados), se recomienda mantener el número de botones reducidos. En función de la exploración, una columna con tres botones funciona bien manteniendo todo el contenido dentro del campo de vista (campo de visualización) incluso cuando un usuario mueve sus manos al centro del campo de contenido. 
 
-**Uso del menú de la mano para una acción rápida** 
+**Usar el menú mano para una acción rápida** 
 
 La elevación de una ARM y el mantenimiento de la posición pueden provocar una fatiga ARM. Use un método bloqueado manualmente para el menú que requiera una breve interacción. Si el menú es complejo y requiere tiempos de interacción extendidos, considere la posibilidad de usar en su lugar el uso de bloqueos internacionales o del cuerpo. 
 
@@ -52,10 +52,11 @@ Si los botones de menú de la mano se colocan demasiado cerca del botón Inicio,
 <br>
 
 ## <a name="hand-menu-with-large-and-complex-ui-controls"></a>Menú mano con controles de interfaz de usuario grandes y complejos
+
 <img src="images/HandMenu_SizeExample.png" alt="HoloLens perspective of a menu system that always faces the user" width="940px">
 Se recomienda limitar el número de botones o controles de interfaz de usuario en los menús conectados a mano. Esto se debe a que la interacción extendida con un gran número de elementos de la interfaz de usuario puede causar fatiga ARM. Si su experiencia requiere un menú grande, proporcione un método sencillo para que el usuario bloquee el menú. Una técnica que se recomienda es usar el menú de bloqueo internacional cuando la mano se coloca o se mueve fuera del usuario. Una segunda técnica consiste en permitir que el usuario capte directamente el menú con la otra mano. Cuando el usuario suelta el menú, el menú debe ser un bloqueo universal. De este modo, un usuario puede interactuar con varios elementos de la interfaz de usuario de forma cómoda y confiable durante un período de tiempo prolongado. 
 
-Cuando el menú esté bloqueado mundialmente, asegúrese de proporcionar una manera de desplace el menú y cierre el menú cuando ya no se necesite. Haga que el menú sea móvil proporcionando controladores en los lados o en la parte superior del menú. Agregue un botón Cerrar para permitir que el menú se cierre. Permite que el menú se vuelva a adjuntar a la mano cuando el usuario se enfrente al usuario. También se recomienda requerir que los usuarios se vean a mano para evitar activaciones falsas (consulte a continuación).
+Cuando el menú esté bloqueado mundialmente, asegúrese de proporcionar una manera de desplace el menú y cierre el menú cuando ya no se necesite. Haga que el menú sea móvil proporcionando controladores en los lados o en la parte superior del menú. Agregue un botón Cerrar para permitir que el menú se cierre. Permite que el menú se vuelva a asociar a la mano cuando el usuario se enfrente al usuario. También se recomienda requerir que los usuarios se admiran a su mano para evitar activaciones falsas (consulte a continuación).
 
 **Menú grande que muestra un problema de facilidad de uso**
 
@@ -69,7 +70,6 @@ Cuando el menú esté bloqueado mundialmente, asegúrese de proporcionar una man
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AJAf]
 
-
 ## <a name="how-to-prevent-false-activation"></a>Cómo evitar la activación falsa
 
 Si usa solo Palm como un evento para desencadenar el menú de la mano, puede aparecer accidentalmente cuando no lo necesite (falsos positivos), ya que los usuarios mueven sus manos intencionadamente (para la comunicación y la manipulación de objetos) y de forma involuntaria. Para reducir las activaciones falsas, agregue un paso adicional además del evento de mano para invocar el menú de la mano (como los dedos totalmente abiertos o el usuario intencionadamente Gazing en su mano).
@@ -80,7 +80,7 @@ Al requerir una mano abierta plana, puede evitar la activación falsa que se pue
 
 **Requerir mira**
 
-Al solicitar al usuario que se ponga en mano (ya sea con miras hacia abajo o hacia abajo), se evitan las activaciones falsas debido a que el usuario tiene que dirigir intencionadamente su atención a la mano como un paso de activación secundario (con un umbral de distancia ajustable que se usa para permitir la comodidad del usuario).  
+Al solicitar al usuario que se ponga en mano (ya sea con miras hacia abajo o hacia abajo), se evitan las activaciones falsas debido a que el usuario tiene que dirigir su atención a la mano como un paso de activación secundario (con un umbral de distancia ajustable que se usa para permitir la comodidad del usuario).  
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4Asn4]
 
@@ -92,45 +92,42 @@ En la anatomía humana, el ulnar Nerve es un Nerve que se ejecuta cerca del hues
 
 A continuación se muestran dos ubicaciones recomendadas basadas en nuestras exploraciones:
 
-
 :::row:::
     :::column:::
-        ![Ubicación del lado de ulnar](images/UlnarSideHandMenu.gif)<br>
+        ![Ulnar ubicación lateral dentro de Palm](images/UlnarSideHandMenu.gif)<br>
         **A. ulnar en Palm**<br>
         Esta posición es confiable porque las manos no se superponen entre sí. Esto es fundamental para la detección y el seguimiento precisos de la mano.
     :::column-end:::
     :::column:::
-        ![Ubicación del lado de ulnar](images/UlnarAboveHandMenu.gif)<br>
+        ![Ubicación del lado de ulnar por encima de la mano](images/UlnarAboveHandMenu.gif)<br>
         **B. ulnar por encima de la mano**<br>
-        Esta ubicación es cómoda para los usuarios porque no necesitan aumentar demasiado el brazo para interactuar con el menú de la mano. Se recomienda colocar los menús **13cm** sobre la palma y alinear los botones dentro de la palma de ulnar. [Obtenga más información sobre el tamaño óptimo del botón](interactable-object.md)<br>
+        Esta ubicación es cómoda para los usuarios porque no necesitan aumentar demasiado el brazo para interactuar con el menú de la mano. Se recomienda colocar los menús **13 cm** por encima de la palma y alinear los botones dentro de la palma de ulnar. [Obtenga más información sobre el tamaño óptimo del botón](interactable-object.md)<br>
         <br>
         Por motivos técnicos, recomendamos esta ubicación con una implementación necesaria: el desarrollador deberá inmovilizar el menú cuando la mano del usuario se acerque a la interacción con él. Esto evitará la vibración de las manos superpuestas y también permite un destino más rápido de los botones.<br>
         <br>
-        Las cámaras de HoloLens 2 identifican las manos con precisión cuando son independientes entre sí. Las manos superpuestas pueden provocar que los menús de la mano se alejen de la ubicación del delimitador.<br>
+        Las cámaras de HoloLens 2 identifican con precisión cuándo son independientes entre sí. Las manos superpuestas pueden provocar que los menús de la mano se alejen de la ubicación del delimitador.<br>
     :::column-end:::
 :::row-end:::
-
-
 
 <br>
 
 ---
 
-## <a name="menu-positions-that-are-not-recommended"></a>Posiciones de menú no recomendadas
-Hemos realizado una investigación de usuario con distintos diseños y ubicaciones de menús; **no se recomiendan** las siguientes ubicaciones de menú:
+## <a name="menu-positions-that-arent-recommended"></a>Posiciones de menú que no se recomiendan
 
+Hemos realizado una investigación de usuario con distintos diseños y ubicaciones de menús; **no se recomiendan** las siguientes ubicaciones de menú:
 
 :::row:::
     :::column:::
         ![Anterior ARM](images/AboveArm.gif)<br>
         **Por encima del brazo**<br>
         1-difícil de mantener un buen seguimiento de la mano<br>
-        2-causa fatiga del usuario debido a una posición no natural
+        2-causa la fatiga del usuario debido a una posición no natural
     :::column-end:::
     :::column:::
         ![Los dedos anteriores](images/AboveFingers.gif)<br>
         **Los dedos anteriores**<br>
-        la fatiga de 1 mano debido a la falta de mano durante mucho tiempo<br>
+        la fatiga de un lado a otro debido a la falta de mano durante mucho tiempo<br>
         2-problemas de seguimiento en el índice y los dedos del centro
     :::column-end:::
 :::row-end:::
@@ -141,14 +138,14 @@ Hemos realizado una investigación de usuario con distintos diseños y ubicacion
     :::column:::
         ![Por encima del centro Palm](images/handCenter.gif)<br>
         **Anterior: Palm del centro**<br>
-        1-problemas de seguimiento debidos a manos superpuestas<br>
-        fatiga de 2 a mano debido a la conservación de las manos durante mucho tiempo para interactuar con los menús
+        1-problemas de seguimiento debido a las manos superpuestas<br>
+        fatiga de 2 a mano debido a la retención de manos durante mucho tiempo para interactuar con los menús
     :::column-end:::
     :::column:::
         ![Primer dedo ](images/TopFingerTip.gif) **principal**<br>
         1-problemas de seguimiento de la mano<br>
         la fatiga de 2 manos desde la mano por encima de la postura normal<br>
-        3-problemas al presionar botones con otros dedos por accidente debido a un espacio limitado entre los dedos
+        3-problemas al presionar botones con otros dedos por accidente debido al espacio limitado entre los dedos
     :::column-end:::
 :::row-end:::
 
@@ -170,6 +167,7 @@ Hemos realizado una investigación de usuario con distintos diseños y ubicacion
 ---
 
 ## <a name="hand-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Menú de la mano en MRTK (kit de herramientas de realidad mixta) para Unity
+
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona scripts y escenas de ejemplo para el menú de la mano. El script de Solver de HandConstraintPalmUp le permite adjuntar cualquier objeto a las manos con varias opciones configurables. Los ejemplos de los menús de MRTK incluyen opciones útiles como el requisito plano de Palm y fijamente para evitar la activación falsa.
 
 * [Documentación del menú de la mano](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_HandMenu.html)
@@ -181,7 +179,6 @@ Puede probar ejemplos de menú de la mano en HoloLens 2 con la aplicación Hub d
 <br>
 
 ---
-
 
 ## <a name="see-also"></a>Consulte también
 

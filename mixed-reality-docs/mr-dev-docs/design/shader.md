@@ -1,26 +1,26 @@
 ---
 title: Sombreador
-description: El sombreador estándar de MRTK proporciona varios tipos de efectos visuales que se pueden usar con hologramas.
+description: El sombreador estándar del kit de herramientas de realidad mixta proporciona varios tipos de efectos visuales que se pueden usar con hologramas.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, sombreador, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, efectos visuales
-ms.openlocfilehash: ced2d62f9304a8e6238febb8c485449f2e10b135
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 08701fb48d633f7de75b74b5e44655c3a01fade8
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703351"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97848241"
 ---
 # <a name="shader"></a>Sombreador
 
 ![Sombreador](images/UX_Hero_StandardShader.jpg)
 
-Dado que los objetos holográficas se mezclan con los físicos en el entorno real, es importante proporcionar indicaciones visuales al usuario. El sombreador estándar de MRTK proporciona varios tipos de efectos visuales que se pueden usar con hologramas. El sistema de sombreado estándar de MRTK emplea un sombreador único y flexible que puede lograr objetos visuales similares al sombreador estándar de Unity, implementa [principios del sistema de diseño fluida](https://www.microsoft.com/design/fluent/#/)y sigue teniendo el rendimiento de los dispositivos de realidad mixta.
+Dado que los objetos holográficas se mezclan con los físicos en el entorno real, es importante proporcionar indicaciones visuales al usuario. El sombreador estándar del kit de herramientas de realidad mixta proporciona varios tipos de efectos visuales para su uso con hologramas. El sistema de sombreado usa un único sombreador flexible para lograr objetos visuales similares al sombreador estándar de Unity. El sombreador implementa [principios del sistema de diseño fluida](https://www.microsoft.com/design/fluent/#/) y sigue teniendo un rendimiento en dispositivos de realidad mixta.
 <br>
 
-## <a name="examples-of-visual-effects-using-mrtk-standard-shader"></a>Ejemplos de efectos visuales con el sombreador estándar de MRTK 
+## <a name="examples-of-visual-effects-using-mrtk-mixed-reality-toolkit-standard-shader"></a>Ejemplos de efectos visuales con el sombreador estándar de MRTK (kit de herramientas de realidad mixta) 
 :::row:::
     :::column:::
        ![Mover](images/UX_Button_Affordance_ProximityLight.jpg)<br>
@@ -36,10 +36,9 @@ Dado que los objetos holográficas se mezclan con los físicos en el entorno rea
 
 ---
 
-## <a name="mrtk-standard-shader-in-mrtk-mixed-reality-toolkit-for-unity"></a>Sombreador estándar de MRTK en MRTK (kit de herramientas de realidad mixta) para Unity
+## <a name="standard-shader-in-mrtk-for-unity"></a>Sombreador estándar en MRTK para Unity
 
 * [MRTK: sombreador estándar](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html)
-
 
 <br>
 

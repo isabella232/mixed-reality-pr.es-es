@@ -6,17 +6,18 @@ ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, tratamiento de mano, auriculares envolvente, MRTK, manos, ayuda a manos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: d925f28b1d34b5a157e89fc0ea56a7b28fffbe8f
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: e46704a1cd2e93fc1764528c408c01d117444c34
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702351"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847957"
 ---
 # <a name="hand-coach"></a>Asesor manual
+
 ![Ejemplo: autocar manual](images/HandCoach/MRTK_handCoach.jpg)<br>
 
-El autocar de mano es una práctica con modelo 3D que se desencadena cuando el sistema no detecta las manos del usuario. Esto se implementa como un componente de "enseñanza" que ayuda a guiar al usuario cuando no se ha impartido el gesto. Si los usuarios no han realizado el gesto especificado durante un período, las manos se repetirán con un retraso. El autocar manual se puede usar para representar presionar un botón o recoger un holograma.  
+Los desencadenadores de manos se activan en 3D con modelo cuando el sistema no detecta las manos del usuario. Esta característica es un componente de "enseñanza" que ayuda a guiar al usuario cuando no se ha enseñado el gesto. Si los usuarios no han realizado el gesto especificado durante un período, las manos se repetirán con un retraso. El autocar manual se puede usar para representar presionar un botón o recoger un holograma.  
 
 ## <a name="hand-coach-provided"></a>Autocar proporcionado
 
@@ -62,11 +63,11 @@ El modelo de interacción actual representa una gran variedad de controles de ge
 
 ## <a name="design-concepts"></a>Conceptos de diseño
 
-En el caso de Hololens2, diseñamos interacciones de mano basadas en instinctual y gestos de mano naturales. Creemos que son intuitivos para la mayoría de los usuarios y, por lo tanto, no crean momentos de aprendizaje de gestos dedicados. En su lugar, creamos el autocar de mano para ayudar a los usuarios que se bloquean o que no están familiarizados con la interacción con los hologramas. Obtenga información sobre estos gestos. Sin un momento de aprendizaje, pensamos que mostrar a los usuarios cómo realizar una acción mediante la demostración sería la mejor opción. En nuestros estudios, encontramos que los usuarios podían averiguar el gesto pero necesitaba un poco de orientación. Si se detecta que un usuario no interactúa con un objeto durante un período, se desencadenaría un autocar de mano que demuestra la colocación correcta de la mano y el dedo. 
+En el caso de Hololens2, diseñamos interacciones de mano basadas en instinctual y gestos de mano naturales. Creemos que son intuitivos para la mayoría de los usuarios, por lo que no creamos momentos de aprendizaje de gestos dedicados. En su lugar, creamos el autocar de mano para ayudar a los usuarios a obtener información sobre estos gestos si se bloquean o no están familiarizados con las interacciones con los hologramas. Sin un momento de aprendizaje, pensamos que mostrar a los usuarios cómo realizar una acción mediante la demostración sería la mejor opción. Encontramos que los usuarios podían averiguar el gesto pero necesitaba un poco de orientación. Si se detecta que un usuario no interactúa con un objeto durante un período, se desencadenaría un autocar de mano que demuestra la colocación correcta de la mano y el dedo. 
 
 ### <a name="intuitive"></a>Intuitivo
 
-Al animar las manos, debe ser obvio y no debe causar ninguna confusión. La animación de las manos es una representación del gesto que está intentando llevar al usuario a entender su finalidad. 
+Al animar las manos, debe ser obvio y no debe causar ninguna confusión. La animación de mano es una representación del gesto que está intentando preguntar al usuario. 
 
 Por ejemplo, si desea que un usuario presione un botón, se desencadenaría una mano al presionar un botón.
 
@@ -75,7 +76,7 @@ Por ejemplo, si desea que un usuario presione un botón, se desencadenaría una 
 
 ### <a name="hand-scale"></a>Escala de mano
 
-Se han probado varios tamaños de mano con los menús de la interfaz de usuario y se ha dado la sensación de que, si las manos eran verdaderas para el tamaño, se dio una menacing pero, si fueran demasiado pequeños, era difícil ver y entender el gesto. 
+Se han probado varios tamaños de mano con los menús de la interfaz de usuario y se ha dado la sensación de que, si las manos eran verdaderas para el tamaño, se dio una menacing. Si fueran demasiado pequeños, era difícil ver y entender el gesto. 
 
 **Voz sobre y manos**
 
@@ -85,7 +86,7 @@ No se espera que los usuarios puedan escuchar un conjunto de instrucciones a tra
 ## <a name="can-i-create-my-own"></a>¿Puedo crear mis propios?
 
 Sí. Le recomendamos que cree su propio gesto único para su juego y contribuya de nuevo a la comunidad.
-Hemos proporcionado un archivo Maya de una mano RIGGED que se puede usar para la aplicación que se puede descargar aquí: <a href="files/HandCoach_MRTK.zip"> descargar HandCoach_MRTK.zip </a>
+Hemos proporcionado un archivo Maya de una mano RIGGED que se puede usar para la aplicación, que se puede descargar aquí: <a href="files/HandCoach_MRTK.zip"> descargar HandCoach_MRTK.zip </a>
 
 ![Ejemplo de manos animadas en Maya](images/HandCoach/MayaSelect_Gif.gif)<br>
 *Ejemplo de Poking de mano animada un cuadro en Maya*
@@ -93,9 +94,9 @@ Hemos proporcionado un archivo Maya de una mano RIGGED que se puede usar para la
 
 **Herramienta de creación recomendada**
 
-Entre los artistas 3D, muchos optan por usar [Maya de Autodesk, que es capaz de usar HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) para transformar el modo en que se crean los recursos. El archivo de manos proporcionado es un archivo binario Maya, por lo que se recomienda usar Maya para animar y exportar las manos. Si prefiere usar otro programa 3D, aquí se muestra un <b>. FBX</b>: <a href="files/HandCoachMRTK_FBX.zip"> Descargue HandCoachMRTK_FBX.zip </a> para crear su propia configuración del controlador. 
+Entre los artistas 3D, muchos deciden usar [Maya de Autodesk, que puede usar HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) para transformar el modo en que se crean los recursos. El archivo de manos proporcionado es un archivo binario Maya, por lo que se recomienda usar Maya para animar y exportar las manos. Si prefiere usar otro programa 3D, aquí se muestra un <b>. FBX</b>: <a href="files/HandCoachMRTK_FBX.zip"> Descargue HandCoachMRTK_FBX.zip </a> para crear su propia configuración del controlador. 
 
-Si se usa el archivo de la mano que se va a descargar, se recomienda reducir el tamaño de las manos en Unity a 0,6.
+Si se usa el archivo de la unidad Maya descargable que se proporciona, se recomienda reducir verticalmente las manos en Unity en 0,6.
 
 ![Ejemplo: plataforma de autocar manual en Maya](images/HandCoach/MayaExample.png)<br>
 *Manos de RIGGED*
@@ -105,8 +106,8 @@ Si se usa el archivo de la mano que se va a descargar, se recomienda reducir el 
 *   El archivo de dos manos está disponible en formato de formato ASCII Maya
 *    La mano derecha e izquierda está disponible en formato binario de Maya
 *   Establezca el archivo Maya en 24 FPS
-*   Dentro del archivo, hay una mano izquierda y derecha que se puede usar para los gestos de dos manos o de una sola mano. La mano derecha solo será visible de forma predeterminada.
-*   Se recomienda dejar un búfer de aproximadamente 10 fotogramas al principio y al final de los fundidos
+*   Dentro del archivo, hay una mano izquierda y derecha, que se puede usar para los gestos de dos manos o de una sola mano. La mano derecha solo será visible de forma predeterminada.
+*   Se sugiere dejar un búfer de aproximadamente 10 fotogramas al principio y al final de los fundidos
 *   Si se anima un objeto con un destino especificado, su procedimiento recomendado es animar a un cuadro predeterminado o a un valor null.
 *   Si la mano está animando un objeto físico como un cuadro, el procedimiento recomendado es no animar la traducción en Maya pero esperar a animarla en Unity o en el código.
 *   La animación visible debe ser de 1,5 segundos para que se transmita información significativa
@@ -137,7 +138,7 @@ Una vez que esté satisfecho con la animación
      ![Ejemplo: Ubicación del menú opciones de exportación](images/HandCoach/FBXSelection.png)<br>
 
 
- Al exportar como FBX y incorporarse a Unity, escale las manos hacia abajo hasta 0,6. Encontramos que este era el equilibrio perfecto para mostrar las manos. 
+ Al exportar como FBX y a Unity, escale las manos a 0,6. Encontramos que este era el equilibrio perfecto para mostrar las manos. 
 
 ![Ejemplo: configuración de Unity](images/HandCoach/HandHintScale.png)<br>
 *Se encontró la configuración de Unity para HandCoach_R recurso prefabricado en MRTK*
@@ -146,21 +147,23 @@ Una vez que esté satisfecho con la animación
 ## <a name="implementing-hands-into-your-unity-project"></a>Implementación de manos en el proyecto de Unity
 
 ### <a name="best-practices"></a>Procedimientos recomendados
-*    Se recomienda reducir verticalmente las manos en Unity en 0,6
-*   Las manos se deben reproducir dos veces y, si no se completan, se repiten continuamente hasta que se completa el gesto. Las manos deben repetirse dos veces para asegurarse de que el usuario tiene tiempo para registrarse y ver el gesto. Las manos deben intensificar y desplazarse entre bucles. 
+
+* Se recomienda reducir verticalmente las manos en Unity en 0,6
+* Las manos se deben reproducir dos veces y, si no se completan, se repiten continuamente hasta que se completa el gesto. Las manos deben repetirse dos veces para asegurarse de que el usuario tiene tiempo para registrarse y ver el gesto. Las manos deben intensificar y desplazarse entre bucles. 
  *  Si las manos de los usuarios son visibles para las cámaras HL2, pero los usuarios no realizan la interacción necesaria, las manos aparecerán después de 10 segundos.
 *   Si las manos del usuario no son visibles para las cámaras de HL2, las manos aparecerán después de 5 segundos.  
 *   Si se realiza un seguimiento de las manos del usuario mediante las cámaras HL2 en el medio de la animación, la animación se completará y desaparecerá.
-*   Si incluye la voz sobre, se recomienda que se corresponda con el gesto de la mano.
-*   Si ha aprendido las manos al menos una vez, repita solo el gesto si detecta que el usuario está atascado.
+*   Si está incluyendo la voz sobre, se recomienda que se corresponda con el gesto de la mano.
+*   Si ha aprendido las manos al menos una vez, repita el gesto solo si se detecta que el usuario está atascado.
 *   Si las posiciones de dedo/mano específicas son críticas, asegúrese de que los usuarios puedan ver claramente estos matices en la animación. Pruebe angulación las manos para que las partes más importantes estén claramente visibles. 
-* Si observa distorsión en las manos, debe ir a la configuración de calidad de Unity para aumentar la cantidad de huesos. 
+* Si observa distorsión en las manos, debe ir a la configuración de calidad de Unity para aumentar el número de huesos. 
  Vaya a la > Editar configuración del proyecto de Unity > calidad > otros pesos > Blend. Asegúrese de que se seleccionan "4 huesos" para ver uniones suaves. 
 
    ![Ejemplo: ventana de configuración del proyecto](images/HandCoach/ProjectSettings.png)<br>
 
 
 ### <a name="what-to-avoid"></a>Qué evitar
+
 * Escalar las manos demasiado grandes
 * colocar las manos demasiado cerca del usuario
 * Las manos solo deben impartirse una vez. La enseñanza en exceso puede causar confusión y desenredado
@@ -171,6 +174,7 @@ Una vez que esté satisfecho con la animación
         *   Escena establecida en UWP: puede encontrar instrucciones en el [proyecto de configuración de Unity](../develop/unity/Configure-Unity-Project.md) para Windows Mixed Reality.
 
 ## <a name="see-also"></a>Consulte también
+
 * [Interacción: aspectos fundamentales del](interaction-fundamentals.md)
 * [Proceso de creación de recursos](asset-creation-process.md)
 * [Gestos](../gestures.md)

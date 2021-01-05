@@ -6,16 +6,16 @@ ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Realidad mixta, gestos, interacción, diseño, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, floración
-ms.openlocfilehash: 1994b38341dfdb2ef1cdb326cf7747c0af5f9c34
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 9df8d54dcf63c13dedabdbf55300b3516a2c9bf1
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703271"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97848162"
 ---
 # <a name="start-gesture"></a>Movimiento de inicio
 
-El gesto de inicio es un gesto de mano que se usa para invocar el menú Inicio. Es el equivalente de presionar la tecla Windows en el teclado, el botón Xbox en un controlador Xbox o el botón Windows en el controlador de movimiento de auriculares envolvente. Es importante comprender qué gestos están reservados para el sistema en cada dispositivo de realidad mixta para evitar conflictos al diseñar las interacciones.
+El gesto de inicio es un gesto de mano que se usa para invocar el menú Inicio. Es el equivalente de presionar la tecla Windows en los teclados, el botón Xbox en los controladores Xbox o el botón Windows en los controladores de movimiento de auriculares inmersivo. Preste especial atención a los gestos del sistema reservados en cada dispositivo de realidad mixta para evitar conflictos al diseñar interacciones.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -53,7 +53,8 @@ El gesto de inicio es un gesto de mano que se usa para invocar el menú Inicio. 
 </table>
 
 ## <a name="bloom"></a>Eclosión
-Para abrir el menú Inicio en HoloLens (1ª generación), hemos diseñado "floración", que es un gesto simbólico que imita el Blossom de la flor. Es distintivo para la interacción con Surefooted, fácil de realizar y rápida recuperación. Para llevar a cabo el gesto de floración en HoloLens (1ª generación), mantenga su mano con su mano y cerca de la mano y, a continuación, abra la mano mediante la distribución de los dedos.
+
+Hemos diseñado "floración" para que aparezca el menú Inicio en HoloLens (1ª generación), que es un gesto simbólico que imita un Blossom de flores. Es distintivo para asegurar la interacción, es fácil de usar y rápida para la recuperación. Para usar el gesto, mantenga su mano con su bolsillo hacia arriba y a la mano y, a continuación, abra la mano mediante la distribución de los dedos.
 
 :::row:::
     :::column:::
@@ -71,7 +72,8 @@ Para abrir el menú Inicio en HoloLens (1ª generación), hemos diseñado "flora
 ---
 
 ## <a name="start-gesture"></a>Movimiento de inicio
-En HoloLens 2, reemplazamos el gesto de floración con un botón de muñeca virtual que permite más interacciones de instinctual que no requieren ninguna enseñanza adicional. Al mostrar a los usuarios el botón de la muñeca, pueden ponerse en contacto de forma intuitiva y presionarlo con la mano.
+
+En HoloLens 2, reemplazamos el gesto de floración por un botón de muñeca virtual, que es más instinctual para los usuarios. Al mostrar a los usuarios el botón de la muñeca, pueden ponerse en contacto de forma intuitiva y presionarlo con la mano.
 
 :::row:::
     :::column:::
@@ -88,7 +90,6 @@ En HoloLens 2, reemplazamos el gesto de floración con un botón de muñeca virt
 
 ---
 
-
 ## <a name="one-handed-start-gesture"></a>Gesto de inicio con una sola mano
 
 > [!IMPORTANT]
@@ -97,7 +98,7 @@ En HoloLens 2, reemplazamos el gesto de floración con un botón de muñeca virt
 > 1. Debe actualizar a la actualización de noviembre de 2019 (compilación 18363,1039) o posterior.
 > 1. Los ojos deben calibrarse en el dispositivo para que el seguimiento ocular funcione correctamente. Si no ve puntos en órbita alrededor del icono de inicio al mirarlo, los ojos no se calibrarán en el dispositivo.
 
-También puede realizar el gesto de inicio con una sola mano. Para ello, mantenga su mano con la palma y mire el **icono de inicio** en su muñeca interna. **Mientras mantiene el ojo del icono**, acerque el dedo y el dedo del índice.<br>
+También puede usar el gesto de inicio con solo una mano. Manténgase al alcance de su mano con la mano y mire el **icono de inicio** en su muñeca interna. **Mientras mantiene el ojo del icono**, acerque el dedo y el dedo del índice.<br>
 :::row:::
     :::column:::
         ![Botón de pulsera listo](images/wrist-button-ready.png)<br>

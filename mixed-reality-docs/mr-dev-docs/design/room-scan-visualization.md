@@ -1,28 +1,28 @@
 ---
 title: Visualización de la exploración de la sala
-description: Las aplicaciones que requieren datos de asignación espacial se basan en el dispositivo para recopilar automáticamente estos datos a lo largo del tiempo y entre sesiones a medida que el usuario explora su entorno con el dispositivo activo.
+description: Las aplicaciones que requieren asignación espacial usan el dispositivo para recopilar datos a lo largo del tiempo y entre sesiones.
 author: mattzmsft
 ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, patrones de aplicaciones, diseño, HoloLens, exploración de salón, asignación espacial, malla, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens
-ms.openlocfilehash: f912ddcff5ef1d14468cec1e63c8153ae6460476
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: f4ec072c8fde8d3e7e390bd837116a8262bac38b
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703361"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97848247"
 ---
 # <a name="room-scan-visualization"></a>Visualización de la exploración de la sala
 
-Las aplicaciones que requieren datos de asignación espacial se basan en el dispositivo para recopilar automáticamente estos datos a lo largo del tiempo y entre sesiones a medida que el usuario explora su entorno con el dispositivo activo. La integridad y la calidad de estos datos dependen de una serie de factores, entre los que se incluye la cantidad de exploración que ha realizado el usuario, cuánto tiempo ha transcurrido desde la exploración y si los objetos como el mobiliario y las puertas se han trasladado desde que el dispositivo examinó la zona.
+Las aplicaciones que requieren asignación espacial dependen del dispositivo para recopilar datos a lo largo del tiempo y entre sesiones. La integridad y la calidad de los datos de asignación dependen de muchos factores, incluida la cantidad de exploración que ha realizado el usuario, cuánto tiempo ha transcurrido desde la exploración y si los objetos como el mobiliario y las puertas se han trasladado desde que el dispositivo examinó la zona.
 
 Para garantizar datos de asignación espacial útiles, los desarrolladores de aplicaciones tienen varias opciones:
 * Confíe en lo que ya se ha recopilado. Estos datos pueden estar incompletos inicialmente.
 * Pida al usuario que use el gesto de floración para llegar a la Página principal de Windows Mixed Reality y, a continuación, explore el área que desean usar para la experiencia. Pueden utilizar la pulsación aérea para confirmar que el dispositivo conoce todo el área necesaria.
 * Cree una experiencia de exploración personalizada en su propia aplicación.
 
-Tenga en cuenta que en todos estos casos los datos reales recopilados durante la exploración se almacenan en el sistema y la aplicación no necesita hacerlo.
+En todos estos casos, el sistema almacena los datos reales recopilados durante la exploración y la aplicación no necesita hacerlo.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -48,31 +48,31 @@ Tenga en cuenta que en todos estos casos los datos reales recopilados durante la
 
 ## <a name="building-a-custom-scanning-experience"></a>Generar una experiencia de exploración personalizada
 
-Las aplicaciones pueden decidir analizar los datos de asignación espacial al principio de la experiencia para juzgar si desean que el usuario realice pasos adicionales para mejorar su integridad y calidad. Si el análisis indica que se debe mejorar la calidad, los desarrolladores deben proporcionar una visualización de superposición en todo el mundo para indicar:
+Las aplicaciones pueden analizar los datos de asignación espacial al principio de la experiencia para juzgar si desean que el usuario realice pasos adicionales para mejorar su integridad y calidad. Si el análisis indica que se debe mejorar la calidad, los desarrolladores deben proporcionar una visualización de superposición en todo el mundo para indicar:
 * La cantidad del volumen total de los usuarios en proximidad debe formar parte de la experiencia
 * Dónde debe ir el usuario para mejorar los datos
 
-Los usuarios no saben lo que realiza un análisis "correcto". Es necesario que se muestren o se les indique lo que debe buscar si se les pide que evalúen un análisis, la distancia de las paredes reales, etc. El desarrollador debe implementar un bucle de comentarios que incluya la actualización de los datos de asignación espacial durante la fase de exploración o exploración.
+Los usuarios no saben lo que realiza un análisis "correcto". Es necesario que se muestren o se les indique lo que debe buscar si se les pide que evalúen un examen: la curvatura, la distancia de las paredes reales, etc. El desarrollador debe implementar un bucle de comentarios que incluya la actualización de los datos de asignación espacial durante la fase de exploración o exploración.
 
-En muchos casos, puede ser mejor indicar al usuario lo que necesita hacer (por ejemplo, mirar el límite superior, mirar detrás del mobiliario) para obtener la calidad de examen necesaria.
+En muchos casos, es mejor indicar al usuario lo que necesita hacer para obtener la calidad de examen necesaria. Por ejemplo, mire el límite superior, mire detrás del mobiliario, etc.
 
 ## <a name="cached-versus-continuous-spatial-mapping"></a>Asignación espacial en caché y continua
 
 Los datos de asignación espacial son el peso más pesado que pueden consumir las aplicaciones de origen de datos. Para evitar problemas de rendimiento, como fotogramas quitados o intermitencias, el consumo de estos datos debe realizarse con cuidado.
 
-El análisis activo durante una experiencia puede ser beneficioso o perjudicial, y el desarrollador deberá decidir qué método usar en función de la experiencia.
+El análisis activo durante una experiencia puede ser beneficioso y perjudicial, por lo que deberá decidir qué método usar en función de la experiencia.
 
 ### <a name="cached-spatial-mapping"></a>Asignación espacial almacenada en caché
 
-En el caso de la asignación espacial almacenada en caché, la aplicación normalmente toma una instantánea de los datos de asignación espacial y usa esta instantánea para la duración de la experiencia.
+Si hay datos de asignación espacial en caché, la aplicación normalmente toma una instantánea de los datos de asignación espacial y usa esta instantánea durante la experiencia.
 
 **Beneficios**
-* Reducción de la sobrecarga en el sistema mientras se ejecuta la experiencia, lo que supone una mejora considerable en el rendimiento de la CPU, el térmico y la potencia.
+* Reducción de la sobrecarga en el sistema mientras se ejecuta la experiencia, lo que supone una mejora considerable en el rendimiento de la CPU, la temperatura y el consumo de energía.
 * Una implementación más sencilla de la experiencia principal, ya que no se ve interrumpida por los cambios en los datos espaciales.
 * Un único costo de tiempo en cualquier procesamiento posterior de los datos espaciales para la física, los gráficos y otros propósitos.
 
 **Desventajas**
-* El movimiento de objetos o personas reales no se refleja en los datos almacenados en caché. Por ejemplo, es posible que la aplicación considere una puerta abierta cuando realmente está cerrada.
+* El movimiento de objetos o personas reales no se refleja en los datos almacenados en caché. por ejemplo, la aplicación puede considerar una puerta abierta cuando se cierra ahora.
 * Posiblemente más memoria de la aplicación para mantener la versión en caché de los datos.
 
 Un buen caso para este método es un entorno controlado o una tabla principal del juego.
@@ -87,12 +87,13 @@ Algunas aplicaciones pueden basarse en el análisis continuo para actualizar los
 
 **Desventajas**
 * Mayor complejidad en la implementación de la experiencia principal.
-* Sobrecarga potencial del procesamiento adicional de gráficos o física, ya que estos sistemas deben ingerir los cambios de forma incremental.
+* Sobrecarga potencial del procesamiento físico y gráfico adicional, ya que estos sistemas deben ingerir los cambios de forma incremental.
 * Mayor potencia, térmico y impacto de la CPU.
 
-Un buen caso para este método es aquél en el que se espera que los hologramas interactúen con los objetos de movimiento, por ejemplo, un coche holográfica que las unidades del piso quieran golpear correctamente en una puerta en función de si está abierto o cerrado.
+Un buen caso para este método es aquél en el que se espera que los hologramas interactúen con los objetos de movimiento, por ejemplo, un coche holográfica que las unidades del piso quieran golpear en una puerta, en función de si están abiertos o cerrados.
 
 ## <a name="see-also"></a>Consulta también
+
 * [Asignación espacial](spatial-mapping.md)
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Diseño de sonido espacial](spatial-sound-design.md)

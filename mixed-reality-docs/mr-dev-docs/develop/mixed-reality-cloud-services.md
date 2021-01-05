@@ -8,12 +8,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, cloud services, Azure, remote rendering, spatial anchors, cognitive services, cognition, unity, machine learning, speech translation, computer vision, Microsoft Graph
-ms.openlocfilehash: f69ec9672898caf01092d805e5c83df48a14a65e
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: e660556810cdea86321b7826217268e6c8d0850a
+ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925929"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865410"
 ---
 # <a name="azure-mixed-reality-cloud-services-overview"></a>Introducción a los servicios en la nube de realidad mixta de Azure
 
@@ -28,7 +28,7 @@ Los servicios en la nube de realidad mixta, como **Azure Remote Rendering** y **
 ### <a name="azure-remote-rendering"></a>Azure Remote Rendering
 Azure Remote Rendering o ARR es un servicio que le permite representar modelos 3D muy complejos en tiempo real y hacer streaming de ellos en un dispositivo. Actualmente, ARR se encuentra en versión preliminar y se puede agregar a los proyectos de Unity o C++ nativo que tienen HoloLens 2 o el equipo de escritorio de Windows como destino.
 
-![ Imagen de Remote Rendering](../design/images/RemoteRendering.jpg)
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Intro-to-Azure-Mixed-Reality-Services-Azure-Remote-Rendering/player]
 
 ARR es un componente esencial de cualquier aplicación de realidad mixta que se ejecuta en un dispositivo sin vincular, ya que tiene menos potencia de representación de cálculo. Realice la siguiente comparación de modelos de motor en paralelo como ejemplo. el modelo de alta fidelidad de la izquierda tiene más de 18 millones triángulos, mientras que el modelo reducido de la derecha tiene solo unos 200 000. En aquellos escenarios en los que cada detalle es importante, la administración de plantas industrial, la revisión de diseños de los recursos, como los motores de camiones, la planificación de cirugías preoperatorias, etc., la visualización 3D aporta ese detalle al ciclo de vida. Permite a los diseñadores, ingenieros, médicos y estudiantes entender mejor la información compleja y adoptar la medida correcta. Sin embargo, esta simplificación puede dar lugar a una pérdida de detalles importantes que se necesitan en las decisiones clave sobre la empresa y el diseño.
 

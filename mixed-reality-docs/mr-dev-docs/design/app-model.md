@@ -6,43 +6,43 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: UWP, modelo de aplicación, ciclo de vida, suspensión, reanudación, icono, vistas, contratos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 332556a5118f0c69a83654d345119995e4262cb5
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 00d9d5329e4c93030692d727c645de1eefbdb72d
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703111"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97848109"
 ---
 # <a name="app-model"></a>Modelo de aplicación
 
-Windows Mixed Reality usa el modelo de aplicación proporcionado por el [plataforma universal de Windows](https://docs.microsoft.com/windows/uwp/get-started/) (UWP), un modelo y un entorno para las aplicaciones modernas de Windows. El modelo de aplicación de UWP define el modo en que las aplicaciones se instalan, actualizan, controlan versiones y se quitan de forma segura y completa. Rige el ciclo de vida de la aplicación: cómo se ejecutan las aplicaciones, la suspensión y la finalización, y cómo pueden preservar el estado. También se describe la integración y la interacción con el sistema operativo, los archivos y otras aplicaciones.
+Windows Mixed Reality usa el modelo de aplicación proporcionado por el [plataforma universal de Windows](https://docs.microsoft.com/windows/uwp/get-started/) (UWP), que es un modelo y un entorno para las aplicaciones modernas de Windows. El modelo de aplicación de UWP define el modo en que las aplicaciones se instalan, actualizan, controlan versiones y se quitan por completo. También rige el ciclo de vida de la aplicación: cómo las aplicaciones se ejecutan, suspenden y detienen, y cómo pueden conservar el estado. Por último, el modelo de aplicación cubre la integración y la interacción con el sistema operativo, los archivos y otras aplicaciones.
 
 ![aplicaciones 2D organizadas en la Página principal de Windows Mixed Reality en un área de desayuno](images/20160112-055908-hololens-500px.jpg)<br>
 *Aplicaciones con una vista 2D organizada en la Página principal de Windows Mixed Reality*
 
 ## <a name="app-lifecycle"></a>Ciclo de vida de la aplicación
 
-El ciclo de vida de una aplicación de realidad mixta incluye conceptos de aplicaciones estándar, como la selección de ubicación, Inicio, terminación y eliminación.
+El ciclo de vida de una aplicación de realidad mixta implica conceptos de aplicaciones estándar, como la selección de ubicación, el inicio, la terminación y la eliminación.
 
 ### <a name="placement-is-launch"></a>La selección de ubicación es Launch
 
-Todas las aplicaciones se inician en la realidad mixta colocando un icono de la aplicación (solo un [icono secundario de Windows](https://docs.microsoft.com/uwp/api/Windows.UI.StartScreen.SecondaryTile)) en la [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md). Estos iconos de la aplicación, en la ubicación, comenzarán a ejecutar la aplicación. Estos iconos de la aplicación se conservan y permanecen en la ubicación donde se colocan, actuando como iniciadores en cualquier momento que quiera volver a la aplicación.
+Todas las aplicaciones se inician en la realidad mixta colocando un icono de la aplicación (solo un [icono secundario de Windows](https://docs.microsoft.com/uwp/api/Windows.UI.StartScreen.SecondaryTile)) en la [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md). Estos iconos de la aplicación, en la ubicación, comenzarán a ejecutar la aplicación. Estos iconos de la aplicación se conservan y permanecen en su ubicación colocada, actuando como iniciadores en cualquier momento que quiera volver a la aplicación.
 
 ![La selección de ubicación coloca un icono secundario en el mundo](images/slide1-600px.png)<br>
 *La selección de ubicación coloca un icono secundario en el mundo*
 
-En cuanto se complete la selección de ubicación (a menos que la ubicación la haya iniciado una [aplicación para](app-model.md#protocols) el inicio de la aplicación), la aplicación comenzará a iniciarse. Windows Mixed Reality puede ejecutar un número limitado de aplicaciones al mismo tiempo. En cuanto se coloca e inicia una aplicación, se pueden suspender otras aplicaciones activas, lo que deja una captura de pantalla del último estado de la aplicación en el icono de la aplicación donde se colocó. Consulte el ciclo de vida de las [aplicaciones para UWP de Windows 10](https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle) para más información sobre el control de reanudación y otros eventos del ciclo de vida de aplicaciones.
+En cuanto se complete la selección de ubicación (a menos que la ubicación la haya iniciado una [aplicación para](app-model.md#protocols) el inicio de la aplicación), la aplicación comenzará a iniciarse. Windows Mixed Reality puede ejecutar un número limitado de aplicaciones al mismo tiempo. En cuanto se coloca e inicia una aplicación, otras aplicaciones activas pueden suspenderse. Las aplicaciones suspendidas dejan una captura de pantalla del último estado de la aplicación en el icono de la aplicación donde se colocó. Para obtener más información sobre el control de reanudación y otros eventos del ciclo de vida, consulte ciclo de vida de la [aplicación Windows 10 UWP](https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle).
 
 ![Después de colocar un icono, la aplicación comienza el ](images/slide2-500px.png) ![ Diagrama de estado de ejecución de la aplicación en ejecución, suspendida o no en ejecución.](images/ic576232-500px.png)<br>
 *Izquierda: después de colocar un icono, la aplicación comienza a ejecutarse. Right: Diagrama de estado de la aplicación en ejecución, suspendida o no se está ejecutando.*
 
 ### <a name="remove-is-closeterminate-process"></a>Quitar es el proceso de cierre y terminación
 
-Cuando se quita un icono de aplicación colocada del mundo, se cierran los procesos subyacentes. Esto puede ser útil para garantizar que la aplicación finaliza o reinicia una aplicación problemática.
+Cuando se quita un icono de aplicación colocada del mundo, se cierran los procesos subyacentes. Esto puede ser útil para garantizar que la aplicación se detenga o se reinicie una aplicación problemática.
 
 ### <a name="app-suspensiontermination"></a>Suspensión/terminación de la aplicación
 
-En la [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md), el usuario puede crear varios puntos de entrada para una aplicación. Para ello, inician la aplicación desde el menú Inicio y colocan el icono de la aplicación en el mundo. Cada icono de la aplicación se comporta como un punto de entrada diferente y tiene una instancia de mosaico independiente en el sistema. Una consulta para [SecondaryTile. FindAllAsync](https://docs.microsoft.com/uwp/api/Windows.UI.StartScreen.SecondaryTile#Windows_UI_StartScreen_SecondaryTile_FindAllAsync) producirá un **SecondaryTile** para cada instancia de la aplicación.
+En la [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md), el usuario puede crear varios puntos de entrada para una aplicación iniciando la aplicación desde el menú Inicio y colocando el icono de la aplicación en el mundo. Cada icono de la aplicación se comporta como un punto de entrada diferente y tiene una instancia de mosaico independiente en el sistema. Una consulta para [SecondaryTile. FindAllAsync](https://docs.microsoft.com/uwp/api/Windows.UI.StartScreen.SecondaryTile#Windows_UI_StartScreen_SecondaryTile_FindAllAsync) producirá un **SecondaryTile** para cada instancia de la aplicación.
 
 Cuando se suspende una aplicación para UWP, se toma una captura de pantalla del estado actual.
 
@@ -70,14 +70,14 @@ A veces, la aplicación debe seguir trabajando en segundo plano o reproduciendo 
 
 Cuando se activa la aplicación, puede elegir el tipo de vista que le gustaría mostrar. En el caso de una aplicación de **CoreApplication**, siempre hay una [vista de aplicación](https://docs.microsoft.com/uwp/api/Windows.UI.ViewManagement.ApplicationView) principal y cualquier número de vistas de aplicación adicionales que quiera crear. En el escritorio, puede pensar en una vista de la aplicación como una ventana. Nuestras plantillas de aplicaciones de realidad mixta crean un proyecto de Unity en el que la vista de la aplicación principal es [envolvente](app-views.md). 
 
-La aplicación puede crear una vista de aplicación 2D adicional mediante tecnología como XAML, para usar características de Windows 10 como la compra desde la aplicación. Si la aplicación se inicia como una aplicación para UWP para otros dispositivos de Windows 10, la vista principal es 2D, pero podría "iluminarse" en realidad mixta agregando una vista de aplicación adicional que es envolvente para mostrar una experiencia de forma volumétrica. Imagine que compila una aplicación de visor de fotos en XAML donde el botón de presentación de diapositivas cambió a una vista de aplicación envolvente que voló fotos de la aplicación en todo el mundo y Surfaces.
+La aplicación puede crear una vista de aplicación 2D adicional mediante tecnología como XAML, para usar características de Windows 10 como la compra desde la aplicación. Si la aplicación se inicia como una aplicación para UWP para otros dispositivos de Windows 10, la vista principal es 2D. Sin embargo, se puede "iluminar" en la realidad mixta agregando otra vista de la aplicación que es envolvente para mostrar una experiencia de forma volumétrica. Imagine que compila una aplicación de visor de fotos en XAML donde el botón de presentación de diapositivas cambió a una vista de aplicación envolvente que voló fotos de la aplicación en todo el mundo y Surfaces.
 
 ![La aplicación en ejecución puede tener una vista 2D o una vista envolvente](images/slide3-800px.png)<br>
 *La aplicación en ejecución puede tener una vista 2D o una vista envolvente*
 
 ### <a name="creating-an-immersive-view"></a>Crear una vista envolvente
 
-Las aplicaciones de realidad mixta son las que crean una vista envolvente, que se consigue con el tipo [HolographicSpace](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace) .
+Las aplicaciones de realidad mixta crean una vista envolvente, que se consigue con el tipo [HolographicSpace](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographicspace) .
 
 Una aplicación que es puramente envolvente siempre debe crear una vista envolvente en el inicio, incluso si se inicia desde el escritorio. Las vistas envolventes siempre aparecen en el casco, independientemente de dónde se crearon. Al activar una vista envolvente, se mostrará el portal de realidad mixta y se guiará al usuario para que se ponga en el casco.
 
@@ -90,7 +90,7 @@ Una aplicación que se inicia con una vista 2D en el monitor de escritorio puede
 
 Cualquier cosa que no sea una vista envolvente se representa como una vista 2D en su mundo.
 
-Una aplicación puede tener vistas 2D en el monitor de escritorio y en el casco. Tenga en cuenta que una nueva vista 2D se colocará en el mismo Shell que la vista que la creó, ya sea en el monitor o en el casco. En la actualidad, no es posible que una aplicación o un usuario mueva una vista 2D entre la Página principal de la realidad mixta y el monitor.
+Una aplicación puede tener vistas 2D en el monitor de escritorio y en el casco. Una nueva vista 2D se colocará en el mismo Shell que la vista que la creó, ya sea en el monitor o en el casco. Actualmente, no es posible que una aplicación o un usuario mueva una vista 2D entre la Página principal de la realidad mixta y el monitor.
 
 ![Las aplicaciones que se ejecutan en la vista 2D comparten el espacio del mundo mixto con otras aplicaciones](images/slide5-800px.png)<br>
 *Las aplicaciones que se ejecutan en una vista 2D comparten el espacio con otras aplicaciones*
@@ -145,7 +145,7 @@ El menú Inicio usa el icono pequeño estándar y el icono mediano para los pin 
 
 A medida que crea aplicaciones, tiene acceso a la aplicación enriquecida a los mecanismos de comunicación de aplicaciones disponibles en Windows 10. Muchas de las nuevas API de protocolo y registros de archivos funcionan perfectamente en HoloLens para permitir el inicio y la comunicación de aplicaciones. 
 
-Tenga en cuenta que para los auriculares de escritorio, la aplicación asociada a una extensión de archivo o protocolo determinados puede ser una aplicación de Win32 que solo puede aparecer en el monitor de escritorio o en la pizarra de escritorio.
+En el caso de los auriculares de escritorio, la aplicación asociada a una extensión de archivo o protocolo determinados puede ser una aplicación Win32 que solo puede aparecer en el monitor de escritorio o en la pizarra de escritorio.
 
 ### <a name="protocols"></a>Protocolos
 
@@ -157,13 +157,13 @@ Hay algunos aspectos que se deben tener en cuenta al iniciar otra aplicación:
 
 * Al realizar un inicio modal, como a través de [LaunchUriForResultsAsync](https://docs.microsoft.com/uwp/api/Windows.System.Launcher#Windows_System_Launcher_LaunchUriForResultsAsync_Windows_Foundation_Uri_Windows_System_LauncherOptions_Windows_Foundation_Collections_ValueSet_), la aplicación modal se coloca en la parte superior de la ventana.
 
-* Windows Mixed Reality no puede superponer aplicaciones sobre vistas exclusivas. Para mostrar la aplicación iniciada, Windows vuelve al usuario al mundo para mostrar la aplicación.
+* Windows Mixed Reality no puede superponer aplicaciones encima de vistas exclusivas. Para mostrar la aplicación iniciada, Windows vuelve al usuario al mundo para mostrar la aplicación.
 
 ### <a name="file-pickers"></a>Selectores de archivos
 
 HoloLens admite contratos de [FileOpenPicker](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileOpenPicker) y [FileSavePicker](https://docs.microsoft.com/uwp/api/Windows.Storage.Pickers.FileSavePicker) . Sin embargo, no hay ninguna aplicación preinstalada que cumpla los contratos del selector de archivos. Estas aplicaciones (por ejemplo, OneDrive) se pueden instalar desde el Microsoft Store.
 
-Si tiene más de una aplicación de selector de archivos instalada, no verá ninguna interfaz de usuario de desambiguación para elegir la aplicación que se va a iniciar. en su lugar, se elegirá el primer selector de archivos instalado. Cuando se guarda un archivo, se genera el nombre de archivo, que incluye la marca de tiempo. El usuario no puede cambiarlo.
+Si tiene más de una aplicación de selector de archivos instalada, no verá ninguna interfaz de usuario de desambiguación para elegir la aplicación que se va a iniciar. En su lugar, se elegirá el primer selector de archivos instalado. Cuando se guarda un archivo, se genera el nombre de archivo, que incluye la marca de tiempo. El usuario no puede cambiarlo.
 
 De forma predeterminada, se admiten las siguientes extensiones localmente:
 
@@ -176,7 +176,7 @@ De forma predeterminada, se admiten las siguientes extensiones localmente:
 
 Los contratos de aplicación y los puntos de extensión permiten registrar la aplicación para aprovechar las ventajas de las características más avanzadas del sistema operativo, como el control de una extensión de archivo o el uso de tareas en segundo plano. Esta es una lista de los contratos y puntos de extensión admitidos y no admitidos en HoloLens.
 
-|  Contrato o extensión  |  Se admite? | 
+|  Contrato o extensión  |  ¿Compatible? | 
 |----------|----------|
 | [Proveedor de imágenes de cuenta (extensión)](https://msdn.microsoft.com/library/windows/desktop/hh464906.aspx#account_picture_provider) | No compatible | 
 | [Alarma](https://msdn.microsoft.com/library/windows/desktop/hh464906.aspx#alarm) | No compatible | 
@@ -207,7 +207,7 @@ Los contratos de aplicación y los puntos de extensión permiten registrar la ap
 
 ## <a name="app-file-storage"></a>Almacenamiento de archivos de aplicación
 
-Todo el almacenamiento se realiza a través del [espacio de nombres Windows. Storage](https://docs.microsoft.com/uwp/api/Windows.Storage). Consulte la siguiente documentación para obtener más detalles. HoloLens no admite la sincronización/itinerancia de App Storage.
+Todo el almacenamiento se realiza a través del [espacio de nombres Windows. Storage](https://docs.microsoft.com/uwp/api/Windows.Storage). HoloLens no es compatible con la sincronización/itinerancia de App Storage. Para obtener más información, consulte la documentación siguiente:
 
 * [Archivos, carpetas y bibliotecas](https://docs.microsoft.com/windows/uwp/files/index)
 * [Almacenar y recuperar la configuración y otros datos de aplicación](https://docs.microsoft.com/windows/uwp/design/app-settings/store-and-retrieve-app-data)
@@ -218,7 +218,7 @@ Consulte [KnownFolders](https://docs.microsoft.com/uwp/api/Windows.Storage.Known
 
 <table>
 <tr>
-<th> Propiedad</th><th> Compatible con HoloLens</th><th> Compatible con auriculares inmersivo</th><th> Descripción</th>
+<th> Propiedad</th><th> Compatible con HoloLens</th><th> Compatible con auriculares inmersivo</th><th> Description</th>
 </tr><tr>
 <td><a href="https://docs.microsoft.com/uwp/api/Windows.Storage.KnownFolders#Windows_Storage_KnownFolders_AppCaptures">AppCaptures</a></td><td style="text-align: center;">✔️</td><td style="text-align: center;">✔️</td><td>Obtiene la carpeta de capturas de la aplicación.</td>
 </tr><tr>
@@ -250,9 +250,9 @@ Consulte [KnownFolders](https://docs.microsoft.com/uwp/api/Windows.Storage.Known
 
 ## <a name="app-package"></a>Paquete de aplicaciones
 
-Con Windows 10 ya no tiene como destino un sistema operativo, sino [que dirige su aplicación a una o varias familias de dispositivos](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families). Una familia de dispositivos identifica las API, las características del sistema y los comportamientos que puedes esperar en todos los dispositivos de la familia. También determina el conjunto de dispositivos en los que se puede instalar la aplicación desde el [Microsoft Store](../distribute/submitting-an-app-to-the-microsoft-store.md#specifying-target-device-families).
+Con Windows 10, ya no tiene como destino un sistema operativo, sino [que dirige su aplicación a una o varias familias de dispositivos](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide#device-families). Una familia de dispositivos identifica las API, las características del sistema y los comportamientos que puedes esperar en todos los dispositivos de la familia. También determina el conjunto de dispositivos en los que se puede instalar la aplicación desde el [Microsoft Store](../distribute/submitting-an-app-to-the-microsoft-store.md#specifying-target-device-families).
 
-* Para tener como destino los auriculares de escritorio y HoloLens, destine su aplicación a la familia de dispositivos **Windows. universal** .
+* Para tener como destino los auriculares de escritorio y HoloLens, destine su aplicación a **Windows.** Familia de dispositivos universales.
 * Para dirigirse solo a auriculares de escritorio, dirija su aplicación a la familia de dispositivos **Windows. Desktop** .
 * Para dirigirse solo a HoloLens, dirige la aplicación a la familia de dispositivos **Windows. Holographic** .
 
