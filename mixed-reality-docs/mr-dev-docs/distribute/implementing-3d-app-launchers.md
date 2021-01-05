@@ -6,19 +6,19 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, icono, modelado, iniciador, selector 3D, mosaico, cubo activo, vínculo profundo, secondarytile, mosaico secundario, UWP, auricular de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, XML, cuadro de límite, Unity
-ms.openlocfilehash: 926d0b3bb337517b65986f85f6977b3dd1975735
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 38f0932f20e3660c91b87de7bcb9d66799d9a51a
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703201"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757503"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementación de iniciadores de aplicaciones 3D (aplicaciones para UWP)
 
 > [!NOTE]
 > Esta característica se agregó como parte de la actualización de 2017 Fall Creators Update (RS3) para los auriculares más envolventes y es compatible con HoloLens con la actualización de Windows 10 de abril de 2018. Asegúrese de que la aplicación tiene como destino una versión de la Windows SDK mayor o igual que 10.0.16299 en auriculares inmersivo y 10.0.17125 en HoloLens. Puede encontrar el Windows SDK más reciente [aquí](https://developer.microsoft.com/windows/downloads/windows-10-sdk).
 
-La [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md) es el punto de partida en el que los usuarios se colocan antes de iniciar las aplicaciones. Al crear una aplicación para UWP para Windows Mixed Reality, de forma predeterminada, las aplicaciones se inician como pizarras bidimensionales con el logotipo de su aplicación. Al desarrollar experiencias para Windows Mixed Reality, opcionalmente se puede definir un selector 3D para invalidar el iniciador de 2D predeterminado de la aplicación. En general, los iniciadores 3D se recomiendan para iniciar aplicaciones envolventes que sacan provecho de la Página principal de Windows Mixed Reality, mientras que el selector de 2D predeterminado es preferible cuando la aplicación se activa en su lugar. También puede crear un [vínculo profundo en 3D (secondaryTile)](#3d-deep-links-secondarytiles) como un selector 3D para el contenido de una aplicación de UWP en 2D.
+La [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md) es el punto de partida en el que los usuarios se colocan antes de iniciar las aplicaciones. Al crear una aplicación para UWP para Windows Mixed Reality, de forma predeterminada, las aplicaciones se inician como pizarras bidimensionales con el logotipo de su aplicación. Al desarrollar experiencias para Windows Mixed Reality, opcionalmente se puede definir un selector 3D para invalidar el iniciador de 2D predeterminado de la aplicación. En general, los iniciadores 3D se recomiendan para iniciar aplicaciones envolventes que sacan provecho de la Página principal de Windows Mixed Reality. Se prefiere el selector de 2D predeterminado cuando la aplicación está activada en contexto. También puede crear un [vínculo profundo en 3D (secondaryTile)](#3d-deep-links-secondarytiles) como un selector 3D para el contenido de una aplicación de UWP en 2D.
 
 >[!VIDEO https://www.youtube.com/embed/TxIslHsEXno]
 
@@ -72,7 +72,7 @@ A continuación, especifique "MixedRealityModel" en el icono predeterminado de l
 </Applications>
 ```
 
-Los elementos MixedRealityModel aceptan una ruta de acceso de archivo que apunta a un recurso 3D almacenado en el paquete de la aplicación. Actualmente solo se admiten los modelos 3D que se entregan con el formato de archivo. glb y se crean con las [instrucciones de creación de recursos de Windows Mixed Reality 3D](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) . Los recursos deben almacenarse en el paquete de la aplicación y la animación no se admite actualmente. Si el parámetro "path" se deja en blanco, Windows mostrará la pizarra 2D en lugar del iniciador 3D. **Nota:** el recurso. glb debe estar marcado como "contenido" en la configuración de compilación antes de compilar y ejecutar la aplicación.
+El elemento MixedRealityModel acepta una ruta de acceso de archivo que apunta a un recurso 3D almacenado en el paquete de la aplicación. Actualmente solo se admiten los modelos 3D que se entregan con el formato de archivo. glb y se crean con las [instrucciones de creación de recursos de Windows Mixed Reality 3D](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md) . Los recursos deben almacenarse en el paquete de la aplicación y la animación no se admite actualmente. Si el parámetro "path" se deja en blanco, Windows mostrará la pizarra 2D en lugar del iniciador 3D. **Nota:** el recurso. glb debe estar marcado como "contenido" en la configuración de compilación antes de compilar y ejecutar la aplicación.
 
 
 ![Seleccione el. glb en el explorador de soluciones y use la sección Propiedades para marcarlo como "contenido" en la configuración de compilación.](images/buildsetting-content-300px.png)<br>
@@ -80,9 +80,9 @@ Los elementos MixedRealityModel aceptan una ruta de acceso de archivo que apunta
 
 ### <a name="bounding-box"></a>Rectángulo de selección
 
-Un cuadro de límite se puede usar para agregar opcionalmente una región de búfer adicional alrededor del objeto. El cuadro de límite se especifica utilizando un punto central y extensiones que indican la distancia desde el centro del cuadro de límite a sus bordes a lo largo de cada eje. Las unidades del cuadro de límite se pueden asignar a 1 unidad = 1 metro. Si no se proporciona un cuadro de límite, uno se ajustará automáticamente a la malla del objeto. Si el cuadro de límite proporcionado es menor que el modelo, se cambiará el tamaño para ajustarse a la malla.
+Un cuadro de límite se puede usar para agregar opcionalmente una región de búfer adicional alrededor del objeto. El cuadro de límite se especifica mediante un punto central y extensiones, que indican la distancia desde el centro del cuadro de límite a sus bordes a lo largo de cada eje. Las unidades del cuadro de límite se pueden asignar a 1 unidad = 1 metro. Si no se proporciona un cuadro de límite, uno se ajustará automáticamente a la malla del objeto. Si el cuadro de límite proporcionado es menor que el modelo, se cambiará de tamaño para ajustarse a la malla.
 
-La compatibilidad con el atributo de cuadro de límite incluirá la actualización de RS4 de Windows como una propiedad en el elemento MixedRealityModel. Para definir un cuadro de límite primero en la parte superior del manifiesto de la aplicación, agregue el esquema uap6 e inclúyalo como espacios de nombres que se puedan omitir:
+La compatibilidad con el atributo de cuadro de límite incluirá la actualización de RS4 de Windows como una propiedad en el elemento MixedRealityModel. Para definir un cuadro de límite primero en la parte superior del manifiesto de la aplicación, agregue el esquema uap6 e inclúyalo como espacios de nombres que se van a omitir:
 
 ```xml
 <Package xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" 
@@ -157,7 +157,7 @@ await tile.RequestCreateAsync();
 
 ### <a name="bounding-box"></a>Rectángulo de selección
 
-Un cuadro de límite se puede usar para agregar una región de búfer adicional alrededor del objeto. El cuadro de límite se especifica utilizando un punto central y extensiones que indican la distancia desde el centro del cuadro de límite a sus bordes a lo largo de cada eje. Las unidades del cuadro de límite se pueden asignar a 1 unidad = 1 metro. Si no se proporciona un cuadro de límite, uno se ajustará automáticamente a la malla del objeto. Si el cuadro de límite proporcionado es menor que el modelo, se cambiará el tamaño para ajustarse a la malla.
+Un cuadro de límite se puede usar para agregar una región de búfer adicional alrededor del objeto. El cuadro de límite se especifica mediante un punto central y extensiones, que indican la distancia desde el centro del cuadro de límite a sus bordes a lo largo de cada eje. Las unidades del cuadro de límite se pueden asignar a 1 unidad = 1 metro. Si no se proporciona un cuadro de límite, uno se ajustará automáticamente a la malla del objeto. Si el cuadro de límite proporcionado es menor que el modelo, se cambiará de tamaño para ajustarse a la malla.
 
 ### <a name="activation-behavior"></a>Comportamiento de activación
 
@@ -166,7 +166,7 @@ Un cuadro de límite se puede usar para agregar una región de búfer adicional 
 
 Puede definir el comportamiento de activación de un secondaryTile de 3D para controlar cómo reacciona cuando un usuario lo selecciona. Se puede usar para colocar objetos 3D en la Página principal de la realidad mixta que son meramente informativas o decorativas. Se admiten los siguientes tipos de comportamiento de activación:
 1. Valor predeterminado: cuando un usuario selecciona el secondaryTile 3D, se activa la aplicación
-2. Ninguno: cuando los usuarios seleccionan el secondaryTile 3D, no sucede nada y la aplicación no está activada.
+2. Ninguno: cuando el usuario selecciona el secondaryTile 3D, no sucede nada y la aplicación no está activada.
 
 ### <a name="obtaining-and-updating-an-existing-secondarytile"></a>Obtener y actualizar un "secondaryTile" existente
 
@@ -195,12 +195,13 @@ solo se pueden crear vínculos profundos 3D (secondaryTiles) mientras la vista s
 
 ## <a name="tile-notifications"></a>Notificaciones de icono
 
-Las notificaciones de icono no admiten actualmente el envío de una actualización con un recurso 3D. Esto significa que los desarrolladores no podrán hacer lo siguiente
+Las notificaciones de icono no admiten actualmente el envío de una actualización con un recurso 3D. Esto significa que los desarrolladores no pueden hacer lo siguiente:
+
 * Notificaciones de inserción
 * Sondeo periódico
 * Notificaciones programadas
 
-Para obtener más información sobre los demás iconos y características, y cómo se usan para los mosaicos de 2D, consulte la [documentación de iconos de aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles).
+Para obtener más información sobre las características y los atributos de los iconos y cómo se usan para los mosaicos 2D, consulte la [documentación de los iconos de las aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles).
 
 ## <a name="see-also"></a>Consulte también
 

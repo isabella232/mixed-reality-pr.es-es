@@ -3,29 +3,29 @@ title: Preguntas más frecuentes sobre seguimiento
 description: Seguimiento de la solución de problemas de Windows Mixed Reality que va más allá de nuestra documentación de soporte técnico de consumidor estándar.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, seguimiento
-ms.openlocfilehash: 7a7e6add79af5917749ba241347d6cf719f6ed90
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: 2634b95cf876a5b540710f80d3dd7f9d48b3bad9
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93132099"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725836"
 ---
 # <a name="tracking-faqs"></a>Preguntas más frecuentes sobre seguimiento
 
 ## <a name="my-headset-has-stopped-tracking"></a>El micrófono ha dejado de realizar el seguimiento
 
-Asegúrese de que las luces están encendidas y de que no hay nada que obstruya las cámaras de seguimiento interior de la parte delantera del casco. Si se pierde el seguimiento, puede tardar unos segundos en reanudarse. Si no se reanuda, reinicie el portal de Windows Mixed Reality.
+Asegúrese de que las luces están encendidas y de que no hay nada que obstruya las cámaras de seguimiento interior de la parte delantera del casco. Si se pierde el seguimiento, puede tardar unos segundos en reanudarse. Reiniciar el portal de Windows Mixed Reality el seguimiento no se reinicia.
 
 ## <a name="i-can-look-around-but-i-cant-translate-im-stuck-in-3dof"></a>Puedo buscar, pero no puedo traducir (Estoy atascado en 3DOF)
 
-Esto significa que el sistema de seguimiento no puede generar una suposición o la aplicación se ha detenido con los nuevos datos de pose que se van a representar. Compruebe lo siguiente:
+Esto significa que el sistema de seguimiento no puede generar una representación o que la aplicación se ha detenido con los nuevos datos de pose que se van a representar. Para solucionar el problema:
 
 * Asegúrese de que el salón tenga suficiente luz.
 * Asegúrese de que el salón tenga suficientes detalles para realizar el seguimiento.
 * Desconecte el dispositivo, cierre Windows Mixed Reality y vuelva a conectar el dispositivo.
 * Si el mensaje persiste, póngase en contacto [con el servicio de soporte al cliente](https://support.microsoft.com/) .
 
-## <a name="the-view-in-the-hmd-is-completely-frozen"></a>La vista del HMD está completamente inmovilizada
+## <a name="the-view-in-the-hmd-is-frozen"></a>La vista del HMD está inmovilizada
 
 Normalmente, esto significa que se ha producido un error en la aplicación o en un componente de nivel de sistema. Intente:
 
@@ -33,11 +33,11 @@ Normalmente, esto significa que se ha producido un error en la aplicación o en 
 2. Desconecte el dispositivo, cierre PRM y vuelva a conectar el dispositivo.
 3. Reinicia el equipo.
 
-## <a name="the-world-briefly-froze-and-perhaps-tilted-or-flipped-upside-down-before-returning-to-normal"></a>El mundo se inmovilizó brevemente y quizás se inclina o voltea hacia abajo antes de volver a la normalidad
+## <a name="the-world-briefly-froze-and-tilted-or-flipped-upside-down-before-returning-to-normal"></a>El mundo se inmovilizó brevemente y se inclina o voltea hacia abajo antes de volver a la normalidad
 
-Esto puede deberse a que un componente de nivel de aplicación o de sistema ha provocado un error irrecuperable o a una falta temporal de recursos de memoria o CPU. Para comprobar lo siguiente:
+Esto puede deberse a que una aplicación o un componente de nivel de sistema ha provocado un error irrecuperable o una falta temporal de memoria o recursos de CPU. Para comprobar lo siguiente:
 
-1. Abra el administrador de tareas y asegúrese de que al menos el 20% de la CPU sea gratuito, 400 MB de memoria disponible y la e/s de disco debe estar por debajo del 80%.
+1. Abra el administrador de tareas y asegúrese de que al menos el 20% de la CPU sea gratuito, 400 MB de memoria disponible y la e/s de disco debe ser inferior al 80%.
 2. Vaya a **Visor de eventos > registros de Windows > aplicación** para buscar errores en torno a la inmovilización. Busque cualquier elemento que haga referencia a los sensores de HoloLens, la realidad mixta o la aplicación que se estaba ejecutando en ese momento. Esos registros podrían explicar qué causó el error.
 3. Reinicie el equipo si el problema persiste.
 

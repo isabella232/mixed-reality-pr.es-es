@@ -6,19 +6,18 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, teclado, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 52555dec04b42b7865e8d358d57cbc9112a7a326
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: b258ad7934cae76c581723d681cce32c68458b72
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703151"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847281"
 ---
 # <a name="keyboard"></a>Teclado
 
 ![Teclado](images/UX_Hero_Keyboard.jpg)
 
-La aplicación de realidad mixta puede invocar el teclado del sistema en cualquier momento. Tenga en cuenta que el teclado del sistema se comportará según las funcionalidades de la plataforma de destino; por ejemplo, el teclado de HoloLens 2 es compatible con las interacciones directas, mientras que el teclado de HoloLens (1ª generación) admite la entrada de gestos de toque y movimiento de aire.
-
+La aplicación de realidad mixta puede invocar el teclado del sistema en cualquier momento, lo que se comporta según las capacidades de la plataforma de destino. Por ejemplo, el teclado de HoloLens 2 es compatible con las interacciones de manos directas, mientras que los teclados de HoloLens (1ª generación) admiten miraciones y pulsaciones aéreas.
 
 <br>
 
@@ -34,7 +33,7 @@ La aplicación de realidad mixta puede invocar el teclado del sistema en cualqui
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, la siguiente tarea consiste en implementar la aplicación en un dispositivo o emulador. 
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, la siguiente tarea consiste en implementar la aplicación en un dispositivo o emulador. 
 
 > [!div class="nextstepaction"]
 > [Implementación en HoloLens o con auriculares de Windows Mixed Reality](../develop/platform-capabilities-and-apis/using-visual-studio.md)

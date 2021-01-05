@@ -1,24 +1,24 @@
 ---
 title: Mirada y permanencia
-description: Información general sobre el modelo de entrada de mira y disponibilidad (ojo)
+description: Información general sobre el modelo de entrada de mirada y de la vivienda (ojo o cabeza).
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
 keywords: Realidad mixta, miradas, viviendas, interacción, diseño, seguimiento ocular, seguimiento de cabezales, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: d47401b65f7d62e1fe59655c42efe72ac68acfc6
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: e8005551e08248a73098bd0f9c198b0919e2471a
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702201"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847338"
 ---
 # <a name="gaze-and-dwell"></a>Mirada y permanencia
 
 Si tienes las manos ocupadas con herramientas y piezas, hacer gestos puede ser engorroso o imposible.
 Los comandos de voz también pueden ser poco confiables en determinados contextos, por ejemplo, en condiciones excesivamente altas.
 La mirada y la vivienda ofrecen un mecanismo familiar y fácil de usar para los directivos de trabajo y las manos libres de HoloLens.
-Además, la mirada y la permanencia son una gran reserva que es independiente de las interferencias de ruido o las restricciones de silencio en el entorno operativo.
+Además, la mirada y la permanencia son una gran reserva, que es independiente de las interferencias de ruido o las restricciones de silencio en el entorno operativo.
 Se distinguen dos variantes de _miradas y_ de la vivienda: [miran hacia la cabeza y la vivienda](gaze-and-dwell-head.md) , y [miran](gaze-and-dwell-eyes.md)y se superponen.
 
 ## <a name="scenarios"></a>Escenarios
@@ -64,6 +64,7 @@ La mirada y la vivienda permiten a la persona que usa HoloLens navegar por confi
 ---
 
  ## <a name="see-also"></a>Consulte también
+
 * [Interacción basada en los ojos](eye-gaze-interaction.md)
 * [Seguimiento de los ojos en HoloLens 2](eye-tracking.md)
 * [Mirada y confirmación](gaze-and-commit.md)

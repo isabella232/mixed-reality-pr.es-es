@@ -1,26 +1,26 @@
 ---
 title: Implementación de iniciadores de aplicaciones 3D (aplicaciones Win32)
-description: Cómo crear iniciadores de aplicaciones 3D y logotipos para aplicaciones y juegos de Win32 VR (distribuidos fuera del vapor) para que aparezcan en el menú Inicio y en el entorno de inicio de Windows Mixed Reality.
+description: Aprenda a crear iniciadores de aplicaciones 3D y logotipos para aplicaciones y juegos de Win32 VR para el menú Inicio de Windows Mixed Reality y el entorno de inicio.
 author: thmignon
 ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, icono, modelado, iniciador, selector 3D, mosaico, cubo dinámico, Win32, auricular de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, manifiesto
-ms.openlocfilehash: 9a8680232bf1d8d333c26ca4e39075ee553782fb
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 5a3e38de54aad1fceb4804003043c87dddab61c4
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703431"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757823"
 ---
 # <a name="implement-3d-app-launchers-win32-apps"></a>Implementación de iniciadores de aplicaciones 3D (aplicaciones Win32)
 
 > [!NOTE]
 > Esta característica solo está disponible para los equipos que ejecutan la versión más reciente de [Windows Insider](https://insider.windows.com) (RS5), compilación 17704 y versiones más recientes.
 
-La [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md) es el punto de partida en el que los usuarios se colocan antes de iniciar las aplicaciones. De forma predeterminada, las aplicaciones y juegos envolventes de Win32 VR deben iniciarse desde fuera del casco y no aparecerán en la lista "todas las aplicaciones" del menú Inicio de Windows Mixed Reality. Sin embargo, al seguir las instrucciones de este artículo para implementar un iniciador de aplicaciones 3D, la experiencia de Win32 VR envolvente se puede iniciar desde el menú Inicio y el entorno de inicio de Windows Mixed Reality.
+La [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md) es el punto de partida en el que los usuarios se colocan antes de iniciar las aplicaciones. De forma predeterminada, debe iniciar aplicaciones y juegos de Win32 VR envolventes desde fuera del casco y no aparecerán en la lista "todas las aplicaciones" del menú Inicio de Windows Mixed Reality. Si sigue las instrucciones de este artículo para implementar un iniciador de aplicaciones 3D, su experiencia de Win32 VR envolvente se puede iniciar desde el menú Inicio de Windows Mixed Reality y el entorno de inicio.
 
-Esto solo es válido para las experiencias de Win32 VR envolventes distributied fuera de la secuencia. En el caso de las experiencias de VR [distribuidas a través de vapor](../develop/porting-apps/updating-your-steamvr-application-for-windows-mixed-reality.md), hemos [actualizado Windows Mixed Reality para SteamVR beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) junto con los vuelos de Windows Insider RS5 más recientes para que los títulos de SteamVR aparezcan en el menú Inicio de Windows Mixed Reality en la lista "todas las aplicaciones" automáticamente mediante un iniciador predeterminado. En otras palabras, el método descrito en este artículo no es necesario para los títulos de SteamVR y se reemplazará por la funcionalidad de Windows Mixed Reality para SteamVR beta.
+Esto solo es válido para las experiencias de Win32 VR envolventes distribuidas fuera de la secuencia. En el caso de las experiencias de VR [distribuidas a través de vapor](../develop/porting-apps/updating-your-steamvr-application-for-windows-mixed-reality.md), hemos [actualizado Windows Mixed Reality para SteamVR beta](https://steamcommunity.com/games/719950/announcements/detail/1687045485866139800) junto con los vuelos de Windows Insider RS5 más recientes para que los títulos de SteamVR aparezcan en el menú Inicio de Windows Mixed Reality en la lista "todas las aplicaciones" automáticamente mediante un iniciador predeterminado. En otras palabras, el método descrito en este artículo no es necesario para los títulos de SteamVR y se reemplazará por la funcionalidad de Windows Mixed Reality para SteamVR beta.
 
 ## <a name="3d-app-launcher-creation-process"></a>proceso de creación del iniciador de aplicaciones 3D
 
@@ -40,8 +40,8 @@ Las aplicaciones Win32 aparecerán en la lista "todas las aplicaciones" del men�
     1. Puede empezar con el [ejemplo siguiente](#sample-visual-elements-manifest).  Consulte la documentación del [manifiesto de elementos visuales](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx) completos para obtener más detalles.
     2. Actualice **Square150x150Logo** y **Square70x70Logo** con un archivo PNG/JPG/GIF para la aplicación.
         * Se usarán para el logotipo de 2D de la aplicación en la lista todas las aplicaciones de Windows Mixed Reality y para el menú Inicio en el escritorio.
-        * La ruta de acceso del archivo es relativa a la carpeta que contiene el manifiesto de elementos visuales.
-        * Todavía tiene que proporcionar un icono de menú Inicio de escritorio para la aplicación a través de los mecanismos estándar. Puede estar directamente en el archivo ejecutable o en el acceso directo que cree (por ejemplo, a través de IShellLink:: SetIconLocation).
+        * La ruta de acceso del archivo se basa en la carpeta que contiene el manifiesto de elementos visuales.
+        * Todavía tiene que proporcionar un icono de menú Inicio de escritorio para la aplicación a través de los mecanismos estándar. Puede estar directamente en el archivo ejecutable o en el acceso directo que cree. Por ejemplo, a través de IShellLink:: SetIconLocation.
         * *Opcional:* Puede usar un archivo resources. PRI si desea que MRT proporcione varios tamaños de recursos para diferentes escalas de resolución y temas de contraste alto.
     3. Actualice la **ruta de acceso de MixedRealityModel** para que apunte al glb del iniciador de la aplicación 3D.
     4. Guarde el archivo con el mismo nombre que el archivo ejecutable, con la extensión ".VisualElementsManifest.xml" y guárdelo en el mismo directorio. Por ejemplo, para el archivo ejecutable "contoso.exe", el archivo XML que lo acompaña se denomina "contoso.visualelementsmanifest.xml".
@@ -69,7 +69,7 @@ Las aplicaciones Win32 aparecerán en la lista "todas las aplicaciones" del men�
 
 ### <a name="sample-app-launcher-shortcut-creation"></a>Creación de un acceso directo del iniciador de aplicaciones de ejemplo
 
-En el código de ejemplo siguiente se muestra cómo se puede crear un acceso directo en C++, incluida la invalidación de la ruta de acceso al archivo XML de manifiesto de los elementos visuales. Tenga en cuenta que la invalidación solo es necesaria en los casos en los que el acceso directo no apunta directamente al archivo EXE asociado con el manifiesto (por ejemplo, el acceso directo usa un controlador de protocolo personalizado como "myapp://").
+En el código de ejemplo siguiente se muestra cómo se puede crear un acceso directo en C++, incluida la invalidación de la ruta de acceso al archivo XML de manifiesto de los elementos visuales. Tenga en cuenta que la invalidación solo es necesaria en los casos en los que el acceso directo no apunta directamente al archivo EXE asociado al manifiesto (por ejemplo, el acceso directo usa un controlador de protocolo personalizado como "myapp://").
 
 #### <a name="sample-lnk-shortcut-creation-c"></a>AdventureWorks. Creación de accesos directos de LNK (C++)
 

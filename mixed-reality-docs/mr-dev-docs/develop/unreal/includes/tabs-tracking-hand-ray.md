@@ -1,11 +1,19 @@
 ---
-ms.openlocfilehash: 23bba22801f61f6b4814991c8b3bde68d2c5f6b7
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: 18ccbf3e28eaa2f61157bd9585d633c987e9af48
+ms.sourcegitcommit: 13ef9f89ee61fbfe547ecf5fdfdb97560a0de833
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002746"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97717646"
 ---
+# <a name="426"></a>[4.26](#tab/426)
+
+Para obtener los datos de los rayos de mano, debe usar la función get Motion Controller data de la sección anterior. La estructura devuelta contiene dos parámetros que se pueden usar para crear un rayo de mano: **posición de objetivo** y **rotación de objetivos**. Estos parámetros forman un rayo dirigido por el codo. Debe tomarlos y encontrar un holograma al que apunta.
+
+A continuación se muestra un ejemplo de cómo determinar si un rayo de mano alcanza un widget y establece un resultado personalizado de aciertos:
+
+![Plano de la función get Motion Controller Data](../images/unreal-hand-tracking-img-04.png) 
+
 # <a name="425"></a>[4.25](#tab/425)
 
 Para usar rayos de mano en blueprints, busque cualquiera de las acciones en **Windows Mixed Reality HMD**:
@@ -138,10 +146,3 @@ C++:
 ```cpp
 static EHMDTrackingStatus UWindowsMixedRealityFunctionLibrary::GetControllerTrackingStatus(EControllerHand hand);
 ```
-# <a name="426"></a>[4.26](#tab/426)
-
-Para obtener los datos de los rayos de mano, debe usar la función get Motion Controller data de la sección anterior. La estructura devuelta contiene dos parámetros que se pueden usar para crear un rayo de mano: **posición de objetivo** y **rotación de objetivos**. Estos parámetros forman un rayo dirigido por el codo. Debe tomarlos y encontrar un holograma al que apunta.
-
-A continuación se muestra un ejemplo de cómo determinar si un rayo de mano alcanza un widget y establece un resultado personalizado de aciertos:
-
-![Plano de la función get Motion Controller Data](../images/unreal-hand-tracking-img-04.png) 

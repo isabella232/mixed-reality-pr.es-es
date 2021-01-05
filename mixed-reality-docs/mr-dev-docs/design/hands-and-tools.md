@@ -6,16 +6,18 @@ ms.author: shentan
 ms.date: 04/26/2019
 ms.topic: article
 keywords: Realidad mixta, manos, controladores de movimiento, interacción, diseño, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: e931e5ec11548d9aab0d1dd7f8921dbc7554abab
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 1dffdd5f3471993dfdb5e504e4c5b87ec0bfef7d
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702161"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847317"
 ---
 # <a name="hands-and-motion-controllers"></a>Controladores de manos y movimiento
+
 ## <a name="scenarios"></a>Escenarios
-Si decide adoptar este modelo de interacción después de leer la [información general](interaction-fundamentals.md)de la interacción, significa que está desarrollando una aplicación que requiere que los usuarios usen dos manos para interactuar con el mundo holográfica. La aplicación va a lograr el objetivo de quitar el límite entre virtual y física.
+
+Después de leer la [información general](interaction-fundamentals.md)de la interacción, elija el modelo de interacción del controlador de movimiento y la mano. Esto significa que está desarrollando una aplicación que requiere que los usuarios usen dos manos para interactuar con el mundo holográfica. La aplicación va a lograr el objetivo de quitar el límite entre virtual y física.
 
 Algunos escenarios específicos pueden ser:
 * Proporcionar a los trabajadores de la información pantallas virtuales 2D con prestaciones de la interfaz de usuario para mostrar y controlar el contenido.
@@ -34,7 +36,7 @@ Algunos escenarios específicos pueden ser:
     :::column:::
        [![Manipulación directa con las manos](images/hands-and-controllers-direct-manipulation.jpg)](direct-manipulation.md)<br>
        ### <a name="direct-manipulation-with-handsbr"></a>[Manipulación directa con las manos](direct-manipulation.md)<br>
-       Se trata de una moda que aprovecha la eficacia de las manos, con las que los usuarios pueden tocar y manipular directamente los hologramas. Al aprovechar las experiencias diarias de la vida y proporcionar prestaciones visuales adecuadas, los usuarios pueden usar la misma manera de manipular objetos del mundo real para interactuar con los virtuales.
+       Modalidad que aplica la potencia de las manos que los usuarios pueden usar para tocar y manipular los hologramas. Mediante el uso de experiencias de vida diaria y la prestación de prestaciones visuales adecuadas, los usuarios pueden usar la misma manera de manipular objetos del mundo real para interactuar con los virtuales.
     :::column-end:::
     :::column:::
        [![Apuntar y confirmar con las manos](images/hands-and-controllers-point-and-commit.jpg)](point-and-commit.md)<br>
@@ -44,7 +46,7 @@ Algunos escenarios específicos pueden ser:
     :::column:::
        [![Controladores de movimiento](images/hands-and-controllers-motion-controllers.jpg)](motion-controllers.md)<br>
        ### <a name="motion-controllersbr"></a>[Controladores de movimiento](motion-controllers.md)<br>
-       Los controladores de movimiento son herramientas que amplían las capacidades físicas del usuario al proporcionar interacciones precisas en una gran variedad de distancias al usar una o ambas manos. Estos accesorios de hardware proporcionan accesos directos a muchas interacciones usadas con frecuencia y proporcionan comentarios Surefooted y táctiles para una variedad de acciones. Actualmente, los controladores de movimiento solo están disponibles para escenarios de Windows Mixed Reality (WMR). 
+       Los controladores de movimiento amplían las capacidades físicas del usuario con interacciones precisas en un intervalo de distancias al usar una o ambas manos. Estos accesorios de hardware proporcionan accesos directos a muchas de las interacciones usadas comúnmente y proporcionan comentarios de seguridad en el pie de página para realizar diversas acciones. Actualmente, los controladores de movimiento solo están disponibles para escenarios de Windows Mixed Reality (WMR). 
     :::column-end:::
 :::row-end:::
 

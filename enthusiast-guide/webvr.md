@@ -3,12 +3,12 @@ title: Uso de WebVR con Windows Mixed Reality
 description: Describe WebVR y cómo usarlo con Microsoft Edge en auriculares Windows Mixed Reality.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, WebVR, Edge, Microsoft Edge, exploración Web
-ms.openlocfilehash: 8e8d7b5feefe5b1eccad0684808b40b63e9bbbca
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: 92f1d00c7f635c88a727732fb743996a654ba775
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93131859"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725606"
 ---
 # <a name="using-webvr-with-windows-mixed-reality"></a>Uso de WebVR con Windows Mixed Reality
 
@@ -17,21 +17,21 @@ ms.locfileid: "93131859"
 
 ## <a name="what-is-webvr"></a>Qué es WebVR
 
-[WebVR](https://webvr.info) es una especificación abierta que permite experimentar VR en el explorador. Si un sitio web implementa la compatibilidad con WebVR y proporciona contenido 3D, puede mostrar el contenido envolvente del casco con el consentimiento del usuario.
+[WebVR](https://webvr.info) es una especificación abierta que le permite experimentar el funcionamiento de VR desde un explorador. Si un sitio web implementa la compatibilidad con WebVR y proporciona contenido 3D, puede mostrar el contenido envolvente del casco con el consentimiento del usuario.
 
 ## <a name="what-is-the-difference-between-webvr-and-browsing-the-web-in-vr"></a>¿Cuál es la diferencia entre WebVR y explorar la web en VR?
 
-WebVR es una tecnología que permite al autor de un sitio web agregar la funcionalidad de VR a una página. La API de WebVR se usa en una página para mostrar contenido 3D (por ejemplo, un vídeo de 360 grados, un modelo 3D o un juego 3D) para todo el casco. **Ejemplo:** Visualización de un vídeo de 360 en [CNN.com/VR](http://cnn.com/vr). Si una página admite WebVR, agregará un botón u otro elemento de la interfaz de usuario en el que puede hacer clic para especificar VR.
+WebVR es una tecnología que permite al autor de un sitio web agregar la funcionalidad de VR a una página. La API de WebVR se usa en una página para mostrar contenido 3D (por ejemplo, un vídeo de 360 grados, un modelo 3D o un juego 3D) para todo el casco. **Ejemplo:** Visualización de un vídeo de 360 en [CNN.com/VR](http://cnn.com/vr). Si una página admite WebVR, agregará un botón u otro elemento de la interfaz de usuario que puede seleccionar para especificar VR.
 
 Explorar la web en VR significa usar el explorador Edge mientras usa el casco, como una pizarra de aplicación 2D dentro de Cliffhouse.
 
 ## <a name="do-all-websites-support-webvr"></a>Hacer que todos los sitios web admitan WebVR
 
-No. Los autores de sitios web deben optar por usar WebVR y, además, pueden crear sitios que estén optimizados para exploradores, auriculares y controladores específicos. Por ejemplo, algunos contenidos de WebVR están optimizados solo para dispositivos móviles de VR. Además, tenga en cuenta que los sitios web deben crear y proporcionar contenido de WebVR de forma explícita. El número de sitios que tienen algún contenido compatible con WebVR está creciendo cada día.
+No. Los autores de sitios web deben participar en el uso de WebVR y pueden crear sitios optimizados para exploradores, auriculares y controladores específicos. Algunos contenidos de WebVR están optimizados solo para dispositivos móviles de VR. Además, tenga en cuenta que los sitios web deben crear y proporcionar contenido de WebVR de forma explícita. El número de sitios que tienen algún contenido compatible con WebVR está creciendo cada día.
 
 ## <a name="can-i-use-my-viveoculus-etc-to-view-webvr-content-in-microsoft-edge"></a>¿Puedo usar mi Naopak/Oculus, etc., para ver el contenido de WebVR en Microsoft Edge?
 
-No. Debe usar un casco de realidad mixta de Windows para usar WebVR en Edge. Sin embargo, es posible que pueda acceder al contenido de WebVR en otro explorador. Consulte la lista completa de dispositivos y exploradores compatibles en: [WebVR. Rocks](http://webvr.rocks/).
+No. Se requiere un casco de Windows Mixed Reality para usar WebVR en Edge. Sin embargo, puede tener acceso al contenido de WebVR en otro explorador. Consulte la lista completa de dispositivos y exploradores compatibles en: [WebVR. Rocks](http://webvr.rocks/).
 
 ## <a name="where-can-i-find-the-webvr-developer-documentation"></a>¿Dónde puedo encontrar la documentación para desarrolladores de WebVR
 
@@ -51,14 +51,14 @@ Vea los [ejemplos de webvr.info](http://webvr.info/samples/XX-vr-controllers.htm
 
 ## <a name="how-do-i-set-up-webvr"></a>Cómo configurar WebVR
 
-Para experimentar el contenido de WebVR en un casco de realidad mixta de Windows (con hardware o simulación) debe:
+Para experimentar el contenido de WebVR en un casco de realidad mixta de Windows (con hardware o simulación), debe:
 
 1. Asegúrese de que el casco está conectado.
 2. Inicie Microsoft Edge, ya sea en el escritorio o en una realidad mixta.
 3. Navegue a una página habilitada para WebVR.
-4. Haga clic en el botón escribir VR dentro de la página (la ubicación y la representación visual de este botón pueden variar en función del sitio web). Puede tener un aspecto similar a: \
+4. Seleccione el botón escribir VR dentro de la página (la ubicación y la representación visual de este botón pueden variar en función del sitio web). Puede tener un aspecto similar a: \
    ![Imagen de la VR](images/75px-enter-vr.png)
-5. La primera vez que intente especificar VR en un dominio específico, el explorador solicitará consentimiento para usar la vista envolvente, haga clic en sí: ![Interfaz de usuario de consentimiento que se muestra en el primer intento de especificar VR en un dominio determinado](images/1053px-Webvr-consent-ui.png)
+5. La primera vez que intente especificar VR en un dominio específico, el explorador solicitará consentimiento para usar la vista envolvente, seleccione Sí: ![Interfaz de usuario de consentimiento que se muestra en el primer intento de especificar VR en un dominio determinado](images/1053px-Webvr-consent-ui.png)
 6. Los auriculares deben empezar a mostrar el contenido de WebVR.
 
 ## <a name="see-also"></a>Consulte también

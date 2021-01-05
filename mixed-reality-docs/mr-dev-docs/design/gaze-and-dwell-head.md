@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 05/13/2019
 ms.topic: article
 keywords: Realidad mixta, miradas, viviendas, interacción, diseño, auriculares de realidad mixta, auriculares Windows Mixed Reality, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, experiencia de usuario, directrices, vista de lista
-ms.openlocfilehash: abedff5a273816f49419c7823b96eda1d474e336
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 060d78ec629905ac9f2134851998ec131d85f0cd
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702321"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847368"
 ---
 # <a name="head-gaze-and-dwell"></a>Mirada con la cabeza y permanencia
 
@@ -19,7 +19,7 @@ Si tienes las manos ocupadas con herramientas y piezas, hacer gestos puede ser e
 
 ## <a name="scenarios"></a>Escenarios
 
-En los casos en los que las manos de una persona están ocupados con otras tareas y la voz no es del 100% confiable o disponible debido a las restricciones ambientales o sociales, el uso de la mano y los de la vivienda. Un buen ejemplo sería el de una persona que lleva un dispositivo HoloLens para ver superpuesta información de referencia mientras repara el motor de un automóvil. Puede tener ocupadas las manos con herramientas o usarlas para sostenerse al reclinarse sobre el compartimento del motor. En la zona del garaje hay mucho ruido, con los constantes golpes y zumbidos de las herramientas, lo que dificulta el uso de comandos de voz. El encabezado y la vivienda permiten a la persona que usa HoloLens navegar por confianza su material de referencia sin interrumpir su flujo de trabajo. 
+La mirada y la vivienda son excelentes en escenarios en los que las manos de una persona están ocupadas por otras tareas. La característica también es útil cuando la voz no es 100% confiable o disponible debido a restricciones ambientales o sociales. Un buen ejemplo sería el de una persona que lleva un dispositivo HoloLens para ver superpuesta información de referencia mientras repara el motor de un automóvil. Puede tener ocupadas las manos con herramientas o usarlas para sostenerse al reclinarse sobre el compartimento del motor. En la zona del garaje hay mucho ruido, con los constantes golpes y zumbidos de las herramientas, lo que dificulta el uso de comandos de voz. El encabezado y la vivienda permiten a la persona que usa HoloLens navegar por confianza su material de referencia sin interrumpir su flujo de trabajo. 
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -49,7 +49,7 @@ En los casos en los que las manos de una persona están ocupados con otras tarea
 
 **Evitar miradas a discreción**
 
-El modelo de mirada con la cabeza y permanencia requiere información visual para ser intuitivo, pero demasiada información puede resultar estresante. La información debe ayudar al usuario a saber qué está mirando, pero no seleccionar ese elemento automáticamente contra la voluntad del usuario. La lectura de texto, iconos y etiquetas requiere una consideración especial para dar tiempo al usuario a absorber la información antes de seleccionar.
+El modelo de mirada con la cabeza y permanencia requiere información visual para ser intuitivo, pero demasiada información puede resultar estresante. Los comentarios deben ayudar a un usuario a saber lo que tienen como destino, pero no seleccionarlo para su intención. Al leer texto, iconos y etiquetas, debe proporcionar tiempo a los usuarios para absorber la información antes de seleccionarla.
     
 **Buscar una velocidad adecuada**
     
@@ -57,37 +57,38 @@ Las interacciones de permanencia pueden tener distintos temporizadores, en funci
     
 **Evitar el efecto yo-yo**
 
-El efecto yo-yo es un patrón incómodo de movimiento de la cabeza que puede surgir cuando la ubicación del contenido y los controles de mirada con la cabeza y permanencia obligan al usuario a mirar hacia arriba y hacia abajo constantemente. Por ejemplo, una lista de navegación con el botón de AvPág y el botón de permanencia en la parte inferior induce un bucle de-mirar a la vivienda, buscar en los resultados, buscar en la vivienda, etc. Este patrón resultante es incómodo y se debe evitar colocando los controles de navegación en una ubicación centralizada que requiere menos y después. La ubicación de los botones de permanencia en relación con sus efectos resulta importante para la comodidad.
-
+El efecto yo-yo es un patrón incómodo de movimiento de cabeza que se produce cuando la colocación del contenido y los controles de cabeza y vista del cabezal y la vivienda obligan a las personas a buscarse y reducirse repetidamente. Por ejemplo, una lista de navegación con el botón de AvPág y el botón de permanencia en la parte inferior induce un bucle de-mirar a la vivienda, buscar en los resultados, buscar en la vivienda, etc. El patrón resultante es inestable, por lo que se recomienda colocar los controles de navegación en una ubicación centralizada que requiera menos. La colocación de los botones de permanencia en función de sus efectos es importante para la comodidad.
+s
 <br>
 
 ---
 
-
 ## <a name="ux-guidelines-and-best-practices"></a>Directrices y procedimientos recomendados para la experiencia del usuario
 
 ### <a name="target-sizes"></a>Tamaños de los destinos
-  Para que sea fácilmente accesible, los objetivos de la vista de cabeza y de la vivienda deben ser lo suficientemente grandes como para examinarlos de forma cómoda y mantener el cabezal estable en el destino durante el tiempo previsto. Se recomienda un tamaño mínimo de destino de 2 grados para lograr la experiencia más cómoda. 
+
+Para que se pueda acceder fácilmente, los objetivos de la vista de cabeza y de la vivienda deben ser lo suficientemente grandes como para examinarlos de forma cómoda y mantener una ventaja estable en el destino durante el tiempo previsto. Se recomienda un tamaño mínimo de destino de 2 grados para lograr la experiencia más cómoda. 
 
 ### <a name="visual-feedback"></a>Información visual
 
 Al utilizar un relleno radial para representar el temporizador de permanencia, empieza desde el centro del botón. Una respuesta coherente es menos confusa que si cada botón tiene una dirección distinta. 
 
-  * No obstante, esta regla puede romperse para las interacciones direccionales (por ejemplo, navegar hacia arriba/abajo/izquierda/derecha, etc.). Por ejemplo, Microsoft Dynamics 365 Guides hace una excepción para los botones SIGUIENTE/ATRÁS, que son rellenos de izquierda y derecha.
-  * Considera la posibilidad de invertir un relleno radial desde fuera, para escenarios como desactivar un botón. La sensación inversa a pulsar un botón es un patrón visual que resulta útil mantener. 
+  * Esta regla se puede romper a pesar de las interacciones direccionales (por ejemplo, NAV arriba/abajo/izquierda/derecha, etc.). Por ejemplo, Microsoft Dynamics 365 Guides hace una excepción para los botones SIGUIENTE/ATRÁS, que son rellenos de izquierda y derecha.
+  * Considere la posibilidad de invertir el relleno radial desde fuera, en escenarios como la alternancia de un botón. La sensación inversa a pulsar un botón es un patrón visual que resulta útil mantener. 
 
 ### <a name="progressive-disclosure"></a>Muestra progresiva
 
-La muestra progresiva significa que solo se muestran los detalles pertinentes en cada etapa de una interacción. En el caso de la permanencia, esto significa que el objetivo de permanencia se muestra resaltado (por ejemplo, en un control de lista).
+La muestra progresiva significa que solo se muestran los detalles pertinentes en cada etapa de una interacción. En el caso de la vivienda, esto significa que el destino de la vivienda se revela en el resaltado (por ejemplo, en un control de lista).
 
  ### <a name="oversized-targets"></a>Objetivos demasiado grandes
+
 La región de permanencia puede ser mayor que el icono inactivo para que resulte más fácil de usar, al igual que el botón Atrás en Microsoft Dynamics 365 Guides.
 
 ### <a name="prevent-flickering-with-delayed-feedback"></a>Evitar el parpadeo con información retrasada
-Utiliza un breve retraso antes de iniciar la información visual para evitar el parpadeo cuando un usuario pase sobre un objetivo de permanencia.
-* En el caso de los botones INTERACTUADOS con frecuencia, mantenga el retraso muy breve para que la aplicación se sienta reactiva.
-* En el caso de los botones que se interactúan con poca frecuencia, un retraso más largo puede ser adecuado para evitar la sensación de interfaz twitchy.
 
+Utiliza un breve retraso antes de iniciar la información visual para evitar el parpadeo cuando un usuario pase sobre un objetivo de permanencia.
+* En el caso de los botones interactivos con frecuencia, mantenga el retraso corto para que la aplicación se sienta reactiva.
+* En el caso de los botones que se interactúan con poca frecuencia, un retraso más largo puede ser adecuado para evitar la sensación de interfaz twitchy.
 
 <br>
 
@@ -118,7 +119,8 @@ Utiliza un breve retraso antes de iniciar la información visual para evitar el 
 
 
 ### <a name="low-frequency-buttons"></a>Botones de baja frecuencia
-Los botones de baja frecuencia son aquellos que no se accionan en la aplicación con demasiada frecuencia. Un buen ejemplo podría ser un botón para acceder al menú de configuración o un botón para borrar todo el trabajo.
+
+Los botones de baja frecuencia son botones que no interactúan con tan solo en la aplicación. Un buen ejemplo podría ser un botón para acceder al menú de configuración o un botón para borrar todo el trabajo.
 
 * Intenta mantener estos botones apartados de las rutas frecuentes de la mirada con la cabeza para evitar activarlos accidentalmente. 
 
@@ -130,7 +132,7 @@ Los botones de baja frecuencia son aquellos que no se accionan en la aplicación
 
 :::row:::
     :::column:::
-        Cuando una acción tiene un impacto significativo, como cobrar dinero, eliminar trabajo o iniciar un proceso largo, resulta útil confirmar que el usuario realmente quiere seleccionar ese botón.<br>
+        Cuando una acción tiene un impacto significativo, como la carga de dinero, la eliminación de trabajo o el inicio de un proceso largo, es útil confirmar que una persona está pensada para seleccionar un botón.<br>
         <br>
         **Recomendaciones**<br>
   * Muestra el resaltado de la selección en el botón principal.
@@ -149,7 +151,8 @@ Los botones de baja frecuencia son aquellos que no se accionan en la aplicación
 ---
 
 ### <a name="toggle-buttons"></a>Botones de alternancia
-Los botones de alternancia requieren una lógica matizada para que funcionen correctamente. Cuando una persona permanece sobre un botón de alternancia y lo activa, debe salir del botón y, a continuación, volver para reiniciar la lógica de permanencia. Es importante que se distinga claramente el estado activo del inactivo de los botones de alternancia. 
+
+Los botones de alternancia requieren una lógica matizada para que funcionen correctamente. Cuando una persona se aloja en un botón de alternancia y lo activa, debe salir del botón y volver a iniciar la lógica de permanencia. Es importante que los botones que se van a alternar tengan un estado activo e inactivo. 
 
 <br>
 
@@ -159,14 +162,14 @@ Los botones de alternancia requieren una lógica matizada para que funcionen cor
 
 :::row:::
     :::column:::
-        Las vistas de lista presentan un desafío determinado para la entrada de encabezado y de continuación. Los usuarios deben poder recorrer el contenido sin la sensación de tener que ir pasando de puntillas por los distintos objetivos de permanencia.<br>
+        Las vistas de lista presentan un desafío determinado para la entrada de encabezado y de continuación. Los usuarios pueden examinar el contenido sin tener que tiptoe en torno a los objetivos de la vivienda.<br>
         <br>
 **Recomendaciones**<br>
   * Hacer que la fila completa se resalte cuando se mira por la cabeza, pero no comienza la permanencia, a menos que la punta de la mirada esté en el destino de vivienda específico.
   * Muestre solo el destino de permanencia cuando la fila esté resaltada para reducir el ruido visual.
   * Ser claros y coherentes con la posición de los objetivos de la vivienda.
   * No muestre todos los destinos de permanencia a la vez para evitar la interfaz de usuario repetida.
-  * Vuelva a usar el mismo patrón tantas veces como sea posible para establecer la familiaridad con la experiencia del usuario.<br>
+  * Reutilice el mismo patrón tantas veces como sea posible para establecer la familiaridad de la experiencia del usuario.<br>
         <br>
 *Imagen: lista de guías de Microsoft Dynamics 365*
     :::column-end:::
@@ -180,6 +183,7 @@ Los botones de alternancia requieren una lógica matizada para que funcionen cor
 ---
  
  ## <a name="see-also"></a>Consulte también
+
 * [Mirada y confirmación](gaze-and-commit.md)
 * [Manos: manipulación directa](direct-manipulation.md)
 * [Manos: gestos](gaze-and-commit.md#composite-gestures)

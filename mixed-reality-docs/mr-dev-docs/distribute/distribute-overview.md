@@ -6,18 +6,18 @@ ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
 keywords: HoloLens, realidad mixta, auriculares envolventes, aplicación, UWP, envío, envío, filtros, metadatos, requisitos del sistema, palabras clave, Wack, certificación, paquete, appx, comercialización
-ms.openlocfilehash: b4b82557ba274852ebb3f97058017fa2e5db1c02
-ms.sourcegitcommit: 9e9d58de4513655c7daa71ff4b5b2c2b115ab959
+ms.openlocfilehash: 632bb9c0c5bdb93041f71a4382802b02f6817f0e
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97034586"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757633"
 ---
 # <a name="distributing-your-apps"></a>Distribución de las aplicaciones
 
 ![Lancher de aplicación 3D de pájaros de punto flotante en WMR Home](images/distribute-hero-image.png)
 
-La obtención de las aplicaciones en manos de los usuarios o en el mundo es la más importante y a veces PAINSTAKING, parte de cualquier esfuerzo de desarrollo. Hemos simplificado el proceso en un conjunto de recursos que se enumeran a continuación, que dependen del escenario de distribución e implementación que mejor se adapte a usted o a su equipo.
+La obtención de las aplicaciones en manos de los usuarios o en el mundo es la más importante y a veces PAINSTAKING, parte de cualquier esfuerzo de desarrollo. Hemos simplificado el proceso en un conjunto de recursos, que dependen del escenario de distribución e implementación que mejor se adapte a usted o a su equipo.
 
 [!INCLUDE[](includes/before-submission.md)]
 
@@ -40,7 +40,7 @@ La obtención de las aplicaciones en manos de los usuarios o en el mundo es la m
 </colgroup>
 <tr>
     <td><strong>Escenario</strong></td>
-    <td><strong>Instalación de dispositivo local</strong></td>
+    <td><strong>Instalaciones de dispositivos locales</strong></td>
     <td><strong>Compartir con cualquier persona</strong></td>
     <td><strong>Compartir con una organización</strong></td>
 </tr>
@@ -81,7 +81,7 @@ La obtención de las aplicaciones en manos de los usuarios o en el mundo es la m
     <td>✔️</td>
 </tr>
 <tr>
-    <td><a href="#additional-scenarios"><strong>Implementación personalizada de Win32</strong></a> (no está disponible para dispositivos HoloLens; consulte a continuación).</td>
+    <td><a href="#other-scenarios"><strong>Implementación personalizada de Win32</strong></a> (no está disponible para dispositivos HoloLens; consulte a continuación).</td>
     <td>✔️</td>
     <td>✔️</td>
     <td>❌</td>
@@ -91,14 +91,14 @@ La obtención de las aplicaciones en manos de los usuarios o en el mundo es la m
 > [!IMPORTANT]
 > El instalador de la aplicación no está disponible actualmente para dispositivos administrados o de HoloLens (primera generación).
 
-## <a name="additional-scenarios"></a>Otros escenarios
+## <a name="other-scenarios"></a>Otros escenarios
 
-* En el caso de la implementación de aplicaciones Win32, incluida la secuencia de vapor y la de juegos, puede generar un Win32. Archivo EXE que usa el destino de compilación independiente de PC de Unity y envíe las aplicaciones de la forma habitual a la plataforma elegida. 
+* Puede generar un Win32. Archivo EXE que usa el destino de compilación independiente de PC de Unity para la implementación de aplicaciones de Win32, incluido el paso de juegos y vapor. Una vez que tenga. EXE, puede enviar sus aplicaciones de la forma habitual a la plataforma elegida. 
 
 * Si tiene que instalar una aplicación de HoloLens 2 mientras está sin conexión, consulte las instrucciones [seguras de hololens 2 sin conexión](https://docs.microsoft.com/hololens/hololens-common-scenarios-offline-secure) o instale la aplicación a través de un paquete de aprovisionamiento sin habilitar el modo de desarrollador.
 
 * También puede implementar compilaciones en el dispositivo y compartirlas con otros desarrolladores que tengan el modo de desarrollador habilitado mediante la [implementación y depuración con Visual Studio](../develop/platform-capabilities-and-apis/using-visual-studio.md) o [la instalación de un paquete de aplicación con el portal de dispositivos](https://docs.microsoft.com/hololens/holographic-custom-apps#installing-an-application-package-with-the-device-portal).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Buscar, instalar y desinstalar aplicaciones del Microsoft Store](https://docs.microsoft.com/hololens/holographic-store-apps)
 

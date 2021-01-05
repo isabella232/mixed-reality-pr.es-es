@@ -1,36 +1,36 @@
 ---
 title: Información general de casos prácticos
-description: Historias, aprendizajes y experiencias que el equipo de realidad mixta ha encontrado y jotted a lo largo del proceso.
+description: Historias, aprendizajes y experiencias que el equipo de la realidad mixta ha encontrado y jotteddo a lo largo del proceso.
 author: grbury
 ms.author: grbury
 ms.date: 08/24/2019
 ms.topic: overview
 keywords: Windows Mixed Reality, HoloLens, caso práctico, visión, escenarios, casos prácticos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: b30cc49759867b4f11f3f88195c8d9bec87ba297
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 7d3e2f3bbbc6a89bf4f136e2657f8a9abe7b9560
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703491"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757653"
 ---
 # <a name="case-study-gallery"></a>Galería de casos prácticos
 
-Historias, aprendizajes y experiencias que el equipo de realidad mixta ha encontrado y jotted a lo largo del proceso.
+Historias, aprendizajes y experiencias que el equipo de la realidad mixta ha encontrado y jotteddo a lo largo del proceso.
 
 :::row:::
     :::column:::
        [ ![ 3 información sobre el diseño de la interfaz de usuario e interacción de HoloStudio](images/thought-bubble-500px.jpg)](../out-of-scope/case-study-3-holostudio-ui-and-interaction-design-learnings.md) **[3 información sobre el diseño de la interfaz de usuario y la interacción](../out-of-scope/case-study-3-holostudio-ui-and-interaction-design-learnings.md)**<br>
-        HoloStudio era una de las primeras aplicaciones de HoloLens. Por este motivo, teníamos que crear nuevas prácticas recomendadas para la interfaz de usuario y el diseño de interacción 3D. Hicimos esto a través de una gran cantidad de pruebas de usuario, prototipos y errores.<br>
+        HoloStudio era una de las primeras aplicaciones de HoloLens. Por este motivo, teníamos que crear nuevas prácticas recomendadas para la interfaz de usuario y el diseño de interacción 3D. Lo hemos realizado a través de pruebas de usuario, prototipos y errores.<br>
         *Julio de 2016*
     :::column-end:::
     :::column:::
-       [ ![ Compilación de HoloSketch, una aplicación de diseño espacial y de boceto de la experiencia de usuario para](images/holosketch-image-01-640px.png)](../out-of-scope/case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md) la **[creación de HoloSketch, una aplicación de diseño espacial y de boceto de la experiencia de usuario de hololens](../out-of-scope/case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)**<br>
+       [ ![ Compilación de HoloSketch, una aplicación de diseño espacial y de boceto de la experiencia de usuario para](images/holosketch-image-01-640px.png)](../out-of-scope/case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md) la **[creación de HoloSketch, un diseño espacial y una aplicación de boceto de experiencia de usuario para hololens](../out-of-scope/case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)**<br>
         HoloSketch es un diseño espacial en el dispositivo y una herramienta de boceto de la experiencia del usuario para HoloLens que ayuda a crear experiencias holográficas.<br>
          *Julio de 2017*
     :::column-end:::
     :::column:::
        [ ![ Creación de una experiencia envolvente en fragmentos](images/surfacereconstruction.jpg)](../out-of-scope/case-study-creating-an-immersive-experience-in-fragments.md) **[creación de una experiencia envolvente en fragmentos](../out-of-scope/case-study-creating-an-immersive-experience-in-fragments.md)**<br>
-        Fragmentos es una plataforma de delitos interactiva para Microsoft HoloLens, donde se siguen las pistas para resolver un misterio que tiene lugar en el espacio del mundo real.<br>
+        Los fragmentos son un teatro de delitos interactivos para Microsoft HoloLens, donde se siguen las pistas para solucionar un misterio que tiene lugar en el espacio real.<br>
         *Agosto de 2016*
     :::column-end:::
 :::row-end:::
@@ -79,7 +79,7 @@ Antes de que se enviara a Microsoft HoloLens, hemos preguntado a nuestra comunid
     :::column-end:::
     :::column:::
        [ ![ La creación](../develop/unity/images/ge-update-interactions-concept-force-grab.png)](../develop/unity/galaxy-explorer-update.md) del explorador de Galaxy para hololens 2 es **[la creación de Galaxy Explorer para hololens 2](../develop/unity/galaxy-explorer-update.md)**<br>
-        Este es el recorrido por la actualización de Galaxy Explorer para HoloLens 2. El explorador de Galaxy se desarrolló originalmente como una aplicación de código abierto para HoloLens (1ª generación) a través del programa de uso compartido de ideas y es una de las primeras experiencias de realidad mixta que muchos usuarios tenían. Ahora lo estamos actualizando para las nuevas funcionalidades de HoloLens 2.<br>
+        Este es el recorrido de cómo estamos actualizando Galaxy Explorer para HoloLens 2. El explorador de Galaxy se desarrolló originalmente como una aplicación de código abierto para HoloLens (1ª generación) a través del programa de uso compartido de ideas y es una de las primeras experiencias de realidad mixta que muchos usuarios tenían. Ahora lo estamos actualizando para las nuevas funcionalidades de HoloLens 2.<br>
         *Junio de 2019*
     :::column-end:::
     :::column:::
@@ -104,7 +104,7 @@ HoloTour para Microsoft HoloLens proporciona paseos en 3D sobre las ubicaciones 
         *Agosto de 2016*
     :::column-end:::
     :::column:::
-       [ ![ Captura y creación de contenido para HoloTour](../out-of-scope/images/camera-machu-pichu-500px.png)](../out-of-scope/case-study-capturing-and-creating-content-for-holotour.md) **[captura y creación de contenido para HoloTour](../out-of-scope/case-study-capturing-and-creating-content-for-holotour.md)**<br>
+       [ ![ Captura y creación de contenido para Machu Pichu HoloTour](../out-of-scope/images/camera-machu-pichu-500px.png)](../out-of-scope/case-study-capturing-and-creating-content-for-holotour.md) **[captura y creación de contenido para HoloTour](../out-of-scope/case-study-capturing-and-creating-content-for-holotour.md)**<br>
         HoloTour proporciona paseos en 3D para las ubicaciones de iconos en todo el mundo. Como hemos descubierto, la creación de una representación 3D convincentemente real de una ubicación conocida toma una mezcla de wizardrys creativos y tecnológicos.<br>
         *Agosto de 2016*
     :::column-end:::
@@ -140,7 +140,7 @@ Lea nuestras ideas de alto nivel y comprenda los principios que seguimos.
 :::row:::
     :::column:::
        [ ![ Representar a seres humanos en realidad mixta](../develop/unity/images/bang-ai-weiwie.jpg)](../out-of-scope/case-study-representing-humans-in-mixed-reality.md) **[que representan a seres humanos en realidad mixta](../out-of-scope/case-study-representing-humans-in-mixed-reality.md)**<br>
-        ¿Qué tipo de oportunidades surgen cuando no se pueden crear elementos fantásticos, sino que se usan las capturas más realistas de entornos, objetos y personas en realidad mixta?<br>
+        ¿Qué tipo de oportunidades surgen cuando no se pueden crear elementos fantásticos, pero se usa la captura más realista de entornos, objetos y personas en realidad mixta?<br>
          *Noviembre de 2017*
     :::column-end:::
     :::column:::
@@ -158,7 +158,7 @@ Lea nuestras ideas de alto nivel y comprenda los principios que seguimos.
 :::row:::
     :::column:::
        [ ![ Desarrollo de procesos de AfterNow, creación de prototipos, generación](../out-of-scope/images/whatisenvisioning-640px.png)](../out-of-scope/case-study-afternows-process-envisioning,-prototyping,-building.md) de **[procesos de AfterNow, creación de prototipos y compilación](../out-of-scope/case-study-afternows-process-envisioning,-prototyping,-building.md)**<br>
-        En AfterNow, trabajamos con usted para convertir sus ideas y aspiraciones en productos y experiencias totalmente operativas y listos para el mercado. Pero antes de escribir una sola línea de código, creamos un plano a través de un proceso denominado Envisioning.<br>
+        En AfterNow, trabajamos con usted para convertir sus ideas y aspiraciones en productos concretos y totalmente operativos, y experiencias listas para el mercado. Pero antes de escribir una sola línea de código, creamos un plano a través de un proceso denominado Envisioning.<br>
         *Abril de 2017*
     :::column-end:::
     :::column:::

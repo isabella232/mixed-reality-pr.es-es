@@ -1,11 +1,23 @@
 ---
-ms.openlocfilehash: 9fdcbdfe115fa859081c28b768f9c213ac241d13
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: c5a13798ca6a73f1a6410abe310c2166b67f4626
+ms.sourcegitcommit: 13ef9f89ee61fbfe547ecf5fdfdb97560a0de833
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002723"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97718015"
 ---
+# <a name="426"></a>[4.26](#tab/426)
+
+La jerarquía se describe mediante `EHandKeypoint` enum:
+
+![Imagen de las opciones de keypoint bluprint](../images/hand-keypoint-bp.png)
+
+Puede obtener todos estos datos de las manos de un usuario mediante la función **Get Motion Controller Data** . Esa función devuelve una estructura **XRMotionControllerData** . A continuación se muestra un script de plano de ejemplo que analiza la estructura XRMotionControllerData para obtener las ubicaciones de unión a mano y dibuja un sistema de coordenadas de depuración en cada ubicación de la Unión.
+
+![Plano de la función de datos de mirada conectada a la función de seguimiento de línea por canal](../images/unreal-hand-tracking-img-03.png)
+
+Es importante comprobar si la estructura es válida y es una mano. De lo contrario, puede obtener un comportamiento indefinido en el acceso a las posiciones, las rotaciones y las matrices de radios.
+
 # <a name="425"></a>[4.25](#tab/425)
 
 La `EWMRHandKeypoint` enumeración describe la jerarquía del hueso de la mano. Puede encontrar cada keypoint de mano enumerado en los planos:
@@ -84,15 +96,3 @@ Este es un desglose de los parámetros de función de GetHandJointTransform:
 * * * Radio: radio de la base del hueso.
 * * * Valor devuelto: true si se realiza un seguimiento del hueso de este fotograma, false si no se realiza el seguimiento del hueso.
 
-
-# <a name="426"></a>[4.26](#tab/426)
-
-La jerarquía se describe mediante `EHandKeypoint` enum:
-
-![Imagen de las opciones de keypoint bluprint](../images/hand-keypoint-bp.png)
-
-Puede obtener todos estos datos de las manos de un usuario mediante la función **Get Motion Controller Data** . Esa función devuelve una estructura **XRMotionControllerData** . A continuación se muestra un script de plano de ejemplo que analiza la estructura XRMotionControllerData para obtener las ubicaciones de unión a mano y dibuja un sistema de coordenadas de depuración en cada ubicación de la Unión.
-
-![Plano de la función de datos de mirada conectada a la función de seguimiento de línea por canal](../images/unreal-hand-tracking-img-03.png)
-
-Es importante comprobar si la estructura es válida y es una mano. De lo contrario, puede obtener un comportamiento indefinido en el acceso a las posiciones, las rotaciones y las matrices de radios.

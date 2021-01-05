@@ -3,12 +3,12 @@ title: Preguntas más frecuentes sobre WebVR
 description: Solución de problemas de la realidad mixta web que va más allá de nuestra documentación de soporte técnico estándar para el consumidor.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, WebVR
-ms.openlocfilehash: e03051008921f87e18cae3a9f6db369e54c56b94
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: fd9906ca36c71b1bf959466d90c57e07be0eca5e
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93131939"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725636"
 ---
 # <a name="webvr-faqs"></a>Preguntas más frecuentes sobre WebVR
 
@@ -18,11 +18,11 @@ No todo el contenido de WebVR se crea para admitir controladores de movimiento. 
 
 ## <a name="why-cant-i-use-the-mouse-in-an-immersive-webvr-view"></a>¿Por qué no puedo usar el mouse en una vista de WebVR envolvente?
 
-Esta es una característica opcional de la especificación WebVR. No todos los exploradores admiten esta característica y no se crea todo el contenido de WebVR para admitir la entrada del mouse. WebVR permite a los desarrolladores de contenido admitir distintos tipos de entrada, como el mouse, el teclado, los controladores de juegos o los controladores de movimiento. El comportamiento de la entrada del mouse varía según el explorador. Dentro de Microsoft Edge, los autores de sitios web deben asegurarse de que usan "pointerlock" cuando se presentan al casco para que la entrada del mouse funcione.
+El uso de un mouse es una característica opcional de la especificación WebVR. No todos los exploradores admiten esta característica y no se crea todo el contenido de WebVR para admitir la entrada del mouse. WebVR permite a los desarrolladores de contenido admitir distintos tipos de entrada, como el mouse, el teclado, los controladores de juegos o los controladores de movimiento. El comportamiento de la entrada del mouse varía según el explorador. Dentro de Microsoft Edge, los autores de sitios web deben asegurarse de que usan "pointerlock" cuando se presentan al casco para que la entrada del mouse funcione.
 
-## <a name="why-cant-i-view-360-degree-videos-from-youtubefacebookvimeothe-guardian-etc-from-edge-in-vr"></a>¿Por qué no puedo ver vídeos de 360 Degrees de YouTube/Facebook/Vimeo/The Guardian, etc. desde Edge en VR?
+## <a name="why-cant-i-view-360-degree-videos-from-youtubefacebookvimeothe-guardian-etc-from-edge-in-vr"></a>¿Por qué no puedo ver vídeos de 360 grados de YouTube/Facebook/Vimeo/The Guardian, etc. desde Edge en VR?
 
-Existe una especificación de WebVR que permite que los sitios web inicien experiencias de VR directamente desde el explorador y que los autores de estos sitios web no hayan implementado esta especificación en este momento. Puede haber aplicaciones descargables en algunas plataformas que permitan ver el contenido de VR de estos proveedores.
+Existe una especificación de WebVR que permite que los sitios web inicien experiencias de VR directamente desde el explorador. Los autores de estos sitios web no han implementado esta especificación en este momento. Puede haber aplicaciones descargables en algunas plataformas que permitan ver el contenido de VR de estos proveedores.
 
 ## <a name="why-cant-i-enter-vr-from-firefox-or-chrome"></a>¿Por qué no puedo especificar VR desde Firefox o Chrome?
 
@@ -37,11 +37,11 @@ Es posible que el sitio web no haya implementado compatibilidad con máquinas co
 
 ## <a name="when-i-exit-vr-when-watching-a-video-from-edge-the-sound-continues-playing-but-the-edge-window-is-grayed-out"></a>Al salir de VR al ver un vídeo desde la periferia, el sonido continúa jugando, pero la ventana del borde está atenuada
 
-Se trata de un problema conocido al ejecutar WebVR desde Edge en la casa de la realidad de la realidad mixta. Para resolverlo, presione ESC en el teclado en lugar de presionar el botón Windows para salir de la experiencia WebVR, o bien Active la ventana de borde atenuado seleccionándola y, a continuación, detenga el vídeo.
+Se trata de un problema conocido al ejecutar WebVR desde Edge en la casa de la realidad de la realidad mixta. Para resolverlo, presione ESC en el teclado en lugar del botón de Windows para salir de la experiencia de WebVR o Active la ventana de borde atenuado seleccionándola y, a continuación, detenga el vídeo.
 
 ## <a name="can-i-use-webvr-on-the-hololens"></a>¿Puedo usar WebVR en HoloLens?
 
-En este momento, Microsoft no ha anunciado nada sobre WebVR en HoloLens.
+Microsoft no anunció nada sobre WebVR en HoloLens en este momento.
 
 ## <a name="why-is-my-view-at-floor-level-when-viewing-webvr-content-from-edge"></a>¿Por qué mi vista está en el nivel inferior al ver el contenido de WebVR desde el perímetro?
 
@@ -53,7 +53,7 @@ El sitio web no admite correctamente auriculares con Windows Mixed Reality. Para
 4. Espere entre cinco y 10 segundos para que la experiencia entre en el modo inmersivo completo.
 5. Colóquelo en el casco.
 
-## <a name="the-display-is-very-low-resolution-in-some-webvr-experiences"></a>La pantalla tiene una resolución muy baja en algunas experiencias de WebVR
+## <a name="the-display-is-low-resolution-in-some-webvr-experiences"></a>La pantalla tiene una resolución baja en algunas experiencias de WebVR
 
 Estos sitios web no admiten correctamente auriculares de alta resolución. Para solucionar este problema:
 
@@ -72,4 +72,4 @@ Puede notificar sitios rotos directamente al equipo del explorador Microsoft Edg
 
 ## <a name="why-does-haptic-feedback-not-work-in-webvr-with-motion-controllers"></a>¿Por qué los comentarios hápticos no funcionan en WebVR con los controladores de movimiento?
 
-Microsoft Edge no es compatible actualmente con hápticos en las extensiones de la API del controlador de juegos de WebVR.
+Microsoft Edge no admite actualmente hápticos en las extensiones de la API del controlador de juegos de WebVR.

@@ -8,18 +8,18 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: 892236c632d21620e48ced55d594bd059704a423
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: f349f4bbc2cadd511515783504562052f1d58ed3
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93132059"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725396"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Controladores de movimiento en Windows Mixed Reality
 
-Los controladores de movimiento son accesorios de hardware que permiten a los usuarios tomar medidas en realidad mixta. Una ventaja de los controladores de movimiento a través de gestos es que los controladores tienen una posición precisa en el espacio, lo que permite una interacción específica con objetos digitales. En el caso de los auriculares de la realidad mixta de Windows, los controladores de movimiento son la manera principal en que los usuarios realizarán acciones en su mundo.
+Los controladores de movimiento son accesorios de hardware que permiten a los usuarios interactuar en la realidad mixta. Una ventaja de los controladores de movimiento a través de gestos es que los controladores tienen una posición precisa en el espacio, lo que permite una interacción específica con objetos digitales. En el caso de los auriculares de la realidad mixta de Windows, los controladores de movimiento son la manera principal en que los usuarios realizarán acciones en su mundo.
 
-Los controladores de movimiento de Windows Mixed Reality ofrecen un seguimiento preciso y con capacidad de respuesta del movimiento en el campo de la vista con los sensores en el casco envolvente, lo que significa que no es necesario instalar hardware en las paredes del espacio. Estos controladores de movimiento ofrecen la misma facilidad de configuración y portabilidad que los auriculares de la realidad mixta de Windows.
+Los controladores de movimiento de Windows Mixed Reality ofrecen un seguimiento de movimiento preciso y con capacidad de respuesta en el campo de vista a través de los sensores de auriculares inmersivo. No es necesario instalar hardware en las paredes del espacio. Estos controladores de movimiento ofrecen la misma facilidad de configuración y portabilidad que los auriculares de la realidad mixta de Windows.
 
 También puede usar una controladora Xbox, un mouse y un teclado, o bien desplazarse por [el uso de la voz](using-speech-in-wmr.md).
 
@@ -28,8 +28,8 @@ También puede usar una controladora Xbox, un mouse y un teclado, o bien desplaz
 La mayoría de los auriculares se emparejan previamente directamente con los auriculares, pero algunos auriculares iniciales requieren que los controladores de movimiento se emparejen al equipo con Bluetooth 4,0. Cuando conecte el casco envolvente por primera vez, se le guiará a través de la activación de los controladores de movimiento durante la instalación. Pero si necesita volver a emparejarlos más adelante, aquí se muestra cómo:
 
 1. Inicie el **portal de realidad mixta** con los auriculares conectados.  
-2. En la esquina inferior izquierda, seleccione **... > configurar controladores** .
-3. Inserte dos baterías AA en cada controlador y ponga el controlador en modo de emparejamiento (consulte las instrucciones en la [sección sobre controladores de movimiento en pares](controllers-in-wmr.md#pair-motion-controllers) ).
+2. En la esquina inferior izquierda, seleccione **... > configurar controladores**.
+3. Inserte dos baterías de AA en cada controlador y ponga el controlador en modo de emparejamiento (consulte las instrucciones en la [sección sobre controladores de movimiento en pares](controllers-in-wmr.md#pair-motion-controllers) ).
 4. Siga las instrucciones que aparecen en pantalla.
 
 > [!NOTE]
@@ -45,11 +45,11 @@ La mayoría de los auriculares se emparejan previamente directamente con los aur
 > 
 > Si tiene un controlador Xbox con cable, conéctelo a su PC.
 > 
-> Algunos juegos y aplicaciones usan el controlador Xbox de forma distinta a como se usa en la realidad mixta. Para usar el controlador para un juego o una aplicación, selecciona **usar como** controlador de juegos en la barra de la aplicación o decir "usar como controlador de juegos". Para volver a cambiar el controlador a la realidad mixta, seleccione **usar como controlador para juegos** , de nuevo o decir, "usar con mirarme".  
+> Algunos juegos y aplicaciones usan el controlador Xbox de forma distinta a como se usa en la realidad mixta. Para usar el controlador para un juego o una aplicación, selecciona **usar como** controlador de juegos en la barra de la aplicación o decir "usar como controlador de juegos". Para volver a cambiar el controlador a la realidad mixta, seleccione **usar como controlador para juegos**, de nuevo o decir, "usar con mirarme".  
 
 ## <a name="pair-motion-controllers"></a>Controladores de movimiento de pares
 
-Si usa un casco que incluye un controlador Bluetooth integrado, como la reverberación Samsung Odyssey + o HP, los controladores ya deben estar emparejados. Sin embargo, puede seguir emparejando los controladores mediante la aplicación de configuración (ya debe estar instalado durante la configuración de HMD. También puede obtenerlo en Microsoft Store).
+Si usa un casco que incluye un controlador Bluetooth integrado, como la reverberación Samsung Odyssey + o HP, los controladores ya deben estar emparejados. Sin embargo, puede seguir emparejando los controladores mediante la aplicación de instalación (ya debe estar instalado durante la configuración de HMD. También puede obtenerlo en Microsoft Store).
 
 ### <a name="pair-motion-controllers-to-hmd"></a>Emparejar controladores de movimiento a HMD
 
@@ -59,7 +59,7 @@ Quite la tapa de la batería de los controladores y busque el pequeño botón de
     ![Emparejamiento de controlador de movimiento](images/connect_controller.png)
 
 Inicie el **portal de realidad mixta** con los auriculares conectados.  
-En la esquina inferior izquierda, seleccione **... > configurar controladores** .
+En la esquina inferior izquierda, seleccione **... > configurar controladores**.
 Siga las instrucciones de la pantalla.
 
 ### <a name="pair-motion-controllers-to-pc"></a>Emparejar controladores de movimiento al equipo
@@ -77,10 +77,10 @@ Una vez completado el emparejamiento, los LED serán sólidos y brillantes.
 
 * Compruebe que solo tiene un radio Bluetooth activo en el equipo. Si tiene más de un radio Bluetooth, tendrá que deshabilitar las demás radios en Device Manager.
 * Coloque la llave de Bluetooth en un puerto que tenga una visión clara de los controladores, y lejos del encendido en dispositivos USB 3,0. Se sabe que USB 3,0 tiene interferencias RF con Bluetooth (lea [este documento](https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/usb3-frequency-interference-paper.pdf) de Intel para obtener más detalles). Los puertos USB 2,0 funcionan mejor para el dispositivo Bluetooth.
-* Asegúrese de que la llave Bluetooth no esté conectada a un puerto USB adyacente al cable USB de su HMD. También se sabe que el cable de auriculares causa interferencias con los llaves Bluetooth. Conecte el dispositivo de protección en el puerto USB front-end del equipo para obtener los mejores resultados.
-* En el caso de los cuadernos, asegúrese de que Wi-Fi está conectado a una banda de 5 GHz para obtener la mejor experiencia (seleccione el icono de red inalámbrica en la bandeja inferior derecha y seleccione Propiedades para la red que está usando). Los cuadernos que están diseñados para compartir una antena de 2,4 GHz para la conectividad Bluetooth y WiFi tienen más probabilidades de ver la congestión de los datos en forma de velocidades de red lentas o un rendimiento deficiente de seguimiento para los controladores de movimiento.
-* Los controladores de movimiento recibirán nuevas actualizaciones de software de Microsoft de forma periódica. Los controladores mostrarán un patrón alterno de luces intermitentes cuando reciban estas nuevas actualizaciones de software. Esto es normal. Espere hasta que se complete la actualización del software antes de usar los controladores (los controladores vibrarán y una luz constante reemplazará el patrón de Flash alterno cuando haya terminado).
-* Es posible que se le diga "poner en el casco y usar el stick analógico para teletransportar" antes de que los controladores finalicen el proceso de actualización. Los controladores no estarán visibles ni se podrán usar hasta que se complete la actualización. La mayoría de las actualizaciones se producen en dos minutos, pero las actualizaciones pueden tardar hasta 10 minutos. Espere a que se complete la actualización antes de continuar con el siguiente paso.
+* Asegúrese de que el dispositivo Bluetooth no esté conectado a un puerto USB situado junto al cable USB de su HMD. También se sabe que el cable de auriculares causa interferencias con los llaves Bluetooth. Conecte el dispositivo de protección en el puerto USB front-end del equipo para obtener los mejores resultados.
+* En el caso de los cuadernos, asegúrese de que la red Wi-Fi está conectada a una banda de 5 GHz para obtener la mejor experiencia. Seleccione la bandeja de la parte inferior derecha del icono de red inalámbrica y seleccione Propiedades para la red que está usando. Los cuadernos diseñados para compartir una antena de 2,4 GHz para la conectividad Wi-Fi y Bluetooth verán la congestión de datos de velocidades de red lentas o un rendimiento deficiente de seguimiento del controlador de movimiento.
+* Los controladores de movimiento recibirán nuevas actualizaciones de software de Microsoft de forma periódica. Los controladores mostrarán un patrón alterno de luces intermitentes cuando reciban estas nuevas actualizaciones de software. Esto es normal. Espere hasta que se complete la actualización del software antes de usar los controladores. Los controladores vibrarán y una luz constante reemplazará el patrón de Flash alterno cuando haya terminado.
+* Es posible que se le diga "poner en el casco y usar el stick analógico para teletransportar" antes de que los controladores finalicen el proceso de actualización. Los controladores no podrán verse ni usarse hasta que se complete la actualización. La mayoría de las actualizaciones se producen en dos minutos, pero las actualizaciones pueden tardar hasta 10 minutos. Espere a que se complete la actualización antes de continuar con el siguiente paso.
 
 ## <a name="using-controllers"></a>Uso de controladores
 
@@ -91,15 +91,15 @@ Aquí se muestra cómo desplazarse por la realidad mixta con controladores de mo
 
 ![Asignación de botón de controlador de movimiento](images/get_to_know_controllers.png)
 
-|  Para  |  Controladores de movimiento  | Controlador para juegos | Mouse + teclado |
+|  Para hacer esto  |  Controladores de movimiento  | Controlador para juegos | Mouse + teclado |
 | --- | --- | --- | --- |
-| Te | Presione el stick analógico hacia delante y luego señale el controlador al que desea ir. Suelte el stick. | Presione el stick analógico izquierdo hacia delante y luego mire dónde quiere ir. Suelte el stick. | Haga clic y mantenga presionado el botón secundario y, a continuación, señale el mouse donde desea ir. Suelte el botón. |
-| Seleccionar | Señale el controlador y, a continuación, extraiga el desencadenador o haga clic en el panel táctil. | Mira el destino y después presiona. | Señale el mouse y haga clic con el botón primario. |
-| Abrir el menú Inicio | Presione el botón **Windows** . | Presione el botón **Xbox** . | Presione la **tecla del logotipo de Windows** . |
-| Dejar una aplicación envolvente | Presione el botón **Windows** . A continuación, seleccione **Inicio de realidad mixta** en el menú acciones rápidas. | Presione el botón **Xbox** . A continuación, seleccione el botón **Inicio de realidad mixta** en el menú acciones rápidas. | Presione la **tecla del logotipo de Windows** . Después, seleccione el botón **Inicio de realidad mixta** en el menú acciones rápidas que aparece. |
-| Girar | Mueve el Stick a la izquierda o a la derecha. | Mueve el stick derecho a la izquierda o a la derecha. | No está disponible. |
-| Copia de seguridad | Mueve el stick hacia atrás. | Mueve el stick izquierdo hacia atrás. | No está disponible. |
-| A pie | Inserte el stick analógico hacia abajo y luego presiónelo en la dirección que desea recorrer. | Inserte el stick izquierdo hacia abajo y, a continuación, haga clic en la dirección que desea recorrer. | No está disponible. |
+| Te | Presione el stick analógico hacia delante y luego señale el controlador al que desea ir. Suelte el stick. | Presione el stick analógico izquierdo hacia delante y luego mire dónde quiere ir. Suelte el stick. | Seleccione y mantenga presionado el botón secundario y, a continuación, señale el mouse donde desea ir. Suelte el botón. |
+| Seleccionar | Señale el controlador y, a continuación, extraiga el desencadenador o use el Touchpad. | Mira el destino y después presiona. | Señale el mouse y haga clic con el botón primario. |
+| Abrir el menú Inicio | Presione el botón **Windows** . | Presione el botón **Xbox** . | Presione la **tecla del logotipo de Windows**. |
+| Dejar una aplicación envolvente | Presione el botón **Windows** . A continuación, seleccione **Inicio de realidad mixta** en el menú acciones rápidas. | Presione el botón **Xbox** . A continuación, seleccione el botón **Inicio de realidad mixta** en el menú acciones rápidas. | Presione la tecla del logotipo de Windows * *. Después, seleccione el botón **Inicio de realidad mixta** en el menú acciones rápidas que aparece. |
+| Girar | Mueve el Stick a la izquierda o a la derecha. | Mueve el stick derecho a la izquierda o a la derecha. | No disponible. |
+| Copia de seguridad | Mueve el stick hacia atrás. | Mueve el stick izquierdo hacia atrás. | No disponible. |
+| A pie | Inserte el stick analógico hacia abajo y luego presiónelo en la dirección que desea recorrer. | Inserte el stick izquierdo hacia abajo y, a continuación, haga clic en la dirección que desea recorrer. | No disponible. |
 | Movimiento de una ventana de aplicación | Apunte a la barra de la aplicación. Tire y mantenga presionado el desencadenador para capturar la ventana y, a continuación, use el controlador para moverla en cualquier dirección. Libere el desencadenador. | Mira fijamente en la barra de la aplicación y después presiona y mantiene presionada la ventana. Use el botón de la derecha para subir o bajar la ventana. Use los desencadenadores para desplazarlos más cerca y más lejos. A continuación, libere un. | Señale el mouse en la barra de la aplicación. Haga clic con el botón derecho y mantenga presionado el botón del mouse para seleccionarlo de lado a lado o hacia arriba y hacia abajo. Use la rueda de desplazamiento para bajar o alejar la ventana. Suelte el botón del mouse (ratón). |
 | Mover un objeto 3D | Señale el objeto y, a continuación, extraiga y mantenga presionado el desencadenador para capturarlo. Muévalo en cualquier dirección con el controlador y, a continuación, libere el desencadenador. | Mira el objeto, presiona y mantiene presionado para obtenerlo. Use el botón de la derecha para subir o bajar la ventana. Use los desencadenadores para desplazarlos más cerca y más lejos. A continuación, libere un. | Señale el mouse en el objeto. Haga clic con el botón izquierdo y mantenga presionado el botón del mouse para moverlo de lado a lado o hacia arriba y hacia abajo.  Para moverla más cerca o más lejos, use la rueda de desplazamiento. Suelte el botón del mouse (ratón). |
 | Girar o cambiar el tamaño de una ventana de la aplicación | Señale un controlador en la barra de la aplicación y el otro controlador en cualquier parte de la ventana. Mantenga presionados ambos desencadenadores y, a continuación, mueva los controladores o separe su tamaño.  Para rotar, mueva un controlador hacia usted y el otro a su alrededor. Libere los desencadenadores. | Seleccione **ajustar** en la barra de la aplicación. Mira una esquina del marco de ajuste y después presiona un para seleccionarlo. Use el stick izquierdo para cambiar el tamaño de la ventana.  | Seleccione **ajustar** en la barra de la aplicación. Seleccione y mantenga presionada una esquina del marco de ajuste y, a continuación, use el mouse para cambiar el tamaño de la ventana. |
@@ -127,7 +127,7 @@ El controlador se comunica con usted lo que está haciendo vibrando y parpadeand
 ## <a name="updating-motion-controllers-firmware"></a>Actualización del firmware de los controladores de movimiento
 
 * Si hay un auricular envolvente conectado al equipo y hay disponible un nuevo firmware de controlador, el firmware se insertará automáticamente en los controladores de movimiento la próxima vez que se activen.
-* Las actualizaciones de firmware del controlador se indican mediante un patrón de cuadrantes LED de iluminación en un movimiento circular y tardan 1-2 minutos. En ocasiones, las actualizaciones de firmware pueden tardar más tiempo, hasta 10 minutos, lo que puede indicar una mala conectividad Bluetooth o interferencias de radio.
+* Las actualizaciones de firmware del controlador se muestran con un patrón de cuadrantes LED de iluminación en un movimiento circular y tardan 1-2 minutos. En ocasiones, las actualizaciones de firmware pueden tardar más tiempo, hasta 10 minutos, lo que puede indicar una mala conectividad Bluetooth o interferencias de radio.
 * En caso de que se interrumpa la actualización de firmware (controlador apagado o batería agotada), se volverá a intentar en el siguiente encendido.
 * Una vez finalizada la actualización del firmware, los controladores se reinician y se vuelven a conectar.
 * Ambos controladores deben estar conectados ahora. Vaya al portal de realidad mixta para comprobar el estado de los controladores.

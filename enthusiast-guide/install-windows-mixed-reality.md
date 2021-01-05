@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, introducción, configuración, portal de realidad mixta
 appliesto:
 - Windows 10
-ms.openlocfilehash: a9333e9f4d80ea73724e2530f2e94c3d0e32d0d4
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: 72782d14218e0a95b5a88297310f791c977fe094
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93132109"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726076"
 ---
 # <a name="install-windows-mixed-reality-software"></a>Instale el software de Windows Mixed Reality
 
@@ -22,23 +22,23 @@ ms.locfileid: "93132109"
 
 ## <a name="launch-mixed-reality-portal"></a>Inicio del portal de realidad mixta
 
-Después de conectar el casco de la realidad mixta de Windows y de que el controlador se instala correctamente, el portal de realidad mixta (PRM) se iniciará automáticamente en el escritorio. Si esto no ocurre automáticamente, siempre puede iniciar el portal de realidad mixta desde el menú Inicio ( **iniciar > portal de realidad mixta** ). Una vez que se haya iniciado el portal, haga clic en **Introducción** .
+Después de conectar el casco de la realidad mixta de Windows y de que el controlador se instala correctamente, el portal de realidad mixta (PRM) se iniciará automáticamente en el escritorio. Si el portal no se inicia, siempre puede abrir el portal de realidad mixta desde **inicio > portal de realidad mixta**. Una vez que se haya iniciado el portal, seleccione **Introducción**
 
 ![Le damos la bienvenida a Mixed Reality](images/1050px-mixedrealityportal.png)
 
 En el portal de realidad mixta, puede:
 
-* Mostrar un streaming en vivo de la vista en el casco (Windows Mixed Reality ultra Only). Para activar y desactivar esta opción, seleccione "detener vista previa" o "iniciar vista previa". (También puede activar y desactivar la vista previa en el menú Inicio de realidad mixta).
+* Mostrar un streaming en vivo de la vista en el casco (Windows Mixed Reality ultra Only) seleccionando "detener vista previa" o "iniciar vista previa". También puede activar y desactivar la vista previa en el menú Inicio de realidad mixta.
 * Vea el estado de los auriculares y los controladores. Seleccione "menú" para ver toda la información.
-* Configurar nuevos controladores. Seleccione **menú > configurar controladores** .
-* Activar o desactivar el límite. Activar **o desactivar el límite de > de menús** . (Si lo desactiva, deberá permanecer en un lugar por seguridad).
-* Cree un nuevo límite. Seleccione el **menú > ejecutar el programa de instalación** .
-* Llegue a sus fotos de realidad mixta. Seleccione **menú > consulte fotos de realidad mixta** .
-* Obtenga aplicaciones y juegos de realidad mixta. Seleccione **menú > obtener aplicaciones de realidad mixta** .
+* Configurar nuevos controladores. Seleccione **menú > configurar controladores**.
+* Activar o desactivar el límite. Activar **o desactivar el límite de > de menús**. (Si lo desactiva, deberá permanecer en un lugar por seguridad).
+* Cree un nuevo límite. Seleccione el **menú > ejecutar el programa de instalación**.
+* Llegue a sus fotos de realidad mixta. Seleccione **menú > consulte fotos de realidad mixta**.
+* Obtenga aplicaciones y juegos de realidad mixta. Seleccione **menú > obtener aplicaciones de realidad mixta**.
 
 ## <a name="download-windows-mixed-reality"></a>Descargar Windows Mixed Reality
 
-Windows Mixed Reality tiene aproximadamente 1 GB de tamaño y los tiempos de descarga variarán en función de la conexión a Internet. Si encuentra un mensaje que dice "no pudimos descargar el software de realidad mixta", consulte [los pasos de solución de problemas](installation_errors.md#we-couldnt-download-the-mixed-reality-software-or-hang-tight-while-we-do-some-downloading).
+Windows Mixed Reality tiene un tamaño de 1 GB y los tiempos de descarga variarán en función de la conexión a Internet. Si se encuentra con un mensaje que dice "no se pudo descargar el software de realidad mixta", eche un vistazo a estos [pasos de solución de problemas](installation_errors.md#we-couldnt-download-the-mixed-reality-software-or-hang-tight-while-we-do-some-downloading).
 
 ## <a name="general-troubleshooting"></a>Solución general de problemas
 
@@ -59,18 +59,18 @@ Si no aparece, intente lo siguiente:
 * Busque las actualizaciones de software más recientes desde [Windows Update](https://support.microsoft.com/help/12373).
 * Desinstalar y reinstalar Windows Mixed Reality:
     1. Desconecte el casco del equipo (ambos cables).
-    2. Seleccione **configuración > realidad mixta > desinstalar** .
-    3. Desemparejar los controladores de movimiento: seleccione la **configuración > dispositivos > Bluetooth & otros dispositivos** . Seleccione cada controlador y, a continuación, seleccione **quitar dispositivo** .
+    2. Seleccione **configuración > realidad mixta > desinstalar**.
+    3. Desemparejar los controladores de movimiento: seleccione la **configuración > dispositivos > Bluetooth & otros dispositivos**. Seleccione cada controlador y, a continuación, seleccione **quitar dispositivo**.
     4. Para volver a instalar Windows Mixed Reality, conecte el casco a su PC.
 
 ## <a name="common-error-messages"></a>Mensajes comunes de error
 
 A continuación se indican algunas cosas para probar [los mensajes de error](error-codes.md) que puede ver.
 
-| Si ve este mensaje | Pruebe esto |
+| Si ve este mensaje | Probar esto |
 | --- | --- |
 | Comprobar el cable USB | Conecte los auriculares a otro puerto USB (y asegúrese de que es un SuperSpeed USB 3,0). Además, pruebe a quitar cualquier dispositivo extender o concentrador entre los auriculares y el equipo. |
-| Comprobar el cable para mostrar | Pruebe lo siguiente: <ul><li>Conecte los auriculares a un DisplayPort 1,2 o posterior, o HDMI 1,4 o posterior. Asegúrese de que el puerto corresponde a la tarjeta de gráficos más avanzada del equipo.</li><li>Si utiliza un adaptador, asegúrese de que sea compatible con 4K</li><li>Pruebe a usar un puerto HDMI diferente</li><li>Si tiene un monitor externo conectado a un puerto HDMI, intente conectarlo a un DisplayPort en su lugar y use el puerto HDMI para sus auriculares</li></ul> |
+| Comprobar el cable para mostrar | Realice estos pasos: <ul><li>Conecte los auriculares a un DisplayPort 1,2 o posterior, o HDMI 1,4 o posterior. Asegúrese de que el puerto corresponde a la tarjeta de gráficos más avanzada del equipo.</li><li>Si usa un adaptador, asegúrese de que tiene la capacidad de 4K</li><li>Pruebe a usar un puerto HDMI diferente</li><li>Si tiene un monitor externo conectado a un puerto HDMI, intente conectarlo a un DisplayPort en su lugar y use el puerto HDMI para sus auriculares</li></ul> |
 | Hubo un problema | Siga los pasos de solución de problemas generales anteriores. |
 
 ## <a name="review-and-accept-terms-and-conditions"></a>Revisar y aceptar los términos y condiciones
@@ -81,13 +81,13 @@ Para continuar con la instalación, debe tener 2 GB de espacio disponible en el 
 
 ## <a name="compatibility-check"></a>Comprobación de compatibilidad
 
-A continuación se encuentra la comprobación compatible. El portal de realidad mixta comprobará que el equipo sea compatible con la realidad mixta. Las comprobaciones **verdes** indican que el equipo ha pasado el elemento necesario. Los triángulos **naranja** significan que puede haber problemas con el equipo para el requisito determinado. Si tiene problemas, es posible que tenga que solucionar problemas o actualizar el equipo. **Red** La X significa que el equipo no cumple los requisitos del elemento especificado.
+A continuación se encuentra la comprobación compatible. El portal de realidad mixta comprobará que el equipo sea compatible con la realidad mixta. Las comprobaciones **verdes** indican que el equipo ha pasado el elemento necesario. Los triángulos **naranja** significan que puede haber problemas con el equipo para el requisito determinado. Si encuentra algún problema, es posible que tenga que solucionar problemas o actualizar el equipo. **Red** XS significa que el equipo no cumple los requisitos del elemento especificado.
 
 ![Comprobación de compatibilidad](images/1050px-compatcheck.png)
 
 ## <a name="getting-ready"></a>Preparación
 
-Verá un mensaje de "preparación para configurar" en la pantalla con un icono de giro. Esto solo tardará unos minutos:
+Verá el mensaje "Prepárese para configurar" en la pantalla con un icono de giro, que solo tardará unos minutos:
 
 ![Preparación para configurar](images/1050px-gettingsetup.png)
 

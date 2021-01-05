@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 11/13/2020
 ms.topic: article
 keywords: Microsoft Store, HoloLens, auriculares envolventes, aplicación, UWP, envío, envío, filtros, metadatos, requisitos del sistema, palabras clave, Wack, certificación, paquete, appx, comercialización, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 1d37337279e46e5f0f9d5cea82813af8de9d0f76
-ms.sourcegitcommit: 9c640c96e2270ef69edd46f1b12acb00b373554d
+ms.openlocfilehash: 92de6072300ed94873cc68dfa78531da4685d274
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96578904"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757843"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>Envío de aplicaciones a Microsoft Store
 
@@ -47,7 +47,7 @@ Los recursos de imagen siguientes son necesarios para que las herramientas de co
 |  Logotipo de la Tienda |  75x75 (escala del 150%)  |  PNG  |  Centro de Partners, aplicación de informes, escribir una revisión, mi biblioteca | 
 |  Pantalla de presentación |  930x450 (escala del 150%)  |  PNG  |  iniciador de aplicaciones 2D (pizarra) | 
 
-Si está desarrollando para HoloLens, hay más recursos recomendados que puede aprovechar:
+Si está desarrollando para HoloLens, hay otros recursos recomendados que puede aprovechar:
 
 | Activos recomendados | Escala recomendada | ¿Dónde se muestra el recurso? | 
 |----------|----------|----------|
@@ -70,7 +70,7 @@ Cuando cree un nuevo proyecto universal de Windows en Visual Studio, se le pedir
 
 ### <a name="specifying-target-device-families"></a>Especificación de las familias de dispositivos de destino
 
-Las aplicaciones de realidad mixta de Windows (tanto para [HoloLens](../hololens-hardware-details.md) como para [auriculares envolventes](../discover/immersive-headset-hardware-details.md)) forman parte de la plataforma universal de Windows, por lo que cualquier paquete de aplicación con una [familia de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn986903.aspx) **Windows. universal** de destino puede ejecutarse en equipos HoloLens o Windows 10 con auriculares envolventes. Si no especifica una familia de dispositivos de destino en el manifiesto de la aplicación, puede abrir la aplicación accidentalmente en dispositivos Windows 10 imprevistos. Siga los pasos que se indican a continuación para especificar la familia de dispositivos Windows 10 deseada y, después, [Compruebe que se han establecido las familias de dispositivos correctas al cargar el paquete de la aplicación en el centro de partners para el envío de Microsoft Store.](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
+Las aplicaciones de realidad mixta de Windows (tanto para [HoloLens](../hololens-hardware-details.md) como para [auriculares envolventes](../discover/immersive-headset-hardware-details.md)) forman parte de la plataforma universal de Windows, por lo que cualquier paquete de aplicación con una [familia de dispositivos](https://msdn.microsoft.com/library/windows/apps/dn986903.aspx) **Windows. universal** de destino puede ejecutarse en equipos HoloLens o Windows 10 con auriculares envolventes. Si no especifica una familia de dispositivos de destino en el manifiesto de la aplicación, puede abrir la aplicación accidentalmente en dispositivos Windows 10 imprevistos. Siga los pasos que se indican a continuación para especificar la familia de dispositivos de Windows 10 deseada y, después, [Compruebe que ha establecido las familias de dispositivos correctas al cargar el paquete de la aplicación en el centro de partners para el envío de Microsoft Store.](submitting-an-app-to-the-microsoft-store.md#submitting-your-mixed-reality-app-to-the-store)
 
 * Para establecer este campo en Visual Studio, haga clic con el botón derecho en **Package. appxmanifest** y seleccione **Ver código** y, a continuación, busque el campo **nombre de TargetDeviceFamily** . De forma predeterminada, debería ser similar a la siguiente entrada:
 
@@ -172,7 +172,7 @@ La plataforma universal de Windows permite crear una única aplicación que se e
 
 Si va a enviar una aplicación de realidad mixta que se basa en un proyecto de Unity, consulte este [vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/How-to-publish-your-Unity-game-as-a-UWP-app) primero.
 
-En general, el envío de una aplicación de Windows Mixed Reality que funcione en HoloLens y/o auriculares envolvente es igual que enviar cualquier aplicación de UWP al Microsoft Store. Una vez que haya [creado la aplicación reservando su nombre](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name), siga la [lista de comprobación de envío de UWP](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
+En general, el envío de una aplicación de Windows Mixed Reality que funciona en HoloLens o auriculares envolventes es igual que enviar cualquier aplicación de UWP al Microsoft Store. Una vez que haya [creado la aplicación reservando su nombre](https://docs.microsoft.com/windows/uwp/publish/create-your-app-by-reserving-a-name), siga la [lista de comprobación de envío de UWP](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
 
 Una de las primeras cosas que debe hacer es [seleccionar una categoría y subcategoría](https://docs.microsoft.com/windows/uwp/publish/category-and-subcategory-table) para la experiencia de realidad mixta. Es importante que **Elija la categoría más precisa de la aplicación**. Las categorías ayudan a los productos de la aplicación en las categorías de la tienda adecuada y garantizan que se muestren mediante consultas de búsqueda pertinentes. **Mostrar el título de VR como un juego no dará lugar a una mejor exposición para la aplicación** y puede impedir que se muestre en categorías con más montaje y menos abarrotado.
 
@@ -192,7 +192,7 @@ Declaraciones de productos de realidad mixta
 En primer lugar, debe identificar los tipos de dispositivo para los que la aplicación ofrece una experiencia de realidad mixta. La identificación de los tipos de dispositivo garantiza que la aplicación se incluya en las colecciones de Windows Mixed Reality en el almacén.
 
 Junto a "esta experiencia está diseñada para Windows Mixed Reality en:"
-* Active la casilla **PC** si la aplicación ofrece una experiencia de VR cuando se conecta un auricular envolvente al equipo del usuario. Se recomienda activar esta casilla si la aplicación está configurada para ejecutarse exclusivamente en un casco inmersivo o si es un juego de PC estándar o una aplicación que ofrece un modo de realidad mixta y/o contenido adicional cuando se conecta un auricular.
+* Active la casilla **PC** si la aplicación ofrece una experiencia de VR cuando se conecta un auricular envolvente al equipo del usuario. Se recomienda activar esta casilla si la aplicación está configurada para ejecutarse exclusivamente en un casco inmersivo o si es un juego de PC estándar o una aplicación que ofrece un modo de realidad mixta o un contenido adicional cuando se conecta un auricular.
 * Active la casilla **HoloLens** solo si la aplicación ofrece una experiencia holográfica cuando se ejecuta en HoloLens.
 * Active **ambas** casillas si la aplicación ofrece una experiencia de realidad mixta en ambos tipos de dispositivo.
 
@@ -211,7 +211,7 @@ En esta sección, identificará el hardware mínimo (necesario) y el hardware re
 
 **Hardware de entrada:**
 
-Use las casillas para indicar a los clientes potenciales si la aplicación admite el **micrófono** para la [entrada de voz](../design/voice-input.md)), el **[controlador de Xbox o el controlador de juegos](../discover/hardware-accessories.md#bluetooth-gamepads)** y **[los controladores de movimiento de Windows Mixed Reality](../design/motion-controllers.md)**. Esta información aparecerá en la página de detalles del producto de la aplicación en la tienda y ayudará a que la aplicación se incluya en las colecciones de aplicaciones y juegos adecuadas. Por ejemplo, puede existir una colección para todos los juegos que admiten controladores de movimiento.
+Use las casillas para indicar a los clientes potenciales si la aplicación admite el **micrófono** para la [entrada de voz](../design/voice-input.md)), el **[controlador de Xbox o el controlador de juegos](../discover/hardware-accessories.md#bluetooth-gamepads)** o **[los controladores de movimiento de Windows Mixed Reality](../design/motion-controllers.md)**. Esta información aparecerá en la página de detalles del producto de la aplicación en la tienda y ayudará a que la aplicación se incluya en las colecciones de aplicaciones y juegos adecuadas. Por ejemplo, puede existir una colección para todos los juegos que admiten controladores de movimiento.
 
 Tenga cuidado al seleccionar casillas de verificación para "hardware mínimo" o "Hardware recomendado" para los tipos de entrada. 
 
@@ -266,8 +266,8 @@ Agregar "Windows Mixed Reality" a los términos de búsqueda
 
 En muchos casos, los consumidores se limitarán a no tener experiencia con la realidad virtual antes de adquirir un casco de realidad más envolvente de Windows Mixed Reality. Es posible que no sepan qué esperan de juegos intensivos o que estén familiarizados con su propio umbral de confort en experiencias envolventes. Muchos clientes también pueden probar con un casco con Windows Mixed Reality en equipos que no están identificados como [equipos con Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines). Debido a estas consideraciones, le recomendamos encarecidamente que considere la posibilidad de ofrecer una [evaluación gratuita](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#free-trial) para su aplicación o juego de realidad mixta.
 
-## <a name="see-also"></a>Vea también
-* [¿Qué es Mixed Reality?](../discover/mixed-reality.md)
+## <a name="see-also"></a>Consulte también
+* [¿Qué es la realidad mixta?](../discover/mixed-reality.md)
 * [Introducción al desarrollo](../develop/development.md)
 * [Vistas de aplicación](../design/app-views.md)
 * [Descripción del rendimiento de la realidad mixta](../develop/platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)

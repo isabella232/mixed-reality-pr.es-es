@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, portal de realidad mixta
 appliesto:
 - Windows 10
-ms.openlocfilehash: 11fa60b16a350d794a08db6a5f6120d88259c9ac
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 2beb063afb3aea5f44be116e6cb906312447dbd8
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692498"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726046"
 ---
 # <a name="mixed-reality-portal-error-messages"></a>Mensajes de error del portal de realidad mixta
 
@@ -29,12 +29,12 @@ Si eso no funciona, asegúrese de que el equipo reconoce los auriculares:
 2. Escriba "Administrador de dispositivos" en el cuadro de búsqueda y selecciónelo en la lista. 
 3. Expanda "dispositivos de realidad mixta" y compruebe si aparece el casco. 
 
-Si no aparece, intente lo siguiente:
+Si no aparece en la lista:
 1. Conecte los auriculares a puertos diferentes en el equipo, si está disponible.
 2. Busque las actualizaciones de software más recientes desde Windows Update.
 3. Desinstalar y reinstalar Windows Mixed Reality:
     1. Desconecte ambos cables de auriculares del equipo.
-    2. Seleccione **configuración > realidad mixta > desinstalar** .
+    2. Seleccione **configuración > realidad mixta > desinstalar**.
     3. Seleccione **configuración > dispositivos > Bluetooth & otros dispositivos** para desemparejar los controladores de movimiento. Seleccione cada controlador y, a continuación, seleccione "quitar dispositivo".
     4. Vuelva a conectar el casco al equipo para volver a instalar Windows Mixed Reality.
     
@@ -44,8 +44,8 @@ Conecte los auriculares a otro puerto USB (y asegúrese de que es un SuperSpeed 
 
 ## <a name="im-getting-a-check-your-display-cable-error-message"></a>Obtengo un mensaje de error "comprobar el cable de pantalla".
 
-Pruebe lo siguiente:
+Siga estos pasos para solucionar el problema:
 * Conecte los auriculares a un DisplayPort 1,2 o posterior, o HDMI 1,4 o posterior. Asegúrese de que el puerto corresponde a la tarjeta de gráficos más avanzada del equipo.
-* Si utiliza un adaptador, asegúrese de que sea compatible con 4K.
+* Si usa un adaptador, asegúrese de que tiene la capacidad de 4K.
 * Pruebe a usar un puerto HDMI diferente.
 * Si tiene un monitor externo conectado a un puerto HDMI, intente conectarlo a un DisplayPort en su lugar y use el puerto HDMI para sus auriculares.

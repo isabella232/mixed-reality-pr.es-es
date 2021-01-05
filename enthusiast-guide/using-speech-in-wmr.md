@@ -8,16 +8,16 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: b65be6082967b49ee9d3c8b97cb0a18f9149a3ca
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: 6a32b96fd932e3b7d47e29749fb47c70b64e32c3
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93131959"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725776"
 ---
 # <a name="using-speech-in-windows-mixed-reality"></a>Usar voz en Windows Mixed Reality
 
-Use su voz para acercarse a Windows Mixed Reality más rápido: tome una foto rápida, abra una aplicación, incluso teletranspórtate sin un controlador. Y para obtener una forma sencilla de escribir, pruebe el modo de dictado en el teclado Mixed Reality. 
+Puede usar su voz para acercarse a Windows Mixed Reality con mayor rapidez. La creación de una foto rápida, la apertura de una aplicación, incluso la telemigración sin un controlador, están fuera de la palabra. Para obtener una forma sencilla de escribir, pruebe el modo de dictado en el teclado Mixed Reality. 
 
 ¿Tiene problemas con la voz? [Obtener ayuda](using-wmr-faq.md#speech-commands-arent-working)
 
@@ -25,18 +25,18 @@ Use su voz para acercarse a Windows Mixed Reality más rápido: tome una foto r�
 
 > [!NOTE]
 > * Cuando la voz está activada, Windows Mixed Reality siempre está escuchando. Cuando esté conectado a Internet, enviamos todo lo que digas a la nube para que Microsoft Speech Services pueda reconocer incluso más comandos.
-> * Los comandos de voz no se admiten en todos los lenguajes. Saber más
+> * Los comandos de voz no se admiten en todos los lenguajes. Más información
 > * Los auriculares y los altavoces Bluetooth no se admiten en Windows Mixed Reality.
 
 ## <a name="see-it-say-it"></a>Verlo, decirlo
 
-En la Página principal de Windows Mixed Reality, si ve una palabra, a menudo se puede usar como un comando de voz. Por ejemplo, simplemente indique el nombre de un botón para seleccionarlo. Si no ve un nombre, apunte el controlador de movimiento en el botón (o bien, si usa un controlador para juegos de Xbox, apoye en él) para averiguar qué decir. 
+En la Página principal de Windows Mixed Reality, si ve una palabra, a menudo se puede usar como un comando de voz. Por ejemplo, simplemente indique el nombre de un botón para seleccionarlo. Si no ve un nombre, apunte el controlador de movimiento en el botón para averiguar qué decir. En el caso de los juegos de Xbox, apoye el botón.
 
 ## <a name="general-speech-commands"></a>Comandos de voz generales
 
-Úselas a lo largo de Windows Mixed Reality para trabajar más rápido. Algunos comandos usan el cursor de miras, que se mostrarán al decir "Select".
+Use los siguientes comandos de voz a lo largo de Windows Mixed Reality para ponerse en marcha con mayor rapidez. Algunos comandos usan el cursor de miras, que se mostrarán al decir "Select".
 
-| Para | Diga esto |
+| Para hacer esto | Diga esto |
 | --- | --- |
 | Seleccionar | Supongamos "seleccionar" para que aparezca el cursor de miras. A continuación, cambie el encabezado para colocar el cursor sobre lo que desea seleccionar y, a continuación, indique "seleccionar" de nuevo. |
 | Abrir el menú Inicio | Ir a Inicio |
@@ -54,7 +54,7 @@ En la Página principal de Windows Mixed Reality, si ve una palabra, a menudo se
 
 Mira un objeto 3D, holograma o una ventana de la aplicación para usar estos comandos:
 
-| Para | Diga esto |
+| Para hacer esto | Diga esto |
 | --- | --- |
 | Aumentar su tamaño | Indentación |
 | Reducir el tamaño | Disminuye |
@@ -66,7 +66,7 @@ Mira un objeto 3D, holograma o una ventana de la aplicación para usar estos com
 
 Mira una ventana de la aplicación o un objeto 3D para usar estos comandos:
 
-| Para | Diga esto |
+| Para hacer esto | Diga esto |
 | --- | --- |
 | Cerrar una aplicación o un objeto 3D | Cerrar |
 | Ajuste algo (cambio de tamaño o movimiento) | Ajustar |
@@ -81,7 +81,7 @@ Mira una ventana de la aplicación o un objeto 3D para usar estos comandos:
 
 Mira al menú Inicio para usar estos comandos:
 
-| Para | Diga esto |
+| Para hacer esto | Diga esto |
 | --- | --- |
 | Vaya a la lista todas las aplicaciones. | Todas las aplicaciones |
 | Subir o bajar en el inicio o en todas las aplicaciones | Retroceder/avanzar página |
@@ -98,7 +98,7 @@ Mira al menú Inicio para usar estos comandos:
 
 Por ejemplo, "Hola Cortana", use uno de los siguientes comandos:
 
-| Para | Diga esto |
+| Para hacer esto | Diga esto |
 | --- | --- |
 | Averigüe lo que puede decir en Cortana | What can I say? (¿Qué puedo decir?) |
 | Aumentar o disminuir el volumen | Subir o bajar el volumen |
@@ -114,30 +114,30 @@ Por ejemplo, "Hola Cortana", use uno de los siguientes comandos:
 | Establecer un recordatorio | Establecer un recordatorio |
 
 > [!NOTE]
-> * Cortana no está disponible en todas las regiones y los idiomas. [Obtenga más información](https://support.microsoft.com/help/4026948).
+> * Cortana no está disponible en todas las regiones y los idiomas. [Más información](https://support.microsoft.com/help/4026948).
 > * Si Cortana no responde a "Hola Cortana", seleccione **configuración > privacidad > voz** y activar el reconocimiento de voz en línea.
 > * Si desactiva Cortana, los comandos de voz "Hola Cortana" no estarán disponibles, pero seguirá pudiendo usar otros comandos (como "seleccionar" y "teletranspórtate").
 
 ## <a name="keyboard-dictation"></a>Dictado de teclado
 
-Cambie al modo de dictado cada vez que el teclado esté activo para una manera fácil de escribir. Seleccione micrófono en el teclado, o simplemente "iniciar dictado", para empezar.
+Cambie al modo de dictado siempre que el teclado esté activo para una manera fácil de escribir. Seleccione micrófono en el teclado, o simplemente "iniciar dictado", para empezar.
 
 > [!NOTE]
 > El teclado Mixed Reality solo está disponible en inglés, pero puede usar dictado en cualquiera de los idiomas admitidos de [Windows Mixed Reality](other-questions.md#what-languages-are-supported-in-windows-mixed-reality).
 
 ### <a name="keyboard-dictation-commands"></a>Comandos de dictado de teclado
 
-| Para | Diga esto |
+| Para hacer esto | Diga esto |
 | --- | --- |
 | Cerrar el teclado | Cerrar |
 | Iniciar dictado | Iniciar dictado |
 | Detener dictado | Detener dictado |
-| Eliminar lo que acaba de dictar | Eliminar eso |
+| Eliminación de lo que ha dictado | Eliminar eso |
 | Seleccionar todo en el cuadro dictado | Seleccionar todo |
 
 ### <a name="punctuation"></a>Signos de puntuación
 
-Deberá indicar los nombres de los signos de puntuación que quiere usar. Por ejemplo, podría decir **"Hola, ¿cuál es el** signo de **interrogación** ".
+Deberá indicar los nombres de los signos de puntuación que quiere usar. Por ejemplo, podría decir **"Hola, ¿cuál es el** signo de **interrogación**".
 
 Estas son las palabras clave de puntuación que puede usar:
 
@@ -148,9 +148,9 @@ Estas son las palabras clave de puntuación que puede usar:
 * Hashtag, cara sonriente, enfadado, Winky
 * Dólar, porcentaje
 
-A veces resulta útil deletrear aspectos como las direcciones de correo electrónico. Por ejemplo, para dictar example@outlook.com , diría "E X a M P L E en Outlook dot com".
+A veces resulta útil deletrear aspectos como las direcciones de correo electrónico. Por ejemplo, para dictar example@outlook.com , diría "E X a M P L E en Outlook dot-com".
 
-Para detener el dictado, seleccione **listo** .
+Para detener el dictado, seleccione **listo**.
 
 ## <a name="see-also"></a>Consulte también
 

@@ -6,12 +6,12 @@ ms.author: moelhama
 ms.date: 08/03/2020
 ms.topic: article
 keywords: HoloLens, portal de dispositivos de Windows, API, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 1085f6c948ab7fe0ff8cb3801ebb0b883570acbc
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: c705ce65971042ab41befed9c6813dc797b61fc0
+ms.sourcegitcommit: 084b1da9d7b435394b38d6152a2f9aee7a74aa2a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677974"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97804427"
 ---
 # <a name="device-portal-api-reference"></a>Referencia de la API del Portal de dispositivos
 
@@ -388,6 +388,9 @@ Parámetros
 Detiene la grabación de realidad mixta actual
 
 ## <a name="mixed-reality-streaming"></a>Streaming de realidad mixta
+
+> [!CAUTION]
+> Debido al aislamiento de bucle invertido, no se puede conectar a un streaming de realidad mixta desde dentro de una aplicación en un dispositivo.
 
 HoloLens admite la vista previa dinámica de la realidad mixta a través de la descarga fragmentada de un MP4 fragmentado.
 

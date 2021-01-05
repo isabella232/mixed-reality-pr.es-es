@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/02/2020
 ms.topic: article
 keywords: HoloLens, HoloLens 2, PIX, captura, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 5dfc16f97790b47af3c24ca44c060a9a2495a320
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 598a6b891798be7059eae2eff578c6bbbae442f6
+ms.sourcegitcommit: 9d79aaa313f003dd42d5610d458031890776ee8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530444"
+ms.lasthandoff: 12/30/2020
+ms.locfileid: "97822922"
 ---
 # <a name="installing-pix-for-hololens-2"></a>Instalación de PIX para HoloLens 2
 
@@ -25,7 +25,7 @@ ms.locfileid: "97530444"
 
 3. Habilite el **modo de desarrollador** y el portal de **dispositivos**:
 
-* Abra **configuración** desde Shell:
+* Abra **configuración** desde la Página principal de realidad mixta:
 
 ![Captura de pantalla del menú de HoloLens con el botón configuración resaltado](images/pix-img-01.jpg)
 

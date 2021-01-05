@@ -7,16 +7,16 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, rendimiento
 appliesto:
 - Windows 10
-ms.openlocfilehash: d6b37f8f6c964222b90fff57f0ba994c14fcaeab
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: dea2e81d53bfbb16a8803fc3f7c4e011741dfce6
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93131969"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97726006"
 ---
 # <a name="performance-faqs"></a>Preguntas más frecuentes sobre rendimiento
 
-## <a name="is-my-windows-mixed-reality-headset-rendering-at-60hz-or-90hz-framerate"></a>Es la representación de auriculares de realidad mixta de Windows a 60Hz o a 90Hz de velocidad de fotogramas
+## <a name="is-my-windows-mixed-reality-headset-rendering-at-60-hz-or-90-hz-framerate"></a>Es la representación de auriculares de realidad mixta de Windows con una velocidad de fotogramas de 60 Hz o 90-Hz
 
 Si tiene una GPU discreta con puertos HDMI 2,0 y una CPU con cuatro o más núcleos físicos, debe obtener 90 Hz. Para confirmar, consulte la pestaña **rendimiento del portal de dispositivos >** .
 
@@ -26,7 +26,7 @@ Nota: la configuración de calidad visual de "pantalla de auriculares" solo afec
 
 ## <a name="my-pc-is-running-slowly"></a>Mi PC se ejecuta lentamente
 
-El sistema puede ser lento por muchos motivos y, en la mayoría de los casos, esto solo dura unos segundos. Si experimenta este problema durante largos períodos de tiempo:
+El sistema puede ser lento por muchos motivos, normalmente solo unos pocos segundos. Si experimenta este problema durante largos períodos de tiempo:
 
 1. Cierre todas las aplicaciones sin usar en el escritorio.
 2. Asegúrese de que el portátil esté conectado a una fuente de alimentación.
@@ -46,8 +46,8 @@ El sistema puede ser lento por muchos motivos y, en la mayoría de los casos, es
 * Asegúrese de que el casco está enchufado en la tarjeta gráfica correcta del equipo. Algunos equipos tienen tarjetas de gráficos integradas y discretas. Por lo general, la tarjeta discreta proporcionará el mejor rendimiento. [Más información sobre el hardware de PC](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md).
 * Cierre las aplicaciones no utilizadas en el escritorio.
 * Asegúrese de que el casco se ajusta perfectamente (muévalo hacia abajo y hacia arriba, o a la izquierda y derecha para ajustar).
-* Ajusta la configuración visual de los auriculares en **configuración > realidad mixta > pantalla de auriculares** . Cuando "calidad visual" esté establecido en "automático", se elegirá automáticamente la experiencia de realidad mixta para el equipo. Para obtener más detalles visuales, establezca "calidad visual" en "alto". Si los objetos visuales son entrecortado, seleccione un valor inferior.
-* Ajuste el botón de calibración de auriculares para asegurarse de que las lentes estén configuradas con la distancia correcta entre los alumnos (denominado IPD). Si no conoce el IPD, un Optometrist debe ser capaz de medirlo automáticamente, o bien usar un sitio web diseñado para medirlo. Si el casco no tiene un botón de calibración, seleccione la **configuración > realidad mixta > auriculares para mostrar** y ajustar el "control de calibración".
+* Ajusta la configuración visual de los auriculares en **configuración > realidad mixta > pantalla de auriculares**. Cuando "calidad visual" esté establecido en "automático", se elegirá automáticamente la experiencia de realidad mixta para el equipo. Para obtener más detalles visuales, establezca "calidad visual" en "alto". Si los objetos visuales son entrecortado, seleccione un valor inferior.
+* Ajuste el botón de calibración de auriculares para asegurarse de que las lentes estén configuradas con la distancia correcta entre los alumnos (denominado IPD). Si no conoce el IPD, un Optometrist puede medirlo por usted o usar un sitio web diseñado para medir el uso de IPD. Si el casco no tiene un botón de calibración, seleccione la **configuración > realidad mixta > auriculares para mostrar** y ajustar el "control de calibración".
 * Si usa un adaptador de USB-C o DisplayPort a HDMI, pruebe con otro. Consulte [adaptadores recomendados.](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
 * Desconecte los monitores adicionales que puedan estar conectados a la tarjeta gráfica de su PC.
 * Pruebe algunas aplicaciones de realidad mixta en la tienda Windows, algunas pueden funcionar mejor con la configuración del equipo.

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: hologramas, estabilidad, hololens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, velocidad de fotogramas, representación, Reproyección, separación de colores
 appliesto:
 - HoloLens
-ms.openlocfilehash: 345ba3608b77ed4d7b493985903295f5ee3f4863
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 4405cd0fa7cfca5205d312d1ccc54efc06db7bd7
+ms.sourcegitcommit: 13fe1e7f7f268730a0be720933d7414e9c63ac9b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530424"
+ms.lasthandoff: 12/29/2020
+ms.locfileid: "97808836"
 ---
 # <a name="hologram-stability"></a>Estabilidad de hologramas
 
@@ -91,14 +91,14 @@ Hay cuatro tipos principales de Reproyección
 Las aplicaciones deben realizar acciones específicas para habilitar los distintos tipos de Reproyección.
 * **Reproyección de profundidad:** La aplicación envía su búfer de profundidad al sistema para cada fotograma representado.  En Unity, la reproyección de profundidad se realiza con la opción **búfer de profundidad compartido** en el panel **configuración de Windows Mixed Reality** en la **Administración de complementos de XR**.  Las aplicaciones de DirectX llaman a CommitDirect3D11DepthBuffer.  La aplicación no debe llamar a SetFocusPoint.
 * **Reproyección plana:** En cada fotograma, las aplicaciones indican al sistema la ubicación de un plano para estabilizar.  Las aplicaciones de Unity llaman a SetFocusPointForFrame y deben tener el **búfer de profundidad compartido** deshabilitado.  Las aplicaciones de DirectX llaman a SetFocusPoint y no deben llamar a CommitDirect3D11DepthBuffer.
-* **Reproyección plana automática:** Para habilitar, la aplicación debe enviar su búfer de profundidad al sistema como lo haría para la reproyección de profundidad.  En HoloLens 2, la aplicación necesita SetFocusPoint con un punto de 0, 0 para cada fotograma.  En el caso de la generación 1 de HoloLens, la aplicación no debe llamar a SetFocusPoint.
+* **Reproyección plana automática:** Para habilitar, la aplicación debe enviar su búfer de profundidad al sistema como lo haría para la reproyección de profundidad. Las aplicaciones que usan el kit de herramientas de la realidad mixta (MRTK) pueden configurar el [proveedor de configuración](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/CameraSystem/WindowsMixedRealityCameraSettings.html#hololens-2-reprojection-method) de la cámara para que use la reproyección de Autodiseño. Las aplicaciones nativas deben establecer el `DepthReprojectionMode` de [HolographicCameraRenderingParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters) en `AutoPlanar` cada fotograma. En el caso de la generación 1 de HoloLens, la aplicación no debe llamar a SetFocusPoint.
 
 ### <a name="choosing-reprojection-technique"></a>Elección de la técnica de Reproyección
 
 Tipo de estabilización |    Cascos envolventes |    Generación 1 de HoloLens | HoloLens 2
 --- | --- | --- | ---
-Reproyección de profundidad |    Recomendado |   N/A |   Recomendado<br/><br/>Las aplicaciones de Unity deben usar Unity 2018.4.12 o posterior o Unity 2019,3 o posterior. De lo contrario, use la Reproyección plana automática.
-Reproyección plana automática | N/A |   Valor predeterminado recomendado |   Recomendado si la reproyección de profundidad no da los mejores resultados<br/><br/>Se recomienda que las aplicaciones de Unity usen Unity 2018.4.12 o posterior o Unity 2019,3 o posterior.  Las versiones anteriores de Unity funcionarán con resultados de Reproyección ligeramente reducidos.
+Reproyección de profundidad |    Recomendado |   N/D |   Recomendado<br/><br/>Las aplicaciones de Unity deben usar Unity 2018.4.12 o posterior o Unity 2019,3 o posterior. De lo contrario, use la Reproyección plana automática.
+Reproyección plana automática | N/D |   Valor predeterminado recomendado |   Recomendado si la reproyección de profundidad no da los mejores resultados<br/><br/>Se recomienda que las aplicaciones de Unity usen Unity 2018.4.12 o posterior o Unity 2019,3 o posterior.  Las versiones anteriores de Unity funcionarán con resultados de Reproyección ligeramente reducidos.
 Reproyección plana |   No recomendado |   Recomendado si el plan plano automático no da los mejores resultados | Use si ninguna de las opciones de profundidad proporciona los resultados deseados.    
 
 ### <a name="verifying-depth-is-set-correctly"></a>La comprobación de profundidad está establecida correctamente

@@ -6,16 +6,16 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, iniciador de aplicaciones 3D, auriculares envolventes, cubo activo, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, UWP, Win32, iluminación, color
-ms.openlocfilehash: a501b4bdc86df17f6d005c2f7ccf4fe6a94a4b43
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 2edb09e47da5bcbae34a37f004853002f3f65cf3
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703481"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757733"
 ---
 # <a name="3d-app-launcher-design-guidance"></a>Guía de diseño del iniciador de aplicaciones 3D
 
-Cuando se coloca en un casco de Windows Mixed Reality inmersivo (VR), se introduce la Página principal de Windows Mixed Reality, visualizada como una casa en un acantilado rodeado por montañas y agua (aunque puede [elegir otros entornos e incluso crear el suyo propio](../design/add-custom-home-environments.md)). Dentro del espacio de este hogar, un usuario puede organizar y organizar los objetos 3D y las aplicaciones que le interesan de la forma que deseen. Un **iniciador de aplicaciones 3D** es un objeto "físico" de la casa de la realidad mixta del usuario que puede seleccionar para iniciar una aplicación.
+Cuando se coloca en un casco de Windows Mixed Reality inmersivo (VR), se introduce la Página principal de Windows Mixed Reality. El hogar se visualiza como una casa en un acantilado rodeado por montañas y agua, pero puede [elegir otros entornos e incluso crear el suyo propio](../design/add-custom-home-environments.md)). Dentro del espacio de la casa, un usuario puede organizar y organizar los objetos 3D y las aplicaciones que le interesan de la forma que deseen. Un **iniciador de aplicaciones 3D** es un objeto "físico" de la casa de la realidad mixta del usuario que puede seleccionar para iniciar una aplicación.
 
 ![Ejemplo: selector de aplicaciones 3D de pájaros de punto flotante](images/20171016-151526-mixedreality1-1200px-1000px.jpg)<br>
 *Ejemplo de selector de aplicaciones 3D de pájaros de flotación (aplicación ficticia)*
@@ -56,7 +56,7 @@ El iniciador de aplicaciones debe sentirse como un objeto al que le encantaría 
 
 ### <a name="recognizable"></a>Reconocible
 
-El selector de aplicaciones 3D debe expresar al instante "la marca de la aplicación" para las personas que lo ven. Si tiene un carácter de estrella o un objeto que se puede identificar especialmente en la aplicación, se recomienda usarlo como gran parte del diseño. En un mundo de realidad mixta, un objeto dibujará más interés de los usuarios que solo un logotipo por sí solo. Los objetos reconocibles comunican la marca rápida y claramente.
+El selector de aplicaciones 3D debe expresar al instante "la marca de la aplicación" para las personas que lo ven. Si tiene un carácter de estrella o un objeto que se puede identificar especialmente en la aplicación, se recomienda usarlo como parte importante del diseño. En un mundo de realidad mixta, un objeto dibujará más interés de los usuarios que solo un logotipo por sí solo. Los objetos reconocibles comunican la marca rápida y claramente.
 
 ### <a name="volumetric"></a>Volumétricos
 
@@ -82,11 +82,11 @@ La aplicación merece más que simplemente colocar su logotipo en un plano plano
 
 ## <a name="tips-for-good-3d-models"></a>Sugerencias para buenos modelos 3D
 
-* Cuando planee las dimensiones del iniciador de aplicaciones, capte aproximadamente un cubo 30cm. Por lo tanto, una relación de tamaño de 1:1:1.
+* Cuando planee las dimensiones del iniciador de aplicaciones, capte aproximadamente un cubo de 30 cm. Por lo tanto, una relación de tamaño de 1:1:1.
 * Los modelos deben tener menos de 10.000 polígonos. [Más información sobre recuentos de triángulos y niveles de detalles (LODs)](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#triangle-counts-and-levels-of-detail-lods)
 * Pruebe en un casco envolvente.
 * Cree detalles en la geometría del modelo siempre que sea posible: no se base en las texturas para obtener detalles.
-* Compilar la geometría cerrada con "ajuste del agua". Ningún hueco que no esté modelado en.
+* Compilar la geometría cerrada con "ajuste del agua". Ningún hueco no modelado en.
 * Use materiales naturales en el objeto. Imagine que la diseña en el mundo real.
 * Asegúrese de que el modelo se lea bien en diferentes distancias y tamaños.
 * Cuando el modelo esté listo, lea las instrucciones de [exportación de activos](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#asset-requirements-overview).
@@ -105,9 +105,9 @@ La aplicación merece más que simplemente colocar su logotipo en un plano plano
 
 ## <a name="how-to-handle-type"></a>Cómo controlar el tipo
 
-* Se recomienda que el tipo comprenda aproximadamente 1/3 del iniciador de la aplicación (o más). El tipo es lo principal que da a los usuarios una idea de que el iniciador es, de hecho, un iniciador para que sea estupendo si es bastante importante.
+* Se recomienda que el tipo contenga aproximadamente 1/3 del iniciador de la aplicación (o más). El tipo es lo principal que da a los usuarios una idea de que el iniciador es, de hecho, un iniciador para que sea agradable si es importante.
 * Evite hacer el tipo superwide: intente mantenerlo dentro de los límites de las dimensiones básicas de los iniciadores de aplicaciones (más o menos).
-* El tipo plano puede funcionar, pero tenga en cuenta que puede ser difícil de ver desde determinados ángulos y en determinados entornos. Considere la posibilidad de colocarlo en un objeto sólido o telón de fondo para ayudarle con esto.
+* El tipo plano puede funcionar, pero puede ser difícil de ver desde determinados ángulos y en determinados entornos. Considere la posibilidad de colocarlo en un objeto sólido o telón de fondo para ayudarle con esto.
 * La adición de una dimensión a su tipo se siente agradable en 3D. Sombrear los lados del tipo con un color más oscuro, puede ayudar a mejorar la legibilidad.
 
 :::row:::
@@ -144,7 +144,7 @@ Los colores de tipo que causan problemas son:
 
 ## <a name="lighting"></a>Iluminación
 
-La iluminación del iniciador de la aplicación procede del entorno del centro de acantilado. Asegúrese de probar el iniciador en varios lugares de la casa para que tenga buenos puntos de luz y sombras. La buena noticia es que, si ha seguido las otras instrucciones de diseño de este documento, el iniciador debe tener una forma bastante buena para la mayor iluminación en la casa del acantilado.
+La iluminación del iniciador de la aplicación procede del entorno del centro de acantilado. Asegúrese de probar el iniciador en varios lugares de la casa para que tenga buenos puntos de luz y sombras. La buena noticia es que, si ha seguido las otras instrucciones de diseño de este documento, el iniciador debe estar en buen estado para la mayor iluminación en la casa del acantilado.
 
 Los buenos lugares para probar el aspecto del iniciador en las diversas luces del entorno son el estudio, la sala multimedia, en cualquier parte fuera y en el patio de vuelta (el área concreta con el césped). Otra buena prueba es colocarla en la mitad de la luz y la mitad de la sombra y ver su aspecto.
 
@@ -168,7 +168,7 @@ Se recomienda usar el [pintor de sustancias](https://www.allegorithmic.com/produ
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
-* Si el objeto iniciador de la aplicación se creó para PBR, debe ser bastante sencillo convertirlo en el entorno de la casa de acantilado.
+* Si el objeto iniciador de la aplicación se creó para PBR, debe ser sencillo convertirlo en el entorno de la casa de acantilado.
 * Nuestro sombreador espera un flujo de trabajo de metal/rugosidad: el sombreador de PBR inreal es un fax de cierre.
 * Al exportar las texturas, tenga en cuenta los [tamaños de textura recomendados](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md#material-guidelines) .
 * Asegúrese de crear los objetos para la iluminación en tiempo real, lo que significa:

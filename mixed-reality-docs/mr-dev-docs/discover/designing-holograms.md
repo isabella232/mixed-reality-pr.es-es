@@ -6,19 +6,19 @@ ms.author: daescu
 ms.date: 11/24/2020
 ms.topic: article
 keywords: MRTK, kit de herramientas de realidad mixta, hologramas, diseño de hologramas, aprendizaje, aplicación de ejemplo, auriculares de realidad mixta, auriculares de realidad virtual, qué es realidad virtual
-ms.openlocfilehash: bf904b319ed5b452f254b659315d9b531832a4d5
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: 2480b5e0b4dca502c746dad6f070226ffa8cd1f9
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002590"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757763"
 ---
 # <a name="the-making-of-designing-holograms"></a>La realización del diseño de hologramas
 
 > [!NOTE]
 > Permita que una pequeña ventana de carga tenga en cuenta todos los archivos GIF y los vídeos insertados en esta página.
 
-Aprender a diseñar una realidad mixta puede ser difícil, especialmente con la apariencia del medio, que no siempre se convierte en procesos de diseño 2D. Aquí, en Microsoft, hemos creado una aplicación gratuita que puede descargar para HoloLens 2, que le ayuda a conocer los aspectos básicos del diseño de la experiencia de usuario de realidad mixta al experimentarlo de primera mano. El enfoque único de la aplicación de diseño de hologramas se adentra en comportamientos de realidad mixta, sugerencias y recomendaciones para ayudarle a crear aplicaciones de HoloLens atractivas y increíbles propias. Descargue la aplicación de forma gratuita desde el Microsoft Store y aprenda del equipo de diseño de la realidad mixta de Microsoft.
+Aprender a diseñar una realidad mixta puede ser difícil, ya que el medio no siempre se convierte bien en procesos de diseño 2D. Aquí, en Microsoft, hemos creado una aplicación gratuita para HoloLens 2 que le ayudará a conocer los aspectos básicos del diseño de la experiencia de usuario de realidad mixta de primera mano. El enfoque único de la aplicación de diseño de hologramas se adentra en comportamientos de realidad mixta, sugerencias y recomendaciones para ayudarle a crear aplicaciones de HoloLens atractivas y increíbles propias. Descargue la aplicación de forma gratuita desde el Microsoft Store y aprenda del equipo de diseño de la realidad mixta de Microsoft.
 
 > [!div class="nextstepaction"]
 > [Descarga de la aplicación de diseño de hologramas](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd)
@@ -52,7 +52,7 @@ El diseño de hologramas es una experiencia visual que explica los conceptos y l
 
 ## <a name="exploring-the-doll-house"></a>Exploración de la casa de muñecas
 
-La casa de muñecas es el entorno virtual que usamos en toda la aplicación, una sala en miniatura de 80 x 60 x 40 cm que contiene los elementos básicos que la mayoría de los salones tienen en común, como las paredes, las lámparas, el mobiliario, una tabla y un televisor. La casa de muñecas es el protagonist principal de la experiencia de la aplicación, por lo que es necesario asegurarse de que funcionaría bien en cualquier entorno. Piense en ello como un pequeño salón de demostración para visualizar todo tipo de conceptos de realidad mixta.
+La casa de muñecas es el entorno virtual que usamos en toda la aplicación. El entorno es una habitación en miniatura de 80 x 60 x 40 cm que contiene los elementos básicos que la mayoría de los salones tienen en común, como las paredes, las lámparas, el mobiliario, una tabla y un televisor. La casa de muñecas es el protagonist principal de la experiencia de la aplicación, por lo que es necesario asegurarse de que funcionaría bien en cualquier entorno. Piense en ello como un pequeño salón de demostración para visualizar todo tipo de conceptos de realidad mixta.
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Dollhouse-adjustment-behavior-in-the-Designing-Holograms-app/player]
 *Vídeo del comportamiento de ajuste de dollhouse*
@@ -62,10 +62,10 @@ La casa de muñecas es el entorno virtual que usamos en toda la aplicación, una
 Nuestra suposición inicial era que las demostraciones de 1:1 serían increíbles, casi como mirar a un profesor real. El usuario verá todo lo que ve el profesor en una escala de vida real. Sin embargo, inmediatamente se ha dado cuenta de que hay algunos problemas:
 
 - La mayoría de los desarrolladores ejecutarán sus aplicaciones en oficinas o salas más pequeñas que el salón de demostración, por lo que no cabe.
-- Las pantallas son aditivas, lo que significa que todo el entorno virtual se superpone a la habitación de un usuario. Esto puede resultar confuso con dos tablas, por lo que es posible que haya doble sofá y paredes que no se alineen.
+- Las pantallas son aditivas, lo que significa que todo el entorno virtual se superpone a la habitación de un usuario. Esto puede resultar confuso con dos tablas, quizás bisofás y paredes que no se alinean.
 - Y el peor de los entornos virtuales están muy restringidos por un campo de vista.
 
-Cuando se intentó una escala de 1:10, el resultado era una fantástica vista de pájaro de una sala realista donde podía ver todo lo que estaba pasando desde cualquier ángulo y todo al mismo tiempo. Lo más sorprendente es que la mayoría de los evaluadores lo encontraron mucho más envolventes para ver una versión pequeña y, después, nunca se han vuelto a la escala 1:1. Por lo tanto, hemos decidido rechazar la versión 1:1 y evitar el trabajo adicional necesario para adaptar la interfaz de usuario y otros aspectos de la aplicación.
+Cuando se intentó una pequeña escala de 1:10, el resultado era una fantástica vista de pájaro de un salón realista. Podría ver todo lo que estaba pasando desde cualquier ángulo al mismo tiempo. Lo más sorprendente es que la mayoría de los evaluadores lo encontraron mucho más envolventes para ver una versión pequeña y, después, nunca se han vuelto a la escala 1:1. Por lo tanto, hemos decidido rechazar la versión 1:1 y evitar el trabajo adicional necesario para adaptar la interfaz de usuario y otros aspectos de la aplicación.
 
 ![Campo de vista con el ](images/designing-holograms/1-1-scale.png)
  *campo de escala 1:1 de la vista con la escala 1:1*
@@ -84,7 +84,7 @@ Microsoft tiene un estudio de captura de realidad mixta en San Francisco. Micros
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Raw-capture-footage-for-the-Designing-Holograms-app/player]
 *Material de estudio de Daniel escudero de una de las cámaras 106 en el estudio de captura de realidad mixta en San Francisco.*
 
-El proceso de captura genera una malla, normales y texturas fotogramas clave, que se pueden entregar como archivos OBJ/PNG para posteriores a la producción o listas para su reproducción como un archivo MP4 comprimido H. 264. Estos archivos se pueden importar en Unity, nonreal, Native y WebXR, y se ejecutan en Windows, iOS, Mac, Android, Magic Leap y PlayStation VR.
+El proceso de captura genera una malla, normales y texturas fotogramas clave, que se pueden entregar como archivos OBJ/PNG para posteriores a la producción o listas para su reproducción como un archivo MP4 comprimido H. 264. Estos archivos se pueden importar en proyectos Unity, no reales, nativos y WebXR. Los archivos se pueden ejecutar en Windows, iOS, Mac, Android, Magic Leap y PlayStation VR.
 
 <br>
 
@@ -107,7 +107,7 @@ Usamos este truco para asegurarnos de que la captura inactiva siempre se encontr
 
 ### <a name="syncing-animated-objects"></a>Sincronizar objetos animados
 
-El segundo, estaba animando objetos para sincronizar con el movimiento de una captura. En diferentes partes de la aplicación, se han importado obj secuenciales de una captura específica cada cinco fotogramas. Después, los obj se animaron en la escena para asegurarse de que coincidirían con el fotograma correspondiente de la captura. Es un proceso tedioso de animación y fotogramas clave, pero el resultado es excelente. ahora puede ver una captura de realidad mixta que interactúa con objetos no capturados.
+El segundo, estaba animando objetos para sincronizar con el movimiento de una captura. En diferentes partes de la aplicación, se han importado obj secuenciales de una captura específica cada cinco fotogramas. Después, los obj se animaron en la escena para asegurarse de que coincidirían con el fotograma correspondiente de la captura. Es un proceso tedioso de animación y fotogramas clave, pero el resultado es excelente. Ahora puede ver una captura de realidad mixta que interactúa con objetos no capturados.
 
 ![Animación sincronizada entre una captura de realidad mixta y un panel de interfaz de usuario](images/designing-holograms/synced-objects.gif)
 
@@ -115,11 +115,11 @@ El segundo, estaba animando objetos para sincronizar con el movimiento de una ca
 
 ### <a name="ui-creative-process"></a>Proceso de creación de interfaz de usuario
 
-Cuando comenzamos ideating el diseño de la interfaz de usuario, además de la información de transporte, también queríamos mostrar algunos de los datos mágicos y las posibilidades que ofrecen los hologramas. Simplemente mostrar ventanas 2D estáticas y cuadros de texto no se siente bien en el mundo 3D y no muestra muchas de las posibilidades a mano, así que desde el principio decidimos apartarse de eso y hacer uso completo del espacio 3D holográfica.
+Cuando comenzamos el diseño de la interfaz de usuario, quisiéramos mostrar algunos de los casos de magia y la posibilidad de que los hologramas lo ofrezcan. Simplemente mostrar ventanas 2D estáticas y cuadros de texto no se siente bien en el mundo 3D. Muchas de las posibilidades que hay a mano no se muestran, así que desde el principio decidimos apartarse de eso y hacer uso completo del espacio 3D holográfica.
 
-En primer lugar, empezamos por agregar cierto grosor a los paneles e iconos, además de la información de texto. Aún así, como usuario, lo que veo es un cuadro de texto. Cuadros de texto con imágenes, pero no estamos ahí. Hemos ido más lejos mediante el uso de los sombreadores de kit de herramientas de realidad mixta (MRTK). Los sombreadores de MRTK se convierten en una herramienta eficaz y se utilizaban sus características de estarcido, algunas pueden conocerlo como el efecto del portal, para agregar profundidad negativa a los paneles. Esto significa que, en lugar de agregar elementos delante de un cuadro de texto, los iconos aparecen ahora detrás de un panel transparente. Lo que veo ahora como usuario es algo que simplemente no puedo replicar en el mundo real, y aquí es donde se empezó a producir holográfica mágica. Además, como usuario realmente no me gustaría leer, hago mucho en el mundo físico.
+En primer lugar, empezamos por agregar cierto grosor a los paneles, iconos e información de texto. Aún así, como usuario, lo que veo es un cuadro de texto. Cuadros de texto con imágenes, pero no estamos ahí. Hemos ido más lejos mediante el uso de los sombreadores de kit de herramientas de realidad mixta (MRTK). Los sombreadores de MRTK se convierten en una herramienta eficaz y hicimos uso de sus características de estarcido para agregar profundidad negativa a los paneles. Esto significa que, en lugar de agregar elementos delante de un cuadro de texto, los iconos aparecen ahora detrás de un panel transparente. Lo que veo ahora como usuario es algo que simplemente no puedo replicar en el mundo real, y aquí es donde se empezó a producir holográfica mágica. Además, como usuario realmente no me gustaría leer, hago mucho en el mundo físico.
 
-Obviamente, los iconos funcionan mucho mejor que el texto simple, por lo que, para proporcionar una guía aún más eficaz, se inició la creación de un conjunto de objetos y avatares animados, cada uno de ellos con una pequeña historia sobre lo que se hace en el escenario respectivo y cómo se usa.
+Obviamente, los iconos funcionan mucho mejor que el texto sencillo, para proporcionar una guía aún más eficaz y, a continuación, empezaron a crear un conjunto de objetos animados y avatares, cada uno de ellos indicando una pequeña historia sobre lo que se hace en el escenario respectivo y cómo se usa.
 
 ![GIF animado de un sistema de menús de Holographic interactivo](images/designing-holograms/creative-process.gif)
 
@@ -181,7 +181,7 @@ El diseño de hologramas enseña conceptos de realidad mixta, pero también le p
 </tr>
 </table>
 
-Le agradecemos enormemente el equipo de diseño de la realidad mixta para compartir todo el conocimiento y, por supuesto, con las increíbles personas en [teoría de objetos](https://objecttheory.com/) que se han convertido en compañeros de equipo esenciales en cada paso único de este proyecto. Gracias por su gran talento, por su pasión y una mirada excepcional para el diseño.
+Le agradecemos enormemente el equipo de diseño de la realidad mixta con el fin de compartir tanto conocimiento como el increíble personal en [teoría de objetos](https://objecttheory.com/) para ser integrantes de los compañeros de equipo en cada paso del proyecto. Gracias por su gran talento, por su pasión y una mirada excepcional para el diseño.
 
 > [!div class="nextstepaction"]
 > [Descarga de la aplicación de diseño de hologramas](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd)

@@ -1,22 +1,23 @@
 ---
 title: Diálogo
+description: Obtenga información acerca de las superposiciones de diálogo y cómo usarlas en aplicaciones de realidad mixta.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: article
 keywords: Realidad mixta, HoloLens, controles de IU, interacción, IU, experiencia de usuario, diseño de la experiencia del usuario, interfaz de usuario espacial, interacción espacial, interfaz de usuario 3D, experiencia en 3D, auriculares
-ms.openlocfilehash: 354581b5f0c2b63e5fdb7077c0d8cdba4c96c3d3
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 752c4cc03c90e498664c61fa3c53b303a2a83a2f
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702611"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847452"
 ---
 # <a name="dialog"></a>Diálogo
 
-![Diálogo](images/MRTK_UX_Dialog.jpg)
+![Captura de pantalla de una superposición de diálogo con los botones sí y no mostrados en HoloLens](images/MRTK_UX_Dialog.jpg)
 
-Los controles de cuadro de diálogo son superposiciones de IU que proporcionan información contextual de la aplicación. A menudo solicitan algún tipo de acción por parte del usuario. Use los cuadros de diálogo para notificar a los usuarios información importante o para solicitar información adicional o confirmación para completar una acción.
+Los controles de cuadro de diálogo son superposiciones de IU que proporcionan información contextual de la aplicación, a menudo solicitando una acción del usuario. Use cuadros de diálogo para proporcionar información importante a los usuarios y solicitar confirmación o información adicional antes de que se pueda completar una acción.
 
 <br>
 
@@ -29,10 +30,10 @@ MRTK proporciona un control de cuadro de diálogo en tres tamaños con una o dos
 - DialogMedium_192x128. recurso prefabricado: 192x128mm
 - DialogLarge_192x192. recurso prefabricado: 192x192mm
 
-![Diálogo](images/MRTK_UX_Dialog_Types.jpg)
+![Captura de pantalla de diferentes superposiciones de cuadros de diálogo que se ejecutan en HoloLens](images/MRTK_UX_Dialog_Types.jpg)
 
 
-* Para más información, consulte [MRTK-Dialog](https://microsoft.github.io/MixedRealityToolkit-Unity/Assets/MRTK/SDK/Experimental/Dialog/README_Dialog.html) .
+* Para obtener más información, vea [MRTK-Dialog](https://microsoft.github.io/MixedRealityToolkit-Unity/Assets/MRTK/SDK/Experimental/Dialog/README_Dialog.html).
 
 <br>
 

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, preventa, investigación, compra, antes de comprar
 appliesto:
 - Windows 10
-ms.openlocfilehash: 20a585088c9bea9d01754f78e9934a4022c0e34c
-ms.sourcegitcommit: c7b5790a26472c5a08c959189a574fb15f9046d2
+ms.openlocfilehash: e9b9254166b3ac4c188531d3651407ecfd853460
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2020
-ms.locfileid: "95002980"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725516"
 ---
 # <a name="before-you-buy-frequently-asked-questions"></a>Antes de comprar las preguntas más frecuentes
 
@@ -21,7 +21,7 @@ ms.locfileid: "95002980"
 
 ### <a name="where-can-i-buy-a-windows-mixed-reality-ready-pc-or-headset"></a>¿Dónde puedo comprar un PC o auriculares preparados para Windows Mixed Reality?
 
-**Respuesta rápida:** Puede comprar un PC o auriculares preparados para Windows Mixed Reality en un distribuidor local aprobado o en línea desde diversos distribuidores, incluidos los Microsoft Store. Buscar un PC preparado para Windows Mixed Reality o auriculares en línea: <https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1>
+**Respuesta rápida:** Puede comprar un PC o auriculares preparados para Windows Mixed Reality en un distribuidor local aprobado o en línea de distintos distribuidores, incluido el Microsoft Store. Buscar un PC preparado para Windows Mixed Reality o auriculares en línea: <https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1>
 
 ### <a name="where-can-i-try-windows-mixed-reality"></a>¿Dónde puedo probar Windows Mixed Reality?
 
@@ -51,19 +51,19 @@ Obtenga más información sobre la realidad mixta aquí: <https://docs.microsoft
 
 **Respuesta rápida:** Los auriculares con Windows Mixed Reality incluyen el seguimiento interno (las cámaras de seguimiento están en el casco) y la configuración de plug and Play con Windows 10.
 
-**Más detalles**: Windows Mixed Reality ofrece varias características, entre las que se incluye la instalación sencilla (no es necesario que los sensores externos realicen un seguimiento de su equipo y sus controladores), la elección de los auriculares para satisfacer su comodidad y el punto de precio, los auriculares con resoluciones competitivas y, por último, una experiencia de usuario única que incluye una interfaz espacial que le permite usar miles Microsoft Store de
+**Más detalles**: Windows Mixed Reality ofrece varias características, entre las que se incluye la instalación sencilla (no es necesario que los sensores externos realicen un seguimiento de su equipo y sus controladores), la opción de usar auriculares para satisfacer su comodidad y el punto de precio, los auriculares con resoluciones competitivas y, por último, una experiencia de usuario única que incluye una interfaz espacial, que le permite usar Microsoft Store miles
 
 ### <a name="does-mixed-reality-mean-that-inside-out-cameras-are-passthrough-can-you-experience-augmented-reality-in-addition-to-virtual-reality"></a>¿La realidad mixta significa que las cámaras internas son de paso a través? ¿Puede experimentar la realidad aumentada además de la realidad virtual?
 
-**Respuesta rápida:** No, las cámaras internas en auriculares con Windows Mixed Reality solo se usan para el seguimiento posicional. Los auriculares Windows Mixed Reality son ocluidos, lo que significa que son para realidad virtual y no proporcionan una vista del mundo real ni de la realidad aumentada.
+**Respuesta rápida:** No, las cámaras internas en auriculares con Windows Mixed Reality solo se usan para el seguimiento posicional. Los auriculares con Windows Mixed Reality son ocluidos, lo que significa que son para realidad virtual y no proporcionan una vista del mundo real ni de la realidad aumentada.
 
 ### <a name="what-is-inside-out-tracking-how-is-it-different-than-outside-in-tracking-or-lighthouse-tracking"></a>¿Qué es el seguimiento interno? ¿En qué se diferencia el seguimiento externo o el seguimiento de Lighthouse
 
-* **Seguimiento interno** Windows Mixed Reality usa el seguimiento interno. Con las cámaras de seguimiento Inside-Out están integradas en el casco y realizan un seguimiento de los cambios en el entorno con el fin de determinar la posición de los auriculares en relación con el entorno a medida que se desplaza.
+* **Seguimiento interno** Windows Mixed Reality usa el seguimiento interno. Con las cámaras de seguimiento interior están integradas en el casco y realizar un seguimiento de los cambios en el entorno para determinar la posición de los auriculares en función del entorno a medida que se desplaza.
 
-* **Seguimiento externo** Oculus, Naopak y otros usan el seguimiento externo.  Con el seguimiento externo se realiza un seguimiento de los auriculares mediante uno o varios dispositivos externos. Las cámaras están integradas en esos dispositivos externos, colocados en torno al entorno y se usan para determinar la posición del casco en relación con el entorno.
+* **Seguimiento externo** Oculus, Naopak y otros usan el seguimiento externo.  Con el seguimiento exterior, se realiza un seguimiento de los auriculares mediante uno o varios dispositivos externos. Las cámaras están integradas en esos dispositivos externos, colocados en torno al entorno y se usan para determinar la posición del casco en función del entorno.
 
-Para obtener más información sobre el seguimiento interno, puede ir aquí: <https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system>
+Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system).
 
 ### <a name="can-inside-out-tracking-of-motion-controllers-impact-my-game-play-due-to-camera-fov"></a>Puede realizar un seguimiento interior de los controladores de movimiento que afectan a mi juego debido a la cámara.
 
@@ -71,7 +71,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 
 ### <a name="how-is-windows-mixed-reality-different-from-samsung-gear-vr"></a>¿En qué se diferencia Windows mixed reality de Samsung Gear VR?
 
-**Respuesta rápida:** Todos los productos de VR basados en smartphone, incluidos los sistemas de seguimiento de la posición de los cabezales de Samsung y Google DAYDREAM, usan 3 grados de libertad (3DOF). los sistemas basados en 3DOF permiten trasladar el cabezal **solo** del cuello en el mundo virtual. Por otro lado, Windows MR usa un encabezado de 6 grados de libertad (6DOF) y los sistemas de seguimiento de la posición de los controladores. los sistemas basados en 6DOF permiten trasladar todo el cuerpo del mundo virtual; por lo tanto, puede recorrer un objeto y verlo desde distintas perspectivas, al igual que en el mundo físico. Rift y Naopak también son sistemas basados en 6DOF.
+**Respuesta rápida:** Todos los productos de VR basados en smartphone, incluidos los sistemas de seguimiento de la posición principal de Samsung y Google DAYDREAM, usan tres grados de libertad (3DOF). los sistemas basados en 3DOF permiten trasladar el cabezal **solo** del cuello en el mundo virtual. Por otro lado, Windows MR usa un encabezado de seis grados de libertad (6DOF) y los sistemas de seguimiento de la posición de los controladores. los sistemas basados en 6DOF permiten trasladar todo el cuerpo del mundo virtual; por lo tanto, puede recorrer un objeto y verlo desde distintas perspectivas, al igual que en el mundo físico. Rift y Naopak también son sistemas basados en 6DOF.
 
 * Obtenga más información sobre 3DOF y 6DOF aquí: <https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system#what-is-the-difference-between-3dof-and-6dof> 
 * Obtenga más información sobre el seguimiento posicional y el grado de libertad (DOF) aquí: <https://www.roadtovr.com/introduction-positional-tracking-degrees-freedom-dof/>
@@ -81,7 +81,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <table>
 <tr>
 <th style="width:25%"> Auriculares </th>
-<th style="width:15%"> Resolución </th>
+<th style="width:15%"> Solución </th>
 <th style="width:10%"> Pantalla </th>
 <th style="width:10%"> Frecuencia de actualización </th>
 <th style="width:10%"> Visual </th>
@@ -96,10 +96,10 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> AH101 de Acer </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 100 ° </td>
 <td> conector de 3,5 mm </td>
-<td> None </td>
+<td> Ninguno </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.acer.com/ac/en/US/content/windows-mixed-reality-home">Acer</a> </td>
@@ -109,9 +109,9 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> OJO 500 de Acer </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 100 ° </td>
-<td> Conector de + 3,5 mm integrado </td>
+<td> Conector integrado + 3,5-mm </td>
 <td> Integrada </td>
 <td style="text-align: center;">Mecánica</td>
 <td> 2018 </td>
@@ -122,10 +122,10 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> ASUS HC102 </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 95 ° </td>
 <td> conector de 3,5 mm </td>
-<td> None </td>
+<td> Ninguno </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.asus.com/us/Headset/ASUS-Windows-Mixed-Reality-Headset-HC102/">ASU</a> </td>
@@ -135,10 +135,10 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Visor de Dell </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> None </td>
+<td> Ninguno </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.dell.com/en-us/shop/accessories/apd/536-bbbr?~ck=mn">Proyector</a> </td>
@@ -148,10 +148,10 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Auriculares de Fujitsu FMV </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> None </td>
+<td> Ninguno </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="http://pr.fujitsu.com/jp/news/2017/10/17.html">Fujitsu</a> </td>
@@ -161,9 +161,9 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Reverberación de HP </td>
 <td> 4320x2160 </td>
 <td> LCD </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 114 ° </td>
-<td> Conector de + 3,5 mm integrado </td>
+<td> Conector integrado + 3,5-mm </td>
 <td> Integrada </td>
 <td style="text-align: center;">Software</td>
 <td> Muelle 2019 </td>
@@ -174,10 +174,10 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> HP VR1000 </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> None </td>
+<td> Ninguno </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://store.hp.com/us/en/pdp/hp-windows-mixed-reality-headset-vr1000-100">FABRICANTES</a> </td>
@@ -187,10 +187,10 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Explorer de Lenovo </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> None </td>
+<td> Ninguno </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.lenovo.com/us/en/virtual-reality-and-smart-devices/virtual-and-augmented-reality/lenovo-explorer/Lenovo-Explorer/p/G10NREAG0A2">Lenovo</a> </td>
@@ -200,10 +200,10 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Medion ERAZER MR X1000 </td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> None </td>
+<td> Ninguno </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.medion.com/be/shop/monitoren-medion-erazer-mr-x1000-vr-headset-controllers-30023616a1.html">Medion</a> </td>
@@ -213,10 +213,10 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Odyssey de Samsung HMD</td>
 <td> 2880x1600 </td>
 <td> AMOLED </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 110 ° </td>
 <td> Integrado </td>
-<td> None </td>
+<td> Ninguno </td>
 <td style="text-align: center;">Mecánica</td>
 <td> 2017 </td>
 <td> <a href="https://www.samsung.com/us/computing/hmd/windows-mixed-reality/xe800zaa-hc1us-xe800zaa-hc1us/?redir=windows%20mixed%20reality">Samsung</a> </td>
@@ -226,7 +226,7 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> Samsung HMD Odyssey+</td>
 <td> 2880x1600 </td>
 <td> AMOLED </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 110 ° </td>
 <td> Integrado </td>
 <td> Integrada </td>
@@ -239,10 +239,10 @@ Para obtener más información sobre el seguimiento interno, puede ir aquí: <ht
 <td> 3Glasses Blubur S2</td>
 <td> 2880x1440 </td>
 <td> LCD </td>
-<td> Hasta 90Hz </td>
+<td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> None </td>
+<td> Ninguno </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="http://3glasses.com/goods.action?gid=30">3Glasses</a> </td>
@@ -261,11 +261,11 @@ Se hace referencia a los detalles técnicos mencionados en las especificaciones 
 
 ### <a name="do-the-mixed-reality-headsets-have-eye-relief-adjustment"></a>¿Los auriculares de realidad mixta tienen ajuste de la mirada?
 
-**Respuesta rápida:** No, los auriculares de la realidad mixta de Windows no tienen ajuste de la vista.
+**Respuesta rápida:** No, los auriculares de realidad mixta de Windows no tienen ajuste de desahogo.
 
 ### <a name="will-there-be-issues-with-motion-controller-tracking-if-multiple-windows-mixed-reality-headsets-are-in-close-proximity"></a>¿Hay problemas con el seguimiento del controlador de movimiento si varios auriculares de la realidad mixta de Windows están cerca de cerca?
 
-**Respuesta rápida:** Encontramos que no hay interferencias con los controladores de movimiento, pero debe proporcionar a los usuarios espacio suficiente para la mejor experiencia en la realidad mixta, es decir, 10 pies x 10 metros.
+**Respuesta rápida:** Hemos descubierto que no hay interferencias con los controladores de movimiento, pero debe proporcionar a los usuarios espacio suficiente para la mejor experiencia en la realidad mixta, por ejemplo, 10 pies x 10 metros.
 
 ### <a name="is-there-boundary-chaperone-or-guardian-system-in-windows-mixed-reality"></a>¿Existe algún límite, Chaperone o sistema de protección en Windows Mixed Reality?
 
@@ -273,13 +273,13 @@ Se hace referencia a los detalles técnicos mencionados en las especificaciones 
 
 ### <a name="do-windows-mixed-reality-headsets-work-in-the-dark"></a>¿Funcionan los auriculares con una realidad mixta de Windows en la oscuridad?
 
-**Respuesta rápida:** Una buena regla general es si no se puede desplazar con confianza por la habitación porque es demasiado oscuro, el sistema de seguimiento también tendrá un tiempo de funcionamiento en ese entorno.
+**Respuesta rápida:** Una buena regla general es si no puede desplazarse con confianza por el salón porque es demasiado oscuro, el sistema de seguimiento también tendrá un tiempo de funcionamiento en ese entorno.
 
 ### <a name="what-is-the-cable-length-of-the-windows-mixed-reality-headset"></a>¿Cuál es la longitud de los cables del casco de la realidad mixta de Windows?
 
 **Respuesta rápida:** Normalmente, la longitud del cable de los auriculares de la realidad mixta de Windows es de 4 metros, pero depende del casco. Para obtener más información, consulte: <https://www.microsoft.com/en-us/store/collections/vrandmixedrealityheadsets>
 
-### <a name="can-i-use-an-usb--hdmi-extension-cables-with-windows-mixed-reality-headsets"></a>¿Puedo usar cables de extensión USB/HDMI con auriculares de realidad mixta de Windows?
+### <a name="can-i-use-a-usb--hdmi-extension-cable-with-windows-mixed-reality-headsets"></a>¿Puedo usar un cable de extensión USB/HDMI con auriculares de realidad mixta de Windows?
 
 **Respuesta rápida:** Hemos diseñado Windows Mixed Reality para trabajar sin cables de extensión. No se admite el uso de cables de extensión con auriculares de realidad mixta y el uso puede afectar a su experiencia.
 
@@ -322,7 +322,7 @@ Se hace referencia a los detalles técnicos mencionados en las especificaciones 
 
 **Respuesta rápida:** Si su equipo no tiene compatibilidad integrada con Bluetooth, tendrá que conectar un adaptador de Bluetooth USB que admita Bluetooth 4,0 para habilitar los controladores de movimiento.
 
-### <a name="will-the-controllers-work-with-bluetooth-31-or-do-i-need-bluetooth-40"></a>¿Funcionarán los controladores con Bluetooth 3,1 o necesito Bluetooth 4,0?
+### <a name="will-the-controllers-work-with-bluetooth-31-or-do-i-need-bluetooth-40"></a>¿Funcionará el controlador con Bluetooth 3,1 o necesito Bluetooth 4,0?
 
 **Respuesta rápida:** La especificación mínima admitida para Windows Mixed Reality es Bluetooth 4,0. Si el equipo tiene Bluetooth 3,1, no se le bloqueará el uso de los controladores, pero la mejor experiencia es en BT 4,0. Descargue y ejecute el [portal de realidad mixta](https://www.microsoft.com/en-us/p/mixed-reality-portal/9ng1h8b3zc7m?activetab=pivot:overviewtab) para ver si el equipo está listo para WMR.
 
@@ -354,7 +354,7 @@ Se hace referencia a los detalles técnicos mencionados en las especificaciones 
 
 ### <a name="can-i-see-my-keyboard-from-inside-a-windows-mixed-reality-headset"></a>¿Puedo ver mi teclado desde dentro de un casco de realidad mixta de Windows?
 
-**Respuesta rápida:** No puede ver el teclado físico desde dentro de los auriculares, pero puede usar el teclado del software. Además, muchos auriculares con Windows Mixed Reality tienen una pantalla frontal con bisagras, por lo que puede voltear el casco mientras trabaja. Más detalles: <https://www.microsoft.com/en-us/windows/windows-mixed-reality#specs>
+**Respuesta rápida:** No puede ver el teclado físico del casco, pero puede usar el teclado del software. Además, muchos auriculares con Windows Mixed Reality tienen una pantalla frontal con bisagras, por lo que puede voltear el casco mientras trabaja. Más detalles: <https://www.microsoft.com/en-us/windows/windows-mixed-reality#specs>
 
 ### <a name="what-games-require-a-gamepad-as-opposed-to-motion-controllers"></a>¿Qué juegos requieren un controlador de juegos en lugar de los controladores de movimiento?
 
@@ -376,7 +376,7 @@ Se hace referencia a los detalles técnicos mencionados en las especificaciones 
 
 ### <a name="will-vive-be-able-to-run-windows-mixed-reality-content"></a>¿Naopak podrá ejecutar el contenido de la realidad mixta de Windows?
 
-**Respuesta rápida:** Los auriculares naopak no son compatibles con Windows Mixed Reality.
+**Respuesta rápida:** Los auriculares de naopak no son compatibles con Windows Mixed Reality.
 
 ### <a name="can-i-play-my-xbox-one-games-in-windows-mixed-reality"></a>¿Puedo jugar con mis juegos de Xbox One en Windows Mixed Reality?
 
@@ -386,7 +386,7 @@ Se hace referencia a los detalles técnicos mencionados en las especificaciones 
 
 ### <a name="are-the-minimum-specs-for-steamvr-higher-than-a-windows-mixed-reality-ultra-pc"></a>¿Son las especificaciones mínimas de SteamVR superior a la de Windows Mixed Reality ultra PC?
 
-**Respuesta rápida:** Puede ejecutar SteamVR con los requisitos de ultra PC para Windows Mixed Reality. Sin embargo, se recomienda ejecutar la versión preliminar de SteamVR en un equipo con una tarjeta de vídeo GTX 1070 (o superior) y un procesador i7 de Intel Core. Estamos continuando revisando los comentarios y optimizando el rendimiento para admitir configuraciones de sistema adicionales en futuras actualizaciones. No se impide que el equipo ejecute Windows Mixed Reality SteamVR si no cumple estas especificaciones más altas, pero esto afectará al rendimiento y la calidad de la experiencia general.
+**Respuesta rápida:** Puede ejecutar SteamVR con los requisitos de ultra PC para Windows Mixed Reality. Sin embargo, se recomienda ejecutar la versión preliminar de SteamVR en un equipo con una tarjeta de vídeo GTX 1070 (o superior) y un procesador i7 de Intel Core. Vamos a seguir revisando los comentarios y optimizar el rendimiento para admitir configuraciones de sistema adicionales en futuras actualizaciones. No se bloqueará la ejecución de Windows Mixed Reality SteamVR en su equipo si no cumple estas especificaciones más altas. sin embargo, esto afectará al rendimiento y la calidad de la experiencia global.
 
 ### <a name="are-all-steam-vr-games-be-supported"></a>¿Se admiten todos los juegos de la VR de vapor?
 

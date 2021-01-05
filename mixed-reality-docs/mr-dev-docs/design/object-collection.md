@@ -1,25 +1,23 @@
 ---
 title: Colección de objetos
-description: Colección de objetos es un control de diseño que ayuda a diseñar una matriz de objetos en una forma tridimensional predefinida.
+description: La colección de objetos es un control de diseño, que le ayuda a diseñar una matriz de objetos en una forma tridimensional predefinida.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, controles, diseño, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, colección de objetos, 2D, 3D, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 41087c4a09e72b199c1ab03f504343bf7d6b1ba8
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: a459d03246b8df4c17d523f57ece54997849c209
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703411"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847212"
 ---
 # <a name="object-collection"></a>Colección de objetos
 
 ![Colección de objetos utilizada en la tabla periódica de la aplicación Elements](images/UX_Hero_ObjectCollection.jpg)<br>
 
-
-Colección de objetos es un control de diseño que ayuda a diseñar una matriz de objetos en una forma tridimensional predefinida. Admite varios estilos de superficie: **plano, cilindro, esfera** y **radial**. Puede ajustar el radio y el tamaño de los objetos y el espacio que hay entre ellos. La colección de objetos admite cualquier objeto de Unity, tanto en 2D como en 3D. En el **[Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)**, hemos creado scripts de Unity y ejemplos que le ayudarán a crear una colección de objetos.
-
+La colección de objetos es un control de diseño, que le ayuda a diseñar una matriz de objetos en una forma tridimensional predefinida. Admite varios estilos de superficie: * * plano, cilindro, esfera y **radial**. Puede ajustar el radio y el tamaño de los objetos y el espacio que hay entre ellos. La colección de objetos admite cualquier objeto de Unity, tanto en 2D como en 3D. En el **[Kit de herramientas de realidad mixta](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)**, hemos creado scripts de Unity y ejemplos que le ayudarán a crear una colección de objetos.
 
 ## <a name="object-collection-examples"></a>Ejemplos de colección de objetos
 
@@ -41,7 +39,7 @@ También puede usar imágenes 2D con la colección de objetos. En los siguientes
 
 ![Ejemplo de imágenes 2D con colección de objetos](images/940px-layout-3dobjects-3.jpg)
 
-![Ejemplo de imágenes 2D con colección de objetos](images/940px-layout-2dimages.jpg)<br>
+![Ejemplos de uso de colecciones de objetos con imágenes 2D](images/940px-layout-2dimages.jpg)<br>
 *Ejemplos de uso de colecciones de objetos con imágenes 2D*
 
 <br>
@@ -52,11 +50,9 @@ También puede usar imágenes 2D con la colección de objetos. En los siguientes
 
 * [MRTK: colección de objetos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)
 
-
 <br>
 
 ---
-
 
 ## <a name="see-also"></a>Consulte también
 

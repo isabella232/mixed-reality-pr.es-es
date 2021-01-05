@@ -46,3 +46,5 @@
 ### [Funcionamiento del seguimiento de la interacción directa](tracking-system.md)
 ### [Controladores de HP Reverb G2 en Unity](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
 ### [Controladores de HP Reverb G2 en Unreal](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
+
+## [Guía de contribución](contributing.md)

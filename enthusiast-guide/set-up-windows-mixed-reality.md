@@ -3,12 +3,12 @@ title: Configuración de Windows Mixed Reality
 description: Cómo configurar los controladores de movimiento, la voz y el audio de Windows Mixed Reality, y definir el límite de la habitación para un espacio de juego seguro.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, introducción, configuración, controlador de movimiento, controlador, voz, audio, sentado, posición, límite, controladores de gráficos, Microsoft Edge, cromo
-ms.openlocfilehash: 693c55a7375dd2cb1b4a6f880fca31ba8d50c7f9
-ms.sourcegitcommit: b90697776b7027ed7eb8dd49a72d52740a16d12d
+ms.openlocfilehash: 8cd313651665fe2e50deb21e2ba2434883dc873a
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96843133"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725946"
 ---
 # <a name="set-up-windows-mixed-reality"></a>Configuración de Windows Mixed Reality
 
@@ -42,7 +42,7 @@ Si el casco tiene una radio integrada, los controladores que se incluyen con los
 
 Si tiene un casco sin una radio integrada, tendrá que configurar los controladores de movimiento para emparejarlos con el equipo. La mayoría de los auriculares fabricados después 2018 tienen radio integrada.
 
-Si solo tiene previsto usar un teclado y un mouse de Xbox, no es necesario emparejar los controladores.  Si alguna vez planea usar controladores, probablemente debería emparejarlos.
+No es necesario emparejar los controladores si solo tiene previsto usar un teclado y un mouse de Xbox.  Si alguna vez planea usar controladores, debe emparejarlos.
 
 **Nota**: los controladores de movimiento de Windows Mixed Reality requieren Bluetooth 4,0. Si su equipo no tiene Bluetooth integrado, tendrá que conectar un adaptador de Bluetooth USB que admita Bluetooth 4,0 para habilitar los controladores de movimiento. No necesita un adaptador de Bluetooth para usar la radio integrada en el casco.
 
@@ -56,7 +56,7 @@ Elija una escala de sala o una experiencia de escalado de mesa:
 
 **Opción 1: configurar para todas las experiencias (también conocido como escala de sala)** le permitirá desplazarse por el salón y es la experiencia de realidad mixta más envolvente. Le recomendamos que, al menos, cinco pies x siete pies (1,5 metros x 2 metros) de espacio para la realidad mixta.
 
-**Opción 2: configurar la experiencia de sentado y de posición (también conocida como escala de escritorio)** funcionará en su escritorio. Es una buena opción si el espacio no es grande. También significa que utilizará los auriculares sin límite. Deberá permanecer en un solo lugar, ya que no tendrá ningún límite que le ayude a evitar obstáculos físicos. Además, algunas aplicaciones y juegos están diseñados para usarse con un límite, por lo que es posible que no funcionen según lo previsto.
+**Opción 2: configurar la experiencia de sentado y de posición (también conocida como escala de escritorio)** funcionará en su escritorio. Es una buena opción si el espacio no es grande. También significa que utilizará los auriculares sin límite. Deberá permanecer en un solo lugar, ya que no tendrá ningún límite que le ayude a evitar obstáculos físicos. Algunas aplicaciones y juegos no están diseñados para ser una experiencia de límite, por lo que es posible que no funcionen según lo previsto.
 
 ![Elegir una configuración](images/1050px-chooseasetup.png)
 
@@ -90,7 +90,7 @@ No se requieren pasos adicionales si elige esta opción.
 
 ## <a name="what-is-the-maximum-size-of-the-boundary"></a>¿Cuál es el tamaño máximo del límite?
 
-El tamaño de límite máximo admitido en Windows Mixed Reality es un radio de 18x18ft (5.7 x 5.7 m) o 13 ft (4 m) del centro.  El tamaño del límite depende del punto de anclaje y de la distancia desde el punto de anclaje que puede moverse antes de arriesgar la estabilidad del límite.  Windows Mixed Reality se basa en una abstracción de fase en la plataforma, la fase es el espacio en el que se desplaza. Esa fase depende de un solo delimitador, que prácticamente todas las aplicaciones asumen, es el funcionamiento de Naopak y Oculus, ya que solo tienen un único sistema de coordenadas.  Esto es importante porque con el seguimiento interno, a medida que se aleja de un punto de anclaje, el seguimiento del casco es confiable a la vez que se mantiene el límite estable.  En los casos en los que el límite esté diseñado para evitar obstáculos físicos, se vuelve más allá de un problema desde el centro.  Dos factores entraron en la decisión sobre el tamaño máximo del límite. la distancia máxima a la que los auriculares de la realidad mixta de Windows podrían proporcionar la mejor experiencia de escala de sala con un límite y la longitud del cable del casco, que para la mayoría de los auriculares de la realidad mixta de Windows es de 10 ft (3 m).
+El tamaño máximo de límite admitido en Windows Mixed Reality es un radio de 18x18ft (5.7 x 5.7 m) o 13 ft (4 m) del centro. El tamaño del límite depende del punto de anclaje y de la distancia desde el punto de anclaje que puede moverse antes de arriesgar la estabilidad del límite.  Windows Mixed Reality se basa en una abstracción de fase, la fase es el espacio que se mueve en. Esa fase depende de un solo delimitador, que prácticamente todas las aplicaciones asumen, es cómo Naopak y Oculus funcionan también con su sistema de coordenadas único.  Esto es importante porque con el seguimiento interno, a medida que se aleja de un punto de anclaje, el seguimiento del casco es confiable a la vez que se mantiene el límite estable.  En los casos en los que el límite esté diseñado para evitar obstáculos físicos, se convierte en un problema más allá del centro.  Dos factores entraron en la decisión sobre el tamaño máximo del límite. La distancia máxima a la que los auriculares de la realidad mixta de Windows podrían proporcionar la mejor experiencia de escala de sala con un límite y la longitud del cable del casco, que para la mayoría de los auriculares de la realidad mixta de Windows son 10 ft (3 m).
 
 ## <a name="set-up-speech"></a>Configurar voz
 
@@ -100,7 +100,7 @@ Puede habilitar los comandos de Cortana en la realidad mixta, lo que le permite 
 
 ## <a name="set-up-your-audio-headset"></a>Configurar los auriculares de audio
 
-A menos que haya adquirido un Odyssey de Samsung HMD con auriculares de AKG integrados y una matriz de doble micrófono, debe obtener un auricular de audio con micrófono y auriculares, y conectarlo al conector de audio 3,5-mm del casco. El conector de audio de 3,5 mm para el casco es, dependiendo del modelo de casco, situado en la parte inferior del parasol o al final de un cable de audio corto conectado al parasol del casco.
+A menos que haya adquirido un Odyssey de Samsung HMD con auriculares de AKG integrados y una matriz de doble micrófono, debe obtener un auricular de audio con micrófono y auriculares, y conectarlo al conector de audio 3,5-mm del casco. El conector de audio de 3,5 mm para el casco se encuentra en la parte inferior del visor de auriculares o al final de un cable de audio corto conectado al visor de auriculares, dependiendo del modelo de casco.
 
 ## <a name="adjusting-your-headsets-display-settings"></a>Ajuste de la configuración de pantalla del casco
 
@@ -110,7 +110,7 @@ Windows Mixed Reality elige automáticamente la configuración de pantalla que e
 
 Esta configuración controla la calidad visual de la Página principal de la realidad mixta. El valor predeterminado es "Automatic".
 
-### <a name="resolution"></a>Resolución
+### <a name="resolution"></a>Solución
 
 La resolución nativa del casco se muestra aquí.
 
@@ -118,7 +118,9 @@ Si conecta un casco con pantallas de mayor resolución al equipo, por ejemplo, c
 
 * Esta configuración proporciona la opción para que la pila de composición de la realidad mixta de Windows se represente de forma nativa (por ejemplo, en 4320x2160), o para que la pila de composición se represente en una resolución y escalado inferiores (por ejemplo, se represente en 2880x1440 y escale a 4320x2160).
 * La configuración predeterminada es representar de forma nativa (por ejemplo, la opción **4320 x 2160 (calidad óptima)** para proporcionar la mejor calidad visual posible desde los auriculares.
-* Si el equipo no cumple los requisitos mínimos de hardware de gráficos para los auriculares con pantallas de mayor resolución, o si ve problemas de rendimiento de gráficos, pruebe a usar la opción de **escalado automático (mejor rendimiento)** .
+* Use la opción de **escalado automático (mejor rendimiento)** si:
+    * El equipo no cumple los requisitos mínimos de hardware de gráficos para los auriculares con pantallas de mayor resolución
+    * Está viendo los problemas de rendimiento de los gráficos
 
 Esta opción está disponible en Windows 10, versión 1903 o posterior.
 
@@ -130,7 +132,7 @@ Esta opción es ajustar la calibración de IPD para los auriculares con compatib
 
 Esta configuración avanzada invalida la experiencia predeterminada de frecuencia de actualización de la pantalla de auriculares.
 
-* **Automática (valor predeterminado)**: seleccione automáticamente la experiencia de 60 hz o 90 Hz según la configuración de hardware de su equipo.
+* **Automática (valor predeterminado)**: seleccione automáticamente la experiencia de 60 hz o 90-Hz en función de la configuración de hardware del equipo.
 * **60 Hz**
 * **90 Hz**
 
@@ -175,7 +177,7 @@ Para usar el nuevo Microsoft Edge basado en cromo en la Página principal de Win
 
 Escribir la realidad mixta una segunda vez es tan sencillo como volver a colocar el casco mientras está conectado al equipo. También puede iniciar manualmente la aplicación del portal de realidad mixta abriéndola desde el menú Inicio. La entrada y el audio se enrutarán automáticamente al casco cuando lo coloque, o bien puede desencadenar esto de forma manual presionando **Windows + Y** en el teclado.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Preguntar a la comunidad](https://answers.microsoft.com)
 * [Póngase en contacto con nosotros para obtener soporte técnico](https://support.microsoft.com/contactus/)

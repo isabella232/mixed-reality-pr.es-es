@@ -6,22 +6,21 @@ ms.author: v-hferrone
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, hologramas, diseño, interacción, auriculares de realidad mixta, auriculares Windows Mixed Reality, qué es realidad aumentada
-ms.openlocfilehash: 6407770a818bc294cf615201a837218173b963d0
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: b390910fcece8e6263d19f52c80b784efb2561f6
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702251"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757563"
 ---
 # <a name="what-is-a-hologram"></a>¿Qué es un holograma?
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/MVXH5V8MVQo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-HoloLens le permite crear **hologramas**, objetos de luz y sonido que aparecen en el mundo, al igual que si fueran objetos reales. Los hologramas responden a los comandos de [mirados](../design/gaze-and-commit.md), [gestos](../design/gaze-and-commit.md#composite-gestures) y [voz](../design/voice-input.md), y pueden interactuar con las [superficies del mundo real](../design/spatial-mapping.md) . Con los hologramas, puedes crear objetos digitales que formen parte de tu mundo.
+HoloLens le permite crear **hologramas**, que son objetos de luz y sonido que aparecen en el mundo como objetos reales. Los hologramas responden a los comandos de [mirados](../design/gaze-and-commit.md), [gestos](../design/gaze-and-commit.md#composite-gestures)y [voz](../design/voice-input.md). Incluso pueden interactuar con las [superficies del mundo real](../design/spatial-mapping.md) . Con los hologramas, puedes crear objetos digitales que formen parte de tu mundo.
 
 <br>
-
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -54,7 +53,7 @@ HoloLens le permite crear **hologramas**, objetos de luz y sonido que aparecen e
 
 Los hologramas que HoloLens [representa](../develop/platform-capabilities-and-apis/rendering.md) aparecen en el marco holográfica directamente delante de los ojos del usuario. Los hologramas agregan luz a su mundo, lo que significa que puede ver la luz de la pantalla y la luz de su entorno. HoloLens no quita la luz de los ojos, por lo que los hologramas no se pueden representar con el color negro. En su lugar, el contenido negro aparece como transparente.
 
-Los hologramas pueden tener muchos comportamientos y apariencias diferentes. Algunos son reales y sólidos, mientras que otros están animados y Ethereal. Los hologramas pueden resaltar características en el entorno y pueden ser elementos de la interfaz de usuario de la aplicación.
+Los hologramas pueden tener muchos comportamientos y apariencias diferentes. Algunos son reales y sólidos, mientras que otros están animados y Ethereal. Puede usar hologramas para resaltar características en su entorno o usarlas como elementos en la interfaz de usuario de la aplicación.
 
 ![Manos de la manipulación de un holograma](images/hologram-hands-940px.jpg)
 
@@ -66,29 +65,28 @@ Los hologramas también pueden hacer [sonidos](../design/spatial-sound.md), que 
 
 ## <a name="a-hologram-can-be-placed-in-the-world-or-tag-along-with-you"></a>Se puede colocar un holograma en el mundo o etiqueta junto con usted
 
-Cuando tenga una ubicación concreta en la que desee un holograma, puede [colocarlo](../design/coordinate-systems.md) precisamente en el mundo. A medida que recorra el holograma, aparecerá estable en relación con el mundo. Si usa un [delimitador espacial](../design/coordinate-systems.md#spatial-anchors) para anclar ese objeto al mundo, el sistema puede incluso recordar dónde lo dejó cuando vuelva más tarde.
+Si tiene una ubicación determinada para un holograma, puede [colocarla](../design/coordinate-systems.md) precisamente en ese punto del mundo. A medida que recorre, el holograma parece estable en función del mundo. Si usa un [delimitador espacial](../design/coordinate-systems.md#spatial-anchors) para anclar el objeto, el sistema puede incluso recordar dónde lo dejó cuando vuelva más tarde.
 
 ![Dos hombres con el diseño de Microsoft Dynamics 365 en un espacio comercial](images/HLS19_retailLayoutHologram_001-940px.jpg)
 
-Algunos hologramas siguen al usuario en su lugar. Estas etiquetas a lo largo de los hologramas se colocan en relación con el usuario, independientemente de dónde se recorran. Incluso puede optar por un holograma y colocarlo en la pared una vez que llegue a otra habitación.
+Algunos hologramas siguen al usuario en su lugar, se colocan en función del usuario, independientemente de dónde se recorran. Incluso puede optar por un holograma y colocarlo en la pared una vez que llegue a otra habitación.
 
-**Procedimientos recomendados**
+**procedimientos recomendados**
 * Algunos escenarios pueden exigir que los hologramas se mantengan fácilmente reconocibles o visibles a lo largo de la experiencia. Hay dos enfoques de alto nivel para este tipo de posicionamiento. Vamos a llamarlos **"display-locked"** y **"Body-locked"**.
-   * Mostrar el contenido bloqueado está "bloqueado" en la pantalla del dispositivo. Esto es complicado por una serie de motivos, entre los que se incluyen una sensación poco natural de "clingyness" que hace que muchos usuarios se sienten frustrados y desean "sacudirlos". En general, muchos diseñadores lo han descubierto mejor para evitar el contenido de bloqueo de pantalla.
-   * El enfoque de cuerpo bloqueado es mucho más forgivable. El bloqueo de cuerpo es cuando un holograma está anclado al cuerpo del usuario o al vector de miración, pero se coloca en el espacio 3D alrededor del usuario. Muchas experiencias han adoptado un comportamiento de bloqueo de cuerpo en el que el holograma "sigue" a los usuarios mirados, lo que permite al usuario girar su cuerpo y desplazarse por el espacio sin perder el holograma. Incorporar un retraso ayuda a que el movimiento de hologramas parezca más natural. Por ejemplo, algunas interfaces de usuario principales del sistema operativo Holographic de Windows usan una variación en el bloqueo del cuerpo que sigue al mirador con un retraso suave y elástico mientras el usuario cambia la cabeza.
+   * Mostrar el contenido bloqueado está "bloqueado" en la pantalla del dispositivo. Este tipo de contenido es complicado por varios motivos, por ejemplo, una sensación poco natural de "clingyness" que hace que muchos usuarios se sienten frustrados y quieran "sacudirlo". En general, muchos diseñadores lo han descubierto mejor para evitar el contenido de bloqueo de pantalla.
+   * El enfoque de cuerpo bloqueado es mucho más forgivable. El bloqueo de cuerpo es cuando se ancla un holograma al cuerpo del usuario o al vector de miración en el espacio 3D. Muchas experiencias han adoptado un comportamiento de bloqueo de cuerpo en el que el holograma "sigue" a los usuarios mirados, lo que permite al usuario girar su cuerpo y desplazarse por el espacio sin perder el holograma. Incorporar un retraso ayuda a que el movimiento de hologramas parezca más natural. Por ejemplo, algunas interfaces de usuario principales del sistema operativo Holographic de Windows usan una variación en el bloqueo del cuerpo que sigue al mirador con un retraso suave y elástico mientras el usuario cambia la cabeza.
 * Coloque el holograma con una distancia de visualización cómoda normalmente de aproximadamente 1-2 metros de la cabeza.
 * Proporcione una cantidad de desplazamiento para los elementos que deben estar continuamente en el marco holográfica, o considere la posibilidad de animar el contenido a un lado de la pantalla cuando el usuario cambie su punto de vista.
 
-**Coloque los hologramas en la zona óptima: entre 1,25 m y 5 m**
+**Colocar hologramas en la zona óptima: entre 1,25 m y 5 m**
 
-Dos medidores son los más óptimos, y la experiencia se degradará cuanto más se acerque a un medidor. En distancias más cerca de un medidor, es más probable que los hologramas que se mueven con frecuencia en profundidad sean problemáticos que los hologramas estacionarios. Considere la posibilidad de recortar o difuminar correctamente el contenido cuando se acerque demasiado, de modo que no se determine al usuario en una experiencia inesperada.
+Dos medidores son los más óptimos y la experiencia se degradará cuanto más se aproxime de 1 metro. En distancias más cerca de un medidor, los hologramas que se mueven con frecuencia son más probables que sean problemáticos que los hologramas estacionarios. Considere la posibilidad de recortar o difuminar correctamente el contenido cuando se acerque demasiado, de modo que no se determine el usuario en una experiencia inesperada.
 
 ![Distancia óptima para colocar hologramas del usuario.](images/distanceguiderendering-950px.png)
 
 <br>
 
 ---
-
 
 ## <a name="a-hologram-interacts-with-you-and-your-world"></a>Un holograma interactúa con usted y su mundo
 
@@ -98,13 +96,13 @@ Los hologramas no solo están relacionados con la luz y el sonido; también son 
 
 Los hologramas permiten interacciones personales que no son posibles en ningún otro lugar. Dado que HoloLens sabe dónde se encuentra en el mundo, un personaje Holographic puede tener una apariencia directa en los ojos mientras se recorre la habitación.
 
-Un holograma también puede interactuar con su entorno. Por ejemplo, puede colocar una bola de rebote holográfica sobre una tabla. A continuación, con una [derivación aérea](../design/gaze-and-commit.md#composite-gestures), vea el rebote de la bola y cree un sonido cuando llegue a la tabla.
+Un holograma también puede interactuar con su entorno. Por ejemplo, puede colocar una bola de rebote holográfica sobre una tabla. A continuación, con una [pulsación aérea](../design/gaze-and-commit.md#composite-gestures), vea el rebote de la bola y cree un sonido cuando llegue a la tabla.
 
 Los hologramas también pueden ser ocluidosdos por objetos del mundo real. Por ejemplo, un personaje Holographic podría recorrer una puerta y detrás de una pared, fuera de la vista.
 
 **Sugerencias para la integración de hologramas y el mundo real**
 * La alineación de las reglas de Gravitational hace que los hologramas sean más fáciles de relacionar con y más increíble. por ejemplo: ponga un perro holográfica en el suelo & un jarrón en la tabla en lugar de hacer que floten en el espacio.
-* Muchos diseñadores han descubierto que incluso pueden integrar de forma más increíble los hologramas creando una "sombra negativa" en la superficie en la que está sentado el holograma. Para ello, se crea un resplandor blando en torno al holograma y, a continuación, se resta la "sombra" del resplandor. El resplandor suave se integra con la luz del mundo real y la sombra del holograma en el entorno.
+* Muchos diseñadores han descubierto que pueden integrar hologramas más increíble mediante la creación de una "sombra negativa" en la superficie en la que está sentado el holograma. Para ello, se crea un resplandor blando en torno al holograma y, a continuación, se resta la "sombra" del resplandor. El resplandor suave se integra con la luz del mundo real, que usa la sombra para el holograma en el entorno.
 
 <br>
 

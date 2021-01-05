@@ -6,16 +6,16 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Shell, so, plataforma, acantilado House, casa, Inicio, entorno, Inicio, menú Inicio, menú Inicio, PIN, aplicación, iniciar aplicaciones, colocar aplicaciones, desplazarse, moverse, navegar, auriculares de realidad mixta, auriculares de realidad virtual, qué es realidad virtual
-ms.openlocfilehash: 590e52de7caacc515e703da19e9efdc0a2b9c535
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 4d8aa88fa1057c550601feb7ad85ace15fcada54
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703451"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757693"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>Desplazamiento por la página principal de Windows Mixed Reality
 
-Al igual que la experiencia de PC de Windows se inicia con el escritorio, Windows Mixed Reality comienza con el hogar. La Página principal de Windows Mixed Reality aprovecha nuestra capacidad de INNATE para comprender y navegar por los lugares 3D. Con HoloLens, su hogar es el espacio físico. Con auriculares más inmersivo, su hogar es un lugar virtual.
+Al igual que la experiencia de PC de Windows se inicia con el escritorio, Windows Mixed Reality comienza con el hogar. La Página principal de Windows Mixed Reality usa nuestra capacidad de INNATE para comprender y navegar por los lugares 3D. Con HoloLens, su hogar es el espacio físico, pero con auriculares más envolventes, su hogar es un lugar virtual.
 
 En su hogar también podrá usar el menú Inicio para abrir y colocar aplicaciones y contenido. Puede rellenar su página principal con contenido de realidad mixta y a través de varias aplicaciones al mismo tiempo. Las cosas que coloque en su hogar permanecerán allí, incluso aunque reinicie el dispositivo.
 
@@ -52,17 +52,17 @@ Seleccione **ajustar** en la barra de la aplicación para mostrar los controles 
 
 ![La pizarra de la tienda en modo de ajuste (fotograma azul). Tenga en cuenta que la barra de la aplicación (superior) ha cambiado para incluir los botones ' listo ' y ' quitar '.](images/adjust-500px.png)
 
-Distintas aplicaciones pueden tener opciones adicionales en la barra de la aplicación. Por ejemplo, Microsoft Edge tiene opciones de *desplazamiento*, *arrastre* y *zoom* . 
+Distintas aplicaciones pueden tener otras opciones en la barra de la aplicación. Por ejemplo, Microsoft Edge tiene opciones de *desplazamiento*, *arrastre* y *zoom* . 
 
 ![Barra de la aplicación para aplicaciones 2D que se ejecutan en HoloLens](images/holobar-500px.png)
 
-El botón **atrás** navega de nuevo a las pantallas que se vieron anteriormente en la aplicación. Se detendrá cuando llegue al principio de las experiencias que se han mostrado en la aplicación y no se desplazará a otras aplicaciones.
+El botón **atrás** navega de nuevo a las pantallas que se vieron anteriormente en la aplicación. Se detendrá cuando llegue al principio de las experiencias que se muestran en la aplicación y no se desplazará a otras aplicaciones.
 
 ## <a name="getting-around-your-home"></a>Desplazarse por su hogar
 
 Con **HoloLens**, puede desplazarse por el espacio físico para moverse por su hogar.
 
-Con **auriculares** más ajustados, puede empezar de forma similar en su Playspace para moverse dentro de una zona similar del mundo virtual. Para desplazarse a través de distancias largas, puede usar el stick analógico en el controlador para "caminar", o bien puede usar la *teleportabilidad* para saltar inmediatamente distancias más largas.
+Con **auriculares** más ajustados, puede empezar a trabajar en su Playspace para moverse dentro de una zona similar del mundo virtual. Para desplazarse a través de distancias largas, use el stick analógico en el controlador para "caminar", o bien puede usar la *teleportabilidad* para pasar inmediatamente a distancias más largas.
 
 ![Teleportabilidad en la Página principal de Windows Mixed Reality](images/teleportation-500px.png)
 
@@ -87,7 +87,7 @@ Los [auriculares envolventes de realidad mixta de Windows](immersive-headset-har
 
 ### <a name="motion-controllers"></a>Controladores de movimiento
 
-La mejor experiencia de Windows Mixed Reality será con [los controladores de movimiento](../design/motion-controllers.md) de Windows Mixed Reality que admiten el seguimiento de 6 grados de libertad mediante el uso de los sensores en el casco: no se requiere ninguna cámara ni marcador externos.
+La mejor experiencia de Windows Mixed Reality será con [controladores de movimiento](../design/motion-controllers.md) de Windows Mixed Reality que admitan seis grados de libertad de seguimiento mediante el uso de los sensores en el casco: no se requiere ninguna cámara o marcador externos.
 
 Los comandos de navegación estarán disponibles próximamente.
 
@@ -97,7 +97,7 @@ Los comandos de navegación estarán disponibles próximamente.
   * Pulse el stick analógico hacia la izquierda, derecha o hacia atrás para moverse a la izquierda, a la derecha o hacia atrás en incrementos pequeños.
   * Haga clic en bajar en el stick analógico izquierdo y, a continuación, mueva el stick analógico en la dirección en la que desea ["caminar".](navigating-the-windows-mixed-reality-home.md#getting-around-your-home)
 * Puntee en el **stick analógico** situado a la izquierda o a la derecha para girar la dirección a la que está orientada en 45 grados.
-* Al presionar el botón **a** , se realiza una selección y actúa como el gesto de [pulsación de aire](../design/gaze-and-commit.md#composite-gestures) .
+* Al presionar el botón **a** , se selecciona y se comporta como el gesto de [pulsación de aire](../design/gaze-and-commit.md#composite-gestures) .
 * Al presionar el botón **Guía** , se abre el [menú Inicio](navigating-the-windows-mixed-reality-home.md#start-menu) y se actúa como el gesto de [floración](../design/system-gesture.md#bloom) .
 * Presionar los **desencadenadores izquierdo y derecho** le permite acercar y alejar una aplicación de escritorio 2D con la que interactúa en el hogar.
 
@@ -106,14 +106,14 @@ Los comandos de navegación estarán disponibles próximamente.
 **Nota:** Use la **tecla Windows + Y** para cambiar el mouse entre el control del escritorio de su PC y la Página principal de Windows Mixed Reality.
 
 En la Página principal de Windows Mixed Reality:
-* Al presionar el botón primario del mouse **,** se realiza una selección y se comporta como el gesto de [pulsación de aire](../design/gaze-and-commit.md#composite-gestures) .
+* Al presionar el botón primario del mouse **,** se selecciona y se actúa como el gesto de [pulsación de aire](../design/gaze-and-commit.md#composite-gestures) .
 * Si mantiene presionado el botón secundario del mouse **,** aparecerá el retículo de [teleportabilidad](navigating-the-windows-mixed-reality-home.md#getting-around-your-home) .
 * Al presionar la tecla **Windows** en el teclado, se abre el [menú Inicio](navigating-the-windows-mixed-reality-home.md#start-menu) y se actúa como el gesto de [floración](../design/system-gesture.md#bloom) .
 * Cuando [Gazing](../design/gaze-and-commit.md) en una aplicación de escritorio 2D, puede **hacer clic** con el botón derecho para seleccionar, **hacer clic con el botón secundario** para abrir los menús contextuales y usar la **rueda de desplazamiento** para desplazarse (al igual que en el escritorio de su PC).
 
 ## <a name="cortana"></a>Cortana
 
-[Cortana](../design/voice-input.md#hey-cortana) es su asistente personal en Windows Mixed Reality, al igual que en PC y teléfono. HoloLens tiene un micrófono integrado, pero los auriculares envolventes pueden requerir hardware adicional. Use Cortana para abrir aplicaciones, reiniciar el dispositivo, buscar elementos en línea, etc. Los desarrolladores también pueden optar por [integrar Cortana](https://dev.windows.com/cortana) en sus experiencias.
+[Cortana](../design/voice-input.md#hey-cortana) es su asistente personal en Windows Mixed Reality, al igual que en PC y teléfono. HoloLens tiene un micrófono integrado, pero los auriculares más envolventes pueden requerir hardware adicional. Use Cortana para abrir aplicaciones, reiniciar el dispositivo, buscar cosas en línea, etc. Los desarrolladores también pueden optar por [integrar Cortana](https://dev.windows.com/cortana) en sus experiencias.
 
 También puede usar comandos de voz para hacer todo su hogar. Por ejemplo, señale un botón (mediante la tecla de [mira](../design/gaze-and-commit.md) o un controlador, en función del dispositivo) y "seleccione". Otros comandos de voz incluyen "ir a casa", "más grande", "más pequeño", "cerrar" y "me encuentro".
 

@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/15/2020
 ms.topic: overview
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR,
-ms.openlocfilehash: 9426a85611cf53a349ca5bc8f3727ee8a784940e
-ms.sourcegitcommit: a129039d8ed228ed0305aa312006cadf403f0831
+ms.openlocfilehash: 9a82ab12b9cf91bd1fefcf84a2f6b4e62c8df24a
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "95417209"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725716"
 ---
 # <a name="start-your-vr-journey"></a>Empezar el recorrido de VR
 
@@ -19,11 +19,15 @@ ms.locfileid: "95417209"
 
 ## <a name="setup--usability-checkpoints"></a>Configurar puntos de control de facilidad de uso &
 
-Use los puntos de control siguientes para instalar, configurar y usar los dispositivos de VR envolventes para que sus aplicaciones y juegos cobren vida.
+Use los puntos de control siguientes para instalar, configurar y usar los dispositivos de VR determinantes para que sus aplicaciones y juegos cobren vida.
 
 ### <a name="1-before-you-buy"></a>1. antes de comprar
 
-Es importante que el equipo pueda controlar el hardware de VR que está comprando para tener la mejor experiencia de configuración y uso. En algunos casos, puede que tenga que solicitar [adaptadores o hardware](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)adicionales. Esta sección le guiará a través de los requisitos mínimos de equipo, las comprobaciones de compatibilidad y las preguntas más frecuentes asociadas al hardware de realidad virtual.
+El equipo debe administrar el hardware de VR que está comprando para tener la mejor experiencia de configuración y uso. En algunos casos, puede que tenga que solicitar [adaptadores o hardware](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)adicionales. Esta sección le guiará a través de:
+
+* Los requisitos mínimos de equipo
+* Comprobaciones de compatibilidad
+* Preguntas más frecuentes relacionadas con el hardware de realidad virtual
 
 <br>
 
@@ -48,7 +52,11 @@ Una vez que tenga el dispositivo, deberá configurarlo y configurarlo correctame
 
 ### <a name="3-using-windows-mixed-reality"></a>3. usar Windows Mixed Reality
 
-Hay una variedad de características y servicios disponibles a través de Windows Mixed Reality y auriculares de VR de la serie. Al final de esta sección, estará familiarizado con la navegación por el entorno de inicio virtual, el uso de controladores y voz como entradas, y la integración de servicios y aplicaciones como SteamVR y WebVR.
+Hay diferentes características y servicios disponibles a través de Windows Mixed Reality y auriculares de VR envolventes. Al final de esta sección, se sentirá cómodo:
+
+* Navegar por el entorno de inicio virtual
+* Usar controladores y voz como entradas
+* Integración de servicios y aplicaciones como SteamVR y WebVR.
 
 <br>
 
@@ -57,7 +65,7 @@ Hay una variedad de características y servicios disponibles a través de Window
 | [Información sobre Mixed Reality](learn-mixed-reality.md) | Obtenga información acerca de cómo usar las entradas de fijamente, voz, controladores y teclado/mouse |
 | [Navegar por la Página principal de Windows Mixed Reality](your-mixed-reality-home.md) | Explorar el entorno virtual de la Página principal de Windows Mixed Reality  |
 | [Uso de controladores](controllers-in-wmr.md) | Configuración, comprensión y uso de los controladores de movimiento |
-| [Uso de la entrada de voz](using-speech-in-wmr.md) | Familiarícese con una variedad de comandos de voz que pueden interactuar con objetos 3D, la barra de la aplicación, el menú Inicio y Cortana. |
+| [Uso de la entrada de voz](using-speech-in-wmr.md) | Familiarícese con distintos comandos de voz que pueden interactuar con objetos 3D, la barra de la aplicación, el menú Inicio y Cortana |
 
 > [!NOTE]
 > Si tiene problemas con cualquiera de las características anteriores, consulte las **[preguntas más frecuentes sobre el uso de Windows Mixed Reality](using-wmr-faq.md)**.
@@ -81,9 +89,9 @@ Cuando tenga problemas con cualquier cosa relacionada con el hardware envolvente
  
 * [Preguntas más frecuentes generales](troubleshooting-windows-mixed-reality.md) 
 
-Si no encuentra lo que busca, tenemos una lista exhaustiva de documentos de preguntas más frecuentes específicos del tema en la sección de **preguntas más frecuentes de solución de problemas** que abarcan todo, desde la instalación y los códigos de error, hasta el rendimiento y las pantallas con auriculares. Si desea obtener más información sobre cómo funcionan las características específicas en VR, consulte los artículos sobre [Cómo funcionan los controladores de movimiento](controllers-in-wmr.md) y el [seguimiento interno](tracking-system.md) .
+Si no encuentra lo que busca, tenemos una lista exhaustiva de documentos de preguntas más frecuentes específicos del tema en la sección **de preguntas más** frecuentes de solución de problemas que abarcan todo, desde la instalación y los códigos de error, hasta el rendimiento y el casco. Puede obtener más información sobre cómo funcionan las características específicas en los artículos sobre [Cómo funcionan los controladores de movimiento](controllers-in-wmr.md) y el [seguimiento interno](tracking-system.md) .
 
-Siempre estamos atentos a los nuevos problemas y errores, por lo que si tiene alguno que no esté documentado, envíenos [sus comentarios aquí](filing-feedback.md).
+Siempre estamos atentos a los nuevos problemas y errores, por lo que si tiene alguno que no esté documentado, envíenos [sus comentarios](filing-feedback.md).
 
 > [!NOTE]
 > [Aquí](mixed-reality-software.md)puede encontrar un historial completo de versiones de Windows Mixed Reality.

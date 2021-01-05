@@ -8,27 +8,27 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: c0e2da59e64973c954cc880504a021a2835ed204
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: 9237a9e4d537a15ffe4369d589e1fd80e3881891
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93132129"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725696"
 ---
 # <a name="filing-bugs-and-feedback"></a>Registro de problemas y comentarios
 
 ## <a name="why-its-important"></a>Por qué es importante
 
-El equipo de ingeniería usa el mismo mecanismo internamente para realizar el seguimiento de los errores y corregirlos, por lo que es un centro de comentarios y notifica los errores que se ven. estamos escuchando.
+El equipo de ingeniería usa el mismo mecanismo para el seguimiento y la corrección de errores internos, por lo que puede usar el centro de opiniones para informar de cualquier extraño que esté viendo: estamos escuchando.
 
 ## <a name="before-you-file-feedback"></a>Antes de enviar los comentarios
 
 Asegúrese de que su equipo está configurado para proporcionarnos datos completos de comentarios y diagnósticos. Aquí se muestra cómo comprobar la configuración en el equipo antes de enviar comentarios:
 
 1. Abra la aplicación **configuración** de Windows.
-2. Haga clic en **privacidad** .
-3. Vaya a **comentarios & diagnósticos** en el panel izquierdo (tenga en cuenta que se ha cambiado el nombre a **Diagnotics & comentarios** en las compilaciones recientes de Windows Insider de Windows.
-4. En **seleccionar la cantidad de datos que envía a Microsoft** , seleccione **completa** si aún no está seleccionada.
+2. Seleccione **privacidad**.
+3. Vaya a **comentarios & diagnósticos** en el panel izquierdo, al que se ha cambiado el nombre de **diagnóstico & comentarios** en las compilaciones recientes de Windows Insider de Windows.
+4. En **seleccionar la cantidad de datos que envía a Microsoft**, seleccione **completa** si aún no está seleccionada.
 5. Asegúrese de reiniciar el equipo y repita los pasos para reproducir el problema antes de enviar los comentarios.
 
 ## <a name="how-to-file-feedback-for-windows-mixed-reality-immersive-headsets-on-pc"></a>Cómo archivar los comentarios de los auriculares con micrófonos de Windows Mixed Reality en PC
@@ -36,7 +36,7 @@ Asegúrese de que su equipo está configurado para proporcionarnos datos complet
 1. Asegúrese de que tiene el casco envolvente conectado al equipo.
 2. Inicie el **centro de comentarios** en el escritorio con el HMD conectado.
 3. Vaya a la **pestaña comentarios** en el panel izquierdo. ![Pestaña comentarios](images/feedback1.png) 
-4. Haga clic en el botón **Agregar nuevo comentario** para escribir los comentarios. ![Agregar nuevo comentario](images/feedback2.png)
+4. Seleccione el botón **Agregar nuevo comentario** para escribir los comentarios. ![Agregar nuevo comentario](images/feedback2.png)
 5. Seleccione **problema** en **¿Qué tipo de comentarios es?** para que los comentarios sean procesables. ![Pasos de detalles y reproducción](images/feedback3.png)
 6. Proporcione un título de comentario significativo en **resumir la caja del problema** .
 7. Proporcione los detalles y los pasos para reproducir el problema en el cuadro **proporcione más detalles** .
@@ -52,14 +52,14 @@ Asegúrese de que su equipo está configurado para proporcionarnos datos complet
    | Configurar           | Cualquier cosa que le impida configurar el dispositivo.                           |
    | Todos los demás problemas | Algo más.                                                                        |
 
-9. Para ayudarnos a identificar y corregir el error más rápido, es muy útil capturar los seguimientos y el vídeo. Para empezar a recopilar seguimientos, haga clic en **Iniciar captura** . Esto iniciará la recopilación de seguimientos y una captura de vídeo del escenario de realidad mixta. ![ Iniciar captura](images/feedback4.png)
+9. Para ayudarnos a identificar y corregir el error más rápido, es útil capturar los seguimientos y el vídeo. Para empezar a recopilar seguimientos, seleccione **Iniciar captura**. Esto iniciará la recopilación de seguimientos y una captura de vídeo del escenario de realidad mixta. ![ Iniciar captura](images/feedback4.png)
 10. Deje la aplicación de comentarios y ejecute el escenario roto. No cierre la aplicación del centro de comentarios en este momento.
-11. Cuando haya terminado con el escenario, vuelva a la aplicación de comentarios y haga clic en **Detener captura** . Una vez hecho esto, debería ver que se ha agregado un archivo que contiene los seguimientos.
-12. Haga clic en **Enviar** . ![ Enviar](images/feedback5.png)
+11. Cuando haya terminado con el escenario, vuelva a la aplicación de comentarios y seleccione **Detener captura**. Una vez hecho esto, debería ver que se ha agregado un archivo que contiene los seguimientos.
+12. Seleccione **submit (enviar**). ![ Enviar](images/feedback5.png)
 
 Esto le llevará a la página "agradecimiento". En este momento, los comentarios se enviaron correctamente.
 
-Después de enviar los comentarios, para dirigir fácilmente a otras personas (por ejemplo, compañeros de trabajo, personal de Microsoft, lectores de [foros](https://forums.hololens.com/) , etc.) al problema, vaya a **comentarios > mis comentarios** , haga clic en el problema y use el icono de uso **compartido** para obtener una dirección URL abreviada que puede asignar a otros usuarios al nivel de voto o a escala.
+Es fácil dirigir a otras personas a sus comentarios tras su envío yendo a **comentarios > mis comentarios**, seleccionando el problema y usando el icono de uso **compartido** para obtener una dirección URL abreviada. Puede proporcionar la dirección URL a compañeros de trabajo, personal de Microsoft, lectores de [foros](https://forums.hololens.com/) , etc., para votar o escalar.
 
 > [!IMPORTANT]
 > Antes de presentar un error, asegúrese de que cumple las siguientes restricciones para que los registros se carguen correctamente con los comentarios.

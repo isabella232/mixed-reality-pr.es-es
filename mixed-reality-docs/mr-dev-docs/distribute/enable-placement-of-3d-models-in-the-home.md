@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
 keywords: 3D, modelo, lugar en casa, lugar, mundo, modelado, Inicio de la realidad mixta, Web, aplicación, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 192c403ce50c3a47fb19f644af78d1150bb9aa3f
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: ad35e1d010e32c4729b0d0dd58943dabdee86e09
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703191"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757818"
 ---
 # <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>Habilitación de la colocación de modelos 3D en el ambiente principal
 
@@ -20,7 +20,7 @@ ms.locfileid: "94703191"
 
 La [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md) es el punto de partida en el que los usuarios se colocan antes de iniciar las aplicaciones. En algunos escenarios, las aplicaciones 2D (como la aplicación de hologramas) permiten colocar los modelos 3D directamente en la Página principal de la realidad mixta como decoración o para realizar más inspecciones en 3D completo. El *Protocolo agregar modelo* le permite enviar un modelo 3D desde su sitio web o aplicación directamente a la Página principal de Windows Mixed Reality, donde se conservará como [iniciadores de aplicaciones 3D](3d-app-launcher-design-guidance.md), aplicaciones 2D y hologramas. 
 
-Por ejemplo, si está desarrollando una aplicación que muestra un catálogo de mobiliario 3D para diseñar un espacio, puede usar el *Protocolo agregar modelo* para permitir que los usuarios coloquen esos modelos de mobiliario 3D desde el catálogo. Una vez colocado en el mundo, los usuarios pueden moverse, cambiar de tamaño y quitar estos modelos 3D igual que otros hologramas en el hogar. En este artículo se proporciona información general sobre la implementación del *Protocolo de adición de modelos* para que pueda empezar a permitir a los usuarios decorar su mundo con objetos 3D desde la aplicación o la Web.
+Por ejemplo, si está desarrollando una aplicación que muestra un catálogo de mobiliario 3D para diseñar un espacio, use el *Protocolo agregar modelo* para permitir que los usuarios coloquen los modelos de mobiliario 3D del catálogo. Una vez colocado en el mundo, los usuarios pueden moverse, cambiar de tamaño y quitar estos modelos 3D igual que otros hologramas en el hogar. En este artículo se proporciona información general sobre la implementación del *Protocolo de incorporación de modelos* para permitir a los usuarios decorar su mundo con objetos 3D desde la aplicación o la Web.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -44,7 +44,7 @@ Por ejemplo, si está desarrollando una aplicación que muestra un catálogo de 
 
 ## <a name="overview"></a>Información general
 
-Hay 2 pasos para habilitar la selección de ubicación de modelos 3D en la Página principal de Windows Mixed Reality:
+Hay dos pasos para habilitar la selección de ubicación de modelos 3D en la Página principal de Windows Mixed Reality:
 1. [Asegúrese de que el modelo 3D es compatible con la Página principal de Windows Mixed Reality](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md).
 2. Implemente el *Protocolo de adición de modelos* en la aplicación o la página web (este artículo).
 

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: c789fbb19f406c6dc355e326f2f12a5d64030e32
-ms.sourcegitcommit: 2da7e181e4e23eed31b59f0332c3ba8b3f594cd0
+ms.openlocfilehash: bde88890f596e19dd9b5f9e87ceabbf91039af67
+ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2020
-ms.locfileid: "93131819"
+ms.lasthandoff: 12/22/2020
+ms.locfileid: "97725446"
 ---
 # <a name="windows-mixed-reality-setup-faq"></a>Preguntas más frecuentes sobre la configuración de Windows Mixed Reality
 
@@ -21,34 +21,34 @@ A continuación se muestra información para ayudar a solucionar los problemas q
 
 ## <a name="i-get-a-message-that-says-we-couldnt-download-the-window-mixed-reality-software-or-setup-is-stuck-on-the-hang-tight-while-we-do-some-downloading-page"></a>Aparece un mensaje que indica "no pudimos descargar el software de la realidad mixta de Windows" o el programa de instalación está atascado en la página "se bloqueó la carga mientras hacemos algunas descargas"
 
-Pruebe lo siguiente:
+Realice estos pasos:
 
 * Vaya a **configuración > actualizar & seguridad > Windows Update** y asegúrese de que Windows Update está activado. A continuación, descargue e instale las actualizaciones que estén esperando para ser instaladas.
 * Asegúrese de que el equipo está conectado a Internet y tiene al menos 2 GB de espacio de almacenamiento libre.
 * Reinicie el equipo e inténtelo de nuevo. Es posible que tenga que repetir varias veces o ejecutar el solucionador de problemas de Windows Update para borrar las actualizaciones pendientes.
 
 > [!NOTE]
-> * Si se encuentra en una red administrada por la empresa, consulte con el administrador. Es posible que necesiten habilitar Windows Mixed Reality. ¿Busca las instrucciones para profesionales de ti? Consulte **[este artículo](https://docs.microsoft.com/windows/application-management/manage-windows-mixed-reality)** .
+> * Si se encuentra en una red administrada por la empresa, consulte con el administrador. Es posible que necesiten habilitar Windows Mixed Reality. ¿Busca las instrucciones para profesionales de ti? Consulte **[este artículo](https://docs.microsoft.com/windows/application-management/manage-windows-mixed-reality)**.
 > * Si la conexión de red Wi-Fi está establecida en medido, cámbiela a desmedido. **[Más información](https://support.microsoft.com/help/4028458)**
 
 ## <a name="i-get-a-message-that-says-something-went-wrong-and-we-couldnt-start-windows-mixed-reality"></a>Aparece un mensaje que indica "se produjo un error y no pudimos iniciar Windows Mixed Reality".
 
-Pruebe lo siguiente:
+Realice estos pasos:
 
 1. Desconecte el casco del equipo (ambos cables).
 2. Reinicie el equipo.
 3. Vaya a **configuración > Update & security > Windows Update** y asegúrese de que Windows Update está activado. A continuación, descargue e instale las actualizaciones que estén esperando para ser instaladas.
 4. Vuelva a conectar los auriculares al equipo e intente realizar de nuevo la instalación.
 
-Si los pasos anteriores no funcionan, intente desinstalar y reinstalar Windows Mixed Reality. Vaya a **configuración > realidad mixta > desinstalar** y seleccione **desinstalar** . Luego, reinicie el equipo. Para volver a iniciar el proceso de instalación, simplemente conecte el casco a su PC.
+Si los pasos anteriores no funcionan, intente desinstalar y reinstalar Windows Mixed Reality. Vaya a **configuración > realidad mixta > desinstalar** y seleccione **desinstalar**. Luego, reinicie el equipo. Para volver a iniciar el proceso de instalación, simplemente conecte el casco a su PC.
 
 ## <a name="the-mixed-reality-portal-doesnt-open-when-i-plug-in-my-headset"></a>El portal de realidad mixta no se abre cuando se conectan los auriculares
 
-Portal de realidad mixta, la aplicación que le guía a través de la configuración de Windows Mixed Reality, está diseñada para abrirse automáticamente cuando conecta un casco compatible. Si no se abre, vaya a Inicio y escriba "portal de realidad mixta" en el cuadro de búsqueda para abrir la aplicación. Si no encuentra el portal de realidad mixta, es posible que deba [actualizar a la versión más reciente de Windows](https://support.microsoft.com/en-us/help/12373/windows-update-faq).
+Portal de realidad mixta, la aplicación que le guía a través de la configuración de Windows Mixed Reality, está diseñada para abrirse automáticamente cuando conecta un casco compatible. Si no se abre, vaya a Inicio y escriba "portal de realidad mixta" en el cuadro de búsqueda para abrir la aplicación. Es posible que tenga que [actualizar a la versión más reciente de Windows](https://support.microsoft.com/en-us/help/12373/windows-update-faq) si no encuentra el portal de realidad mixta.
 
 ## <a name="i-get-a-message-that-says-my-pc-cant-run-windows-mixed-reality"></a>Aparece un mensaje que indica que mi PC no puede ejecutar Windows Mixed Reality
 
-Si recibe este mensaje, el equipo no cumple los [requisitos mínimos](https://support.microsoft.com/help/4039260) necesarios para ejecutar Windows Mixed Reality. Esto podría deberse a que la configuración de hardware del equipo no es compatible con Windows Mixed Reality, o a que es necesario [actualizar a la versión más reciente de Windows](https://support.microsoft.com/help/12373).
+Si recibe este mensaje, el equipo no cumple los [requisitos mínimos](https://support.microsoft.com/help/4039260) necesarios para ejecutar Windows Mixed Reality. Es posible que la configuración de hardware del equipo no sea compatible con Windows Mixed Reality, o que tenga que [actualizar a la versión más reciente de Windows](https://support.microsoft.com/help/12373).
 
 Notas sobre tarjetas de gráficos:
 
@@ -57,11 +57,11 @@ Notas sobre tarjetas de gráficos:
 
 ## <a name="i-get-a-message-that-says-youre-nearly-therethis-pc-doesnt-meet-the-minimum-requirements-needed-to-run-windows-mixed-reality"></a>Aparece un mensaje que indica que "ya está casi ahí — este equipo no cumple los requisitos mínimos necesarios para ejecutar Windows Mixed Reality".
 
-Si recibe este mensaje, el equipo no cumple los requisitos mínimos necesarios para la mejor experiencia en Windows Mixed Reality. Es posible que el equipo pueda ejecutar un casco envolvente, pero es posible que no pueda ejecutar ciertas aplicaciones o que tenga problemas de rendimiento.
+Si recibe este mensaje, el equipo no cumple los requisitos mínimos necesarios para la mejor experiencia en Windows Mixed Reality. El equipo puede ejecutar un casco envolvente, pero es posible que no pueda ejecutar ciertas aplicaciones o que tenga problemas de rendimiento.
 
 ## <a name="my-xbox-controller-isnt-working"></a>El controlador Xbox no funciona
 
-Pruebe lo siguiente:
+Realice estos pasos:
 
 * Asegúrese de que el controlador esté encendido, totalmente cargado y conectado al equipo.
 * Reemplace las baterías del controlador.
@@ -71,7 +71,7 @@ Pruebe lo siguiente:
 
 ## <a name="my-motion-controllers-arent-working"></a>Mis controladores de movimiento no funcionan
 
-Pruebe lo siguiente:
+Realice estos pasos:
 
 * Asegúrese de que los controladores están encendidos y totalmente cargados.
 * Reemplace las baterías de los controladores.
@@ -82,16 +82,16 @@ Pruebe lo siguiente:
 
 ## <a name="i-get-a-message-that-says-connect-your-headset-even-though-ive-plugged-in-my-headset"></a>Aparece un mensaje que dice "conectar los auriculares" aunque he enchufado los auriculares
 
-Pruebe lo siguiente:
+Realice estos pasos:
 
 - Asegúrese de que el casco esté conectado a los puertos correctos del equipo. Debe estar conectado a la tarjeta de gráficos discretos del equipo y a un puerto USB 3,0. Aquí se indica cómo identificar los puertos correctos:
-    - Los puertos USB 3,0 tienen un logotipo especial con una marca "SS" (que indica "SuperSpeed"). La pieza interior del puerto suele ser azul, mientras que los puertos USB 2,0 más antiguos suelen estar en blanco o negro en el interior.
-    - Si el equipo tiene dos puertos HDMI, use el que se conecta a la tarjeta gráfica, no la placa base del equipo. No siempre es obvio qué es, aunque los puertos discretos se encuentran a menudo en una ranura de expansión del equipo. Si intenta un puerto y no funciona, pruebe el otro.
+    - Los puertos USB 3,0 tienen un logotipo especial con una marca "SS" (que indica "SuperSpeed"). Normalmente, la pieza interior del puerto es azul, pero los puertos USB 2,0 más antiguos suelen estar en blanco o negro en el interior.
+    - Si el equipo tiene dos puertos HDMI, use el que se conecta a la tarjeta gráfica, no la placa base del equipo. No siempre es obvio, que es lo que, aunque los puertos discretos se encuentran a menudo en una ranura de expansión del equipo. Si intenta un puerto y no funciona, pruebe el otro.
 - Vaya al sitio web del fabricante del casco y actualice los controladores y el firmware del casco.
 
 ## <a name="during-mixed-reality-start-up-im-stuck-at-turn-your-head-side-to-side-and-then-at-the-floor"></a>Durante el inicio de la realidad mixta, estoy atascado en "gire el cabezal hacia el lateral y, a continuación, en el suelo"
 
-Este paso permite que los auriculares reconozcan su espacio y restauren el suelo y el límite virtual existentes. Al colocar el casco, este proceso de análisis puede tardar hasta 10 segundos. Una vez finalizado, estará en la Página principal de Windows Mixed Reality o se le pedirá que configure de nuevo el límite.
+Este paso permite que los auriculares reconozcan su espacio y restauren el suelo y el límite virtual existentes. Al colocar el casco, este proceso de análisis puede tardar hasta 10 segundos. Una vez que haya finalizado, estará en la Página principal de Windows Mixed Reality o se le pedirá que configure de nuevo el límite.
 
 Si el proceso de análisis tarda más de 10 segundos, podría haber un problema con el sensor de proximidad en el casco:
 
@@ -100,11 +100,11 @@ Si el proceso de análisis tarda más de 10 segundos, podría haber un problema 
 
 ## <a name="the-floor-of-my-windows-mixed-reality-home-doesnt-appear-to-be-at-the-correct-height"></a>El nivel inferior de la Página principal de Windows Mixed Reality no parece estar en el alto correcto
 
-Seleccione **inicio > ajuste de piso** , que se iniciará una vez que coloque la aplicación en el mundo, para realizar cambios mientras se contiene el casco. En esta aplicación, se le indicará que use el teclado táctil (controlador de movimiento) o el panel de control (controlador de vídeo) para ajustar el alto del piso. Cuando el piso sea correcto, use el botón Windows para volver a la Página principal.
+Seleccione **inicio > ajuste del piso**, que se iniciará una vez que coloque la aplicación en el mundo, para realizar cambios mientras tiene el casco. En esta aplicación, se le indicará que use el teclado táctil (controlador de movimiento) o el panel de control (controlador de vídeo) para ajustar el alto del piso. Cuando el piso sea correcto, use el botón Windows para volver a la Página principal.
 
 ## <a name="i-cant-show-a-preview-of-what-im-seeing-in-my-headset-on-my-desktop"></a>No se puede mostrar una vista previa de lo que veo en el micrófono
 
-El portal de Windows Mixed Reality tiene un botón **reproducir** en la parte inferior de la pantalla que le permite obtener una vista previa de lo que está viendo en el casco en la pantalla del escritorio. Por motivos de rendimiento, esta característica solo está disponible en equipos que ejecutan Windows Mixed Reality ultra (90Hz).
+El portal de Windows Mixed Reality tiene un botón **reproducir** en la parte inferior de la pantalla que le permite obtener una vista previa de lo que está viendo en el casco en la pantalla del escritorio. Por motivos de rendimiento, esta característica solo está disponible en equipos que ejecutan Windows Mixed Reality ultra (90 Hz).
 
 ## <a name="how-can-i-get-a-clearer-view-in-my-headset"></a>¿Cómo puedo obtener una vista más clara en el casco?
 
@@ -124,9 +124,9 @@ Pruebe esto:
 
 ## <a name="my-wi-fi-slows-down-when-i-use-windows-mixed-reality"></a>Mi Wi-Fi se ralentiza cuando utilizo Windows Mixed Reality
 
-Si usa una conexión Wi-Fi de 2,4 GHz, es posible que los controladores de movimiento ralenticen la red Wi-Fi. Pruebe una de las siguientes opciones:
+Si usa una conexión Wi-Fi a 2,4 GHz, los controladores de movimiento pueden ralentizar la red Wi-Fi. Realice uno de los pasos siguientes:
 
-* Cambie a una conexión Wi-Fi de 5 GHz, si hay alguna disponible. Saber más
+* Cambie a una conexión de Wi-Fi de 5 GHz, si hay alguna disponible. Saber más
 * Use un adaptador Bluetooth independiente para conectar sus controladores de movimiento al equipo. [Consulte los adaptadores recomendados](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
 
 > [!NOTE]
@@ -154,7 +154,7 @@ Si no aparece en la lista:
 2. Busque las actualizaciones de software más recientes desde Windows Update.
 3. Desinstalar y reinstalar Windows Mixed Reality:
     1. Desconecte ambos cables de auriculares del equipo.
-    2. Seleccione **configuración > realidad mixta > desinstalar** .
+    2. Seleccione **configuración > realidad mixta > desinstalar**.
     3. Si los controladores de movimiento están emparejados al equipo, seleccione **configuración > dispositivos > Bluetooth & otros dispositivos** para desemparejarlos. Seleccione cada controlador y "quitar dispositivo". Si los controladores se emparejan con el casco, puede omitir este paso.
     4. Vuelva a conectar el casco al equipo para volver a instalar Windows Mixed Reality.
 

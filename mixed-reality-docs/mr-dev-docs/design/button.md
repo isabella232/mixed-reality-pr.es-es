@@ -1,63 +1,62 @@
 ---
 title: Botón
-description: Un botón ofrece al usuario una forma de desencadenar una acción inmediata. Es uno de los componentes fundamentales de la realidad mixta.
+description: Aprenda a desencadenar una acción inmediata con botones, que es uno de los componentes fundamentales de la realidad mixta.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, botón
-ms.openlocfilehash: c5e52bef8604ba4874b7f4b055107ec0db6b3683
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: b4e8388c4e3ea855c191cbdfc06621018274ff86
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94702861"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97847592"
 ---
 # <a name="button"></a>Button
 
 ![Button](images/UX_Hero_Button.jpg)
 
-Un botón ofrece al usuario una forma de desencadenar una acción inmediata. Es uno de los componentes fundamentales de la realidad mixta. En HoloLens 2, un botón tiene muchas indicaciones visuales y prestaciones para aumentar la confianza de la interacción del usuario. 
-
+Un botón permite a los usuarios desencadenar acciones inmediatas en una experiencia de realidad mixta. En HoloLens 2, los botones tienen indicaciones visuales y prestaciones que ayudan a aumentar la confianza de la interacción con los usuarios. 
 
 :::row:::
     :::column:::
-       ![Mover](images/UX_Button_Affordance_ProximityLight.jpg)<br>
+       ![Botón con el efecto de luz de proximidad mostrado](images/UX_Button_Affordance_ProximityLight.jpg)<br>
        **Luz de proximidad**<br>
     :::column-end:::
     :::column:::
-       ![Girar](images/UX_Button_Affordance_FocusHighlight.jpg)<br>
+       ![Botón seleccionado con el efecto resaltado de foco mostrado](images/UX_Button_Affordance_FocusHighlight.jpg)<br>
         **Resaltado de foco**<br>
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       ![Mover](images/UX_Button_Affordance_Compression.jpg)<br>
+       ![Botón que se va a presionar con el efecto de la jaula de compresión mostrado](images/UX_Button_Affordance_Compression.jpg)<br>
        **Comprimiendo el Cage**<br>
     :::column-end:::
     :::column:::
-       ![Girar](images/UX_Button_Affordance_Pulse.jpg)<br>
+       ![Botón que se está presionando con el efecto desencadenador mostrado](images/UX_Button_Affordance_Pulse.jpg)<br>
         **Pulso en desencadenador**<br>
     :::column-end:::
 :::row-end:::
 
 <br>
 
-
 ---
 
 ## <a name="button-in-mrtkmixed-reality-toolkit-for-unity"></a>Botón en MRTK (kit de herramientas de realidad mixta) para Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona varios tipos de Prefabs de botón. Puede encontrar botones de estilo de Shell para HoloLens 2 y HoloLens (1ª generación), así como ejemplos personalizados. El botón recurso prefabricado de HoloLens 2 contiene muchas prestaciones detalladas que ayudan a mejorar la confianza del usuario. Incluye el resaltado basado en proximidad, la compresión de la caja delantera y un efecto de impulso en el desencadenador.
+**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona varios tipos de Prefabs de botón, incluidos los botones de estilo de Shell de hololens 2 y hololens (1ª generación). El botón recurso prefabricado de HoloLens 2 contiene varias prestaciones detalladas que ayudan a mejorar la confianza del usuario:
 
-* [MRTK: botón](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html)
+* Resaltado basado en proximidad
+* Comprimiendo el compartimento delantero
+* Efecto de impulso en el desencadenador.
 
-
+* Consulte el [botón MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) para obtener más instrucciones y ejemplos personalizados.
 
 <br>
 
 ---
-
 
 ## <a name="see-also"></a>Consulte también
 

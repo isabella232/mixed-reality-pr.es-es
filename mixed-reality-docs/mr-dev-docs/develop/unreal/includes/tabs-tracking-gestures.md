@@ -1,11 +1,28 @@
 ---
-ms.openlocfilehash: 50b56f6f081f682c3f3655e81aa492d84d254314
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: 6b9223481ed909961dbb88d03e4b55ef68448525
+ms.sourcegitcommit: 13ef9f89ee61fbfe547ecf5fdfdb97560a0de833
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002706"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "97718059"
 ---
+# <a name="426"></a>[4.26](#tab/426)
+
+### <a name="windows-mixed-reality"></a>Windows Mixed Reality
+
+![Plano del evento Begin Play Connected para configurar la función gestos](../images/unreal-hand-tracking-img-09.png)
+
+Después, debe agregar código para suscribirse a los siguientes eventos:
+
+![Plano de gestos de la retención de entrada espacial de Windows, TAP y izquierda gestos ](../images/unreal/key-events.png)
+ ![ de manipulación de entradas espaciales de Windows en el panel detalles](../images/unreal/key-events2.png)
+
+### <a name="openxr"></a>OpenXR
+
+En OpenXR, se realiza un seguimiento de los eventos de gesto a través de la canalización de entrada. Mediante la interacción con la mano, el dispositivo puede reconocer automáticamente los gestos de pulsar y mantener, pero no los demás. Se denominan asignaciones de selección y control de OpenXRMsftHandInteraction. No es necesario habilitar la suscripción. debe declarar los eventos en configuración del proyecto/motor/entrada, de la siguiente manera:
+
+![Captura de pantalla de las asignaciones de acción de OpenXR](../images/unreal-hand-tracking-img-12.png)
+
 # <a name="425"></a>[4.25](#tab/425)
 
 Puede encontrar la función Blueprint en en **entrada espacial de Windows Mixed Reality** y la función de C++ agregando `WindowsMixedRealitySpatialInputFunctionLibrary.h` en el archivo de código que realiza la llamada.
@@ -87,19 +104,3 @@ const FKey FSpatialInputKeys::RightNavigationYGesture(RightNavigationYGestureNam
 const FKey FSpatialInputKeys::RightNavigationZGesture(RightNavigationZGestureName);
 ```
 
-# <a name="426"></a>[4.26](#tab/426)
-
-### <a name="windows-mixed-reality"></a>Windows Mixed Reality
-
-![Plano del evento Begin Play Connected para configurar la función gestos](../images/unreal-hand-tracking-img-09.png)
-
-Después, debe agregar código para suscribirse a los siguientes eventos:
-
-![Plano de gestos de la retención de entrada espacial de Windows, TAP y izquierda gestos ](../images/unreal/key-events.png)
- ![ de manipulación de entradas espaciales de Windows en el panel detalles](../images/unreal/key-events2.png)
-
-### <a name="openxr"></a>OpenXR
-
-En OpenXR, se realiza un seguimiento de los eventos de gesto a través de la canalización de entrada. Mediante la interacción con la mano, el dispositivo puede reconocer automáticamente los gestos de pulsar y mantener, pero no los demás. Se denominan asignaciones de selección y control de OpenXRMsftHandInteraction. No es necesario habilitar la suscripción. debe declarar los eventos en configuración del proyecto/motor/entrada, de la siguiente manera:
-
-![Captura de pantalla de las asignaciones de acción de OpenXR](../images/unreal-hand-tracking-img-12.png)
