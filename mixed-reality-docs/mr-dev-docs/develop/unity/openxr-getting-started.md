@@ -6,18 +6,18 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: openxr, Unity, hololens, hololens 2, reality Mixed, MRTK, kit de herramientas de realidad mixta, realidad aumentada, realidad virtual, auriculares de realidad mixta, información, tutorial, introducción
-ms.openlocfilehash: 9e7f59c57d409d61df73e6d07659bf6c7242202c
-ms.sourcegitcommit: 5784336a780486d05db6a627839efe47f08fac36
+ms.openlocfilehash: 7d28dd50e111da4b010bcae699b7451d967e8f35
+ms.sourcegitcommit: 653ddcae6d7a1617c89da1153fa8e7b482ef6818
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97880609"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "97905297"
 ---
 # <a name="using-the-mixed-reality-openxr-plugin-for-unity"></a>Uso del complemento OpenXR de realidad mixta para Unity
 
 A partir de la versión 2020,2 de Unity, el paquete de complementos de OpenXR mixed reality de Microsoft está disponible mediante el administrador de paquetes de Unity (UPM).
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 * Unity 2020,2 o posterior
 * Complemento de Unity OpenXR 0.1.1 o posterior
@@ -125,6 +125,10 @@ Para el uso de uno o varios de los ejemplos, instale [ARFoundation 4.0 +](https:
 ## <a name="next-steps"></a>Pasos siguientes
 
 Ahora que ha configurado el proyecto para OpenXR y tiene acceso a los ejemplos, consulte [las características](openxr-supported-features.md) que se admiten actualmente en nuestro complemento OpenXR.
+
+## <a name="have-feedback"></a>¿Tiene comentarios?
+
+OpenXR sigue siendo experimental, por lo que agradecemos cualquier comentario que nos proporcione para ayudarlo a mejorar. Nos encontrarás en los [foros de Unity](https://aka.ms/unityforums) mediante el etiquetado de tu entrada de foro con **Microsoft**  +  **OpenXRs** y **HoloLens 2** o **Windows Mixed Reality**.
 
 ## <a name="see-also"></a>Consulte también
 
