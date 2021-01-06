@@ -1,4 +1,19 @@
-# - name: Learn about Azure Services 
+- name: Exploración de la aplicación Designing Holograms
+  href: ../discover/designing-holograms.md
+- name: Nuevos módulos de aprendizaje de Mixed Reality
+  href: ../discover/mr-learning-overview.md
+- name: Más información sobre los servicios en la nube de realidad mixta de Azure
+  href: ../develop/mixed-reality-cloud-services.md
+- name: Introducción a OpenXR en Unity
+  href: ../develop/unity/openxr-getting-started.md
+- name: "Uso de los nuevos controladores de HP\_Reverb\_G2"
+  items:
+    - name: Unity
+      href: ../develop/unity/unity-reverb-g2-controllers.md
+    - name: Unreal
+      href: ../develop/unreal/unreal-reverb-g2-controllers.md
+- name: Distribución de las aplicaciones por todo el mundo
+  href: ../distribute/distribute-overview.md
 - name: Prepárate para el nuevo Microsoft Edge
   href: new-microsoft-edge.md
 - name: Programas y eventos
