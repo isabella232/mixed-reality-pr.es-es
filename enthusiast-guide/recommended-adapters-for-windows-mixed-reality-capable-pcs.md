@@ -1,5 +1,5 @@
 ---
-title: Adaptadores recomendados para equipos con capacidad de Windows Mixed Reality
+title: Adaptadores recomendados para equipos con Windows Mixed Reality
 description: Lista de adaptadores recomendados para su uso con auriculares Windows Mixed Reality si el equipo no tiene puertos USB y HDMI de tamaño completo.
 author: hferrone
 ms.author: v-hferrone
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, adaptador, dongle, HDMI, USB, DisplayPort
 appliesto:
 - Windows 10
-ms.openlocfilehash: 248a202ce57c0b6872ddefc9ec9c2f89e2aa87a4
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 86eaa8d462d97a740f15859d2ab631aafb8dd68e
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725986"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009105"
 ---
 # <a name="recommended-adapters"></a>Adaptadores recomendados
 > [!NOTE]

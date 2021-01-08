@@ -1,6 +1,6 @@
 ---
 title: Preguntas más frecuentes sobre la configuración de Windows Mixed Reality
-description: Obtenga respuestas a preguntas comunes sobre la instalación al trabajar con Windows Mixed Reality.
+description: Obtenga respuestas a preguntas de configuración comunes al trabajar con aplicaciones y dispositivos de Windows Mixed Reality.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: bde88890f596e19dd9b5f9e87ceabbf91039af67
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 2da2524ae09014b990ea4f0301a21d4aac963eb9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725446"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008635"
 ---
 # <a name="windows-mixed-reality-setup-faq"></a>Preguntas más frecuentes sobre la configuración de Windows Mixed Reality
 

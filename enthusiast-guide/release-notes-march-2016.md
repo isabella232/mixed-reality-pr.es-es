@@ -1,17 +1,17 @@
 ---
 title: Notas de la versión (marzo de 2016)
-description: Notas de la versión de HoloLens para el lanzamiento de HoloLens y Windows Holographic.
+description: Manténgase al día en las notas de la versión de HoloLens para el lanzamiento de HoloLens y Windows Holographic.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Notas de la versión, HoloLens, so, plataforma, características, compilación, Inicio
-ms.openlocfilehash: 9129bb220d2a580235494a94ecbd3227e7d4c7c7
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: a7797483b5ba60203f0f0b3c2c4ce79b924d81dc
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725936"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009205"
 ---
 # <a name="release-notes---march-2016"></a>Notas de la versión (marzo de 2016)
 

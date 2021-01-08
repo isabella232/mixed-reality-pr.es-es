@@ -1,17 +1,17 @@
 ---
 title: Tabla periódica de los elementos
-description: La tabla periódica de los elementos es una aplicación de ejemplo de código abierto de los laboratorios de diseño de la realidad mixta de Microsoft. Aprende cómo diseñar una matriz de objetos en el espacio 3D con distintos tipos de superficie mediante una colección de objetos.
+description: Obtenga información sobre cómo diseñar una matriz de objetos en el espacio 3D con varios tipos de superficie mediante una colección de objetos con la tabla periódica de la aplicación de ejemplo Elements.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, aplicación de ejemplo, controles, MRTK, kit de herramientas de realidad mixta, Unity, aplicaciones de ejemplo, aplicaciones de ejemplo, código abierto, Microsoft Store, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: a4099c889fee886e63d3a8b773398a250621f26e
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: fd525b0d41efa15ff55097456fb6b06dd3d60c25
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010186"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009365"
 ---
 # <a name="periodic-table-of-the-elements"></a>Tabla periódica de los elementos
 
@@ -31,7 +31,7 @@ Grabado con HoloLens 2 mediante la captura de realidad mixta
 
 La tabla periódica de los elementos visualiza los elementos químicos y cada una de sus propiedades en un espacio 3D. Incorpora las interacciones básicas de HoloLens, como mira fijamente y el aire TAP. Los usuarios pueden obtener información sobre los elementos con modelos 3D animados. Pueden comprender visualmente el shell de electrones de un elemento y su núcleo, que se compone de protoneladas y neutrons.
 
-## <a name="background"></a>Información previa
+## <a name="background"></a>Fondo
 
 Después de haber experimentado HoloLens, sabía que quería experimentar con una aplicación de tabla periódica en realidad mixta. Puesto que cada elemento tiene muchos puntos de datos que se muestran con texto, pensé que sería una buena cuestión para explorar la composición tipográfica en un espacio 3D. Dar a los usuarios la oportunidad de visualizar el modelo de electrones del elemento fue otra parte interesante de este proyecto.
 

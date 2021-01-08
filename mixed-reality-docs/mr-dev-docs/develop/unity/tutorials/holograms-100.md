@@ -1,17 +1,17 @@
 ---
 title: 'Aspectos básicos de realidad mixta (100): introducción a Unity'
-description: Aprenda a crear su primera aplicación básica "Hola a todos" de realidad mixta.
+description: Aprenda a crear su primera aplicación básica "Hola mundo" de realidad mixta para HoloLens y dispositivos Windows Mixed Reality.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realidad mixta, Windows Mixed Reality, HoloLens, envolventes, VR, Mr, introducción, holograma, Academia, tutorial, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 83ca133e341688f42fa2d53b4d50f1aefa9bb39b
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 7b316314d7aa693e8be9006b2c5578c1bae7e3ff
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678414"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006515"
 ---
 # <a name="mr-basics-100-getting-started-with-unity"></a>Aspectos básicos de realidad mixta (100): Introducción a Unity
 
@@ -30,7 +30,7 @@ Este tutorial le guiará a través de la creación de una aplicación básica de
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](../../install-the-tools.md).
 
@@ -223,7 +223,7 @@ Asegúrese de que el dispositivo está conectado a través del cable USB.
 
 Ahora que la aplicación está implementada, intente mover todo el cubo y observe que permanece en todo el mundo.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Introducción al desarrollo de Unity](../unity-development-overview.md)
 * [Procedimientos recomendados para trabajar con Unity y Visual Studio](../best-practices-for-working-with-unity-and-visual-studio.md)

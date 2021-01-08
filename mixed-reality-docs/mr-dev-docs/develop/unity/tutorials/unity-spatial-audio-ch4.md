@@ -1,26 +1,28 @@
 ---
-title: 'Tutoriales de audio espacial: 4. Habilitar y deshabilitar el audio espacial en tiempo de ejecución'
-description: Use un botón para habilitar y deshabilitar la espacialización del audio en tiempo de ejecución.
+title: Habilitar y deshabilitar el audio espacial en tiempo de ejecución
+description: Obtenga información sobre cómo escribir un script de C# que use un botón para habilitar y deshabilitar la espacialización de audio en tiempo de ejecución.
 author: kegodin
 ms.author: v-hferrone
 ms.date: 12/01/2019
 ms.topic: article
 keywords: mixed reality, Unity, tutorial, hololens2, audio espacial, MRTK, kit de herramientas de realidad mixta, UWP, Windows 10, HRTF, función de transferencia relacionada con el encabezado, reverberación, Microsoft Spatializer
-ms.openlocfilehash: c9e510e544962c5d1a4c462d20dafa222c6a5289
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: eaaf8a05088b5bab674ca11b15b0c63383faa479
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002610"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007345"
 ---
 # <a name="enabling-and-disabling-spatialization-at-run-time"></a>Habilitar y deshabilitar la espacialización en tiempo de ejecución
 
 ## <a name="objectives"></a>Objetivos
+
 En este cuarto capítulo, hará lo siguiente:
 * Agregar un nuevo script para controlar la espacialización en un objeto de juego
 * Controlar el script de control de la espacialización desde acciones de botón
 
 ## <a name="add-spatialization-control-script"></a>Agregar script de control de espacialización
+
 Haga clic con el botón derecho en el panel **proyecto** y cree un nuevo script de c# eligiendo **crear > script de c#**. Asigne el nombre "SpatializeOnOff" al script.
 
 ![Creación del script](images/spatial-audio/create-script.png)
@@ -90,6 +92,7 @@ public class SpatializeOnOff : MonoBehaviour
 > Si prefiere deshabilitar completamente la espacialización, modifique el script para ajustar también la propiedad booleana de la **espacialización** de la variable **SourceObject** .
 
 ## <a name="attach-your-script-and-drive-it-from-the-button"></a>Adjunte el script y colóquelo en el botón
+
 En el panel del **Inspector** de la **cuádruple**, haga clic en **Agregar componente** y agregue el espacio **de comandos de Spatial en OFF** :
 
 ![Agregar script a cuádruple](images/spatial-audio/add-script-to-quad.png)
@@ -115,6 +118,7 @@ Después de estos cambios, el componente **interactuable** tendrá el siguiente 
 ![Configuración de acción de botón](images/spatial-audio/button-action-settings.png)
 
 ## <a name="next-steps"></a>Pasos siguientes
+
 Pruebe la aplicación en HoloLens 2 o en el editor de Unity. En la aplicación, ahora puede tocar el botón para activar y desactivar la espacialización en el vídeo. Al realizar pruebas en el editor de Unity, presione la barra espaciadora y desplácese con la rueda de desplazamiento para activar la simulación de mano. 
 
 > [!div class="nextstepaction"]

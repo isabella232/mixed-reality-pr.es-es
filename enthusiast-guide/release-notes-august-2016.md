@@ -1,17 +1,17 @@
 ---
 title: Notas de la versión (agosto de 2016)
-description: Notas de la versión de HoloLens para la versión de aniversario de Windows 10 (2016)
+description: Manténgase al día en las notas de la versión de HoloLens para la versión de aniversario de Windows 10 para 2016.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, notas de la versión, sistema operativo, plataforma, características, Commercial Suite
-ms.openlocfilehash: 870da1075dd1fa1a83926a89bad753233927abda
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 9d65d0a2454b5eb076e7c350a6d26e11660af9a5
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725966"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009265"
 ---
 # <a name="release-notes---august-2016"></a>Notas de la versión (agosto de 2016)
 

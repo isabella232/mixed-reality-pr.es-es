@@ -1,6 +1,6 @@
 ---
-title: Información general de software de Mixed Reality e historial de versiones
-description: Información general de los principales componentes de software para Windows Mixed Reality y su historial de versiones
+title: Información general de software y historial de versiones
+description: Información general de los principales componentes de software para Windows Mixed Reality, auriculares más inmersivo y su historial de versiones.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, componentes de software, historial de versiones, notas de la versión, historial de versiones
 appliesto:
 - Windows 10
-ms.openlocfilehash: 31adf0572482cb9857ff94c2b7ef3aee4fe538d9
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: b06bd835f1e2562e01bfb7bf240747919f422e8c
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726026"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009255"
 ---
 # <a name="mixed-reality-software-overview-and-release-history"></a>Información general de software de Mixed Reality e historial de versiones
 
@@ -49,9 +49,11 @@ Actualización a la versión más reciente del equipo para auriculares con Windo
 ### <a name="updates-for-windows-mixed-reality-immersive-headsets"></a>Actualizaciones para auriculares con Windows Mixed Reality
 
 #### <a name="introducing-the-new-microsoft-edge"></a>Presentación del nuevo Microsoft Edge
+
 Como se [anunció anteriormente](https://docs.microsoft.com/windows/mixed-reality/new-microsoft-edge), hemos realizado actualizaciones para mejorar la compatibilidad con el nuevo explorador Microsoft Edge en Windows Mixed Reality. El nuevo Microsoft Edge adopta el proyecto de código abierto de cromo para crear una mejor compatibilidad web para los clientes y menos fragmentación de la web para todos los desarrolladores Web. También es compatible con WebXR, el nuevo estándar para crear experiencias Web envolventes para auriculares VR en lugar de WebVR.
 
 #### <a name="improved-settings-for-wmr"></a>Configuración mejorada de WMR
+
 Gracias a sus comentarios, hemos agregado y aclarado la configuración de la página de visualización de los auriculares:
 
 * **Calidad visual de mi hogar** : el cambio de esta configuración solo afecta al entorno de inicio de la realidad mixta (acantilado House y Skyloft):
@@ -71,15 +73,18 @@ Gracias a sus comentarios, hemos agregado y aclarado la configuración de la pá
 * **Cambio de entrada** : alterne el comportamiento de cambio de foco de entrada (Win + Y) para que sea automático (según los comentarios del sensor de presencia) o manual.
 
 #### <a name="new-cortana-app"></a>Nueva aplicación de Cortana
+
 Esta actualización a Windows incluye la versión más reciente de la aplicación Cortana, que actualmente es solo en inglés y ya no es compatible con determinados comandos específicos de realidad mixta, como "tomar una imagen" y "tomar un vídeo". Puede usar el nuevo Cortana para iniciar aplicaciones y también es compatible con los nuevos comandos de productividad, como "¿Cuál es mi próxima reunión?". o bien, "enviar un correo electrónico a <name> que estoy ejecutando tarde".
     
 #### <a name="additional-updates-in-available-in-19041546-released-october-2020"></a>Hay actualizaciones adicionales disponibles en 19041,546 (publicada el 2020 de octubre)
+
 Esta actualización de mantenimiento mensual del escritorio incluye los siguientes cambios en los dispositivos de Windows Mixed Reality: 
 * Reduce las distorsiones y aberraciones en las pantallas montadas por el cabezal de Windows Mixed Reality (HMD). 
 * Agrega compatibilidad con los próximos controladores de movimiento de la realidad mixta de HP Windows. 
 * Cambia el comportamiento de la configuración de frecuencia de actualización de 90-Hz en Windows Mixed Reality a no volver a cambiar automáticamente a 60 Hz en ciertos casos en los que no se puede lograr 90 Hz. 
 
 #### <a name="help-us-improve"></a>Ayúdenos a mejorar.
+
 Veremos continuamente cómo mejorar la compatibilidad.  Si encuentra que su aplicación favorita de Win32 clásica no se comporta correctamente en Windows Mixed Reality, envíe sus comentarios a través de nuestro [centro de opiniones](https://support.microsoft.com//help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub).
 
 ### <a name="prior-release-notes"></a>Notas de la versión anterior

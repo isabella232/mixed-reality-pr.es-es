@@ -1,17 +1,17 @@
 ---
 title: Escritura de un reproductor de control remoto de holografías personalizado
-description: Mediante la creación de una aplicación de reproductor de comunicación remota holográfica personalizada, puede crear una aplicación personalizada capaz de mostrar el contenido representado en una máquina remota a HoloLens 2.
+description: Cree una aplicación de comunicación remota de hologaphic personalizada para mostrar el contenido representado en una máquina remota a HoloLens 2.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, Holographic Remoting, NuGet, manifiesto de la aplicación, contexto del reproductor, aplicación remota, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: ac3ee68cf3cff3e024ce40acceac61a2fe123399
-ms.sourcegitcommit: 99ae85159b7cf75f919021771ebb8299868beea9
+ms.openlocfilehash: 23449749e709075e6530730e596bfcc9cd088c1e
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97102900"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006555"
 ---
 # <a name="writing-a-custom-holographic-remoting-player-app"></a>Escritura de una aplicación de reproductor de control remoto de holografías personalizada
 
@@ -22,7 +22,7 @@ Mediante la creación de una aplicación de reproductor de comunicación remota 
 
 Un reproductor remoto holográfica permite que la aplicación muestre el contenido holográfica [representado](rendering.md) en un equipo de escritorio o un dispositivo UWP como la Xbox One con acceso a más recursos del sistema. Una aplicación de reproductor de comunicación remota holográfica transmite datos de entrada a una aplicación remota de Holographic Remoting y recibe una vista envolvente como flujo de audio y vídeo. La conexión se realiza mediante Wi-Fi estándar. Para crear una aplicación de reproductor, use un paquete NuGet para agregar la comunicación remota holográfica a la aplicación de UWP. A continuación, escriba el código para controlar la conexión y mostrar una vista envolvente. 
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Un buen punto de partida es una aplicación UWP basada en DirectX que ya tiene como destino la API de Windows Mixed Reality. Para obtener más información, vea [Introducción al desarrollo de DirectX](../native/directx-development-overview.md). Si no tiene una aplicación existente y desea comenzar desde el principio, la [plantilla de proyecto de C++ Holographic](../native/creating-a-holographic-directx-project.md) es un buen punto de partida.
 

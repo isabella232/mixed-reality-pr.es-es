@@ -1,17 +1,17 @@
 ---
 title: 'Notas de la versión: mayo 2019'
-description: Notas de la versión Windows Mixed Reality para la actualización 2019 de Windows 10 (también conocida como 19H1).
+description: Manténgase al día de las notas de la versión de Windows 10 de mayo de 2019/19H1 para Windows 10.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: Notas de la versión, versión, Windows 10, compilación, 19h1, so, mayo 2019
-ms.openlocfilehash: 19444732884a87de3f28e90d656deef6e51eb191
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: fd5688b7c68e0a16873ff153f3c158a3575e02e9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725926"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007125"
 ---
 # <a name="release-notes---may-2019"></a>Notas de la versión: mayo 2019
 

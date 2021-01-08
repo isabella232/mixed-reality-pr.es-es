@@ -1,17 +1,17 @@
 ---
 title: Módulo lunar
-description: Obtenga información acerca de cómo ampliar los gestos base de HoloLens con seguimiento de dos manos y entrada de la controladora Xbox, crear objetos que sean reactivos para la asignación de superficie y la búsqueda de planos, e implementar sistemas de menús sencillos.
+description: Obtenga información sobre cómo ampliar los gestos base de HoloLens con seguimiento de dos manos y entrada del controlador Xbox, crear objetos reactivos e implementar sistemas de menús.
 author: radicalad
 ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, aplicaciones de ejemplo, diseño, MRTK, kit de herramientas de realidad mixta, Unity, aplicaciones de ejemplo, aplicaciones de ejemplo, código abierto, Microsoft Store, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 2861cb85ac2f4a51a80e586b2be42ddb1d395e8a
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: b0630df49fd8ad154017000893a08560793fb39e
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010506"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008833"
 ---
 # <a name="lunar-module"></a>Módulo lunar
 

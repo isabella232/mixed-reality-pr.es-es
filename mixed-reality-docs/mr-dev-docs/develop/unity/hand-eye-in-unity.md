@@ -1,17 +1,17 @@
 ---
 title: Seguimiento de manos y ojos articulados en Unity
-description: Hay dos formas clave de tomar medidas en su mirada en Unity, gestos de mano y controladores de movimiento.
+description: Obtenga información acerca de las dos formas clave de tomar medidas en su mirada en Unity, gestos de mano y controladores de movimiento.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: gestos, controladores de movimiento, Unity, mira, entrada, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: de8ea7968c36722f3690c5515e4f69e576898524
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 4c704677a78fee02b9da9d0db9bc2966ab6b3724
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97011562"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008964"
 ---
 # <a name="articulated-hand-and-eye-tracking-in-unity"></a>Seguimiento de manos y ojos articulados en Unity
 
@@ -48,7 +48,7 @@ Puede encontrar otras escenas de ejemplo en la carpeta **assets/MixedRealityTool
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de creación:
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Asignación espacial](spatial-mapping-in-unity.md)

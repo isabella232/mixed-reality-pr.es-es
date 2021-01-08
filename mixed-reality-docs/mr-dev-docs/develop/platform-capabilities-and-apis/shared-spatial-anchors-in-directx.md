@@ -1,17 +1,17 @@
 ---
 title: Delimitadores espaciales compartidos en DirectX
-description: Explica cómo sincronizar dos dispositivos HoloLens compartiendo los delimitadores espaciales.
+description: Obtenga información sobre cómo sincronizar dos dispositivos de HoloLens compartiendo los delimitadores espaciales locales y de Azure en las aplicaciones de DirectX.
 author: thetuvix
 ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: HoloLens, sincronizar, delimitador espacial, transferencia, multijugador, vista, escenario, tutorial, código de ejemplo, Azure, delimitadores espaciales de Azure, ASA
-ms.openlocfilehash: 4e41975a18c28cb2228b20ebb5d3a445774cca44
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 46fe6be5d81a8fc68502500e318eb8e63d223089
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530323"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008535"
 ---
 # <a name="shared-experiences-in-directx"></a>Experiencias compartidas en DirectX
 
@@ -35,6 +35,7 @@ Una vez que esté en funcionamiento con los anclajes espaciales de Azure, puede 
 En situaciones en las que no se pueden usar delimitadores espaciales de Azure, las [transferencias de delimitadores locales](../../out-of-scope/local-anchor-transfers-in-directx.md) permiten que un dispositivo hololens exporte un anclaje para que lo importe un segundo dispositivo hololens.  Este enfoque proporciona una recuperación de delimitador menos sólida que los delimitadores espaciales de Azure, y los dispositivos iOS y Android no son compatibles con este enfoque.
 
 ## <a name="see-also"></a>Consulte también
+
 * [Experiencias compartidas en realidad mixta](shared-experiences-in-mixed-reality.md)
 * <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
 * <a href="https://docs.microsoft.com/cpp/api/spatial-anchors/winrt/" target="_blank">SDK de anclajes espaciales de Azure para HoloLens</a>

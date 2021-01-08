@@ -1,17 +1,17 @@
 ---
 title: Empezar el recorrido de VR
-description: Puntos de control para guiar a los nuevos usuarios de dispositivos de VR a través de la configuración y el uso de sus dispositivos de VR.
+description: Explore nuestros puntos de control de seleccionada para guiar a los nuevos usuarios de dispositivos a través de la configuración y el uso de sus dispositivos de VR.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 10/15/2020
 ms.topic: overview
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR,
-ms.openlocfilehash: 9a82ab12b9cf91bd1fefcf84a2f6b4e62c8df24a
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 711c1b74b79ba510d29c17de0ec21270946ceb61
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725716"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007065"
 ---
 # <a name="start-your-vr-journey"></a>Empezar el recorrido de VR
 

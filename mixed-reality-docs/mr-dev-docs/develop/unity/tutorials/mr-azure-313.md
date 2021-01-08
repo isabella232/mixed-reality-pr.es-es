@@ -1,17 +1,17 @@
 ---
 title: Realidad mixta y Azure (313) servicio IoT Hub
-description: Complete este curso para aprender a implementar Azure IoT Hub servicio en una máquina virtual que ejecuta Ubuntu 16,4 y, a continuación, visualice los datos de los mensajes mediante Microsoft HoloLens o un casco envolvente (VR).
+description: Obtenga información acerca de cómo implementar Azure IoT Hub servicio en una máquina virtual que ejecuta Ubuntu 16,4 y visualizar los datos de mensaje mediante Microsoft HoloLens o VR cascos.
 author: drneil
 ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, realidad mixta, Academia, Edge, IOT Edge, tutorial, API, notificación, funciones, tablas, hololens, inmersivo, VR, IOT, máquina virtual, Ubuntu, Python, Windows 10, Visual Studio
-ms.openlocfilehash: 2a642bad363d86e37ca2d6c00ebf1ebb73908dec
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 3c01c7351ee284b72a15fd7d5bdd3205fec91e49
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679514"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009305"
 ---
 # <a name="mr-and-azure-313-iot-hub-service"></a>Realidad mixta y Azure (313): Servicio IoT Hub
 
@@ -55,7 +55,7 @@ Este curso le enseñará cómo configurar y usar el servicio de IoT Hub y, a con
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para obtener los requisitos previos más actualizados para el desarrollo con la realidad mixta, incluido con Microsoft HoloLens, visite el artículo [instalar las herramientas](https://docs.microsoft.com/windows/mixed-reality/install-the-tools) .
 
@@ -79,7 +79,7 @@ Se requiere el siguiente hardware y software:
 
 
 
-### <a name="before-you-start"></a>Antes de empezar
+### <a name="before-you-start"></a>Antes de comenzar
 
 1. Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup).
 2. Es una buena idea realizar la **calibración** y el **ajuste del sensor** al empezar a desarrollar una nueva aplicación de HoloLens (a veces puede ayudar a realizar esas tareas para cada usuario).

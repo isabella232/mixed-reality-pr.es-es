@@ -1,6 +1,6 @@
 ---
 title: Usar voz en Windows Mixed Reality
-description: Obtenga información sobre cómo usar la entrada de voz en las aplicaciones de Windows Mixed Reality.
+description: Obtenga información sobre cómo usar la entrada de voz para controlar comandos, objetos 3D y dictado en las aplicaciones de Windows Mixed Reality.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/16/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: 6a32b96fd932e3b7d47e29749fb47c70b64e32c3
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 9c1863a3fb0c7d8681f82aa6e0d93400bef578c9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725776"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007675"
 ---
 # <a name="using-speech-in-windows-mixed-reality"></a>Usar voz en Windows Mixed Reality
 
@@ -25,7 +25,7 @@ Puede usar su voz para acercarse a Windows Mixed Reality con mayor rapidez. La c
 
 > [!NOTE]
 > * Cuando la voz está activada, Windows Mixed Reality siempre está escuchando. Cuando esté conectado a Internet, enviamos todo lo que digas a la nube para que Microsoft Speech Services pueda reconocer incluso más comandos.
-> * Los comandos de voz no se admiten en todos los lenguajes. Más información
+> * Los comandos de voz no se admiten en todos los lenguajes. Saber más
 > * Los auriculares y los altavoces Bluetooth no se admiten en Windows Mixed Reality.
 
 ## <a name="see-it-say-it"></a>Verlo, decirlo

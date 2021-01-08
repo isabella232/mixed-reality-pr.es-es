@@ -1,17 +1,17 @@
 ---
 title: Punto de enfoque en Unity
-description: Ajuste manual de la estabilidad de holograma en Unity estableciendo el punto de enfoque
+description: Obtenga información sobre cómo ajustar manualmente la estabilidad de los hologramas en Unity mediante el establecimiento del punto de enfoque para HoloLens y los auriculares con micrófonos de la realidad mixta de Windows.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, punto de enfoque, plano de enfoque, plano de estabilización, punto de estabilización, Reproyección, LSR, búfer de profundidad, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: d2708dcf39f1d2c67ab1abf69f8330f9dd536ab0
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: bd662a079f23ed590708d961e924859675a44917
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010276"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009345"
 ---
 # <a name="focus-point-in-unity"></a>Punto de enfoque en Unity
 
@@ -53,7 +53,7 @@ void Update()
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con el tema siguiente:
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con el siguiente tema:
 
 > [!div class="nextstepaction"]
 > [Pérdida de seguimiento](tracking-loss-in-unity.md)
@@ -66,4 +66,5 @@ O bien puede ir directamente a la implementación de la aplicación en un dispos
 Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#3-platform-capabilities-and-apis) en cualquier momento.
 
 ### <a name="see-also"></a>Consulte también
+
 * [Plano de estabilización](../platform-capabilities-and-apis/hologram-stability.md#reprojection)

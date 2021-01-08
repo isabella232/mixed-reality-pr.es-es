@@ -1,17 +1,17 @@
 ---
 title: Incorporación de Holographic Remoting
-description: Explica cómo usar la comunicación remota holográfica para representar hologramas en una HoloLens a través de la red.
+description: Aprenda a instalar, configurar y usar la comunicación remota holográfica para representar hologramas en un dispositivo HoloLens a través de la red.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, Holographic Remoting, representación remota, representación en red, HoloLens, hologramas remotos, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 809258d3387b5e45885c0eb207544c176f891a1d
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 68c1dd43dac4830da061d4900ce768692057e781
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530307"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006675"
 ---
 # <a name="add-holographic-remoting-hololens-first-gen"></a>Incorporación de la comunicación remota holográfica (HoloLens (primera generación))
 

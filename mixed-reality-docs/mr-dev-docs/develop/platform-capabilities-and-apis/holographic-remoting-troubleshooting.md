@@ -1,17 +1,17 @@
 ---
 title: Solución de problemas y limitaciones de la comunicación remota holográfica
-description: Pasos de solución de problemas para la comunicación remota holográfica en HoloLens 2.
+description: Encuentre recursos de solución de problemas e instrucciones para la característica de comunicación remota holográfica en dispositivos HoloLens 2.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, Holographic Remoting, representación remota, representación en red, HoloLens, hologramas remotos, solución de problemas, ayuda, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 9b900238abc79b0f2f93691d4b4a67cce67a201a
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: ee1dce72af02374e930de4a1bdff94285c7a84ae
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530192"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006455"
 ---
 # <a name="holographic-remoting-troubleshooting"></a>Solución de problemas de Holographic Remoting
 

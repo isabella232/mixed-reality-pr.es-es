@@ -1,5 +1,5 @@
 ---
-title: Windows mixed reality sobre el estado, la seguridad y la comodidad del casco
+title: Cuidados y seguridad de la realidad mixta de Windows
 description: Obtenga información sobre cómo mantenerlos en buen estado, seguros y cómodos al usar aplicaciones de Windows Mixed Reality.
 author: hferrone
 ms.author: v-hferrone
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: a8b78cd637b3f3b68ef793aa76031e3151f1f0fe
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 32b29d11585bae4e803e516ae3733e1165f45587
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725576"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009005"
 ---
 # <a name="windows-mixed-reality-immersive-headset-health-safety-and-comfort"></a>Windows mixed reality sobre el estado, la seguridad y la comodidad del casco
 

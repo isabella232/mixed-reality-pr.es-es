@@ -1,17 +1,17 @@
 ---
 title: Asignación espacial en DirectX
-description: Obtenga información sobre cómo implementar la asignación espacial en la aplicación DirectX, incluida la aplicación de ejemplo de asignación espacial que se incluye con el SDK de Plataforma universal de Windows.
+description: Obtenga información sobre cómo implementar la asignación espacial en la aplicación DirectX y cómo usar la aplicación de ejemplo de asignación espacial en el SDK de Plataforma universal de Windows.
 author: mikeriches
 ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows Mixed Reality, asignación espacial, entorno, interacción, DirectX, winrt, API, código de ejemplo, UWP, SDK, tutorial
-ms.openlocfilehash: fa372473939222ef4be7ca36076a17241173c441
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: bcd78487e96aaf09707aa4bf58917223cc2e8583
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97612919"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006715"
 ---
 # <a name="spatial-mapping-in-directx"></a>Asignación espacial en DirectX
 

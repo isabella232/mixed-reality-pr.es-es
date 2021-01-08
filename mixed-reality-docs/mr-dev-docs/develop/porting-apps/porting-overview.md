@@ -1,17 +1,17 @@
 ---
 title: Introducción a la portabilidad
-description: Información general de las distintas opciones de portabilidad para incorporar aplicaciones existentes a la realidad mixta.
+description: Información general de las distintas opciones de portabilidad para llevar las aplicaciones existentes a la realidad mixta de HoloLens y VR.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
 keywords: portabilidad, Unity, middleware, motor, UWP, Win32
-ms.openlocfilehash: d8cbb62500a81a29a00f4d32eaed0c2df3f5149d
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 5a57c73481e80e5ab6fac1bd02b83c5d3dfaabb6
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97612839"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007495"
 ---
 # <a name="porting-overview"></a>Introducción a la portabilidad
 

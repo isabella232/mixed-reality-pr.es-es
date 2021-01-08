@@ -8,12 +8,12 @@ ms.topic: article
 keywords: hologramas, estabilidad, hololens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, velocidad de fotogramas, representación, Reproyección, separación de colores
 appliesto:
 - HoloLens
-ms.openlocfilehash: 4405cd0fa7cfca5205d312d1ccc54efc06db7bd7
-ms.sourcegitcommit: 13fe1e7f7f268730a0be720933d7414e9c63ac9b
+ms.openlocfilehash: 36abf928d8f665717bacaf8da372d299b41fabd6
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/29/2020
-ms.locfileid: "97808836"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006645"
 ---
 # <a name="hologram-stability"></a>Estabilidad de hologramas
 
@@ -95,7 +95,7 @@ Las aplicaciones deben realizar acciones específicas para habilitar los distint
 
 ### <a name="choosing-reprojection-technique"></a>Elección de la técnica de Reproyección
 
-Tipo de estabilización |    Cascos envolventes |    Generación 1 de HoloLens | HoloLens 2
+Tipo de estabilización |    Auriculares inmersivo |    Generación 1 de HoloLens | HoloLens 2
 --- | --- | --- | ---
 Reproyección de profundidad |    Recomendado |   N/D |   Recomendado<br/><br/>Las aplicaciones de Unity deben usar Unity 2018.4.12 o posterior o Unity 2019,3 o posterior. De lo contrario, use la Reproyección plana automática.
 Reproyección plana automática | N/D |   Valor predeterminado recomendado |   Recomendado si la reproyección de profundidad no da los mejores resultados<br/><br/>Se recomienda que las aplicaciones de Unity usen Unity 2018.4.12 o posterior o Unity 2019,3 o posterior.  Las versiones anteriores de Unity funcionarán con resultados de Reproyección ligeramente reducidos.

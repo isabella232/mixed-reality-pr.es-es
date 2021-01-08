@@ -1,17 +1,17 @@
 ---
 title: Representación de volúmenes
-description: Las imágenes volumétricas contienen información enriquecida con opacidad y color en todo el volumen que no se puede expresar fácilmente como superficies. Aprenda a representar eficazmente imágenes volumétricas en Windows Mixed Reality.
+description: Aprenda a representar eficazmente imágenes volumétricas enriquecidas con opacidad y color en Windows Mixed Reality.
 author: kevinkennedy
 ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
 keywords: imagen volumétrica, representación por volumen, rendimiento, realidad mixta
-ms.openlocfilehash: c0b68a2368823e5699e24d66bfafe1e4e05bdce8
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 2a76be80d786aea0c8bc1bd364155fa37d37e151
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97612949"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008785"
 ---
 # <a name="volume-rendering"></a>Representación de volúmenes
 

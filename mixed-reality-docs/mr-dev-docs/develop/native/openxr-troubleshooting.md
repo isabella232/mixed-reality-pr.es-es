@@ -1,17 +1,17 @@
 ---
 title: Solución de problemas de OpenXR
-description: Solucionar problemas en las aplicaciones de OpenXR.
+description: Busque recursos y respuestas a problemas comunes en las aplicaciones de Windows Mixed Reality OpenXR.
 author: thetuvix
 ms.author: alexturn
 ms.date: 2/28/2020
 ms.topic: article
 keywords: OpenXR, Khronos, BasicXRApp, DirectX, Native, aplicación nativa, motor personalizado, middleware, solución de problemas
-ms.openlocfilehash: ddfe548d689d84576ad0ac06bda46d7c2757859c
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 6e1696bca4f31f70af10c32087400ed56efa3c11
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97612939"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006735"
 ---
 # <a name="openxr-troubleshooting"></a>Solución de problemas de OpenXR
 

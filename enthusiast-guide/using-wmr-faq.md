@@ -1,6 +1,6 @@
 ---
 title: Preguntas más frecuentes sobre el uso de Windows Mixed Reality
-description: Obtenga respuestas a preguntas habituales al trabajar con Windows Mixed Reality.
+description: Encuentre recursos a preguntas habituales al trabajar con aplicaciones y hardware de Windows Mixed Reality.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: 75ed2699cc34af5f526e0799b762d45ef36e99b9
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 31a27afa9c96ee8beb8b38f74534fc6f58c01f1d
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725676"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007055"
 ---
 # <a name="using-windows-mixed-reality-faq"></a>Preguntas más frecuentes sobre el uso de Windows Mixed Reality
 
@@ -24,7 +24,6 @@ Si necesita ayuda con el uso de un auricular envolvente de Windows Mixed Reality
 ## <a name="i-see-a-message-that-says-lost-tracking-or-we-dont-have-a-boundary-for-this-space"></a>Veo un mensaje que indica "pérdida de seguimiento" o "no tenemos límite para este espacio".
 
 Seleccione **inicio > portal de realidad mixta** en el escritorio. Seleccione **menú** y, a continuación, seleccione **ejecutar el programa de instalación** para crear un nuevo límite. Windows Mixed Reality admite varias ubicaciones e identificará el espacio en el que se encuentra en el inicio, siempre y cuando la habitación no haya cambiado.  
-
 
 ## <a name="i-cant-hear-any-sound-or-the-sound-is-coming-from-my-computer-instead-of-my-headset"></a>No puedo oír ningún sonido o el sonido proviene del equipo en lugar de los auriculares
 
@@ -133,5 +132,6 @@ Al colocar el casco, Windows Mixed Reality necesita un poco de tiempo para volve
 ¿Aún necesita ayuda? Para la solución avanzada de problemas, consulte [este artículo](troubleshooting-windows-mixed-reality.md).
 
 ## <a name="see-also"></a>Consulte también
+
 * [Preguntar a la comunidad](https://answers.microsoft.com)
 * [Póngase en contacto con nosotros para obtener soporte técnico](https://support.microsoft.com/contactus/)

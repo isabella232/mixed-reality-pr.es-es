@@ -1,17 +1,17 @@
 ---
 title: Interacción basada en el control con los ojos
-description: HoloLens 2 ofrece un nuevo nivel de conocimiento del contexto y del comportamiento humano dentro de la experiencia holográfica al proporcionar a los desarrolladores la capacidad de usar información sobre lo que están mirando los usuarios. En esta página se tratan las recomendaciones de diseño para los desarrolladores que quieren usar miradamente como entrada.
+description: Obtenga información sobre las interacciones basadas en el ojo y la mirada en HoloLens 2 y los nuevos niveles de contexto y comprensión humana si el usuario proporciona experiencias holográficas.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Seguimiento ocular, realidad mixta, entrada, ojo, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, diseño, interacciones
-ms.openlocfilehash: e21d591d2843f67f3a0b0eed42a27c74942e8999
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: b5091b92fd048f72184212401d54ad0b7353875c
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847336"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008585"
 ---
 # <a name="eye-gaze-based-interaction-on-hololens-2"></a>Interacción mirada en la vista en HoloLens 2
 

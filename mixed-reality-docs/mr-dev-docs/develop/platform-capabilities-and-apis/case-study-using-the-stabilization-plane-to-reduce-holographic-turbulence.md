@@ -1,17 +1,17 @@
 ---
-title: 'Caso práctico: uso del plano de estabilización para reducir la turbulencia holográfica'
-description: Uso del plano de estabilización para reducir la turbulencia holográfica
+title: 'Caso práctico: uso del plano de estabilización'
+description: Explore el modo en que nuestro equipo de desarrollo usó el plano de estabilización para reducir las turbulencias holográficas en una aplicación de realidad mixta.
 author: bstrukus
 ms.author: bestruku
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, estabilización, caso práctico, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: e0eba3df5457ea06ee80682d99c82a5a23c1635d
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 85caee589a5f031f605417639eab2e980cb613c5
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530435"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006705"
 ---
 # <a name="case-study---using-the-stabilization-plane-to-reduce-holographic-turbulence"></a>Caso práctico: uso del plano de estabilización para reducir la turbulencia holográfica
 

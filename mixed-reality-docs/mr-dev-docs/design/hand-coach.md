@@ -1,17 +1,17 @@
 ---
 title: Asesor manual
-description: manos 3D que se desencadenan cuando el sistema no detecta las manos del usuario para ayudarles.
+description: Obtenga información acerca de cómo se desencadenan las manos 3D con el autocar manual cuando el sistema no detecta las manos del usuario para ayudarles.
 author: grayclee
 ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, tratamiento de mano, auriculares envolvente, MRTK, manos, ayuda a manos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: e46704a1cd2e93fc1764528c408c01d117444c34
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 07b42482d9258b4189ef43683370bd951f5c88e8
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847957"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009165"
 ---
 # <a name="hand-coach"></a>Asesor manual
 

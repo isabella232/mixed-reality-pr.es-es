@@ -1,17 +1,17 @@
 ---
 title: Mirada con la cabeza y permanencia
-description: Introducción al modelo de entrada de mirada con la cabeza y permanencia
+description: Introducción a la información general sobre el modelo de entrada de la vista principal y la vivienda, incluidos escenarios comunes y principios de diseño.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 05/13/2019
 ms.topic: article
 keywords: Realidad mixta, miradas, viviendas, interacción, diseño, auriculares de realidad mixta, auriculares Windows Mixed Reality, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, experiencia de usuario, directrices, vista de lista
-ms.openlocfilehash: 060d78ec629905ac9f2134851998ec131d85f0cd
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 2bfd984a466c1ccd3913e889ca57663800f46380
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847368"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007085"
 ---
 # <a name="head-gaze-and-dwell"></a>Mirada con la cabeza y permanencia
 

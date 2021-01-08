@@ -1,17 +1,17 @@
 ---
 title: Holographic Remoting Player
-description: Holographic Remoting Player es una aplicación complementaria que se conecta a aplicaciones y juegos de PC que admiten el control remoto de holografías. Holographic Remoting transmite contenido holográfica desde un equipo a su Microsoft HoloLens en tiempo real, mediante una conexión de Wi-Fi.
+description: Obtenga información sobre el reproductor de acceso remoto holográfica y el contenido de streaming holográfica desde un equipo a su HoloLens en tiempo real a través de Wi-Fi.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota holográfica, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, diagnósticos, rendimiento
-ms.openlocfilehash: 07848f20fb23c15688dcb7cbc668b8011e34736b
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: c016221746efb34dd83ceb42a4a2cde156dde4c8
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530228"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006535"
 ---
 # <a name="holographic-remoting-player"></a>Holographic Remoting Player
 

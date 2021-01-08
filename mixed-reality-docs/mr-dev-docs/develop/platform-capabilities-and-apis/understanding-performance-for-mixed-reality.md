@@ -1,17 +1,17 @@
 ---
 title: Descripción del rendimiento de la realidad mixta
-description: Información avanzada y detalles para optimizar el rendimiento de las aplicaciones de Windows Mixed Reality.
+description: Obtenga información avanzada y detalles para analizar y optimizar el rendimiento de las aplicaciones de Windows Mixed Reality.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, rendimiento, optimización, CPU, GPU
-ms.openlocfilehash: fc7b6385acda9079a649131b9e6eccf5ac067819
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: ff3db5d49ddab13a20c4c32de8e5640fff4f0d81
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530067"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008475"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Descripción del rendimiento de la realidad mixta
 
@@ -134,7 +134,7 @@ Las operaciones de asignación y desasignación de memoria excesiva pueden dar l
 
 #### <a name="object-pooling"></a>Agrupación de objetos
 
-La agrupación de objetos es una técnica popular para reducir el costo de las asignaciones continuas y desasignaciones de objetos. Para ello, se asigna un grupo grande de objetos idénticos y se reutilizan instancias disponibles inactivas de este grupo en lugar de generar y destruir objetos constantemente a lo largo del tiempo. Los grupos de objetos son excelentes para los componentes reutilizables que tienen una duración variable durante una aplicación.
+La agrupación de objetos es una técnica popular para reducir el costo de las asignaciones continuas y desasignaciones de objetos. Para ello, se asigna un grupo grande de objetos idénticos y se reutilizan instancias disponibles inactivas de este grupo en lugar de generar y destruir objetos constantemente a lo largo del tiempo. Los grupos de objetos son excelentes para los componentes reutilizables que tienen una duración variable en una aplicación.
 
 ## <a name="see-also"></a>Consulte también
 - [Recomendaciones de rendimiento para Unity](../unity/performance-recommendations-for-unity.md)

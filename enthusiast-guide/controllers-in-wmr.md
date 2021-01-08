@@ -1,6 +1,6 @@
 ---
 title: Controladores de Windows Mixed Reality
-description: Obtenga información acerca de cómo configurar y usar controladores en Windows Mixed Reality.
+description: Aprenda a configurar, emparejar, usar y solucionar problemas comunes con controladores en Windows Mixed Reality.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: f349f4bbc2cadd511515783504562052f1d58ed3
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 5f2e02c85b443497f539d1bfcbf165214e3ac3c1
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725396"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007805"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Controladores de movimiento en Windows Mixed Reality
 

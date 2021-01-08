@@ -1,17 +1,17 @@
 ---
 title: Descripción de escenas
-description: Introducción a las funcionalidades de comprensión de escenas para HoloLens
+description: Aprenda a desarrollar con conocimiento de escenas para HoloLens, incluidos el SDK, las capacidades y los escenarios de uso comunes.
 author: szymons
 ms.author: szymons
 ms.date: 07/08/2019
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, oclusión, SDK
-ms.openlocfilehash: f46245c668e7cc58258fa4e28c4af5aa7812ef5f
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: c4485c5501300d6ca629f4e587fde1f88eea7ea5
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848261"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008875"
 ---
 # <a name="scene-understanding"></a>Descripción de escenas
 

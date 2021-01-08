@@ -1,17 +1,17 @@
 ---
 title: Compras desde la aplicación
-description: Las compras desde la aplicación se admiten en aplicaciones de realidad mixta, pero hay algún trabajo para configurarlas.
+description: Obtenga información sobre cómo usar compras desde la aplicación en las aplicaciones de realidad mixta con vistas XAML 2D y ventanas emergentes del sistema operativo Windows.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: compras desde la aplicación, hololens, XAML, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 905c1be72bf2a3d6fa167cab68a4cb71e6538acc
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: a87cc68f67def1d46a3a6ba352e723d356f51fa2
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757792"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008675"
 ---
 # <a name="in-app-purchases"></a>Compras desde la aplicación
 

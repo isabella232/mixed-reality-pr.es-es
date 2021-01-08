@@ -1,17 +1,17 @@
 ---
 title: Delimitadores espaciales
-description: Procedimientos recomendados de uso de delimitadores espaciales para representar hologramas estables.
+description: Obtenga información sobre las prácticas recomendadas para usar delimitadores espaciales para representar hologramas estables en aplicaciones de realidad mixta.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema de coordenadas, sistema de coordenadas espaciales, escala mundial, mundo, escala, posición, orientación, delimitador, anclaje espacial, bloqueo mundial, bloqueo mundial, persistencia, uso compartido, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens
-ms.openlocfilehash: 7f6997e491f76e66845b88ea0897dbb037495ba6
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 2db88f9bc5d128f4a9eb42cfb5211d0597b43cfa
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848214"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009115"
 ---
 # <a name="spatial-anchors"></a>Delimitadores espaciales
 

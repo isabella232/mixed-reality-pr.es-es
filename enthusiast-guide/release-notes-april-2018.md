@@ -1,17 +1,17 @@
 ---
 title: 'Notas de la versión: abril 2018'
-description: Las notas de la versión de HoloLens y Windows Mixed Reality para la actualización 2018 de abril de Windows 10 (también conocida como RS4).
+description: Manténgase al día de las notas de la versión de HoloLens y Windows Mixed Reality para la actualización Windows 10 de abril de 2018/RS4.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 05/21/2018
 ms.topic: article
 keywords: Notas de la versión, versión, Windows 10, compilación, RS4, so
-ms.openlocfilehash: 42d22feb582716be5ab0bd24ade4a8566dddb5cf
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 8590cf8f813f22fb4f91fef0862b1e2e4ad43b1a
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725976"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009245"
 ---
 # <a name="release-notes---april-2018"></a>Notas de la versión: abril 2018
 
@@ -47,7 +47,7 @@ La actualización 2018 de abril de Windows 10 llegó para todos los clientes de 
 
 <table>
   <tr>
-    <th>Característica</th><th>Detalles</th><th>Instrucciones</th>
+    <th>Característica</th><th>Detalles</th><th>Instructions</th>
   </tr>
   <tr>
     <td>Colocación automática del contenido 2D y 3D en el inicio</td><td>Un iniciador de aplicaciones 2D o una aplicación UWP de 2D se coloca automáticamente en el mundo con un tamaño y una distancia óptimos cuando se inicia en lugar de solicitar al usuario que lo coloque. Si una <a href="https://docs.microsoft.com/windows/mixed-reality/design/app-views">aplicación envolvente</a> usa un iniciador de aplicaciones 2D en lugar de un <a href="https://docs.microsoft.com/windows/mixed-reality/distribute/3d-app-launcher-design-guidance">iniciador de aplicaciones 3D</a>, la aplicación envolvente se iniciará automáticamente desde el iniciador de aplicaciones 2D igual que en RS1.<br><br>Un iniciador de aplicaciones 3D del menú Inicio también coloca automáticamente en el mundo. En lugar de iniciar automáticamente la aplicación, los usuarios pueden hacer clic en el iniciador para iniciar la aplicación envolvente. el contenido 3D que se abre desde la aplicación de hologramas y desde el borde también se coloca automáticamente en el mundo.</td><td>Al abrir una aplicación desde el menú Inicio, no se le pedirá que la coloque en el mundo.<br><br>Si la selección de ubicación del<a href="https://docs.microsoft.com/windows/mixed-reality/distribute/3d-app-launcher-design-guidance">iniciador de aplicaciones 3D</a> o de aplicación 2D no es óptima, puede moverlas fácilmente mediante las nuevas manipulaciones de aplicaciones fluidas que se describen a continuación. También puede cambiar la posición del iniciador de aplicaciones 2D/contenido 3D indicando "mover esto" y, a continuación, haciendo avanzar para cambiar la posición del contenido.</td>
@@ -92,7 +92,7 @@ La actualización 2018 de abril de Windows 10 llegó para todos los clientes de 
 
 <table>
   <tr>
-    <th>Característica</th><th>Detalles</th><th>Instrucciones</th>
+    <th>Característica</th><th>Detalles</th><th>Instructions</th>
   </tr>
   <tr>
     <td>Mejoras en la asignación espacial</td><td>Mejoras en la calidad, la simplificación y el rendimiento.</td><td>La malla de asignación espacial aparecerá en el limpiador; se requieren menos triángulos para representar el mismo nivel de detalle. Es posible que observe cambios en la densidad de los triángulos de la escena.</td>
@@ -117,7 +117,7 @@ La actualización 2018 de abril de Windows 10 llegó para todos los clientes de 
 
 <table>
   <tr>
-    <th>Característica</th><th>Detalles</th><th>Instrucciones</th>
+    <th>Característica</th><th>Detalles</th><th>Instructions</th>
   </tr>
   <tr>
     <td>Usar varias cuentas de usuario de Azure Active Directory en un solo dispositivo</td><td>Comparta un HoloLens con varios Azure AD usuarios, cada uno con su propia configuración de usuario y datos de usuario en el dispositivo.</td><td><a href="https://docs.microsoft.com/hololens/hololens-multiple-users">Centro de profesionales de TI: compartir HoloLens con varias personas</a></td>
@@ -137,7 +137,7 @@ La actualización 2018 de abril de Windows 10 llegó para todos los clientes de 
 
 <table>
   <tr>
-    <th>Característica</th><th>Detalles</th><th>Instrucciones</th>
+    <th>Característica</th><th>Detalles</th><th>Instructions</th>
   </tr>
   <tr>
     <td>Nuevo nombre del sistema operativo de Windows Holographic for Business</td><td>Borre el nombre de la edición para reducir la confusión en la aplicación de licencias de actualización de edición cuando se habilitan las características del conjunto comercial en HoloLens.</td><td>Puede ver qué edición de Windows Holographic está en el dispositivo en <b>configuración > sistema > acerca</b>de. "Windows Holographic for Business" aparecerá si se ha aplicado una actualización de edición para habilitar las características de Commercial Suite. Obtenga información acerca <a href="https://docs.microsoft.com/hololens/hololens-upgrade-enterprise">de cómo desbloquear características de Windows Holographic for Business</a>.</td>

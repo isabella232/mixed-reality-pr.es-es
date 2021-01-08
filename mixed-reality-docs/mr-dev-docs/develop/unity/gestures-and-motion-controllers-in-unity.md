@@ -1,17 +1,17 @@
 ---
 title: Gestos y controladores de movimiento en Unity
-description: Obtenga información sobre cómo realizar una acción en Unity en Unity con gestos de mano y controladores de movimiento.
+description: Obtenga información sobre cómo realizar una acción en Unity en Unity con gestos y controladores de movimiento a mano mediante XR y API de botón/eje comunes.
 author: hferrone
 ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: gestos, controladores de movimiento, Unity, mira, entrada, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 8941fa05af21a7b2c7302f4a76f27cf38e1d5a65
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 3ef3e3d5a1d9171ff6cc04e19fa97bb73768370e
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010326"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008795"
 ---
 # <a name="gestures-and-motion-controllers-in-unity"></a>Gestos y controladores de movimiento en Unity
 
@@ -565,7 +565,7 @@ Los tutoriales paso a paso, con ejemplos de personalización más detallados, es
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de creación:
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Seguimiento de manos y ocular](hand-eye-in-unit.md)

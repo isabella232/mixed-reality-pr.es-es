@@ -1,17 +1,17 @@
 ---
 title: Configuración recomendada para Unity
-description: Unity ofrece algunos comportamientos específicos de la realidad mixta que se pueden alternar a través de la configuración del proyecto.
+description: Obtenga información sobre los comportamientos de publicación y rendimiento de Unity específicos de las aplicaciones de realidad mixta que se pueden alternar a través de la configuración del proyecto.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity, configuración, realidad mixta, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, rendimiento, configuración de calidad, configuración de iluminación, búfer de profundidad, XR, pérdida de seguimiento
-ms.openlocfilehash: d32dd19e535d2681654014cc92f319dc564e059e
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: be85b592a6857c9dd40e2b3bb3f09dec0a6273be
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010116"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009335"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -115,9 +115,9 @@ Para alternar la pantalla de presentación de Holographic:
 |  Pantalla de presentación de mostrar Unity  |  Imagen de bienvenida holográfica  |  Comportamiento |
 |----------|----------|----------|
 |  Activado  |  None  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
-|  Activado  |  Personalizada  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Activado  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
 |  Desactivado  |  None  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
-|  Desactivado  |  Personalizada  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Desactivado  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
 
 Lea [la documentación de la pantalla de presentación de Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) para obtener más información.
 

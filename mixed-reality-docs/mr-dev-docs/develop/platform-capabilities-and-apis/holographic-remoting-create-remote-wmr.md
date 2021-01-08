@@ -1,17 +1,17 @@
 ---
 title: Escritura de una aplicación remota holográfica Remoting (WMR)
-description: Al crear un contenido remoto de aplicaciones remotas holográficas, que se representa en un equipo remoto, se puede transmitir a HoloLens 2.
+description: Obtenga información sobre cómo transmitir contenido remoto representado en una máquina remota a HoloLens 2 con aplicaciones de comunicación remota de Holographic con HolographicSpace.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota holográfica, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, NuGet
-ms.openlocfilehash: 5eddcc117008ebc54eac11965592099601880d3e
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: b78d1c93c8b2890ba8d904c289c8d61a14380824
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530215"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006505"
 ---
 # <a name="writing-a-holographic-remoting-remote-app-using-the-holographicspace-api"></a>Escritura de una aplicación remota de Holographic Remoting mediante la API de HolographicSpace
 

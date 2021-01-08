@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota holográfica, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, seguridad, autenticación, servidor a cliente
-ms.openlocfilehash: 64eb54d9401f3fbc8b73ebb97b19de5a68cdc5c4
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 0881238bfca199958802598a3e1829a9de0d8e5b
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530406"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006485"
 ---
 # <a name="enabling-connection-security-for-holographic-remoting"></a>Habilitación de la seguridad de conexión para Holographic Remoting
 
@@ -24,7 +24,7 @@ Esta página proporciona información general sobre la seguridad de red para Hol
 * medidas recomendadas basadas en diferentes casos de uso
 * implementación de la seguridad en la solución de Holographic Remoting
 
-## <a name="overview"></a>Información general
+## <a name="holographic-remoting-security"></a>Seguridad de Holographic Remoting
 
 Holographic Remoting intercambia información a través de una red. Si no se aplica ninguna medida de seguridad, los adversarios en la misma red puede poner en peligro la integridad de la comunicación o acceder a la información confidencial.
 

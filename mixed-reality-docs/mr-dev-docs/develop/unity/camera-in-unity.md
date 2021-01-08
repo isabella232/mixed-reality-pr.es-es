@@ -1,17 +1,17 @@
 ---
 title: Cámara en Unity
-description: Cómo usar la cámara principal de Unity para el desarrollo de la realidad mixta de Windows para realizar la representación holográfica.
+description: Obtenga información sobre cómo configurar y usar la cámara principal de Unity para el desarrollo de Windows Mixed Reality para realizar la representación holográfica.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, representación holográfica, holográfica, envolvente, punto de enfoque, búfer de profundidad, solo orientación, posicional, opaco, transparente, recorte, auriculares de realidad mixta, auriculares mixto de realidad de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 26eb8966004c958c6063d09de891ef835d973a82
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: cd5284a8fdef7254b7d0375b57877d30f5d0d708
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010436"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006395"
 ---
 # <a name="camera-in-unity"></a>Cámara en Unity
 
@@ -97,7 +97,7 @@ Siga la guía [paso a paso](https://microsoft.github.io/MixedRealityToolkit-Unit
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de creación:
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Gaze](gaze-in-unity.md)

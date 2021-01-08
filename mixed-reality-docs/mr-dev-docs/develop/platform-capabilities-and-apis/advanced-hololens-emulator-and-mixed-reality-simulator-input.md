@@ -1,17 +1,17 @@
 ---
-title: Introducción de datos avanzada en el emulador de HoloLens y el simulador de realidad mixta
+title: Emulador de HoloLens avanzado y simulador de realidad mixta
 description: Instrucciones detalladas para usar el teclado, el mouse y el controlador Xbox para simular la entrada para el emulador de HoloLens y el simulador de realidad de Windows Mixed.
 author: pbarnettms
 ms.author: pbarnett
 ms.date: 06/8/2020
 ms.topic: article
 keywords: HoloLens, emulador, simulación, Windows Mixed Reality, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: f5076e65ba1c5d95c1bb106d2d3181665177b43a
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: ff8a2830630b73266fe7348eee5459bcad98e2e0
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530456"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006685"
 ---
 # <a name="advanced-hololens-emulator-and-mixed-reality-simulator-input"></a>Introducción de datos avanzada en el emulador de HoloLens y el simulador de realidad mixta
 
@@ -50,13 +50,13 @@ También puede controlar el estado de la entrada de sensor simulado:
 
 En la tabla siguiente se muestra cómo se asignan los tipos de entrada al teclado, el mouse y el controlador Xbox. Cada tipo tiene una asignación diferente en función del modo de control de entrada. Puede encontrar más información sobre los modos de control de entrada más adelante en este documento.
 
-| Entrada |  Keyboard |  Mouse |  Controladora Xbox | 
+| Entrada |  Teclado |  Mouse |  Controladora Xbox | 
 |----------|----------|----------|----------|
 |  Eje |  Flechas izquierda/derecha |  Arrastrar a la izquierda o a la derecha |  Palanca derecha izquierda/derecha | 
 |  Inclinación |  Flechas arriba/abajo |  Arrastrar hacia arriba o hacia abajo |  Palanca derecha arriba/abajo | 
 |  Volver |  P/E |  |  DPad izquierda/derecha | 
 |  X |  A/D |  |  Stick izquierdo izquierdo/derecho | 
-|  Y |  RE PÁG/AV pág |  |  DPad arriba/abajo | 
+|  esté |  RE PÁG/AV pág |  |  DPad arriba/abajo | 
 |  Z |  W/S |  |  Stick izquierdo hacia arriba/abajo | 
 |  Acción |  Escriba o espacio |  Botón derecho |  Un botón o cualquier desencadenador | 
 |  Floración/sistema |  F2 o tecla Windows |  |  Botón B | 
@@ -85,7 +85,7 @@ En la tabla siguiente se describen las opciones de destino y la manera de activa
 
 | Object | Modificador de teclado | Modificador de controlador | Modificador de interfaz de usuario del emulador |
 |----------|----------|----------|----------|
-| Body | (predeterminado). | (predeterminado). | (predeterminado). |
+| Cuerpo | (predeterminado). | (predeterminado). | (predeterminado). |
 | Head | Mantener H | (No disponible) | (No disponible) |
 | Mano izquierda/controlador | Mantener presionado el botón Alt izq | Mantenga presionado el botón izquierdo del hombro | Chincheta Left-Hand | 
 | Mano derecha/controlador | Mantenga presionado el botón Alt derecho | Botón mantener el hombro derecho | Chincheta Right-Hand |
@@ -99,7 +99,7 @@ En la tabla siguiente se muestra cómo cada modificador de destino asigna cada u
 |  Inclinación |  Activar o desactivar el cabezal |  Subir o bajar |  Activar o desactivar el cabezal | El ojo mira hacia arriba o hacia abajo | 
 |  Volver |  Deshacer el cabezal izquierdo y derecho |  |  Deshacer el cabezal izquierdo y derecho | (Ninguna acción) |
 |  X |  Cuerpo de la diapositiva a la izquierda o a la derecha |  Movimiento de mano o controlador izquierda/derecha |  Desactivar la izquierda o la derecha | (Ninguna acción) |
-|  Y |  Subir o bajar el cuerpo |  Subir o bajar el controlador |  Activar o desactivar el cabezal | (Ninguna acción) |
+|  esté |  Subir o bajar el cuerpo |  Subir o bajar el controlador |  Activar o desactivar el cabezal | (Ninguna acción) |
 |  Z |  Desplazar el cuerpo hacia delante o hacia atrás |  Avanzar o retroceder el controlador |  Activar o desactivar el cabezal | (Ninguna acción) |
  
  

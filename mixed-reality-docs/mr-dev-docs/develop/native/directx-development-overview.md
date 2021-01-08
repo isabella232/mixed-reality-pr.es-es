@@ -1,17 +1,17 @@
 ---
 title: Introducción al desarrollo con Native
-description: Cree un motor de realidad mixta basado en DirectX mediante las API de realidad mixta de Windows directamente.
+description: Aprenda a crear un motor de realidad mixta basado en DirectX mediante las API de realidad mixta de Windows directamente.
 author: thetuvix
 ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: DirectX, representación holográfica, nativa, aplicación nativa, WinRT, aplicación de WinRT, API de plataforma, motor personalizado, middleware, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 493715660ff8df79df25e09c82fe48b863053ed3
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 764cbe0a37501cc176e9bb05a9a7771b03666f0c
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613079"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006855"
 ---
 # <a name="native-development-overview"></a>Introducción al desarrollo con Native
 

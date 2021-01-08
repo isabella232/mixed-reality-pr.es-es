@@ -1,17 +1,17 @@
 ---
 title: Escritura de una aplicación remota holográfica Remoting (OpenXR)
-description: Al crear una aplicación remota Holographic Remoting, el contenido remoto, que se representa en un equipo remoto, se puede transmitir a HoloLens 2.
+description: Obtenga información sobre cómo transmitir contenido remoto representado en una máquina remota a HoloLens 2 con aplicaciones de comunicación remota de Holographic con OpenXR.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota holográfica, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, NuGet
-ms.openlocfilehash: 202f2108ade9998d25d87dee20d4bd456da0a118
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 616765143309fe2a4883c1393713133fcbe2a9d5
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530421"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006495"
 ---
 # <a name="writing-a-holographic-remoting-remote-app-using-the-openxr-api"></a>Escritura de una aplicación remota de Holographic Remoting mediante la API de OpenXR
 

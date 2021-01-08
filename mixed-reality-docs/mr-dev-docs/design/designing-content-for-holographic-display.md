@@ -1,17 +1,17 @@
 ---
 title: Diseño de contenido para la pantalla holográfica
-description: Obtenga información sobre las directrices de diseño y los procedimientos recomendados para la visualización holográfica.
+description: Obtenga información sobre las instrucciones de diseño y los procedimientos recomendados para la visualización de Holographic en dispositivos HoloLens.
 author: yoonpark
 ms.author: dongpark
 ms.date: 06/18/2020
 ms.topic: article
 keywords: Diseño de la interfaz de usuario, pantalla holográfica, diseño de contenido, tema oscuro, tema claro, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, diseño, píxeles
-ms.openlocfilehash: 4a95f5df50a600035d9127c73f86a5d8be5e7131
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 371d9aac610a765e7ecc6dd1f17401e5d7855672
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847987"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009095"
 ---
 # <a name="designing-content-for-holographic-display"></a>Diseño de contenido para la pantalla holográfica
 
@@ -22,6 +22,7 @@ Al diseñar contenido para pantallas holográficas, hay varios elementos que deb
 <br>
 
 ## <a name="challenges-with-bright-color-on-a-large-surface"></a>Desafíos con color brillante en una superficie grande 
+
 En función de nuestra experiencia de investigación y pruebas de HoloLens, encontramos que el uso de colores brillantes en un área grande de la pantalla puede producir varios problemas: 
 
 **Fatiga ocular** 

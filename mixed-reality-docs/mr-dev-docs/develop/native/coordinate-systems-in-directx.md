@@ -1,17 +1,17 @@
 ---
 title: Sistemas de coordenadas de DirectX
-description: Obtenga información sobre los sistemas de coordenadas en DirectX y Mixed Reality con localizadores espaciales, fotogramas de referencia y delimitadores espaciales. Use SpatialStage y controle la pérdida de seguimiento, el guardado y la carga de delimitadores y la estabilización de imágenes.
+description: Obtenga información sobre los sistemas de coordenadas en DirectX y Mixed Reality con localizadores espaciales, fotogramas de referencia y delimitadores espaciales.
 author: thetuvix
 ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Realidad mixta, localizador espacial, marco de referencia espacial, sistema de coordenadas espaciales, fase espacial, código de ejemplo, estabilización de imágenes, delimitador espacial, almacén de delimitador espacial, pérdida de seguimiento, tutorial, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 7bf2309f3fb6264d6b1a5232f7ead78b771c1649
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 055eff0bb04228cb0a19b9ea208bfc9c00ce2dbe
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613119"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006865"
 ---
 # <a name="coordinate-systems-in-directx"></a>Sistemas de coordenadas de DirectX
 
