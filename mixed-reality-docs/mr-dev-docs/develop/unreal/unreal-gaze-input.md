@@ -1,58 +1,58 @@
 ---
 title: Mira fijamente inrealmente
-description: Tutorial sobre la configuración de la entrada de fijamente para HoloLens y el motor no real
+description: Obtenga información sobre cómo configurar y usar la entrada de fijamente con el seguimiento ocular y la orientación del encabezado de las aplicaciones de HoloLens en el caso de que no sea real.
 author: hferrone
 ms.author: jacksonf
 ms.date: 12/9/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, HoloLens 2, seguimiento ocular, entrada de mirada, pantalla montada de cabeza, motor no real, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: a11573d732e739068dca8c42dd8688c0705fc5bb
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: e546867fe02acd5e72ee76b4108a369ec25fd32f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925983"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010145"
 ---
-# <a name="gaze-input"></a><span data-ttu-id="fc0f1-104">Entrada de mira</span><span class="sxs-lookup"><span data-stu-id="fc0f1-104">Gaze Input</span></span>
+# <a name="gaze-input"></a><span data-ttu-id="648e6-104">Entrada de mira</span><span class="sxs-lookup"><span data-stu-id="648e6-104">Gaze Input</span></span>
 
-<span data-ttu-id="fc0f1-105">La entrada de miras en las aplicaciones de realidad mixta consiste en averiguar qué miran los usuarios.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-105">Gaze input in mixed reality apps is all about finding out what your users are looking at.</span></span> <span data-ttu-id="fc0f1-106">Cuando las cámaras de seguimiento ocular de su dispositivo coinciden con los rayos en el espacio mundial del usuario, la línea de datos de la vista del usuario está disponible.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-106">When the eye tracking cameras on your device match up with rays in Unreal's world space, your user's line of sight data becomes available.</span></span> <span data-ttu-id="fc0f1-107">Fijamente se puede usar tanto en Blueprints como en C++, y es una característica principal para los mecanismos como interacción de objetos, búsqueda y controles de cámara.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-107">Gaze can be used in both blueprints and C++, and is a core feature for mechanics like object interaction, way finding, and camera controls.</span></span>
+<span data-ttu-id="648e6-105">La entrada de miras en las aplicaciones de realidad mixta consiste en averiguar qué miran los usuarios.</span><span class="sxs-lookup"><span data-stu-id="648e6-105">Gaze input in mixed reality apps is all about finding out what your users are looking at.</span></span> <span data-ttu-id="648e6-106">Cuando las cámaras de seguimiento ocular de su dispositivo coinciden con los rayos en el espacio mundial del usuario, la línea de datos de la vista del usuario está disponible.</span><span class="sxs-lookup"><span data-stu-id="648e6-106">When the eye tracking cameras on your device match up with rays in Unreal's world space, your user's line of sight data becomes available.</span></span> <span data-ttu-id="648e6-107">Fijamente se puede usar tanto en Blueprints como en C++, y es una característica principal para los mecanismos como interacción de objetos, búsqueda y controles de cámara.</span><span class="sxs-lookup"><span data-stu-id="648e6-107">Gaze can be used in both blueprints and C++, and is a core feature for mechanics like object interaction, way finding, and camera controls.</span></span>
 
-## <a name="enabling-eye-tracking"></a><span data-ttu-id="fc0f1-108">Habilitación del seguimiento ocular</span><span class="sxs-lookup"><span data-stu-id="fc0f1-108">Enabling eye tracking</span></span>
+## <a name="enabling-eye-tracking"></a><span data-ttu-id="648e6-108">Habilitación del seguimiento ocular</span><span class="sxs-lookup"><span data-stu-id="648e6-108">Enabling eye tracking</span></span>
 
-- <span data-ttu-id="fc0f1-109">En **configuración del proyecto > HoloLens**, habilite la función de **entrada de mirada** :</span><span class="sxs-lookup"><span data-stu-id="fc0f1-109">In **Project Settings > HoloLens**, enable the **Gaze Input** capability:</span></span>
+- <span data-ttu-id="648e6-109">En **configuración del proyecto > HoloLens**, habilite la función de **entrada de mirada** :</span><span class="sxs-lookup"><span data-stu-id="648e6-109">In **Project Settings > HoloLens**, enable the **Gaze Input** capability:</span></span>
 
 ![Captura de pantalla de las capacidades de configuración de proyecto de HoloLens con entrada de pág resaltada](images/unreal-gaze-img-01.png)
 
-- <span data-ttu-id="fc0f1-111">Cree un nuevo actor y agréguelo a su escena</span><span class="sxs-lookup"><span data-stu-id="fc0f1-111">Create a new actor and add it to your scene</span></span>
+- <span data-ttu-id="648e6-111">Cree un nuevo actor y agréguelo a su escena</span><span class="sxs-lookup"><span data-stu-id="648e6-111">Create a new actor and add it to your scene</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="fc0f1-112">El seguimiento ocular de HoloLens en inreal solo tiene un único rayo de miración para ambos ojos.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-112">HoloLens eye tracking in Unreal only has a single gaze ray for both eyes.</span></span> <span data-ttu-id="fc0f1-113">No se admite el seguimiento de Stereoscopic, que requiere dos rayos.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-113">Stereoscopic tracking, which requires two rays, isn't supported.</span></span>
+> <span data-ttu-id="648e6-112">El seguimiento ocular de HoloLens en inreal solo tiene un único rayo de miración para ambos ojos.</span><span class="sxs-lookup"><span data-stu-id="648e6-112">HoloLens eye tracking in Unreal only has a single gaze ray for both eyes.</span></span> <span data-ttu-id="648e6-113">No se admite el seguimiento de Stereoscopic, que requiere dos rayos.</span><span class="sxs-lookup"><span data-stu-id="648e6-113">Stereoscopic tracking, which requires two rays, isn't supported.</span></span>
 
-## <a name="using-eye-tracking"></a><span data-ttu-id="fc0f1-114">Uso del seguimiento ocular</span><span class="sxs-lookup"><span data-stu-id="fc0f1-114">Using eye tracking</span></span>
+## <a name="using-eye-tracking"></a><span data-ttu-id="648e6-114">Uso del seguimiento ocular</span><span class="sxs-lookup"><span data-stu-id="648e6-114">Using eye tracking</span></span>
 
-<span data-ttu-id="fc0f1-115">En primer lugar, compruebe que el dispositivo admite el seguimiento ocular con la función **IsEyeTrackerConnected** .</span><span class="sxs-lookup"><span data-stu-id="fc0f1-115">First, check that your device supports eye tracking with the **IsEyeTrackerConnected** function.</span></span>  <span data-ttu-id="fc0f1-116">Si la función devuelve true, llame a **GetGazeData** para buscar el lugar en el que el usuario mira en el fotograma actual:</span><span class="sxs-lookup"><span data-stu-id="fc0f1-116">If the function returns true, call **GetGazeData** to find where the user’s eyes are looking at in the current frame:</span></span>
+<span data-ttu-id="648e6-115">En primer lugar, compruebe que el dispositivo admite el seguimiento ocular con la función **IsEyeTrackerConnected** .</span><span class="sxs-lookup"><span data-stu-id="648e6-115">First, check that your device supports eye tracking with the **IsEyeTrackerConnected** function.</span></span>  <span data-ttu-id="648e6-116">Si la función devuelve true, llame a **GetGazeData** para buscar el lugar en el que el usuario mira en el fotograma actual:</span><span class="sxs-lookup"><span data-stu-id="648e6-116">If the function returns true, call **GetGazeData** to find where the user’s eyes are looking at in the current frame:</span></span>
 
 ![Blueprint de la función Connected Tracking](images/unreal-gaze-img-02.png)
 
 > [!NOTE]
-> <span data-ttu-id="fc0f1-118">El punto de fijación y el valor de confianza no están disponibles en HoloLens.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-118">The fixation point and the confidence value are not available on HoloLens.</span></span>
+> <span data-ttu-id="648e6-118">El punto de fijación y el valor de confianza no están disponibles en HoloLens.</span><span class="sxs-lookup"><span data-stu-id="648e6-118">The fixation point and the confidence value are not available on HoloLens.</span></span>
 
-<span data-ttu-id="fc0f1-119">Use el origen y la dirección de mira en un seguimiento de línea para averiguar exactamente dónde están buscando los usuarios.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-119">Use the gaze origin and direction in a line trace to find out exactly where your users are looking.</span></span>  <span data-ttu-id="fc0f1-120">El valor de mirar es un vector, comenzando en el origen de miras y terminando en el origen más la dirección de miración multiplicada por la distancia del seguimiento de línea:</span><span class="sxs-lookup"><span data-stu-id="fc0f1-120">The gaze value is a vector, starting at the gaze origin and ending at the origin plus the gaze direction multiplied by the line trace distance:</span></span>
+<span data-ttu-id="648e6-119">Use el origen y la dirección de mira en un seguimiento de línea para averiguar exactamente dónde están buscando los usuarios.</span><span class="sxs-lookup"><span data-stu-id="648e6-119">Use the gaze origin and direction in a line trace to find out exactly where your users are looking.</span></span>  <span data-ttu-id="648e6-120">El valor de mirar es un vector, comenzando en el origen de miras y terminando en el origen más la dirección de miración multiplicada por la distancia del seguimiento de línea:</span><span class="sxs-lookup"><span data-stu-id="648e6-120">The gaze value is a vector, starting at the gaze origin and ending at the origin plus the gaze direction multiplied by the line trace distance:</span></span>
 
 ![Blueprint de la función de datos de miras](images/unreal-gaze-img-03.png)
 
-## <a name="getting-head-orientation"></a><span data-ttu-id="fc0f1-122">Obtener orientación del encabezado</span><span class="sxs-lookup"><span data-stu-id="fc0f1-122">Getting head orientation</span></span>
+## <a name="getting-head-orientation"></a><span data-ttu-id="648e6-122">Obtener orientación del encabezado</span><span class="sxs-lookup"><span data-stu-id="648e6-122">Getting head orientation</span></span>
 
-<span data-ttu-id="fc0f1-123">También puede usar el giro de la pantalla montada del cabezal (HMD) para representar la dirección del encabezado del usuario.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-123">You can also use the rotation of the Head Mounted Display (HMD) to represent the direction of the user’s head.</span></span> <span data-ttu-id="fc0f1-124">Puede obtener la dirección del encabezado de los usuarios sin habilitar la función de entrada fijamente, pero no recibirá ninguna información de seguimiento ocular.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-124">You can get the users head direction without enabling the Gaze Input capability, but you won't get you any eye tracking information.</span></span>  <span data-ttu-id="fc0f1-125">Agregue una referencia al plano como el contexto del mundo para obtener los datos de salida correctos:</span><span class="sxs-lookup"><span data-stu-id="fc0f1-125">Add a reference to the blueprint as the world context to get the correct output data:</span></span>
+<span data-ttu-id="648e6-123">También puede usar el giro de la pantalla montada del cabezal (HMD) para representar la dirección del encabezado del usuario.</span><span class="sxs-lookup"><span data-stu-id="648e6-123">You can also use the rotation of the Head Mounted Display (HMD) to represent the direction of the user’s head.</span></span> <span data-ttu-id="648e6-124">Puede obtener la dirección del encabezado de los usuarios sin habilitar la función de entrada fijamente, pero no recibirá ninguna información de seguimiento ocular.</span><span class="sxs-lookup"><span data-stu-id="648e6-124">You can get the users head direction without enabling the Gaze Input capability, but you won't get you any eye tracking information.</span></span>  <span data-ttu-id="648e6-125">Agregue una referencia al plano como el contexto del mundo para obtener los datos de salida correctos:</span><span class="sxs-lookup"><span data-stu-id="648e6-125">Add a reference to the blueprint as the world context to get the correct output data:</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="fc0f1-126">La obtención de datos de HMD solo está disponible en 4,26 y versiones posteriores.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-126">Getting HMD Data is only available in Unreal 4.26 and onwards.</span></span>
+> <span data-ttu-id="648e6-126">La obtención de datos de HMD solo está disponible en 4,26 y versiones posteriores.</span><span class="sxs-lookup"><span data-stu-id="648e6-126">Getting HMD Data is only available in Unreal 4.26 and onwards.</span></span>
 
 ![Plano de la función get HMDData](images/unreal-gaze-img-04.png)
 
-## <a name="using-c"></a><span data-ttu-id="fc0f1-128">Usar C++</span><span class="sxs-lookup"><span data-stu-id="fc0f1-128">Using C++</span></span>
+## <a name="using-c"></a><span data-ttu-id="648e6-128">Usar C++</span><span class="sxs-lookup"><span data-stu-id="648e6-128">Using C++</span></span>
 
-- <span data-ttu-id="fc0f1-129">En el archivo **Build.CS** del juego, agregue **EyeTracker** a la lista de **PublicDependencyModuleNames** :</span><span class="sxs-lookup"><span data-stu-id="fc0f1-129">In your game’s **build.cs** file, add **EyeTracker** to the **PublicDependencyModuleNames** list:</span></span>
+- <span data-ttu-id="648e6-129">En el archivo **Build.CS** del juego, agregue **EyeTracker** a la lista de **PublicDependencyModuleNames** :</span><span class="sxs-lookup"><span data-stu-id="648e6-129">In your game’s **build.cs** file, add **EyeTracker** to the **PublicDependencyModuleNames** list:</span></span>
 
 ```cpp
 PublicDependencyModuleNames.AddRange(
@@ -65,19 +65,19 @@ PublicDependencyModuleNames.AddRange(
 });
 ```
 
-- <span data-ttu-id="fc0f1-130">En **archivo/nueva clase de c++**, cree un nuevo actor de C++ denominado **EyeTracker**</span><span class="sxs-lookup"><span data-stu-id="fc0f1-130">In **File/ New C++ Class**, create a new C++ actor called **EyeTracker**</span></span>
-    - <span data-ttu-id="fc0f1-131">Una solución de Visual Studio abrirá la nueva clase EyeTracker.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-131">A Visual Studio solution will open up the new EyeTracker class.</span></span> <span data-ttu-id="fc0f1-132">Compile y ejecute para abrir el juego inreal con el nuevo actor EyeTracker.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-132">Build and run to open the Unreal game with the new EyeTracker actor.</span></span>  <span data-ttu-id="fc0f1-133">Busque "EyeTracker" en la ventana **colocar actores** y arrastre y coloque la clase en la ventana del juego para agregarla al proyecto:</span><span class="sxs-lookup"><span data-stu-id="fc0f1-133">Search for “EyeTracker” in the **Place Actors** window and drag and drop the class into the game window to add it to the project:</span></span>
+- <span data-ttu-id="648e6-130">En **archivo/nueva clase de c++**, cree un nuevo actor de C++ denominado **EyeTracker**</span><span class="sxs-lookup"><span data-stu-id="648e6-130">In **File/ New C++ Class**, create a new C++ actor called **EyeTracker**</span></span>
+    - <span data-ttu-id="648e6-131">Una solución de Visual Studio abrirá la nueva clase EyeTracker.</span><span class="sxs-lookup"><span data-stu-id="648e6-131">A Visual Studio solution will open up the new EyeTracker class.</span></span> <span data-ttu-id="648e6-132">Compile y ejecute para abrir el juego inreal con el nuevo actor EyeTracker.</span><span class="sxs-lookup"><span data-stu-id="648e6-132">Build and run to open the Unreal game with the new EyeTracker actor.</span></span>  <span data-ttu-id="648e6-133">Busque "EyeTracker" en la ventana **colocar actores** y arrastre y coloque la clase en la ventana del juego para agregarla al proyecto:</span><span class="sxs-lookup"><span data-stu-id="648e6-133">Search for “EyeTracker” in the **Place Actors** window and drag and drop the class into the game window to add it to the project:</span></span>
 
 ![Captura de pantalla de un actor con la ventana colocar actor abierta](images/unreal-gaze-img-06.png)
 
-- <span data-ttu-id="fc0f1-135">En **EyeTracker. cpp**, agregue includes para **EyeTrackerFunctionLibrary** y **DrawDebugHelpers**:</span><span class="sxs-lookup"><span data-stu-id="fc0f1-135">In **EyeTracker.cpp**, add includes for **EyeTrackerFunctionLibrary**, and **DrawDebugHelpers**:</span></span>
+- <span data-ttu-id="648e6-135">En **EyeTracker. cpp**, agregue includes para **EyeTrackerFunctionLibrary** y **DrawDebugHelpers**:</span><span class="sxs-lookup"><span data-stu-id="648e6-135">In **EyeTracker.cpp**, add includes for **EyeTrackerFunctionLibrary**, and **DrawDebugHelpers**:</span></span>
 
 ```cpp
 #include "EyeTrackerFunctionLibrary.h"
 #include "DrawDebugHelpers.h"
 ```
 
-<span data-ttu-id="fc0f1-136">Compruebe que el dispositivo admite el seguimiento ocular con **UEyeTrackerFunctionLibrary:: IsEyeTrackerConnected** antes de intentar obtener los datos de miras.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-136">Check that your device supports eye tracking with **UEyeTrackerFunctionLibrary::IsEyeTrackerConnected** before trying to get any gaze data.</span></span>  <span data-ttu-id="fc0f1-137">Si se admite el seguimiento ocular, busque el inicio y el final de un rayo para un seguimiento de línea de **UEyeTrackerFunctionLibrary:: GetGazeData**.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-137">If eye tracking is supported, find the start and end of a ray for a line trace from **UEyeTrackerFunctionLibrary::GetGazeData**.</span></span> <span data-ttu-id="fc0f1-138">A partir de ahí, puede crear un vector de miración y pasar su contenido a **LineTraceSingleByChannel** para depurar los resultados de los aciertos de rayo:</span><span class="sxs-lookup"><span data-stu-id="fc0f1-138">From there, you can construct a gaze vector and pass its contents to **LineTraceSingleByChannel** to debug any ray hit results:</span></span>
+<span data-ttu-id="648e6-136">Compruebe que el dispositivo admite el seguimiento ocular con **UEyeTrackerFunctionLibrary:: IsEyeTrackerConnected** antes de intentar obtener los datos de miras.</span><span class="sxs-lookup"><span data-stu-id="648e6-136">Check that your device supports eye tracking with **UEyeTrackerFunctionLibrary::IsEyeTrackerConnected** before trying to get any gaze data.</span></span>  <span data-ttu-id="648e6-137">Si se admite el seguimiento ocular, busque el inicio y el final de un rayo para un seguimiento de línea de **UEyeTrackerFunctionLibrary:: GetGazeData**.</span><span class="sxs-lookup"><span data-stu-id="648e6-137">If eye tracking is supported, find the start and end of a ray for a line trace from **UEyeTrackerFunctionLibrary::GetGazeData**.</span></span> <span data-ttu-id="648e6-138">A partir de ahí, puede crear un vector de miración y pasar su contenido a **LineTraceSingleByChannel** para depurar los resultados de los aciertos de rayo:</span><span class="sxs-lookup"><span data-stu-id="648e6-138">From there, you can construct a gaze vector and pass its contents to **LineTraceSingleByChannel** to debug any ray hit results:</span></span>
 
 ```cpp
 void AEyeTracker::Tick(float DeltaTime)
@@ -102,22 +102,22 @@ void AEyeTracker::Tick(float DeltaTime)
 }
 ```
 
-## <a name="next-development-checkpoint"></a><span data-ttu-id="fc0f1-139">Siguiente punto de control de desarrollo</span><span class="sxs-lookup"><span data-stu-id="fc0f1-139">Next Development Checkpoint</span></span>
+## <a name="next-development-checkpoint"></a><span data-ttu-id="648e6-139">Siguiente punto de control de desarrollo</span><span class="sxs-lookup"><span data-stu-id="648e6-139">Next Development Checkpoint</span></span>
 
-<span data-ttu-id="fc0f1-140">Si está siguiendo el viaje de desarrollo no real que hemos diseñado, se encuentra en medio de explorar los bloques de creación principales de MRTK.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-140">If you're following the Unreal development journey we've laid out, you're in the midst of exploring the MRTK core building blocks.</span></span> <span data-ttu-id="fc0f1-141">Desde aquí, puede continuar con el siguiente bloque de creación:</span><span class="sxs-lookup"><span data-stu-id="fc0f1-141">From here, you can continue to the next building block:</span></span>
-
-> [!div class="nextstepaction"]
-> [<span data-ttu-id="fc0f1-142">Seguimiento de las manos</span><span class="sxs-lookup"><span data-stu-id="fc0f1-142">Hand tracking</span></span>](unreal-hand-tracking.md)
-
-<span data-ttu-id="fc0f1-143">O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:</span><span class="sxs-lookup"><span data-stu-id="fc0f1-143">Or jump to Mixed Reality platform capabilities and APIs:</span></span>
+<span data-ttu-id="648e6-140">Si sigue el recorrido de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK.</span><span class="sxs-lookup"><span data-stu-id="648e6-140">If you're following the Unreal development journey we've laid out, you're in the midst of exploring the MRTK core building blocks.</span></span> <span data-ttu-id="648e6-141">Desde aquí, puede continuar con el siguiente bloque de compilación:</span><span class="sxs-lookup"><span data-stu-id="648e6-141">From here, you can continue to the next building block:</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="fc0f1-144">Cámara de HoloLens</span><span class="sxs-lookup"><span data-stu-id="fc0f1-144">HoloLens camera</span></span>](unreal-hololens-camera.md)
+> [<span data-ttu-id="648e6-142">Seguimiento de las manos</span><span class="sxs-lookup"><span data-stu-id="648e6-142">Hand tracking</span></span>](unreal-hand-tracking.md)
 
-<span data-ttu-id="fc0f1-145">Puede volver a los [puntos de control de desarrollo de Unreal](unreal-development-overview.md#2-core-building-blocks) en cualquier momento.</span><span class="sxs-lookup"><span data-stu-id="fc0f1-145">You can always go back to the [Unreal development checkpoints](unreal-development-overview.md#2-core-building-blocks) at any time.</span></span>
+<span data-ttu-id="648e6-143">O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:</span><span class="sxs-lookup"><span data-stu-id="648e6-143">Or jump to Mixed Reality platform capabilities and APIs:</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="fc0f1-146">Consulta también</span><span class="sxs-lookup"><span data-stu-id="fc0f1-146">See also</span></span>
-* [<span data-ttu-id="fc0f1-147">Calibración</span><span class="sxs-lookup"><span data-stu-id="fc0f1-147">Calibration</span></span>](../../calibration.md)
-* [<span data-ttu-id="fc0f1-148">Comodidad</span><span class="sxs-lookup"><span data-stu-id="fc0f1-148">Comfort</span></span>](../../design/comfort.md)
-* [<span data-ttu-id="fc0f1-149">Mirada y confirmación</span><span class="sxs-lookup"><span data-stu-id="fc0f1-149">Gaze and commit</span></span>](../../design/gaze-and-commit.md)
-* [<span data-ttu-id="fc0f1-150">Entrada de voz</span><span class="sxs-lookup"><span data-stu-id="fc0f1-150">Voice input</span></span>](../../out-of-scope/voice-design.md)
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="648e6-144">Cámara de HoloLens</span><span class="sxs-lookup"><span data-stu-id="648e6-144">HoloLens camera</span></span>](unreal-hololens-camera.md)
+
+<span data-ttu-id="648e6-145">Puede volver a los [puntos de control de desarrollo de Unreal](unreal-development-overview.md#2-core-building-blocks) en cualquier momento.</span><span class="sxs-lookup"><span data-stu-id="648e6-145">You can always go back to the [Unreal development checkpoints](unreal-development-overview.md#2-core-building-blocks) at any time.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="648e6-146">Consulta también</span><span class="sxs-lookup"><span data-stu-id="648e6-146">See also</span></span>
+* [<span data-ttu-id="648e6-147">Calibración</span><span class="sxs-lookup"><span data-stu-id="648e6-147">Calibration</span></span>](../../calibration.md)
+* [<span data-ttu-id="648e6-148">Comodidad</span><span class="sxs-lookup"><span data-stu-id="648e6-148">Comfort</span></span>](../../design/comfort.md)
+* [<span data-ttu-id="648e6-149">Mirada y confirmación</span><span class="sxs-lookup"><span data-stu-id="648e6-149">Gaze and commit</span></span>](../../design/gaze-and-commit.md)
+* [<span data-ttu-id="648e6-150">Entrada de voz</span><span class="sxs-lookup"><span data-stu-id="648e6-150">Voice input</span></span>](../../out-of-scope/voice-design.md)
