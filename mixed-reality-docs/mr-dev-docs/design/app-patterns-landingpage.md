@@ -1,21 +1,22 @@
 ---
 title: Elementos de la experiencia de usuario de realidad mixta
-description: Este documento contiene un conjunto de temas que explican cómo diseñar dispositivos de realidad mixta.
+description: Obtenga información sobre cómo diseñar aplicaciones para dispositivos de realidad mixta con elementos fundamentales, controles comunes y comportamientos.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: overview
 keywords: Diseño de la experiencia del usuario, experiencia mixta UX, experiencia del usuario, patrones de aplicaciones, controles, estilo, HoloLens, interacción, interacción espacial, IU espacial, elementos de la experiencia de usuario, comportamientos, bloques de creación, tipografía, color, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 47f7877e9a5f8a71bcae9a16011210d9fc897040
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: a1b087230b5a744cb6194c5cb791e4085aa791c6
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847783"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009705"
 ---
 # <a name="ux-elements-overview"></a>Información general sobre elementos UX
 
 ## <a name="foundational-elements"></a>Elementos fundamentales
+
 Obtenga información sobre los elementos fundamentales que necesita para diseñar una excelente experiencia de realidad mixta.
 
 :::row:::
@@ -39,6 +40,7 @@ Obtenga información sobre los elementos fundamentales que necesita para diseña
 <br>
 
 ## <a name="common-controls-and-behaviors"></a>Controles y comportamientos comunes
+
 Obtenga información sobre las interacciones espaciales y los bloques de compilación de la interfaz de usuario comunes que se usan con frecuencia para las experiencias de realidad mixta.
 
 :::row:::

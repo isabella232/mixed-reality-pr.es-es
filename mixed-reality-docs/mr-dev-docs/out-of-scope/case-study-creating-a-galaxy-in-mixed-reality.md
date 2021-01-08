@@ -1,17 +1,17 @@
 ---
 title: 'Caso práctico: creación de una galaxia en una realidad mixta'
-description: Antes de que se enviara a Microsoft HoloLens, hemos preguntado a nuestra comunidad de desarrolladores qué tipo de aplicación les gustaría ver una compilación de equipo interna con experiencia para el nuevo dispositivo. Se comparten más de 5000 ideas y, después de un sondeo de Twitter de 24 horas, el ganador era una idea denominada "explorador de Galaxy".
+description: Obtenga información sobre la aplicación "Galaxy Explorer" y cómo se creó para la HoloLens de la comunidad y después de un sondeo de Twitter de 24 horas por parte de los desarrolladores de la comunidad.
 author: karimluccin
 ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy Explorer, HoloLens, Windows Mixed Reality, compartir ideas, caso práctico
-ms.openlocfilehash: 91e1c356d69d2b58795a0a0003dd5ffaf0ef1bdc
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 0226c38e9fa21407a7a6529693a2adb3c5da7659
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693322"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009785"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Caso práctico: creación de una galaxia en una realidad mixta
 
@@ -41,7 +41,7 @@ Iniciamos pruebas de esfuerzo con miles de objetos de punto en distintos patrone
 
 ### <a name="creating-the-position-of-the-stars"></a>Crear la posición de las estrellas
 
-Uno de nuestros miembros del equipo ya ha escrito el código de C# que generaría estrellas en su posición inicial. Las estrellas se encuentran en una elipse y su posición puede describirse mediante ( **curveOffset** , **ellipseSize** , **elevation** ), donde **curveOffset** es el ángulo de la estrella a lo largo de la elipse, **ellipseSize** es la dimensión de la elipse a lo largo de X y Z, y eleva la elevación adecuada de la estrella dentro de la galaxia. Por lo tanto, podemos crear un búfer ([ComputeBuffer de Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) que se inicializaría con cada atributo de estrella y lo enviaría en la GPU donde residiría para el resto de la experiencia. Para dibujar este búfer, usamos [DrawProcedural de Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , que permite ejecutar un sombreador (código en una GPU) en un conjunto arbitrario de puntos sin tener una malla real que represente la galaxia:
+Uno de nuestros miembros del equipo ya ha escrito el código de C# que generaría estrellas en su posición inicial. Las estrellas se encuentran en una elipse y su posición puede describirse mediante (**curveOffset**, **ellipseSize**, **elevation**), donde **curveOffset** es el ángulo de la estrella a lo largo de la elipse, **ellipseSize** es la dimensión de la elipse a lo largo de X y Z, y eleva la elevación adecuada de la estrella dentro de la galaxia. Por lo tanto, podemos crear un búfer ([ComputeBuffer de Unity](https://docs.unity3d.com/ScriptReference/ComputeBuffer.html)) que se inicializaría con cada atributo de estrella y lo enviaría en la GPU donde residiría para el resto de la experiencia. Para dibujar este búfer, usamos [DrawProcedural de Unity](https://docs.unity3d.com/ScriptReference/Graphics.DrawProcedural.html) , que permite ejecutar un sombreador (código en una GPU) en un conjunto arbitrario de puntos sin tener una malla real que represente la galaxia:
 
 **CPU**
 
@@ -85,14 +85,14 @@ Una vez que se agregan las elipses suficientes y se establecen para rotar, el Ga
 
 ### <a name="creating-the-motion-of-the-stars"></a>Crear el movimiento de las estrellas
 
-Para animar el movimiento de estrella general, era necesario agregar un ángulo constante para cada fotograma y hacer que las estrellas se muevan a lo largo de sus puntos suspensivos en una velocidad radial constante. Esta es la razón principal para usar **curveOffset** . Esto no es técnicamente correcto, ya que las estrellas se moverán más rápido a lo largo de los extremos largos de las elipses, pero el movimiento general se considera adecuado.
+Para animar el movimiento de estrella general, era necesario agregar un ángulo constante para cada fotograma y hacer que las estrellas se muevan a lo largo de sus puntos suspensivos en una velocidad radial constante. Esta es la razón principal para usar **curveOffset**. Esto no es técnicamente correcto, ya que las estrellas se moverán más rápido a lo largo de los extremos largos de las elipses, pero el movimiento general se considera adecuado.
 
 ![Las estrellas se mueven más rápido en el arco largo, más lentamente en los bordes.](images/ellipse-movement.jpg)
 
 Las estrellas se mueven más rápido en el arco largo, más lentamente en los bordes.
 
 
-Con eso, cada estrella se describe por completo ( **curveOffset** , **ellipseSize** , **elevación** , **Age** ), donde **Age** es una acumulación del tiempo total transcurrido desde que se cargó la escena.
+Con eso, cada estrella se describe por completo (**curveOffset**, **ellipseSize**, **elevación**, **Age**), donde **Age** es una acumulación del tiempo total transcurrido desde que se cargó la escena.
 
 
 

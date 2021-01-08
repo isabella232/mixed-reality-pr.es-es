@@ -1,17 +1,17 @@
 ---
 title: Seguimiento de códigos QR
-description: Obtenga información sobre cómo detectar códigos QR en HoloLens 2.
+description: Obtenga información sobre cómo detectar códigos QR, agregar funcionalidades de cámara web y administrar sistemas de coordenadas en aplicaciones de realidad mixta en HoloLens 2.
 author: dorreneb
 ms.author: dobrown
 ms.date: 05/15/2019
 ms.topic: article
 keywords: VR, LBE, entretenimiento basado en ubicación, VR Arcade, Arcade, inmersivo, QR, código QR, hololens2
-ms.openlocfilehash: 023da7a98d1559d9dd0387a7efbaf26ad577df50
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 7e5931e0d23ef6c905b8ec54d08e572a89e747e0
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530011"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009405"
 ---
 # <a name="qr-code-tracking"></a>Seguimiento de códigos QR
 

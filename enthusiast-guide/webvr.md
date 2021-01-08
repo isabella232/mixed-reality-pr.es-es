@@ -1,14 +1,14 @@
 ---
 title: Uso de WebVR con Windows Mixed Reality
-description: Describe WebVR y cómo usarlo con Microsoft Edge en auriculares Windows Mixed Reality.
+description: Conozca los conceptos básicos de WebVR, cómo usarlos con Microsoft Edge en auriculares de realidad mixta de Windows y problemas comunes de solución de problemas.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, WebVR, Edge, Microsoft Edge, exploración Web
-ms.openlocfilehash: 92f1d00c7f635c88a727732fb743996a654ba775
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 0b0d07383b43feaa11fb9bfac2b071d8d4d80b19
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725606"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009445"
 ---
 # <a name="using-webvr-with-windows-mixed-reality"></a>Uso de WebVR con Windows Mixed Reality
 

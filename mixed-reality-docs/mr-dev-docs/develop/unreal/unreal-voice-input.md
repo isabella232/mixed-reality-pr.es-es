@@ -1,17 +1,17 @@
 ---
-title: Entrada de voz
-description: Tutorial sobre la configuración y el uso de la entrada de voz en HoloLens 2 e inreal Engine
+title: Entrada de voz en inreal
+description: Obtenga información sobre cómo configurar y usar la entrada de voz, las asignaciones de voz y el reconocimiento en aplicaciones de realidad mixta no reales para dispositivos HoloLens 2.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 keywords: Windows Mixed Reality, inreal, no real, motor 4, UE4, HoloLens 2, voz, entrada de voz, reconocimiento de voz, realidad mixta, desarrollo, características, documentación, guías, hologramas, desarrollo de juegos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 504a2d978e3c9bc698e8edd11ea8a4d6be13795a
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: c7ac523258dc44aa261470aea8cdf21f32c915b2
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609756"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010075"
 ---
 # <a name="voice-input-in-unreal"></a>Entrada de voz en inreal
 

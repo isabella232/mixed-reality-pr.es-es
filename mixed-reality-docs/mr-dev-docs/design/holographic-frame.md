@@ -1,17 +1,17 @@
 ---
 title: Marco holográfico
-description: Los usuarios ven el mundo de la realidad mixta a través del marco holográfica.
+description: Obtenga información sobre cómo los usuarios ven el mundo de la realidad mixta a través del marco holográfica y cómo diseñar mejor la experiencia.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/25/2020
 ms.topic: article
 keywords: HoloLens, Windows Mixed Reality, fotograma holográfica, campo de vista, campo de subconjuntos, auricular de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, interacciones, navegación, menú
-ms.openlocfilehash: 679f629d5190ad6e3df2d92d2adfcce998f7dea5
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 5898f98054afadb58fb059ff54be23f015232d55
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847386"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009595"
 ---
 # <a name="holographic-frame"></a>Marco holográfico
 

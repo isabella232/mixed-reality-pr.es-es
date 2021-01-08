@@ -1,17 +1,17 @@
 ---
 title: Seguimiento de las manos en Unreal
-description: Explica cómo usar el seguimiento de manos en inreal
+description: Obtenga información sobre cómo usar la entrada, la postura, las mallas de mano y las animaciones de vínculos activos en aplicaciones de realidad mixta.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 keywords: Windows Mixed Reality, seguimiento de mano, inreal, inreal Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, desarrollo, características, documentación, guías, hologramas, desarrollo de juegos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 66ae1994f2bbee3ba4786a7c4eeebfe1cd57ca37
-ms.sourcegitcommit: fbeff51cae92add88d2b960c9b7bbfb04d5a0291
+ms.openlocfilehash: e482c93233348325736d2c224788e9174c1f3b67
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97002707"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010165"
 ---
 # <a name="hand-tracking-in-unreal"></a>Seguimiento de las manos en Unreal
 
@@ -162,7 +162,7 @@ HoloLens 2 realiza el seguimiento de gestos espaciales, lo que significa que pue
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de desarrollo no real que hemos diseñado, se encuentra en medio de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de creación:
+Si sigue el recorrido de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Anclajes espaciales locales](unreal-spatial-anchors.md)

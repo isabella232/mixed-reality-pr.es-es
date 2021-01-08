@@ -1,17 +1,17 @@
 ---
 title: Transferencias de delimitadores locales en Unity
-description: Transfiera los anclajes entre varios dispositivos de HoloLens en una aplicación de Unity.
+description: Obtenga información sobre cómo transferir delimitadores entre varios dispositivos HoloLens en una aplicación de Unity Mixed Reality.
 author: fieldsjacksong
 ms.author: jacksonf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Uso compartido, delimitador, WorldAnchor, MR Sharing 250, WorldAnchorTransferBatch, SpatialPerception, transferencia, transferencia de delimitador local, exportación de delimitadores, importación de delimitadores
-ms.openlocfilehash: d6aebfb89d05926b1f773dea58ee65fead57988e
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 1048e6a3cfc41a04cd49e201e5d1841e805a4193
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91694942"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009645"
 ---
 # <a name="local-anchor-transfers-in-unity"></a>Transferencias de delimitadores locales en Unity
 
@@ -35,7 +35,7 @@ Cómo habilitar la funcionalidad *SpatialPerception* :
 ### <a name="anchor-transfer"></a>Transferencia de delimitador
 
 **Espacio de nombres:** *UnityEngine. XR. WSA. Sharing*<br>
-**Tipo** : *WorldAnchorTransferBatch*
+**Tipo**: *WorldAnchorTransferBatch*
 
 Para transferir un [WorldAnchor](../develop/unity/coordinate-systems-in-unity.md), debe establecer el delimitador que se va a transferir. El usuario de un HoloLens examina su entorno y, de forma manual o mediante programación, elige un punto en el espacio para que sea el delimitador de la experiencia compartida. Los datos que representan este punto se pueden serializar y transmitir a los otros dispositivos que compartan la experiencia. Después, cada dispositivo deserializa los datos de delimitador e intenta buscar ese punto en el espacio. Para que la transferencia de delimitador funcione, cada dispositivo debe haber explorado en el entorno suficiente, de modo que se pueda identificar el punto representado por el delimitador.
 
@@ -43,7 +43,7 @@ Para transferir un [WorldAnchor](../develop/unity/coordinate-systems-in-unity.md
 
 El código de ejemplo de esta página tiene algunos campos que se deben inicializar:
 1. *GameObject rootGameObject* es un *GameObject* en Unity que tiene un componente *WorldAnchor* en él. Un usuario de la experiencia compartida colocará esta *GameObject* y exportará los datos a los demás usuarios.
-2. *WorldAnchor gameRootAnchor* es *UnityEngine. XR. WSA. WorldAnchor* que se encuentra en *rootGameObject* .
+2. *WorldAnchor gameRootAnchor* es *UnityEngine. XR. WSA. WorldAnchor* que se encuentra en *rootGameObject*.
 3. *Byte [] importedData* es una matriz de bytes para el delimitador serializado que recibe cada cliente a través de la red.
 
 ```

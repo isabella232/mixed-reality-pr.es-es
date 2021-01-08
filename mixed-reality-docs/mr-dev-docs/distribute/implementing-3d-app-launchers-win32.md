@@ -1,17 +1,17 @@
 ---
 title: Implementación de iniciadores de aplicaciones 3D (aplicaciones Win32)
-description: Aprenda a crear iniciadores de aplicaciones 3D y logotipos para aplicaciones y juegos de Win32 VR para el menú Inicio de Windows Mixed Reality y el entorno de inicio.
+description: Aprenda a crear iniciadores de aplicaciones 3D y logotipos para aplicaciones y juegos de Win32 VR para el menú Inicio y el entorno doméstico.
 author: thmignon
 ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, icono, modelado, iniciador, selector 3D, mosaico, cubo dinámico, Win32, auricular de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, manifiesto
-ms.openlocfilehash: 5a3e38de54aad1fceb4804003043c87dddab61c4
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 63b07664cb09f51e6d0588fdc50d141ad8985093
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757823"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009675"
 ---
 # <a name="implement-3d-app-launchers-win32-apps"></a>Implementación de iniciadores de aplicaciones 3D (aplicaciones Win32)
 

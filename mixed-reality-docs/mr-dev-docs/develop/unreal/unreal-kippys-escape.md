@@ -1,6 +1,6 @@
 ---
 title: La realización del escape de Kippy
-description: Siga con nosotros a medida que exploramos la realización del escape de Kippy para HoloLens 2 en el motor inreal.
+description: Siga con nosotros a medida que exploramos la creación de la aplicación de realidad mixta de escape de Kippy para HoloLens 2 en el motor inreal.
 author: sw5813
 ms.author: suwu
 ms.date: 9/4/2020
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: No real, no real Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, implementación en dispositivo, PC, documentación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: eaba6ea1ee77ffffb74008402eafd1f09fd822e5
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: df199b6a3215158e15fb1252dd75c58aea5bc2ab
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609686"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010045"
 ---
 # <a name="the-making-of-kippys-escape"></a>La realización del escape de Kippy
 
@@ -21,8 +21,6 @@ Kippy el robot se reactiva para encontrarse en una isla. Es el usuario quien pue
 
 > [!IMPORTANT]
 > Asegúrese de que está usando el **motor inreal 4,25 o posterior** si está compilando el escape de Kippy desde el repositorio de github.
-
-## <a name="overview"></a>Información general
 
 El escape de Kippy es una aplicación de ejemplo de [HoloLens 2](https://docs.microsoft.com/hololens/hololens2-hardware) de código abierto compilada con las herramientas inreal Engine 4 y [UX de realidad mixta](https://github.com/microsoft/MixedReality-UXTools-Unreal). En esta publicación, le guiaremos a través de nuestro proceso desde los primeros principios y el diseño visual hasta la implementación y optimización de la experiencia. Puede encontrar más información sobre el desarrollo de aplicaciones de realidad mixta con las herramientas de MRTK UX en la [información general sobre el desarrollo inreal](unreal-development-overview.md).
 

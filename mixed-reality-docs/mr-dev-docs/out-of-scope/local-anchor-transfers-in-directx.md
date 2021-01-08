@@ -1,17 +1,17 @@
 ---
 title: Transferencias de delimitadores locales en DirectX
-description: Explica cómo sincronizar dos dispositivos HoloLens transfiriendo anclajes espaciales.
+description: Obtenga información sobre cómo sincronizar dos dispositivos HoloLens mediante la transferencia, exportación y serialización de delimitadores espaciales.
 author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, sincronizar, delimitador espacial, transferencia, multijugador, vista, escenario, tutorial, código de ejemplo, transferencia, transferencia de delimitador local, exportación de delimitadores, importación de delimitadores
-ms.openlocfilehash: 6d54b29a01617f9d78b7fdfec0ebc04a3cd48002
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 5007220f480a3093864502e624737e9707bd3952
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91691798"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009655"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Transferencias de delimitadores locales en DirectX
 
@@ -31,7 +31,7 @@ Tenga en cuenta que los anclajes espaciales no pueden transferirse entre diferen
 
 ## <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>Configuración de la aplicación para usar la funcionalidad spatialPerception
 
-Se debe conceder permiso a la aplicación para usar la funcionalidad spatialPerception antes de poder usar [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Esto es necesario porque la transferencia de un delimitador espacial implica compartir imágenes de sensor recopiladas a lo largo del tiempo en proximidad de ese delimitador, lo que puede incluir información confidencial.
+Se debe conceder permiso a la aplicación para usar la funcionalidad SpatialPerception antes de poder usar [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Esto es necesario porque la transferencia de un delimitador espacial implica compartir imágenes de sensor recopiladas a lo largo del tiempo en proximidad de ese delimitador, lo que puede incluir información confidencial.
 
 Declare esta funcionalidad en el archivo package. appxmanifest de la aplicación. Este es un ejemplo:
 
@@ -675,6 +675,6 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 Eso es todo. Ahora, debe tener suficiente información para intentar localizar los delimitadores recibidos a través de la red. De nuevo, tenga en cuenta que el cliente debe tener suficientes datos de seguimiento visual para que el espacio Localice correctamente el delimitador. Si no funciona de inmediato, intente recorrer un rato. Si sigue sin funcionar, haga que el servidor envíe más delimitadores y use las comunicaciones de red para aceptar una que funcione para el cliente. Para probar esto, descargue HolographicSpatialAnchorTransferSample, configure las direcciones IP del cliente y del servidor y impleméntela en los dispositivos cliente y servidor HoloLens.
 
 ## <a name="see-also"></a>Consulte también
-* [Parallel Patterns Library (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
+* [Biblioteca de modelos de procesamiento paralelo (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
 * [Windows. networking. StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
 * [Windows. networking. StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)

@@ -1,17 +1,17 @@
 ---
 title: Captura de realidad mixta para desarrolladores
-description: Prácticas recomendadas para la captura de realidad mixta para desarrolladores.
+description: Obtenga información sobre las prácticas recomendadas para habilitar, usar y representar una captura de realidad mixta para desarrolladores.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, Foto, vídeo, captura, cámara
-ms.openlocfilehash: 13765686c3e86822efff17b25995a6eaa4008e6c
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: e55100003859e3581bdd7f6e1da312e1fdd8cf57
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613349"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009945"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Captura de realidad mixta para desarrolladores
 
@@ -224,13 +224,13 @@ Efecto de vídeo de MRC (**Windows. Media. MixedRealityCapture. MixedRealityCapt
 |  Nombre de propiedad  |  Tipo  |  Valor predeterminado  |  Descripción |
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (videograbación)  |  Describir en qué secuencia de captura se utiliza este efecto. Audio no está disponible. |
-|  HologramCompositionEnabled  |  boolean  |  TRUE  |  Marca para habilitar o deshabilitar los hologramas en la captura de vídeo. |
-|  RecordingIndicatorEnabled  |  boolean  |  TRUE  |  Marca para habilitar o deshabilitar el indicador de grabación en pantalla durante la captura de hologramas. |
-|  VideoStabilizationEnabled  |  boolean  |  FALSE  |  Marca para habilitar o deshabilitar la estabilización de vídeo con el seguimiento de HoloLens. |
+|  HologramCompositionEnabled  |  boolean  |  true  |  Marca para habilitar o deshabilitar los hologramas en la captura de vídeo. |
+|  RecordingIndicatorEnabled  |  boolean  |  true  |  Marca para habilitar o deshabilitar el indicador de grabación en pantalla durante la captura de hologramas. |
+|  VideoStabilizationEnabled  |  boolean  |  false  |  Marca para habilitar o deshabilitar la estabilización de vídeo con el seguimiento de HoloLens. |
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  Establezca el número de fotogramas históricos que se usan para la estabilización de vídeo. 0 es 0-latencia y casi "gratis" desde una perspectiva de eficacia y rendimiento. 15 se recomienda para obtener una mayor calidad (a costa de 15 fotogramas de latencia y memoria). |
 |  GlobalOpacityCoefficient  |  FLOAT  |  0,9 (HoloLens) 1,0 (auricular envolvente)  |  Establezca el coeficiente de opacidad global del holograma en el intervalo de 0,0 (totalmente transparente) a 1,0 (totalmente opaco). |
-|  BlankOnProtectedContent  |  boolean  |  FALSE  |  Marca para habilitar o deshabilitar la devolución de un marco vacío si hay una aplicación de UWP 2D que muestra contenido protegido. Si esta marca es falsa y una aplicación de UWP en 2D muestra contenido protegido, la aplicación de UWP de 2D se reemplazará por una textura de contenido protegido tanto en el casco como en la captura de realidad mixta. |
-|  ShowHiddenMesh  |  boolean  |  FALSE  |  Marca para habilitar o deshabilitar que muestra la malla de área oculta y el contenido adyacente de la cámara holográfica. |
+|  BlankOnProtectedContent  |  boolean  |  false  |  Marca para habilitar o deshabilitar la devolución de un marco vacío si hay una aplicación de UWP 2D que muestra contenido protegido. Si esta marca es falsa y una aplicación de UWP en 2D muestra contenido protegido, la aplicación de UWP de 2D se reemplazará por una textura de contenido protegido tanto en el casco como en la captura de realidad mixta. |
+|  ShowHiddenMesh  |  boolean  |  false  |  Marca para habilitar o deshabilitar que muestra la malla de área oculta y el contenido adyacente de la cámara holográfica. |
 | Outlocate | Size | 0, 0 | Establezca el tamaño de salida deseado después de recortar para la estabilización de vídeo. Se elige un tamaño de recorte predeterminado si es 0 o se especifica un tamaño de salida no válido. |
 | PreferredHologramPerspective | UINT32 | **Representación de** la configuración de la cámara en el portal de dispositivos de Windows | Enumeración usada para indicar qué configuración de la vista de cámara holográfica debe capturarse: 0 (Mostrar) significa que no se le pedirá a la aplicación que se represente desde la cámara de foto/vídeo, 1 (PhotoVideoCamera) solicitará a la aplicación que se represente desde la cámara de foto/vídeo (si la aplicación lo admite). Solo se admite en HoloLens 2 |
 

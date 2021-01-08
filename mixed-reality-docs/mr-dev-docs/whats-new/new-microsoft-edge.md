@@ -1,19 +1,19 @@
 ---
 title: Windows Mixed Reality y el nuevo Microsoft Edge
-description: Prepárese para el nuevo Microsoft Edge en Windows Mixed Reality. Incluye los cambios que se esperan, las actualizaciones que se deben tener en cuenta y los problemas conocidos.
+description: Obtenga información sobre el nuevo Microsoft Edge para la realidad mixta, incluido lo que se espera, las actualizaciones que se van a buscar y los problemas conocidos.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Edge, nuevo, Web envolvente, Microsoft Edge, explorador, VR, 360, 360 video, 360 Viewer, webxr, webvr
-ms.openlocfilehash: 341c7e3d53bd7fb0c569a8acffcf56662c8d2c32
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: ef55ee564e0a7ea11aaaad62ebf259459454ab72
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757443"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010035"
 ---
-# <a name="windows-mixed-reality-and-the-new-microsoft-edge"></a>Windows Mixed Reality y el nuevo Microsoft Edge
+# <a name="the-new-microsoft-edge-for-windows-mixed-reality"></a>El nuevo Microsoft Edge para Windows Mixed Reality
 
 El [nuevo Microsoft Edge ya está disponible para su descarga](https://blogs.windows.com/windowsexperience/?p=173496), pero los clientes también pueden [esperar una actualización futura para instalarlo con Windows 10](https://blogs.windows.com/msedgedev/2020/01/15/upgrading-new-microsoft-edge-79-chromium/), siguiendo un enfoque de implementación medido en los próximos meses. 
 

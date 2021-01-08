@@ -1,17 +1,17 @@
 ---
 title: Visualización de malla espacial
-description: Obtenga información acerca de cómo los dispositivos entienden los entornos físicos mediante mallas espaciales.
+description: Obtenga información sobre las directrices de diseño y la comprensión del entorno físico con la visualización de malla espacial en MRTK.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: article
 keywords: Realidad mixta, HoloLens, controles de IU, interacción, IU, experiencia de usuario, diseño de la experiencia del usuario, interfaz de usuario espacial, interacción espacial, interfaz de usuario 3D, experiencia en 3D, auriculares
-ms.openlocfilehash: ffa13da6762b803ba2a3f370308ac2af65164ecf
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 0f9cdc218c6fe54b8892c39a6a76f023e203d334
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848196"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009925"
 ---
 # <a name="spatial-mesh"></a>Malla espacial
 

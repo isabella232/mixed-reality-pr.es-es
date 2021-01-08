@@ -1,17 +1,17 @@
 ---
 title: Notas de la versión (octubre de 2017)
-description: Notas de la versión de Windows Mixed Reality para Windows 10 Fall Creators Update (2017 de octubre).
+description: Manténgase al día de las notas de la versión de Windows Mixed Reality para Windows 10 Fall Creators Update (2017 de octubre).
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Notas de la versión, versión, Windows 10, compilación, RS3, so
-ms.openlocfilehash: 7c5af3b8ead4aa4bee9e342e9c41b696a30e5e2c
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 83c16a40388960547cfcf7444e1ae630c2f5b7f2
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725916"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009495"
 ---
 # <a name="release-notes---october-2017"></a>Notas de la versión (octubre de 2017)
 

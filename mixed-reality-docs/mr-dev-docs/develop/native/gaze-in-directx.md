@@ -1,17 +1,17 @@
 ---
 title: Control con la cabeza y los ojos de DirectX
-description: Obtenga información sobre cómo usar el seguimiento de la mirada y el ojo en aplicaciones DirectX nativas.
+description: Obtenga información acerca de cómo solicitar, usar y desempaquetar datos de raycasting del seguimiento de la mirada y del ojo en aplicaciones DirectX nativas.
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 08/04/2020
 ms.topic: article
 keywords: miras hacia abajo, hacia abajo, seguimiento del cabezal, seguimiento ocular, DirectX, entrada, hologramas, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 4d7ed9b735b5f3cd7029e42ccc75bc539e3c4f4b
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: a518e5e4153da9c58295abb257a8ed2d69145211
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848092"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009555"
 ---
 # <a name="head-gaze-and-eye-gaze-input-in-directx"></a>Entrada de ojo y mira fijamente en DirectX
 
@@ -27,6 +27,7 @@ En Windows Mixed Reality, se usa la entrada de ojo y mirarnos para determinar lo
 Se puede acceder a los rayos de mira y hacia la vista a través de la API de  [SpatialPointerPose](https://docs.microsoft.com//uwp/api/Windows.UI.Input.Spatial.SpatialPointerPose) . Llame a [SpatialPointerPose:: TryGetAtTimestamp](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialpointerpose.trygetattimestamp) para recibir un nuevo objeto SpatialPointerPose en la marca de tiempo y el [sistema de coordenadas](coordinate-systems-in-directx.md)especificados. Este SpatialPointerPose contiene el origen y la dirección del encabezado. También contiene un origen y una dirección de mirada si el seguimiento ocular está disponible.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
+
 <table>
 <colgroup>
     <col width="25%" />

@@ -1,17 +1,17 @@
 ---
 title: Controladores de HP reverberación G2 en la realidad
-description: Instrucciones sobre el uso de los controladores de HP reverberación G2 en OpenXR y SteamVR
+description: Aprenda a usar los nuevos controladores de HP reverberación G2 en OpenXR y SteamVR para aplicaciones de realidad mixtas no reales.
 author: hferrone
 ms.author: jacksonf
 ms.date: 10/9/2020
 ms.topic: article
 keywords: Unreal, nonreal Engine 4, UE4, reverberation, reverberación G2, HP reverberación G2, realidad mixta, desarrollo, controladores de movimiento, entrada de usuario, características, nuevo proyecto, emulador, documentación, guías, características, hologramas, desarrollo de juegos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 419f5b803a6abb2b19080807ef9f403b96758683
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 83ff19c0527ee2d10a4f00ccd84539ca16d05517
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609596"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009995"
 ---
 # <a name="hp-reverb-g2-controllers-in-unreal"></a>Controladores de HP reverberación G2 en la realidad 
 

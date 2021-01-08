@@ -1,17 +1,17 @@
 ---
 title: Movimiento de inicio
-description: Iniciar el gesto para llamar al menú Inicio.
+description: Obtenga información acerca de cómo usar el gesto de inicio para llamar al menú Inicio en HoloLens y en los auriculares con forma de Windows Mixed Reality.
 author: shengkait
 ms.author: cmeekhof
 ms.date: 10/22/2019
 ms.topic: article
 keywords: Realidad mixta, gestos, interacción, diseño, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, floración
-ms.openlocfilehash: 9df8d54dcf63c13dedabdbf55300b3516a2c9bf1
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 9e29d483375db103cebc30be9117e40899a9f81f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848162"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009435"
 ---
 # <a name="start-gesture"></a>Movimiento de inicio
 

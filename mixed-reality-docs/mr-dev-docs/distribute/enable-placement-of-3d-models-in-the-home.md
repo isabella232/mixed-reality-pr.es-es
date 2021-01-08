@@ -1,17 +1,17 @@
 ---
 title: Habilitación de la colocación de modelos 3D en el hogar
-description: Cómo colocar modelos 3D desde su sitio web o aplicación en la Página principal de Windows Mixed Reality
+description: Obtenga información sobre cómo colocar modelos 3D desde su sitio web o aplicación en la Página principal de Windows Mixed Reality.
 author: thmignon
 ms.author: thmignon
 ms.date: 05/04/2018
 ms.topic: article
 keywords: 3D, modelo, lugar en casa, lugar, mundo, modelado, Inicio de la realidad mixta, Web, aplicación, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: ad35e1d010e32c4729b0d0dd58943dabdee86e09
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: c92ba7a3242b618b9ef9cef01ae400cf4dbf36b2
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757818"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010105"
 ---
 # <a name="enable-placement-of-3d-models-in-the-mixed-reality-home"></a>Habilitación de la colocación de modelos 3D en el ambiente principal
 
@@ -42,7 +42,7 @@ Por ejemplo, si está desarrollando una aplicación que muestra un catálogo de 
     </tr>
 </table>
 
-## <a name="overview"></a>Información general
+## <a name="the-basics"></a>Conceptos básicos
 
 Hay dos pasos para habilitar la selección de ubicación de modelos 3D en la Página principal de Windows Mixed Reality:
 1. [Asegúrese de que el modelo 3D es compatible con la Página principal de Windows Mixed Reality](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md).

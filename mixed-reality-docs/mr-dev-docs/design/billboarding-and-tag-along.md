@@ -1,17 +1,17 @@
 ---
 title: Etiquetado y vista frontal continua
-description: Los objetos con la cartelera siempre se orientan a sí mismos para que se enfrente al usuario.
+description: Obtenga información sobre cómo usar objetos con la cartelera, que siempre se orientan a los usuarios en aplicaciones de realidad mixta.
 author: radicalad
 ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, la cartelera, la etiqueta, junto con el casco de realidad mixta, el casco de la realidad mixta de Windows, el casco de realidad virtual, HoloLens, MRTK, el kit de herramientas de realidad mixta
-ms.openlocfilehash: 44f2678fe2f8e4be071086f46037749d1df61ae4
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 92caa1bcd325cefecc6d3820b819cecfce6fc09c
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848036"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009624"
 ---
 # <a name="billboarding-and-tag-along"></a>Etiquetado y vista frontal continua
 

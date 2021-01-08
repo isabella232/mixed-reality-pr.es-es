@@ -1,17 +1,17 @@
 ---
 title: Proceso de creación de recursos
-description: Instrucciones para crear recursos para experiencias de realidad mixta.
+description: Aprenda a crear, comprar y trasladar recursos para experiencias de realidad mixta.
 author: shengkait
 ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
 keywords: activos, creación, proceso, presupuesto, polígonos, texturas, sombreadores, rendimiento, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, recursos
-ms.openlocfilehash: 2089ac7a870d9b4b13d314774d6d6124b78bb15c
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: a5f4271de522111b0ef994869b9ecf4910582562
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847552"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009625"
 ---
 # <a name="asset-creation-process"></a>Proceso de creación de recursos
 
@@ -51,7 +51,7 @@ A continuación se muestra un presupuesto de ejemplo para su experiencia. El ren
 </tr><tr>
 <td> Sobrecarga general</td><td> 5 %</td><td> 5 %</td><td> 5 %</td>
 </tr><tr>
-<td> <b>Total</b></td><td> <b>65%</b></td><td> <b>90 %</b></td><td> <b>70%</b></td>
+<td> <b>Total</b></td><td> <b>65 %</b></td><td> <b>90 %</b></td><td> <b>70%</b></td>
 </tr>
 </table>
 

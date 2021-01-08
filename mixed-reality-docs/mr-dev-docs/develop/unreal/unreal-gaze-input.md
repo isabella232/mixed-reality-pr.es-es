@@ -1,17 +1,17 @@
 ---
 title: Mira fijamente inrealmente
-description: Tutorial sobre la configuración de la entrada de fijamente para HoloLens y el motor no real
+description: Obtenga información sobre cómo configurar y usar la entrada de fijamente con el seguimiento ocular y la orientación del encabezado de las aplicaciones de HoloLens en el caso de que no sea real.
 author: hferrone
 ms.author: jacksonf
 ms.date: 12/9/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, HoloLens 2, seguimiento ocular, entrada de mirada, pantalla montada de cabeza, motor no real, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: a11573d732e739068dca8c42dd8688c0705fc5bb
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: e546867fe02acd5e72ee76b4108a369ec25fd32f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96925983"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010145"
 ---
 # <a name="gaze-input"></a>Entrada de mira
 
@@ -104,7 +104,7 @@ void AEyeTracker::Tick(float DeltaTime)
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de desarrollo no real que hemos diseñado, se encuentra en medio de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de creación:
+Si sigue el recorrido de desarrollo de Unreal que hemos diseñado, significa que ya se encuentra en proceso de explorar los bloques de compilación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Seguimiento de las manos](unreal-hand-tracking.md)

@@ -1,17 +1,17 @@
 ---
 title: Teclado
-description: Obtenga información sobre cómo invocar el teclado del sistema en MRTK.
+description: Obtenga información sobre cómo invocar y usar el teclado del sistema mediante el kit de herramientas de realidad mixta.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, teclado, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: b258ad7934cae76c581723d681cce32c68458b72
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 8efb5446479e53569349eda302c7d4dcb844a137
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847281"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009735"
 ---
 # <a name="keyboard"></a>Teclado
 

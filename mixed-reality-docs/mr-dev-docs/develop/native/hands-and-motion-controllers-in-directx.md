@@ -1,17 +1,17 @@
 ---
 title: Manos y controladores de movimiento en DirectX
-description: Guía del desarrollador para usar el seguimiento de mano y los controladores de movimiento en aplicaciones DirectX nativas.
+description: Introducción a la guía del desarrollador para usar el seguimiento de mano y los controladores de movimiento en aplicaciones DirectX nativas.
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 08/04/2020
 ms.topic: article
 keywords: manos, controladores de movimiento, DirectX, entrada, hologramas, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 52fc8f054ee4a4a57374c90fc31703b749d498de
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 43673602b01a1937953d16fcca9b4c4f4d3fd33a
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613059"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009545"
 ---
 # <a name="hands-and-motion-controllers-in-directx"></a>Manos y controladores de movimiento en DirectX
 
@@ -102,7 +102,7 @@ Esto conduce a las siguientes prácticas recomendadas al representar y destinar 
 ## <a name="cross-device-input-properties"></a>Propiedades de entrada entre dispositivos
 La API de SpatialInteractionSource admite controladores y sistemas de seguimiento de mano con una amplia gama de funcionalidades. Una serie de estas funcionalidades son comunes entre los tipos de dispositivo. Por ejemplo, el seguimiento de mano y los controladores de movimiento proporcionan una acción "Select" y una posición 3D. Siempre que sea posible, la API asigna estas funciones comunes a las mismas propiedades en el SpatialInteractionSource.  Esto permite a las aplicaciones admitir más fácilmente una amplia gama de tipos de entrada. En la tabla siguiente se describen las propiedades que se admiten y cómo se comparan entre los tipos de entrada.
 
-| Propiedad. | Descripción | Gestos de HoloLens (primera generación) | Controladores de movimiento | Manos articuladas|
+| Propiedad | Description | Gestos de HoloLens (primera generación) | Controladores de movimiento | Manos articuladas|
 |--- |--- |--- |--- |--- |
 | [SpatialInteractionSource::**Handl**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsource.handedness) | Mano derecha o izquierda/controlador. | No compatible | Compatible | Compatible |
 | [SpatialInteractionSourceState::**IsSelectPressed**](https://docs.microsoft.com//uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate.isselectpressed) | Estado actual del botón principal. | TAP del aire | Desencadenador | Pulsación aérea relajada (bajo contacto vertical) |

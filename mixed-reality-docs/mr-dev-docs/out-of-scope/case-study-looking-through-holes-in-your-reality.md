@@ -1,17 +1,17 @@
 ---
 title: 'Case study - Looking through holes in your reality (Caso práctico: mirar por un agujero en tu realidad)'
-description: En este caso práctico se explica cómo implementar el efecto "Magic Window" en HoloLens, lo que permite al usuario ver detrás de las paredes, debajo del suelo, y en aperturas virtuales dentro de su entorno real.
+description: En este caso práctico se explica la implementación del efecto "ventana mágica" en HoloLens, lo que permite al usuario ver detrás de las paredes, en el suelo y en aperturas virtuales.
 author: ericrehmeyer
 ms.author: bestruku
 ms.date: 10/18/2019
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, ventana mágica, Parallax
-ms.openlocfilehash: 84af124cc69e03b3502cee55c694b11ff5c9433b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 018e45a79d88cbc8e28204f023106fbe5dae39bc
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693274"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010115"
 ---
 # <a name="case-study---looking-through-holes-in-your-reality"></a>Case study - Looking through holes in your reality (Caso práctico: mirar por un agujero en tu realidad)
 
@@ -19,7 +19,7 @@ Cuando los usuarios piensan en la realidad mixta y lo que pueden hacer con Micro
 
 ## <a name="the-tech"></a>La tecnología
 
-Si ha fought a los extranjeros a medida que se desplazan por los muros de **[RoboRaid](https://www.youtube.com/watch?v=Hf9qkURqtbM)** , desbloquea un muro en **[fragmentos](case-study-creating-an-immersive-experience-in-fragments.md)** o estaba lo suficientemente afortunado como para ver el UNSC de infinidad de hangar en la **[experiencia de Halo 5 en E3 en 2015](https://www.youtube.com/watch?v=QDw5QjDtFy8)** , entonces ha visto lo que me está hablando. En función de su imaginación, este truco visual se puede usar para colocar agujeros temporales en el prefabricado o para ocultar mundos en un Floorboard suelto.
+Si ha fought a los extranjeros a medida que se desplazan por los muros de **[RoboRaid](https://www.youtube.com/watch?v=Hf9qkURqtbM)**, desbloquea un muro en **[fragmentos](case-study-creating-an-immersive-experience-in-fragments.md)** o estaba lo suficientemente afortunado como para ver el UNSC de infinidad de hangar en la **[experiencia de Halo 5 en E3 en 2015](https://www.youtube.com/watch?v=QDw5QjDtFy8)**, entonces ha visto lo que me está hablando. En función de su imaginación, este truco visual se puede usar para colocar agujeros temporales en el prefabricado o para ocultar mundos en un Floorboard suelto.
 
 ![RoboRaid agrega canalizaciones tridimensionales y otras estructuras detrás de las paredes, solo visibles a través de los agujeros creados como los invadidores.](../develop/unity/images/roboraid-640px.png)
 

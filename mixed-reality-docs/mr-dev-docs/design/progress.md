@@ -1,17 +1,17 @@
 ---
 title: Indicación del progreso
-description: Un control de progreso proporciona información al usuario sobre el hecho de que se está llevando a cabo una operación de ejecución larga.
+description: Obtenga información sobre cómo los controles de progreso proporcionan comentarios al usuario de que se está llevando a cabo una operación de ejecución prolongada en las aplicaciones de realidad mixta.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, controles, IU, experiencia de usuario, indicador de progreso, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 3f24f7095147a0d220df8adc42b67a1b8e4053c9
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 489f4bd9fea31126f936673db7acafeab27d9cd9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848277"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009465"
 ---
 # <a name="progress-indicator"></a>Indicador de progreso
 

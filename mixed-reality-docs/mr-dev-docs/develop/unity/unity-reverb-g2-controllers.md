@@ -1,17 +1,17 @@
 ---
 title: Controladores de HP reverberación G2 en Unity
-description: Instrucciones sobre el uso de los controladores de HP reverberación G2 en SteamVR y Windows Mixed Reality.
+description: Obtenga información sobre cómo configurar y usar los nuevos controladores de HP reverberación G2 en aplicaciones SteamVR y Windows Mixed Reality Unity.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 10/14/2020
 ms.topic: article
 keywords: Unity, reverberación, reverberación G2, HP reverberación G2, realidad mixta, desarrollo, controladores de movimiento, entrada de usuario, características, nuevo proyecto, emulador, documentación, guías, características, hologramas, desarrollo de juegos
-ms.openlocfilehash: 17f373a3d94740bf103821b85ee5d6fe4dbaa11f
-ms.sourcegitcommit: 8b16945d6a551f174a65fa3980ba392682ca45d4
+ms.openlocfilehash: 1c9d8f1279f81ea1d8020e2a3c689dae86496221
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92886258"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009835"
 ---
 # <a name="hp-reverb-g2-controllers-in-unity"></a>Controladores de HP reverberación G2 en Unity
 
@@ -286,7 +286,7 @@ void Update()
 
 ### <a name="generating-events-from-the-new-inputs"></a>Generar eventos a partir de las nuevas entradas 
 
-En lugar de sondear el estado de un controlador una vez por fotograma, tiene la opción de controlar todos los cambios de estado como eventos, lo que le permite controlar incluso las acciones más rápidas que duran menos que un fotograma. Para que este enfoque funcione, la memoria caché de los controladores de movimiento debe procesar todos los Estados publicados por un controlador desde el último fotograma, lo que se puede hacer mediante el almacenamiento de la marca de tiempo de los últimos MotionControllerReading recuperados de un MotionController y la llamada a *MotionController. TryGetReadingAfterTime ()* : 
+En lugar de sondear el estado de un controlador una vez por fotograma, tiene la opción de controlar todos los cambios de estado como eventos, lo que le permite controlar incluso las acciones más rápidas que duran menos que un fotograma. Para que este enfoque funcione, la memoria caché de los controladores de movimiento debe procesar todos los Estados publicados por un controlador desde el último fotograma, lo que se puede hacer mediante el almacenamiento de la marca de tiempo de los últimos MotionControllerReading recuperados de un MotionController y la llamada a *MotionController. TryGetReadingAfterTime ()*: 
 
 ```csharp
 private class MotionControllerState 

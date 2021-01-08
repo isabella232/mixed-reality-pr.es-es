@@ -1,17 +1,17 @@
 ---
 title: Implementación de iniciadores de aplicaciones 3D (aplicaciones para UWP)
-description: Cómo crear iniciadores de aplicaciones 3D y logotipos para aplicaciones y juegos UWP de Windows Mixed Reality (distribuidos a través de la Microsoft Store), tanto en los auriculares HoloLens como envolventes (VR).
+description: Aprenda a crear iniciadores de aplicaciones 3D y logotipos para aplicaciones y juegos UWP de Windows Mixed Reality en los auriculares HoloLens y VR.
 author: thmignon
 ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, icono, modelado, iniciador, selector 3D, mosaico, cubo activo, vínculo profundo, secondarytile, mosaico secundario, UWP, auricular de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, XML, cuadro de límite, Unity
-ms.openlocfilehash: 38f0932f20e3660c91b87de7bcb9d66799d9a51a
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 40a68d0835ec8fb92d6417650700f41e8a31aab6
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757503"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009685"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementación de iniciadores de aplicaciones 3D (aplicaciones para UWP)
 

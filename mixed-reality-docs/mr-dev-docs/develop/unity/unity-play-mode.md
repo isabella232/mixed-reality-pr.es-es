@@ -1,17 +1,17 @@
 ---
 title: Modo de reproducción de Unity
-description: Usar el modo de reproducción en el editor de Unity para obtener una vista previa de los cambios en un dispositivo sin necesidad de implementar una aplicación.
+description: Aprenda a usar el modo de reproducción en el editor de Unity para obtener una vista previa de los cambios de la aplicación en un dispositivo sin necesidad de implementar una aplicación.
 author: jonmlyons
 ms.author: jlyons
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, comunicación remota, comunicación remota holográfica, reproductor de comunicación remota holográfica, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, modo de reproducción de Unity
-ms.openlocfilehash: 396e441903fe7b567c6329ca4d207ce893a07825
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 9f6c2cafd08fca8a5d60f3fcf5832ee74762e173
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010616"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009845"
 ---
 # <a name="unity-play-mode"></a>Modo de reproducción de Unity
 

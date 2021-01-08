@@ -1,17 +1,17 @@
 ---
 title: SDK de introducción a la escena
-description: Guía de programación para el SDK de descripción de la escena
+description: Obtenga información sobre cómo instalar y usar el SDK de comprensión de escenas, incluidos componentes, mallas y objetos en aplicaciones de realidad mixta.
 author: szymons
 ms.author: szymons
 ms.date: 12/14/2020
 ms.topic: article
 keywords: Comprensión de escenas, asignación espacial, Windows Mixed Reality, Unity
-ms.openlocfilehash: 1ec29d09ab52abae9a9111a6441523c8aa7720f7
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 9520ad604125705c60624254b097de5fc93021ec
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530352"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009385"
 ---
 # <a name="scene-understanding-sdk-overview"></a>Información general del SDK de introducción a la escena
 
@@ -117,15 +117,15 @@ SceneObjects puede tener cualquiera de las siguientes opciones:
 
 <table>
 <tr>
-<th>SceneObjectKind</th> <th>Descripción</th>
+<th>SceneObjectKind</th> <th>Description</th>
 </tr>
-<tr><td>Información previa</td><td>Se sabe que el SceneObject <b>no</b> es uno de los otros tipos reconocidos de objeto de escena. Esta clase no se debe confundir con Unknown, donde se sabe que el fondo no es mural, piso, techo, etc. Aunque Unknown no se ha categorizado todavía.</b></td></tr>
+<tr><td>Fondo</td><td>Se sabe que el SceneObject <b>no</b> es uno de los otros tipos reconocidos de objeto de escena. Esta clase no se debe confundir con Unknown, donde se sabe que el fondo no es mural, piso, techo, etc. Aunque Unknown no se ha categorizado todavía.</b></td></tr>
 <tr><td>Pared</td><td>Una pared física. Se supone que las paredes son estructuras de entorno inmóviles.</td></tr>
 <tr><td>Floor</td><td>Las plantas son superficies en las que se puede recorrer. Nota: las escaleras no se encuentran en el suelo. Tenga en cuenta también que las plantas suponen cualquier superficie que se puede examinar y, por lo tanto, no hay ninguna suposición explícita de un piso singular. Estructuras de varios niveles, rampas, etc... debe clasificarse como Floor.</td></tr>
 <tr><td>Ceiling</td><td>La superficie superior de una habitación.</td></tr>
 <tr><td>Plataforma</td><td>Una superficie plana grande en la que se pueden colocar hologramas. Tienden a representar tablas, contrapartes y otras superficies horizontales grandes.</td></tr>
 <tr><td>World</td><td>Etiqueta reservada para los datos geométricos que es independiente de la etiqueta. La malla generada al establecer la marca de actualización EnableWorldMesh se clasificaría como World.</td></tr>
-<tr><td>Unknown</td><td>Este objeto de escena todavía se puede clasificar y asignar a un tipo. No se debe confundir con el fondo, ya que este objeto podría ser cualquier cosa, el sistema no se ha puesto todavía con una clasificación suficientemente alta para ella.</td></tr>
+<tr><td>Desconocido</td><td>Este objeto de escena todavía se puede clasificar y asignar a un tipo. No se debe confundir con el fondo, ya que este objeto podría ser cualquier cosa, el sistema no se ha puesto todavía con una clasificación suficientemente alta para ella.</td></tr>
 </tr>
 </table>
 

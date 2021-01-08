@@ -1,18 +1,18 @@
 ---
 title: Preguntas más frecuentes de la reverberación de HP G2
-description: Preguntas más frecuentes sobre el uso de la reverberación de HP G2 auriculares
+description: Manténgase al día con las preguntas más frecuentes sobre el uso de los auriculares de reverberación de HP G2 con auriculares con Windows Mixed Reality.
 ms.author: v-hferrone
 ms.date: 09/15/2020
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, rendimiento
 appliesto:
 - Windows 10
-ms.openlocfilehash: 55baf3f076b8cf0f815f899658b3bbe61292e267
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 00338e1354dc04acc76fa2525c721a5e2bd4afe2
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725906"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009475"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>Preguntas más frecuentes de la reverberación de HP G2
 

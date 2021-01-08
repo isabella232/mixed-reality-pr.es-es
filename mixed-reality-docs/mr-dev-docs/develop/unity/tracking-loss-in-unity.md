@@ -1,17 +1,17 @@
 ---
 title: Pérdida de seguimiento en Unity
-description: Control de la pérdida de seguimiento en una aplicación de Unity.
+description: Obtenga información sobre cómo controlar la pérdida de seguimiento manual y predeterminado en una aplicación de Unity Mixed Reality.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, pérdida de seguimiento, imagen de pérdida de seguimiento, sondeo, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 1df9f579abf43576284d065afa091bb26c631482
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 39ce4e079886b27ed35c419a3b3913c6700e0d32
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010056"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009855"
 ---
 # <a name="tracking-loss-in-unity"></a>Pérdida de seguimiento en Unity
 
@@ -82,4 +82,5 @@ private void WorldManager_OnPositionalLocatorStateChanged(PositionalLocatorState
 ```
 
 ## <a name="see-also"></a>Consulte también
+
 * [Control de la pérdida de seguimiento en DirectX](../native/coordinate-systems-in-directx.md#handling-tracking-loss)

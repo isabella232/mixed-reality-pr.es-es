@@ -1,17 +1,17 @@
 ---
 title: Desplazamiento por la página principal de Windows Mixed Reality
-description: Los auriculares HoloLens y Windows Mixed Reality comparten un paradigma para iniciar, colocar y manipular aplicaciones y modelos 3D en su entorno (ya sea físico o digital). Obtenga información sobre cómo navegar por la Página principal de Windows Mixed Reality en ambos tipos de dispositivo.
+description: Obtenga información sobre cómo navegar por la Página principal de Windows Mixed Reality en los auriculares HoloLens y Windows Mixed Reality.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Shell, so, plataforma, acantilado House, casa, Inicio, entorno, Inicio, menú Inicio, menú Inicio, PIN, aplicación, iniciar aplicaciones, colocar aplicaciones, desplazarse, moverse, navegar, auriculares de realidad mixta, auriculares de realidad virtual, qué es realidad virtual
-ms.openlocfilehash: 4d8aa88fa1057c550601feb7ad85ace15fcada54
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 06e28c9c1f0f6244f7f502382d61d4740b5fb71f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757693"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009695"
 ---
 # <a name="navigating-the-windows-mixed-reality-home"></a>Desplazamiento por la página principal de Windows Mixed Reality
 

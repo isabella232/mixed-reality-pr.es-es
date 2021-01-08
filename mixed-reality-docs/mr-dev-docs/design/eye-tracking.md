@@ -1,17 +1,17 @@
 ---
 title: Seguimiento de los ojos
-description: HoloLens 2 permite un nuevo nivel de contexto y comprensión humana dentro de la experiencia holográfica, ya que proporciona a los desarrolladores la capacidad de usar información sobre lo que el usuario está examinando.
+description: Obtenga información sobre el seguimiento ocular de HoloLens 2 y los nuevos niveles de comprensión humana si se ofrece experiencias holográficas.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Seguimiento ocular, realidad mixta, entrada, ojo ocular, calibración, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, conjunto de herramientas de realidad mixta, intención, acciones
-ms.openlocfilehash: 5ee957db85c2eefc32b7bfd716268262b347867b
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: ffc9fd172f3e9a1cfd648e3fb431274690c9f190
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847946"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009605"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Seguimiento de los ojos en HoloLens 2
 
@@ -19,7 +19,7 @@ ms.locfileid: "97847946"
 
 HoloLens 2 permite un nuevo nivel de contexto y comprensión humana dentro de la experiencia holográfica, ya que proporciona a los desarrolladores la capacidad de usar información sobre lo que el usuario está examinando. En esta página se explica cómo los desarrolladores pueden beneficiarse del seguimiento ocular de varios casos de uso y qué buscar al diseñar interacciones de usuario basadas en el ojo. 
 
-La API de seguimiento ocular se ha diseñado pensando en la privacidad del usuario, evitando pasar cualquier información identificable, especialmente cualquier biometría. En el caso de las aplicaciones compatibles con el seguimiento ocular, el usuario debe conceder permiso a la aplicación para usar la información de seguimiento ocular. 
+La API de seguimiento ocular se ha diseñado pensando en la privacidad del usuario, evitando pasar cualquier información identificable, especialmente cualquier biometría. En el caso de las aplicaciones compatibles con el seguimiento ocular, el usuario debe conceder permiso a la aplicación para usar la información de seguimiento ocular.
 
 ### <a name="device-support"></a>Compatibilidad con dispositivos
 

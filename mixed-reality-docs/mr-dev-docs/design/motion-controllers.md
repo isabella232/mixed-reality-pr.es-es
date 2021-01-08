@@ -1,17 +1,17 @@
 ---
 title: Controladores de movimiento
-description: Detalles sobre los controladores de movimiento de realidad mixta.
+description: Obtenga información sobre cómo configurar, emparejar y asociar interacciones de entrada mediante controladores de movimiento de realidad mixta en sus aplicaciones.
 author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Controladores de 6DOF, controladores de movimiento, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, desplazamiento, control, estado
-ms.openlocfilehash: 768e316f175769d7399866b0b7cc62ee8c5c2cde
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 2dbe0ab0b83b371a88e419e7b223f30670bfeaea
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847446"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009715"
 ---
 # <a name="motion-controllers"></a>Controladores de movimiento
 
@@ -213,8 +213,6 @@ Las aplicaciones que quieren tratar las posiciones de manera diferente según el
 </tr>
 </table>
 
-
-
 Estos Estados de seguimiento del controlador de movimiento se definen de la siguiente manera:
 * **Alta precisión:** Aunque el controlador de movimiento está en el campo de vista del casco, normalmente proporcionará posiciones de alta precisión en función del seguimiento visual. Un controlador de movimiento que deja momentáneamente el campo de vista o que se oculta momentáneamente de los sensores de auriculares (por ejemplo, por la otra mano del usuario) seguirá devolviendo las supuestos de alta precisión durante un breve período de tiempo, en función del seguimiento inercial del propio controlador.
 * **Alta precisión (riesgo de pérdida):** Cuando el usuario mueve el controlador de movimiento más allá del borde del campo de vista del casco, el casco pronto no podrá realizar un seguimiento visual de la posición del controlador. La aplicación sabe cuándo el controlador ha alcanzado este límite de hiperapartados; para ello, vea el **SourceLossRisk** Reach 1,0. En ese momento, la aplicación puede optar por pausar los gestos del controlador que requieren un flujo estable de planteamientos de alta calidad.
@@ -278,6 +276,7 @@ Consulte [solución de problemas del controlador de movimiento](https://docs.mic
 Envíenos [sus comentarios](../give-us-feedback.md) en la central de comentarios, usando la categoría de entrada de > de realidad mixta.
 
 ## <a name="see-also"></a>Consulte también
+
 * [Gestos y controladores de movimiento en Unity](../develop/unity/gestures-and-motion-controllers-in-unity.md)
 * [Manos y controladores de movimiento en DirectX](../develop/native/hands-and-motion-controllers-in-directx.md)
 * [Gestos](gaze-and-commit.md#composite-gestures)

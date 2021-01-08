@@ -1,17 +1,17 @@
 ---
 title: Información sobre herramientas
-description: La información sobre herramientas es una breve descripción que está vinculada con otro control u objeto.
+description: Obtenga información sobre cómo usar la información sobre herramientas en aplicaciones de realidad mixta, que son breves descripciones que están vinculadas a otro control u objeto.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, información sobre herramientas, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: ceb88fd89ec9d7bde50e23f2ae3ac158a301eb02
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: bed9e83cac381fceddbf94cd4048d36427a27874
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848122"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009415"
 ---
 # <a name="tooltip"></a>Información sobre herramientas
 

@@ -1,17 +1,17 @@
 ---
 title: 'Realidad mixta y Azure (310): detección de objetos'
-description: Complete este curso para aprender a entrenar un modelo de aprendizaje automático y, a continuación, use el modelo entrenado para reconocer objetos similares y su posición en el mundo real desde una aplicación de realidad mixta.
+description: Complete este curso para aprender a entrenar y usar un modelo de aprendizaje automático para reconocer objetos similares y su posición en el mundo real.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, visión personalizada, detección de objetos, realidad mixta, Academia, Unity, tutorial, API, hololens, Windows 10, Visual Studio
-ms.openlocfilehash: 10f3b2b8f8422a20c39a4d89568e42ca530683c2
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 8f625ebc1e40edaa6364567686c345386ea37dbf
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679464"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010175"
 ---
 # <a name="mr-and-azure-310-object-detection"></a>Mr y Azure 310: detección de objetos
 
@@ -55,7 +55,7 @@ Este curso le enseñará cómo obtener los resultados de la Custom Vision Servic
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 > [!NOTE]
 > Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#. Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de julio). Puede usar el software más reciente, como se indica en el artículo [instalar las herramientas](../../install-the-tools.md) , aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se enumera a continuación.
@@ -71,7 +71,7 @@ Se recomienda el siguiente hardware y software para este curso:
 - Acceso a Internet para la configuración y recuperación de Custom Vision Service de Azure
 -  Se requiere una serie de al menos quince (15) imágenes) para cada objeto que desea que reconozca el Custom Vision. Si lo desea, puede usar las imágenes que ya se proporcionan con este curso, [una serie de tazas](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20310%20-%20Object%20detection/Cup%20Images.zip)).
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 1.  Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).
 2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
@@ -1292,7 +1292,7 @@ Ya está listo para compilar la aplicación como una solución de UWP en la que 
 
     1.  Mientras se contenga HoloLens, abra la **configuración**.
 
-    2.  Vaya a **red &**  >  Opciones avanzadas **de Wi-Fi de**  >  **Advanced Options** Internet
+    2.  Vaya a **red &**  >  Opciones avanzadas **de Wi-Fi de**  >   Internet
 
     3.  Anote la dirección **IPv4** .
 

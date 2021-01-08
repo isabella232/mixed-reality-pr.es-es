@@ -1,17 +1,17 @@
 ---
 title: Mirada con la cabeza y confirmación
-description: Información general sobre el modelo de entrada y de confirmación de encabezado.
+description: Empiece a trabajar con el modelo de entrada y de confirmación del encabezado, incluido el ajuste de tamaño, la ubicación y la estabilización de destino.
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
 keywords: Realidad mixta, miración rápida, interacción, diseño, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, destino, enfoque, suavizado
-ms.openlocfilehash: cc12c349704a63c5b95c9eede91d0486f56787a2
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 13a040a8309d084fcfdbfa91cbd9d63b595b004a
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847879"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009455"
 ---
 # <a name="head-gaze-and-commit"></a>Mirada con la cabeza y confirmación
 

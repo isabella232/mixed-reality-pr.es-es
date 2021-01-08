@@ -1,17 +1,17 @@
 ---
 title: Menú Cerca
-description: Un menú Near es una colección de botones de un panel que le siguen con el comportamiento de etiqueta.
+description: Aprenda a usar menús cercanos, que son una colección de botones en un panel que le siguen con el comportamiento de etiqueta en un entorno de realidad mixta.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, menú, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: fb64ecf4a0bc2d7a495e87d127b39aded1212a6f
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 3cba4452861f05a1ce921c1f18f6636661ee34b0
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847258"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009935"
 ---
 # <a name="near-menu"></a>Menú Cerca
 
