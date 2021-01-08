@@ -6,21 +6,26 @@ ms.author: mazeller
 ms.date: 11/13/2020
 ms.topic: article
 keywords: Microsoft Store, HoloLens, auriculares envolventes, aplicación, UWP, envío, envío, filtros, metadatos, requisitos del sistema, palabras clave, Wack, certificación, paquete, appx, comercialización, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 92de6072300ed94873cc68dfa78531da4685d274
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 7b1953fe0244b06f019f0e28432b7f9be9c21081
+ms.sourcegitcommit: b13c517df19179ca281362a1f006914289c58ad4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757843"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98031986"
 ---
 # <a name="submitting-an-app-to-the-microsoft-store"></a>Envío de aplicaciones a Microsoft Store
 
 > [!IMPORTANT]
-> Si va a enviar una aplicación inreal, asegúrese de seguir las instrucciones de **[publicación aquí](../develop/unreal/unreal-publishing-to-store.md)** antes de continuar.
+> Si va a enviar una aplicación no real, asegúrese de seguir las instrucciones de **[publicación](../develop/unreal/unreal-publishing-to-store.md)** antes de continuar.
+
+## <a name="prerequisites"></a>Requisitos previos
 
 Tanto [HoloLens](../hololens-hardware-details.md) como el equipo con Windows 10 que encienden el [casco envolvente](../discover/immersive-headset-hardware-details.md) se ejecutan plataforma universal de Windows aplicaciones. Tanto si va a enviar una aplicación que admite HoloLens, equipo o ambos, el envío de aplicaciones pasa por el [centro de Partners](https://partner.microsoft.com/dashboard).
 
-Si aún no tiene una cuenta de desarrollador de centro de Partners, [Regístrese](https://developer.microsoft.com/store/register) en uno antes de continuar.
+Si aún no tiene una cuenta de desarrollador de centro de Partners, [Regístrese](https://developer.microsoft.com/store/register) en uno antes de continuar. Puede encontrar más información sobre las instrucciones de envío y las listas de comprobación en este artículo de envíos de [aplicaciones](https://docs.microsoft.com/windows/uwp/publish/app-submissions).
+
+> [!IMPORTANT]
+> No podrá enviar ninguna aplicación al Microsoft Store si la cuenta de desarrollador del centro de Partners no supera la comprobación de empleo. Póngase en contacto con el [equipo de soporte técnico](https://developer.microsoft.com/windows/support) del centro de partners para obtener más detalles.
 
 ## <a name="packaging-a-mixed-reality-app"></a>Empaquetado de una aplicación de realidad mixta
 
@@ -267,7 +272,7 @@ Agregar "Windows Mixed Reality" a los términos de búsqueda
 En muchos casos, los consumidores se limitarán a no tener experiencia con la realidad virtual antes de adquirir un casco de realidad más envolvente de Windows Mixed Reality. Es posible que no sepan qué esperan de juegos intensivos o que estén familiarizados con su propio umbral de confort en experiencias envolventes. Muchos clientes también pueden probar con un casco con Windows Mixed Reality en equipos que no están identificados como [equipos con Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines). Debido a estas consideraciones, le recomendamos encarecidamente que considere la posibilidad de ofrecer una [evaluación gratuita](https://docs.microsoft.com/windows/uwp/publish/set-app-pricing-and-availability#free-trial) para su aplicación o juego de realidad mixta.
 
 ## <a name="see-also"></a>Consulte también
-* [¿Qué es la realidad mixta?](../discover/mixed-reality.md)
+* [¿Qué es Mixed Reality?](../discover/mixed-reality.md)
 * [Introducción al desarrollo](../develop/development.md)
 * [Vistas de aplicación](../design/app-views.md)
 * [Descripción del rendimiento de la realidad mixta](../develop/platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)
