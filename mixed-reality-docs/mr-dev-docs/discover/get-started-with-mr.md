@@ -1,24 +1,24 @@
 ---
 title: Introducción a Mixed Reality
-description: Para ayudar a un usuario nuevo en el ámbito de la realidad mixta, descubre qué es y comprende sus capacidades.
+description: Aprenda los aspectos básicos sobre la teoría de la realidad mixta, su desarrollo y los casos de uso comunes.
 author: grbury
 ms.author: grbury
 ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: ef39848fea512df9fa61ca4d538354e11fb8e042
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: f50457fedb0223317e522c4d86bd56cc02657c77
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96926062"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757673"
 ---
 # <a name="get-started-with-mixed-reality"></a>Introducción a Mixed Reality
 
 ![Colibrí virtual con mano humana](images/01_MixedReality.png)
 
-El ecosistema de la realidad mixta es un panorama emergente de interacciones físicas y digitales, limitado solo por la imaginación. Tanto si es desarrollador experimentado como si es principiante, le recomendamos que comience su recorrido por la realidad mixta con los recursos que hemos diseñado en los vínculos siguientes. Hay una gran cantidad de cosas nuevas que cubrir, así que empecemos. 
+El ecosistema de la realidad mixta es un panorama emergente de interacciones físicas y digitales, limitado solo por la imaginación. Tanto si es un desarrollador experimentado como si es principiante, le recomendamos que comience su recorrido por la realidad mixta con los recursos que hemos recopilado a continuación. Hay una gran cantidad de cosas nuevas que cubrir, así que empecemos. 
 
 ## <a name="choose-your-track"></a>Elige tu opción
 
@@ -48,18 +48,18 @@ Si ya sabe qué área de realidad mixta le gustaría explorar, no dude en ir dir
 
 ## <a name="understand-the-basics"></a>Comprender los conceptos básicos
 
-Si no está familiarizado con la realidad mixta, es importante comenzar desde lo más básico e ir aprendiendo los principales conceptos, experiencias y funcionalidades. Hemos creado un recorrido secuencial clasificado para ayudarle a poner cimientos sólidos para diseñar y desarrollar sus propias ideas en realidad mixta.
+Si no está familiarizado con la realidad mixta, es importante que empiece desde lo más básico y que vaya aprendiendo los principales conceptos, experiencias y funcionalidades. Hemos creado un recorrido secuencial clasificado para ayudarle a poner cimientos sólidos para diseñar y desarrollar sus propias ideas en realidad mixta.
 
 ### <a name="what-is-mixed-reality"></a>¿Qué es la realidad mixta?
 
 ![¿Qué puedes hacer con la realidad mixta?](images/HLS19_remoteAssistHologram_001.jpg)
 
-Antes de profundizar en el diseño o el desarrollo de aplicaciones, debe comprender lo que significa la realidad mixta. Esta sección está diseñada para ayudarle a familiarizarse con el espectro de la realidad mixta, incluido el intervalo de entrada de un entorno, los cambios perceptuales, los desafíos de diseño y los dispositivos que incluye. 
+Antes de profundizar en el diseño o el desarrollo de aplicaciones, debe comprender lo que significa la realidad mixta. Esta sección está diseñada para ayudarle a familiarizarse con el espectro de la realidad mixta, incluida la entrada de un entorno, los cambios perceptuales, los desafíos de diseño y los dispositivos. 
 
 |  Concepto  |  Resultado  |
 | --- | --- |
 | [La realidad mixta es un espectro](../discover/mixed-reality.md) | La realidad mixta combina lo físico con lo digital, es la próxima evolución en las interacciones entre personas, equipos y entornos. |
-| [¿Qué es un holograma?](../discover/hologram.md) | HoloLens te permite crear hologramas, que son objetos creados con luz y sonido que aparecen en el mundo que te rodea, como si fueran objetos reales. Los hologramas responden a la mirada, los gestos y los comandos de voz, y pueden interactuar con las superficies reales del entorno. |
+| [¿Qué es un holograma?](../discover/hologram.md) | HoloLens le permite crear hologramas, que son objetos creados con luz y sonido que aparecen en el mundo que le rodea como si fueran objetos reales. Los hologramas responden a la mirada, los gestos y los comandos de voz, y pueden interactuar con las superficies reales del entorno. |
 | [Introducción al aprendizaje de Mixed Reality](mr-learning-overview.md#general-modules) | Pruebe nuestro módulo de Mixed Reality seleccionado a través de Microsoft Learn. |
 | [Ampliar el proceso de diseño](../discover/case-study-expanding-the-design-process-for-mixed-reality.md) | Amplíe su actitud de diseño con pensamiento espacial, bodystorming y actuando al crear experiencias envolventes.  |
 
@@ -68,6 +68,42 @@ Antes de profundizar en el diseño o el desarrollo de aplicaciones, debe compren
 ---
 
 ## <a name="see-how-industry-partners-are-using-mixed-reality"></a>Observa cómo usan los asociados del sector la realidad mixta
+
+:::row:::
+    :::column:::
+       [![Vehículos Mercedes y HoloLens](images/mercedes.png)](https://customers.microsoft.com/story/839709-mercedes-benz-automotive-holoLens-en-usa)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="mercedes-benz-is-transforming-the-service-workforce-with-hololens-2-and-dynamics-365-remote-assist"></a>[Mercedes-Benz está transformando la plantilla del servicio con HoloLens 2 y Dynamics 365 Remote Assist](https://customers.microsoft.com/story/839709-mercedes-benz-automotive-holoLens-en-usa)
+        Mercedes-Benz USA emplea HoloLens 2 y Dynamics 365 Remote Assist para mejorar la eficacia de los técnicos de servicio, acortar el tiempo de solución de problemas y reducir el coste y el impacto medioambiental de los viajes relacionados con el servicio.
+    :::column-end:::
+:::row-end:::
+
+---
+
+:::row:::
+    :::column:::
+       [![BHP Energy, Dynamics 365 y HoloLens](images/bhp.png)](https://customers.microsoft.com/story/850776-bhp-energy-dynamics-365-hololens)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="bhp-increases-the-pace-of-innovation-despite-lockdown-with-mixed-reality-and-iot"></a>[BHP aumenta el ritmo de innovación a pesar del confinamiento gracias a la realidad mixta e IoT](https://customers.microsoft.com/story/850776-bhp-energy-dynamics-365-hololens)
+        A pesar de las restricciones y el impacto de la COVID-19, BHP ofrece soporte técnico y aprendizaje a los trabajadores de campo a miles de kilómetros de distancia gracias a HoloLens 2 y Dynamics 365 Remote Assist.
+    :::column-end:::
+:::row-end:::
+
+---
+
+:::row:::
+    :::column:::
+       [![Historia de MediView y HoloLens](images/mediview.jpeg)](https://customers.microsoft.com/story/848966-mediview-mcs-story)
+    :::column-end:::
+    :::column span="2":::
+        ### <a name="healthcare-startup-cuts-time-to-market-by-up-to-70-despite-pandemic"></a>[Una empresa emergente del sector sanitario reduce el tiempo de comercialización hasta un 70 % a pesar de la pandemia](https://customers.microsoft.com/story/848966-mediview-mcs-story)
+        MediView, una empresa emergente del sector sanitario, ha desarrollado un interesante producto que emplea hologramas 3D que se proyectan directamente sobre el cuerpo del paciente o flotan sobre este para ayudar a los cirujanos a ver la anatomía interna y guiarlos en las operaciones.
+    :::column-end:::
+:::row-end:::
+
+---
 
 :::row:::
     :::column:::
@@ -98,8 +134,8 @@ Antes de profundizar en el diseño o el desarrollo de aplicaciones, debe compren
        [![Philips-Azurion](images/Philips-Azurion1.jpg)](https://binged.it/31B1RiR)
     :::column-end:::
     :::column span="2":::
-        ### <a name="philips-is-piloting-hololens-in-the-domain-of-image-guided-minimally-invasive-procedures"></a>[Philips dirige HoloLens en el dominio de los procedimientos guiados por imagen mínimamente invasivos](https://binged.it/31B1RiR)
-        Philips dirige HoloLens en el dominio de los procedimientos guiados por imagen mínimamente invasivos, durante los cuales los médicos confían en rayos X, ultrasonidos y otras fuentes de información en directo para "ver" el interior el paciente y guiar sus acciones.
+        ### <a name="philips-is-piloting-hololens-in-the-domain-of-image-guided-invasive-procedures"></a>[Philips dirige HoloLens en el dominio de los procedimientos invasivos guiados por imagen](https://binged.it/31B1RiR)
+        Philips dirige HoloLens en el dominio de los procedimientos invasivos guiados por imagen, durante los cuales los médicos confían en rayos X, ultrasonidos y otras fuentes de información en directo para "ver" el interior el paciente y guiar sus acciones.
     :::column-end:::
 :::row-end:::
 
@@ -111,13 +147,13 @@ Antes de profundizar en el diseño o el desarrollo de aplicaciones, debe compren
 
 ![Vista expandida de HoloLens](images/HoloLens2_ExplodedView_8k.png)
 
-Si tiene curiosidad por ver cómo funcionan los distintos hardware y servicios de Mixed Reality, consulte los vínculos siguientes. Estos vínculos le llevarán a distintas partes de la documentación de Microsoft, pero recomendamos agregarlos a los Marcadores y volver aquí para continuar el recorrido de diseño y desarrollo.
+Si tiene curiosidad por ver cómo funcionan los distintos hardware y servicios de Mixed Reality, consulte los vínculos siguientes. Estos vínculos le llevarán a distintas partes de la documentación de Microsoft. Recomendamos agregarlos a los marcadores y volver aquí para continuar el recorrido de diseño y desarrollo.
 
 |  Concepto  |  Resultado  |
 | --- | --- |
 | [Hardware de HoloLens](https://www.microsoft.com//hololens/hardware) | HoloLens 2 ofrece la experiencia de realidad mixta más cómoda y envolvente disponible hoy en día, con soluciones que son líderes en el sector y que proporcionan valor en cuestión de minutos y, todo ello, respaldado por la confiabilidad, seguridad y escalabilidad de los servicios de nube y de inteligencia artificial de Microsoft. |
-| [Dynamics 365](https://dynamics.microsoft.com/mixed-reality/overview/) | Explore una variedad de productos que faculten a los empleados y optimicen las operaciones con Dynamics 365, incluido [Remote Assist](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview), [Layout](https://docs.microsoft.com/dynamics365/mixed-reality/layout/) y [Guides](https://docs.microsoft.com/dynamics365/mixed-reality/guides/). Se obtienen conocimientos significativos al practicar con trabajo real, dispositivos reales y usuarios reales. |
-| [Azure Cloud Services](../develop/mixed-reality-cloud-services.md) | Cree experiencias envolventes atractivas en una gran variedad de plataformas al agregar reconocimiento espacial, anclajes espaciales y representación de modelos 3D complejos. |
+| [Dynamics 365](https://dynamics.microsoft.com/mixed-reality/overview/) | Explore diversos productos que facultan a los empleados y optimizan las operaciones con Dynamics 365, incluido [Remote Assist](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview), Layout y [Guides](https://docs.microsoft.com/dynamics365/mixed-reality/guides/). Se obtienen conocimientos significativos al practicar con trabajo real, dispositivos reales y usuarios reales. |
+| [Azure Cloud Services](../develop/mixed-reality-cloud-services.md) | Cree experiencias envolventes atractivas en diferentes plataformas con reconocimiento espacial, anclajes espaciales y representación de modelos 3D complejos. |
 
 ## <a name="what-would-you-like-to-do-next"></a>¿Qué quieres hacer ahora?
 

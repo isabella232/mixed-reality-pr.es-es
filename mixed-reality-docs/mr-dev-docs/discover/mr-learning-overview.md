@@ -7,12 +7,12 @@ ms.date: 11/30/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, learn, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, qué es la realidad virtual, qué es la realidad aumentada, MRTK, kit de herramientas de mixed reality, traducción de idiomas, Azure, Azure cognitive services, Microsoft Learn
 ms.localizationpriority: high
-ms.openlocfilehash: 996aad49d7fa48d5c7d7d33913680da9e5a4bdd8
-ms.sourcegitcommit: 9c2a90b17fe72cf482598969f8f3beca511e78a1
+ms.openlocfilehash: 5d59f09b98b4228b52a87a7c91e64129060f754c
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "97350017"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757803"
 ---
 # <a name="mixed-reality-learn-overview"></a>Introducción a Learn de Mixed Reality
 
@@ -20,7 +20,7 @@ Microsoft Learn es el lugar donde todo el mundo va a aprender. Descubra nuevas a
 
 Cuantas más herramientas tenga al desarrollar para Mixed Reality, mejor. Aunque la documentación y los tutoriales escritos son fundamentales, si prefiere un aprendizaje visual, lo encontrará en nuestro contenido de vídeo de Microsoft Learn. Se agregan módulos nuevos continuamente: vuelva para ver si hay más actualizaciones.
 
-Nuestros módulos de Learn son una oportunidad de convertirse en experto en desarrollo para Mixed Reality, ya que ofrecen una estructura basada en módulos que puede ayudarle a empezar a trabajar con herramientas clave, como Mixed Reality Toolkit, Unity y los servicios de realidad mixta de Azure. Llegar al paso Hola mundo nunca ha sido más fácil, ya que presentamos los objetivos de aprendizaje, los requisitos previos y el tiempo definido para cumplir las expectativas en la misma interfaz. Comience a usar los módulos de Learn para Mixed Reality ya o vea nuestro [vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/What-is-Microsoft-Learn) de introducción a Microsoft Learn.
+Nuestros módulos de Learn le ayudan a convertirse en experto en desarrollo para Mixed Reality, ya que ofrecen una estructura basada en módulos que le permite empezar a trabajar con herramientas clave, como Mixed Reality Toolkit, Unity y los servicios de realidad mixta de Azure. Llegar al paso Hola mundo nunca ha sido más fácil, ya que presentamos los objetivos de aprendizaje, los requisitos previos y el tiempo definido para cumplir las expectativas en la misma interfaz. Comience a usar los módulos de Learn para Mixed Reality ya o vea nuestro [vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/What-is-Microsoft-Learn) de introducción a Microsoft Learn.
 
 ## <a name="general-modules"></a>Módulos generales
 
@@ -38,7 +38,7 @@ Al término de este módulo, sabrá hacer lo siguiente:
 * Describir las ideas básicas detrás de los hologramas
 * Empezar a diseñar y desarrollar aplicaciones 3D
 * Entender qué ofrece la realidad mixta en aplicaciones reales
-* Aproveche la eficacia de la nube para Mixed Reality.
+* Usar la eficacia de la nube para Mixed Reality
 
 ## <a name="unity-modules"></a>Módulos de Unity
 
@@ -50,7 +50,7 @@ Importe el kit de herramientas de Mixed Reality en su proyecto de Unity para ace
 
 **Objetivos de aprendizaje**
 
-Al final de este módulo, podrá hacer lo siguiente:
+Al término de este módulo, podrá hacer lo siguiente:
 
 * Configurar Unity para el desarrollo para Windows Mixed Reality.
 * Importar el paquete base del kit de herramientas de Mixed Reality (MRTK) en Unity.
@@ -60,7 +60,7 @@ Al final de este módulo, podrá hacer lo siguiente:
 
 ### <a name="create-a-language-translator-app-with-unity--azure-cognitive-services"></a>[Crear una aplicación para traducir entre idiomas con Unity y Azure Cognitive Services](https://docs.microsoft.com/learn/modules/create-language-translator-mixed-reality-application-unity-azure-cognitive-services/)
 
-Cree una aplicación de traductor de idiomas para el dispositivo Mixed Reality (Windows Mixed Reality, HoloLens 2, etc.) mediante Cognitive Services.
+Cree una aplicación de traductor de idioma para el dispositivo de Mixed Reality (Windows Mixed Reality, HoloLens 2, etc.) mediante el uso de Cognitive Services.
 
 **Objetivos de aprendizaje**
 

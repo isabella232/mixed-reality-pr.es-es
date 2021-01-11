@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 7f6f501a5e2cde9fdb6aa3ba1aa973a4ab697fd8
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 83d8068ca8ce73f23edb85cf9044db5409105380
+ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010555"
+ms.lasthandoff: 01/04/2021
+ms.locfileid: "97865400"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Empaquetado e implementación en el dispositivo o emulador
 
@@ -30,6 +30,9 @@ El [control remoto de holografías](https://docs.microsoft.com/windows/mixed-rea
 Si va a realizar esta ruta con la aplicación de ajedrez, necesitará algunos elementos:
 
 1.  Instale **Holographic Remoting Player** desde Microsoft Store en HoloLens 2 y ejecute la aplicación. Anote la dirección IP que se muestra en la aplicación.
+    * Vaya a **Editar > Configuración del proyecto** y asegúrese de que **Default RHI** (RHI predeterminado) de Windows está establecido en **Predeterminado** o **D3D11**:
+
+![RHI predeterminado](../images/unreal/performance-recommendations-img-09.png)
 
 2.  Cuando vuelva a estar en el editor de Unreal, vaya a **Edit > Project Settings** (Editar > Configuración del proyecto) y marque la opción **Habilitar la comunicación remota** en la sección **Holographic Remoting** (Comunicación remota de holografías).
 

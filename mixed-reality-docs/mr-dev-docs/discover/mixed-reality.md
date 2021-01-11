@@ -7,12 +7,12 @@ ms.date: 08/26/2020
 ms.topic: article
 keywords: Mixed Reality, holographic, AR, VR, MR, XR, augmented reality, virtual reality, explanation, case study, mixed reality headset, windows mixed reality headset, virtual reality headset, what is virtual reality, what is augmented reality
 ms.localizationpriority: high
-ms.openlocfilehash: 5f4e41c04206eb5ca1a0d2e0dac914a1b3b1052d
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 7f06909b12137598649d113697651277751bcb22
+ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703131"
+ms.lasthandoff: 12/23/2020
+ms.locfileid: "97757703"
 ---
 # <a name="what-is-mixed-reality"></a>¿Qué es Mixed Reality?
 
@@ -34,7 +34,7 @@ La realidad mixta es una mezcla de universos físicos y digitales, que liberan l
 
 En las últimas décadas, se ha continuado la exploración de la relación entre la entrada del usuario y el equipo, lo que dado lugar a la disciplina que se conoce como *interacción persona-ordenador* o HCI. La entrada humana se realiza a través de distintos medios, como teclados, ratones, toques, tinta, voz e incluso seguimiento del esqueleto de Kinect.
 
-Los avances en los sensores y el procesamiento dan lugar a una nueva área de entrada del equipo desde los entornos. La interacción entre equipos y entornos se basa en una comprensión o *percepción* del entorno efectiva y, por este motivo, los nombres de las API en Windows que revelan información del entorno se denominan [API de percepción](https://docs.microsoft.com/uwp/api/Windows.Perception). La entrada del entorno captura elementos como la posición de una persona en el mundo (el [seguimiento de la cabeza](../design/coordinate-systems.md)), las superficies y límites (la [asignación espacial](../design/spatial-mapping.md) y la [comprensión de la escena](../design/scene-understanding.md)), la iluminación ambiente, el sonido ambiental, el reconocimiento de objetos y la ubicación.
+Los avances en los sensores y el procesamiento están dando lugar a nuevas áreas de entrada del equipo desde los entornos. La interacción entre equipos y entornos se basa en la comprensión o *percepción* del entorno y, por este motivo, los nombres de las API en Windows que revelan información del entorno se denominan [API de percepción](https://docs.microsoft.com/uwp/api/Windows.Perception). La entrada del entorno captura elementos como la posición de una persona en el mundo (el [seguimiento de la cabeza](../design/coordinate-systems.md)), las superficies y límites (la [asignación espacial](../design/spatial-mapping.md) y la [comprensión de la escena](../design/scene-understanding.md)), la iluminación ambiente, el sonido ambiental, el reconocimiento de objetos y la ubicación.
 
 <br>
 
@@ -43,7 +43,7 @@ Los avances en los sensores y el procesamiento dan lugar a una nueva área de en
 
 <br>
 
-Ahora, la combinación de los tres (**el procesamiento del equipo, la entrada del usuario y la entrada del entorno**) ofrece la oportunidad de crear auténticas experiencias de realidad mixta. El movimiento a través del mundo físico puede traducirse al movimiento en el mundo digital. Los límites del mundo físico pueden influir en las experiencias de la aplicación, como jugar a un juego, en el mundo digital. Sin la entrada del entorno, las experiencias no pueden combinar la realidad física y la digital.<br>
+Ahora, la combinación de los tres (**el procesamiento del equipo, la entrada del usuario y la entrada del entorno**) ofrece la oportunidad de crear auténticas experiencias de realidad mixta. El movimiento a través del mundo físico se traduce al movimiento en el mundo digital. Los límites del mundo físico pueden influir en las experiencias de la aplicación, como jugar a un juego, en el mundo digital. Sin la entrada del entorno, las experiencias no pueden combinar la realidad física y la digital.<br>
 
 <br>
 
@@ -66,7 +66,6 @@ La mayoría de los teléfonos móviles del mercado de hoy en día tienen poca o 
 * A partir del mundo físico, se coloca un objeto digital, como un holograma, como si estuviera realmente ahí.
 * A partir del mundo físico, una representación digital de otra persona, un avatar, muestra la ubicación en la que estaban al dejar notas. Es decir, experiencias que representan la colaboración asincrónica en distintos momentos en el tiempo.
 * A partir de un mundo digital, los límites físicos del mundo físico, como las paredes y el mobiliario, aparecen de forma digital dentro de la experiencia para ayudar a los usuarios a evitar los objetos físicos.
-
 
 <br>
 
@@ -100,7 +99,7 @@ Hay dos tipos principales de dispositivos que proporcionan experiencias de Windo
 > [!NOTE]
 > Independientemente de si un dispositivo está conectado o vinculado a un equipo independiente (a través de un cable USB o Wi-Fi) o es autónomo (sin vincular), no se refleja si es holográfico o envolvente. Las características que mejoran la movilidad dan lugar a experiencias mejoradas, y los dispositivos holográficos y envolventes podrían estar vinculados o no.
 
-El avance tecnológico es lo que ha permitido las experiencias de realidad mixta. Actualmente no hay ningún dispositivo que pueda ejecutar experiencias en todo el espectro. Windows 10 proporciona una plataforma de realidad mixta común para los desarrolladores y los fabricantes de dispositivos. Los dispositivos de hoy en día pueden admitir un intervalo específico dentro del espectro de realidad mixta con nuevos dispositivos que amplían dicho intervalo. En el futuro, los dispositivos holográficos serán más envolventes y los dispositivos envolventes serán más holográficos.
+Los avances tecnológicos permiten experiencias de realidad mixta, pero actualmente no hay ningún dispositivo que pueda ejecutar experiencias en todo el espectro. Windows 10 proporciona una plataforma de realidad mixta común para los desarrolladores y los fabricantes de dispositivos. Los dispositivos de hoy en día pueden admitir un intervalo específico dentro del espectro de realidad mixta con nuevos dispositivos que amplían dicho intervalo. En el futuro, los dispositivos holográficos serán más envolventes y los dispositivos envolventes serán más holográficos.
 
 <br>
 
