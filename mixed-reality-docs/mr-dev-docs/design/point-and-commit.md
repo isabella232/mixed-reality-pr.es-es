@@ -7,18 +7,18 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, interaction, design, HoloLens, hands, far, point and commit , mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, hand rays, object manipulation, MRTK, Mixed Reality Toolkit, DoF
-ms.openlocfilehash: 91befcec2d9b020c58d3ed02fd181122ce715936
-ms.sourcegitcommit: 4f3ef057a285be2e260615e5d6c41f00d15d08f8
+ms.openlocfilehash: 13b692dada134f856ac6eed446cca45702030f67
+ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94703461"
+ms.lasthandoff: 01/01/2021
+ms.locfileid: "97848292"
 ---
 # <a name="point-and-commit-with-hands"></a>Apuntar y confirmar con las manos
 
 ![Cursores](images/UX_Hero_HandRay.jpg)
 
-Apuntar y confirmar con las manos es un modelo de entrada que permite a los usuarios seleccionar como destino, seleccionar y manipular contenidos 2D y objetos 3D que están fuera de su alcance. Esta técnica de interacción "lejana" es única de la realidad mixta y no es la forma en que los seres humanos interactúan de forma natural con el mundo real. Por ejemplo, en la película de superhéroes *X-Men*, el personaje [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) es capaz de llegar a objetos lejanos y manipularlos a distancia con las manos. Esto no es algo que los seres humanos pueden hacer en el mundo real. Tanto en HoloLens (AR) como en Mixed Reality (MR), dotamos a los usuarios con poderes mágicos y eliminamos la limitación física del mundo real, no solo para tener una magnífica experiencia con contenido holográfico, sino también para aumentar la eficacia y eficiencia de las interacciones.
+"Apuntar y confirmar con las manos" es un modelo de entrada que permite a los usuarios seleccionar y manipular contenido 2D y 3D que esté fuera de su alcance. Esta técnica de interacción "lejana" es exclusiva de la realidad mixta, ya que los usuarios no interactúan de forma natural con el mundo real. Por ejemplo, en la película de superhéroes *X-Men*, el personaje [Magneto](https://en.wikipedia.org/wiki/Magneto_(comics)) es capaz de manipular objetos lejanos a distancia con las manos. Esto no es algo que los seres humanos puedan hacer en el mundo real. Por ello, tanto en HoloLens (AR) como en Mixed Reality (MR), equipamos a los usuarios con este poder mágico para romper las restricciones físicas del mundo real. No solo es una experiencia holográfica divertida, sino que también hace que las interacciones de los usuarios sean más eficaces.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -44,7 +44,7 @@ Apuntar y confirmar con las manos es un modelo de entrada que permite a los usua
 </table>
 
 
-_"Apuntar y confirmar con las manos"_ es una de las nuevas características que utiliza el nuevo sistema articulado de seguimiento de la mano. Este modelo de entrada también es el principal en los cascos envolventes mediante el uso de controladores de movimiento.
+_"Apuntar y confirmar con las manos"_ es una de las nuevas características que usa el nuevo sistema articulado de seguimiento de la mano. Este modelo de entrada es también el modelo de entrada principal de los auriculares envolventes, gracias al uso de controladores de movimiento.
 
 <br>
 
@@ -54,7 +54,7 @@ _"Apuntar y confirmar con las manos"_ es una de las nuevas características que 
 
 En HoloLens 2, hemos creado un haz que sale desde el centro de la palma de la mano. Dicho rayo se trata como una extensión de la mano. Un cursor con forma de anillo se acopla al final del rayo para indicar la ubicación en que el rayo se cruza con un objeto de destino. El objeto en que se posa el cursor puede recibir comandos gestuales de la mano.
 
-Este comando gestual básico se desencadena al usar los dedos pulgar e índice para realizar la acción de pulsar en el aire. Si se usa el haz de mano para apuntar y la acción de pulsar en el aire para confirmar, los usuarios pueden activar un botón o un hipervínculo. Con más gestos compuestos, los usuarios son capaces de navegar por el contenido web y manipular objetos 3D a distancia. El diseño visual del rayo de la mano también debe reaccionar a estos estados de apuntar y confirmar, como se describe y se muestra a continuación: 
+Este comando gestual básico se desencadena al usar los dedos pulgar e índice para realizar la acción de pulsar en el aire. Si se usa el haz de mano para apuntar y la acción de pulsar en el aire para confirmar, los usuarios pueden activar un botón o un hipervínculo. Si usan más gestos compuestos, los usuarios pueden navegar por el contenido web y manipular objetos 3D a distancia. El diseño visual del rayo de la mano también debe reaccionar a estos estados de apuntar y confirmar, como se describe y se muestra a continuación: 
 
 :::row:::
     :::column:::
@@ -73,10 +73,9 @@ Este comando gestual básico se desencadena al usar los dedos pulgar e índice p
 
 ---
 
-
 ## <a name="transition-between-near-and-far"></a>Transición entre cerca y lejos
 
-En lugar de usar un gesto concreto, como "apuntar con el dedo índice" para dirigir el haz, hemos diseñado el haz para que parta del centro de la palma de la mano, con el fin de liberar y reservar los cinco dedos para los gestos más manipulativos, como acercar los dedos y agarrar. Con este diseño, creamos solo un modelo mental, se usa el mismo conjunto de gestos de las manos para la interacción cercana y la lejana. Puedes usar el mismo gesto de arrastrar para manipular objetos que se encuentren a distinta distancia. La invocación de los haces es automática y se basa en la proximidad:
+En lugar de usar gestos específicos como "señalar con el dedo índice" para dirigir el rayo, hemos diseñado el rayo para que salga del centro de la palma de la mano del usuario. De este modo, tenemos los cinco dedos disponibles para realizar más gestos de manipulación, como el contacto y la captura. Con este diseño, creamos solo un modelo mental, se usa el mismo conjunto de gestos de las manos para la interacción cercana y la lejana. Puedes usar el mismo gesto de arrastrar para manipular objetos que se encuentren a distinta distancia. La invocación de los haces es automática y se basa en la proximidad:
 
 :::row:::
     :::column:::
@@ -124,16 +123,16 @@ Si se seleccionan como destino del rayo las esquinas y los bordes aparece la pre
 * Al aplicar un gesto de manipulación en la prestación, los usuarios pueden realizar un escalado uniforme mediante la prestación de la esquina y redistribuir la tableta táctil mediante la prestación del borde. 
 * Al aplicar un gesto de manipulación a la barra holográfica de la parte superior de la tableta táctil 2D, los usuarios pueden mover toda la tableta táctil.<br>
 
-
 <br>
 
 ---
 
 ## <a name="3d-object-manipulation"></a>Manipulación de objetos 3D
 
-En la manipulación directa, hay dos formas de que los usuarios manipulen objetos 3D, la manipulación con prestaciones y la manipulación sin prestaciones. En el modelo de señalar y confirmar, los usuarios son capaces de conseguir exactamente las mismas tareas a través de los rayos de las manos. No se necesita ningún aprendizaje adicional.<br>
+En la manipulación directa, hay dos formas de que los usuarios manipulen objetos 3D, la manipulación con prestaciones y la manipulación sin prestaciones. En el modelo para apuntar y confirmar, los usuarios pueden conseguir exactamente las mismas tareas a través de los haces de mano. No es necesario realizar ningún aprendizaje adicional.<br>
 
 ### <a name="affordance-based-manipulation"></a>Manipulación con prestaciones
+
 Los usuarios usan los rayos de las manos para apuntar y mostrar el rectángulo de selección y las prestaciones de manipulación. Los usuarios pueden aplicar el gesto de manipulación al rectángulo de selección para mover todo el objeto, a las prestaciones del borde para girarlo y a las prestaciones de la esquina para escalarlo de forma uniforme. <br>
 
 :::row:::
@@ -151,8 +150,8 @@ Los usuarios usan los rayos de las manos para apuntar y mostrar el rectángulo d
     :::column-end:::
 :::row-end:::
 
-
 ### <a name="non-affordance-based-manipulation"></a>Manipulación sin prestaciones
+
 Los usuarios señalan con los rayos de las manos para mostrar el rectángulo de selección y, después, le aplican directamente los gestos de manipulación. Con una mano, la traslación y rotación del objeto se asocian con el movimiento y la orientación de la mano. Con dos manos, los usuarios pueden trasladarlo, escalarlo y girarlo en función de los movimientos relativos de las dos manos.<br>
 
 <br>
@@ -160,7 +159,8 @@ Los usuarios señalan con los rayos de las manos para mostrar el rectángulo de 
 ---
 
 ## <a name="instinctual-gestures"></a>Gestos instintivos
-El concepto de gestos instintivos para señalar y confirmar es similar a la de la [manipulación directa con las manos](direct-manipulation.md). Los gestos que los usuarios realizan en un objeto 3D los guía el diseño de las prestaciones 3D. Por ejemplo, un punto de control pequeño podría motivar a los usuarios a acercar los dedos pulgar e índice, mientras que si un usuario quiere agarrar un objeto mayor, debe usar los cinco dedos.
+
+El concepto de gestos instintivos para señalar y confirmar es similar a la de la [manipulación directa con las manos](direct-manipulation.md). Los gestos que los usuarios realizan en un objeto 3D los guía el diseño de las prestaciones de interfaz de usuario. Por ejemplo, un punto de control pequeño podría motivar a los usuarios a acercar los dedos pulgar e índice, mientras que si un usuario quiere agarrar un objeto mayor, debe usar los cinco dedos.
 
 :::row:::
     :::column:::
@@ -183,7 +183,7 @@ El concepto de gestos instintivos para señalar y confirmar es similar a la de l
 
 ## <a name="symmetric-design-between-hands-and-6-dof-controller"></a>Diseño simétrico entre las manos y 6 controladores DoF 
 
-El concepto de apuntar y confirmar para la interacción lejana se creó y definió inicialmente para el Portal de realidad mixta (MRP), donde un usuario lleva puesto un casco envolvente e interactúa con objetos 3D a través de los controladores de movimiento. Los controladores de movimiento lanzar rayos para señalar y manipular objetos lejanos. Hay botones en los controladores para confirmar más acciones diferentes. Aprovechamos el modelo de interacción de rayos y los acoplamos a ambas manos. Con este diseño simétrico, los usuarios que están familiarizados con MRP no necesitan aprender otro modelo de interacción para señalar y manipular a distancia cuando usan HoloLens 2, y viceversa.    
+El concepto de señalar y confirmar de la interacción lejana se creó y definió para el portal de realidad mixta (PRM). En este escenario, el usuario lleva un casco envolvente e interactúa con objetos 3D a través de los controladores de movimiento. Los controladores de movimiento lanzar rayos para señalar y manipular objetos lejanos. Hay botones en los controladores para confirmar más acciones diferentes. Aprovecharemos el modelo de interacción de rayos y los acoplaremos a ambas manos. Con este diseño simétrico, los usuarios que están familiarizados con MRP no necesitan aprender otro modelo de interacción para señalar y manipular a distancia cuando usan HoloLens 2, y viceversa.    
 
 :::row:::
     :::column:::
@@ -198,16 +198,15 @@ El concepto de apuntar y confirmar para la interacción lejana se creó y defini
 
 <br>
 
-
 ---
 
 ## <a name="hand-ray-in-mrtk-mixed-reality-toolkit-for-unity"></a>Haz de mano en MRTK (Mixed Reality Toolkit) para Unity
+
 De forma predeterminada, MRTK proporciona un haz de mano prefabricado ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) que tiene el mismo estado visual que el haz de mano del sistema del shell. Se asigna en el perfil de entrada de MRTK, en Punteros. En un casco envolvente, se usan los mismos haces para los controladores de movimiento.
 
 * [MRTK: perfil de puntero](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
 * [MRTK: sistema de entrada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
 * [MRTK: punteros](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
-
 
 ---
 

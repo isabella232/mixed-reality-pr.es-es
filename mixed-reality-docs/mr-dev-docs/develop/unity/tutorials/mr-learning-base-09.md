@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriales de introducción: 9. Uso de los comandos de voz'
+title: Tutoriales de MRTK - 9. Uso de los comandos de voz
 description: En este curso se muestra cómo usar comandos de voz con Mixed Reality Toolkit (MRTK).
 author: jessemcculloch
 ms.author: jemccull
@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, speech commands, voice input
 ms.localizationpriority: high
-ms.openlocfilehash: e51f9e816acbc2f98415deaec2c0885c97e40442
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 6e008f3e46bc4a22499691e284020321d29a2f23
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679254"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613469"
 ---
 # <a name="9-using-speech-commands"></a>9. Uso de los comandos de voz
 

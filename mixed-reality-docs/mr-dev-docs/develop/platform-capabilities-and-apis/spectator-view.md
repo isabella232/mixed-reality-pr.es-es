@@ -1,18 +1,18 @@
 ---
 title: Vista del espectador
-description: Visualiza los hologramas desde un dispositivo externo a fin de demostrar una experiencia de realidad mixta en una pantalla externa o grabar un vídeo de una experiencia de realidad mixta.
+description: Visualice los hologramas de un dispositivo externo para mostrar o grabar una experiencia de realidad mixta en una pantalla externa.
 author: chrisfromwork
 ms.author: chriba
 ms.date: 02/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Vista del espectador, iPhone, iOS, iPad, OpenCV, cámara, ARKit, HoloLens, realidad mixta, MixedRealityToolkit, demo, grabar
-ms.openlocfilehash: 7b48315753ada0ae7a94abca5377a083ac659a34
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: c344edea9b499bdff15d1d93e400b8be626a63b6
+ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91700542"
+ms.lasthandoff: 12/15/2020
+ms.locfileid: "97530107"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Vista del espectador para HoloLens y HoloLens 2
 
@@ -20,8 +20,7 @@ ms.locfileid: "91700542"
 
 ## <a name="overview"></a>Introducción
 
-Cuando llevamos puesto el dispositivo HoloLens, a menudo nos olvidamos de que alguien que no lo lleve no puede experimentar las mismas maravillas que nosotros. La vista del espectador permite a otros usuarios ver en una pantalla 2D lo que ve un usuario de HoloLens en su mundo.
-Dicha vista ofrece un enfoque rápido y asequible para grabar hologramas en HD con dispositivos móviles. También ofrece una grabación de hologramas de calidad profesional con cámaras de vídeo.
+Cuando tiene un dispositivo HoloLens, es fácil olvidarse de que aquellos que no tienen ninguno no pueden ver las mismas maravillas de las que está disfrutando. Gracias a la vista de espectador, otros usuarios pueden ver lo que ve un usuario de HoloLens en una pantalla 2D. También es un enfoque rápido y asequible para grabar hologramas en HD con dispositivos móviles y obtener grabaciones de los hologramas de gran calidad con cámaras de vídeo.
 
 ## <a name="key-resources"></a>Recursos clave
 
@@ -30,7 +29,8 @@ Dicha vista ofrece un enfoque rápido y asequible para grabar hologramas en HD c
 * [**Ejemplos de la vista del espectador**](https://github.com/microsoft/MixedReality-SpectatorView/tree/master/samples)
 
 ## <a name="use-cases"></a>Casos de uso
-* Puedes grabar una experiencia de realidad mixta mediante un dispositivo iPhone o Android. Graba en Full HD y aplica el suavizado de contorno a hologramas e incluso a sombras. Es una forma rentable y rápida de capturar vídeos de hologramas.
+
+* Puedes grabar una experiencia de realidad mixta mediante un dispositivo iPhone o Android. Grabe en Full HD y aplique el suavizado de contornos y un sombreado a los hologramas para conseguir una forma rentable y rápida de grabar vídeos de los mismos.
 * Haz streaming de experiencias de realidad mixta en directo a Apple TV directamente desde tu iPhone o iPad y sin retrasos.
 * Comparte la experiencia con los invitados: permite que los usuarios sin HoloLens experimenten los hologramas directamente desde sus teléfonos o tabletas.
 

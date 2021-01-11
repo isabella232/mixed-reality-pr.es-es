@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriales de introducción: 4. Posicionamiento de los objetos en la escena'
+title: Tutoriales de MRTK - 4. Posicionamiento de los objetos en la escena
 description: En este curso se muestra cómo colocar objetos en la escena y cómo usar Mixed Reality Toolkit (MRTK) para organizar los objetos en una cuadrícula.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, solvers, grid object collection
 ms.localizationpriority: high
-ms.openlocfilehash: b49d1b93b98a68e253239647262edc737fdbeb58
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: e09047e4f75697722f76301630c275f126b3cbda
+ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679314"
+ms.lasthandoff: 12/17/2020
+ms.locfileid: "97613259"
 ---
 # <a name="4-positioning-objects-in-the-scene"></a>4. Posicionamiento de los objetos en la escena
 
