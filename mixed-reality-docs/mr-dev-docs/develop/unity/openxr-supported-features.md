@@ -3,26 +3,26 @@ title: Características compatibles con el complemento OpenXR en Unity
 description: Descubra las características que OpenXR admite para el desarrollo de la realidad mixta en Unity.
 author: hferrone
 ms.author: alexturn
-ms.date: 12/15/2020
+ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr, Unity, hololens, hololens 2, reality Mixed, MRTK, kit de herramientas de realidad mixta, realidad aumentada, realidad virtual, auriculares de realidad mixta, información, tutorial, introducción
-ms.openlocfilehash: 94ec7ae6c89dea8f953fea6f4c794ca51e044d87
-ms.sourcegitcommit: 5784336a780486d05db6a627839efe47f08fac36
+ms.openlocfilehash: d65bab65bcb06f7ccba522461e04062458e7400c
+ms.sourcegitcommit: aa29b68603721e909f08f352feed24c65d2e505e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97880589"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98108848"
 ---
 # <a name="mixed-reality-openxr-supported-features-in-unity"></a>Características admitidas de OpenXR de realidad mixta en Unity
 
-El paquete de **Complementos OpenXR de realidad mixta** es una extensión del **complemento OpenXR** de Unity y admite un conjunto de características para los auriculares HoloLens 2 y Windows Mixed Reality. Antes de continuar, asegúrese de que ha instalado **unity 2020,2** o posterior, **OpenXR plugin versión 0.1.1** o posterior y el proyecto de Unity está [configurado para OpenXR](openxr-getting-started.md).
+El paquete de **Complementos OpenXR de realidad mixta** es una extensión del **complemento OpenXR** de Unity y admite un conjunto de características para los auriculares HoloLens 2 y Windows Mixed Reality. Antes de continuar, asegúrese de que ha instalado **unity 2020,2** o posterior, **OpenXR plugin versión 0.1.2** o posterior y el proyecto de Unity está [configurado para OpenXR](openxr-getting-started.md).
 
 ## <a name="whats-supported"></a>Lo que se admite
 
 Actualmente se admiten las siguientes características:
 
-* Admite aplicaciones para UWP para aplicaciones de HoloLens 2 y Win32 VR para auriculares con Windows Mixed Reality.
-* Optimiza el paquete UWP y la interacción con CoreWindow para aplicaciones de HoloLens 2.
+* Admite aplicaciones de UWP para HoloLens 2 y optimizar para el modelo de aplicación de HoloLens 2.
+* Admite aplicaciones Win32 VR para auriculares con Windows Mixed Reality con los perfiles de controlador más recientes y la comunicación remota de la aplicación holográfica.
 * Seguimiento de escala mundial con delimitadores y espacio sin enlazar.
 * [Delimite la API de almacenamiento para conservar los delimitadores](#anchors-and-anchor-persistence) en el almacenamiento local de HoloLens 2.
 * Control de [movimiento y interacciones de mano](#motion-controller-and-hand-interactions), incluido el nuevo controlador de HP reverberación G2.
@@ -31,7 +31,7 @@ Actualmente se admiten las siguientes características:
 * Buscar la cámara de foto/vídeo (PV) en HoloLens 2.
 * Captura de realidad mixta mediante la representación de la tercera vista a través de la cámara PV.
 * Admite ["Play" en HoloLens 2 con la aplicación de comunicación remota holográfica](#holographic-remoting-in-unity-editor-play-mode), lo que permite a los desarrolladores depurar scripts sin compilar e implementar en el dispositivo.
-* Compatible con MRTK Unity 2.5.2 y versiones más recientes a través de la compatibilidad con el proveedor de MRTK OpenXR. [Consulte la documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithMRTKAndXRSDK.html) para empezar a trabajar.
+* Compatible con MRTK Unity 2.5.3 y versiones más recientes a través de la compatibilidad con el [proveedor de MRTK OpenXR](openxr-getting-started.md#using-mrtk-with-openxr-support).
 * Compatible con Unity [ARFoundation 4,0](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html) o posterior
 
 ## <a name="holographic-remoting-in-unity-editor-play-mode"></a>Holographic Remoting en el modo de reproducción del editor de Unity

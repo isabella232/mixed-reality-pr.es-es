@@ -3,14 +3,14 @@ title: Instrucciones de colaboración
 description: Obtenga información sobre cómo contribuir a los documentos de desarrollador de realidad mixta en la plataforma de docs.microsoft.com con Markdown de GitHub.
 author: mattwojo
 ms.author: mattwoj
-ms.date: 03/21/2018
+ms.date: 01/11/2021
 ms.topic: article
-ms.openlocfilehash: 47689a53557e6ce9b97d0e9d834a70fb0a7786d0
-ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
+ms.openlocfilehash: 8add6413b0ff4bb32c15d1fce10977397aa33ba1
+ms.sourcegitcommit: aa29b68603721e909f08f352feed24c65d2e505e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865420"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98108858"
 ---
 # <a name="contributing-to-mixed-reality-developer-documentation"></a>Contribución a la documentación para desarrolladores de realidad mixta
 
@@ -28,7 +28,7 @@ En esta página se describen los pasos básicos y las directrices para contribui
 | Guía de entusiastas de la VR | [MicrosoftDocs/Mixed-Reality/entusiasta-Guide](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) |
 | HoloLens | [MicrosoftDocs/HoloLens](https://github.com/MicrosoftDocs/Hololens) |
 
-## <a name="before-you-start"></a>Antes de comenzar
+## <a name="before-you-start"></a>Antes de empezar
 
 Si aún no tiene una, deberá [crear una cuenta de github](https://github.com/join).
 
@@ -84,7 +84,7 @@ Para agregar una redirección a .openpublishing.redirection.js, agregue una entr
 
 - `source_path`Es la ruta de acceso relativa del repositorio al artículo anterior que se va a quitar. Asegúrese de que la ruta de acceso comienza con `mixed-reality-docs` y termina con `.md` .
 - `redirect_url`Es la dirección URL pública relativa del artículo anterior al nuevo artículo. Asegúrese de que esta dirección URL **no** contiene `mixed-reality-docs` o `.md` , ya que hace referencia a la dirección URL pública y no a la ruta de acceso del repositorio. Se permite la vinculación a una sección del nuevo artículo con `#section` . También puede usar una ruta de acceso absoluta a otro sitio, si es necesario.
-- `redirect_document_id` indica si desea conservar el identificador de documento del archivo anterior. El valor predeterminado es `false`. Use `true` si desea conservar el `ms.documentid` valor de atributo del artículo redirigido. Si conserva el identificador de documento, los datos, como las vistas de página y las clasificaciones, se transferirán al artículo de destino. Haga esto si el redireccionamiento es principalmente un cambio de nombre y no un puntero a un artículo diferente que solo trata parte del mismo contenido.
+- `redirect_document_id` indica si desea conservar el identificador de documento del archivo anterior. De manera predeterminada, es `false`. Use `true` si desea conservar el `ms.documentid` valor de atributo del artículo redirigido. Si conserva el identificador de documento, los datos, como las vistas de página y las clasificaciones, se transferirán al artículo de destino. Haga esto si el redireccionamiento es principalmente un cambio de nombre y no un puntero a un artículo diferente que solo trata parte del mismo contenido.
 
 Si agrega un redireccionamiento, asegúrese de eliminar también el archivo antiguo.
 
