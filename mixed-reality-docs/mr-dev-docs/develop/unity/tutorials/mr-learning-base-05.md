@@ -1,5 +1,5 @@
 ---
-title: Tutoriales de MRTK - 5. Creación de contenido dinámico mediante solucionadores
+title: Creación de contenido dinámico mediante solucionadores
 description: En este curso se muestra cómo usar los solucionadores de Mixed Reality Toolkit (MRTK) para crear contenido dinámico.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,16 +7,14 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, solvers
 ms.localizationpriority: high
-ms.openlocfilehash: 533aa1c9f2b0b7620e23d611714552fb19a5357b
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 959ed164e566f5bee3db203437145fa08ce168d8
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613509"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008025"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5. Creación de contenido dinámico mediante solucionadores
-
-## <a name="overview"></a>Introducción
 
 En este tutorial, explorará distintas formas de colocar hologramas de forma dinámica mediante las herramientas de selección de ubicación disponibles de MRTK, conocidas como "solucionadores", para resolver escenarios de selección de ubicación espacial complejos. En MRTK, los solucionadores son un sistema de scripts y comportamientos que se usaron para permitir que los objetos sigan al usuario o a otros objetos de juego en la escena. También pueden usarse para acoplarse en ciertas posiciones, de modo que la aplicación sea más intuitiva.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriales sobre las funcionalidades multiusuario: 1. Introducción a los tutoriales sobre las funcionalidades multiusuario'
+title: Introducción a los tutoriales sobre las funcionalidades multiusuario
 description: Complete este curso para aprender a implementar experiencias multiusuario compartidas en una aplicación de HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,16 +7,14 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, multi-user capabilities, Photon, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: 9bcaed777b8b98d95065324fc1fb5b33a1923e63
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 1000b4d2637e3a0f3bbc79df9866577427674767
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679744"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007225"
 ---
 # <a name="1-introduction-to-the-multi-user-capabilities-tutorials"></a>1. Introducción a los tutoriales sobre las funcionalidades multiusuario
-
-## <a name="overview"></a>Introducción
 
 ¡Le damos la bienvenida a los tutoriales sobre las funcionalidades multiusuario! A lo largo de esta serie de tutoriales aprenderá los aspectos básicos de la creación de una experiencia multiusuario mediante <a href="https://www.photonengine.com/PUN" target="_blank">Photon Unity Networking</a> (PUN). PUN es una de las diversas opciones de redes disponibles para que los desarrolladores de realidad mixta creen experiencias compartidas.
 

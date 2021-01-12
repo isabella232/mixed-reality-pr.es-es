@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriales de la nube de Azure: 2. Integración de Azure Storage'
+title: Integración de Azure Storage
 description: Complete este curso para aprender a implementar Azure Table Storage y Azure Blob Storage en una aplicación de HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, hololens 2, azure storage, azure cloud services, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: f13014757c4a3d6f9a6f3ffd53ef6aaf19334e2f
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: a948e035a467588091a2b5e16a3e2632ab3049d3
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679374"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008205"
 ---
 # <a name="2-integrating-azure-storage"></a>2. Integración de Azure Storage
 

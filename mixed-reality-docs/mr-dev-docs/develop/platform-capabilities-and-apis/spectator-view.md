@@ -7,18 +7,16 @@ ms.date: 02/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Vista del espectador, iPhone, iOS, iPad, OpenCV, cámara, ARKit, HoloLens, realidad mixta, MixedRealityToolkit, demo, grabar
-ms.openlocfilehash: c344edea9b499bdff15d1d93e400b8be626a63b6
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 1f61d2094ec2762ab22576d2eac85ed6bf81d5c7
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530107"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008615"
 ---
 # <a name="spectator-view-for-hololens-and-hololens-2"></a>Vista del espectador para HoloLens y HoloLens 2
 
 ![Marcador](images/SpecViewPhoneHero.jpg)
-
-## <a name="overview"></a>Introducción
 
 Cuando tiene un dispositivo HoloLens, es fácil olvidarse de que aquellos que no tienen ninguno no pueden ver las mismas maravillas de las que está disfrutando. Gracias a la vista de espectador, otros usuarios pueden ver lo que ve un usuario de HoloLens en una pantalla 2D. También es un enfoque rápido y asequible para grabar hologramas en HD con dispositivos móviles y obtener grabaciones de los hologramas de gran calidad con cámaras de vídeo.
 
