@@ -5,13 +5,13 @@ author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Controladores de 6DOF, controladores de movimiento, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, desplazamiento, control, estado
-ms.openlocfilehash: 2dbe0ab0b83b371a88e419e7b223f30670bfeaea
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+keywords: Controladores de 6DOF, controladores de movimiento, emparejamiento, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, desplazamiento, control, estado
+ms.openlocfilehash: 94a9292b3a765131ae197fd9f91c27a52a463eef
+ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009715"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192623"
 ---
 # <a name="motion-controllers"></a>Controladores de movimiento
 
@@ -239,7 +239,7 @@ Se puede realizar un seguimiento de los [gestos de mano](gaze-and-commit.md#comp
 
 Se recomienda representar todos los modelos que se representen **en la representación** del controlador, ya que el origen del modelo se alinea con este punto del mundo físico. Si está representando modelos de controlador, puede que quiera Raycast en su escena desde el **replanteamiento de puntero**, que representa el rayo a lo largo del que los usuarios esperarán de forma natural, dado el diseño físico del controlador.
 
-Para más información sobre cómo cargar modelos de controlador de forma dinámica en Unity, consulte la sección [representación del modelo de controlador de movimiento en Unity](../develop/unity/gestures-and-motion-controllers-in-unity.md#rendering-the-motion-controller-model-in-unity) .
+Para más información sobre cómo cargar modelos de controlador de forma dinámica en Unity, consulte la sección [representación del modelo de controlador de movimiento en Unity](../develop/unity/gestures-in-unity.md#rendering-the-motion-controller-model-in-unity) .
 
 **arte de línea del controlador 2D** Aunque se recomienda asociar los comandos y las sugerencias de la controladora en la aplicación a los propios modelos de App Controller, es posible que algunos desarrolladores quieran usar representaciones de arte de línea 2D de los controladores de movimiento en la interfaz de usuario "Tutorial" o "cómo". Para esos desarrolladores, hemos hecho que los archivos de imagen del controlador de movimiento. png estén disponibles tanto en blanco como en blanco a continuación (haga clic con el botón derecho para guardarlos).
 
@@ -275,9 +275,9 @@ Consulte [solución de problemas del controlador de movimiento](https://docs.mic
 
 Envíenos [sus comentarios](../give-us-feedback.md) en la central de comentarios, usando la categoría de entrada de > de realidad mixta.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 
-* [Gestos y controladores de movimiento en Unity](../develop/unity/gestures-and-motion-controllers-in-unity.md)
+* [Controladores de movimiento en Unity](../develop/unity/motion-controllers-in-unity.md)
 * [Manos y controladores de movimiento en DirectX](../develop/native/hands-and-motion-controllers-in-directx.md)
 * [Gestos](gaze-and-commit.md#composite-gestures)
 * [Guía del entusiasta: su página principal de Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)

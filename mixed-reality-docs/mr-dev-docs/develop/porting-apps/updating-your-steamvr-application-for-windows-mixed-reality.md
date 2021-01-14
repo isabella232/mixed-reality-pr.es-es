@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 03/21/2018
 ms.topic: article
 keywords: SteamVR, compatibilidad, portabilidad, HoloLens de la primera generación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, migración, Windows 10, controladores de streaming de movimiento, hápticos
-ms.openlocfilehash: 94b6aad63156d752858c6566174ff01e6127d75d
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: c67eed489f626c804583592e496fcfaff5d8c291
+ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97612909"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192633"
 ---
 # <a name="updating-steamvr-apps-for-windows-mixed-reality"></a>Actualización de aplicaciones de SteamVR para Windows Mixed Reality
 
@@ -26,7 +26,7 @@ Para empezar a probar su juego o aplicación en Windows Mixed Reality, asegúres
 1. Si la aplicación representa modelos de controlador:
     * Usar los [modelos de controlador de movimiento de Windows Mixed Reality](../../design/motion-controllers.md#rendering-the-motion-controller-model)
     * Use IVRRenderModel:: GetComponentState para obtener transformaciones locales a partes de componentes (por ejemplo, la pose de puntero).
-2. Las experiencias que tienen una noción de mano deben obtener sugerencias de las API de entrada para diferenciar los controladores [(ejemplo de Unity)](../unity/gestures-and-motion-controllers-in-unity.md#unity-buttonaxis-mapping-table)
+2. Las experiencias que tienen una noción de mano deben obtener sugerencias de las API de entrada para diferenciar los controladores [(ejemplo de Unity)](../unity/motion-controllers-in-unity.md#unity-buttonaxis-mapping-table)
 
 ## <a name="controls"></a>Controles
 

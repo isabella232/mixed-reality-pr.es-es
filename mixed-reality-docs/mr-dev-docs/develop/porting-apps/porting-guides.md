@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/9/2020
 ms.topic: article
 keywords: puerto, Unity, no real, middleware, motor, UWP, Win32, portabilidad, HoloLens primera generación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, migración, Windows 10, asignación de entrada
-ms.openlocfilehash: f1cb7cd96ee1d6e32c9ef1f8d3e0e1b2654e0a79
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b43b42567183ef77ef76b301212233eeeb7c04ca
+ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009875"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192673"
 ---
 # <a name="porting-vr-apps-to-windows-mixed-reality"></a>Portabilidad de aplicaciones de VR a Windows Mixed Reality
 
@@ -56,12 +56,12 @@ La plataforma Windows Mixed Reality todavía está en desarrollo activo. Se reco
 > [!IMPORTANT]
 > Si usa controladores de HP reverberación G2, consulte [este artículo](../unreal/unreal-reverb-g2-controllers.md) para obtener instrucciones adicionales de asignación de entrada.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Instrucciones de compatibilidad de hardware de equipo mínima de Windows Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)
 * [Descripción del rendimiento de la realidad mixta](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)
 * [Recomendaciones de rendimiento para Unity](../unity/performance-recommendations-for-unity.md)
 * [Controladores de movimiento](../../design/motion-controllers.md)
-* [Gestos y controladores de movimiento en Unity](../unity/gestures-and-motion-controllers-in-unity.md)
+* [Controladores de movimiento en Unity](../unity/motion-controllers-in-unity.md)
 * [UnityEngine. XR. WSA. Input](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.html)
 * [UnityEngine. XR. InputTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking.html)
 * [Guías de migración](porting-guides.md)

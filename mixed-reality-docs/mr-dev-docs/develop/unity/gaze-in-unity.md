@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: miras hacia abajo, a la punta, por la cabeza, el holograma, la realidad mixta, el casco de realidad mixta, el casco de realidad mixta de Windows, el casco de realidad virtual, MRTK, el kit de herramientas de realidad mixta
-ms.openlocfilehash: 5dab8cb38aaa4b9a4547f4bf494afb093b6d8058
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 7efc77eff90a164fdc0476a90912a0f52c9bb33d
+ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009895"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98192643"
 ---
 # <a name="head-gaze-in-unity"></a>Encabezado de la mirada en Unity
 
@@ -59,7 +59,7 @@ Puede acceder al encabezado de la mirada desde el [Administrador de entrada](htt
 Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
-> [Gestos y controladores de movimiento](gestures-and-motion-controllers-in-unity.md)
+> [Controladores de movimiento](motion-controllers-in-unity.md)
 
 O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:
 
@@ -68,7 +68,7 @@ O bien puede saltar a las funcionalidades y las API de la plataforma de realidad
 
 Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 * [Cámara](camera-in-unity.md)
 * [Cursores](../../design/cursors.md)
 * [Mirada-cabeza y confirmación](../../design/gaze-and-commit.md)
