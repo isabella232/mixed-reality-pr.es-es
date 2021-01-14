@@ -1,19 +1,19 @@
 ---
 layout: LandingPage
 title: Tutoriales
-description: Proporciona tutoriales sobre el desarrollo de realidad mixta.
+description: Manténgase al día sobre los tutoriales de desarrollo de realidad mixta que se ofrecen para HoloLens y los servicios de Azure.
 author: keveleigh
 ms.author: kurtie
 ms.date: 07/30/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial, mixed reality headset, windows mixed reality headset, virtual reality headset, unity, unreal, HoloLens, Azure spatial anchors, Azure speech services
-ms.openlocfilehash: a85792ba082450fb01f3c6f7bb008d3c7b17560b
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 76c8cdcddd9617df8e823b4967593c37fa1e6bb9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010466"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006525"
 ---
 # <a name="tutorials"></a>Tutoriales
 
