@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriales sobre Azure Spatial Anchors: 2. Introducción a Azure Spatial Anchors'
+title: Introducción a Azure Spatial Anchors
 description: Siga este curso para aprender a usar Azure Spatial Anchors dentro para anclar objetos en una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,16 +7,14 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: ae2726be302bf8ebf342ebd95233b28d7e534423
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: a31d398621c581460e49ed81d23c446e60bc530f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679944"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008515"
 ---
 # <a name="2-getting-started-with-azure-spatial-anchors"></a>2. Introducción a Azure Spatial Anchors
-
-## <a name="overview"></a>Introducción
 
 En este tutorial, explorará los distintos pasos necesarios para iniciar y detener una sesión de Azure Spatial Anchors, y para crear, cargar y descargar Azure Spatial Anchors en un único dispositivo.
 
@@ -29,14 +27,14 @@ En este tutorial, explorará los distintos pasos necesarios para iniciar y deten
 
 En esta sección, crearás un nuevo proyecto de Unity y lo prepararás para el desarrollo con MRTK.
 
-Para ello, antes debe seguir las instrucciones de [Inicialización de su proyecto e implementación de su primera aplicación](mr-learning-base-02.md), a excepción de la sección [Compilación de la aplicación para el dispositivo](mr-learning-base-02.md#building-your-application-to-your-hololens-2), que incluyen los pasos siguientes:
+Primero, debe seguir las instrucciones de [Inicialización de su proyecto e implementación de su primera aplicación](mr-learning-base-02.md), a excepción de la sección [Compilación de la aplicación para el dispositivo](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2), que incluyen los pasos siguientes:
 
 1. [Crear el proyecto de Unity](mr-learning-base-02.md#creating-the-unity-project) y asignarle un nombre adecuado; por ejemplo, *MRTK Tutorials*
-1. [Cambiar la plataforma de compilación](mr-learning-base-02.md#configuring-the-unity-project)
-1. [Importar los recursos esenciales de TextMeshPro](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
-1. [Importar Mixed Reality Toolkit](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-1. [Configurar el proyecto de Unity](mr-learning-base-02.md#configuring-the-unity-project)
-1. [Crear y configurar la escena](mr-learning-base-02.md#creating-and-configuring-the-scene) y asignarle un nombre adecuado; por ejemplo, *AzureSpatialAnchors*
+2. [Cambiar la plataforma de compilación](mr-learning-base-02.md#switching-the-build-platform)
+3. [Importar los recursos esenciales de TextMeshPro](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
+4. [Importar Mixed Reality Toolkit](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
+5. [Configurar el proyecto de Unity](mr-learning-base-02.md#selecting-mrtk-and-project-settings)
+6. [Crear y configurar la escena](mr-learning-base-02.md#creating-and-configuring-the-scene) y asignarle un nombre adecuado; por ejemplo, *AzureSpatialAnchors*
 
 A continuación, siga las instrucciones de la sección [Cambio de la opción de visualización de reconocimiento espacial](mr-learning-base-03.md#changing-the-spatial-awareness-display-option) para:
 
@@ -148,7 +146,7 @@ En la ventana Hierarchy (Jerarquía), seleccione el objeto **ParentAnchor** y, e
 Azure Spatial Anchors no se puede ejecutar en Unity, de modo que, para probar la funcionalidad de Azure Spatial Anchors, debe compilar el proyecto e implementar la aplicación en el dispositivo.
 
 > [!TIP]
-> Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puede consultar las instrucciones de [Compilación de la aplicación para el HoloLens 2](mr-learning-base-02.md#building-your-application-to-your-hololens-2).
+> Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puede consultar las instrucciones de [Compilación de la aplicación a HoloLens 2]((mr-learning-base-02.md#building-your-application-to-your-hololens-2).
 
 Cuando la aplicación se ejecute en el dispositivo, siga las instrucciones en pantalla que se muestran en el panel de instrucciones del tutorial de Azure Spatial Anchors:
 

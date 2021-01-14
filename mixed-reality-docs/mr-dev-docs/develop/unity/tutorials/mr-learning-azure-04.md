@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriales de la nube de Azure: 4. Integración de Azure Spatial Anchors'
+title: Integración de Azure Spatial Anchors
 description: Siga este curso para aprender a implementar Azure Spatial Anchors dentro de una aplicación de HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, hololens 2, Azure spatial anchors, azure cloud services, azure custom vision, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 5245f3522e7822c16ebc0d0113634f152f223086
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 50e5bccf09e03ebda8057dbb3ca9d83fc01694bd
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679344"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008175"
 ---
 # <a name="4-integrating-azure-spatial-anchors"></a>4. Integración de Azure Spatial Anchors
 
@@ -60,7 +60,7 @@ Observará que el campo **Anchor Manager** (Administrador de anclajes) del compo
 Azure Spatial Anchors no se puede ejecutar en Unity, de modo que, para probar la funcionalidad Azure Spatial Anchors, debes implementar el proyecto en el dispositivo.
 
 > [!TIP]
-> Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puede consultar las instrucciones de [Compilación de la aplicación para el HoloLens 2](mr-learning-base-02.md#building-your-application-to-your-hololens-2).
+> Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puede consultar las instrucciones de [Compilación de la aplicación a HoloLens 2]((mr-learning-base-02.md#building-and-deploying-to-your-hololens-2).
 
 ## <a name="run-the-app-on-your-hololens-2-and-follow-the-in-app-instructions"></a>Ejecutar la aplicación en HoloLens 2 y seguir las instrucciones desde la aplicación
 
