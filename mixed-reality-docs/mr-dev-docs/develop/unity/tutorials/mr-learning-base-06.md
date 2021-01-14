@@ -1,22 +1,20 @@
 ---
-title: Tutoriales de MRTK - 6. Creación de interfaces de usuario
-description: En este curso se muestra cómo usar Mixed Reality Toolkit (MRTK) para crear interfaces de usuario.
+title: Creación de interfaces de usuario
+description: En este curso se muestra cómo usar Mixed Reality Toolkit (MRTK) para crear interfaces de usuario estáticas y dinámicas.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, prefabs, holograms, tooltips
 ms.localizationpriority: high
-ms.openlocfilehash: 90b794dc6e88b724d16c339e428c4d2ed9cdac07
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 989de4871332608448619e75ffd760c616332533
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613519"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008065"
 ---
 # <a name="6-creating-user-interfaces"></a>6. Creación de interfaces de usuario
-
-## <a name="overview"></a>Introducción
 
 En este tutorial, obtendrá información sobre cómo crear una interfaz de usuario sencilla con los elementos prefabricados de botón y menú de MRTK junto con el componente TextMeshPro de Unity. También aprenderá a configurar los botones para desencadenar eventos y agregar elementos dinámicos de información sobre herramientas en la interfaz de usuario para proporcionar a los usuarios información adicional.
 

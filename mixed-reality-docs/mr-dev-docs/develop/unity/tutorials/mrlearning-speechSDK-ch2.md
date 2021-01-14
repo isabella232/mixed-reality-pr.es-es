@@ -1,20 +1,20 @@
 ---
-title: 'Tutoriales de los servicios de voz de Azure: 2. Adición de un modo sin conexión para la traducción de voz a texto local'
-description: Haz este curso para aprender a implementar el SDK de voz de Azure dentro de una aplicación de realidad mixta.
+title: Adición de un modo sin conexión para la traducción de voz a texto local
+description: Complete este curso para aprender a agregar el modo sin conexión para la traducción de voz a texto local en aplicaciones de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 06/27/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, speech recognition, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: d5b0e5140c698996c051eab10064d99280482886
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: db495d6cdfa99721e68b4004535a5411bde9b17d
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679734"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010085"
 ---
-# <a name="2-using-speech-recognition-to-execute-commands"></a>2. Usar el reconocimiento de voz para ejecutar comandos
+# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. Adición de un modo sin conexión para la traducción de voz a texto local
 
 En este tutorial, agregarás la posibilidad de ejecutar comandos con el reconocimiento de voz de Azure, lo que te permitirá hacer que pase algo en función de la palabra o frase que definas.
 
@@ -29,18 +29,18 @@ En la ventaja Hierarchy (Jerarquía), selecciona el objeto **Lunarcom** y, a con
 * En el campo **Wake Word** (Palabra de activación), escribe una frase adecuada; por ejemplo, _Activate terminal_ (Activar terminal).
 * En el campo **Dismiss Word** (Palabra de descarte), escribe una frase adecuada; por ejemplo, _Dismiss terminal_ (Descartar terminal).
 
-![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-1.png)
+![Editor de Unity con el componente Wake Word Recognizer (Script) (Reconocimiento de palabra de activación [script])](images/mrlearning-speech/tutorial2-section1-step1-1.png)
 
 > [!NOTE]
 > El componente Wake Word Recognizer (Script) (Reconocimiento de palabra de activación [script]) no forma parte de MRTK. Se proporcionó con los recursos de este tutorial.
 
 Si ahora entras en el modo de juego, como en el tutorial anterior, el panel del terminal está habilitado de forma predeterminada, pero puedes deshabilitarlo diciendo la palabra de descarte: **Dismiss terminal** (Descartar terminal):
 
-![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-2.png)
+![Editor de Unity en modo de reproducción con la característica de reconocedor de voz en uso](images/mrlearning-speech/tutorial2-section1-step1-2.png)
 
 Para volver a habilitarlo, indica la palabra de activación **Activate terminal** (Activar terminal):
 
-![mrlearning-speech](images/mrlearning-speech/tutorial2-section1-step1-3.png)
+![Editor de Unity en modo de reproducción con el terminal activo](images/mrlearning-speech/tutorial2-section1-step1-3.png)
 
 > [!CAUTION]
 > La aplicación necesita conectarse a Azure, por lo que debes asegurarte de que el equipo o dispositivo está conectado a Internet.

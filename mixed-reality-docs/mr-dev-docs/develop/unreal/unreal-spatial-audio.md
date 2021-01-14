@@ -1,18 +1,18 @@
 ---
 title: Audio espacial en Unreal
-description: Aprenda los pormenores del complemento de audio espacial de Unreal Engine.
+description: Conozca los pormenores del complemento de audio espacial para aplicaciones de realidad mixta de Unreal para dispositivos HoloLens.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 06/15/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, remoting, mixed reality, development, getting started, features, new project, emulator, documentation, guides, features, holograms, game development, mixed reality headset, windows mixed reality headset, virtual reality headset, spatial audio
-ms.openlocfilehash: fa87862f6a6af456ea344b67e22f1640c9cfafb4
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 98c10e370cd4ca5e437a4677be6fce3d3aee53a9
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609546"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009975"
 ---
 # <a name="spatial-audio-in-unreal"></a>Audio espacial en Unreal
 
@@ -34,7 +34,6 @@ El primer paso para agregar sonido espacial a su proyecto es instalar el complem
 ![Complemento de audio espacial de Unreal](images/unreal-spatial-audio-img-01.png)
 
 Cuando se reinicia el editor, el proyecto ya está preparado.
-
 
 ## <a name="setting-the-spatialization-plugin-for-hololens-2-platform"></a>Configuración del complemento de espacialización para la plataforma HoloLens 2
 

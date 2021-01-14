@@ -1,18 +1,18 @@
 ---
 title: Introducción al módulo de Learn de Mixed Reality
-description: Eche un vistazo a los módulos de Learn para Mixed Reality disponibles.
+description: Manténgase al día con todos los módulos de Mixed Reality disponibles hospedados en la plataforma Microsoft Learn.
 author: hferrone
 ms.author: jemccull
 ms.date: 11/30/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, learn, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, qué es la realidad virtual, qué es la realidad aumentada, MRTK, kit de herramientas de mixed reality, traducción de idiomas, Azure, Azure cognitive services, Microsoft Learn
 ms.localizationpriority: high
-ms.openlocfilehash: 5d59f09b98b4228b52a87a7c91e64129060f754c
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 211d8e61a45a59df725f4c6c7d11c93f129d63b5
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757803"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98006915"
 ---
 # <a name="mixed-reality-learn-overview"></a>Introducción a Learn de Mixed Reality
 

@@ -1,18 +1,18 @@
 ---
 title: Cámara de foto y vídeo HoloLens en Unreal
-description: Guía para usar la cámara de foto y vídeo HoloLens en Unreal
+description: Obtenga información sobre cómo usar la cámara de fotos y vídeo de HoloLens para Captura de realidad mixta y la ubicación de objetos en Unreal.
 author: hferrone
 ms.author: jacksonf
 ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, camera, PV camera, MRC, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: fb7bbf5a0f41c15d73e59226dad32cda8764e6cc
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: 15eba0c992d6d3d8895314f1a6128ace18c02483
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96926102"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010065"
 ---
 # <a name="hololens-photovideo-camera-in-unreal"></a>Cámara de foto y vídeo HoloLens en Unreal
 
@@ -38,5 +38,6 @@ O bien puede ir directamente a la implementación de la aplicación en un dispos
 Puede volver a los [puntos de control de desarrollo de Unreal](unreal-development-overview.md#3-platform-capabilities-and-apis) en cualquier momento.
 
 ## <a name="see-also"></a>Consulta también
+
 * [Cámara localizable](../platform-capabilities-and-apis/locatable-camera.md)
 * [Captura de realidad mixta para desarrolladores](../platform-capabilities-and-apis/mixed-reality-capture-for-developers.md)

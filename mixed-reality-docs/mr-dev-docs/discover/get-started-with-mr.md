@@ -1,18 +1,18 @@
 ---
 title: Introducción a Mixed Reality
-description: Aprenda los aspectos básicos sobre la teoría de la realidad mixta, su desarrollo y los casos de uso comunes.
+description: Elija su recorrido de desarrollo y aprenda los aspectos básicos sobre la teoría de la realidad mixta, su desarrollo y los casos de uso comunes.
 author: grbury
 ms.author: grbury
 ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: f50457fedb0223317e522c4d86bd56cc02657c77
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 03db5f79a531d77bfd1cd6513c5bed9ad1202189
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757673"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009725"
 ---
 # <a name="get-started-with-mixed-reality"></a>Introducción a Mixed Reality
 

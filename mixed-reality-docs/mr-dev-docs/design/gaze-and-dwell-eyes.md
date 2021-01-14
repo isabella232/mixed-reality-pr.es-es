@@ -1,18 +1,18 @@
 ---
 title: Control con los ojos y permanencia
-description: Introducción al modelo de entrada de control con los ojos y permanencia.
+description: Empiece con una introducción al modelo de entrada de control con los ojos y permanencia, que incluye modelos de interacción, directrices de diseño y desafíos únicos.
 author: sostel
 ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Eye Tracking, Mixed Reality, Input, Eye Gaze, Eye Targeting, HoloLens 2, Eye-based Selection, Dwell, mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit, design
-ms.openlocfilehash: bf9ad97790093a08156660bfd6e33d16c06e6387
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 78f8dcec3c8368128ec5904df36ce1391aa8b879
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847814"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007715"
 ---
 # <a name="eye-gaze-and-dwell"></a>Control con los ojos y permanencia
 
@@ -43,6 +43,7 @@ Se recomienda un tiempo de inicio de 150 a 250 ms en una proximidad determinada 
 ![Estados de permanencia](images/eyes_dwellstate_recommendation.png)<br>
 
 ## <a name="see-also"></a>Consulta también
+
 * [Seguimiento de los ojos](eye-tracking.md)
 * [Control con los ojos y confirmación](gaze-and-commit-eyes.md)
 * [Mirada y confirmación](gaze-and-commit.md)

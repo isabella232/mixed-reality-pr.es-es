@@ -1,18 +1,18 @@
 ---
 title: Actualización de proyectos en Unreal
-description: Información general de los pasos de actualización de la versión y las API en desuso en proyectos de Unreal.
+description: Manténgase al día con los pasos de actualización de la versión, los cambios de API y el desuso de proyectos de Unreal.
 author: hferrone
 ms.author: jacksonf
 ms.date: 11/23/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, desarrollo, características, documentación, guías, hologramas, códigos qr, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual
-ms.openlocfilehash: 5460ab55c887c44029e956545cf6a549f55716f7
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 27fb726bc0ca9c51b4e7b68ad28b76f89312262e
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010626"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010055"
 ---
 # <a name="upgrading-projects-in-unreal"></a>Actualización de proyectos en Unreal
 

@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriales de introducción: 1. Introducción y objetivos'
+title: Información general y objetivos del tutorial
 description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 777203d0051c22b0f249db7d377ab08f92c089b7
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: d767cca4fbb88d0cfdd7c2fdea1a0621523ad236
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91701592"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010095"
 ---
 # <a name="1-overview-and-objectives"></a>1. Introducción y objetivos
 
@@ -43,7 +43,7 @@ ms.locfileid: "91701592"
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-* Un equipo Windows 10 configurado con las [herramientas instaladas](../../install-the-tools.md) correctas
+* Un equipo Windows 10 configurado con las [herramientas correctas instaladas](../../install-the-tools.md)
 * SDK de Windows 10 10.0.18362.0 o posterior
 * Capacidad básica para programar con C#
 * Un dispositivo HoloLens 2 [configurado para el desarrollo](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)

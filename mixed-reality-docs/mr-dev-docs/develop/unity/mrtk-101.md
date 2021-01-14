@@ -1,18 +1,18 @@
 ---
-title: 'MRTK 101: Uso de Unity con Mixed Reality Toolkit para interacciones espaciales comunes (HoloLens 2, HoloLens, Windows Mixed Reality y Open VR)'
-description: Uso de Unity con Mixed Reality Toolkit para interacciones básicas (HoloLens 2, HoloLens, Windows Mixed Reality y Open VR)
+title: 'MRTK 101: uso de interacciones espaciales comunes'
+description: Uso de Unity con Mixed Reality Toolkit para interacciones básicas en HoloLens 2, HoloLens, Windows Mixed Reality y Open VR.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 08/27/2019
 ms.topic: article
 keywords: HoloLens, MRTK, Mixed Reality Toolkit, Windows Mixed Reality, design, sample app, controls, mixed reality headset, windows mixed reality headset, virtual reality headset
 ms.localizationpriority: high
-ms.openlocfilehash: 16087b69a45def0f496d2ded434458725474bd25
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: ff3c6e055bca66fc5ad12548966140af8197235c
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010606"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98008945"
 ---
 # <a name="mrtk-101-how-to-use-mixed-reality-toolkit-unity-for-common-spatial-interactions"></a>MRTK 101: Uso de Mixed Reality Toolkit Unity para interacciones espaciales comunes
 

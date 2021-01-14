@@ -1,18 +1,18 @@
 ---
 title: Códigos QR en Unreal
-description: Guía para el uso de códigos QR en Unreal
+description: Obtenga información sobre cómo configurar y usar códigos QR, y sobre cómo realizar su seguimiento, en aplicaciones de realidad mixta de Unreal.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, qr codes, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 72f08c22b8dcab5e13de2baae817b3496ada1a60
-ms.sourcegitcommit: f2782d0925b2075fdaa0a4ecdef3dd4f0b4e1e99
+ms.openlocfilehash: 1daa368ee9f98accec58c6621073bd7caefdfdcb
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96926082"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98010015"
 ---
 # <a name="qr-codes-in-unreal"></a>Códigos QR en Unreal
 
@@ -28,6 +28,7 @@ Preste especial atención a las [consideraciones del ambiente](../../environment
 > Los códigos QR son el único tipo de imágenes de las que HoloLens puede realizar un seguimiento de forma predefinida. El módulo **UARTrackedImage** de Unreal no se admite en HoloLens. Si necesita realizar un seguimiento de las imágenes personalizadas, puede acceder a la [cámara web](unreal-hololens-camera.md) del dispositivo y procesar imágenes mediante una biblioteca de reconocimiento de imágenes de terceros. 
 
 ## <a name="enabling-qr-detection"></a>Habilitación de la detección de QR
+
 Como HoloLens 2 necesita usar la cámara web para ver los códigos QR, deberá habilitarla en la configuración del proyecto:
 - Abra **Editar > Configuración del proyecto**, desplácese hasta la sección **Plataformas** y seleccione **HoloLens**.
     + Expanda la sección **Funcionalidades** y marque **Cámara web**.  
@@ -52,6 +53,7 @@ Los códigos QR aparecen en el sistema de geometría con seguimiento de AR de Un
 ![Adición de un nodo al evento On Add Tracked Geometry (Al agregar geometría con seguimiento)](images/unreal-qr-codes-tracked-geometry.png)
 
 ## <a name="using-a-tracked-qr-code"></a>Uso de un código QR con seguimiento
+
 El gráfico de eventos de la siguiente imagen muestra el evento **OnUpdateTrackedImage** que se usa para representar un punto en el centro de un código QR e imprimir sus datos.
 
 [!INCLUDE[](includes/tabs-qr-codes-2.md)]
@@ -63,6 +65,7 @@ Esto es lo que sucede:
 También puede [obtener el sistema de coordenadas para un código QR](https://docs.microsoft.com/windows/mixed-reality/qr-code-tracking#getting-the-coordinate-system-for-a-qr-code) en el código.
 
 ## <a name="finding-the-unique-id"></a>Búsqueda del identificador único
+
 Cada código QR tiene un id. de GUID único, que puede buscar:
 - Arrastrando y colocando el marcador **As ARTracked QRCode** (Como QRCode ARTracked) y buscando **Get Unique ID** (Obtener id. único).
 

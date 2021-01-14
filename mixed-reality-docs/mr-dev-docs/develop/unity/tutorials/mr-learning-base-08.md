@@ -1,22 +1,20 @@
 ---
-title: Tutoriales de MRTK - 8. Uso del seguimiento ocular
-description: En este curso se muestra cómo usar el seguimiento ocular con Mixed Reality Toolkit (MRTK).
+title: Uso del seguimiento ocular
+description: En este curso se muestra cómo usar el seguimiento ocular en las aplicaciones de realidad mixta con Mixed Reality Toolkit (MRTK).
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, eye-tracking
 ms.localizationpriority: high
-ms.openlocfilehash: 538204513589b96bedb8b20c46eee5735b764a4c
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: f464ba4e08f1446f1d50eda577aedf9d070630ee
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613489"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007895"
 ---
 # <a name="8-using-eye-tracking"></a>8. Uso del seguimiento ocular
-
-## <a name="overview"></a>Introducción
 
 En este tutorial, aprenderá a habilitar el seguimiento ocular para HoloLens 2 y agregará el seguimiento ocular a los objetos para desencadenar acciones cuando el usuario los mire.
 
@@ -35,7 +33,7 @@ En el menú de Unity, seleccione Mixed Reality Toolkit > Utilities (Utilidades) 
 ![Ventana MRTK Project Configurator (Configurador del proyecto MRTK) de Unity](images/mr-learning-base/base-08-section1-step1-1.png)
 
 > [!NOTE]
-> La funcionalidad de entrada de mirada con los ojos debe haberse habilitado durante las instrucciones de [Aplicación de la configuración de MRTK Project Configurator](mr-learning-base-02.md#1-apply-the-mrtk-project-configurator-settings) al configurar el proyecto de Unity al principio de esta serie de tutoriales. Sin embargo, si no está habilitada, asegúrese de habilitarla ahora.
+> La funcionalidad de entrada de mirada con los ojos debe haberse habilitado durante las instrucciones de [Aplicación de la configuración de MRTK Project Configurator](mr-learning-base-02.md#selecting-mrtk-and-project-settings) al configurar el proyecto de Unity al principio de esta serie de tutoriales. Sin embargo, si no está habilitada, asegúrese de habilitarla ahora.
 
 ## <a name="enabling-eye-based-gaze-in-the-gaze-provider"></a>Habilitar la mirada con los ojos en el proveedor de mirada
 

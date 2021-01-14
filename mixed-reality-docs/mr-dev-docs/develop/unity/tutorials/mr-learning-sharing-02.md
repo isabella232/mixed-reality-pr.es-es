@@ -1,22 +1,20 @@
 ---
-title: 'Tutoriales sobre las funcionalidades multiusuario: 2. Configuración de Photon Unity Networking'
-description: Siga este curso para aprender a implementar Photon Unity Networking en una aplicación de HoloLens 2.
+title: Configuración de Photon Unity Networking
+description: Siga este curso para aprender a implementar Photon Unity Networking en una aplicación de realidad mixta de HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, multi-user capabilities, Photon, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, PUN
 ms.localizationpriority: high
-ms.openlocfilehash: 062c39ab6973c7c71e305cfc7a695fb250c76596
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 8bf8d440cb47d817514e34c98ac45f34f495c2bb
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679264"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007305"
 ---
 # <a name="2-setting-up-photon-unity-networking"></a>2. Configuración de Photon Unity Networking
-
-## <a name="overview"></a>Introducción
 
 En este tutorial, se preparará para la creación de una experiencia compartida con Photon Unity Networking (PUN). Obtendrá información sobre cómo crear una aplicación de PUN, importar recursos de PUN en el proyecto de Unity y conectar el proyecto de Unity a la aplicación de PUN.
 
@@ -30,14 +28,14 @@ En este tutorial, se preparará para la creación de una experiencia compartida 
 
 En esta sección, crearás un nuevo proyecto de Unity y lo prepararás para el desarrollo con MRTK.
 
-Para ello, antes debe seguir las instrucciones de [Inicialización de su proyecto e implementación de su primera aplicación](mr-learning-base-02.md), a excepción de la sección [Compilación de la aplicación para el dispositivo](mr-learning-base-02.md#building-your-application-to-your-hololens-2), que incluyen los pasos siguientes:
+Primero, debe seguir las instrucciones de [Inicialización de su proyecto e implementación de su primera aplicación](mr-learning-base-02.md), a excepción de la sección [Compilación de la aplicación para el dispositivo](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2), que incluyen los pasos siguientes:
 
 1. [Crear el proyecto de Unity](mr-learning-base-02.md#creating-the-unity-project) y asignarle un nombre adecuado; por ejemplo, *MRTK Tutorials*
-1. [Cambiar la plataforma de compilación](mr-learning-base-02.md#configuring-the-unity-project)
-1. [Importar los recursos esenciales de TextMeshPro](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
-1. [Importar Mixed Reality Toolkit](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-1. [Configurar el proyecto de Unity](mr-learning-base-02.md#configuring-the-unity-project)
-1. [Crear y configurar la escena](mr-learning-base-02.md#creating-and-configuring-the-scene) y asignar un nombre adecuado a la escena; por ejemplo, *MultiUserCapabilities*
+2. [Cambiar la plataforma de compilación](mr-learning-base-02.md#switching-the-build-platform)
+3. [Importar los recursos esenciales de TextMeshPro](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
+4. [Importar Mixed Reality Toolkit](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
+5. [Configurar el proyecto de Unity](mr-learning-base-02.md#selecting-mrtk-and-project-settings)
+6. [Crear y configurar la escena](mr-learning-base-02.md#creating-and-configuring-the-scene) y asignar un nombre adecuado a la escena; por ejemplo, *MultiUserCapabilities*
 
 A continuación, siga las instrucciones de la sección [Cambio de la opción de visualización de reconocimiento espacial](mr-learning-base-03.md#changing-the-spatial-awareness-display-option) para:
 
@@ -50,7 +48,7 @@ En el menú de Unity, selecciona **Edit** > **Project Settings...** (Editar > Co
 
 ![Player Settings (Configuración del reproductor) de Unity](images/mr-learning-sharing/sharing-02-section2-step1-1.png)
 
-En **Configuración de publicación**, desplácese hasta la sección **Funcionalidades** y compruebe que las funcionalidades **InternetClient**, **Microphone**, **SpatialPerception** y **GazeInput** que habilitó durante el paso anterior titulado [Configuración del proyecto de Unity](mr-learning-base-02.md#configuring-the-unity-project), estén habilitadas.
+En **Configuración de publicación**, desplácese hasta la sección **Funcionalidades** y compruebe que las funcionalidades **InternetClient**, **Microphone**, **SpatialPerception** y **GazeInput** que habilitó durante el paso anterior titulado [Configuración del proyecto de Unity](mr-learning-base-02.md#selecting-mrtk-and-project-settings), estén habilitadas.
 
 A continuación, habilite las siguientes funcionalidades adicionales:
 
@@ -61,7 +59,7 @@ A continuación, habilite las siguientes funcionalidades adicionales:
 
 ## <a name="installing-inbuilt-unity-packages"></a>Instalación de paquetes de Unity integrados
 
-En el menú de Unity, seleccione **Ventana** > **Administrador de paquetes** para abrir la ventana Administrador de paquetes y, a continuación, seleccione **AR Foundation** y haga clic en el botón **Instalar** para instalar el paquete:
+En el menú de Unity, seleccione **Window** > **Package Manager** (Ventana > Administrador de paquetes) para abrir la ventana Package Manager y, a continuación, seleccione **AR Foundation** y haga clic en el botón **Install** (Instalar) para instalar el paquete:
 
 ![Unity Package Manager con AR Foundation seleccionado](images/mr-learning-sharing/sharing-02-section3-step1-1.png)
 
@@ -72,7 +70,7 @@ En el menú de Unity, seleccione **Ventana** > **Administrador de paquetes** par
 
 Descarga e **importa** los siguientes paquetes personalizados de Unity **en el orden en que aparecen**:
 
-* [AzureSpatialAnchors.unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.2.1/AzureSpatialAnchors.unitypackage) (versión 2.2.1)
+* [AzureSpatialAnchors.unitypackage](https://github.com/Azure/azure-spatial-anchors-samples/releases/download/v2.2.1/AzureSpatialAnchors.unitypackage) (versión 2.2.1)
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage)
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.4.0.unitypackage)
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.MultiUserCapabilities.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/multi-user-capabilities-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.MultiUserCapabilities.2.4.0.unitypackage)

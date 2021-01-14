@@ -1,22 +1,20 @@
 ---
-title: Tutoriales de MRTK - 9. Uso de los comandos de voz
-description: En este curso se muestra cómo usar comandos de voz con Mixed Reality Toolkit (MRTK).
+title: Uso de los comandos de voz
+description: En este curso se muestra cómo configurar, crear y usar los comandos de voz en las aplicaciones de realidad mixta con Mixed Reality Toolkit (MRTK).
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, speech commands, voice input
 ms.localizationpriority: high
-ms.openlocfilehash: 6e008f3e46bc4a22499691e284020321d29a2f23
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 8aea8ead6416787f2979e0deff46ee5d6d45eb19
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613469"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007915"
 ---
 # <a name="9-using-speech-commands"></a>9. Uso de los comandos de voz
-
-## <a name="overview"></a>Introducción
 
 En este tutorial, aprenderá a crear comandos de voz y a controlarlos de forma global. También aprenderá a controlar comandos de voz locales que requieren que el usuario vea el objeto que controla el comando de voz.
 
@@ -32,7 +30,7 @@ En el menú de Unity, seleccione Mixed Reality Toolkit > Utilities (Utilidades) 
 ![Enable microphone capability (Habilitar la funcionalidad del micrófono)](images/mr-learning-base/base-09-section1-step1-1.png)
 
 > [!NOTE]
-> La funcionalidad del micrófono debe haberse habilitado durante las instrucciones de [Aplicación de la configuración de MRTK Project Configurator](mr-learning-base-02.md#1-apply-the-mrtk-project-configurator-settings) al configurar el proyecto de Unity al principio de esta serie de tutoriales. Sin embargo, si no está habilitada, asegúrese de habilitarla ahora.
+> La funcionalidad del micrófono debe haberse habilitado durante las instrucciones de [Aplicación de la configuración de MRTK Project Configurator](mr-learning-base-02.md#selecting-mrtk-and-project-settings) al configurar el proyecto de Unity al principio de esta serie de tutoriales. Sin embargo, si no está habilitada, asegúrese de habilitarla ahora.
 
 ## <a name="creating-speech-commands"></a>Creación de comandos de voz
 

@@ -1,19 +1,19 @@
 ---
 layout: LandingPage
 title: Introducción a los servicios en la nube de realidad mixta de Azure
-description: Recursos de servicios en la nube de realidad mixta.
+description: Obtenga información sobre todos los servicios en la nube de Azure Mixed Reality que puede integrar en sus aplicaciones de Unity o Unreal.
 author: hferrone
 ms.author: v-haferr
 ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, cloud services, Azure, remote rendering, spatial anchors, cognitive services, cognition, unity, machine learning, speech translation, computer vision, Microsoft Graph
-ms.openlocfilehash: e660556810cdea86321b7826217268e6c8d0850a
-ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
+ms.openlocfilehash: 251fd68d2a3fea79c1db160b6aaf64aad05c686f
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865410"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98009575"
 ---
 # <a name="azure-mixed-reality-cloud-services-overview"></a>Introducción a los servicios en la nube de realidad mixta de Azure
 

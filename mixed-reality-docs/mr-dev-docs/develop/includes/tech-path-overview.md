@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 11533175057217bddcc7e121a524da1f26d2764e
-ms.sourcegitcommit: b0b5e109c16bcff7b9c098620467c8b9685e9597
+ms.openlocfilehash: c74a6c0c22439376a84ecb8254b945295c8988a2
+ms.sourcegitcommit: b13c517df19179ca281362a1f006914289c58ad4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/29/2020
-ms.locfileid: "92915547"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98052852"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
@@ -40,11 +40,11 @@ Al compilar aplicaciones de realidad mixta con Unity, cuenta con varias opciones
 
 Hay varios servicios en la nube que se pueden integrar en proyectos de realidad mixta creados en Unity, específicamente **Azure Remote Rendering** y **Azure Spatial Anchors**. Estos servicios pueden agregar contenido holográfico compartido y una representación 3D en tiempo real a las aplicaciones, lo que hace que sean más atractivas y envolventes para los usuarios.
 
-Todos estos servicios se tratarán en el curso del [recorrido de desarrollo de Unity](../unity/unity-development-overview.md), que es la **guía que se recomienda seguir para aprender a usar Mixed Reality con Unity**. Dado que ya empezó dicho recorrido, simplemente siga leyendo y haga clic en el botón azul grande que hay en la parte inferior del artículo. Sin embargo, si se encuentra en una fase de desarrollo más avanzada y ya sabe que quiere profundizar en ello, consulte la [información general de Cloud Services](../mixed-reality-cloud-services.md) o vaya directamente a los [recursos de servicios](../unity/unity-development-overview.md#5-adding-services).
+Todos estos servicios se tratarán en el curso del [recorrido de desarrollo de Unity para HoloLens](../unity/unity-development-overview.md), que es la **guía que se recomienda seguir para aprender a usar Mixed Reality con Unity**. Dado que ya empezó dicho recorrido, simplemente siga leyendo y haga clic en el botón azul grande que hay en la parte inferior del artículo. Sin embargo, si se encuentra en una fase de desarrollo más avanzada y ya sabe que quiere profundizar en ello, consulte la [información general de Cloud Services](../mixed-reality-cloud-services.md) o vaya directamente a los [recursos de servicios](../unity/unity-development-overview.md#5-adding-services).
 
 ## <a name="dynamics-365-guides"></a>Dynamics 365 Guides
 
-Puede usar **Microsoft Dynamics 365 Guides** para vincular visualmente las instrucciones holográficas al entorno virtual de las aplicaciones, lo que proporciona a los usuarios información importante cuando y donde convenga. Esta característica también se trata en el recorrido de desarrollo de Unity, pero si quiere avanzar y ver lo que se ofrece, seleccione la pestaña **Dynamics 365** [aquí](../unity/unity-development-overview.md#5-adding-services).
+Puede usar **Microsoft Dynamics 365 Guides** para vincular visualmente las instrucciones holográficas al entorno virtual de las aplicaciones, lo que proporciona a los usuarios información importante cuando y donde convenga. Esta característica también se trata en el recorrido de desarrollo de Unity para HoloLens, pero si quiere avanzar y ver lo que se ofrece, seleccione la pestaña **Dynamics 365** [aquí](../unity/unity-development-overview.md#5-adding-services).
 
 ## <a name="examples"></a>Ejemplos
 
@@ -88,7 +88,7 @@ Al compilar aplicaciones de realidad mixta con Unreal Engine, cuenta con varias 
 
 ## <a name="cloud-services"></a>Servicios en la nube
 
-Al compilar aplicaciones de realidad mixta en Unreal, tiene acceso a un eficaz servicio en la nube llamado **Azure Spatial Anchors** , que puede usar para agregar, conservar y compartir contenido holográfico en distintos dispositivos. 
+Al compilar aplicaciones de realidad mixta en Unreal, tiene acceso a un eficaz servicio en la nube llamado **Azure Spatial Anchors**, que puede usar para agregar, conservar y compartir contenido holográfico en distintos dispositivos. 
 
 Azure Spatial Anchors, se tratará en el curso del [recorrido de desarrollo de Unity](../unreal/unreal-development-overview.md), que es la **guía que se recomienda seguir para aprender a usar Mixed Reality con Unity**. Dado que ya empezó dicho recorrido, simplemente siga leyendo y haga clic en el botón azul grande que hay en la parte inferior del artículo. Sin embargo, si se encuentra en una fase de desarrollo más avanzada y ya sabe que quiere profundizar en ello, consulte la [información general de Cloud Services](../mixed-reality-cloud-services.md) o vaya directamente a los [recursos de servicios](../unreal/unreal-development-overview.md#5-adding-services).
 

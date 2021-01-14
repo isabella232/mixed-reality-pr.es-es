@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, componentes de software, historial de versiones, notas de la versión, historial de versiones
 appliesto:
 - Windows 10
-ms.openlocfilehash: b06bd835f1e2562e01bfb7bf240747919f422e8c
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 763814e7ab81feeb22c4cbe4f5daf02d62db38fa
+ms.sourcegitcommit: 4b6815605e2ea3830052baed38df21af354d2f9b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009255"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98166760"
 ---
 # <a name="mixed-reality-software-overview-and-release-history"></a>Información general de software de Mixed Reality e historial de versiones
 
@@ -167,6 +167,7 @@ En Windows 10, la versión 1809 y versiones más recientes, el [portal de realid
 
    | Versión            | Fecha de la versión          | Principales cambios                                                 |
    |--------------------|-----------------------|---------------------------------------------------------------|
+   | 2000.20111.1381.0  | 10 de diciembre de 2020        | <ul><li>Actualiza la página de aterrizaje del portal de realidad mixta.</li><li>Reduce los errores de conectividad con auriculares durante las actualizaciones de firmware. </li></ul>  |    | 2000.20071.1133.0  | 5 de agosto de 2020        | <ul><li>Compatibilidad con [OpenXR](https://docs.microsoft.com/windows/mixed-reality/openxr) para pausar la ventana de vista previa.</li></ul>  | 
    | 2000.20071.1133.0  | 5 de agosto de 2020        | <ul><li>Compatibilidad con [OpenXR](https://docs.microsoft.com/windows/mixed-reality/openxr) para pausar la ventana de vista previa.</li></ul>  | 
    | 2000.20041.1212.0  | 11 de mayo de 2020          | <ul><li>Soluciona un problema de control de tiempo que ha generado un error 15-5 incoherente.</li><li>Compatibilidad mejorada para ejecutar Windows Mixed Reality sin conexión a Internet.</li><li>Compatibilidad mejorada para emparejar controladores de movimiento a través de **controladores de instalación**.</li></ul>  | 
    | 2000.20031.1202.0  | 14 de abril de 2020        | <ul><li>Compatibilidad con la suscripción para obtener información, sugerencias y ofertas sobre Windows Mixed Reality.</li></ul>  | 

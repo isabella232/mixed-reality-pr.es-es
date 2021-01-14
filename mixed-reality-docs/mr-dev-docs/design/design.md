@@ -7,18 +7,22 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects, core concepts, interaction, mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: 5c0eefe6f4811feba6d1d52164652acbc44945c3
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: f4a4ea50c45263f18079da76dd8dfd5f31e2af44
+ms.sourcegitcommit: 44d0f2873c75003caf9d8d244ceaeb3faa89df63
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847600"
+ms.lasthandoff: 01/12/2021
+ms.locfileid: "98110453"
 ---
 # <a name="start-designing-and-prototyping"></a>Empezar a diseñar y a crear prototipos
 
 ![resumen de diseño de realidad mixta](images/design-hero-image.png)
 
-En la actualidad, las aplicaciones de realidad mixta son distintas de cualquier otra cosa del mundo y diseñarlas resulta complicado. No solo tiene que tener en cuenta las nuevas combinaciones de los mundos reales y virtuales que cree, sino también las nuevas experiencias de usuario que estos aportan. Dado que la realidad mixta es un lugar muy amplio, hemos seleccionado aspectos importantes de su espectro de diseño y los hemos expuesto en una serie de puntos de control. Están pensadas para ser secuenciales, pero si ya ha empezado a profundizar en el tema, no dude en ir a cualquiera de las secciones siguientes.
+En la actualidad, las aplicaciones de realidad mixta son distintas de cualquier otra cosa del mundo y diseñarlas resulta complicado. No solo tiene que tener en cuenta las nuevas combinaciones de los mundos reales y virtuales que cree, sino también las nuevas experiencias de usuario que estos aportan. Dado que la realidad mixta es un lugar muy amplio, hemos seleccionado aspectos importantes de su espectro de diseño y los hemos expuesto en una serie de puntos de control. Están pensadas para ser secuenciales, pero si ya ha empezado a profundizar en el tema, no dude en ir a cualquiera de las secciones siguientes. 
+
+Eche un vistazo a nuestro vídeo de información general sobre el diseño para empezar:
+
+>[!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4LhlW]
 
 ## <a name="design-checkpoints"></a>Diseño de puntos de control
 

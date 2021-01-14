@@ -1,18 +1,18 @@
 ---
-title: 'Tutoriales de los servicios de voz de Azure: 4. Configuración de reconocimiento de intenciones y comprensión del lenguaje natural'
-description: Haz este curso para aprender a implementar el SDK de voz de Azure dentro de una aplicación de realidad mixta.
+title: Configuración de reconocimiento de intenciones y comprensión del lenguaje natural
+description: Complete este curso para aprender a configurar la comprensión del lenguaje natural y la intención en las aplicaciones de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, speech recognition, Windows 10, LUIS, LUIS portal, intent, entities, utterances, natural language understanding
 ms.localizationpriority: high
-ms.openlocfilehash: b21637fc0630b6cb024dcdbc0a1985979914d3a0
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 07044d3dc38be12d5d601d34a23a241a71c5b06d
+ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678514"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "98007775"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Configuración de reconocimiento de intenciones y comprensión del lenguaje natural
 
