@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
 keywords: HoloLens, realidad mixta, auriculares envolventes, aplicación, UWP, envío, envío, filtros, metadatos, requisitos del sistema, palabras clave, Wack, certificación, paquete, appx, comercialización
-ms.openlocfilehash: 632bb9c0c5bdb93041f71a4382802b02f6817f0e
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: b729bd65413587d3ad3b05bef495349b60a6fffd
+ms.sourcegitcommit: 47a5c86b4694449c825902631777a9962a40e332
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757633"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98215980"
 ---
 # <a name="distributing-your-apps"></a>Distribución de las aplicaciones
 
@@ -66,7 +66,7 @@ La obtención de las aplicaciones en manos de los usuarios o en el mundo es la m
     <td><a href="submitting-an-app-to-the-microsoft-store.md"><strong>Microsoft Store</strong></a></td>
     <td>❌</td>
     <td>✔️</td>
-    <td>✔️</td>s
+    <td>✔️</td>
 </tr>
 <tr>
     <td><a href="https://docs.microsoft.com/hololens/app-deploy-store-business"><strong>Microsoft Store para Empresas</strong></a></td>
@@ -97,8 +97,8 @@ La obtención de las aplicaciones en manos de los usuarios o en el mundo es la m
 
 * Si tiene que instalar una aplicación de HoloLens 2 mientras está sin conexión, consulte las instrucciones [seguras de hololens 2 sin conexión](https://docs.microsoft.com/hololens/hololens-common-scenarios-offline-secure) o instale la aplicación a través de un paquete de aprovisionamiento sin habilitar el modo de desarrollador.
 
-* También puede implementar compilaciones en el dispositivo y compartirlas con otros desarrolladores que tengan el modo de desarrollador habilitado mediante la [implementación y depuración con Visual Studio](../develop/platform-capabilities-and-apis/using-visual-studio.md) o [la instalación de un paquete de aplicación con el portal de dispositivos](https://docs.microsoft.com/hololens/holographic-custom-apps#installing-an-application-package-with-the-device-portal).
+* También puede implementar compilaciones en el dispositivo y compartirlas con otros desarrolladores que tengan el modo de desarrollador habilitado mediante la [implementación y depuración con Visual Studio](../develop/platform-capabilities-and-apis/using-visual-studio.md) o [la instalación de un paquete de aplicación con el portal de dispositivos](../develop/platform-capabilities-and-apis/using-the-windows-device-portal.md#sideloading-applications).
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [Buscar, instalar y desinstalar aplicaciones del Microsoft Store](https://docs.microsoft.com/hololens/holographic-store-apps)
 
