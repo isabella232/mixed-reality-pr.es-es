@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Foto, vídeo, hololens, cámara, Unity, localizable, PVC, cámara de vídeo fotográfico, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, cámara web, captura de fotos, captura de vídeo
-ms.openlocfilehash: 125521206421acbcc4c9ad6e5fb371314ddb48f2
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 8916b332774185e4453b514ca7b6916947bdcd81
+ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010106"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98226424"
 ---
 # <a name="locatable-camera-in-unity"></a>Cámara localizable en Unity
 
@@ -309,7 +309,7 @@ void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con el tema siguiente:
+Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con el siguiente tema:
 
 > [!div class="nextstepaction"]
 > [Punto de enfoque](focus-point-in-unity.md)
@@ -319,7 +319,7 @@ O bien puede ir directamente a la implementación de la aplicación en un dispos
 > [!div class="nextstepaction"]
 > [Implementación en HoloLens o con auriculares de Windows Mixed Reality](../platform-capabilities-and-apis/using-visual-studio.md)
 
-Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#3-platform-capabilities-and-apis) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#3-advanced-features) en cualquier momento.
 
 ## <a name="see-also"></a>Consulte también
 * [Cámara localizable](../platform-capab ilities-and-apis/locatable-camera.md)

@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, punto de enfoque, plano de enfoque, plano de estabilización, punto de estabilización, Reproyección, LSR, búfer de profundidad, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: bd662a079f23ed590708d961e924859675a44917
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 2ceb5f2b58cbd1571b2d9f4de79acfe45779bfea
+ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009345"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98226404"
 ---
 # <a name="focus-point-in-unity"></a>Punto de enfoque en Unity
 
@@ -63,7 +63,7 @@ O bien puede ir directamente a la implementación de la aplicación en un dispos
 > [!div class="nextstepaction"]
 > [Implementación en HoloLens o con auriculares de Windows Mixed Reality](../platform-capabilities-and-apis/using-visual-studio.md)
 
-Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#3-platform-capabilities-and-apis) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#3-advanced-features) en cualquier momento.
 
 ### <a name="see-also"></a>Consulte también
 

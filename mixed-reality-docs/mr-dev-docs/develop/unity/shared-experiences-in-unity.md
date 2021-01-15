@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Uso compartido, delimitador, WorldAnchor, MR Sharing 250, WorldAnchorTransferBatch, SpatialPerception, Azure, anclajes espaciales de Azure, ASA, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: a82439d5676bf4bcb7898a33aafc29b43e91a49f
-ms.sourcegitcommit: b13c517df19179ca281362a1f006914289c58ad4
+ms.openlocfilehash: 4d24f3690f4d4b1fc206dbd2b5e0aa5afad6c34c
+ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98031961"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98226344"
 ---
 # <a name="shared-experiences-in-unity"></a>Experiencias compartidas en Unity
 
@@ -43,7 +43,7 @@ O bien puede ir directamente a la implementación de la aplicación en un dispos
 > [!div class="nextstepaction"]
 > [Implementación en HoloLens o con auriculares de Windows Mixed Reality](../platform-capabilities-and-apis/using-visual-studio.md)
 
-Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#3-platform-capabilities-and-apis) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#3-advanced-features) en cualquier momento.
 
 ## <a name="see-also"></a>Consulte también
 * [Experiencias compartidas en realidad mixta](../platform-capabilities-and-apis/shared-experiences-in-mixed-reality.md)

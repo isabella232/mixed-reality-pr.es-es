@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: teclado, entrada, Unity, touchscreenkeyboard, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 613c9327b517205c340555b6423a3809906f9b9f
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+ms.openlocfilehash: 90416f91a7de369ff97a2254fed4b3773724408b
+ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010516"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98226414"
 ---
 # <a name="keyboard-input-in-unity"></a>Entrada desde teclado en Unity
 
@@ -118,7 +118,7 @@ Las alternativas actuales para aprovechar el teclado del sistema mediante Unity 
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con cualquier [tema](unity-development-overview.md#3-platform-capabilities-and-apis) o ir directamente a la implementación de la aplicación en un dispositivo o emulador.
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar las API y funcionalidades de la plataforma de realidad mixta. Desde aquí, puede continuar con cualquier [tema](unity-development-overview.md#3-advanced-features) o ir directamente a la implementación de la aplicación en un dispositivo o emulador.
 
 > [!div class="nextstepaction"]
 > [Implementación en HoloLens o con auriculares de Windows Mixed Reality](../platform-capabilities-and-apis/using-visual-studio.md)
