@@ -20,25 +20,17 @@
       href: porting-apps/building-2d-apps.md
 - name: Unity
   items:
-    - name: Introducción al desarrollo de Unity
+    - name: Desarrollo de Unity para HoloLens
       href: unity/unity-development-overview.md
-    - name: Configuraciones de proyectos
-      items:
-        - name: Introducción a MRTK
-          href: unity/mrtk-getting-started.md
-        - name: Configuración de un proyecto sin MRTK
-          href: unity/configure-unity-project.md
-        - name: Uso del complemento OpenXR de Mixed Reality
-          href: unity/openxr-getting-started.md
-        - name: Características compatibles del complemento OpenXR
-          href: unity/openxr-supported-features.md
+    - name: Desarrollo de Unity para VR
+      href: unity/unity-development-wmr-overview.md
     - name: Tutoriales
       items:
         - name: Información general
           href: unity/tutorials.md
         - name: Tutoriales de HoloLens 2
           items:
-            - name: Tutoriales de MRTK
+            - name: Tutoriales de MRTK para principiantes
               items:
                 - name: 1. Introducción
                   href: unity/tutorials/mr-learning-base-01.md
@@ -172,51 +164,63 @@
               href: unity/tutorials/mr-azure-312.md
             - name: Realidad mixta y Azure (313) servicio IoT Hub
               href: unity/tutorials/mr-azure-301.md
-    - name: Bloques de creación principales
+    - name: Configurar tu proyecto
+      items:
+        - name: Introducción a MRTK
+          href: unity/mrtk-getting-started.md
+        - name: Configuración de un proyecto sin MRTK
+          href: unity/configure-unity-project.md
+        - name: Uso del complemento OpenXR de Mixed Reality
+          href: unity/openxr-getting-started.md
+        - name: Características compatibles del complemento OpenXR
+          href: unity/openxr-supported-features.md
+    - name: Bloques de creación básicos
       items:
         - name: 'MRTK 101: Creación de interacciones básicas con Mixed Reality Toolkit Unity'
           href: unity/mrtk-101.md
-        - name: Cámara en Unity
+        - name: Cámara
           href: unity/camera-in-unity.md
-        - name: Sistemas de coordenadas de Unity
+        - name: Sistemas de coordenadas
           href: unity/coordinate-systems-in-unity.md
-        - name: Persistencia en Unity
+        - name: Persistencia
           href: unity/persistence-in-unity.md
-        - name: Mirada en Unity
+        - name: Mirada con la cabeza
           href: unity/gaze-in-unity.md
-        - name: Texto en Unity
+        - name: Texto
           href: unity/text-in-unity.md
-        - name: Gestos y controladores de movimiento en Unity
-          href: unity/gestures-and-motion-controllers-in-unity.md
-        - name: Seguimiento con mano y ojo en Unity
+        - name: Controladores de movimiento
+          href: unity/motion-controllers-in-unity.md
+        - name: Gestos
+          href: unity/gestures-in-unity.md
+        - name: Seguimiento de manos y ocular
           href: unity/hand-eye-in-unit.md
-        - name: Entrada de voz en Unity
+        - name: Entrada de voz
           href: unity/voice-input-in-unity.md
-        - name: Asignación espacial en Unity
+        - name: Asignación espacial
           href: unity/spatial-mapping-in-unity.md
-        - name: Sonido espacial en Unity
+        - name: Sonido espacial
           href: unity/spatial-sound-in-unity.md
-    - name: Funcionalidades y API de la plataforma
+    - name: Características avanzadas
       items:
-        - name: Experiencias compartidas en Unity
+        - name: Experiencias compartidas
           href: unity/shared-experiences-in-unity.md
-        - name: Cámara localizable en Unity
+        - name: Cámara localizable
           href: unity/locatable-camera-in-unity.md
-        - name: Punto de enfoque en Unity
+        - name: Punto de enfoque
           href: unity/focus-point-in-unity.md
-        - name: Pérdida de seguimiento en Unity
+        - name: Pérdida de seguimiento
           href: unity/tracking-loss-in-unity.md
-        - name: Entrada desde teclado en Unity
+        - name: Entrada de teclado
           href: unity/keyboard-input-in-unity.md
         - name: Uso del espacio de nombres de Windows con las aplicaciones de Unity para HoloLens
           href: unity/using-the-windows-namespace-with-unity-apps-for-hololens.md
-        - name: Objetos nativos de realidad mixta en Unity
+        - name: Objetos nativos de Mixed Reality
           href: unity/unity-xrdevice-advanced.md
-        - name: Uso de Vuforia con Unity
+        - name: Uso de Vuforia
           href: unity/vuforia-development-overview.md
     - name: VR envolvente
       items:
-        - name: Controladores de HP Reverb G2 en Unity
+        - name: Controladores de HP Reverb G2
           href: unity/unity-reverb-g2-controllers.md
     - name: Aplicaciones de ejemplo
       items:
@@ -236,7 +240,7 @@
               href: unity/galaxy-explorer.md
             - name: Módulo lunar
               href: unity/lunar-module.md
-    - name: Configuración y depuración
+    - name: Depuración y rendimiento
       items:
         - name: Depuración administrada con Unity IL2CPP
           href: unity/managed-debugging-with-unity-il2cpp.md
@@ -272,35 +276,35 @@
               href: unreal/tutorials/unreal-uxt-ch5.md
             - name: Empaquetado e implementación
               href: unreal/tutorials/unreal-uxt-ch6.md
-    - name: Bloques de creación principales
+    - name: Bloques de creación básicos
       items:
-        - name: Entrada de mirada en Unreal
+        - name: Entrada de mirada
           href: unreal/unreal-gaze-input.md
-        - name: Seguimiento de las manos en Unreal
+        - name: Seguimiento de las manos
           href: unreal/unreal-hand-tracking.md
-        - name: Asignación espacial en Unreal
+        - name: Asignación espacial
           href: unreal/unreal-spatial-mapping.md
-        - name: Audio espacial en Unreal
+        - name: Audio espacial
           href: unreal/unreal-spatial-audio.md
-        - name: Anclajes espaciales locales en Unreal
+        - name: Anclajes espaciales locales
           href: unreal/unreal-spatial-anchors.md
-        - name: Azure Spatial Anchors en Unreal
+        - name: Anclajes espaciales de Azure
           href: unreal/unreal-azure-spatial-anchors.md
-        - name: Entrada de voz en Unreal
+        - name: Entrada de voz
           href: unreal/unreal-voice-input.md
-    - name: Funcionalidades y API de la plataforma
+    - name: Características avanzadas
       items:
-        - name: Cámara de foto y vídeo HoloLens en Unreal
+        - name: Cámara de fotos y vídeo de HoloLens
           href: unreal/unreal-hololens-camera.md
-        - name: Códigos QR en Unreal
+        - name: Códigos QR
           href: unreal/unreal-qr-codes.md
-        - name: UMG y teclado en Unreal
+        - name: UMG y teclado
           href: unreal/unreal-umg-keyboard.md
-        - name: WinRT en Unreal
+        - name: WinRT
           href: unreal/unreal-winrt.md
     - name: VR envolvente
       items:
-        - name: Controladores de HP Reverb G2 en Unreal
+        - name: Controladores de HP Reverb G2
           href: unreal/unreal-reverb-g2-controllers.md
     - name: Aplicaciones de ejemplo
       items:
@@ -308,17 +312,17 @@
           href: unreal/unreal-kippys-escape.md
     - name: Implementación y rendimiento
       items:
-        - name: Implementación en el dispositivo en Unreal
+        - name: Implementar en el dispositivo
           href: unreal/unreal-deploying.md
         - name: Publicación en Microsoft Store
           href: unreal/unreal-publishing-to-store.md
-        - name: Recomendaciones de rendimiento para Unreal
+        - name: Recomendaciones de rendimiento
           href: unreal/performance-recommendations-for-unreal.md
-        - name: Recomendaciones de material en Unreal
+        - name: Recomendaciones de material
           href: unreal/unreal-materials.md
         - name: Generación de perfiles con Unreal Insights
           href: unreal/unreal-insights.md
-        - name: Streaming en Unreal
+        - name: Streaming
           href: unreal/unreal-streaming.md
 - name: Web
   items:
