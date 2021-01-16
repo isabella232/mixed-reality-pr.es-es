@@ -176,8 +176,6 @@
           href: unity/openxr-supported-features.md
     - name: Bloques de creación básicos
       items:
-        - name: 'MRTK 101: Creación de interacciones básicas con Mixed Reality Toolkit Unity'
-          href: unity/mrtk-101.md
         - name: Cámara
           href: unity/camera-in-unity.md
         - name: Sistemas de coordenadas
