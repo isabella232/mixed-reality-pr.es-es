@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, rendimiento
 appliesto:
 - Windows 10
-ms.openlocfilehash: 00338e1354dc04acc76fa2525c721a5e2bd4afe2
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 60854785d526c7abff6327ddbb8d39d4eef23ae4
+ms.sourcegitcommit: c904d47ab2ce03d433d5eff394ec4078f404a0f7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009475"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98242545"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>Preguntas más frecuentes de la reverberación de HP G2
 
@@ -92,3 +92,13 @@ Para hacer esto
 
 Desde aquí, puede cambiar el enlace del controlador activo a "personalizado", que abrirá la opción para probar los enlaces de juegos de la comunidad.
 Si aún no se ha compartido ningún enlace de juego personalizado para este juego (o si no está totalmente satisfecho con los que ha intentado), también puede crear sus propios enlaces de juego personalizados e incluso ayudar al resto de la comunidad compartiendo estos archivos después de algunas sesiones de juego.
+
+## <a name="i-have-all-cables-connected-to-the-headset-and-pc-but-it-wont-turn-on"></a>Tengo todos los cables conectados a los auriculares y el equipo, pero no se activan
+
+Compruebe que el cable conectado al casco esté completamente colocado. Hay un pequeño punto en la parte superior del cable que se alineará junto al borde superior del casco cuando se haya insertado por completo:
+
+![Punto pequeño en la parte superior del cable](images/small-dot.jpg)
+
+## <a name="how-can-i-power-down-the-headset-while-still-using-my-pc"></a>¿Cómo puedo apagar el casco mientras sigue usando mi PC?
+
+Desconecte el adaptador de conexión AC del cuadro de vínculo del cable de auricular para quitar la alimentación del casco.
