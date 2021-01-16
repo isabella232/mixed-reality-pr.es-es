@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 02/24/2019
 ms.topic: article
 keywords: MRC, Foto, vídeo, captura, cámara
-ms.openlocfilehash: 40d621133d8aa4c7a58488b80a04ca3b4b46638d
-ms.sourcegitcommit: aa29b68603721e909f08f352feed24c65d2e505e
+ms.openlocfilehash: 88b31d139f01c6cbe0567203e39f7640270f7716
+ms.sourcegitcommit: e24715fffa815c24ca411fa93eed9576ae729337
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98108868"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98247728"
 ---
 # <a name="mixed-reality-capture-for-developers"></a>Captura de realidad mixta para desarrolladores
 
@@ -214,21 +214,21 @@ Otras aplicaciones pueden hacerlo mediante el uso de las [API de captura de mult
 
 Las aplicaciones tienen dos opciones para agregar el efecto:
 * La API anterior: [Windows. Media. Capture. MediaCapture. AddEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addeffectasync)
-* La nueva API recomendada de Microsoft (devuelve un objeto, lo que permite manipular propiedades dinámicas): [Windows. Media. Capture. MediaCapture. AddVideoEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync)  /  [Windows. Media. Capture. mediacapture. AddAudioEffectAsync (),](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) que requiere que la aplicación cree su propia implementación de [IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) y [IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition). Vea el ejemplo de MRC [Effect], por ejemplo, uso.
+* La nueva API recomendada de Microsoft (devuelve un objeto, lo que permite manipular propiedades dinámicas): [Windows. Media. Capture. MediaCapture. AddVideoEffectAsync ()](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addvideoeffectasync)  /  [Windows. Media. Capture. mediacapture. AddAudioEffectAsync (),](https://docs.microsoft.com/uwp/api/windows.media.capture.mediacapture.addaudioeffectasync) que requiere que la aplicación cree su propia implementación de [IVideoEffectDefinition](https://docs.microsoft.com/uwp/api/Windows.Media.Effects.IVideoEffectDefinition) y [IAudioEffectDefinition](https://docs.microsoft.com/uwp/api/windows.media.effects.iaudioeffectdefinition). Consulte la [aplicación de ejemplo de MRC](https://github.com/microsoft/Windows-universal-samples/tree/master/Samples/HolographicMixedRealityCapture) para obtener ejemplos.
 
 >[!NOTE]
 > Visual Studio no reconocerá el espacio de nombres Windows. Media. MixedRealityCapture, pero las cadenas seguirán siendo válidas.
 
 Efecto de vídeo de MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureVideoEffect**)
 
-|  Nombre de propiedad  |  Tipo  |  Valor predeterminado  |  Descripción |
+|  Nombre de la propiedad  |  Tipo  |  Valor predeterminado  |  Descripción |
 |----------|----------|----------|----------|
 |  StreamType  |  UINT32 ([MediaStreamType](https://docs.microsoft.com/uwp/api/Windows.Media.Capture.MediaStreamType))  |  1 (videograbación)  |  Describir en qué secuencia de captura se utiliza este efecto. Audio no está disponible. |
 |  HologramCompositionEnabled  |  boolean  |  true  |  Marca para habilitar o deshabilitar los hologramas en la captura de vídeo. |
 |  RecordingIndicatorEnabled  |  boolean  |  true  |  Marca para habilitar o deshabilitar el indicador de grabación en pantalla durante la captura de hologramas. |
 |  VideoStabilizationEnabled  |  boolean  |  false  |  Marca para habilitar o deshabilitar la estabilización de vídeo con el seguimiento de HoloLens. |
 |  VideoStabilizationBufferLength  |  UINT32  |  0  |  Establezca el número de fotogramas históricos que se usan para la estabilización de vídeo. 0 es 0-latencia y casi "gratis" desde una perspectiva de eficacia y rendimiento. 15 se recomienda para obtener una mayor calidad (a costa de 15 fotogramas de latencia y memoria). |
-|  GlobalOpacityCoefficient  |  FLOAT  |  0,9 (HoloLens) 1,0 (auricular envolvente)  |  Establezca el coeficiente de opacidad global del holograma en el intervalo de 0,0 (totalmente transparente) a 1,0 (totalmente opaco). |
+|  GlobalOpacityCoefficient  |  float  |  0,9 (HoloLens) 1,0 (auricular envolvente)  |  Establezca el coeficiente de opacidad global del holograma en el intervalo de 0,0 (totalmente transparente) a 1,0 (totalmente opaco). |
 |  BlankOnProtectedContent  |  boolean  |  false  |  Marca para habilitar o deshabilitar la devolución de un marco vacío si hay una aplicación de UWP 2D que muestra contenido protegido. Si esta marca es falsa y una aplicación de UWP en 2D muestra contenido protegido, la aplicación de UWP de 2D se reemplazará por una textura de contenido protegido tanto en el casco como en la captura de realidad mixta. |
 |  ShowHiddenMesh  |  boolean  |  false  |  Marca para habilitar o deshabilitar que muestra la malla de área oculta y el contenido adyacente de la cámara holográfica. |
 | Outlocate | Size | 0, 0 | Establezca el tamaño de salida deseado después de recortar para la estabilización de vídeo. Se elige un tamaño de recorte predeterminado si es 0 o se especifica un tamaño de salida no válido. |
@@ -241,11 +241,11 @@ Efecto de vídeo de MRC (**Windows. Media. MixedRealityCapture. MixedRealityCapt
 
 Efecto de audio de MRC (**Windows. Media. MixedRealityCapture. MixedRealityCaptureAudioEffect**)
 
-| Nombre de propiedad | Tipo | Valor predeterminado | Descripción |
+| Nombre de la propiedad | Tipo | Valor predeterminado | Descripción |
 |----------|----------|----------|----------|
 | MixerMode | UINT32 | 2 (MIC y audio del sistema) | Enumeración que se usa para indicar qué orígenes de audio se deben usar: 0 (solo audio de MIC), 1 (solo audio del sistema), 2 (MIC y audio del sistema) |
-| LoopbackGain | FLOAT | Configuración de **ganancia de audio de aplicación** en el portal de dispositivos de Windows | Obtener para aplicar al volumen de audio del sistema. Oscila entre 0,0 y 5,0. Solo se admite en HoloLens 2 |
-| MicrophoneGain | FLOAT | Configuración de **ganancia de audio de MIC** en el portal de dispositivos de Windows | Obtener para aplicar al volumen de MIC. Oscila entre 0,0 y 5,0. Solo se admite en HoloLens 2 |
+| LoopbackGain | float | Configuración de **ganancia de audio de aplicación** en el portal de dispositivos de Windows | Obtener para aplicar al volumen de audio del sistema. Oscila entre 0,0 y 5,0. Solo se admite en HoloLens 2 |
+| MicrophoneGain | float | Configuración de **ganancia de audio de MIC** en el portal de dispositivos de Windows | Obtener para aplicar al volumen de MIC. Oscila entre 0,0 y 5,0. Solo se admite en HoloLens 2 |
 
 >[!NOTE]
 > Puede cambiar el valor predeterminado de **LoopbackGain** o **MicrophoneGain** en el portal de dispositivos de Windows. para ello, vaya a la página de [captura de realidad mixta](using-the-windows-device-portal.md#mixed-reality-capture) y ajuste el control deslizante junto a su configuración correspondiente. Ambos valores tienen como valor predeterminado **1,0**, pero se pueden establecer en cualquier valor entre **0,0** y **5,0**.
