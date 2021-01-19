@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, qr codes, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 1daa368ee9f98accec58c6621073bd7caefdfdcb
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: d896af683a86a1b27e5d100df744222085574a93
+ms.sourcegitcommit: e24715fffa815c24ca411fa93eed9576ae729337
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010015"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98247748"
 ---
 # <a name="qr-codes-in-unreal"></a>Códigos QR en Unreal
 
@@ -85,7 +85,7 @@ O bien puede ir directamente a la implementación de la aplicación en un dispos
 > [!div class="nextstepaction"]
 > [Implementación en el dispositivo](unreal-deploying.md)
 
-Puede volver a los [puntos de control de desarrollo de Unreal](unreal-development-overview.md#3-platform-capabilities-and-apis) en cualquier momento.
+Puede volver a los [puntos de control de desarrollo de Unreal](unreal-development-overview.md#3-advanced-features) en cualquier momento.
 
 ## <a name="see-also"></a>Consulta también
 * [Asignación espacial](../../design/spatial-mapping.md)
