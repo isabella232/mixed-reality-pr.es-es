@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: e3d150544c3bce99d1aa808229d282b3d2fe1dd0
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 28b377108fdb51d7f922710e579d62e7103ef765
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007485"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580538"
 ---
 # <a name="get-help-with-pc-compatibility-in-windows-mixed-reality"></a>Obtener ayuda con la compatibilidad de equipos en Windows Mixed Reality
 
@@ -116,7 +116,7 @@ Si los problemas continúan:
 
 ### <a name="this-pc-doesnt-have-bluetooth-40-for-controllers"></a>Este equipo no tiene Bluetooth 4,0 para los controladores
 
-2018 y las versiones más recientes de los auriculares de Windows Mixed Reality ya tienen el Bluetooth integrado, pero si tiene auriculares más antiguos, se requiere Bluetooth 4,0 para los controladores de movimiento de realidad mixta. Todavía puede [usar Windows Mixed Reality con un controlador de Xbox](motion-controller-problems.md#can-i-pair-my-xbox-controller-to-my-pc-so-i-can-use-it-in-headset), un [mouse y un teclado](https://docs.microsoft.com/windows/mixed-reality/discover/navigating-the-windows-mixed-reality-home#keyboard-and-mouse), o un adaptador de [Bluetooth USB para conectar controladores de movimiento](motion-controller-problems.md#how-can-i-tell-if-im-using-bluetooth-technology) al equipo. [Consulte los adaptadores recomendados](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
+2018 y las versiones más recientes de los auriculares de Windows Mixed Reality ya tienen el Bluetooth integrado, pero si tiene auriculares más antiguos, se requiere Bluetooth 4,0 para los controladores de movimiento de realidad mixta. Todavía puede [usar Windows Mixed Reality con un controlador de Xbox](motion-controller-problems.md#can-i-pair-my-xbox-controller-to-my-pc-so-i-can-use-it-in-headset), un [mouse y un teclado](/windows/mixed-reality/discover/navigating-the-windows-mixed-reality-home#keyboard-and-mouse), o un adaptador de [Bluetooth USB para conectar controladores de movimiento](motion-controller-problems.md#how-can-i-tell-if-im-using-bluetooth-technology) al equipo. [Consulte los adaptadores recomendados](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
 
 ### <a name="depending-on-your-headset-you-may-need-a-bluetooth-adapter-to-use-motion-controllers"></a>En función de los auriculares, es posible que necesite un adaptador de Bluetooth para usar los controladores de movimiento.
 

@@ -6,12 +6,12 @@ ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
 keywords: 'JavaScript, WebXR, WinMR, WebAR, WebVR, WindowsMixedReality, HoloLens, Windows Mixed Reality, Web VR, webxr, Web Mr, WebAr, 360, 360 video, 360 videos, 360 Photo, 360 photos, contenido de 360, Web inmersivo, envolventes: Web, IW, immersiveweb'
-ms.openlocfilehash: 26d1edf536eb23673393caaee0a833e036adc194
-ms.sourcegitcommit: 8e91ff47ef70e80a41137f80aa1093e711d27bf7
+ms.openlocfilehash: 573db6f739292b7e67148d260a5ba1880d24fb20
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957785"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580327"
 ---
 # <a name="javascript-development-overview"></a>Introducción al desarrollo con JavaScript
 
@@ -63,8 +63,8 @@ La plataforma [nativa Babylon](https://www.babylonjs.com/native/) permite a cual
 * [Immersiveweb. dev](https://immersiveweb.dev/)
 * [Ejemplos de WebXR](https://immersive-web.github.io/webxr-samples/)
 * [Uso de Babylon.js para crear experiencias de WebXR](https://doc.babylonjs.com/how_to/introduction_to_webxr)
-* [Windows Mixed Reality y el nuevo Microsoft Edge](https://docs.microsoft.com/windows/mixed-reality/new-microsoft-edge#introducing-the-new-microsoft-edge)
+* [Windows Mixed Reality y el nuevo Microsoft Edge](/windows/mixed-reality/new-microsoft-edge#introducing-the-new-microsoft-edge)
 * [GitHub Web de W3C envolvente](https://github.com/immersive-web)
-* [API de WebGL](https://msdn.microsoft.com/library/bg182648(v=vs.85).aspx)
+* [API de WebGL](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/bg182648(v=vs.85))
 * [API](https://msdn.microsoft.com/library/dn743630(v=vs.85).aspx) y [extensiones de controlador](https://w3c.github.io/gamepad/extensions.html) para juegos
 * [Información general de WebVR](webvr-overview.md)

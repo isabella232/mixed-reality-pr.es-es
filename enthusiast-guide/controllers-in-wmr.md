@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: 5f2e02c85b443497f539d1bfcbf165214e3ac3c1
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 960b26d16e9edd387eb94c469d45b0c669fadc10
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007805"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580544"
 ---
 # <a name="motion-controllers-in-windows-mixed-reality"></a>Controladores de movimiento en Windows Mixed Reality
 
@@ -151,8 +151,8 @@ Envíenos sus comentarios en la central de comentarios, usando la categoría de 
 
 ## <a name="see-also"></a>Consulte también
 
-- [Controladores de HP en Unity](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
-- [Controladores de HP en la realidad](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
+- [Controladores de HP en Unity](/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
+- [Controladores de HP en la realidad](/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
 - [Preguntar a la comunidad](https://answers.microsoft.com)
 - [Póngase en contacto con nosotros para obtener soporte técnico](https://support.microsoft.com/contactus/)
 - [Solución de problemas](troubleshooting-windows-mixed-reality.md)

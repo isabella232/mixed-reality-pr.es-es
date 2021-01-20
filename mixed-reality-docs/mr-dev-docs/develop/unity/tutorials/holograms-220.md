@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academia, tutorial, sonido espacial, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: 043443c0c197e3b606c4845966e0cf60102d0b85
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: da130a5a93ec261d2e767874faa31dbc50d51b12
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678374"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582767"
 ---
 # <a name="mr-spatial-220-spatial-sound"></a>Asignación espacial de realidad mixta (220): Sonido espacial
 
 >[!NOTE]
->Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](../../../mr-learning-base-01.md) para HoloLens 2.
+>Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](./mr-learning-base-01.md) para HoloLens 2.
 
 El [sonido espacial](../../../design/spatial-sound.md) respire la vida en los hologramas y les da presencia en nuestro mundo. Los hologramas se componen de luz y sonido, y si se pierde la visión de los hologramas, el sonido espacial puede ayudarle a encontrarlos. El sonido espacial no es como el sonido típico que se oíría en la radio, sino que se encuentra en el espacio 3D. Con el sonido espacial, puede hacer que los hologramas suenen como si estuvieran detrás, junto a usted o incluso en su cabeza. En este curso, hará lo siguiente:
 
@@ -30,7 +30,7 @@ El [sonido espacial](../../../design/spatial-sound.md) respire la vida en los ho
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td>Asignación espacial de realidad mixta (220): Sonido espacial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -38,7 +38,7 @@ El [sonido espacial](../../../design/spatial-sound.md) respire la vida en los ho
 
 ## <a name="before-you-start"></a>Antes de empezar
 
-### <a name="prerequisites"></a>Prerrequisitos
+### <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](../../../develop/install-the-tools.md).
 * Funcionalidad básica de programación de C#.
@@ -67,7 +67,7 @@ El [sonido espacial](../../../design/spatial-sound.md) respire la vida en los ho
 * Cambie la configuración de sonido de Unity para usar el sonido espacial de Microsoft.
 * Agregue un sonido 3D a un objeto en Unity.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 * Inicie Unity.
 * seleccione **Open**(Abrir).
@@ -134,7 +134,7 @@ Si se implementa en un auricular envolvente:
 
 La ubicación adecuada para el sonido dependerá del holograma. Por ejemplo, si el holograma es humano, el origen de sonido debe estar situado cerca de la boca y no de los pies.
 
-#### <a name="instructions"></a>Instrucciones
+#### <a name="instructions"></a>Instructions
 
 Las instrucciones siguientes conectarán un sonido espacial a un holograma.
 
@@ -159,7 +159,7 @@ Si se establece el nivel de Doppler en cero, se deshabilitan los cambios de tono
 
 Un ejemplo de expectativas aprendidas es que las aves suelen estar por encima de los cabezales de los seres humanos. Si un usuario oye un sonido de pájaro, su reacción inicial es buscar. Colocar un pájaro debajo del usuario puede conducir a que se dirija a la dirección correcta del sonido, pero no puede encontrar el holograma en función de la expectativa de necesidad de buscar.
 
-#### <a name="instructions"></a>Instrucciones
+#### <a name="instructions"></a>Instructions
 
 Las instrucciones siguientes permiten que P0LY se oculte por detrás, de modo que pueda usar el sonido para buscar el holograma.
 
@@ -178,7 +178,7 @@ Las instrucciones siguientes permiten que P0LY se oculte por detrás, de modo qu
 * No sobrecargar el exceso de sonido del usuario en el camino
 * Los sonidos sutiles funcionan mejor: no hagan la experiencia
 
-#### <a name="instructions"></a>Instrucciones
+#### <a name="instructions"></a>Instructions
 
 * En el panel **jerarquía** , expanda **HologramCollection**.
 * Expanda **EnergyHub** y seleccione **base**.
@@ -228,14 +228,14 @@ Nota: hay un panel de texto que se etiquetará junto con usted. Esto contendrá 
 
 Por ejemplo, el establecimiento de una copa en una tabla debe hacer un sonido más silencioso que colocar un Boulder en una pieza de metal.
 
-#### <a name="instructions"></a>Instrucciones
+#### <a name="instructions"></a>Instructions
 
 * En el panel **jerarquía** , expanda **HologramCollection**.
 * Expanda **EnergyHub** y seleccione **base**.
 * En el panel **Inspector** , haga clic en **Agregar componente** y agregue **puntear para colocar con el sonido y la acción**.
 * En **puntear para colocar con el sonido y la acción**:
   * Active **colocar primario al pulsar**.
-  * Establezca el sonido de **Place** **selección de ubicación** .
+  * Establezca el sonido de  **selección de ubicación** .
   * Establezca **sonido de recogida** en **recogida**.
   * Presione + en la parte inferior derecha, en la acción **de recogida** y **en la acción de selección de ubicación**. Arrastre EnergyHub desde la escena hasta los campos **ninguno (objeto)** .
     * En **acción de recogida**, haga clic en **ninguna función**  ->  **EnergyHubBase**  ->  **ResetAnimation**.
@@ -251,7 +251,7 @@ Por ejemplo, el establecimiento de una copa en una tabla debe hacer un sonido m�
 
 Un ejemplo clásico es un salón de concierto. Cuando un agente de escucha está fuera del salón y la puerta está cerrada, la música suena silenciada. Normalmente, también hay una reducción del volumen. Cuando se abre la puerta, se oye todo el espectro del sonido en el volumen real. Los sonidos de alta frecuencia suelen absorber más que las bajas frecuencias.
 
-#### <a name="instructions"></a>Instrucciones
+#### <a name="instructions"></a>Instructions
 
 * En el panel **jerarquía** , expanda **HologramCollection** y seleccione **P0LY**.
 * En el panel **Inspector** , haga clic en **Agregar componente** y agregue **emisor de audio**.
@@ -435,7 +435,7 @@ En Unity, puede marcar un archivo de audio para el streaming en la configuració
 * La creación de vistas en un mundo oculto es visualmente atractiva.
 * Mejore el realismo agregando efectos de audio cuando un holograma o el usuario están cerca del mundo oculto.
 
-#### <a name="instructions"></a>Instrucciones
+#### <a name="instructions"></a>Instructions
 
 * En el panel **jerarquía** , expanda **HologramCollection** y seleccione el **submundo**.
 * Expanda el **submundo** y seleccione **VoiceSource**.
@@ -512,6 +512,6 @@ El mundo se ocultará y los hologramas previamente ocultos volverán a aparecer.
 
 ## <a name="the-end"></a>Fin
 
-¡Enhorabuena! Ahora ha completado el **Mr espacial 220: sonido espacial**.
+Felicidades. Ahora ha completado el **Mr espacial 220: sonido espacial**.
 
 Escuche el mundo y llévese sus experiencias con sonido.

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6bed33ee9b41a4ee66ce4c1c579d398f0958143d
-ms.sourcegitcommit: db01faaf76bccd4f0432cf6b383fefa04ab7a085
+ms.openlocfilehash: 7d530b66596bb79a082b98e5417bd125a7c5687d
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97745757"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580401"
 ---
 # <a name="426"></a>[4.26](#tab/426)
 
@@ -69,7 +69,7 @@ En el primer paso, debe agregar un packages.config ( https://docs.microsoft.com/
 </packages>
 ```
 
-Ahora puede descargar NuGet, los paquetes necesarios o hacer referencia a la [documentación](https://docs.microsoft.com/nuget/consume-packages/install-use-packages-nuget-cli)de Nuget.
+Ahora puede descargar NuGet, los paquetes necesarios o hacer referencia a la [documentación](/nuget/consume-packages/install-use-packages-nuget-cli)de Nuget.
 
 Abra YourModule.Build.cs y agregue el código siguiente:
 
@@ -533,5 +533,4 @@ Cuando el método no real llama a OpenFileDialogue, se abre un cuadro de diálog
 
 ## <a name="summary"></a>Resumen 
 
-Le recomendamos que use este tutorial como punto de partida para consumir código de WinRT en un lugar inreal cuando necesite guardar archivos en el disco de HoloLens con el mismo cuadro de diálogo de archivo que Windows.  El mismo proceso se aplica a la exportación de funciones adicionales desde el encabezado HoloLensWinrtDLL y que se usa en el mismo.  Preste especial atención al código DLL que espera en el código asincrónico de WinRT en un subproceso MTA en segundo plano, lo que evita el interbloqueo del subproceso de juego inreal. 
-
+Le recomendamos que use este tutorial como punto de partida para consumir código de WinRT en un lugar inreal cuando necesite guardar archivos en el disco de HoloLens con el mismo cuadro de diálogo de archivo que Windows.  El mismo proceso se aplica a la exportación de funciones adicionales desde el encabezado HoloLensWinrtDLL y que se usa en el mismo.  Preste especial atención al código DLL que espera en el código asincrónico de WinRT en un subproceso MTA en segundo plano, lo que evita el interbloqueo del subproceso de juego inreal.

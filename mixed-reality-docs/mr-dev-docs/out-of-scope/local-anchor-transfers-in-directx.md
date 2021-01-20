@@ -6,32 +6,32 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, sincronizar, delimitador espacial, transferencia, multijugador, vista, escenario, tutorial, código de ejemplo, transferencia, transferencia de delimitador local, exportación de delimitadores, importación de delimitadores
-ms.openlocfilehash: 5007220f480a3093864502e624737e9707bd3952
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 5d539338a25657441ee07acac38a4edd6cd86e58
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009655"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582804"
 ---
 # <a name="local-anchor-transfers-in-directx"></a>Transferencias de delimitadores locales en DirectX
 
-En situaciones en las que no se pueden usar <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">delimitadores espaciales de Azure</a>, las transferencias de delimitadores locales permiten que un dispositivo hololens exporte un delimitador para que lo importe un segundo dispositivo hololens.
+En situaciones en las que no se pueden usar <a href="/azure/spatial-anchors" target="_blank">delimitadores espaciales de Azure</a>, las transferencias de delimitadores locales permiten que un dispositivo hololens exporte un delimitador para que lo importe un segundo dispositivo hololens.
 
 >[!NOTE]
->Las transferencias de delimitadores locales proporcionan una recuperación de delimitador menos sólida que los delimitadores <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">espaciales de Azure</a>y los dispositivos iOS y Android no se admiten en este enfoque.
+>Las transferencias de delimitadores locales proporcionan una recuperación de delimitador menos sólida que los delimitadores <a href="/azure/spatial-anchors" target="_blank">espaciales de Azure</a>y los dispositivos iOS y Android no se admiten en este enfoque.
 
 >[!NOTE]
 >Los fragmentos de código de este artículo muestran actualmente el uso de C++/CX en lugar de C + +17 compatible con C++/WinRT tal y como se usa en la [plantilla de proyecto de C++ Holographic](../develop/native/creating-a-holographic-directx-project.md).  Los conceptos son equivalentes para un proyecto/WinRT de C++, aunque tendrá que traducir el código.
 
 ## <a name="transferring-spatial-anchors"></a>Transferir delimitadores espaciales
 
-Puede transferir delimitadores espaciales entre dispositivos de Windows Mixed Reality mediante [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Esta API le permite agrupar un delimitador con todos los datos de sensor necesarios para encontrar ese lugar exacto en el mundo y, a continuación, importar ese lote en otro dispositivo. Una vez que la aplicación en el segundo dispositivo ha importado ese delimitador, cada aplicación puede representar hologramas usando el sistema de coordenadas del delimitador espacial compartido, que aparecerá en el mismo lugar del mundo real.
+Puede transferir delimitadores espaciales entre dispositivos de Windows Mixed Reality mediante [SpatialAnchorTransferManager](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager). Esta API le permite agrupar un delimitador con todos los datos de sensor necesarios para encontrar ese lugar exacto en el mundo y, a continuación, importar ese lote en otro dispositivo. Una vez que la aplicación en el segundo dispositivo ha importado ese delimitador, cada aplicación puede representar hologramas usando el sistema de coordenadas del delimitador espacial compartido, que aparecerá en el mismo lugar del mundo real.
 
 Tenga en cuenta que los anclajes espaciales no pueden transferirse entre diferentes tipos de dispositivos, por ejemplo, es posible que no se pueda localizar un anclaje espacial de HoloLens mediante un casco envolvente.  Los delimitadores transferidos tampoco son compatibles con dispositivos iOS o Android.
 
 ## <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>Configuración de la aplicación para usar la funcionalidad spatialPerception
 
-Se debe conceder permiso a la aplicación para usar la funcionalidad SpatialPerception antes de poder usar [SpatialAnchorTransferManager](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.aspx). Esto es necesario porque la transferencia de un delimitador espacial implica compartir imágenes de sensor recopiladas a lo largo del tiempo en proximidad de ese delimitador, lo que puede incluir información confidencial.
+Se debe conceder permiso a la aplicación para usar la funcionalidad SpatialPerception antes de poder usar [SpatialAnchorTransferManager](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager). Esto es necesario porque la transferencia de un delimitador espacial implica compartir imágenes de sensor recopiladas a lo largo del tiempo en proximidad de ese delimitador, lo que puede incluir información confidencial.
 
 Declare esta funcionalidad en el archivo package. appxmanifest de la aplicación. Este es un ejemplo:
 
@@ -53,11 +53,11 @@ La funcionalidad proviene del espacio de nombres **uap2** . Para obtener acceso 
     >
 ```
 
-**Nota:** La aplicación tendrá que solicitar la funcionalidad en tiempo de ejecución para poder acceder a las API de exportación e importación de SpatialAnchor. Vea [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchortransfermanager.requestaccessasync.aspx) en los ejemplos siguientes.
+**Nota:** La aplicación tendrá que solicitar la funcionalidad en tiempo de ejecución para poder acceder a las API de exportación e importación de SpatialAnchor. Vea [RequestAccessAsync](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) en los ejemplos siguientes.
 
 ## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Serializar los datos del delimitador exportándolos con el SpatialAnchorTransferManager
 
-En el ejemplo de código se incluye una función auxiliar para exportar (serializar) los datos [SpatialAnchor](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) . Esta API de exportación serializa todos los delimitadores de una colección de pares clave-valor que asocian cadenas con delimitadores.
+En el ejemplo de código se incluye una función auxiliar para exportar (serializar) los datos [SpatialAnchor](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) . Esta API de exportación serializa todos los delimitadores de una colección de pares clave-valor que asocian cadenas con delimitadores.
 
 ```
 // ExportAnchorDataAsync: Exports a byte buffer containing all of the anchors in the given collection.
@@ -274,7 +274,7 @@ Si se pueden importar los datos, obtenemos una vista de mapa de pares clave-valo
 
 ## <a name="special-considerations"></a>Consideraciones especiales
 
-La API de [TryExportAnchorsAsync](https://msdn.microsoft.com/library/windows/apps/mt592763.aspx) permite exportar varios [SpatialAnchors](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) en el mismo BLOB binario opaco. Sin embargo, hay una diferencia sutil en cuanto a los datos que incluirá el BLOB, en función de si se exportan un único SpatialAnchor o varios SpatialAnchors en una sola llamada.
+La API de [TryExportAnchorsAsync](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) permite exportar varios [SpatialAnchors](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) en el mismo BLOB binario opaco. Sin embargo, hay una diferencia sutil en cuanto a los datos que incluirá el BLOB, en función de si se exportan un único SpatialAnchor o varios SpatialAnchors en una sola llamada.
 
 ### <a name="export-of-a-single-spatialanchor"></a>Exportación de un único SpatialAnchor
 
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-Eso es todo. Ahora, debe tener suficiente información para intentar localizar los delimitadores recibidos a través de la red. De nuevo, tenga en cuenta que el cliente debe tener suficientes datos de seguimiento visual para que el espacio Localice correctamente el delimitador. Si no funciona de inmediato, intente recorrer un rato. Si sigue sin funcionar, haga que el servidor envíe más delimitadores y use las comunicaciones de red para aceptar una que funcione para el cliente. Para probar esto, descargue HolographicSpatialAnchorTransferSample, configure las direcciones IP del cliente y del servidor y impleméntela en los dispositivos cliente y servidor HoloLens.
+Ya está. Ahora, debe tener suficiente información para intentar localizar los delimitadores recibidos a través de la red. De nuevo, tenga en cuenta que el cliente debe tener suficientes datos de seguimiento visual para que el espacio Localice correctamente el delimitador. Si no funciona de inmediato, intente recorrer un rato. Si sigue sin funcionar, haga que el servidor envíe más delimitadores y use las comunicaciones de red para aceptar una que funcione para el cliente. Para probar esto, descargue HolographicSpatialAnchorTransferSample, configure las direcciones IP del cliente y del servidor y impleméntela en los dispositivos cliente y servidor HoloLens.
 
 ## <a name="see-also"></a>Consulte también
-* [Biblioteca de modelos de procesamiento paralelo (PPL)](https://msdn.microsoft.com/library/dd492418.aspx)
-* [Windows. networking. StreamSocket](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocket.aspx)
-* [Windows. networking. StreamSocketListener](https://msdn.microsoft.com/library/windows/apps/windows.networking.sockets.streamsocketlistener.aspx)
+* [Biblioteca de modelos de procesamiento paralelo (PPL)](/cpp/parallel/concrt/parallel-patterns-library-ppl)
+* [Windows. networking. StreamSocket](/uwp/api/Windows.Networking.Sockets.StreamSocket)
+* [Windows. networking. StreamSocketListener](/uwp/api/Windows.Networking.Sockets.StreamSocketListener)

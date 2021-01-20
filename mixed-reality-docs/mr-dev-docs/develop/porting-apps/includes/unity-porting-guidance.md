@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0ef22142ac2efc3ef47ece2619d31dbeddcff8fe
-ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
+ms.openlocfilehash: 6c33618e6d09da156bc4a4480fbecf3c0da94378
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192672"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580572"
 ---
 # <a name="project-settings"></a>[Configuración del proyecto](#tab/project)
 
@@ -39,7 +39,7 @@ Desde dentro de la aplicación Unity:
 > Si la aplicación tiene dependencias en servicios específicos del dispositivo, como la realización de una coincidencia de vapor, deberá deshabilitarlos en este paso. Puede enlazar a los servicios equivalentes que Windows proporciona más adelante.
 
 ### <a name="5-setup-your-windows-mixed-reality-hardware"></a>5. configurar el hardware de Windows Mixed Reality
-1. Revisión de los pasos de la [configuración de auriculares inmersivo](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/before-you-start
+1. Revisión de los pasos de la [configuración de auriculares inmersivo](/windows/mixed-reality/enthusiast-guide/before-you-start
 )
 2. Obtener información sobre cómo [usar el simulador de realidad mixta de Windows](../../platform-capabilities-and-apis/using-the-windows-mixed-reality-simulator.md) y [navegar por la Página principal de Windows Mixed Reality](../../../discover/navigating-the-windows-mixed-reality-home.md)
 
@@ -95,13 +95,13 @@ El algoritmo se basa en un blog de Daniel Smilkov: [el rectángulo más grande d
 
 Cada juego o aplicación que tiene como destino un HMD existente tendrá un conjunto de entradas que controla, los tipos de entradas que necesita para la experiencia y las API específicas a las que llama para obtener esas entradas. Hemos invertido en intentar que sea tan sencillo y sencillo como sea posible para aprovechar las ventajas de las entradas disponibles en Windows Mixed Reality.
 
-Lea la [Guía de portabilidad de entrada para Unity](https://docs.microsoft.com/windows/mixed-reality/develop/porting-apps/porting-guides?tabs=input) en la pestaña adyacente para obtener detalles sobre cómo Windows Mixed Reality expone la entrada y cómo se asigna a lo que la aplicación puede hacer hoy.
+Lea la [Guía de portabilidad de entrada para Unity](../porting-guides.md?tabs=input) en la pestaña adyacente para obtener detalles sobre cómo Windows Mixed Reality expone la entrada y cómo se asigna a lo que la aplicación puede hacer hoy.
 
 ### <a name="9-performance-testing-and-tuning"></a>9. pruebas y ajuste del rendimiento
 
-Windows Mixed Reality estará disponible en una amplia gama de dispositivos, que abarcan desde equipos de juegos de alta gama, hasta grandes equipos estándar de mercado. En función del mercado de destino, hay una diferencia significativa en los presupuestos de proceso y gráficos disponibles para la aplicación. Durante este proceso de migración, es probable que se esté aprovechando un equipo Premium y que haya presupuestos de cálculo y gráficos significativos disponibles para la aplicación. Si quiere que la aplicación esté disponible para un público más amplio, debe probar y generar el perfil de la aplicación en [el hardware representativo que](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)quiere usar como destino.
+Windows Mixed Reality estará disponible en una amplia gama de dispositivos, que abarcan desde equipos de juegos de alta gama, hasta grandes equipos estándar de mercado. En función del mercado de destino, hay una diferencia significativa en los presupuestos de proceso y gráficos disponibles para la aplicación. Durante este proceso de migración, es probable que se esté aprovechando un equipo Premium y que haya presupuestos de cálculo y gráficos significativos disponibles para la aplicación. Si quiere que la aplicación esté disponible para un público más amplio, debe probar y generar el perfil de la aplicación en [el hardware representativo que](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines)quiere usar como destino.
 
-Tanto [Unity](https://docs.unity3d.com/Manual/Profiler.html) como [Visual Studio](https://docs.microsoft.com/visualstudio/profiling/index) incluyen los generadores de rendimiento y las directrices de publicación de [Microsoft](../../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md) e [Intel](https://software.intel.com/articles/vr-content-developer-guide) sobre la optimización y la generación de perfiles de rendimiento. Hay una explicación exhaustiva del rendimiento disponible al [comprender el rendimiento de la realidad mixta](../../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md). Además, hay detalles específicos para Unity en [recomendaciones de rendimiento para Unity](../../unity/performance-recommendations-for-unity.md).
+Tanto [Unity](https://docs.unity3d.com/Manual/Profiler.html) como [Visual Studio](/visualstudio/profiling/index) incluyen los generadores de rendimiento y las directrices de publicación de [Microsoft](../../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md) e [Intel](https://software.intel.com/articles/vr-content-developer-guide) sobre la optimización y la generación de perfiles de rendimiento. Hay una explicación exhaustiva del rendimiento disponible al [comprender el rendimiento de la realidad mixta](../../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md). Además, hay detalles específicos para Unity en [recomendaciones de rendimiento para Unity](../../unity/performance-recommendations-for-unity.md).
 
 # <a name="input-mapping"></a>[Asignación de datos de entrada](#tab/input)
 

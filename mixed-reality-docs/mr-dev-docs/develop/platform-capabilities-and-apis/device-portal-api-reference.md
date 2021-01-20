@@ -6,12 +6,12 @@ ms.author: moelhama
 ms.date: 08/03/2020
 ms.topic: article
 keywords: HoloLens, portal de dispositivos de Windows, API, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 13845a5a5668ee8c86178196326425f46be9b321
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: cdbe9635fc51a0d19c978b72fdc8d5db6b8e8e01
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006655"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581255"
 ---
 # <a name="device-portal-api-reference"></a>Referencia de la API del Portal de dispositivos
 
@@ -584,7 +584,7 @@ Devuelve las estadísticas de rendimiento del sistema (e/s de lectura/escritura,
 Devolver datos
 * JSON con información del sistema: CPU, GPU, memoria, red, e/s
 
-## <a name="power"></a>Power
+## <a name="power"></a>Potencia
 
 **/API/Power/Battery (GET)**
 
@@ -698,4 +698,4 @@ Devolver datos
 
 ## <a name="see-also"></a>Consulte también
 * [Uso del Portal de dispositivos Windows](using-the-windows-device-portal.md)
-* [Referencia de API principal del portal de dispositivos (UWP)](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-api-core)
+* [Referencia de API principal del portal de dispositivos (UWP)](/windows/uwp/debug-test-perf/device-portal-api-core)

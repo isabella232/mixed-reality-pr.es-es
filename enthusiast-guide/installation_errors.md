@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, instalación
 appliesto:
 - Windows 10
-ms.openlocfilehash: 56ead28a5809eadef1797507168b68cbaf79953e
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 056caca0b7e562007178929d4a59c2faeaece450
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726066"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581668"
 ---
 # <a name="installation-errors"></a>Errores de instalación
 
@@ -31,7 +31,7 @@ Windows Mixed Reality requiere un controlador de tarjeta de gráficos que admita
 
 ## <a name="before-we-can-set-up-windows-mixed-reality-your-administrator-will-need-to-enable-it-for-your-organization-learn-more"></a>"Antes de poder configurar Windows Mixed Reality, el administrador deberá habilitarlo para su organización. Más información "
 
-Probablemente se encuentre en una red administrada por la empresa y su organización use Windows Server Update Services (WSUS). Estas y otras directivas pueden bloquear la descarga. Póngase en contacto con el administrador del sistema o el Departamento de TI de su organización para [habilitar Windows Mixed Reality](https://docs.microsoft.com/windows/application-management/manage-windows-mixed-reality#enable).
+Probablemente se encuentre en una red administrada por la empresa y su organización use Windows Server Update Services (WSUS). Estas y otras directivas pueden bloquear la descarga. Póngase en contacto con el administrador del sistema o el Departamento de TI de su organización para [habilitar Windows Mixed Reality](/windows/application-management/manage-windows-mixed-reality#enable).
 
 ## <a name="we-couldnt-download-the-mixed-reality-software-or-hang-tight-while-we-do-some-downloading"></a>"No pudimos descargar el software de realidad mixta" ni "colgar mientras hacemos una descarga"
 

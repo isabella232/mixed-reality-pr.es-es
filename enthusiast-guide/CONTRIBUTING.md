@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: afb559937c2bde06d3c74c1c572aefec50502884
-ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
+ms.openlocfilehash: 28ca1653019252c749fe5977a06bff4503800c10
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865440"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580184"
 ---
 # <a name="contributing-to-the-mixed-reality-enthusiast-guide"></a>Contribución a la guía del entusiasta de la realidad mixta
 
@@ -22,7 +22,7 @@ Gracias por su interés en la guía de entusiastas. Agradecemos sus comentarios,
 > [!IMPORTANT]
 > Todos los repositorios que publican en docs.microsoft.com han adoptado el [Código de conducta de código abierto de Microsoft](https://opensource.microsoft.com/codeofconduct/). Para más información, consulte las [preguntas más frecuentes del código de conducta](https://opensource.microsoft.com/codeofconduct/faq/) o póngase en contacto con [opencode@microsoft.com](mailto:opencode@microsoft.com) si tiene cualquier pregunta o comentario.<br>
 >
-> Las correcciones menores o aclaraciones de la documentación y los ejemplos de código de los repositorios públicos se rigen por los [Términos de uso del sitio docs.microsoft.com](https://docs.microsoft.com/legal/termsofuse). Los cambios importantes o nuevos generarán un comentario en la solicitud de incorporación de cambios para solicitarle que acepte el contrato de licencia de colaboración (CLA, por sus siglas en inglés) si no es un empleado de Microsoft. Necesitamos que rellene el formulario en línea para aceptar su solicitud de incorporación de cambios.
+> Las correcciones menores o aclaraciones de la documentación y los ejemplos de código de los repositorios públicos se rigen por los [Términos de uso del sitio docs.microsoft.com](/legal/termsofuse). Los cambios importantes o nuevos generarán un comentario en la solicitud de incorporación de cambios para solicitarle que acepte el contrato de licencia de colaboración (CLA, por sus siglas en inglés) si no es un empleado de Microsoft. Necesitamos que rellene el formulario en línea para aceptar su solicitud de incorporación de cambios.
 
 ## <a name="before-you-start"></a>Antes de comenzar
 
@@ -53,7 +53,7 @@ El sistema de publicación está asociado a GitHub, por lo que estos pasos son i
 | 5. Haga clic en vista previa de cambios para comprobar que el formato es el esperado. | ![Vista previa de los cambios](images/edit-in-github.png)|
 | 6. cuando haya terminado, desplácese hasta la parte inferior de la página y haga clic en "proponer cambio de archivo"; se mostrará la página "comparando cambios", donde podrá comprobar los cambios. A continuación, haga clic en el botón "crear solicitud de incorporación de cambios" para enviar los cambios. Después de este paso, ya habrá terminado. | ![Propuesta de cambio](images/propose.jpg)|
 
-Después de enviar los cambios (a través de una solicitud de incorporación de cambios), los revisará un miembro del equipo de documentación. Si se acepta la solicitud, las actualizaciones se publican en [https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide) .
+Después de enviar los cambios (a través de una solicitud de incorporación de cambios), los revisará un miembro del equipo de documentación. Si se acepta la solicitud, las actualizaciones se publican en [https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide](/windows/mixed-reality/enthusiast-guide) .
 
 * Solo para la revisión interna, puede ver los cambios en [https://review.docs.microsoft.com/windows/mixed-reality/enthusiast-guide](https://review.docs.microsoft.com/en-us/windows/mixed-reality/enthusiast-guide/?branch=master) .
 
@@ -128,7 +128,7 @@ Use el siguiente flujo de trabajo para *crear nuevos artículos* en el repositor
 
 ## <a name="working-with-branches"></a>Trabajo con ramas
 
-El [repositorio de github guía para entusiastas de realidad mixta](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide) utiliza dos bifurcaciones principales: [maestra](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide/tree/master), este contenido se puede revisar en el [sitio de ensayo](https://review.docs.microsoft.com/windows/mixed-reality/enthusiast-guide)y en [directo](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide/tree/live), para el contenido que aparece en el [sitio activo](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide).
+El [repositorio de github guía para entusiastas de realidad mixta](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide) utiliza dos bifurcaciones principales: [maestra](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide/tree/master), este contenido se puede revisar en el [sitio de ensayo](https://review.docs.microsoft.com/windows/mixed-reality/enthusiast-guide)y en [directo](https://github.com/MicrosoftDocs/mixedreality-enthusiast-guide/tree/live), para el contenido que aparece en el [sitio activo](/windows/mixed-reality/enthusiast-guide).
 
 Al realizar contribuciones, envíe su solicitud de incorporación de cambios (PR) a la rama **Master** . Esta rama se puede ver en el sitio de ensayo y solo debe contener las contribuciones que están listas para ser publicadas. También puede crear y enviar una rama con su propio nombre de rama único que se puede seleccionar y ver en el sitio de ensayo. (La rama en **directo** solo se permite para el uso por parte de los administradores de contenido).
 
@@ -138,13 +138,13 @@ Los siguientes recursos le ayudarán a aprender a editar la documentación con e
 
 - [Markdown basics](https://help.github.com/articles/basic-writing-and-formatting-syntax/) (Conceptos básicos de Markdown)
 - [Póster de referencia de Markdown a un vistazo](images/MarkdownPoster.pdf)
-- [Recursos adicionales para escribir Markdown para docs.microsoft.com](https://docs.microsoft.com/contribute/how-to-write-use-markdown)
+- [Recursos adicionales para escribir Markdown para docs.microsoft.com](/contribute/how-to-write-use-markdown)
 
 ### <a name="adding-tables"></a>Agregar tablas
 
 Debido a la forma en que docs.microsoft.com las tablas de estilos, no tendrán bordes ni estilos personalizados, aunque pruebe CSS en línea. Parecerá que funciona durante un breve período de tiempo, pero finalmente la plataforma eliminará el estilo de la tabla. Por tanto, planee con facilidad y mantenga las tablas sencillas. [Este es un sitio que facilita las tablas de Markdown](https://www.tablesgenerator.com/markdown_tables).
 
-La [extensión docs Markdown para Visual Studio Code](https://docs.microsoft.com/teamblog/docs-extension) también facilita la generación de tablas si usa [Visual Studio Code (consulte a continuación)](#using-visual-studio-code) para editar la documentación.
+La [extensión docs Markdown para Visual Studio Code](/teamblog/docs-extension) también facilita la generación de tablas si usa [Visual Studio Code (consulte a continuación)](#using-visual-studio-code) para editar la documentación.
 
 ### <a name="adding-images"></a>Agregar imágenes
 

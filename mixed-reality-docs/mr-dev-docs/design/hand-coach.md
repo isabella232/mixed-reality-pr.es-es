@@ -6,12 +6,12 @@ ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, tratamiento de mano, auriculares envolvente, MRTK, manos, ayuda a manos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 07b42482d9258b4189ef43683370bd951f5c88e8
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 69afe767e01c57535b79575e4f25fabe4a9f6f39
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009165"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582269"
 ---
 # <a name="hand-coach"></a>Asesor manual
 
@@ -177,7 +177,7 @@ Una vez que esté satisfecho con la animación
 
 * [Interacción: aspectos fundamentales del](interaction-fundamentals.md)
 * [Proceso de creación de recursos](asset-creation-process.md)
-* [Gestos](../gestures.md)
+* [Gestos](./interaction-fundamentals.md)
 * [Instalar las herramientas](../develop/install-the-tools.md)
 * [Configuración del proyecto de Unity](../develop/unity/Configure-Unity-Project.md)
 * [Introducción al desarrollo de Unity](../develop/unity/unity-development-overview.md)

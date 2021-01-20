@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: DirectX, representación holográfica, nativa, aplicación nativa, WinRT, aplicación de WinRT, API de plataforma, motor personalizado, middleware, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 764cbe0a37501cc176e9bb05a9a7771b03666f0c
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b137fad12740542deb4995485201a9bd0d1d7662
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006855"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581048"
 ---
 # <a name="native-development-overview"></a>Introducción al desarrollo con Native
 
@@ -32,7 +32,7 @@ Windows Mixed Reality admite [dos tipos de aplicaciones](../../design/app-views.
 * **Aplicaciones de realidad mixta** de UWP o Win32 que usan la API de [HOLOGRAPHICSPACE](getting-a-holographicspace.md) o la [API de OpenXR](openxr.md) para representar una [vista envolvente](../../design/app-views.md) que llena la pantalla de auriculares
 * **aplicaciones 2D** (UWP) que usan DirectX, XAML u otro marco de trabajo para representar [vistas 2D](../../design/app-views.md#2d-views) en pizarras en la Página principal de Windows Mixed Reality
 
-Las diferencias entre el desarrollo de DirectX para [vistas 2D y vistas envolventes](../../design/app-views.md) se refieren principalmente a la representación holográfica y la entrada espacial. El HWND de la aplicación de [UWP o el](https://msdn.microsoft.com/library/windows/apps/windows.applicationmodel.core.iframeworkview.aspx) HWND de la aplicación de Win32 son necesarios y permanecen en gran medida. Lo mismo se aplica a las API de WinRT que están disponibles para la aplicación. Sin embargo, debe usar un subconjunto diferente de estas API para aprovechar las características holográficas. Por ejemplo, el sistema para aplicaciones holográficas administra el intercambio y el marco presentes para habilitar un bucle de trama de predicción de supuestos.
+Las diferencias entre el desarrollo de DirectX para [vistas 2D y vistas envolventes](../../design/app-views.md) se refieren principalmente a la representación holográfica y la entrada espacial. El HWND de la aplicación de [UWP o el](/uwp/api/Windows.ApplicationModel.Core.IFrameworkView) HWND de la aplicación de Win32 son necesarios y permanecen en gran medida. Lo mismo se aplica a las API de WinRT que están disponibles para la aplicación. Sin embargo, debe usar un subconjunto diferente de estas API para aprovechar las características holográficas. Por ejemplo, el sistema para aplicaciones holográficas administra el intercambio y el marco presentes para habilitar un bucle de trama de predicción de supuestos.
 
 [!INCLUDE[](../includes/native-getting-started.md)]
 

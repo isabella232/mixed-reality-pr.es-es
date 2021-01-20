@@ -6,18 +6,18 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Seguimiento ocular, realidad mixta, entrada, ojo, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, diseño, interacciones
-ms.openlocfilehash: b5091b92fd048f72184212401d54ad0b7353875c
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: db3cb774d72de13c2f1e51d446969ee7a4cdf2b7
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008585"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582380"
 ---
 # <a name="eye-gaze-based-interaction-on-hololens-2"></a>Interacción mirada en la vista en HoloLens 2
 
 ![Demostración de seguimiento ocular en MRTK](images/mrtk_et_scenemenu.jpg)
 
-Una de nuestras nuevas funcionalidades interesantes en HoloLens 2 es el seguimiento ocular. En la página [seguimiento de la vista de HoloLens 2](eye-tracking.md) , hemos mencionado la necesidad de que cada usuario pase por una [calibración](https://docs.microsoft.com/hololens/hololens-calibration), proporcionó algunas instrucciones para desarrolladores y los casos de uso resaltados para el seguimiento ocular. La entrada de mirada sigue siendo un nuevo tipo de entrada de usuario y hay mucho que aprender. 
+Una de nuestras nuevas funcionalidades interesantes en HoloLens 2 es el seguimiento ocular. En la página [seguimiento de la vista de HoloLens 2](eye-tracking.md) , hemos mencionado la necesidad de que cada usuario pase por una [calibración](/hololens/hololens-calibration), proporcionó algunas instrucciones para desarrolladores y los casos de uso resaltados para el seguimiento ocular. La entrada de mirada sigue siendo un nuevo tipo de entrada de usuario y hay mucho que aprender. 
 
 A pesar de que la entrada de ojo mirada solo se usa sutilmente en nuestra experiencia de Shell holográfica (la interfaz de usuario que ve al iniciar su HoloLens 2), varias aplicaciones, como la ["animación de HoloLens"](https://www.microsoft.com/p/mr-playground/9nb31lh723s2), presentan excelentes ejemplos sobre cómo la entrada de miración ocular puede agregarse a la magia de su experiencia holográfica.
 En esta página, se describen las consideraciones de diseño para la integración de la entrada ocular para interactuar con las aplicaciones holográficas.
@@ -35,7 +35,7 @@ Aprenderá sobre las principales ventajas y también los desafíos únicos que a
 </colgroup>
 <tr>
      <td><strong>Característica</strong></td>
-     <td><a href="../hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+     <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
 </tr>

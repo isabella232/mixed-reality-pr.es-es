@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/03/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, estilo, fuente, tipografía, IU, experiencia de usuario, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens
-ms.openlocfilehash: 38acc8c0d2c7dbd7bcb192f82bb1bb52838323ac
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 015273c84462e48e145af77421da4131bb650d9e
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007655"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580269"
 ---
 # <a name="typography"></a>Tipografía
 
@@ -37,9 +37,9 @@ Cree el contraste y la jerarquía mediante el uso de diferentes tamaños y pesos
 
 ### <a name="limit-your-fonts"></a>Limitar las fuentes
 
-Evite usar más de dos familias de fuentes diferentes en un único contexto. Demasiadas fuentes interrumpirán la armonía y la coherencia de su experiencia y dificultarán el consumo de información. En HoloLens, dado que la información se superpone en el entorno físico, el uso de demasiados estilos de fuente degradará la experiencia. Segoe UI es la fuente de todos los diseños digitales de Microsoft. Se usa de forma coherente en el shell de Windows Mixed Reality. Puede descargar el archivo de fuente de Segoe UI desde la [página del kit de herramientas de diseño de Windows](https://docs.microsoft.com/windows/uwp/design-downloads/).
+Evite usar más de dos familias de fuentes diferentes en un único contexto. Demasiadas fuentes interrumpirán la armonía y la coherencia de su experiencia y dificultarán el consumo de información. En HoloLens, dado que la información se superpone en el entorno físico, el uso de demasiados estilos de fuente degradará la experiencia. Segoe UI es la fuente de todos los diseños digitales de Microsoft. Se usa de forma coherente en el shell de Windows Mixed Reality. Puede descargar el archivo de fuente de Segoe UI desde la [página del kit de herramientas de diseño de Windows](/windows/uwp/design-downloads/).
 
-[Más información sobre el Segoe UI tipo de letra](https://docs.microsoft.com/windows/uwp/design/style/typography)
+[Más información sobre el Segoe UI tipo de letra](/windows/uwp/design/style/typography)
 
 ### <a name="avoid-thin-font-weights"></a>Evitar los pesos de fuente finos
 
@@ -132,4 +132,4 @@ Segoe UI (la fuente predeterminada para Windows) funciona bien en la mayoría de
 ## <a name="see-also"></a>Consulte también
 
 * [Texto en Unity](../develop/unity/text-in-unity.md)
-* [Color, luz y materiales](../color,-light-and-materials.md)
+* [Color, luz y materiales](./color-light-and-materials.md)

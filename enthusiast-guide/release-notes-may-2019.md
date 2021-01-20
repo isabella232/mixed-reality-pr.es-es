@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 07/11/2019
 ms.topic: article
 keywords: Notas de la versión, versión, Windows 10, compilación, 19h1, so, mayo 2019
-ms.openlocfilehash: fd5688b7c68e0a16873ff153f3c158a3575e02e9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b8df518b03544bd2473ff67030ed008e1a2bc26e
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007125"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581508"
 ---
 # <a name="release-notes---may-2019"></a>Notas de la versión: mayo 2019
 
@@ -50,7 +50,7 @@ Estamos realizando un seguimiento de un problema que requiere que un monitor est
 
 ## <a name="provide-feedback-and-report-issues"></a>Proporcionar comentarios e informar de problemas
 
-Use la [aplicación de centro de comentarios en su equipo con Windows 10 o en](https://docs.microsoft.com/windows/mixed-reality/give-us-feedback) su dispositivo HoloLens para proporcionar comentarios e informar de problemas. El uso del centro de comentarios garantiza que se incluye toda la información de diagnóstico necesaria para ayudar a nuestros ingenieros a depurar y resolver el problema rápidamente.
+Use la [aplicación de centro de comentarios en su equipo con Windows 10 o en](/windows/mixed-reality/give-us-feedback) su dispositivo HoloLens para proporcionar comentarios e informar de problemas. El uso del centro de comentarios garantiza que se incluye toda la información de diagnóstico necesaria para ayudar a nuestros ingenieros a depurar y resolver el problema rápidamente.
 
 >[!NOTE]
 >Asegúrese de aceptar el mensaje que le pregunta si desea que el centro de comentarios tenga acceso a la carpeta de documentos (seleccione **sí** cuando se le solicite).
@@ -66,8 +66,7 @@ Use la [aplicación de centro de comentarios en su equipo con Windows 10 o en](h
 * [Notas de la versión (marzo de 2016)](release-notes-march-2016.md)
 
 ## <a name="see-also"></a>Consulte también
-* [Compatibilidad con auriculares envolvente (vínculo externo)](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
+* [Compatibilidad con auriculares envolvente (vínculo externo)](./troubleshooting-windows-mixed-reality.md)
 * [Compatibilidad con HoloLens (vínculo externo)](https://support.microsoft.com/products/hololens)
-* [Instalación de las herramientas](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools)
+* [Instalación de las herramientas](/windows/mixed-reality/develop/install-the-tools)
 * [Envíenos sus comentarios] (https://docs.microsoft.com/windows/mixed-reality/give-us-feedback
-

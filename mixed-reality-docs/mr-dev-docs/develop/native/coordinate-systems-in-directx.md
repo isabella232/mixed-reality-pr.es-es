@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Realidad mixta, localizador espacial, marco de referencia espacial, sistema de coordenadas espaciales, fase espacial, código de ejemplo, estabilización de imágenes, delimitador espacial, almacén de delimitador espacial, pérdida de seguimiento, tutorial, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 055eff0bb04228cb0a19b9ea208bfc9c00ce2dbe
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 7cf463e4c3bb9b2fe06c834376eb46e3ee20c1ee
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006865"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581074"
 ---
 # <a name="coordinate-systems-in-directx"></a>Sistemas de coordenadas de DirectX
 
@@ -27,27 +27,27 @@ Los dispositivos de la plataforma de VR de una sola habitación o de la primera 
 
 ## <a name="spatial-coordinate-systems-in-windows"></a>Sistemas de coordenadas espaciales en Windows
 
-El tipo básico que se usa para los sistemas de coordenadas del mundo real en Windows es el <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a>. Una instancia de este tipo representa un sistema de coordenadas arbitrario, que proporciona un método para obtener los datos de la matriz de transformación que se pueden usar para transformar entre dos sistemas de coordenadas sin conocer los detalles de cada uno de ellos.
+El tipo básico que se usa para los sistemas de coordenadas del mundo real en Windows es el <a href="/uwp/api/windows.perception.spatial.spatialcoordinatesystem" target="_blank">SpatialCoordinateSystem</a>. Una instancia de este tipo representa un sistema de coordenadas arbitrario, que proporciona un método para obtener los datos de la matriz de transformación que se pueden usar para transformar entre dos sistemas de coordenadas sin conocer los detalles de cada uno de ellos.
 
 Los métodos que devuelven información espacial aceptarán un parámetro SpatialCoordinateSystem para permitirle decidir el sistema de coordenadas en el que es más útil para las coordenadas que se van a devolver. La información espacial se representa como puntos, rayos o volúmenes en el entorno del usuario, y las unidades de estas coordenadas siempre estarán en metros.
 
 Un SpatialCoordinateSystem tiene una relación dinámica con otros sistemas de coordenadas, incluidos los que representan la posición del dispositivo. En cualquier momento, el dispositivo puede localizar algunos sistemas de coordenadas y no otros. Para la mayoría de los sistemas de coordenadas, la aplicación debe estar preparada para controlar los períodos de tiempo durante los cuales no se pueden encontrar.
 
 La aplicación no debe crear SpatialCoordinateSystems directamente, sino que se deben usar a través de las API de percepción. Existen tres orígenes principales de sistemas de coordenadas en las API de percepción, cada uno de los cuales se asigna a un concepto descrito en la página [sistemas de coordenadas](../../design/coordinate-systems.md) :
-* Para obtener un marco estacionario de referencia, cree un <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstationaryframeofreference" target="_blank">SpatialStationaryFrameOfReference</a> u obtenga uno de la <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference" target="_blank">SpatialStageFrameOfReference</a>actual.
-* Para obtener un delimitador espacial, cree un <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialanchor" target="_blank">SpatialAnchor</a>.
-* Para obtener un marco de referencia asociado, cree un <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocatorattachedframeofreference" target="_blank">SpatialLocatorAttachedFrameOfReference</a>.
+* Para obtener un marco estacionario de referencia, cree un <a href="/uwp/api/windows.perception.spatial.spatialstationaryframeofreference" target="_blank">SpatialStationaryFrameOfReference</a> u obtenga uno de la <a href="/uwp/api/windows.perception.spatial.spatialstageframeofreference" target="_blank">SpatialStageFrameOfReference</a>actual.
+* Para obtener un delimitador espacial, cree un <a href="/uwp/api/windows.perception.spatial.spatialanchor" target="_blank">SpatialAnchor</a>.
+* Para obtener un marco de referencia asociado, cree un <a href="/uwp/api/windows.perception.spatial.spatiallocatorattachedframeofreference" target="_blank">SpatialLocatorAttachedFrameOfReference</a>.
 
 Todos los sistemas de coordenadas devueltos por estos objetos son zurdos, con + y hacia arriba, + x a la derecha y + z hacia atrás. Puede recordar en qué dirección apunta el eje z positivo apuntando los dedos de la mano izquierda o derecha en la dirección x positiva y enrollándose en la dirección y positiva. La dirección en la que se encuentra el punto de control, ya sea hacia delante o fuera, es la dirección en la que apunta el eje z positivo para ese sistema de coordenadas. En la ilustración siguiente se muestran estos dos sistemas de coordenadas.
 
 ![Sistemas de coordenadas del lado izquierdo y derecho](images/left-hand-right-hand.gif)<br>
 *Sistemas de coordenadas del lado izquierdo y derecho*
 
-Use la clase <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> para crear un marco fijo o adjunto de referencia para arrancar en un SpatialCoordinateSystem basado en la posición de HoloLens. Continúe con la siguiente sección para obtener más información sobre este proceso.
+Use la clase <a href="/uwp/api/windows.perception.spatial.spatiallocator" target="_blank">SpatialLocator</a> para crear un marco fijo o adjunto de referencia para arrancar en un SpatialCoordinateSystem basado en la posición de HoloLens. Continúe con la siguiente sección para obtener más información sobre este proceso.
 
 ## <a name="place-holograms-in-the-world-using-a-spatial-stage"></a>Colocar hologramas en el mundo mediante una fase espacial
 
-Se tiene acceso al sistema de coordenadas para los auriculares con forma de la realidad mixta de Windows con la que se usa la propiedad estática <a href="https://docs.microsoft.com/uwp/api/windows.perception.spatial.spatialstageframeofreference.current" target="_blank">SpatialStageFrameOfReference:: Current</a> . Esta API proporciona:
+Se tiene acceso al sistema de coordenadas para los auriculares con forma de la realidad mixta de Windows con la que se usa la propiedad estática <a href="/uwp/api/windows.perception.spatial.spatialstageframeofreference.current" target="_blank">SpatialStageFrameOfReference:: Current</a> . Esta API proporciona:
 
 * Un sistema de coordenadas
 * Información sobre si el reproductor está sentado o es móvil
@@ -289,9 +289,9 @@ std::vector<unsigned short> SpatialStageManager::TriangulatePoints(std::vector<f
 
 ## <a name="place-holograms-in-the-world-using-a-stationary-frame-of-reference"></a>Colocar hologramas en el mundo con un marco estacionario de referencia
 
-La clase [SpatialStationaryFrameOfReference](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialstationaryframeofreference.aspx) representa un marco de referencia que [permanece estacionario](../../design/coordinate-systems.md#stationary-frame-of-reference) en relación con el entorno del usuario a medida que el usuario se desplaza. Este marco de referencia prioriza la conservación de las coordenadas al lado del dispositivo. Un uso clave de una SpatialStationaryFrameOfReference es actuar como el sistema de coordenadas universal subyacente dentro de un motor de representación al representar hologramas.
+La clase [SpatialStationaryFrameOfReference](/uwp/api/Windows.Perception.Spatial.SpatialStationaryFrameOfReference) representa un marco de referencia que [permanece estacionario](../../design/coordinate-systems.md#stationary-frame-of-reference) en relación con el entorno del usuario a medida que el usuario se desplaza. Este marco de referencia prioriza la conservación de las coordenadas al lado del dispositivo. Un uso clave de una SpatialStationaryFrameOfReference es actuar como el sistema de coordenadas universal subyacente dentro de un motor de representación al representar hologramas.
 
-Para obtener un SpatialStationaryFrameOfReference, use la clase [SpatialLocator](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatiallocator.aspx) y llame a [CreateStationaryFrameOfReferenceAtCurrentLocation](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatiallocator.createstationaryframeofreferenceatcurrentlocation.aspx).
+Para obtener un SpatialStationaryFrameOfReference, use la clase [SpatialLocator](/uwp/api/Windows.Perception.Spatial.SpatialLocator) y llame a [CreateStationaryFrameOfReferenceAtCurrentLocation](/uwp/api/Windows.Perception.Spatial.SpatialLocator).
 
 En el código de plantilla de la aplicación Holographic de Windows:
 
@@ -314,21 +314,21 @@ Una vez definido, el sistema de coordenadas de un SpatialAnchor se ajusta contin
 
 Los efectos de los ajustes que mantienen el anclaje en su lugar se amplían a medida que el delimitador aumenta. Debe evitar la representación del contenido en relación con un delimitador que supere los 3 metros del origen de ese delimitador.
 
-La propiedad [coordenadas](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.coordinatesystem.aspx) obtiene un sistema de coordenadas que le permite colocar el contenido en relación con el delimitador, con una aceleración aplicada cuando el dispositivo ajusta la ubicación precisa del delimitador.
+La propiedad [coordenadas](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) obtiene un sistema de coordenadas que le permite colocar el contenido en relación con el delimitador, con una aceleración aplicada cuando el dispositivo ajusta la ubicación precisa del delimitador.
 
-Use la propiedad [RawCoordinateSystem](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.rawcoordinatesystem.aspx) y el evento [RawCoordinateSystemAdjusted](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.rawcoordinatesystemadjusted.aspx) correspondiente para administrar estos ajustes.
+Use la propiedad [RawCoordinateSystem](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) y el evento [RawCoordinateSystemAdjusted](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) correspondiente para administrar estos ajustes.
 
 ### <a name="persist-and-share-spatial-anchors"></a>Persistencia y uso compartido de delimitadores espaciales
 
-Puede conservar un SpatialAnchor localmente mediante la clase [SpatialAnchorStore](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchorstore.aspx) y, a continuación, recuperarlo en una sesión de aplicación futura en el mismo dispositivo HoloLens.
+Puede conservar un SpatialAnchor localmente mediante la clase [SpatialAnchorStore](/uwp/api/Windows.Perception.Spatial.SpatialAnchorStore) y, a continuación, recuperarlo en una sesión de aplicación futura en el mismo dispositivo HoloLens.
 
-Mediante el uso de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">anclajes espaciales de Azure</a>, puede crear un delimitador de la nube durable desde un SpatialAnchor local, que la aplicación puede ubicar en varios dispositivos HoloLens, iOS y Android.  Al compartir un delimitador espacial común en varios dispositivos, cada usuario puede ver el contenido representado en relación con ese delimitador en la misma ubicación física en tiempo real. 
+Mediante el uso de <a href="/azure/spatial-anchors/overview" target="_blank">anclajes espaciales de Azure</a>, puede crear un delimitador de la nube durable desde un SpatialAnchor local, que la aplicación puede ubicar en varios dispositivos HoloLens, iOS y Android.  Al compartir un delimitador espacial común en varios dispositivos, cada usuario puede ver el contenido representado en relación con ese delimitador en la misma ubicación física en tiempo real. 
 
-También puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a> para la persistencia asincrónica de hologramas en dispositivos de HoloLens, iOS y Android.  Al compartir un delimitador espacial en la nube duradero, varios dispositivos pueden observar el mismo holograma persistente con el tiempo, incluso si esos dispositivos no están presentes juntos al mismo tiempo.
+También puede usar <a href="/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a> para la persistencia asincrónica de hologramas en dispositivos de HoloLens, iOS y Android.  Al compartir un delimitador espacial en la nube duradero, varios dispositivos pueden observar el mismo holograma persistente con el tiempo, incluso si esos dispositivos no están presentes juntos al mismo tiempo.
 
-Para empezar a crear experiencias compartidas en la aplicación de HoloLens, pruebe la guía de inicio rápido de HoloLens de 5 minutos de <a href="https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-hololens" target="_blank">delimitadores espaciales de Azure</a>.
+Para empezar a crear experiencias compartidas en la aplicación de HoloLens, pruebe la guía de inicio rápido de HoloLens de 5 minutos de <a href="/azure/spatial-anchors/quickstarts/get-started-hololens" target="_blank">delimitadores espaciales de Azure</a>.
 
-Una vez que esté en funcionamiento con los anclajes espaciales de Azure, puede <a href="https://docs.microsoft.com/azure/spatial-anchors/concepts/create-locate-anchors-cpp-winrt" target="_blank">crear y buscar delimitadores en HoloLens</a>.  También hay tutoriales disponibles para <a href="https://docs.microsoft.com/azure/spatial-anchors/create-locate-anchors-overview" target="_blank">Android e iOS</a> , lo que le permite compartir los mismos delimitadores en todos los dispositivos.
+Una vez que esté en funcionamiento con los anclajes espaciales de Azure, puede <a href="/azure/spatial-anchors/concepts/create-locate-anchors-cpp-winrt" target="_blank">crear y buscar delimitadores en HoloLens</a>.  También hay tutoriales disponibles para <a href="/azure/spatial-anchors/create-locate-anchors-overview" target="_blank">Android e iOS</a> , lo que le permite compartir los mismos delimitadores en todos los dispositivos.
 
 ### <a name="create-spatialanchors-for-holographic-content"></a>Crear SpatialAnchors para contenido holográfica
 
@@ -382,7 +382,7 @@ Veamos cómo escribir una clase SampleSpatialAnchorHelper que ayude a controlar 
 * Cargar delimitadores de la SpatialAnchorStore del sistema, que se mantiene independiente de la colección en memoria local.
 * Guardar la colección local en memoria de los delimitadores en el SpatialAnchorStore cuando la aplicación decida hacerlo.
 
-Aquí se muestra cómo guardar objetos [SpatialAnchor](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchor.aspx) en [SpatialAnchorStore](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchorstore.aspx).
+Aquí se muestra cómo guardar objetos [SpatialAnchor](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) en [SpatialAnchorStore](/uwp/api/Windows.Perception.Spatial.SpatialAnchorStore).
 
 Cuando se inicia la clase, se solicita SpatialAnchorStore de forma asincrónica. Esto implica la e/s del sistema, ya que la API carga el almacén de delimitadores y esta API se hace asincrónica para que la e/s no sea de bloqueo.
 
@@ -539,7 +539,7 @@ Necesita su propia base de datos en memoria de SpatialAnchors para asociar caden
 
 ### <a name="clear-the-anchor-store-when-needed"></a>Borrar el almacén delimitador, cuando sea necesario
 
-A veces, debe borrar el estado de la aplicación y escribir datos nuevos. Aquí se muestra cómo hacerlo con el [SpatialAnchorStore](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialanchorstore.aspx).
+A veces, debe borrar el estado de la aplicación y escribir datos nuevos. Aquí se muestra cómo hacerlo con el [SpatialAnchorStore](/uwp/api/Windows.Perception.Spatial.SpatialAnchorStore).
 
 Con nuestra clase auxiliar, casi innecesaria para encapsular la función Clear. Decidimos hacerlo en nuestra implementación de ejemplo, porque a nuestra clase auxiliar se le da la responsabilidad de poseer la instancia de SpatialAnchorStore.
 
@@ -561,7 +561,7 @@ Con nuestra clase auxiliar, casi innecesaria para encapsular la función Clear. 
 
 ### <a name="example-relating-anchor-coordinate-systems-to-stationary-reference-frame-coordinate-systems"></a>Ejemplo: vinculación de sistemas de coordenadas de anclaje a sistemas de coordenadas de fotogramas de referencia estacionales
 
-Supongamos que tiene un delimitador y quiere relacionar algo en el sistema de coordenadas del delimitador con el SpatialStationaryReferenceFrame que ya está usando para el otro contenido. Puede usar [TryGetTransformTo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.trygettransformto.aspx) para obtener una transformación del sistema de coordenadas del delimitador al marco de referencia estacionaria:
+Supongamos que tiene un delimitador y quiere relacionar algo en el sistema de coordenadas del delimitador con el SpatialStationaryReferenceFrame que ya está usando para el otro contenido. Puede usar [TryGetTransformTo](/uwp/api/Windows.Perception.Spatial.SpatialCoordinateSystem) para obtener una transformación del sistema de coordenadas del delimitador al marco de referencia estacionaria:
 
 ```
    // In this code snippet, someAnchor is a SpatialAnchor^ that has been initialized and is valid in the current environment.
@@ -740,7 +740,7 @@ Desde **HolographicTagAlongSampleMain:: Render**:
        );
 ```
 
-Eso es todo. Ahora, el holograma "persecución" es una posición de 2 metros delante de la dirección del usuario.
+Ya está. Ahora, el holograma "persecución" es una posición de 2 metros delante de la dirección del usuario.
 
 >[!NOTE]
 >En este ejemplo también se carga contenido adicional; Consulte StationaryQuadRenderer. cpp.
@@ -807,7 +807,7 @@ Las API de [asignación espacial](spatial-mapping-in-directx.md) hacen uso de lo
 ## <a name="see-also"></a>Consulte también
 * [Sistemas de coordenadas](../../design/coordinate-systems.md)
 * [Delimitadores espaciales](../../design/spatial-anchors.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* <a href="/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
 * [Control con la cabeza y los ojos de DirectX](gaze-in-directx.md)
 * [Manos y controladores de movimiento en DirectX](hands-and-motion-controllers-in-directx.md)
 * [Asignación espacial en DirectX](spatial-mapping-in-directx.md)

@@ -1,19 +1,19 @@
 ---
-title: Generación de perfiles con información inreal
+title: Generación de perfiles con Unreal Insights
 description: Obtenga información sobre cómo usar información no real en HoloLens 2.
 author: sajidfarooq
 ms.author: v-hferrone
 ms.date: 12/10/2020
 ms.topic: article
 keywords: No real, no real Engine 4, UE4, HoloLens, HoloLens 2, desarrollo, Prof., información inreal, documentación, guías, características, hologramas, desarrollo de juegos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 20e620f147f2cf5ee05073467c8ce7335340d59d
-ms.sourcegitcommit: 53bde413a174712cb9d3794d02d96363a2d599cd
+ms.openlocfilehash: b41d36679adfb35b5cc3561b8d5e7734654e7fb5
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97486429"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580832"
 ---
-# <a name="profiling-with-unreal-insights"></a>Generación de perfiles con información inreal 
+# <a name="profiling-with-unreal-insights"></a>Generación de perfiles con Unreal Insights 
 
 La [información inreal](https://docs.unrealengine.com/TestingAndOptimization/PerformanceAndProfiling/UnrealInsights/Overview/index.html) es un sistema de generación de perfiles que recopila, analiza y visualiza datos de un motor inreal. El sistema de generación de perfiles puede ayudarle a encontrar cuellos de botella y áreas de optimización donde el rendimiento de las aplicaciones podría usar un aumento. Normalmente, se habilita la información no real directamente desde el editor, pero para HoloLens 2 deberá usar la línea de comandos.  
 
@@ -102,6 +102,6 @@ De nuevo en información no real, seleccione la conexión **dinámica** al dispo
 
 El perfil personalizado se comparte entre proyectos. Desde aquí, puede usar el perfil personalizado que creó en lugar de tener que hacerlo cada vez. Solo tiene que volver a crear la conexión con el dispositivo cada vez que se inicia de un momento dado con los pasos 3 a 6 de la [sección de configuración](#setup).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Documentación de Insights no real](https://docs.unrealengine.com/TestingAndOptimization/PerformanceAndProfiling/UnrealInsights/index.html)
 

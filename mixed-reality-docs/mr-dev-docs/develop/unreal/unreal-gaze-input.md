@@ -6,12 +6,12 @@ ms.author: jacksonf
 ms.date: 12/9/2020
 ms.topic: article
 keywords: Windows Mixed Reality, hologramas, HoloLens 2, seguimiento ocular, entrada de mirada, pantalla montada de cabeza, motor no real, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: e546867fe02acd5e72ee76b4108a369ec25fd32f
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 0c5191534313b94a5382d1065f5a5dd1a208bb49
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010145"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98579979"
 ---
 # <a name="gaze-input"></a>Entrada de mira
 
@@ -117,7 +117,7 @@ O bien puede saltar a las funcionalidades y las API de la plataforma de realidad
 Puede volver a los [puntos de control de desarrollo de Unreal](unreal-development-overview.md#2-core-building-blocks) en cualquier momento.
 
 ## <a name="see-also"></a>Consulta también
-* [Calibración](../../calibration.md)
+* [Calibración](/hololens/hololens-calibration)
 * [Comodidad](../../design/comfort.md)
 * [Mirada y confirmación](../../design/gaze-and-commit.md)
 * [Entrada de voz](../../out-of-scope/voice-design.md)

@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Edge, nuevo, Web envolvente, Microsoft Edge, explorador, VR, 360, 360 video, 360 Viewer, webxr, webvr
-ms.openlocfilehash: ef55ee564e0a7ea11aaaad62ebf259459454ab72
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 041c374e1e2120c3aac35bd09889b8594825a186
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010035"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582501"
 ---
 # <a name="the-new-microsoft-edge-for-windows-mixed-reality"></a>El nuevo Microsoft Edge para Windows Mixed Reality
 
@@ -52,7 +52,7 @@ Después de realizar la actualización acumulativa 2020-01 para la versión 1903
 
 **¿Por qué ocurre esto?**
 
-La compatibilidad con aplicaciones Win32 clásicas en Windows Mixed Reality se presentó con la [actualización de Windows 10 de mayo de 2019](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-may-2019). Para habilitar esta compatibilidad, se debe crear un monitor virtual para hospedar la aplicación Win32. Cada vez que se inicia una nueva aplicación Win32, debe crearse otro monitor virtual. Desgraciadamente, la creación de un monitor virtual es una tarea intensiva que puede hacer que la pantalla del casco se incongele brevemente. Los clientes ofrecían comentarios de que se trata de una experiencia desagradable y molesta. Debido a los comentarios y al aumento del uso de las aplicaciones de Win32, hemos tomado la decisión de asignar previamente tres monitores virtuales durante el inicio de Windows Mixed Reality. Esto evita la interrupción y permite a los clientes iniciar hasta tres aplicaciones Win32 simultáneas sin tener que mostrar la inmovilización de los auriculares.
+La compatibilidad con aplicaciones Win32 clásicas en Windows Mixed Reality se presentó con la [actualización de Windows 10 de mayo de 2019](/windows/mixed-reality/enthusiast-guide/release-notes-may-2019). Para habilitar esta compatibilidad, se debe crear un monitor virtual para hospedar la aplicación Win32. Cada vez que se inicia una nueva aplicación Win32, debe crearse otro monitor virtual. Desgraciadamente, la creación de un monitor virtual es una tarea intensiva que puede hacer que la pantalla del casco se incongele brevemente. Los clientes ofrecían comentarios de que se trata de una experiencia desagradable y molesta. Debido a los comentarios y al aumento del uso de las aplicaciones de Win32, hemos tomado la decisión de asignar previamente tres monitores virtuales durante el inicio de Windows Mixed Reality. Esto evita la interrupción y permite a los clientes iniciar hasta tres aplicaciones Win32 simultáneas sin tener que mostrar la inmovilización de los auriculares.
 
 **Solución alternativa**
 

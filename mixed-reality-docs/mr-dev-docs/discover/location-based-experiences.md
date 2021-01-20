@@ -6,12 +6,12 @@ ms.author: ishitak
 ms.date: 08/03/2020
 ms.topic: article
 keywords: realidad mixta, VR, LBE, ubicación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, hardware, HoloLens, varios jugadores, servicios en la nube, Azure
-ms.openlocfilehash: 323981d49c99f5cb175b71645851496bfa1f268c
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 41b35e7f92f8410357c685362ebc1714aea616e8
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757833"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580671"
 ---
 # <a name="location-based-entertainment-with-windows-mixed-reality"></a>Entretenimiento basado en la ubicación con Windows Mixed Reality
 
@@ -98,11 +98,11 @@ El archivo JSON debe tener el siguiente contenido con el valor "true" establecid
  
 **P: ¿hay alguna orientación sobre la configuración de Playspace?**
 
-R: la configuración de un Playspace debe realizarse tal como lo haría con una experiencia de instalación del consumidor. El proceso de configuración del salón también le permitirá definir los límites de la habitación. Puede leer [aquí](https://docs.microsoft.com//windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary)más detalles sobre la configuración de los límites de la habitación.
+R: la configuración de un Playspace debe realizarse tal como lo haría con una experiencia de instalación del consumidor. El proceso de configuración del salón también le permitirá definir los límites de la habitación. Puede leer [aquí](//windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary)más detalles sobre la configuración de los límites de la habitación.
 
 Como se explicó en el documento anterior, el Playspace de coordenada única razonable máximo está alrededor de 5mx5m. Si desea tener un área más grande, puede usar la capacidad de anclajes espaciales en la pila de la API de Windows Holographic. El uso de esta API requerirá ingeniería personalizada en las experiencias que está generando.  
 
-Puede leer [aquí](https://docs.microsoft.com//windows/mixed-reality/coordinate-systems)más detalles sobre cómo optimizar el contenido de los distintos tamaños de espacio.
+Puede leer [aquí](//windows/mixed-reality/coordinate-systems)más detalles sobre cómo optimizar el contenido de los distintos tamaños de espacio.
  
 
 **P: mi espacio es demasiado grande y se están ejecutando errores al intentar configurar una experiencia permanente con límites. ¿Qué debo hacer para configurar mi trabajo de gran experiencia de movilidad gratuita?**
@@ -113,7 +113,7 @@ Puede configurar el modo "sentado", que no mostrará el límite ni configurará 
 
 El desarrollador de la aplicación es responsable de mostrar las medidas de seguridad necesarias para que los usuarios no entren en conflicto con el entorno físico.  Podrían ser paredes digitales dentro de la experiencia o un visual de límite de juego personalizado. 
 
-Puede encontrar instrucciones sobre cómo configurar el límite de la habitación con WMR [aquí](https://docs.microsoft.com//windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary).
+Puede encontrar instrucciones sobre cómo configurar el límite de la habitación con WMR [aquí](//windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary).
 
 **P: ¿Dónde está el origen de Playspace?**
 
@@ -125,7 +125,7 @@ R: el origen de Playspace viene determinado por la experiencia de instalación d
 
 R: Si opta por la compilación de Windows 20H1 o posterior a través de nuestro programa Insider, puede acceder a una nueva interfaz para el uso compartido de mapas. Esta nueva funcionalidad está disponible a través de la interfaz del [Administrador de mapas](../develop/platform-capabilities-and-apis/using-the-windows-device-portal.md#map-manager) del portal de dispositivos de Windows. Para usar esta herramienta, siga estos pasos:
 * Asegúrese de que está suscrito a 20H1 o posterior: después del 2019 de septiembre, esto significa el uso de nuestro programa Insider
-* Habilitar Windows Device portal (WDP) mediante estas [instrucciones](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-desktop)
+* Habilitar Windows Device portal (WDP) mediante estas [instrucciones](/windows/uwp/debug-test-perf/device-portal-desktop)
 * Conecte una HMD de realidad mixta de Windows que quiera descargar una asignación existente desde o importar una nueva asignación.
 * Navegue hasta el WDP en el explorador que prefiera mediante la dirección URL proporcionada en la pantalla Configuración.
     * Una vez que haya navegado a la sección "Mixed Reality" y seleccione "Administrador de mapas".
@@ -140,13 +140,13 @@ R: Si opta por la compilación de Windows 20H1 o posterior a través de nuestro 
 
 P: ¿Cómo funciona la tecnología de seguimiento de los auriculares Windows Mixed Reality?  
 
-La realidad mixta comparte la misma tecnología de seguimiento que la HoloLens. Para obtener más información sobre el sistema de seguimiento interno, consulte la documentación [aquí](https://docs.microsoft.com//windows/mixed-reality/enthusiast-guide/tracking-system).
+La realidad mixta comparte la misma tecnología de seguimiento que la HoloLens. Para obtener más información sobre el sistema de seguimiento interno, consulte la documentación [aquí](//windows/mixed-reality/enthusiast-guide/tracking-system).
 
 Para obtener una descripción de cómo funciona el sistema de asignación espacial de nivel superior, puede leer nuestra descripción [aquí](../design/spatial-mapping.md).
 
 **P: ¿existen procedimientos recomendados para obtener un volumen de seguimiento confiable?**
 
-Para configurar mejor el entorno para el seguimiento correcto, puede leer los procedimientos recomendados en esta [publicación](../environment-considerations-for-hololens.md).
+Para configurar mejor el entorno para el seguimiento correcto, puede leer los procedimientos recomendados en esta [publicación](/hololens/hololens-environment-considerations).
 
 **P: ¿existen matices específicos con el seguimiento de los espacios de escala de almacenamiento o de las optimizaciones que se deben tener en cuenta?**
 
@@ -188,13 +188,13 @@ R: Azure PlayFab es una plataforma de back-end completa para juegos en vivo. Pue
 
 **P: uso SteamVR para implementar mis experiencias. ¿Funciona Windows Mixed Reality con SteamVR?**
 
-R: Windows Mixed Reality para SteamVR permite a los usuarios ejecutar experiencias de SteamVR en auriculares con micrófonos de realidad con Windows Mixed Reality. [Aquí](https://docs.microsoft.com//windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality)encontrará más información sobre STEAMVR con WMR.
+R: Windows Mixed Reality para SteamVR permite a los usuarios ejecutar experiencias de SteamVR en auriculares con micrófonos de realidad con Windows Mixed Reality. [Aquí](//windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality)encontrará más información sobre STEAMVR con WMR.
 
 ### <a name="support-and-community"></a>Soporte técnico y comunidad  
 
 Tenemos unos pocos recursos útiles para ayudarle a ponerse en contacto con expertos en la materia en nuestro equipo, obtener soporte técnico para solucionar problemas y contribuir a la mayor comunidad de desarrollo de la realidad mixta.  
 
-Si surgen problemas con características publicadas de forma pública, envíe un error a través del centro de comentarios. para obtener instrucciones, consulte esta [Página](https://docs.microsoft.com//windows/mixed-reality/enthusiast-guide/filing-feedback).
+Si surgen problemas con características publicadas de forma pública, envíe un error a través del centro de comentarios. para obtener instrucciones, consulte esta [Página](//windows/mixed-reality/enthusiast-guide/filing-feedback).
 
 Para obtener más ayuda para la solución de problemas con WMR, [pida una solicitud de soporte técnico](https://support.microsoft.com//supportforbusiness/productselection?sapId=96bfb202-bc79-741b-bf7a-774d8b767782) al equipo de soporte técnico al cliente.
 

@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
 appliesto:
 - Windows 10
-ms.openlocfilehash: 2da2524ae09014b990ea4f0301a21d4aac963eb9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 87eb22e600ca2426bdd3fec1fd428c11d9c45313
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008635"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581816"
 ---
 # <a name="windows-mixed-reality-setup-faq"></a>Preguntas más frecuentes sobre la configuración de Windows Mixed Reality
 
@@ -28,7 +28,7 @@ Realice estos pasos:
 * Reinicie el equipo e inténtelo de nuevo. Es posible que tenga que repetir varias veces o ejecutar el solucionador de problemas de Windows Update para borrar las actualizaciones pendientes.
 
 > [!NOTE]
-> * Si se encuentra en una red administrada por la empresa, consulte con el administrador. Es posible que necesiten habilitar Windows Mixed Reality. ¿Busca las instrucciones para profesionales de ti? Consulte **[este artículo](https://docs.microsoft.com/windows/application-management/manage-windows-mixed-reality)**.
+> * Si se encuentra en una red administrada por la empresa, consulte con el administrador. Es posible que necesiten habilitar Windows Mixed Reality. ¿Busca las instrucciones para profesionales de ti? Consulte **[este artículo](/windows/application-management/manage-windows-mixed-reality)**.
 > * Si la conexión de red Wi-Fi está establecida en medido, cámbiela a desmedido. **[Más información](https://support.microsoft.com/help/4028458)**
 
 ## <a name="i-get-a-message-that-says-something-went-wrong-and-we-couldnt-start-windows-mixed-reality"></a>Aparece un mensaje que indica "se produjo un error y no pudimos iniciar Windows Mixed Reality".
@@ -126,7 +126,7 @@ Pruebe esto:
 
 Si usa una conexión Wi-Fi a 2,4 GHz, los controladores de movimiento pueden ralentizar la red Wi-Fi. Realice uno de los pasos siguientes:
 
-* Cambie a una conexión de Wi-Fi de 5 GHz, si hay alguna disponible. Saber más
+* Cambie a una conexión de Wi-Fi de 5 GHz, si hay alguna disponible. Más información
 * Use un adaptador Bluetooth independiente para conectar sus controladores de movimiento al equipo. [Consulte los adaptadores recomendados](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
 
 > [!NOTE]

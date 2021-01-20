@@ -3,12 +3,12 @@ title: Uso de WebVR con Windows Mixed Reality
 description: Conozca los conceptos básicos de WebVR, cómo usarlos con Microsoft Edge en auriculares de realidad mixta de Windows y problemas comunes de solución de problemas.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, WebVR, Edge, Microsoft Edge, exploración Web
-ms.openlocfilehash: 0b0d07383b43feaa11fb9bfac2b071d8d4d80b19
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 89d9e51bf4adb63e7836968a0112849f7ac403d0
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009445"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581754"
 ---
 # <a name="using-webvr-with-windows-mixed-reality"></a>Uso de WebVR con Windows Mixed Reality
 
@@ -35,7 +35,7 @@ No. Se requiere un casco de Windows Mixed Reality para usar WebVR en Edge. Sin e
 
 ## <a name="where-can-i-find-the-webvr-developer-documentation"></a>¿Dónde puedo encontrar la documentación para desarrolladores de WebVR
 
-La documentación para desarrolladores se encuentra aquí: [documentación para desarrolladores de WebVR](https://docs.microsoft.com/microsoft-edge/webvr/).
+La documentación para desarrolladores se encuentra aquí: [documentación para desarrolladores de WebVR](/microsoft-edge/webvr/).
 
 ## <a name="ive-found-a-website-with-webvr-that-doesnt-work-in-windows-mixed-reality-what-do-i-do"></a>He encontrado un sitio web con WebVR que no funciona en Windows Mixed Reality. ¿Qué hago?
 

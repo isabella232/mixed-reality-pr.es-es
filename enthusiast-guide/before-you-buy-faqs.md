@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, preventa, investigación, compra, antes de comprar
 appliesto:
 - Windows 10
-ms.openlocfilehash: e9b9254166b3ac4c188531d3651407ecfd853460
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: 1f7eaa59a18598d1df2ecef611a9ea7d58e6a36a
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725516"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580290"
 ---
 # <a name="before-you-buy-frequently-asked-questions"></a>Antes de comprar las preguntas más frecuentes
 
@@ -63,7 +63,7 @@ Obtenga más información sobre la realidad mixta aquí: <https://docs.microsoft
 
 * **Seguimiento externo** Oculus, Naopak y otros usan el seguimiento externo.  Con el seguimiento exterior, se realiza un seguimiento de los auriculares mediante uno o varios dispositivos externos. Las cámaras están integradas en esos dispositivos externos, colocados en torno al entorno y se usan para determinar la posición del casco en función del entorno.
 
-Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/tracking-system).
+Obtenga más información sobre [el seguimiento interno](./tracking-system.md).
 
 ### <a name="can-inside-out-tracking-of-motion-controllers-impact-my-game-play-due-to-camera-fov"></a>Puede realizar un seguimiento interior de los controladores de movimiento que afectan a mi juego debido a la cámara.
 
@@ -82,7 +82,7 @@ Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.
 <tr>
 <th style="width:25%"> Auriculares </th>
 <th style="width:15%"> Solución </th>
-<th style="width:10%"> Pantalla </th>
+<th style="width:10%"> Mostrar </th>
 <th style="width:10%"> Frecuencia de actualización </th>
 <th style="width:10%"> Visual </th>
 <th style="width:15%"> Audio </th>
@@ -99,7 +99,7 @@ Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.
 <td> Hasta 90 Hz </td>
 <td> 100 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.acer.com/ac/en/US/content/windows-mixed-reality-home">Acer</a> </td>
@@ -125,7 +125,7 @@ Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.
 <td> Hasta 90 Hz </td>
 <td> 95 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.asus.com/us/Headset/ASUS-Windows-Mixed-Reality-Headset-HC102/">ASU</a> </td>
@@ -138,7 +138,7 @@ Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.
 <td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.dell.com/en-us/shop/accessories/apd/536-bbbr?~ck=mn">Proyector</a> </td>
@@ -151,7 +151,7 @@ Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.
 <td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="http://pr.fujitsu.com/jp/news/2017/10/17.html">Fujitsu</a> </td>
@@ -177,7 +177,7 @@ Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.
 <td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://store.hp.com/us/en/pdp/hp-windows-mixed-reality-headset-vr1000-100">FABRICANTES</a> </td>
@@ -190,7 +190,7 @@ Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.
 <td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.lenovo.com/us/en/virtual-reality-and-smart-devices/virtual-and-augmented-reality/lenovo-explorer/Lenovo-Explorer/p/G10NREAG0A2">Lenovo</a> </td>
@@ -203,7 +203,7 @@ Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.
 <td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="https://www.medion.com/be/shop/monitoren-medion-erazer-mr-x1000-vr-headset-controllers-30023616a1.html">Medion</a> </td>
@@ -216,7 +216,7 @@ Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.
 <td> Hasta 90 Hz </td>
 <td> 110 ° </td>
 <td> Integrado </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Mecánica</td>
 <td> 2017 </td>
 <td> <a href="https://www.samsung.com/us/computing/hmd/windows-mixed-reality/xe800zaa-hc1us-xe800zaa-hc1us/?redir=windows%20mixed%20reality">Samsung</a> </td>
@@ -242,7 +242,7 @@ Obtenga más información sobre [el seguimiento interno](https://docs.microsoft.
 <td> Hasta 90 Hz </td>
 <td> 105 ° </td>
 <td> conector de 3,5 mm </td>
-<td> Ninguno </td>
+<td> None </td>
 <td style="text-align: center;">Software</td>
 <td> 2017 </td>
 <td> <a href="http://3glasses.com/goods.action?gid=30">3Glasses</a> </td>
@@ -368,7 +368,7 @@ Se hace referencia a los detalles técnicos mencionados en las especificaciones 
 
 **Respuesta rápida:** Sí, Windows Mixed Reality funcionará aunque no tenga mucho espacio. Puede establecer este valor durante la instalación seleccionando la experiencia "nivel de escritorio".
 
-## <a name="content"></a>Contenido
+## <a name="content"></a>Content
 
 ### <a name="what-games-and-apps-run-on-windows-mixed-reality"></a>¿Qué juegos y aplicaciones se ejecutan en Windows Mixed Reality?
 

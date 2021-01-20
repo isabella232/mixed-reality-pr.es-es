@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico
 appliesto:
 - Windows 10
-ms.openlocfilehash: 6bcd6db30bf3a8a6e69d45c10be523d45ee4f82a
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: f448cafe3d0952ada63d545e44b58001779a1470
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725416"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580509"
 ---
 # <a name="headset-display-faqs"></a>Preguntas más frecuentes sobre pantalla
 
@@ -52,7 +52,7 @@ ms.locfileid: "97725416"
 
 ## <a name="my-headset-display-occasionally-turns-black-after-some-use"></a>En ocasiones, la pantalla se vuelve negra después de algún uso
 
-* Intente deshabilitar las características de suspensión de USB o de ahorro de energía en su PC. Por ejemplo, en **configuración > sistema > Power & Sleep > suspensión [selectiva de USB](https://docs.microsoft.com/windows-hardware/drivers/usbcon/usb-selective-suspend)**, la configuración "permitir que el equipo apague este dispositivo para ahorrar energía" en Device Manager y cualquier configuración de ahorro de energía USB en el firmware del equipo.
+* Intente deshabilitar las características de suspensión de USB o de ahorro de energía en su PC. Por ejemplo, en **configuración > sistema > Power & Sleep > suspensión [selectiva de USB](/windows-hardware/drivers/usbcon/usb-selective-suspend)**, la configuración "permitir que el equipo apague este dispositivo para ahorrar energía" en Device Manager y cualquier configuración de ahorro de energía USB en el firmware del equipo.
 * Desconecte temporalmente cualquier otro dispositivo USB y periféricos conectados al equipo.
 * Compruebe que la versión del controlador de GPU es reciente y compruebe si hay nuevos problemas de rendimiento y compatibilidad y regresiones en los nuevos controladores.
 

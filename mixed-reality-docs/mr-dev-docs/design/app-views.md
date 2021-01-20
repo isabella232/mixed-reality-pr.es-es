@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: vista envolvente, vista en 2D, pizarra, aplicación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: a9cd03212fcbb0d7b3d9e4d2b3108e4d09972455
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b6a16fc3b1ac45d74874f37ce44a36d3e144fee8
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009635"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580105"
 ---
 # <a name="app-views"></a>Vistas de aplicación
 
@@ -24,7 +24,7 @@ Una vista envolvente ofrece a la aplicación la posibilidad de crear hologramas 
 ![Cuando se encuentra en una vista envolvente, los hologramas se pueden colocar en todo el mundo.](images/designoverview-940px.jpg)<br>
 *Cuando se encuentra en una vista envolvente, los hologramas se pueden colocar en todo el mundo*
 
-En [HoloLens](https://docs.microsoft.com/hololens/hololens1-hardware), la aplicación representa sus hologramas sobre el entorno real del usuario. En un [casco con Windows Mixed Reality](../discover/immersive-headset-hardware-details.md), el usuario no puede ver el mundo real y, por tanto, la aplicación debe representar todo lo que verá el usuario.
+En [HoloLens](/hololens/hololens1-hardware), la aplicación representa sus hologramas sobre el entorno real del usuario. En un [casco con Windows Mixed Reality](../discover/immersive-headset-hardware-details.md), el usuario no puede ver el mundo real y, por tanto, la aplicación debe representar todo lo que verá el usuario.
 
 La [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md) (incluido el menú Inicio y los hologramas que ha colocado en torno al entorno) no se representa en una vista envolvente. En HoloLens, Cortana retransmite cualquier notificación del sistema que se produce mientras se muestra una vista envolvente, en la que el usuario puede responder con la entrada de voz.
 

@@ -6,12 +6,12 @@ ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
 keywords: Realidad mixta, miración de miración, interacción, diseño, seguimiento ocular, seguimiento de cabezales, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: f9e79f8d600002f63e87316ea588741a21c0d68b
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: bfbf58ad065f91b27208d36ba63672ee5c28dfdd
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847933"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582338"
 ---
 # <a name="gaze-and-commit"></a>Mirada y confirmación
 
@@ -40,7 +40,7 @@ A continuación se muestran algunos ejemplos de cómo puede beneficiarse de un d
     </colgroup>
     <tr>
         <td><strong>Modelo de entrada</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -135,7 +135,7 @@ Después de establecer como destino un objeto o un elemento de la interfaz de us
 Se admiten los siguientes métodos de confirmación:
 - Gesto de puntear en el aire (es decir, levantar la mano del usuario y reunir el dedo del índice y el control de posición)
 - Decir _"seleccionar"_ o uno de los comandos de voz de destino
-- Presionar un solo botón en un [clic de HoloLens](https://docs.microsoft.com/hololens/hololens1-clicker)
+- Presionar un solo botón en un [clic de HoloLens](/hololens/hololens1-clicker)
 - Presione el botón ' A ' en un controlador para juegos de Xbox
 - Presione el botón ' A ' en un controlador adaptable de Xbox
 
@@ -295,4 +295,3 @@ Hay tres cosas que hay que tener en cuenta:
 * [Manos: apuntar y confirmar](point-and-commit.md)
 * [Interacciones instintivas](interaction-fundamentals.md)
 * [Entrada de voz](voice-input.md)
-

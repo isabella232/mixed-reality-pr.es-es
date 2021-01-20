@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema de coordenadas, sistema de coordenadas espaciales, solo orientación, escalado colocado, escalado permanente, escala de habitación, escala mundial, 360 Degree, sentado, posición, habitación, mundo, escala, posición, orientación, estacionaria, conectado, fase, delimitador, delimitador espacial, bloqueo mundial, bloqueo mundial, bloqueado por el cuerpo, bloqueo de cuerpo, límites, persistencia, uso compartido, pérdida de seguimiento, el anclaje espacial de la nube, auriculares de realidad mixta
-ms.openlocfilehash: 42efc1444c030641ad215501c4a12d6315ea9857
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 6d4bddc17027ad32f82fbc8c37860e64b2bc57eb
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848018"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582413"
 ---
 # <a name="coordinate-systems"></a>Sistemas de coordenadas
 
@@ -32,9 +32,9 @@ En su núcleo, las aplicaciones de realidad mixta colocan [hologramas](../discov
     </colgroup>
     <tr>
         <td><strong>Característica</strong></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
-        <td><a href="https://docs.microsoft.com/windows/mixed-reality/immersive-headset-hardware-details"><strong>Cascos envolventes</strong></a></td>
+        <td><a href="/windows/mixed-reality/immersive-headset-hardware-details"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
         <td><a href="coordinate-systems.md#stationary-frame-of-reference">Marco estacionario de referencia</a></td>
@@ -105,7 +105,7 @@ El marco de fase de referencia todavía no se admite en HoloLens. Actualmente, u
 
 ## <a name="spatial-coordinate-systems"></a>Sistemas de coordenadas espaciales
 
-Todas las aplicaciones de gráficos 3D usan [sistemas de coordenadas cartesianos](https://docs.microsoft.com/windows/uwp/graphics-concepts/coordinate-systems) para motivar las posiciones y las orientaciones de los objetos virtuales. Estos sistemas de coordenadas establecen tres ejes perpendiculares para colocar los objetos: un eje X, Y y Z.
+Todas las aplicaciones de gráficos 3D usan [sistemas de coordenadas cartesianos](/windows/uwp/graphics-concepts/coordinate-systems) para motivar las posiciones y las orientaciones de los objetos virtuales. Estos sistemas de coordenadas establecen tres ejes perpendiculares para colocar los objetos: un eje X, Y y Z.
 
 En la [realidad mixta](../discover/mixed-reality.md), los motivos de las aplicaciones son los sistemas de coordenadas virtuales y físicos. Windows llama a un sistema de coordenadas que tiene un significado real en el mundo físico, un **sistema de coordenadas espaciales**.
 
@@ -191,13 +191,13 @@ Puede guardar en el disco los delimitadores espaciales que crea la aplicación y
 
 Al conservar los delimitadores en el almacén, los usuarios pueden colocar hologramas individuales o colocar un área de trabajo en torno a la cual una aplicación colocará sus distintos hologramas y, después, buscar esos hologramas más adelante donde los esperan, en muchos usos de la aplicación.
 
-También puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a> para la persistencia asincrónica de hologramas en dispositivos de HoloLens, iOS y Android.  Al compartir un delimitador espacial en la nube duradero, varios dispositivos pueden observar el mismo holograma persistente con el tiempo, incluso si esos dispositivos no están presentes juntos al mismo tiempo.
+También puede usar <a href="/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a> para la persistencia asincrónica de hologramas en dispositivos de HoloLens, iOS y Android.  Al compartir un delimitador espacial en la nube duradero, varios dispositivos pueden observar el mismo holograma persistente con el tiempo, incluso si esos dispositivos no están presentes juntos al mismo tiempo.
 
 ### <a name="spatial-anchor-sharing"></a>Uso compartido del delimitador espacial
 
 La aplicación también puede compartir un delimitador espacial en tiempo real con otros dispositivos, lo que permite experiencias compartidas en tiempo real.
 
-Mediante el uso de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a>, la aplicación puede compartir un anclaje espacial en varios dispositivos HoloLens, iOS y Android. Con la representación de un holograma mediante el mismo delimitador espacial en cada dispositivo, los usuarios verán el holograma aparecer en el mismo lugar en el mundo real.
+Mediante el uso de <a href="/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a>, la aplicación puede compartir un anclaje espacial en varios dispositivos HoloLens, iOS y Android. Con la representación de un holograma mediante el mismo delimitador espacial en cada dispositivo, los usuarios verán el holograma aparecer en el mismo lugar en el mundo real.
 
 ## <a name="avoid-head-locked-content"></a>Evitar el contenido bloqueado de encabezado
 
@@ -239,5 +239,5 @@ A veces, un hogar u otro espacio puede tener dos áreas idénticas. Por ejemplo,
 * [Sistemas de coordenadas de DirectX](../develop/native/coordinate-systems-in-directx.md)
 * [Delimitadores espaciales](spatial-anchors.md)
 * [Experiencias compartidas en realidad mixta](../develop/platform-capabilities-and-apis/shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* <a href="/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
 * [Case study - Looking through holes in your reality](../out-of-scope/case-study-looking-through-holes-in-your-reality.md) (Caso práctico: mirar por un agujero en tu realidad)

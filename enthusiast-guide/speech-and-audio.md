@@ -3,12 +3,12 @@ title: Preguntas más frecuentes sobre voz y audio
 description: Solución de problemas de Windows mixed reality de voz y audio que va más allá de nuestra documentación de soporte técnico estándar para el consumidor.
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, problemas de audio, problemas de voz
-ms.openlocfilehash: d685190248dd17792f941cf53e3a57499cd3e662
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: fff5d661dbe61d4c9364c83e3bd0c6ddb8ab5cc6
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97725896"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581412"
 ---
 # <a name="speech-and-audio-faqs"></a>Preguntas más frecuentes sobre voz y audio
 
@@ -35,7 +35,7 @@ ms.locfileid: "97725896"
 
 * Algunas aplicaciones, como las que se inician a través de SteamVR, pueden perder audio o bloquearse cuando el dispositivo de audio cambia cuando se inicia o se detiene el portal de realidad mixta. Para corregir esto, vuelva a abrir el portal de realidad mixta y reinicie la aplicación.
 * Si otro dispositivo USB multimedia (por ejemplo, una cámara web) comparte el mismo concentrador USB interno o externo con el casco de realidad mixta de Windows, es posible que, en ocasiones, el Jack o los auriculares de audio de los auriculares tengan un sonido de zumbido o que no haya audio. Conecte el casco a un puerto USB que use un concentrador diferente o desconecte o deshabilite el otro dispositivo multimedia USB.
-* Si observa una ráfaga de ruido en los auriculares conectados, es posible que el concentrador USB del equipo no pueda proporcionar suficiente energía para los auriculares de Windows Mixed Reality. Si esto ocurre, archivo un error de [centro de comentarios](https://docs.microsoft.com/hololens/hololens-feedback) y pruebe lo siguiente:
+* Si observa una ráfaga de ruido en los auriculares conectados, es posible que el concentrador USB del equipo no pueda proporcionar suficiente energía para los auriculares de Windows Mixed Reality. Si esto ocurre, archivo un error de [centro de comentarios](/hololens/hololens-feedback) y pruebe lo siguiente:
     * quitar cables de extensión
     * uso de un CONCENTRADOr USB 3,0 dedicado y externo
     * un puerto USB diferente en el equipo

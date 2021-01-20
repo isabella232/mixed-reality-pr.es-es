@@ -6,12 +6,12 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Seguimiento ocular, realidad mixta, entrada, ojo ocular, calibración, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, conjunto de herramientas de realidad mixta, intención, acciones
-ms.openlocfilehash: ffc9fd172f3e9a1cfd648e3fb431274690c9f190
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: d603e2576856fe48080a1a1f06c1814a78381192
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009605"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582324"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Seguimiento de los ojos en HoloLens 2
 
@@ -32,7 +32,7 @@ La API de seguimiento ocular se ha diseñado pensando en la privacidad del usuar
 </colgroup>
 <tr>
      <td><strong>Característica</strong></td>
-     <td><a href="../hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+     <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
 </tr>
@@ -48,7 +48,7 @@ La API de seguimiento ocular se ha diseñado pensando en la privacidad del usuar
 
 ## <a name="calibration"></a>Calibración 
 
-Para que el seguimiento de los ojos funcione con precisión, cada usuario tiene que pasar por una [calibración de usuario de seguimiento ocular](../calibration.md) en la que el usuario tiene que mirar un conjunto de destinos holográficas. Esto permite que el dispositivo ajuste el sistema para una experiencia de visualización más cómoda y de mayor calidad para el usuario y para garantizar un seguimiento de ojo preciso al mismo tiempo. 
+Para que el seguimiento de los ojos funcione con precisión, cada usuario tiene que pasar por una [calibración de usuario de seguimiento ocular](/hololens/hololens-calibration) en la que el usuario tiene que mirar un conjunto de destinos holográficas. Esto permite que el dispositivo ajuste el sistema para una experiencia de visualización más cómoda y de mayor calidad para el usuario y para garantizar un seguimiento de ojo preciso al mismo tiempo. 
 
 El seguimiento ocular debe funcionar para la mayoría de los usuarios, pero hay casos poco frecuentes en los que un usuario no se puede calibrar correctamente. Podría producirse un error en la calibración por varias razones, entre las que se incluyen, entre otras: 
 * El usuario previamente decidió salir del proceso de calibración
@@ -59,13 +59,13 @@ El seguimiento ocular debe funcionar para la mayoría de los usuarios, pero hay 
 
 Los desarrolladores deben asegurarse de proporcionar soporte técnico adecuado a los usuarios para los que es posible que los datos de seguimiento ocular no estén disponibles (que no pueden calibrarse correctamente). En la sección de la parte inferior de esta página se proporcionan recomendaciones para las soluciones de reserva. 
 
-Para obtener más información sobre la calibración y cómo garantizar una experiencia fluida, consulte nuestra página de [calibración de usuario de seguimiento ocular](../calibration.md) .
+Para obtener más información sobre la calibración y cómo garantizar una experiencia fluida, consulte nuestra página de [calibración de usuario de seguimiento ocular](/hololens/hololens-calibration) .
 
 <br>
 
 ## <a name="available-eye-tracking-data"></a>Datos de seguimiento ocular disponibles
 
-Antes de entrar en detalles sobre los casos de uso específicos de la entrada ocular y mirarnos, queremos señalar brevemente las funcionalidades que proporciona la [API de seguimiento](https://docs.microsoft.com/uwp/api/windows.perception.people.eyespose) de la vista de HoloLens 2. Los desarrolladores obtienen acceso a un solo rayo de mira fijamente (miran el origen y la dirección) a aproximadamente _30 fps (30 Hz)_.
+Antes de entrar en detalles sobre los casos de uso específicos de la entrada ocular y mirarnos, queremos señalar brevemente las funcionalidades que proporciona la [API de seguimiento](/uwp/api/windows.perception.people.eyespose) de la vista de HoloLens 2. Los desarrolladores obtienen acceso a un solo rayo de mira fijamente (miran el origen y la dirección) a aproximadamente _30 fps (30 Hz)_.
 Para obtener información más detallada sobre cómo obtener acceso a los datos de seguimiento de los ojos, consulte nuestras guías del desarrollador para usar [miras en DirectX](../develop/native/gaze-in-directx.md) y [mirarnos en Unity](https://aka.ms/mrtk-eyes).
 
 El ojo de miración predicho es aproximadamente de 1,5 grados en el ángulo visual alrededor del destino real (vea la ilustración siguiente). A medida que se esperan ligeras imprecisiones, los desarrolladores deben planear algún margen alrededor de este valor de límite inferior (por ejemplo, los grados 2.0-3.0 pueden dar lugar a una experiencia mucho más cómoda). Veremos cómo abordar la selección de destinos pequeños con más detalle a continuación. Para que el seguimiento de los ojos funcione con precisión, cada usuario debe realizar una calibración de seguimiento de los ojos. 
@@ -135,8 +135,8 @@ Por un lado, los ojos se mueven tan rápido que debe tener cuidado al usar la en
 
 En raras ocasiones, es posible que los datos de seguimiento ocular no estén disponibles.
 Esto puede deberse a diferentes motivos entre los que se enumeran los más comunes:
-* El sistema no pudo [calibrar al usuario](../calibration.md).
-* El usuario omitió la [calibración](../calibration.md).    
+* El sistema no pudo [calibrar al usuario](/hololens/hololens-calibration).
+* El usuario omitió la [calibración](/hololens/hololens-calibration).   
 * El usuario está calibrado, pero decidió no conceder permiso a la aplicación para usar los datos de seguimiento ocular.    
 * El usuario tiene anteojos únicos o alguna condición de ojo que el sistema todavía no admite. 
 * Factores externos que impiden el seguimiento de ojos fiables, como manchas en el parasol o anteojos de HoloLens, una luz solar directa y las oclusións por el pelo en la parte delantera de los ojos.  
@@ -168,12 +168,10 @@ Esperamos que esta página le haya proporcionado una buena introducción para em
 
 ## <a name="see-also"></a>Consulte también
 
-* [Calibración](../calibration.md)
+* [Calibración](/hololens/hololens-calibration)
 * [Comodidad](comfort.md)
 * [Interacción basada en el control con los ojos](eye-gaze-interaction.md)
 * [Miras a la vista en DirectX](../develop/native/gaze-in-directx.md)
 * [Mirada a la vista de Unity (kit de herramientas de realidad mixta)](https://aka.ms/mrtk-eyes)
 * [Mirada y confirmación](gaze-and-commit.md)
 * [Entrada de voz](../out-of-scope/voice-design.md)
-
-

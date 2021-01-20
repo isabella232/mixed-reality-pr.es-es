@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c5a13798ca6a73f1a6410abe310c2166b67f4626
-ms.sourcegitcommit: 13ef9f89ee61fbfe547ecf5fdfdb97560a0de833
+ms.openlocfilehash: 21c29b2c8d540378259200cc834f7a36065f8ab3
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "97718015"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581110"
 ---
 # <a name="426"></a>[4.26](#tab/426)
 
@@ -57,7 +57,7 @@ enum class EWMRHandKeypoint : uint8
 };
 ```
 
-Puede encontrar los valores numéricos de cada caso de enumeración en la tabla [Windows. Perception. people. HandJointKind](https://docs.microsoft.com/uwp/api/windows.perception.people.handjointkind) .
+Puede encontrar los valores numéricos de cada caso de enumeración en la tabla [Windows. Perception. people. HandJointKind](/uwp/api/windows.perception.people.handjointkind) .
 
 ### <a name="supporting-hand-tracking"></a>Compatibilidad con el seguimiento de la mano
 
@@ -95,4 +95,3 @@ Este es un desglose de los parámetros de función de GetHandJointTransform:
 * **Transformación** : coordenadas y orientación de la base del hueso. Puede solicitar la base del siguiente hueso para obtener los datos de transformación para el final de un hueso. Un hueso de la sugerencia especial proporciona el final de distal.
 * * * Radio: radio de la base del hueso.
 * * * Valor devuelto: true si se realiza un seguimiento del hueso de este fotograma, false si no se realiza el seguimiento del hueso.
-

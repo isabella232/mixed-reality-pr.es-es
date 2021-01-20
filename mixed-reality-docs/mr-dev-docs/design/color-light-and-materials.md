@@ -6,16 +6,16 @@ ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, color, luz, materiales, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 5d99941f068e808ba14d97084ef840a66aded2a9
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: bf64413793aa40d158fde9f9a416d9a9b66af236
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848058"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580068"
 ---
 # <a name="color-light-and-materials"></a>Color, luz y materiales
 
-![Color, luz y materiales](images/RemoteRendering.jpg)
+![Color, Light y material](images/RemoteRendering.jpg)
 
 El diseño de contenido para la realidad mixta requiere una consideración cuidadosa del color, la iluminación y los materiales de todos los recursos virtuales. Los fines estéticos pueden incluir el uso de luz y material para establecer el tono de un entorno envolvente, mientras que los propósitos funcionales pueden incluir el uso de colores impactantes para alertar a los usuarios de una acción inminente. Cada una de estas decisiones se debe sopesar con respecto a las oportunidades y las restricciones del dispositivo de destino de su experiencia.
 
@@ -105,4 +105,4 @@ Los materiales son elementos fundamentales para crear hologramas realistas. Al p
 * [Separación de colores](../develop/platform-capabilities-and-apis/hologram-stability.md#color-separation)
 * [Hologramas](../discover/hologram.md)
 * [Lenguaje de diseño de Microsoft: color](https://www.microsoft.com/design/color)
-* [Color de Plataforma universal de Windows](https://docs.microsoft.com/windows/uwp/style/color)
+* [Color de Plataforma universal de Windows](/windows/uwp/style/color)

@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, representación holográfica, holográfica, envolvente, punto de enfoque, búfer de profundidad, solo orientación, posicional, opaco, transparente, recorte, auriculares de realidad mixta, auriculares mixto de realidad de Windows, auriculares de realidad virtual
-ms.openlocfilehash: cd5284a8fdef7254b7d0375b57877d30f5d0d708
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: ba42e8a384f62dddcf7b8e685859ddeff7b666bb
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006395"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581123"
 ---
 # <a name="camera-in-unity"></a>Cámara en Unity
 
@@ -33,7 +33,7 @@ Cuando se gasta un auricular de realidad mixta, se convierte en el centro del mu
 La configuración predeterminada del componente de cámara Unity es para las aplicaciones 3D tradicionales, que necesitan un fondo similar a SkyBOX, ya que no tienen un mundo real.
 
 * Cuando se ejecuta en un **[auricular envolvente](../../discover/immersive-headset-hardware-details.md)**, está representando todo lo que ve el usuario y, por lo tanto, es probable que quiera mantener el skybox.
-* Sin embargo, cuando se ejecuta en un **casco holográfica** como [HoloLens](../../hololens-hardware-details.md), el mundo real debe aparecer detrás de todo lo que se representa en la cámara. Establezca el fondo de la cámara para que sea transparente (en HoloLens, las representaciones en negro como transparente) en lugar de una textura SKYBOX:
+* Sin embargo, cuando se ejecuta en un **casco holográfica** como [HoloLens](/hololens/hololens1-hardware), el mundo real debe aparecer detrás de todo lo que se representa en la cámara. Establezca el fondo de la cámara para que sea transparente (en HoloLens, las representaciones en negro como transparente) en lugar de una textura SKYBOX:
     1. Seleccionar la cámara principal en el panel de jerarquías
     2. En el panel Inspector, busque el componente Camera y cambie la lista desplegable Clear flags de SKYBOX a Solid color.
     3. Seleccione el selector de colores de fondo y cambie los valores RGBA a (0, 0, 0, 0)
@@ -81,7 +81,7 @@ Si sabe que está creando una [experiencia de solo orientación](coordinate-syst
 Compartir el búfer de profundidad de la aplicación en Windows cada fotograma proporcionará a la aplicación una de estas dos aumentos en la estabilidad del holograma, en función del tipo de casco que se está representando:
 
 * Los **auriculares envolventes** pueden encargarse de la Reproyección posicional cuando se proporciona un búfer de profundidad, ajustando los hologramas para una predicción inesperada en la posición y la orientación.
-* Los **auriculares holográficas** tienen varios métodos diferentes. HoloLens 1 seleccionará automáticamente un [punto de enfoque](focus-point-in-unity.md) cuando se proporcione un búfer de profundidad, optimizando la estabilidad del holograma a lo largo del plano que intersecta el mayor contenido. HoloLens 2 estabilizará el contenido mediante [LSR de profundidad (vea la sección comentarios)](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint).
+* Los **auriculares holográficas** tienen varios métodos diferentes. HoloLens 1 seleccionará automáticamente un [punto de enfoque](focus-point-in-unity.md) cuando se proporcione un búfer de profundidad, optimizando la estabilidad del holograma a lo largo del plano que intersecta el mayor contenido. HoloLens 2 estabilizará el contenido mediante [LSR de profundidad (vea la sección comentarios)](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters.setfocuspoint).
 
 Para establecer si la aplicación de Unity proporcionará un búfer de profundidad a Windows:
 
