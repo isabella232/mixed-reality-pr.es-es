@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, comunicación remota, realidad mixta, desarrollo, introducción, características, nuevo proyecto, emulador, documentación, guías, hologramas, desarrollo del juego, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, OpenXR
-ms.openlocfilehash: 3d9a33ca98734d40a37e24805f28f7f70b6a4ba9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: eb9ec39d663dec2b5bf4c9177524449f31aaf554
+ms.sourcegitcommit: e24715fffa815c24ca411fa93eed9576ae729337
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009765"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98247738"
 ---
 # <a name="unreal-development-overview"></a>Introducción al desarrollo con Unreal
 
@@ -54,7 +54,7 @@ Hay varias características clave de la realidad mixta que nuestra serie de tuto
 > [!NOTE]
 > Puede explorar el repositorio de **[GitHub de UX Tools for Unreal](https://github.com/microsoft/MixedReality-UXTools-Unreal)** para obtener más detalles.
 
-### <a name="3-platform-capabilities-and-apis"></a>3. Funcionalidades y API de la plataforma
+### <a name="3-advanced-features"></a>3. Características avanzadas
 
 Hay otras características clave que desempeñan un rol en las aplicaciones de realidad mixta disponibles sin que se requiera ningún paquete o instalación adicional. Estas características se pueden agregar a proyectos de Unreal tanto si se instala MRTK como si no. Después de profundizar en las funcionalidades más avanzadas, podrá crear aplicaciones de realidad mixta más complejas.
 

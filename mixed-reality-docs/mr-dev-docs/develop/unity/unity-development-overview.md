@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, mixed reality, development, getting started, new project, porting, capability, camera, simulation, emulation, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset, what is virtual reality, what is augmented reality, MRTK, mixed reality toolkit, spatial mapping, voice input, locatable camera, emulator, Azure, tutorials
-ms.openlocfilehash: 28ddaeed4218dc3433e13122806a2032e335dd56
-ms.sourcegitcommit: b13c517df19179ca281362a1f006914289c58ad4
+ms.openlocfilehash: c5b7683574378565c71e95bc6205be3dbf92fcaf
+ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98031991"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98226444"
 ---
 # <a name="unity-development-for-hololens"></a>Desarrollo de Unity para HoloLens
 
@@ -49,7 +49,7 @@ Todos los bloques de creación básicos para las aplicaciones de realidad mixta 
 
 [!INCLUDE[](../includes/unity-building-blocks.md)]
 
-### <a name="3-platform-capabilities-and-apis"></a>3. Funcionalidades y API de la plataforma
+### <a name="3-advanced-features"></a>3. Características avanzadas
 
 Hay otras características clave que desempeñan un rol en las aplicaciones de realidad mixta disponibles a través de las API de Unity sin que se requiera ningún paquete o instalación adicional. Estas características se pueden agregar a proyectos de Unity tanto si se instala MRTK como si no. Después de profundizar en las funcionalidades más avanzadas que ofrece Unity, podrá crear aplicaciones de realidad mixta más completas y complejas.
 
