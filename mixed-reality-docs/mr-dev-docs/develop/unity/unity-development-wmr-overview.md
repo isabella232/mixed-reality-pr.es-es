@@ -7,12 +7,12 @@ ms.date: 12/11/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, realidad mixta, mixed reality, desarrollo, introducción, nuevo proyecto, portabilidad, funcionalidad, cámara, simulación, emulación, documentación, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, qué es la realidad virtual, qué es la realidad aumentada, MRTK, kit de herramientas de realidad mixta, entrada de voz, cámara localizable, emulador, Azure, tutoriales
-ms.openlocfilehash: ba63f137e90b68345f3e5bbb831aba6abd6fe538
-ms.sourcegitcommit: b13c517df19179ca281362a1f006914289c58ad4
+ms.openlocfilehash: edd75def71ad31a1d29a480d0b2a7f7ffbd8c037
+ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98040575"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98226434"
 ---
 # <a name="unity-development-for-vr-and-windows-mixed-reality"></a>Desarrollo de Unity para VR y Windows Mixed Reality
 
@@ -42,7 +42,7 @@ Después de iniciar un nuevo proyecto envolvente, necesitará algunos bloques de
 
 [!INCLUDE[](../includes/unity-building-blocks-wmr.md)]
 
-### <a name="3-platform-capabilities-and-apis"></a>3. Funcionalidades y API de la plataforma
+### <a name="3-advanced-features"></a>3. Características avanzadas
 
 Hay otras características clave que desempeñan un rol en las aplicaciones envolventes disponibles a través de las API de Unity sin que se requiera ningún paquete o instalación adicional. Después de profundizar en las funcionalidades más avanzadas que ofrece Unity, podrá crear aplicaciones de VR más completas y complejas.
 
