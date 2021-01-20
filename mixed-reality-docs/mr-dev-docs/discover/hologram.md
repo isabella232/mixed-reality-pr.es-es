@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, HoloLens, hologramas, diseño, interacción, auriculares de realidad mixta, auriculares Windows Mixed Reality, qué es realidad aumentada
-ms.openlocfilehash: b390910fcece8e6263d19f52c80b784efb2561f6
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: cc6b4a4838e7a275b1ef3a45e54c4b894a04b9c2
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757563"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583348"
 ---
 # <a name="what-is-a-hologram"></a>¿Qué es un holograma?
 
@@ -33,7 +33,7 @@ HoloLens le permite crear **hologramas**, que son objetos de luz y sonido que ap
     </colgroup>
     <tr>
         <td><strong>Característica</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -130,4 +130,3 @@ Si está siguiendo el [recorrido de detección](get-started-with-mr.md) hemos di
 
 > [!div class="nextstepaction"]
 > [Ampliar el proceso de diseño](case-study-expanding-the-design-process-for-mixed-reality.md)
-

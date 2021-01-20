@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows Mixed Reality, teclado, Mouse, dispositivo de juego, controladora Xbox, HoloLens, escritorio, tutorial, código de ejemplo
-ms.openlocfilehash: b7984c86b952612af020e2bd91063e0a9b0d92f6
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 3cf35ba195e839332cbedb8b2c3945334a158cbc
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530048"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583633"
 ---
 # <a name="keyboard-mouse-and-controller-input-in-directx"></a>Entrada desde teclado, ratón y controlador en DirectX
 
@@ -60,7 +60,7 @@ Para obtener más información sobre cómo implementar la compatibilidad con Cor
 También puede usar la entrada del mouse de nuevo a través de los controladores de eventos de entrada de CoreWindow de UWP. Aquí se muestra cómo modificar la plantilla de la aplicación holográfica de Windows para admitir los clics del mouse de la misma manera que los gestos presionados. Después de realizar esta modificación, al hacer clic con el mouse mientras se contenía un dispositivo con auriculares envolvente, cambiará la posición del cubo.
 
 > [!NOTE]
-> Las aplicaciones UWP también pueden obtener datos XY sin formato para el mouse mediante la API de [MouseDevice](https://docs.microsoft.com/uwp/api/Windows.Devices.Input.MouseDevice) .
+> Las aplicaciones UWP también pueden obtener datos XY sin formato para el mouse mediante la API de [MouseDevice](/uwp/api/Windows.Devices.Input.MouseDevice) .
 
 Empiece por declarar un nuevo controlador OnPointerPressed en AppView. h:
 

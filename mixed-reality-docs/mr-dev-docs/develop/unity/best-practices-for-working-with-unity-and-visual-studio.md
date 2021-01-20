@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: implementación, Unity, Visual Studio, HoloLens, HoloLens 2, auriculares envolvente, procedimientos recomendados, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, UWP, Visual Studio Tools, Windows SDK
-ms.openlocfilehash: 9464c86826b9a8ea2c64384dfa699fc6d98743dd
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 6940382af605c28686cec862cf2d9b6cb8411387
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009375"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583468"
 ---
 # <a name="best-practices-for-working-with-unity-and-visual-studio"></a>Procedimientos recomendados para trabajar con Unity y Visual Studio
 
@@ -35,7 +35,7 @@ Considere la posibilidad de instalar la [extensión de Visual Studio *UnityScrip
 
 ## <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools para Unity
 
-Descargar [Visual Studio Tools para Unity](https://docs.microsoft.com/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity)
+Descargar [Visual Studio Tools para Unity](/visualstudio/cross-platform/getting-started-with-visual-studio-tools-for-unity)
 
 **Ventajas de Visual Studio Tools para Unity**
 * Depure el modo de reproducción en el editor de Unity desde Visual Studio colocando puntos de interrupción, evaluando variables y expresiones complejas.

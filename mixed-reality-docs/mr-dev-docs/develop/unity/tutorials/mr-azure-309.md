@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, Application Insights, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: d663da0e3a0d00532669a122dc95f2089bf08712
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 5d599e7c3c6f887675bf010a10fb8841e80143db
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679474"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582961"
 ---
 # <a name="mr-and-azure-309-application-insights"></a>Realidad mixta y Azure (309): Application Insights
 
@@ -40,7 +40,7 @@ Este curso le enseñará a obtener los resultados del servicio de Application In
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td> Realidad mixta y Azure (309): Application Insights</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -49,7 +49,7 @@ Este curso le enseñará a obtener los resultados del servicio de Application In
 > [!NOTE]
 > Aunque este curso se centra principalmente en los auriculares de Windows Mixed Reality inmersivo (VR), también puede aplicar lo que aprenda en este curso a Microsoft HoloLens. A medida que siga con el curso, verá notas sobre cualquier cambio que deba usar para admitir HoloLens. Al usar HoloLens, puede observar algún Eco durante la captura de voz.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 > [!NOTE]
 > Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#. Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de julio). Puede usar el software más reciente, como se indica en el artículo [instalar las herramientas](../../install-the-tools.md) , aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se enumera a continuación.
@@ -61,11 +61,11 @@ Se recomienda el siguiente hardware y software para este curso:
 - [El SDK de Windows 10 más reciente](../../install-the-tools.md#installation-checklist)
 - [Unity 2017,4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](../../../hololens-hardware-details.md) con el modo de desarrollador habilitado
+- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](/hololens/hololens1-hardware) con el modo de desarrollador habilitado
 - Un conjunto de auriculares con un micrófono integrado (si el casco no tiene micrófonos y altavoces integrados)
 - Acceso a Internet para la instalación de Azure y Application Insights la recuperación de datos
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).
 
@@ -102,7 +102,7 @@ Para usar *Application Insights*, debe crear y configurar un *servicio de Applic
 
     4.  Elija un **grupo de recursos** o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos cursos) en un grupo de recursos común).
 
-        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](/azure/azure-resource-manager/resource-group-portal).
 
     5.  Seleccione una **ubicación**.
 
@@ -337,15 +337,15 @@ Ahora creará algunas formas básicas para la escena, con las que el usuario pue
 
 8.  Haga clic con el botón secundario en un área vacía del *Panel jerarquía* y, a continuación, en **objeto 3D, cápsula**.
 
-    -  Con la **cápsula** seleccionada, cambie su **Transform** *posición* de transformación a: **-10, 1, 0**.
+    -  Con la **cápsula** seleccionada, cambie su  *posición* de transformación a: **-10, 1, 0**.
 
 9.  Haga clic con el botón secundario en un área vacía del *Panel jerarquía* y, a continuación, en **objeto 3D, cubo**.
 
-    -  Con el **cubo** seleccionado, cambie su **Transform** *posición* de transformación a: **0, 0, 10**.
+    -  Con el **cubo** seleccionado, cambie su  *posición* de transformación a: **0, 0, 10**.
 
 10. Haga clic con el botón secundario en un área vacía del *Panel jerarquía* y, a continuación, en **objeto 3D, esfera**.
 
-    -  Con la **esfera** seleccionada, cambie su **Transform** *posición* de transformación a: **10, 0,0**.
+    -  Con la **esfera** seleccionada, cambie su  *posición* de transformación a: **10, 0,0**.
 
     ![Configurar los objetos de la escena de Unity](images/AzureLabs-Lab309-40.png)
 
@@ -1207,7 +1207,7 @@ En este capítulo, debe colocar el script de **movimiento** en el **elemento pri
 
 Ya se ha completado todo lo necesario para la sección Unity de este proyecto, por lo que es el momento de compilarla desde Unity.
 
-1.  Vaya a **configuración de compilación**(**File**  >  **configuración de compilación** de archivos).
+1.  Vaya a **configuración de compilación**(  >  **configuración de compilación** de archivos).
 
 2.  En la ventana **configuración de compilación** , haga clic en **compilar**.
 
@@ -1281,4 +1281,3 @@ Pruebe a generar, en lugar de crear manualmente, los objetos ObjectInScene y est
 **Ejercicio 2**
 
 Ordene los resultados de la Application Insights por hora, para obtener los datos más relevantes e implementar esos datos confidenciales en la aplicación.
-

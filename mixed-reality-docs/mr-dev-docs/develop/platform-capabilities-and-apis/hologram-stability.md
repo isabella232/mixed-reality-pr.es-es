@@ -8,12 +8,12 @@ ms.topic: article
 keywords: hologramas, estabilidad, hololens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, velocidad de fotogramas, representación, Reproyección, separación de colores
 appliesto:
 - HoloLens
-ms.openlocfilehash: 36abf928d8f665717bacaf8da372d299b41fabd6
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 064e42f771391e77874796e91ea8e4d563c08ec2
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006645"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582881"
 ---
 # <a name="hologram-stability"></a>Estabilidad de hologramas
 
@@ -25,11 +25,11 @@ La calidad de los hologramas es el resultado de un buen entorno y un buen desarr
 
 La siguiente terminología puede ayudarle a identificar problemas con el entorno, tasas de representación incoherentes o bajas, o cualquier otra cosa.
 * **Precisión.** Una vez que el holograma está bloqueado mundialmente y colocado en el mundo real, debe permanecer donde se colocará en relación con el entorno circundante e independiente del movimiento del usuario o de los cambios de entorno pequeños y dispersos. Si más adelante aparece un holograma en una ubicación inesperada, se trata de un problema de *precisión* . Estos escenarios pueden producirse si dos salones distintos parecen idénticos.
-* **Vibrante.** Los usuarios observan la vibración como una sacudida de alta frecuencia de un holograma, lo que puede ocurrir cuando el seguimiento del entorno se degrada. Para los usuarios, la solución está ejecutando el [ajuste del sensor](../../sensor-tuning.md).
+* **Vibrante.** Los usuarios observan la vibración como una sacudida de alta frecuencia de un holograma, lo que puede ocurrir cuando el seguimiento del entorno se degrada. Para los usuarios, la solución está ejecutando el [ajuste del sensor](/hololens/hololens-updates).
 * **Judder.** Las frecuencias de representación bajas dan como resultado una imagen de movimiento y dos veces inuniformes de hologramas. Judder es especialmente perceptible en los hologramas con movimiento. Los desarrolladores necesitan mantener una [constante de 60 fps](hologram-stability.md#frame-rate).
 * **Fase.** Los usuarios ven el desplazamiento a medida que un holograma desaparece de donde se colocó originalmente. El desplazamiento se produce cuando se colocan hologramas lejos de los [delimitadores espaciales](../../design/spatial-anchors.md), especialmente en las partes sin asignar del entorno. La creación de hologramas cercanos a los delimitadores espaciales reduce la probabilidad de derivación.
 * **Puesta en marcha.** Cuando un holograma "extrae" o "salta" fuera de su ubicación ocasionalmente. La puesta en marcha puede producirse cuando el seguimiento ajusta los hologramas para que coincidan con el conocimiento actualizado de su entorno.
-* **Nada.** Cuando aparece un holograma en Sway que corresponde al movimiento del encabezado del usuario. Nadar se produce cuando la aplicación no ha implementado completamente la [Reproyección](hologram-stability.md#reprojection)y si HoloLens no está [calibrado](../../calibration.md) para el usuario actual. El usuario puede volver a ejecutar la aplicación de [calibración](../../calibration.md) para corregir el problema. Los desarrolladores pueden actualizar el plano de estabilización para mejorar la estabilidad.
+* **Nada.** Cuando aparece un holograma en Sway que corresponde al movimiento del encabezado del usuario. Nadar se produce cuando la aplicación no ha implementado completamente la [Reproyección](hologram-stability.md#reprojection)y si HoloLens no está [calibrado](/hololens/hololens-calibration) para el usuario actual. El usuario puede volver a ejecutar la aplicación de [calibración](/hololens/hololens-calibration) para corregir el problema. Los desarrolladores pueden actualizar el plano de estabilización para mejorar la estabilidad.
 * **Separación de colores.** Las pantallas en HoloLens son pantallas secuenciales de color, que son canales de color rojo, verde y azul-verde a 60 Hz (los campos de color individuales se muestran a 240 Hz). Cada vez que un usuario realiza un seguimiento de un holograma móvil con sus ojos, los bordes inicial y final del holograma se separan en sus colores constituyentes, lo que produce un efecto de arco iris. El grado de separación depende de la velocidad del holograma. En algunos casos menos raros, el movimiento de una cabeza rápida mientras se examina un holograma estacionario también puede producir un efecto de arco iris, que se denomina *[separación de colores](hologram-stability.md#color-separation)*.
 
 ## <a name="frame-rate"></a>Velocidad de fotogramas
@@ -45,7 +45,7 @@ Al representar en 60 FPS, está haciendo tres cosas para ayudar a crear hologram
 
 **Coherencia de velocidad de fotogramas** La coherencia de velocidad de fotogramas es tan importante como fotogramas altos por segundo. Ocasionalmente, los fotogramas quitados son inevitables para cualquier aplicación de contenido enriquecido y HoloLens implementa algunos algoritmos sofisticados para recuperarse de problemas ocasionales. Sin embargo, una velocidad de fotogramas oscilante constantemente es mucho más evidente para un usuario que la ejecución coherente con velocidades de fotogramas inferiores. Por ejemplo, una aplicación que se presenta sin problemas para cinco fotogramas (60 FPS mientras duren estos cinco fotogramas) y, a continuación, quita cada fotograma de los 10 fotogramas siguientes (30 FPS para la duración de estos 10 fotogramas) parecerá más inestable que una aplicación que se representa de forma coherente a 30 FPS.
 
-En una nota relacionada, el sistema operativo limita las aplicaciones a 30 FPS cuando se está ejecutando una [captura de realidad mixta](../../mixed-reality-capture.md) .
+En una nota relacionada, el sistema operativo limita las aplicaciones a 30 FPS cuando se está ejecutando una [captura de realidad mixta](/hololens/holographic-photos-and-videos) .
 
 **Análisis de rendimiento** Hay diferentes tipos de herramientas que se pueden usar para realizar pruebas comparativas de la velocidad de fotogramas de la aplicación, por ejemplo:
 * GPUView
@@ -66,7 +66,7 @@ La convergencia y el alojamiento son únicos porque sus guías retinas adicional
 
 Los usuarios que contengan HoloLens siempre se acomodarán a 2,0 m para mantener una imagen clara porque las pantallas de HoloLens se corrigen a una distancia óptica de aproximadamente 2,0 m del usuario. Los desarrolladores de aplicaciones controlan el lugar en el que los usuarios convergen colocando contenido y hologramas a varias profundidades. Cuando los usuarios se acomodan y convergen en distintas distancias, se rompe el vínculo natural entre las dos señales, lo que puede dar lugar a la molestia visual o a la fatiga, especialmente cuando la magnitud del conflicto es grande. 
 
-La descomodidad del conflicto de alojamiento de vergence se puede evitar o minimizar manteniendo el contenido convergente lo más cerca posible de 2,0 m (es decir, en una escena con mucha profundidad, coloque las áreas de interés cerca de 2,0 m, cuando sea posible). Cuando el contenido no se puede colocar cerca de 2,0 m, la molestia del conflicto de alojamiento de Vergence es mayor cuando el usuario mira hacia atrás y hacia delante entre distintas distancias. En otras palabras, es mucho más cómodo mirar un holograma estacionario que permanezca 50 cm fuera de la vista de un holograma de 50 cm que se desplaza hacia el usuario con el tiempo.
+La descomodidad del conflicto de alojamiento de vergence se puede evitar o minimizar manteniendo el contenido convergente lo más cerca posible de 2,0 m (es decir, en una escena con mucha profundidad, coloque las áreas de interés cerca de 2,0 m, cuando sea posible). Cuando el contenido no se puede colocar cerca de 2,0 m, la molestia del conflicto de alojamiento de Vergence es mayor cuando el usuario mira hacia atrás y hacia delante entre distintas distancias. En otras palabras, es mucho más cómodo ver un holograma estático que se mantiene a 50 cm de distancia que mirar un holograma a 50 cm que se acerca y se aleja del usuario con el tiempo.
 
 Colocar contenido en 2,0 m también es ventajoso porque las dos pantallas están diseñadas para superponerse completamente a esta distancia. En el caso de las imágenes que se colocan fuera de este plano, cuando se mueven fuera del lado del fotograma holográfica aparecen de una pantalla mientras siguen siendo visibles en la otra. Este rival puede ser perjudicial para la percepción de profundidad del holograma.
 
@@ -91,7 +91,7 @@ Hay cuatro tipos principales de Reproyección
 Las aplicaciones deben realizar acciones específicas para habilitar los distintos tipos de Reproyección.
 * **Reproyección de profundidad:** La aplicación envía su búfer de profundidad al sistema para cada fotograma representado.  En Unity, la reproyección de profundidad se realiza con la opción **búfer de profundidad compartido** en el panel **configuración de Windows Mixed Reality** en la **Administración de complementos de XR**.  Las aplicaciones de DirectX llaman a CommitDirect3D11DepthBuffer.  La aplicación no debe llamar a SetFocusPoint.
 * **Reproyección plana:** En cada fotograma, las aplicaciones indican al sistema la ubicación de un plano para estabilizar.  Las aplicaciones de Unity llaman a SetFocusPointForFrame y deben tener el **búfer de profundidad compartido** deshabilitado.  Las aplicaciones de DirectX llaman a SetFocusPoint y no deben llamar a CommitDirect3D11DepthBuffer.
-* **Reproyección plana automática:** Para habilitar, la aplicación debe enviar su búfer de profundidad al sistema como lo haría para la reproyección de profundidad. Las aplicaciones que usan el kit de herramientas de la realidad mixta (MRTK) pueden configurar el [proveedor de configuración](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/CameraSystem/WindowsMixedRealityCameraSettings.html#hololens-2-reprojection-method) de la cámara para que use la reproyección de Autodiseño. Las aplicaciones nativas deben establecer el `DepthReprojectionMode` de [HolographicCameraRenderingParameters](https://docs.microsoft.com/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters) en `AutoPlanar` cada fotograma. En el caso de la generación 1 de HoloLens, la aplicación no debe llamar a SetFocusPoint.
+* **Reproyección plana automática:** Para habilitar, la aplicación debe enviar su búfer de profundidad al sistema como lo haría para la reproyección de profundidad. Las aplicaciones que usan el kit de herramientas de la realidad mixta (MRTK) pueden configurar el [proveedor de configuración](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/CameraSystem/WindowsMixedRealityCameraSettings.html#hololens-2-reprojection-method) de la cámara para que use la reproyección de Autodiseño. Las aplicaciones nativas deben establecer el `DepthReprojectionMode` de [HolographicCameraRenderingParameters](/uwp/api/windows.graphics.holographic.holographiccamerarenderingparameters) en `AutoPlanar` cada fotograma. En el caso de la generación 1 de HoloLens, la aplicación no debe llamar a SetFocusPoint.
 
 ### <a name="choosing-reprojection-technique"></a>Elección de la técnica de Reproyección
 
@@ -183,6 +183,6 @@ Como antes, la representación en 60 FPS y el establecimiento del plano de estab
 
 ## <a name="see-also"></a>Consulte también
 * [Descripción del rendimiento de la realidad mixta](understanding-performance-for-mixed-reality.md)
-* [Color, luz y materiales](../../color,-light-and-materials.md)
+* [Color, luz y materiales](../../design/color-light-and-materials.md)
 * [Interacciones instintivas](../../design/interaction-fundamentals.md)
 * [Estabilización del holograma de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/hologram-stabilization.html)

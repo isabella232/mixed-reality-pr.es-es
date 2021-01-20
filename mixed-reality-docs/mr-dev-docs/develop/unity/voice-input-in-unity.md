@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Entrada de voz, KeywordRecognizer, GrammarRecognizer, micrófono, dictado, voz, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: d07909bbf05ff882eb0a4b6123c39eae9280e3e8
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: c6364b190ca90c5e6faf7fb8ef79314134e93cfc
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009805"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583725"
 ---
 # <a name="voice-input-in-unity"></a>Entrada de voz en Unity
 
@@ -105,7 +105,7 @@ keywordRecognizer.Start();
 **Espacio de nombres:** *UnityEngine. Windows. Speech*<br>
 **Tipos**: *GrammarRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*
 
-El GrammarRecognizer se usa si se especifica la gramática de reconocimiento mediante SRGS. Esto puede ser útil si la aplicación tiene más de unas pocas palabras clave, si desea reconocer frases más complejas o si desea activar o desactivar fácilmente conjuntos de comandos. Vea: [crear gramáticas con XML de SRGS](https://msdn.microsoft.com/library/hh378349(v=office.14).aspx) para obtener información sobre el formato de archivo.
+El GrammarRecognizer se usa si se especifica la gramática de reconocimiento mediante SRGS. Esto puede ser útil si la aplicación tiene más de unas pocas palabras clave, si desea reconocer frases más complejas o si desea activar o desactivar fácilmente conjuntos de comandos. Vea: [crear gramáticas con XML de SRGS](/previous-versions/office/developer/speech-technologies/hh378349(v=office.14)) para obtener información sobre el formato de archivo.
 
 Una vez que tenga la gramática de SRGS y esté en el proyecto en una [carpeta StreamingAssets](https://docs.unity3d.com/Manual/StreamingAssets.html):
 

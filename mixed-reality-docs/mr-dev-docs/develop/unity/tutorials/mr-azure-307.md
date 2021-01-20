@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, machine learning, ml, machine learning Studio, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 3bb50c146e11a340f4223d71dd401ac2b84dd6d4
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 95213c3d17bbe0f0f81438d4808db142ad21c595
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679484"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583393"
 ---
 # <a name="mr-and-azure-307-machine-learning"></a>Realidad mixta y Azure (307): Aprendizaje automático
 
@@ -42,7 +42,7 @@ Este curso es un tutorial independiente, que no implica directamente ningún otr
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td> Realidad mixta y Azure (307): Aprendizaje automático</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -51,7 +51,7 @@ Este curso es un tutorial independiente, que no implica directamente ningún otr
 > [!NOTE]
 > Aunque este curso se centra principalmente en los auriculares de Windows Mixed Reality inmersivo (VR), también puede aplicar lo que aprenda en este curso a Microsoft HoloLens. A medida que siga con el curso, verá notas sobre cualquier cambio que deba usar para admitir HoloLens. Al usar HoloLens, puede observar algún Eco durante la captura de voz.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 > [!NOTE]
 > Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#. Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de mayo). Puede usar el software más reciente, como se indica en el [artículo instalar las herramientas](../../install-the-tools.md), aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se indica a continuación.
@@ -63,10 +63,10 @@ Se recomienda el siguiente hardware y software para este curso:
 - [El SDK de Windows 10 más reciente](../../install-the-tools.md#installation-checklist)
 - [Unity 2017,4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](../../../hololens-hardware-details.md) con el modo de desarrollador habilitado
+- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](/hololens/hololens1-hardware) con el modo de desarrollador habilitado
 - Acceso a Internet para la configuración de Azure y la recuperación de datos de ML
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación). 
 
@@ -100,7 +100,7 @@ Para usar la API de traductor de Azure, tendrá que configurar una instancia del
     7.  Seleccione una opción en **Suscripción**.
     4. Elija un **grupo de recursos** o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común).
 
-        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](/azure/azure-resource-manager/resource-group-portal).
     
     5.  Determine la **Ubicación** del grupo de recursos (si va a crear un nuevo grupo de recursos). Idealmente, la ubicación estará en la región donde se ejecutará la aplicación. Algunos recursos de Azure solo están disponibles en determinadas regiones.
 
@@ -132,7 +132,7 @@ Para usar el *Azure machine learning*, deberá configurar una instancia del serv
 
     3. Elija un **grupo de recursos** o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común). 
 
-        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](/azure/azure-resource-manager/resource-group-portal).
 
     4.  Determine la **Ubicación** del grupo de recursos (si va a crear un nuevo grupo de recursos). Idealmente, la ubicación estará en la región donde se ejecutará la aplicación. Algunos recursos de Azure solo están disponibles en determinadas regiones. Debe usar el mismo grupo de recursos que utilizó para crear el Azure Storage en el capítulo anterior.
 
@@ -216,7 +216,7 @@ Antes de poder compilar el sistema de aprendizaje automático, deberá compilar 
 
 Para empezar a crear un experimento:
 
-1.  Haga clic de nuevo en el botón **+ nuevo** situado en la parte inferior izquierda de la página y, a continuación, haga clic en experimento en blanco de **experimento**  >  **Blank Experiment**.
+1.  Haga clic de nuevo en el botón **+ nuevo** situado en la parte inferior izquierda de la página y, a continuación, haga clic en experimento en blanco de **experimento**  >  .
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-15.png)
 
@@ -252,7 +252,7 @@ Para empezar a crear un experimento:
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-22.png)
 
-11. Va a entrenar un algoritmo de **regresión logística multiclase** para predecir el **producto** más vendido en función de la hora del día y la fecha. Sin embargo, queda fuera del ámbito de este documento la explicación de los detalles de los distintos algoritmos proporcionados por Azure Machine Learning Studio. puede encontrar más información en la hoja de referencia rápida de [algoritmos de machine learning](https://docs.microsoft.com/azure/machine-learning/studio/algorithm-cheat-sheet)
+11. Va a entrenar un algoritmo de **regresión logística multiclase** para predecir el **producto** más vendido en función de la hora del día y la fecha. Sin embargo, queda fuera del ámbito de este documento la explicación de los detalles de los distintos algoritmos proporcionados por Azure Machine Learning Studio. puede encontrar más información en la hoja de referencia rápida de [algoritmos de machine learning](/azure/machine-learning/studio/algorithm-cheat-sheet)
 
 12. En el panel elementos del experimento de la izquierda, expanda **machine learning**  >  **inicializar**  >  **clasificación** del modelo y arrastre el elemento de **regresión logística multiclase** al lienzo del experimento.
 
@@ -338,7 +338,7 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
 2.  Con Unity abierto, merece la pena comprobar que el **Editor de scripts** predeterminado está establecido en **Visual Studio**. Vaya a **Editar**  >  **preferencias** y, a continuación, en la nueva ventana, vaya a **herramientas externas**. Cambie el **Editor de script externo** a **Visual Studio 2017**. Cierre la ventana **preferencias** .
 
-3.  A continuación, vaya a configuración de compilación de **archivos**  >  **Build Settings** y cambie la plataforma a **plataforma universal de Windows**; para ello, haga clic en el botón **_cambiar plataforma_* _.
+3.  A continuación, vaya a configuración de compilación de **archivos**  >   y cambie la plataforma a **plataforma universal de Windows**; para ello, haga clic en el botón **_cambiar plataforma_* _.
 
 4.  Asegúrese también de que:
 
@@ -823,7 +823,7 @@ Para compilar:
 
 1.  Guarde la escena actual haciendo clic en **archivo**  >  **Guardar escenas**.
 
-2.  Ir a **File** la  >  **configuración de compilación** de archivos
+2.  Ir a la  >  **configuración de compilación** de archivos
 
 3.  Active la casilla denominada **proyectos de C# de Unity** (esto es importante porque le permitirá editar las clases una vez completada la compilación).
 

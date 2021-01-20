@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realidad mixta, Windows Mixed Reality, HoloLens, envolventes, VR, Mr, introducción, holograma, Academia, tutorial, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 7b316314d7aa693e8be9006b2c5578c1bae7e3ff
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 86ac759cb73e39f88d62db5dab0c38108bb17d55
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006515"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583729"
 ---
 # <a name="mr-basics-100-getting-started-with-unity"></a>Aspectos básicos de realidad mixta (100): Introducción a Unity
 
@@ -24,7 +24,7 @@ Este tutorial le guiará a través de la creación de una aplicación básica de
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td>Aspectos básicos de realidad mixta (100): Introducción a Unity</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -143,7 +143,7 @@ La creación de un cubo en el proyecto de Unity es igual que crear cualquier otr
 
 Ahora que hemos creado el cubo, es el momento de realizar una comprobación rápida del dispositivo. Puede hacerlo directamente desde el editor de Unity.
 
-### <a name="initial-setup"></a>Instalación inicial
+### <a name="initial-setup"></a>Configuración inicial
 
 1. En el equipo de desarrollo, en Unity, Abra **archivo >** ventana de configuración de compilación.
 2. Cambie **plataforma** a **plataforma universal de Windows** y haga clic en **cambiar plataforma**

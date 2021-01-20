@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, icono, modelado, iniciador, selector 3D, mosaico, cubo dinámico, Win32, auricular de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, manifiesto
-ms.openlocfilehash: 63b07664cb09f51e6d0588fdc50d141ad8985093
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 46d3419d3c8267291496d8f788103d7002e6f230
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009675"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583033"
 ---
 # <a name="implement-3d-app-launchers-win32-apps"></a>Implementación de iniciadores de aplicaciones 3D (aplicaciones Win32)
 
@@ -33,11 +33,11 @@ los recursos 3D que se usarán como iniciadores de la aplicación deben crearse 
 
 ## <a name="configuring-the-3d-launcher"></a>Configurar el iniciador 3D
 
-Las aplicaciones Win32 aparecerán en la lista "todas las aplicaciones" del menú Inicio de Windows Mixed Reality si crea un selector de aplicaciones 3D para ellas. Para ello, cree un archivo XML de [manifiesto de elementos visuales](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx) que haga referencia al iniciador de aplicaciones 3D siguiendo estos pasos:
+Las aplicaciones Win32 aparecerán en la lista "todas las aplicaciones" del menú Inicio de Windows Mixed Reality si crea un selector de aplicaciones 3D para ellas. Para ello, cree un archivo XML de [manifiesto de elementos visuales](/previous-versions/windows/apps/dn393983(v=win.10)) que haga referencia al iniciador de aplicaciones 3D siguiendo estos pasos:
 
 1. Cree un **archivo glb de activo del iniciador de aplicaciones 3D** (consulte [modelado y exportación](creating-3d-models-for-use-in-the-windows-mixed-reality-home.md)).
-2. Cree un **[manifiesto de elementos visuales](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx)** para la aplicación.
-    1. Puede empezar con el [ejemplo siguiente](#sample-visual-elements-manifest).  Consulte la documentación del [manifiesto de elementos visuales](https://msdn.microsoft.com/library/windows/apps/dn393983.aspx) completos para obtener más detalles.
+2. Cree un **[manifiesto de elementos visuales](/previous-versions/windows/apps/dn393983(v=win.10))** para la aplicación.
+    1. Puede empezar con el [ejemplo siguiente](#sample-visual-elements-manifest).  Consulte la documentación del [manifiesto de elementos visuales](/previous-versions/windows/apps/dn393983(v=win.10)) completos para obtener más detalles.
     2. Actualice **Square150x150Logo** y **Square70x70Logo** con un archivo PNG/JPG/GIF para la aplicación.
         * Se usarán para el logotipo de 2D de la aplicación en la lista todas las aplicaciones de Windows Mixed Reality y para el menú Inicio en el escritorio.
         * La ruta de acceso del archivo se basa en la carpeta que contiene el manifiesto de elementos visuales.

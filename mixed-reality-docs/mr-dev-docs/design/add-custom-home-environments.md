@@ -6,19 +6,19 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, Home, entornos personalizados, lugares, acantilado House, Skyloft, usuario, creación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 2d88b4e20c2703b554572c0d39d5c69767164694
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: ca6a41f8388a767b1191ddc3b377822567a603a6
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848082"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583299"
 ---
 # <a name="design-your-own-immersive-environments"></a>Diseñar entornos envolventes propios
 
 >[!NOTE]
 >Se trata de una característica experimental. Pruébelo y disfrute de divertido, pero no se sorprenda si todo no funciona de la manera esperada. Estamos evaluando la viabilidad de esta característica y nos interesa usarla, así que díganos su experiencia (y los errores que encuentre) en los [foros para desarrolladores](https://forums.hololens.com/categories/custom-home-environments).
 
-A partir de la [actualización del 2018 de abril de Windows 10](https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/release-notes-april-2018), hemos habilitado una característica experimental que le permite agregar entornos personalizados al selector de ubicaciones (en el menú Inicio) para usarlos como [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md). Windows Mixed Reality tiene dos entornos predeterminados, acantilado House y Skyloft, puede elegir como su hogar. La creación de entornos personalizados permite expandir la lista con sus propias creaciones. Estamos haciendo que esta característica esté disponible en un estado temprano para evaluar el interés de los creadores y desarrolladores. Vea qué tipos de mundos crea y comprenda cómo trabaja con diferentes herramientas de creación.
+A partir de la [actualización del 2018 de abril de Windows 10](/windows/mixed-reality/enthusiast-guide/release-notes-april-2018), hemos habilitado una característica experimental que le permite agregar entornos personalizados al selector de ubicaciones (en el menú Inicio) para usarlos como [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md). Windows Mixed Reality tiene dos entornos predeterminados, acantilado House y Skyloft, puede elegir como su hogar. La creación de entornos personalizados permite expandir la lista con sus propias creaciones. Estamos haciendo que esta característica esté disponible en un estado temprano para evaluar el interés de los creadores y desarrolladores. Vea qué tipos de mundos crea y comprenda cómo trabaja con diferentes herramientas de creación.
 
 Al usar un entorno personalizado, observará que el telepuerto, la interacción con las aplicaciones y la colocación de hologramas funciona igual que en la casa del acantilado y Skyloft. Puede explorar la web en un panorama de fantasía o rellenar una ciudad futurista con hologramas; las posibilidades son infinitas.
 
@@ -32,7 +32,7 @@ Al usar un entorno personalizado, observará que el telepuerto, la interacción 
     </colgroup>
     <tr>
         <td><strong>Característica</strong></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens</strong></a></td>
+        <td><a href="/hololens/hololens2-hardware"><strong>HoloLens</strong></a></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
@@ -96,7 +96,7 @@ Para facilitar este proceso, hemos creado el convertidor de [activos de Windows 
 
 El convertidor admite actualmente varias marcas para retocar el comportamiento exacto de las optimizaciones. Se recomienda ejecutar con las siguientes marcas para obtener los mejores resultados:
 
-Marca|Valores recomendados|Description
+Marcar|Valores recomendados|Descripción
 ---|---|---
 -Max-Texture-size|1024 o 2048| Retoque el valor para mejorar la calidad de las texturas, el valor predeterminado es 512 x 512. Un valor mayor afectará significativamente al tamaño de archivo del entorno, por lo que debe tener en cuenta el límite de 256 MB.
 -min-versión|1803|Los entornos personalizados solo se admiten en las versiones de Windows >= 1803. Esta marca quitará las texturas de las versiones anteriores y reducirá el tamaño de archivo del activo final.
@@ -151,4 +151,3 @@ Al crear el entorno personalizado, utilizará una simulación de representación
 
 ## <a name="see-also"></a>Consulte también
 * [Convertidor de activos de Windows Mixed Reality (en GitHub)](https://github.com/Microsoft/glTF-Toolkit/releases)
-

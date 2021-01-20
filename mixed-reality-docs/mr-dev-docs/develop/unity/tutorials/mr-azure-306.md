@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Media Services, streaming video, 360, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 1d53b260b2c4b00ff6bf985646a45948472a56a5
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 3a0401b7503d8a783ba529cf24cdf6cc55c88311
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679524"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583451"
 ---
 # <a name="mr-and-azure-306-streaming-video"></a>Realidad mixta y Azure (306): Vídeo en streaming
 
@@ -43,13 +43,13 @@ En su aplicación, depende del modo en que va a integrar los resultados con el d
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td> Realidad mixta y Azure (306): Vídeo en streaming</td><td style="text-align: center;"> </td><td style="text-align: center;"> ✔️</td>
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 > [!NOTE]
 > Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#. Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de mayo). Puede usar el software más reciente, como se indica en el [artículo instalar las herramientas](../../install-the-tools.md), aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se indica a continuación.
@@ -65,7 +65,7 @@ Se recomienda el siguiente hardware y software para este curso:
 - Acceso a Internet para la configuración de Azure y la recuperación de datos
 - Vídeos de 2 360 grados en formato MP4 (puede encontrar algunos vídeos sin derechos de autor [en esta página de descarga](https://www.mettle.com/360vr-master-series-free-360-downloads-page))
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 1.  Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).
 2.  Configure y pruebe sus auriculares de la realidad mixta.
@@ -142,7 +142,7 @@ Para usar Azure Media Services, debe configurar una instancia del servicio para 
 
     3. Elija un **grupo de recursos** o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común). 
     
-    > Si desea leer más sobre los grupos de recursos de Azure, siga este [vínculo sobre cómo administrar grupos de recursos de Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+    > Si desea leer más sobre los grupos de recursos de Azure, siga este [vínculo sobre cómo administrar grupos de recursos de Azure](/azure/azure-resource-manager/resource-group-portal).
 
     4.  Determine la **Ubicación** del grupo de recursos (si va a crear un nuevo grupo de recursos). Idealmente, la ubicación estará en la región donde se ejecutará la aplicación. Algunos recursos de Azure solo están disponibles en determinadas regiones.
 
@@ -245,12 +245,12 @@ Para usar Azure Media Services, debe configurar una instancia del servicio para 
 
 23. Se le pedirá que establezca un **localizador**, que es el punto de entrada, en archivo/s en los recursos. En el escenario, establezca las siguientes propiedades:
 
-    1.  Tipo de localizador **Locator type**  >  **Progresiva**.
+    1.  Tipo de localizador   >  **Progresiva**.
 
     2.  La **fecha** y la **hora** se establecerán automáticamente, desde la fecha actual, hasta una hora futura (100 años en este caso). Deje tal cual o cámbielo para adaptarse.
 
     > [!NOTE]
-    > Para obtener más información acerca de los localizadores y lo que puede elegir, visite la [documentación de Azure Media Services](https://docs.microsoft.com/azure/media-services/media-services-concepts).
+    > Para obtener más información acerca de los localizadores y lo que puede elegir, visite la [documentación de Azure Media Services](/azure/media-services/media-services-concepts).
 
 24. En la parte inferior de ese panel, haga clic en el botón **Agregar** .
 
@@ -285,7 +285,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 
     ![Azure Portal](images/AzureLabs-Lab6-30.png)
 
-4.  A continuación, vaya a configuración de compilación de **_archivos_ *Build Settings*** y cambie la plataforma a **plataforma universal de Windows**, haciendo clic en el botón **cambiar plataforma** .
+4.  A continuación, vaya a configuración de compilación de **_archivos_** y cambie la plataforma a **plataforma universal de Windows**, haciendo clic en el botón **cambiar plataforma** .
 
 5.  Asegúrese también de que:
 
@@ -360,7 +360,7 @@ Cómo importar **unitypackage Tools**:
 
     2.  En la carpeta **materiales** encontrará el **InsideOutSpheres** material  *lambert1*, junto con un material denominado *ButtonMaterial*, que se usa en el GazeButton, que verá en breve.
 
-    3.  La carpeta **Prefabs** contiene recurso prefabricado **InsideOutSphere** , que contiene el modelo **InsideOutSphere** *model* y el *GazeButton*.
+    3.  La carpeta **Prefabs** contiene recurso prefabricado **InsideOutSphere** , que contiene el modelo **InsideOutSphere**  y el *GazeButton*.
 
     4.  **No se incluye ningún código**, se escribirá el código siguiendo este curso.
 
@@ -606,7 +606,7 @@ Para crear esta clase:
     ```
 
     > [!TIP] 
-    > El método **ChangeScene ()** utiliza una característica de C muy útil \# denominada *operador condicional*. Esto permite comprobar las condiciones y, después, los valores devueltos en función del resultado de la comprobación, todo dentro de una única instrucción. Siga este [vínculo para obtener más información acerca del operador condicional](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/conditional-operator).
+    > El método **ChangeScene ()** utiliza una característica de C muy útil \# denominada *operador condicional*. Esto permite comprobar las condiciones y, después, los valores devueltos en función del resultado de la comprobación, todo dentro de una única instrucción. Siga este [vínculo para obtener más información acerca del operador condicional](/dotnet/csharp/language-reference/operators/conditional-operator).
 
 11. Guarde los cambios en Visual Studio antes de volver a Unity.
 
@@ -888,5 +888,3 @@ Es totalmente posible usar una sola escena para cambiar vídeos en este tutorial
 **Ejercicio 2**
 
 Experimente con Azure y Unity e intente implementar la capacidad de la aplicación para seleccionar automáticamente un vídeo con un tamaño de archivo diferente, en función de la seguridad de una conexión a Internet.
-
-

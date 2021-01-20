@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: asignación espacial, HoloLens, realidad mixta, reconstrucción expuesta, malla, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, comprensión de escenas, malla mundial, oclusión, física, navegación, observador de superficie, representación, procesamiento de malla
-ms.openlocfilehash: 4305a291a2a83f4425c5a80d25dd8145a7033492
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 1c41706abc0a393e8530b38be83fed49ed3e20a6
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848199"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583271"
 ---
 # <a name="spatial-mapping"></a>Asignación espacial
 
@@ -32,7 +32,7 @@ La asignación espacial proporciona una representación detallada de las superfi
     </colgroup>
     <tr>
         <td><strong>Característica</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -78,7 +78,7 @@ En el caso de HoloLens 2, es posible consultar una versión estática de los dat
 
 ## <a name="what-influences-spatial-mapping-quality"></a>¿Qué influye en la calidad de la asignación espacial?
 
-Algunos factores, detallados [aquí](../environment-considerations-for-hololens.md), pueden afectar a la frecuencia y la gravedad de estos errores.  Sin embargo, debe diseñar la aplicación para que el usuario pueda alcanzar sus objetivos incluso en presencia de errores en los datos de asignación espacial.
+Algunos factores, detallados [aquí](/hololens/hololens-environment-considerations), pueden afectar a la frecuencia y la gravedad de estos errores.  Sin embargo, debe diseñar la aplicación para que el usuario pueda alcanzar sus objetivos incluso en presencia de errores en los datos de asignación espacial.
 
 ## <a name="common-usage-scenarios"></a>Escenarios de uso comunes
 
@@ -209,13 +209,13 @@ Hay tres formas principales en las que se suelen usar las mallas de asignación 
    * Lo que hay que tener en cuenta es que las mallas espaciales son diferentes a la clase de mallas que puede crear un artista 3D. La topología de triángulo no será "limpia" como topología de creación humana y la malla se verá afectada por [diversos errores](spatial-mapping.md#what-influences-spatial-mapping-quality).
    * Para crear una estética visual agradable, puede que desee realizar algún procesamiento de [mallas](spatial-mapping.md#mesh-processing), por ejemplo, para rellenar los huecos o las normales de superficie suave. También puede usar un sombreador para proyectar texturas diseñadas por intérpretes en la malla en lugar de visualizar directamente la topología de la malla y las normales.
 * Para occluding hologramas detrás de las superficies del mundo real
-   * Las superficies espaciales se pueden representar en un paso solo de profundidad, que solo afecta al [búfer de profundidad](https://msdn.microsoft.com/library/windows/desktop/bb219616(v=vs.85).aspx) y no afecta a los destinos de representación de color.
+   * Las superficies espaciales se pueden representar en un paso solo de profundidad, que solo afecta al [búfer de profundidad](/windows/win32/direct3d9/depth-buffers) y no afecta a los destinos de representación de color.
    * Esto Prime el búfer de profundidad para tapaba los hologramas representados posteriormente detrás de las superficies espaciales. La oclusión exacta de hologramas mejora el sentido de que los hologramas existen realmente en el espacio físico del usuario.
-   * Para habilitar la representación solo de profundidad, actualice el estado de Blend para establecer el valor de [RenderTargetWriteMask](https://msdn.microsoft.com/library/windows/desktop/hh404492(v=vs.85).aspx) en cero para todos los destinos de representación de color.
+   * Para habilitar la representación solo de profundidad, actualice el estado de Blend para establecer el valor de [RenderTargetWriteMask](/windows/win32/api/d3d11_1/ns-d3d11_1-d3d11_render_target_blend_desc1) en cero para todos los destinos de representación de color.
 * Para modificar la apariencia de los hologramas ocluidos por las superficies del mundo real
-   * Normalmente, la geometría representada está oculta cuando es ocluidos. Esto se consigue configurando la función Depth en el estado de la [Galería de símbolos de profundidad](https://msdn.microsoft.com/library/windows/desktop/ff476110(v=vs.85).aspx) en "menor o igual que", lo que hace que la geometría sea visible solo cuando se **acerque** a la cámara que a todas las geometrías representadas previamente.
+   * Normalmente, la geometría representada está oculta cuando es ocluidos. Esto se consigue configurando la función Depth en el estado de la [Galería de símbolos de profundidad](/windows/win32/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc) en "menor o igual que", lo que hace que la geometría sea visible solo cuando se **acerque** a la cámara que a todas las geometrías representadas previamente.
    * Sin embargo, puede ser útil mantener visible cierta geometría incluso cuando se ocluidos y modificar su apariencia cuando ocluidos como forma de proporcionar comentarios visuales al usuario. Por ejemplo, esto permite que la aplicación muestre al usuario la ubicación de un objeto y lo deja claro que está detrás de una superficie del mundo real.
-   * Para lograr esto, represente la geometría una segunda vez con un sombreador diferente que cree la apariencia deseada de "ocluidos". Antes de representar la geometría por segunda vez, realice dos cambios en el [Estado de la galería de símbolos de profundidad](https://msdn.microsoft.com/library/windows/desktop/ff476110(v=vs.85).aspx). En primer lugar, establezca la función Depth en "mayor o igual que" para que la geometría solo sea visible cuando sea **más allá** de la cámara que todas las geometrías representadas previamente. En segundo lugar, establezca DepthWriteMask en cero, para que no se modifique el búfer de profundidad (el búfer de profundidad debe seguir representando la profundidad de la geometría **más cercana** a la cámara).
+   * Para lograr esto, represente la geometría una segunda vez con un sombreador diferente que cree la apariencia deseada de "ocluidos". Antes de representar la geometría por segunda vez, realice dos cambios en el [Estado de la galería de símbolos de profundidad](/windows/win32/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc). En primer lugar, establezca la función Depth en "mayor o igual que" para que la geometría solo sea visible cuando sea **más allá** de la cámara que todas las geometrías representadas previamente. En segundo lugar, establezca DepthWriteMask en cero, para que no se modifique el búfer de profundidad (el búfer de profundidad debe seguir representando la profundidad de la geometría **más cercana** a la cámara).
 
 El [rendimiento](../develop/platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md) es una preocupación importante a la hora de representar mallas de asignación espacial. A continuación se muestran algunas técnicas de rendimiento específicas para la representación de mallas de asignación espacial:
 * Ajustar la densidad del triángulo
@@ -227,11 +227,11 @@ El [rendimiento](../develop/platform-capabilities-and-apis/understanding-perform
    * Dado que la selección se realiza por malla y las superficies espaciales pueden ser grandes, dividir cada malla de superficie espacial en fragmentos más pequeños puede dar lugar a una selección más eficaz (en el caso de que se representen menos triángulos fuera de la vista). Sin embargo, hay una desventaja. cuanto más mallas tenga, más llamadas de dibujo debe realizar, lo que puede aumentar los costos de la CPU. En un caso extremo, los cálculos de selección de frustum en sí mismos podrían incluso tener un costo de CPU medible.
 * Ajustar el orden de representación
    * Las superficies espaciales tienden a ser grandes, ya que representan el entorno completo del usuario que las rodea. Los costos de procesamiento de píxeles en la GPU pueden ser altos, especialmente en los casos en los que hay más de una capa de geometría visible (incluidas las superficies espaciales y otros hologramas). En este caso, la capa más cercana al usuario estará occludingndo cualquier capa más allá, por lo que se desperdicia cualquier tiempo de GPU dedicado a representar esas capas más lejanas.
-   * Para reducir este trabajo redundante en la GPU, ayuda a representar las superficies opacas en orden ascendente (más cerca de las primeras, más alejadas en último lugar). Por ' opaco ', se refiere a las superficies para las que el DepthWriteMask se establece en uno en el estado de la [Galería de símbolos de profundidad](https://msdn.microsoft.com/library/windows/desktop/ff476110(v=vs.85).aspx). Cuando se representan las superficies más cercanas, se encontrarán en el búfer de profundidad, de modo que el procesador de píxeles de la GPU omita eficazmente las superficies más lejanas.
+   * Para reducir este trabajo redundante en la GPU, ayuda a representar las superficies opacas en orden ascendente (más cerca de las primeras, más alejadas en último lugar). Por ' opaco ', se refiere a las superficies para las que el DepthWriteMask se establece en uno en el estado de la [Galería de símbolos de profundidad](/windows/win32/api/d3d11/ns-d3d11-d3d11_depth_stencil_desc). Cuando se representan las superficies más cercanas, se encontrarán en el búfer de profundidad, de modo que el procesador de píxeles de la GPU omita eficazmente las superficies más lejanas.
 
 ## <a name="mesh-processing"></a>Procesamiento de mallas
 
-Una aplicación puede querer realizar [varias operaciones](spatial-mapping.md#mesh-processing) en mallas de superficie espacial para satisfacer sus necesidades. Los datos de índice y vértices que se proporcionan con cada malla de superficie espacial usan el mismo diseño conocido que los [búferes de vértices y de índices](https://msdn.microsoft.com/library/windows/desktop/bb147325%28v=vs.85%29.aspx) que se usan para representar mallas de triángulo en todas las API de representación modernas. Sin embargo, un hecho clave que hay que tener en cuenta es que los triángulos de la asignación espacial tienen un **orden de paso en sentido** ascendente. Cada triángulo se representa mediante tres índices de vértice en el búfer de índice de la malla y estos índices identifican los vértices del triángulo en el orden que se encuentra en el sentido de las **agujas del reloj** , cuando el triángulo se ve desde la parte **frontal** . El lado delantero (o exterior) de las mallas de superficie espacial se corresponde como cabría esperar en el lado frontal (visible) de las superficies reales.
+Una aplicación puede querer realizar [varias operaciones](spatial-mapping.md#mesh-processing) en mallas de superficie espacial para satisfacer sus necesidades. Los datos de índice y vértices que se proporcionan con cada malla de superficie espacial usan el mismo diseño conocido que los [búferes de vértices y de índices](/windows/win32/direct3d9/rendering-from-vertex-and-index-buffers) que se usan para representar mallas de triángulo en todas las API de representación modernas. Sin embargo, un hecho clave que hay que tener en cuenta es que los triángulos de la asignación espacial tienen un **orden de paso en sentido** ascendente. Cada triángulo se representa mediante tres índices de vértice en el búfer de índice de la malla y estos índices identifican los vértices del triángulo en el orden que se encuentra en el sentido de las **agujas del reloj** , cuando el triángulo se ve desde la parte **frontal** . El lado delantero (o exterior) de las mallas de superficie espacial se corresponde como cabría esperar en el lado frontal (visible) de las superficies reales.
 
 Las aplicaciones solo deben simplificar las mallas si la densidad triangular más gruesa proporcionada por el observador de superficie sigue siendo insuficiente. este trabajo es costoso en informática y ya lo realiza el tiempo de ejecución para generar los distintos niveles de detalle proporcionados.
 
@@ -292,7 +292,7 @@ Para ayudar a diseñar la experiencia de examen adecuada, tenga en cuenta cuál 
    * Una aplicación puede requerir un examen de todas las superficies de la habitación actual, incluidas las que están detrás del usuario.
    * Por ejemplo, un juego puede poner al usuario en el rol de Gulliver, en Siege desde cientos de pequeñas Lilliputianss que se aproximan desde todas las direcciones.
    * En tales casos, la aplicación necesitará determinar cuántas de las superficies de la habitación actual ya se han analizado y dirigir la mirada del usuario para rellenar los huecos significativos.
-   * La clave de este proceso es proporcionar comentarios visuales que lo hacen claro al usuario qué superficies todavía no se han analizado. Por ejemplo, la aplicación podría usar la [niebla basada en distancia](https://msdn.microsoft.com/library/windows/desktop/bb173401%28v=vs.85%29.aspx) para resaltar visualmente las regiones que no están incluidas en las superficies de asignación espacial.
+   * La clave de este proceso es proporcionar comentarios visuales que lo hacen claro al usuario qué superficies todavía no se han analizado. Por ejemplo, la aplicación podría usar la [niebla basada en distancia](/windows/win32/direct3d9/fog-formulas) para resaltar visualmente las regiones que no están incluidas en las superficies de asignación espacial.
 
 * **Tomar una instantánea inicial del entorno**
    * Una aplicación puede querer omitir todos los cambios en el entorno después de tomar una "instantánea" inicial.

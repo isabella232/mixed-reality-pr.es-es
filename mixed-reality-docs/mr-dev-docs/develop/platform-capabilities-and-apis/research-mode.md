@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 07/31/2020
 ms.topic: article
 keywords: Modo de investigación, CV, RS4, Computer Vision, investigación, HoloLens, HoloLens 2
-ms.openlocfilehash: 6c40ac814a5dacfdbb942aec8200f46157bea161
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: c8e626969f87eda8b686ba759a167a2bf48e3277
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530085"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583129"
 ---
 # <a name="hololens-research-mode"></a>Modo de investigación de HoloLens
 
@@ -44,7 +44,7 @@ Además, Microsoft no proporciona garantías de que el modo de investigación o 
 
 ## <a name="security-and-performance"></a>Seguridad y rendimiento
 
-Al habilitar el modo de investigación se usa más energía de la batería que el uso de HoloLens 2 en condiciones normales, aunque no se esté ejecutando la aplicación que usa las características del modo de investigación.  Habilitar este modo también puede reducir la seguridad general del dispositivo, ya que las aplicaciones pueden hacer uso indebido de los datos del sensor.  Puede encontrar más información sobre la seguridad de los dispositivos en las [preguntas más frecuentes sobre seguridad de HoloLens](https://docs.microsoft.com/hololens/hololens-faq-security).  
+Al habilitar el modo de investigación se usa más energía de la batería que el uso de HoloLens 2 en condiciones normales, aunque no se esté ejecutando la aplicación que usa las características del modo de investigación.  Habilitar este modo también puede reducir la seguridad general del dispositivo, ya que las aplicaciones pueden hacer uso indebido de los datos del sensor.  Puede encontrar más información sobre la seguridad de los dispositivos en las [preguntas más frecuentes sobre seguridad de HoloLens](/hololens/hololens-faq-security).  
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 <table>
@@ -54,8 +54,8 @@ Al habilitar el modo de investigación se usa más energía de la batería que e
     <col width="33%" /> </colgroup>
     <tr>
         <td><strong>Característica</strong></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens1-hardware"><strong>Primera generación de HoloLens</strong></a></td>
-        <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>Primera generación de HoloLens</strong></a></td>
+        <td><a href="/hololens/hololens2-hardware"><strong>HoloLens 2</strong></a></td>
     </tr>
      <tr>
         <td>Cámaras de seguimiento de cabezales</td>
@@ -92,7 +92,7 @@ El modo de investigación es una extensión del modo de programador. Antes de co
 * Seleccione **para desarrolladores** y habilite el **modo de desarrollador**.
 * Desplázate hacia abajo y habilita **Portal de dispositivos**.
 
-Una vez habilitadas las características de desarrollador, [Conéctese al portal de dispositivos](https://docs.microsoft.com/windows/uwp/debug-test-perf/device-portal-hololens) para habilitar las características del modo de investigación:
+Una vez habilitadas las características de desarrollador, [Conéctese al portal de dispositivos](/windows/uwp/debug-test-perf/device-portal-hololens) para habilitar las características del modo de investigación:
 
 * Vaya al **modo System > Research** en el **portal de dispositivos**.
 * Seleccione **permitir el acceso a la secuencia del sensor**.
@@ -104,15 +104,15 @@ Una vez que haya reiniciado el dispositivo, las aplicaciones que se cargan a tra
 *Ventana del modo de investigación en el portal de dispositivos de HoloLens*
 
 > [!IMPORTANT]
-> El modo de investigación de HoloLens 2 está disponible a partir de la compilación 19041,1356. Si necesita tener acceso en una compilación anterior, Regístrese en el programa de [versión preliminar de Insider](https://docs.microsoft.com/hololens/hololens-insider) .
+> El modo de investigación de HoloLens 2 está disponible a partir de la compilación 19041,1356. Si necesita tener acceso en una compilación anterior, Regístrese en el programa de [versión preliminar de Insider](/hololens/hololens-insider) .
 
 ### <a name="using-sensor-data-in-your-apps"></a>Uso de datos de sensor en las aplicaciones
 
-Las aplicaciones pueden tener acceso a los datos del flujo del sensor de la misma manera que [Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197) accede a las secuencias de la cámara de vídeo y de fotos. 
+Las aplicaciones pueden tener acceso a los datos del flujo del sensor de la misma manera que [Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk) accede a las secuencias de la cámara de vídeo y de fotos. 
 
 Todas las API que funcionan con el desarrollo de HoloLens también están disponibles en el modo de investigación. En concreto, la aplicación sabe exactamente dónde se encuentra HoloLens en el espacio 6DoF en cada tiempo de captura de fotogramas del sensor.
 
-Tenemos aplicaciones de ejemplo en las que se muestra el acceso a secuencias en modo de referencia, con los [intrínsecos y extrinsics](https://docs.microsoft.com/windows/mixed-reality/locatable-camera#locating-the-device-camera-in-the-world)y las secuencias de registro:
+Tenemos aplicaciones de ejemplo en las que se muestra el acceso a secuencias en modo de referencia, con los [intrínsecos y extrinsics](/windows/mixed-reality/locatable-camera#locating-the-device-camera-in-the-world)y las secuencias de registro:
 * [HoloLens (primera generación)](https://github.com/Microsoft/HoloLensForCV)
 * [HoloLens 2](https://github.com/microsoft/HoloLens2ForCV)
 
@@ -124,7 +124,7 @@ Para HoloLens 2, use el [seguimiento de problemas](https://github.com/microsoft/
 
 ## <a name="see-also"></a>Consulte también
 
-* [Microsoft Media Foundation](https://msdn.microsoft.com/library/windows/desktop/ms694197)
+* [Microsoft Media Foundation](/windows/win32/medfound/microsoft-media-foundation-sdk)
 * [Repositorio de GitHub de HoloLensForCV](https://github.com/Microsoft/HoloLensForCV)
 * [Repositorio de GitHub de HoloLens2ForCV](https://github.com/microsoft/HoloLens2ForCV)
 * [Uso del Portal de dispositivos Windows](using-the-windows-device-portal.md)

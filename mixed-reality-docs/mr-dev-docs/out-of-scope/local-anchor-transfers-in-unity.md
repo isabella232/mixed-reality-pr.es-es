@@ -6,19 +6,19 @@ ms.author: jacksonf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Uso compartido, delimitador, WorldAnchor, MR Sharing 250, WorldAnchorTransferBatch, SpatialPerception, transferencia, transferencia de delimitador local, exportación de delimitadores, importación de delimitadores
-ms.openlocfilehash: 1048e6a3cfc41a04cd49e201e5d1841e805a4193
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 4949dd49817d723729974fb5666d5defb64b72ba
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009645"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583871"
 ---
 # <a name="local-anchor-transfers-in-unity"></a>Transferencias de delimitadores locales en Unity
 
-En situaciones en las que no se pueden usar <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">delimitadores espaciales de Azure</a>, las transferencias de delimitadores locales permiten que un dispositivo hololens exporte un delimitador para que lo importe un segundo dispositivo hololens.
+En situaciones en las que no se pueden usar <a href="/azure/spatial-anchors" target="_blank">delimitadores espaciales de Azure</a>, las transferencias de delimitadores locales permiten que un dispositivo hololens exporte un delimitador para que lo importe un segundo dispositivo hololens.
 
 >[!NOTE]
->Las transferencias de delimitadores locales proporcionan una recuperación de delimitador menos sólida que los delimitadores <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">espaciales de Azure</a>y los dispositivos iOS y Android no se admiten en este enfoque.
+>Las transferencias de delimitadores locales proporcionan una recuperación de delimitador menos sólida que los delimitadores <a href="/azure/spatial-anchors" target="_blank">espaciales de Azure</a>y los dispositivos iOS y Android no se admiten en este enfoque.
 
 ### <a name="setting-the-spatialperception-capability"></a>Establecimiento de la funcionalidad SpatialPerception
 
@@ -138,4 +138,3 @@ private void OnImportComplete(SerializationCompletionReason completionReason, Wo
 ```
 
 Después de que un *GameObject* se bloquee a través de la llamada de *LockObject* , tendrá un *WorldAnchor* que lo mantendrá en la misma posición física del mundo, pero puede estar en una ubicación diferente en el espacio de coordenadas de Unity que otros usuarios.
-

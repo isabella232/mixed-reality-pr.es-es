@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, funciones, almacenamiento, hololens, inmersivo, VR, Windows 10, Visual Studio
-ms.openlocfilehash: bc609e5a4a1c4252f498ada4dba2206140635667
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 5c9784446923b3eae7a600b8e672574ce6465038
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679494"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583423"
 ---
 # <a name="mr-and-azure-305-functions-and-storage"></a>Realidad mixta y Azure (305): Funciones y almacenamiento
 
@@ -26,9 +26,9 @@ ms.locfileid: "94679494"
 
 En este curso, aprenderá a crear y usar Azure Functions y almacenar datos con un recurso Azure Storage, dentro de una aplicación de realidad mixta.
 
-*Azure Functions* es un servicio de Microsoft, que permite a los desarrolladores ejecutar pequeños fragmentos de código, "funciones", en Azure. Esto proporciona una manera de delegar el trabajo en la nube, en lugar de la aplicación local, que puede tener muchas ventajas. *Azure Functions* admite varios lenguajes de desarrollo, incluidos C \# , F \# , Node.js, Java y php. Para obtener más información, visite el [artículo Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview).
+*Azure Functions* es un servicio de Microsoft, que permite a los desarrolladores ejecutar pequeños fragmentos de código, "funciones", en Azure. Esto proporciona una manera de delegar el trabajo en la nube, en lugar de la aplicación local, que puede tener muchas ventajas. *Azure Functions* admite varios lenguajes de desarrollo, incluidos C \# , F \# , Node.js, Java y php. Para obtener más información, visite el [artículo Azure Functions](/azure/azure-functions/functions-overview).
 
-*Azure Storage* es un servicio en la nube de Microsoft, que permite a los desarrolladores almacenar datos, con el seguro de que estará altamente disponible, seguro, duradero, escalable y redundante. Esto significa que Microsoft administrará todo el mantenimiento y los problemas críticos. Para obtener más información, visite el [artículo Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-introduction).
+*Azure Storage* es un servicio en la nube de Microsoft, que permite a los desarrolladores almacenar datos, con el seguro de que estará altamente disponible, seguro, duradero, escalable y redundante. Esto significa que Microsoft administrará todo el mantenimiento y los problemas críticos. Para obtener más información, visite el [artículo Azure Storage](/azure/storage/common/storage-introduction).
 
 Una vez finalizado este curso, tendrá una aplicación de auriculares con un casco de realidad mixta que podrá hacer lo siguiente:
 
@@ -44,7 +44,7 @@ En su aplicación, depende del modo en que va a integrar los resultados con el d
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td>Realidad mixta y Azure (305): Funciones y almacenamiento</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -53,7 +53,7 @@ En su aplicación, depende del modo en que va a integrar los resultados con el d
 > [!NOTE]
 > Aunque este curso se centra principalmente en los auriculares de Windows Mixed Reality inmersivo (VR), también puede aplicar lo que aprenda en este curso a Microsoft HoloLens. A medida que siga con el curso, verá notas sobre cualquier cambio que deba usar para admitir HoloLens.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 > [!NOTE]
 > Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#. Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de mayo). Puede usar el software más reciente, como se indica en el artículo [instalar las herramientas](../../install-the-tools.md) , aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se indica a continuación.
@@ -65,11 +65,11 @@ Se recomienda el siguiente hardware y software para este curso:
 - [El SDK de Windows 10 más reciente](../../install-the-tools.md#installation-checklist)
 - [Unity 2017,4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](../../../hololens-hardware-details.md) con el modo de desarrollador habilitado
+- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](/hololens/hololens1-hardware) con el modo de desarrollador habilitado
 - Una suscripción a una cuenta de Azure para crear recursos de Azure
 - Acceso a Internet para la configuración de Azure y la recuperación de datos
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).
 
@@ -113,7 +113,7 @@ Para usar el **servicio Azure Storage**, debe crear y configurar una **cuenta de
 
     9. Elija un *grupo de recursos* o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común). 
 
-        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](/azure/azure-resource-manager/resource-group-portal).
 
     10. También deberá confirmar que ha comprendido los términos y condiciones que se aplican a este servicio.
 
@@ -166,7 +166,7 @@ Para crear una función de Azure:
 
     3. Elija un *grupo de recursos* o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común). 
 
-        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](/azure/azure-resource-manager/resource-group-portal).
 
     4.  Para este ejercicio, seleccione *Windows* como el **sistema operativo** elegido.
 
@@ -256,11 +256,11 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
     ![establecer Visual Studio como editor de scripts](images/AzureLabs-Lab5-19.png)
 
-4.  A continuación, vaya **File** a  >  **configuración de compilación** de archivos y cambie la plataforma a **plataforma universal de Windows**, haciendo clic en el botón **cambiar plataforma** .
+4.  A continuación, vaya a  >  **configuración de compilación** de archivos y cambie la plataforma a **plataforma universal de Windows**, haciendo clic en el botón **cambiar plataforma** .
 
     ![cambiar la plataforma a UWP](images/AzureLabs-Lab5-20.png)
 
-5.  Vaya a **File**  >  **configuración de compilación** de archivos y asegúrese de que:
+5.  Vaya a   >  **configuración de compilación** de archivos y asegúrese de que:
 
     1. El **dispositivo de destino** se establece en **cualquier dispositivo**.
 
@@ -463,15 +463,15 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
 ## <a name="chapter-6---import-azure-storage-for-unity"></a>Capítulo 6: importar Azure Storage para Unity
 
-Usará Azure Storage para Unity (que a su vez usa el SDK de .net para Azure). Puede leer más sobre esto en el [artículo Azure Storage para Unity](https://docs.microsoft.com/sandbox/gamedev/unity/azure-storage-unity).
+Usará Azure Storage para Unity (que a su vez usa el SDK de .net para Azure). Puede leer más sobre esto en el [artículo Azure Storage para Unity](/sandbox/gamedev/unity/azure-storage-unity).
 
 Actualmente hay un problema conocido en Unity que requiere que los complementos se vuelvan a configurar después de la importación. Estos pasos (4-7 en esta sección) ya no serán necesarios una vez resuelto el error.
 
 Para importar el SDK en su propio proyecto, asegúrese de que ha descargado el [". unitypackage Tools" más reciente de github](https://aka.ms/azstorage-unitysdk). A continuación, haga lo siguiente:
 
-1.  Agregue el archivo **. unitypackage Tools** a Unity mediante la opción de menú de **Assets**  >  **Import Package**  >  **paquete personalizado** de importación de recursos.
+1.  Agregue el archivo **. unitypackage Tools** a Unity mediante la opción de menú de   >    >  **paquete personalizado** de importación de recursos.
 
-2.  En el cuadro **importar paquete Unity** que aparece, puede seleccionar todo en almacenamiento de **Complementos**  >  **Storage**. Desactive todo lo demás, ya que no es necesario para este curso.
+2.  En el cuadro **importar paquete Unity** que aparece, puede seleccionar todo en almacenamiento de **Complementos**  >  . Desactive todo lo demás, ya que no es necesario para este curso.
 
     ![importar a paquete](images/AzureLabs-Lab5-45.png)
 
@@ -1220,7 +1220,7 @@ Para implementar la aplicación:
 3.  En la **configuración de soluciones** , seleccione **depurar**.
 
     > En el caso de Microsoft HoloLens, es posible que le resulte más fácil establecer esto en el *equipo remoto*, de modo que no esté anclado al equipo. Sin embargo, también tendrá que hacer lo siguiente:
-    > - Conozca la **dirección IP** de HoloLens, que se encuentra en la red de **configuración**  >  **&**  >  Opciones avanzadas de **Wi-Fi** de Internet  >  **Advanced Options**; la IPv4 es la dirección que debe usar. 
+    > - Conozca la **dirección IP** de HoloLens, que se encuentra en la red de **configuración**  >  **&**  >  Opciones avanzadas de **Wi-Fi** de Internet  >  ; la IPv4 es la dirección que debe usar. 
     > - Asegurarse de que el **modo de desarrollador** está **activado**; se encuentra en **configuración**  >  **Actualizar & seguridad**  >  **para los desarrolladores**.
 
     ![implementar solución](images/AzureLabs-Lab5-55.png)
@@ -1243,4 +1243,4 @@ Cree un segundo punto de generación y grabe el punto de generación a partir de
 
 ### <a name="exercise-2"></a>Ejercicio 2
 
-Cree una manera de reiniciar la aplicación, en lugar de tener que volver a abrirla cada vez. La **carga de escenas** es un buen punto de partida. Después de hacerlo, cree una manera de borrar la lista almacenada en *Azure Storage*, para que se pueda restablecer fácilmente desde la aplicación. 
+Cree una manera de reiniciar la aplicación, en lugar de tener que volver a abrirla cada vez. La **carga de escenas** es un buen punto de partida. Después de hacerlo, cree una manera de borrar la lista almacenada en *Azure Storage*, para que se pueda restablecer fácilmente desde la aplicación.

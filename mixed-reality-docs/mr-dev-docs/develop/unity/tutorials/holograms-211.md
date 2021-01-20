@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, tutorial, gesto, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: 9f83e2f3b02cf8d83b2fb58a3a0d05dc8576b0e8
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: dfb31901001f760abd60bda3022902267b7c05cf
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94678295"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583699"
 ---
 # <a name="mr-input-211-gesture"></a>Entrada de realidad mixta (211): Gesto
 
 >[!NOTE]
->Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](../../../mr-learning-base-01.md) para HoloLens 2.
+>Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](./mr-learning-base-01.md) para HoloLens 2.
 
 Los [gestos](../../../design/gaze-and-commit.md#composite-gestures) convierten la intención del usuario en acción. Con los gestos, los usuarios pueden interactuar con los hologramas. En este curso, aprenderá a realizar un seguimiento de las manos del usuario, a responder a la entrada del usuario y a enviar comentarios al usuario en función del estado y la ubicación de la mano.
 
@@ -38,7 +38,7 @@ En este curso, volveremos a visitar el explorador de **modelos** de proyectos de
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td>Entrada de realidad mixta (211): Gesto</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -46,7 +46,7 @@ En este curso, volveremos a visitar el explorador de **modelos** de proyectos de
 
 ## <a name="before-you-start"></a>Antes de empezar
 
-### <a name="prerequisites"></a>Prerrequisitos
+### <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](../../../develop/install-the-tools.md).
 * Funcionalidad básica de programación de C#.
@@ -68,7 +68,7 @@ En este curso, volveremos a visitar el explorador de **modelos** de proyectos de
 
 ## <a name="chapter-0---unity-setup"></a>Capítulo 0: configuración de Unity
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 1. Inicie Unity.
 2. seleccione **Open**(Abrir).
@@ -124,7 +124,7 @@ Si se implementa en un auricular envolvente:
 >[!NOTE]
 >En HoloLens 2, las manos detectadas se activan siempre que las manos están visibles (no solo cuando se señala un dedo).
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 * En el panel **jerarquía** , expanda el objeto **InputManager** .
 * Busque y seleccione el objeto **GesturesInput** .
@@ -170,7 +170,7 @@ Los **datos de estado del cursor** funcionan de la siguiente manera:
 
 * Use los eventos de gestos de navegación para rotar el Astronaut.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 Para usar los gestos de navegación en nuestra aplicación, vamos a editar **GestureAction.CS** para girar objetos cuando se produce el gesto de navegación. Además, agregaremos comentarios al cursor para que se muestren cuando la navegación esté disponible.
 
@@ -314,7 +314,7 @@ Observará que los demás eventos de navegación ya se han rellenado con cierta 
 * Use la puntuación de la **Guía de mano** para ayudar a predecir cuándo se perderá el seguimiento de manos.
 * Proporcione **comentarios sobre el cursor** para mostrar Cuándo el usuario está cerca del borde de la cámara de la vista.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 1. En el panel **jerarquía** , seleccione el objeto **CursorWithFeedback** .
 2. En el panel **Inspector** , haga clic en el botón **Agregar componente** .
@@ -339,7 +339,7 @@ Observará que los demás eventos de navegación ya se han rellenado con cierta 
 * Use los eventos de manipulación para trasladar el Astronaut con las manos.
 * Proporcione comentarios sobre el cursor para que el usuario sepa cuándo se puede usar la manipulación.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 GestureManager.cs y AstronautManager.cs nos permiten hacer lo siguiente:
 
@@ -506,7 +506,7 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 * Expanda el modelo Astronaut en varias partes más pequeñas con las que el usuario pueda interactuar.
 * Mueva cada pieza individualmente mediante gestos de navegación y manipulación.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 En esta sección, se realizarán las siguientes tareas:
 
@@ -543,7 +543,7 @@ Haremos esto agregando dos palabras clave más al origen de entrada de voz del c
 
 ## <a name="the-end"></a>Fin
 
-¡Enhorabuena! Ahora ha completado la **entrada MR 211: gesto**.
+Felicidades. Ahora ha completado la **entrada MR 211: gesto**.
 
 * Sabe cómo detectar y responder a los eventos de seguimiento, navegación y manipulación.
 * Comprende la diferencia entre los gestos de navegación y manipulación.

@@ -6,16 +6,16 @@ ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: cámara, hololens, cámara de color, frontal cara, hololens 2, CV, Computer Vision, fiducial, Marks, código QR, QR, Foto, vídeo
-ms.openlocfilehash: 9261465f362e6aa0e97d9f6b1f61af305c178079
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: bc478aa658b26eb3a4efb16c62d0874b12992e78
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530382"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583620"
 ---
 # <a name="locatable-camera"></a>Cámara localizable
 
-HoloLens incluye una cámara mundial montada en la parte frontal del dispositivo, lo que permite a las aplicaciones ver lo que ve el usuario. Los desarrolladores tienen acceso y control de la cámara, tal como lo harían las cámaras de color en smartphones, portátiles o equipos de escritorio. La misma captura universal de Windows [media](https://msdn.microsoft.com/library/windows/apps/windows.media.capture.mediacapture.aspx) y las API de Windows Media Foundation que funcionan en Mobile y Desktop funcionan en HoloLens. Unity [ajustó estas API de Windows](../unity/locatable-camera-in-unity.md) para abstraer las características de uso de la cámara en HoloLens. Entre las tareas de características se incluyen realizar fotos y vídeos regulares (con o sin hologramas) y buscar la posición de la cámara en la escena y en la perspectiva.
+HoloLens incluye una cámara mundial montada en la parte frontal del dispositivo, lo que permite a las aplicaciones ver lo que ve el usuario. Los desarrolladores tienen acceso y control de la cámara, tal como lo harían las cámaras de color en smartphones, portátiles o equipos de escritorio. La misma captura universal de Windows [media](/uwp/api/Windows.Media.Capture.MediaCapture) y las API de Windows Media Foundation que funcionan en Mobile y Desktop funcionan en HoloLens. Unity [ajustó estas API de Windows](../unity/locatable-camera-in-unity.md) para abstraer las características de uso de la cámara en HoloLens. Entre las tareas de características se incluyen realizar fotos y vídeos regulares (con o sin hologramas) y buscar la posición de la cámara en la escena y en la perspectiva.
 
 ## <a name="device-camera-information"></a>Información de cámara de dispositivo
 
@@ -25,10 +25,10 @@ HoloLens incluye una cámara mundial montada en la parte frontal del dispositivo
 * El LED de privacidad en blanco para el mundo se iluminará siempre que la cámara esté activa
 * La cámara admite los siguientes modos (todos los modos tienen una relación de aspecto de 16:9) a 30, 24, 20, 15 y 5 FPS:
 
-  |  Vídeos  |  Versión preliminar  |  ¿  |  Campo horizontal de la vista (H-Field) |  Uso sugerido | 
+  |  Vídeo  |  Versión preliminar  |  ¿  |  Campo horizontal de la vista (H-Field) |  Uso sugerido | 
   |----------|----------|----------|----------|----------|
   |  1280x720 |  1280x720 |  1280x720 |  45 Grad  |  (modo predeterminado con estabilización de vídeo) | 
-  |  N/A |  N/A |  2048x1152 |  67 Grad |  Imagen fija de mayor resolución | 
+  |  N/D |  N/D |  2048x1152 |  67 Grad |  Imagen fija de mayor resolución | 
   |  1408x792 |  1408x792 |  1408x792 |  48 Grad |  Resolución de sobrebarrido (relleno) antes de la estabilización de vídeo | 
   |  1344x756 |  1344x756 |  1344x756 |  67 Grad |  Modo de vídeo de hiperjuego grande con sobrebarrido | 
   |  896x504 |  896x504 |  896x504 |  48 Grad |  Modo de baja energía/baja resolución para las tareas de procesamiento de imágenes | 
@@ -37,10 +37,10 @@ HoloLens incluye una cámara mundial montada en la parte frontal del dispositivo
 
 * Centrar automáticamente la cámara de foto/vídeo (PV) con el equilibrio de blancos automático, la exposición automática y la canalización de procesamiento de imágenes completa.
 * El LED de privacidad en blanco orientado al mundo se iluminará cada vez que la cámara esté activa.
-* HoloLens 2 admite distintos perfiles de cámara. Obtenga información acerca de cómo [detectar y seleccionar funcionalidades de la cámara](https://docs.microsoft.com//windows/uwp/audio-video-camera/camera-profiles).
+* HoloLens 2 admite distintos perfiles de cámara. Obtenga información acerca de cómo [detectar y seleccionar funcionalidades de la cámara](//windows/uwp/audio-video-camera/camera-profiles).
 * La cámara admite los siguientes perfiles y resoluciones (todos los modos de vídeo tienen una relación de aspecto de 16:9):
   
-  | Perfil                                         | Vídeos     | Versión preliminar   | ¿     | Velocidades de fotogramas | Campo horizontal de la vista (H-Field) | Uso sugerido                             |
+  | Perfil                                         | Vídeo     | Versión preliminar   | ¿     | Velocidades de fotogramas | Campo horizontal de la vista (H-Field) | Uso sugerido                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Legacy, 0 BalancedVideoAndPhoto, 100             | 2272x1278 | 2272x1278 |           | 15,30       | 64,69                            | Grabación de vídeo de alta calidad                |
   | Legacy, 0 BalancedVideoAndPhoto, 100             | 896x504   | 896x504   |           | 15,30       | 64,69                            | Flujo de vista previa para la captura de fotografías de alta calidad |
@@ -59,7 +59,7 @@ HoloLens incluye una cámara mundial montada en la parte frontal del dispositivo
   | Videoconferencia, 100 BalancedVideoAndPhoto, 120 | 424x240   |           |           | 15, 30       | 64,69                            | Videoconferencia, escenarios de larga duración |
 
 > [!NOTE]
-> Los clientes pueden aprovechar la [captura de realidad mixta](../../mixed-reality-capture.md) para tomar vídeos o fotos de la aplicación, que incluyen hologramas y estabilización de vídeo.
+> Los clientes pueden aprovechar la [captura de realidad mixta](/hololens/holographic-photos-and-videos) para tomar vídeos o fotos de la aplicación, que incluyen hologramas y estabilización de vídeo.
 >
 >Como desarrollador, existen consideraciones que debe tener en cuenta a la hora de crear la aplicación si quiere que se vea lo mejor posible cuando un cliente captura contenido. También puede habilitar (y personalizar) la captura de realidad mixta desde directamente dentro de la aplicación. Obtenga más información en [captura de realidad mixta para desarrolladores](mixed-reality-capture-for-developers.md).
 
@@ -75,20 +75,20 @@ Para ir de "CameraIntrinsics" y "CameraCoordinateSystem" al sistema de coordenad
 
 ### <a name="using-mediaframereference"></a>Usar MediaFrameReference
 
-Estas instrucciones se aplican si you'r usa la clase [MediaFrameReference](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference) para leer fotogramas de imagen de la cámara.
+Estas instrucciones se aplican si you'r usa la clase [MediaFrameReference](//uwp/api/windows.media.capture.frames.mediaframereference) para leer fotogramas de imagen de la cámara.
 
-Cada fotograma de imagen (ya sea fotográfico o vídeo) incluye una [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) raíz en la cámara en el momento de la captura, a la que se puede acceder mediante la propiedad [coordenadas](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) de su [MediaFrameReference](https://docs.microsoft.com//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference). Cada fotograma contiene una descripción del modelo de lente de la cámara, que puede encontrarse en la propiedad [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) . Juntas, estas transformaciones definen para cada píxel un rayo en un espacio 3D que representa la ruta de acceso tomada por las fotografías que han producido el píxel. Estos rayos pueden estar relacionados con otro contenido de la aplicación mediante la obtención de la transformación del sistema de coordenadas del marco a algún otro sistema de coordenadas (por ejemplo, desde un [marco estacionario de referencia](../../design/coordinate-systems.md#stationary-frame-of-reference)). 
+Cada fotograma de imagen (ya sea fotográfico o vídeo) incluye una [SpatialCoordinateSystem](//uwp/api/windows.perception.spatial.spatialcoordinatesystem) raíz en la cámara en el momento de la captura, a la que se puede acceder mediante la propiedad [coordenadas](//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) de su [MediaFrameReference](//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference). Cada fotograma contiene una descripción del modelo de lente de la cámara, que puede encontrarse en la propiedad [CameraIntrinsics](//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) . Juntas, estas transformaciones definen para cada píxel un rayo en un espacio 3D que representa la ruta de acceso tomada por las fotografías que han producido el píxel. Estos rayos pueden estar relacionados con otro contenido de la aplicación mediante la obtención de la transformación del sistema de coordenadas del marco a algún otro sistema de coordenadas (por ejemplo, desde un [marco estacionario de referencia](../../design/coordinate-systems.md#stationary-frame-of-reference)). 
 
 Cada fotograma de imagen proporciona lo siguiente:
 * Datos de píxeles (en formato RGB/NV12/JPEG/etc.)
-* Un [SpatialCoordinateSystem](https://docs.microsoft.com//uwp/api/windows.perception.spatial.spatialcoordinatesystem) de la ubicación de la captura
-* Una clase [CameraIntrinsics](https://docs.microsoft.com//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) que contiene el modo de lente de la cámara
+* Un [SpatialCoordinateSystem](//uwp/api/windows.perception.spatial.spatialcoordinatesystem) de la ubicación de la captura
+* Una clase [CameraIntrinsics](//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) que contiene el modo de lente de la cámara
 
 En el [ejemplo HolographicFaceTracking](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) se muestra la forma bastante sencilla de consultar la transformación entre el sistema de coordenadas de la cámara y sus propios sistemas de coordenadas de aplicación.
 
 ### <a name="using-media-foundation"></a>Usar Media Foundation
 
-Si usa Media Foundation directamente para leer fotogramas de imagen de la cámara, puede usar el [atributo MFSampleExtension_CameraExtrinsics](https://docs.microsoft.com/windows/win32/medfound/mfsampleextension-cameraextrinsics) de cada fotograma y el [atributo MFSampleExtension_PinholeCameraIntrinsics](https://docs.microsoft.com/windows/win32/medfound/mfsampleextension-pinholecameraintrinsics) para buscar fotogramas de cámara relativos a los demás sistemas de coordenadas de la aplicación, tal como se muestra en este código de ejemplo:
+Si usa Media Foundation directamente para leer fotogramas de imagen de la cámara, puede usar el [atributo MFSampleExtension_CameraExtrinsics](/windows/win32/medfound/mfsampleextension-cameraextrinsics) de cada fotograma y el [atributo MFSampleExtension_PinholeCameraIntrinsics](/windows/win32/medfound/mfsampleextension-pinholecameraintrinsics) para buscar fotogramas de cámara relativos a los demás sistemas de coordenadas de la aplicación, tal como se muestra en este código de ejemplo:
 
 ```cpp
 #include <winrt/windows.perception.spatial.preview.h>
@@ -259,7 +259,7 @@ Ejemplos:
 ## <a name="see-also"></a>Consulte también
 * [Ejemplo de cámara localizable](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)
 * [Cámara localizable en Unity](../unity/locatable-camera-in-unity.md)
-* [Captura de realidad mixta](../../mixed-reality-capture.md)
+* [Captura de realidad mixta](/hololens/holographic-photos-and-videos)
 * [Captura de realidad mixta para desarrolladores](mixed-reality-capture-for-developers.md)
-* [Introducción a la captura multimedia](https://msdn.microsoft.com/library/windows/apps/mt243896.aspx)
+* [Introducción a la captura multimedia](/windows/uwp/audio-video-camera/)
 * [Ejemplo de seguimiento de caras holográficas](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking)

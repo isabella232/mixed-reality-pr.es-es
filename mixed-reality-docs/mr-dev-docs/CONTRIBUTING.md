@@ -5,12 +5,12 @@ author: mattwojo
 ms.author: mattwoj
 ms.date: 01/11/2021
 ms.topic: article
-ms.openlocfilehash: 8add6413b0ff4bb32c15d1fce10977397aa33ba1
-ms.sourcegitcommit: aa29b68603721e909f08f352feed24c65d2e505e
+ms.openlocfilehash: f60179c35f6103c4771ea2777e05829bfb7a8ce4
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
-ms.locfileid: "98108858"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583045"
 ---
 # <a name="contributing-to-mixed-reality-developer-documentation"></a>Contribución a la documentación para desarrolladores de realidad mixta
 
@@ -22,13 +22,13 @@ En esta página se describen los pasos básicos y las directrices para contribui
 
 ## <a name="available-repos"></a>Repositorios disponibles
 
-| Nombre del repositorio | URL |
+| Nombre del repositorio | Dirección URL |
 | --- | --- |
-| Mixed Reality | [MicrosoftDocs/Mixed-Reality](https://docs.microsoft.com/windows/mixed-reality) |
+| Mixed Reality | [MicrosoftDocs/Mixed-Reality](/windows/mixed-reality) |
 | Guía de entusiastas de la VR | [MicrosoftDocs/Mixed-Reality/entusiasta-Guide](https://github.com/MicrosoftDocs/mixed-reality/tree/docs/enthusiast-guide) |
 | HoloLens | [MicrosoftDocs/HoloLens](https://github.com/MicrosoftDocs/Hololens) |
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 Si aún no tiene una, deberá [crear una cuenta de github](https://github.com/join).
 
@@ -84,7 +84,7 @@ Para agregar una redirección a .openpublishing.redirection.js, agregue una entr
 
 - `source_path`Es la ruta de acceso relativa del repositorio al artículo anterior que se va a quitar. Asegúrese de que la ruta de acceso comienza con `mixed-reality-docs` y termina con `.md` .
 - `redirect_url`Es la dirección URL pública relativa del artículo anterior al nuevo artículo. Asegúrese de que esta dirección URL **no** contiene `mixed-reality-docs` o `.md` , ya que hace referencia a la dirección URL pública y no a la ruta de acceso del repositorio. Se permite la vinculación a una sección del nuevo artículo con `#section` . También puede usar una ruta de acceso absoluta a otro sitio, si es necesario.
-- `redirect_document_id` indica si desea conservar el identificador de documento del archivo anterior. De manera predeterminada, es `false`. Use `true` si desea conservar el `ms.documentid` valor de atributo del artículo redirigido. Si conserva el identificador de documento, los datos, como las vistas de página y las clasificaciones, se transferirán al artículo de destino. Haga esto si el redireccionamiento es principalmente un cambio de nombre y no un puntero a un artículo diferente que solo trata parte del mismo contenido.
+- `redirect_document_id` indica si desea conservar el identificador de documento del archivo anterior. El valor predeterminado es `false`. Use `true` si desea conservar el `ms.documentid` valor de atributo del artículo redirigido. Si conserva el identificador de documento, los datos, como las vistas de página y las clasificaciones, se transferirán al artículo de destino. Haga esto si el redireccionamiento es principalmente un cambio de nombre y no un puntero a un artículo diferente que solo trata parte del mismo contenido.
 
 Si agrega un redireccionamiento, asegúrese de eliminar también el archivo antiguo.
 
@@ -131,13 +131,13 @@ Los siguientes recursos le ayudarán a aprender a editar la documentación con e
 
 - [Markdown basics](https://help.github.com/articles/basic-writing-and-formatting-syntax/) (Conceptos básicos de Markdown)
 - [Póster de referencia de Markdown a un vistazo](images/MarkdownPoster.pdf)
-- [Recursos adicionales para escribir Markdown para docs.microsoft.com](https://docs.microsoft.com/contribute/how-to-write-use-markdown)
+- [Recursos adicionales para escribir Markdown para docs.microsoft.com](/contribute/how-to-write-use-markdown)
 
 ### <a name="adding-tables"></a>Agregar tablas
 
 Debido a la forma en que docs.microsoft.com las tablas de estilos, no tendrán bordes ni estilos personalizados, aunque pruebe CSS en línea. Parecerá que funciona durante un breve período de tiempo, pero finalmente la plataforma eliminará el estilo de la tabla. Por tanto, planee con facilidad y mantenga las tablas sencillas. [Este es un sitio que facilita las tablas de Markdown](https://www.tablesgenerator.com/markdown_tables).
 
-La [extensión docs Markdown para Visual Studio Code](https://docs.microsoft.com/teamblog/docs-extension) también facilita la generación de tablas si usa [Visual Studio Code (consulte a continuación)](#using-visual-studio-code) para editar la documentación.
+La [extensión docs Markdown para Visual Studio Code](/teamblog/docs-extension) también facilita la generación de tablas si usa [Visual Studio Code (consulte a continuación)](#using-visual-studio-code) para editar la documentación.
 
 ### <a name="adding-images"></a>Agregar imágenes
 

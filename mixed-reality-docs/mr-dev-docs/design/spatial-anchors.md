@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: sistema de coordenadas, sistema de coordenadas espaciales, escala mundial, mundo, escala, posición, orientación, delimitador, anclaje espacial, bloqueo mundial, bloqueo mundial, persistencia, uso compartido, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens
-ms.openlocfilehash: 2db88f9bc5d128f4a9eb42cfb5211d0597b43cfa
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b11dc8cada8b67a21795dd9838579fc5dd735e6d
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009115"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583262"
 ---
 # <a name="spatial-anchors"></a>Delimitadores espaciales
 
@@ -19,8 +19,8 @@ Un delimitador espacial representa un punto importante del mundo en el que el si
 
 También puede conservar y compartir los delimitadores espaciales en las sesiones de aplicación y en los dispositivos:
 * Al guardar los delimitadores espaciales locales en el disco y volver a cargarlos más tarde, la aplicación puede calcular la misma ubicación en el mundo real en varias sesiones de aplicación en una sola HoloLens.
-* Mediante el uso de <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a> para crear un delimitador de nube, la aplicación puede compartir un anclaje espacial en varios dispositivos de HoloLens, iOS y Android. Cuando cada dispositivo representa un holograma mediante el mismo delimitador espacial, los usuarios verán que el holograma aparece en el mismo lugar del mundo real. Esto permite compartir experiencias en tiempo real.
-* También puede usar <a href="https://docs.microsoft.com/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a> para la persistencia asincrónica de hologramas en dispositivos de HoloLens, iOS y Android. Al compartir un delimitador espacial en la nube duradero, varios dispositivos pueden observar el mismo holograma persistente con el tiempo, incluso si esos dispositivos no están presentes juntos al mismo tiempo.
+* Mediante el uso de <a href="/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a> para crear un delimitador de nube, la aplicación puede compartir un anclaje espacial en varios dispositivos de HoloLens, iOS y Android. Cuando cada dispositivo representa un holograma mediante el mismo delimitador espacial, los usuarios verán que el holograma aparece en el mismo lugar del mundo real. Esto permite compartir experiencias en tiempo real.
+* También puede usar <a href="/azure/spatial-anchors/overview" target="_blank">delimitadores espaciales de Azure</a> para la persistencia asincrónica de hologramas en dispositivos de HoloLens, iOS y Android. Al compartir un delimitador espacial en la nube duradero, varios dispositivos pueden observar el mismo holograma persistente con el tiempo, incluso si esos dispositivos no están presentes juntos al mismo tiempo.
 
 En el caso de las experiencias de escalado permanente o de escala de sala para auriculares de escritorio anclados que permanecerán dentro de un diámetro de 5 metros, normalmente puede usar el [marco de fase de referencia](coordinate-systems.md#stage-frame-of-reference) en lugar de los delimitadores espaciales, lo que proporciona un sistema de coordenadas único en el que se va a representar todo el contenido. Sin embargo, si la aplicación permite a los usuarios ir más allá de 5 metros en HoloLens, quizás funcionando en todo el piso de un edificio, necesitará anclajes espaciales para mantener el contenido estable.
 
@@ -75,7 +75,7 @@ Para los delimitadores espaciales en la nube, el almacenamiento puede escalar se
 
 * [Sistemas de coordenadas](coordinate-systems.md)
 * [Experiencias compartidas en realidad mixta](../develop/platform-capabilities-and-apis/shared-experiences-in-mixed-reality.md)
-* <a href="https://docs.microsoft.com/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
+* <a href="/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
 * [Persistencia en Unity](../develop/unity/persistence-in-unity.md)
 * [Delimitadores espaciales en DirectX](../develop/native/coordinate-systems-in-directx.md#place-holograms-in-the-world-using-spatial-anchors)
 * [Case study - Looking through holes in your reality](../out-of-scope/case-study-looking-through-holes-in-your-reality.md) (Caso práctico: mirar por un agujero en tu realidad)

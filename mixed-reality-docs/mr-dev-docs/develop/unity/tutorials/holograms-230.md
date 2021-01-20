@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academia, tutorial, asignación espacial, reconstrucción superficial, malla, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: dc96fbff43c21216e3b860f1dbbbaae330e1f176
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 6b218de239da04190fbf08ff8668fa16009df949
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677194"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582934"
 ---
 # <a name="mr-spatial-230-spatial-mapping"></a>Asignación espacial de realidad mixta (230): Asignación espacial
 
 >[!NOTE]
->Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](../../../mr-learning-base-01.md) para HoloLens 2.
+>Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](./mr-learning-base-01.md) para HoloLens 2.
 
 La [asignación espacial](../../../design/spatial-mapping.md) combina el mundo real y el mundo virtual juntos mediante la enseñanza de hologramas sobre el entorno. En MR Spatial 230 (Project Planetarium), veremos cómo:
 
@@ -32,7 +32,7 @@ La [asignación espacial](../../../design/spatial-mapping.md) combina el mundo r
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td>Asignación espacial de realidad mixta (230): Asignación espacial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
@@ -40,7 +40,7 @@ La [asignación espacial](../../../design/spatial-mapping.md) combina el mundo r
 
 ## <a name="before-you-start"></a>Antes de empezar
 
-### <a name="prerequisites"></a>Prerrequisitos
+### <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](../../../develop/install-the-tools.md).
 * Funcionalidad básica de programación de C#.
@@ -134,7 +134,7 @@ La [asignación espacial](../../../design/spatial-mapping.md) combina el mundo r
 * En Visual Studio, use la barra de herramientas superior para cambiar la configuración a **Release**.
 * Cambie la plataforma a **x86**.
 * Haga clic en la flecha desplegable situada a la derecha de "equipo local" y seleccione **equipo remoto**.
-* Escriba la [dirección IP del dispositivo](../../../connecting-to-wi-fi-on-hololens.md#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) en el campo Dirección y cambie el modo de autenticación a **universal (protocolo sin cifrar)**.
+* Escriba la [dirección IP del dispositivo](/hololens/hololens-network#identifying-the-ip-address-of-your-hololens-on-the-wi-fi-network) en el campo Dirección y cambie el modo de autenticación a **universal (protocolo sin cifrar)**.
 * Haga clic en **depurar-> iniciar sin depurar** o presione **Ctrl + F5**.
 * Vea el panel de **salida** en Visual Studio para ver el estado de compilación e implementación.
 * Una vez que la aplicación se haya implementado, desplazarse por la habitación. Verá las superficies circundantes que se incluyen en mallas de alambres en blanco y negro.
@@ -202,7 +202,7 @@ Por último, vamos a guardar la malla de sala y cargarla en Unity.
     2. Comprueba la normal del vértice para determinar si un píxel es vertical.
     3. Establece el color del píxel que se va a representar.
 
-**Compilación e implementación**
+**Compilar e implementar aplicaciones WPF**
 
 * Vuelva a Unity y presione **reproducir** para entrar en el modo de vista previa.
 * Las líneas azules se representarán en todas las superficies verticales de la malla de habitación (que se cargan automáticamente a partir de los datos de exámenes guardados).
@@ -443,7 +443,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 }
 ```
 
-**Compilación e implementación**
+**Compilar e implementar aplicaciones WPF**
 
 * Antes de implementar en HoloLens, presione el botón **reproducir** en Unity para entrar en el modo de reproducción.
 * Después de cargar la malla de sala desde el archivo, espere 10 segundos antes de que se inicie el procesamiento en la malla de asignación espacial.
@@ -1065,7 +1065,7 @@ public class Placeable : MonoBehaviour
 }
 ```
 
-**Compilación e implementación**
+**Compilar e implementar aplicaciones WPF**
 
 * Como antes, compile el proyecto e impleméntelo en HoloLens.
 * Espere a que se complete el análisis y el procesamiento de los datos de la asignación espacial.
@@ -1197,7 +1197,7 @@ public class PlanetOcclusion : MonoBehaviour
 }
 ```
 
-**Compilación e implementación**
+**Compilar e implementar aplicaciones WPF**
 
 * Compile e implemente la aplicación en HoloLens, como de costumbre.
 * Espere a que se completen el análisis y el procesamiento de los datos de la asignación espacial (debe ver que aparecen líneas azules en las paredes).
@@ -1208,7 +1208,7 @@ public class PlanetOcclusion : MonoBehaviour
 
 ## <a name="the-end"></a>Fin
 
-¡Enhorabuena! Ha completado **MR 230: asignación espacial**.
+Felicidades. Ha completado **MR 230: asignación espacial**.
 
 * Sabe cómo analizar el entorno y cargar datos de asignación espacial en Unity.
 * Comprende los aspectos básicos de los sombreadores y cómo se pueden usar los materiales para volver a visualizar el mundo.

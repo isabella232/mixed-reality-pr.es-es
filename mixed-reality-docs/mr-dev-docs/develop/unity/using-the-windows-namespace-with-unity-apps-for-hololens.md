@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, WinRT, Windows Mixed Reality, API, tutorial, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, API de realidad mixta
-ms.openlocfilehash: 2c57af72a10867b5ef4fc87ff96679e576d203f4
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 2116f0025449fdf127998e605f87de456e9bdaf9
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007325"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583557"
 ---
 # <a name="winrt-apis-with-unity-for-hololens"></a>API de WinRT con Unity para HoloLens
 
@@ -19,7 +19,7 @@ En esta página se describe cómo hacer uso de las API de WinRT en el proyecto d
 
 ## <a name="mixed-reality-apis"></a>API de realidad mixta
 
-Un subconjunto centrado en la realidad mixta del Windows SDK se ha puesto a disposición en una proyección compatible con .NET Standard 2,0, que puede usar en el proyecto sin las directivas de preprocesador. La mayoría de las API de Windows. Los espacios de nombres imception y Windows. UI. Input. Spatial se incluyen y se pueden expandir para incluir API adicionales en el futuro. Las API proyectadas se pueden usar mientras se ejecutan en el editor, lo que permite el uso del [modo de reproducción](https://docs.microsoft.com//windows/mixed-reality/unity-play-mode). Para usar esta proyección, realice las siguientes modificaciones en el proyecto:
+Un subconjunto centrado en la realidad mixta del Windows SDK se ha puesto a disposición en una proyección compatible con .NET Standard 2,0, que puede usar en el proyecto sin las directivas de preprocesador. La mayoría de las API de Windows. Los espacios de nombres imception y Windows. UI. Input. Spatial se incluyen y se pueden expandir para incluir API adicionales en el futuro. Las API proyectadas se pueden usar mientras se ejecutan en el editor, lo que permite el uso del [modo de reproducción](//windows/mixed-reality/unity-play-mode). Para usar esta proyección, realice las siguientes modificaciones en el proyecto:
 
 1) Agregue una referencia al paquete de Nuget [Microsoft. Windows. MixedReality. DotNetWinRT](https://www.nuget.org/packages/Microsoft.Windows.MixedReality.DotNetWinRT) mediante [Nuget para Unity](https://github.com/GlitchEnzo/NuGetForUnity).
 2) Referencias de prefijo al `Windows` espacio de nombres con `Microsoft.` :

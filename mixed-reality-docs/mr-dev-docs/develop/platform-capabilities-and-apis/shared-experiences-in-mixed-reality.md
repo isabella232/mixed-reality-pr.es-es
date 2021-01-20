@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 02/10/2019
 ms.topic: article
 keywords: experiencia compartida, realidad mixta, holograma, delimitador espacial, multiusuario, múltiple
-ms.openlocfilehash: 6db5bb13d7e04dbee6b4d9d6568b821347bd769a
-ms.sourcegitcommit: c41372e0c6ca265f599bff309390982642d628b8
+ms.openlocfilehash: 3383bcd8b87dad6e817262d96b8ac1ebb3d0c8f5
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97530113"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583158"
 ---
 # <a name="shared-experiences-in-mixed-reality"></a>Experiencias compartidas en realidad mixta
 
@@ -95,7 +95,7 @@ Tenga en cuenta que las experiencias de uso compartido se encajan en una de esta
 * **Similar**: entornos que tienden a tener mobiliario similar, luz de ambiente y sonido, tamaño físico de la sala. Por ejemplo: el profesor está en la Conferencia de la sala A y los estudiantes están en la sala Hall B. el salón de la Conferencia a puede tener menos sillas que B, pero ambos pueden tener un escritorio físico en el que colocar los hologramas.
 * **Diferente**: entornos que son diferentes en la configuración de mobiliario, tamaños de sala, claros y de sonido. Por ejemplo: un profesor está en una sala de enfoque, pero los estudiantes se encuentran en un salón de conferencia grande, con estudiantes y profesores.
 
-Es importante pensar en [el entorno](../../environment-considerations-for-hololens.md), ya que influirá en:
+Es importante pensar en [el entorno](/hololens/hololens-environment-considerations), ya que influirá en:
 
 * Cómo los usuarios experimentarán estos objetos. Por ejemplo: Si la experiencia funciona mejor en una tabla y el usuario no tiene ninguna tabla, O en una superficie plana, pero el usuario tiene un espacio abarrotado.
 * Escala de los objetos. Por ejemplo, la colocación de un modelo humano de seis metros en una tabla puede ser desafiante, pero un modelo de corazón funcionará bien.
@@ -128,7 +128,7 @@ La colaboración intuitiva es el cimientos de conversación, trabajando conjunta
 
 ## <a name="get-started-building-shared-experiences"></a>Introducción a la creación de experiencias compartidas
 
-En función de la aplicación y el escenario, habrá varios requisitos para lograr la experiencia deseada. Algunos son:
+En función de la aplicación y el escenario, habrá varios requisitos para lograr la experiencia deseada. Algunas son:
 
 * **Coincidencia**: capacidad de crear sesiones, anunciar sesiones, detectar e invitar a personas específicas, tanto de forma local como remota para unirse a la sesión.
 * **Uso compartido de delimitadores**: capacidad de alinear las coordenadas entre varios dispositivos en un espacio local común, por lo que los hologramas aparecen en el mismo lugar para todas las personas.
@@ -137,11 +137,11 @@ En función de la aplicación y el escenario, habrá varios requisitos para logr
 
 La clave de las experiencias compartidas tiene varios usuarios que ven los mismos hologramas en el mundo en su propio dispositivo, que se suelen realizar mediante el uso compartido de los anclajes para alinear las coordenadas entre los dispositivos.
 
-Para compartir los delimitadores, use los [anclajes espaciales de Azure](https://docs.microsoft.com/azure/spatial-anchors):
+Para compartir los delimitadores, use los [anclajes espaciales de Azure](/azure/spatial-anchors):
 
 * En primer lugar, el usuario coloca el holograma.
 * La aplicación crea un [delimitador espacial](../../design/spatial-anchors.md)para anclar ese holograma exactamente en el mundo.
-* Los delimitadores se pueden compartir en dispositivos de HoloLens, iOS y Android a través de los [anclajes espaciales de Azure](https://docs.microsoft.com/azure/spatial-anchors/).
+* Los delimitadores se pueden compartir en dispositivos de HoloLens, iOS y Android a través de los [anclajes espaciales de Azure](/azure/spatial-anchors/).
 
 Con un delimitador espacial compartido, la aplicación en cada dispositivo tiene ahora un [sistema de coordenadas común](../../design/coordinate-systems.md) en el que puede colocar el contenido. Ahora la aplicación puede asegurarse de colocar y orientar el holograma en la misma ubicación.
 
@@ -153,7 +153,7 @@ Hay varias opciones de servicio y tecnología disponibles para ayudar a crear ex
 
 ## <a name="shared-static-holograms-no-interactions"></a>Hologramas estáticos compartidos (sin interacciones)
 
-Aproveche los [anclajes espaciales de Azure](https://docs.microsoft.com/azure/spatial-anchors/) en la aplicación.  Habilitar y compartir anclajes espaciales entre dispositivos permite crear una aplicación en la que los usuarios ven los hologramas en el mismo lugar al mismo tiempo.  Se necesita sincronización adicional entre dispositivos para permitir que los usuarios puedan interactuar con los hologramas y ver los movimientos o las actualizaciones de estado de los hologramas.
+Aproveche los [anclajes espaciales de Azure](/azure/spatial-anchors/) en la aplicación.  Habilitar y compartir anclajes espaciales entre dispositivos permite crear una aplicación en la que los usuarios ven los hologramas en el mismo lugar al mismo tiempo.  Se necesita sincronización adicional entre dispositivos para permitir que los usuarios puedan interactuar con los hologramas y ver los movimientos o las actualizaciones de estado de los hologramas.
 
 ## <a name="share-first-person-perspective"></a>Perspectiva compartir primera persona
 
@@ -172,7 +172,7 @@ Aproveche [MixedReality-SpectatorView](https://github.com/microsoft/MixedReality
 
 ## <a name="multi-user-collaborative-experience"></a>Experiencia de colaboración de varios usuarios
 
-Comience con nuestro [tutorial de aprendizaje multiusuario](../../mrlearning-sharing(photon)-ch1.md), que aprovecha los [anclajes espaciales de Azure](https://docs.microsoft.com/azure/spatial-anchors/) para los usuarios locales y el [SDK de Photon](https://www.photonengine.com/PUN) para sincronizar el contenido o el estado de la escena. Cree aplicaciones de colaboración local en las que cada usuario tenga su propia perspectiva en los hologramas de la escena y pueda interactuar completamente con los hologramas.  Las actualizaciones se proporcionan en todos los dispositivos y la administración de conflictos de interacción se controla mediante Photon.
+Comience con nuestro [tutorial de aprendizaje multiusuario](../unity/tutorials/mr-learning-sharing-02.md), que aprovecha los [anclajes espaciales de Azure](/azure/spatial-anchors/) para los usuarios locales y el [SDK de Photon](https://www.photonengine.com/PUN) para sincronizar el contenido o el estado de la escena. Cree aplicaciones de colaboración local en las que cada usuario tenga su propia perspectiva en los hologramas de la escena y pueda interactuar completamente con los hologramas.  Las actualizaciones se proporcionan en todos los dispositivos y la administración de conflictos de interacción se controla mediante Photon.
 
 > [!NOTE]
 > Tenga en cuenta que [Photon](https://www.photonengine.com/) es un producto que no es de Microsoft, por lo que es posible que se necesite una relación de facturación con Photon para la producción y el escalado para un uso más alto.
@@ -185,7 +185,7 @@ Las funciones e interfaces de los componentes le ayudarán a proporcionar una s�
 
 ## <a name="see-also"></a>Consulta también
 
-* [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors)
+* [Azure Spatial Anchors](/azure/spatial-anchors)
 * [Delimitadores espaciales compartidos en DirectX](shared-spatial-anchors-in-directx.md)
 * [Experiencias compartidas en Unity](../unity/shared-experiences-in-unity.md)
 * [Vista del espectador](spectator-view.md)

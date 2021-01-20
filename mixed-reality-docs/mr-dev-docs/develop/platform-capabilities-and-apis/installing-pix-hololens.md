@@ -6,12 +6,12 @@ ms.author: flbagar
 ms.date: 12/02/2020
 ms.topic: article
 keywords: HoloLens, HoloLens 2, PIX, captura, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 598a6b891798be7059eae2eff578c6bbbae442f6
-ms.sourcegitcommit: 9d79aaa313f003dd42d5610d458031890776ee8e
+ms.openlocfilehash: 29cb741cd986fbb98dabb1faf2051450fd0286c3
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/30/2020
-ms.locfileid: "97822922"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583090"
 ---
 # <a name="installing-pix-for-hololens-2"></a>Instalación de PIX para HoloLens 2
 
@@ -21,7 +21,7 @@ ms.locfileid: "97822922"
 
 1. Grabe la última [versión]( https://devblogs.microsoft.com/pix/download) de PIX del equipo host y conecte HoloLens 2 a su PC a través de un cable USB.
 
-2. Si HoloLens 2 está en una [compilación de Windows Insider](https://insider.windows.com) o tiene una configuración que interrumpe pix, reproduzca  [el dispositivo](https://docs.microsoft.com/hololens/hololens-recovery) para borrar todos los datos.
+2. Si HoloLens 2 está en una [compilación de Windows Insider](https://insider.windows.com) o tiene una configuración que interrumpe pix, reproduzca  [el dispositivo](/hololens/hololens-recovery) para borrar todos los datos.
 
 3. Habilite el **modo de desarrollador** y el portal de **dispositivos**:
 
@@ -46,7 +46,7 @@ ms.locfileid: "97822922"
 * Con el dispositivo todavía conectado, activo y con el usuario que ha iniciado sesión, inicie Visual Studio.
 
 > [!IMPORTANT]
-> Asegúrese de que el dispositivo no está en modo de espera o en suspensión. Si tiene problemas con este paso, consulte las [instrucciones del portal de dispositivos de Windows](https://docs.microsoft.com/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal).
+> Asegúrese de que el dispositivo no está en modo de espera o en suspensión. Si tiene problemas con este paso, consulte las [instrucciones del portal de dispositivos de Windows](./using-the-windows-device-portal.md).
 
 ## <a name="preparing-for-deployment"></a>Preparación para la implementación
 

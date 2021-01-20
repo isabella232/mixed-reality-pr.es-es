@@ -6,12 +6,12 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realidad mixta, Windows Mixed Reality, HoloLens, holograma, Academia, tutorial, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: f2725db17a2991b956c777ee7106b7f094582f77
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 4ca16542060e1cee746ba5095a7bf68ca8136267
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677204"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583713"
 ---
 # <a name="mr-basics-101-complete-project-with-device"></a>Aspectos básicos de realidad mixta (101): Proyecto completo con dispositivo
 
@@ -32,7 +32,7 @@ El tutorial tardará aproximadamente 1 hora en completarse.
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td>Aspectos básicos de realidad mixta (101): Proyecto completo con dispositivo</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
@@ -40,7 +40,7 @@ El tutorial tardará aproximadamente 1 hora en completarse.
 
 ## <a name="before-you-start"></a>Antes de empezar
 
-### <a name="prerequisites"></a>Prerrequisitos
+### <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](../../install-the-tools.md).
 * Un dispositivo HoloLens [configurado para el desarrollo](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode).
@@ -68,7 +68,7 @@ En este capítulo, se configurará el primer proyecto de Unity y se recorrerá e
 * Cree un holograma.
 * Vea un holograma que haya realizado.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 * Inicie Unity.
 * seleccione **Open**(Abrir).
@@ -137,7 +137,7 @@ En este capítulo, vamos a presentar la primera de las tres formas de interactua
 
 * Visualice la mirada con un cursor de un mundo bloqueado.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 * Vuelva al proyecto de Unity y cierre la ventana de configuración de la compilación si aún está abierta.
 * Seleccione la carpeta **hologramas** en el **panel Proyecto**.
@@ -213,7 +213,7 @@ En este capítulo, se agregará compatibilidad con [gestos](../../../design/gaze
 
 * Controle los hologramas con el gesto de selección.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 Comenzaremos por crear un script y luego puede detectar el gesto de selección.
 
@@ -325,7 +325,7 @@ En este capítulo, se agregará compatibilidad con dos [comandos de voz](../../.
 * Agregue comandos de voz que siempre escuchan en segundo plano.
 * Cree un holograma que reaccione a un comando de voz.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 * En la carpeta **scripts** , cree un script denominado **SpeechManager**.
 * Arrastre el script **SpeechManager** hasta el objeto **OrigamiCollection** de la jerarquía.
@@ -447,7 +447,7 @@ En este capítulo, agregaremos música a la aplicación y, a continuación, dese
 
 * Escuche los hologramas de su mundo.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 * En Unity, seleccione en el menú superior **editar > configuración del proyecto > audio**
 * En el panel Inspector del lado derecho, busque la configuración del **complemento Spatializer** y seleccione **MS HRTF Spatializer**.
@@ -557,7 +557,7 @@ Ahora vamos a usar la [asignación espacial](../../../design/spatial-mapping.md)
 * Traiga su mundo real al mundo virtual.
 * Coloque los hologramas donde más le importan.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 * En Unity, haga clic en la carpeta **hologramas** en el panel Proyecto.
 * Arrastre el recurso de **asignación espacial** a la raíz de la **jerarquía**.
@@ -641,7 +641,7 @@ public class TapToPlaceParent : MonoBehaviour
 
 * Revela la entrada a un mundo holográfica.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 Ahora le mostraremos cómo descubrir el mundo holográfica:
 
@@ -695,7 +695,7 @@ Ha aprendido:
 
 Ya está listo para empezar a crear su propia experiencia holográfica.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [MR Basics 101E: proyecto completo con emulador](holograms-101e.md)
 * [Gaze](../../../design/gaze-and-commit.md)

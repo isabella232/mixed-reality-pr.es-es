@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, texto de traductor, hololens, envolventes, VR, traducción de idioma, Windows 10, Visual Studio
-ms.openlocfilehash: 3f7d48df92ae5ed979c6fa8d69d348ce084d3fb9
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 0b7e7c2e4146d3c60e62c25764aae48260fdf3ef
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679574"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583298"
 ---
 # <a name="mr-and-azure-301-language-translation"></a>Realidad mixta y Azure (301): Traducción de idiomas
 
@@ -40,7 +40,7 @@ Este curso le enseñará a obtener los resultados del servicio de Traductor en u
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td> Realidad mixta y Azure (301): Traducción de idiomas</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -49,7 +49,7 @@ Este curso le enseñará a obtener los resultados del servicio de Traductor en u
 > [!NOTE]
 > Aunque este curso se centra principalmente en los auriculares de Windows Mixed Reality inmersivo (VR), también puede aplicar lo que aprenda en este curso a Microsoft HoloLens. A medida que siga con el curso, verá notas sobre cualquier cambio que deba usar para admitir HoloLens. Al usar HoloLens, puede observar algún Eco durante la captura de voz.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 > [!NOTE]
 > Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#. Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de mayo). Puede usar el software más reciente, como se indica en el artículo [instalar las herramientas](../../install-the-tools.md) , aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se indica a continuación.
@@ -61,11 +61,11 @@ Se recomienda el siguiente hardware y software para este curso:
 - [El SDK de Windows 10 más reciente](../../install-the-tools.md#installation-checklist)
 - [Unity 2017,4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](../../../hololens-hardware-details.md) con el modo de desarrollador habilitado
+- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](/hololens/hololens1-hardware) con el modo de desarrollador habilitado
 - Un conjunto de auriculares con micrófono integrado (si el casco no tiene micrófonos y altavoces integrados)
 - Acceso a Internet para la instalación y la recuperación de traducciones de Azure
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 - Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).
 - El código de este tutorial le permitirá grabar desde el dispositivo de micrófono predeterminado conectado al equipo. Asegúrese de que el dispositivo de micrófono predeterminado está establecido en el dispositivo que va a usar para capturar la voz.
@@ -88,7 +88,7 @@ Para usar la API de traductor de Azure, tendrá que configurar una instancia del
     > [!NOTE]
     > Si aún no tiene una cuenta de Azure, tendrá que crear una. Si sigue este tutorial en una situación de aula o de laboratorio, pregunte al instructor o a uno de los Proctors para obtener ayuda para configurar la nueva cuenta.
 
-2.  Una vez que haya iniciado sesión, haga clic en **nuevo** en la esquina superior izquierda y busque "Translator Text API". Seleccione **Entrar**.
+2.  Una vez que haya iniciado sesión, haga clic en **nuevo** en la esquina superior izquierda y busque "Translator Text API". Presione **Entrar**.
 
     ![Nuevo recurso](images/AzureLabs-Lab1-02.png)
 
@@ -106,7 +106,7 @@ Para usar la API de traductor de Azure, tendrá que configurar una instancia del
     3. Seleccione el **plan de tarifa** adecuado para usted; si es la primera vez que crea un *servicio de Translator Text*, debe tener a su disposición un nivel gratis (denominado F0).
     4. Elija un **grupo de recursos** o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común).
 
-        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](/azure/azure-resource-manager/resource-group-portal).
 
     5. Determine la **Ubicación** del grupo de recursos (si va a crear un nuevo grupo de recursos). Idealmente, la ubicación estará en la región donde se ejecutará la aplicación. Algunos recursos de Azure solo están disponibles en determinadas regiones.
     6. También deberá confirmar que ha comprendido los términos y condiciones que se aplican a este servicio.
@@ -267,7 +267,7 @@ Para mostrar la entrada y la salida de la traducción, es necesario crear una in
 
     1. Para el componente de *transformación Rect* :
 
-        | Name                   | Transformación: *posición*             | Ancho      | Alto    |
+        | Nombre                   | Transformación: *posición*             | Ancho      | Alto    |
         |:----------------------:|:----------------------------------:|:----------:|:---------:|
         | MicrophoneStatusLabel  | **X** -80 **Y** 90 **Z** 0         | 300        | 30        |
         | AzureResponseLabel     | **X** -80 **Y** 30 **Z** 0         | 300        | 30        |
@@ -278,7 +278,7 @@ Para mostrar la entrada y la salida de la traducción, es necesario crear una in
     2. Para el componente de **texto (Script)** :
 
 
-        | Name                   | Texto               | Tamaño de fuente    |
+        | Nombre                   | Texto               | Tamaño de fuente    |
         |:----------------------:|:------------------:|:------------:|
         | MicrophoneStatusLabel  | Estado del micrófono: | 20           |
         | AzureResponseLabel     | Respuesta web de Azure | 20           |
@@ -296,7 +296,7 @@ Para mostrar la entrada y la salida de la traducción, es necesario crear una in
 
     1. Para el componente de **transformación Rect** :
 
-        | Name                  | Transformación: *posición* | Ancho      | Alto    |
+        | Nombre                  | Transformación: *posición* | Ancho      | Alto    |
         |:---------------------:|:----------------------:|:----------:|:---------:|
         | MicrophoneStatusText  | X 0 Y-30 Z 0          | 300        | 30        |
         | AzureResponseText     | X 0 Y-30 Z 0          | 300        | 30        |
@@ -305,7 +305,7 @@ Para mostrar la entrada y la salida de la traducción, es necesario crear una in
 
     2. Para el componente de **texto (Script)** :
 
-        | Name                  | Texto          | Tamaño de fuente    |
+        | Nombre                  | Texto          | Tamaño de fuente    |
         |:---------------------:|:-------------:|:------------:|
         | MicrophoneStatusText  |      ??       | 20           |
         | AzureResponseText     |      ??       | 20           |
@@ -609,7 +609,7 @@ Para crear esta clase:
     ```
 
     > [!NOTE]
-    > - Los lenguajes insertados en la **enumeración** de lenguajes son solo ejemplos. No dude en agregar más si lo desea; la [API admite más de 60 idiomas](https://docs.microsoft.com/azure/cognitive-services/translator/languages) (incluido Klingon).
+    > - Los lenguajes insertados en la **enumeración** de lenguajes son solo ejemplos. No dude en agregar más si lo desea; la [API admite más de 60 idiomas](/azure/cognitive-services/translator/languages) (incluido Klingon).
     > - Hay una [página más interactiva que cubre los idiomas disponibles](https://www.microsoft.com/translator/business/languages/), aunque tenga en cuenta que la página solo parece funcionar cuando el idioma del sitio está establecido en ' ' (y el sitio de Microsoft probablemente redirigirá a su idioma nativo). Puede cambiar el idioma del sitio en la parte inferior de la página o mediante la modificación de la dirección URL.
     > - El valor **authorizationKey** , en el fragmento de código anterior, debe ser la **clave**  que recibió al suscribirse a *Azure Translator Text API*. Esto se trató en el [capítulo 1](#chapter-1--the-azure-portal).
 

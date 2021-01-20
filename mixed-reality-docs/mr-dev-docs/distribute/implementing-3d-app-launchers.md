@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 07/12/2018
 ms.topic: article
 keywords: 3D, logotipo, icono, modelado, iniciador, selector 3D, mosaico, cubo activo, vínculo profundo, secondarytile, mosaico secundario, UWP, auricular de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, XML, cuadro de límite, Unity
-ms.openlocfilehash: 40a68d0835ec8fb92d6417650700f41e8a31aab6
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 7a0b73a0b3638c1aa2c9cbffacd548fb461589ea
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009685"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582973"
 ---
 # <a name="implement-3d-app-launchers-uwp-apps"></a>Implementación de iniciadores de aplicaciones 3D (aplicaciones para UWP)
 
@@ -118,7 +118,7 @@ Al trabajar con Unity, el proyecto se debe compilar y abrir en Visual Studio par
 >[!IMPORTANT]
 >los vínculos profundos 3D (secondaryTiles) solo funcionan con aplicaciones UWP de 2D. Sin embargo, puede crear un [iniciador de aplicaciones 3D](implementing-3d-app-launchers.md) para iniciar una aplicación exclusiva desde la Página principal de Windows Mixed Reality.
 
-Las aplicaciones 2D se pueden mejorar para Windows Mixed Reality agregando la capacidad de colocar modelos 3D desde la aplicación en la [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md) como vínculos profundos al contenido dentro de la aplicación 2D, al igual que los [mosaicos secundarios 2D](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) en el menú Inicio de Windows. Por ejemplo, puede crear fotoesferas 360 ° que se vinculan directamente a una aplicación de visor de fotos de 360 °, o bien permitir que los usuarios coloquen contenido 3D de una colección de recursos que abre una página de detalles sobre el autor. Se trata de un par de formas de ampliar la funcionalidad de la aplicación 2D con contenido 3D.
+Las aplicaciones 2D se pueden mejorar para Windows Mixed Reality agregando la capacidad de colocar modelos 3D desde la aplicación en la [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md) como vínculos profundos al contenido dentro de la aplicación 2D, al igual que los [mosaicos secundarios 2D](/windows/uwp/controls-and-patterns/tiles-and-notifications-secondary-tiles) en el menú Inicio de Windows. Por ejemplo, puede crear fotoesferas 360 ° que se vinculan directamente a una aplicación de visor de fotos de 360 °, o bien permitir que los usuarios coloquen contenido 3D de una colección de recursos que abre una página de detalles sobre el autor. Se trata de un par de formas de ampliar la funcionalidad de la aplicación 2D con contenido 3D.
 
 ### <a name="creating-a-3d-secondarytile"></a>Crear un "secondaryTile" 3D
 
@@ -191,7 +191,7 @@ if (!tile.VisualElements.MixedRealityModel.Uri.Equals(updatedUri))
 
 ### <a name="checking-that-the-user-is-in-windows-mixed-reality"></a>Comprobar que el usuario está en Windows Mixed Reality
 
-solo se pueden crear vínculos profundos 3D (secondaryTiles) mientras la vista se muestra en un casco de realidad mixta de Windows. Cuando la vista no se presenta en un casco de realidad mixta de Windows, se recomienda controlarlo correctamente ocultando el punto de entrada o mostrando un mensaje de error. Para comprobarlo, consulte [IsCurrentViewPresentedOnHolographic ()](https://docs.microsoft.com/uwp/api/windows.applicationmodel.preview.holographic.holographicapplicationpreview#Windows_ApplicationModel_Preview_Holographic_HolographicApplicationPreview_IsCurrentViewPresentedOnHolographicDisplay_).
+solo se pueden crear vínculos profundos 3D (secondaryTiles) mientras la vista se muestra en un casco de realidad mixta de Windows. Cuando la vista no se presenta en un casco de realidad mixta de Windows, se recomienda controlarlo correctamente ocultando el punto de entrada o mostrando un mensaje de error. Para comprobarlo, consulte [IsCurrentViewPresentedOnHolographic ()](/uwp/api/windows.applicationmodel.preview.holographic.holographicapplicationpreview#Windows_ApplicationModel_Preview_Holographic_HolographicApplicationPreview_IsCurrentViewPresentedOnHolographicDisplay_).
 
 ## <a name="tile-notifications"></a>Notificaciones de icono
 
@@ -201,7 +201,7 @@ Las notificaciones de icono no admiten actualmente el envío de una actualizaci�
 * Sondeo periódico
 * Notificaciones programadas
 
-Para obtener más información sobre las características y los atributos de los iconos y cómo se usan para los mosaicos 2D, consulte la [documentación de los iconos de las aplicaciones para UWP](https://docs.microsoft.com/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles).
+Para obtener más información sobre las características y los atributos de los iconos y cómo se usan para los mosaicos 2D, consulte la [documentación de los iconos de las aplicaciones para UWP](/windows/uwp/controls-and-patterns/tiles-and-notifications-creating-tiles).
 
 ## <a name="see-also"></a>Consulte también
 

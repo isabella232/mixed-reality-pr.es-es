@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 08/03/2020
 ms.topic: article
 keywords: LBE, MixedRealitySpatialDataPackager.exe, MixedRealitySpatialDataPackager
-ms.openlocfilehash: df6757730c8a5448d96811bfe4ce024f6942dc07
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 93d598a6add8350850faadab241b254e9cb341aa
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692694"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583642"
 ---
 # <a name="mixed-reality-spatial-data-packager-documentation"></a>Documentación del Empaquetador de datos espaciales de realidad mixta
 
@@ -37,7 +37,7 @@ ms.locfileid: "91692694"
     </colgroup>
     <tr>
         <td><strong>Característica</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -71,8 +71,7 @@ Requisitos y limitaciones clave:
 4. Minimizar las superficies en blanco y sin texturas, por ejemplo, colocar un intervalo de pósters distintos en las paredes blancas
 5. Asignar el espacio sin objetos dinámicos en la escena, como mover personas
 6. Bloquear el mapa al importar (disponible a través de Insider Preview)
-7. Desbloquee el mapa y vuelva a examinar el entorno cuando el seguimiento de la calidad sea degradado o haya cambios en el entorno (iluminación o cambios en el diseño de objetos)
-***
+7. Desbloquee el mapa y vuelva a examinar el entorno cuando se realice un seguimiento de la calidad y/o cuando haya cambios en el entorno (iluminación o cambios en el diseño de objetos) * * _
 
 ## <a name="running-mixed-reality-spatial-data-packager-with-companion-script"></a>Ejecución de un empaquetador de datos espaciales de realidad mixta con un script complementario
 
@@ -154,7 +153,7 @@ MixedRealitySpatialDataPackager.exe import <folderpath to mapx files> <target pa
 La importación elimina los datos espaciales existentes y los reemplaza con los datos del directorio especificado. La entrada del nombre de la aplicación especifica el nombre del paquete de la aplicación de destino que se debe importar para y el SID del usuario de destino especifica el usuario que debe tener acceso a los delimitadores espaciales importados. El nombre de familia y los SID de usuario del paquete de destino deben coincidir con los valores existentes en el equipo o se producirá un error en el archivo exe.
 
 
-***
+_**
 ## <a name="error-messages"></a>mensajes de error
 Además, los mensajes de error siguientes también irán acompañados de un valor HRESULT.
 

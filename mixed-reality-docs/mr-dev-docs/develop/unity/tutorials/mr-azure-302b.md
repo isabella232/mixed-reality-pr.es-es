@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, visión personalizada, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: d40dc1cf23ee8040406047eaddd7ee3b70365199
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: cba2df5841911df6d60a7060a70f835975a21f62
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679554"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583403"
 ---
 # <a name="mr-and-azure-302b-custom-vision"></a>Realidad mixta y Azure (302b): Custom Vision
 
@@ -29,7 +29,7 @@ Este servicio le permitirá entrenar un modelo de aprendizaje automático median
 
 ![resultado del curso](images/AzureLabs-Lab302b-00.png)
 
-Azure Custom Vision es un servicio cognitivo de Microsoft que permite a los desarrolladores crear clasificadores de imágenes personalizados. Estos clasificadores se pueden usar con nuevas imágenes para reconocer o clasificar objetos dentro de la nueva imagen. El servicio proporciona un portal en línea sencillo y fácil de usar para simplificar el proceso. Para obtener más información, visite la [Página de Custom Vision Service de Azure](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/home).
+Azure Custom Vision es un servicio cognitivo de Microsoft que permite a los desarrolladores crear clasificadores de imágenes personalizados. Estos clasificadores se pueden usar con nuevas imágenes para reconocer o clasificar objetos dentro de la nueva imagen. El servicio proporciona un portal en línea sencillo y fácil de usar para simplificar el proceso. Para obtener más información, visite la [Página de Custom Vision Service de Azure](/azure/cognitive-services/custom-vision-service/home).
 
 Al finalizar este curso, tendrá una aplicación de realidad mixta que podrá trabajar en dos modos:
 
@@ -43,7 +43,7 @@ Este curso le enseñará cómo obtener los resultados de la Custom Vision Servic
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td> Realidad mixta y Azure (302b): Custom Vision</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -52,7 +52,7 @@ Este curso le enseñará cómo obtener los resultados de la Custom Vision Servic
 > [!NOTE]
 > Aunque este curso se centra principalmente en HoloLens, también puede aplicar lo que aprenda en este curso a los auriculares con Windows Mixed Reality inmersivo (VR). Dado que los auriculares envolventes (VR) no tienen cámaras accesibles, necesitará una cámara externa conectada al equipo. A medida que siga con el curso, verá notas sobre cualquier cambio que deba usar para admitir auriculares envolventes (VR).
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 > [!NOTE]
 > Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#. Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de julio). Puede usar el software más reciente, como se indica en el artículo [instalar las herramientas](../../install-the-tools.md) , aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se enumera a continuación.
@@ -64,20 +64,20 @@ Se recomienda el siguiente hardware y software para este curso:
 - [El SDK de Windows 10 más reciente](../../install-the-tools.md#installation-checklist)
 - [Unity 2017,4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](../../../hololens-hardware-details.md) con el modo de desarrollador habilitado
+- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](/hololens/hololens1-hardware) con el modo de desarrollador habilitado
 - Una cámara conectada al equipo (para el desarrollo de auriculares envolvente)
 - Acceso a Internet para la instalación de Azure y Custom Vision la recuperación de API
 - Una serie de al menos cinco (5) imágenes (diez (10) recomendado) para cada objeto que desea que reconozca el Custom Vision Service. Si lo desea, puede usar [las imágenes que ya se proporcionan con este curso (un mouse de equipo y un teclado) ](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302b%20-%20Custom%20vision/ComputerVision_Images.zip).
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 1.  Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).
-2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
+2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](/hololens/hololens-setup). 
 3.  Es una buena idea realizar la calibración y el ajuste del sensor al empezar a desarrollar una nueva aplicación de HoloLens (a veces puede ayudar a realizar esas tareas para cada usuario). 
 
-Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](../../../calibration.md#hololens-2).
+Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](/hololens/hololens-calibration#hololens-2).
 
-Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](../../../sensor-tuning.md).
+Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](/hololens/hololens-updates).
 
 ## <a name="chapter-1---the-custom-vision-service-portal"></a>Capítulo 1: portal de Custom Vision Service
 
@@ -118,7 +118,7 @@ Para usar el *Custom Vision Service* en Azure, debe configurar una instancia del
 
         ![Establecer los dominios](images/AzureLabs-Lab302b-05.png)
 
-        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](/azure/azure-resource-manager/resource-group-portal).
 
 7.  Cuando haya terminado, haga clic en **Create Project (crear proyecto**), se le redirigirá a la página Custom Vision Service, Project (proyecto).
 
@@ -279,7 +279,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 Este curso requiere el uso de la biblioteca **Newtonsoft** , que se puede agregar como un archivo DLL a los recursos. El paquete que contiene [esta biblioteca se puede descargar desde este vínculo](https://github.com/Microsoft/HolographicAcademy/raw/Azure-MixedReality-Labs/Azure%20Mixed%20Reality%20Labs/MR%20and%20Azure%20302b%20-%20Custom%20vision/NewtonsoftDLL.unitypackage).
 Para importar la biblioteca de Newtonsoft en el proyecto, use el paquete de Unity que se incluía con este curso.
 
-1.  Agregue el *. unitypackage Tools* a Unity mediante la opción de menú de **Assets*  >  *paquetes importar* *paquete*  >  *personalizado* *Package** de paquetes.
+1.  Agregue el *. unitypackage Tools* a Unity mediante la opción de menú de * >  *paquetes importar* *paquete*  >  *personalizado** de paquetes.
 
 2.  En el cuadro **importar paquete Unity** que aparece, asegúrese de que todo lo que hay en **Complementos** (y incluido) está seleccionado.
 
@@ -1666,7 +1666,7 @@ Para implementar en HoloLens:
 
     1.  Mientras se contenga HoloLens, abra la **configuración**.
 
-    2.  Vaya a **red &**  >  Opciones avanzadas **de Wi-Fi de**  >  **Advanced Options** Internet
+    2.  Vaya a **red &**  >  Opciones avanzadas **de Wi-Fi de**  >   Internet
 
     3.  Anote la dirección **IPv4** .
 
@@ -1697,7 +1697,7 @@ Para cambiar la funcionalidad de la aplicación entre el modo de *entrenamiento*
         // Change this flag to switch between Analysis mode and Training mode 
         AppMode = AppModes.Training;
 ```
-o
+or
 ```
         // Change this flag to switch between Analysis mode and Training mode 
         AppMode = AppModes.Analysis;

@@ -6,12 +6,12 @@ ms.author: randyw
 ms.date: 10/22/2019
 ms.topic: article
 keywords: ninguno
-ms.openlocfilehash: 1fc560d170c4e17f4d70b7068474a1aabda472a2
-ms.sourcegitcommit: 3762d207d3b5f4a1d932197aae7a4fae4baec960
+ms.openlocfilehash: 246e87ace1c0b3edf5e9f4829a5a0879cddf7279
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97676138"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583171"
 ---
 # <a name="title-be-as-specific-as-possible-use-human-terms"></a>Título (sea lo más específico posible, utilice términos humanos) 
 
@@ -32,7 +32,7 @@ ms.locfileid: "97676138"
 </colgroup>
 <tr>
      <td><strong>Característica</strong></td>
-     <td><a href="../hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+     <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
      <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
      <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
 </tr>
@@ -192,7 +192,7 @@ Los Nabis de la acción de fotoel mundo de la pintura pintan el campo de color c
 
 Neo: estructural del usuario geográfico posterior a impressionism Die Brücke existentialism superplana, neo-Data idealmente Gründerzeit.
 
-| Distancia | Ángulo de visualización | Tamaño |
+| Distancia | Ángulo de visualización | Size |
 |---------|---------|---------|
 | 45cm  | no menor que 2 ° | 1,6 x 1,6 cm |
 

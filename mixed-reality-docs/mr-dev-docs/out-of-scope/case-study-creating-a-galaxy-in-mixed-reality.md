@@ -6,12 +6,12 @@ ms.author: kaluccin
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Galaxy Explorer, HoloLens, Windows Mixed Reality, compartir ideas, caso práctico
-ms.openlocfilehash: 0226c38e9fa21407a7a6529693a2adb3c5da7659
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: ef97920d22df65a9d4fa5e630840759e58c80b53
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009785"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583546"
 ---
 # <a name="case-study---creating-a-galaxy-in-mixed-reality"></a>Caso práctico: creación de una galaxia en una realidad mixta
 
@@ -147,7 +147,7 @@ Realizar nubes de pantalla completa e intentar desenfocarlos habría sido una ma
 
 ### <a name="a-bit-of-context-first"></a>Un bit de contexto primero
 
-Cuando se usan texturas en un juego, el tamaño de la textura rara vez coincidirá con el área en la que se desea utilizar, pero se puede usar un tipo diferente de filtrado de textura para que la tarjeta gráfica se interpole el color que se desea de los píxeles de la textura ([filtrado de textura](https://msdn.microsoft.com/library/dn642451.aspx)). El filtrado que nos interesa es [bilineal Filtering](https://msdn.microsoft.com/library/windows/desktop/bb172357.aspx) , que calculará el valor de cualquier píxel usando los 4 vecinos más cercanos.
+Cuando se usan texturas en un juego, el tamaño de la textura rara vez coincidirá con el área en la que se desea utilizar, pero se puede usar un tipo diferente de filtrado de textura para que la tarjeta gráfica se interpole el color que se desea de los píxeles de la textura ([filtrado de textura](/previous-versions/visualstudio/visual-studio-2015/debugger/point-bilinear-trilinear-and-anisotropic-texture-filtering-variants)). El filtrado que nos interesa es [bilineal Filtering](/windows/win32/direct3d9/bilinear-texture-filtering) , que calculará el valor de cualquier píxel usando los 4 vecinos más cercanos.
 
 ![Original antes del filtrado](images/texture-1.png)
 

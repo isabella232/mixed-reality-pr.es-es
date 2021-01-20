@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: tutorial, comando de voz, frase, reconocimiento, voz, DirectX, plataforma, Cortana, Windows Mixed Reality
-ms.openlocfilehash: c917fbc4215442bc66f52dc2c527e01b2c446594
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 5f7ed587b474d147c0b13e4896a89f655f8dc30b
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613109"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583746"
 ---
 # <a name="voice-input-in-directx"></a>Entrada de voz en DirectX
 
@@ -67,7 +67,7 @@ m_speechCommandList->Append(StringReference(L"SpeechRecognizer"));
    m_speechCommandData.push_back(float4(0.5f, 0.1f, 1.f, 1.f));
 ```
 
-Para cargar la lista de comandos en la lista de restricciones del reconocedor de voz, use un objeto [SpeechRecognitionListConstraint](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionlistconstraint.aspx) .
+Para cargar la lista de comandos en la lista de restricciones del reconocedor de voz, use un objeto [SpeechRecognitionListConstraint](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionListConstraint) .
 
 ```
 SpeechRecognitionListConstraint^ spConstraint = ref new SpeechRecognitionListConstraint(m_speechCommandList);
@@ -86,7 +86,7 @@ SpeechRecognitionListConstraint^ spConstraint = ref new SpeechRecognitionListCon
    });
 ```
 
-Suscríbase al evento [ResultGenerated](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionsession.resultgenerated.aspx) en el [SpeechContinuousRecognitionSession](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionsession.aspx)del reconocedor de voz. Este evento notifica a la aplicación cuando se ha reconocido uno de sus comandos.
+Suscríbase al evento [ResultGenerated](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession) en el [SpeechContinuousRecognitionSession](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionSession)del reconocedor de voz. Este evento notifica a la aplicación cuando se ha reconocido uno de sus comandos.
 
 ```
 m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
@@ -95,7 +95,7 @@ m_speechRecognizer->ContinuousRecognitionSession->ResultGenerated +=
            );
 ```
 
-El controlador de eventos *OnResultGenerated* recibe datos de evento en una instancia de [SpeechContinuousRecognitionResultGeneratedEventArgs](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechcontinuousrecognitionresultgeneratedeventargs.aspx) . Si la confianza es mayor que el umbral definido, la aplicación debe tener en cuenta que se produjo el evento. Guarde los datos del evento para poder usarlos en un bucle de actualización posterior.
+El controlador de eventos *OnResultGenerated* recibe datos de evento en una instancia de [SpeechContinuousRecognitionResultGeneratedEventArgs](/uwp/api/Windows.Media.SpeechRecognition.SpeechContinuousRecognitionResultGeneratedEventArgs) . Si la confianza es mayor que el umbral definido, la aplicación debe tener en cuenta que se produjo el evento. Guarde los datos del evento para poder usarlos en un bucle de actualización posterior.
 
 Desde *HolographicVoiceInputSampleMain. cpp*:
 
@@ -256,7 +256,7 @@ catch (Exception^ exception)
 ```
 
 > [!NOTE]
-> Hay varios [SpeechRecognitionScenarios](https://msdn.microsoft.com/library/windows/apps/windows.media.speechrecognition.speechrecognitionscenario.aspx) predefinidos que puede usar para optimizar el reconocimiento de voz.
+> Hay varios [SpeechRecognitionScenarios](/uwp/api/Windows.Media.SpeechRecognition.SpeechRecognitionScenario) predefinidos que puede usar para optimizar el reconocimiento de voz.
 
 * Para optimizar el dictado, use el escenario de dictado.<br/>
    ```
@@ -431,5 +431,5 @@ catch (Exception^ exception)
 ```
 
 ## <a name="see-also"></a>Consulte también
-* [Diseño de aplicaciones de voz](https://msdn.microsoft.com/library/dn596121.aspx)
+* [Diseño de aplicaciones de voz](/windows/uwp/design/input/speech-interactions)
 * [Ejemplo de SpeechRecognitionAndSynthesis](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/SpeechRecognitionAndSynthesis)

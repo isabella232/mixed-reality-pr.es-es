@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, tutorial, fijamente, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: 2cbbdba0a74ab94c6a291cbe6af1cd1ae9020fe4
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 7e8d72bc4d37d76f8f9ec40956cb85591e237ac8
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677254"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583861"
 ---
 # <a name="mr-input-210-gaze"></a>Aspectos básicos de realidad mixta (210): Mirar
 
 >[!NOTE]
->Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](../../../mr-learning-base-01.md) para HoloLens 2.
+>Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](./mr-learning-base-01.md) para HoloLens 2.
 
 [Mira](../../../design/gaze-and-commit.md) la primera forma de entrada y revela la intención y el reconocimiento del usuario. La entrada MR 210 (también conocido como Project Explorer) es un análisis profundo de los conceptos relacionados con la mirada para Windows Mixed Reality. Agregaremos reconocimiento contextual a nuestro cursor y a los hologramas, aprovechando al máximo lo que la aplicación conoce sobre la mirada del usuario.
 
@@ -37,7 +37,7 @@ Tenemos un Astronaut descriptivo aquí para ayudarle a conocer los conceptos de 
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td>Aspectos básicos de realidad mixta (210): Mirar</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -45,7 +45,7 @@ Tenemos un Astronaut descriptivo aquí para ayudarle a conocer los conceptos de 
 
 ## <a name="before-you-start"></a>Antes de empezar
 
-### <a name="prerequisites"></a>Prerrequisitos
+### <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](../../../develop/install-the-tools.md).
 * Funcionalidad básica de programación de C#.
@@ -74,7 +74,7 @@ Tenemos un Astronaut descriptivo aquí para ayudarle a conocer los conceptos de 
 * Importar recursos y configurar la escena.
 * Vea el Astronaut en HoloLens.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 1. Inicie Unity.
 2. Seleccione **Nuevo proyecto**.
@@ -136,7 +136,7 @@ Por último, actualizaremos la configuración de calidad para lograr un rendimie
 2. Haga clic en **nueva carpeta** y asigne un nombre a la carpeta **Scenes**.
 3. Asigne al archivo el nombre "**ModelExplorer**" y guárdelo en la carpeta **Scenes** .
 
-### <a name="build-the-project"></a>Compilación del proyecto
+### <a name="build-the-project"></a>Compilar el proyecto
 
 1. En Unity, seleccione **archivo > configuración de compilación**.
 2. Haga clic en **Agregar escenas abiertas** para agregar la escena.
@@ -184,7 +184,7 @@ Vamos a basar nuestro trabajo en algunos principios de diseño de cursores, es d
 * No deje que el cursor sea demasiado pequeño o grande.
 * Evite obstruir el contenido.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 1. En la carpeta **HoloToolkit\Input\Prefabs** , busque el recurso **InputManager** .
 2. Arrastre y coloque el **InputManager** en la **jerarquía**.
@@ -203,7 +203,7 @@ Vamos a basar nuestro trabajo en algunos principios de diseño de cursores, es d
 4. Haga clic en **depurar-> iniciar sin depurar** o presione **Ctrl + F5**.
 5. Observe cómo se dibuja el cursor y cómo cambia la apariencia si toca un holograma.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 1. En el panel **jerarquía** , expanda el objeto **AstroMan** -> **GEO_G** -> **Back_Center** .
 2. Haga doble clic en **Interactible.CS** para abrirlo en Visual Studio.
@@ -248,7 +248,7 @@ void IFocusable.OnFocusExit()
 * Facilitar el destino de los hologramas.
 * Estabilice los movimientos de los cabezales naturales.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 1. En el panel **jerarquía** , seleccione el objeto **InputManager** .
 2. En el panel **Inspector** , busque el script del **estabilizador de miras** . Haga clic en él para abrirlo en Visual Studio, si desea echar un vistazo.
@@ -263,7 +263,7 @@ void IFocusable.OnFocusExit()
 
 * Agregue un indicador direccional en el cursor para buscar hologramas.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 Vamos a usar el archivo **DirectionIndicator.CS** , que:
 

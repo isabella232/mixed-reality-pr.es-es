@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: compras desde la aplicación, hololens, XAML, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: a87cc68f67def1d46a3a6ba352e723d356f51fa2
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: dfc5a0cfcc7a4d63147a753c8892d65dfae5e495
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008675"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582951"
 ---
 # <a name="in-app-purchases"></a>Compras desde la aplicación
 
@@ -20,7 +20,7 @@ Las compras desde la aplicación se admiten en HoloLens, pero hay algún trabajo
 Para usar la funcionalidad de compra de la aplicación, debe:
 * Crear una [vista 2D](../design/app-views.md) de XAML para que aparezca como una pizarra
 * Cambiar a él para activar la selección de ubicación, que deja la vista envolvente
-* Llame a la API: Await [CurrentApp. RequestProductPurchaseAsync ("DurableItemIAPName");](https://docs.microsoft.com/uwp/api/windows.applicationmodel.store.currentapp#Windows_ApplicationModel_Store_CurrentApp_RequestProductPurchaseAsync_System_String_)
+* Llame a la API: Await [CurrentApp. RequestProductPurchaseAsync ("DurableItemIAPName");](/uwp/api/windows.applicationmodel.store.currentapp#Windows_ApplicationModel_Store_CurrentApp_RequestProductPurchaseAsync_System_String_)
 
 Esta API abrirá el menú contextual de sistema operativo Windows que muestra el nombre, la descripción y el precio de la compra desde la aplicación. El usuario puede elegir opciones de compra. Una vez completada la acción, la aplicación necesitará presentar la interfaz de usuario, lo que permite al usuario volver a su [vista envolvente](../design/app-views.md).
 

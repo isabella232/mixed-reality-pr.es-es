@@ -6,12 +6,12 @@ ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, patrones de aplicaciones, diseño, HoloLens, exploración de salón, asignación espacial, malla, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens
-ms.openlocfilehash: f4ec072c8fde8d3e7e390bd837116a8262bac38b
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 0bef09d7f023127f1f5eedf28065758b4a438f3e
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97848247"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583599"
 ---
 # <a name="room-scan-visualization"></a>Visualización de la exploración de la sala
 
@@ -34,7 +34,7 @@ En todos estos casos, el sistema almacena los datos reales recopilados durante l
     </colgroup>
     <tr>
         <td><strong>Característica</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens</strong></a></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>

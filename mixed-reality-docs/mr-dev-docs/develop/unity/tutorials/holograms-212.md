@@ -6,17 +6,17 @@ ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academia, tutorial, voz, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: b9d9002180da7a59c62b77b83872e77499da4c09
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 6fb3e10cb440fdda941a6d68b106da1bbaaedbc9
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94677244"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583686"
 ---
 # <a name="mr-input-212-voice"></a>Entrada de realidad mixta (212): Voz
 
 >[!NOTE]
->Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](../../../mr-learning-base-01.md) para HoloLens 2.
+>Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](./mr-learning-base-01.md) para HoloLens 2.
 
 La [entrada de voz](../../../design/voice-input.md) nos proporciona otro método para interactuar con los hologramas. Los comandos de voz funcionan de forma muy natural y sencilla. Diseñe los comandos de voz para que estén:
 
@@ -45,7 +45,7 @@ En este curso, volveremos a visitar el explorador de modelos, que hemos creado e
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td>Entrada de realidad mixta (212): Voz</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -53,7 +53,7 @@ En este curso, volveremos a visitar el explorador de modelos, que hemos creado e
 
 ## <a name="before-you-start"></a>Antes de empezar
 
-### <a name="prerequisites"></a>Prerrequisitos
+### <a name="prerequisites"></a>Requisitos previos
 
 * Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](../../../develop/install-the-tools.md).
 * Funcionalidad básica de programación de C#.
@@ -76,7 +76,7 @@ En este curso, volveremos a visitar el explorador de modelos, que hemos creado e
 
 ## <a name="unity-setup"></a>Configuración de Unity
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 1. Inicie Unity.
 2. seleccione **Open**(Abrir).
@@ -149,10 +149,10 @@ En este capítulo, aprenderá a diseñar comandos de voz. Al crear comandos de v
     3. Herramienta de zoom
     4. Herramienta de arrastre
     5. Ajustar
-    6. Quitar
+    6. Remove
 * Usar sonidos similares. Intente evitar el uso de comandos de voz que Rhyme. Si tiene una aplicación de compras que admitía *"Mostrar tienda"* y *"Mostrar más"* como comandos de voz, querrá deshabilitar uno de los comandos mientras el otro estaba en uso. Por ejemplo, puede usar el botón *"Mostrar tienda"* para abrir el almacén y, a continuación, deshabilitar ese comando cuando se mostró el almacén para que el comando *"Mostrar más"* pueda usarse para la exploración.
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 * En el panel de **jerarquías** de Unity, use la herramienta de búsqueda para buscar el objeto de **holoComm_screen_mesh** .
 * Haga doble clic en el objeto **holoComm_screen_mesh** para verlo en la **escena**. Esta es la inspección de Astronaut, que responderá a los comandos de voz.
@@ -192,7 +192,7 @@ En este capítulo, aprenderá a diseñar comandos de voz. Al crear comandos de v
 >2. Haga clic en la pestaña "Plataforma universal de Windows"
 >3. En la sección "configuración de publicación > funcionalidades", Compruebe la capacidad del **micrófono** .
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 * En el panel de **jerarquías** de Unity, compruebe que está seleccionado el objeto de **holoComm_screen_mesh** .
 * En el panel **Inspector** , busque el componente **Astronaut Watch (Script)** .
@@ -248,7 +248,7 @@ En este capítulo, usaremos el reconocedor de dictado para crear un mensaje para
 >2. Haga clic en la pestaña "Plataforma universal de Windows"
 >3. En la sección "configuración de publicación > funcionalidades", Compruebe la capacidad del **micrófono** .
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 Vamos a editar **MicrophoneManager.CS** para usar el reconocedor de dictado. Esto es lo que agregaremos:
 
@@ -475,7 +475,7 @@ namespace Academy
 >2. Haga clic en la pestaña "Plataforma universal de Windows"
 >3. En la sección "configuración de publicación > funcionalidades", Compruebe la capacidad del **micrófono** .
 
-### <a name="instructions"></a>Instrucciones
+### <a name="instructions"></a>Instructions
 
 1. En el panel **jerarquía** , busque **Jetpack_Center** y selecciónelo.
 2. Busque el script de **acción tagalong** en el panel **Inspector** .
@@ -500,7 +500,7 @@ En nuestro archivo SRGS, tenemos tres tipos de reglas:
 
 ## <a name="the-end"></a>Fin
 
-¡Enhorabuena! Ahora ha completado la **entrada MR 212: Voice**.
+Felicidades. Ahora ha completado la **entrada MR 212: Voice**.
 
 * Conoce las dos y no los comandos de voz.
 * Vio cómo se empleó la información sobre herramientas para que los usuarios conozcan los comandos de voz.

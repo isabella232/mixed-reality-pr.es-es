@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, rendimiento, optimización, CPU, GPU
-ms.openlocfilehash: ff3db5d49ddab13a20c4c32de8e5640fff4f0d81
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 68aae6408a59b197227ab8cd9042e11f8a255d10
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008475"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583083"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Descripción del rendimiento de la realidad mixta
 
@@ -21,7 +21,7 @@ A continuación se enumeran los valores de velocidad de fotogramas de rendimient
 
 | Plataforma | Velocidad de fotogramas de destino |
 |----------|-------------------|
-| [HoloLens](../../hololens-hardware-details.md) | 60 FPS |
+| [HoloLens](/hololens/hololens1-hardware) | 60 FPS |
 | [Windows Mixed Reality ultra PC](../../discover/immersive-headset-hardware-details.md) | 90 FPS |
 | [Equipos con Windows Mixed Reality](../../discover/immersive-headset-hardware-details.md) | 60 FPS |
 
@@ -46,7 +46,7 @@ Hay muchas herramientas que le permiten comprender el perfil de rendimiento y lo
 
 A continuación se muestran algunas herramientas comunes para ayudarle a recopilar información de generación de perfiles profunda para su aplicación:
 - [Analizadores de rendimiento de gráficos Intel](https://software.intel.com/gpa)
-- [Depuradores de gráficos de Visual Studio](https://docs.microsoft.com/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)
+- [Depuradores de gráficos de Visual Studio](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)
 - [Generador de perfiles de Unity](https://docs.unity3d.com/Manual/Profiler.html)
 - [Depurador de fotogramas de Unity](https://docs.unity3d.com/Manual/FrameDebugger.html)
 
@@ -100,7 +100,7 @@ La velocidad de relleno se centra en reducir el número de operaciones que se de
 
 #### <a name="reduce-polygon-count"></a>Reducir el número de polígonos
 
-Los recuentos de polígonos más altos producen más operaciones para la GPU, por lo que [reducir el número de polígonos](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) de la escena reduce el tiempo de representación. Hay otros factores que hacen que el sombreado de la geometría sea caro, pero el recuento de polígonos es la métrica más simple para determinar la cantidad de trabajo que se tardará en representar una escena.
+Los recuentos de polígonos más altos producen más operaciones para la GPU, por lo que [reducir el número de polígonos](/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) de la escena reduce el tiempo de representación. Hay otros factores que hacen que el sombreado de la geometría sea caro, pero el recuento de polígonos es la métrica más simple para determinar la cantidad de trabajo que se tardará en representar una escena.
 
 #### <a name="limit-overdraw"></a>Sobredibujo del límite
 
@@ -139,6 +139,5 @@ La agrupación de objetos es una técnica popular para reducir el costo de las a
 ## <a name="see-also"></a>Consulte también
 - [Recomendaciones de rendimiento para Unity](../unity/performance-recommendations-for-unity.md)
 - [Configuración recomendada para Unity](../unity/recommended-settings-for-unity.md)
-- [Optimizar modelos 3D](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
-- [Prácticas recomendadas para convertir y optimizar modelos 3D en tiempo real](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/best-practices)
-
+- [Optimizar modelos 3D](/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
+- [Prácticas recomendadas para convertir y optimizar modelos 3D en tiempo real](/dynamics365/mixed-reality/import-tool/best-practices)

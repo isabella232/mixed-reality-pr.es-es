@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, reconocimiento facial, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: a6578950039a0a9267b7191f5b96775dca366c01
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 6cdb8b7af9988bbfbc6670d0ef79f00487db7f3c
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010155"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583378"
 ---
 # <a name="mr-and-azure-304-face-recognition"></a>Realidad mixta y Azure (304): Reconocimiento facial
 
@@ -43,7 +43,7 @@ En su aplicación, depende del modo en que va a integrar los resultados con el d
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td> Realidad mixta y Azure (304): Reconocimiento facial</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -64,19 +64,19 @@ Se recomienda el siguiente hardware y software para este curso:
 - [El SDK de Windows 10 más reciente](../../install-the-tools.md)
 - [Unity 2017,4](../../install-the-tools.md)
 - [Visual Studio 2017](../../install-the-tools.md)
-- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](../../../hololens-hardware-details.md) con el modo de desarrollador habilitado
+- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](/hololens/hololens1-hardware) con el modo de desarrollador habilitado
 - Una cámara conectada al equipo (para el desarrollo de auriculares envolvente)
 - Acceso a Internet para la configuración y recuperación de Face API de Azure
 
 ## <a name="before-you-start"></a>Antes de comenzar
 
 1.  Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).
-2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
+2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](/hololens/hololens-setup). 
 3.  Es una buena idea realizar la calibración y el ajuste del sensor al empezar a desarrollar una nueva aplicación de HoloLens (a veces puede ayudar a realizar esas tareas para cada usuario). 
 
-Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](../../../calibration.md#hololens-2).
+Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](/hololens/hololens-calibration#hololens-2).
 
-Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](../../../sensor-tuning.md).
+Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](/hololens/hololens-updates).
 
 ## <a name="chapter-1---the-azure-portal"></a>Capítulo 1: Azure portal
 
@@ -108,7 +108,7 @@ Para usar el servicio de *face API* en Azure, tendrá que configurar una instanc
 
     4. Elija un **grupo de recursos** o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos laboratorios) en un grupo de recursos común). 
 
-        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](/azure/azure-resource-manager/resource-group-portal).
 
     5. La aplicación para UWP, **Person Maker**, que se usa más adelante, requiere el uso de ' oeste de EE. UU. ' en la ubicación.
 
@@ -147,7 +147,7 @@ Asegúrese de descargar la aplicación de UWP precompilada denominada [persona M
 
 > AÚN **Person Maker** usa algunas limitaciones básicas para asegurarse de que no supere el número de llamadas de servicio por minuto para el nivel de **suscripción gratuita**. El texto verde de la parte superior cambiará a rojo y se actualizará como ' activo ' cuando se esté produciendo la limitación; Si este es el caso, simplemente espere a que la aplicación (esperará hasta que pueda seguir accediendo al servicio de caras, actualizando como "en activo" cuando pueda volver a usarla).
 
-Esta aplicación usa las bibliotecas *Microsoft. ProjectOxford. facial* , que le permitirán hacer uso completo de los Face API. Esta biblioteca está disponible de forma gratuita como paquete NuGet. Para obtener más información sobre esta y las API similares, asegúrese [de visitar el artículo de referencia de la API](https://docs.microsoft.com/azure/cognitive-services/face/apireference).
+Esta aplicación usa las bibliotecas *Microsoft. ProjectOxford. facial* , que le permitirán hacer uso completo de los Face API. Esta biblioteca está disponible de forma gratuita como paquete NuGet. Para obtener más información sobre esta y las API similares, asegúrese [de visitar el artículo de referencia de la API](/azure/cognitive-services/face/apireference).
 
 > [!NOTE] 
 > Estos son solo los pasos necesarios, las instrucciones sobre cómo realizar estas acciones se encuentran en el documento. La aplicación **creador de personas** le permitirá:
@@ -842,7 +842,7 @@ Para implementar en HoloLens:
 ## <a name="chapter-10---using-the-application"></a>Capítulo 10: uso de la aplicación
 
 1.  Con HoloLens, inicie la aplicación.
-2.  Fíjese en la persona que ha registrado con el *face API*. Asegúrese de lo siguiente:
+2.  Fíjese en la persona que ha registrado con el *face API*. Asegúrese de que:
 
     -  La superficie de la persona no está demasiado lejana y es claramente visible
     -  La iluminación del entorno no es demasiado oscura

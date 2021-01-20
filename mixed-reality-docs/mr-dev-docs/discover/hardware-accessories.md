@@ -6,18 +6,18 @@ ms.author: mazeller
 ms.date: 05/20/2020
 ms.topic: article
 keywords: procedimientos, accesorios, Bluetooth, BT, controlador, controlador de juegos, clic, Xbox, hardware, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, controlador de movimiento
-ms.openlocfilehash: aaed865f3fd2f722ce287bd2362299f785af05dc
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: b9a58a34a88de01d1d2351ff0a5efbe4f99298db
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757723"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583328"
 ---
 # <a name="hardware-accessories"></a>Accesorios de hardware
 
 Los dispositivos de Windows Mixed Reality admiten accesorios. Puede usar puertos Bluetooth o USB para emparejar los accesorios compatibles con un casco envolvente desde su PC.
 
-Para obtener información sobre el uso de accesorios Bluetooth con HoloLens, consulte [conexión a dispositivos Bluetooth y USB-C](https://docs.microsoft.com/hololens/hololens-connect-devices).
+Para obtener información sobre el uso de accesorios Bluetooth con HoloLens, consulte [conexión a dispositivos Bluetooth y USB-C](/hololens/hololens-connect-devices).
 
 Los auriculares que se encuentran en la realidad mixta de Windows requieren accesorios para la entrada más allá de la [mirada](../design/gaze-and-commit.md) y la [voz](../design/voice-input.md). Los accesorios admitidos son el **teclado y el mouse**, el **controlador de juegos** y **[los controladores de movimiento](../design/motion-controllers.md)**.
 

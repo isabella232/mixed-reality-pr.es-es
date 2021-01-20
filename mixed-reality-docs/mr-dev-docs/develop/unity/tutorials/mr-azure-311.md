@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Microsoft Graph, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 341b6fea537fe6001a8f7dcf2e98efea0a0b09b6
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: 699e520fb9db8d8d3b5bab8b98d92fa39f0acb2d
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679444"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583443"
 ---
 # <a name="mr-and-azure-311---microsoft-graph"></a>Realidad mixta y Azure (311): Microsoft Graph
 
@@ -37,13 +37,13 @@ En su aplicación, depende del modo en que va a integrar los resultados con el d
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td> Realidad mixta y Azure (311): Microsoft Graph</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> </td>
 </tr>
 </table>
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 > [!NOTE]
 > Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#. Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de julio). Puede usar el software más reciente, como se indica en el artículo [instalar las herramientas](../../install-the-tools.md) , aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se enumera a continuación.
@@ -55,20 +55,20 @@ Se recomienda el siguiente hardware y software para este curso:
 - [El SDK de Windows 10 más reciente](../../install-the-tools.md#installation-checklist)
 - [Unity 2017,4](../../install-the-tools.md#installation-checklist)
 - [Visual Studio 2017](../../install-the-tools.md#installation-checklist)
-- Un [Microsoft HoloLens](../../../hololens-hardware-details.md) con el modo de desarrollador habilitado
+- Un [Microsoft HoloLens](/hololens/hololens1-hardware) con el modo de desarrollador habilitado
 - Acceso a Internet para la instalación de Azure y Microsoft Graph la recuperación de datos
 - Una **cuenta Microsoft** válida (personal, profesional o educativa)
 - Algunas reuniones programadas para el día actual, con la misma cuenta de Microsoft
 
-### <a name="before-you-start"></a>Antes de empezar
+### <a name="before-you-start"></a>Antes de comenzar
 
 1.  Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación).
-2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](https://docs.microsoft.com/hololens/hololens-setup). 
+2.  Configure y pruebe su HoloLens. Si necesita ayuda para configurar HoloLens, asegúrese [de visitar el artículo de configuración de hololens](/hololens/hololens-setup). 
 3.  Es una buena idea realizar la calibración y el ajuste del sensor al empezar a desarrollar una nueva aplicación de HoloLens (a veces puede ayudar a realizar esas tareas para cada usuario). 
 
-Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](../../../calibration.md#hololens-2).
+Para obtener ayuda sobre la calibración, siga este [vínculo al artículo sobre la calibración de HoloLens](/hololens/hololens-calibration#hololens-2).
 
-Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](../../../sensor-tuning.md).
+Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al artículo sobre la optimización del sensor de HoloLens](/hololens/hololens-updates).
 
 ## <a name="chapter-1---create-your-app-in-the-application-registration-portal"></a>Capítulo 1: creación de la aplicación en el portal de registro de aplicaciones
 
@@ -127,11 +127,11 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 
     ![](images/AzureLabs-Lab311-11.png)
 
-4.  Vaya a **File**  >  **configuración de compilación** de archivos y seleccione **plataforma universal de Windows** y, a continuación, haga clic en el botón **cambiar plataforma** para aplicar la selección.
+4.  Vaya a   >  **configuración de compilación** de archivos y seleccione **plataforma universal de Windows** y, a continuación, haga clic en el botón **cambiar plataforma** para aplicar la selección.
 
     ![](images/AzureLabs-Lab311-12.png)
 
-5.  Mientras sigue en la configuración de compilación de **archivos**  >  **Build Settings**, asegúrese de que:
+5.  Mientras sigue en la configuración de compilación de **archivos**  >  , asegúrese de que:
 
     1. El **dispositivo de destino** está establecido en **HoloLens**
     2. El **tipo de compilación** se establece en **D3D**
@@ -205,7 +205,7 @@ Si desea obtener más información sobre cómo agregar archivos dll personalizad
 
 Para importar el paquete:
 
-1.  Agregue el paquete Unity a Unity mediante la **Assets**  >  opción de menú de paquetes **importar paquete**  >  **personalizado** de recursos. Seleccione el paquete que acaba de descargar.
+1.  Agregue el paquete Unity a Unity mediante la   >  opción de menú de paquetes **importar paquete**  >  **personalizado** de recursos. Seleccione el paquete que acaba de descargar.
 
 2.  En el cuadro **importar paquete Unity** que aparece, asegúrese de que todo lo que hay en **Complementos** (y incluido) está seleccionado.
 
@@ -959,7 +959,7 @@ Para implementar en HoloLens:
 
     1.  Mientras se contenga HoloLens, abra la **configuración**.
 
-    2.  Vaya a **red &**  >  Opciones avanzadas **de Wi-Fi de**  >  **Advanced Options** Internet
+    2.  Vaya a **red &**  >  Opciones avanzadas **de Wi-Fi de**  >   Internet
 
     3.  Anote la dirección **IPv4** .
 

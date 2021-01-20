@@ -6,12 +6,12 @@ ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Language Understanding Intelligence Service, Luis, hololens, inmersivo, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 431858d369bc7007cc5eddbf0e75d9b74b7ba5d3
-ms.sourcegitcommit: dd13a32a5bb90bd53eeeea8214cd5384d7b9ef76
+ms.openlocfilehash: a91fcd2e20ce1e1731bd398fa72923f6ff5e8406
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94679504"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583437"
 ---
 # <a name="mr-and-azure-303-natural-language-understanding-luis"></a>MR y Azure 303: comprensión del lenguaje natural (LUIS)
 
@@ -44,7 +44,7 @@ Esté preparado para entrenar a LUIS varias veces, que se trata en el [capítulo
 
 <table>
 <tr>
-<th>Curso</th><th style="width:150px"> <a href="../../../hololens-hardware-details.md">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
+<th>Curso</th><th style="width:150px"> <a href="/hololens/hololens1-hardware">HoloLens</a></th><th style="width:150px"> <a href="../../../discover/immersive-headset-hardware-details.md">Cascos envolventes</a></th>
 </tr><tr>
 <td>MR y Azure 303: comprensión del lenguaje natural (LUIS)</td><td style="text-align: center;"> ✔️</td><td style="text-align: center;"> ✔️</td>
 </tr>
@@ -53,7 +53,7 @@ Esté preparado para entrenar a LUIS varias veces, que se trata en el [capítulo
 > [!NOTE]
 > Aunque este curso se centra principalmente en los auriculares de Windows Mixed Reality inmersivo (VR), también puede aplicar lo que aprenda en este curso a Microsoft HoloLens. A medida que siga con el curso, verá notas sobre cualquier cambio que deba usar para admitir HoloLens. Al usar HoloLens, puede observar algún Eco durante la captura de voz.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 > [!NOTE]
 > Este tutorial está diseñado para desarrolladores que tienen experiencia básica con Unity y C#. Tenga en cuenta también que los requisitos previos y las instrucciones escritas dentro de este documento representan lo que se ha probado y comprobado en el momento de la escritura (2018 de mayo). Puede usar el software más reciente, como se indica en el artículo [instalar las herramientas](../../install-the-tools.md) , aunque no se debe suponer que la información de este curso se ajusta perfectamente a lo que encontrará en el software más reciente que el que se indica a continuación.
@@ -65,11 +65,11 @@ Se recomienda el siguiente hardware y software para este curso:
 - [El SDK de Windows 10 más reciente](../../install-the-tools.md)
 - [Unity 2017,4](../../install-the-tools.md)
 - [Visual Studio 2017](../../install-the-tools.md)
-- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](../../../hololens-hardware-details.md) con el modo de desarrollador habilitado
+- Un [auricular de Windows Mixed Reality inmersivo (VR)](../../../discover/immersive-headset-hardware-details.md) o [Microsoft HoloLens](/hololens/hololens1-hardware) con el modo de desarrollador habilitado
 - Un conjunto de auriculares con micrófono integrado (si el casco no tiene micrófonos y altavoces integrados)
 - Acceso a Internet para la instalación de Azure y la recuperación de LUIS
 
-## <a name="before-you-start"></a>Antes de empezar
+## <a name="before-you-start"></a>Antes de comenzar
 
 1.  Para evitar que se produzcan problemas al compilar este proyecto, se recomienda encarecidamente que cree el proyecto mencionado en este tutorial en una carpeta raíz o cerca de la raíz (las rutas de acceso de carpeta largas pueden producir problemas en tiempo de compilación). 
 2.  Para permitir que el equipo habilite el dictado, vaya a **configuración de Windows > privacidad > voz, entrada manuscrita & escriba** y presione el botón **activar servicios de voz y sugerencias de escritura**.
@@ -105,7 +105,7 @@ Para usar el servicio de *Language Understanding* en Azure, tendrá que configur
     3. Seleccione el **plan de tarifa** adecuado para usted; si es la primera vez que crea un *servicio Luis*, debe tener a su disposición un nivel gratis (denominado F0). La asignación gratuita debe ser más que suficiente para este curso.
     4. Elija un **grupo de recursos** o cree uno nuevo. Un grupo de recursos proporciona una manera de supervisar, controlar el acceso, aprovisionar y administrar la facturación de una colección de recursos de Azure. Se recomienda mantener todos los servicios de Azure asociados a un único proyecto (por ejemplo, estos cursos) en un grupo de recursos común). 
 
-        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-portal).
+        > Si desea leer más información sobre los grupos de recursos de Azure, [visite el artículo sobre el grupo de recursos](/azure/azure-resource-manager/resource-group-portal).
 
     5. Determine la **Ubicación** del grupo de recursos (si va a crear un nuevo grupo de recursos). Idealmente, la ubicación estará en la región donde se ejecutará la aplicación. Algunos recursos de Azure solo están disponibles en determinadas regiones.
     6. También deberá confirmar que ha comprendido los términos y condiciones que se aplican a este servicio.
@@ -1117,4 +1117,4 @@ Al usar esta aplicación, es posible que observe que si mira el objeto Floor y p
 
 ### <a name="exercise-2"></a>Ejercicio 2
 
-Intente ampliar las funcionalidades de LUIS y App, agregando funcionalidad adicional a los objetos de la escena. por ejemplo, cree nuevos objetos en el punto de Miración de la mirada, en función de lo que indique el usuario y, a continuación, podrá usar esos objetos junto con los objetos de la escena actual con los comandos existentes. 
+Intente ampliar las funcionalidades de LUIS y App, agregando funcionalidad adicional a los objetos de la escena. por ejemplo, cree nuevos objetos en el punto de Miración de la mirada, en función de lo que indique el usuario y, a continuación, podrá usar esos objetos junto con los objetos de la escena actual con los comandos existentes.

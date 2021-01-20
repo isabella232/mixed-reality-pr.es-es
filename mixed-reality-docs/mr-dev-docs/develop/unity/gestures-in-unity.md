@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: gestos, Unity, miras, entrada, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 2a968235abaeff9187580b7f5f77263b27c38c28
-ms.sourcegitcommit: a1bb77f729ee2e0b3dbd1c2c837bb7614ba7b9bd
+ms.openlocfilehash: 44c42abdd4628cacd6af334a916fb725da8bb022
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98192974"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583898"
 ---
 # <a name="gestures-in-unity"></a>Gestos en Unity
 
@@ -145,7 +145,7 @@ Los tutoriales paso a paso, con ejemplos de personalización más detallados, es
 - [MR Input 211: gesto](tutorials/holograms-211.md)
 - [MR Input 213: controladores de movimiento](../../deprecated/mixed-reality-213.md)
 
-[![Entrada MR 213-controlador de movimiento](images/mr213-main-600px.jpg)](https://docs.microsoft.com/windows/mixed-reality/mixed-reality-213)<br>
+[![Entrada MR 213-controlador de movimiento](images/mr213-main-600px.jpg)](/windows/mixed-reality/mixed-reality-213)<br>
 *Entrada MR 213-controlador de movimiento*
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
@@ -153,7 +153,7 @@ Los tutoriales paso a paso, con ejemplos de personalización más detallados, es
 Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
-> [Seguimiento de manos y ocular](hand-eye-in-unit.md)
+> [Seguimiento de manos y ocular](./hand-eye-in-unity.md)
 
 O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:
 

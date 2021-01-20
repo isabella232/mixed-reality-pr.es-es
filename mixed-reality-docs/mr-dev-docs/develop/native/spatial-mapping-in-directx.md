@@ -6,12 +6,12 @@ ms.author: mriches
 ms.date: 08/04/2020
 ms.topic: article
 keywords: Windows Mixed Reality, asignación espacial, entorno, interacción, DirectX, winrt, API, código de ejemplo, UWP, SDK, tutorial
-ms.openlocfilehash: bcd78487e96aaf09707aa4bf58917223cc2e8583
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 19479a4efb577bad629e46b59334f0d23b0b2db4
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98006715"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583776"
 ---
 # <a name="spatial-mapping-in-directx"></a>Asignación espacial en DirectX
 
@@ -36,7 +36,7 @@ En este tema se usa el código del ejemplo de código UWP [HolographicSpatialMap
     </colgroup>
     <tr>
         <td><strong>Característica</strong></td>
-        <td><a href="../../hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></td>
         <td><a href="../../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -50,35 +50,35 @@ En este tema se usa el código del ejemplo de código UWP [HolographicSpatialMap
 
 ## <a name="directx-development-overview"></a>Introducción al desarrollo de DirectX
 
-El desarrollo de aplicaciones nativas para la asignación espacial usa las API en el espacio de nombres [Windows. imception. Spatial](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.aspx) . Estas API proporcionan control total sobre la funcionalidad de asignación espacial, del mismo modo que [Unity](../unity/spatial-mapping-in-unity.md)expone las API de asignación espacial.
+El desarrollo de aplicaciones nativas para la asignación espacial usa las API en el espacio de nombres [Windows. imception. Spatial](/uwp/api/Windows.Perception.Spatial) . Estas API proporcionan control total sobre la funcionalidad de asignación espacial, del mismo modo que [Unity](../unity/spatial-mapping-in-unity.md)expone las API de asignación espacial.
 
 ### <a name="perception-apis"></a>API de percepción
 
 Los tipos principales proporcionados para el desarrollo de asignación espacial son los siguientes:
-* [SpatialSurfaceObserver](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.aspx) proporciona información sobre las superficies en regiones de espacio especificadas por la aplicación cerca del usuario, en forma de objetos SpatialSurfaceInfo.
-* [SpatialSurfaceInfo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceinfo.aspx) describe una sola superficie espacial, que incluye un identificador único, el volumen de límite y la hora del último cambio. Proporcionará un SpatialSurfaceMesh de forma asincrónica cuando se solicite.
-* [SpatialSurfaceMeshOptions](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemeshoptions.aspx) contiene parámetros que se usan para personalizar los objetos SpatialSurfaceMesh solicitados desde SpatialSurfaceInfo.
-* [SpatialSurfaceMesh](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.aspx) representa los datos de la malla para una sola superficie espacial. Los datos para las posiciones de los vértices, las normales de vértices y los índices de triángulo se encuentran en los objetos SpatialSurfaceMeshBuffer de miembro.
-* [SpatialSurfaceMeshBuffer](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemeshbuffer.aspx) ajusta un solo tipo de datos de malla.
+* [SpatialSurfaceObserver](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver) proporciona información sobre las superficies en regiones de espacio especificadas por la aplicación cerca del usuario, en forma de objetos SpatialSurfaceInfo.
+* [SpatialSurfaceInfo](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo) describe una sola superficie espacial, que incluye un identificador único, el volumen de límite y la hora del último cambio. Proporcionará un SpatialSurfaceMesh de forma asincrónica cuando se solicite.
+* [SpatialSurfaceMeshOptions](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshOptions) contiene parámetros que se usan para personalizar los objetos SpatialSurfaceMesh solicitados desde SpatialSurfaceInfo.
+* [SpatialSurfaceMesh](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh) representa los datos de la malla para una sola superficie espacial. Los datos para las posiciones de los vértices, las normales de vértices y los índices de triángulo se encuentran en los objetos SpatialSurfaceMeshBuffer de miembro.
+* [SpatialSurfaceMeshBuffer](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMeshBuffer) ajusta un solo tipo de datos de malla.
 
 Al desarrollar una aplicación mediante estas API, el flujo del programa básico tendrá el siguiente aspecto (como se muestra en la aplicación de ejemplo que se describe a continuación):
 - **Configuración de SpatialSurfaceObserver**
-  - Llame a [RequestAccessAsync](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.requestaccessasync.aspx)para asegurarse de que el usuario ha concedido permiso a la aplicación para usar las capacidades de asignación espacial del dispositivo.
+  - Llame a [RequestAccessAsync](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver)para asegurarse de que el usuario ha concedido permiso a la aplicación para usar las capacidades de asignación espacial del dispositivo.
   - Cree una instancia de un objeto SpatialSurfaceObserver.
-  - Llame a [SetBoundingVolumes](https://msdn.microsoft.com/library/windows/apps/mt592747.aspx) para especificar las regiones de espacio en las que quiere obtener información sobre las superficies espaciales. Puede modificar estas regiones en el futuro llamando a esta función de nuevo. Cada región se especifica mediante un [SpatialBoundingVolume](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialboundingvolume.aspx).
-  - Regístrese para el evento [ObservedSurfacesChanged](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.observedsurfaceschanged.aspx) , que se activará siempre que haya nueva información disponible sobre las superficies espaciales en las regiones de espacio que haya especificado.
+  - Llame a [SetBoundingVolumes](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver) para especificar las regiones de espacio en las que quiere obtener información sobre las superficies espaciales. Puede modificar estas regiones en el futuro llamando a esta función de nuevo. Cada región se especifica mediante un [SpatialBoundingVolume](/uwp/api/Windows.Perception.Spatial.SpatialBoundingVolume).
+  - Regístrese para el evento [ObservedSurfacesChanged](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver) , que se activará siempre que haya nueva información disponible sobre las superficies espaciales en las regiones de espacio que haya especificado.
 - **Procesar eventos de ObservedSurfacesChanged**
-  - En el controlador de eventos, llame a [GetObservedSurfaces](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.getobservedsurfaces.aspx) para recibir un mapa de objetos SpatialSurfaceInfo. Con esta asignación, puede actualizar los registros de las superficies espaciales que [existen en el entorno del usuario](../../design/spatial-mapping.md#mesh-caching).
-  - Para cada objeto SpatialSurfaceInfo, puede consultar [TryGetBounds](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceinfo.trygetbounds.aspx) para determinar las extensiones espaciales de la superficie, expresada en un [sistema de coordenadas espaciales](../../design/coordinate-systems.md) de su elección.
-  - Si decide solicitar, malla para una superficie espacial, llame a [TryComputeLatestMeshAsync](https://msdn.microsoft.com/library/windows/apps/mt592715.aspx). Puede proporcionar opciones que especifiquen la densidad de los triángulos y el formato de los datos de malla devueltos.
+  - En el controlador de eventos, llame a [GetObservedSurfaces](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver) para recibir un mapa de objetos SpatialSurfaceInfo. Con esta asignación, puede actualizar los registros de las superficies espaciales que [existen en el entorno del usuario](../../design/spatial-mapping.md#mesh-caching).
+  - Para cada objeto SpatialSurfaceInfo, puede consultar [TryGetBounds](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo) para determinar las extensiones espaciales de la superficie, expresada en un [sistema de coordenadas espaciales](../../design/coordinate-systems.md) de su elección.
+  - Si decide solicitar, malla para una superficie espacial, llame a [TryComputeLatestMeshAsync](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo). Puede proporcionar opciones que especifiquen la densidad de los triángulos y el formato de los datos de malla devueltos.
 - **Red de recepción y proceso**
   - Cada llamada a TryComputeLatestMeshAsync devolverá de forma asincrónica un objeto SpatialSurfaceMesh.
-  - A partir de este objeto, puede tener acceso a los objetos SpatialSurfaceMeshBuffer contenidos, lo que le proporciona acceso a los índices de triángulo, las posiciones de vértices y las normales de vértice de la malla si los solicita. Estos datos estarán en un formato directamente compatible con las [API de Direct3D 11](https://msdn.microsoft.com/library/windows/desktop/ff476501(v=vs.85).aspx) usadas para representar mallas.
+  - A partir de este objeto, puede tener acceso a los objetos SpatialSurfaceMeshBuffer contenidos, lo que le proporciona acceso a los índices de triángulo, las posiciones de vértices y las normales de vértice de la malla si los solicita. Estos datos estarán en un formato directamente compatible con las [API de Direct3D 11](/windows/win32/api/d3d11/nf-d3d11-id3d11device-createbuffer) usadas para representar mallas.
   - Desde aquí, la aplicación puede analizar o [procesar](../../design/spatial-mapping.md#mesh-processing) los datos de la malla, y usarlos para la [representación](../../design/spatial-mapping.md#rendering) y la raycasting física [y la colisión](../../design/spatial-mapping.md#raycasting-and-collision).
-  - Un detalle importante a tener en cuenta es que se debe aplicar una escala a las posiciones del vértice de la malla (por ejemplo, en el sombreador de vértices que se usa para representar las mallas), para convertirlas desde las unidades enteras optimizadas en las que se almacenan en el búfer, hasta los medidores. Puede recuperar esta escala llamando a [VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx).
+  - Un detalle importante a tener en cuenta es que se debe aplicar una escala a las posiciones del vértice de la malla (por ejemplo, en el sombreador de vértices que se usa para representar las mallas), para convertirlas desde las unidades enteras optimizadas en las que se almacenan en el búfer, hasta los medidores. Puede recuperar esta escala llamando a [VertexPositionScale](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh).
 
 ### <a name="troubleshooting"></a>Solución de problemas
-* No olvide escalar las posiciones de los vértices de malla en el sombreador de vértices mediante la escala devuelta por [SpatialSurfaceMesh. VertexPositionScale](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.vertexpositionscale.aspx)
+* No olvide escalar las posiciones de los vértices de malla en el sombreador de vértices mediante la escala devuelta por [SpatialSurfaceMesh. VertexPositionScale](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh)
 
 ## <a name="spatial-mapping-code-sample-walkthrough"></a>Tutorial de ejemplo de código de asignación espacial
 
@@ -159,7 +159,7 @@ initSurfaceObserverTask.then([this, coordinateSystem](Windows::Perception::Spati
 
 ### <a name="create-a-surface-observer"></a>Creación de un observador de superficie
 
-El espacio de nombres **Windows::P erception:: Spatial:: Surfaces** incluye la clase [SpatialSurfaceObserver](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.aspx) , que observa uno o más volúmenes que se especifican en un [SpatialCoordinateSystem](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialcoordinatesystem.aspx). Use una instancia de [SpatialSurfaceObserver](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceobserver.aspx) para tener acceso a los datos de malla superficial en tiempo real.
+El espacio de nombres **Windows::P erception:: Spatial:: Surfaces** incluye la clase [SpatialSurfaceObserver](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver) , que observa uno o más volúmenes que se especifican en un [SpatialCoordinateSystem](/uwp/api/Windows.Perception.Spatial.SpatialCoordinateSystem). Use una instancia de [SpatialSurfaceObserver](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceObserver) para tener acceso a los datos de malla superficial en tiempo real.
 
 Desde **AppMain. h**:
 
@@ -219,7 +219,7 @@ m_surfaceObserver->SetBoundingVolume(
             );
 ```
 
-Si la aplicación necesita hacer algo diferente cuando los datos de asignación de superficie no están disponibles, puede escribir código para responder al caso en el que no se **permite** el [SpatialPerceptionAccessStatus](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.spatialperceptionaccessstatus.aspx) ; por ejemplo, no se permitirá en equipos con dispositivos inmersivo conectados porque dichos dispositivos no tienen hardware para la asignación espacial. En el caso de estos dispositivos, debe basarse en la fase espacial para obtener información sobre el entorno del usuario y la configuración del dispositivo.
+Si la aplicación necesita hacer algo diferente cuando los datos de asignación de superficie no están disponibles, puede escribir código para responder al caso en el que no se **permite** el [SpatialPerceptionAccessStatus](/uwp/api/Windows.Perception.Spatial.SpatialPerceptionAccessStatus) ; por ejemplo, no se permitirá en equipos con dispositivos inmersivo conectados porque dichos dispositivos no tienen hardware para la asignación espacial. En el caso de estos dispositivos, debe basarse en la fase espacial para obtener información sobre el entorno del usuario y la configuración del dispositivo.
 
 ### <a name="initialize-and-update-the-surface-mesh-collection"></a>Inicializar y actualizar la colección de mallas de Surface
 
@@ -250,7 +250,7 @@ Nuestro ejemplo de código también está configurado para responder a estos eve
 
 **Nota:** Es posible que esta no sea la forma más eficaz para que la aplicación controle los datos de malla. Este código se escribe para mayor claridad y no está optimizado.
 
-Los datos de la malla de superficie se proporcionan en un mapa de solo lectura que almacena los objetos [SpatialSurfaceInfo](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfaceinfo.aspx) mediante [Platform:: GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931.aspx) como valores de clave.
+Los datos de la malla de superficie se proporcionan en un mapa de solo lectura que almacena los objetos [SpatialSurfaceInfo](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceInfo) mediante [Platform:: GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931.aspx) como valores de clave.
 
 ```cpp
 IMapView<Guid, SpatialSurfaceInfo^>^ const& surfaceCollection = sender->GetObservedSurfaces();
@@ -397,7 +397,7 @@ CreateDirectXBuffer(device, D3D11_BIND_VERTEX_BUFFER, positions, m_vertexPositio
 
 ### <a name="update-and-render-surface-meshes"></a>Actualización y representación de mallas de superficie
 
-Nuestra clase SurfaceMesh tiene una función de actualización especializada. Cada [SpatialSurfaceMesh](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.surfaces.spatialsurfacemesh.aspx) tiene su propia transformación y en nuestro ejemplo se usa el sistema de coordenadas actual para que nuestro **SpatialStationaryReferenceFrame** adquiera la transformación. A continuación, actualiza el búfer de constantes del modelo en la GPU.
+Nuestra clase SurfaceMesh tiene una función de actualización especializada. Cada [SpatialSurfaceMesh](/uwp/api/Windows.Perception.Spatial.Surfaces.SpatialSurfaceMesh) tiene su propia transformación y en nuestro ejemplo se usa el sistema de coordenadas actual para que nuestro **SpatialStationaryReferenceFrame** adquiera la transformación. A continuación, actualiza el búfer de constantes del modelo en la GPU.
 
 ```cpp
 void SurfaceMesh::UpdateTransform(
@@ -678,4 +678,4 @@ m_meshCollection->Render(pCameraResources->IsRenderingStereoscopic(), false);
 
 ## <a name="see-also"></a>Consulte también
 * [Creación de un proyecto de DirectX holográfico](creating-a-holographic-directx-project.md)
-* [Windows. Perception. Spatial API](https://msdn.microsoft.com/library/windows/apps/windows.perception.spatial.aspx)
+* [Windows. Perception. Spatial API](/uwp/api/Windows.Perception.Spatial)
