@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, rendimiento, optimización, CPU, GPU
-ms.openlocfilehash: 68aae6408a59b197227ab8cd9042e11f8a255d10
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 5012c30dce1ca4149324c916355922086a33c258
+ms.sourcegitcommit: 6725b83adf13f6573faacb27db2bcaafe80df472
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583083"
+ms.locfileid: "98615131"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Descripción del rendimiento de la realidad mixta
 
@@ -49,6 +49,9 @@ A continuación se muestran algunas herramientas comunes para ayudarle a recopil
 - [Depuradores de gráficos de Visual Studio](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)
 - [Generador de perfiles de Unity](https://docs.unity3d.com/Manual/Profiler.html)
 - [Depurador de fotogramas de Unity](https://docs.unity3d.com/Manual/FrameDebugger.html)
+- [Información no real](../unreal/unreal-insights.md)
+- [PIX](https://devblogs.microsoft.com/pix/)
+- [Pofiling de GPU en inreal](https://docs.unrealengine.com/en-US/TestingAndOptimization/PerformanceAndProfiling/GPU/index.html)
 
 ### <a name="how-to-profile-in-any-environment"></a>Cómo generar perfiles en cualquier entorno
 
@@ -136,8 +139,12 @@ Las operaciones de asignación y desasignación de memoria excesiva pueden dar l
 
 La agrupación de objetos es una técnica popular para reducir el costo de las asignaciones continuas y desasignaciones de objetos. Para ello, se asigna un grupo grande de objetos idénticos y se reutilizan instancias disponibles inactivas de este grupo en lugar de generar y destruir objetos constantemente a lo largo del tiempo. Los grupos de objetos son excelentes para los componentes reutilizables que tienen una duración variable en una aplicación.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulta también
 - [Recomendaciones de rendimiento para Unity](../unity/performance-recommendations-for-unity.md)
 - [Configuración recomendada para Unity](../unity/recommended-settings-for-unity.md)
-- [Optimizar modelos 3D](/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
-- [Prácticas recomendadas para convertir y optimizar modelos 3D en tiempo real](/dynamics365/mixed-reality/import-tool/best-practices)
+- [Recomendaciones de rendimiento para Unreal](../unreal/performance-recommendations-for-unreal.md)
+- [Recomendaciones de material en Unreal](../unreal/unreal-materials.md)
+- [Optimizar modelos 3D](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets)
+- [Prácticas recomendadas para convertir y optimizar modelos 3D en tiempo real](https://docs.microsoft.com/dynamics365/mixed-reality/import-tool/best-practices)
+- [Instrucciones de rendimiento para artistas y diseñadores de no real](https://docs.unrealengine.com/en-US/TestingAndOptimization/PerformanceAndProfiling/Guidelines/index.html)
+- [Prácticas recomendadas para la realidad](https://docs.unrealengine.com/en-US/SharingAndReleasing/XRDevelopment/VR/DevelopVR/ContentSetup/index.html)
