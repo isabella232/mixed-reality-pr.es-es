@@ -13,12 +13,12 @@ metadata:
   author: hferrone
   ms.author: v-haferr
   ms.date: 07/23/2020
-  ms.openlocfilehash: 0ef4c230bb58d9be3c0d61822754c313ab8dab16
-  ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+  ms.openlocfilehash: a4a869ca70c630956427130b01928c3154164f46
+  ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/08/2021
-  ms.locfileid: "98007565"
+  ms.lasthandoff: 01/20/2021
+  ms.locfileid: "98582867"
 highlightedContent:
   items:
   - title: ¿Qué es Mixed Reality?
@@ -26,10 +26,10 @@ highlightedContent:
     url: discover/mixed-reality.md
   - title: Introducción a HoloLens 2
     itemType: overview
-    url: https://docs.microsoft.com/hololens/hololens2-hardware
+    url: /hololens/hololens2-hardware
   - title: Aplicaciones de Dynamics 365 Mixed Reality
     itemType: reference
-    url: https://docs.microsoft.com/dynamics365/mixed-reality/
+    url: /dynamics365/mixed-reality/
   - title: Servicios en la nube de realidad mixta de Azure
     itemType: whats-new
     url: develop/mixed-reality-cloud-services.md
@@ -38,13 +38,13 @@ highlightedContent:
     url: develop/development.md
   - title: Administradores de TI
     itemType: quickstart
-    url: https://docs.microsoft.com/hololens/hololens-requirements
+    url: /hololens/hololens-requirements
   - title: Entusiastas de la VR
     itemType: how-to-guide
-    url: https://docs.microsoft.com/windows/mixed-reality/enthusiast-guide/vr-journey
+    url: /windows/mixed-reality/enthusiast-guide/vr-journey
   - title: Módulos de aprendizaje de Mixed Reality
     itemType: learn
-    url: develop/mr-learning-overview.md
+    url: ./discover/mr-learning-overview.md
 productDirectory:
   title: Explore Mixed Reality
   summary: Tanto si se dedica al diseño o desarrollo como a las TI, hemos seleccionado el camino adecuado para ayudarle a andar antes de echar a correr.
@@ -82,17 +82,17 @@ productDirectory:
   - title: Implementación
     imageSrc: images/icon-distribution.jpg
     links:
-    - url: https://docs.microsoft.com/hololens/hololens-requirements
+    - url: /hololens/hololens-requirements
       text: Prepare la implementación comercial
-    - url: https://docs.microsoft.com/hololens/hololens-identity
+    - url: /hololens/hololens-identity
       text: Administre la identidad del usuario y el inicio de sesión
-    - url: https://docs.microsoft.com/hololens/hololens-enroll-mdm
+    - url: /hololens/hololens-enroll-mdm
       text: Inscriba sus dispositivos
-    - url: https://docs.microsoft.com/hololens/hololens-updates
+    - url: /hololens/hololens-updates
       text: Administre las actualizaciones de HoloLens
-    - url: https://docs.microsoft.com/hololens/hololens2-cloud-connected-overview
+    - url: /hololens/hololens2-cloud-connected-overview
       text: Implementación conectada a la nube con Remote Assist
-    - url: https://docs.microsoft.com/hololens/hololens-troubleshooting
+    - url: /hololens/hololens-troubleshooting
       text: Solución de problemas y soporte técnico
 conceptualContent:
   title: Marcos de trabajo

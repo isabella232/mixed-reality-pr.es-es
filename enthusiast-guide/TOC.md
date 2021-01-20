@@ -44,7 +44,7 @@
 ### [Estado, seguridad y comodidad del casco envolvente](wmr-health-safety-comfort.md)
 ### [Información general de software de Mixed Reality e historial de versiones](mixed-reality-software.md)
 ### [Funcionamiento del seguimiento de la interacción directa](tracking-system.md)
-### [Controladores de HP Reverb G2 en Unity](https://docs.microsoft.com/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
-### [Controladores de HP Reverb G2 en Unreal](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
+### [Controladores de HP Reverb G2 en Unity](/windows/mixed-reality/develop/unity/unity-reverb-g2-controllers)
+### [Controladores de HP Reverb G2 en Unreal](/windows/mixed-reality/develop/unreal/unreal-reverb-g2-controllers)
 
 ## [Guía de contribución](contributing.md)
