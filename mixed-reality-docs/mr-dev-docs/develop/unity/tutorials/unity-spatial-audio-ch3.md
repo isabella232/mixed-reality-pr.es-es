@@ -1,107 +1,118 @@
 ---
-title: Espacialización del audio de un vídeo
-description: Obtenga información sobre cómo importar un recurso de vídeo en el proyecto de realidad mixta de Unity y cómo espaciale el audio del vídeo.
+title: 'Tutoriales de audio espacial: 3. Espacialización del audio de un vídeo'
+description: Importe un recurso de vídeo en el proyecto de Unity y cospatiala el audio del vídeo.
 author: kegodin
 ms.author: v-hferrone
 ms.date: 12/01/2019
 ms.topic: article
 keywords: mixed reality, Unity, tutorial, hololens2, audio espacial, MRTK, kit de herramientas de realidad mixta, UWP, Windows 10, HRTF, función de transferencia relacionada con el encabezado, reverberación, Microsoft Spatializer, vídeo, importación, reproductor de vídeo
-ms.openlocfilehash: 211d1e32a8137444d0f33d442a60067dcd77ca36
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 6474da522e650d23349a21c3deeac00222b8ce93
+ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007416"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98578625"
 ---
-# <a name="spatializing-audio-from-a-video"></a>Espacialización del audio de un vídeo
+# <a name="3-spatializing-audio-from-a-video"></a>3. Espacialización del audio de un vídeo
 
-En este tercer capítulo del módulo de audio espacial de los tutoriales de Unity de HoloLens 2, hará lo siguiente:
+## <a name="overview"></a>Introducción
+
+En este tutorial, obtendrá información sobre cómo espaciale el audio de un origen de vídeo y cómo probarlo en el editor de Unity y en HoloLens 2.
+
+## <a name="objectives"></a>Objetivos
+
 * Importar un vídeo y agregar un reproductor de vídeo
 * Reproducir el vídeo en un Quadrangle
 * Enrute el audio del vídeo al Quadrangle y Spatial el audio
 
-## <a name="import-a-video-and-add-a-video-player"></a>Importar un vídeo y agregar un reproductor de vídeo
+## <a name="import-a-video-and-add-a-video-player-to-the-scene"></a>Importar un vídeo y agregar un reproductor de vídeo a la escena
 
-Arrastre un archivo de vídeo al panel **proyecto** del proyecto de Unity. Puede usar [este vídeo](https://github.com/microsoft/spatialaudio-unity/blob/develop/Samples/MicrosoftSpatializerSample/Assets/Microsoft%20HoloLens%20-%20Spatial%20Sound-PTPvx7mDon4.mp4?raw=true) desde el proyecto de ejemplo de audio espacial.
+En este tutorial, puede usar [este vídeo](https://github.com/microsoft/spatialaudio-unity/blob/develop/Samples/MicrosoftSpatializerSample/Assets/Microsoft%20HoloLens%20-%20Spatial%20Sound-PTPvx7mDon4.mp4?raw=true) del proyecto de ejemplo de audio espacial.
 
-![Carpeta assets con vídeo](images/spatial-audio/assets-folder-with-video.png)
+Para importar vídeo en el proyecto de Unity. en el menú de Unity, seleccione **recurso**  >  **importar nuevo** 
+ activo importar activo. ![](images/spatial-audio/spatial-audio-03-section1-step1-1.png)
 
-Ajustar la configuración de calidad en el clip de vídeo puede garantizar una reproducción fluida de HoloLens 2. Haga clic en el archivo de vídeo en el panel **proyecto** . Después, en el panel **Inspector** del archivo de vídeo, invalide la configuración de las aplicaciones de la tienda Windows y:
+En la ventana **importar nuevo recurso...** , seleccione el archivo **Microsoft HoloLens-Spatial Sound-PTPvx7mDon4** que descargó y haga clic en el botón **abrir** para importar el recurso en el proyecto:
+
+![Seleccionar activo](images/spatial-audio/spatial-audio-03-section1-step1-2.png)
+
+Ajustar la configuración de calidad en el clip de vídeo puede garantizar una reproducción fluida de HoloLens 2. Seleccione el archivo de vídeo en la ventana **proyecto** y, en la ventana del inspector del archivo de vídeo, **invalide** la configuración de las aplicaciones de la **tienda Windows** y:
+
 * Habilitar **Transcode**
 * Establecer **códec** en H264
 * Establecer el **modo de velocidad de bits** en baja
 * Establecer **calidad espacial** en calidad espacial media
 
-Después de estos ajustes, el panel del **Inspector** para el archivo de vídeo tendrá el siguiente aspecto:
+Después de estos ajustes, haga clic en aplicar para cambiar la configuración de calidad en el clip de vídeo.
 
-![Panel de propiedades de vídeo](images/spatial-audio/video-property-pane.png)
+![Cambio de propiedad de vídeo](images/spatial-audio/spatial-audio-03-section1-step1-3.png)
 
-A continuación, agregue un objeto de **reproductor de vídeo** a la **jerarquía** haciendo clic con el botón derecho en el panel de **jerarquías** y eligiendo **vídeo > reproductor de** vídeo:
+Haga clic con el botón derecho en la jerarquía, seleccione  >  **reproductor** de vídeo de vídeo para agregar el componente reproductor de vídeo.
 
-![Reproductor de vídeo en jerarquía](images/spatial-audio/video-player-in-hierarchy.png)
+![Agregar reproductor de vídeo](images/spatial-audio/spatial-audio-03-section1-step1-4.png)
 
 ## <a name="play-video-onto-a-quadrangle"></a>Reproducir vídeo en un Quadrangle
 
-El objeto **reproductor de vídeo** necesita un objeto de juego con textura en el que representar el vídeo. En primer lugar, agregue un **cuádruple** a la **jerarquía** ; para ello, haga clic con el botón derecho en el panel de **jerarquías** y elija **objeto 3D > cuádruple**:
+El objeto **reproductor de vídeo** necesita un objeto de juego con textura para representar el vídeo.
 
-![Agregar cuatro a la jerarquía](images/spatial-audio/add-quad-to-hierarchy.png)
+Haga clic con el botón derecho en la jerarquía, seleccione **objeto 3D**  >  **cuádruple** para crear un cuádruple y configure su componente de **transformación** como se indica a continuación:
 
-Para asegurarse de que el **cuádruple** aparece delante del usuario cuando se inicia la aplicación, establezca la propiedad **posición** de **cuádruple** en (0, 0, 2) y la propiedad **escala** en (1,28, 0,72, 1). Después de estos cambios, el componente de **transformación** en el panel del **Inspector** de la **cuádruple** tendrá el siguiente aspecto:
+* **Posición**: X = 0, Y = 0, Z = 2
+* **Rotación**: X = 0, Y = 0, Z = 0
+* **Escala**: X = 1,28, y = 0,72, Z = 1
 
-![Transformación cuádruple](images/spatial-audio/quad-transform.png)
+![Agregar un cuádruple](images/spatial-audio/spatial-audio-03-section2-step1-1.png)
 
-Para crear una textura entre el **cuádruple** y el vídeo, cree una nueva **textura de representación**. En el panel **proyecto** , haga clic con el botón derecho y seleccione **crear-> Mostrar textura**:
+Ahora debe texturar el **cuádruple** con el vídeo, en la ventana **proyecto** , haga clic con el botón derecho y elija **crear**  >  **textura de representación** para crear un componente de textura de representación, escriba un nombre adecuado para la textura de representación, por ejemplo, _textura de audio espacial_:
 
-![Crear textura de representación](images/spatial-audio/create-render-texture.png)
+![Crear textura de representación](images/spatial-audio/spatial-audio-03-section2-step1-2.png)
 
-En el panel **Inspector** de la **textura de representación**, establezca la propiedad **size** para que coincida con la resolución nativa del vídeo de 1280x720. A continuación, para garantizar un buen rendimiento de la representación en HoloLens 2, establezca la propiedad de **búfer de profundidad** en una **profundidad de 16 bits como mínimo**. Después de esta configuración, el panel del **Inspector** para la **textura de representación** tendrá el siguiente aspecto:
+Seleccione la **textura de representación** y, en la ventana del inspector, establezca la propiedad **size** para que coincida con la resolución nativa del vídeo de 1280x720. A continuación, para garantizar un buen rendimiento de la representación en HoloLens 2, establezca la propiedad de **búfer de profundidad** en una **profundidad de 16 bits como mínimo**.
 
-![Representar propiedades de textura](images/spatial-audio/render-texture-properties.png)
+![Representar propiedades de textura](images/spatial-audio/spatial-audio-03-section2-step1-3.png)
 
-A continuación, use la nueva **textura de representación** como textura para la **cuádruple**:
-1. Arrastre la **textura de representación** desde el panel **proyecto** hasta el **cuádruple** de la **jerarquía** .
-2. Para garantizar un buen rendimiento en HoloLens 2, en el panel **Inspector** de la serie **, seleccione** el **sombreador estándar del kit de herramientas de realidad mixta**.
+A continuación, use la textura de **audio espacial** de textura de representación creada como textura para la **cuádruple**:
 
-Con esta configuración, el componente de **textura** en el panel del **Inspector** de la **cuádruple** tendrá el siguiente aspecto:
+1. Arrastre la **textura de audio espacial** desde la ventana de **proyecto** hasta el **cuádruple** de la jerarquía para agregar la textura de representación a la cuádruple
+2. Para garantizar un buen rendimiento en HoloLens 2, seleccione cuádruple en la jerarquía y, en la ventana del inspector del sombreador, seleccione el sombreador estándar del **Kit de herramientas de realidad mixta**  >   .
 
-![Propiedades de textura cuádruple](images/spatial-audio/quad-texture-properties.png)
+![Propiedades de textura cuádruple](images/spatial-audio/spatial-audio-03-section2-step1-4.png)
 
-Para establecer el nuevo **reproductor de vídeo** y **representar la textura** para reproducir el clip de vídeo, abra el panel del **Inspector** para el **reproductor de vídeo** y:
-* Establecer la propiedad **clip de vídeo** en el archivo de vídeo
+Para configurar **el reproductor de vídeo** y mostrar la **textura** para reproducir el clip de vídeo, seleccione el **reproductor** de vídeo en la **jerarquía** y en la ventana del **Inspector** .
+
+* Establezca la propiedad **clip de vídeo** en el archivo de vídeo descargado ' Microsoft HoloLens-Spatial Sound-PTPvx7mDon4 '
 * Marque la casilla **bucle**
-* Establecer la **textura de destino** en la nueva textura de representación
+* Establecer la **textura de destino** en la nueva textura de representación de textura de **audio espacial**
 
-El panel del **Inspector** del **reproductor de vídeo** tendrá ahora el siguiente aspecto:
-
-![Propiedades del reproductor de vídeo](images/spatial-audio/video-player-properties.png)
+![Propiedades del reproductor de vídeo](images/spatial-audio/spatial-audio-03-section2-step1-5.png)
 
 ## <a name="spatialize-the-audio-from-the-video"></a>Spatial el audio del vídeo
 
-En el panel **Inspector** del **cuádruple**, cree un **origen de audio** al que enrutará el audio desde el vídeo:
-* Haga clic en **Agregar componente** en la parte inferior del panel.
-* Agregar un **origen de audio**
+En la ventana jerarquía, seleccione **cuádruple** objeto y, a continuación, en la ventana del inspector, use el botón **Agregar componente** para agregar el **origen de audio** al que enrutará el audio del vídeo.
 
-Después, en el **origen de audio**:
-* Establecer el **resultado** en el mezclador
+En el **origen de audio**:
+
+* Establecer la **salida** en el **mezclador de audio espacial**
 * Active la casilla **Spatial**
 * Mueve el control deslizante de **mezcla espacial** a 1 (3D)
 
-Después de estos cambios, el componente **origen de audio** del panel **Inspector** de la **cuádruple** tendrá el siguiente aspecto:
+![Inspector de fuente de audio cuádruple](images/spatial-audio/spatial-audio-03-section3-step1-1.png)
 
-![Inspector de fuente de audio cuádruple](images/spatial-audio/quad-audio-source-inspector.png)
+Para configurar el reproductor de vídeo para que enrute su audio al **origen de audio**, seleccione el **reproductor de vídeo** en la ventana jerarquía y, en el objeto reproductor de vídeo del inspector, realice los cambios siguientes.
 
-Para configurar el **reproductor de vídeo** para que enrute su audio a la **fuente de audio** en el **cuádruple**, abra el panel del **Inspector** para el **reproductor de vídeo** y:
-* Establecer el **modo de salida de audio** en "origen de audio"
-* Establezca la propiedad **origen de audio** en su cuádruple
+* Establecer el **modo de salida de audio** en **origen de audio**
+* Establezca la propiedad **origen de audio** en el **cuádruple**
 
-Después de estos cambios, el panel del **Inspector** del **reproductor de vídeo** tendrá el siguiente aspecto:
+![Reproductor de vídeo conjunto de audio origen](images/spatial-audio/spatial-audio-03-section3-step1-2.png)
 
-![Reproductor de vídeo conjunto de audio origen](images/spatial-audio/video-player-set-audio-source.png)
+> [!TIP]
+> Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puede consultar las instrucciones de [Compilación de la aplicación para el HoloLens 2](mr-learning-base-02.md#building-your-application-to-your-hololens-2).
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="congratulations"></a>Enhorabuena
 
-Pruebe la aplicación en HoloLens 2 o en el editor de Unity. Verá y oirá el vídeo y el audio del vídeo se encontrará espacial.
+En este tutorial, ha aprendido cómo enespaciale el audio desde un origen de vídeo pruebe la aplicación en una HoloLens 2 o en el editor de Unity. Verá y oirá el vídeo y el audio del vídeo está espacial.
+
+En el siguiente tutorial, aprenderá a habilitar y deshabilitar la espacialización en tiempo de ejecución.
 
 > [!div class="nextstepaction"]
-> [Capítulo 4](unity-spatial-audio-ch4.md) 
-
+> [Siguiente tutorial: 4. habilitar y deshabilitar la espacialización en tiempo de ejecución](unity-spatial-audio-ch4.md)

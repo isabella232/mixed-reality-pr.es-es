@@ -1,27 +1,27 @@
 ---
-title: Agregar audio espacial al proyecto
+title: 'Tutoriales de audio espacial: 1. Agregar audio espacial al proyecto'
 description: Agregue el complemento de Microsoft Spatializer a su proyecto de Unity para acceder a la descarga de hardware de HoloLens 2 HRTF.
 author: kegodin
 ms.author: v-hferrone
 ms.date: 12/01/2019
 ms.topic: article
 keywords: mixed reality, Unity, tutorial, hololens2, audio espacial, MRTK, kit de herramientas de realidad mixta, UWP, Windows 10, HRTF, función de transferencia relacionada con el encabezado, reverberación, Microsoft Spatializer
-ms.openlocfilehash: 80bf19e8a091bd241e28afff0a42c13ca72e1d45
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 1eb2913f1953e334cfe75b786f96bb51a9852fc5
+ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007475"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98578461"
 ---
-# <a name="adding-spatial-audio-to-your-unity-project"></a>Incorporación de audio espacial al proyecto de Unity
+# <a name="1-adding-spatial-audio-to-your-unity-project"></a>1. agregar audio espacial a su proyecto de Unity
 
-Este es el tutorial de audio espacial para Unity en HoloLens2. Esta secuencia de tutorial muestra:
-* Cómo usar la descarga relacionada con la función de transferencia (HRTF) en HoloLens 2 en Unity
-* Cómo habilitar la reverberación al usar la descarga de HRTF
+## <a name="overview"></a>Introducción
 
-El [repositorio de github de Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity) tiene un proyecto de Unity completado de esta secuencia de tutoriales. 
+Este es el tutorial de audio espacial para Unity en HoloLens2. A través de esta serie de tutoriales, aprenderá a usar la descarga de la función de transferencia relacionada con el encabezado (HRTF) en HoloLens 2 y cómo habilitar reverberación al usar la descarga de HRTF.
 
-Para obtener una descripción sobre lo que significa espaciale los sonidos mediante tecnologías de espacialización basadas en HRTF y recomendaciones para cuando pueda ser útil, consulte [diseño de sonido espacial](https://docs.microsoft.com/windows/mixed-reality/spatial-sound-design).
+El [repositorio de github de Microsoft Spatializer](https://github.com/microsoft/spatialaudio-unity) tiene un proyecto de Unity completado de esta secuencia de tutoriales.
+
+Para obtener una descripción de lo que significa para espaciales con las tecnologías de espacialización basadas en HRTF y las recomendaciones para cuando pueda ser útil, consulte [diseño de sonido espacial](https://docs.microsoft.com/windows/mixed-reality/spatial-sound-design).
 
 ## <a name="what-is-hrtf-offload"></a>¿Qué es la descarga de HRTF?
 
@@ -29,79 +29,68 @@ El procesamiento de audio mediante algoritmos basados en HRTF requiere una gran 
 
 ## <a name="objectives"></a>Objetivos
 
-En este primer capítulo, hará lo siguiente:
-* Creación de un proyecto de Unity e importación de MRTK
-* Importar el complemento de Microsoft spatializer
-* Habilitación del complemento Microsoft spatializer
+* Importación y habilitación del complemento de Microsoft spatializer
 * Habilitación del audio espacial en la estación de trabajo de desarrollador
 
-## <a name="create-a-project-and-add-nuget-for-unity"></a>Creación de un proyecto y adición de NuGet para Unity
+## <a name="prerequisites"></a>Requisitos previos
 
-Comience con un proyecto de Unity vacío y, después, agregue y configure NuGet para Unity:
-1. Descargue la versión más reciente de [NuGetForUnity. unitypackage Tools](https://github.com/GlitchEnzo/NuGetForUnity/releases/latest)
-2. En la barra de menús de Unity, haga clic en **activos > importar paquete > paquete personalizado...** e instalar el paquete NuGetForUnity:
+* Un equipo Windows 10 configurado con las [herramientas correctas instaladas](../../install-the-tools.md)
+* Conocimientos básicos de programación de C#
+* Un dispositivo HoloLens 2 [configurado para el desarrollo](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019 LTS montado y el módulo de compatibilidad con la compilación de la Plataforma universal de Windows agregado
 
-![Importar paquete personalizado](images/spatial-audio/import-custom-package.png)
+Se **recomienda** completar la serie de tutoriales de [Introducción](mr-learning-base-01.md) o tener una experiencia previa básica con Unity y MRTK antes de continuar.
 
-## <a name="add-the-windows-mixed-reality-package"></a>Agregar el paquete de Windows Mixed Reality
+> [!IMPORTANT]
+>
+> * La versión de Unity recomendada para esta serie de tutoriales es Unity 2019 LTS. Sustituye los requisitos de versión de Unity o las recomendaciones descritas en los requisitos previos vinculados anteriormente.
 
-La compatibilidad con Windows Mixed Reality en Unity 2019 y versiones posteriores se incluye en un paquete opcional. Para agregarlo al proyecto, abra el **Administrador de paquetes de > de ventana** desde la barra de menús de Unity:
+## <a name="creating-and-preparing-the-unity-project"></a>Creación y preparación del proyecto de Unity
 
-![Menú del administrador de paquetes](images/spatial-audio/package-manager-menu.png)
+En esta sección, crearás un nuevo proyecto de Unity y lo prepararás para el desarrollo con MRTK.
 
-A continuación, busque e instale el paquete de **Windows Mixed Reality** :
+Para ello, antes debes seguir las instrucciones de [Inicialización de tu proyecto y primera aplicación](mr-learning-base-02.md), a excepción de la sección [Compilación de la aplicación para el dispositivo](mr-learning-base-02.md#building-your-application-to-your-hololens-2), que incluyen los pasos siguientes:
 
-![Ventana del administrador de paquetes](images/spatial-audio/package-manager-window.png)
+1. [Crear el proyecto de Unity](mr-learning-base-02.md#creating-the-unity-project) y asignarle un nombre adecuado; por ejemplo, *MRTK Tutorials*
 
-## <a name="install-mrtk-and-microsoft-spatializer"></a>Instalación de MRTK y Microsoft Spatializer
+1. [Cambiar la plataforma de compilación](mr-learning-base-02.md#configuring-the-unity-project)
 
-Con NuGet para Unity, instale los complementos de MRTK y Microsoft Spatializer:
-1. En la barra de menús de Unity, haga clic en **Nuget-> administrar paquetes NuGet**.
+1. [Importar los recursos esenciales de TextMeshPro](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
 
-![Administrar paquetes NuGet](images/spatial-audio/manage-nuget-packages.png)
+1. [Importar Mixed Reality Toolkit](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
 
-2. En el cuadro de **búsqueda** , escriba "Microsoft. MixedReality. Toolkit" e instale el paquete de MRTK Core: **Microsoft. MixedReality. Toolkit. Foundation** .
+1. [Configurar el proyecto de Unity](mr-learning-base-02.md#configuring-the-unity-project)
 
-![Paquete NuGet de MRTK](images/spatial-audio/mrtk-nuget-package.png)
+1. [Crear y establecer la escena](mr-learning-base-02.md#creating-and-configuring-the-scene) y asignar a la escena un nombre adecuado, por ejemplo, *SpatialAudio*
 
-El [paquete NuGet de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MRTKNuGetPackage.html) tiene contexto y detalles adicionales.
+Después, siga las instrucciones de la [opción de visualización cambiar el reconocimiento espacial](mr-learning-base-03.md#changing-the-spatial-awareness-display-option) para asegurarse de que el perfil de configuración de MRTK para la escena sea **DefaultXRSDKConfigurationProfile** y cambie las opciones de presentación de la malla de reconocimiento espacial a **oclusión**.
 
-4. En el cuadro de **búsqueda** , escriba "Microsoft. SpatialAudio" e instale el paquete de Microsoft Spatializer: **Microsoft. SpatialAudio. Spatializer. Unity** .
+## <a name="adding-microsoft-spatializer-to-the-project"></a>Agregando Microsoft Spatializer al proyecto
 
-![Complemento NuGet de Spatializer](images/spatial-audio/spatializer-plugin-nuget.png)
+Descargue e importe Microsoft Spatializer  <a href="https://github.com/microsoft/spatialaudio-unity/releases/download/v1.0.18/Microsoft.SpatialAudio.Spatializer.Unity.1.0.18.unitypackage" target="_blank">Microsoft. SpatialAudio. Spatializer. Unity. 1.0.18. unitypackage Tools </a>
 
-## <a name="set-up-mrtk-in-your-project"></a>Configuración de MRTK en el proyecto
-
-1. Para abrir la ventana Configuración de compilación, vaya a **archivo-> configuración de compilación**.
-
-2. Seleccione la _plataforma universal de Windows_ y haga clic en **cambiar plataforma**.
-
-3. Haga clic en **configuración del reproductor** en la **ventana compilar** para abrir las propiedades de **configuración del reproductor** en el panel **Inspector** .
-    * En **configuración de XR**, active la casilla **compatible con realidad virtual**
-    * En **configuración de XR**, cambie el **modo de representación de estéreo** a instancia de **paso único**.
-    * En **configuración de publicación**, active la casilla **percepción espacial** en la sección **capacidades** .
-
-4. En la barra de menús, haga clic en **Kit de herramientas de realidad mixta: > agregar a la escena y configurar.** para agregar MRTK a la escena.
-
-Para obtener instrucciones adicionales, incluida la forma de compilar la aplicación e implementarla en HoloLens 2, consulte [el capítulo 1 del módulo de base de aprendizaje Mr](../../../mrlearning-base-ch1.md).
+>[!TIP]
+> Para obtener un recordatorio sobre cómo importar un paquete personalizado de Unity, consulta las instrucciones de [Importación de Mixed Reality Toolkit](../../../mrlearning-base-ch1.md#import-the-mixed-reality-toolkit).
 
 ## <a name="enable-the-microsoft-spatializer-plugin"></a>Habilitación del complemento Microsoft Spatializer
 
-Habilite el complemento de **Microsoft Spatializer** . Abra **editar > configuración del proyecto-> audio** y cambie el **complemento Spatializer** a "Microsoft Spatializer". La sección **audio** de la **configuración del proyecto** tendrá ahora el siguiente aspecto:
+Después de importar la **Spatializer de Microsoft** , debe habilitarla. Abra **editar > configuración del proyecto-> audio** y cambie el **complemento Spatializer** a "Microsoft Spatializer".
 
-![Configuración del proyecto que muestra el complemento spatializer](images/spatial-audio/project-settings.png)
+![Configuración del proyecto que muestra el complemento spatializer](images/spatial-audio/spatial-audio-01-section3-step1-1.png)
 
 ## <a name="enable-spatial-audio-on-your-workstation"></a>Habilitación del audio espacial en la estación de trabajo
 
 En las versiones de escritorio de Windows, el audio espacial está deshabilitado de forma predeterminada. Habilítelo haciendo clic con el botón derecho en el icono de volumen en la barra de tareas. Para obtener la mejor representación de lo que escuchará en HoloLens 2, elija **sonido espacial > Windows Sonic para auriculares**.
 
-![Configuración de audio espacial de escritorio](images/spatial-audio/desktop-audio-settings.png)
+![Configuración de audio espacial de escritorio](images/spatial-audio/spatial-audio-01-section4-step1-1.png)
 
 > [!NOTE]
 > Esta configuración solo es necesaria si tiene previsto probar el proyecto en el editor de Unity.
 
-## <a name="next-steps"></a>Pasos siguientes
+## <a name="congratulations"></a>Enhorabuena
+
+En este tutorial, aprenderá a importar y habilitar el complemento Microsoft Spatializer y también a habilitar el audio espacial en la estación de trabajo.
+En el siguiente tutorial, aprenderá a agregar audio espacial en el proyecto de Unity.
 
 > [!div class="nextstepaction"]
-> [Audio espacial de Unity capítulo 2](unity-spatial-audio-ch2.md)
-
+> [Siguiente tutorial: 2. Spatial los sonidos de interacción del botón](unity-spatial-audio-ch2.md)
