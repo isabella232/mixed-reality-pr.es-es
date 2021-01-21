@@ -8,12 +8,12 @@ ms.topic: article
 keywords: No real, no real Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, implementación en dispositivo, PC, documentación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 7302e6c8d5de866b652ec4741fbef128eca616e0
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: eca0b12cd9ba4e3d5d4033790184ffd770b44280
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580809"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635403"
 ---
 # <a name="the-making-of-kippys-escape"></a>La realización del escape de Kippy
 
@@ -62,21 +62,21 @@ Más allá del diseño de caracteres y entornos, hemos realizado un esfuerzo con
 
 El escape de Kippy se basa en gran medida en los componentes de las herramientas de la experiencia de usuario de realidad mixta para que los actores de interacción con nombre interactivo de juego, controles de límites, manipuladores, controles deslizantes y botones.   
 
-El [actor de interacción a mano](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/HandInteraction.html) permite la manipulación directa y lejana de los hologramas. Al principio del escape de Kippy, el usuario tiene la oportunidad de establecer la ubicación del juego. Los haces de mano que se extienden desde la palmera del usuario facilitan la manipulación de hologramas grandes, tal como se muestra en el GIF siguiente.  
+El [actor de interacción a mano](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/HandInteraction.html) permite la manipulación directa y lejana de los hologramas. Al principio del escape de Kippy, el usuario tiene la oportunidad de establecer la ubicación del juego. Los haces de mano que se extienden desde la palmera del usuario facilitan la manipulación de hologramas grandes, tal como se muestra en el GIF siguiente.  
 
 ![GIF de interacción de mano de actor](images/kippys-escape/kippys-escape-img-06.gif)
 
-La propia escena de marcador de posición se puede arrastrar y girar mediante el componente de [control de límites](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/BoundsControl.html) de las herramientas de la experiencia del usuario.  
+La propia escena de marcador de posición se puede arrastrar y girar mediante el componente de [control de límites](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/BoundsControl.html) de las herramientas de la experiencia del usuario.  
 
-En la segunda isla, el usuario debe recoger las gemas y colocarlas en sus ranuras coincidentes. Las gemas tienen [manipuladores](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/Manipulator.html) asociados que permiten al usuario seleccionarlos y colocarlos. 
+En la segunda isla, el usuario debe recoger las gemas y colocarlas en sus ranuras coincidentes. Las gemas tienen [manipuladores](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/Manipulator.html) asociados que permiten al usuario seleccionarlos y colocarlos. 
 
 ![GIF de ejemplo de manipulador](images/kippys-escape/kippys-escape-img-07.gif)
 
-Un [botón](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/PressableButton.html) que se pueda presionar es la clave para abrir bombas para su uso en la tercera isla.  
+Un [botón](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/PressableButton.html) que se pueda presionar es la clave para abrir bombas para su uso en la tercera isla.  
 
 ![GIF de ejemplo de botón que se ha presionado](images/kippys-escape/kippys-escape-img-08.gif)
 
-Un componente de [control deslizante](https://microsoft.github.io/MixedReality-UXTools-Unreal/version/public/0.9.x/Docs/PinchSlider.html) aparece en la cuarta isla, lo que desencadena el último puente que se va a generar.  
+Un componente de [control deslizante](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/PinchSlider.html) aparece en la cuarta isla, lo que desencadena el último puente que se va a generar.  
 
 ![GIF de ejemplo de componente de control deslizante](images/kippys-escape/kippys-escape-img-09.gif) 
 

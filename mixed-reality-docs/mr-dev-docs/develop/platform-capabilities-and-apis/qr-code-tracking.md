@@ -3,19 +3,19 @@ title: Seguimiento de códigos QR
 description: Obtenga información sobre cómo detectar códigos QR, agregar funcionalidades de cámara web y administrar sistemas de coordenadas en aplicaciones de realidad mixta en HoloLens 2.
 author: dorreneb
 ms.author: dobrown
-ms.date: 05/15/2019
+ms.date: 01/21/2021
 ms.topic: article
 keywords: VR, LBE, entretenimiento basado en ubicación, VR Arcade, Arcade, inmersivo, QR, código QR, hololens2
-ms.openlocfilehash: 08ed651deaab0c230142f45b93858f41ee300323
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 0f53b8def268b2d501c6efe3c3e40ea18f9323e0
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583140"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635437"
 ---
 # <a name="qr-code-tracking"></a>Seguimiento de códigos QR
 
-HoloLens 2 puede detectar códigos QR en el entorno alrededor del caso, estableciendo un sistema de coordenadas en la ubicación real de cada código.
+HoloLens 2 puede detectar códigos QR en el entorno alrededor del caso, estableciendo un sistema de coordenadas en la ubicación real de cada código. Una vez que habilite la cámara web del dispositivo, podrá reconocer códigos QR en las versiones más recientes de los proyectos no reales o de Unity. Antes de pasar a producción, se recomienda seguir los procedimientos [recomendados](#best-practices-for-qr-code-detection) que hemos establecido al final del artículo.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -458,6 +458,6 @@ namespace Microsoft.MixedReality.QR
 }
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [Sistemas de coordenadas](../../design/coordinate-systems.md)
 * <a href="/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a>
