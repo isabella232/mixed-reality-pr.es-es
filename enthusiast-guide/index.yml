@@ -5,19 +5,19 @@ brand: windows
 metadata:
   title: Documentación de VR de Windows Mixed Reality
   description: Experimente la emoción de la realidad virtual en juegos, viajes y streaming. Aquí puede obtener información sobre cómo empezar a usar la VR en Windows Mixed Reality
-  services: guidance
-  ms.service: guidance
+  services: service
+  ms.service: service
   ms.topic: hub-page
   ms.prod: mixed-reality
   ms.technology: enthusiast-guide
   author: mattwojo
   ms.author: mattwoj
-  ms.openlocfilehash: b8ff9f6abbd27d3f73548e19e13888dcd7321181
-  ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+  ms.openlocfilehash: 3a9ffacb2d62cab93bd41f9842c25ae2c9d35190
+  ms.sourcegitcommit: be33fcda10d1cb98df90b428a923289933d42c77
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 01/20/2021
-  ms.locfileid: "98581685"
+  ms.lasthandoff: 01/22/2021
+  ms.locfileid: "98672732"
 highlightedContent:
   items:
   - title: Acerca de la VR en Windows Mixed Reality
