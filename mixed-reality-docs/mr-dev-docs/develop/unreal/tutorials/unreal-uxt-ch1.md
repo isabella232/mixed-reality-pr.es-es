@@ -7,16 +7,16 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 762247f550a3471bbbb6d1004283c6f901346503
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: a46b9fef96f75f3d80b9ebbd5cbd724730374b41
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009795"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580563"
 ---
 # <a name="1-getting-started"></a>1. Introducción
 
-Independientemente de que no esté familiarizado con la realidad virtual o que sea un profesional experimentado, está en el lugar adecuado para empezar su camino con [HoloLens 2](https://docs.microsoft.com/windows/mixed-reality/) y [Unreal Engine](https://www.unrealengine.com/en-US/). En esta serie de tutoriales se ofrece una guía paso a paso sobre cómo compilar una aplicación de ajedrez interactiva con el [complemento UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal), parte de [Mixed Reality Toolkit para Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal). El complemento le ayudará a agregar características comunes de UX a sus proyectos con código, planos técnicos y ejemplos. 
+Independientemente de que no esté familiarizado con la realidad virtual o que sea un profesional experimentado, está en el lugar adecuado para empezar su camino con [HoloLens 2](../../../index.yml) y [Unreal Engine](https://www.unrealengine.com/en-US/). En esta serie de tutoriales se ofrece una guía paso a paso sobre cómo compilar una aplicación de ajedrez interactiva con el [complemento UX Tools](https://github.com/microsoft/MixedReality-UXTools-Unreal), parte de [Mixed Reality Toolkit para Unreal](https://github.com/microsoft/MixedRealityToolkit-Unreal). El complemento le ayudará a agregar características comunes de UX a sus proyectos con código, planos técnicos y ejemplos. 
 
 ![Escena final en la ventanilla](images/unreal-uxt/5-endscene.PNG)
 
@@ -40,7 +40,7 @@ Asegúrese de haber instalado lo siguiente antes de empezar:
 
 En primer lugar, asegúrese de configurar todos los paquetes de Visual Studio necesarios:
 1. Instale la versión más reciente de [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).
-1. Instale las [cargas de trabajo](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?#modify-workloads) siguientes:
+1. Instale las [cargas de trabajo](/visualstudio/install/modify-visual-studio#modify-workloads) siguientes:
     * Desarrollo de escritorio con C++
     * Desarrollo de escritorio de .NET
     * Desarrollo con la Plataforma universal de Windows
@@ -48,7 +48,7 @@ En primer lugar, asegúrese de configurar todos los paquetes de Visual Studio n
     * Conectividad del dispositivo USB
     * Herramientas de la Plataforma universal de Windows para C++ (v142)
 
-1. Instale los [componentes](https://docs.microsoft.com/visualstudio/install/modify-visual-studio?#modify-individual-components) siguientes:
+1. Instale los [componentes](/visualstudio/install/modify-visual-studio#modify-individual-components) siguientes:
     * Compiladores, herramientas de compilación y entornos en tiempo de ejecución > herramientas de desarrollo para ARM64 en C++ de MSVC v142 - VS 2019 (versión más reciente)
 
 Puede confirmar la instalación con la siguiente imagen:

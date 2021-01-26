@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, app sessions
 ms.localizationpriority: high
-ms.openlocfilehash: abe0c8bc70469826e25f7016a3cc1ba971c1fcc1
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 4bae36bfb24130fc7914563af07c09374162f3cb
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008365"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582050"
 ---
 # <a name="3-saving-retrieving-and-sharing-azure-spatial-anchors"></a>3. Guardar, recuperar y compartir Azure Spatial Anchors
 
@@ -58,7 +58,7 @@ Si compila la aplicación actualizada en HoloLens, puede conservar Azure Spatial
 8. Busque el anclaje de Azure (coloca el explorador del róver en la ubicación del paso 3).
 
 > [!NOTE]
-> Para reiniciar completamente la aplicación, después de salir de la vista de aplicación inmersiva, la ventana de la aplicación en el ambiente principal debe cerrarse antes de volver a iniciar la aplicación desde el menú Inicio. Para obtener más información, puedes consultar la documentación de [Usar aplicaciones en HoloLens](https://docs.microsoft.com/hololens/holographic-home#using-apps-on-hololens).
+> Para reiniciar completamente la aplicación, después de salir de la vista de aplicación inmersiva, la ventana de la aplicación en el ambiente principal debe cerrarse antes de volver a iniciar la aplicación desde el menú Inicio. Para obtener más información, puedes consultar la documentación de [Usar aplicaciones en HoloLens](/hololens/holographic-home#using-apps-on-hololens).
 
 ## <a name="sharing-azure-spatial-anchors-between-devices"></a>Uso compartido de Azure Spatial Anchors entre sesiones de la aplicación
 

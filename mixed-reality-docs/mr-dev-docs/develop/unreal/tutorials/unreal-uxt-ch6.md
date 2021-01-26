@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 83d8068ca8ce73f23edb85cf9044db5409105380
-ms.sourcegitcommit: 9a93c9e9b3b088da942ac4386813ecf263c2e324
+ms.openlocfilehash: 7b706cf2a8685954ed916c825c3617ade190f1e0
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2021
-ms.locfileid: "97865400"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583653"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Empaquetado e implementación en el dispositivo o emulador
 
@@ -25,7 +25,7 @@ En el tutorial anterior, agregó un botón sencillo que restablece la pieza de a
 
 ## <a name="device-only-streaming"></a>[Solo dispositivo] Transmisión en secuencias
 
-El [control remoto de holografías](https://docs.microsoft.com/windows/mixed-reality/add-holographic-remoting) significa la transmisión en secuencias de datos desde un equipo o dispositivo UWP independiente a HoloLens 2, sin cambiar el canal. Una aplicación host de control remoto recibe una transmisión en secuencias de datos de entrada de HoloLens, representa el contenido en una vista envolvente virtual y vuelve a transmitir en secuencia los fotogramas de contenido a HoloLens a través de Wi-Fi. La transmisión en secuencias le permite agregar vistas envolventes remotas al software del equipo de escritorio existente y tener acceso a más recursos del sistema.
+El [control remoto de holografías](/windows/mixed-reality/add-holographic-remoting) significa la transmisión en secuencias de datos desde un equipo o dispositivo UWP independiente a HoloLens 2, sin cambiar el canal. Una aplicación host de control remoto recibe una transmisión en secuencias de datos de entrada de HoloLens, representa el contenido en una vista envolvente virtual y vuelve a transmitir en secuencia los fotogramas de contenido a HoloLens a través de Wi-Fi. La transmisión en secuencias le permite agregar vistas envolventes remotas al software del equipo de escritorio existente y tener acceso a más recursos del sistema.
 
 Si va a realizar esta ruta con la aplicación de ajedrez, necesitará algunos elementos:
 
@@ -81,7 +81,7 @@ Una vez conectado, haga clic en la flecha desplegable situada a la derecha del b
 5. Ve a **File > Package Project** (Archivo > Proyecto de paquete) y selecciona **HoloLens**.
     * Crea una nueva carpeta en la que guardar el paquete y haz clic en **Select Folder** (Seleccionar carpeta).
 
-6.  Abra el [Portal de dispositivos Windows](https://docs.microsoft.com/windows/mixed-reality/using-the-windows-device-portal) después de empaquetar la aplicación, vaya a **Vistas > Aplicaciones** y busque la sección **Implementar aplicación**.
+6.  Abra el [Portal de dispositivos Windows](/windows/mixed-reality/using-the-windows-device-portal) después de empaquetar la aplicación, vaya a **Vistas > Aplicaciones** y busque la sección **Implementar aplicación**.
 
 7.  Haga clic en **Examinar...** , vaya al archivo **ChessApp.appxbundle** y haga clic en **Abrir**.
 
@@ -91,7 +91,7 @@ Una vez conectado, haga clic en la flecha desplegable situada a la derecha del b
 8.  Haz clic en **Instalar**
     * Ahora puede ir a **Todas las aplicaciones** y pulsar la aplicación recién instalada para ejecutarla, o inicie la aplicación directamente desde el **Portal de dispositivos Windows**. 
 
-Enhorabuena. La aplicación de realidad mixta de HoloLens está finalizada y lista para utilizarse. Sin embargo, esto no es todo. MRTK tiene muchas características independientes que puede agregar a los proyectos, como el mapeo espacial, la entrada de mirada y voz, e incluso los códigos QR. Puede encontrar más información sobre estas características en [Introducción al desarrollo con Unreal](https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview).
+Enhorabuena. La aplicación de realidad mixta de HoloLens está finalizada y lista para utilizarse. Sin embargo, esto no es todo. MRTK tiene muchas características independientes que puede agregar a los proyectos, como el mapeo espacial, la entrada de mirada y voz, e incluso los códigos QR. Puede encontrar más información sobre estas características en [Introducción al desarrollo con Unreal](/windows/mixed-reality/unreal-development-overview).
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 

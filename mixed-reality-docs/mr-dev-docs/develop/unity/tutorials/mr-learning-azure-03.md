@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, hololens 2, azure custom vision, azure cognitive services, azure cloud services, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: bd99b2ca8f41c276db747dc7fc75328c31807512
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: aa3ad219ab2cd45b14d06881757ec776d3e098f3
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008215"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581937"
 ---
 # <a name="3-integrating-azure-custom-vision"></a>3. Integración de Azure Custom Vision
 
@@ -28,13 +28,13 @@ En este tutorial, aprenderá a usar **Azure Custom Vision**. Cargará un conjunt
 
 **Azure Custom Vision** forma parte de la familia **Cognitive Services** y se usa para entrenar clasificadores de imágenes. El clasificador de imágenes es un servicio de IA que usa el modelo entrenado para aplicar etiquetas coincidentes. Nuestra aplicación usará esta característica de clasificación para detectar *objetos con seguimiento*.
 
-Más información sobre [Azure Custom Vision](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/home).
+Más información sobre [Azure Custom Vision](/azure/cognitive-services/custom-vision-service/home).
 
 ## <a name="preparing-azure-custom-vision"></a>Preparación de Azure Custom Vision
 
 Antes de empezar, tiene que crear un proyecto de Custom Vision, la manera más rápida es usar el portal web.
 
-Siga este [tutorial de inicio rápido](https://docs.microsoft.com/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier#choose-training-images) para configurar la cuenta y el proyecto hasta la sección *Carga y etiquetado de imágenes*.
+Siga este [tutorial de inicio rápido](/azure/cognitive-services/custom-vision-service/getting-started-build-a-classifier#choose-training-images) para configurar la cuenta y el proyecto hasta la sección *Carga y etiquetado de imágenes*.
 
 > [!WARNING]
 > Para entrenar un modelo, debe tener al menos 2 etiquetas y 5 imágenes por etiqueta. Para usar esta aplicación, debe crear al menos una etiqueta con 5 imágenes, de modo que el proceso de entrenamiento no genere errores más adelante.

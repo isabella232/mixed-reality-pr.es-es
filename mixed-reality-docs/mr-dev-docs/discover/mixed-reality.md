@@ -7,12 +7,12 @@ ms.date: 08/26/2020
 ms.topic: article
 keywords: Mixed Reality, holographic, AR, VR, MR, XR, augmented reality, virtual reality, explanation, case study, mixed reality headset, windows mixed reality headset, virtual reality headset, what is virtual reality, what is augmented reality
 ms.localizationpriority: high
-ms.openlocfilehash: 7f06909b12137598649d113697651277751bcb22
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 2eac20b85ceeb9413dfc0b6820cceda2ddf335c5
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757703"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583011"
 ---
 # <a name="what-is-mixed-reality"></a>¿Qué es Mixed Reality?
 
@@ -34,7 +34,7 @@ La realidad mixta es una mezcla de universos físicos y digitales, que liberan l
 
 En las últimas décadas, se ha continuado la exploración de la relación entre la entrada del usuario y el equipo, lo que dado lugar a la disciplina que se conoce como *interacción persona-ordenador* o HCI. La entrada humana se realiza a través de distintos medios, como teclados, ratones, toques, tinta, voz e incluso seguimiento del esqueleto de Kinect.
 
-Los avances en los sensores y el procesamiento están dando lugar a nuevas áreas de entrada del equipo desde los entornos. La interacción entre equipos y entornos se basa en la comprensión o *percepción* del entorno y, por este motivo, los nombres de las API en Windows que revelan información del entorno se denominan [API de percepción](https://docs.microsoft.com/uwp/api/Windows.Perception). La entrada del entorno captura elementos como la posición de una persona en el mundo (el [seguimiento de la cabeza](../design/coordinate-systems.md)), las superficies y límites (la [asignación espacial](../design/spatial-mapping.md) y la [comprensión de la escena](../design/scene-understanding.md)), la iluminación ambiente, el sonido ambiental, el reconocimiento de objetos y la ubicación.
+Los avances en los sensores y el procesamiento están dando lugar a nuevas áreas de entrada del equipo desde los entornos. La interacción entre equipos y entornos se basa en la comprensión o *percepción* del entorno y, por este motivo, los nombres de las API en Windows que revelan información del entorno se denominan [API de percepción](/uwp/api/Windows.Perception). La entrada del entorno captura elementos como la posición de una persona en el mundo (el [seguimiento de la cabeza](../design/coordinate-systems.md)), las superficies y límites (la [asignación espacial](../design/spatial-mapping.md) y la [comprensión de la escena](../design/scene-understanding.md)), la iluminación ambiente, el sonido ambiental, el reconocimiento de objetos y la ubicación.
 
 <br>
 
@@ -117,5 +117,3 @@ Si está siguiendo el [recorrido de detección](get-started-with-mr.md) hemos di
 
 > [!div class="nextstepaction"]
 > [¿Qué es un holograma?](hologram.md)
-
-

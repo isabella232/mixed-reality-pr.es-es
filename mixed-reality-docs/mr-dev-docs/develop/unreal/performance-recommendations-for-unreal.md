@@ -2,17 +2,17 @@
 title: Recomendaciones de rendimiento para Unreal
 description: Obtenga información sobre cómo lograr el mejor rendimiento de las aplicaciones de realidad mixta con la configuración de proyecto de Unreal recomendada.
 author: hferrone
-ms.author: v-hferrone
+ms.author: safarooq
 ms.date: 5/5/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, performance, optimization, settings, documentation
-ms.openlocfilehash: a1a8dacd0206882c7ebd67b2658fa2e6300aa66a
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: e956f12d27c826cff35e0b65957060953073a28b
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009825"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583067"
 ---
 # <a name="performance-recommendations-for-unreal"></a>Recomendaciones de rendimiento para Unreal
 

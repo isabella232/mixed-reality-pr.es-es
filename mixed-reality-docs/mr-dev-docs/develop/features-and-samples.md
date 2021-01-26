@@ -7,12 +7,12 @@ ms.date: 12/3/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, learn, ejemplos, MRTK, modo de investigación, HoloLens 2, códigos qr, WebRTC, captura de realidad mixta, control remoto de holografías, UX Tools
 ms.localizationpriority: high
-ms.openlocfilehash: 3aa0e51a92b909689ff97a07b45900ab65579c59
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 78cfc726bdffdb461a83bd1e9805d8f0e64b0f01
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007615"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583190"
 ---
 # <a name="samples-and-feature-apps"></a>Aplicaciones de ejemplo y características
 
@@ -30,7 +30,7 @@ Los ejemplos de características que se enumeran a continuación corresponden a 
 
 ### <a name="research-mode"></a>Modo de investigación
 
-El modo de investigación se presentó en la primera generación de HoloLens para dar acceso a los sensores de claves en el dispositivo, específicamente para las aplicaciones de investigación que no están pensadas para la implementación. Las aplicaciones de ejemplo siguientes son ejemplos de acceso y grabación de secuencias de modo de investigación y el uso de los atributos [intrinsics y extrinsics](https://docs.microsoft.com/windows/mixed-reality/locatable-camera#locating-the-device-camera-in-the-world).
+El modo de investigación se presentó en la primera generación de HoloLens para dar acceso a los sensores de claves en el dispositivo, específicamente para las aplicaciones de investigación que no están pensadas para la implementación. Las aplicaciones de ejemplo siguientes son ejemplos de acceso y grabación de secuencias de modo de investigación y el uso de los atributos [intrinsics y extrinsics](/windows/mixed-reality/locatable-camera#locating-the-device-camera-in-the-world).
 
 <br>
 
@@ -67,7 +67,7 @@ Captura de realidad mixta (MRC) captura la experiencia en primera persona de com
 
 | Artículo de referencia | Muestra |
 | --- | --- |
-| [Captura de realidad mixta](platform-capabilities-and-apis/mixed-reality-capture-for-developers.md) | [Ejemplos de Captura de realidad mixta](https://docs.microsoft.com/samples/microsoft/windows-universal-samples/holographicmixedrealitycapture/) |
+| [Captura de realidad mixta](platform-capabilities-and-apis/mixed-reality-capture-for-developers.md) | [Ejemplos de Captura de realidad mixta](/samples/microsoft/windows-universal-samples/holographicmixedrealitycapture/) |
 
 ### <a name="holographic-remoting"></a>Control remoto de holografías
 

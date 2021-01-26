@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, hololens 2, Azure spatial anchors, azure cloud services, azure custom vision, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 50e5bccf09e03ebda8057dbb3ca9d83fc01694bd
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 75c3f98c2f40f03240906716d9b942a157994130
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008175"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581891"
 ---
 # <a name="4-integrating-azure-spatial-anchors"></a>4. Integración de Azure Spatial Anchors
 
@@ -28,12 +28,12 @@ En este tutorial, aprenderá a usar **Azure Spatial Anchors**. Almacenará la ub
 
  **Azure Spatial Anchors** forma parte de la familia de servicios en la nube de Azure y se usa para guardar las ubicaciones de anclaje. Las ubicaciones de anclaje guardadas se pueden recuperar en función del *identificador de anclaje* de la nube. Para compartir y acceder a dicha ubicación de anclaje, se pueden usar dispositivos multiplataforma, como HoloLens, iOS y Android.
 
-Obtenga más información sobre [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/overview).
+Obtenga más información sobre [Azure Spatial Anchors](/azure/spatial-anchors/overview).
 
 ## <a name="preparing-azure-spatial-anchors"></a>Preparación de Azure Spatial Anchors
 
 Antes de empezar, tiene que crear un recurso de anclaje espacial en Azure Portal.
-Obtenga información sobre cómo crear un [recurso de anclaje espacial](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-hololens#create-a-spatial-anchors-resource).
+Obtenga información sobre cómo crear un [recurso de anclaje espacial](/azure/spatial-anchors/quickstarts/get-started-hololens#create-a-spatial-anchors-resource).
 
 ## <a name="preparing-the-scene"></a>Preparación de la escena
 

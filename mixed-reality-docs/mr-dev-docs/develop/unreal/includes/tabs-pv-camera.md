@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 53d22260603c4e52096eccf1d7af6a3b0732124e
-ms.sourcegitcommit: 672a7a145cfc656273af4ea34f99583eb9fa849c
+ms.openlocfilehash: e79b14c19a452b5b78c6f8cf7ea24bd65bfa0eaa
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98225232"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98605190"
 ---
 # <a name="426"></a>[4.26](#tab/426) 
 
@@ -197,7 +197,7 @@ Para participar en la representación de la cámara PV:
 Unreal controlará las solicitudes de MRC para representarlas desde la perspectiva de la cámara PV.
 
 > [!NOTE]
-> Solo cuando se desencadena la [Captura de realidad mixta](../../../mixed-reality-capture.md), se pedirá a la aplicación que represente desde la perspectiva de la cámara de foto y vídeo.
+> Solo cuando se desencadena la [Captura de realidad mixta](/hololens/holographic-photos-and-videos), se pedirá a la aplicación que represente desde la perspectiva de la cámara de foto y vídeo.
 
 ## <a name="using-the-pv-camera"></a>Uso de la cámara PV
 
@@ -224,4 +224,3 @@ Para representar la imagen de la cámara:
 5. Asegúrese de que el material tiene un parámetro que coincide con el nombre de **SetTextureParameterValue** que está enlazado a una entrada de color. Sin el parámetro, la imagen de la cámara no puede mostrarse correctamente.
 
 ![Textura de cámara](../images/unreal-camera-material.PNG)
-

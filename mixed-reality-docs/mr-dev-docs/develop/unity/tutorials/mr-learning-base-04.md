@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, solvers, grid object collection
 ms.localizationpriority: high
-ms.openlocfilehash: e09047e4f75697722f76301630c275f126b3cbda
-ms.sourcegitcommit: 2bf79eef6a9b845494484f458443ef4f89d7efc0
+ms.openlocfilehash: 27964cad03111a3f7dad89c66df0cb9a4f95a9e2
+ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97613259"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98579214"
 ---
 # <a name="4-positioning-objects-in-the-scene"></a>4. Posicionamiento de los objetos en la escena
 
@@ -143,4 +143,5 @@ A continuación, haga clic en el botón **Update Collection** (Actualizar colecc
 
 En este tutorial, ha aprendido a colocar objetos en la escena en relación con el usuario y a usar la característica de colección de objetos de la cuadrícula de MRTK para organizar los objetos de una colección.
 
-[Tutorial siguiente: 5. Creación de contenido dinámico mediante el uso de solucionadores](mr-learning-base-05.md)
+> [!div class="nextstepaction"]
+>[Tutorial siguiente: 5. Creación de contenido dinámico mediante el uso de solucionadores](mr-learning-base-05.md)

@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 03db5f79a531d77bfd1cd6513c5bed9ad1202189
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 222c70882826e61d2b60e104c460156687f8b5df
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009725"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583351"
 ---
 # <a name="get-started-with-mixed-reality"></a>Introducción a Mixed Reality
 
@@ -152,7 +152,7 @@ Si tiene curiosidad por ver cómo funcionan los distintos hardware y servicios d
 |  Concepto  |  Resultado  |
 | --- | --- |
 | [Hardware de HoloLens](https://www.microsoft.com//hololens/hardware) | HoloLens 2 ofrece la experiencia de realidad mixta más cómoda y envolvente disponible hoy en día, con soluciones que son líderes en el sector y que proporcionan valor en cuestión de minutos y, todo ello, respaldado por la confiabilidad, seguridad y escalabilidad de los servicios de nube y de inteligencia artificial de Microsoft. |
-| [Dynamics 365](https://dynamics.microsoft.com/mixed-reality/overview/) | Explore diversos productos que facultan a los empleados y optimizan las operaciones con Dynamics 365, incluido [Remote Assist](https://docs.microsoft.com/dynamics365/mixed-reality/remote-assist/ra-overview), Layout y [Guides](https://docs.microsoft.com/dynamics365/mixed-reality/guides/). Se obtienen conocimientos significativos al practicar con trabajo real, dispositivos reales y usuarios reales. |
+| [Dynamics 365](https://dynamics.microsoft.com/mixed-reality/overview/) | Explore diversos productos que facultan a los empleados y optimizan las operaciones con Dynamics 365, incluido [Remote Assist](/dynamics365/mixed-reality/remote-assist/ra-overview), Layout y [Guides](/dynamics365/mixed-reality/guides/). Se obtienen conocimientos significativos al practicar con trabajo real, dispositivos reales y usuarios reales. |
 | [Azure Cloud Services](../develop/mixed-reality-cloud-services.md) | Cree experiencias envolventes atractivas en diferentes plataformas con reconocimiento espacial, anclajes espaciales y representación de modelos 3D complejos. |
 
 ## <a name="what-would-you-like-to-do-next"></a>¿Qué quieres hacer ahora?
@@ -181,5 +181,4 @@ Si tiene curiosidad por ver cómo funcionan los distintos hardware y servicios d
 <br>
 
 >[!IMPORTANT]
->Todos los materiales de desarrollo de realidad mixta que se proporcionan en este sitio son únicamente para consulta. La aplicación, el uso de esta y su efecto en los usuarios finales es responsabilidad exclusivamente suya como desarrollador de la aplicación. Esto incluye la garantía de que la aplicación no causará molestias, lesiones ni ningún otro daño a un usuario final y la inclusión de las declinaciones de responsabilidad y advertencias adecuadas. Deberá en todo momento dar los pasos apropiados en el desarrollo y publicación de la aplicación para asegurarse de que esta es segura, y cumplir con todas las obligaciones que se indican en el [acuerdo para desarrolladores de aplicaciones con Microsoft](https://docs.microsoft.com/legal/windows/agreements/app-developer-agreement).
-
+>Todos los materiales de desarrollo de realidad mixta que se proporcionan en este sitio son únicamente para consulta. La aplicación, el uso de esta y su efecto en los usuarios finales es responsabilidad exclusivamente suya como desarrollador de la aplicación. Esto incluye la garantía de que la aplicación no causará molestias, lesiones ni ningún otro daño a un usuario final y la inclusión de las declinaciones de responsabilidad y advertencias adecuadas. Deberá en todo momento dar los pasos apropiados en el desarrollo y publicación de la aplicación para asegurarse de que esta es segura, y cumplir con todas las obligaciones que se indican en el [acuerdo para desarrolladores de aplicaciones con Microsoft](/legal/windows/agreements/app-developer-agreement).

@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, solvers
 ms.localizationpriority: high
-ms.openlocfilehash: 959ed164e566f5bee3db203437145fa08ce168d8
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 6006bf5e3edaee13c8ede0bdc04fd5ea928f1757
+ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008025"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98579166"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5. Creación de contenido dinámico mediante solucionadores
 
@@ -141,4 +141,5 @@ En este tutorial, aprendió a usar el solucionador Directional Indicator (Indica
 
 Para más información sobre estos y otros solucionadores incluidos con MRTK, consulte la guía de [solucionadores](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Solver.html) del [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
-[Tutorial siguiente: 6. Creación de interfaces de usuario](mr-learning-base-06.md)
+> [!div class="nextstepaction"]
+>[Tutorial siguiente: 6. Creación de interfaces de usuario](mr-learning-base-06.md)

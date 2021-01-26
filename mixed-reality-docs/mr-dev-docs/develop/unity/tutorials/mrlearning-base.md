@@ -7,12 +7,12 @@ ms.date: 02/26/2019
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: d767cca4fbb88d0cfdd7c2fdea1a0621523ad236
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: b7e04a03f01beb1438f6f723c3938d05a60c9131
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010095"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98581159"
 ---
 # <a name="1-overview-and-objectives"></a>1. Introducción y objetivos
 
@@ -27,7 +27,7 @@ ms.locfileid: "98010095"
     </colgroup>
     <tr>
         <td><strong>Curso</strong></td>
-        <td><a href="../../../hololens-hardware-details.md"><strong>HoloLens (1.ª generación)</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens (1.ª generación)</strong></a></td>
         <td><a href="https://www.microsoft.com//hololens/hardware"><strong>HoloLens 2</strong></a></td>
         <td><a href="../../../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
@@ -52,4 +52,4 @@ ms.locfileid: "98010095"
 > [!IMPORTANT]
 > La versión de Unity recomendada para esta serie de tutoriales es Unity 2019.2.X. Esta sustituye los requisitos de versión de Unity o las recomendaciones descritas en los requisitos previos vinculados anteriormente.
 
-[Siguiente lección: 2. Inicialización del proyecto y primera aplicación](../../../mrlearning-base-ch1.md)
+[Siguiente lección: 2. Inicialización del proyecto y primera aplicación](./mr-learning-base-02.md)
