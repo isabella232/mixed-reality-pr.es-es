@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, development, features, documentation, guides, holograms, qr codes, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: d896af683a86a1b27e5d100df744222085574a93
-ms.sourcegitcommit: e24715fffa815c24ca411fa93eed9576ae729337
+ms.openlocfilehash: d9f23bacf31b310da6d49e74de2153b50e642c7d
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98247748"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582662"
 ---
 # <a name="qr-codes-in-unreal"></a>Códigos QR en Unreal
 
@@ -22,7 +22,7 @@ HoloLens 2 puede ver los códigos QR en el espacio del mundo real a través de 
 - Iluminación y fondo
 - Tamaño, distancia y posición angular
 
-Preste especial atención a las [consideraciones del ambiente](../../environment-considerations-for-hololens.md) al colocar códigos QR en la aplicación. Puede encontrar más información sobre cada uno de estos temas e instrucciones sobre cómo descargar el paquete de NuGet necesario en el documento principal de [seguimiento de código QR](../platform-capabilities-and-apis/qr-code-tracking.md).
+Preste especial atención a las [consideraciones del ambiente](/hololens/hololens-environment-considerations) al colocar códigos QR en la aplicación. Puede encontrar más información sobre cada uno de estos temas e instrucciones sobre cómo descargar el paquete de NuGet necesario en el documento principal de [seguimiento de código QR](../platform-capabilities-and-apis/qr-code-tracking.md).
 
 > [!CAUTION]
 > Los códigos QR son el único tipo de imágenes de las que HoloLens puede realizar un seguimiento de forma predefinida. El módulo **UARTrackedImage** de Unreal no se admite en HoloLens. Si necesita realizar un seguimiento de las imágenes personalizadas, puede acceder a la [cámara web](unreal-hololens-camera.md) del dispositivo y procesar imágenes mediante una biblioteca de reconocimiento de imágenes de terceros. 
@@ -32,7 +32,7 @@ Preste especial atención a las [consideraciones del ambiente](../../environment
 Como HoloLens 2 necesita usar la cámara web para ver los códigos QR, deberá habilitarla en la configuración del proyecto:
 - Abra **Editar > Configuración del proyecto**, desplácese hasta la sección **Plataformas** y seleccione **HoloLens**.
     + Expanda la sección **Funcionalidades** y marque **Cámara web**.  
-- También deberá participar en el seguimiento del código QR mediante la [adición de un activo ARSessionConfig](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset).
+- También deberá participar en el seguimiento del código QR mediante la [adición de un activo ARSessionConfig](/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset).
 
 [!INCLUDE[](includes/tabs-qr-codes-1.md)]
 
@@ -62,7 +62,7 @@ Esto es lo que sucede:
 1. En primer lugar, convierte la imagen con seguimiento en un elemento **ARTrackedQRCode** para comprobar que la imagen actualizada actual es un código QR.  
 2. Los datos codificados se recuperan de la variable **QRCode**. Puede obtener la parte superior izquierda del código QR en la ubicación de **GetLocalToWorldTransform** y las dimensiones con **GetEstimateSize**.
 
-También puede [obtener el sistema de coordenadas para un código QR](https://docs.microsoft.com/windows/mixed-reality/qr-code-tracking#getting-the-coordinate-system-for-a-qr-code) en el código.
+También puede [obtener el sistema de coordenadas para un código QR](/windows/mixed-reality/qr-code-tracking#getting-the-coordinate-system-for-a-qr-code) en el código.
 
 ## <a name="finding-the-unique-id"></a>Búsqueda del identificador único
 

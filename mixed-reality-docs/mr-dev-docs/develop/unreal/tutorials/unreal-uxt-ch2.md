@@ -7,19 +7,19 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 464df846d0fc6e1bd22ee3862adcdf110c377728
-ms.sourcegitcommit: 32cb81eee976e73cd661c2b347691c37865a60bc
+ms.openlocfilehash: 9e02ea6cb2710b4661e97dc8b0d5f4f48ab09fa7
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96609656"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583907"
 ---
 # <a name="2-initializing-your-project-and-first-application"></a>2. Inicialización de tu proyecto y primera aplicación
 
 En el primer tutorial, comenzará con un nuevo proyecto de Unreal y habilitará el complemento de HoloLens, creará y activará un nivel, y agregará piezas de ajedrez. Usará nuestros recursos predefinidos para todos los materiales y objetos 3D, por lo que no deberá preocuparse por modelar nada. Al final de este tutorial tendrá un lienzo en blanco listo para la realidad mixta.
 
 > [!IMPORTANT]
-> Asegúrese de que tiene todos los requisitos previos de la página [Introducción](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch1).
+> Asegúrese de que tiene todos los requisitos previos de la página [Introducción](/windows/mixed-reality/unreal-uxt-ch1).
 
 ## <a name="objectives"></a>Objetivos
 
@@ -29,7 +29,7 @@ En el primer tutorial, comenzará con un nuevo proyecto de Unreal y habilitará 
 
 ## <a name="creating-a-new-unreal-project"></a>Creación de un nuevo proyecto de Unreal
 
-Lo primero que necesita es un proyecto con el que trabajar. Si es la primera vez que desarrolla una aplicación para Unreal, deberá [descargar los archivos auxiliares](https://docs.microsoft.com/windows/mixed-reality/develop/unreal/tutorials/unreal-uxt-ch6#packaging-and-deploying-the-app-via-device-portal) desde el iniciador de Epic.
+Lo primero que necesita es un proyecto con el que trabajar. Si es la primera vez que desarrolla una aplicación para Unreal, deberá [descargar los archivos auxiliares](./unreal-uxt-ch6.md#packaging-and-deploying-the-app-via-device-portal) desde el iniciador de Epic.
 
 1. Iniciar Unreal Engine
 

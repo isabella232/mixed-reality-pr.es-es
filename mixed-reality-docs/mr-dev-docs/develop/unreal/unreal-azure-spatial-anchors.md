@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: tutorial
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens 2, azure, azure development, spatial anchors, mixed reality, development, features, new project, emulator, documentation, guides, holograms, game development, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 95e8ad708dd44a05fb306b2ea49f167fd400c5d8
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 5797cd48198b163b55f3724685126b1d4d85c69c
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009775"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98583019"
 ---
 # <a name="azure-spatial-anchors-in-unreal"></a>Azure Spatial Anchors en Unreal
 
@@ -30,17 +30,17 @@ Para completar esta guía, asegúrese de tener:
 
 - Instalado [Unreal versión 4.25](https://www.unrealengine.com/get-now) o posterior
 - Un [proyecto de HoloLens 2](tutorials/unreal-uxt-ch1.md) configurado en Unreal 
-- Leída la [información general de Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/overview)
+- Leída la [información general de Azure Spatial Anchors](/azure/spatial-anchors/overview)
 - Conocimientos básicos de C++ y Unreal
 
 ## <a name="getting-azure-spatial-anchors-account-info"></a>Obtención de información de cuenta de Azure Spatial Anchors
 
 Antes de usar Azure Spatial Anchors en un proyecto, debe:
-* [Crear un recurso de anclajes espaciales](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-hololens#create-a-spatial-anchors-resource) y copiar los campos de la cuenta que se enumeran a continuación. Estos valores se usan para autenticar a los usuarios con la cuenta de la aplicación:
+* [Crear un recurso de anclajes espaciales](/azure/spatial-anchors/quickstarts/get-started-hololens#create-a-spatial-anchors-resource) y copiar los campos de la cuenta que se enumeran a continuación. Estos valores se usan para autenticar a los usuarios con la cuenta de la aplicación:
     * **Id. de cuenta**
     * **Clave de cuenta**
 
-Para obtener más información, consulte los documentos de [autenticación de Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/concepts/authentication?tabs=csharp).
+Para obtener más información, consulte los documentos de [autenticación de Azure Spatial Anchors](/azure/spatial-anchors/concepts/authentication?tabs=csharp).
 
 > [!NOTE]
 > Azure Spatial Anchors en Unreal 4.25 no admite tokens de autenticación de Azure AD, pero la compatibilidad con esta funcionalidad estará disponible en una versión posterior.
@@ -65,7 +65,7 @@ Una sesión de Azure Spatial Anchors permite que las aplicaciones cliente se com
 ![Captura de pantalla del panel de detalles con el identificador, la clave y el tipo de variable de la cuenta de Azure Spatial Anchors resaltados](images/asa-unreal/unreal-spatial-anchors-img-02.png)
 
 Para iniciar una sesión de Azure Spatial Anchors:
-1. Compruebe que se está ejecutando una **AR Session** (Sesión de AR) en la aplicación de HoloLens, ya que la sesión de Azure Spatial Anchors no puede iniciarse mientras no se esté ejecutando una sesión de AR. Si no tiene una configurada, [cree un recurso de AR Session](https://docs.microsoft.com/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset).
+1. Compruebe que se está ejecutando una **AR Session** (Sesión de AR) en la aplicación de HoloLens, ya que la sesión de Azure Spatial Anchors no puede iniciarse mientras no se esté ejecutando una sesión de AR. Si no tiene una configurada, [cree un recurso de AR Session](/windows/mixed-reality/unreal-uxt-ch3#adding-the-session-asset).
 2. Agregue el evento personalizado **Start Azure Spatial Anchors Session** (Iniciar sesión de Azure Spatial Anchors) y configúrelo como se muestra en la captura de pantalla siguiente.
     * Al crear una sesión no se inicia la sesión de manera predeterminada, lo que le permite configurar la sesión para la autenticación en el servicio de Azure Spatial Anchors.
 
@@ -216,6 +216,6 @@ Puede volver a los [puntos de control de desarrollo de Unreal](unreal-developmen
 
 ## <a name="next-steps"></a>Pasos siguientes
 * [Anclajes espaciales locales](unreal-spatial-anchors.md)
-* [Documentación sobre anclajes espaciales](https://docs.microsoft.com/azure/spatial-anchors/)
+* [Documentación sobre anclajes espaciales](/azure/spatial-anchors/)
 * [Características de Spatial Anchors](https://azure.microsoft.com/services/spatial-anchors/#features)
-* [Instrucciones sobre una experiencia de anclaje efectiva](https://docs.microsoft.com/azure/spatial-anchors/concepts/guidelines-effective-anchor-experiences)
+* [Instrucciones sobre una experiencia de anclaje efectiva](/azure/spatial-anchors/concepts/guidelines-effective-anchor-experiences)
