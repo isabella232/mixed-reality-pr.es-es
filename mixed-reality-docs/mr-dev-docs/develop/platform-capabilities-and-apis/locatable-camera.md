@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 06/12/2019
 ms.topic: article
 keywords: cámara, hololens, cámara de color, frontal cara, hololens 2, CV, Computer Vision, fiducial, Marks, código QR, QR, Foto, vídeo
-ms.openlocfilehash: bc478aa658b26eb3a4efb16c62d0874b12992e78
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: f34973fee56f9469632b320a62dd441ed32e5805
+ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583620"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98810151"
 ---
 # <a name="locatable-camera"></a>Cámara localizable
 
@@ -25,7 +25,7 @@ HoloLens incluye una cámara mundial montada en la parte frontal del dispositivo
 * El LED de privacidad en blanco para el mundo se iluminará siempre que la cámara esté activa
 * La cámara admite los siguientes modos (todos los modos tienen una relación de aspecto de 16:9) a 30, 24, 20, 15 y 5 FPS:
 
-  |  Vídeo  |  Versión preliminar  |  ¿  |  Campo horizontal de la vista (H-Field) |  Uso sugerido | 
+  |  vídeo  |  Versión preliminar  |  ¿  |  Campo horizontal de la vista (H-Field) |  Uso sugerido | 
   |----------|----------|----------|----------|----------|
   |  1280x720 |  1280x720 |  1280x720 |  45 Grad  |  (modo predeterminado con estabilización de vídeo) | 
   |  N/D |  N/D |  2048x1152 |  67 Grad |  Imagen fija de mayor resolución | 
@@ -37,10 +37,10 @@ HoloLens incluye una cámara mundial montada en la parte frontal del dispositivo
 
 * Centrar automáticamente la cámara de foto/vídeo (PV) con el equilibrio de blancos automático, la exposición automática y la canalización de procesamiento de imágenes completa.
 * El LED de privacidad en blanco orientado al mundo se iluminará cada vez que la cámara esté activa.
-* HoloLens 2 admite distintos perfiles de cámara. Obtenga información acerca de cómo [detectar y seleccionar funcionalidades de la cámara](//windows/uwp/audio-video-camera/camera-profiles).
+* HoloLens 2 admite distintos perfiles de cámara. Obtenga información acerca de cómo [detectar y seleccionar funcionalidades de la cámara](/windows/uwp/audio-video-camera/camera-profiles).
 * La cámara admite los siguientes perfiles y resoluciones (todos los modos de vídeo tienen una relación de aspecto de 16:9):
   
-  | Perfil                                         | Vídeo     | Versión preliminar   | ¿     | Velocidades de fotogramas | Campo horizontal de la vista (H-Field) | Uso sugerido                             |
+  | Perfil                                         | vídeo     | Versión preliminar   | ¿     | Velocidades de fotogramas | Campo horizontal de la vista (H-Field) | Uso sugerido                             |
   |-------------------------------------------------|-----------|-----------|-----------|-------------|----------------------------------|---------------------------------------------|
   | Legacy, 0 BalancedVideoAndPhoto, 100             | 2272x1278 | 2272x1278 |           | 15,30       | 64,69                            | Grabación de vídeo de alta calidad                |
   | Legacy, 0 BalancedVideoAndPhoto, 100             | 896x504   | 896x504   |           | 15,30       | 64,69                            | Flujo de vista previa para la captura de fotografías de alta calidad |
@@ -75,14 +75,14 @@ Para ir de "CameraIntrinsics" y "CameraCoordinateSystem" al sistema de coordenad
 
 ### <a name="using-mediaframereference"></a>Usar MediaFrameReference
 
-Estas instrucciones se aplican si you'r usa la clase [MediaFrameReference](//uwp/api/windows.media.capture.frames.mediaframereference) para leer fotogramas de imagen de la cámara.
+Estas instrucciones se aplican si you'r usa la clase [MediaFrameReference](/uwp/api/windows.media.capture.frames.mediaframereference) para leer fotogramas de imagen de la cámara.
 
-Cada fotograma de imagen (ya sea fotográfico o vídeo) incluye una [SpatialCoordinateSystem](//uwp/api/windows.perception.spatial.spatialcoordinatesystem) raíz en la cámara en el momento de la captura, a la que se puede acceder mediante la propiedad [coordenadas](//uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) de su [MediaFrameReference](//uwp/api/Windows.Media.Capture.Frames.MediaFrameReference). Cada fotograma contiene una descripción del modelo de lente de la cámara, que puede encontrarse en la propiedad [CameraIntrinsics](//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) . Juntas, estas transformaciones definen para cada píxel un rayo en un espacio 3D que representa la ruta de acceso tomada por las fotografías que han producido el píxel. Estos rayos pueden estar relacionados con otro contenido de la aplicación mediante la obtención de la transformación del sistema de coordenadas del marco a algún otro sistema de coordenadas (por ejemplo, desde un [marco estacionario de referencia](../../design/coordinate-systems.md#stationary-frame-of-reference)). 
+Cada fotograma de imagen (ya sea fotográfico o vídeo) incluye una [SpatialCoordinateSystem](/uwp/api/windows.perception.spatial.spatialcoordinatesystem) raíz en la cámara en el momento de la captura, a la que se puede acceder mediante la propiedad [coordenadas](/uwp/api/windows.media.capture.frames.mediaframereference.coordinatesystem#Windows_Media_Capture_Frames_MediaFrameReference_CoordinateSystem) de su [MediaFrameReference](/uwp/api/Windows.Media.Capture.Frames.MediaFrameReference). Cada fotograma contiene una descripción del modelo de lente de la cámara, que puede encontrarse en la propiedad [CameraIntrinsics](/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) . Juntas, estas transformaciones definen para cada píxel un rayo en un espacio 3D que representa la ruta de acceso tomada por las fotografías que han producido el píxel. Estos rayos pueden estar relacionados con otro contenido de la aplicación mediante la obtención de la transformación del sistema de coordenadas del marco a algún otro sistema de coordenadas (por ejemplo, desde un [marco estacionario de referencia](../../design/coordinate-systems.md#stationary-frame-of-reference)). 
 
 Cada fotograma de imagen proporciona lo siguiente:
 * Datos de píxeles (en formato RGB/NV12/JPEG/etc.)
-* Un [SpatialCoordinateSystem](//uwp/api/windows.perception.spatial.spatialcoordinatesystem) de la ubicación de la captura
-* Una clase [CameraIntrinsics](//uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) que contiene el modo de lente de la cámara
+* Un [SpatialCoordinateSystem](/uwp/api/windows.perception.spatial.spatialcoordinatesystem) de la ubicación de la captura
+* Una clase [CameraIntrinsics](/uwp/api/windows.media.capture.frames.videomediaframe.cameraintrinsics#Windows_Media_Capture_Frames_VideoMediaFrame_CameraIntrinsics) que contiene el modo de lente de la cámara
 
 En el [ejemplo HolographicFaceTracking](https://github.com/Microsoft/Windows-universal-samples/tree/master/Samples/HolographicFaceTracking) se muestra la forma bastante sencilla de consultar la transformación entre el sistema de coordenadas de la cámara y sus propios sistemas de coordenadas de aplicación.
 

@@ -6,12 +6,12 @@ ms.author: ishitak
 ms.date: 08/03/2020
 ms.topic: article
 keywords: realidad mixta, VR, LBE, ubicación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, hardware, HoloLens, varios jugadores, servicios en la nube, Azure
-ms.openlocfilehash: 41b35e7f92f8410357c685362ebc1714aea616e8
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 1cc54ad0ef4b9892c49e13c7437a4d5356093c79
+ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580671"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98810103"
 ---
 # <a name="location-based-entertainment-with-windows-mixed-reality"></a>Entretenimiento basado en la ubicación con Windows Mixed Reality
 
@@ -49,7 +49,7 @@ En el caso de las experiencias de VR con tethering de PC, nuestros OEM ofrecen u
 
 HP acaba de lanzar su mochila de HP VR de la versión G2, el equipo portátil más eficaz del mundo, optimizado para experiencias de movilidad gratuita, ahora con un 30% más de energía con una GPU de RTX 2080 dentro de. [Detalles](https://www8.hp.com/us/en/vr/vr-backpack.html)
 
-### <a name="setup"></a>Configurar
+### <a name="setup"></a>Configuración
 
 **P: ¿Cómo puedo configurar más fácilmente el programa de instalación y personalizar el portal de realidad mixta para LBE?**
 
@@ -98,11 +98,11 @@ El archivo JSON debe tener el siguiente contenido con el valor "true" establecid
  
 **P: ¿hay alguna orientación sobre la configuración de Playspace?**
 
-R: la configuración de un Playspace debe realizarse tal como lo haría con una experiencia de instalación del consumidor. El proceso de configuración del salón también le permitirá definir los límites de la habitación. Puede leer [aquí](//windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary)más detalles sobre la configuración de los límites de la habitación.
+R: la configuración de un Playspace debe realizarse tal como lo haría con una experiencia de instalación del consumidor. El proceso de configuración del salón también le permitirá definir los límites de la habitación. Puede leer [aquí](/windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary)más detalles sobre la configuración de los límites de la habitación.
 
 Como se explicó en el documento anterior, el Playspace de coordenada única razonable máximo está alrededor de 5mx5m. Si desea tener un área más grande, puede usar la capacidad de anclajes espaciales en la pila de la API de Windows Holographic. El uso de esta API requerirá ingeniería personalizada en las experiencias que está generando.  
 
-Puede leer [aquí](//windows/mixed-reality/coordinate-systems)más detalles sobre cómo optimizar el contenido de los distintos tamaños de espacio.
+Puede leer [aquí](/windows/mixed-reality/coordinate-systems)más detalles sobre cómo optimizar el contenido de los distintos tamaños de espacio.
  
 
 **P: mi espacio es demasiado grande y se están ejecutando errores al intentar configurar una experiencia permanente con límites. ¿Qué debo hacer para configurar mi trabajo de gran experiencia de movilidad gratuita?**
@@ -113,7 +113,7 @@ Puede configurar el modo "sentado", que no mostrará el límite ni configurará 
 
 El desarrollador de la aplicación es responsable de mostrar las medidas de seguridad necesarias para que los usuarios no entren en conflicto con el entorno físico.  Podrían ser paredes digitales dentro de la experiencia o un visual de límite de juego personalizado. 
 
-Puede encontrar instrucciones sobre cómo configurar el límite de la habitación con WMR [aquí](//windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary).
+Puede encontrar instrucciones sobre cómo configurar el límite de la habitación con WMR [aquí](/windows/mixed-reality/enthusiast-guide/set-up-windows-mixed-reality#set-up-your-room-boundary).
 
 **P: ¿Dónde está el origen de Playspace?**
 
@@ -140,7 +140,7 @@ R: Si opta por la compilación de Windows 20H1 o posterior a través de nuestro 
 
 P: ¿Cómo funciona la tecnología de seguimiento de los auriculares Windows Mixed Reality?  
 
-La realidad mixta comparte la misma tecnología de seguimiento que la HoloLens. Para obtener más información sobre el sistema de seguimiento interno, consulte la documentación [aquí](//windows/mixed-reality/enthusiast-guide/tracking-system).
+La realidad mixta comparte la misma tecnología de seguimiento que la HoloLens. Para obtener más información sobre el sistema de seguimiento interno, consulte la documentación [aquí](/windows/mixed-reality/enthusiast-guide/tracking-system).
 
 Para obtener una descripción de cómo funciona el sistema de asignación espacial de nivel superior, puede leer nuestra descripción [aquí](../design/spatial-mapping.md).
 
@@ -188,13 +188,13 @@ R: Azure PlayFab es una plataforma de back-end completa para juegos en vivo. Pue
 
 **P: uso SteamVR para implementar mis experiencias. ¿Funciona Windows Mixed Reality con SteamVR?**
 
-R: Windows Mixed Reality para SteamVR permite a los usuarios ejecutar experiencias de SteamVR en auriculares con micrófonos de realidad con Windows Mixed Reality. [Aquí](//windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality)encontrará más información sobre STEAMVR con WMR.
+R: Windows Mixed Reality para SteamVR permite a los usuarios ejecutar experiencias de SteamVR en auriculares con micrófonos de realidad con Windows Mixed Reality. [Aquí](/windows/mixed-reality/enthusiast-guide/using-steamvr-with-windows-mixed-reality)encontrará más información sobre STEAMVR con WMR.
 
 ### <a name="support-and-community"></a>Soporte técnico y comunidad  
 
 Tenemos unos pocos recursos útiles para ayudarle a ponerse en contacto con expertos en la materia en nuestro equipo, obtener soporte técnico para solucionar problemas y contribuir a la mayor comunidad de desarrollo de la realidad mixta.  
 
-Si surgen problemas con características publicadas de forma pública, envíe un error a través del centro de comentarios. para obtener instrucciones, consulte esta [Página](//windows/mixed-reality/enthusiast-guide/filing-feedback).
+Si surgen problemas con características publicadas de forma pública, envíe un error a través del centro de comentarios. para obtener instrucciones, consulte esta [Página](/windows/mixed-reality/enthusiast-guide/filing-feedback).
 
 Para obtener más ayuda para la solución de problemas con WMR, [pida una solicitud de soporte técnico](https://support.microsoft.com//supportforbusiness/productselection?sapId=96bfb202-bc79-741b-bf7a-774d8b767782) al equipo de soporte técnico al cliente.
 
