@@ -8,12 +8,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, cloud services, Azure, remote rendering, spatial anchors, cognitive services, cognition, unity, machine learning, speech translation, computer vision, Microsoft Graph
-ms.openlocfilehash: 251fd68d2a3fea79c1db160b6aaf64aad05c686f
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 725e41e94923f1738eb11064c772f9138a6be09a
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009575"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98582707"
 ---
 # <a name="azure-mixed-reality-cloud-services-overview"></a>Introducción a los servicios en la nube de realidad mixta de Azure
 
@@ -66,10 +66,10 @@ El servicio puede desarrollarse en un host de entornos e implementarse en un gra
 
 :::row:::
     :::column:::
-       [![Voz](../whats-new/images/speech.jpg)](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
+       [![Voz](../whats-new/images/speech.jpg)](/azure/cognitive-services/speech-service/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="speech"></a>[Voz](https://docs.microsoft.com/azure/cognitive-services/speech-service/)
+        ### <a name="speech"></a>[Voz](/azure/cognitive-services/speech-service/)
         Descubra cómo Speech permite la integración de funcionalidades de procesamiento de voz en cualquier aplicación o servicio. Convierta el idioma hablado en texto o genere voz que suene de forma natural a partir del texto con fuentes de voz estándar (o personalizables). Pruebe cualquier servicio gratis y compile rápidamente aplicaciones y servicios habilitados para voz con las siguientes funcionalidades.
     :::column-end:::
 :::row-end:::
@@ -78,10 +78,10 @@ El servicio puede desarrollarse en un host de entornos e implementarse en un gra
 
 :::row:::
     :::column:::
-       [![Visión](../whats-new/images/vision.jpg)](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
+       [![Visión](../whats-new/images/vision.jpg)](/azure/cognitive-services/computer-vision/)
     :::column-end:::
     :::column span="2":::
-        ### <a name="vision"></a>[Visión](https://docs.microsoft.com/azure/cognitive-services/computer-vision/)
+        ### <a name="vision"></a>[Visión](/azure/cognitive-services/computer-vision/)
         Reconozca, identifique, subtitule, indexe y modere sus imágenes, vídeos y contenido de entrada de lápiz digital. Descubra cómo Vision permite que las aplicaciones y los servicios identifiquen y analicen con precisión el contenido de imágenes, vídeos y entrada de lápiz digital.
     :::column-end:::
 :::row-end:::
@@ -95,7 +95,7 @@ Los servicios independientes que se enumeran a continuación no se aplican a la 
 <table>
     <tr>
         <td><strong>Servicio en la nube de Azure</strong></td>
-        <td><a href="../hololens-hardware-details.md"><strong>HoloLens 1.ª generación</strong></a></td>
+        <td><a href="/hololens/hololens1-hardware"><strong>HoloLens 1.ª generación</strong></a></td>
         <td><a href="../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></td>
     </tr>
      <tr>
@@ -167,5 +167,5 @@ Los servicios independientes que se enumeran a continuación no se aplican a la 
 
 ## <a name="see-also"></a>Consulte también
 
-* Tutoriales de Azure Spatial Anchors para HoloLens 2: [1 de 3 Introducción a Azure Spatial Anchors](../mrlearning-asa-ch1.md)
+* Tutoriales de Azure Spatial Anchors para HoloLens 2: [1 de 3 Introducción a Azure Spatial Anchors](./unity/tutorials/mr-learning-asa-02.md)
 * Tutoriales de Azure Speech Services para HoloLens 2: [1 de 4; Integración y uso del reconocimiento de voz y la transcripción](../develop/unity/tutorials/mrlearning-speechSDK-ch1.md)
