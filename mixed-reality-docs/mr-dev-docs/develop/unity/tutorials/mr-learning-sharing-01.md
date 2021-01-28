@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, multi-user capabilities, Photon, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: 1000b4d2637e3a0f3bbc79df9866577427674767
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: c18bd7c10ed042278053a51c2d1894564000dfe2
+ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007225"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699024"
 ---
 # <a name="1-introduction-to-the-multi-user-capabilities-tutorials"></a>1. Introducción a los tutoriales sobre las funcionalidades multiusuario
 
@@ -37,23 +37,23 @@ Tutoriales de esta serie:
 * Un equipo Windows 10 configurado con las [herramientas adecuadas instaladas](../../install-the-tools.md)
 * SDK de Windows 10 10.0.18362.0 o posterior
 * Un dispositivo HoloLens 2 [configurado para el desarrollo](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.3.15 instalado y el módulo de compatibilidad con la compilación de la Plataforma universal de Windows agregado
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019 LTS instalado y el módulo de compatibilidad con la compilación de la Plataforma universal de Windows agregado
 * Haber completado la sección [Creación de un recurso de Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens#create-a-spatial-anchors-resource) del tutorial [Inicio rápido: Creación de una aplicación de HoloLens en Unity que usa Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-hololens).
 * Haber completado la serie de [tutoriales de introducción](mr-learning-base-01.md) o contar con experiencia previa básica en el uso de Unity y MRTK
 * Haber completado la serie de [tutoriales de Azure Spatial Anchors](mr-learning-asa-01.md) o contar con experiencia previa en la creación de una cuenta de Azure Spatial Anchors
 * Si va a realizar la implementación en Android y en HoloLens
   * Un dispositivo Android <a href="https://developer.android.com/studio/debug/dev-options" target="_blank">habilitado para desarrollo</a> y <a href="https://developers.google.com/ar/discover/supported-devices" target="_blank">compatible con ARCore</a>, con conexión USB a tu equipo Windows o macOS
-  * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.3.15 instalado y el módulo de compatibilidad con la compilación de Android agregado
+  * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019 LTS instalado y el módulo de compatibilidad con la compilación de Android agregado
 * Si va a realizar la implementación en iOS y en HoloLens
   * Un equipo macOS que tenga instalada la última versión de <a href="https://geo.itunes.apple.com/us/app/xcode/id497799835?mt=12" target="_blank">Xcode</a> y <a href="https://cocoapods.org" target="_blank">CocoaPods</a>
   * Un dispositivo iOS <a href="https://developer.apple.com/documentation/arkit/verifying_device_support_and_user_permission" target="_blank">compatible con ARKit</a>, con conexión USB a tu equipo macOS
-  * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019.3.15 instalado y el módulo de compatibilidad con la compilación de iOS agregado
+  * <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019 LTS instalado y el módulo de compatibilidad con la compilación de iOS agregado
 
 > [!CAUTION]
-> La versión de Mixed Reality Toolkit recomendada para esta serie de tutoriales es MRTK 2.4.0.
+> La versión de Mixed Reality Toolkit recomendada para esta serie de tutoriales es MRTK 2.5.1.
 
 > [!CAUTION]
-> La versión de Unity recomendada para esta serie de tutoriales es Unity 2019.3.15. Esta sustituye los requisitos de versión de Unity descritos en los requisitos previos vinculados anteriormente.
+> La versión de Unity recomendada para esta serie de tutoriales es Unity 2019 LTS. Esto sustituye cualquier requisito de versión de Unity indicado en los requisitos previos vinculados más arriba.
 
 > [!div class="nextstepaction"]
 > [Tutorial siguiente: 2. Configuración de Photon Unity Networking](mr-learning-sharing-02.md)

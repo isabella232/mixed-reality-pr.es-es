@@ -7,21 +7,21 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, object interactions, bounding boxes
 ms.localizationpriority: high
-ms.openlocfilehash: c9acb72b2ad961737f5ce3f21c048fc80024b49d
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 23cfe3d3746d6ab6dbc0757f32b95ddc8637a366
+ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007935"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98578763"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7. Interacción con objetos 3D
 
-En este tutorial, aprenderá a habilitar la manipulación cercana y lejana de objetos 3D y a limitar los tipos de manipulación permitidos. También aprenderá a agregar cuadros de límite alrededor de objetos 3D para facilitar el control de la manipulación de objetos.
+En este tutorial, aprenderá a habilitar la manipulación cercana y lejana de objetos 3D y a limitar los tipos de manipulación permitidos. También aprenderá a agregar controles de límites alrededor de objetos 3D para facilitar el control de la manipulación de objetos.
 
 ## <a name="objectives"></a>Objetivos
 
 * Aprender a configurar objetos 3D para poder interactuar con ellos
-* Aprender a agregar cuadros de límite a objetos 3D
+* Aprender a agregar un control de límites a objetos 3D
 
 ## <a name="manipulating-3d-objects"></a>Manipulación de objetos 3D
 
@@ -59,6 +59,9 @@ En la ventana Hierarchy (Jerarquía), expanda el objeto RoverExplorer > **RoverP
 > Para seleccionar varios objetos que no estén juntos entre sí, mantenga presionada la tecla Control mientras usa el mouse para seleccionar cualquier objeto.
 
 > [!NOTE]
+> Cuando se agrega un manipulador de objetos (script), en este caso, se agrega automáticamente el administrador de restricciones (script) porque el manipulador de objetos (script) depende de él.
+
+> [!NOTE]
 > Para los fines de este tutorial, los colisionadores ya se han agregado a las partes del róver. Para obtener más información sobre los colisionadores, visita la documentación sobre <a href="https://docs.unity3d.com/Manual/CollidersOverview.html" target="_blank">colisionadores</a> de Unity.
 
 > [!NOTE]
@@ -73,7 +76,7 @@ Con todos los objetos de las partes de róver y el objeto RoverAssembly todavía
 > [!NOTE]
 > En este punto, ha habilitado la manipulación de objetos para todos los objetos de las piezas de Rover y el objeto RoverAssembly.
 
-En la ventana Proyecto, navegue hasta la carpeta **Recursos** > **MRTK** > **SDK** > **StandardAssets** > **Audio** para buscar los clips de audio:
+En la ventana Proyecto, navegue hasta **Recursos** > **MRTK** > **StandardAssets** >  carpeta **Audio** para buscar los clips de audio:
 
 ![Ventana Project (Proyecto) de Unity con la carpeta Audio seleccionada](images/mr-learning-base/base-07-section1-step1-3.png)
 
@@ -123,15 +126,18 @@ En la ventana Hierarchy (Jerarquía), seleccione el objeto **RoverExplorer** y, 
 * Componente **BoundingBox**
 * Componente **Object Manipulator (Script)** (Manipulador de objetos [script])
 
-A continuación, **desactive** la casilla situada junto a ambos componentes para que **estén deshabilitados** de forma predeterminada:
+A continuación, **desactive** la casilla situada junto a todos los componentes para que **estén deshabilitados** de forma predeterminada:
 
 ![Unity con el objeto RoverExplorer seleccionado y los componentes agregados y deshabilitados](images/mr-learning-base/base-07-section2-step1-1.png)
 
 > [!NOTE]
-> La visualización del cuadro de límite se crea en tiempo de ejecución y, por tanto, no es visible antes de entrar en el Modo Juego.
+> La visualización del cuadro de límite se crea en tiempo de ejecución y, por tanto, no está visible antes de entrar en el modo de juego.
 
 > [!NOTE]
-> El componente BoundingBox agregará automáticamente el componente NearInteractionGrabbable en tiempo de ejecución. Por lo tanto, no es necesario agregar este componente para agarrar los objetos delimitados con las manos con seguimiento.
+>El componente BoundingBox agregará automáticamente el componente NearInteractionGrabbable en tiempo de ejecución. Por lo tanto, no es necesario agregar este componente para agarrar los objetos delimitados con las manos con seguimiento.
+
+> [!NOTE]
+>El manipulador de objetos (script) agrega automáticamente el administrador de restricciones (script)
 
 En la ventana Hierarchy (Jerarquía), expanda el objeto Menu (Menú) > **ButtonCollection** para mostrar los cuatro botones. Cambie el nombre del tercer botón a **BoundingBox_Enable** y, a continuación, en la ventana Inspector, configure el componente **Button Config Helper (Script)** (Asistente de configuración del botón [script]) como se indica a continuación:
 
@@ -143,7 +149,7 @@ En la ventana Hierarchy (Jerarquía), expanda el objeto Menu (Menú) > **ButtonC
 * Asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **ObjectManipulator** > **bool Enabled** (Booleano habilitado) para actualizar el valor de esta propiedad cuando se desencadene el evento.
 * Verifique que la casilla del argumento esté **activada**.
-* Deje el **icono** como el icono "cubo con cuadro de límite".
+* Deje el **Icono** como el icono "cubo con control de límites".
 
 ![Unity con el objeto de botón BoundingBox_Enable seleccionado y el componente Button Config Helper (Asistente de configuración del botón) configurado](images/mr-learning-base/base-07-section2-step1-2.png)
 
@@ -157,19 +163,19 @@ Cambie el nombre del cuarto y el último botón por **BoundingBox_Disable** y, a
 * Asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **ObjectManipulator** > **bool Enabled** (Booleano habilitado) para actualizar el valor de esta propiedad cuando se desencadene el evento.
 * Verifique que la casilla del argumento esté **desactivada**.
-* Deje el **icono** como el icono "cubo con cuadro de límite".
+* Deje el **Icono** al icono "cubo con control de límites".
 
 ![Unity con el objeto de botón BoundingBox_Disable seleccionado y el componente Button Config Helper (Asistente de configuración del botón) configurado](images/mr-learning-base/base-07-section2-step1-3.png)
 
-Si ahora entra en el Modo Juego y habilita el cuadro de límite haciendo clic en el botón Habilitar, podrá usar la interacción cercana o lejana para desplazar, girar y escalar el cuadro de límite, así como usar el botón Deshabilitar para deshabilitar de nuevo el cuadro de límite:
+Si ahora entra en el modo de juego y habilita el control de límites haciendo clic en el botón Habilitar, podrá usar la interacción cercana o lejana para desplazar, girar y escalar el cuadro de límite, así como usar el botón Deshabilitar para deshabilitar de nuevo el cuadro de límite:
 
 ![Vista dividida del modo de reproducción de Unity con el cuadro de límite manipulado](images/mr-learning-base/base-07-section2-step1-4.png)
 
-Para obtener más información sobre el componente de cuadro de límite y sus propiedades asociadas, puedes visitar la guía sobre el [cuadro de límite](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+Para obtener más información sobre el componente de cuadro de límite y sus propiedades asociadas, puede visitar la guía sobre el [cuadro de límite](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
 
 ## <a name="congratulations"></a>Enhorabuena
 
-En este tutorial, aprendió a habilitar la manipulación cercana y lejana de objetos 3D y a limitar los tipos de manipulación permitidos. También aprendió a agregar cuadros de límite alrededor de objetos 3D para facilitar el control de la manipulación de objetos.
+En este tutorial, aprendió a habilitar la manipulación cercana y lejana de objetos 3D y a limitar los tipos de manipulación permitidos. También aprendió a agregar un cuadro de límite alrededor de objetos 3D para facilitar el control de la manipulación de objetos.
 
 > [!div class="nextstepaction"]
 > [Tutorial siguiente: 8. Uso del seguimiento ocular](mr-learning-base-08.md)

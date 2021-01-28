@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, multi-user capabilities, Photon, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: 6cc77b32e9479bafeb53dcb99cba4f2f29865fd7
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 0c6bf0871836ad7aae9c3906b2042f97ae003ebf
+ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007215"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699069"
 ---
 # <a name="3-connecting-multiple-users"></a>3. Conexión de varios usuarios
 
@@ -63,13 +63,13 @@ En la ventana Inspector, usa el botón **Agregar componente** para agregar el co
 
 En la ventana Inspector, usa el botón **Agregar componente** para agregar el componente **Photon View (Script)** (Vista de Photon [script]) al objeto PhotonUser y configúralo de la siguiente manera:
 
-* En el campo **Observed Components** (Componentes observados), asigne el componente **Generic Net Sync (Script)** (Sincronización neta genérica [script]).
+* Asegúrese de que el campo **Observed Components** (Componentes observados) tenga asignado el componente **Generic Net Sync (Script)** (Sincronización neta genérica [script]).
 
 ![Unity con el componente Photon View (Vista de Photon) agregado y configurado](images/mr-learning-sharing/sharing-03-section2-step1-4.png)
 
 ### <a name="2-create-the-avatar"></a>2. Creación del avatar
 
-En la ventana Proyecto, navegue hasta **Assets** (Recursos)  > **MRTK** > **SDK** > **StandardAssets** > carpeta **Materials** (Materiales) para buscar los materiales de MRTK.
+En la ventana Project (Proyecto), navegue hasta **Assets** (Recursos)  > **MRTK** > **StandardAssets** >  carpeta **Materials** (Materiales) para buscar los materiales de MRTK.
 
 Después, en la ventana Jerarquía, haga clic con el botón derecho en el objeto **PhotonUser** y seleccione **Objeto 3D** > **Esfera** para crear un objeto con forma de esfera como elemento secundario del objeto PhotonUser, y configúrelo de la manera siguiente:
 
@@ -112,7 +112,7 @@ Si ahora compila e implementa el proyecto de Unity en su dispositivo HoloLens, v
 ![Animación que muestra Unity con usuarios de red](images/mr-learning-sharing/sharing-03-section4-step1-1.gif)
 
 > [!TIP]
-> Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puede consultar las instrucciones de [Compilación de la aplicación para el HoloLens 2](mr-learning-base-02.md#building-and-deploying-to-your-hololens-2).
+> Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puede consultar las instrucciones de [Compilación de la aplicación para el HoloLens 2](mr-learning-base-02.md#building-your-application-to-your-hololens-2).
 
 > [!CAUTION]
 > La aplicación necesita conectarse a Photon, por lo que debe asegurarse de que el equipo o dispositivo esté conectado a Internet.

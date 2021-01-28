@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, comunicación remota, realidad mixta, desarrollo, introducción, características, nuevo proyecto, emulador, documentación, guías, hologramas, desarrollo del juego, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, OpenXR
-ms.openlocfilehash: eb9ec39d663dec2b5bf4c9177524449f31aaf554
-ms.sourcegitcommit: e24715fffa815c24ca411fa93eed9576ae729337
+ms.openlocfilehash: a5b65bbfe5a1f365a93836406365fdc395b73c47
+ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98247738"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98580034"
 ---
 # <a name="unreal-development-overview"></a>Introducción al desarrollo con Unreal
 
@@ -49,6 +49,8 @@ Hay varias características clave de la realidad mixta que nuestra serie de tuto
 
 * [UX Tools para Unreal](https://www.unrealengine.com/marketplace/en-US/product/mixed-reality-ux-tools) es el primer complemento que se va a publicar y actualmente solo se admite en HoloLens 2. El complemento incluye código C++, planos técnicos y recursos de ejemplo de las características comunes de la experiencia de usuario para la simulación de entradas, las interacciones con la mano, el magnetismo de superficie y mucho más.
 
+* [Graphics Tools for Unreal](https://github.com/microsoft/MixedReality-GraphicsTools-Unreal/) es un complemento de juego de UE con código, planos técnicos y recursos de ejemplo creados para ayudar a mejorar la fidelidad visual de las aplicaciones de realidad mixta sin salirse de los presupuestos de rendimiento.
+
 [!INCLUDE[](../includes/unreal-building-blocks.md)]
 
 > [!NOTE]
@@ -82,7 +84,7 @@ Nunca se realiza un trabajo de desarrollador, especialmente cuando se aprende a 
 
 ### <a name="debugging"></a>Depuración
 
-Si está pensando en la posibilidad de depurar la aplicación mientras se ejecuta en el dispositivo con Visual Studio, siga estas [instrucciones](https://docs.microsoft.com/visualstudio/debugger/debug-installed-app-package#remote).
+Si está pensando en la posibilidad de depurar la aplicación mientras se ejecuta en el dispositivo con Visual Studio, siga estas [instrucciones](/visualstudio/debugger/debug-installed-app-package#remote).
 
 ### <a name="performance"></a>Rendimiento
 
@@ -104,7 +106,7 @@ El desarrollo para la realidad mixta incluye puntos de control de rendimiento qu
 | Audio espacial | 4.23 | ✔️ |
 | Compatibilidad con la pantalla de espectador para streaming | 4.24 |
 | LSR plana por streaming | 4.24 |
-| [Aplicaciones de ejemplo](unreal-samples.md) | 4.24 | ✔️ |
+| [Aplicaciones de ejemplo](../features-and-samples.md) | 4.24 | ✔️ |
 | Modo multivista móvil: resultados de rendimiento de 60 fps | 4.25 | ✔️ |
 | Representación de tercera cámara | 4.25 |
 | Streaming desde una aplicación de escritorio empaquetada | 4.25.1 | ✔️ |

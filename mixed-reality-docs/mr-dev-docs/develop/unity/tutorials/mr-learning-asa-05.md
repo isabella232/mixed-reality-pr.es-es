@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, android, ios, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, AR Foundation, ARCore, ARKit
 ms.localizationpriority: high
-ms.openlocfilehash: 545373ed169a77614b0a00264f5ba1bf1f3deb8e
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 741c000de0ab2feb3dcbff33e2a0b0acc70838e8
+ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008395"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98699262"
 ---
 # <a name="5-azure-spatial-anchors-for-android-and-ios"></a>5. Azure Spatial Anchors para iOS y Android
 
@@ -28,7 +28,7 @@ En este tutorial, aprenderás a compilar un proyecto en dispositivos iOS y Andro
 En esta sección, actualizará e instalará los siguientes paquetes integrados:
 
 * AR Foundation 3.1.3
-* XR Legacy Input Helpers 2.1.4
+* XR Legacy Input Helpers 2.1.6
 * Complemento de ARCore XR 3.1.3 para la compatibilidad con Android
 * Complemento de ARKit XR 3.1.3 para la compatibilidad con iOS
 
@@ -73,6 +73,10 @@ En la ventana Hierarchy (Jerarquía), seleccione el objeto **RoverExplorer** y, 
 > [!NOTE]
 > Cuando se agregue el componente AR Reference Point Manager (Script) (Administrador de puntos de referencia de AR [script]), se agregará automáticamente el componente AR Session Origin (Script) (Origen de la sesión de AR [script]) según lo requiere el componente AR Reference Point Manager (Script) (Administrador de puntos de referencia de AR [script]).
 
+
+
+Invoque el siguiente elemento de menú para actualizar las definiciones del scripting de MRTK UnityAR: **Mixed Reality Toolkit** > **Utilities** (Utilidades)  > **UnityAR** > Update Scripting Defines (Actualizar definiciones de scripting)
+
 ## <a name="building-your-application-to-your-android-device"></a>Compilación de la aplicación en el dispositivo Android
 
 En esta sección, aprenderá a configurar el proyecto para compilarlo e implementarlo en un dispositivo Android.
@@ -93,6 +97,10 @@ En el menú de Unity, seleccione **Mixed Reality Toolkit** > **Utilities** > **C
 En el menú de Unity, seleccione **Edit** > **Project Settings...** (Editar > Configuración del proyecto...) para abrir la ventana Player Settings (Configuración del jugador). A continuación, busque la sección **Player** >  **Other Settings** (Jugador > Otra configuración), seleccione **Vulkan** y quítelo haciendo clic en el símbolo **"-"** .
 
 ![Other Settings (Otra configuración) de Unity con Vulkan seleccionado](images/mr-learning-asa/asa-05-section3-step1-3.png)
+
+En el menú de Unity, seleccione **Edit** (Editar)  > **Project Settings...** (Características del proyecto)  >**Player** (Jugador)> **XR Setting** (Configuración de XR), asegúrese de encontrarse en una plataforma **Android**, active la casilla **Virtual Reality Supported** (Compatibilidad con realidad virtual), haga clic en el icono + y seleccione None (Ninguno):
+
+![Ventana MRTK Project Configurator (Configurador del proyecto MRTK) de Unity para Android](images/mr-learning-asa/asa-05-section3-step1-2-1.png)
 
 Cierra la ventana Player Settings (Configuración del reproductor) y vuelva a abrir la ventana Build Settings (Configuración de compilación).
 
@@ -147,7 +155,7 @@ Elija una ubicación adecuada para almacenar el proyecto Xcode, por ejemplo, _D:
 
 ![Ventana Build Settings (Configuración de compilación) de Unity con la ventana de solicitud Save (Guardar) para iOS](images/mr-learning-asa/asa-05-section4-step1-5.png)
 
-Una vez completado el proceso de compilación, siga las instrucciones del artículo [Exportación del proyecto de Xcode](https://docs.microsoft.com/azure/spatial-anchors/quickstarts/get-started-unity-ios#export-the-xcode-project) para aprender a implementar el proyecto de Xcode en el dispositivo iOS.
+Una vez completado el proceso de compilación, siga las instrucciones del artículo [Exportación del proyecto de Xcode](/azure/spatial-anchors/quickstarts/get-started-unity-ios#export-the-xcode-project) para aprender a implementar el proyecto de Xcode en el dispositivo iOS.
 
 ## <a name="congratulations"></a>Enhorabuena
 

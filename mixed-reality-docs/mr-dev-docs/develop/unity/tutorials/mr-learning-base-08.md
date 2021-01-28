@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, eye-tracking
 ms.localizationpriority: high
-ms.openlocfilehash: f464ba4e08f1446f1d50eda577aedf9d070630ee
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 5efe1c54d9e3b4096dfec4221e4ce04e7370ca47
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007895"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635477"
 ---
 # <a name="8-using-eye-tracking"></a>8. Uso del seguimiento ocular
 
@@ -33,7 +33,7 @@ En el menú de Unity, seleccione Mixed Reality Toolkit > Utilities (Utilidades) 
 ![Ventana MRTK Project Configurator (Configurador del proyecto MRTK) de Unity](images/mr-learning-base/base-08-section1-step1-1.png)
 
 > [!NOTE]
-> La funcionalidad de entrada de mirada con los ojos debe haberse habilitado durante las instrucciones de [Aplicación de la configuración de MRTK Project Configurator](mr-learning-base-02.md#selecting-mrtk-and-project-settings) al configurar el proyecto de Unity al principio de esta serie de tutoriales. Sin embargo, si no está habilitada, asegúrese de habilitarla ahora.
+> La funcionalidad de entrada de mirada con los ojos debe haberse habilitado durante las instrucciones de [Aplicación de la configuración de MRTK Project Configurator](mr-learning-base-02.md#creating-and-configuring-the-scene) al configurar el proyecto de Unity al principio de esta serie de tutoriales. Sin embargo, si no está habilitada, asegúrese de habilitarla ahora.
 
 ## <a name="enabling-eye-based-gaze-in-the-gaze-provider"></a>Habilitar la mirada con los ojos en el proveedor de mirada
 
@@ -55,9 +55,9 @@ En la ventana Jerarquía, seleccione el objeto **MixedRealityToolkit** y, a cont
 
 * Expanda la sección **Input Data Providers** (Proveedores de datos de entrada)  > **Input Simulation Service** (Servicio de simulación de entrada).
 * Clone el perfil **DefaultMixedRealityInputSimulationProfile** y asígnele un nombre adecuado, por ejemplo, _GettingStarted_MixedRealityInputSimulationProfile_.
-* Busque la sección **Eye Simulation** (Simulación ocular) y active la casilla **Simulate Eye Position** (Simular posición ocular).
+* Busque **Eye Gaze Simulation** (Simulación de mirada) y establezca el valor de **Default Eye Gaze Simulation Mode** (Modo de simulación de mirada predeterminado) en **Camera Forward Axis** (Eje de cámara hacia adelante).
 
-![Componente de MixedRealityToolkit de Unity con el perfil recién creado aplicado y la simulación ocular habilitada](images/mr-learning-base/base-08-section3-step1-1.png)
+![Unity con el objeto TextMeshPro seleccionado](images/mr-learning-base/base-08-section3-step1-1.png)
 
 ## <a name="adding-eye-tracking-to-objects"></a>Agregar seguimiento ocular a los objetos
 

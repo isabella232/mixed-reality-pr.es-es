@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, prefabs, holograms, tooltips
 ms.localizationpriority: high
-ms.openlocfilehash: 989de4871332608448619e75ffd760c616332533
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 4fe4b016be36e04abffeb415f690cc0c01a6f767
+ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008065"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98635557"
 ---
 # <a name="6-creating-user-interfaces"></a>6. Creación de interfaces de usuario
 
@@ -97,17 +97,17 @@ En la ventana Hierarchy (Jerarquía), cambie el nombre del objeto a **Menu** y, 
 
 ![Unity con el objeto Menu seleccionado y el objeto ButtonCollection expandido](images/mr-learning-base/base-06-section2-step1-2.png)
 
-Cambie el nombre del primer botón por **Indicator** y, a continuación, en la ventana Inspector, configure el componente **Button Config Helper (Script)** (Asistente de configuración del botón [script]) de la siguiente manera:
+Cambie el nombre del primer botón en ButtonCollection por Indicator y, a continuación, en la ventana Inspector, configure el componente Button Config Helper (Script) (Asistente de configuración del botón [script]) de la siguiente manera:
 
 * Cambie el **texto de la etiqueta principal** para que coincida con el nombre del botón.
-* Asigne el objeto **Indicator** al campo **None (Object)** (Ninguno [objeto]).
+* Asigne el objeto Indicator, que parece un cheurón, al campo None (Object) (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **GameObject** > **SetActive (bool)** para establecer esta función como la acción que se va a ejecutar cuando se desencadene el evento.
 * Compruebe que la casilla del argumento esté **activada**.
 * Cambie el **icono** al icono de "búsqueda".
 
 ![Unity con el objeto de botón Indicator con Button Config Helper configurado](images/mr-learning-base/base-06-section2-step1-3.png)
 
-En la ventana Jerarquía, seleccione el objeto **Indicador** y, a continuación, en la ventana del Inspector:
+Para deshabilitar el objeto Indicator en forma de cheurón, en la ventana Hierarchy (Jerarquía), seleccione el objeto Indicator similar a un cheurón y, a continuación, en la ventana Inspector:
 
 * Desactive la casilla situada junto a su nombre para que esté inactivo de forma predeterminada.
 * Use el botón **Agregar componente** para agregar el componente **Controlador del indicador de dirección (Script)** .
@@ -115,7 +115,7 @@ En la ventana Jerarquía, seleccione el objeto **Indicador** y, a continuación,
 ![Unity con el objeto Indicator seleccionado, deshabilitado, y el componente DirectionalIndicatorController agregado](images/mr-learning-base/base-06-section2-step1-4.png)
 
 > [!NOTE]
-> Ahora, cuando se inicia la aplicación, el objeto Indicator está deshabilitado de forma predeterminada y se puede habilitar presionando el botón Indicator.
+> Ahora, cuando se inicia la aplicación, el objeto Indicator en forma de cheurón está deshabilitado de forma predeterminada y se puede habilitar presionando el botón Indicator.
 
 Cambie el nombre del segundo botón por **TapToPlace** y, a continuación, en la ventana Inspector, configure el componente **Button Config Helper (Script)** (Asistente de configuración del botón [script]) de la siguiente manera:
 
@@ -169,7 +169,7 @@ En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK** > **SD
 En la ventana Hierarchy (Jerarquía), expanda el objeto RoverExplorer > **RoverParts** y seleccione todos los objetos secundarios de partes, y, a continuación, en la ventana Inspector, use el botón **Add Component** (Agregar componente) para agregar el componente **ToolTipSpawner** y configúrelo de la forma siguiente:
 
 * Asegúrese de que la casilla de verificación **Focus enabled** (Enfoque habilitado) está activada para requerir que el usuario mire la parte para que aparezca la información sobre herramientas.
-* Asigne el elemento prefabricado **Simple Line ToolTip** (Información sobre herramientas de línea simple) desde la ventana Project (Proyecto) al campo **Tool Tip Prefab** (Elemento prefabricado de información de herramientas).
+* Asigne el elemento prefabricado **Simple Line ToolTip** (Información sobre herramientas de línea simple) desde la ventana Project (Proyecto) al campo **Prefab** (Elemento prefabricado).
 * Cambie ToolTip Override Settings > **Settings Mode** (Configuración de invalidación de información sobre herramientas > Modo de configuración) a **Override** (Invalidar).
 * Cambie ToolTip Override Settings > **Manual Pivot Local Position Y** (Configuración de invalidación de información sobre herramientas > Posición Y local del pivote manual) a **1.5**.
 
@@ -196,4 +196,5 @@ Presione el botón Play (Reproducir) para entrar en el modo de juego y, a contin
 
 En este tutorial, aprendió a crear una interfaz de usuario sencilla con los elementos prefabricados de botón y menú proporcionados por MRTK junto con el componente TextMeshPro de Unity y a configurar los botones para desencadenar eventos cuando se presionan. También ha aprendido a agregar elementos dinámicos de información sobre herramientas en la interfaz de usuario para proporcionar información adicional al usuario.
 
-[Tutorial siguiente: 7. Interacción con objetos 3D](mr-learning-base-07.md)
+> [!div class="nextstepaction"]
+>[Tutorial siguiente: 7. Interacción con objetos 3D](mr-learning-base-07.md)
