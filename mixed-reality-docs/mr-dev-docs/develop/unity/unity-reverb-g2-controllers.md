@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/14/2020
 ms.topic: article
 keywords: Unity, reverberación, reverberación G2, HP reverberación G2, realidad mixta, desarrollo, controladores de movimiento, entrada de usuario, características, nuevo proyecto, emulador, documentación, guías, características, hologramas, desarrollo de juegos
-ms.openlocfilehash: fa9b80076d65978ae1602fc4f9519d7e11c651b5
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 26435ef57c9baf59b1008fb4750aedd913a19814
+ms.sourcegitcommit: 1304f8f0a838290c1ae3db34670b67c75ea9bdaa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583570"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99421403"
 ---
 # <a name="hp-reverb-g2-controllers-in-unity"></a>Controladores de HP reverberación G2 en Unity
 
@@ -31,38 +31,11 @@ Dado que no se puede acceder a las nuevas entradas a través de las API de Unity
 
 Puede obtener instancias de MotionController mediante la creación de un *MotionControllerWatcher* y la suscripción a sus eventos, de forma similar al uso de eventos *InteractionManager* para detectar nuevas instancias de *InteractionSource* . Los métodos y propiedades de MotionController describen las entradas admitidas por el controlador, incluidos sus botones, desencadenadores, eje 2D y stick analógico. La clase MotionController también expone métodos para tener acceso a Estados de entrada a través de la clase *MotionControllerReading* . La clase MotionControllerReading representa una instantánea del estado del controlador en un momento dado. 
 
-## <a name="installing-microsoftmixedrealityinput-using-the-unity-package-manager"></a>Instalación de Microsoft. MixedReality. Input mediante el administrador de paquetes de Unity 
+## <a name="installing-microsoftmixedrealityinput-with-the-mixed-reality-feature-tool"></a>Instalación de Microsoft. MixedReality. Input con la herramienta de característica de realidad mixta
 
-El administrador de paquetes de Unity usa un [archivo de manifiesto](https://docs.unity3d.com/Manual/upm-manifestPkg.html) (manifest.jsen) para determinar qué paquetes se deben instalar y los registros (servidores) desde los que se pueden instalar. Antes de poder usar el paquete Microsoft. MixedReality. Input, deberá registrar el servidor de componentes de realidad mixta.
+Instale el complemento Microsoft. MixedReality. Input con la nueva aplicación de herramienta de características de realidad mixta. Siga las [instrucciones de instalación y uso](welcome-to-mr-feature-tool.md) y seleccione el paquete de **entrada de realidad mixta** en la categoría del kit de herramientas de realidad mixta:
 
-### <a name="registering-the-mixed-reality-component-server"></a>Registrar el servidor de componentes de realidad mixta 
-
-Para cada proyecto que vaya a usar el paquete de entrada de realidad mixta, el manifest.jsen el archivo (en la carpeta paquetes) necesita agregar el registro con ámbito de realidad mixta. Para modificar manifest.jscorrectamente en para admitir la realidad mixta: 
-    1. Abra <projectRoot> /Packages/manifest.jsen un editor de texto, como Visual Studio Code. 
-    2. En la parte superior del archivo de manifiesto, agregue el servidor de realidad mixta a la sección del registro con ámbito y guarde el archivo. 
-    
-<pre>
-{ 
-  "scopedRegistries": [ 
-    { 
-      "name": "Microsoft Mixed Reality", 
-      "url": "https://pkgs.dev.azure.com/aipmr/MixedReality-Unity-Packages/_packaging/Unity-packages/npm/registry/", 
-      "scopes": [ 
-        "com.microsoft.mixedreality" 
-      ] 
-    } 
-  ], 
-</pre>
-
-### <a name="adding-the-microsoftmixedrealityinput-package"></a>Agregar el paquete Microsoft. MixedReality. Input 
-
-Modifique la sección de dependencias del <projectRoot> /Packages/manifest.jsen el archivo en el editor de texto para agregar el paquete com. Microsoft. mixedreality. Input y guarde el archivo. 
-
-<pre>
-  "dependencies": { 
-    "com.microsoft.mixedreality.input": "0.9.2006", 
-  }
-</pre>
+![Ventana paquetes de herramientas de característica de realidad mixta con entrada de realidad mixta resaltada](images/feature-tool-mrinput.png)
 
 ## <a name="using-microsoftmixedrealityinput"></a>Usar Microsoft. MixedReality. Input 
 
@@ -505,7 +478,7 @@ private void stateCache_InputPressed(object sender, MotionControllerStateCache.M
 } 
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 <!-- ## Getting started
 
