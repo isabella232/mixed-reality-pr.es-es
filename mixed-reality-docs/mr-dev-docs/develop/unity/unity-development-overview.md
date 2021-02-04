@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, mixed reality, development, getting started, new project, porting, capability, camera, simulation, emulation, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset, what is virtual reality, what is augmented reality, MRTK, mixed reality toolkit, spatial mapping, voice input, locatable camera, emulator, Azure, tutorials
-ms.openlocfilehash: fc444f4d40d8bc013253869fe77ddd563e889d85
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 59bb269bfb8d7e0a9cfd6963cf144ddb0e070c5f
+ms.sourcegitcommit: 1304f8f0a838290c1ae3db34670b67c75ea9bdaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582983"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99421414"
 ---
 # <a name="unity-development-for-hololens"></a>Desarrollo de Unity para HoloLens
 
@@ -36,6 +36,7 @@ La forma más fácil de desarrollar aplicaciones en Unity es con Mixed Reality T
 | [¿Qué es MRTK?](mrtk-getting-started.md) | Comience su recorrido y familiarícese con Mixed Reality Toolkit y lo que puede ofrecerle. |
 | [Instale las actualizaciones más recientes.](../install-the-tools.md) | Descargue e instale el paquete de Unity más reciente y configure el proyecto para la realidad mixta. |
 | [Serie de tutoriales de HoloLens 2](tutorials/mr-learning-base-01.md) | Profundice en los tutoriales de MRTK de nivel principiante para el hardware de HoloLens 2. |
+| **Opcional** [Descargar la herramienta de características de Mixed Reality](welcome-to-mr-feature-tool.md) | Una nueva herramienta de desarrollo para detectar, actualizar y agregar paquetes de características de Mixed Reality a los proyectos de Unity |
 
 > [!IMPORTANT]
 > Si quieres crear un nuevo proyecto de Unity sin importar Mixed Reality Toolkit, hay un pequeño conjunto de opciones de configuración de Unity que debes cambiar manualmente para Windows Mixed Reality. Se dividen en dos categorías: por proyecto y por escena. Eche un vistazo a nuestra [guía de configuración](configure-unity-project.md) para ver el proceso paso a paso.

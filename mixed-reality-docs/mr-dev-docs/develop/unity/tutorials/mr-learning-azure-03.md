@@ -7,12 +7,12 @@ ms.date: 07/01/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, hololens 2, azure custom vision, azure cognitive services, azure cloud services, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: aa3ad219ab2cd45b14d06881757ec776d3e098f3
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 7676a55a2276b88f3bc123dda90a1b8d39536a61
+ms.sourcegitcommit: daa45a19a3a353334380cda78fee7fa149f0e48b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581937"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98981724"
 ---
 # <a name="3-integrating-azure-custom-vision"></a>3. Integración de Azure Custom Vision
 
@@ -50,17 +50,17 @@ Desde ahí, arrastre el recurso prefabricado **ObjectDetectionManager** hasta la
 ![Unity con los campos de configuración del componente de script ObjectDetectionManager que aparecen en Inspector](images/mr-learning-azure/tutorial3-section4-step1-2.png)
 
 En la ventana Hierarchy (Jerarquía), busque el objeto **ObjectDetectionManager** y selecciónelo.
-El recurso prefabricado **ObjectDetectionManager** contiene el componente **ObjectDetectionManager (script)** y, como puede ver en la ventana Inspector, depende de varios valores.
+El recurso prefabricado **ObjectDetectionManager** contiene el componente **ObjectDetectionManager (script)** y, como puede ver en la ventana Inspector, depende de varios valores de Azure y del proyecto.
 
 ## <a name="retrieving-azure-api-resource-credentials"></a>Recuperación de credenciales de recursos de API de Azure
 
 Las credenciales necesarias para la configuración de **ObjectDetectionManager (script)** se pueden recuperar de Azure Portal y del portal de Custom Vision.
 
-### <a name="azure-portal"></a>Azure Portal
+### <a name="retrieving-azure-settings-credentials"></a>Recuperación de las credenciales de configuración de Azure
 
-Busque el recurso personalizado de Custom Vision de tipo **Cognitive Services** que ha creado en la sección *Preparación de la escena* de este tutorial. Haga clic en *Keys and Endpoint* (Claves y punto de conexión) para recuperar las credenciales necesarias.
+Busque el recurso de Custom Vision de tipo **Cognitive Services** que ha creado en la sección *Preparación de la escena* de este tutorial y búsquelo (seleccione el nombre de los recursos de Custom Vision seguido de *-Prediction*). Haga clic en *Información general* o *Claves y punto de conexión* para recuperar las credenciales necesarias.
 
-### <a name="custom-vision-dashboard"></a>Panel de Custom Vision
+### <a name="retrieving-project-settings-credentials"></a>Recuperación de las credenciales de configuración de proyecto
 
 En el panel de [Custom Vision](https://www.customvision.ai/projects), abra el proyecto que ha creado para este tutorial y haga clic en la esquina superior derecha de la página en el icono de engranaje para abrir la página de configuración. Aquí, en la sección *Resources* (Recursos) de la derecha encontrará las credenciales necesarias.
 
@@ -87,6 +87,10 @@ Una vez que tenga suficientes imágenes, haga clic en el botón **Train** (Entre
 > **ObjectDetectionManager (script)** carga directamente las imágenes tomadas en el servicio Custom Vision. Como alternativa, Custom Vision API acepta las direcciones URL de las imágenes; como ejercicio, puede modificar **ObjectDetectionManager (script)** para que cargue las imágenes en un almacenamiento de blobs en su lugar.
 
 ## <a name="detect-objects"></a>Detección de objetos
+
+Para poder detectar los objetos, es necesario cambiar la clave de API que existe en **ObjectDetectionManager (script)** de la configuración del proyecto que ya se ha asignado por la de Custom Vision.
+
+Busque el recurso de Custom Vision en Azure Portal. Haga clic en *Claves y punto de conexión* para recuperar la clave de API y reemplácela por la clave de API anterior de la configuración del proyecto.
 
 Ahora puede poner a prueba el modelo entrenado; ejecute la aplicación y, en el *menú principal* haga clic en **Search Object** (Buscar objeto) y escriba el nombre del **objeto con seguimiento** en cuestión. Aparecerá **Object Card** (Tarjeta de objeto) y haga clic en el botón **Custom Vision**. Desde aquí, **ObjectDetectionManager** comenzará a tomar capturas de imagen en segundo plano desde la cámara, y el progreso se indicará en el menú. Apunte la cámara al objeto que usó para entrenar el modelo y verá que, después de un breve lapso, detectará el objeto.
 

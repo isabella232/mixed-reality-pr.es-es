@@ -1,5 +1,5 @@
 ---
-title: Creación de un proyecto de HoloLens
+title: Creación de la primera aplicación de Unreal para HoloLens
 description: Aprenda a configurar correctamente un proyecto de Unreal con objetos de escena e interacciones de entrada para el desarrollo de realidad mixta de HoloLens.
 author: hferrone
 ms.author: safarooq
@@ -7,14 +7,27 @@ ms.date: 01/19/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, Unreal editor, UE4, HoloLens, HoloLens 2, mixed reality, development, documentation, guides, features, mixed reality headset, windows mixed reality headset, virtual reality headset, porting, upgrading
-ms.openlocfilehash: 3b2b88ac897a8791fec1ca2942d0db34efcee598
-ms.sourcegitcommit: be33fcda10d1cb98df90b428a923289933d42c77
+ms.openlocfilehash: 467987f69b50c0ec635c99899d6bcecab5a62af0
+ms.sourcegitcommit: 1304f8f0a838290c1ae3db34670b67c75ea9bdaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98672742"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99421434"
 ---
-# <a name="creating-a-hololens-project"></a>Creación de un proyecto de HoloLens
+# <a name="creating-your-first-hololens-unreal-application"></a>Creación de la primera aplicación de Unreal para HoloLens
+
+Esta guía le guiará por el proceso para poner en ejecución su primera aplicación de Mixed Reality en HoloLens con Unreal Engine. Siguiendo la tradición de "Hola mundo", creará una aplicación sencilla que muestra un cubo en la pantalla. Para que le resulte más útil, también creará el primer gesto para girar el cubo y salir de la aplicación. 
+
+## <a name="objectives"></a>Objetivos
+
+* Iniciar un proyecto de HoloLens
+* Habilitar los complementos correctos
+* Crear un recurso de datos ARSessionConfig
+* Configurar entradas de gestos
+* Crear un nivel básico
+* Implementar un gesto de reducir
+
+## <a name="creating-a-new-project"></a>Creación de un nuevo proyecto
 
 Lo primero que necesita es un proyecto con el que trabajar. Si es la primera vez que desarrolla una aplicación para Unreal, deberá [descargar los archivos auxiliares](tutorials/unreal-uxt-ch6.md#packaging-and-deploying-the-app-via-device-portal) desde el iniciador de Epic.
 
@@ -29,7 +42,8 @@ Lo primero que necesita es un proyecto con el que trabajar. Si es la primera vez
 
 4. En **Project Settings** (Configuración del proyecto), defina **C++, Scalable 3D or 2D, Mobile/Tablet** (C++, 3D o 2D escalable, móvil/tableta) y **No Starter Content** (Sin contenido de inicio). A continuación, elija una ubicación para guardar y haga clic en **Create Project** (Crear proyecto).
 
-> [!NOTE] Está usando un C++ en lugar de un proyecto de plano técnico para estar listo para usar el complemento OpenXR más adelante. En esta guía de inicio rápido se usa el complemento de OpenXR predeterminado que viene con Unreal Engine. Sin embargo, se recomienda descargar y usar el complemento oficial OpenXR de Microsoft. Esto requiere que el proyecto sea un proyecto de C++.
+> [!NOTE] 
+> Está usando un C++ en lugar de un proyecto de plano técnico para estar listo para usar el complemento OpenXR más adelante. En esta guía de inicio rápido se usa el complemento de OpenXR predeterminado que viene con Unreal Engine. Sin embargo, se recomienda descargar y usar el complemento oficial OpenXR de Microsoft. Esto requiere que el proyecto sea un proyecto de C++.
 
 ![Ventana de configuración del proyecto con las opciones de proyecto, rendimiento, plataforma de destino y contenido de inicio resaltadas](images/unreal-quickstart-img-03.png)
 
@@ -131,14 +145,18 @@ Una vez hecho esto, el paso siguiente consiste en asegurarse de que la sesión d
 
 ![Asignaciones de acciones con las opciones de Open XR Msft Hand interaction resaltadas](images/unreal-quickstart-img-16.jpg)
 
-4. Abra el elemento **Level Blueprint** (Plano técnico de nivel) y agregue las acciones **InputAction RightPinch** y **InputAction LeftPinch**.
+## <a name="setting-up-gestures"></a>Configuración de gestos
+
+Ahora que hemos configurado las entradas, pasaremos a la parte emocionante: la incorporación de gestos. Vamos a girar el cubo con el gesto de reducir de la mano derecha y saldremos de la aplicación con el gesto de reducir de la mano izquierda.
+
+1. Abra el elemento **Level Blueprint** (Plano técnico de nivel) y agregue las acciones **InputAction RightPinch** y **InputAction LeftPinch**.
 * Conecte el evento de reducción derecha a **AddActorLocalRotation** con el elemento **Cube** (Cubo) como destino y el valor de **Delta Rotation** (Rotación diferencial) definido como **X = 0, Y = 0** y **Z = 20**. Ahora, el cubo girará 20 grados cada vez que se realice el gesto de reducir
 * Conectar el evento de reducción izquierda a **Quit Game** (Salir del juego)
 
 ![Deje el plano técnico de nivel abierto con acciones de entrada para eventos de reducción izquierda y derecha.](images/unreal-quickstart-img-17.jpg)
 
-5. En la configuración de **Transform** (Transformación) del cubo, establezca **Mobility** (Movilidad) como **Movable** (Móvil) para que se pueda mover de forma dinámica:
+2. En la configuración de **Transform** (Transformación) del cubo, establezca **Mobility** (Movilidad) como **Movable** (Móvil) para que se pueda mover de forma dinámica:
 
 ![Configuración de transformación con la propiedad de movilidad resaltada](images/unreal-quickstart-img-18.jpg)
 
-En este punto, está listo para implementar y probar la aplicación.
+En este punto, estará listo para implementar y probar la aplicación.

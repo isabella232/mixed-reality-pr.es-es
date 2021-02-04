@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, streaming, comunicación remota, realidad mixta, desarrollo, introducción, características, nuevo proyecto, emulador, documentación, guías, hologramas, desarrollo del juego, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, OpenXR
-ms.openlocfilehash: a5b65bbfe5a1f365a93836406365fdc395b73c47
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 99540b9cd3473097896d847943b9736300000305
+ms.sourcegitcommit: 1304f8f0a838290c1ae3db34670b67c75ea9bdaa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580034"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99421424"
 ---
 # <a name="unreal-development-overview"></a>Introducción al desarrollo con Unreal
 
@@ -38,6 +38,7 @@ En primer lugar, debe instalar las herramientas para el desarrollo de HoloLens 
 |  Punto de control  |  Resultado  |
 | --- | --- |
 | [Instale las actualizaciones más recientes.](../install-the-tools.md) | Descargue e instale la versión más reciente de Unreal Engine y configure el proyecto para la realidad mixta. |
+| [Creación de la primera aplicación de Unreal para HoloLens](unreal-quickstart.md) | Comience su recorrido de desarrollo en Unreal y HoloLens mediante la creación de una aplicación básica de Mixed Reality. |
 | [Serie de tutoriales de HoloLens 2](tutorials/unreal-uxt-ch1.md) | Prepárese para el desarrollo de realidad mixta en Unreal, compile su primera aplicación con MRTK e implemente la aplicación en HoloLens 2. |
 | (Opcional) Introducción a [OpenXR](../native/openxr.md) en Unreal | Si está pensando en compilar una aplicación de OpenXR en Unreal, debe deshabilitar el siguiente complemento de motor:<ul><li>Windows Mixed Reality</li></ul><br>Descargue y habilite el siguiente complemento en el proyecto desde GitHub:<ul><li> [Microsoft OpenXR](https://github.com/microsoft/Microsoft-OpenXR-Unreal)</li></ul><br>La lista completa de las características admitidas actualmente en OpenXR se incluye [a continuación](#supported-features).|
 

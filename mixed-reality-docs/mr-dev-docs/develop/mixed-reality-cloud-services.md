@@ -8,12 +8,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, cloud services, Azure, remote rendering, spatial anchors, cognitive services, cognition, unity, machine learning, speech translation, computer vision, Microsoft Graph
-ms.openlocfilehash: 725e41e94923f1738eb11064c772f9138a6be09a
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: e4ddfd5951945cc6a5bc9d7b71cad86a296fe725
+ms.sourcegitcommit: cd2987467044fde1e2eb227e6c25d00e744aabfc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582707"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "98923815"
 ---
 # <a name="azure-mixed-reality-cloud-services-overview"></a>Introducción a los servicios en la nube de realidad mixta de Azure
 
@@ -26,7 +26,10 @@ Libere las mejores aptitudes de los usuarios del mundo físico tridimensional qu
 Los servicios en la nube de realidad mixta, como **Azure Remote Rendering** y **Azure Spatial Anchors**, ayudan a los desarrolladores a crear atractivas experiencias envolventes en una gran variedad de plataformas. Estos servicios permiten integrar el reconocimiento espacial en los proyectos al crear aplicaciones para el aprendizaje en 3D, el mantenimiento predictivo de los equipos y la revisión del diseño. Todo esto, en el contexto de los entornos de los usuarios.
 
 ### <a name="azure-remote-rendering"></a>Azure Remote Rendering
-Azure Remote Rendering o ARR es un servicio que le permite representar modelos 3D muy complejos en tiempo real y hacer streaming de ellos en un dispositivo. Actualmente, ARR se encuentra en versión preliminar y se puede agregar a los proyectos de Unity o C++ nativo que tienen HoloLens 2 o el equipo de escritorio de Windows como destino.
+
+[Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering/) o ARR es un servicio que le permite representar modelos 3D muy complejos en tiempo real y hacer streaming de ellos en un dispositivo. Actualmente, ARR se encuentra en versión preliminar y se puede agregar a los proyectos de Unity o C++ nativo que tienen HoloLens 2 o el equipo de escritorio de Windows como destino.
+
+<br>
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Intro-to-Azure-Mixed-Reality-Services-Azure-Remote-Rendering/player]
 
@@ -43,7 +46,8 @@ Como ventaja adicional, ARR no restringe el tipo de interfaz de usuario que pued
 ![Ejemplo de Azure Remote Rendering en la aplicación de presentación de Unity](images/showcase-app.png)
 
 ### <a name="azure-spatial-anchors"></a>Azure Spatial Anchors
-Azure Spatial Anchors o ASA es un servicio multiplataforma que le permite crear aplicaciones de realidad mixta con reconocimiento espacial. Con Azure Spatial Anchors, puede asignar, conservar y compartir contenido holográfico en varios dispositivos a escala real. 
+
+[Azure Spatial Anchors](https://docs.microsoft.com /azure/spatial-anchors/) o ASA es un servicio multiplataforma que le permite crear aplicaciones de realidad mixta con reconocimiento espacial. Con Azure Spatial Anchors, puede asignar, conservar y compartir contenido holográfico en varios dispositivos a escala real. 
 
 ASA es una solución adaptada de forma exclusiva para casos de uso comunes en la realidad mixta, incluidos:
 * **Orientación**: en que dos o más anclajes espaciales podrían conectarse para crear una lista de tareas o puntos de interés con los que un usuario debe interactuar.
