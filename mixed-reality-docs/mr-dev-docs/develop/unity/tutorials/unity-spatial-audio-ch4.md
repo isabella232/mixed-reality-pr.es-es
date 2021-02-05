@@ -3,19 +3,19 @@ title: 'Tutoriales de audio espacial: 4. Habilitar y deshabilitar el audio espac
 description: Use un botón para habilitar y deshabilitar la espacialización del audio en tiempo de ejecución.
 author: kegodin
 ms.author: v-hferrone
-ms.date: 12/01/2019
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, Unity, tutorial, hololens2, audio espacial, MRTK, kit de herramientas de realidad mixta, UWP, Windows 10, HRTF, función de transferencia relacionada con el encabezado, reverberación, Microsoft Spatializer
-ms.openlocfilehash: 9239c45efa5196b94fe2e05f85a2e83df6c7789f
-ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
+ms.openlocfilehash: 26143975707b2cd6141803a6335cec89db5bbd26
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98578324"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590737"
 ---
 # <a name="4-enabling-and-disabling-spatialization-at-run-time"></a>4. habilitar y deshabilitar la espacialización en tiempo de ejecución
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 En este tutorial, obtendrá información sobre cómo habilitar y deshabilitar la espacialización en tiempo de ejecución y probarlo en el editor de Unity y en HoloLens 2.
 

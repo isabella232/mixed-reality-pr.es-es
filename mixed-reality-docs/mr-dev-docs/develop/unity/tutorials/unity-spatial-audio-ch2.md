@@ -3,19 +3,19 @@ title: 'Tutoriales de audio espacial: 2. Sonidos de interacción del botón de e
 description: Agregue un botón al proyecto y Spatial los sonidos de interacción del botón.
 author: kegodin
 ms.author: v-hferrone
-ms.date: 12/01/2019
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, Unity, tutorial, hololens2, audio espacial, MRTK, kit de herramientas de realidad mixta, UWP, Windows 10, HRTF, función de transferencia relacionada con el encabezado, reverberación, Microsoft Spatializer, Prefabs, curva de volumen
-ms.openlocfilehash: e4b2ed99f56fea82b1c72e4fce5205c14e1d3533
-ms.sourcegitcommit: a56a551ebc59529a3683fe6db90d59f982ab0b45
+ms.openlocfilehash: 12d159cb162cbf136483f7be94b0d297319a0737
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/19/2021
-ms.locfileid: "98578496"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590767"
 ---
 # <a name="2-spatializing-button-interaction-sounds"></a>2. Sonidos de interacción del botón de espacialización
 
-## <a name="overview"></a>Introducción
+## <a name="overview"></a>Información general
 
 En este tutorial, obtendrá información sobre cómo espaciale los sonidos de interacción del botón y aprenderá a usar un clip de audio para probar la interacción del botón espacial.  
 
@@ -25,7 +25,7 @@ En este tutorial, obtendrá información sobre cómo espaciale los sonidos de in
 
 ## <a name="add-a-button"></a>Adición de un botón
 
-Para agregar el botón recurso prefabricado, en la ventana **proyecto** , seleccione **activos** y escriba "PressableButtonHoloLens2" en la barra de búsqueda.
+Para agregar el botón recurso prefabricado, en la ventana **proyecto** , seleccione **paquetes** y escriba "PressableButtonHoloLens2" en la barra de búsqueda.
 
 ![Botón recurso prefabricado en activos](images/spatial-audio/spatial-audio-02-section1-step1-1.png)
 
