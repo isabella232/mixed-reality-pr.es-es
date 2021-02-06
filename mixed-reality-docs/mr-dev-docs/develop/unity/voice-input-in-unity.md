@@ -6,44 +6,47 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Entrada de voz, KeywordRecognizer, GrammarRecognizer, micrófono, dictado, voz, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: c6364b190ca90c5e6faf7fb8ef79314134e93cfc
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 7268a4df9c7fce03029937c72540ed274574067d
+ms.sourcegitcommit: 8c3af63fb49494f75c8ab46236fc3dd8533c1e9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583725"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99606120"
 ---
-# <a name="voice-input-in-unity"></a><span data-ttu-id="444c1-104">Entrada de voz en Unity</span><span class="sxs-lookup"><span data-stu-id="444c1-104">Voice input in Unity</span></span>
+# <a name="voice-input-in-unity"></a><span data-ttu-id="bdbd8-104">Entrada de voz en Unity</span><span class="sxs-lookup"><span data-stu-id="bdbd8-104">Voice input in Unity</span></span>
 
->[!NOTE]
-><span data-ttu-id="444c1-105">En lugar de la siguiente información, considere la posibilidad de usar el complemento Unity para el SDK de servicios de voz cognitivos, que tiene unos resultados de precisión de voz mucho mejores y proporciona fácil acceso a la descodificación de voz a texto y a características de voz avanzadas como cuadro de diálogo, interacción basada en intención, traducción, síntesis de texto a voz y reconocimiento de voz en lenguaje natural.</span><span class="sxs-lookup"><span data-stu-id="444c1-105">Instead of the below information, consider using the Unity plug-in for the Cognitive Speech Services SDK which has much better Speech Accuracy results and provides easy access to speech-to-text decode and advanced speech features like dialog, intent based interaction, translation, text-to-speech synthesis and natural language speech recognition.</span></span> <span data-ttu-id="444c1-106">Busque el ejemplo y documentación aquí: https://docs.microsoft.com//azure/cognitive-services/speech-service/quickstart-csharp-unity</span><span class="sxs-lookup"><span data-stu-id="444c1-106">Find the sample and documentaion here: https://docs.microsoft.com//azure/cognitive-services/speech-service/quickstart-csharp-unity</span></span>   
+> [!CAUTION]
+> <span data-ttu-id="bdbd8-105">Antes de comenzar, considere la posibilidad de usar el complemento Unity para el SDK de servicios de voz cognitivo.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-105">Before starting, consider using the Unity plug-in for the Cognitive Speech Services SDK.</span></span> <span data-ttu-id="bdbd8-106">El complemento tiene mejores resultados de precisión de voz y acceso sencillo a la descodificación de voz a texto, así como características avanzadas de voz como cuadro de diálogo, interacción basada en intención, traducción, síntesis de texto a voz y reconocimiento de voz en lenguaje natural.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-106">The plugin has better Speech Accuracy results and easy access to speech-to-text decode, as well as advanced speech features like dialog, intent based interaction, translation, text-to-speech synthesis, and natural language speech recognition.</span></span> <span data-ttu-id="bdbd8-107">Para empezar, consulte la [documentación y el ejemplo](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstart-csharp-unity).</span><span class="sxs-lookup"><span data-stu-id="bdbd8-107">To get started, check out the [sample and documentation](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstart-csharp-unity).</span></span>
 
-<span data-ttu-id="444c1-107">Unity expone tres maneras de agregar una [entrada de voz](../../design/voice-input.md) a la aplicación de Unity.</span><span class="sxs-lookup"><span data-stu-id="444c1-107">Unity exposes three ways to add [Voice input](../../design/voice-input.md) to your Unity application.</span></span>
+<span data-ttu-id="bdbd8-108">Unity expone tres maneras de agregar una [entrada de voz](../../design/voice-input.md) a la aplicación de Unity, los dos primeros son tipos de PhraseRecognizer:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-108">Unity exposes three ways to add [Voice input](../../design/voice-input.md) to your Unity application, the first two of which are types of PhraseRecognizer:</span></span>
+* <span data-ttu-id="bdbd8-109">`KeywordRecognizer`Proporciona la aplicación con una matriz de comandos de cadena para realizar escuchas.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-109">The `KeywordRecognizer` supplies your app with an array of string commands to listen for</span></span>
+* <span data-ttu-id="bdbd8-110">`GrammarRecognizer`Proporciona a la aplicación un archivo SRGS que define una gramática específica para escuchar</span><span class="sxs-lookup"><span data-stu-id="bdbd8-110">The `GrammarRecognizer` gives your app an SRGS file defining a specific grammar to listen for</span></span>
+* <span data-ttu-id="bdbd8-111">`DictationRecognizer`Permite que la aplicación escuche cualquier palabra y proporcione al usuario una nota u otra presentación de la voz.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-111">The `DictationRecognizer` lets your app listen for any word and provide the user with a note or other display of their speech</span></span>
 
-<span data-ttu-id="444c1-108">Con KeywordRecognizer (uno de los dos tipos de PhraseRecognizers), se puede proporcionar a la aplicación una matriz de comandos de cadena para realizar escuchas.</span><span class="sxs-lookup"><span data-stu-id="444c1-108">With the KeywordRecognizer (one of two types of PhraseRecognizers), your app can be given an array of string commands to listen for.</span></span> <span data-ttu-id="444c1-109">Con GrammarRecognizer (el otro tipo de PhraseRecognizer), se puede proporcionar a la aplicación un archivo SRGS que defina una gramática específica para realizar escuchas.</span><span class="sxs-lookup"><span data-stu-id="444c1-109">With the GrammarRecognizer (the other type of PhraseRecognizer), your app can be given an SRGS file defining a specific grammar to listen for.</span></span> <span data-ttu-id="444c1-110">Con el DictationRecognizer, la aplicación puede escuchar cualquier palabra y proporcionar al usuario una nota u otra presentación de la voz.</span><span class="sxs-lookup"><span data-stu-id="444c1-110">With the DictationRecognizer, your app can listen for any word and provide the user with a note or other display of their speech.</span></span>
+> [!NOTE]
+> <span data-ttu-id="bdbd8-112">No se puede controlar el reconocimiento de dictado y frase al mismo tiempo.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-112">Dictation and phrase recognition can't be handled at the same time.</span></span> <span data-ttu-id="bdbd8-113">Si GrammarRecognizer o KeywordRecognizer está activo, un DictationRecognizer no puede estar activo y viceversa.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-113">If a GrammarRecognizer or KeywordRecognizer is active, a DictationRecognizer can't be active and vice versa.</span></span>
 
->[!NOTE]
-><span data-ttu-id="444c1-111">Solo se puede controlar el reconocimiento de dictado o de frase a la vez.</span><span class="sxs-lookup"><span data-stu-id="444c1-111">Only dictation or phrase recognition can be handled at once.</span></span> <span data-ttu-id="444c1-112">Esto significa que, si GrammarRecognizer o KeywordRecognizer está activo, un DictationRecognizer no puede estar activo y viceversa.</span><span class="sxs-lookup"><span data-stu-id="444c1-112">That means if a GrammarRecognizer or KeywordRecognizer is active, a DictationRecognizer can not be active and vice versa.</span></span>
+## <a name="enabling-the-capability-for-voice"></a><span data-ttu-id="bdbd8-114">Habilitación de la funcionalidad de Voice</span><span class="sxs-lookup"><span data-stu-id="bdbd8-114">Enabling the capability for Voice</span></span>
 
-## <a name="enabling-the-capability-for-voice"></a><span data-ttu-id="444c1-113">Habilitación de la funcionalidad de Voice</span><span class="sxs-lookup"><span data-stu-id="444c1-113">Enabling the capability for Voice</span></span>
+<span data-ttu-id="bdbd8-115">La capacidad del **micrófono** se debe declarar para que una aplicación use la entrada de voz.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-115">The **Microphone** capability must be declared for an app to use Voice input.</span></span>
+1. <span data-ttu-id="bdbd8-116">En el editor de Unity, vaya a **editar > configuración del proyecto > Player** .</span><span class="sxs-lookup"><span data-stu-id="bdbd8-116">In the Unity Editor, navigate to **Edit > Project Settings > Player**</span></span>
+2. <span data-ttu-id="bdbd8-117">Seleccione la pestaña de la **tienda Windows**</span><span class="sxs-lookup"><span data-stu-id="bdbd8-117">Select the **Windows Store** tab</span></span>
+3. <span data-ttu-id="bdbd8-118">En la sección **funciones de configuración de publicación >** , Compruebe la capacidad del **micrófono** .</span><span class="sxs-lookup"><span data-stu-id="bdbd8-118">In the **Publishing Settings > Capabilities** section, check the **Microphone** capability</span></span>
+4. <span data-ttu-id="bdbd8-119">Concesión de permisos a la aplicación para el acceso al micrófono en el dispositivo HoloLens</span><span class="sxs-lookup"><span data-stu-id="bdbd8-119">Grant permissions to the app for microphone access on your HoloLens device</span></span>
+    * <span data-ttu-id="bdbd8-120">Se le pedirá que lo haga en el inicio del dispositivo, pero si hizo clic accidentalmente en "no", puede cambiar los permisos en la configuración del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-120">You'll be asked to do this on device startup, but if you accidentally clicked "no" you can change the permissions in the device settings</span></span>
 
-<span data-ttu-id="444c1-114">La capacidad del **micrófono** se debe declarar para que una aplicación use la entrada de voz.</span><span class="sxs-lookup"><span data-stu-id="444c1-114">The **Microphone** capability must be declared for an app to use Voice input.</span></span>
-1. <span data-ttu-id="444c1-115">En el editor de Unity, vaya a la configuración del reproductor en "editar > configuración del proyecto > Player".</span><span class="sxs-lookup"><span data-stu-id="444c1-115">In the Unity Editor, go to the player settings by navigating to "Edit > Project Settings > Player"</span></span>
-2. <span data-ttu-id="444c1-116">Seleccione en la pestaña "tienda Windows"</span><span class="sxs-lookup"><span data-stu-id="444c1-116">Select on the "Windows Store" tab</span></span>
-3. <span data-ttu-id="444c1-117">En la sección "configuración de publicación > funcionalidades", Compruebe la capacidad del **micrófono** .</span><span class="sxs-lookup"><span data-stu-id="444c1-117">In the "Publishing Settings > Capabilities" section, check the **Microphone** capability</span></span>
+## <a name="phrase-recognition"></a><span data-ttu-id="bdbd8-121">Reconocimiento de frases</span><span class="sxs-lookup"><span data-stu-id="bdbd8-121">Phrase Recognition</span></span>
 
-## <a name="phrase-recognition"></a><span data-ttu-id="444c1-118">Reconocimiento de frases</span><span class="sxs-lookup"><span data-stu-id="444c1-118">Phrase Recognition</span></span>
+<span data-ttu-id="bdbd8-122">Para permitir que la aplicación escuche frases específicas que habla el usuario, realice alguna acción; debe:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-122">To enable your app to listen for specific phrases spoken by the user then take some action, you need to:</span></span>
+1. <span data-ttu-id="bdbd8-123">Especificar las frases que se van a escuchar con `KeywordRecognizer` o `GrammarRecognizer`</span><span class="sxs-lookup"><span data-stu-id="bdbd8-123">Specify which phrases to listen for using a `KeywordRecognizer` or `GrammarRecognizer`</span></span>
+2. <span data-ttu-id="bdbd8-124">Controlar el `OnPhraseRecognized` evento y tomar las medidas correspondientes a la frase reconocida</span><span class="sxs-lookup"><span data-stu-id="bdbd8-124">Handle the `OnPhraseRecognized` event and take action corresponding to the phrase recognized</span></span>
 
-<span data-ttu-id="444c1-119">Para permitir que la aplicación escuche frases específicas que habla el usuario, realice alguna acción; debe:</span><span class="sxs-lookup"><span data-stu-id="444c1-119">To enable your app to listen for specific phrases spoken by the user then take some action, you need to:</span></span>
-1. <span data-ttu-id="444c1-120">Especificar las frases que se van a escuchar con KeywordRecognizer o GrammarRecognizer</span><span class="sxs-lookup"><span data-stu-id="444c1-120">Specify which phrases to listen for using a KeywordRecognizer or GrammarRecognizer</span></span>
-2. <span data-ttu-id="444c1-121">Controle el evento OnPhraseRecognized y tome las medidas correspondientes a la frase reconocida</span><span class="sxs-lookup"><span data-stu-id="444c1-121">Handle the OnPhraseRecognized event and take action corresponding to the phrase recognized</span></span>
+### <a name="keywordrecognizer"></a><span data-ttu-id="bdbd8-125">KeywordRecognizer</span><span class="sxs-lookup"><span data-stu-id="bdbd8-125">KeywordRecognizer</span></span>
 
-### <a name="keywordrecognizer"></a><span data-ttu-id="444c1-122">KeywordRecognizer</span><span class="sxs-lookup"><span data-stu-id="444c1-122">KeywordRecognizer</span></span>
+<span data-ttu-id="bdbd8-126">**Espacio de nombres:** *UnityEngine. Windows. Speech*</span><span class="sxs-lookup"><span data-stu-id="bdbd8-126">**Namespace:** *UnityEngine.Windows.Speech*</span></span><br>
+<span data-ttu-id="bdbd8-127">**Tipos:** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*</span><span class="sxs-lookup"><span data-stu-id="bdbd8-127">**Types:** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*</span></span>
 
-<span data-ttu-id="444c1-123">**Espacio de nombres:** *UnityEngine. Windows. Speech*</span><span class="sxs-lookup"><span data-stu-id="444c1-123">**Namespace:** *UnityEngine.Windows.Speech*</span></span><br>
-<span data-ttu-id="444c1-124">**Tipos:** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*</span><span class="sxs-lookup"><span data-stu-id="444c1-124">**Types:** *KeywordRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*</span></span>
-
-<span data-ttu-id="444c1-125">Necesitamos algunas instrucciones Using para guardar algunas pulsaciones de teclas:</span><span class="sxs-lookup"><span data-stu-id="444c1-125">We'll need a few using statements to save some keystrokes:</span></span>
+<span data-ttu-id="bdbd8-128">Necesitamos algunas instrucciones Using para guardar algunas pulsaciones de teclas:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-128">We'll need a few using statements to save some keystrokes:</span></span>
 
 ```
 using UnityEngine.Windows.Speech;
@@ -51,14 +54,14 @@ using System.Collections.Generic;
 using System.Linq;
 ```
 
-<span data-ttu-id="444c1-126">A continuación, vamos a agregar algunos campos a la clase para almacenar el reconocedor y la palabra clave >Diccionario de acciones:</span><span class="sxs-lookup"><span data-stu-id="444c1-126">Then let's add a few fields to your class to store the recognizer and keyword->action dictionary:</span></span>
+<span data-ttu-id="bdbd8-129">A continuación, vamos a agregar algunos campos a la clase para almacenar el reconocedor y la palabra clave >Diccionario de acciones:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-129">Then let's add a few fields to your class to store the recognizer and keyword->action dictionary:</span></span>
 
 ```
 KeywordRecognizer keywordRecognizer;
 Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 ```
 
-<span data-ttu-id="444c1-127">Ahora, agregue una palabra clave al diccionario, por ejemplo, en un método Start ().</span><span class="sxs-lookup"><span data-stu-id="444c1-127">Now add a keyword to the dictionary, for example in of a Start() method.</span></span> <span data-ttu-id="444c1-128">Estamos agregando la palabra clave "activar" en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="444c1-128">We're adding the "activate" keyword in this example:</span></span>
+<span data-ttu-id="bdbd8-130">Ahora, agregue una palabra clave al diccionario, por ejemplo, en de un `Start()` método.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-130">Now add a keyword to the dictionary, for example in of a `Start()` method.</span></span> <span data-ttu-id="bdbd8-131">Estamos agregando la palabra clave "activar" en este ejemplo:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-131">We're adding the "activate" keyword in this example:</span></span>
 
 ```
 //Create keywords for keyword recognizer
@@ -68,19 +71,19 @@ keywords.Add("activate", () =>
 });
 ```
 
-<span data-ttu-id="444c1-129">Cree el reconocedor de palabras clave e indíquele lo que desea reconocer:</span><span class="sxs-lookup"><span data-stu-id="444c1-129">Create the keyword recognizer and tell it what we want to recognize:</span></span>
+<span data-ttu-id="bdbd8-132">Cree el reconocedor de palabras clave e indíquele lo que desea reconocer:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-132">Create the keyword recognizer and tell it what we want to recognize:</span></span>
 
 ```
 keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
 ```
 
-<span data-ttu-id="444c1-130">Regístrese ahora para el evento OnPhraseRecognized</span><span class="sxs-lookup"><span data-stu-id="444c1-130">Now register for the OnPhraseRecognized event</span></span>
+<span data-ttu-id="bdbd8-133">Regístrese ahora para el `OnPhraseRecognized` evento</span><span class="sxs-lookup"><span data-stu-id="bdbd8-133">Now register for the `OnPhraseRecognized` event</span></span>
 
 ```
 keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
 ```
 
-<span data-ttu-id="444c1-131">Un controlador de ejemplo es:</span><span class="sxs-lookup"><span data-stu-id="444c1-131">An example handler is:</span></span>
+<span data-ttu-id="bdbd8-134">Un controlador de ejemplo es:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-134">An example handler is:</span></span>
 
 ```
 private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
@@ -94,39 +97,39 @@ private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args
 }
 ```
 
-<span data-ttu-id="444c1-132">Por último, empiece a reconocer.</span><span class="sxs-lookup"><span data-stu-id="444c1-132">Finally, start recognizing!</span></span>
+<span data-ttu-id="bdbd8-135">Por último, empiece a reconocer.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-135">Finally, start recognizing!</span></span>
 
 ```
 keywordRecognizer.Start();
 ```
 
-### <a name="grammarrecognizer"></a><span data-ttu-id="444c1-133">GrammarRecognizer</span><span class="sxs-lookup"><span data-stu-id="444c1-133">GrammarRecognizer</span></span>
+### <a name="grammarrecognizer"></a><span data-ttu-id="bdbd8-136">GrammarRecognizer</span><span class="sxs-lookup"><span data-stu-id="bdbd8-136">GrammarRecognizer</span></span>
 
-<span data-ttu-id="444c1-134">**Espacio de nombres:** *UnityEngine. Windows. Speech*</span><span class="sxs-lookup"><span data-stu-id="444c1-134">**Namespace:** *UnityEngine.Windows.Speech*</span></span><br>
-<span data-ttu-id="444c1-135">**Tipos**: *GrammarRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*</span><span class="sxs-lookup"><span data-stu-id="444c1-135">**Types**: *GrammarRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*</span></span>
+<span data-ttu-id="bdbd8-137">**Espacio de nombres:** *UnityEngine. Windows. Speech*</span><span class="sxs-lookup"><span data-stu-id="bdbd8-137">**Namespace:** *UnityEngine.Windows.Speech*</span></span><br>
+<span data-ttu-id="bdbd8-138">**Tipos**: *GrammarRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*</span><span class="sxs-lookup"><span data-stu-id="bdbd8-138">**Types**: *GrammarRecognizer*, *PhraseRecognizedEventArgs*, *SpeechError*, *SpeechSystemStatus*</span></span>
 
-<span data-ttu-id="444c1-136">El GrammarRecognizer se usa si se especifica la gramática de reconocimiento mediante SRGS.</span><span class="sxs-lookup"><span data-stu-id="444c1-136">The GrammarRecognizer is used if you're specifying your recognition grammar using SRGS.</span></span> <span data-ttu-id="444c1-137">Esto puede ser útil si la aplicación tiene más de unas pocas palabras clave, si desea reconocer frases más complejas o si desea activar o desactivar fácilmente conjuntos de comandos.</span><span class="sxs-lookup"><span data-stu-id="444c1-137">This can be useful if your app has more than just a few keywords, if you want to recognize more complex phrases, or if you want to easily turn on and off sets of commands.</span></span> <span data-ttu-id="444c1-138">Vea: [crear gramáticas con XML de SRGS](/previous-versions/office/developer/speech-technologies/hh378349(v=office.14)) para obtener información sobre el formato de archivo.</span><span class="sxs-lookup"><span data-stu-id="444c1-138">See: [Create Grammars Using SRGS XML](/previous-versions/office/developer/speech-technologies/hh378349(v=office.14)) for file format information.</span></span>
+<span data-ttu-id="bdbd8-139">El GrammarRecognizer se usa si se especifica la gramática de reconocimiento mediante SRGS.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-139">The GrammarRecognizer is used if you're specifying your recognition grammar using SRGS.</span></span> <span data-ttu-id="bdbd8-140">Esto puede ser útil si la aplicación tiene más de unas pocas palabras clave, si desea reconocer frases más complejas o si desea activar o desactivar fácilmente conjuntos de comandos.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-140">This can be useful if your app has more than just a few keywords, if you want to recognize more complex phrases, or if you want to easily turn on and off sets of commands.</span></span> <span data-ttu-id="bdbd8-141">Vea: [crear gramáticas con XML de SRGS](/previous-versions/office/developer/speech-technologies/hh378349(v=office.14)) para obtener información sobre el formato de archivo.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-141">See: [Create Grammars Using SRGS XML](/previous-versions/office/developer/speech-technologies/hh378349(v=office.14)) for file format information.</span></span>
 
-<span data-ttu-id="444c1-139">Una vez que tenga la gramática de SRGS y esté en el proyecto en una [carpeta StreamingAssets](https://docs.unity3d.com/Manual/StreamingAssets.html):</span><span class="sxs-lookup"><span data-stu-id="444c1-139">Once you have your SRGS grammar, and it is in your project in a [StreamingAssets folder](https://docs.unity3d.com/Manual/StreamingAssets.html):</span></span>
+<span data-ttu-id="bdbd8-142">Una vez que tenga la gramática de SRGS y esté en el proyecto en una [carpeta StreamingAssets](https://docs.unity3d.com/Manual/StreamingAssets.html):</span><span class="sxs-lookup"><span data-stu-id="bdbd8-142">Once you have your SRGS grammar, and it is in your project in a [StreamingAssets folder](https://docs.unity3d.com/Manual/StreamingAssets.html):</span></span>
 
 ```
 <PROJECT_ROOT>/Assets/StreamingAssets/SRGS/myGrammar.xml
 ```
 
-<span data-ttu-id="444c1-140">Cree un GrammarRecognizer y pásele la ruta de acceso al archivo SRGS:</span><span class="sxs-lookup"><span data-stu-id="444c1-140">Create a GrammarRecognizer and pass it the path to your SRGS file:</span></span>
+<span data-ttu-id="bdbd8-143">Cree un `GrammarRecognizer` y pásele la ruta de acceso al archivo SRGS:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-143">Create a `GrammarRecognizer` and pass it the path to your SRGS file:</span></span>
 
 ```
 private GrammarRecognizer grammarRecognizer;
 grammarRecognizer = new GrammarRecognizer(Application.streamingDataPath + "/SRGS/myGrammar.xml");
 ```
 
-<span data-ttu-id="444c1-141">Regístrese ahora para el evento OnPhraseRecognized</span><span class="sxs-lookup"><span data-stu-id="444c1-141">Now register for the OnPhraseRecognized event</span></span>
+<span data-ttu-id="bdbd8-144">Regístrese ahora para el `OnPhraseRecognized` evento</span><span class="sxs-lookup"><span data-stu-id="bdbd8-144">Now register for the `OnPhraseRecognized` event</span></span>
 
 ```
 grammarRecognizer.OnPhraseRecognized += grammarRecognizer_OnPhraseRecognized;
 ```
 
-<span data-ttu-id="444c1-142">Obtendrá una devolución de llamada que contiene la información especificada en la gramática de SRGS, que puede controlar de forma adecuada.</span><span class="sxs-lookup"><span data-stu-id="444c1-142">You'll get a callback containing information specified in your SRGS grammar, which you can handle appropriately.</span></span> <span data-ttu-id="444c1-143">La mayor parte de la información importante se proporcionará en la matriz semanticMeanings.</span><span class="sxs-lookup"><span data-stu-id="444c1-143">Most of the important information will be provided in the semanticMeanings array.</span></span>
+<span data-ttu-id="bdbd8-145">Obtendrá una devolución de llamada que contiene la información especificada en la gramática de SRGS, que puede controlar de forma adecuada.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-145">You'll get a callback containing information specified in your SRGS grammar, which you can handle appropriately.</span></span> <span data-ttu-id="bdbd8-146">La mayoría de la información importante se proporcionará en la `semanticMeanings` matriz.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-146">Most of the important information will be provided in the `semanticMeanings` array.</span></span>
 
 ```
 private void Grammar_OnPhraseRecognized(PhraseRecognizedEventArgs args)
@@ -136,56 +139,59 @@ private void Grammar_OnPhraseRecognized(PhraseRecognizedEventArgs args)
 }
 ```
 
-<span data-ttu-id="444c1-144">Por último, empiece a reconocer.</span><span class="sxs-lookup"><span data-stu-id="444c1-144">Finally, start recognizing!</span></span>
+<span data-ttu-id="bdbd8-147">Por último, empiece a reconocer.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-147">Finally, start recognizing!</span></span>
 
 ```
 grammarRecognizer.Start();
 ```
 
-## <a name="dictation"></a><span data-ttu-id="444c1-145">Dictado</span><span class="sxs-lookup"><span data-stu-id="444c1-145">Dictation</span></span>
+## <a name="dictation"></a><span data-ttu-id="bdbd8-148">Dictado</span><span class="sxs-lookup"><span data-stu-id="bdbd8-148">Dictation</span></span>
 
-<span data-ttu-id="444c1-146">**Espacio de nombres:** *UnityEngine. Windows. Speech*</span><span class="sxs-lookup"><span data-stu-id="444c1-146">**Namespace:** *UnityEngine.Windows.Speech*</span></span><br>
-<span data-ttu-id="444c1-147">**Tipos**: *DictationRecognizer*, *SpeechError*, *SpeechSystemStatus*</span><span class="sxs-lookup"><span data-stu-id="444c1-147">**Types**: *DictationRecognizer*, *SpeechError*, *SpeechSystemStatus*</span></span>
+<span data-ttu-id="bdbd8-149">**Espacio de nombres:** *UnityEngine. Windows. Speech*</span><span class="sxs-lookup"><span data-stu-id="bdbd8-149">**Namespace:** *UnityEngine.Windows.Speech*</span></span><br>
+<span data-ttu-id="bdbd8-150">**Tipos**: *DictationRecognizer*, *SpeechError*, *SpeechSystemStatus*</span><span class="sxs-lookup"><span data-stu-id="bdbd8-150">**Types**: *DictationRecognizer*, *SpeechError*, *SpeechSystemStatus*</span></span>
 
-<span data-ttu-id="444c1-148">Use DictationRecognizer para convertir la voz del usuario en texto.</span><span class="sxs-lookup"><span data-stu-id="444c1-148">Use the DictationRecognizer to convert the user's speech to text.</span></span> <span data-ttu-id="444c1-149">DictationRecognizer expone la funcionalidad de [dictado](../../design/voice-input.md#dictation) y admite el registro y la escucha de eventos de hipótesis y frases completadas, de forma que puede enviar comentarios al usuario mientras hablan y después.</span><span class="sxs-lookup"><span data-stu-id="444c1-149">The DictationRecognizer exposes [dictation](../../design/voice-input.md#dictation) functionality and supports registering and listening for hypothesis and phrase completed events, so you can give feedback to your user both while they speak and afterwards.</span></span> <span data-ttu-id="444c1-150">Los métodos Start () y STOP () respectivamente habilitan y deshabilitan el reconocimiento de dictado.</span><span class="sxs-lookup"><span data-stu-id="444c1-150">Start() and Stop() methods respectively enable and disable dictation recognition.</span></span> <span data-ttu-id="444c1-151">Una vez que se realiza con el reconocedor, se debe desechar mediante el método Dispose () para liberar los recursos que utiliza.</span><span class="sxs-lookup"><span data-stu-id="444c1-151">Once done with the recognizer, it should be disposed using Dispose() method to release the resources it uses.</span></span> <span data-ttu-id="444c1-152">Estos recursos se liberan automáticamente durante la recolección de elementos no utilizados en un costo de rendimiento adicional si no se liberan antes.</span><span class="sxs-lookup"><span data-stu-id="444c1-152">It will release these resources automatically during garbage collection at an additional performance cost if they aren't released before that.</span></span>
+<span data-ttu-id="bdbd8-151">Use `DictationRecognizer` para convertir la voz del usuario en texto.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-151">Use the `DictationRecognizer` to convert the user's speech to text.</span></span> <span data-ttu-id="bdbd8-152">DictationRecognizer expone la funcionalidad de [dictado](../../design/voice-input.md#dictation) y admite el registro y la escucha de eventos de hipótesis y frases completadas, de forma que puede enviar comentarios al usuario mientras hablan y después.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-152">The DictationRecognizer exposes [dictation](../../design/voice-input.md#dictation) functionality and supports registering and listening for hypothesis and phrase completed events, so you can give feedback to your user both while they speak and afterwards.</span></span> <span data-ttu-id="bdbd8-153">`Start()``Stop()`los métodos y, respectivamente, habilitan y deshabilitan el reconocimiento de dictado.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-153">`Start()` and `Stop()` methods respectively enable and disable dictation recognition.</span></span> <span data-ttu-id="bdbd8-154">Una vez que se ha realizado con el reconocedor, se debe eliminar usando `Dispose()` para liberar los recursos que utiliza.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-154">Once done with the recognizer, it should be disposed using `Dispose()` to release the resources it uses.</span></span> <span data-ttu-id="bdbd8-155">Estos recursos se liberan automáticamente durante la recolección de elementos no utilizados en un costo de rendimiento adicional si no se liberan antes.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-155">It will release these resources automatically during garbage collection at an extra performance cost if they aren't released before that.</span></span>
 
-<span data-ttu-id="444c1-153">Solo se necesitan algunos pasos para empezar a trabajar con el dictado:</span><span class="sxs-lookup"><span data-stu-id="444c1-153">There are only a few steps needed to get started with dictation:</span></span>
-1. <span data-ttu-id="444c1-154">Crear un nuevo DictationRecognizer</span><span class="sxs-lookup"><span data-stu-id="444c1-154">Create a new DictationRecognizer</span></span>
-2. <span data-ttu-id="444c1-155">Controlar los eventos de dictado</span><span class="sxs-lookup"><span data-stu-id="444c1-155">Handle Dictation events</span></span>
-3. <span data-ttu-id="444c1-156">Inicio de DictationRecognizer</span><span class="sxs-lookup"><span data-stu-id="444c1-156">Start the DictationRecognizer</span></span>
+<span data-ttu-id="bdbd8-156">Solo se necesitan algunos pasos para empezar a trabajar con el dictado:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-156">There are only a few steps needed to get started with dictation:</span></span>
+1. <span data-ttu-id="bdbd8-157">Crear un nuevo `DictationRecognizer`</span><span class="sxs-lookup"><span data-stu-id="bdbd8-157">Create a new `DictationRecognizer`</span></span>
+2. <span data-ttu-id="bdbd8-158">Controlar los eventos de dictado</span><span class="sxs-lookup"><span data-stu-id="bdbd8-158">Handle Dictation events</span></span>
+3. <span data-ttu-id="bdbd8-159">Inicio de DictationRecognizer</span><span class="sxs-lookup"><span data-stu-id="bdbd8-159">Start the DictationRecognizer</span></span>
 
-### <a name="enabling-the-capability-for-dictation"></a><span data-ttu-id="444c1-157">Habilitar la funcionalidad para el dictado</span><span class="sxs-lookup"><span data-stu-id="444c1-157">Enabling the capability for dictation</span></span>
+### <a name="enabling-the-capability-for-dictation"></a><span data-ttu-id="bdbd8-160">Habilitar la funcionalidad para el dictado</span><span class="sxs-lookup"><span data-stu-id="bdbd8-160">Enabling the capability for dictation</span></span>
 
-<span data-ttu-id="444c1-158">La funcionalidad "cliente de Internet", junto con la función "micrófono" mencionada anteriormente, se debe declarar para que una aplicación aproveche el dictado.</span><span class="sxs-lookup"><span data-stu-id="444c1-158">The "Internet Client" capability, along with the "Microphone" capability mentioned above, must be declared for an app to leverage dictation.</span></span>
-1. <span data-ttu-id="444c1-159">En el editor de Unity, vaya a la página "editar > configuración del proyecto > reproductor" para ir a la configuración del reproductor.</span><span class="sxs-lookup"><span data-stu-id="444c1-159">In the Unity Editor, go to the player settings by navigating to "Edit > Project Settings > Player" page</span></span>
-2. <span data-ttu-id="444c1-160">Seleccione en la pestaña "tienda Windows"</span><span class="sxs-lookup"><span data-stu-id="444c1-160">Select on the "Windows Store" tab</span></span>
-3. <span data-ttu-id="444c1-161">En la sección "configuración de publicación > funcionalidades", Compruebe la funcionalidad de **InternetClient** .</span><span class="sxs-lookup"><span data-stu-id="444c1-161">In the "Publishing Settings > Capabilities" section, check the **InternetClient** capability</span></span>
+<span data-ttu-id="bdbd8-161">Las capacidades de cliente y **micrófono** de **Internet** se deben declarar para que una aplicación use dictado:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-161">The **Internet Client** and **Microphone** capabilities must be declared for an app to use dictation:</span></span>
+1. <span data-ttu-id="bdbd8-162">En el editor de Unity, vaya a **editar > configuración del proyecto > Player** .</span><span class="sxs-lookup"><span data-stu-id="bdbd8-162">In the Unity Editor, go to **Edit > Project Settings > Player**</span></span>
+2. <span data-ttu-id="bdbd8-163">Seleccionar en la pestaña de la **tienda Windows**</span><span class="sxs-lookup"><span data-stu-id="bdbd8-163">Select on the **Windows Store** tab</span></span>
+3. <span data-ttu-id="bdbd8-164">En la sección **capacidades de publicación de configuración de >** , Compruebe la funcionalidad de **InternetClient** .</span><span class="sxs-lookup"><span data-stu-id="bdbd8-164">In the **Publishing Settings > Capabilities** section, check the **InternetClient** capability</span></span>
+    * <span data-ttu-id="bdbd8-165">Opcionalmente, si aún no ha habilitado el micrófono, Compruebe la capacidad del **micrófono** .</span><span class="sxs-lookup"><span data-stu-id="bdbd8-165">Optionally, if you didn't already enable the microphone, check the **Microphone** capability</span></span>
+4. <span data-ttu-id="bdbd8-166">Conceda permisos a la aplicación para acceder al micrófono en el dispositivo HoloLens, si no lo ha hecho ya</span><span class="sxs-lookup"><span data-stu-id="bdbd8-166">Grant permissions to the app for microphone access on your HoloLens device if you haven't already</span></span>
+    * <span data-ttu-id="bdbd8-167">Se le pedirá que lo haga en el inicio del dispositivo, pero si hizo clic accidentalmente en "no", puede cambiar los permisos en la configuración del dispositivo.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-167">You'll be asked to do this on device startup, but if you accidentally clicked "no" you can change the permissions in the device settings</span></span>
 
-### <a name="dictationrecognizer"></a><span data-ttu-id="444c1-162">DictationRecognizer</span><span class="sxs-lookup"><span data-stu-id="444c1-162">DictationRecognizer</span></span>
+### <a name="dictationrecognizer"></a><span data-ttu-id="bdbd8-168">DictationRecognizer</span><span class="sxs-lookup"><span data-stu-id="bdbd8-168">DictationRecognizer</span></span>
 
-<span data-ttu-id="444c1-163">Cree un DictationRecognizer como el siguiente:</span><span class="sxs-lookup"><span data-stu-id="444c1-163">Create a DictationRecognizer like so:</span></span>
+<span data-ttu-id="bdbd8-169">Cree un DictationRecognizer como el siguiente:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-169">Create a DictationRecognizer like so:</span></span>
 
 ```
 dictationRecognizer = new DictationRecognizer();
 ```
 
-<span data-ttu-id="444c1-164">Hay cuatro eventos de dictado a los que se puede suscribir y controlar para implementar el comportamiento de dictado.</span><span class="sxs-lookup"><span data-stu-id="444c1-164">There are four dictation events that can be subscribed to and handled to implement dictation behavior.</span></span>
-1. <span data-ttu-id="444c1-165">DictationResult</span><span class="sxs-lookup"><span data-stu-id="444c1-165">DictationResult</span></span>
-2. <span data-ttu-id="444c1-166">DictationComplete</span><span class="sxs-lookup"><span data-stu-id="444c1-166">DictationComplete</span></span>
-3. <span data-ttu-id="444c1-167">DictationHypothesis</span><span class="sxs-lookup"><span data-stu-id="444c1-167">DictationHypothesis</span></span>
-4. <span data-ttu-id="444c1-168">DictationError</span><span class="sxs-lookup"><span data-stu-id="444c1-168">DictationError</span></span>
+<span data-ttu-id="bdbd8-170">Hay cuatro eventos de dictado a los que se puede suscribir y controlar para implementar el comportamiento de dictado.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-170">There are four dictation events that can be subscribed to and handled to implement dictation behavior.</span></span>
+1. `DictationResult`
+2. `DictationComplete`
+3. `DictationHypothesis`
+4. `DictationError`
 
-<span data-ttu-id="444c1-169">**DictationResult**</span><span class="sxs-lookup"><span data-stu-id="444c1-169">**DictationResult**</span></span>
+<span data-ttu-id="bdbd8-171">**DictationResult**</span><span class="sxs-lookup"><span data-stu-id="bdbd8-171">**DictationResult**</span></span>
 
-<span data-ttu-id="444c1-170">Este evento se desencadena después de que el usuario se pausa, normalmente al final de una frase.</span><span class="sxs-lookup"><span data-stu-id="444c1-170">This event is fired after the user pauses, typically at the end of a sentence.</span></span> <span data-ttu-id="444c1-171">Aquí se devuelve la cadena completa reconocida.</span><span class="sxs-lookup"><span data-stu-id="444c1-171">The full recognized string is returned here.</span></span>
+<span data-ttu-id="bdbd8-172">Este evento se desencadena después de que el usuario se pausa, normalmente al final de una frase.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-172">This event is fired after the user pauses, typically at the end of a sentence.</span></span> <span data-ttu-id="bdbd8-173">Aquí se devuelve la cadena completa reconocida.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-173">The full recognized string is returned here.</span></span>
 
-<span data-ttu-id="444c1-172">En primer lugar, suscríbase al evento DictationResult:</span><span class="sxs-lookup"><span data-stu-id="444c1-172">First, subscribe to the DictationResult event:</span></span>
+<span data-ttu-id="bdbd8-174">En primer lugar, suscríbase al `DictationResult` evento:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-174">First, subscribe to the `DictationResult` event:</span></span>
 
 ```
 dictationRecognizer.DictationResult += DictationRecognizer_DictationResult;
 ```
 
-<span data-ttu-id="444c1-173">A continuación, controle la devolución de llamada DictationResult:</span><span class="sxs-lookup"><span data-stu-id="444c1-173">Then handle the DictationResult callback:</span></span>
+<span data-ttu-id="bdbd8-175">A continuación, controle la devolución de llamada DictationResult:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-175">Then handle the DictationResult callback:</span></span>
 
 ```
 private void DictationRecognizer_DictationResult(string text, ConfidenceLevel confidence)
@@ -194,17 +200,17 @@ private void DictationRecognizer_DictationResult(string text, ConfidenceLevel co
 }
 ```
 
-<span data-ttu-id="444c1-174">**DictationHypothesis**</span><span class="sxs-lookup"><span data-stu-id="444c1-174">**DictationHypothesis**</span></span>
+<span data-ttu-id="bdbd8-176">**DictationHypothesis**</span><span class="sxs-lookup"><span data-stu-id="bdbd8-176">**DictationHypothesis**</span></span>
 
-<span data-ttu-id="444c1-175">Este evento se desencadena continuamente mientras el usuario está hablando.</span><span class="sxs-lookup"><span data-stu-id="444c1-175">This event is fired continuously while the user is talking.</span></span> <span data-ttu-id="444c1-176">A medida que el reconocedor realiza escuchas, proporciona texto de lo que se oye hasta ahora.</span><span class="sxs-lookup"><span data-stu-id="444c1-176">As the recognizer listens, it provides text of what it's heard so far.</span></span>
+<span data-ttu-id="bdbd8-177">Este evento se desencadena continuamente mientras el usuario está hablando.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-177">This event is fired continuously while the user is talking.</span></span> <span data-ttu-id="bdbd8-178">A medida que el reconocedor realiza escuchas, proporciona texto de lo que se oye hasta ahora.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-178">As the recognizer listens, it provides text of what it's heard so far.</span></span>
 
-<span data-ttu-id="444c1-177">En primer lugar, suscríbase al evento DictationHypothesis:</span><span class="sxs-lookup"><span data-stu-id="444c1-177">First, subscribe to the DictationHypothesis event:</span></span>
+<span data-ttu-id="bdbd8-179">En primer lugar, suscríbase al `DictationHypothesis` evento:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-179">First, subscribe to the `DictationHypothesis` event:</span></span>
 
 ```
 dictationRecognizer.DictationHypothesis += DictationRecognizer_DictationHypothesis;
 ```
 
-<span data-ttu-id="444c1-178">A continuación, controle la devolución de llamada DictationHypothesis:</span><span class="sxs-lookup"><span data-stu-id="444c1-178">Then handle the DictationHypothesis callback:</span></span>
+<span data-ttu-id="bdbd8-180">A continuación, controle la devolución de llamada DictationHypothesis:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-180">Then handle the DictationHypothesis callback:</span></span>
 
 ```
 private void DictationRecognizer_DictationHypothesis(string text)
@@ -213,17 +219,17 @@ private void DictationRecognizer_DictationHypothesis(string text)
 }
 ```
 
-<span data-ttu-id="444c1-179">**DictationComplete**</span><span class="sxs-lookup"><span data-stu-id="444c1-179">**DictationComplete**</span></span>
+<span data-ttu-id="bdbd8-181">**DictationComplete**</span><span class="sxs-lookup"><span data-stu-id="bdbd8-181">**DictationComplete**</span></span>
 
-<span data-ttu-id="444c1-180">Este evento se desencadena cuando se detiene el reconocedor, ya sea de detención (), se ha producido un tiempo de espera o de algún otro error.</span><span class="sxs-lookup"><span data-stu-id="444c1-180">This event is fired when the recognizer stops, whether from Stop() being called, a timeout occurring, or some other error.</span></span>
+<span data-ttu-id="bdbd8-182">Este evento se desencadena cuando se detiene el reconocedor, ya sea de detención (), se ha producido un tiempo de espera o de algún otro error.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-182">This event is fired when the recognizer stops, whether from Stop() being called, a timeout occurring, or some other error.</span></span>
 
-<span data-ttu-id="444c1-181">En primer lugar, suscríbase al evento DictationComplete:</span><span class="sxs-lookup"><span data-stu-id="444c1-181">First, subscribe to the DictationComplete event:</span></span>
+<span data-ttu-id="bdbd8-183">En primer lugar, suscríbase al `DictationComplete` evento:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-183">First, subscribe to the `DictationComplete` event:</span></span>
 
 ```
 dictationRecognizer.DictationComplete += DictationRecognizer_DictationComplete;
 ```
 
-<span data-ttu-id="444c1-182">A continuación, controle la devolución de llamada DictationComplete:</span><span class="sxs-lookup"><span data-stu-id="444c1-182">Then handle the DictationComplete callback:</span></span>
+<span data-ttu-id="bdbd8-184">A continuación, controle la devolución de llamada DictationComplete:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-184">Then handle the DictationComplete callback:</span></span>
 
 ```
 private void DictationRecognizer_DictationComplete(DictationCompletionCause cause)
@@ -232,17 +238,17 @@ private void DictationRecognizer_DictationComplete(DictationCompletionCause caus
 }
 ```
 
-<span data-ttu-id="444c1-183">**DictationError**</span><span class="sxs-lookup"><span data-stu-id="444c1-183">**DictationError**</span></span>
+<span data-ttu-id="bdbd8-185">**DictationError**</span><span class="sxs-lookup"><span data-stu-id="bdbd8-185">**DictationError**</span></span>
 
-<span data-ttu-id="444c1-184">Este evento se desencadena cuando se produce un error.</span><span class="sxs-lookup"><span data-stu-id="444c1-184">This event is fired when an error occurs.</span></span>
+<span data-ttu-id="bdbd8-186">Este evento se desencadena cuando se produce un error.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-186">This event is fired when an error occurs.</span></span>
 
-<span data-ttu-id="444c1-185">En primer lugar, suscríbase al evento DictationError:</span><span class="sxs-lookup"><span data-stu-id="444c1-185">First, subscribe to the DictationError event:</span></span>
+<span data-ttu-id="bdbd8-187">En primer lugar, suscríbase al `DictationError` evento:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-187">First, subscribe to the `DictationError` event:</span></span>
 
 ```
 dictationRecognizer.DictationError += DictationRecognizer_DictationError;
 ```
 
-<span data-ttu-id="444c1-186">A continuación, controle la devolución de llamada DictationError:</span><span class="sxs-lookup"><span data-stu-id="444c1-186">Then handle the DictationError callback:</span></span>
+<span data-ttu-id="bdbd8-188">A continuación, controle la devolución de llamada DictationError:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-188">Then handle the DictationError callback:</span></span>
 
 ```
 private void DictationRecognizer_DictationError(string error, int hresult)
@@ -251,13 +257,13 @@ private void DictationRecognizer_DictationError(string error, int hresult)
 }
 ```
 
-<span data-ttu-id="444c1-187">Una vez que haya suscrito y controlado los eventos de dictado que le interesan, inicie el reconocedor de dictado para comenzar a recibir eventos.</span><span class="sxs-lookup"><span data-stu-id="444c1-187">Once you've subscribed and handled the dictation events that you care about, start the dictation recognizer to begin receiving events.</span></span>
+<span data-ttu-id="bdbd8-189">Una vez que haya suscrito y controlado los eventos de dictado que le interesan, inicie el reconocedor de dictado para comenzar a recibir eventos.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-189">Once you've subscribed and handled the dictation events that you care about, start the dictation recognizer to begin receiving events.</span></span>
 
 ```
 dictationRecognizer.Start();
 ```
 
-<span data-ttu-id="444c1-188">Si ya no desea mantener el DictationRecognizer en torno, debe cancelar la suscripción a los eventos y eliminar el DictationRecognizer.</span><span class="sxs-lookup"><span data-stu-id="444c1-188">If you no longer want to keep the DictationRecognizer around, you need to unsubscribe from the events and Dispose the DictationRecognizer.</span></span>
+<span data-ttu-id="bdbd8-190">Si ya no desea mantener el DictationRecognizer en torno, debe cancelar la suscripción a los eventos y eliminar el DictationRecognizer.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-190">If you no longer want to keep the DictationRecognizer around, you need to unsubscribe from the events and Dispose the DictationRecognizer.</span></span>
 
 ```
 dictationRecognizer.DictationResult -= DictationRecognizer_DictationResult;
@@ -267,45 +273,40 @@ dictationRecognizer.DictationError -= DictationRecognizer_DictationError ;
 dictationRecognizer.Dispose();
 ```
 
-<span data-ttu-id="444c1-189">**Sugerencias**</span><span class="sxs-lookup"><span data-stu-id="444c1-189">**Tips**</span></span>
-* <span data-ttu-id="444c1-190">Los métodos Start () y STOP () respectivamente habilitan y deshabilitan el reconocimiento de dictado.</span><span class="sxs-lookup"><span data-stu-id="444c1-190">Start() and Stop() methods respectively enable and disable dictation recognition.</span></span>
-* <span data-ttu-id="444c1-191">Una vez que se realiza con el reconocedor, se debe desechar mediante el método Dispose () para liberar los recursos que utiliza.</span><span class="sxs-lookup"><span data-stu-id="444c1-191">Once done with the recognizer, it must be disposed using Dispose() method to release the resources it uses.</span></span> <span data-ttu-id="444c1-192">Estos recursos se liberan automáticamente durante la recolección de elementos no utilizados en un costo de rendimiento adicional si no se liberan antes.</span><span class="sxs-lookup"><span data-stu-id="444c1-192">It will release these resources automatically during garbage collection at an additional performance cost if they aren't released before that.</span></span>
-* <span data-ttu-id="444c1-193">Los tiempos de espera se producen después de un período de tiempo establecido.</span><span class="sxs-lookup"><span data-stu-id="444c1-193">Timeouts occur after a set period of time.</span></span> <span data-ttu-id="444c1-194">Puede buscar estos tiempos de espera en el evento DictationComplete.</span><span class="sxs-lookup"><span data-stu-id="444c1-194">You can check for these timeouts in the DictationComplete event.</span></span> <span data-ttu-id="444c1-195">Hay dos tiempos de espera que se deben tener en cuenta:</span><span class="sxs-lookup"><span data-stu-id="444c1-195">There are two timeouts to be aware of:</span></span>
-   1. <span data-ttu-id="444c1-196">Si el reconocedor se inicia y no oye ningún audio durante los primeros cinco segundos, se agotará el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="444c1-196">If the recognizer starts and doesn't hear any audio for the first five seconds, it will time out.</span></span>
-   2. <span data-ttu-id="444c1-197">Si el reconocedor ha dado un resultado, pero oye el silencio durante 20 segundos, se agotará el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="444c1-197">If the recognizer has given a result, but then hears silence for 20 seconds, it will time out.</span></span>
+<span data-ttu-id="bdbd8-191">**Sugerencias**</span><span class="sxs-lookup"><span data-stu-id="bdbd8-191">**Tips**</span></span>
+* <span data-ttu-id="bdbd8-192">`Start()``Stop()`los métodos y, respectivamente, habilitan y deshabilitan el reconocimiento de dictado.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-192">`Start()` and `Stop()` methods respectively enable and disable dictation recognition.</span></span>
+* <span data-ttu-id="bdbd8-193">Una vez que se realiza con el reconocedor, se debe desechar usando `Dispose()` para liberar los recursos que utiliza.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-193">Once done with the recognizer, it must be disposed using `Dispose()` to release the resources it uses.</span></span> <span data-ttu-id="bdbd8-194">Estos recursos se liberan automáticamente durante la recolección de elementos no utilizados en un costo de rendimiento adicional si no se liberan antes.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-194">It will release these resources automatically during garbage collection at an extra performance cost if they aren't released before that.</span></span>
+* <span data-ttu-id="bdbd8-195">Los tiempos de espera se producen después de un período de tiempo establecido.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-195">Timeouts occur after a set period of time.</span></span> <span data-ttu-id="bdbd8-196">Puede buscar estos tiempos de espera en el `DictationComplete` evento.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-196">You can check for these timeouts in the `DictationComplete` event.</span></span> <span data-ttu-id="bdbd8-197">Hay dos tiempos de espera que se deben tener en cuenta:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-197">There are two timeouts to be aware of:</span></span>
+   1. <span data-ttu-id="bdbd8-198">Si el reconocedor se inicia y no oye ningún audio durante los primeros cinco segundos, se agotará el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-198">If the recognizer starts and doesn't hear any audio for the first five seconds, it will time out.</span></span>
+   2. <span data-ttu-id="bdbd8-199">Si el reconocedor ha dado un resultado, pero oye el silencio durante 20 segundos, se agotará el tiempo de espera.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-199">If the recognizer has given a result, but then hears silence for 20 seconds, it will time out.</span></span>
 
-## <a name="using-both-phrase-recognition-and-dictation"></a><span data-ttu-id="444c1-198">Usar el reconocimiento de frases y el dictado</span><span class="sxs-lookup"><span data-stu-id="444c1-198">Using both Phrase Recognition and Dictation</span></span>
+## <a name="using-both-phrase-recognition-and-dictation"></a><span data-ttu-id="bdbd8-200">Usar el reconocimiento de frases y el dictado</span><span class="sxs-lookup"><span data-stu-id="bdbd8-200">Using both Phrase Recognition and Dictation</span></span>
 
-<span data-ttu-id="444c1-199">Si desea usar tanto el reconocimiento de frases como el dictado en la aplicación, deberá apagarlo completamente antes de poder iniciar el otro.</span><span class="sxs-lookup"><span data-stu-id="444c1-199">If you want to use both phrase recognition and dictation in your app, you'll need to fully shut one down before you can start the other.</span></span> <span data-ttu-id="444c1-200">Si tiene varios KeywordRecognizers en ejecución, puede cerrarlos todos a la vez con:</span><span class="sxs-lookup"><span data-stu-id="444c1-200">If you have multiple KeywordRecognizers running, you can shut them all down at once with:</span></span>
+<span data-ttu-id="bdbd8-201">Si desea usar tanto el reconocimiento de frases como el dictado en la aplicación, deberá apagarlo completamente antes de poder iniciar el otro.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-201">If you want to use both phrase recognition and dictation in your app, you'll need to fully shut one down before you can start the other.</span></span> <span data-ttu-id="bdbd8-202">Si tiene varios KeywordRecognizers en ejecución, puede cerrarlos todos a la vez con:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-202">If you have multiple KeywordRecognizers running, you can shut them all down at once with:</span></span>
 
 ```
 PhraseRecognitionSystem.Shutdown();
 ```
 
-<span data-ttu-id="444c1-201">Para restaurar todos los reconocedores a su estado anterior, una vez detenido el DictationRecognizer, puede llamar a:</span><span class="sxs-lookup"><span data-stu-id="444c1-201">In order to restore all recognizers to their previous state, after the DictationRecognizer has stopped, you can call:</span></span>
+<span data-ttu-id="bdbd8-203">Puede llamar `Restart()` a para restaurar todos los reconocedores a su estado anterior después de que DictationRecognizer se haya detenido:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-203">You can call `Restart()` to restore all recognizers to their previous state after the DictationRecognizer has stopped:</span></span>
 
 ```
 PhraseRecognitionSystem.Restart();
 ```
 
-<span data-ttu-id="444c1-202">También puede iniciar una KeywordRecognizer, lo que reiniciará el PhraseRecognitionSystem también.</span><span class="sxs-lookup"><span data-stu-id="444c1-202">You could also just start a KeywordRecognizer, which will restart the PhraseRecognitionSystem as well.</span></span>
+<span data-ttu-id="bdbd8-204">También puede iniciar una KeywordRecognizer, lo que reiniciará el PhraseRecognitionSystem también.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-204">You could also just start a KeywordRecognizer, which will restart the PhraseRecognitionSystem as well.</span></span>
 
-## <a name="using-the-microphone-helper"></a><span data-ttu-id="444c1-203">Uso de la aplicación auxiliar de micrófono</span><span class="sxs-lookup"><span data-stu-id="444c1-203">Using the microphone helper</span></span>
+## <a name="voice-input-in-mixed-reality-toolkit"></a><span data-ttu-id="bdbd8-205">Entrada de voz en el kit de herramientas de realidad mixta</span><span class="sxs-lookup"><span data-stu-id="bdbd8-205">Voice input in Mixed Reality Toolkit</span></span>
 
-<span data-ttu-id="444c1-204">El kit de herramientas de realidad mixta en GitHub contiene una clase auxiliar de micrófono para sugerir a los desarrolladores si hay un micrófono utilizable en el sistema.</span><span class="sxs-lookup"><span data-stu-id="444c1-204">The Mixed Reality Toolkit on GitHub contains a microphone helper class to hint at developers if there's a usable microphone on the system.</span></span> <span data-ttu-id="444c1-205">Un uso para este es el lugar en el que desea comprobar si hay un micrófono en el sistema antes de mostrar cualquier sugerencia de interacción de voz en la aplicación.</span><span class="sxs-lookup"><span data-stu-id="444c1-205">One use for it's where one would want to check if there's microphone on system before showing any speech interaction hints in the application.</span></span>
+<span data-ttu-id="bdbd8-206">Puede encontrar ejemplos de MRTK para la entrada de voz en las siguientes escenas de demostración:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-206">You can find MRTK examples for voice input in the following demo scenes:</span></span>
+* [<span data-ttu-id="bdbd8-207">Dictado</span><span class="sxs-lookup"><span data-stu-id="bdbd8-207">Dictation</span></span>](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/Examples/Demos/Input/Scenes/Dictation)
+* [<span data-ttu-id="bdbd8-208">Voz</span><span class="sxs-lookup"><span data-stu-id="bdbd8-208">Speech</span></span>](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/Examples/Demos/Input/Scenes/Speech)
 
-<span data-ttu-id="444c1-206">El script de la aplicación auxiliar de micrófono se puede encontrar en la [carpeta INPUT/scripts/Utilities](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Utilities/MicrophoneHelper.cs).</span><span class="sxs-lookup"><span data-stu-id="444c1-206">The microphone helper script can be found in the [Input/Scripts/Utilities folder](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Utilities/MicrophoneHelper.cs).</span></span> <span data-ttu-id="444c1-207">El repositorio de GitHub también contiene un [pequeño ejemplo](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Input/Scripts/MicrophoneHelperSample.cs) en el que se muestra cómo usar el ayudante.</span><span class="sxs-lookup"><span data-stu-id="444c1-207">The GitHub repo also contains a [small sample](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Input/Scripts/MicrophoneHelperSample.cs) demonstrating how to use the helper.</span></span>
+## <a name="next-development-checkpoint"></a><span data-ttu-id="bdbd8-209">Siguiente punto de control de desarrollo</span><span class="sxs-lookup"><span data-stu-id="bdbd8-209">Next Development Checkpoint</span></span>
 
-## <a name="voice-input-in-mixed-reality-toolkit"></a><span data-ttu-id="444c1-208">Entrada de voz en el kit de herramientas de realidad mixta</span><span class="sxs-lookup"><span data-stu-id="444c1-208">Voice input in Mixed Reality Toolkit</span></span>
-<span data-ttu-id="444c1-209">Puede encontrar ejemplos de la entrada de voz en esta escena.</span><span class="sxs-lookup"><span data-stu-id="444c1-209">You can find the examples of the voice input in this scene.</span></span>
-
-- [<span data-ttu-id="444c1-210">HoloToolkit-Examples/INPUT/Scenes/SpeechInputSource. Unity</span><span class="sxs-lookup"><span data-stu-id="444c1-210">HoloToolkit-Examples/Input/Scenes/SpeechInputSource.unity</span></span>](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Input/Scenes/SpeechInputSource.unity)
-
-## <a name="next-development-checkpoint"></a><span data-ttu-id="444c1-211">Siguiente punto de control de desarrollo</span><span class="sxs-lookup"><span data-stu-id="444c1-211">Next Development Checkpoint</span></span>
-
-<span data-ttu-id="444c1-212">Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, la tarea siguiente está explorando las funcionalidades y API de la plataforma de realidad mixta:</span><span class="sxs-lookup"><span data-stu-id="444c1-212">If you're following the Unity development checkpoint journey we've laid out, you're next task is exploring the Mixed Reality platform capabilities and APIs:</span></span>
+<span data-ttu-id="bdbd8-210">Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, la tarea siguiente está explorando las funcionalidades y API de la plataforma de realidad mixta:</span><span class="sxs-lookup"><span data-stu-id="bdbd8-210">If you're following the Unity development checkpoint journey we've laid out, you're next task is exploring the Mixed Reality platform capabilities and APIs:</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="444c1-213">Experiencias compartidas</span><span class="sxs-lookup"><span data-stu-id="444c1-213">Shared experiences</span></span>](shared-experiences-in-unity.md)
+> [<span data-ttu-id="bdbd8-211">Experiencias compartidas</span><span class="sxs-lookup"><span data-stu-id="bdbd8-211">Shared experiences</span></span>](shared-experiences-in-unity.md)
 
-<span data-ttu-id="444c1-214">Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.</span><span class="sxs-lookup"><span data-stu-id="444c1-214">You can always go back to the [Unity development checkpoints](unity-development-overview.md#2-core-building-blocks) at any time.</span></span>
+<span data-ttu-id="bdbd8-212">Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.</span><span class="sxs-lookup"><span data-stu-id="bdbd8-212">You can always go back to the [Unity development checkpoints](unity-development-overview.md#2-core-building-blocks) at any time.</span></span>
