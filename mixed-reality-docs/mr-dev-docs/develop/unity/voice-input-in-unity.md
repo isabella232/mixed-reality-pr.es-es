@@ -6,37 +6,40 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Entrada de voz, KeywordRecognizer, GrammarRecognizer, micrófono, dictado, voz, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: c6364b190ca90c5e6faf7fb8ef79314134e93cfc
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 7268a4df9c7fce03029937c72540ed274574067d
+ms.sourcegitcommit: 8c3af63fb49494f75c8ab46236fc3dd8533c1e9d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583725"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99606120"
 ---
 # <a name="voice-input-in-unity"></a>Entrada de voz en Unity
 
->[!NOTE]
->En lugar de la siguiente información, considere la posibilidad de usar el complemento Unity para el SDK de servicios de voz cognitivos, que tiene unos resultados de precisión de voz mucho mejores y proporciona fácil acceso a la descodificación de voz a texto y a características de voz avanzadas como cuadro de diálogo, interacción basada en intención, traducción, síntesis de texto a voz y reconocimiento de voz en lenguaje natural. Busque el ejemplo y documentación aquí: https://docs.microsoft.com//azure/cognitive-services/speech-service/quickstart-csharp-unity   
+> [!CAUTION]
+> Antes de comenzar, considere la posibilidad de usar el complemento Unity para el SDK de servicios de voz cognitivo. El complemento tiene mejores resultados de precisión de voz y acceso sencillo a la descodificación de voz a texto, así como características avanzadas de voz como cuadro de diálogo, interacción basada en intención, traducción, síntesis de texto a voz y reconocimiento de voz en lenguaje natural. Para empezar, consulte la [documentación y el ejemplo](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstart-csharp-unity).
 
-Unity expone tres maneras de agregar una [entrada de voz](../../design/voice-input.md) a la aplicación de Unity.
+Unity expone tres maneras de agregar una [entrada de voz](../../design/voice-input.md) a la aplicación de Unity, los dos primeros son tipos de PhraseRecognizer:
+* `KeywordRecognizer`Proporciona la aplicación con una matriz de comandos de cadena para realizar escuchas.
+* `GrammarRecognizer`Proporciona a la aplicación un archivo SRGS que define una gramática específica para escuchar
+* `DictationRecognizer`Permite que la aplicación escuche cualquier palabra y proporcione al usuario una nota u otra presentación de la voz.
 
-Con KeywordRecognizer (uno de los dos tipos de PhraseRecognizers), se puede proporcionar a la aplicación una matriz de comandos de cadena para realizar escuchas. Con GrammarRecognizer (el otro tipo de PhraseRecognizer), se puede proporcionar a la aplicación un archivo SRGS que defina una gramática específica para realizar escuchas. Con el DictationRecognizer, la aplicación puede escuchar cualquier palabra y proporcionar al usuario una nota u otra presentación de la voz.
-
->[!NOTE]
->Solo se puede controlar el reconocimiento de dictado o de frase a la vez. Esto significa que, si GrammarRecognizer o KeywordRecognizer está activo, un DictationRecognizer no puede estar activo y viceversa.
+> [!NOTE]
+> No se puede controlar el reconocimiento de dictado y frase al mismo tiempo. Si GrammarRecognizer o KeywordRecognizer está activo, un DictationRecognizer no puede estar activo y viceversa.
 
 ## <a name="enabling-the-capability-for-voice"></a>Habilitación de la funcionalidad de Voice
 
 La capacidad del **micrófono** se debe declarar para que una aplicación use la entrada de voz.
-1. En el editor de Unity, vaya a la configuración del reproductor en "editar > configuración del proyecto > Player".
-2. Seleccione en la pestaña "tienda Windows"
-3. En la sección "configuración de publicación > funcionalidades", Compruebe la capacidad del **micrófono** .
+1. En el editor de Unity, vaya a **editar > configuración del proyecto > Player** .
+2. Seleccione la pestaña de la **tienda Windows**
+3. En la sección **funciones de configuración de publicación >** , Compruebe la capacidad del **micrófono** .
+4. Concesión de permisos a la aplicación para el acceso al micrófono en el dispositivo HoloLens
+    * Se le pedirá que lo haga en el inicio del dispositivo, pero si hizo clic accidentalmente en "no", puede cambiar los permisos en la configuración del dispositivo.
 
 ## <a name="phrase-recognition"></a>Reconocimiento de frases
 
 Para permitir que la aplicación escuche frases específicas que habla el usuario, realice alguna acción; debe:
-1. Especificar las frases que se van a escuchar con KeywordRecognizer o GrammarRecognizer
-2. Controle el evento OnPhraseRecognized y tome las medidas correspondientes a la frase reconocida
+1. Especificar las frases que se van a escuchar con `KeywordRecognizer` o `GrammarRecognizer`
+2. Controlar el `OnPhraseRecognized` evento y tomar las medidas correspondientes a la frase reconocida
 
 ### <a name="keywordrecognizer"></a>KeywordRecognizer
 
@@ -58,7 +61,7 @@ KeywordRecognizer keywordRecognizer;
 Dictionary<string, System.Action> keywords = new Dictionary<string, System.Action>();
 ```
 
-Ahora, agregue una palabra clave al diccionario, por ejemplo, en un método Start (). Estamos agregando la palabra clave "activar" en este ejemplo:
+Ahora, agregue una palabra clave al diccionario, por ejemplo, en de un `Start()` método. Estamos agregando la palabra clave "activar" en este ejemplo:
 
 ```
 //Create keywords for keyword recognizer
@@ -74,7 +77,7 @@ Cree el reconocedor de palabras clave e indíquele lo que desea reconocer:
 keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
 ```
 
-Regístrese ahora para el evento OnPhraseRecognized
+Regístrese ahora para el `OnPhraseRecognized` evento
 
 ```
 keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
@@ -113,20 +116,20 @@ Una vez que tenga la gramática de SRGS y esté en el proyecto en una [carpeta S
 <PROJECT_ROOT>/Assets/StreamingAssets/SRGS/myGrammar.xml
 ```
 
-Cree un GrammarRecognizer y pásele la ruta de acceso al archivo SRGS:
+Cree un `GrammarRecognizer` y pásele la ruta de acceso al archivo SRGS:
 
 ```
 private GrammarRecognizer grammarRecognizer;
 grammarRecognizer = new GrammarRecognizer(Application.streamingDataPath + "/SRGS/myGrammar.xml");
 ```
 
-Regístrese ahora para el evento OnPhraseRecognized
+Regístrese ahora para el `OnPhraseRecognized` evento
 
 ```
 grammarRecognizer.OnPhraseRecognized += grammarRecognizer_OnPhraseRecognized;
 ```
 
-Obtendrá una devolución de llamada que contiene la información especificada en la gramática de SRGS, que puede controlar de forma adecuada. La mayor parte de la información importante se proporcionará en la matriz semanticMeanings.
+Obtendrá una devolución de llamada que contiene la información especificada en la gramática de SRGS, que puede controlar de forma adecuada. La mayoría de la información importante se proporcionará en la `semanticMeanings` matriz.
 
 ```
 private void Grammar_OnPhraseRecognized(PhraseRecognizedEventArgs args)
@@ -147,19 +150,22 @@ grammarRecognizer.Start();
 **Espacio de nombres:** *UnityEngine. Windows. Speech*<br>
 **Tipos**: *DictationRecognizer*, *SpeechError*, *SpeechSystemStatus*
 
-Use DictationRecognizer para convertir la voz del usuario en texto. DictationRecognizer expone la funcionalidad de [dictado](../../design/voice-input.md#dictation) y admite el registro y la escucha de eventos de hipótesis y frases completadas, de forma que puede enviar comentarios al usuario mientras hablan y después. Los métodos Start () y STOP () respectivamente habilitan y deshabilitan el reconocimiento de dictado. Una vez que se realiza con el reconocedor, se debe desechar mediante el método Dispose () para liberar los recursos que utiliza. Estos recursos se liberan automáticamente durante la recolección de elementos no utilizados en un costo de rendimiento adicional si no se liberan antes.
+Use `DictationRecognizer` para convertir la voz del usuario en texto. DictationRecognizer expone la funcionalidad de [dictado](../../design/voice-input.md#dictation) y admite el registro y la escucha de eventos de hipótesis y frases completadas, de forma que puede enviar comentarios al usuario mientras hablan y después. `Start()``Stop()`los métodos y, respectivamente, habilitan y deshabilitan el reconocimiento de dictado. Una vez que se ha realizado con el reconocedor, se debe eliminar usando `Dispose()` para liberar los recursos que utiliza. Estos recursos se liberan automáticamente durante la recolección de elementos no utilizados en un costo de rendimiento adicional si no se liberan antes.
 
 Solo se necesitan algunos pasos para empezar a trabajar con el dictado:
-1. Crear un nuevo DictationRecognizer
+1. Crear un nuevo `DictationRecognizer`
 2. Controlar los eventos de dictado
 3. Inicio de DictationRecognizer
 
 ### <a name="enabling-the-capability-for-dictation"></a>Habilitar la funcionalidad para el dictado
 
-La funcionalidad "cliente de Internet", junto con la función "micrófono" mencionada anteriormente, se debe declarar para que una aplicación aproveche el dictado.
-1. En el editor de Unity, vaya a la página "editar > configuración del proyecto > reproductor" para ir a la configuración del reproductor.
-2. Seleccione en la pestaña "tienda Windows"
-3. En la sección "configuración de publicación > funcionalidades", Compruebe la funcionalidad de **InternetClient** .
+Las capacidades de cliente y **micrófono** de **Internet** se deben declarar para que una aplicación use dictado:
+1. En el editor de Unity, vaya a **editar > configuración del proyecto > Player** .
+2. Seleccionar en la pestaña de la **tienda Windows**
+3. En la sección **capacidades de publicación de configuración de >** , Compruebe la funcionalidad de **InternetClient** .
+    * Opcionalmente, si aún no ha habilitado el micrófono, Compruebe la capacidad del **micrófono** .
+4. Conceda permisos a la aplicación para acceder al micrófono en el dispositivo HoloLens, si no lo ha hecho ya
+    * Se le pedirá que lo haga en el inicio del dispositivo, pero si hizo clic accidentalmente en "no", puede cambiar los permisos en la configuración del dispositivo.
 
 ### <a name="dictationrecognizer"></a>DictationRecognizer
 
@@ -170,16 +176,16 @@ dictationRecognizer = new DictationRecognizer();
 ```
 
 Hay cuatro eventos de dictado a los que se puede suscribir y controlar para implementar el comportamiento de dictado.
-1. DictationResult
-2. DictationComplete
-3. DictationHypothesis
-4. DictationError
+1. `DictationResult`
+2. `DictationComplete`
+3. `DictationHypothesis`
+4. `DictationError`
 
 **DictationResult**
 
 Este evento se desencadena después de que el usuario se pausa, normalmente al final de una frase. Aquí se devuelve la cadena completa reconocida.
 
-En primer lugar, suscríbase al evento DictationResult:
+En primer lugar, suscríbase al `DictationResult` evento:
 
 ```
 dictationRecognizer.DictationResult += DictationRecognizer_DictationResult;
@@ -198,7 +204,7 @@ private void DictationRecognizer_DictationResult(string text, ConfidenceLevel co
 
 Este evento se desencadena continuamente mientras el usuario está hablando. A medida que el reconocedor realiza escuchas, proporciona texto de lo que se oye hasta ahora.
 
-En primer lugar, suscríbase al evento DictationHypothesis:
+En primer lugar, suscríbase al `DictationHypothesis` evento:
 
 ```
 dictationRecognizer.DictationHypothesis += DictationRecognizer_DictationHypothesis;
@@ -217,7 +223,7 @@ private void DictationRecognizer_DictationHypothesis(string text)
 
 Este evento se desencadena cuando se detiene el reconocedor, ya sea de detención (), se ha producido un tiempo de espera o de algún otro error.
 
-En primer lugar, suscríbase al evento DictationComplete:
+En primer lugar, suscríbase al `DictationComplete` evento:
 
 ```
 dictationRecognizer.DictationComplete += DictationRecognizer_DictationComplete;
@@ -236,7 +242,7 @@ private void DictationRecognizer_DictationComplete(DictationCompletionCause caus
 
 Este evento se desencadena cuando se produce un error.
 
-En primer lugar, suscríbase al evento DictationError:
+En primer lugar, suscríbase al `DictationError` evento:
 
 ```
 dictationRecognizer.DictationError += DictationRecognizer_DictationError;
@@ -268,9 +274,9 @@ dictationRecognizer.Dispose();
 ```
 
 **Sugerencias**
-* Los métodos Start () y STOP () respectivamente habilitan y deshabilitan el reconocimiento de dictado.
-* Una vez que se realiza con el reconocedor, se debe desechar mediante el método Dispose () para liberar los recursos que utiliza. Estos recursos se liberan automáticamente durante la recolección de elementos no utilizados en un costo de rendimiento adicional si no se liberan antes.
-* Los tiempos de espera se producen después de un período de tiempo establecido. Puede buscar estos tiempos de espera en el evento DictationComplete. Hay dos tiempos de espera que se deben tener en cuenta:
+* `Start()``Stop()`los métodos y, respectivamente, habilitan y deshabilitan el reconocimiento de dictado.
+* Una vez que se realiza con el reconocedor, se debe desechar usando `Dispose()` para liberar los recursos que utiliza. Estos recursos se liberan automáticamente durante la recolección de elementos no utilizados en un costo de rendimiento adicional si no se liberan antes.
+* Los tiempos de espera se producen después de un período de tiempo establecido. Puede buscar estos tiempos de espera en el `DictationComplete` evento. Hay dos tiempos de espera que se deben tener en cuenta:
    1. Si el reconocedor se inicia y no oye ningún audio durante los primeros cinco segundos, se agotará el tiempo de espera.
    2. Si el reconocedor ha dado un resultado, pero oye el silencio durante 20 segundos, se agotará el tiempo de espera.
 
@@ -282,7 +288,7 @@ Si desea usar tanto el reconocimiento de frases como el dictado en la aplicació
 PhraseRecognitionSystem.Shutdown();
 ```
 
-Para restaurar todos los reconocedores a su estado anterior, una vez detenido el DictationRecognizer, puede llamar a:
+Puede llamar `Restart()` a para restaurar todos los reconocedores a su estado anterior después de que DictationRecognizer se haya detenido:
 
 ```
 PhraseRecognitionSystem.Restart();
@@ -290,16 +296,11 @@ PhraseRecognitionSystem.Restart();
 
 También puede iniciar una KeywordRecognizer, lo que reiniciará el PhraseRecognitionSystem también.
 
-## <a name="using-the-microphone-helper"></a>Uso de la aplicación auxiliar de micrófono
-
-El kit de herramientas de realidad mixta en GitHub contiene una clase auxiliar de micrófono para sugerir a los desarrolladores si hay un micrófono utilizable en el sistema. Un uso para este es el lugar en el que desea comprobar si hay un micrófono en el sistema antes de mostrar cualquier sugerencia de interacción de voz en la aplicación.
-
-El script de la aplicación auxiliar de micrófono se puede encontrar en la [carpeta INPUT/scripts/Utilities](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit/Input/Scripts/Utilities/MicrophoneHelper.cs). El repositorio de GitHub también contiene un [pequeño ejemplo](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Input/Scripts/MicrophoneHelperSample.cs) en el que se muestra cómo usar el ayudante.
-
 ## <a name="voice-input-in-mixed-reality-toolkit"></a>Entrada de voz en el kit de herramientas de realidad mixta
-Puede encontrar ejemplos de la entrada de voz en esta escena.
 
-- [HoloToolkit-Examples/INPUT/Scenes/SpeechInputSource. Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/Assets/HoloToolkit-Examples/Input/Scenes/SpeechInputSource.unity)
+Puede encontrar ejemplos de MRTK para la entrada de voz en las siguientes escenas de demostración:
+* [Dictado](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/Examples/Demos/Input/Scenes/Dictation)
+* [Voz](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_development/Assets/MRTK/Examples/Demos/Input/Scenes/Speech)
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
