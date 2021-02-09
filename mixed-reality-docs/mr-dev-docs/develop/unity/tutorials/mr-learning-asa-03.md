@@ -3,16 +3,16 @@ title: Guardar, recuperar y compartir Azure Spatial Anchors
 description: Siga este curso para aprender a guardar, recuperar y compartir Azure Spatial Anchors en una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, app sessions
 ms.localizationpriority: high
-ms.openlocfilehash: 4bae36bfb24130fc7914563af07c09374162f3cb
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 91f1139181a5a77123e003fc0c64d0661220a143
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582050"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590687"
 ---
 # <a name="3-saving-retrieving-and-sharing-azure-spatial-anchors"></a>3. Guardar, recuperar y compartir Azure Spatial Anchors
 

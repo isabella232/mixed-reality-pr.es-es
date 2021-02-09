@@ -3,16 +3,16 @@ title: Adición de un modo sin conexión para la traducción de voz a texto loca
 description: Complete este curso para aprender a agregar el modo sin conexión para la traducción de voz a texto local en aplicaciones de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 06/27/2019
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, speech recognition, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: db495d6cdfa99721e68b4004535a5411bde9b17d
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 2e7a48dc4bb64eb177e6fa290f4918345c3d642f
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98010085"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590157"
 ---
 # <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. Adición de un modo sin conexión para la traducción de voz a texto local
 
