@@ -116,54 +116,56 @@
                   href: unity/tutorials/mr-learning-pc-holographic-remoting-02.md
         - name: Tutoriales de HoloLens (primera generación) y de los cascos envolventes
           items:
-            - name: 'Aspectos básicos de realidad mixta (100): introducción a Unity'
-              href: unity/tutorials/holograms-100.md
-            - name: 'Aspectos básicos de realidad mixta (101): proyecto completo con dispositivo'
-              href: unity/tutorials/holograms-101.md
-            - name: 'Aspectos básicos de realidad mixta (101E): proyecto completo con emulador'
-              href: unity/tutorials/holograms-101e.md
-            - name: 'Entrada de realidad mixta (210): mirada'
-              href: unity/tutorials/holograms-210.md
-            - name: 'Entrada de realidad mixta (211): gesto'
-              href: unity/tutorials/holograms-211.md
-            - name: 'Entrada de realidad mixta (212): voz'
-              href: unity/tutorials/holograms-212.md
-            - name: 'Ámbito espacial de realidad mixta (220): sonido espacial'
-              href: unity/tutorials/holograms-220.md
-            - name: 'Ámbito espacial de realidad mixta (230): asignación espacial'
-              href: unity/tutorials/holograms-230.md
-            - name: 'Uso compartido de realidad mixta (240): varios dispositivos HoloLens'
-              href: unity/tutorials/holograms-240.md
-        - name: Tutoriales de realidad mixta y servicios de Azure
-          items:
-            - name: 'Realidad mixta y Azure (301): traducción de idiomas'
-              href: unity/tutorials/mr-azure-301.md
-            - name: 'Realidad mixta y Azure (302): Computer Vision'
-              href: unity/tutorials/mr-azure-302.md
-            - name: 'Realidad mixta y Azure (302b): Custom Vision'
-              href: unity/tutorials/mr-azure-302b.md
-            - name: 'Realidad mixta y Azure (303): comprensión del lenguaje natural'
-              href: unity/tutorials/mr-azure-303.md
-            - name: 'Realidad mixta y Azure (304): reconocimiento facial'
-              href: unity/tutorials/mr-azure-304.md
-            - name: 'Realidad mixta y Azure (305): funciones y almacenamiento'
-              href: unity/tutorials/mr-azure-305.md
-            - name: 'Realidad mixta y Azure (306): vídeo de streaming'
-              href: unity/tutorials/mr-azure-306.md
-            - name: 'Realidad mixta y Azure (307): aprendizaje automático'
-              href: unity/tutorials/mr-azure-307.md
-            - name: 'Realidad mixta y Azure (308): notificaciones entre dispositivos'
-              href: unity/tutorials/mr-azure-308.md
-            - name: 'Realidad mixta y Azure (309): Application Insights'
-              href: unity/tutorials/mr-azure-309.md
-            - name: 'Realidad mixta y Azure (310): detección de objetos'
-              href: unity/tutorials/mr-azure-310.md
-            - name: "Realidad mixta y Azure (311): Microsoft\_Graph"
-              href: unity/tutorials/mr-azure-311.md
-            - name: 'Realidad mixta y Azure (312): integración con bot'
-              href: unity/tutorials/mr-azure-312.md
-            - name: Realidad mixta y Azure (313) servicio IoT Hub
-              href: unity/tutorials/mr-azure-301.md
+            - name: Características de Mixed Reality
+              items:
+                - name: 'Aspectos básicos de realidad mixta (100): introducción a Unity'
+                  href: unity/tutorials/holograms-100.md
+                - name: 'Aspectos básicos de realidad mixta (101): proyecto completo con dispositivo'
+                  href: unity/tutorials/holograms-101.md
+                - name: 'Aspectos básicos de realidad mixta (101E): proyecto completo con emulador'
+                  href: unity/tutorials/holograms-101e.md
+                - name: 'Entrada de realidad mixta (210): mirada'
+                  href: unity/tutorials/holograms-210.md
+                - name: 'Entrada de realidad mixta (211): gesto'
+                  href: unity/tutorials/holograms-211.md
+                - name: 'Entrada de realidad mixta (212): voz'
+                  href: unity/tutorials/holograms-212.md
+                - name: 'Ámbito espacial de realidad mixta (220): sonido espacial'
+                  href: unity/tutorials/holograms-220.md
+                - name: 'Ámbito espacial de realidad mixta (230): asignación espacial'
+                  href: unity/tutorials/holograms-230.md
+                - name: 'Uso compartido de realidad mixta (240): varios dispositivos HoloLens'
+                  href: unity/tutorials/holograms-240.md
+            - name: Mixed Reality y servicios de Azure
+              items:
+                - name: 'Realidad mixta y Azure (301): traducción de idiomas'
+                  href: unity/tutorials/mr-azure-301.md
+                - name: 'Realidad mixta y Azure (302): Computer Vision'
+                  href: unity/tutorials/mr-azure-302.md
+                - name: 'Realidad mixta y Azure (302b): Custom Vision'
+                  href: unity/tutorials/mr-azure-302b.md
+                - name: 'Realidad mixta y Azure (303): comprensión del lenguaje natural'
+                  href: unity/tutorials/mr-azure-303.md
+                - name: 'Realidad mixta y Azure (304): reconocimiento facial'
+                  href: unity/tutorials/mr-azure-304.md
+                - name: 'Realidad mixta y Azure (305): funciones y almacenamiento'
+                  href: unity/tutorials/mr-azure-305.md
+                - name: 'Realidad mixta y Azure (306): vídeo de streaming'
+                  href: unity/tutorials/mr-azure-306.md
+                - name: 'Realidad mixta y Azure (307): aprendizaje automático'
+                  href: unity/tutorials/mr-azure-307.md
+                - name: 'Realidad mixta y Azure (308): notificaciones entre dispositivos'
+                  href: unity/tutorials/mr-azure-308.md
+                - name: 'Realidad mixta y Azure (309): Application Insights'
+                  href: unity/tutorials/mr-azure-309.md
+                - name: 'Realidad mixta y Azure (310): detección de objetos'
+                  href: unity/tutorials/mr-azure-310.md
+                - name: "Realidad mixta y Azure (311): Microsoft\_Graph"
+                  href: unity/tutorials/mr-azure-311.md
+                - name: 'Realidad mixta y Azure (312): integración con bot'
+                  href: unity/tutorials/mr-azure-312.md
+                - name: Realidad mixta y Azure (313) servicio IoT Hub
+                  href: unity/tutorials/mr-azure-301.md
     - name: Configurar tu proyecto
       items:
         - name: Introducción a MRTK
