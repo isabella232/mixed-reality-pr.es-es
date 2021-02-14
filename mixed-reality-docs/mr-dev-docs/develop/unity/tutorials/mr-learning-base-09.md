@@ -3,16 +3,16 @@ title: Uso de los comandos de voz
 description: En este curso se muestra cómo configurar, crear y usar los comandos de voz en las aplicaciones de realidad mixta con Mixed Reality Toolkit (MRTK).
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, speech commands, voice input
 ms.localizationpriority: high
-ms.openlocfilehash: c052c3501ab34811f33f1f6464c8394669eebe77
-ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
+ms.openlocfilehash: bb238ee6ca4c657d7e2cb8e3c41f2cdebc7fc0de
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98635453"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590397"
 ---
 # <a name="9-using-speech-commands"></a>9. Uso de los comandos de voz
 
@@ -59,7 +59,7 @@ En Speech (Voz) > sección **Speech Commands** (Comandos de voz), haz clic en el
 
 ## <a name="controlling-speech-commands"></a>Control de los comandos de voz
 
-En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK** > **SDK** > **Features** > **UX** > **Prefabs** > **ToolTip** para buscar los objetos prefabricados de información sobre herramientas:
+En la ventana Project (Proyecto), vaya a la carpeta **Packages** > **Mixed Reality Toolkit Foundation** > **SDK** > **Features** > **UX** > **Prefabs** > **ToolTip** (Paquetes > Mixed Reality Toolkit Foundation > SDK > Características > Experiencia del usuario > Objetos prefabricados > Información sobre herramientas) para buscar los objetos prefabricados de información sobre herramientas:
 
 ![Apertura de la carpeta de información sobre herramientas](images/mr-learning-base/base-09-section3-step1-1.png)
 

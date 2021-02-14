@@ -3,16 +3,16 @@ title: Creación de interfaces de usuario
 description: En este curso se muestra cómo usar Mixed Reality Toolkit (MRTK) para crear interfaces de usuario estáticas y dinámicas.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, prefabs, holograms, tooltips
 ms.localizationpriority: high
-ms.openlocfilehash: 4fe4b016be36e04abffeb415f690cc0c01a6f767
-ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
+ms.openlocfilehash: 3b32faab4be13d42f228659285244c206680466e
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98635557"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590557"
 ---
 # <a name="6-creating-user-interfaces"></a>6. Creación de interfaces de usuario
 
@@ -86,7 +86,7 @@ y el botón **Explode** para activar y desactivar la vista seccionada:
 
 ## <a name="creating-a-dynamic-menu-that-follows-the-user"></a>Creación de un menú dinámico que sigue al usuario
 
-En la ventana Proyecto, vaya a la carpeta **Recursos** > **MRTK** > **SDK** > **Características** > **Experiencia del usuario** > **Prefabs (Elementos prefabricados)**  > **Menús**, haga clic y arrastre el elemento prefabricado **NearMenu4x1** en la ventana Jerarquía, establezca su **posición** de transformación en X = 0, Y = -0.4, Z = 0 y configúrelo de la forma siguiente:
+En la ventana Proyecto, vaya a la carpeta **Packages** > **Mixed Reality Toolkit Foundation** > **SDK** > **Features** > **UXPrefabsMenus (Paquetes > Mixed Reality Toolkit Foundation > SDK > Características > Experiencia del usuario > Objetos prefabricados > Menús), haga clic y arrastre el elemento prefabricado NearMenu4x1 a la ventana Hierarchy (Jerarquía), establezca el valor del campo Position (Posición) del área Transform (Transformación) en X = 0; Y = -0,4; Z = 0 y configúrelo de la forma siguiente:
 
 * Compruebe que el **Tracked Target Type** (Tipo de objetivo de seguimiento) del componente **SolverHandler** esté establecido en **Head** (Cabeza).
 * Marque la casilla junto al componente **RadialView** del solucionador para que esté habilitado de forma predeterminada
@@ -162,7 +162,7 @@ A continuación, configure el componente **TextMeshPro - Text** como se indica a
 
 ## <a name="adding-tooltips"></a>Agregación de información sobre herramientas
 
-En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK** > **SDK** > **Features** > **UX** > **Prefabs** > **ToolTip** para buscar los objetos prefabricados de información sobre herramientas:
+En la ventana Project (Proyecto), vaya a la carpeta **Packages** > **Mixed Reality Toolkit Foundation** > **SDK** > **Features** > **UX** > **Prefabs** > **ToolTip** (Paquetes > Mixed Reality Toolkit Foundation > SDK > Características > Experiencia del usuario > Objetos prefabricados > Información sobre herramientas) para buscar los objetos prefabricados de información sobre herramientas:
 
 ![Ventana Project (Proyecto) de Unity con la carpeta ToolTips seleccionada](images/mr-learning-base/base-06-section4-step1-1.png)
 

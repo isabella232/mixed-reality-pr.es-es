@@ -3,16 +3,16 @@ title: Conexión de varios usuarios
 description: Siga este curso para aprender a conectar a varios usuarios en una aplicación de realidad mixta de HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, multi-user capabilities, Photon, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: 0c6bf0871836ad7aae9c3906b2042f97ae003ebf
-ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
+ms.openlocfilehash: 58ea52332485a3e0ca460322f6af60266b119ede
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98699069"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590197"
 ---
 # <a name="3-connecting-multiple-users"></a>3. Conexión de varios usuarios
 
@@ -69,7 +69,7 @@ En la ventana Inspector, usa el botón **Agregar componente** para agregar el co
 
 ### <a name="2-create-the-avatar"></a>2. Creación del avatar
 
-En la ventana Project (Proyecto), navegue hasta **Assets** (Recursos)  > **MRTK** > **StandardAssets** >  carpeta **Materials** (Materiales) para buscar los materiales de MRTK.
+En la ventana Project (Proyecto), vaya a la carpeta **Packages** > **Mixed Reality Toolkit Foundation** > **SDK** > **StandardAssets** > **Materials** (Paquetes > Mixed Reality Toolkit Foundation > SDK > Recursos estándar > Materiales) para buscar los materiales de MRTK.
 
 Después, en la ventana Jerarquía, haga clic con el botón derecho en el objeto **PhotonUser** y seleccione **Objeto 3D** > **Esfera** para crear un objeto con forma de esfera como elemento secundario del objeto PhotonUser, y configúrelo de la manera siguiente:
 

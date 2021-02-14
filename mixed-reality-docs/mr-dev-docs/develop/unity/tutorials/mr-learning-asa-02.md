@@ -3,16 +3,16 @@ title: Introducción a Azure Spatial Anchors
 description: Siga este curso para aprender a usar Azure Spatial Anchors dentro para anclar objetos en una aplicación de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: 60d4ae99629f0caf7e5cc7e73b05ed35ee3f4ac4
-ms.sourcegitcommit: 3dad2adfdb5bdb8100d8d864f7845e34a3ef912d
+ms.openlocfilehash: a0621403ec3c4d8d0fa6f13672530756bcb6da39
+ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98699225"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99590756"
 ---
 # <a name="2-getting-started-with-azure-spatial-anchors"></a>2. Introducción a Azure Spatial Anchors
 
@@ -58,7 +58,7 @@ Descarga e **importa** los siguientes paquetes personalizados de Unity **en el o
 
 
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage)
-* [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.4.0.unitypackage)
+* [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.5.3/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.5.3.unitypackage)
 
 Después de importar los recursos del tutorial, la ventana Project (Proyecto) debería tener un aspecto similar al siguiente:
 
@@ -68,7 +68,7 @@ Después de importar los recursos del tutorial, la ventana Project (Proyecto) de
 > Si ve que las advertencias de CS0618 con respecto a "WorldAnchor.SetNativeSpatialAnchorPtr(IntPtr)" están en desuso, puede omitir estas advertencias.
 
 > [!TIP]
-> Para obtener un recordatorio sobre cómo importar un paquete personalizado de Unity, consulte las instrucciones del artículo [Importación de Mixed Reality Toolkit](mr-learning-base-02.md#importing-the-mixed-reality-toolkit).
+> Para repasar cómo se importa un paquete personalizado de Unity, consulte las instrucciones de [Importación de los recursos del tutorial](mr-learning-base-04.md#importing-the-tutorial-assets).
 
 ## <a name="preparing-the-scene"></a>Preparación de la escena
 
@@ -140,6 +140,7 @@ En la ventana Hierarchy (Jerarquía), seleccione el objeto **ParentAnchor** y, e
 
 * En el campo **Spatial Anchors Account ID** (Id. de la cuenta de Spatial Anchors), pega el valor **Id. de cuenta** de la cuenta de Azure Spatial Anchors.
 * En el campo **Spatial Anchors Account ID** (Id. de la cuenta de Spatial Anchors), pega la **clave de acceso** primaria o secundaria de la cuenta de Azure Spatial Anchors.
+* En el campo **Spatial Anchors Account Domain** (Dominio de la cuenta de Spatial Anchors), pegue el valor de **Account Domain** (Dominio de cuenta) de la cuenta de Azure Spatial Anchors.
 
 ![Unity con Spatial Anchor Manager (Administrador de anclaje espacial) configurado](images/mr-learning-asa/asa-02-section6-step1-1.png)
 

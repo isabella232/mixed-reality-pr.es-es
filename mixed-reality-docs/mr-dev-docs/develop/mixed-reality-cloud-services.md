@@ -8,12 +8,12 @@ ms.date: 12/9/2020
 ms.topic: overview
 ms.localizationpriority: high
 keywords: Mixed Reality, develop, development, HoloLens, cloud services, Azure, remote rendering, spatial anchors, cognitive services, cognition, unity, machine learning, speech translation, computer vision, Microsoft Graph
-ms.openlocfilehash: e4ddfd5951945cc6a5bc9d7b71cad86a296fe725
-ms.sourcegitcommit: cd2987467044fde1e2eb227e6c25d00e744aabfc
+ms.openlocfilehash: abd1515b587842dbccb1747b606059e190559480
+ms.sourcegitcommit: 07d6a5c19c9f6ffd0316bce5629ab0e185e1d542
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "98923815"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99973075"
 ---
 # <a name="azure-mixed-reality-cloud-services-overview"></a>Introducción a los servicios en la nube de realidad mixta de Azure
 
@@ -47,9 +47,9 @@ Como ventaja adicional, ARR no restringe el tipo de interfaz de usuario que pued
 
 ### <a name="azure-spatial-anchors"></a>Azure Spatial Anchors
 
-[Azure Spatial Anchors](https://docs.microsoft.com /azure/spatial-anchors/) o ASA es un servicio multiplataforma que le permite crear aplicaciones de realidad mixta con reconocimiento espacial. Con Azure Spatial Anchors, puede asignar, conservar y compartir contenido holográfico en varios dispositivos a escala real. 
+[Azure Spatial Anchors](https://docs.microsoft.com /azure/spatial-anchors/) es un servicio multiplataforma que permite crear aplicaciones de realidad mixta con reconocimiento espacial. Con Azure Spatial Anchors, puede asignar, conservar y compartir contenido holográfico en varios dispositivos a escala real. 
 
-ASA es una solución adaptada de forma exclusiva para casos de uso comunes en la realidad mixta, incluidos:
+Azure Spatial Anchors es una solución especialmente adaptada a casos de uso comunes de realidad mixta, entre otros:
 * **Orientación**: en que dos o más anclajes espaciales podrían conectarse para crear una lista de tareas o puntos de interés con los que un usuario debe interactuar.
 * **Experiencias de varios usuarios**: En que los usuarios pueden hacer o deshacer movimientos al interactuar con los objetos del mismo espacio virtual.
 * **Conservación del contenido virtual en el mundo real**: en que los usuarios podrían colocar objetos virtuales en el mundo real que se puedan ver desde otros dispositivos compatibles.

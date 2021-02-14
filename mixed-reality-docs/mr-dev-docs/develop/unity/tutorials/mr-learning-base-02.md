@@ -3,16 +3,16 @@ title: Inicialización de su proyecto e implementación de su primera aplicació
 description: En este curso se muestra cómo configurar un proyecto de Unity para Mixed Reality Toolkit (MRTK) y cómo implementarlo en HoloLens 2.
 author: jessemcculloch
 ms.author: jemccull
-ms.date: 07/01/2020
+ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, TextMeshPro,
 ms.localizationpriority: high
-ms.openlocfilehash: ff479df81316ab5ceeabf045ad1bbae007190ed4
-ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
+ms.openlocfilehash: 82551257339d41940075ee06a6e6937624b83900
+ms.sourcegitcommit: 08503cada8a29a34bcbd9fd955cb23adfe9b60a4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99238149"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99627856"
 ---
 # <a name="2-initializing-your-project-and-deploying-your-first-application"></a>2. Inicialización de su proyecto e implementación de su primera aplicación
 
@@ -86,27 +86,46 @@ En la ventana Import Unity Package (Importar paquete de Unity), haz clic en el b
 
 ## <a name="importing-the-mixed-reality-toolkit"></a>Importación de Mixed Reality Toolkit
 
-### <a name="using-the-mixed-reality-feature-tool"></a>Uso de la herramienta de características de Mixed Reality
+Para importar Mixed Reality Toolkit en el proyecto de Unity, habrá que usar la herramienta [Mixed Reality Feature Tool](https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool), que permite a los desarrolladores detectar, actualizar y agregar paquetes de características de Mixed Reality a proyectos de Unity. Puede buscar paquetes por nombre o categoría, consultar sus dependencias e incluso ver los cambios propuestos en el archivo de manifiesto de sus proyectos antes de realizar la importación.
 
-Para instalar MRTK con la nueva herramienta de características de Mixed Reality, siga las [instrucciones de instalación y uso](../welcome-to-mr-feature-tool.md) y seleccione el paquete **Mixed Reality Toolkit Foundation** en la categoría de Mixed Reality Toolkit.
+Descargue la versión más reciente de la herramienta Mixed Reality Feature Tool del [Centro de descarga de Microsoft](https://aka.ms/MRFeatureTool). Cuando finalice la descarga, descomprima el archivo y guárdelo en el escritorio.
 
-### <a name="using-unity-packages"></a>Uso de paquetes de Unity
+> [!NOTE]
+> Para que pueda ejecutar la herramienta, instale el [entorno de ejecución de .NET 5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
 
-Para instalar MRTK con un paquete personalizado, haga lo siguiente:
+> [!NOTE]
+> La herramienta Mixed Reality Feature Tool solo se puede ejecutar en Windows. En el caso de MacOS, siga este [procedimiento](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html#1-get-the-latest-mrtk-unity-packages) para descargar e importar Mixed Reality Toolkit en el proyecto de Unity.
 
-* [Microsoft.MixedReality.Toolkit.Unity.Foundation.2.5.1.unitypackage](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/download/v2.5.1/Microsoft.MixedReality.Toolkit.Unity.Foundation.2.5.1.unitypackage)
+Abra el archivo ejecutable, **MixedRealityFeatureTool**, que se encuentra en la carpeta descargada, para iniciar la herramienta Mixed Reality Feature Tool.  
 
-En el menú de Unity, selecciona **Assets** > **Import Package** > **Custom Package...** (Recursos > Importar paquete > Paquete personalizado...) para abrir la ventana Import package... (Importar paquete...):
+![Abrir MixedRealityFeatureTool](images/mr-learning-base/base-02-section4-step1-1.png)
 
-![Ruta de menú Import Custom Package… (Importar paquete personalizado…) de Unity](images/mr-learning-base/base-02-section4-step1-1.png)
+Una vez que **MixedRealityFeatureTool** se haya abierto, haga clic en Start (Iniciar) para empezar a usar la herramienta Mixed Reality Feature Tool.
 
-En la ventana Import package... (Importar paquete...), seleccione el paquete **Microsoft.MixedReality.Toolkit.Unity.Foundation.2.5.1.unitypackage** que descargó y haga clic en el botón **Open** (Abrir):
+![MixedRealityFeatureTool](images/mr-learning-base/base-02-section4-step1-2.png)
 
-![Import Custom Package (Importar paquete personalizado) de Unity con la ventana de mensajes Open (Abrir)](images/mr-learning-base/base-02-section4-step1-2.png)
+Para facilitar la búsqueda de elementos, las características se agrupan por categoría. Haga clic en la lista desplegable **Mixed Reality Toolkit** para buscar los paquetes relacionados con Mixed Reality Toolkit.
 
-En la ventana Import Unity Package (Importar paquete de Unity), haz clic en el botón **All** (Todos) para asegurarte de que todos los recursos están seleccionados y, a continuación, haz clic en el botón **Import** (Importar) para importar los recursos:
+![Ventana de MixedRealityFeatureTool](images/mr-learning-base/base-02-section4-step1-3.png)
 
-![Ventana de importación de Unity MRTK Foundation](images/mr-learning-base/base-02-section4-step1-3.png)
+Seleccione **Mixed Reality Toolkit Foundation** y haga clic en la lista desplegable que aparece junto a ella para seleccionar la versión de MRTK requerida. Para esta serie de tutoriales, seleccione **2.5.3**. Después, haga clic en el botón **Get Features** (Obtener características) para descargar los paquetes seleccionados.
+
+![Seleccionar Mixed Reality Toolkit Foundation](images/mr-learning-base/base-02-section4-step1-4.png)
+
+El paquete seleccionado, **Mixed Reality Toolkit Foundation 2.5.3**, se muestra junto con su paquete de dependencias, **Mixed Reality Toolkit Standard Assets 2.5.3** en la ventana **Import Features** (Importar características).
+
+También debe establecer la ubicación del proyecto de Unity de destino para proporcionar el valor apropiado en **Project path** (Ruta de acceso del proyecto). Haga clic en los **tres puntos** que encontrará al lado del campo Project path (Ruta de acceso del proyecto) y vaya a la carpeta del proyecto en el explorador, por ejemplo _D:\MixedRealityLearning\MRTK Tutorials_.
+
+> [!NOTE]
+> El cuadro de diálogo que se muestra al buscar la carpeta del proyecto de Unity contiene "_" como nombre de archivo. Debe escribir un valor en el nombre de archivo para que pueda seleccionarse la carpeta.
+
+A continuación, haga clic en el botón **Validate** (Validar) para validar el paquete seleccionado y aparecerá un cuadro emergente con el mensaje **No validation issues were detected** (No se detectaron problemas de validación). Haga clic en **Ok** (Aceptar) para cerrar el elemento emergente y haga clic en el botón **Import** (Importar).
+
+![Validar Mixed Reality Toolkit Foundation](images/mr-learning-base/base-02-section4-step1-5.png)
+
+Haga clic en el botón **Approve** (Aprobar) para agregar **Mixed Reality Toolkit** al proyecto.
+
+![Aprobar Mixed Reality Toolkit Foundation](images/mr-learning-base/base-02-section4-step1-6.png)
 
 ## <a name="configuring-the-unity-project"></a>Configuración del proyecto de Unity
 
@@ -130,28 +149,18 @@ En la ventana MRTK Project Configurator (Configurador del proyecto de MRTK), exp
 
 En el menú de Unity, selecciona **Edit** > **Project Settings...** (Editar > Configuración del proyecto...) para abrir la ventana de configuración del proyecto:
 
-![Ruta del menú Project Settings… (Configuración del proyecto…) de Unity](images/mr-learning-base/base-02-section5-step2-1.png)
-
-En la ventana Configuración del proyecto, seleccione **XR Plug-in Management** > **Instalar XR Plug-in Management** para instalar XR Plug-in Management:
-
-![Configuración del proyecto con XR Plugin Management seleccionado](images/mr-learning-base/base-02-section5-step2-2.png)
-
-Después de que Unity haya terminado de instalar XR Plug-in Management. Asegúrese de estar en la configuración de la Plataforma universal de Windows y active Initialize XR on Startup (Inicializar XR al inicio).
-
-![Configuración de XR Plug-in Management en Unity](images/mr-learning-base/base-02-section5-step2-3.png)
-
-En la ventana Project Settings (Configuración del proyecto), seleccione **Player** > **XR Settings** (Reproductor > Configuración de XR), haga clic en el icono **+** y seleccione Windows Mixed Reality para agregar el SDK de Windows Mixed Reality:
+En la ventana Project Settings (Configuración del proyecto), seleccione **Player** > **XR Settings** (Reproductor > Configuración de XR) y la casilla **Virtual Reality Supported** (Compatibilidad con realidad virtual); haga clic en el icono **+** y, después, seleccione Windows Mixed Reality para agregar el SDK de Windows Mixed Reality:
 
 ![XR Settings (Configuración de XR) de Unity con la opción para agregar el SDK de Windows Mixed Reality seleccionada](images/mr-learning-base/base-02-section5-step2-4.png)
 
-Una vez que Unity haya terminado de importar el SDK de Windows Mixed Reality, debe volver a aparecer la ventana MRTK Project Configurator (Configurador del proyecto de MRTK). Si no es así, use el menú de Unity para abrirla.
+Una vez que Unity haya terminado de importar el SDK de Windows Mixed Reality, debe volver a aparecer la ventana MRTK Project Configurator (Configurador del proyecto de MRTK). Si no aparece, puede abrirlo de forma manual desde el menú Unity seleccionando la opción **Mixed Reality Toolkit** > **Utilities** > **Configure Unity Project** (Mixed Reality Toolkit > Utilidades > Configurar proyecto de Unity)
 
 En la ventana MRTK Project Configurator (Configurador del proyecto de MRTK), use la lista desplegable **Audio spatializer** (Espacializador de audio) para seleccionar **MS HRTF Spatializer** (Espacializador de audio MS HRTF) y, a continuación, haga clic en el botón **Apply** (Aplicar) para aplicar la configuración:
 
-![Ventana del configurador del proyecto MRTK con la propiedad Audio spatializer (Espacializador de audio) resaltada](images/mr-learning-base/base-02-section5-step2-5.png)
+![XR Settings (Configuración de XR) de Unity con la opción para agregar el SDK de Windows Mixed Reality seleccionada](images/mr-learning-base/base-02-section5-step2-5.png)
 
 > [!TIP]
->La definición de la propiedad Audio spatializer (Espacializador de audio) es opcional, pero puede mejorar la experiencia de audio en el proyecto. Si la establece en MS HRTF Spatializer (Espacializador de audio MS HRTF), este complemento de espacializador se usará cuando la propiedad AudioSource.spatial de Unity esté habilitada. Para obtener más información sobre este tema, puede consultar los <a href="https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/unity-spatial-audio-ch1" target="_blank">tutoriales de audio espacial</a>.
+>La definición de la propiedad Audio spatializer (Espacializador de audio) es opcional, pero puede mejorar la experiencia de audio en el proyecto. Si la establece en MS HRTF Spatializer (Espacializador de audio MS HRTF), este complemento de espacializador se usará cuando la propiedad AudioSource.spatial de Unity esté habilitada. Para obtener más información sobre este tema, puede consultar los <a href="https://docs.microsoft.com/en-us/windows/mixed-reality/develop/unity/tutorials/unity-spatial-audio-ch1" target="_blank">tutoriales de audio espacial</a>.
 
 En la ventana Project Settings (Configuración del proyecto), seleccione **Player** > **XR Settings** (Reproductor > Configuración de XR) y, a continuación, use la lista desplegable **Depth Format** (Formato de profundidad) para seleccionar **16-bit depth** (Profundidad de 16 bits):
 

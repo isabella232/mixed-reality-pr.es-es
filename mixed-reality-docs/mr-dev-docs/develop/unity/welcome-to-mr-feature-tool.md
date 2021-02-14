@@ -7,12 +7,12 @@ ms.date: 01/27/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: up-to-date, tools, get started, basics, unity, visual studio, toolkit, mixed reality headset, windows mixed reality headset, virtual reality headset, installation, Windows, HoloLens, emulator, unreal, openxr
-ms.openlocfilehash: b9d54edb251cfe22d4f5fbea6fa8c923f6ff2d69
-ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
+ms.openlocfilehash: 0aad81ddd625467dd9159232d590b1a4bf68d06b
+ms.sourcegitcommit: d9f87635c87627adba7db37834e4627c149f9a28
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99244070"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570258"
 ---
 # <a name="welcome-to-the-mixed-reality-feature-tool"></a>Le damos la bienvenida a la herramienta de características de Mixed Reality
 
@@ -33,9 +33,11 @@ Para que pueda ejecutar la herramienta de característica de Mixed Reality, nece
 > [!NOTE]
 > Actualmente, la herramienta de características de Mixed Reality solo se ejecuta en Windows, pero pronto estará disponible la compatibilidad con MacOS.
 
+## <a name="download"></a>Descargar 
+
 Una vez configurado el entorno, haga lo siguiente:
 
-* Descargue la última versión de la herramienta de características de Mixed Reality del [Centro de descargas de Microsoft](https://aka.ms/MRFeatureTool).
+* [Descargue la última versión de la herramienta Mixed Reality Feature Tool](https://aka.ms/MRFeatureTool) del Centro de descarga de Microsoft.
 * Una vez finalizada la descarga, descomprima el archivo y guárdelo en el escritorio.
     * Se recomienda crear un acceso directo al archivo ejecutable para obtener un acceso más rápido.
 
