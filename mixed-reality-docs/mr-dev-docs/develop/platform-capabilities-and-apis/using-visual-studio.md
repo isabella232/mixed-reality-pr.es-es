@@ -7,12 +7,12 @@ ms.date: 04/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, realidad mixta, depurar, implementar
-ms.openlocfilehash: c4ffe3a426ad82c324efef20639cf836f16a7f63
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 2ab89311163a48ee3c14511446a1498ce883a232
+ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583618"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100496102"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Uso de Visual Studio para implementaciones y depuraciones
 
@@ -22,7 +22,8 @@ Tanto si usa DirectX como Unity para desarrollar su aplicación de realidad mixt
 * Depurar aplicaciones de realidad mixta.
 
 ## <a name="prerequisites"></a>Requisitos previos
-1. Consulta [Instalar las herramientas](../../develop/install-the-tools.md) para obtener instrucciones de instalación.
+
+1. Consulta [Instalar las herramientas](../../develop/install-the-tools.md#installation-checklist) para obtener instrucciones de instalación.
 2. Crea un proyecto de aplicación universal de Windows en Visual Studio.  Para HoloLens (1.ª generación), usa Visual Studio 2017 o una versión más reciente.  Para Hololens 2, use Visual Studio 2019 16.2 o una versión más reciente. Se admiten los lenguajes C# y C++. (También puedes seguir las instrucciones para [crear una aplicación en Unity](../../develop/unity/tutorials/holograms-100.md)).
 
 ## <a name="enabling-developer-mode"></a>Habilitar el modo de desarrollador
@@ -30,12 +31,13 @@ Tanto si usa DirectX como Unity para desarrollar su aplicación de realidad mixt
 Para empezar, habilita el **Modo de desarrollador** en tu dispositivo, para que Visual Studio pueda conectarse a él.
 
 ### <a name="hololens"></a>HoloLens
+
 1. Enciende tu HoloLens y colócate el dispositivo.
 2. Realice el [gesto de inicio](../../design/system-gesture.md) para iniciar el menú principal.
 3. Selecciona el icono **Configuración** para iniciar la aplicación en tu entorno.
 4. Selecciona el elemento de menú **Actualizar**.
 5. Selecciona el elemento de menú **Para desarrolladores**.
-6. Habilite el **Modo de desarrollador** para [implementar aplicaciones de Visual Studio](using-visual-studio.md) en HoloLens.
+6. Habilite el **Modo de desarrollador** para implementar aplicaciones de Visual Studio en HoloLens.
 7. Opcional: Desplácese hacia abajo y habilite el **Portal de dispositivos**, que le permitirá conectarse al [Portal de dispositivos Windows](using-the-windows-device-portal.md) en HoloLens desde un explorador web.
 
 ### <a name="windows-pc"></a>Equipo Windows
@@ -46,61 +48,99 @@ Si trabaja con un casco de Windows Mixed Reality conectado al equipo, debe habil
 3. Selecciona **Para desarrolladores**.
 4. Habilite el **Modo de desarrollador**, lea el aviso de declinación de responsabilidades para la configuración elegida y, a continuación, haga clic en Sí para aceptar el cambio.
 
-## <a name="deploying-an-app-over-wi-fi---hololens-1st-gen"></a>Implementación de una aplicación a través de Wi-Fi: HoloLens (1.ª generación)
-1. Selecciona una configuración de compilación **x86** para tu aplicación.</br>
-![Configuración de compilación x86 en Visual Studio](images/x86setting.png)</br>
-2. Selecciona **Máquina remota** en el menú desplegable de destino de la implementación.</br>
-![Destino de implementación de la máquina remota en Visual Studio](images/remotemachinesetting.png)</br>
-3. Para proyectos de C++ y JavaScript, ve a **Proyecto > Propiedades > Propiedades de configuración > Depuración**. Para proyectos de C#, aparecerá automáticamente un cuadro de diálogo para configurar tu conexión.
-  a. Escribe la dirección IP del dispositivo en el campo **Dirección** o **Nombre de la máquina**. Busca la dirección IP de tu HoloLens en **Configuración > Red e Internet > Opciones avanzadas**, o puedes pedirle a Cortana "¿Cuál es mi dirección IP?"
-  b. Establece el modo de autenticación en **Universal (protocolo sin cifrar)** .</br>
-  ![Cuadro de diálogo de conexión remota en Visual Studio](images/remotedeploy.png)</br>
-4. Selecciona **Depuración > Iniciar depuración** para implementar tu aplicación e iniciar la depuración.</br>
-![Iniciar sin depuración en Visual Studio](images/deploywithdebugging.png)</br>
-5. La primera vez que implemente una aplicación en HoloLens desde el equipo, deberá escribir un PIN. Sigue las instrucciones de la sección **Emparejamiento del dispositivo** que hay a continuación.
+## <a name="deploying-a-hololens-app-over-wi-fi"></a>Implementación de una aplicación de HoloLens a través de Wi-Fi 
 
-## <a name="deploying-an-app-over-wi-fi---hololens-2"></a>Implementación de una aplicación a través de Wi-Fi: HoloLens 2
-1. Selecciona una configuración de compilación **ARM** o **ARM64** para tu aplicación.</br>
-![Configuración de compilación ARM64 en Visual Studio](images/arm64setting.png)</br>
-2. Selecciona **Máquina remota** en el menú desplegable de destino de la implementación.</br>
-![Destino de implementación de la máquina remota en Visual Studio](images/remotemachinesetting_arm64.png)</br>
-3. Para proyectos de C++ y JavaScript, ve a **Proyecto > Propiedades > Propiedades de configuración > Depuración**. Para proyectos de C#, aparecerá automáticamente un cuadro de diálogo para configurar tu conexión.
-  a. Escribe la dirección IP del dispositivo en el campo **Dirección** o **Nombre de la máquina**. Busca la dirección IP de tu HoloLens en **Configuración > Red e Internet > Opciones avanzadas**, o puedes pedirle a Cortana "¿Cuál es mi dirección IP?"
-  b. Establece el modo de autenticación en **Universal (protocolo sin cifrar)** .</br>
-  ![Cuadro de diálogo de conexión remota en Visual Studio](images/remotedeploy.png)</br>
-4. Selecciona **Depuración > Iniciar depuración** para implementar tu aplicación e iniciar la depuración.</br>
-![Iniciar sin depuración en Visual Studio](images/deploywithdebugging.png)</br>
-5. La primera vez que implemente una aplicación en HoloLens desde el equipo, deberá escribir un PIN. Sigue las instrucciones de la sección **Emparejamiento del dispositivo** que hay a continuación.
+Configure el proyecto de Visual Studio con las siguientes propiedades:
 
-Si cambia la dirección IP de tu HoloLens, puedes cambiar la dirección IP de la máquina de destino. Para ello, ve a **Proyecto > Propiedades > Propiedades de configuración > Depuración**.
+1. Seleccione las opciones de compilación de las aplicaciones:
+    * En el caso de los proyectos de Unity, elija **Versión** o **Maestro**. 
+    * Para todos los demás proyectos, elija **Versión**.
 
-## <a name="deploying-an-app-over-usb---hololens-1st-gen"></a>Implementar una aplicación a través de USB: HoloLens (1.ª generación)
-1. Selecciona una configuración de compilación **x86** para tu aplicación.</br>
-![Configuración de compilación x86 en Visual Studio](images/x86setting.png)</br>
-2. Selecciona **Dispositivo** en el menú desplegable de destino de la implementación.</br>
-![Implementación de dispositivos en Visual Studio](images/buildsettingsusbdeploy.png)</br>
-3. Selecciona **Depuración > Iniciar depuración** para implementar tu aplicación e iniciar la depuración.</br>
-![Iniciar sin depuración en Visual Studio](images/deploywithdebugging.png)</br>
+> [!NOTE]
+> Puede encontrar definiciones completas para cada opción de compilación en [Exportación y creación de soluciones de Visual Studio](../unity/exporting-and-building-a-unity-visual-studio-solution.md#building-and-deploying-a-unity-visual-studio-solution).
+
+2. Seleccione la configuración de compilación en función del dispositivo:
+
+[!INCLUDE[](includes/vs-wifi-hl-include.md)]
+
+3. Selecciona **Máquina remota** en el menú desplegable de destino de la implementación.
+
+![Destino de implementación de la máquina remota en Visual Studio](images/remotemachinesetting_arm64.png)
+
+A continuación, debe establecer la conexión remota. Para proyectos de C++ y JavaScript, ve a **Proyecto > Propiedades > Propiedades de configuración > Depuración**. Si está trabajando en un proyecto de C#, debe aparecer automáticamente un cuadro de diálogo.
+
+> [!NOTE]
+> Si el cuadro de diálogo de conexión remota no aparece en el proyecto de C#, puede abrirlo manualmente desde **Propiedades > Depurar**.
+
+1. Escribe la dirección IP del dispositivo en el campo **Dirección** o **Nombre de la máquina**. 
+    * Puede encontrar la dirección IP de su dispositivo HoloLens en **Configuración > Red e Internet > Opciones avanzadas**.
+    * Siempre se recomienda especificar manualmente la dirección IP en lugar de depender de la característica Detección automática.
+
+2. Establezca **Modo de autenticación** en **Universal (protocolo sin cifrar)** .
+
+  ![Cuadro de diálogo de conexión remota en Visual Studio](images/remotedeploy.png)
+
+3. Compile, implemente y depure la aplicación en función de sus necesidades:
+    * Selecciona **Depuración > Iniciar depuración** para implementar tu aplicación e iniciar la depuración.
+    * Seleccione **Compilar > Implementar** para compilarla e implementarla sin depuración.
+
+![Iniciar sin depuración en Visual Studio](images/deploywithdebugging.png)
+
 4. La primera vez que implemente una aplicación en HoloLens desde el equipo, deberá escribir un PIN. Sigue las instrucciones de la sección **Emparejamiento del dispositivo** que hay a continuación.
 
-## <a name="deploying-an-app-over-usb---hololens-2"></a>Implementación de una aplicación a través de USB: HoloLens 2
+## <a name="deploying-a-hololens-app-over-usb"></a>Implementación de una aplicación de HoloLens a través de USB 
+
+<br>
 
 >[!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Deploying-your-HoloLens-2-application/player?format=ny]
 
-1. Selecciona una configuración de compilación **ARM** o **ARM64** para tu aplicación.</br>
-![Configuración de compilación ARM64 en Visual Studio](images/arm64setting.png)</br>
-2. Selecciona **Dispositivo** en el menú desplegable de destino de la implementación.</br>
-![Implementación de dispositivos en Visual Studio](images/buildsettingsusbdeploy_arm64.png)</br>
-3. Selecciona **Depuración > Iniciar depuración** para implementar tu aplicación e iniciar la depuración.</br>
-![Iniciar sin depuración en Visual Studio](images/deploywithdebugging.png)</br>
-4. La primera vez que implemente una aplicación en HoloLens desde el equipo, deberá escribir un PIN. Sigue las instrucciones de la sección **Emparejamiento del dispositivo** que hay a continuación.
+1. Seleccione las opciones de compilación de las aplicaciones:
+    * En el caso de los proyectos de Unity, elija **Versión** o **Maestro**. 
+    * Para todos los demás proyectos, elija **Versión**.
 
-## <a name="deploying-an-app-to-your-local-pc---immersive-headset"></a>Implementación de una aplicación en tu equipo local: casco envolvente
+> [!NOTE]
+> Puede encontrar definiciones completas para cada opción de compilación en [Exportación y creación de soluciones de Visual Studio](../unity/exporting-and-building-a-unity-visual-studio-solution.md#building-and-deploying-a-unity-visual-studio-solution).
+
+2. Seleccione la configuración de compilación en función del dispositivo:
+
+[!INCLUDE[](includes/vs-wifi-hl-include.md)]
+
+3. Selecciona **Dispositivo** en el menú desplegable de destino de la implementación.
+
+![Implementación de dispositivos en Visual Studio](images/buildsettingsusbdeploy_arm64.png)
+
+4. Compile, implemente y depure la aplicación en función de sus necesidades:
+    * Selecciona **Depuración > Iniciar depuración** para implementar tu aplicación e iniciar la depuración.
+    * Seleccione **Compilar > Implementar** para compilarla e implementarla sin depuración.
+
+![Iniciar sin depuración en Visual Studio](images/deploywithdebugging.png)</br>
+
+5. La primera vez que implemente una aplicación en HoloLens desde el equipo, deberá escribir un PIN. Sigue las instrucciones de la sección **Emparejamiento del dispositivo** que hay a continuación.
+
+> [!NOTE]
+> Si observa un tiempo de retardo considerable en la implementación de aplicaciones a través de USB, se recomienda usar las [instrucciones para la máquina remota](#deploying-a-hololens-app-over-wi-fi) de la sección anterior.
+
+## <a name="deploying-an-app-to-the-hololens-emulator"></a>Implementación de una aplicación en el emulador de HoloLens
+
+1. Asegúrese de haber **[instalado el emulador de HoloLens 2 o HoloLens (1.ª generación)](../install-the-tools.md#installation-checklist)**
+2. Seleccione la configuración de compilación y el emulador en función del dispositivo:
+
+[!INCLUDE[](includes/vs-wifi-hl-include.md)]
+
+3. Compile, implemente y depure la aplicación en función de sus necesidades:
+    * Selecciona **Depuración > Iniciar depuración** para implementar tu aplicación e iniciar la depuración.
+    * Seleccione **Compilar > Implementar** para compilarla e implementarla sin depuración.
+
+![Iniciar sin depuración en Visual Studio](images/deploywithdebugging.png)
+
+## <a name="deploying-a-vr-app-to-your-local-pc"></a>Implementación de una aplicación de VR en el equipo local 
 
 A la hora de usar un casco envolvente de Windows Mixed Reality que se conecte al equipo o al [simulador de Mixed Reality](using-the-windows-mixed-reality-simulator.md):
 1. Selecciona una configuración de compilación **x86** o **x64** para tu aplicación.
 2. Selecciona **Máquina local** en el menú desplegable de destino de la implementación.
-3. Selecciona **Depuración > Iniciar depuración** para implementar tu aplicación e iniciar la depuración.
+3. Compile, implemente y depure la aplicación en función de sus necesidades:
+    * Selecciona **Depuración > Iniciar depuración** para implementar tu aplicación e iniciar la depuración.
+    * Seleccione **Compilar > Implementar** para compilarla e implementarla sin depuración.
 
 ## <a name="pairing-your-device"></a>Emparejamiento del dispositivo
 
@@ -108,24 +148,6 @@ La primera vez que implemente una aplicación desde Visual Studio en HoloLens, 
 
 Para desemparejar HoloLens de todos los equipos emparejados:
 * Inicie la aplicación de **Configuración**, vaya a **Actualizar > Para desarrolladores** y pulse **Borrar**.
-
-## <a name="deploying-an-app-to-the-hololens-1st-gen-emulator"></a>Implementación de una aplicación en el emulador de HoloLens (1.ª generación)
-1. Asegúrese de que tiene **[instalado el emulador de HoloLens](../install-the-tools.md)** .
-2. Selecciona una configuración de compilación **x86** para tu aplicación.</br>
-![Configuración de compilación x86 en Visual Studio](images/x86setting.png)</br>
-3. Selecciona **Emulador de HoloLens** en el menú desplegable de destino de la implementación.</br>
-![Destino del emulador en Visual Studio](images/deployemulator.png)</br>
-4. Selecciona **Depuración > Iniciar depuración** para implementar tu aplicación e iniciar la depuración.</br>
-![Iniciar sin depuración en Visual Studio](images/deploywithdebugging.png)</br>
-
-## <a name="deploying-an-app-to-the-hololens-2-emulator"></a>Implementación de una aplicación en el emulador de HoloLens 2
-1. Asegúrese de que tiene **[instalado el emulador de HoloLens](../install-the-tools.md)** .
-2. Selecciona una configuración de compilación **x86** o **x64** para tu aplicación.</br>
-![Configuración de compilación x86 en Visual Studio](images/x86setting.png)</br>
-3. Selecciona **Emulador de HoloLens 2** en el menú desplegable de destino de la implementación.</br>
-![Destino del emulador en Visual Studio](images/deployemulator2.png)</br>
-4. Selecciona **Depuración > Iniciar depuración** para implementar tu aplicación e iniciar la depuración.</br>
-![Iniciar sin depuración en Visual Studio](images/deploywithdebugging.png)</br>
 
 ## <a name="graphics-debugger-for-hololens-1st-gen"></a>Depurador de gráficos para HoloLens (1.ª generación)
 
