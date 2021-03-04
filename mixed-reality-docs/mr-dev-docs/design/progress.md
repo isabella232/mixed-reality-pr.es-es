@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, controles, IU, experiencia de usuario, indicador de progreso, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 489f4bd9fea31126f936673db7acafeab27d9cd9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: f323559c9a50a6f01636f0aba0bddc93b547125b
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009465"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759851"
 ---
 # <a name="progress-indicator"></a>Indicador de progreso
 
@@ -81,6 +81,7 @@ Es importante proporcionar información de usuario sobre lo que está ocurriendo
 ---
 
 ## <a name="best-practices"></a>Procedimientos recomendados
+
 * Encadenar estrechamente la [cartelera o etiqueta, junto](billboarding-and-tag-along.md) con la presentación de progreso, ya que el usuario puede trasladar fácilmente el encabezado a un espacio vacío y perder el contexto. La aplicación podría parecerse a que se ha bloqueado si el usuario no puede ver nada. La cartelera y el etiquetado están integrados en el recurso prefabricado de progreso.
 * Siempre es conveniente proporcionar información de estado sobre lo que está ocurriendo al usuario. El recurso prefabricado de progreso proporciona varios estilos visuales, incluido el progreso de tipo anillo estándar de Windows para proporcionar el estado. También puede usar una malla personalizada con una animación si desea que el estilo del progreso se alinee con la marca de la aplicación.
 
@@ -91,7 +92,7 @@ Es importante proporcionar información de usuario sobre lo que está ocurriendo
 ## <a name="progress-indicator-in-mrtk-mixed-reality-toolkit-for-unity"></a>Indicador de progreso en MRTK (kit de herramientas de realidad mixta) para Unity
 
 * [MRTK: indicador de progreso Prefabs](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MRTK/SDK/Features/UX/Prefabs/ProgressIndicators)
-* [MRTK: servicio de transición de escenas](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Extensions/SceneTransitionService/SceneTransitionServiceOverview.html)
+* [MRTK: servicio de transición de escenas](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/extensions/scene-transition-service.md)
 
 
 <br>

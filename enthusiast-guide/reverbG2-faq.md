@@ -7,12 +7,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, solución de problemas, errores, ayuda, soporte técnico, rendimiento
 appliesto:
 - Windows 10
-ms.openlocfilehash: 60854785d526c7abff6327ddbb8d39d4eef23ae4
-ms.sourcegitcommit: c904d47ab2ce03d433d5eff394ec4078f404a0f7
+ms.openlocfilehash: 9b477042ebed33600a007778cd534d3074e34770
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98242545"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759290"
 ---
 # <a name="hp-reverb-g2-frequently-asked-questions"></a>Preguntas más frecuentes de la reverberación de HP G2
 
@@ -102,3 +102,8 @@ Compruebe que el cable conectado al casco esté completamente colocado. Hay un p
 ## <a name="how-can-i-power-down-the-headset-while-still-using-my-pc"></a>¿Cómo puedo apagar el casco mientras sigue usando mi PC?
 
 Desconecte el adaptador de conexión AC del cuadro de vínculo del cable de auricular para quitar la alimentación del casco.
+
+## <a name="the-image-of-the-displays-of-the-reverb-g2-is-smaller-and-only-in-the-upper-left"></a>La imagen de las pantallas de la reverberación G2 es más pequeña y solo en la parte superior izquierda
+
+Si tiene una GPU de energía AMD, deberá deshabilitar el escalado automático. Mientras está conectado el casco, vaya a configuración-> > de realidad mixta-> la resolución.
+En el menú desplegable, seleccione la opción "4320 x 2160 (calidad óptima)". Cuando está seleccionada la opción "escalado automático (mejor rendimiento)", puede experimentar el problema con la pantalla.

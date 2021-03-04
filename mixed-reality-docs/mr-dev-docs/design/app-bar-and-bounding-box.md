@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, barra de aplicaciones, cuadro de límite, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 0f94aa3842afbfbd544716b801c7cb88d7be3abc
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: aba2e318439fec2bbb9e986c2ff7cac7a8a5fb3a
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847653"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759441"
 ---
 # <a name="bounding-box-and-app-bar"></a>Cuadro de límite y barra de la aplicación
 ![El límite es la interfaz estándar para la manipulación de objetos en la realidad mixta.](images/UX_Hero_BoundingBox.jpg)<br>
@@ -95,7 +95,7 @@ La barra de la aplicación es un menú de nivel de objeto, que contiene una seri
 ## <a name="bounding-box-in-mrtk-mixed-reality-toolkit-for-unity"></a>Cuadro de límite en MRTK (kit de herramientas de realidad mixta) para Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona scripts y Prefabs para el cuadro de límite y la barra de la aplicación. Puede Agregar un cuadro de límite mediante la asignación del script BoundingBox.cs en cualquier objeto.
 
-* [MRTK: cuadro de límite](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)
+* [MRTK: cuadro de límite](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/bounding-box.md)
 
 
 <br>

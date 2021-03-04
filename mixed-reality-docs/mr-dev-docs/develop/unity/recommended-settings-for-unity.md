@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity, configuración, realidad mixta, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, rendimiento, configuración de calidad, configuración de iluminación, búfer de profundidad, XR, pérdida de seguimiento
-ms.openlocfilehash: be85b592a6857c9dd40e2b3bb3f09dec0a6273be
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: cc1d2692a172c84274299580a0ce580264f65fcf
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009335"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759701"
 ---
 # <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -68,7 +68,7 @@ Además, se recomienda seleccionar profundidad de **16 bits** en la configuraci�
 
 Para que la plataforma Windows Mixed Reality optimice la estabilidad del holograma, se basa en el búfer de profundidad para que sea preciso y coincida con cualquier holograma representado en la pantalla. Por lo tanto, con el uso compartido de búfer de profundidad en, es importante al representar el color, para representar también la profundidad. En Unity, la mayoría de los materiales opacos o TransparentCutouts representarán la profundidad de forma predeterminada, pero los objetos transparentes y de texto no representarán la profundidad, aunque esto depende del sombreador, etc.
 
-Si usa el [sombreador estándar del kit de herramientas de realidad mixta](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md), para representar la profundidad de los objetos transparentes:
+Si usa el [sombreador estándar del kit de herramientas de realidad mixta](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/mrtk-standard-shader.md), para representar la profundidad de los objetos transparentes:
 
 1) Seleccione el material transparente que usa el sombreador estándar de MRTK y abra la ventana del editor del inspector.
 2) Seleccione el botón **corregir ahora** dentro de la advertencia de uso compartido de búfer de profundidad. Esto también puede realizarse manualmente si se establece el **modo de representación** en **personalizado**; a continuación, establezca el **modo** en **transparente** y, por último, establezca **escritura de profundidad** en **activado** .
@@ -114,10 +114,10 @@ Para alternar la pantalla de presentación de Holographic:
 
 |  Pantalla de presentación de mostrar Unity  |  Imagen de bienvenida holográfica  |  Comportamiento |
 |----------|----------|----------|
-|  Activado  |  None  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
-|  Activado  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
-|  Desactivado  |  None  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
-|  Desactivado  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Por  |  None  |  Mostrar la pantalla de presentación predeterminada de Unity durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Por  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
+|  Off  |  None  |  Mostrar negro transparente (nada) hasta que se cargue la aplicación. |
+|  Off  |  Personalizado  |  Mostrar la pantalla de presentación personalizada durante 5 segundos o hasta que se cargue la aplicación, lo que sea más largo. |
 
 Lea [la documentación de la pantalla de presentación de Unity](https://docs.unity3d.com/Manual/class-PlayerSettingsSplashScreen.html) para obtener más información.
 
@@ -147,7 +147,7 @@ Para no participar en el comportamiento de pausa automática:
 
 Para definir el comportamiento personalizado cuando se pierde el seguimiento, controle los [eventos de pérdida de seguimiento](tracking-loss-in-unity.md)global.
 
-### <a name="capabilities"></a>Funcionalidades
+### <a name="capabilities"></a>Capacidades
 
 Para que una aplicación aproveche ciertas funciones, debe declarar las capacidades adecuadas en su manifiesto. Las declaraciones de manifiesto se pueden realizar en Unity para que se incluyan en cada exportación de proyecto futura.
 

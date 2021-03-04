@@ -6,12 +6,12 @@ ms.author: hakons
 ms.date: 10/03/2019
 ms.topic: article
 keywords: GGV, voz, Cortana, voz, entrada, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, mira fijamente
-ms.openlocfilehash: 079a3d457da9403611d2f825dd6e599a4e9f0353
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: cc1ecd7d236748c3c4de77678e6f67c69a2c1af1
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583227"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759146"
 ---
 # <a name="voice-input"></a>Entrada de voz
 
@@ -273,7 +273,7 @@ En el caso de las aplicaciones que desean aprovechar las opciones de procesamien
 
 Todo este procesamiento de audio se acelera en hardware, lo que significa que las características agotan una gran cantidad de energía que si se realizara el mismo procesamiento en la CPU de HoloLens. Evite ejecutar otro procesamiento de entrada de audio en la CPU para maximizar la duración de la batería del sistema y aprovechar el procesamiento de entrada de audio descargado integrado.
 
-## <a name="languages"></a>Idiomas
+## <a name="languages"></a>Lenguajes
 
 HoloLens 2 [es compatible con varios idiomas](/hololens/hololens2-language-support). Tenga en cuenta que los comandos de voz siempre se ejecutarán en el idioma para mostrar del sistema aunque se instalen varios teclados o cuando las aplicaciones intenten crear un reconocedor de voz en otro idioma.
 
@@ -290,7 +290,7 @@ En el caso de la versión 2017 de Windows Mixed Reality Developer Edition, la l�
 ## <a name="voice-input-in-mrtk-mixed-reality-toolkit-for-unity"></a>Entrada de voz en MRTK (kit de herramientas de realidad mixta) para Unity
 Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**, puede asignar fácilmente comandos de voz en cualquier objeto. Use el **Perfil de entrada de voz** de MRTK para definir sus palabras clave. Mediante la asignación del script **SpeechInputHandler** , puede hacer que cualquier objeto responda a las palabras clave definidas en el perfil de entrada de voz. SpeechInputHandler también proporciona una etiqueta de confirmación de voz para mejorar la confianza del usuario.
 
-* [Comando MRTK-Voice](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Speech.html)
+* [Comando MRTK-Voice](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/speech.md)
 
 ---
 

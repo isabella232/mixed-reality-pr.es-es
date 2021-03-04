@@ -6,12 +6,12 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, asignación espacial, representador, Colisionador, malla, escaneo, componente, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 841cc1fa2a37884545ae12865f9b7cf56338dc07
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: a713497e0c5f061e9e81bf66197b3e2116218219
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582545"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759751"
 ---
 # <a name="spatial-mapping-in-unity"></a>Asignación espacial en Unity
 
@@ -480,7 +480,7 @@ La dll de comprensión almacena internamente el Playspace como una cuadrícula d
 * Cuando se pierde el seguimiento, el siguiente evento OnSurfaceChanged quitará todas las mallas.
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Asignación espacial en el kit de herramientas de realidad mixta
-Para obtener más información sobre el uso de la asignación espacial con el kit de herramientas de realidad mixta V2, consulte la <a href="https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html" target="_blank">sección de reconocimiento espacial</a> de los documentos de MRTK.
+Para obtener más información sobre el uso de la asignación espacial con el kit de herramientas de realidad mixta V2, consulte la <a href="https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/spatial-awareness/spatial-awareness-getting-started.md" target="_blank">sección de reconocimiento espacial</a> de los documentos de MRTK.
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 

@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, botón
-ms.openlocfilehash: b4e8388c4e3ea855c191cbdfc06621018274ff86
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+ms.openlocfilehash: 9e4d0637d8c10c3cd23bd2ee1369fd57137af795
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847592"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759431"
 ---
 # <a name="button"></a>Button
 
@@ -46,13 +46,13 @@ Un botón permite a los usuarios desencadenar acciones inmediatas en una experie
 ---
 
 ## <a name="button-in-mrtkmixed-reality-toolkit-for-unity"></a>Botón en MRTK (kit de herramientas de realidad mixta) para Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona varios tipos de Prefabs de botón, incluidos los botones de estilo de Shell de hololens 2 y hololens (1ª generación). El botón recurso prefabricado de HoloLens 2 contiene varias prestaciones detalladas que ayudan a mejorar la confianza del usuario:
+**[MRTK para Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona varios tipos de Prefabs de botón, incluidos los botones de estilo de Shell de hololens 2 y hololens (1ª generación). El botón recurso prefabricado de HoloLens 2 contiene varias prestaciones detalladas que ayudan a mejorar la confianza del usuario:
 
 * Resaltado basado en proximidad
 * Comprimiendo el compartimento delantero
 * Efecto de impulso en el desencadenador.
 
-* Consulte el [botón MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) para obtener más instrucciones y ejemplos personalizados.
+* Consulte el [botón MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/button.md) para obtener más instrucciones y ejemplos personalizados.
 
 <br>
 

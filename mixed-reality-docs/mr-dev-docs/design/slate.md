@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, HoloLens, pizarra, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: cbb4a741f4f78dcad603670bc282a25bc0e70fd2
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 444116b8946c763b284cdc83d45f5de118e965aa
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008815"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759841"
 ---
 # <a name="slate"></a>Claqueta
 
@@ -25,7 +25,7 @@ Una pizarra es un control de estilo de ventana fino para mostrar contenido 2D, c
 
 ## <a name="slate-in-mrtk-mixed-reality-toolkit-for-unity"></a>Pizarra en MRTK (kit de herramientas de realidad mixta) para Unity
 
-* [MRTK-pizarra](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Slate.html)
+* [MRTK-pizarra](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/slate.md)
 
 <br>
 

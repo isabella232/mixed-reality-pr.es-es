@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 12/9/2020
 ms.topic: article
 keywords: portabilidad, Unity, middleware, motor, UWP, Win32
-ms.openlocfilehash: 268d98b45aa659614e0266bfd1add7c7ed2f684a
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 693891d67ae26098f0810a539059da8d34f4731c
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583581"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759116"
 ---
 # <a name="porting-overview"></a>Introducción a la portabilidad
 
@@ -35,7 +35,7 @@ Nuestra recomendación actual para el desarrollo de Unity con realidad mixta es 
 > [!CAUTION]
 > Aunque el SDK de XR está disponible con esta versión de Unity, los delimitadores espaciales de Azure no son compatibles actualmente con esta configuración. Esta recomendación se actualizará con una versión futura del paquete de anclajes espaciales de Azure para Unity. 
 > 
-> * Si no necesita anclajes espaciales de Azure, puede [configurar el proyecto de Unity para XR](https://docs.unity3d.com/Manual/configuring-project-for-xr.html) y comenzar a usar el [SDK de MRTK y XR](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithMRTKAndXRSDK.html).
+> * Si no necesita anclajes espaciales de Azure, puede [configurar el proyecto de Unity para XR](https://docs.unity3d.com/Manual/configuring-project-for-xr.html) y comenzar a usar el [SDK de MRTK y XR](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/getting-started-with-mrtk-and-xrsdk.md).
 > 
 > * Si actualmente está usando el SDK de XR en el proyecto y quiere usar delimitadores espaciales de Azure, desinstale el SDK de XR y reinstale el paquete de XR heredado para revertir la configuración del proyecto.
 

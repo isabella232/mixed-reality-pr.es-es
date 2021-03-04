@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
 keywords: gestos, Unity, miras, entrada, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 44c42abdd4628cacd6af334a916fb725da8bb022
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 4c3db98e3047cdc74663c5cbee1c4607b77008e0
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583898"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759086"
 ---
 # <a name="gestures-in-unity"></a>Gestos en Unity
 
@@ -131,11 +131,11 @@ Puede encontrar un ejemplo de cómo se recomienda implementar el lanzamiento [aq
 
 El lanzamiento continuará mejorando con futuras actualizaciones de Windows y puede esperar encontrar más información aquí.
 
-## <a name="gesture-and-motion-controllers-in-mrtk-v2"></a>Gestos y controladores de movimiento en MRTK V2
+## <a name="gesture-and-motion-controllers-in-mrtk"></a>Gestos y controladores de movimiento en MRTK
 
 Puede tener acceso al gesto y al controlador de movimiento desde el administrador de entrada.
-* [Gesto en MRTK V2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Gestures.html)
-* [Controlador de movimiento en MRTK V2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Controllers.html)
+* [Gesto en MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/gestures.md)
+* [Controlador de movimiento en MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/controllers.md)
 
 
 ## <a name="follow-along-with-tutorials"></a>Seguimiento de tutoriales

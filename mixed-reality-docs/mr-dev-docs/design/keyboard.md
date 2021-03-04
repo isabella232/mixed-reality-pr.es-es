@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, teclado, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 8efb5446479e53569349eda302c7d4dcb844a137
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 9f42940b689a8fef77c9cf2f269100fccccfe6e0
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009735"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759861"
 ---
 # <a name="keyboard"></a>Teclado
 
@@ -25,7 +25,7 @@ La aplicación de realidad mixta puede invocar el teclado del sistema en cualqui
 
 ## <a name="system-keyboard-in-mrtk-mixed-reality-toolkit-for-unity"></a>Teclado del sistema en MRTK (kit de herramientas de realidad mixta) para Unity
 
-* [MRTK-teclado del sistema](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_SystemKeyboard.html)
+* [MRTK-teclado del sistema](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/system-keyboard.md)
 
 <br>
 

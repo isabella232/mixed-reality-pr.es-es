@@ -6,18 +6,18 @@ ms.author: grbury
 ms.date: 06/30/2019
 ms.topic: article
 keywords: Explorador de Galaxy, caso práctico, proyecto, ejemplo, MRTK, kit de herramientas de realidad mixta, Unity, aplicaciones de ejemplo, aplicaciones de ejemplo, código abierto, Microsoft Store, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 4a5df06009d2c9c25b12c8e7f4bd1622821964c8
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 2d72e005bd955bbf2611f0724ba63b80c70f7dc1
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582895"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759821"
 ---
 # <a name="the-making-of-galaxy-explorer-for-hololens-2"></a>La creación del explorador de Galaxy para HoloLens 2
 
 Este es el explorador de Galaxy actualizado para la aplicación HoloLens 2. El [Explorador de Galaxy](/windows/mixed-reality/galaxy-explorer "Explorador de la galaxia") se desarrolló originalmente como una aplicación de código abierto para HoloLens (First gen) a través del programa de compartir ideas, y es una de las primeras experiencias de realidad mixta que muchos usuarios tenían. Ahora lo estamos actualizando para las [nuevas y emocionantes funcionalidades de HoloLens 2](https://www.microsoft.com/hololens/hardware).
 
-Como uno de los [estudios de realidad mixta de Microsoft](galaxy-explorer-update.md#mixed-reality-studios), normalmente desarrollamos soluciones de calidad comercial y desarrollamos & pruebas en las plataformas de destino a lo largo del proceso de desarrollo y creativo. Estamos embarcados en este proyecto con los marcos y las herramientas (como [MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html)) a medida que están disponibles para nosotros y la comunidad, y queremos que le llevemos el paso.
+Como uno de los [estudios de realidad mixta de Microsoft](galaxy-explorer-update.md#mixed-reality-studios), normalmente desarrollamos soluciones de calidad comercial y desarrollamos & pruebas en las plataformas de destino a lo largo del proceso de desarrollo y creativo. Estamos embarcados en este proyecto con los marcos y las herramientas (como [MRTK](mrtk-getting-started.md)) a medida que están disponibles para nosotros y la comunidad, y queremos que le llevemos el paso.
 
 Al igual que el explorador de Galaxy original, [nuestro equipo](galaxy-explorer-update.md#meet-the-team) [abrirá el proyecto en github](https://github.com/Microsoft/GalaxyExplorer) para asegurarse de que la comunidad tiene acceso completo. También documentaremos nuestro viaje aquí con una transparencia completa sobre cómo migramos de MRTK v1 a MRTK V2, hemos mejorado la experiencia con las nuevas características disponibles en HoloLens 2 y hemos asegurado de que el explorador de Galaxy seguía siendo una experiencia multiplataforma. Si está viendo el explorador de Galaxy en HoloLens (primera generación), HoloLens 2, un casco de realidad mixta de Windows o en el escritorio de Windows 10, queremos asegurarnos de que está disfrutando del viaje tan bien como estamos.
 

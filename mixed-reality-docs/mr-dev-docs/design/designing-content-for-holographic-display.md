@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/18/2020
 ms.topic: article
 keywords: Diseño de la interfaz de usuario, pantalla holográfica, diseño de contenido, tema oscuro, tema claro, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, diseño, píxeles
-ms.openlocfilehash: 371d9aac610a765e7ecc6dd1f17401e5d7855672
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 6bf65b9e40e42f1609b1108b366ac65637fcf106
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009095"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759280"
 ---
 # <a name="designing-content-for-holographic-display"></a>Diseño de contenido para la pantalla holográfica
 
@@ -85,7 +85,7 @@ Para mejorar la Reproyección holográfica o la estabilidad del holograma, una a
 
 De forma predeterminada, los objetos transparentes o translúcidos no escriben la profundidad para permitir una combinación adecuada. Algunas formas de mitigar este problema son el uso de objetos opacos, la garantía de que los objetos translúcidos aparecen cerca de los objetos opacos (por ejemplo, un botón translúcido delante de una placa posterior opaca), lo que fuerza la escritura de los objetos translúcidos (no aplicable en todos los escenarios) o la representación de objetos proxy, que solo contribuyen con valores de profundidad
 
-Soluciones dentro de MRTK-Unity: https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/hologram-stabilization.html#depth-buffer-sharing-in-unity  
+Soluciones dentro de MRTK-Unity: https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/performance/hologram-stabilization.md#depth-buffer-sharing-in-unity  
 
 Mediante el uso de una placa de fondo sólida y opaca, podemos proteger la legibilidad y la confianza de la interacción.
 
@@ -103,9 +103,9 @@ Si el proyecto debe utilizar objetos transparentes, intente minimizar el número
 
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona muchos ejemplos de bloques de creación de interfaz de usuario basados en las combinaciones de colores oscuras.
 
-* [Menú Near](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_NearMenu.html)
-* [Diálogo](https://microsoft.github.io/MixedRealityToolkit-Unity/Assets/MRTK/SDK/Experimental/Dialog/README_Dialog.html)
-* [Menú de la mano](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_HandMenu.html)
+* [Menú Near](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/near-menu.md)
+* [Diálogo](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/experimental/dialog.md)
+* [Menú de la mano](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/hand-menu.md)
 
 <br>
 

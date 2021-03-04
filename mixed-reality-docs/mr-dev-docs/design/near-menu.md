@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, menú, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 3cba4452861f05a1ce921c1f18f6636661ee34b0
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 71e88ab94f9051d58b666f2b3c27c33564194e19
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009935"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759176"
 ---
 # <a name="near-menu"></a>Menú Cerca
 
@@ -26,7 +26,7 @@ Un menú cercano es una colección de botones de un panel que siguen a los usuar
 ## <a name="near-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Menú Near en MRTK (kit de herramientas de realidad mixta) para Unity
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona varios ejemplos de recurso prefabricado de menú cercanos.
 
-* [MRTK: menú Near](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_NearMenu.html)
+* [MRTK: menú Near](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/near-menu.md)
 
 <br>
 

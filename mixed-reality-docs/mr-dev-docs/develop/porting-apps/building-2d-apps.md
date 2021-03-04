@@ -6,12 +6,12 @@ ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
 keywords: aplicación 2D, UWP, aplicación plana, HoloLens, auriculares envolventes, modelo de aplicación, botón atrás, barra de la aplicación, PPP, resolución, escala, portabilidad, HoloLens primera generación, HoloLens 2, auriculares de realidad mixta, auriculares de realidad mixta de Windows, migración, Windows 10
-ms.openlocfilehash: 2d6b03a8cca70ac2db810209263139ebdf3c22a7
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 6e8e000f694b40f637c932ee9764415ec3a57698
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583538"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759801"
 ---
 # <a name="updating-2d-uwp-apps-for-windows-mixed-reality"></a>Actualización de aplicaciones para UWP en 2D para Windows Mixed Reality
 
@@ -51,7 +51,7 @@ Solo tiene que ir al menú Inicio dentro del casco de realidad mixta e iniciar l
 
 ## <a name="targeting-both-immersive-headsets-and-hololens"></a>Establecer como destino los auriculares que se envolverán y HoloLens
 
-Felicidades. La aplicación está usando Windows 10 Plataforma universal de Windows (UWP).
+¡Enhorabuena! La aplicación está usando Windows 10 Plataforma universal de Windows (UWP).
 
 La aplicación ahora es capaz de ejecutarse en los dispositivos Windows de hoy en día, como escritorio, móviles, Xbox, Windows Mixed Reality con auriculares más envolventes, HoloLens y futuros dispositivos Windows. Sin embargo, para tener como destino todos los dispositivos, deberá asegurarse de que la aplicación esté destinada a Windows. Familia de dispositivos universales.
 
@@ -108,7 +108,7 @@ Estos pasos le guiarán a través de la depuración de la aplicación para UWP m
 
 ## <a name="update-your-ui"></a>Actualizar la interfaz de usuario
 
-Ahora que la aplicación para UWP se está ejecutando en auriculares envolventes y HoloLens como un holograma de 2D, nos aseguraremos de que parezca bonito. Algunos aspectos que debe considerar:
+Ahora que la aplicación para UWP se está ejecutando en auriculares envolventes y HoloLens como un holograma de 2D, nos aseguraremos de que parezca bonito. Estos son algunos aspectos que hay que tener en cuenta:
 * Windows Mixed Reality ejecutará todas las aplicaciones 2D con una resolución fija y un PPP equivalentes a los píxeles efectivos de 853x480. Considere la posibilidad de que su diseño necesite perfeccionarse a esta escala y revise las instrucciones de diseño que se indican a continuación para mejorar su experiencia en HoloLens y en auriculares de gran tamaño.
 * Windows Mixed Reality [no admite](../../design/app-model.md) mosaicos dinámicos 2D. Si la funcionalidad principal muestra información sobre un icono dinámico, considere la posibilidad de mover esa información de nuevo a la aplicación o explore los [iniciadores de aplicaciones 3D](../../distribute/3d-app-launcher-design-guidance.md).
 
