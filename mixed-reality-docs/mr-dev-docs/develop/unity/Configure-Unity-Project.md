@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity, realidad mixta, desarrollo, introducción, nuevo proyecto, Windows Mixed Reality, UWP, XR, rendimiento
-ms.openlocfilehash: 6a9bc0d9a565de1d25e1906c439e39773cb99244
-ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
+ms.openlocfilehash: bd25c56947007f90c0310ea9802bba91a81b0914
+ms.sourcegitcommit: fd19bf57607c7ed94a849d4cf606bba2bb93e668
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100496083"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102117629"
 ---
 # <a name="configuring-your-project-without-mrtk"></a>Configuración de un proyecto sin MRTK
 
@@ -56,8 +56,10 @@ Después de establecer la plataforma, debe dejar que Unity sepa crear una [vista
 
 ![Captura de pantalla de la ventana Configuración del proyecto abierta en el editor de Unity con la administración de complementos de XR resalta](images/wmr-config-img-7.png)
 
-4. Expanda la sección **Administración de complementos de XR** y seleccione **Windows Mixed Reality** .
-5. Active todas las casillas y establezca el **modo de envío de profundidad** en profundidad de **16 bits**
+4. Expanda la sección **Administración de complementos de XR** y seleccione la pestaña Configuración de la **plataforma de Windows universal** .
+5. Si usa Unity 2020 o una versión posterior, verá las opciones para comprobar **OpenXR (versión preliminar)** o **Windows Mixed Reality** .
+6. Puede elegir en tiempo de ejecución.  Si está desarrollando específicamente para HoloLens 2 o la reverberación de HP G2 y decide probar **OpenXR (versión preliminar)**, seleccione el cuadro OpenXR (versión preliminar) y revise nuestra guía sobre cómo [usar el complemento Mixed Reality OpenXR para Unity](openxr-getting-started.md) para que se configure correctamente para estos dispositivos antes de volver a este tutorial.
+7. Si decide elegir el complemento de **Windows Mixed Reality** , active todas las casillas y establezca el **modo de envío de profundidad** en profundidad de **16 bits** .
 
 ![Captura de pantalla de la ventana de configuración del proyecto abierta en el editor de Unity con Windows Mixed Reality sección resaltada](images/wmr-config-img-8.png)
 
@@ -90,11 +92,11 @@ Se recomienda que realice las declaraciones de manifiesto en Unity para incluirl
 
 ### <a name="quality-settings"></a>Configuración de calidad
 
-HoloLens tiene una GPU de clase móvil. Si su aplicación tiene como destino HoloLens, querrá que la configuración de calidad de la aplicación se ajuste para obtener un rendimiento más rápido para asegurarse de que mantiene la velocidad de fotogramas completa:
+HoloLens tiene una GPU de clase móvil. Si su aplicación tiene como destino HoloLens, querrá empezar con la configuración de calidad de la aplicación ajustada para obtener un rendimiento más rápido y asegurarse de que mantiene la velocidad de fotogramas completa.  Una vez que tenga más en el desarrollo, puede considerar la posibilidad de hacer ping a la configuración de calidad para encontrar el equilibrio adecuado entre calidad y rendimiento: 
 
-1. Seleccione **editar > configuración del proyecto > calidad**
-2. Seleccione la **lista desplegable** en el logotipo de la **tienda Windows** y seleccione **muy baja**. Sabrá que la configuración se aplica correctamente cuando el cuadro de la columna de la tienda Windows y la fila **muy baja** es verde.
-3. En la sección **Shadows** , seleccione **deshabilitar sombras** .
+1. Seleccione **editar > configuración del proyecto > calidad** 
+2. Seleccione la **lista desplegable** en el logotipo de la  **tienda Windows**   y seleccione  **muy baja**. Sabrá que la configuración se aplica correctamente cuando el cuadro de la columna de la tienda Windows y la fila muy baja es verde. 
+3. En la sección **Shadows**   , seleccione **deshabilitar sombras** . 
 
 ![Captura de pantalla de la ventana de configuración del proyecto abierta en el editor de Unity con la sección configuración de calidad resaltada](images/wmr-config-img-10.png)<br>
 *Configuración de calidad de Unity*
