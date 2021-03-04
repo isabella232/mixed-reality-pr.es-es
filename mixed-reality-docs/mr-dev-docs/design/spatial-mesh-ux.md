@@ -6,58 +6,58 @@ ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: article
 keywords: Realidad mixta, HoloLens, controles de IU, interacción, IU, experiencia de usuario, diseño de la experiencia del usuario, interfaz de usuario espacial, interacción espacial, interfaz de usuario 3D, experiencia en 3D, auriculares
-ms.openlocfilehash: 0f9cdc218c6fe54b8892c39a6a76f023e203d334
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 5e8ffbb90b1143cd4e11bf45a889c11c233232df
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009925"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759811"
 ---
-# <a name="spatial-mesh"></a><span data-ttu-id="9c2b6-104">Malla espacial</span><span class="sxs-lookup"><span data-stu-id="9c2b6-104">Spatial mesh</span></span>
+# <a name="spatial-mesh"></a><span data-ttu-id="ea963-104">Malla espacial</span><span class="sxs-lookup"><span data-stu-id="ea963-104">Spatial mesh</span></span>
 
 ![Malla espacial](images/MRTK_PulseShader_SpatialMesh.gif)
 
-<span data-ttu-id="9c2b6-106">Los usuarios aprenden cómo un dispositivo percibe y comprenden el entorno físico a través de la visualización de malla espacial.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-106">Users learn how a device perceives and understands the physical environment through spatial mesh visualization.</span></span> <span data-ttu-id="9c2b6-107">La visualización correcta de la malla espacial puede crear una experiencia agradables y mágica a la vez que proporciona un contexto espacial.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-107">Proper spatial mesh visualization can create a delightful and magical experience while providing spatial context.</span></span>  
+<span data-ttu-id="ea963-106">Los usuarios aprenden cómo un dispositivo percibe y comprenden el entorno físico a través de la visualización de malla espacial.</span><span class="sxs-lookup"><span data-stu-id="ea963-106">Users learn how a device perceives and understands the physical environment through spatial mesh visualization.</span></span> <span data-ttu-id="ea963-107">La visualización correcta de la malla espacial puede crear una experiencia agradables y mágica a la vez que proporciona un contexto espacial.</span><span class="sxs-lookup"><span data-stu-id="ea963-107">Proper spatial mesh visualization can create a delightful and magical experience while providing spatial context.</span></span>  
 
-## <a name="design-guideline"></a><span data-ttu-id="9c2b6-108">Directrices de diseño</span><span class="sxs-lookup"><span data-stu-id="9c2b6-108">Design guideline</span></span>
+## <a name="design-guideline"></a><span data-ttu-id="ea963-108">Directrices de diseño</span><span class="sxs-lookup"><span data-stu-id="ea963-108">Design guideline</span></span>
 
-<span data-ttu-id="9c2b6-109">Es importante permitir que el usuario se Centre e interactúe con el contenido.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-109">It's important to allow the user to focus and interact with content.</span></span> <span data-ttu-id="9c2b6-110">La visualización continua de la malla espacial en segundo plano puede distraerse.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-110">Continuous visualization of the spatial mesh in the background can be distracting.</span></span> <span data-ttu-id="9c2b6-111">Se recomienda visualizar el entorno de forma moderada, ya sea una sola vez en el inicio inicial o cuando el usuario muestra claramente que quieren ver la malla del entorno mediante el destino y el espacio de punteo aéreo.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-111">We recommend visualizing the environment sparingly, either only once in the initial launch or when the user clearly shows they want to see the environmental mesh by targeting and air-tapping space.</span></span> <span data-ttu-id="9c2b6-112">Puede observar este comportamiento en el portal de realidad mixta.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-112">You can observe this behavior in the Mixed Reality Portal.</span></span>
+<span data-ttu-id="ea963-109">Es importante permitir que el usuario se Centre e interactúe con el contenido.</span><span class="sxs-lookup"><span data-stu-id="ea963-109">It's important to allow the user to focus and interact with content.</span></span> <span data-ttu-id="ea963-110">La visualización continua de la malla espacial en segundo plano puede distraerse.</span><span class="sxs-lookup"><span data-stu-id="ea963-110">Continuous visualization of the spatial mesh in the background can be distracting.</span></span> <span data-ttu-id="ea963-111">Se recomienda visualizar el entorno de forma moderada, ya sea una sola vez en el inicio inicial o cuando el usuario muestra claramente que quieren ver la malla del entorno mediante el destino y el espacio de punteo aéreo.</span><span class="sxs-lookup"><span data-stu-id="ea963-111">We recommend visualizing the environment sparingly, either only once in the initial launch or when the user clearly shows they want to see the environmental mesh by targeting and air-tapping space.</span></span> <span data-ttu-id="ea963-112">Puede observar este comportamiento en el portal de realidad mixta.</span><span class="sxs-lookup"><span data-stu-id="ea963-112">You can observe this behavior in the Mixed Reality Portal.</span></span>
 <br>
 
-## <a name="spatial-mesh-visualization-in-mrtk-mixed-reality-toolkit-for-unity"></a><span data-ttu-id="9c2b6-113">Visualización de malla espacial en MRTK (kit de herramientas de realidad mixta) para Unity</span><span class="sxs-lookup"><span data-stu-id="9c2b6-113">Spatial mesh visualization in MRTK (Mixed Reality Toolkit) for Unity</span></span>
+## <a name="spatial-mesh-visualization-in-mrtk-mixed-reality-toolkit-for-unity"></a><span data-ttu-id="ea963-113">Visualización de malla espacial en MRTK (kit de herramientas de realidad mixta) para Unity</span><span class="sxs-lookup"><span data-stu-id="ea963-113">Spatial mesh visualization in MRTK (Mixed Reality Toolkit) for Unity</span></span>
 
-<span data-ttu-id="9c2b6-114">MRTK proporciona varios materiales para la visualización de la malla espacial.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-114">MRTK provides several materials for the spatial mesh visualization.</span></span>
+<span data-ttu-id="ea963-114">MRTK proporciona varios materiales para la visualización de la malla espacial.</span><span class="sxs-lookup"><span data-stu-id="ea963-114">MRTK provides several materials for the spatial mesh visualization.</span></span>
 
-- <span data-ttu-id="9c2b6-115">**MRTK_Wireframe. MAT, MRTK_Wireframe. MAT**: material de malla espacial estático predeterminado, que muestra los contornos de la malla sin animación.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-115">**MRTK_Wireframe.mat, MRTK_Wireframe.mat**: Default static spatial mesh material, which shows the mesh outlines without animation.</span></span> <span data-ttu-id="9c2b6-116">Este material es útil para la depuración, ya que muestra todas las geometrías espaciales de la malla.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-116">This material is useful for debugging purposes since it shows the entire spatial mesh geometries.</span></span> <span data-ttu-id="9c2b6-117">Sin embargo, no se recomienda para la producción.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-117">However, it isn't recommended for production.</span></span>
+- <span data-ttu-id="ea963-115">**MRTK_Wireframe. MAT, MRTK_Wireframe. MAT**: material de malla espacial estático predeterminado, que muestra los contornos de la malla sin animación.</span><span class="sxs-lookup"><span data-stu-id="ea963-115">**MRTK_Wireframe.mat, MRTK_Wireframe.mat**: Default static spatial mesh material, which shows the mesh outlines without animation.</span></span> <span data-ttu-id="ea963-116">Este material es útil para la depuración, ya que muestra todas las geometrías espaciales de la malla.</span><span class="sxs-lookup"><span data-stu-id="ea963-116">This material is useful for debugging purposes since it shows the entire spatial mesh geometries.</span></span> <span data-ttu-id="ea963-117">Sin embargo, no se recomienda para la producción.</span><span class="sxs-lookup"><span data-stu-id="ea963-117">However, it isn't recommended for production.</span></span>
 <br>
 <img src="images/SurfaceReconstruction.jpg" alt="Wireframe spatial mesh visualization" width="640px">
 
-- <span data-ttu-id="9c2b6-118">**MRTK_SurfaceReconstruction. MAT**: este material proporciona un efecto de pulso animado en la malla espacial.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-118">**MRTK_SurfaceReconstruction.mat**: This material gives you an animated pulse effect on the spatial mesh.</span></span> <span data-ttu-id="9c2b6-119">Puede usar este material para visualizar el entorno en un momento específico o en la entrada de punteo de aire del usuario.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-119">You can use this material to visualize the environment at a specific moment or on the user's air-tap input.</span></span> <span data-ttu-id="9c2b6-120">Consulte **PulseShaderExamples. Unity** Scene para ver los ejemplos.</span><span class="sxs-lookup"><span data-stu-id="9c2b6-120">See **PulseShaderExamples.unity** scene for the examples.</span></span>
+- <span data-ttu-id="ea963-118">**MRTK_SurfaceReconstruction. MAT**: este material proporciona un efecto de pulso animado en la malla espacial.</span><span class="sxs-lookup"><span data-stu-id="ea963-118">**MRTK_SurfaceReconstruction.mat**: This material gives you an animated pulse effect on the spatial mesh.</span></span> <span data-ttu-id="ea963-119">Puede usar este material para visualizar el entorno en un momento específico o en la entrada de punteo de aire del usuario.</span><span class="sxs-lookup"><span data-stu-id="ea963-119">You can use this material to visualize the environment at a specific moment or on the user's air-tap input.</span></span> <span data-ttu-id="ea963-120">Consulte **PulseShaderExamples. Unity** Scene para ver los ejemplos.</span><span class="sxs-lookup"><span data-stu-id="ea963-120">See **PulseShaderExamples.unity** scene for the examples.</span></span>
 <br>
 <img src="images/MRTK_SRMesh_Pulse.jpg" alt="Pulse spatial mesh visualization" width="640px">
-* <span data-ttu-id="9c2b6-121">Para obtener más información, consulte [MRTK-Spatial awareing](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html) y [MRTK-Pulse Shader](https://microsoft.github.io/MixedRealityToolkit-Unity/Assets/MRTK/SDK/Experimental/PulseShader/README.html).</span><span class="sxs-lookup"><span data-stu-id="9c2b6-121">For more information, see [MRTK - Spatial Awareness](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SpatialAwareness/SpatialAwarenessGettingStarted.html) and [MRTK - Pulse Shader](https://microsoft.github.io/MixedRealityToolkit-Unity/Assets/MRTK/SDK/Experimental/PulseShader/README.html).</span></span>
+* <span data-ttu-id="ea963-121">Para obtener más información, consulte [MRTK-Spatial awareing](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/spatial-awareness/spatial-awareness-getting-started.md) y [MRTK-Pulse Shader](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/experimental/pulse-shader.md).</span><span class="sxs-lookup"><span data-stu-id="ea963-121">For more information, see [MRTK - Spatial Awareness](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/spatial-awareness/spatial-awareness-getting-started.md) and [MRTK - Pulse Shader](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/experimental/pulse-shader.md).</span></span>
 
 <br>
 
 ---
 
-## <a name="see-also"></a><span data-ttu-id="9c2b6-122">Consulte también</span><span class="sxs-lookup"><span data-stu-id="9c2b6-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ea963-122">Consulte también</span><span class="sxs-lookup"><span data-stu-id="ea963-122">See also</span></span>
 
-* [<span data-ttu-id="9c2b6-123">Cursores</span><span class="sxs-lookup"><span data-stu-id="9c2b6-123">Cursors</span></span>](cursors.md)
-* [<span data-ttu-id="9c2b6-124">Haces de mano</span><span class="sxs-lookup"><span data-stu-id="9c2b6-124">Hand ray</span></span>](point-and-commit.md)
-* [<span data-ttu-id="9c2b6-125">Botón</span><span class="sxs-lookup"><span data-stu-id="9c2b6-125">Button</span></span>](button.md)
-* [<span data-ttu-id="9c2b6-126">Objeto con el que se puede interactuar</span><span class="sxs-lookup"><span data-stu-id="9c2b6-126">Interactable object</span></span>](interactable-object.md)
-* [<span data-ttu-id="9c2b6-127">Cuadro de límite y barra de la aplicación</span><span class="sxs-lookup"><span data-stu-id="9c2b6-127">Bounding box and App bar</span></span>](app-bar-and-bounding-box.md)
-* [<span data-ttu-id="9c2b6-128">Manipulación</span><span class="sxs-lookup"><span data-stu-id="9c2b6-128">Manipulation</span></span>](direct-manipulation.md)
-* [<span data-ttu-id="9c2b6-129">Menú Mano</span><span class="sxs-lookup"><span data-stu-id="9c2b6-129">Hand menu</span></span>](hand-menu.md)
-* [<span data-ttu-id="9c2b6-130">Menú Cerca</span><span class="sxs-lookup"><span data-stu-id="9c2b6-130">Near menu</span></span>](near-menu.md)
-* [<span data-ttu-id="9c2b6-131">Colección de objetos</span><span class="sxs-lookup"><span data-stu-id="9c2b6-131">Object collection</span></span>](object-collection.md)
-* [<span data-ttu-id="9c2b6-132">Comando de voz</span><span class="sxs-lookup"><span data-stu-id="9c2b6-132">Voice command</span></span>](voice-input.md)
-* [<span data-ttu-id="9c2b6-133">Teclado</span><span class="sxs-lookup"><span data-stu-id="9c2b6-133">Keyboard</span></span>](keyboard.md)
-* [<span data-ttu-id="9c2b6-134">Información sobre herramientas</span><span class="sxs-lookup"><span data-stu-id="9c2b6-134">Tooltip</span></span>](tooltip.md)
-* [<span data-ttu-id="9c2b6-135">Claqueta</span><span class="sxs-lookup"><span data-stu-id="9c2b6-135">Slate</span></span>](slate.md)
-* [<span data-ttu-id="9c2b6-136">Control deslizante</span><span class="sxs-lookup"><span data-stu-id="9c2b6-136">Slider</span></span>](slider.md)
-* [<span data-ttu-id="9c2b6-137">Sombreador</span><span class="sxs-lookup"><span data-stu-id="9c2b6-137">Shader</span></span>](shader.md)
-* [<span data-ttu-id="9c2b6-138">Etiquetado y vista frontal continua</span><span class="sxs-lookup"><span data-stu-id="9c2b6-138">Billboarding and tag-along</span></span>](billboarding-and-tag-along.md)
-* [<span data-ttu-id="9c2b6-139">Indicación del progreso</span><span class="sxs-lookup"><span data-stu-id="9c2b6-139">Displaying progress</span></span>](progress.md)
-* [<span data-ttu-id="9c2b6-140">Magnetismo de superficie</span><span class="sxs-lookup"><span data-stu-id="9c2b6-140">Surface magnetism</span></span>](surface-magnetism.md)
+* [<span data-ttu-id="ea963-123">Cursores</span><span class="sxs-lookup"><span data-stu-id="ea963-123">Cursors</span></span>](cursors.md)
+* [<span data-ttu-id="ea963-124">Haces de mano</span><span class="sxs-lookup"><span data-stu-id="ea963-124">Hand ray</span></span>](point-and-commit.md)
+* [<span data-ttu-id="ea963-125">Botón</span><span class="sxs-lookup"><span data-stu-id="ea963-125">Button</span></span>](button.md)
+* [<span data-ttu-id="ea963-126">Objeto con el que se puede interactuar</span><span class="sxs-lookup"><span data-stu-id="ea963-126">Interactable object</span></span>](interactable-object.md)
+* [<span data-ttu-id="ea963-127">Cuadro de límite y barra de la aplicación</span><span class="sxs-lookup"><span data-stu-id="ea963-127">Bounding box and App bar</span></span>](app-bar-and-bounding-box.md)
+* [<span data-ttu-id="ea963-128">Manipulación</span><span class="sxs-lookup"><span data-stu-id="ea963-128">Manipulation</span></span>](direct-manipulation.md)
+* [<span data-ttu-id="ea963-129">Menú Mano</span><span class="sxs-lookup"><span data-stu-id="ea963-129">Hand menu</span></span>](hand-menu.md)
+* [<span data-ttu-id="ea963-130">Menú Cerca</span><span class="sxs-lookup"><span data-stu-id="ea963-130">Near menu</span></span>](near-menu.md)
+* [<span data-ttu-id="ea963-131">Colección de objetos</span><span class="sxs-lookup"><span data-stu-id="ea963-131">Object collection</span></span>](object-collection.md)
+* [<span data-ttu-id="ea963-132">Comando de voz</span><span class="sxs-lookup"><span data-stu-id="ea963-132">Voice command</span></span>](voice-input.md)
+* [<span data-ttu-id="ea963-133">Teclado</span><span class="sxs-lookup"><span data-stu-id="ea963-133">Keyboard</span></span>](keyboard.md)
+* [<span data-ttu-id="ea963-134">Información sobre herramientas</span><span class="sxs-lookup"><span data-stu-id="ea963-134">Tooltip</span></span>](tooltip.md)
+* [<span data-ttu-id="ea963-135">Claqueta</span><span class="sxs-lookup"><span data-stu-id="ea963-135">Slate</span></span>](slate.md)
+* [<span data-ttu-id="ea963-136">Control deslizante</span><span class="sxs-lookup"><span data-stu-id="ea963-136">Slider</span></span>](slider.md)
+* [<span data-ttu-id="ea963-137">Sombreador</span><span class="sxs-lookup"><span data-stu-id="ea963-137">Shader</span></span>](shader.md)
+* [<span data-ttu-id="ea963-138">Etiquetado y vista frontal continua</span><span class="sxs-lookup"><span data-stu-id="ea963-138">Billboarding and tag-along</span></span>](billboarding-and-tag-along.md)
+* [<span data-ttu-id="ea963-139">Indicación del progreso</span><span class="sxs-lookup"><span data-stu-id="ea963-139">Displaying progress</span></span>](progress.md)
+* [<span data-ttu-id="ea963-140">Magnetismo de superficie</span><span class="sxs-lookup"><span data-stu-id="ea963-140">Surface magnetism</span></span>](surface-magnetism.md)
