@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr, Unity, hololens, hololens 2, reality Mixed, MRTK, kit de herramientas de realidad mixta, realidad aumentada, realidad virtual, auriculares de realidad mixta, información, tutorial, introducción
-ms.openlocfilehash: bad18c5f30465120bce370aa91c13ff3f229bef6
-ms.sourcegitcommit: 029f247a6c33068360d3a06f2a473a12586017e1
+ms.openlocfilehash: 0501abe5a417c17283347455ccea8ec6f49a6a45
+ms.sourcegitcommit: 4647712788a91a2b26d4b01e62285c2942bb0bd2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100496160"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102230746"
 ---
 # <a name="mixed-reality-openxr-supported-features-in-unity"></a>Características admitidas de OpenXR de realidad mixta en Unity
 
@@ -34,6 +34,7 @@ Actualmente se admiten las siguientes características:
 * Compatible con MRTK Unity 2.5.3 y versiones más recientes a través de la compatibilidad con el [proveedor de MRTK OpenXR](openxr-getting-started.md#using-mrtk-with-openxr-support).
 * Compatible con Unity [ARFoundation 4,0](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html) o posterior.
 * (Agregado en 0.1.3) Admite la [comunicación remota de la aplicación de escritorio holográfica](#holographic-remoting-in-desktop-app) desde una aplicación independiente de Windows compilada e implementada.
+* (Agregado en 0.1.4) Admite el [seguimiento del código QR](#qr-codes) en HoloLens2 a través de SpatialGraphNode
 
 ## <a name="holographic-remoting-setup"></a>Configuración de Holographic Remoting
 
@@ -205,17 +206,23 @@ public static readonly InputFeatureUsage<Vector3> PointerPosition = new InputFea
 
 Para obtener información sobre el uso de hápticos en el sistema de entrada XR de Unity, puede encontrar documentación en el [manual de Unity para entrada-hápticos de Unity](https://docs.unity3d.com/2020.2/Documentation/Manual/xr_input.html#Haptics).
 
+## <a name="qr-codes"></a>Códigos QR
+
+HoloLens 2 puede detectar códigos QR en el entorno alrededor del caso, estableciendo un sistema de coordenadas en la ubicación real de cada código. Puede encontrar más detalles en nuestra documentación de [seguimiento de código QR](../platform-capabilities-and-apis/qr-code-tracking.md) .  Al usar el complemento OpenXR, tome el [ `SpatialGraphNodeId` de la API QR](../platform-capabilities-and-apis/qr-code-tracking.md#qr-api-reference) y use la `Microsoft.MixedReality.OpenXR.SpatialGraphNode` API para buscar el código QR.
+
+Como referencia, tenemos un [proyecto de ejemplo de seguimiento de QR en github](https://github.com/yl-msft/QRTracking) con más información detallada sobre el uso de la [ `SpatialGraphNode` API](https://github.com/yl-msft/QRTracking/blob/main/SampleQRCodes/Assets/Scripts/SpatialGraphNodeTracker.cs).
+
 ## <a name="whats-coming-soon"></a>Novedades próximamente
 
 Los siguientes problemas y las características que faltan se conocen con la **versión 0.1.0** del complemento OpenXR de realidad mixta. Estamos trabajando en ellos y publicará correcciones y nuevas características en las próximas versiones.
 
 * **ARPlaneSubsystem** todavía no se admite. **ARPlaneManager**, **ARRaycastManager** y API relacionada como **ARAnchorManager. AttachAnchor** tampoco se admiten en HoloLens 2.
-* El **delimitador** no es compatible aún con la comunicación remota holográfica, pero está próximamente en un futuro.
-* Todavía no se admite el seguimiento de **mallas de mano** , los **códigos QR** y los **XRMeshSubsystem** .
+* La **persistencia del delimitador** no es compatible aún con la comunicación remota de Holographic, pero está próximamente en un futuro.
+* Todavía no se admite el seguimiento de la **malla de mano** y **XRMeshSubsystem** .
 * La compatibilidad con los **anclajes espaciales de Azure** está disponible en una versión futura.
 * **ARM64** es la única plataforma admitida para las aplicaciones de HoloLens 2. La plataforma **ARM** está próximamente en una versión futura.
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 Al suspender y reanudar una aplicación de Unity en HoloLens 2, la aplicación no se puede reanudar correctamente, lo que conduce a 4 puntos de giro en la vista de HoloLens.
 
