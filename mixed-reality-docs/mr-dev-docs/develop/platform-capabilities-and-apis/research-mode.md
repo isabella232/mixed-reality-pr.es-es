@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 07/31/2020
 ms.topic: article
 keywords: Modo de investigación, CV, RS4, Computer Vision, investigación, HoloLens, HoloLens 2
-ms.openlocfilehash: c8e626969f87eda8b686ba759a167a2bf48e3277
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 6737f9b668b73258e65f8d00e85dcd19c28ddfb5
+ms.sourcegitcommit: ad1e0c6a31f938a93daa2735cece24d676384f3f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583129"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102237136"
 ---
 # <a name="hololens-research-mode"></a>Modo de investigación de HoloLens
 
@@ -104,7 +104,7 @@ Una vez que haya reiniciado el dispositivo, las aplicaciones que se cargan a tra
 *Ventana del modo de investigación en el portal de dispositivos de HoloLens*
 
 > [!IMPORTANT]
-> El modo de investigación de HoloLens 2 está disponible a partir de la compilación 19041,1356. Si necesita tener acceso en una compilación anterior, Regístrese en el programa de [versión preliminar de Insider](/hololens/hololens-insider) .
+> El modo de investigación de HoloLens 2 está disponible a partir de la compilación 19041,1364. Si necesita tener acceso en una compilación anterior, Regístrese en el programa de [versión preliminar de Insider](/hololens/hololens-insider) . Puede encontrar más detalles en el [repositorio de github del modo de investigación](https://github.com/microsoft/HoloLens2ForCV).
 
 ### <a name="using-sensor-data-in-your-apps"></a>Uso de datos de sensor en las aplicaciones
 

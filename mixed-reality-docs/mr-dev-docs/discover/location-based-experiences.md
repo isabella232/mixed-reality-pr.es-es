@@ -6,12 +6,12 @@ ms.author: ishitak
 ms.date: 08/03/2020
 ms.topic: article
 keywords: realidad mixta, VR, LBE, ubicación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, hardware, HoloLens, varios jugadores, servicios en la nube, Azure
-ms.openlocfilehash: 1cc54ad0ef4b9892c49e13c7437a4d5356093c79
-ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
+ms.openlocfilehash: 49e96b99d3f74bd24a4a0e71f212018108148ad2
+ms.sourcegitcommit: ad1e0c6a31f938a93daa2735cece24d676384f3f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98810103"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236916"
 ---
 # <a name="location-based-entertainment-with-windows-mixed-reality"></a>Entretenimiento basado en la ubicación con Windows Mixed Reality
 
@@ -49,7 +49,7 @@ En el caso de las experiencias de VR con tethering de PC, nuestros OEM ofrecen u
 
 HP acaba de lanzar su mochila de HP VR de la versión G2, el equipo portátil más eficaz del mundo, optimizado para experiencias de movilidad gratuita, ahora con un 30% más de energía con una GPU de RTX 2080 dentro de. [Detalles](https://www8.hp.com/us/en/vr/vr-backpack.html)
 
-### <a name="setup"></a>Configuración
+### <a name="setup"></a>Configurar
 
 **P: ¿Cómo puedo configurar más fácilmente el programa de instalación y personalizar el portal de realidad mixta para LBE?**
 
@@ -68,7 +68,7 @@ Omitir la instalación de aplicaciones desde la tienda: el programa de instalaci
 
 Mostrar vista previa en pantalla completa: el portal de realidad mixta mostrará de forma predeterminada la vista previa del casco en la pantalla completa en el equipo de escritorio mientras el casco está en uso.  
 
-Ocultar nuevo en el panel lateral: impide que el nuevo para su panel se expanda al iniciar el portal de realidad mixta.  
+Ocultar nuevo en el panel lateral: impide que el panel nuevo en su panel se expanda al iniciar el portal de realidad mixta.  
 
 #### <a name="how-to-configure"></a>Cómo se configura:  
 

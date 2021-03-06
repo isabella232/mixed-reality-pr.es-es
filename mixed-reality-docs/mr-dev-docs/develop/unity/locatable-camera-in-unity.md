@@ -6,12 +6,12 @@ ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Foto, vídeo, hololens, cámara, Unity, localizable, PVC, cámara de vídeo fotográfico, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, cámara web, captura de fotos, captura de vídeo
-ms.openlocfilehash: 8916b332774185e4453b514ca7b6916947bdcd81
-ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
+ms.openlocfilehash: ccf0c17a5f419341e64a87fb9ef04ef0a40c2a33
+ms.sourcegitcommit: ad1e0c6a31f938a93daa2735cece24d676384f3f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98226424"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102236906"
 ---
 # <a name="locatable-camera-in-unity"></a>Cámara localizable en Unity
 
@@ -26,7 +26,8 @@ Solo se puede realizar una operación con la cámara a la vez. Puede comprobar c
 
 ## <a name="photo-capture"></a>Captura de foto
 
-**Espacio de nombres:** *UnityEngine. XR. WSA. webcam*<br>
+**Espacio de nombres:**  
+*UnityEngine. XR. WSA. WebCam (Unity \~ 2018) UnityEngine. Windows. webcam (unity 2019 \~ )*<br>
 **Tipo:** *fotocapture*
 
 El tipo de *fotocaptura* le permite tomar fotografías con la cámara de vídeo fotográfico. El patrón general para usar *fotocapture* para tomar una foto es el siguiente:
@@ -303,7 +304,7 @@ void OnStoppedRecordingVideo(VideoCapture.VideoCaptureResult result)
    }
 ```
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 * No hay ninguna solución disponible
     * Asegúrese de que la funcionalidad de la **cámara web** está especificada en el proyecto.
 
