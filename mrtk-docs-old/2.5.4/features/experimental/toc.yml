@@ -1,0 +1,12 @@
+- name: Diálogo
+  href: dialog.md
+- name: Acoplar
+  href: dock.md
+- name: Asesor manual
+  href: hand-coach.md
+- name: Servicio de la física de la mano
+  href: hand-physics-service.md
+- name: Teclado de Mixed Reality
+  href: mixed-reality-keyboard.md
+- name: Sombreador de pulsos
+  href: pulse-shader.md

@@ -1,0 +1,4 @@
+- name: Información general de los solucionadores
+  href: solver.md
+- name: Pulsar para colocar
+  href: tap-to-place.md

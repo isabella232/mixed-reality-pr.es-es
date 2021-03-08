@@ -1,0 +1,16 @@
+- name: Herramienta de asignación de controladores
+  href: controller-mapping-tool.md
+- name: Ventana de dependencias
+  href: dependency-window.md
+- name: Asistente para la creación del servicio de extensión
+  href: extension-service-creation-wizard.md
+- name: Control remoto de holografías
+  href: holographic-remoting.md
+- name: Herramienta de uso de las características de entrada
+  href: input-feature-usage-tool.md
+- name: Ventana de migración
+  href: migration-window.md
+- name: Optimizar ventana
+  href: optimize-window.md
+- name: Utilidad de captura de pantalla
+  href: screenshot-utility.md

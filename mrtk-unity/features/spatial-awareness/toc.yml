@@ -1,0 +1,12 @@
+- name: Introducción al reconocimiento espacial
+  href: spatial-awareness-getting-started.md
+- name: Observador de la malla de reconocimiento espacial
+  href: configuring-spatial-awareness-mesh-observer.md
+- name: Observador de la malla de objetos espaciales
+  href: spatial-object-mesh-observer.md
+- name: Observador de la descripción de escenas
+  href: scene-understanding.md
+- name: Guía de uso
+  href: usage-guide.md
+- name: Creación del proveedor de datos
+  href: create-data-provider.md
