@@ -1,0 +1,40 @@
+- name: Barra de la aplicación
+  href: app-bar.md
+- name: Cuadro de límite
+  href: bounding-box.md
+- name: bounds-control
+  href: bounds-control.md
+- name: Botón
+  href: button.md
+- name: Administrador de restricciones
+  href: constraint-manager.md
+- name: Visualización del dedo
+  href: fingertip-visualization.md
+- name: Menú Mano
+  href: hand-menu.md
+- name: Interactuable
+  href: interactable.md
+- name: Controlador de manipulación
+  href: manipulation-handler.md
+- name: Menú Cerca
+  href: near-menu.md
+- name: Colección de objetos
+  href: object-collection.md
+- name: Manipulador de objetos
+  href: object-manipulator.md
+- name: Indicador de progreso
+  href: progress-indicator.md
+- name: Desplazamiento por la colección de objetos
+  href: scrolling-object-collection.md
+- name: Claqueta
+  href: slate.md
+- name: Controles deslizantes
+  href: sliders.md
+- name: Teclado del sistema
+  href: system-keyboard.md
+- name: Cuadro de herramientas
+  href: toolbox.md
+- name: Información sobre herramientas
+  href: tooltip.md
+- name: Solucionadores
+  href: solvers/toc.yml
