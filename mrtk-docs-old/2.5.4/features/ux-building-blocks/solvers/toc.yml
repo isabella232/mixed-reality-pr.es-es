@@ -1,0 +1,4 @@
+- name: Solver
+  href: solver.md
+- name: Pulsar para colocar
+  href: tap-to-place.md
