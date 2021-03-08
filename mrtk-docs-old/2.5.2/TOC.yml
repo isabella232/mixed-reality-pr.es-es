@@ -1,0 +1,20 @@
+- name: Le damos la bienvenida a MRTK
+  href: WelcomeToMRTK.md
+- name: Guía de instalación
+  href: Installation.md
+- name: Configuración
+  href: configuration/toc.yml
+- name: Architecture
+  href: architecture/toc.yml
+- name: Características
+  href: features/toc.yml
+- name: Rendimiento y procedimientos recomendados
+  href: performance/toc.yml
+- name: Actualizaciones e implementación
+  href: updates-deployment/toc.yml
+- name: Paquetes y notas de la versión
+  href: packages-releases/toc.yml
+- name: Contribuir
+  href: contributing/toc.yml
+- name: Planificación
+  href: planning/toc.yml
