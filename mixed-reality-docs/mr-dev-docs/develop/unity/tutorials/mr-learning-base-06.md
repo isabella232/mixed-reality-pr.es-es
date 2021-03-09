@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, prefabs, holograms, tooltips
 ms.localizationpriority: high
-ms.openlocfilehash: 3b32faab4be13d42f228659285244c206680466e
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: 8e7ab83fa195fc48d8fe1c1daf8207c49e3ec71e
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590557"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101760031"
 ---
 # <a name="6-creating-user-interfaces"></a>6. Creación de interfaces de usuario
 
@@ -67,7 +67,7 @@ En la ventana Hierarchy (Jerarquí)a, seleccione el objeto del botón **Hints** 
 ![Unity con el evento OnClick del objeto de botón Hints configurado](images/mr-learning-base/base-06-section1-step1-5.png)
 
 > [!TIP]
-> El componente Interactable es un contenedor todo en uno que hace que se puede interactuar fácilmente con cualquier objeto y que este tenga capacidad de respuesta a las entradas. Interactable actúa como una instrucción comodín para todos los tipos de entradas como, por ejemplo, entradas táctiles, haces de mano, voz, etc., y canaliza estas interacciones en eventos y respuestas de tema visual. Para aprender a configurarlo para diferentes tipos de entrada y personalizar su tema visual, puede consultar la guía sobre [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) en el [Portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+> El componente Interactable es un contenedor todo en uno que hace que se puede interactuar fácilmente con cualquier objeto y que este tenga capacidad de respuesta a las entradas. Interactable actúa como una instrucción comodín para todos los tipos de entradas como, por ejemplo, entradas táctiles, haces de mano, voz, etc., y canaliza estas interacciones en eventos y respuestas de tema visual. Para aprender a configurarlo para diferentes tipos de entrada y personalizar su tema visual, puede consultar la guía sobre [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) en el [Portal de documentación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/).
 
 En la ventana Hierarchy (Jerarquía), seleccione el objeto del botón **Explode** y, a continuación, en la ventana Inspector, configure el evento **OnClick ()** de la siguiente manera:
 
@@ -86,7 +86,7 @@ y el botón **Explode** para activar y desactivar la vista seccionada:
 
 ## <a name="creating-a-dynamic-menu-that-follows-the-user"></a>Creación de un menú dinámico que sigue al usuario
 
-En la ventana Proyecto, vaya a la carpeta **Packages** > **Mixed Reality Toolkit Foundation** > **SDK** > **Features** > **UXPrefabsMenus (Paquetes > Mixed Reality Toolkit Foundation > SDK > Características > Experiencia del usuario > Objetos prefabricados > Menús), haga clic y arrastre el elemento prefabricado NearMenu4x1 a la ventana Hierarchy (Jerarquía), establezca el valor del campo Position (Posición) del área Transform (Transformación) en X = 0; Y = -0,4; Z = 0 y configúrelo de la forma siguiente:
+En la ventana Proyecto, vaya a la carpeta PackagesMixed Reality Toolkit FoundationSDKFeatures**UXPrefabsMenus (Paquetes > Mixed Reality Toolkit Foundation > SDK > Características > Experiencia del usuario > Objetos prefabricados > Menús), haga clic y arrastre el elemento prefabricado NearMenu4x1 a la ventana Hierarchy (Jerarquía), establezca el valor del campo Position (Posición) del área Transform (Transformación) en X = 0; Y = -0,4; Z = 0 y configúrelo de la forma siguiente:
 
 * Compruebe que el **Tracked Target Type** (Tipo de objetivo de seguimiento) del componente **SolverHandler** esté establecido en **Head** (Cabeza).
 * Marque la casilla junto al componente **RadialView** del solucionador para que esté habilitado de forma predeterminada

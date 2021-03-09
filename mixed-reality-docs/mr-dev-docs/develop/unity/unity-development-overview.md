@@ -7,18 +7,18 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, mixed reality, development, getting started, new project, porting, capability, camera, simulation, emulation, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset, what is virtual reality, what is augmented reality, MRTK, mixed reality toolkit, spatial mapping, voice input, locatable camera, emulator, Azure, tutorials
-ms.openlocfilehash: 59bb269bfb8d7e0a9cfd6963cf144ddb0e070c5f
-ms.sourcegitcommit: 1304f8f0a838290c1ae3db34670b67c75ea9bdaa
+ms.openlocfilehash: ed0f27822ab83baa2c1de6575067bdbd6b00a5e6
+ms.sourcegitcommit: 5694cc472bde67c940204ebe6671b0598501e62a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99421414"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "102126618"
 ---
 # <a name="unity-development-for-hololens"></a>Desarrollo de Unity para HoloLens
 
 ![Logotipo del banner de Unity](../images/unity_logo_banner.png)
 
-La forma más rápida de compilar una [aplicación de realidad mixta](../../design/app-views.md) de HoloLens en [Unity](https://unity.com) es mediante el kit de herramientas de Mixed Reality. Si no está familiarizado con Unity, le recomendamos que explore los [tutoriales](https://unity3d.com/learn/tutorials) de nivel principiante en la plataforma de aprendizaje de Unity antes de continuar. También puede resultarle útil visitar la exhaustiva tienda [Asset Store](https://www.assetstore.unity3d.com/) y los [foros de realidad mixta de Unity](https://forum.unity3d.com/forums/hololens.102/) a fin de interactuar con la comunidad en línea que crea aplicaciones de realidad mixta. Nunca se sabe qué recursos o soluciones interesantes pueden encontrarse allí. Cuando esté listo para empezar a usar MRTK, diríjase a los puntos de control de desarrollo siguientes.
+La forma más rápida de compilar una [aplicación de realidad mixta](../../design/app-views.md) de HoloLens en [Unity](https://unity.com) es mediante el kit de herramientas de Mixed Reality. Si no está familiarizado con Unity, le recomendamos que explore los [tutoriales](https://unity3d.com/learn/tutorials) de nivel principiante en la plataforma de aprendizaje de Unity antes de continuar. También puede resultarle útil visitar la exhaustiva tienda [Asset Store](https://assetstore.unity.com) y los [foros de realidad mixta de Unity](https://forum.unity3d.com/forums/hololens.102/) a fin de interactuar con la comunidad en línea que crea aplicaciones de realidad mixta. Nunca se sabe qué recursos o soluciones interesantes pueden encontrarse allí. Cuando esté listo para empezar a usar MRTK, diríjase a los puntos de control de desarrollo siguientes.
 
 > [!IMPORTANT]
 > Eche un vistazo a nuestras **[guías de migración](../porting-apps/porting-overview.md)** si tiene un proyecto de Unity existente que quiere llevar a HoloLens 2. Tenemos guías para los proyectos que usan HTK, MRTK V1 o SteamVR.
@@ -104,7 +104,7 @@ Antes de que se sumerja en el mundo de la realidad mixta por su cuenta, le recom
 | --- | --- |
 | [Introducción a la arquitectura de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Architecture/Overview.html) | Conozca mejor cómo funciona el SDK de MRTK en sus proyectos. |
 | [Configuración y rendimiento](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Performance/PerfGettingStarted.html) | Genere perfiles de la aplicación, actualice la configuración de Unity y obtenga el mejor rendimiento de estabilización de hologramas disponible. |
-| [Introducción a MRTK y XR](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithMRTKAndXRSDK.html) | Realice la transferencia a la canalización de XR alternativa que proporciona Unity. |
+| [Introducción a MRTK y XR](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/getting-started-with-mrtk-and-xrsdk.md) | Realice la transferencia a la canalización de XR alternativa que proporciona Unity. |
 
 ### <a name="unity-resources"></a>Recursos de Unity
 

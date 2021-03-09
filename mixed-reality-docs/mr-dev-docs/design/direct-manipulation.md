@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens, mixed reality headset, windows mixed reality headset, virtual reality headset, MRTK, Mixed Reality Toolkit, button, colliders, bounding box, 2D, instinctual gestures
-ms.openlocfilehash: 194212fd19196990eaf873299afbf1c11846946d
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 8316452b8308e159612a81d097c352cf1d935362
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583412"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759327"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulación directa con las manos
 
@@ -327,8 +327,7 @@ Si el usuario lleva un tiempo sin mirar un holograma, pero se ha detectado un ev
 ## <a name="manipulation-in-mrtk-mixed-reality-toolkit-for-unity"></a>Manipulación en MRTK (Mixed Reality Toolkit) para Unity
 Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede conseguir un comportamiento de manipulación común con el script **ObjectManipulator**. Con ManipulationHandler, puede agarrar y mover objetos directamente con las manos o con el haz de mano. También admite la manipulación con dos manos para escalar y girar un objeto.
 
-* [MRTK: manipulación](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html)
-
+* [MRTK: manipulación](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/object-manipulator.md)
 
 ---
 
