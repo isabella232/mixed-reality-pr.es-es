@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, object interactions, Bounds Controles
 ms.localizationpriority: high
-ms.openlocfilehash: f92eca294e2114207a5e28ebe80aa480b9029b66
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: 1ab7b3a334639be564717d77d3bbc478a25e8326
+ms.sourcegitcommit: ad1e0c6a31f938a93daa2735cece24d676384f3f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590463"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102237246"
 ---
 # <a name="7-interacting-with-3d-objects"></a>7. Interacción con objetos 3D
 
@@ -113,7 +113,7 @@ Si ahora entra en el Modo Juego, podrá usar la interacción cercana o lejana pa
 
 ![Vista dividida del modo de reproducción de Unity con el botón Reset presionado](images/mr-learning-base/base-07-section1-step1-7.png)
 
-Para obtener más información sobre el componente Object Manipulator (Manipulador de objetos) y sus propiedades asociadas, consulte la guía [Manipulador de objetos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+Para obtener más información sobre el componente Object Manipulator (Manipulador de objetos) y sus propiedades asociadas, consulte la guía [Manipulador de objetos](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectManipulator.html) en el [portal de documentación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/).
 
 ## <a name="adding-bounds-control"></a>Agregar Bounds Control
 
@@ -132,9 +132,6 @@ A continuación, **desactive** la casilla situada junto a todos los componentes 
 
 > [!NOTE]
 > La visualización de Bounds Control se crea en tiempo de ejecución y, por tanto, no es visible antes de entrar en el modo de juego.
-
-> [!NOTE]
->El componente BoundsControl agregará automáticamente el componente NearInteractionGrabbable en tiempo de ejecución. Por lo tanto, no es necesario agregar este componente para agarrar los objetos delimitados con las manos con seguimiento.
 
 > [!NOTE]
 >El manipulador de objetos (script) agrega automáticamente el administrador de restricciones (script)
@@ -171,7 +168,7 @@ Si ahora entra en el modo de juego y habilita Bounds Control haciendo clic en el
 
 ![Vista dividida del modo de reproducción de Unity con Bounds Control manipulado](images/mr-learning-base/base-07-section2-step1-4.png)
 
-Para más información sobre el componente Bounds Control y sus propiedades asociadas, puede visitar la guía de [Bounds Control](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundsControl.html) en el [portal de documentación de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/README.html).
+Para más información sobre el componente Bounds Control y sus propiedades asociadas, puede visitar la guía de [Bounds Control](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundsControl.html) en el [portal de documentación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/).
 
 ## <a name="congratulations"></a>Enhorabuena
 

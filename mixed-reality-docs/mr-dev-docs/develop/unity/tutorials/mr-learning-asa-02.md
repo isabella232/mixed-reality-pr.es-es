@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: a0621403ec3c4d8d0fa6f13672530756bcb6da39
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: a44e79d656875d7730ee155e10260bd5ebb6265f
+ms.sourcegitcommit: ad1e0c6a31f938a93daa2735cece24d676384f3f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590756"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "102237126"
 ---
 # <a name="2-getting-started-with-azure-spatial-anchors"></a>2. Introducción a Azure Spatial Anchors
 
@@ -129,7 +129,7 @@ En la ventana Hierarchy (Jerarquía), seleccione el siguiente botón denominado 
 
 En la ventana Hierarchy (Jerarquía), seleccione el siguiente botón denominado **DeleteAzureAnchor**, a continuación, en la ventana Inspector, configure el componente **Button Config Helper (script)** en el evento **On Click ()** de la siguiente manera:
 
-* Asigne el objeto **DeleteAzureAnchor** al campo **None (Object)** (Ninguno [objeto]).
+* Asigne el objeto **ParentAnchor** al campo **None (Object)** (Ninguno [objeto]).
 * En la lista desplegable **No Function** (Ninguna función), seleccione **AnchorModuleScript** > **DeleteAzureAnchor ()** para establecer esta función como la acción que se va a ejecutar cuando se desencadene el evento.
 
 ![Unity con el evento OnClick del botón DeleteAzureAnchor configurado](images/mr-learning-asa/asa-02-section5-step1-6.png)
@@ -149,7 +149,7 @@ En la ventana Hierarchy (Jerarquía), seleccione el objeto **ParentAnchor** y, e
 Azure Spatial Anchors no se puede ejecutar en Unity, de modo que, para probar la funcionalidad de Azure Spatial Anchors, debe compilar el proyecto e implementar la aplicación en el dispositivo.
 
 > [!TIP]
-> Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puede consultar las instrucciones de [Compilación de la aplicación a HoloLens 2]((mr-learning-base-02.md#building-your-application-to-your-hololens-2).
+> Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puede consultar las instrucciones de [Compilación de la aplicación para el HoloLens 2](mr-learning-base-02.md#building-your-application-to-your-hololens-2).
 
 Cuando la aplicación se ejecute en el dispositivo, siga las instrucciones en pantalla que se muestran en el panel de instrucciones del tutorial de Azure Spatial Anchors:
 
