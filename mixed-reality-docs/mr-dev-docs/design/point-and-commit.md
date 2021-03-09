@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, interaction, design, HoloLens, hands, far, point and commit , mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, hand rays, object manipulation, MRTK, Mixed Reality Toolkit, DoF
-ms.openlocfilehash: 3351a38cad99089a60555ffe450447fc5c356fdc
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 8196b67f103bae346ba4da065ee6045ff231b004
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583203"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759871"
 ---
 # <a name="point-and-commit-with-hands"></a>Apuntar y confirmar con las manos
 
@@ -204,9 +204,9 @@ El concepto de señalar y confirmar de la interacción lejana se creó y defini�
 
 De forma predeterminada, MRTK proporciona un haz de mano prefabricado ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) que tiene el mismo estado visual que el haz de mano del sistema del shell. Se asigna en el perfil de entrada de MRTK, en Punteros. En un casco envolvente, se usan los mismos haces para los controladores de movimiento.
 
-* [MRTK: perfil de puntero](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/MixedRealityConfigurationGuide.html#pointer-configuration)
-* [MRTK: sistema de entrada](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Overview.html)
-* [MRTK: punteros](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Input/Pointers.html)
+* [MRTK: perfil de puntero](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/mixed-reality-configuration-guide.md#pointer-configuration)
+* [MRTK: sistema de entrada](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/overview.md)
+* [MRTK: punteros](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/pointers.md)
 
 ---
 

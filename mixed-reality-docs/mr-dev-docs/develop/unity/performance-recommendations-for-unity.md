@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: gráficos, CPU, GPU, representación, recolección de elementos no utilizados, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 738f9032b0e0500e0f5daa3b59cc1740ef570928
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: f8757e5a5f5c9163dc70d8c8d0e93848c49a6694
+ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583184"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "101759731"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recomendaciones de rendimiento para Unity
 
@@ -309,7 +309,7 @@ Por lo tanto, reducir el número de operaciones en el sombreador de fragmentos n
 
 #### <a name="unity-standard-shader-alternatives"></a>Alternativas del sombreador estándar de Unity
 
-En lugar de usar una representación basada físicamente (PBR) u otro sombreador de alta calidad, consulta el uso de un sombreador más eficaz y económico. [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity) proporciona el [sombreador estándar de MRTK](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_MRTKStandardShader.html) que se ha optimizado para proyectos de realidad mixta.
+En lugar de usar una representación basada físicamente (PBR) u otro sombreador de alta calidad, consulta el uso de un sombreador más eficaz y económico. [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity) proporciona el [sombreador estándar de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/mrtk-standard-shader.md) que se ha optimizado para proyectos de realidad mixta.
 
 Unity también proporciona opciones sin iluminación, iluminación de vértice, iluminación difusa y otras opciones simplificadas de sombreador que son más rápidas en comparación con el sombreador estándar de Unity. Consulta [Uso y rendimiento de los sombreadores integrados](https://docs.unity3d.com/Manual/shader-Performance.html) para obtener información más detallada.
 
