@@ -1,17 +1,17 @@
 ---
-title: Cámara en Unity
+title: Configuración de la cámara en Unity
 description: Obtenga información sobre cómo configurar y usar la cámara principal de Unity para el desarrollo de Windows Mixed Reality para realizar la representación holográfica.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, representación holográfica, holográfica, envolvente, punto de enfoque, búfer de profundidad, solo orientación, posicional, opaco, transparente, recorte, auriculares de realidad mixta, auriculares mixto de realidad de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 865d19482e5f612eab95fa2f74cb2bad59171496
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 23f6f1c996ba71b1bcfa62e0c64136bc9fda34b7
+ms.sourcegitcommit: e51e18e443d73a74a9c0b86b3ca5748652cd1b24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759771"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103574971"
 ---
 # <a name="camera-in-unity"></a>Cámara en Unity
 

@@ -6,12 +6,12 @@ ms.author: dobrown
 ms.date: 01/21/2021
 ms.topic: article
 keywords: VR, LBE, entretenimiento basado en ubicación, VR Arcade, Arcade, inmersivo, QR, código QR, hololens2
-ms.openlocfilehash: 0f53b8def268b2d501c6efe3c3e40ea18f9323e0
-ms.sourcegitcommit: 04927427226928bd9178da0049d4cef626a6b0bf
+ms.openlocfilehash: 2617d5f811b9d437ece0d5ba2e7dbc909eb16988
+ms.sourcegitcommit: e51e18e443d73a74a9c0b86b3ca5748652cd1b24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "98635437"
+ms.lasthandoff: 03/16/2021
+ms.locfileid: "103574951"
 ---
 # <a name="qr-code-tracking"></a>Seguimiento de códigos QR
 
@@ -209,9 +209,10 @@ El tiempo exacto para detectar códigos depende no solo del tamaño de los códi
 ### <a name="distance-and-angular-position-from-the-qr-code"></a>Distancia y posición angular del código QR
 Las cámaras de seguimiento solo pueden detectar un cierto nivel de detalle. En el caso de códigos pequeños (< 10 cm a lo largo de los lados) debe estar bastante cerca. En el caso de un código QR de la versión 1 que varía de 10 cm a 25 cm de ancho, la distancia mínima de detección oscila entre 0,15 y 0,5 metros. 
 
-La distancia de detección para el tamaño aumenta linealmente. 
+La distancia de detección para el tamaño aumenta linealmente, pero también depende de la versión QR o del tamaño del módulo. Cuanto mayor sea la versión, más pequeños serán los módulos, que solo se pueden detectar desde una posición más cercana. También puede probar códigos micro QR si desea que la distancia de detección sea más larga. La detección de QR funciona con un rango de ángulos + = 45 grados para garantizar que tenemos una solución adecuada para detectar el código.
 
-La detección de QR funciona con un rango de ángulos + = 45 grados para garantizar que tenemos una solución adecuada para detectar el código.
+> [!IMPORTANT]
+> Asegúrese siempre de que tiene un contraste suficiente y un borde adecuado.
 
 ### <a name="qr-codes-with-logos"></a>Códigos QR con logotipos
 Los códigos QR con logotipos no se han probado y actualmente no se admiten.
@@ -458,6 +459,6 @@ namespace Microsoft.MixedReality.QR
 }
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 * [Sistemas de coordenadas](../../design/coordinate-systems.md)
 * <a href="/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a>
