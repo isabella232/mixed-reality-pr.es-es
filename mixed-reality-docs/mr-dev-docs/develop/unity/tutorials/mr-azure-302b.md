@@ -1,19 +1,19 @@
 ---
-title: 'Realidad mixta y Azure (302b): Custom Vision'
+title: 'HoloLens (1ª generación) y Azure 302B: visión personalizada'
 description: Complete este curso para aprender a entrenar un modelo de aprendizaje automático y, a continuación, use el modelo entrenado para reconocer objetos similares en una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/03/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, visión personalizada, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: cba2df5841911df6d60a7060a70f835975a21f62
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 97fd0ae72401b67a83752cb2cf6799fa2b1ccc0c
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583403"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730532"
 ---
-# <a name="mr-and-azure-302b-custom-vision"></a>Realidad mixta y Azure (302b): Custom Vision
+# <a name="hololens-1st-gen-and-azure-302b-custom-vision"></a>HoloLens (1ª generación) y Azure 302B: visión personalizada
 
 <br>
 
@@ -1662,7 +1662,7 @@ Para comenzar el proceso de *compilación* :
 
 Para implementar en HoloLens:
 
-1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador**. Para hacerlo:
+1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador**. Para ello, siga estos pasos:
 
     1.  Mientras se contenga HoloLens, abra la **configuración**.
 
@@ -1750,11 +1750,11 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha Azure Cus
 
 ## <a name="bonus-exercises"></a>Ejercicios extra
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 Entrenar el **Custom Vision Service** para reconocer más objetos.
 
-### <a name="exercise-2"></a>Ejercicio 2
+### <a name="exercise-2"></a>Ejercicio 2
 
 Para ampliar la información que ha aprendido, complete los siguientes ejercicios:
 

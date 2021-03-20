@@ -1,19 +1,19 @@
 ---
-title: 'Realidad mixta y Azure (306): vídeo de streaming'
+title: 'HoloLens (1ª generación) y Azure 306: vídeo de streaming'
 description: Complete este curso para aprender a implementar Azure Media Services en una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Media Services, streaming video, 360, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 3a0401b7503d8a783ba529cf24cdf6cc55c88311
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: c6afedfd2dae9da3bcd6b044381a6dc20604ded8
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583451"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730572"
 ---
-# <a name="mr-and-azure-306-streaming-video"></a>Realidad mixta y Azure (306): Vídeo en streaming
+# <a name="hololens-1st-gen-and-azure-306-streaming-video"></a>HoloLens (1ª generación) y Azure 306: streaming de vídeo
 
 <br>
 
@@ -285,7 +285,7 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
 
     ![Azure Portal](images/AzureLabs-Lab6-30.png)
 
-4.  A continuación, vaya a configuración de compilación de **_archivos_** y cambie la plataforma a **plataforma universal de Windows**, haciendo clic en el botón **cambiar plataforma** .
+4.  A continuación, vaya a configuración de compilación de ***archivos*** y cambie la plataforma a **plataforma universal de Windows**, haciendo clic en el botón **cambiar plataforma** .
 
 5.  Asegúrese también de que:
 
@@ -629,7 +629,7 @@ Para crear esta clase:
 
 2.  Haga clic con el botón derecho en el panel **proyecto** , **crear* * C \# script * *. Asigne un nombre **al script.**
 
-3.  Haga doble clic en el nuevo script de **_premiración_*para abrirlo con _* Visual Studio 2017.**
+3.  Haga doble clic en el nuevo script ***fijamente** _ para abrirlo con _ *Visual Studio 2017.**
 
 4.  Asegúrese de que el siguiente espacio de nombres se encuentra en la parte superior del script y quite los demás:
 
@@ -881,10 +881,10 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha Azure Med
 
 ## <a name="bonus-exercises"></a>Ejercicios de bonus
 
-**Ejercicio 1**
+**Ejercicio 1**
 
 Es totalmente posible usar una sola escena para cambiar vídeos en este tutorial. Experimente con la aplicación y conviértalo en una sola escena. Quizás incluso agregue otro vídeo a la combinación.
 
-**Ejercicio 2**
+**Ejercicio 2**
 
 Experimente con Azure y Unity e intente implementar la capacidad de la aplicación para seleccionar automáticamente un vídeo con un tamaño de archivo diferente, en función de la seguridad de una conexión a Internet.

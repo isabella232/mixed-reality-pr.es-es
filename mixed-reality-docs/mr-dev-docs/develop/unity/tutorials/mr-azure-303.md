@@ -1,19 +1,19 @@
 ---
-title: 'MR y Azure 303: comprensión del lenguaje natural (LUIS)'
+title: HoloLens (1º gen) y Azure 303-natural Language Understanding (LUIS)
 description: Complete este curso para aprender a implementar Azure Language Understanding Intelligence Service (LUIS) en una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Language Understanding Intelligence Service, Luis, hololens, inmersivo, VR, Windows 10, Visual Studio
-ms.openlocfilehash: a91fcd2e20ce1e1731bd398fa72923f6ff5e8406
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 663ac44dbf15ce2db63d7ffe0ecc605d3555857f
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583437"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730562"
 ---
-# <a name="mr-and-azure-303-natural-language-understanding-luis"></a>MR y Azure 303: comprensión del lenguaje natural (LUIS)
+# <a name="hololens-1st-gen-and-azure-303-natural-language-understanding-luis"></a>HoloLens (1ª generación) y Azure 303: comprensión del lenguaje natural (LUIS)
 
 <br>
 
@@ -1111,10 +1111,10 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha el servic
 
 ## <a name="bonus-exercises"></a>Ejercicios extra
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 Al usar esta aplicación, es posible que observe que si mira el objeto Floor y pide cambiar su color, lo hará. ¿Puede averiguar cómo evitar que la aplicación cambie el color del piso?
 
-### <a name="exercise-2"></a>Ejercicio 2
+### <a name="exercise-2"></a>Ejercicio 2
 
 Intente ampliar las funcionalidades de LUIS y App, agregando funcionalidad adicional a los objetos de la escena. por ejemplo, cree nuevos objetos en el punto de Miración de la mirada, en función de lo que indique el usuario y, a continuación, podrá usar esos objetos junto con los objetos de la escena actual con los comandos existentes.

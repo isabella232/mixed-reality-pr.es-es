@@ -1,19 +1,19 @@
 ---
-title: 'Aspectos básicos de realidad mixta (100): introducción a Unity'
+title: 'Conceptos básicos de HoloLens (primera generación) 100: Introducción a Unity'
 description: Aprenda a crear su primera aplicación básica "Hola mundo" de realidad mixta para HoloLens y dispositivos Windows Mixed Reality.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realidad mixta, Windows Mixed Reality, HoloLens, envolventes, VR, Mr, introducción, holograma, Academia, tutorial, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 86ac759cb73e39f88d62db5dab0c38108bb17d55
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 999ab7dc87a639f10aad9eaf2a7ef8de2cf92633
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583729"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730362"
 ---
-# <a name="mr-basics-100-getting-started-with-unity"></a>Aspectos básicos de realidad mixta (100): Introducción a Unity
+# <a name="hololens-1st-gen-basics-100-getting-started-with-unity"></a>Conceptos básicos de HoloLens (1º gen) 100: Introducción a Unity
 
 >[!IMPORTANT]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](mrlearning-base.md) para HoloLens 2.
@@ -143,7 +143,7 @@ La creación de un cubo en el proyecto de Unity es igual que crear cualquier otr
 
 Ahora que hemos creado el cubo, es el momento de realizar una comprobación rápida del dispositivo. Puede hacerlo directamente desde el editor de Unity.
 
-### <a name="initial-setup"></a>Configuración inicial
+### <a name="initial-setup"></a>Instalación inicial
 
 1. En el equipo de desarrollo, en Unity, Abra **archivo >** ventana de configuración de compilación.
 2. Cambie **plataforma** a **plataforma universal de Windows** y haga clic en **cambiar plataforma**

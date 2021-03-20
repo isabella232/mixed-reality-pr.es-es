@@ -1,19 +1,19 @@
 ---
-title: 'Realidad mixta y Azure (302): Computer Vision'
+title: HoloLens (1ª generación) y Azure 302-Computer Vision
 description: Complete este curso para aprender a reconocer contenido visual dentro de una imagen proporcionada, con Azure Computer Vision en una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Computer Vision, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 2ba5f01b0b14c655f8639f74590a511629350fbb
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 119d83ec9fef97b4e4017b2226a9593404847a71
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583283"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730542"
 ---
-# <a name="mr-and-azure-302-computer-vision"></a>Realidad mixta y Azure (302): Computer Vision
+# <a name="hololens-1st-gen-and-azure-302-computer-vision"></a>HoloLens (1ª generación) y Azure 302: Computer Vision
 
 <br>
 
@@ -709,7 +709,7 @@ Ya se ha completado todo lo necesario para la sección Unity de este proyecto, p
 
 Para implementar en HoloLens:
 
-1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador**. Para hacerlo:
+1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador**. Para ello, siga estos pasos:
 
     1. Mientras se contenga HoloLens, abra la **configuración**.
     2. Vaya a **red & Internet > Wi-Fi > opciones avanzadas**
@@ -737,10 +737,10 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha el Comput
 
 ## <a name="bonus-exercises"></a>Ejercicios extra
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 Del mismo modo que ha usado el parámetro *Tags* (como se evidencia en el *punto de conexión* usado dentro del *VisionManager*), extienda la aplicación para detectar otra información; Observe a qué otros parámetros tiene acceso [aquí](https://westus.dev.cognitive.microsoft.com/docs/services/56f91f2d778daf23d8ec6739/operations/56f91f2e778daf14a499e1fa).
 
-### <a name="exercise-2"></a>Ejercicio 2
+### <a name="exercise-2"></a>Ejercicio 2
 
 Muestre los datos de Azure devueltos, de forma más conversación y legibles, y quizás oculte los números. Como si un bot pudiera estar hablando al usuario.

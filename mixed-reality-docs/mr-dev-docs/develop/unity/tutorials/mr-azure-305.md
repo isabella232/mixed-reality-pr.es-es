@@ -1,19 +1,19 @@
 ---
-title: 'Realidad mixta y Azure (305): funciones y almacenamiento'
+title: 'HoloLens (1ª generación) y Azure 305: funciones y almacenamiento'
 description: Complete este curso para aprender a implementar Azure Storage y funciones en una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, funciones, almacenamiento, hololens, inmersivo, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 5c9784446923b3eae7a600b8e672574ce6465038
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: b55acaf003a1cdf50a5a78e48fdf05a9ab07d0d6
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583423"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730552"
 ---
-# <a name="mr-and-azure-305-functions-and-storage"></a>Realidad mixta y Azure (305): Funciones y almacenamiento
+# <a name="hololens-1st-gen-and-azure-305-functions-and-storage"></a>HoloLens (1ª generación) y Azure 305: funciones y almacenamiento
 
 <br>
 
@@ -1237,10 +1237,10 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha los servi
 
 ## <a name="bonus-exercises"></a>Ejercicios extra
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 Cree un segundo punto de generación y grabe el punto de generación a partir del que se creó un objeto. Al cargar el archivo de datos, reproduzca las formas que se van a generar desde la ubicación en la que se crearon originalmente.
 
-### <a name="exercise-2"></a>Ejercicio 2
+### <a name="exercise-2"></a>Ejercicio 2
 
 Cree una manera de reiniciar la aplicación, en lugar de tener que volver a abrirla cada vez. La **carga de escenas** es un buen punto de partida. Después de hacerlo, cree una manera de borrar la lista almacenada en *Azure Storage*, para que se pueda restablecer fácilmente desde la aplicación.

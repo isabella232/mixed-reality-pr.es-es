@@ -1,19 +1,19 @@
 ---
-title: 'Realidad mixta y Azure (304): reconocimiento facial'
+title: 'HoloLens (1º gen) y Azure 304: reconocimiento facial'
 description: Haz este curso para aprender a implementar Azure Face Recognition dentro de una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, reconocimiento facial, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 6cdb8b7af9988bbfbc6670d0ef79f00487db7f3c
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 6266cb206a0686745bcd7a92f64d78436c71a228
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583378"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730512"
 ---
-# <a name="mr-and-azure-304-face-recognition"></a>Realidad mixta y Azure (304): Reconocimiento facial
+# <a name="hololens-1st-gen-and-azure-304-face-recognition"></a>HoloLens (1ª generación) y Azure 304: reconocimiento facial
 
 <br>
 
@@ -818,7 +818,7 @@ Para comenzar el proceso de compilación:
 
 Para implementar en HoloLens:
 
-1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador**. Para hacerlo:
+1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador**. Para ello, siga estos pasos:
 
     1. Mientras se contenga HoloLens, abra la **configuración**.
     2. Vaya a **red & Internet > Wi-Fi > opciones avanzadas**
@@ -842,7 +842,7 @@ Para implementar en HoloLens:
 ## <a name="chapter-10---using-the-application"></a>Capítulo 10: uso de la aplicación
 
 1.  Con HoloLens, inicie la aplicación.
-2.  Fíjese en la persona que ha registrado con el *face API*. Asegúrese de que:
+2.  Fíjese en la persona que ha registrado con el *face API*. Asegúrese de lo siguiente:
 
     -  La superficie de la persona no está demasiado lejana y es claramente visible
     -  La iluminación del entorno no es demasiado oscura
@@ -860,10 +860,10 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha el servic
 
 ## <a name="bonus-exercises"></a>Ejercicios extra
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 **Azure Face API** es lo suficientemente eficaz como para detectar hasta 64 caras en una sola imagen. Amplíe la aplicación para que pueda reconocer dos o tres caras, entre muchas otras personas.
 
-### <a name="exercise-2"></a>Ejercicio 2
+### <a name="exercise-2"></a>Ejercicio 2
 
 **Azure Face API** también puede proporcionar todos los tipos de información de atributos. Integre esto en la aplicación. Esto podría ser aún más interesante, cuando se combina con el [Emotion API](https://azure.microsoft.com/services/cognitive-services/emotion/).

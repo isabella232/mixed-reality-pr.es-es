@@ -1,19 +1,19 @@
 ---
-title: 'Entrada de realidad mixta (212): voz'
+title: Entrada de HoloLens (1ª generación) 212-voz
 description: Siga este tutorial de codificación con Unity, Visual Studio y HoloLens para obtener información detallada sobre los conceptos de voz.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academia, tutorial, voz, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: 6fb3e10cb440fdda941a6d68b106da1bbaaedbc9
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 3218585c8c485e05fc511cf06b32542709027493
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583686"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730452"
 ---
-# <a name="mr-input-212-voice"></a>Entrada de realidad mixta (212): Voz
+# <a name="hololens-1st-gen-input-212-voice"></a>Entrada de HoloLens (1ª generación) 212: voz
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](./mr-learning-base-01.md) para HoloLens 2.
@@ -76,10 +76,10 @@ En este curso, volveremos a visitar el explorador de modelos, que hemos creado e
 
 ## <a name="unity-setup"></a>Configuración de Unity
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 1. Inicie Unity.
-2. seleccione **Open**(Abrir).
+2. Seleccione **Open** (Abrir).
 3. Vaya a la carpeta **HolographicAcademy-hologramas-212-Voice** que previamente eliminó de archivado.
 4. Busque y seleccione la carpeta de **Inicio** del / **Explorador de modelos** .
 5. Haga clic en el botón **Seleccionar carpeta** .
@@ -152,14 +152,14 @@ En este capítulo, aprenderá a diseñar comandos de voz. Al crear comandos de v
     6. Remove
 * Usar sonidos similares. Intente evitar el uso de comandos de voz que Rhyme. Si tiene una aplicación de compras que admitía *"Mostrar tienda"* y *"Mostrar más"* como comandos de voz, querrá deshabilitar uno de los comandos mientras el otro estaba en uso. Por ejemplo, puede usar el botón *"Mostrar tienda"* para abrir el almacén y, a continuación, deshabilitar ese comando cuando se mostró el almacén para que el comando *"Mostrar más"* pueda usarse para la exploración.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En el panel de **jerarquías** de Unity, use la herramienta de búsqueda para buscar el objeto de **holoComm_screen_mesh** .
 * Haga doble clic en el objeto **holoComm_screen_mesh** para verlo en la **escena**. Esta es la inspección de Astronaut, que responderá a los comandos de voz.
 * En el panel **Inspector** , busque el componente de **origen de entrada de voz (Script)** .
 * Expanda la sección **palabras clave** para ver el comando de voz admitido: **Open Communicator**.
 * Haga clic en engranaje en el lado derecho y, luego, seleccione **Editar script**.
-* Explore **SpeechInputSource.CS** para saber cómo usa **KeywordRecognizer** para agregar comandos de voz.
+* Explore **SpeechInputSource. CS** para comprender cómo usa **KeywordRecognizer** para agregar comandos de voz.
 
 ### <a name="build-and-deploy"></a>Compilación e implementación
 
@@ -192,7 +192,7 @@ En este capítulo, aprenderá a diseñar comandos de voz. Al crear comandos de v
 >2. Haga clic en la pestaña "Plataforma universal de Windows"
 >3. En la sección "configuración de publicación > funcionalidades", Compruebe la capacidad del **micrófono** .
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En el panel de **jerarquías** de Unity, compruebe que está seleccionado el objeto de **holoComm_screen_mesh** .
 * En el panel **Inspector** , busque el componente **Astronaut Watch (Script)** .
@@ -203,9 +203,9 @@ En este capítulo, aprenderá a diseñar comandos de voz. Al crear comandos de v
 * Observe que el objeto **Communicator** tiene un componente de **controlador de entrada de voz (Script)** para responder al comando **send Message** .
 * Fíjese en el componente **Communicator (Script)** y haga doble clic en el script para abrirlo en Visual Studio.
 
-Communicator.cs es responsable de establecer los Estados de botón adecuados en el dispositivo Communicator. Esto permitirá a los usuarios grabar un mensaje, reproducirlo y enviar el mensaje a Astronaut. También iniciará y detendrá un formulario de onda animada para confirmar al usuario que se ha escuchado su voz.
+Communicator. CS es responsable de establecer los Estados de botón adecuados en el dispositivo Communicator. Esto permitirá a los usuarios grabar un mensaje, reproducirlo y enviar el mensaje a Astronaut. También iniciará y detendrá un formulario de onda animada para confirmar al usuario que se ha escuchado su voz.
 
-* En **Communicator.CS**, elimine las líneas siguientes (81 y 82) del método **Start** . Esto habilitará el botón "registro" en Communicator.
+* En **Communicator. CS**, elimine las líneas siguientes (81 y 82) del método **Start** . Esto habilitará el botón "registro" en Communicator.
 
 ```cs
 // TODO: 2.a Delete the following two lines:
@@ -248,9 +248,9 @@ En este capítulo, usaremos el reconocedor de dictado para crear un mensaje para
 >2. Haga clic en la pestaña "Plataforma universal de Windows"
 >3. En la sección "configuración de publicación > funcionalidades", Compruebe la capacidad del **micrófono** .
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
-Vamos a editar **MicrophoneManager.CS** para usar el reconocedor de dictado. Esto es lo que agregaremos:
+Vamos a editar **MicrophoneManager. CS** para usar el reconocedor de dictado. Esto es lo que agregaremos:
 
 1. Cuando se presiona el **botón grabar** , se **inicia el DictationRecognizer**.
 2. Mostrar la **hipótesis** de lo que DictationRecognizer entendió.
@@ -259,7 +259,7 @@ Vamos a editar **MicrophoneManager.CS** para usar el reconocedor de dictado. Est
 5. Cuando se presiona el **botón detener** o se agota el tiempo de espera de la sesión MIC, **detenga el DictationRecognizer**.
 6. Reinicie **KeywordRecognizer**, que escuchará el comando **send Message** .
 
-Comencemos. Complete todos los ejercicios de codificación de 3. a en **MicrophoneManager.CS**, o copie y pegue el código finalizado que se encuentra a continuación:
+Empecemos. Complete todos los ejercicios de codificación de 3. a en **MicrophoneManager. CS**, o copie y pegue el código finalizado que se encuentra a continuación:
 
 ```cs
 // Copyright (c) Microsoft Corporation. All rights reserved.
@@ -475,7 +475,7 @@ namespace Academy
 >2. Haga clic en la pestaña "Plataforma universal de Windows"
 >3. En la sección "configuración de publicación > funcionalidades", Compruebe la capacidad del **micrófono** .
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 1. En el panel **jerarquía** , busque **Jetpack_Center** y selecciónelo.
 2. Busque el script de **acción tagalong** en el panel **Inspector** .

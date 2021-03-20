@@ -1,19 +1,19 @@
 ---
-title: MR y Azure 307-machine learning
+title: HoloLens (1ª generación) y Azure 307-machine learning
 description: Complete este curso para aprender a implementar Azure Machine Learning Studio (clásico) dentro de una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, machine learning, ml, machine learning Studio, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 95213c3d17bbe0f0f81438d4808db142ad21c595
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: c9d6408d41340b1c0fcb1f41b61d84ba115258c3
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583393"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730522"
 ---
-# <a name="mr-and-azure-307-machine-learning"></a>Realidad mixta y Azure (307): Aprendizaje automático
+# <a name="hololens-1st-gen-and-azure-307-machine-learning"></a>HoloLens (1ª generación) y Azure 307: machine learning
 
 <br>
 
@@ -242,7 +242,7 @@ Para empezar a crear un experimento:
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-20.png)
 
-8.  Desde la **_parte inferior izquierda_*del elemento _* Split Data** , arrastre una conexión a la **parte superior derecha** del elemento **Train Model (entrenar modelo** ). El modelo de entrenamiento usará la primera división del 70% del conjunto de filas para entrenar el algoritmo.
+8.  En la **sección * inferior izquierda** del elemento _ *Split Data**, arrastre una conexión a la **parte superior derecha** del elemento **Train Model (entrenar modelo** ). El modelo de entrenamiento usará la primera división del 70% del conjunto de filas para entrenar el algoritmo.
 
     ![El Machine Learning Studio (clásico): el experimento](images/AzureLabs-Lab7-21.png)
 
@@ -338,11 +338,11 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
 2.  Con Unity abierto, merece la pena comprobar que el **Editor de scripts** predeterminado está establecido en **Visual Studio**. Vaya a **Editar**  >  **preferencias** y, a continuación, en la nueva ventana, vaya a **herramientas externas**. Cambie el **Editor de script externo** a **Visual Studio 2017**. Cierre la ventana **preferencias** .
 
-3.  A continuación, vaya a configuración de compilación de **archivos**  >   y cambie la plataforma a **plataforma universal de Windows**; para ello, haga clic en el botón **_cambiar plataforma_* _.
+3.  A continuación, vaya a  >  **configuración de compilación** de archivos y cambie la plataforma a **plataforma universal de Windows**, haciendo clic en el botón **_cambiar plataforma_** .
 
 4.  Asegúrese también de que:
 
-    1.  _ *Dispositivo de destino** está establecido en **cualquier dispositivo**.
+    1.  El **dispositivo de destino** se establece en **cualquier dispositivo**.
 
         > Para Microsoft HoloLens, establezca el **dispositivo de destino** en *hololens*.
 
@@ -368,9 +368,9 @@ Configure y pruebe sus auriculares de la realidad mixta.
 
         1.  La versión de **scripting** **en tiempo de ejecución** debe ser **experimental** (.net 4,6 equivalente)
 
-        2. El **back-end de scripting** debe ser **_.net_* _
+        2. El **back-end de scripting** debe ser **_.net_**
 
-        3. _ El *nivel de compatibilidad* de la API * debe ser **.net 4,6**
+        3. El **nivel de compatibilidad de API** debe ser **.net 4,6**
 
             ![Configuración del proyecto de Unity](images/AzureLabs-Lab7-36.png)
 
@@ -880,10 +880,10 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha las Azure
 
 ## <a name="exercise"></a>Ejercicio
 
-**Ejercicio 1**
+**Ejercicio 1**
 
 Experimente con el criterio de ordenación de la aplicación y tenga en cuenta que las tres predicciones inferiores aparecen en la estantería, ya que estos datos también podrían resultar útiles.
 
-**Ejercicio 2**
+**Ejercicio 2**
 
 El uso de **tablas de Azure** rellenará una nueva tabla con información meteorológica y creará un nuevo experimento con los datos.

@@ -1,19 +1,19 @@
 ---
-title: 'Realidad mixta y Azure (310): detección de objetos'
+title: 'HoloLens (1ª generación) y Azure 310: detección de objetos'
 description: Complete este curso para aprender a entrenar y usar un modelo de aprendizaje automático para reconocer objetos similares y su posición en el mundo real.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, visión personalizada, detección de objetos, realidad mixta, Academia, Unity, tutorial, API, hololens, Windows 10, Visual Studio
-ms.openlocfilehash: edbd583c5361f8074dc57fedb66d6ab01df16de8
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 29b3622e510a0d97ee3f1dea04661b7d6ab51f9f
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583470"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730352"
 ---
-# <a name="mr-and-azure-310-object-detection"></a>Mr y Azure 310: detección de objetos
+# <a name="hololens-1st-gen-and-azure-310-object-detection"></a>HoloLens (1ª generación) y Azure 310: detección de objetos
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -1288,7 +1288,7 @@ Ya está listo para compilar la aplicación como una solución de UWP en la que 
 
 6.  Una vez que Unity termine de compilar (puede tardar algún tiempo), se abrirá una ventana del **Explorador de archivos** en la ubicación de la compilación (Compruebe la barra de tareas, ya que es posible que no aparezca siempre por encima de las ventanas, pero le notificará la adición de una nueva ventana).
 
-7.  Para realizar la implementación en Microsoft HoloLens, necesitará la dirección IP de ese dispositivo (para la implementación remota) y para asegurarse de que también tiene establecido el **modo de desarrollador** . Para hacerlo:
+7.  Para realizar la implementación en Microsoft HoloLens, necesitará la dirección IP de ese dispositivo (para la implementación remota) y para asegurarse de que también tiene establecido el **modo de desarrollador** . Para ello, siga estos pasos:
 
     1.  Mientras se contenga HoloLens, abra la **configuración**.
 
@@ -1331,11 +1331,11 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha el Custom
 
 ## <a name="bonus-exercises"></a>Ejercicios extra
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 Agregando a la etiqueta de texto, use un cubo semitransparente para ajustar el objeto real en un *cuadro de límite* 3D.
 
-### <a name="exercise-2"></a>Ejercicio 2
+### <a name="exercise-2"></a>Ejercicio 2
 
 Entrenar el Custom Vision Service para reconocer más objetos.
 

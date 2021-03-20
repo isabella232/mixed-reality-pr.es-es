@@ -1,19 +1,19 @@
 ---
-title: 'Aspectos básicos de realidad mixta (101E): proyecto completo con emulador'
+title: 'Conceptos básicos de HoloLens (primera generación) 101E: proyecto completo con Emulator'
 description: Siga este tutorial de codificación con Unity, Visual Studio y el emulador de HoloLens para aprender los conceptos básicos de una aplicación holográfica.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realidad mixta, Windows Mixed Reality, holograma, Academy, tutorial, emulador, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, Windows 10, mira, gestos, entrada de voz, sonido espacial, asignación espacial
-ms.openlocfilehash: afe62dbc3385b41d08011bf7893672272f25485b
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 8d75ee610f352d11ac8396ad50c336b541a062a2
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583694"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730292"
 ---
-# <a name="mr-basics-101e-complete-project-with-emulator"></a>Aspectos básicos de realidad mixta (101E): Proyecto completo con emulador
+# <a name="hololens-1st-gen-basics-101e-complete-project-with-emulator"></a>Conceptos básicos de HoloLens (primera generación) 101E: proyecto completo con Emulator
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](mrlearning-base.md) para HoloLens 2.
@@ -63,10 +63,10 @@ En este capítulo, se configurará el primer proyecto de Unity y se recorrerá e
 * Cree un holograma.
 * Vea un holograma que haya realizado.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * Inicie Unity.
-* seleccione **Open**(Abrir).
+* Seleccione **Open** (Abrir).
 * Escriba ubicación como la carpeta **origami** que ha eliminado previamente.
 * Seleccione **origami** y haga clic en **Seleccionar carpeta**.
 * Guarde la nueva escena: **archivo**  /  **Guardar escena como**.
@@ -128,7 +128,7 @@ En este capítulo, vamos a presentar la primera de las tres formas de interactua
 
 * Visualice la mirada con un cursor de un mundo bloqueado.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * Vuelva al proyecto de Unity y cierre la ventana de configuración de la compilación si aún está abierta.
 * Seleccione la carpeta **hologramas** en el **panel Proyecto**.
@@ -141,7 +141,7 @@ En este capítulo, vamos a presentar la primera de las tres formas de interactua
 * Seleccione el objeto **cursor** en el **Panel jerarquía**.
 * Arrastre y coloque el script **WorldCursor** en el **panel Inspector**.
 * Haga doble clic en el script **WorldCursor** para abrirlo en Visual Studio.
-* Copie y pegue este código en **WorldCursor.CS** y **guarde todo**.
+* Copie y pegue este código en **WorldCursor. CS** y **guarde todo**.
 
 ```cs
 using UnityEngine;
@@ -204,7 +204,7 @@ En este capítulo, se agregará compatibilidad con [gestos](../../../design/gaze
 
 * Controle los hologramas con el gesto de selección.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 Comenzaremos por crear un script que pueda detectar el gesto de selección.
 
@@ -316,12 +316,12 @@ En este capítulo, se agregará compatibilidad con dos [comandos de voz](../../.
 * Agregue comandos de voz que siempre escuchan en segundo plano.
 * Cree un holograma que reaccione a un comando de voz.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En la carpeta **scripts** , cree un script denominado **SpeechManager**.
 * Arrastre el script **SpeechManager** hasta el objeto **OrigamiCollection** de la jerarquía.
 * Abra el script **SpeechManager** en Visual Studio.
-* Copie y pegue este código en **SpeechManager.CS** y **guarde todo**:
+* Copie y pegue este código en **SpeechManager. CS** y **guarde todo**:
 
 ```cs
 using System.Collections.Generic;
@@ -438,7 +438,7 @@ En este capítulo, agregaremos música a la aplicación y, a continuación, dese
 
 * Escuche los hologramas de su mundo.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En la selección de Unity, en el menú superior, **edite > configuración del proyecto > audio**
 * Busque la configuración del **complemento de Spatializer** y seleccione **MS HRTF Spatializer**.
@@ -548,7 +548,7 @@ Ahora vamos a usar la [asignación espacial](../../../design/spatial-mapping.md)
 * Traiga su mundo real al mundo virtual.
 * Coloque los hologramas donde más le importan.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * Haga clic en la carpeta **hologramas** en el panel Proyecto.
 * Arrastre el recurso de **asignación espacial** a la raíz de la **jerarquía**.
