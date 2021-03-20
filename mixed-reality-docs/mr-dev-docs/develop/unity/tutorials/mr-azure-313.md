@@ -1,19 +1,19 @@
 ---
-title: Realidad mixta y Azure (313) servicio IoT Hub
+title: HoloLens (1º gen) y el servicio IoT Hub de Azure 313
 description: Obtenga información acerca de cómo implementar Azure IoT Hub servicio en una máquina virtual que ejecuta Ubuntu 16,4 y visualizar los datos de mensaje mediante Microsoft HoloLens o VR cascos.
 author: drneil
 ms.author: jemccull
 ms.date: 07/11/2018
 ms.topic: article
 keywords: Azure, realidad mixta, Academia, Edge, IOT Edge, tutorial, API, notificación, funciones, tablas, hololens, inmersivo, VR, IOT, máquina virtual, Ubuntu, Python, Windows 10, Visual Studio
-ms.openlocfilehash: f23a9bf5bcdb0868ef9b0e6f77fbdb7a15dfdce1
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: f4306e7940e2447fe31afb8c7071c00abc98dd34
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582818"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730502"
 ---
-# <a name="mr-and-azure-313-iot-hub-service"></a>Realidad mixta y Azure (313): Servicio IoT Hub
+# <a name="hololens-1st-gen-and-azure-313-iot-hub-service"></a>HoloLens (1ª generación) y Azure 313: servicio de IoT Hub
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -1269,10 +1269,10 @@ Enhorabuena, ha creado correctamente un servicio IoT Hub con un dispositivo peri
 
 ## <a name="bonus-exercises"></a>Ejercicios extra
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 Expanda la estructura de mensajería almacenada en la tabla y mostrarla como un gráfico. Es posible que desee recopilar más datos y almacenarlos en la misma tabla para que se muestren más adelante.
 
-### <a name="exercise-2"></a>Ejercicio 2
+### <a name="exercise-2"></a>Ejercicio 2
 
 Cree un módulo de "captura de cámara" adicional para implementarlo en el panel de IoT, de modo que pueda capturar imágenes a través de la cámara para su análisis.

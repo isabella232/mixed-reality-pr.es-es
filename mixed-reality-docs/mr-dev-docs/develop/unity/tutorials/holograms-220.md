@@ -1,19 +1,19 @@
 ---
-title: 'Ámbito espacial de realidad mixta (220): sonido espacial'
+title: HoloLens (1ª generación) espacial 220-sonido espacial
 description: Siga este tutorial de codificación con Unity, Visual Studio y HoloLens para obtener información detallada sobre los conceptos de sonido espacial.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academia, tutorial, sonido espacial, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: da130a5a93ec261d2e767874faa31dbc50d51b12
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: aea093aa8f5e6c983cd66acf8cec89d8e7ecf52d
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582767"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730312"
 ---
-# <a name="mr-spatial-220-spatial-sound"></a>Asignación espacial de realidad mixta (220): Sonido espacial
+# <a name="hololens-1st-gen-spatial-220-spatial-sound"></a>HoloLens (1ª generación) espacial 220: sonido espacial
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](./mr-learning-base-01.md) para HoloLens 2.
@@ -67,10 +67,10 @@ El [sonido espacial](../../../design/spatial-sound.md) respire la vida en los ho
 * Cambie la configuración de sonido de Unity para usar el sonido espacial de Microsoft.
 * Agregue un sonido 3D a un objeto en Unity.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * Inicie Unity.
-* seleccione **Open**(Abrir).
+* Seleccione **Open** (Abrir).
 * Navegue hasta el escritorio y busque la carpeta que ha eliminado previamente.
 * Haga clic en la carpeta **Starting\Decibel** y, a continuación, presione el botón **Seleccionar carpeta** .
 * Espere a que el proyecto se cargue en Unity.
@@ -134,7 +134,7 @@ Si se implementa en un auricular envolvente:
 
 La ubicación adecuada para el sonido dependerá del holograma. Por ejemplo, si el holograma es humano, el origen de sonido debe estar situado cerca de la boca y no de los pies.
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>Instrucciones
 
 Las instrucciones siguientes conectarán un sonido espacial a un holograma.
 
@@ -159,7 +159,7 @@ Si se establece el nivel de Doppler en cero, se deshabilitan los cambios de tono
 
 Un ejemplo de expectativas aprendidas es que las aves suelen estar por encima de los cabezales de los seres humanos. Si un usuario oye un sonido de pájaro, su reacción inicial es buscar. Colocar un pájaro debajo del usuario puede conducir a que se dirija a la dirección correcta del sonido, pero no puede encontrar el holograma en función de la expectativa de necesidad de buscar.
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>Instrucciones
 
 Las instrucciones siguientes permiten que P0LY se oculte por detrás, de modo que pueda usar el sonido para buscar el holograma.
 
@@ -178,7 +178,7 @@ Las instrucciones siguientes permiten que P0LY se oculte por detrás, de modo qu
 * No sobrecargar el exceso de sonido del usuario en el camino
 * Los sonidos sutiles funcionan mejor: no hagan la experiencia
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>Instrucciones
 
 * En el panel **jerarquía** , expanda **HologramCollection**.
 * Expanda **EnergyHub** y seleccione **base**.
@@ -228,7 +228,7 @@ Nota: hay un panel de texto que se etiquetará junto con usted. Esto contendrá 
 
 Por ejemplo, el establecimiento de una copa en una tabla debe hacer un sonido más silencioso que colocar un Boulder en una pieza de metal.
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>Instrucciones
 
 * En el panel **jerarquía** , expanda **HologramCollection**.
 * Expanda **EnergyHub** y seleccione **base**.
@@ -251,7 +251,7 @@ Por ejemplo, el establecimiento de una copa en una tabla debe hacer un sonido m�
 
 Un ejemplo clásico es un salón de concierto. Cuando un agente de escucha está fuera del salón y la puerta está cerrada, la música suena silenciada. Normalmente, también hay una reducción del volumen. Cuando se abre la puerta, se oye todo el espectro del sonido en el volumen real. Los sonidos de alta frecuencia suelen absorber más que las bajas frecuencias.
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>Instrucciones
 
 * En el panel **jerarquía** , expanda **HologramCollection** y seleccione **P0LY**.
 * En el panel **Inspector** , haga clic en **Agregar componente** y agregue **emisor de audio**.
@@ -435,7 +435,7 @@ En Unity, puede marcar un archivo de audio para el streaming en la configuració
 * La creación de vistas en un mundo oculto es visualmente atractiva.
 * Mejore el realismo agregando efectos de audio cuando un holograma o el usuario están cerca del mundo oculto.
 
-#### <a name="instructions"></a>Instructions
+#### <a name="instructions"></a>Instrucciones
 
 * En el panel **jerarquía** , expanda **HologramCollection** y seleccione el **submundo**.
 * Expanda el **submundo** y seleccione **VoiceSource**.

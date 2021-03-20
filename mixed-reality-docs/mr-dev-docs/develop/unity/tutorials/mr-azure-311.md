@@ -1,30 +1,30 @@
 ---
-title: 'Realidad mixta y Azure (311): Microsoft Graph'
+title: HoloLens (1ª generación) y Azure 311-Microsoft Graph
 description: Complete este curso para aprender a aprovechar Microsoft Graph y conectarse a los datos que impulsa la productividad, dentro de una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Microsoft Graph, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 699e520fb9db8d8d3b5bab8b98d92fa39f0acb2d
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 6afa1e8c5d2baa2d46652901558b2917c5c43d70
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583443"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730252"
 ---
-# <a name="mr-and-azure-311---microsoft-graph"></a>Realidad mixta y Azure (311): Microsoft Graph
+# <a name="hololens-1st-gen-and-azure-311---microsoft-graph"></a>HoloLens (1ª generación) y Azure 311-Microsoft Graph
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
 
-En este curso, aprenderá a usar *Microsoft Graph* para iniciar sesión en el cuenta de Microsoft mediante la autenticación segura en una aplicación de realidad mixta. A continuación, recuperará y mostrará las reuniones programadas en la interfaz de la aplicación.
+En este curso, aprenderá a usar *Microsoft Graph* para iniciar sesión en el cuenta Microsoft mediante la autenticación segura en una aplicación de realidad mixta. A continuación, recuperará y mostrará las reuniones programadas en la interfaz de la aplicación.
 
 ![](images/AzureLabs-Lab311-00.png)
 
 *Microsoft Graph* es un conjunto de API diseñadas para permitir el acceso a muchos de los servicios de Microsoft. Microsoft describe Microsoft Graph como una matriz de recursos conectados mediante relaciones, lo que significa que permite que una aplicación tenga acceso a todo tipo de datos de usuario conectados. Para obtener más información, visite la [página Microsoft Graph](https://developer.microsoft.com/graph).
 
-El desarrollo incluirá la creación de una aplicación en la que se le indicará al usuario que haga una mirada y, a continuación, puntee en una esfera, que le pedirá al usuario que inicie sesión de forma segura en un cuenta de Microsoft. Una vez que haya iniciado sesión en su cuenta, el usuario podrá ver una lista de las reuniones programadas para el día.
+El desarrollo incluirá la creación de una aplicación en la que se le indicará al usuario que haga una mirada y, a continuación, puntee en una esfera, que le pedirá al usuario que inicie sesión de forma segura en un cuenta Microsoft. Una vez que haya iniciado sesión en su cuenta, el usuario podrá ver una lista de las reuniones programadas para el día.
 
 Una vez completado este curso, tendrá una aplicación de realidad HoloLens mixta, que podrá hacer lo siguiente:
 
@@ -955,7 +955,7 @@ Ya se ha completado todo lo necesario para la sección Unity de este proyecto, p
 
 Para implementar en HoloLens:
 
-1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador.** Para hacerlo:
+1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador.** Para ello, siga estos pasos:
 
     1.  Mientras se contenga HoloLens, abra la **configuración**.
 
@@ -987,12 +987,12 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha el Micros
 
 ## <a name="bonus-exercises"></a>Ejercicios extra
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 Usar Microsoft Graph para mostrar otra información sobre el usuario
 
 -   Correo electrónico de usuario/número de teléfono/imagen de perfil
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 Implemente el control de voz para navegar por la interfaz de usuario de Microsoft Graph.

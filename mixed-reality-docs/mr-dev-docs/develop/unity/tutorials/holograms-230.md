@@ -1,19 +1,19 @@
 ---
-title: 'Ámbito espacial de realidad mixta (230): asignación espacial'
+title: Mapa espacial 230-espacial de HoloLens (1º generación)
 description: Siga este tutorial de codificación con Unity, Visual Studio y HoloLens para obtener información detallada sobre los conceptos de asignación espacial.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academia, tutorial, asignación espacial, reconstrucción superficial, malla, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: 6b218de239da04190fbf08ff8668fa16009df949
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 933b5d331e814cdb2ced2689e06e0c8508f2d68a
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582934"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730142"
 ---
-# <a name="mr-spatial-230-spatial-mapping"></a>Asignación espacial de realidad mixta (230): Asignación espacial
+# <a name="hololens-1st-gen-spatial-230-spatial-mapping"></a>HoloLens (1ª generación) espacial 230: asignación espacial
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](./mr-learning-base-01.md) para HoloLens 2.
@@ -151,7 +151,7 @@ Ahora vamos a explorar cómo la asignación espacial puede afectar al rendimient
 * Haga clic en **Conectar**.
 * Observe el número de milisegundos que tarda la GPU en representar un fotograma.
 * Detenga la ejecución de la aplicación en el dispositivo.
-* Vuelva a Visual Studio y Abra **SpatialMappingObserver.CS**. Lo encontrará en la carpeta HoloToolkit\SpatialMapping del proyecto Assembly-CSharp (universal Windows).
+* Vuelva a Visual Studio y Abra **SpatialMappingObserver. CS**. Lo encontrará en la carpeta HoloToolkit\SpatialMapping del proyecto Assembly-CSharp (universal Windows).
 * Busque la función Activate **()** y agregue la siguiente línea de código: **TrianglesPerCubicMeter = 1200;**
 * Vuelva a implementar el proyecto en el dispositivo y, a continuación, vuelva a **conectar el generador de perfiles**. Observe el cambio en el número de milisegundos para representar un fotograma.
 * Detenga la ejecución de la aplicación en el dispositivo.
@@ -231,15 +231,15 @@ Unity hace un gran trabajo de obtener una vista previa de los materiales, pero s
 * En el panel de **proyectos** de Unity, carpeta **hologramas** , busque el objeto **SpatialProcessing** .
 * Arrastre & Coloque el objeto **SpatialProcessing** en el panel de **jerarquías** .
 
-SpatialProcessing recurso prefabricado incluye componentes para procesar los datos de asignación espacial. **SurfaceMeshesToPlanes.CS** buscará y generará planos basados en los datos de asignación espacial. Usaremos planos en nuestra aplicación para representar paredes, suelos y techos. Este recurso prefabricado también incluye **RemoveSurfaceVertices.CS** , que puede quitar vértices de la malla de asignación espacial. Se puede usar para crear huecos en la malla o para quitar los triángulos sobrantes que ya no son necesarios (porque en su lugar se pueden usar planos).
+SpatialProcessing recurso prefabricado incluye componentes para procesar los datos de asignación espacial. **SurfaceMeshesToPlanes. CS** buscará y generará planos basados en los datos de asignación espacial. Usaremos planos en nuestra aplicación para representar paredes, suelos y techos. Este recurso prefabricado también incluye **RemoveSurfaceVertices. CS** , que puede quitar vértices de la malla de asignación espacial. Se puede usar para crear huecos en la malla o para quitar los triángulos sobrantes que ya no son necesarios (porque en su lugar se pueden usar planos).
 
 * En el panel de **proyectos** de Unity, carpeta **hologramas** , busque el objeto **SpaceCollection** .
 * Arrastre y coloque el objeto **SpaceCollection** en el panel de **jerarquías** .
 * En el panel **jerarquía** , seleccione el objeto **SpatialProcessing** .
 * En el panel **Inspector** , busque el componente de **Administrador de espacio de reproducción (Script)** .
-* Haga doble clic en **PlaySpaceManager.CS** para abrirlo en Visual Studio.
+* Haga doble clic en **PlaySpaceManager. CS** para abrirlo en Visual Studio.
 
-PlaySpaceManager.cs contiene código específico de la aplicación. Agregaremos funcionalidad a este script para habilitar el comportamiento siguiente:
+PlaySpaceManager. cs contiene código específico de la aplicación. Agregaremos funcionalidad a este script para habilitar el comportamiento siguiente:
 
 1. Detener la recopilación de datos de asignación espacial después de superar el límite de tiempo de examen (10 segundos).
 2. Procesar los datos de asignación espacial:
@@ -247,7 +247,7 @@ PlaySpaceManager.cs contiene código específico de la aplicación. Agregaremos 
     2. Use RemoveSurfaceVertices para quitar los triángulos de superficie que se encuentran dentro de los límites del plano.
 3. Generar una colección de hologramas en el mundo y colocarlos en planos murales y en planta cercanos al usuario.
 
-Complete los ejercicios de codificación marcados en PlaySpaceManager.cs o reemplace el script por la solución terminada que aparece a continuación:
+Complete los ejercicios de codificación marcados en PlaySpaceManager. cs o reemplace el script por la solución terminada que aparece a continuación:
 
 ```cs
 using System.Collections.Generic;
@@ -470,7 +470,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
 * En el panel **Inspector** , busque el componente de **mallas de superficie en los planos (Script)** .
 * Cambie la propiedad **Draw aviones** a **Nothing** para borrar la selección.
 * Cambie la propiedad **Draw aviones** a **Wall** para que solo se representen los planos de pared.
-* En el panel **proyecto** , en la carpeta **scripts** , haga doble clic en **placeable.CS** para abrirlo en Visual Studio.
+* En el panel **proyecto** , en la carpeta **scripts** , haga doble clic en **enplaceable. CS** para abrirlo en Visual Studio.
 
 El script que se pueda **colocar** ya está adjunto a los pósters y al cuadro de proyección que se crearon una vez completada la búsqueda de planos. Lo único que debemos hacer es quitar la marca de comentario de código y este script logrará lo siguiente:
 
@@ -482,7 +482,7 @@ El script que se pueda **colocar** ya está adjunto a los pósters y al cuadro d
 6. Vuelva a orientar el holograma para alinearlo con el tipo de superficie (vertical u horizontal) al que tiene afinidad.
 7. Coloque suavemente el holograma en la superficie seleccionada para evitar saltar o ajustar el comportamiento.
 
-Quite la marca de comentario de todo el código del ejercicio de codificación siguiente o use esta solución completada en **placeable.CS**:
+Quite la marca de comentario de todo el código del ejercicio de codificación siguiente o use esta solución completada en **placeable. CS**:
 
 ```cs
 using System.Collections.Generic;
@@ -1098,13 +1098,13 @@ A continuación, vamos a agregar un comportamiento especial a la tierra, de modo
 * En el panel **Inspector** , busque el material de la tierra (componente inferior).
 * En el **menú desplegable del sombreador**, cambie el sombreador a **personalizado > OcclusionRim**. Esto representará un resaltado azul alrededor de tierra siempre que se ocluidos por otro objeto.
 
-Por último, vamos a habilitar un efecto x-Ray Vision para los planetas de nuestro sistema solar. Tendremos que editar **PlanetOcclusion.CS** (que se encuentra en la carpeta Scripts\SolarSystem) para lograr lo siguiente:
+Por último, vamos a habilitar un efecto x-Ray Vision para los planetas de nuestro sistema solar. Tendremos que editar **PlanetOcclusion. CS** (que se encuentra en la carpeta Scripts\SolarSystem) para lograr lo siguiente:
 
 1. Determinar si el nivel de SpatialMapping (mallas y planos de la habitación) ocluidos un planeta.
 2. Muestra la representación en alambre de un planeta siempre que se ocluidos por el nivel de SpatialMapping.
 3. Oculte la representación en alambre de un planeta cuando no esté bloqueada por el nivel SpatialMapping.
 
-Siga el ejercicio de codificación de PlanetOcclusion.cs o use la siguiente solución:
+Siga el ejercicio de codificación de PlanetOcclusion. cs o use la siguiente solución:
 
 ```cs
 using UnityEngine;

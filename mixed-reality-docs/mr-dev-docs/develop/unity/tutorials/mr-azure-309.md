@@ -1,19 +1,19 @@
 ---
-title: MR y Azure 309-Application Insights
+title: HoloLens (1ª generación) y Azure 309-Application Insights
 description: Complete este curso para aprender a recopilar análisis sobre el comportamiento del usuario en una aplicación de realidad mixta, mediante el servicio de Aplicación de Azure Insights.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, Application Insights, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 5d599e7c3c6f887675bf010a10fb8841e80143db
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: efd6a3f8bf526dcf6a7eaee199f5c22ffa1dd639
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582961"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730382"
 ---
-# <a name="mr-and-azure-309-application-insights"></a>Realidad mixta y Azure (309): Application Insights
+# <a name="hololens-1st-gen-and-azure-309-application-insights"></a>HoloLens (1ª generación) y Azure 309: Application Insights
 
 <br>
 
@@ -1274,10 +1274,10 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha el servic
 
 ## <a name="bonus-exercises"></a>Ejercicios de bonus
 
-**Ejercicio 1**
+**Ejercicio 1**
 
 Pruebe a generar, en lugar de crear manualmente, los objetos ObjectInScene y establecer sus coordenadas en el plano dentro de los scripts. De esta manera, podría solicitar a Azure lo que era el objeto más popular (ya sea desde los resultados de mirarnos o de proximidad) y generar uno *extra* de esos objetos.
 
-**Ejercicio 2**
+**Ejercicio 2**
 
 Ordene los resultados de la Application Insights por hora, para obtener los datos más relevantes e implementar esos datos confidenciales en la aplicación.

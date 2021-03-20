@@ -1,19 +1,19 @@
 ---
-title: 'Realidad mixta y Azure (312): integración con bot'
+title: 'HoloLens (primera generación) y Azure 312: integración de bot'
 description: Complete este curso para obtener información sobre cómo crear e implementar un bot, usar Microsoft bot Framework V4 y comunicarse con él en una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, Computer Vision, hololens, inmersivo, VR, Microsoft bot Framework V4, Web App bot, Bot Framework, Microsoft bot, Windows 10, Visual Studio
-ms.openlocfilehash: 6b8b4624615a3c3f62800b396803572b0b67ad1a
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 5bef129b9ccbbba6bf2bce835bd1567d4f596932
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582464"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730322"
 ---
-# <a name="mr-and-azure-312-bot-integration"></a>Realidad mixta y Azure (312): Integración de bots
+# <a name="hololens-1st-gen-and-azure-312-bot-integration"></a>HoloLens (1ª generación) y Azure 312: integración de bot
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Habrá una nueva serie de tutoriales que se publicarán en el futuro que mostrarán cómo desarrollar para HoloLens 2.  Este aviso se actualizará con un vínculo a esos tutoriales cuando se publiquen.
@@ -74,9 +74,9 @@ Para obtener ayuda sobre la optimización de sensores, siga este [vínculo al ar
 
 El primer paso es crear el bot como una aplicación Web de ASP.Net Core local. Una vez que haya terminado y probado, lo publicará en Azure portal.
 
-1.  Abra Visual Studio. Cree un nuevo proyecto, seleccione **asp net Core aplicación web** como el tipo de proyecto (lo encontrará en la subsección .net Core) y llámelo **MyBot**. Haga clic en **OK**.
+1.  Abra Visual Studio. Cree un nuevo proyecto, seleccione **asp net Core aplicación web** como el tipo de proyecto (lo encontrará en la subsección .net Core) y llámelo **MyBot**. Haga clic en **Aceptar**.
 
-2.  En la ventana que aparecerá, seleccione **vacío**. Asegúrese también de que el destino esté establecido en **asp net Core 2,0** y que la autenticación esté establecida en **sin autenticación**. Haga clic en **OK**.  
+2.  En la ventana que aparecerá, seleccione **vacío**. Asegúrese también de que el destino esté establecido en **asp net Core 2,0** y que la autenticación esté establecida en **sin autenticación**. Haga clic en **Aceptar**.  
 
     ![Creación de la aplicación bot](images/AzureLabs-Lab312-01.png)
 
@@ -325,7 +325,7 @@ Ahora que el servicio está listo, debe publicar el código de bot que creó pre
     ![Publicar el bot en el servicio de bot de aplicaciones Web de Azure](images/AzureLabs-Lab312-17.png)
 
 4. Si aún no ha iniciado sesión en su cuenta de Microsoft, tendrá que hacerlo aquí.
-5. En la página **publicar** , verá que tiene que establecer la misma **suscripción** que usó para la creación del servicio *Web App bot* . A continuación, establezca la **vista** como **grupo de recursos** y, en la lista desplegable de la estructura de carpetas, seleccione el **grupo de recursos** que creó anteriormente. Haga clic en **OK**. 
+5. En la página **publicar** , verá que tiene que establecer la misma **suscripción** que usó para la creación del servicio *Web App bot* . A continuación, establezca la **vista** como **grupo de recursos** y, en la lista desplegable de la estructura de carpetas, seleccione el **grupo de recursos** que creó anteriormente. Haga clic en **Aceptar**. 
 
     ![Publicar el bot en el servicio de bot de aplicaciones Web de Azure](images/AzureLabs-Lab312-18.png)
 
@@ -1251,7 +1251,7 @@ Ya se ha completado todo lo necesario para la sección Unity de este proyecto, p
 
 Para implementar en HoloLens:
 
-1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador**. Para hacerlo:
+1.  Necesitará la dirección IP de HoloLens (para la implementación remota) y para asegurarse de que HoloLens está en **modo de desarrollador**. Para ello, siga estos pasos:
 
     1. Mientras se contenga HoloLens, abra la **configuración**.
     2. Vaya a **red & Internet > Wi-Fi > opciones avanzadas**
@@ -1303,10 +1303,10 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha el bot de
 
 ## <a name="bonus-exercises"></a>Ejercicios extra
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 La estructura de conversación de este laboratorio es muy básica. Utilice Microsoft LUIS para ofrecer capacidades de comprensión del lenguaje natural de bot.
 
-### <a name="exercise-2"></a>Ejercicio 2
+### <a name="exercise-2"></a>Ejercicio 2
 
 En este ejemplo no se incluye la finalización de una conversación y el reinicio de una nueva. Para que la característica de bot se complete, intente implementar el cierre de la conversación.

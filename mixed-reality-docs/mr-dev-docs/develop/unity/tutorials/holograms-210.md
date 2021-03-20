@@ -1,19 +1,19 @@
 ---
-title: 'Entrada de realidad mixta (210): mirada'
+title: Entrada de HoloLens (1ª generación) 210-mirada
 description: Siga este tutorial de codificación con Unity, Visual Studio y HoloLens para obtener información detallada sobre los conceptos de la mirada.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, tutorial, fijamente, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: 7e8d72bc4d37d76f8f9ec40956cb85591e237ac8
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 99c0d2ae00416f5d26e99e6d7d00c73ea07e5fb3
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583861"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730332"
 ---
-# <a name="mr-input-210-gaze"></a>Aspectos básicos de realidad mixta (210): Mirar
+# <a name="hololens-1st-gen-input-210-gaze"></a>Entrada de HoloLens (1ª generación) 210: mira fijamente
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](./mr-learning-base-01.md) para HoloLens 2.
@@ -74,7 +74,7 @@ Tenemos un Astronaut descriptivo aquí para ayudarle a conocer los conceptos de 
 * Importar recursos y configurar la escena.
 * Vea el Astronaut en HoloLens.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 1. Inicie Unity.
 2. Seleccione **Nuevo proyecto**.
@@ -184,7 +184,7 @@ Vamos a basar nuestro trabajo en algunos principios de diseño de cursores, es d
 * No deje que el cursor sea demasiado pequeño o grande.
 * Evite obstruir el contenido.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 1. En la carpeta **HoloToolkit\Input\Prefabs** , busque el recurso **InputManager** .
 2. Arrastre y coloque el **InputManager** en la **jerarquía**.
@@ -203,11 +203,11 @@ Vamos a basar nuestro trabajo en algunos principios de diseño de cursores, es d
 4. Haga clic en **depurar-> iniciar sin depurar** o presione **Ctrl + F5**.
 5. Observe cómo se dibuja el cursor y cómo cambia la apariencia si toca un holograma.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 1. En el panel **jerarquía** , expanda el objeto **AstroMan** -> **GEO_G** -> **Back_Center** .
-2. Haga doble clic en **Interactible.CS** para abrirlo en Visual Studio.
-3. Quite las marcas de comentario de las líneas de las devoluciones de llamada **IFocusable. OnFocusEnter ()** y **IFocusable. OnFocusExit ()** en **Interactible.CS**. Las llama el InputManager del kit de herramientas de realidad mixta cuando el foco (ya sea por miras o por controlador) entra y sale del Colisionador de GameObject específico.
+2. Haga doble clic en **interactuable. CS** para abrirlo en Visual Studio.
+3. Quite los comentarios de las líneas de las devoluciones de llamada **IFocusable. OnFocusEnter ()** y **IFocusable. OnFocusExit ()** en **. CS interactuable**. Las llama el InputManager del kit de herramientas de realidad mixta cuando el foco (ya sea por miras o por controlador) entra y sale del Colisionador de GameObject específico.
 
 ```cs
 /* TODO: DEVELOPER CODING EXERCISE 2.d */
@@ -248,7 +248,7 @@ void IFocusable.OnFocusExit()
 * Facilitar el destino de los hologramas.
 * Estabilice los movimientos de los cabezales naturales.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 1. En el panel **jerarquía** , seleccione el objeto **InputManager** .
 2. En el panel **Inspector** , busque el script del **estabilizador de miras** . Haga clic en él para abrirlo en Visual Studio, si desea echar un vistazo.
@@ -263,15 +263,15 @@ void IFocusable.OnFocusExit()
 
 * Agregue un indicador direccional en el cursor para buscar hologramas.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
-Vamos a usar el archivo **DirectionIndicator.CS** , que:
+Vamos a usar el archivo **DirectionIndicator. CS** , que hará lo siguiente:
 
 1. Muestra el indicador direccional si el usuario no se Gazing en los hologramas.
 2. Oculte el indicador direccional si el usuario es Gazing en los hologramas.
 3. Actualice el indicador direccional para que apunte a los hologramas.
 
-Comencemos.
+Empecemos.
 
 1. Haga clic en el objeto **AstroMan** en el panel **jerarquía** y **haga clic en la flecha** para expandirlo.
 2. En el panel **jerarquía** , seleccione el objeto **DirectionalIndicator** en **AstroMan**.
@@ -290,7 +290,7 @@ Comencemos.
 
 * Use la cartelera para que los hologramas siempre se encuentren en su caso.
 
-Vamos a usar el archivo **Billboard.CS** para mantener una orientación GameObject de forma que se enfrente al usuario en todo momento.
+Usaremos el archivo de la **cartelera. CS** para mantener una GameObject orientada de forma que se enfrente al usuario en todo momento.
 
 1. En el panel **jerarquía** , seleccione el objeto **AstroMan** .
 2. En el panel **Inspector** , haga clic en el botón **Agregar componente** .
@@ -318,15 +318,15 @@ La solución que se usa aquí es usar un enfoque "etiqueta a lo largo".
 
 Un objeto de etiqueta no deja completamente la vista del usuario. Puede pensar en una etiqueta, como un objeto asociado al encabezado del usuario por las bandas de goma. A medida que el usuario se mueve, el contenido permanecerá dentro de un sencillo vistazo mediante la deslizamiento hacia el borde de la vista sin salir completamente. Cuando el usuario mira hacia el objeto de etiqueta, resulta más completo ver.
 
-Vamos a usar el archivo **SimpleTagalong.CS** , que:
+Vamos a usar el archivo **SimpleTagalong. CS** , que hará lo siguiente:
 
 1. Determine si el objeto Tag-Along está dentro de los límites de la cámara.
 2. Si no está dentro del frustum de vista, coloque el Tag-Along en parcialmente dentro del frustum de la vista.
 3. De lo contrario, coloque el Tag-Along a una distancia predeterminada del usuario.
 
-Para ello, primero debemos cambiar el script **Interactible.CS** para llamar a **TagalongAction**.
+Para ello, primero debemos cambiar el script **interactuable. CS** para llamar a **TagalongAction**.
 
-1. Edite **Interactible.CS** completando la codificación del ejercicio 6. a (Quite los comentarios de las líneas 84 a 87).
+1. Edite **interactuable. CS** completando la codificación del ejercicio 6. a (Quite los comentarios de las líneas 84 a 87).
 
 ```cs
 /* TODO: DEVELOPER CODING EXERCISE 6.a */
@@ -337,9 +337,9 @@ if (interactibleAction != null)
 }
 ```
 
-El script **InteractibleAction.CS** , emparejado con **Interactible.CS** , realiza acciones personalizadas cuando se pulsa en los hologramas. En este caso, usaremos un específicamente para etiquetar.
+El script **InteractibleAction. CS** , emparejado con **interactuable. CS** , realiza acciones personalizadas cuando se pulsa en hologramas. En este caso, usaremos un específicamente para etiquetar.
 
-* En la carpeta **scripts** , haga clic en el recurso **TagalongAction.CS** para abrirlo en Visual Studio.
+* En la carpeta **scripts** , haga clic en el recurso **TagalongAction. CS** para abrirlo en Visual Studio.
 * Complete el ejercicio de codificación o cámbielo por este:
   * En la parte superior de la **jerarquía**, en la barra de búsqueda, escriba **ChestButton_Center** y seleccione el resultado.
   * En el panel **Inspector** , haga clic en el botón **Agregar componente** .
@@ -357,7 +357,7 @@ Necesitamos agregar lo siguiente:
 * Agregue la cartelera al objeto mirados y establezca el eje dinámico en XY.
 * A continuación, agregue Tag-Along simples al objeto.
 
-Esta es nuestra solución, desde **TagalongAction.CS**:
+Esta es nuestra solución, desde **TagalongAction. CS**:
 
 ```cs
 // Copyright (c) Microsoft Corporation. All rights reserved.

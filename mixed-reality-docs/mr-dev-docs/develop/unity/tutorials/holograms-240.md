@@ -1,19 +1,19 @@
 ---
-title: 'Uso compartido de realidad mixta (240): varios dispositivos HoloLens'
+title: El uso compartido de HoloLens (1º generación) 240-varios dispositivos HoloLens
 description: Siga este tutorial de codificación con Unity, Visual Studio y HoloLens para obtener información detallada sobre el uso compartido de hologramas.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, uso compartido, redes, Academia, tutorial, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: 97f2067c043912e7608361e73e54fdf769b8bf51
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 8e3631c80702f04e9f7e50c98bed91d92c332841
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582927"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730152"
 ---
-# <a name="mr-sharing-240-multiple-hololens-devices"></a>Uso compartido de la realidad mixta (240): Varios dispositivos HoloLens
+# <a name="hololens-1st-gen-sharing-240-multiple-hololens-devices"></a>El uso compartido de HoloLens (1º generación) 240: varios dispositivos HoloLens
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](./mr-learning-base-01.md) para HoloLens 2.
@@ -66,10 +66,10 @@ En este capítulo, se configurará el primer proyecto de Unity y se recorrerá e
 * Configure Unity para desarrollar aplicaciones holográficas.
 * Vea su holograma.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * Inicie Unity.
-* seleccione **Open**(Abrir).
+* Seleccione **Open** (Abrir).
 * Escriba Location como la carpeta **SharedHolograms** que ha desarchivado anteriormente.
 * Seleccione **nombre del proyecto** y haga clic en **Seleccionar carpeta**.
 * En la **jerarquía**, haga clic con el botón secundario en la **cámara principal** y seleccione **eliminar**.
@@ -121,7 +121,7 @@ En este capítulo, Interactuaremos con los hologramas. En primer lugar, vamos a 
 * Use la entrada de fijamente para controlar un cursor.
 * Use la entrada de gestos para interactuar con los hologramas.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 **Gaze**
 
@@ -168,7 +168,7 @@ Es divertido ver los hologramas e interactuar con ellos, pero vamos a continuar.
 >2. Haga clic en la pestaña "tienda Windows"
 >3. En la sección "configuración de publicación > funcionalidades", Compruebe la funcionalidad de **InternetClientServer** y la capacidad de **PrivateNetworkClientServer**
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En el **panel Proyecto** , vaya a la carpeta **HoloToolkit-Sharing-240\Prefabs\Sharing** .
 * Arrastre y coloque el recurso prefabricado de **uso compartido** en el **Panel jerarquía**.
@@ -319,7 +319,7 @@ Ahora todo el mundo puede ver el mismo holograma. Ahora, vamos a ver a todos los
 * Elegir y compartir un avatar de reproductor.
 * Adjunte el avatar del jugador junto a los cabezales de todos.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En el **panel Proyecto** , vaya a la carpeta **hologramas** .
 * Arrastre y coloque **PlayerAvatarStore** en la **jerarquía**.
@@ -618,7 +618,7 @@ En este capítulo, haremos que el anclaje sea capaz de colocarse en superficies 
 
 * Coloque los hologramas en la malla de asignación espacial basada en la posición principal de los jugadores.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En el **panel Proyecto** , vaya a la carpeta **hologramas** .
 * Arrastre y coloque el recurso prefabricado de **CustomSpatialMapping** en la **jerarquía**.
@@ -997,7 +997,7 @@ En este capítulo, vamos a agregar hologramas que rebotan las superficies del mu
 * Inicie los proyectiles que rebotan las superficies del mundo real.
 * Comparta los proyectiles para que otros jugadores puedan verlos.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En la **jerarquía** , seleccione el objeto **HologramCollection** .
 * En el **Inspector** , haga clic en **Agregar componente**.
@@ -1019,7 +1019,7 @@ En este capítulo, se descubrirá un portal que solo se puede detectar con colab
 
 * Trabaje de forma conjunta para iniciar suficientes proyectiles en el anclaje para descubrir un portal secreto.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * En el **panel Proyecto** , vaya a la carpeta **hologramas** .
 * Arrastre y coloque el activo de **submundo** como **elemento secundario de HologramCollection**.
