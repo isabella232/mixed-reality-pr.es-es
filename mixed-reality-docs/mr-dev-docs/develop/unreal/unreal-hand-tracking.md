@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 06/10/2020
 ms.topic: article
 keywords: Windows Mixed Reality, seguimiento de mano, inreal, inreal Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, desarrollo, características, documentación, guías, hologramas, desarrollo de juegos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: ea4ba3ad5905e899eae474e4d571585fef77c0c2
-ms.sourcegitcommit: fd19bf57607c7ed94a849d4cf606bba2bb93e668
+ms.openlocfilehash: 415a0773586ab232e925fd0f18a3a8e6f8217e88
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "102117659"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "104695811"
 ---
 # <a name="hand-tracking-in-unreal"></a>Seguimiento de las manos en Unreal
 
@@ -21,7 +21,8 @@ El sistema de seguimiento de mano usa las palmeras y los dedos de una persona co
 
 La postura de mano permite realizar el seguimiento y el uso de las manos y los dedos de los usuarios como entrada, a los que se puede tener acceso tanto en Blueprints como en C++. La API no real envía los datos como un sistema de coordenadas, con tics sincronizados con el motor inreal.
 
-![Esqueleto manual](images/hand-tracking-skeleton-update.png)
+![Imagen de esqueleto de mano con ](images/hand-tracking-img-02.png)
+ esqueleto de mano superpuesto ![](images/hand-tracking-skeleton-update.png)
 
 [!INCLUDE[](includes/tabs-tracking-hand-pose.md)]
 

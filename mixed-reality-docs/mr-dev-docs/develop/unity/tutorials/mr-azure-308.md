@@ -1,19 +1,19 @@
 ---
-title: 'Realidad mixta y Azure (308): notificaciones entre dispositivos'
+title: 'HoloLens (1ª generación) y Azure 308: notificaciones entre dispositivos'
 description: Complete este curso para aprender a implementar Azure Notification Hubs, Azure Functions, Azure Storage y tablas en una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academia, Unity, tutorial, API, notificación, funciones, tablas, Notification hubs, hololens, envolventes, VR, Windows 10, Visual Studio
-ms.openlocfilehash: 5bf6720fe7be178bf4fb15ae2b87f4ff502afe9b
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 8fef7fe2da76e228264037ca51daa57662fbc554
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581271"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730592"
 ---
-# <a name="mr-and-azure-308-cross-device-notifications"></a>Realidad mixta y Azure (308): Notificaciones entre dispositivos
+# <a name="hololens-1st-gen-and-azure-308-cross-device-notifications"></a>HoloLens (1ª generación) y Azure 308: notificaciones entre dispositivos
 
 <br>
 
@@ -124,22 +124,22 @@ Una vez que se recuperen las credenciales de las aplicaciones, tendrá que ir a 
     > [!NOTE] 
     > Si aún no tiene una cuenta de Azure, tendrá que crear una. Si sigue este tutorial en una situación de aula o de laboratorio, pregunte al instructor o a uno de los Proctors para obtener ayuda para configurar la nueva cuenta.
 
-2.  Una vez que haya iniciado sesión, haga clic en **nuevo** en la esquina superior izquierda y busque el **centro de notificaciones** y haga clic en **_entrar_* _.
+2.  Una vez que haya iniciado sesión, haga clic en **nuevo** en la esquina superior izquierda y busque **centro de notificaciones** y haga clic en **_entrar_**.
 
     ![búsqueda del centro de notificaciones](images/AzureLabs-Lab8-06.png)
 
     > [!NOTE] 
-    > Es posible que la palabra _*_nuevo_*_ se haya reemplazado por _ * crear un recurso * *, en los portales más recientes.
+    > Es posible que la palabra ***New** _ se haya reemplazado por _ * crear un recurso * *, en los portales más recientes.
 
 3.  La nueva página proporcionará una descripción del servicio *Notification hubs* . En la parte inferior izquierda de este mensaje, seleccione el botón **crear** para crear una asociación con este servicio.
 
     ![Crear instancia de Notification hubs](images/AzureLabs-Lab8-07.png)
 
-4.  Una vez que haya hecho clic en **_crear_*:
+4.  Una vez que haya hecho clic en ***crear***:
 
     1.  Inserte el nombre que desee para esta instancia de servicio.
 
-    2.  Proporcione un *espacio de nombres* _ * que podrá asociar a esta aplicación.
+    2.  Proporcione un **espacio de nombres** que podrá asociar a esta aplicación.
 
     3.  Seleccione una **ubicación.**
 
@@ -182,7 +182,7 @@ Después de crear la instancia de servicio de Notification Hubs, vuelva a Azure 
 2.  Una vez que haya iniciado sesión, haga clic en **nuevo** en la esquina superior izquierda, busque la **cuenta de almacenamiento** y haga clic en **entrar**.
 
     > [!NOTE] 
-    > Es posible que la palabra **_nuevo_*_ se haya reemplazado por _* crear un recurso**, en portales más recientes.
+    > Es posible que la palabra ***New** _ se haya reemplazado por _ * crear un recurso * *, en los portales más recientes.
 
 3.  Seleccione **cuenta de almacenamiento: BLOB, archivo, tabla, cola** en la lista.
 
@@ -601,7 +601,7 @@ En primer lugar, debe crear un archivo que permita que la función de Azure carg
 
 ![salidas completadas](images/AzureLabs-Lab8-50.png)
 
-32. En este punto, debe probar la función para asegurarse de que funciona. Para hacerlo: 
+32. En este punto, debe probar la función para asegurarse de que funciona. Para ello, siga estos pasos: 
 
     1. Vaya a la página de la función una vez más:
 
@@ -734,9 +734,9 @@ Para importar el SDK en su propio proyecto, asegúrese de que ha descargado el [
 
     ![importar a paquete](images/AzureLabs-Lab8-61.png)
 
-3.  Haga clic en el botón **_importar_* _ para agregar los elementos al proyecto.
+3.  Haga clic en el botón ***importar*** para agregar los elementos al proyecto.
 
-4.  Vaya a la carpeta _ *Storage** en **Complementos** en la vista de proyecto y seleccione *solo* los siguientes complementos:
+4.  Vaya a la carpeta **Storage** en **Complementos** en la vista proyecto y seleccione *solo* los siguientes complementos:
 
     -   Microsoft.Data.Edm
     -   Microsoft.Data.OData
@@ -759,7 +759,7 @@ Para importar el SDK en su propio proyecto, asegúrese de que ha descargado el [
 
         ![establecer no procesar para archivos dll](images/AzureLabs-Lab8-64.png)
 
-7.  Active la casilla **no procesar** en **configuración de plataforma** y haga clic en **_aplicar_* _.
+7.  Active la casilla **no procesar** en **configuración de plataforma** y haga clic en **_aplicar_**.
 
     ![no aplicar procesamiento](images/AzureLabs-Lab8-65.png)
 
@@ -770,7 +770,7 @@ Para importar el SDK en su propio proyecto, asegúrese de que ha descargado el [
 
 Ahora debe crear los scripts que contienen el código para ejecutar esta aplicación.
 
-El primer script que debe crear es _ * TableToScene * *, que es responsable de:
+El primer script que debe crear es **TableToScene**, que es responsable de:
 
 -   Lectura de entidades en la tabla de Azure.
 -   Con los datos de la tabla, determine qué objetos generar y en qué posición.
@@ -1216,8 +1216,8 @@ Lo siguiente es una configuración típica para desarrollar con la realidad mixt
     1.  En la pestaña **otros valores** :
 
         1.  La **versión de scripting en tiempo de ejecución** debe ser **Experimental** (.net 4,6 equivalente)
-        2.  El **back-end de scripting** debe ser **_.net_* _
-        3.  _ El *nivel de compatibilidad* de la API * debe ser **.net 4,6**
+        2.  El **back-end de scripting** debe ser **_.net_**
+        3.  El **nivel de compatibilidad de API** debe ser **.net 4,6**
 
             ![compatibilidad de API](images/AzureLabs-Lab8-87.png)
 
@@ -1487,9 +1487,9 @@ Este capítulo es idéntico al proceso de compilación del proyecto anterior. Ya
 
 1.  Vaya a **configuración de compilación** (configuración de compilación de **archivos**  >   ).
 
-2.  En el menú **configuración de compilación** , asegúrese de que la opción proyectos de C# de **Unity** _ esté marcado (lo que le permitirá editar los scripts de este proyecto después de la compilación).
+2.  En el menú **configuración de compilación** , asegúrese de que los proyectos de C# de **Unity*** se marcan (lo que le permitirá editar los scripts en este proyecto después de la compilación).
 
-3.  Una vez hecho esto, haga clic en _ * compilar * *.
+3.  Una vez hecho esto, haga clic en **compilar**.
 
     ![compilar proyecto](images/AzureLabs-Lab8-99.png)
 
@@ -1523,7 +1523,7 @@ Para importar el paquete NuGet:
 
     ![abrir el administrador de Nuget](images/AzureLabs-Lab8-102.png)
 
-3.  Seleccione la ***pestaña Browse _ y busque _* WindowsAzure. Messaging. Managed**.
+3.  Seleccione la pestaña ***examinar** _ y busque _ * WindowsAzure. Messaging. Managed * *.
 
     ![buscar paquete de mensajería de Windows Azure](images/AzureLabs-Lab8-103.png)
 
@@ -1680,10 +1680,10 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha el servic
  
 ## <a name="bonus-exercises"></a>Ejercicios extra
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 ¿Puede averiguar cómo cambiar el color del GameObjects y enviar la notificación a otras aplicaciones que vean la escena?
 
-### <a name="exercise-2"></a>Ejercicio 2
+### <a name="exercise-2"></a>Ejercicio 2
 
 ¿Puede Agregar movimiento de GameObjects a la aplicación MR y ver la escena actualizada en la aplicación de escritorio?

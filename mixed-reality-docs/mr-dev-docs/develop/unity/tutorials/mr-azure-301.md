@@ -1,19 +1,19 @@
 ---
-title: 'Realidad mixta y Azure (301): traducción de idiomas'
+title: 'HoloLens (1ª generación) y Azure 301: traducción de idioma'
 description: Complete este curso para aprender a implementar el Translator Text API de Azure en una aplicación de realidad mixta.
 author: drneil
 ms.author: jemccull
 ms.date: 07/04/2018
 ms.topic: article
 keywords: Azure, Mixed Reality, Academy, Unity, tutorial, API, texto de traductor, hololens, envolventes, VR, traducción de idioma, Windows 10, Visual Studio
-ms.openlocfilehash: 0b7e7c2e4146d3c60e62c25764aae48260fdf3ef
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: d02b86b6e62a46cd3ed4ebe7e6188cfda18e0d49
+ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583298"
+ms.lasthandoff: 03/20/2021
+ms.locfileid: "104730582"
 ---
-# <a name="mr-and-azure-301-language-translation"></a>Realidad mixta y Azure (301): Traducción de idiomas
+# <a name="hololens-1st-gen-and-azure-301-language-translation"></a>HoloLens (1ª generación) y Azure 301: traducción de idioma
 
 <br>
 
@@ -88,7 +88,7 @@ Para usar la API de traductor de Azure, tendrá que configurar una instancia del
     > [!NOTE]
     > Si aún no tiene una cuenta de Azure, tendrá que crear una. Si sigue este tutorial en una situación de aula o de laboratorio, pregunte al instructor o a uno de los Proctors para obtener ayuda para configurar la nueva cuenta.
 
-2.  Una vez que haya iniciado sesión, haga clic en **nuevo** en la esquina superior izquierda y busque "Translator Text API". Presione **Entrar**.
+2.  Una vez que haya iniciado sesión, haga clic en **nuevo** en la esquina superior izquierda y busque "Translator Text API". Seleccione **Entrar**.
 
     ![Nuevo recurso](images/AzureLabs-Lab1-02.png)
 
@@ -784,10 +784,10 @@ Enhorabuena, ha creado una aplicación de realidad mixta que aprovecha la API de
 
 ## <a name="bonus-exercises"></a>Ejercicios extra
 
-### <a name="exercise-1"></a>Ejercicio 1
+### <a name="exercise-1"></a>Ejercicio 1
 
 ¿Se puede Agregar funcionalidad de texto a voz a la aplicación para que se diga el texto devuelto?
 
-### <a name="exercise-2"></a>Ejercicio 2
+### <a name="exercise-2"></a>Ejercicio 2
 
 Permite que el usuario cambie los idiomas de origen y de salida ("de" y "a") dentro de la propia aplicación, por lo que no es necesario recompilar la aplicación cada vez que desee cambiar los idiomas.
