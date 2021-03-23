@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Eye Tracking, Mixed Reality, Input, Eye Gaze, Eye Targeting, HoloLens 2, Eye-based Selection, Dwell, mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit, design
 ms.openlocfilehash: 78f8dcec3c8368128ec5904df36ce1391aa8b879
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
+ms.lasthandoff: 03/19/2021
 ms.locfileid: "98007715"
 ---
 # <a name="eye-gaze-and-dwell"></a>Control con los ojos y permanencia

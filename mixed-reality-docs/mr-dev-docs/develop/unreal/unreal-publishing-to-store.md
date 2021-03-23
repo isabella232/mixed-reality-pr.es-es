@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, desarrollo, documentación, guías, características, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, publicación, distribución, Microsoft Store
 ms.openlocfilehash: 3a975d9c66e64f56919163e9d3aa65a3126d6379
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
+ms.lasthandoff: 03/19/2021
 ms.locfileid: "98583598"
 ---
 # <a name="publishing-to-the-microsoft-store"></a>Publicación en Microsoft Store

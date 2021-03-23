@@ -8,10 +8,10 @@ ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects, core concepts, interaction, mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit
 ms.openlocfilehash: f4a4ea50c45263f18079da76dd8dfd5f31e2af44
-ms.sourcegitcommit: 44d0f2873c75003caf9d8d244ceaeb3faa89df63
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2021
+ms.lasthandoff: 03/19/2021
 ms.locfileid: "98110453"
 ---
 # <a name="start-designing-and-prototyping"></a>Empezar a diseñar y a crear prototipos

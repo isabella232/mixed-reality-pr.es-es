@@ -8,10 +8,10 @@ ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, speech recognition, Windows 10, LUIS, LUIS portal, intent, entities, utterances, natural language understanding
 ms.localizationpriority: high
 ms.openlocfilehash: 49e2b44000add22e924d9552f60b63ac1ac30288
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
+ms.lasthandoff: 03/19/2021
 ms.locfileid: "99590367"
 ---
 # <a name="4-setting-up-intent-and-natural-language-understanding"></a>4. Configuración de reconocimiento de intenciones y comprensión del lenguaje natural

@@ -6,12 +6,12 @@ ms.author: thmignon
 ms.date: 04/30/2018
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, Home, entornos personalizados, lugares, acantilado House, Skyloft, usuario, creación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: ca6a41f8388a767b1191ddc3b377822567a603a6
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 2a626b91b79eadb49c9da95c9d61f92a375015a0
+ms.sourcegitcommit: f74d33d50c1fbfebe8571695d631ce78dd599f74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583299"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104881222"
 ---
 # <a name="design-your-own-immersive-environments"></a>Diseñar entornos envolventes propios
 
@@ -82,7 +82,7 @@ Windows Mixed Reality se basa en glTF binario (. glb) como formato de entrega de
 
 El primer paso para exportar recursos que se usarán como entornos domésticos personalizados es la generación de un modelo glTF 2,0. El grupo de trabajo glTF mantiene una [lista de los exportadores y convertidores admitidos](https://github.com/KhronosGroup/glTF/blob/master/README.md#converters-and-exporters) para crear un modelo glTF 2,0. Para empezar, use uno de los programas enumerados en esta página para crear y exportar un modelo glTF 2,0, o bien convertir un modelo existente mediante uno de los convertidores admitidos.
 
-Además, consulte [este artículo útil, que proporciona información general sobre un flujo de trabajo de arte para exportar modelos de glTF de Blender y 3DS Max directamente. 
+<!-- Additionally, check out [this helpful article, which provides an overview of an art workflow for exporting glTF models from Blender and 3DS Max directly.  -->
 
 ### <a name="environment-limits"></a>Límites del entorno
 
@@ -96,7 +96,7 @@ Para facilitar este proceso, hemos creado el convertidor de [activos de Windows 
 
 El convertidor admite actualmente varias marcas para retocar el comportamiento exacto de las optimizaciones. Se recomienda ejecutar con las siguientes marcas para obtener los mejores resultados:
 
-Marcar|Valores recomendados|Descripción
+Marca|Valores recomendados|Descripción
 ---|---|---
 -Max-Texture-size|1024 o 2048| Retoque el valor para mejorar la calidad de las texturas, el valor predeterminado es 512 x 512. Un valor mayor afectará significativamente al tamaño de archivo del entorno, por lo que debe tener en cuenta el límite de 256 MB.
 -min-versión|1803|Los entornos personalizados solo se admiten en las versiones de Windows >= 1803. Esta marca quitará las texturas de las versiones anteriores y reducirá el tamaño de archivo del activo final.
