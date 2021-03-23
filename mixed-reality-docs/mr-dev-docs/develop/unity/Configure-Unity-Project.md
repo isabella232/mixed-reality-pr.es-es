@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 07/29/2020
 ms.topic: article
 keywords: Unity, realidad mixta, desarrollo, introducción, nuevo proyecto, Windows Mixed Reality, UWP, XR, rendimiento
-ms.openlocfilehash: 8d247a6a5b7c8a3d8b7ea26ebc72e86ada5dc99f
-ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
+ms.openlocfilehash: 47ca4041e997d623d08fa1732f7039c655810bfc
+ms.sourcegitcommit: b0fb5497bf9f280ba5610c30e4b9e5aa1cda52c9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104730172"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104837426"
 ---
 # <a name="configuring-your-project-without-mrtk"></a>Configuración de un proyecto sin MRTK
 
@@ -57,8 +57,8 @@ Después de establecer la plataforma, debe dejar que Unity sepa crear una [vista
 ![Captura de pantalla de la ventana Configuración del proyecto abierta en el editor de Unity con la administración de complementos de XR resalta](images/wmr-config-img-7.png)
 
 4. Expanda la sección **Administración de complementos de XR** y seleccione la pestaña Configuración de la **plataforma de Windows universal** .
-5. Si usa Unity 2020 o una versión posterior, verá las opciones para comprobar **OpenXR (versión preliminar)** o **Windows Mixed Reality**. 
-    * Puede elegir en tiempo de ejecución.  Si está desarrollando específicamente para HoloLens 2 o la reverberación de HP G2 y decide probar **OpenXR (versión preliminar)**, seleccione el cuadro OpenXR (versión preliminar) y revise nuestra guía sobre cómo [usar el complemento Mixed Reality OpenXR para Unity](openxr-getting-started.md) para que se configure correctamente para estos dispositivos antes de volver a este tutorial.
+5. Si usa Unity 2020 o una versión posterior, verá las opciones para comprobar **OpenXR** o **Windows Mixed Reality**. 
+    * Puede elegir en tiempo de ejecución.  Si está desarrollando específicamente para HoloLens 2 o la reverberación de HP G2 y decide probar el **OpenXR**, seleccione el cuadro OpenXR y revise nuestra guía para [usar el complemento Mixed Reality OpenXR para Unity](openxr-getting-started.md) con el fin de configurarlo correctamente para estos dispositivos antes de volver a este tutorial.
 
 > [!NOTE]
 > A partir de Unity 2020 LTS, Microsoft adopta el desarrollo con OpenXR.  Al migrar a esta ruta de acceso, en Unity 2021,1 el complemento de Windows XR dejará de usarse y se quitará en 2021,2, de modo que OpenXR la única ruta de acceso admitida. Puede encontrar más información en [uso del complemento OpenXR de realidad mixta](openxr-getting-started.md).
