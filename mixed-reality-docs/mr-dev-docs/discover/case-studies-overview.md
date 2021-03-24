@@ -6,12 +6,12 @@ ms.author: grbury
 ms.date: 08/24/2019
 ms.topic: overview
 keywords: Windows Mixed Reality, HoloLens, caso práctico, visión, escenarios, casos prácticos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 7d3e2f3bbbc6a89bf4f136e2657f8a9abe7b9560
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+ms.openlocfilehash: 696223d2c5d122a1b1c092a2769d27ac0e94046c
+ms.sourcegitcommit: cbfd1c37612aa6904fa41642ede6281d491e478d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757653"
+ms.lasthandoff: 03/23/2021
+ms.locfileid: "104895167"
 ---
 # <a name="case-study-gallery"></a>Galería de casos prácticos
 
@@ -19,23 +19,28 @@ Historias, aprendizajes y experiencias que el equipo de la realidad mixta ha enc
 
 :::row:::
     :::column:::
-       [ ![ 3 información sobre el diseño de la interfaz de usuario e interacción de HoloStudio](images/thought-bubble-500px.jpg)](../out-of-scope/case-study-3-holostudio-ui-and-interaction-design-learnings.md) **[3 información sobre el diseño de la interfaz de usuario y la interacción](../out-of-scope/case-study-3-holostudio-ui-and-interaction-design-learnings.md)**<br>
-        HoloStudio era una de las primeras aplicaciones de HoloLens. Por este motivo, teníamos que crear nuevas prácticas recomendadas para la interfaz de usuario y el diseño de interacción 3D. Lo hemos realizado a través de pruebas de usuario, prototipos y errores.<br>
-        *Julio de 2016*
+       [ ![ Ford GT40 Experience](../develop/unreal/images/ford-gt40-img-01.jpg)](../develop/unreal/unreal-ford-gt40.md) **[Ford GT40 experiencia](../develop/unreal/unreal-ford-gt40.md)**<br>
+        Este caso práctico le permite empezar a trabajar con el racecar de legendarias que supera Ferrari en las 1966 24 horas de la carrera de Le Mans, ya que el Ford GT40 se pone al día de la vida de la mesa delante de usted.<br>
+        *Febrero de 2021*
+    :::column-end:::
+    :::column:::
+       [ ![ Escalado de Datascape en dispositivos con distintos](images/cloud-steps-1-4-700px.jpg)](../out-of-scope/case-study-scaling-datascape-across-devices-with-different-performance.md) **[Datascape de escalado de rendimiento entre dispositivos con un rendimiento diferente](../out-of-scope/case-study-scaling-datascape-across-devices-with-different-performance.md)**<br>
+        En este caso práctico se ofrece información sobre cómo los desarrolladores de Microsoft optimizaron la aplicación Datascape para ofrecer una experiencia atractiva en todos los dispositivos con una variedad de capacidades de rendimiento.<br>
+        *Agosto de 2017*
     :::column-end:::
     :::column:::
        [ ![ Compilación de HoloSketch, una aplicación de diseño espacial y de boceto de la experiencia de usuario para](images/holosketch-image-01-640px.png)](../out-of-scope/case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md) la **[creación de HoloSketch, un diseño espacial y una aplicación de boceto de experiencia de usuario para hololens](../out-of-scope/case-study-building-holosketch,-a-spatial-layout-and-ux-sketching-app-for-hololens.md)**<br>
         HoloSketch es un diseño espacial en el dispositivo y una herramienta de boceto de la experiencia del usuario para HoloLens que ayuda a crear experiencias holográficas.<br>
          *Julio de 2017*
     :::column-end:::
-    :::column:::
-       [ ![ Creación de una experiencia envolvente en fragmentos](images/surfacereconstruction.jpg)](../out-of-scope/case-study-creating-an-immersive-experience-in-fragments.md) **[creación de una experiencia envolvente en fragmentos](../out-of-scope/case-study-creating-an-immersive-experience-in-fragments.md)**<br>
-        Los fragmentos son un teatro de delitos interactivos para Microsoft HoloLens, donde se siguen las pistas para solucionar un misterio que tiene lugar en el espacio real.<br>
-        *Agosto de 2016*
-    :::column-end:::
 :::row-end:::
 
 :::row:::
+    :::column:::
+       [ ![ Uso del plano de estabilización para reducir las turbulencias holográficas](images/holotour-stabilization-plane-500px.jpg)](../develop/platform-capabilities-and-apis/case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md) **[mediante el plano de estabilización para reducir la turbulencia holográfica](../develop/platform-capabilities-and-apis/case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)**<br>
+        Trabajar con hologramas puede resultar complicado. El hecho de que pueda desplazarse por el espacio y ver los hologramas de todos los ángulos distintos proporciona un nivel de inmersión que no se puede obtener con una pantalla normal del equipo.<br>
+        *Abril de 2017*
+    :::column-end:::
     :::column:::
        [ ![ Ampliación de las funcionalidades de asignación espacial de hololens](images/away-from-camera-position-500px.png)](../out-of-scope/case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md) **[que amplían las capacidades de asignación espacial de hololens](../out-of-scope/case-study-expanding-the-spatial-mapping-capabilities-of-hololens.md)**<br>
         Al crear las primeras aplicaciones para Microsoft HoloLens, estábamos ansiosos por ver hasta qué punto se podían introducir los límites de la asignación espacial en el dispositivo.<br>
@@ -46,20 +51,18 @@ Historias, aprendizajes y experiencias que el equipo de la realidad mixta ha enc
         El equipo de HoloLens quiere compartir algunas de las prácticas recomendadas que se derivaron del proyecto HoloLens de Lowe.<br>
         *Septiembre de 2016*
     :::column-end:::
-    :::column:::
-       [ ![ Uso del plano de estabilización para reducir las turbulencias holográficas](images/holotour-stabilization-plane-500px.jpg)](../develop/platform-capabilities-and-apis/case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md) **[mediante el plano de estabilización para reducir la turbulencia holográfica](../develop/platform-capabilities-and-apis/case-study-using-the-stabilization-plane-to-reduce-holographic-turbulence.md)**<br>
-        Trabajar con hologramas puede resultar complicado. El hecho de que pueda desplazarse por el espacio y ver los hologramas de todos los ángulos distintos proporciona un nivel de inmersión que no se puede obtener con una pantalla normal del equipo.<br>
-        *Abril de 2017*
-    :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-       [ ![ Escalado de Datascape en dispositivos con distintos](images/cloud-steps-1-4-700px.jpg)](../out-of-scope/case-study-scaling-datascape-across-devices-with-different-performance.md) **[Datascape de escalado de rendimiento entre dispositivos con un rendimiento diferente](../out-of-scope/case-study-scaling-datascape-across-devices-with-different-performance.md)**<br>
-        En este caso práctico se ofrece información sobre cómo los desarrolladores de Microsoft optimizaron la aplicación Datascape para ofrecer una experiencia atractiva en todos los dispositivos con una variedad de capacidades de rendimiento.<br>
-        *Agosto de 2017*
+       [ ![ Creación de una experiencia envolvente en fragmentos](images/surfacereconstruction.jpg)](../out-of-scope/case-study-creating-an-immersive-experience-in-fragments.md) **[creación de una experiencia envolvente en fragmentos](../out-of-scope/case-study-creating-an-immersive-experience-in-fragments.md)**<br>
+        Los fragmentos son un teatro de delitos interactivos para Microsoft HoloLens, donde se siguen las pistas para solucionar un misterio que tiene lugar en el espacio real.<br>
+        *Agosto de 2016*
     :::column-end:::
     :::column:::
+       [ ![ 3 información sobre el diseño de la interfaz de usuario e interacción de HoloStudio](images/thought-bubble-500px.jpg)](../out-of-scope/case-study-3-holostudio-ui-and-interaction-design-learnings.md) **[3 información sobre el diseño de la interfaz de usuario y la interacción](../out-of-scope/case-study-3-holostudio-ui-and-interaction-design-learnings.md)**<br>
+        HoloStudio era una de las primeras aplicaciones de HoloLens. Por este motivo, teníamos que crear nuevas prácticas recomendadas para la interfaz de usuario y el diseño de interacción 3D. Lo hemos realizado a través de pruebas de usuario, prototipos y errores.<br>
+        *Julio de 2016*
     :::column-end:::
     :::column:::
     :::column-end:::

@@ -8,14 +8,18 @@ ms.topic: article
 keywords: No real, no real Engine 4, UE4, HoloLens, HoloLens 2, realidad mixta, implementación en dispositivo, PC, documentación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: d610907123898471e92598da134e9c4d77a195e9
-ms.sourcegitcommit: cbfd1c37612aa6904fa41642ede6281d491e478d
+ms.openlocfilehash: ca577bdc5bc30aebf80c9888345eb0e2d5c3ce6d
+ms.sourcegitcommit: cc9d90b046a9fce792058fea25ae13a9186e43e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104909144"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105008930"
 ---
 # <a name="the-making-of-the-ford-gt40-experience"></a>La realización de la experiencia de Ford GT40
+
+*"MRTK, el desarrollo de HoloLens 2 mediante el uso de la implementación no real era un poco tedioso, ya que todas las interacciones espaciales debían codificarse a mano en C++. La MRTK de forma no real hizo una gran cantidad de esas mismas tareas triviales. Lo calculo y redujo el tiempo necesario para el prototipo inicial en la mitad. "* -José Rodriguez, desarrollador de software
+
+*"La experiencia de Ford GT40 es una prueba de que una aplicación de HoloLens 2 de alta fidelidad puede completarse en unos pocos meses, con un presupuesto modesto, pero aún así ofrecer resultados muy impactantes".*  -Daniel Cheetham, Director de innovación, feliz acabado
 
 El uso del kit de herramientas de la realidad mixta (MRTK) para una empresa de producción creativa no real, con un feliz acabado, proporcionó una experiencia de HoloLens 2 que proporciona una nueva perspectiva sobre el GT40 de Ford, el coche de carreras legendarias que se ha expulsado Ferrari en las 24 horas de la Mans.
 
@@ -120,14 +124,6 @@ Según Cheetham, el Pandemic global ha impulsado enormemente un nuevo interés e
 > [Descarga de la aplicación Ford GT40](https://www.microsoft.com/p/ford-gt40/9p4vllktfvfp)
 
 Eche un vistazo [a nuestra introducción al desarrollo de realidad mixta en HoloLens 2](../development.md) o [MRTK para](https://github.com/microsoft/MixedRealityToolkit-Unreal) no ser real en github.
-
-## <a name="what-people-are-saying"></a>Qué dicen los usuarios
-
-*"MRTK, el desarrollo de HoloLens 2 mediante el uso de la implementación no real era un poco tedioso, ya que todas las interacciones espaciales debían codificarse a mano en C++. La MRTK de forma no real hizo una gran cantidad de esas mismas tareas triviales. Lo calculo y redujo el tiempo necesario para el prototipo inicial en la mitad. "*
-- José Rodriguez, desarrollador de software
-
-*"La experiencia de Ford GT40 es una prueba de que una aplicación de HoloLens 2 de alta fidelidad puede completarse en unos pocos meses, con un presupuesto modesto, pero aún así ofrecer resultados muy impactantes".*  
-- Daniel Cheetham, Director de innovación, feliz acabado
 
 <!-- ## About the team
 
