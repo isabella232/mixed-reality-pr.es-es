@@ -1,18 +1,18 @@
 ---
 title: Detección y adquisición de características
-description: Obtenga información y descargue características de Mixed Reality.
+description: Detecte y descargue características de Mixed Reality.
 author: davidkline-ms
 ms.author: v-hferrone
-ms.date: 01/27/2021
+ms.date: 03/04/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: up-to-date, tools, get started, basics, unity, visual studio, toolkit, mixed reality headset, windows mixed reality headset, virtual reality headset, installation, Windows, HoloLens, emulator, unreal, openxr
-ms.openlocfilehash: 4da6b6fdfc0205d4fa7fb5bf4ae9e48993d7c1e6
-ms.sourcegitcommit: cef969ffd22dc1e5a1e9c3c32fbf0646206519a1
+ms.openlocfilehash: 859abd0c8e538392a7ba2a1adbb4387956c50028
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99244023"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "102230725"
 ---
 # <a name="discovering-and-acquiring-features"></a>Detección y adquisición de características
 
@@ -51,8 +51,7 @@ Las características se muestran en la categoría correspondiente. Las entradas 
 
 ## <a name="refresh-the-feature-catalog"></a>Actualización del catálogo de características
 
-Para comprobar si hay características nuevas y actualizadas, haga clic en el botón Actualizar ![botón Actualizar](images/RefreshButton.png) . De este modo, se conectará al sitio del catálogo y recuperará la información más reciente.
-* Una vez que se haya leído el catálogo, se mostrará la fecha y la hora de la última actualización.
+Para comprobar si hay características nuevas y actualizadas, haga clic en el botón Actualizar ![botón Actualizar](images/RefreshButton.png) . De este modo, se conectará al sitio del catálogo y recuperará la información más reciente. Una vez que se haya leído el catálogo, se mostrará la fecha y la hora de la última actualización.
 
 ## <a name="select-features"></a>Selección de características
 
@@ -73,7 +72,7 @@ Una vez completada la descarga, la herramienta de características de Mixed Real
 
 ## <a name="going-back-to-the-previous-step"></a>Vuelta al paso anterior
 
-Desde **Discover features** (Detectar características), la herramienta de características de Mixed Reality permite volver al principio. Seleccione **Volver** para volver a comenzar.
+Desde **Discover features** (Detectar características), la herramienta de características de Mixed Reality permite volver a la selección de proyectos. Seleccione **Volver** para volver a comenzar.
 
 ## <a name="see-also"></a>Vea también
 

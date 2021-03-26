@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, eye-tracking
 ms.localizationpriority: high
-ms.openlocfilehash: e4104dfd0d7b27425217c8cb92fa36c807053081
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: 08793622917ca977c51be56267d8710e5abb78e8
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590377"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "102237185"
 ---
 # <a name="8-using-eye-tracking"></a>8. Uso del seguimiento ocular
 
@@ -61,35 +61,34 @@ En la ventana Jerarquía, seleccione el objeto **MixedRealityToolkit** y, a cont
 
 ## <a name="adding-eye-tracking-to-objects"></a>Agregar seguimiento ocular a los objetos
 
-En la ventana Jerarquía, expanda el objeto RoverExplorer > **Botones** y, a continuación, para cada uno de los tres objetos de botón secundarios, expanda y seleccione el objeto SeeItSayItLabel > **TextMeshPro**:
+En la ventana Hierarchy (Jerarquía), expanda **RoverExplorer** > **Buttons** y, a continuación, seleccione los tres objetos de botón secundarios:
 
-![Unity con el objeto TextMeshPro seleccionado](images/mr-learning-base/base-08-section4-step1-1.png)
+![Unity con el objeto Button seleccionado](images/mr-learning-base/base-08-section4-step1-1.png)
 
-Con los tres objetos TextMeshPro todavía seleccionados, en la ventana Inspector, use el botón **Agregar componente** para agregar los siguientes componentes a todos los objetos seleccionados:
-
-* Componente **Colisionador de cuadro**
-* Componente **EyeTrackingTarget**
+Con los tres objetos Button todavía seleccionados, en la ventana Inspector, use el botón **Add Component** (Agregar componente) para agregar el componente **EyeTrackingTarget** a todos los objetos seleccionados:
 
 ![Unity con el objeto TextMeshPro seleccionado y componentes agregados](images/mr-learning-base/base-08-section4-step1-2.png)
 
-En la ventana Jerarquía, seleccione el objeto **Hints** (Sugerencias) > SeeItSayItLabel > **TextMeshPro** y, a continuación, configure el componente **EyeTrackingTarget** como se indica a continuación:
+En la ventana Hierarchy (Jerarquía), expanda **RoverExplorer** > **Buttons** > **Hints** > **SeeItSayItLabel**  >  **TextMeshPro**.
+
+Luego, en la ventana Hierarchy (Jerarquía), seleccione el objeto de botón **Hints** (Sugerencias) y configure el componente **EyeTrackingTarget** como se indica a continuación:
 
 * En la sección de eventos **On Look At Start ()**
   * Haga clic en el icono **+** pequeño para agregar otro evento.
-  * Asigne el propio objeto, es decir, el mismo objeto **TextMeshPro**, al campo **None (Object)** (Ninguno [objeto]).
+  * Asigne el objeto **TextMeshPro** del botón **Hints** al campo **None (Object)** (Ninguno [Objeto]).
   * En la lista desplegable **Ninguna función**, seleccione **TextMeshPro** > **float fontSize** (fontSize tipo float) para actualizar el valor de esta propiedad cuando se desencadene el evento.
   * Establezca el argumento en **0,06** para aumentar el tamaño de fuente actual de 0,04 por el 50 %.
 * En la sección de eventos **On Look Away ()**
   * Haga clic en el icono **+** pequeño para agregar otro evento.
-  * Asigne el propio objeto, es decir, el mismo objeto **TextMeshPro**, al campo **None (Object)** (Ninguno [objeto]).
+  * Asigne el objeto **TextMeshPro** del botón **Hints** al campo **None (Object)** (Ninguno [Objeto]).
   * En la lista desplegable **Ninguna función**, seleccione **TextMeshPro** > **float fontSize** (fontSize tipo float) para actualizar el valor de esta propiedad cuando se desencadene el evento.
   * Establezca el argumento en **0,04** para restablecer el tamaño de fuente en 0,04.
 
 ![Unity con el objeto TextMeshPro de Hints seleccionado y el componente EyeTrackingTarget configurado](images/mr-learning-base/base-08-section4-step1-3.png)
 
-**Repita** este paso para los objetos **Explode** (Explosión) > SeeItSayItLabel > **TextMeshPro** y **Reset** (Restablecer) > **TextMeshPro**.
+**Repita** este paso para el objeto de botón **Explode** (Expandir) y **Reset** (Restablecer) para configurar el seguimiento ocular de los botones restantes.
 
-Ahora, si entra en el Modo de Juego y, a continuación, mantiene presionado el botón secundario del mouse mientras lo mueve hasta que la mirada entre en contacto con una de las etiquetas, verá cómo la fuente aumenta su tamaño en un 50 % y se restablece su tamaño original al apartar la mirada:
+Ahora, si entra en el Modo de Juego y, a continuación, mantiene presionado el botón derecho del mouse mientras lo mueve hasta que la mirada entre en contacto con uno de los botones, verá cómo la fuente aumenta su tamaño en un 50 % y se restablece su tamaño original al apartar la mirada:
 
 ![Vista dividida del modo de reproducción de Unity con la mirada que en contacto con la etiqueta del botón Explode del destino de seguimiento ocular](images/mr-learning-base/base-08-section4-step1-4.png)
 

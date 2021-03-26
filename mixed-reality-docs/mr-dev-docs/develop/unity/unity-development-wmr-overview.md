@@ -7,12 +7,12 @@ ms.date: 12/11/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, realidad mixta, mixed reality, desarrollo, introducción, nuevo proyecto, portabilidad, funcionalidad, cámara, simulación, emulación, documentación, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, qué es la realidad virtual, qué es la realidad aumentada, MRTK, kit de herramientas de realidad mixta, entrada de voz, cámara localizable, emulador, Azure, tutoriales
-ms.openlocfilehash: 65b45d448854f8903ed37466ebaa3c427dea3089
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: e80c5411c7d180e0d78e031599455235dabaceb7
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582943"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "102237146"
 ---
 # <a name="unity-development-for-vr-and-windows-mixed-reality"></a>Desarrollo de Unity para VR y Windows Mixed Reality
 
@@ -74,7 +74,7 @@ Si tiene aplicaciones que quiere migrar, consulte los artículos que se enumeran
 Antes de que se sumerja en el mundo de la realidad mixta por su cuenta, le recomendamos que eche un vistazo a la documentación adicional que se indica a continuación. 
 
 * [Guía para entusiastas de la realidad virtual](/windows/mixed-reality/enthusiast-guide/vr-journey)
-* [Almacén de recursos de Unity](https://www.assetstore.unity3d.com)
+* [Almacén de recursos de Unity](https://assetstore.unity.com)
 
 ## <a name="see-also"></a>Consulte también 
 

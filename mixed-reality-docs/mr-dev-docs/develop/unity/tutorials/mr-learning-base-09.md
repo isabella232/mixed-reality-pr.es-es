@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, speech commands, voice input
 ms.localizationpriority: high
-ms.openlocfilehash: bb238ee6ca4c657d7e2cb8e3c41f2cdebc7fc0de
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+ms.openlocfilehash: 65f989f6f587b236d7931c295e9375ad20a53218
+ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590397"
+ms.lasthandoff: 03/19/2021
+ms.locfileid: "102237225"
 ---
 # <a name="9-using-speech-commands"></a>9. Uso de los comandos de voz
 
@@ -49,8 +49,8 @@ En Speech (Voz) > sección **Speech Commands** (Comandos de voz), haz clic en el
 
 * Enable Indicator (Habilitar indicador)
 * Enable Tap to Place (Habilitar pulsar para colocar)
-* Enable Bounding Box (Habilitar cuadro de límite)
-* Disable Bounding Box (Deshabilitar cuadro de límite)
+* Enable Bounds Control (Habilitar control de límites)
+* Disable Bounds Control (Deshabilitar control de límites)
 
 ![Adición de nuevos comandos de voz](images/mr-learning-base/base-09-section2-step1-2.png)
 
@@ -88,10 +88,10 @@ Expanda **Element 0** (Elemento 0) y configúrelo de la siguiente manera:
 
 Expanda **Element 1** (Elemento 1) y configúrelo de la siguiente manera:
 
-* En el campo **Keyword** (Palabra clave), escriba **Enable Bounding Box** (Habilitar cuadro de límite) para hacer referencia al comando de voz Enable Bounding Box que creó en la sección anterior.
+* En el campo **Keyword** (Palabra clave), escriba **Enable Bounds Control** (Habilitar control de límites) para hacer referencia al comando Enable Bounds Control que creó en la sección anterior.
 * Haga clic en el icono **+** pequeño para agregar un evento.
 * En la ventana Hierarchy (Jerarquía), asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno objeto).
-* En la lista desplegable **No Function** (Ninguna función), seleccione **BoundingBox** > **bool enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento.
+* En la lista desplegable **No Function** (Ninguna función), seleccione **BoundsControl** > **bool enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento
 * Marque la casilla del argumento para que esté **activada**.
 * Haga clic en el icono **+** pequeño para agregar otro evento.
 * En la ventana Hierarchy (Jerarquía), asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno objeto).
@@ -102,10 +102,10 @@ Expanda **Element 1** (Elemento 1) y configúrelo de la siguiente manera:
 
 Expanda **Element 2** (Elemento 2) y configúrelo de la siguiente manera:
 
-* En el campo **Keyword** (Palabra clave), escriba **Disable Bounding Box** (Deshabilitar cuadro de límite) para hacer referencia al comando de voz Disable Bounding Box que creó en la sección anterior.
+* En el campo **Keyword** (Palabra clave), escriba **Disable Bounds Control** (Deshabilitar control de límites) para hacer referencia al comando Disable Bounds Control que creó en la sección anterior.
 * Haga clic en el icono **+** pequeño para agregar un evento.
 * En la ventana Hierarchy (Jerarquía), asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno objeto).
-* En la lista desplegable **No Function** (Ninguna función), seleccione **BoundingBox** > **bool enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento.
+* En la lista desplegable **No Function** (Ninguna función), seleccione **BoundsControl** > **bool enabled** para actualizar el valor de esta propiedad cuando se desencadene el evento
 * Verifique que la casilla del argumento esté **desactivada**.
 * Haga clic en el icono **+** pequeño para agregar otro evento.
 * En la ventana Hierarchy (Jerarquía), asigne el objeto **RoverExplorer** al campo **None (Object)** (Ninguno objeto).
