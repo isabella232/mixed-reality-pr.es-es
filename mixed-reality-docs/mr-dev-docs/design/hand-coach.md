@@ -6,12 +6,12 @@ ms.author: glee
 ms.date: 09/25/2019
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, tratamiento de mano, auriculares envolvente, MRTK, manos, ayuda a manos, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: ca23617e18c84f592ebd0575195b6bf4a98e80e5
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 56a56893a7c5bc772268ab9980f25327eae83af5
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759481"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105550075"
 ---
 # <a name="hand-coach"></a>Asesor manual
 
@@ -169,11 +169,11 @@ Una vez que esté satisfecho con la animación
 * Las manos solo deben impartirse una vez. La enseñanza en exceso puede causar confusión y desenredado
 *   En Unity, descargue la versión más reciente de MRTK aquí: https://github.com/microsoft/MixedRealityToolkit-Unity
     *   Material: Teaching_Hand2
-    *   Scripts: Consulte las instrucciones de MRTK para el <a href= "https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/experimental/hand-coach.md"> autocar de MRTK </a>
+    *   Scripts: Consulte las instrucciones de MRTK para el <a href= "/windows/mixed-reality/mrtk-docs/features/experimental/hand-coach.md"> autocar de MRTK </a>
     *   Configuración por proyecto
         *   Escena establecida en UWP: puede encontrar instrucciones en el [proyecto de configuración de Unity](../develop/unity/Configure-Unity-Project.md) para Windows Mixed Reality.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Interacción: aspectos fundamentales del](interaction-fundamentals.md)
 * [Proceso de creación de recursos](asset-creation-process.md)
@@ -181,4 +181,4 @@ Una vez que esté satisfecho con la animación
 * [Instalar las herramientas](../develop/install-the-tools.md)
 * [Configuración del proyecto de Unity](../develop/unity/Configure-Unity-Project.md)
 * [Introducción al desarrollo de Unity](../develop/unity/unity-development-overview.md)
-* [MRTK 101](../develop/unity/mrtk-101.md)
+* [MRTK 101](../out-of-scope/mrtk-101.md)

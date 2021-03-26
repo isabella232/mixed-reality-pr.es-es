@@ -6,17 +6,17 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Entrada de voz, KeywordRecognizer, GrammarRecognizer, micrófono, dictado, voz, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 7268a4df9c7fce03029937c72540ed274574067d
-ms.sourcegitcommit: 8c3af63fb49494f75c8ab46236fc3dd8533c1e9d
+ms.openlocfilehash: c062289a1a26365528a86761b6b68a9a24041f7c
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99606120"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105550385"
 ---
 # <a name="voice-input-in-unity"></a>Entrada de voz en Unity
 
 > [!CAUTION]
-> Antes de comenzar, considere la posibilidad de usar el complemento Unity para el SDK de servicios de voz cognitivo. El complemento tiene mejores resultados de precisión de voz y acceso sencillo a la descodificación de voz a texto, así como características avanzadas de voz como cuadro de diálogo, interacción basada en intención, traducción, síntesis de texto a voz y reconocimiento de voz en lenguaje natural. Para empezar, consulte la [documentación y el ejemplo](https://docs.microsoft.com/azure/cognitive-services/speech-service/quickstart-csharp-unity).
+> Antes de comenzar, considere la posibilidad de usar el complemento Unity para el SDK de servicios de voz cognitivo. El complemento tiene mejores resultados de precisión de voz y acceso sencillo a la descodificación de voz a texto, así como características avanzadas de voz como cuadro de diálogo, interacción basada en intención, traducción, síntesis de texto a voz y reconocimiento de voz en lenguaje natural. Para empezar, consulte la [documentación y el ejemplo](/azure/cognitive-services/speech-service/quickstart-csharp-unity).
 
 Unity expone tres maneras de agregar una [entrada de voz](../../design/voice-input.md) a la aplicación de Unity, los dos primeros son tipos de PhraseRecognizer:
 * `KeywordRecognizer`Proporciona la aplicación con una matriz de comandos de cadena para realizar escuchas.

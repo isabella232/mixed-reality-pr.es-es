@@ -6,12 +6,12 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, asignación espacial, representador, Colisionador, malla, escaneo, componente, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: a713497e0c5f061e9e81bf66197b3e2116218219
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: e2ef6ac43e81ff2b8e66a4bd197ea41c198a1626
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759751"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105549955"
 ---
 # <a name="spatial-mapping-in-unity"></a>Asignación espacial en Unity
 
@@ -311,7 +311,7 @@ struct TopologyResult
 ```
 
 > [!NOTE]
-> En el ejemplo de Unity, cada una de estas consultas se vincula a un botón en el panel de interfaz de usuario virtual. En el ejemplo se codifican los parámetros de cada una de estas consultas en valores razonables. Vea SpaceVisualizer.cs en el código de ejemplo para obtener más ejemplos.
+> En el ejemplo de Unity, cada una de estas consultas se vincula a un botón en el panel de interfaz de usuario virtual. En el ejemplo se codifican los parámetros de cada una de estas consultas en valores razonables. Vea SpaceVisualizer. CS en el código de ejemplo para obtener más ejemplos.
 
 ### <a name="shape-queries"></a>Consultas de forma
 
@@ -319,7 +319,7 @@ En el archivo dll, el analizador de formas ("ShapeAnalyzer_W") utiliza el analiz
 
 El análisis de formas solo funciona en superficies horizontales. Por ejemplo, un sofá se define mediante la superficie de asiento plana y la parte superior plana del sofá. La consulta de forma busca dos superficies de un tamaño, alto y intervalo de aspecto específicos, con las dos superficies alineadas y conectadas. Con la terminología de las API, el asiento del sofá y la parte superior son componentes de forma y los requisitos de alineación son restricciones de componentes de forma.
 
-A continuación se muestra una consulta de ejemplo definida en el ejemplo de Unity (ShapeDefinition.cs) para objetos "sittable".
+A continuación se muestra una consulta de ejemplo definida en el ejemplo de Unity (ShapeDefinition. CS) para objetos "sittable".
 
 ```cs
 shapeComponents = new List<ShapeComponent>()
@@ -350,7 +350,7 @@ shapeConstraints = new List<ShapeConstraint>()
 };
 ```
 
-Las funciones de contenedor se proporcionan en el módulo Unity para facilitar la creación de definiciones de formas personalizadas. La lista completa de restricciones de componente y forma se puede encontrar en "SpatialUnderstandingDll.cs" dentro de las estructuras "ShapeComponentConstraint" y "ShapeConstraint".
+Las funciones de contenedor se proporcionan en el módulo Unity para facilitar la creación de definiciones de formas personalizadas. La lista completa de restricciones de componente y forma se puede encontrar en "SpatialUnderstandingDll. cs" dentro de las estructuras "ShapeComponentConstraint" y "ShapeConstraint".
 
 ![La forma de rectángulo se encuentra en esta superficie](images/su-shapequery-300px.jpg)<br>
 *La forma de rectángulo se encuentra en esta superficie*
@@ -421,7 +421,7 @@ Solver_PlaceObject(
     UnderstandingDLL.GetStaticObjectPlacementResultPtr());
 ```
 
-Si se realiza correctamente, se devuelve una estructura "ObjectPlacementResult" que contiene la posición de colocación, las dimensiones y la orientación. Además, la selección de ubicación se agrega a la lista interna de objetos colocados del archivo dll. Las consultas de selección de ubicación posteriores tendrán en cuenta este objeto. El archivo "LevelSolver.cs" del ejemplo de Unity contiene más consultas de ejemplo.
+Si se realiza correctamente, se devuelve una estructura "ObjectPlacementResult" que contiene la posición de colocación, las dimensiones y la orientación. Además, la selección de ubicación se agrega a la lista interna de objetos colocados del archivo dll. Las consultas de selección de ubicación posteriores tendrán en cuenta este objeto. El archivo "LevelSolver. cs" en el ejemplo de Unity contiene más consultas de ejemplo.
 
 ![Resultados de la colocación del objeto](images/su-objectplacement-1000px.jpg)<br>
 *Figura 3: los cuadros azules del resultado de tres consultas en planta con respecto a las reglas de posición de la cámara*
@@ -441,7 +441,7 @@ One-time scan process –
     Query functions will not function until after the scan has been finalized.
 ```
 
-Playspace controlada por el usuario "Painting": durante la fase de análisis, el usuario se mueve y se desplaza por el ritmo de las jugadas, con lo que se pintan las áreas que se deben incluir. La malla generada es importante para proporcionar comentarios de los usuarios durante esta fase. Instalación en casa o en el programa de instalación de Office: las funciones de consulta están diseñadas en torno a superficies planas y paredes en los ángulos correctos. Se trata de una limitación flexible. Sin embargo, durante la fase de examen, se completa un análisis de eje principal para optimizar la teselación de malla junto con el eje principal y el secundario. El archivo SpatialUnderstanding.cs incluido administra el proceso de la fase de análisis. Llama a las siguientes funciones.
+Playspace controlada por el usuario "Painting": durante la fase de análisis, el usuario se mueve y se desplaza por el ritmo de las jugadas, con lo que se pintan las áreas que se deben incluir. La malla generada es importante para proporcionar comentarios de los usuarios durante esta fase. Instalación en casa o en el programa de instalación de Office: las funciones de consulta están diseñadas en torno a superficies planas y paredes en los ángulos correctos. Se trata de una limitación flexible. Sin embargo, durante la fase de examen, se completa un análisis de eje principal para optimizar la teselación de malla junto con el eje principal y el secundario. El archivo SpatialUnderstanding. CS incluido administra el proceso de la fase de análisis. Llama a las siguientes funciones.
 
 ```
 SpatialUnderstanding_Init – Called once at the start.
@@ -480,7 +480,7 @@ La dll de comprensión almacena internamente el Playspace como una cuadrícula d
 * Cuando se pierde el seguimiento, el siguiente evento OnSurfaceChanged quitará todas las mallas.
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Asignación espacial en el kit de herramientas de realidad mixta
-Para obtener más información sobre el uso de la asignación espacial con el kit de herramientas de realidad mixta V2, consulte la <a href="https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/spatial-awareness/spatial-awareness-getting-started.md" target="_blank">sección de reconocimiento espacial</a> de los documentos de MRTK.
+Para obtener más información sobre el uso de la asignación espacial con el kit de herramientas de realidad mixta V2, consulte la <a href="/windows/mixed-reality/mrtk-docs/features/spatial-awareness/spatial-awareness-getting-started.md" target="_blank">sección de reconocimiento espacial</a> de los documentos de MRTK.
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
