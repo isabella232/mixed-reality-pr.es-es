@@ -1,17 +1,17 @@
 ---
-title: 'Conceptos básicos de HoloLens (primera generación) 100: Introducción a Unity'
+title: 'Aspectos básicos de HoloLens de primera generación (100): introducción a Unity'
 description: Aprenda a crear su primera aplicación básica "Hola mundo" de realidad mixta para HoloLens y dispositivos Windows Mixed Reality.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
 keywords: realidad mixta, Windows Mixed Reality, HoloLens, envolventes, VR, Mr, introducción, holograma, Academia, tutorial, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 999ab7dc87a639f10aad9eaf2a7ef8de2cf92633
-ms.sourcegitcommit: 35bd43624be33afdb1bf6ba4ddbe36d268eb9bda
+ms.openlocfilehash: c764c28cea812314d9c83136fe771c5b4077adc5
+ms.sourcegitcommit: 0db5777954697f1d738469363bbf385481204d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2021
-ms.locfileid: "104730362"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636177"
 ---
 # <a name="hololens-1st-gen-basics-100-getting-started-with-unity"></a>Conceptos básicos de HoloLens (1º gen) 100: Introducción a Unity
 
@@ -77,7 +77,7 @@ En segundo lugar, hay que pensar en el fondo de la cámara predeterminada.
 
 En tercer lugar, permítanos considerar el plano de recorte cercano en Unity y evitar que los objetos se representen demasiado cerca de los ojos de los usuarios cuando un usuario se aproxime a un objeto o un objeto se aproxime a un usuario.
 
-**En el caso de las aplicaciones de hololens**, el plano de recorte cercano se puede establecer en los contadores de 0,85 [recomendados de hololens](../camera-in-unity.md#clip-planes) .
+**En el caso de las aplicaciones de hololens**, el plano de recorte cercano se puede establecer en los contadores de 0,85 [recomendados de hololens](../camera-in-unity.md#using-clipping-planes) .
 
 1. Con la **cámara principal** aún seleccionada en el **Panel jerarquía** , busque el componente **cámara** en el panel **Inspector** y cambie el campo **Near Clip plano** del valor predeterminado **0,3** a HoloLens recomendado **0,85**.
 
@@ -223,7 +223,7 @@ Asegúrese de que el dispositivo está conectado a través del cable USB.
 
 Ahora que la aplicación está implementada, intente mover todo el cubo y observe que permanece en todo el mundo.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Introducción al desarrollo de Unity](../unity-development-overview.md)
 * [Procedimientos recomendados para trabajar con Unity y Visual Studio](../best-practices-for-working-with-unity-and-visual-studio.md)

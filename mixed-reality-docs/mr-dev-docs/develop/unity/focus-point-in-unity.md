@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, punto de enfoque, plano de enfoque, plano de estabilización, punto de estabilización, Reproyección, LSR, búfer de profundidad, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 2ceb5f2b58cbd1571b2d9f4de79acfe45779bfea
-ms.sourcegitcommit: be7473bbebc1872d8c9df6f2da837efd3279dee6
+ms.openlocfilehash: 16f359e1742b86c5f12c0c5965ac9e818ea76aee
+ms.sourcegitcommit: 0db5777954697f1d738469363bbf385481204d24
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98226404"
+ms.lasthandoff: 03/27/2021
+ms.locfileid: "105636227"
 ---
 # <a name="focus-point-in-unity"></a>Punto de enfoque en Unity
 
@@ -49,7 +49,7 @@ void Update()
 ```
 
 > [!NOTE]
-> El código más anterior puede reducir la estabilidad de los hologramas si el objeto que tiene el foco termina detrás del usuario. Por lo general, se recomienda establecer **[Habilitar el uso compartido del búfer de profundidad](camera-in-unity.md#sharing-your-depth-buffers-with-windows)** en lugar de especificar manualmente un punto de enfoque.
+> El código más anterior puede reducir la estabilidad de los hologramas si el objeto que tiene el foco termina detrás del usuario. Por lo general, se recomienda establecer **[Habilitar el uso compartido del búfer de profundidad](camera-in-unity.md#sharing-depth-buffers)** en lugar de especificar manualmente un punto de enfoque.
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
