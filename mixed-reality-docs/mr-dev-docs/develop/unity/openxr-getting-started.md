@@ -135,7 +135,7 @@ Ahora que ha configurado el proyecto para OpenXR y tiene acceso a los ejemplos, 
 
 OpenXR sigue siendo experimental, por lo que agradecemos cualquier comentario que nos proporcione para ayudarlo a mejorar. Nos encontrarás en los [foros de Unity](https://aka.ms/unityforums) mediante el etiquetado de tu entrada de foro con **Microsoft**  +  **OpenXRs** y **HoloLens 2** o **Windows Mixed Reality**.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Configuración de un proyecto sin MRTK](configure-unity-project.md)
 * [Configuración recomendada para Unity](recommended-settings-for-unity.md)
