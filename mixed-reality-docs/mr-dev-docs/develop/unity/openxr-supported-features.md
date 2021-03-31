@@ -6,16 +6,16 @@ ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr, Unity, hololens, hololens 2, reality Mixed, MRTK, kit de herramientas de realidad mixta, realidad aumentada, realidad virtual, auriculares de realidad mixta, información, tutorial, introducción
-ms.openlocfilehash: 1c9e185c63d3efef66cdc2782d8d8d4e3692c705
-ms.sourcegitcommit: d5e4eb94c87b86a7774a639f11cd9e35a7050107
+ms.openlocfilehash: 1fbc03fe446d9e9619348618c6d0b9aab828fe1a
+ms.sourcegitcommit: 6272d086a2856e8b514a719e1f9e3b78554be5be
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103623635"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105937431"
 ---
 # <a name="mixed-reality-openxr-supported-features-in-unity"></a>Características admitidas de OpenXR de realidad mixta en Unity
 
-El paquete de **Complementos OpenXR de realidad mixta** es una extensión del **complemento OpenXR** de Unity y admite un conjunto de características para los auriculares HoloLens 2 y Windows Mixed Reality. Antes de continuar, asegúrese de que ha instalado **unity 2020,2** o posterior, **OpenXR plugin versión 0.1.3** o posterior y el proyecto de Unity está [configurado para OpenXR](openxr-getting-started.md).
+El paquete de **Complementos OpenXR de realidad mixta** es una extensión del **complemento OpenXR** de Unity y admite un conjunto de características para los auriculares HoloLens 2 y Windows Mixed Reality. Antes de continuar, asegúrese de que el proyecto [de Unity está configurado para OpenXR](openxr-getting-started.md).
 
 ## <a name="whats-supported"></a>Lo que se admite
 
@@ -35,6 +35,9 @@ Actualmente se admiten las siguientes características:
 * Compatible con Unity [ARFoundation 4,0](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@4.1/manual/index.html) o posterior.
 * (Agregado en 0.1.3) Admite la [comunicación remota de la aplicación de escritorio holográfica](holographic-remoting-desktop.md) desde una aplicación independiente de Windows compilada e implementada.
 * (Agregado en 0.1.4) Admite el [seguimiento del código QR](#qr-codes) en HoloLens2 a través de SpatialGraphNode
+* (Agregado en 0.2.0) Admite **delimitador** en la comunicación remota holográfica
+* (Agregado en 0.2.0) Admite las **uniones a mano y el seguimiento de mallas** .
+* (Agregado en 0.2.0) Admite **ARPlaneSubsystems** para la detección de planos y colocar el holograma mediante **ARRaycastManager**.
 
 ## <a name="holographic-remoting-setup"></a>Configuración de Holographic Remoting
 
@@ -112,13 +115,10 @@ Como referencia, tenemos un [proyecto de ejemplo de seguimiento de QR en github]
 
 Los siguientes problemas y las características que faltan se conocen con la **versión 0.1.0** del complemento OpenXR de realidad mixta. Estamos trabajando en ellos y publicará correcciones y nuevas características en las próximas versiones.
 
-* **ARPlaneSubsystem** todavía no se admite. **ARPlaneManager**, **ARRaycastManager** y API relacionada como **ARAnchorManager. AttachAnchor** tampoco se admiten en HoloLens 2.
-* La **persistencia del delimitador** no es compatible aún con la comunicación remota de Holographic, pero está próximamente en un futuro.
-* Todavía no se admite el seguimiento de la **malla de mano** y **XRMeshSubsystem** .
 * La compatibilidad con los **anclajes espaciales de Azure** está disponible en una versión futura.
 * **ARM64** es la única plataforma admitida para las aplicaciones de HoloLens 2. La plataforma **ARM** está próximamente en una versión futura.
 
-## <a name="troubleshooting"></a>Solucionar problemas
+## <a name="troubleshooting"></a>Solución de problemas
 
 Al suspender y reanudar una aplicación de Unity en HoloLens 2, la aplicación no se puede reanudar correctamente, lo que conduce a 4 puntos de giro en la vista de HoloLens.
 
