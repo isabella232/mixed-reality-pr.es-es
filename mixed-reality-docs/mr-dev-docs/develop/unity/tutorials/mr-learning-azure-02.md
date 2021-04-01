@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, hololens 2, azure storage, azure cloud services, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: cebf86901ec7b91888e1e46a13e5dee47f640c6c
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 189fea44da6d2da7cd98629a4a67c2f7c9340d2b
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590567"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105550335"
 ---
 # <a name="2-integrating-azure-storage"></a>2. Integración de Azure Storage
 
@@ -28,7 +28,7 @@ En este tutorial, obtendrá información sobre cómo guardar datos de entidad en
 
 **Azure Storage** es una solución de almacenamiento de Microsoft en la nube que puede abarcar muchos escenarios y requisitos. Se puede escalar de forma masiva y los desarrolladores pueden acceder a ella fácilmente. Todos los servicios se pueden consumir en el paraguas de una **cuenta de Azure Storage**. En nuestro caso de uso, usaremos *Table Storage* y *Blob Storage*.
 
-Obtenga más información sobre los [servicios de Azure Storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-overview).
+Obtenga más información sobre los [servicios de Azure Storage](/azure/storage/blobs/storage-blobs-overview).
 
 ### <a name="azure-table-storage"></a>Azure Table Storage
 
@@ -36,18 +36,18 @@ Estos servicios nos permiten almacenar los datos mediante un mecanismo NoSQL. En
 
 En el contexto de la aplicación de demostración, necesita dos tablas, una para almacenar información sobre el proyecto con información sobre el estado de los modelos entrenados (puede obtener más información al respecto en el tutorial [Integración de Azure Custom Vision](mr-learning-azure-03.md)) y una segunda tabla para almacenar información sobre los *objetos de los que se realiza un seguimiento*.
 
-Obtenga más información sobre [Azure Table Storage](https://docs.microsoft.com/azure/storage/tables/table-storage-overview).
+Obtenga más información sobre [Azure Table Storage](/azure/storage/tables/table-storage-overview).
 
 ### <a name="azure-blob-storage"></a>Azure Blob Storage
 
 Este servicio permite almacenar archivos binarios de gran tamaño. Lo usará para almacenar las fotografías tomadas para los *objetos de los que se realiza un seguimiento* como miniatura.
 En el caso de la aplicación de demostración, necesita un contenedor de blobs para almacenar las imágenes.
 
-Obtenga más información sobre [Azure Blob Storage](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).
+Obtenga más información sobre [Azure Blob Storage](/azure/storage/blobs/storage-blobs-introduction).
 
 ## <a name="preparing-azure-storage"></a>Preparación de Azure Storage
 
-Para consumir los servicios de Azure Storage, necesitará una cuenta de Azure Storage. Para crear una cuenta de almacenamiento, consulte [Creación de una cuenta de almacenamiento](https://docs.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal). Para obtener más información sobre las cuentas de almacenamiento, consulte [Información general de la cuenta de Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-account-overview).
+Para consumir los servicios de Azure Storage, necesitará una cuenta de Azure Storage. Para crear una cuenta de almacenamiento, consulte [Creación de una cuenta de almacenamiento](/azure/storage/common/storage-account-create?tabs=azure-portal). Para obtener más información sobre las cuentas de almacenamiento, consulte [Información general de la cuenta de Azure Storage](/azure/storage/common/storage-account-overview).
 
 Una vez que tenga una cuenta de almacenamiento, puede recuperar la cadena de conexión desde **Azure Portal** que se necesitará en la siguiente sección de esta lección.
 
@@ -58,7 +58,7 @@ Aunque puede ver y comprobar todos los cambios de datos de la interfaz de usuari
 > [!TIP]
 > Para realizar pruebas desde el editor de Unity, puede usar un emulador local:
 >
-> * En Windows 10, puede usar el [emulador de Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-use-emulator).
+> * En Windows 10, puede usar el [emulador de Azure Storage](/azure/storage/common/storage-use-emulator).
 > * En MacOS/Linux, puede usar la [imagen de Docker de Azurite](https://hub.docker.com/_/microsoft-azure-storage-azurite) para Docker.
 
 ## <a name="preparing-the-scene"></a>Preparación de la escena

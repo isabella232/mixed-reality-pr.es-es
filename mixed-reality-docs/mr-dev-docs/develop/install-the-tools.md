@@ -7,12 +7,12 @@ ms.date: 02/09/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: up-to-date, tools, get started, basics, unity, visual studio, toolkit, mixed reality headset, windows mixed reality headset, virtual reality headset, installation, Windows, HoloLens, emulator, unreal, openxr
-ms.openlocfilehash: ac8e4dab8b9d9021c834e0a9d673c81ac3b7f1dc
-ms.sourcegitcommit: f74d33d50c1fbfebe8571695d631ce78dd599f74
+ms.openlocfilehash: 28546e751d3d8001eb2fe69a74624215a6619d4c
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104881242"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105550045"
 ---
 # <a name="install-the-tools"></a>Instalación de las herramientas
 
@@ -42,7 +42,6 @@ Si usa Unity, puede utilizar la simulación de entrada de [Mixed Reality Toolkit
 
 Ahora que tiene Windows 10, Visual Studio y el SDK de Windows 10 listo para usar, instale y configure el motor de su elección. 
 
-Si todavía necesita elegir un motor, consulte la [Introducción al desarrollo con Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/develop/development?tabs=unity#what-technology-path-are-you-interested-in). 
+Si todavía necesita elegir un motor, consulte la [Introducción al desarrollo con Mixed Reality](./development.md?tabs=unity#what-technology-path-are-you-interested-in). 
 
 [!INCLUDE[](includes/tools-overview.md)]
-
