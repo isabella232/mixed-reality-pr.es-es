@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr, Unity, hololens, hololens 2, reality Mixed, MRTK, kit de herramientas de realidad mixta, realidad aumentada, realidad virtual, auriculares de realidad mixta, información, tutorial, introducción
-ms.openlocfilehash: 1fbc03fe446d9e9619348618c6d0b9aab828fe1a
-ms.sourcegitcommit: 6272d086a2856e8b514a719e1f9e3b78554be5be
+ms.openlocfilehash: d45cc9ab0c0c922c1946f4c188202a99f049f4fc
+ms.sourcegitcommit: 8d386bf6c82ec9860815e873e1f2870ea410f40f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105937431"
+ms.lasthandoff: 03/31/2021
+ms.locfileid: "106088494"
 ---
 # <a name="mixed-reality-openxr-supported-features-in-unity"></a>Características admitidas de OpenXR de realidad mixta en Unity
 
@@ -38,6 +38,7 @@ Actualmente se admiten las siguientes características:
 * (Agregado en 0.2.0) Admite **delimitador** en la comunicación remota holográfica
 * (Agregado en 0.2.0) Admite las **uniones a mano y el seguimiento de mallas** .
 * (Agregado en 0.2.0) Admite **ARPlaneSubsystems** para la detección de planos y colocar el holograma mediante **ARRaycastManager**.
+* (0.9.0) admite **XRMeshSubsystem** y **ARMeshManager** para la asignación espacial.
 
 ## <a name="holographic-remoting-setup"></a>Configuración de Holographic Remoting
 
@@ -113,7 +114,7 @@ Como referencia, tenemos un [proyecto de ejemplo de seguimiento de QR en github]
 
 ## <a name="whats-coming-soon"></a>Novedades próximamente
 
-Los siguientes problemas y las características que faltan se conocen con la **versión 0.1.0** del complemento OpenXR de realidad mixta. Estamos trabajando en ellos y publicará correcciones y nuevas características en las próximas versiones.
+Los siguientes problemas y las características que faltan se conocen con la **versión 0.9.0** del complemento OpenXR de realidad mixta. Estamos trabajando en ellos y publicará correcciones y nuevas características en las próximas versiones.
 
 * La compatibilidad con los **anclajes espaciales de Azure** está disponible en una versión futura.
 * **ARM64** es la única plataforma admitida para las aplicaciones de HoloLens 2. La plataforma **ARM** está próximamente en una versión futura.

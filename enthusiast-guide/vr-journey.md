@@ -1,19 +1,19 @@
 ---
-title: Empezar el recorrido de VR
+title: Iniciar el recorrido de la VR
 description: Explore nuestros puntos de control de seleccionada para guiar a los nuevos usuarios de dispositivos a través de la configuración y el uso de sus dispositivos de VR.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 10/15/2020
 ms.topic: overview
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR,
-ms.openlocfilehash: 711c1b74b79ba510d29c17de0ec21270946ceb61
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: f373e0a55557fe38dfa598912296252293fa6d34
+ms.sourcegitcommit: b8a3367bf6dfed01de1ffa10f635385a92ca06b5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007065"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106223936"
 ---
-# <a name="start-your-vr-journey"></a>Empezar el recorrido de VR
+# <a name="start-your-vr-journey"></a>Iniciar el recorrido de la VR
 
 ![Imagen estándar del entorno superpuesto de VR](images/mr-win32-slates-pinspanel.png)
 
@@ -82,6 +82,7 @@ Busque juegos envolventes, aplicaciones de escritorio y contenido de VR en los r
 | [Uso de SteamVR](using-steamvr-with-windows-mixed-reality.md) | Conectar el dispositivo y reproducir SteamVR Games y obtener información sobre el programa Windows Insider |
 | [Uso de Microsoft Edge](using-microsoft-edge.md) | Instalación de la versión más reciente de Microsoft Edge en el dispositivo envolvente |
 | [Usar WebVR](webvr.md) | Obtener el programa de instalación para experimentar VR en el entorno del explorador |
+| [Explorar AltspaceVR](https://docs.microsoft.com/windows/mixed-reality/altspace-vr/journey) | Explore el mundo en expansión de los eventos de la VR con AltspaceVR |
 
 ## <a name="troubleshooting-tips--resources"></a>Solución de problemas, sugerencias & recursos
 

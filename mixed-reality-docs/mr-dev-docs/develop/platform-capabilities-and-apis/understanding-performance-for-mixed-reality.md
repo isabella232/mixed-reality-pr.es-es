@@ -6,16 +6,21 @@ ms.author: v-hferrone
 ms.date: 3/26/2019
 ms.topic: article
 keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, rendimiento, optimización, CPU, GPU
-ms.openlocfilehash: eabc151382652bc2588249ef78d2f9f3b0f8cd99
-ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
+ms.openlocfilehash: d0218902864586e678f6d51dfade58bd567bcc02
+ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105550125"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106269962"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Descripción del rendimiento de la realidad mixta
 
 Este artículo es una introducción a la comprensión del significado del rendimiento de la aplicación de realidad mixta.  La experiencia del usuario se puede degradar considerablemente si la aplicación no se ejecuta con una velocidad de fotogramas óptima. Los hologramas aparecerán inestables y el seguimiento de los cabezales del entorno no será preciso, lo que conduce a una mala experiencia para el usuario. El rendimiento se debe considerar como una característica de primera clase para el desarrollo de la realidad mixta y no para una tarea fina.
+
+Recientemente, publicamos una aplicación llamada conceptos básicos de calidad que cubre problemas comunes de rendimiento, diseño y entorno y soluciones para aplicaciones de HoloLens 2. Esta aplicación es una excelente demostración visual para el contenido que se muestra a continuación.
+
+> [!div class="nextstepaction"]
+> [Descarga de la aplicación de conceptos básicos de calidad](https://www.microsoft.com/en-us/p/quality-fundamentals/9mwz852q88fw)
 
 A continuación se enumeran los valores de velocidad de fotogramas de rendimiento para cada plataforma de destino.
 
@@ -139,7 +144,7 @@ Las operaciones de asignación y desasignación de memoria excesiva pueden dar l
 
 La agrupación de objetos es una técnica popular para reducir el costo de las asignaciones continuas y desasignaciones de objetos. Para ello, se asigna un grupo grande de objetos idénticos y se reutilizan instancias disponibles inactivas de este grupo en lugar de generar y destruir objetos constantemente a lo largo del tiempo. Los grupos de objetos son excelentes para los componentes reutilizables que tienen una duración variable en una aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 - [Recomendaciones de rendimiento para Unity](../unity/performance-recommendations-for-unity.md)
 - [Configuración recomendada para Unity](../unity/recommended-settings-for-unity.md)
 - [Recomendaciones de rendimiento para Unreal](../unreal/performance-recommendations-for-unreal.md)

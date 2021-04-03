@@ -6,12 +6,12 @@ ms.author: daescu
 ms.date: 10/12/2020
 ms.topic: article
 keywords: evento, calendario, Academia, programación, SF, San Francisco, reactor
-ms.openlocfilehash: f534a170594eb26e0d7f56e8694b9112cb0acbac
-ms.sourcegitcommit: 4647712788a91a2b26d4b01e62285c2942bb0bd2
+ms.openlocfilehash: 17db5ecac5953326eeb30c33693be18243579869
+ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "102230886"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "106270021"
 ---
 # <a name="microsoft-mixed-reality-events"></a>Eventos de realidad mixta de Microsoft
 
@@ -21,6 +21,7 @@ ms.locfileid: "102230886"
 
 |Evento|Date|Tema|
 |-------------|-------------|-----|
+| Mixed Reality Speaker Series|6 de abril de 2021 @10 AM PST|[Creación de aplicaciones de realidad mixta con Microsoft PowerApps](https://www.meetup.com/hololens-mr/events/277257132)|
 | Mixed Reality Speaker Series|23 de abril de 2020|[Aumentar la web](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Augmenting-WebXR-Standards)|
 | Mixed Reality Speaker Series|22 de junio de 2020|[Creación de experiencias educativas con MR](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Educational-Experiences-in-MR)|
 | [Evento de realidad virtual de Microsoft](https://www.meetup.com/hololens-mr/events/272364822/)|20 de agosto de 2020|Cumbre de VR|
