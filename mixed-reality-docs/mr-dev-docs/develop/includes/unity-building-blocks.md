@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 8ca6c6b4eea1d49f98e7a04b091a4a08cb859ff3
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 53cb83725bcc9f8f810ba40df5d08e81ec545f19
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98583001"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105582298"
 ---
 # <a name="available-in-mrtk"></a>[Disponible en MRTK](#tab/mrtk)
 
 |  Característica  |  Funcionalidades  |
 | --- | --- |
-| [Interacciones básicas](../unity/mrtk-101.md) | Permite obtener información sobre los aspectos básicos de la interacción con los objetos en el espacio envolvente. |
+| [Interacciones básicas](../../out-of-scope/mrtk-101.md) | Permite obtener información sobre los aspectos básicos de la interacción con los objetos en el espacio envolvente. |
 | [Cámara](../unity/camera-in-unity.md) | Permite optimizar totalmente la calidad visual y la estabilidad del holograma en las aplicaciones de realidad mixta. |
 | [Gaze](../unity/gaze-in-unity.md) | Permite que los usuarios se dirijan a los hologramas mediante su mirada. |
 | [Controladores de movimiento](../unity/motion-controllers-in-unity.md) | Permite agregar acciones espaciales a las aplicaciones de Mixed Reality. |

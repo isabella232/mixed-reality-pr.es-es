@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, eye-tracking
 ms.localizationpriority: high
-ms.openlocfilehash: 08793622917ca977c51be56267d8710e5abb78e8
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: bf7bd266eb471193979c588d97d14dd37aed175e
+ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102237185"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105982905"
 ---
 # <a name="8-using-eye-tracking"></a>8. Uso del seguimiento ocular
 
@@ -26,14 +26,7 @@ En este tutorial, aprenderá a habilitar el seguimiento ocular para HoloLens 2 y
 * Aprender a habilitar el seguimiento ocular para HoloLens 2
 * Aprender a usar el seguimiento ocular para desencadenar la acción
 
-## <a name="ensuring-the-eye-gaze-input-capability-is-enabled"></a>Asegurarse de que está habilitada la funcionalidad de entrada de mirada
-
-En el menú de Unity, seleccione Mixed Reality Toolkit > Utilities (Utilidades) > **Configure Unity Project** (Configurar proyecto de Unity) para abrir la ventana **MRTK Project Configurator** (Configurador de proyecto de MRTK) y, a continuación, en la sección **UWP Capabilities** (Funcionalidades para UWP), verifique que la opción **Enable Eye Gaze Input Capability** (Habilitar funcionalidad de entrada de mirada) esté atenuada:
-
-![Ventana MRTK Project Configurator (Configurador del proyecto MRTK) de Unity](images/mr-learning-base/base-08-section1-step1-1.png)
-
-> [!NOTE]
-> La funcionalidad de entrada de mirada con los ojos debe haberse habilitado durante las instrucciones de [Aplicación de la configuración de MRTK Project Configurator](mr-learning-base-02.md#creating-and-configuring-the-scene) al configurar el proyecto de Unity al principio de esta serie de tutoriales. Sin embargo, si no está habilitada, asegúrese de habilitarla ahora.
+[!INCLUDE[](includes/ensuring-eye-gaze-capabality.md)]
 
 ## <a name="enabling-eye-based-gaze-in-the-gaze-provider"></a>Habilitar la mirada con los ojos en el proveedor de mirada
 

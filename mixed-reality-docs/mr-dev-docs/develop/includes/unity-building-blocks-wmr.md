@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 2327eae53e5fb921feeed127f38592770634575e
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 1fa9e05b96de1ae73c0983de210effdfb97872c5
+ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98195305"
+ms.lasthandoff: 03/25/2021
+ms.locfileid: "105582371"
 ---
 # <a name="available-in-mrtk"></a>[Disponible en MRTK](#tab/mrtk)
 
 |  Característica  |  Funcionalidades  |
 | --- | --- |
-| [Interacciones básicas](../unity/mrtk-101.md) | Permite obtener información sobre los aspectos básicos de la interacción con los objetos en el espacio envolvente. |
+| [Interacciones básicas](../../out-of-scope/mrtk-101.md) | Permite obtener información sobre los aspectos básicos de la interacción con los objetos en el espacio envolvente. |
 | [Cámara](../unity/camera-in-unity.md) | Permite optimizar totalmente la calidad visual y la estabilidad del holograma en las aplicaciones de realidad mixta. |
 | [Controladores de movimiento](../unity/motion-controllers-in-unity.md) | Permite agregar acciones espaciales a las aplicaciones de Mixed Reality. |
 | [Gestos](../unity/gestures-in-unity.md) | Uso de gestos con la mano como entrada en las experiencias de Mixed Reality |
@@ -29,5 +29,3 @@ ms.locfileid: "98195305"
 | [Sonido espacial](../unity/spatial-sound-in-unity.md) | Permite mejorar sus aplicaciones mediante el audio 3D envolvente. |
 | [Texto](../unity/text-in-unity.md) | Permite obtener texto nítido y de alta calidad con un tamaño y una representación de calidad que se pueden administrar. |
 | [Entrada de voz](../unity/voice-input-in-unity.md) | Permite capturar palabras clave, frases y dictado en voz alta de los usuarios.|
-
-

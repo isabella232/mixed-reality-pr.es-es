@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, speech commands, voice input
 ms.localizationpriority: high
-ms.openlocfilehash: c87f3bb801b2fc32ed1aa42f2a4754bc83320587
-ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
+ms.openlocfilehash: 3aea23d5a259e555f47ca9ea41d77f345c977aeb
+ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105550255"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105982955"
 ---
 # <a name="9-using-speech-commands"></a>9. Uso de los comandos de voz
 
@@ -23,14 +23,7 @@ En este tutorial, aprenderá a crear comandos de voz y a controlarlos de forma g
 * Aprender a crear comandos de voz
 * Aprender a controlar los comandos de voz global y localmente
 
-## <a name="ensuring-the-microphone-capability-is-enabled"></a>Asegurarse de que la funcionalidad del micrófono está habilitada
-
-En el menú de Unity, seleccione Mixed Reality Toolkit > Utilities (Utilidades) > **Configure Unity Project** (Configurar proyecto de Unity) para abrir la ventana **MRTK Project Configurator** (Configurador de proyecto de MRTK) y, a continuación, en la sección **UWP Capabilities** (Funcionalidades para UWP), verifique que la opción **Enable Microphone Capability** (Habilitar funcionalidad del micrófono) esté atenuada:
-
-![Enable microphone capability (Habilitar la funcionalidad del micrófono)](images/mr-learning-base/base-09-section1-step1-1.png)
-
-> [!NOTE]
-> La funcionalidad del micrófono debe haberse habilitado durante las instrucciones de [Aplicación de la configuración de MRTK Project Configurator](mr-learning-base-02.md#creating-and-configuring-the-scene) al configurar el proyecto de Unity al principio de esta serie de tutoriales. Sin embargo, si no está habilitada, asegúrese de habilitarla ahora.
+[!INCLUDE[](includes/ensuring-microphone-capabality.md)]
 
 ## <a name="creating-speech-commands"></a>Creación de comandos de voz
 

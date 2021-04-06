@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: ca7eef92721afb24ae359ddf00e810ecc63c2eb4
-ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
+ms.openlocfilehash: 5f16d3c12e6dbb977ecedc1598a28073cfb39222
+ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105550405"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105983148"
 ---
 # <a name="2-getting-started-with-azure-spatial-anchors"></a>2. Introducción a Azure Spatial Anchors
 
@@ -56,7 +56,6 @@ Agregue el SDK de Azure Spatial Anchors V2.7.1 al proyecto de Unity. Para agreg
 
 Descarga e **importa** los siguientes paquetes personalizados de Unity **en el orden en que aparecen**:
 
-
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage)
 * [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.5.3.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.5.3/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.5.3.unitypackage)
 
@@ -68,7 +67,7 @@ Después de importar los recursos del tutorial, la ventana Project (Proyecto) de
 > Si ve que las advertencias de CS0618 con respecto a "WorldAnchor.SetNativeSpatialAnchorPtr(IntPtr)" están en desuso, puede omitir estas advertencias.
 
 > [!TIP]
-> Para repasar cómo se importa un paquete personalizado de Unity, consulte las instrucciones de [Importación de los recursos del tutorial](mr-learning-base-04.md#importing-the-tutorial-assets).
+> Para repasar cómo se importa un paquete personalizado de Unity, consulte las instrucciones de [Importación de los recursos del tutorial](mr-learning-base-02.md#importing-the-tutorial-assets).
 
 ## <a name="preparing-the-scene"></a>Preparación de la escena
 

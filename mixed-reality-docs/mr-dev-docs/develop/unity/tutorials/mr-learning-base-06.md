@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, prefabs, holograms, tooltips
 ms.localizationpriority: high
-ms.openlocfilehash: 8e7ab83fa195fc48d8fe1c1daf8207c49e3ec71e
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 4400ce669863b719b409e11076ceb5689e21893e
+ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "101760031"
+ms.lasthandoff: 03/30/2021
+ms.locfileid: "105982978"
 ---
 # <a name="6-creating-user-interfaces"></a>6. Creación de interfaces de usuario
 
@@ -67,7 +67,7 @@ En la ventana Hierarchy (Jerarquí)a, seleccione el objeto del botón **Hints** 
 ![Unity con el evento OnClick del objeto de botón Hints configurado](images/mr-learning-base/base-06-section1-step1-5.png)
 
 > [!TIP]
-> El componente Interactable es un contenedor todo en uno que hace que se puede interactuar fácilmente con cualquier objeto y que este tenga capacidad de respuesta a las entradas. Interactable actúa como una instrucción comodín para todos los tipos de entradas como, por ejemplo, entradas táctiles, haces de mano, voz, etc., y canaliza estas interacciones en eventos y respuestas de tema visual. Para aprender a configurarlo para diferentes tipos de entrada y personalizar su tema visual, puede consultar la guía sobre [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) en el [Portal de documentación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/).
+> El componente Interactable es un contenedor todo en uno que hace que se puede interactuar fácilmente con cualquier objeto y que este tenga capacidad de respuesta a las entradas. Interactable actúa como una instrucción comodín para todos los tipos de entradas como, por ejemplo, entradas táctiles, haces de mano, voz, etc., y canaliza estas interacciones en eventos y respuestas de tema visual. Para aprender a configurarlo para diferentes tipos de entrada y personalizar su tema visual, puede consultar la guía sobre [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) en el [Portal de documentación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/).
 
 En la ventana Hierarchy (Jerarquía), seleccione el objeto del botón **Explode** y, a continuación, en la ventana Inspector, configure el evento **OnClick ()** de la siguiente manera:
 
