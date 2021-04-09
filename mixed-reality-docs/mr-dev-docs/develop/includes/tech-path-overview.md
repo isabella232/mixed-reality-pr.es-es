@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c61fda885b6cffba2a16b368aa48ad1426fd9fa6
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 5b99eda2ca8bc2ba48a46513b867e94c45b198c1
+ms.sourcegitcommit: 919bdc3e46325f3c44a022c8852cd38ffec33d33
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98605034"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "105105484"
 ---
 # <a name="unity"></a>[Unity](#tab/unity)
 
@@ -35,6 +35,7 @@ Al compilar aplicaciones de realidad mixta con Unity, cuenta con varias opciones
 |  Herramienta/SDK  |  Descripción  |
 | --- | --- |
 | [Mixed Reality Toolkit para Unity](../unity/mrtk-getting-started.md) | Mixed Reality Toolkit para Unity es un kit de desarrollo multiplataforma de código abierto para acelerar el desarrollo de aplicaciones destinadas a Microsoft HoloLens, cascos envolventes (VR) de Windows Mixed Reality y la plataforma OpenVR. |
+| Versión preliminar privada de [Microsoft Mesh](/mesh/overview) | Rellene el formulario para [registrar tu interés en Microsoft Mesh](https://aka.ms/meshsignup) y mantenerse al día con los anuncios y novedades de Mesh. Con Mesh, puede hospedar reuniones virtuales y mejorarlas, realizar sesiones de diseño virtual y ayudar a otros usuarios de forma remota. |
 
 ## <a name="cloud-services"></a>Servicios en la nube
 
@@ -49,9 +50,10 @@ Puede usar **Microsoft Dynamics 365 Guides** para vincular visualmente las ins
 ## <a name="examples"></a>Ejemplos
 
 Tenemos varias [aplicaciones de ejemplo](../features-and-samples.md) de código abierto que puede descargar y probar para hacerse una idea de un producto final de realidad mixta en Unity. También hay disponibles escenas de ejemplo de MRTK para probar características específicas:
-* [Escena de ejemplos de interacción de la mano (MRTK) para Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#open-and-run-the-handinteractionexamples-scene-in-editor): La escena de ejemplo HandInteractionExamples.unity contiene varios tipos de interacciones y controles de interfaz de usuario que resaltan la entrada de mano articulada.
 
-* [Ejemplos de seguimiento de los ojos (MRTK) para Unity](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_ExamplesOverview.html): En esta página se explica cómo empezar a trabajar rápidamente con el seguimiento de los ojos en MRTK mediante la creación que toma como base nuestros ejemplos de seguimiento de los ojos de MRTK proporcionados.
+* [Escena de ejemplos de interacción de la mano (MRTK) para Unity](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/example-scenes/hand-interaction-examples): La escena de ejemplo HandInteractionExamples.unity contiene varios tipos de interacciones y controles de interfaz de usuario que resaltan la entrada de mano articulada.
+
+* [Ejemplos de seguimiento de los ojos (MRTK) para Unity](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/example-scenes/eye-tracking-examples-overview): En esta página se explica cómo empezar a trabajar rápidamente con el seguimiento de los ojos en MRTK mediante la creación que toma como base nuestros ejemplos de seguimiento de los ojos de MRTK proporcionados.
 
 >[!NOTE]
 >Las dos escenas de ejemplo de MRTK requieren la instalación de los paquetes MRTK Foundation y Example Unity.
@@ -106,7 +108,7 @@ Puede usar **Microsoft Dynamics 365 Guides** para vincular visualmente las ins
 
 ![Web](../images/javascript_logo_banner.png)
 
-La API de dispositivo WebXR es una especificación abierta que permite experimentar con aplicaciones de realidad mixta en un explorador en cualquier plataforma. Consulte [Información general sobre el desarrollo con JavaScript](../web/javascript-development-overview.md) para empezar a crear aplicaciones de realidad mixta para cualquier plataforma.
+La API de dispositivo WebXR es una especificación abierta que permite experimentar con aplicaciones de realidad mixta en un explorador en cualquier plataforma. Consulte [Información general sobre el desarrollo con JavaScript](../javascript/javascript-development-overview.md) para empezar a crear aplicaciones de realidad mixta para cualquier plataforma.
 
 
 # <a name="native-openxr"></a>[Nativo (OpenXR)](#tab/native)
