@@ -6,18 +6,19 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, asignación espacial, representador, Colisionador, malla, escaneo, componente, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: e2ef6ac43e81ff2b8e66a4bd197ea41c198a1626
-ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
+ms.openlocfilehash: f7fe6e86f9672f36a34f9d7c32d25fccd7760f5e
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105549955"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300170"
 ---
 # <a name="spatial-mapping-in-unity"></a>Asignación espacial en Unity
 
 la [asignación espacial](../../design/spatial-mapping.md) permite recuperar mallas de triángulo que representan las superficies del mundo en torno a un dispositivo HoloLens. Puede usar datos de superficie para la selección de ubicación, oclusión y análisis de habitación para dar a los proyectos de Unity una dosis adicional de inmersión.
 
 Unity incluye compatibilidad total con la asignación espacial, que se expone a los desarrolladores de las siguientes maneras:
+
 1. Componentes de asignación espacial disponibles en MixedRealityToolkit, que proporcionan una ruta de acceso cómoda y rápida para empezar a trabajar con la asignación espacial
 2. API de asignación espacial de nivel inferior, que proporcionan control total y permiten una personalización específica de la aplicación más sofisticada.
 
@@ -51,6 +52,7 @@ Para usar la asignación espacial en la aplicación, debe establecerse la funcio
 Para que una aplicación consuma datos de asignación espacial, la funcionalidad SpatialPerception debe estar habilitada.
 
 Cómo habilitar la funcionalidad SpatialPerception:
+
 1. En el editor de Unity, abra el panel de **configuración del reproductor** (editar > configuración del proyecto > Player).
 2. Seleccione en la pestaña **"tienda Windows"**
 3. Expanda **"configuración de publicación"** y seleccione la funcionalidad **"SpatialPerception"** en la lista **"funcionalidades"** .
@@ -59,6 +61,7 @@ Cómo habilitar la funcionalidad SpatialPerception:
 > Si ya ha exportado el proyecto de Unity a una solución de Visual Studio, deberá exportar a una nueva carpeta o establecer manualmente [esta funcionalidad en el AppxManifest de Visual Studio](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).
 
 La asignación espacial también requiere un MaxVersionTested de al menos 10.0.10586.0:
+
 1. En Visual Studio, haga clic con el botón derecho en **Package. appxmanifest** en el explorador de soluciones y seleccione **Ver código** .
 2. Busque la línea que especifica **TargetDeviceFamily** y cambie **MaxVersionTested = "10.0.10240.0"** por **MaxVersionTested = "10.0.10586.0"**
 3. **Guarde** el paquete. appxmanifest.
@@ -84,6 +87,7 @@ El Colisionador de asignación espacial permite la interacción de contenido hol
 Puede Agregar ambos componentes a la aplicación si desea visualizar y interactuar con las superficies físicas.
 
 Para usar estos dos componentes en la aplicación de Unity:
+
 1. Seleccione un GameObject en el centro del área en la que desea detectar mallas de superficie espacial.
 2. En la ventana del inspector, **agregue el elemento**  >    >  **Colisionador de asignación espacial** del componente XR o el **representador de asignación espacial**.
 
@@ -92,6 +96,7 @@ Puede encontrar más detalles sobre cómo usar estos componentes en el sitio de 
 ### <a name="going-beyond-the-built-in-spatial-mapping-components"></a>Ir más allá de los componentes de asignación espacial integrados
 
 Estos componentes facilitan la tarea de arrastrar y colocar para empezar a trabajar con la asignación espacial.  Si desea continuar, hay dos rutas principales para explorar:
+
 * Para realizar su propio procesamiento de malla de nivel inferior, consulte la sección siguiente sobre la API de script de asignación espacial de bajo nivel.
 * Para realizar análisis de malla de nivel superior, consulte la sección siguiente sobre la biblioteca SpatialUnderstanding en <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>.
 
@@ -137,6 +142,7 @@ private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bou
 ### <a name="handling-surface-changes"></a>Control de cambios de superficie
 
 Hay varios casos principales que se deben tratar: agregar y actualizar, que pueden utilizar la misma ruta de acceso del código y quitarse.
+
 * En los casos agregados y actualizados, se agrega u obtiene el GameObject que representa esta malla del diccionario, se crea un struct SurfaceData con los componentes necesarios y, después, se llama a RequestMeshDataAsync para rellenar el GameObject con los datos de la malla y la posición en la escena.
 * En el caso de que se quite, se quita el GameObject que representa esta malla del diccionario y se destruye.
 
@@ -268,7 +274,7 @@ En el ejemplo de Unity, el cursor convierte un rayo en cada fotograma. En primer
 
 ### <a name="topology-queries"></a>Consultas de topología
 
-En el archivo DLL, el administrador de topología controla el etiquetado del entorno. Como se mencionó anteriormente, gran parte de los datos se almacenan en surfels, contenidos en un volumen de voxel. Además, la estructura "PlaySpaceInfos" se usa para almacenar información sobre Playspace, incluida la alineación del mundo (más detalles a continuación), piso y alto del techo. La heurística se usa para determinar el piso, el techo y las paredes. Por ejemplo, la superficie horizontal mayor y menor con una superficie mayor que 1-m2 se considera la planta. 
+En el archivo DLL, el administrador de topología controla el etiquetado del entorno. Como se mencionó anteriormente, gran parte de los datos se almacenan en surfels, contenidos en un volumen de voxel. Además, la estructura "PlaySpaceInfos" se usa para almacenar información sobre Playspace, incluida la alineación del mundo (más detalles a continuación), piso y alto del techo. La heurística se usa para determinar el piso, el techo y las paredes. Por ejemplo, la superficie horizontal mayor y menor con una superficie mayor que 1-m2 se considera la planta.
 
 > [!NOTE]
 > La ruta de acceso de la cámara durante el proceso de digitalización también se usa en este proceso.
@@ -470,21 +476,23 @@ El flujo de análisis, controlado por el comportamiento "SpatialUnderstanding" l
 
 ### <a name="understanding-mesh"></a>Descripción de la malla
 
-La dll de comprensión almacena internamente el Playspace como una cuadrícula de voxel cubos de tamaño de 8 cm. Durante la parte inicial del análisis, se completa un análisis de componentes principales para determinar los ejes de la habitación. Internamente, almacena su espacio voxel alineado con estos ejes. Una malla se genera aproximadamente cada segundo mediante la extracción de la isosuperficie del volumen voxel. 
+La dll de comprensión almacena internamente el Playspace como una cuadrícula de voxel cubos de tamaño de 8 cm. Durante la parte inicial del análisis, se completa un análisis de componentes principales para determinar los ejes de la habitación. Internamente, almacena su espacio voxel alineado con estos ejes. Una malla se genera aproximadamente cada segundo mediante la extracción de la isosuperficie del volumen voxel.
 
 ![Malla generada generada a partir del volumen voxel](images/su-custommesh.jpg)<br>
 *Malla generada generada a partir del volumen voxel*
 
 ## <a name="troubleshooting"></a>Solución de problemas
+
 * Asegúrese de que ha establecido la funcionalidad [SpatialPerception](#setting-the-spatialperception-capability)
 * Cuando se pierde el seguimiento, el siguiente evento OnSurfaceChanged quitará todas las mallas.
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Asignación espacial en el kit de herramientas de realidad mixta
-Para obtener más información sobre el uso de la asignación espacial con el kit de herramientas de realidad mixta V2, consulte la <a href="/windows/mixed-reality/mrtk-docs/features/spatial-awareness/spatial-awareness-getting-started.md" target="_blank">sección de reconocimiento espacial</a> de los documentos de MRTK.
+
+Para obtener más información sobre el uso de la asignación espacial con el kit de herramientas de realidad mixta V2, consulte la <a href="/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started" target="_blank">sección de reconocimiento espacial</a> de los documentos de MRTK.
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación: 
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Texto](text-in-unity.md)
@@ -497,6 +505,7 @@ O bien puede saltar a las funcionalidades y las API de la plataforma de realidad
 Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.
 
 ## <a name="see-also"></a>Consulte también
+
 * [Sistemas de coordenadas](../../design/coordinate-systems.md)
 * [Sistemas de coordenadas de Unity](coordinate-systems-in-unity.md)
 * <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a>

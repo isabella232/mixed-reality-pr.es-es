@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, spatial awareness
 ms.localizationpriority: high
-ms.openlocfilehash: 3b44ba6c4eac3cf7b42d15c8fb19d42676b10a4a
-ms.sourcegitcommit: 5017f309827c1d20df4ce656d105a1a49ba7942c
+ms.openlocfilehash: f6c17dc361846808ec10f1d94932e3089072e642
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106011144"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300460"
 ---
 # <a name="3-configuring-the-mrtk-profiles"></a>3. Configuración de los perfiles de MRTK
 
@@ -20,11 +20,11 @@ ms.locfileid: "106011144"
 
 En este tutorial, aprenderá a personalizar y configurar los perfiles de MRTK.
 
-Los <a href="/windows/mixed-reality/mrtk-unity/features/profiles/profiles.md" target="_blank">perfiles de MRTK</a> constituyen un árbol de perfiles anidados que componen la información de configuración sobre cómo se deben inicializar los sistemas y las características de MRTK. El perfil de nivel superior, el perfil Configuration (Configuración), contiene perfiles anidados para cada uno de los sistemas básicos principales. Cada perfil anidado está diseñado para configurar el comportamiento de su sistema correspondiente.
+Los <a href="/windows/mixed-reality/mrtk-unity/features/profiles/profiles" target="_blank">perfiles de MRTK</a> constituyen un árbol de perfiles anidados que componen la información de configuración sobre cómo se deben inicializar los sistemas y las características de MRTK. El perfil de nivel superior, el perfil Configuration (Configuración), contiene perfiles anidados para cada uno de los sistemas básicos principales. Cada perfil anidado está diseñado para configurar el comportamiento de su sistema correspondiente.
 
 En este ejemplo concreto se muestra cómo ocultar la malla de reconocimiento espacial cambiando la configuración del observador de la malla espacial. Puedes seguir estos mismos principios para personalizar cualquier parámetro o valor de los perfiles de MRTK.
 
-Como lo visto al implementar el proyecto en HoloLens 2 durante el [tutorial anterior](mr-learning-base-02.md#congratulations), la malla <a href="/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started.md" target="_blank">Spatial Awareness</a> es una colección de mallas que representan la geometría del entorno. Es una visualización útil para ver inicialmente, pero normalmente está desactivada para evitar la distracción visual y el impacto adicional en el rendimiento al tenerla activada.
+Como lo visto al implementar el proyecto en HoloLens 2 durante el [tutorial anterior](mr-learning-base-02.md#congratulations), la malla <a href="/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started" target="_blank">Spatial Awareness</a> es una colección de mallas que representan la geometría del entorno. Es una visualización útil para ver inicialmente, pero normalmente está desactivada para evitar la distracción visual y el impacto adicional en el rendimiento al tenerla activada.
 
 ## <a name="objectives"></a>Objetivos
 

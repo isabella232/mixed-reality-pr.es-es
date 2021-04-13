@@ -7,12 +7,12 @@ ms.date: 04/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, interaction, design, HoloLens, hands, far, point and commit , mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, hand rays, object manipulation, MRTK, Mixed Reality Toolkit, DoF
-ms.openlocfilehash: 8196b67f103bae346ba4da065ee6045ff231b004
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 78a3ff87a48bbff838df4ee8baab7f8ea80203c0
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "101759871"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299810"
 ---
 # <a name="point-and-commit-with-hands"></a>Apuntar y confirmar con las manos
 
@@ -202,15 +202,16 @@ El concepto de señalar y confirmar de la interacción lejana se creó y defini�
 
 ## <a name="hand-ray-in-mrtk-mixed-reality-toolkit-for-unity"></a>Haz de mano en MRTK (Mixed Reality Toolkit) para Unity
 
-De forma predeterminada, MRTK proporciona un haz de mano prefabricado ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) que tiene el mismo estado visual que el haz de mano del sistema del shell. Se asigna en el perfil de entrada de MRTK, en Punteros. En un casco envolvente, se usan los mismos haces para los controladores de movimiento.
+De forma predeterminada, MRTK proporciona un haz de mano prefabricado ([DefaultControllerPointer.prefab](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MixedRealityToolkit.SDK/Features/UX/Prefabs/Pointers)) que tiene el mismo estado visual que el haz de mano del sistema del shell. Se asigna en el perfil de entrada de MRTK, en Punteros. En un casco envolvente, se usan los mismos haces para los controladores de movimiento.
 
-* [MRTK: perfil de puntero](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/configuration/mixed-reality-configuration-guide.md#pointer-configuration)
-* [MRTK: sistema de entrada](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/overview.md)
-* [MRTK: punteros](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/pointers.md)
+* [MRTK: perfil de puntero](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/configuration/mixed-reality-configuration-guide#pointer-configuration)
+* [MRTK: sistema de entrada](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/overview)
+* [MRTK: punteros](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/pointers)
 
 ---
 
 ## <a name="see-also"></a>Consulte también
+
 * [Manipulación directa con las manos](direct-manipulation.md)
 * [Mirada y confirmación](gaze-and-commit.md)
 * [Manos: manipulación directa](direct-manipulation.md)

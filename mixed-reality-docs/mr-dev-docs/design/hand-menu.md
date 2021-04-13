@@ -6,12 +6,12 @@ ms.author: nobarr
 ms.date: 08/27/2019
 ms.topic: article
 keywords: mano, menú, botón, acceso rápido, diseño, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 8a8b80843b7a107255a45b11868b0bd29a4e3108
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: e222d792d883ccacc71b177fbde21979c8dfcc77
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759461"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299920"
 ---
 # <a name="hand-menu"></a>Menú Mano
 
@@ -21,7 +21,7 @@ El menú de la mano es uno de los patrones de experiencia de usuario más único
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4AJAg]
 
-Encontrará las prácticas recomendadas para trabajar con menús de mano en la lista siguiente. También puede encontrar una escena de ejemplo en la que se muestra el menú de la mano en [MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/hand-menu.md).
+Encontrará las prácticas recomendadas para trabajar con menús de mano en la lista siguiente. También puede encontrar una escena de ejemplo en la que se muestra el menú de la mano en [MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-menu).
 
 <br>
 
@@ -170,10 +170,11 @@ Hemos realizado una investigación de usuario con distintos diseños y ubicacion
 
 **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona scripts y escenas de ejemplo para el menú de la mano. El script de Solver de HandConstraintPalmUp le permite adjuntar cualquier objeto a las manos con varias opciones configurables. Los ejemplos de los menús de MRTK incluyen opciones útiles como el requisito plano de Palm y fijamente para evitar la activación falsa.
 
-* [Documentación del menú de la mano](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/hand-menu.md)
-* [Escenario de ejemplo de menú de mano](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_development/Assets/MRTK/Examples/Demos/HandTracking/Scenes/HandMenuExamples.unity)
+* [Documentación del menú de la mano](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/hand-menu)
+* [Escenario de ejemplo de menú de mano](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/main/Assets/MRTK/Examples/Demos/HandTracking/Scenes/HandMenuExamples.unity)
 
-Puede probar ejemplos de menú de la mano en HoloLens 2 con la aplicación Hub de ejemplos de MRTK. 
+Puede probar ejemplos de menú de la mano en HoloLens 2 con la aplicación Hub de ejemplos de MRTK.
+
 * [Escenario de menú de mano en el concentrador de ejemplos de MRTK](https://www.microsoft.com/p/mrtk-examples-hub/9mv8c39l2sj4?activetab=pivot:overviewtab)
 
 <br>

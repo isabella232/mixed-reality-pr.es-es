@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: article
 keywords: Realidad mixta, HoloLens, controles de IU, interacción, IU, experiencia de usuario, diseño de la experiencia del usuario, interfaz de usuario espacial, interacción espacial, interfaz de usuario 3D, experiencia en 3D, auriculares
-ms.openlocfilehash: c9e1bf3e263214f9691f6c788f6115f93e690489
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 18e446f6b35e8073f939d065de3572204e2967a1
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759260"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300000"
 ---
 # <a name="dialog"></a>Diálogo
 
@@ -33,7 +33,7 @@ MRTK proporciona un control de cuadro de diálogo en tres tamaños con una o dos
 ![Captura de pantalla de diferentes superposiciones de cuadros de diálogo que se ejecutan en HoloLens](images/MRTK_UX_Dialog_Types.jpg)
 
 
-* Para obtener más información, vea [MRTK-Dialog](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/experimental/dialog.md).
+* Para obtener más información, vea [MRTK-Dialog](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/dialog).
 
 <br>
 

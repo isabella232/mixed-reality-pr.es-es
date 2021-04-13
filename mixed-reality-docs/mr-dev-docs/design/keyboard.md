@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, teclado, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 9f42940b689a8fef77c9cf2f269100fccccfe6e0
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: d20fabb2536b028ce4c48aac84592bbdc3a0c291
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759861"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300440"
 ---
 # <a name="keyboard"></a>Teclado
 
@@ -25,7 +25,7 @@ La aplicación de realidad mixta puede invocar el teclado del sistema en cualqui
 
 ## <a name="system-keyboard-in-mrtk-mixed-reality-toolkit-for-unity"></a>Teclado del sistema en MRTK (kit de herramientas de realidad mixta) para Unity
 
-* [MRTK-teclado del sistema](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/system-keyboard.md)
+* [MRTK-teclado del sistema](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/system-keyboard)
 
 <br>
 
@@ -33,7 +33,7 @@ La aplicación de realidad mixta puede invocar el teclado del sistema en cualqui
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, la siguiente tarea consiste en implementar la aplicación en un dispositivo o emulador. 
+Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, la siguiente tarea consiste en implementar la aplicación en un dispositivo o emulador.
 
 > [!div class="nextstepaction"]
 > [Implementación en HoloLens o con auriculares de Windows Mixed Reality](../develop/platform-capabilities-and-apis/using-visual-studio.md)

@@ -6,12 +6,12 @@ ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, color, luz, materiales, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 6e5857436b0325537d0ea5d0321d296c58c09eae
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: b3ee769208bdcd0d86beb05760de377f2a776a47
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759270"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299750"
 ---
 # <a name="color-light-and-materials"></a>Color, luz y materiales
 
@@ -88,7 +88,7 @@ La luz y el color pueden ayudar a que los hologramas aparezcan de forma más nat
     :::column:::
 Los materiales son elementos fundamentales para crear hologramas realistas. Al proporcionar características visuales adecuadas, puede crear objetos holográficas atractivos que se pueden combinar correctamente con el entorno físico. Los materiales también son importantes para proporcionar comentarios visuales para los distintos tipos de interacciones de entrada del usuario.  
 
-[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity) proporciona un sombreador estándar de MRTK con varias opciones de efectos visuales que se pueden usar para los comentarios visuales. Por ejemplo, puede usar la propiedad ' proximidad Light ' para proporcionar un efecto de iluminación cuando el dedo del usuario se acerque a la superficie del objeto. Más información sobre el [sombreador estándar de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/rendering/mrtk-standard-shader.md)
+[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity) proporciona un sombreador estándar de MRTK con varias opciones de efectos visuales que se pueden usar para los comentarios visuales. Por ejemplo, puede usar la propiedad ' proximidad Light ' para proporcionar un efecto de iluminación cuando el dedo del usuario se acerque a la superficie del objeto. Más información sobre el [sombreador estándar de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)
     :::column-end:::
         :::column:::
     *Bucle de vídeo: ejemplo de comentarios visuales basados en proximidad a un cuadro* 

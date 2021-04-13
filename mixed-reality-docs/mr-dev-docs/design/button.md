@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, botón
-ms.openlocfilehash: 9e4d0637d8c10c3cd23bd2ee1369fd57137af795
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 177ccfc1c07df9a9523c9ed6733d3da61bdb7921
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759431"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107299760"
 ---
 # <a name="button"></a>Button
 
@@ -52,7 +52,7 @@ Un botón permite a los usuarios desencadenar acciones inmediatas en una experie
 * Comprimiendo el compartimento delantero
 * Efecto de impulso en el desencadenador.
 
-* Consulte el [botón MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/ux-building-blocks/button.md) para obtener más instrucciones y ejemplos personalizados.
+* Consulte el [botón MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/button) para obtener más instrucciones y ejemplos personalizados.
 
 <br>
 

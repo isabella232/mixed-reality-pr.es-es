@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: miras hacia abajo, a la punta, por la cabeza, el holograma, la realidad mixta, el casco de realidad mixta, el casco de realidad mixta de Windows, el casco de realidad virtual, MRTK, el kit de herramientas de realidad mixta
-ms.openlocfilehash: 7602eb27da19dc77e4eab1c1a428dc9a1cf8b252
-ms.sourcegitcommit: 97815006c09be0a43b3d9b33c1674150cdfecf2b
+ms.openlocfilehash: 98eb4445d04b236dea74917d9c51108b66d6df3b
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "101759691"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107300370"
 ---
 # <a name="head-gaze-in-unity"></a>Encabezado de la mirada en Unity
 
@@ -51,8 +51,9 @@ Aunque en el ejemplo anterior se activa un solo Raycast desde el bucle de actual
 
 Al igual que con un puntero del mouse en un equipo, debe implementar un [cursor](../../design/cursors.md) que represente el encabezado del usuario. Conocer el contenido de destino de un usuario aumenta la confianza con respecto a la forma en que va a interactuar.
 
-## <a name="head-gaze-in-the-mixed-reality-toolkit"></a>Mira al principio en el kit de herramientas de la realidad mixta 
-Puede acceder al encabezado de la mirada desde el [Administrador de entrada](https://docs.microsoft.com/windows/mixed-reality/mrtk-docs/features/input/overview.md) en MRTK.
+## <a name="head-gaze-in-the-mixed-reality-toolkit"></a>Mira al principio en el kit de herramientas de la realidad mixta
+
+Puede acceder al encabezado de la mirada desde el [Administrador de entrada](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/overview) en MRTK.
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
