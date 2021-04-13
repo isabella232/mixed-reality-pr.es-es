@@ -358,7 +358,7 @@ Cuando se presiona el botón, se mueven y generan los eventos adecuados que se e
 
 <img src="../images/button/MRTK_PressableButtonCubeRun1.jpg" alt="Pressable button cube run 1">
 
-#### <a name="troubleshooting"></a>Solución de problemas
+#### <a name="troubleshooting"></a>Solucionar problemas
 
 Si el botón está ejecutando una doble presión, asegúrese de que la propiedad aplicar la entrada **delantera** está activa y de que el plano de **distancia de inicio** se coloca delante del plano táctil de la **interacción cercana** . El plano **táctil cercano** a la interacción se indica mediante el plano azul colocado delante del origen de la flecha blanca en el GIF siguiente:
 
@@ -409,7 +409,7 @@ Cada clave de piano tiene un `PressableButton` y un `NearInteractionTouchable` s
 
 <img src="../images/button/MRTK_Button_Custom3.png" width="450" alt="Pressable Custom3">
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Interactuable](interactable.md)
 * [Temas visuales](visual-themes.md)
