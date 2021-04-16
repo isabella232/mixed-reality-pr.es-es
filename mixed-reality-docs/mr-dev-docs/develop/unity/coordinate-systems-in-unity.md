@@ -1,58 +1,58 @@
 ---
 title: Sistemas de coordenadas de Unity
-description: Aprenda a crear experiencias colocadas, permanentes, de escala de sala y de realidad mixta de gran escala en Unity.
+description: Obtenga información sobre cómo crear experiencias de realidad mixta de nivel general, de pie, de sala y de realidad mixta a escala mundial en Unity.
 author: thetuvix
 ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
-keywords: sistema de coordenadas, sistema de coordenadas espaciales, solo orientación, escalado colocado, escalado permanente, escalado de sala, de escala mundial, 360 Degree, sentada, permanente, habitación, mundo, escala, posición, orientación, Unity, delimitador, anclaje espacial, delimitador mundial, límite mundial, bloqueo mundial, bloqueo de la realidad mixta, bloqueo del cuerpo de la realidad, pérdida de seguimiento, uso de la realidad
-ms.openlocfilehash: aa68ae44e09dfe579f8ab8924d1b300506a1f00e
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: sistema de coordenadas, sistema de coordenadas espaciales, solo orientación, escala asentada, escala de pie, escala de sala, escala mundial, 360 grados, sentado, de pie, sala, mundo, escala, posición, orientación, Unity, delimitador espacial, delimitador espacial, world-locked, world-locking, body-locked, body-locking, tracking loss, locatability, bounds, recenter, mixed reality headset, windows mixed reality headset, virtual reality headset
+ms.openlocfilehash: 91b1adf6dcf1c54d0d29a02bfb97ac4674a87c88
+ms.sourcegitcommit: 3e36b2fbbcc250c49aaf8ca1b6133cf0e9db69fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581060"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107528746"
 ---
 # <a name="coordinate-systems-in-unity"></a>Sistemas de coordenadas de Unity
 
-Windows Mixed Reality es compatible con aplicaciones a través de una amplia gama de [escalas](../../design/coordinate-systems.md), desde aplicaciones de solo orientación y de escalado sentado hasta las aplicaciones a escala de habitación. En HoloLens, puede ir más allá y compilar aplicaciones a gran escala que permitan a los usuarios recorrer más de 5 metros, explorando todo el piso de un edificio y más allá.
+Windows Mixed Reality aplicaciones en una amplia gama de escalas de experiencia, desde aplicaciones de solo orientación y de escalado asentado hasta aplicaciones de escala de sala. En HoloLens, puede ir más allá y crear aplicaciones a escala mundial que permiten a los usuarios recorrer más de 5 metros, explorando toda una planta de un edificio y más allá.
 
-El primer paso para crear una experiencia de realidad mixta en Unity es determinar la [escala de experiencia](../../design/coordinate-systems.md) de destino de la aplicación.
+El primer paso para crear una experiencia de [](../../design/coordinate-systems.md) realidad mixta en Unity es comprender los sistemas de coordenadas y elegir la escala de experiencia a la que se dirigirá la aplicación.
 
-## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Creación de una experiencia de solo orientación o de escalado
+## <a name="building-an-orientation-only-or-seated-scale-experience"></a>Creación de una experiencia de solo orientación o de escala asentada
 
-**Espacio de nombres:** *UnityEngine. XR*<br>
+**Espacio de nombres:** *UnityEngine.XR*<br>
 **Tipo:** *XRDevice*
 
-Para compilar una experiencia de **solo orientación** o **de escalado original**, debe establecer Unity en el tipo de espacio de seguimiento de la estación. El espacio de seguimiento estacionario establece el sistema de coordenadas universal de Unity para realizar el seguimiento del [marco estacionario de referencia](../../design/coordinate-systems.md#spatial-coordinate-systems). En el modo de seguimiento estacionario, el contenido colocado en el editor justo delante de la ubicación predeterminada de la cámara (el avance es-Z) aparecerá delante del usuario cuando se inicie la aplicación.
+Para crear una **experiencia de solo orientación** o de escala asentada, debe establecer Unity en el tipo de espacio de seguimiento estacionado.  El espacio de seguimiento estacionario establece el sistema de coordenadas universal de Unity para realizar el seguimiento [del marco de referencia estacionada.](../../design/coordinate-systems.md#spatial-coordinate-systems) En el modo de seguimiento estacionado, el contenido colocado en el editor justo delante de la ubicación predeterminada de la cámara (el reenvío es -Z) aparecerá delante del usuario cuando se inicie la aplicación.
 
 ```cs
 XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);
 ```
 
-**Espacio de nombres:** *UnityEngine. XR*<br>
+**Espacio de nombres:** *UnityEngine.XR*<br>
 **Tipo:** *InputTracking*
 
-En el caso de una **experiencia pura de solo orientación** , como un visor de vídeo de 360 grados (donde las actualizaciones de los cabezales posicionales estropearían la ilusión), puede establecer [XR. InputTracking. disablePositionalTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking-disablePositionalTracking.html) en true:
+Para una **experiencia** pura de solo orientación, como un visor de vídeo de 360 grados (donde las actualizaciones de la cabeza posicional harían perder la esperanza), puede establecer [XR. InputTracking.disablePositionalTracking](https://docs.unity3d.com/ScriptReference/XR.InputTracking-disablePositionalTracking.html) en true:
 
 ```cs
 InputTracking.disablePositionalTracking = true;
 ```
 
-En el caso de una **experiencia de escalado** inactiva, para permitir que el usuario recentre posteriormente el origen de la caja, puede llamar a [XR. Método InputTracking. recenter](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html) :
+Para una **experiencia de escalado asentado**, para permitir que el usuario más adelante haga más reciente el origen asentado, puede llamar al [XR. Método InputTracking.Recenter:](https://docs.unity3d.com/ScriptReference/XR.InputTracking.Recenter.html)
 
 ```cs
 InputTracking.Recenter();
 ```
 
-## <a name="building-a-standing-scale-or-room-scale-experience"></a>Creación de una experiencia de escalado permanente o a escala de habitación
+## <a name="building-a-standing-scale-or-room-scale-experience"></a>Creación de una experiencia de escala permanente o de escala de habitación
 
-**Espacio de nombres:** *UnityEngine. XR*<br>
+**Espacio de nombres:** *UnityEngine.XR*<br>
 **Tipo:** *XRDevice*
 
-En el caso de una experiencia de escalado **permanente** o de **escalado de habitación**, deberá colocar contenido en relación con el piso. Por lo tanto, se trata del piso del usuario mediante la **[fase espacial](../../design/coordinate-systems.md#spatial-coordinate-systems)**, que representa el origen del nivel de suelo definido por el usuario y el límite de sala opcional, configurado durante la primera ejecución.
+Para una **experiencia de escala** de pie o de escala de **habitación,** deberá colocar contenido relativo a la planta. Para razonar sobre la planta del usuario, se usa la fase espacial **[,](../../design/coordinate-systems.md#spatial-coordinate-systems)** que representa el origen de nivel de planta definido del usuario y el límite opcional de la sala, que se configura durante la primera ejecución.
 
-Para asegurarse de que Unity funcione con su sistema de coordenadas universal en el nivel inferior, puede establecer y probar que Unity usa el tipo de espacio de seguimiento de RoomScale:
+Para asegurarse de que Unity funciona con su sistema de coordenadas del mundo en el nivel de planta, puede establecer y probar que Unity usa el tipo de espacio de seguimiento RoomScale:
 
 ```cs
 if (XRDevice.SetTrackingSpaceType(TrackingSpaceType.RoomScale))
@@ -64,18 +64,18 @@ else
     // RoomScale mode was not set successfully.  App cannot make assumptions about where the floor plane is.
 }
 ```
-* Si SetTrackingSpaceType devuelve true, Unity ha cambiado correctamente su sistema de coordenadas universal para realizar el seguimiento del [marco de fase de referencia](../../design/coordinate-systems.md#spatial-coordinate-systems).
-* Si SetTrackingSpaceType devuelve false, Unity no pudo cambiar al marco de la fase de referencia, probablemente porque el usuario no ha configurado un piso en su entorno. Aunque un valor devuelto falso no es habitual, puede suceder si la fase se configura en otro salón y el dispositivo se mueve a la habitación actual sin que el usuario configure una nueva fase.
+* Si SetTrackingSpaceType devuelve true, Unity ha cambiado correctamente su sistema de coordenadas universal para realizar el seguimiento del marco [de fase de referencia](../../design/coordinate-systems.md#spatial-coordinate-systems).
+* Si SetTrackingSpaceType devuelve false, Unity no pudo cambiar al marco de fase de referencia, probablemente porque el usuario no ha configurado una planta en su entorno. Aunque un valor devuelto falso no es común, puede ocurrir si la fase se configura en otra sala y el dispositivo se mueve a la sala actual sin que el usuario configure una nueva fase.
 
-Una vez que la aplicación establece correctamente el tipo de espacio de seguimiento de RoomScale, el contenido colocado en el plano y = 0 aparecerá en el suelo. El origen en 0, 0, 0 será el lugar específico del piso en el que se encuentra el usuario durante la configuración de la habitación, con-Z que representa la dirección hacia delante hacia delante durante la instalación.
+Una vez que la aplicación establece correctamente el tipo de espacio de seguimiento RoomScale, el contenido situado en el plano y=0 aparecerá en el suelo. El origen en 0, 0, 0 será el lugar específico en la planta donde el usuario se encuentra durante la instalación de la sala, con -Z que representa la dirección hacia delante a la que se enfrentaban durante la instalación.
 
-**Espacio de nombres:** *UnityEngine. experimental. XR*<br>
-**Tipo:** *límite*
+**Espacio de nombres:** *UnityEngine.Experimental.XR*<br>
+**Tipo:** *Límite*
 
-En el código de script, puede llamar al método TryGetGeometry en el tipo UnityEngine. experimental. XR. Boundary para obtener un polígono de límite, especificando un tipo de límite de TrackedArea. Si el usuario definía un límite (se obtiene una lista de vértices), es seguro ofrecer una experiencia de **escalado** a la habitación al usuario, donde puede recorrer la escena que cree.
+En el código de script, puede llamar al método TryGetGeometry en el tipo UnityEngine.Experimental.XR.Boundary para obtener un polígono de límites, especificando un tipo de límite TrackedArea. Si el usuario definió un límite (se obtiene una lista de vértices), es seguro ofrecer una experiencia de escala de habitación al usuario, donde puede recorrer la escena que cree. 
 
 > [!NOTE]
-> El sistema representará automáticamente el límite cuando el usuario lo aproxime. No es necesario que la aplicación use este polígono para representar el límite. Sin embargo, puede elegir diseñar los objetos de la escena con este polígono de límite para asegurarse de que el usuario pueda llegar físicamente a esos objetos sin teletransportar:
+> El sistema representará automáticamente el límite cuando el usuario se acerque a él. La aplicación no necesita usar este polígono para representar el propio límite. Sin embargo, puede optar por establecer los objetos de escena mediante este polígono de límites, para asegurarse de que el usuario puede llegar físicamente a esos objetos sin teleportar:
 
 ```cs
 var vertices = new List<Vector3>();
@@ -85,45 +85,45 @@ if (UnityEngine.Experimental.XR.Boundary.TryGetGeometry(vertices, Boundary.Type.
 }
 ```
 
-## <a name="building-a-world-scale-experience"></a>Creación de una experiencia de escala mundial
+## <a name="building-a-world-scale-experience"></a>Creación de una experiencia a escala mundial
 
-**Espacio de nombres:** *UnityEngine. XR. WSA*<br>
+**Espacio de nombres:** *UnityEngine.XR.WSA*<br>
 **Tipo:** *WorldAnchor*
 
-En el caso de **experiencias** reales en HoloLens que permitan a los usuarios ir más allá de 5 metros, necesitará nuevas técnicas más allá de las que se usan para experiencias a escala de habitación. Una técnica clave que se va a usar es crear un [delimitador espacial](../../design/coordinate-systems.md#spatial-anchors) para bloquear un clúster de hologramas precisamente en su lugar en el mundo físico, con independencia de cuánto se haya desplazado el usuario y, a continuación, [volver a buscar esos hologramas en sesiones posteriores](../../design/coordinate-systems.md#spatial-anchor-persistence).
+Para obtener **experiencias** verdaderas a escala mundial en HoloLens que permiten a los usuarios recorrer más de 5 metros, necesitará nuevas técnicas más allá de las usadas para las experiencias de escala de habitación. Una técnica clave que usará es [](../../design/coordinate-systems.md#spatial-anchors) crear un delimitador espacial para bloquear un clúster de hologramas exactamente en su lugar en el mundo físico, independientemente de la distancia que haya recorrendo el usuario y, a continuación, encontrar esos [hologramas](../../design/coordinate-systems.md#spatial-anchor-persistence)de nuevo en sesiones posteriores.
 
-En Unity, puede crear un delimitador espacial agregando el componente Unity de **WorldAnchor** a un GameObject.
+En Unity, se crea un delimitador espacial mediante la adición **del componente WorldAnchor** Unity a un GameObject.
 
-### <a name="adding-a-world-anchor"></a>Agregar un delimitador mundial
+### <a name="adding-a-world-anchor"></a>Adición de un delimitador de mundo
 
-Para agregar un delimitador mundial, llame a AddComponent <WorldAnchor> () en el objeto de juego con la transformación que quiere delimitar en el mundo real.
+Para agregar un delimitador de mundo, llame a AddComponent () en el objeto de juego con la <WorldAnchor> transformación que desea anclar en el mundo real.
 
 ```cs
 WorldAnchor anchor = gameObject.AddComponent<WorldAnchor>();
 ```
 
-Ya está. Este objeto de juego se anclará ahora a su ubicación actual en el mundo físico; puede ver que las coordenadas del mundo de Unity se ajustan ligeramente con el tiempo para garantizar la alineación física. Use la [persistencia](persistence-in-unity.md) para volver a buscar esta ubicación anclada en una sesión de aplicación futura.
+Eso es todo. Este objeto de juego ahora se anclará a su ubicación actual en el mundo físico; es posible que vea que sus coordenadas del mundo de Unity se ajustan ligeramente con el tiempo para garantizar esa alineación física. Use [la persistencia para](persistence-in-unity.md) encontrar esta ubicación delimitada de nuevo en una sesión de aplicación futura.
 
-### <a name="removing-a-world-anchor"></a>Quitar un delimitador mundial
+### <a name="removing-a-world-anchor"></a>Eliminación de un delimitador de mundo
 
-Si ya no desea que el GameObject esté bloqueado en una ubicación física del mundo y no tiene intención de moverlo a este fotograma, puede llamar simplemente a Destroy en el componente del mundo de delimitador.
+Si ya no quieres que gameObject esté bloqueado en una ubicación física del mundo y no quieres moverlo a este marco, puedes llamar a Destroy en el componente World Anchor.
 
 ```cs
 Destroy(gameObject.GetComponent<WorldAnchor>());
 ```
 
-Si desea trasladar GameObject este fotograma, debe llamar a DestroyImmediate en su lugar.
+Si quieres mover el Objeto GameObject a este marco, debes llamar a DestroyImmediate en su lugar.
 
 ```cs
 DestroyImmediate(gameObject.GetComponent<WorldAnchor>());
 ```
 
-### <a name="moving-a-world-anchored-gameobject"></a>Mover un GameObject anclado mundial
+### <a name="moving-a-world-anchored-gameobject"></a>Mover un GameObject world anchored
 
-No se puede cambiar GameObject mientras un delimitador internacional está en él. Si necesita trasladar el GameObject de este marco, debe:
-1. DestroyImmediate el componente de anclaje mundial
-2. Movimiento del GameObject
-3. Agregue un nuevo componente de anclaje mundial a GameObject.
+Los objetos GameObject no se pueden mover mientras un world anchor está en él. Si necesita mover el Objeto GameObject a este marco, debe:
+1. DestroyImmediate the World Anchor component
+2. Mover el objeto GameObject
+3. Agregue un nuevo componente World Anchor al GameObject.
 
 ```cs
 DestroyImmediate(gameObject.GetComponent<WorldAnchor>());
@@ -131,15 +131,15 @@ gameObject.transform.position = new Vector3(0, 0, 2);
 WorldAnchor anchor = gameObject.AddComponent<WorldAnchor>();
 ```
 
-### <a name="handling-locatability-changes"></a>Control de los cambios de ubicación
+### <a name="handling-locatability-changes"></a>Control de cambios de capacidad de uso
 
-Es posible que WorldAnchor no se pueda localizar en el mundo físico en un momento dado. Si esto ocurre, Unity no actualizará la transformación del objeto delimitado. Esto también puede cambiar mientras se ejecuta una aplicación. Si no se controla el cambio en la localización, el objeto no aparecerá en la ubicación física correcta del mundo.
+Un WorldAnchor puede no ser localizable en el mundo físico en un momento dado. Si esto ocurre, Unity no actualizará la transformación del objeto delimitado. Esto también puede cambiar mientras se ejecuta una aplicación. Si no se controla el cambio en la capacidad de proceso, el objeto no aparecerá en la ubicación física correcta del mundo.
 
-Para recibir notificaciones sobre los cambios de Ubicación:
-1. Suscribirse al evento OnTrackingChanged
-2. Controlar el evento
+Para recibir notificaciones sobre los cambios de locatability:
+1. Suscripción al evento OnTrackingChanged
+2. Control del evento
 
-Se llamará al evento **OnTrackingChanged** siempre que el delimitador espacial subyacente cambie entre un estado que se pueda localizar y que no se pueda localizar.
+Se **llamará al evento OnTrackingChanged** siempre que el delimitador espacial subyacente cambie entre un estado de localizable y no localizable.
 
 ```cs
 anchor.OnTrackingChanged += Anchor_OnTrackingChanged;
@@ -155,23 +155,23 @@ private void Anchor_OnTrackingChanged(WorldAnchor self, bool located)
 }
 ```
 
-A veces, los delimitadores se colocan inmediatamente. En este caso, esta propiedad isLocated del delimitador se establecerá en true cuando AddComponent <WorldAnchor> () devuelva. Como resultado, el evento OnTrackingChanged no se desencadenará. Un patrón limpio sería llamar al controlador OnTrackingChanged con el estado IsLocated inicial después de adjuntar un delimitador.
+A veces, los delimitadores se encuentran inmediatamente. En este caso, esta propiedad isLocated del delimitador se establecerá en true cuando addComponent <WorldAnchor> () devuelva . Como resultado, no se desencadenará el evento OnTrackingChanged. Un patrón limpio sería llamar al controlador OnTrackingChanged con el estado IsLocated inicial después de adjuntar un delimitador.
 
 ```cs
 Anchor_OnTrackingChanged(anchor, anchor.isLocated);
 ```
 
-## <a name="sharing-anchors-across-devices"></a>Compartir delimitadores entre dispositivos
+## <a name="sharing-anchors-across-devices"></a>Uso compartido de delimitadores entre dispositivos
 
-Use los <a href="/azure/spatial-anchors/overview" target="_blank">anclajes espaciales de Azure</a> para crear un delimitador de la nube durable desde un WorldAnchor local, que la aplicación puede encontrar en varios dispositivos de HoloLens, iOS y Android.  Al compartir un delimitador espacial común en varios dispositivos, cada usuario puede ver el contenido representado en relación con ese delimitador en la misma ubicación física.  Esto permite compartir experiencias en tiempo real.
+Use <a href="/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> para crear un anclaje de nube duradero a partir de un WorldAnchor local, que la aplicación puede localizar a continuación en varios dispositivos HoloLens, iOS y Android.  Al compartir un delimitador espacial común entre varios dispositivos, cada usuario puede ver el contenido representado en relación con ese delimitador en la misma ubicación física.  Esto permite compartir experiencias en tiempo real.
 
-Para empezar a crear experiencias compartidas en Unity, pruebe las guías de <a href="/azure/spatial-anchors/unity-overview" target="_blank">Inicio rápido</a>de 5 minutos de anclaje espacial de Azure.
+Para empezar a crear experiencias compartidas en Unity, pruebe los inicios rápidos de 5 minutos <a href="/azure/spatial-anchors/unity-overview" target="_blank">de Azure Spatial Anchors Unity.</a>
 
-Una vez que esté en funcionamiento con los anclajes espaciales de Azure, puede <a href="/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">crear y buscar delimitadores en Unity</a>.
+Una vez que esté en funcionamiento con Azure Spatial Anchors, puede crear y buscar <a href="/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">delimitadores en Unity.</a>
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de punto de control de desarrollo de Unity que hemos diseñado, está en medio de explorar los bloques de creación principales de realidad mixta. Desde aquí, puede continuar con el siguiente bloque de compilación:
+Si sigue el recorrido del punto de control de desarrollo de Unity que hemos diseñado, está en medio de la exploración de los Mixed Reality de creación principales. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Gaze](gaze-in-unity.md)
@@ -191,4 +191,4 @@ Puede volver a los [puntos de control de desarrollo de Unity](unity-development-
 * [Persistencia en Unity](persistence-in-unity.md)
 * [Experiencias compartidas en Unity](shared-experiences-in-unity.md)
 * <a href="/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
-* <a href="/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">SDK de anclajes espaciales de Azure para Unity</a>
+* <a href="/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">SDK de Azure Spatial Anchors para Unity</a>
