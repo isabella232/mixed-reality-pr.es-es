@@ -7,12 +7,12 @@ ms.date: 12/11/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unity, realidad mixta, mixed reality, desarrollo, introducción, nuevo proyecto, portabilidad, funcionalidad, cámara, simulación, emulación, documentación, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, qué es la realidad virtual, qué es la realidad aumentada, MRTK, kit de herramientas de realidad mixta, entrada de voz, cámara localizable, emulador, Azure, tutoriales
-ms.openlocfilehash: e80c5411c7d180e0d78e031599455235dabaceb7
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 50300ff08dd06c5fc250bc93979d537e10b38044
+ms.sourcegitcommit: 3e36b2fbbcc250c49aaf8ca1b6133cf0e9db69fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102237146"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107528717"
 ---
 # <a name="unity-development-for-vr-and-windows-mixed-reality"></a>Desarrollo de Unity para VR y Windows Mixed Reality
 
@@ -34,13 +34,23 @@ Hay un pequeño conjunto de opciones de configuración de Unity que debe cambiar
 |  Punto de control  |  Resultado  |
 | --- | --- |
 | [Instale las actualizaciones más recientes.](../install-the-tools.md) | Descargue e instale el paquete de Unity más reciente y configure el proyecto para la realidad mixta. |
-| [Configuración del proyecto para WMR](configure-unity-project.md) | Obtenga información sobre cómo compilar aplicaciones que representen contenido digital en dispositivos de pantalla holográfica y VR. |
+| [Configuración del proyecto para WMR](windows-xr-plugin.md) | Obtenga información sobre cómo compilar aplicaciones que representen contenido digital en dispositivos de pantalla holográfica y VR. |
+
+> [!IMPORTANT]
+> Consulte nuestra [guía de configuración](choosing-unity-version.md) de proyectos de Unity para obtener más información sobre cómo configurar los proyectos.
 
 ### <a name="2-core-building-blocks"></a>2. Bloques de creación principales
 
 Después de iniciar un nuevo proyecto envolvente, necesitará algunos bloques de creación básicos para desarrollar aplicaciones envolventes. Todos los bloques de creación básicos para las aplicaciones de realidad mixta se exponen de forma coherente con otras API de Unity. Es posible que no los necesite todos a la vez, pero le recomendamos que los explore desde el principio. Después de profundizar en los principales bloques de creación que se enumeran a continuación, contará con herramientas que ofrecen muchas características y que puede integrar en un proyecto de VR.
 
-[!INCLUDE[](../includes/unity-building-blocks-wmr.md)]
+|  Característica  |  Funcionalidades  |
+| --- | --- |
+| [Cámara](../unity/camera-in-unity.md) | Permite optimizar totalmente la calidad visual y la estabilidad del holograma en las aplicaciones de realidad mixta. |
+| [Anclajes espaciales y de bloqueo del mundo](spatial-anchors-in-unity.md) | Permite resolver problemas de estabilización, de ajuste de la cámara, e integrar una solución estable del sistema de coordenadas. || [Controladores de movimiento](../unity/motion-controllers-in-unity.md) | Permite agregar acciones espaciales a las aplicaciones de Mixed Reality. |
+| [Gestos](../unity/gestures-in-unity.md) | Uso de gestos con la mano como entrada en las experiencias de Mixed Reality |
+| [Sonido espacial](../unity/spatial-sound-in-unity.md) | Permite mejorar sus aplicaciones mediante el audio 3D envolvente. |
+| [Texto](../unity/text-in-unity.md) | Permite obtener texto nítido y de alta calidad con un tamaño y una representación de calidad que se pueden administrar. |
+| [Entrada de voz](../unity/voice-input-in-unity.md) | Permite capturar palabras clave, frases y dictado en voz alta de los usuarios.|
 
 ### <a name="3-advanced-features"></a>3. Características avanzadas
 

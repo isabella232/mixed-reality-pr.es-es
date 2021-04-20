@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 78605b17e93429ad974e1ca21e7859035f38d615
-ms.sourcegitcommit: 8d386bf6c82ec9860815e873e1f2870ea410f40f
+ms.openlocfilehash: 2a2dcb6ec9133eb5efa0dc04e4d757cabd48461a
+ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106088722"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "107327208"
 ---
 # <a name="unity-20192020--windows-xr-plugin"></a>[Complemento XR para Unity 2019/2020 y Windows](#tab/winxr)
 
@@ -34,7 +34,7 @@ En la ventana de configuración de compilación, selecciona **Universal Windows 
 1.  Establezca **Target Device** (Dispositivo de destino) en **HoloLens**.
 2.  Establezca la **arquitectura** en **ARM 64**
 3.  Establezca **Build Type** (Tipo de compilación) en **D3D**.
-4.  Establezca la **versión mínima de la plataforma** en **10.2.18362**
+4.  Establezca **Minimum Platform Version** (Versión mínima de la plataforma) en **10.0.18362**.
 5.  Establezca el **SDK de UWP** en la **Latest installed** (última versión instalada)
 6.  Establezca la **configuración de compilación** en **Release** (Publicación) porque hay problemas de rendimiento conocidos con Debug (Depuración).
 7.  Haga clic en el botón Switch Platform (Cambiar plataforma).

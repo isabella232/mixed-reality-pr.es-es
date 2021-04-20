@@ -3,16 +3,16 @@ title: Detección y adquisición de características
 description: Detecte y descargue características de Mixed Reality.
 author: davidkline-ms
 ms.author: v-hferrone
-ms.date: 03/04/2021
+ms.date: 04/19/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: up-to-date, tools, get started, basics, unity, visual studio, toolkit, mixed reality headset, windows mixed reality headset, virtual reality headset, installation, Windows, HoloLens, emulator, unreal, openxr
-ms.openlocfilehash: 859abd0c8e538392a7ba2a1adbb4387956c50028
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 9f12a1eba0c28b89000f1541ba62747a03e3564b
+ms.sourcegitcommit: 286384e6e255135939bce2ab0267a62558837562
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102230725"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107732013"
 ---
 # <a name="discovering-and-acquiring-features"></a>Detección y adquisición de características
 
@@ -37,6 +37,10 @@ El encabezado de categoría de la captura de pantalla anterior contiene las sigu
 - Nombre de la categoría (p. ej., Mixed Reality Toolkit)
 - Número de características seleccionadas
 - Número de características disponibles
+- Botones de selección
+
+> [!NOTE]
+> Los botones de selección distinguen el contexto. En función del estado de selección de una características dentro de la categoría, se mostrarán uno o varios de los botones `Select All` y `Select None`.
 
 ### <a name="feature"></a>Característica
 
@@ -49,6 +53,9 @@ Las características se muestran en la categoría correspondiente. Las entradas 
 - Lista de las versiones disponibles
 - Vínculo a los [detalles del paquete de características](viewing-package-details.md)
 
+> [!NOTE]
+> Si un programa de acceso anticipado (también denominado versión preliminar privada) proporciona una característica, se mostrará un icono indicador de ![acceso anticipado](images/EarlyAccess.png).
+
 ## <a name="refresh-the-feature-catalog"></a>Actualización del catálogo de características
 
 Para comprobar si hay características nuevas y actualizadas, haga clic en el botón Actualizar ![botón Actualizar](images/RefreshButton.png) . De este modo, se conectará al sitio del catálogo y recuperará la información más reciente. Una vez que se haya leído el catálogo, se mostrará la fecha y la hora de la última actualización.
@@ -58,6 +65,8 @@ Para comprobar si hay características nuevas y actualizadas, haga clic en el bo
 Para seleccionar características, expanda una categoría, seleccione una versión y haga clic en la casilla:
 
 ![Características seleccionadas](images/SelectedFeatures.png)
+
+Para seleccionar cada paquete dentro de una categoría, se proporciona un botón `Select All`. `Select None` anulará la selección de todos los paquetes seleccionados. 
 
 Cada categoría con una o más características seleccionadas se actualizará para mostrar el recuento.
 

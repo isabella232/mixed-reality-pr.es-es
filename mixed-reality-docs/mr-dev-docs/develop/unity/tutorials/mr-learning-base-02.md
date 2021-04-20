@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, TextMeshPro,
 ms.localizationpriority: high
-ms.openlocfilehash: c9cf580b1123002e9e8cdfd5c3914c3aa39e2825
-ms.sourcegitcommit: 848b4b7bb8514c2e088a3a55512b1a8075d29093
+ms.openlocfilehash: b0b8d97471dfae9d6dc6bbee26079af04f97de62
+ms.sourcegitcommit: 94ae851f78e5b861af601b445f8f0a3405197c40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2021
-ms.locfileid: "107003134"
+ms.lasthandoff: 04/19/2021
+ms.locfileid: "107716026"
 ---
 # <a name="2-initializing-your-project-and-deploying-your-first-application"></a>2. Inicialización de su proyecto e implementación de su primera aplicación
 
@@ -186,7 +186,7 @@ Repita el mismo procedimiento para agregar un **script Near Interaction Grabbabl
 > [!NOTE]
 > Para los fines de este tutorial, los colisionadores ya se han agregado al objeto Cube. Para obtener más información sobre los colisionadores, visita la documentación sobre <a href="https://docs.unity3d.com/Manual/CollidersOverview.html" target="_blank">colisionadores</a> de Unity.
 
-Para probar esto en el editor de Unity, puede entrar en el modo de reproducción y mantener presionada la tecla **Mayús Izq** o **Espacio** para habilitar el controlador. El movimiento del mouse moverá el controlador y también este se puede alejar o acercar con respecto a la cámara con la rueda del mouse. Una vez que el puntero esté en el objeto Cube, mantenga presionado el **botón secundario del mouse** para desplazarlo.
+Para probar esto en el editor de Unity, puede entrar en el modo de reproducción y mantener presionada la tecla **Mayús Izq** o **Espacio** para habilitar el controlador. El movimiento del mouse moverá el controlador y también este se puede alejar o acercar con respecto a la cámara con la rueda del mouse. Una vez que el puntero esté en el objeto Cube, mantenga presionado el **botón primario del mouse** para desplazarlo.
 
 ![Modo Juego](images/mr-learning-base/base-02-section8-step1-4.png)
 

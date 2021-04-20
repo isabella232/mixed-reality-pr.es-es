@@ -7,12 +7,12 @@ ms.date: 11/30/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, learn, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, qué es la realidad virtual, qué es la realidad aumentada, MRTK, kit de herramientas de mixed reality, traducción de idiomas, Azure, Azure cognitive services, Microsoft Learn
 ms.localizationpriority: high
-ms.openlocfilehash: c4e068dda72c4dc2f22ca0a56a835b334d90c713
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 1dee5448448cca83d96eee352765ddc33b37d606
+ms.sourcegitcommit: 47c402dc8e588817ce60229bf019170fa36f3045
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102770333"
+ms.lasthandoff: 04/16/2021
+ms.locfileid: "107581557"
 ---
 # <a name="mixed-reality-learn-overview"></a>Introducción a Learn de Mixed Reality
 
@@ -20,7 +20,10 @@ Microsoft Learn es el lugar donde todo el mundo va a aprender. Descubra nuevas a
 
 Cuantas más herramientas tenga al desarrollar para Mixed Reality, mejor. Aunque la documentación y los tutoriales escritos son fundamentales, si prefiere un aprendizaje visual, lo encontrará en nuestro contenido de vídeo de Microsoft Learn. Se agregan módulos nuevos continuamente: vuelva para ver si hay más actualizaciones.
 
-Nuestros módulos de Learn le ayudan a convertirse en experto en desarrollo para Mixed Reality, ya que ofrecen una estructura basada en módulos que le permite empezar a trabajar con herramientas clave, como Mixed Reality Toolkit, Unity y los servicios de realidad mixta de Azure. Llegar al paso Hola mundo nunca ha sido más fácil, ya que presentamos los objetivos de aprendizaje, los requisitos previos y el tiempo definido para cumplir las expectativas en la misma interfaz. Comience a usar los módulos de Learn para Mixed Reality ya o vea nuestro [vídeo](https://channel9.msdn.com/Blogs/One-Dev-Minute/What-is-Microsoft-Learn) de introducción a Microsoft Learn.
+Nuestros módulos de Learn le ayudan a convertirse en experto en desarrollo para Mixed Reality, ya que ofrecen una estructura basada en módulos que le permite empezar a trabajar con herramientas clave, como Mixed Reality Toolkit, Unity y los servicios de realidad mixta de Azure. Llegar al paso Hola mundo nunca ha sido más fácil, ya que presentamos los objetivos de aprendizaje, los requisitos previos y el tiempo definido para cumplir las expectativas en la misma interfaz. 
+
+> [!div class="nextstepaction"]
+> [Introducción a nuestra ruta de aprendizaje de Mixed Reality](https://docs.microsoft.com/learn/browse/?terms=mixed%20reality)
 
 ## <a name="general-modules"></a>Módulos generales
 
