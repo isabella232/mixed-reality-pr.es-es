@@ -1,100 +1,100 @@
 ---
 title: Instale el software de Windows Mixed Reality
-description: Después de conectar el casco de la realidad mixta de Windows, use la aplicación del portal de realidad mixta para empezar a trabajar y descargar las características de Windows Mixed Reality.
+description: Después de conectar el casco Windows Mixed Reality, use la aplicación Portal de realidad mixta para empezar a trabajar y descargar Windows Mixed Reality características.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/15/2020
 ms.topic: article
-keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, introducción, configuración, portal de realidad mixta
+keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, get started, setup, Portal de realidad mixta
 appliesto:
 - Windows 10
-ms.openlocfilehash: 72782d14218e0a95b5a88297310f791c977fe094
-ms.sourcegitcommit: 1b90f27af091dffd4fba63d69a89873aa0f75079
+ms.openlocfilehash: a0ce559372d854e5f0bd51d25d112ba285e4d81e
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97726076"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107944746"
 ---
 # <a name="install-windows-mixed-reality-software"></a>Instale el software de Windows Mixed Reality
 
 > [!div class="nextstepaction"]
-> [Obtener portal de realidad mixta](https://www.microsoft.com/p/mixed-reality-portal/9ng1h8b3zc7m?activetab=pivot:overviewtab)
+> [Obtener Portal de realidad mixta](https://www.microsoft.com/p/mixed-reality-portal/9ng1h8b3zc7m?activetab=pivot:overviewtab)
 
-## <a name="launch-mixed-reality-portal"></a>Inicio del portal de realidad mixta
+## <a name="launch-mixed-reality-portal"></a>Iniciar Portal de realidad mixta
 
-Después de conectar el casco de la realidad mixta de Windows y de que el controlador se instala correctamente, el portal de realidad mixta (PRM) se iniciará automáticamente en el escritorio. Si el portal no se inicia, siempre puede abrir el portal de realidad mixta desde **inicio > portal de realidad mixta**. Una vez que se haya iniciado el portal, seleccione **Introducción**
+Después de conectar el casco Windows Mixed Reality y el controlador se instala correctamente, el Portal de realidad mixta (MRP) se iniciará automáticamente en el escritorio. Si el portal no se inicia, siempre puede abrir el portal Mixed Reality desde **Inicio > Portal de realidad mixta**. Una vez que se haya iniciado el portal, seleccione **Introducción.**
 
 ![Le damos la bienvenida a Mixed Reality](images/1050px-mixedrealityportal.png)
 
-En el portal de realidad mixta, puede:
+En Portal de realidad mixta, puede:
 
-* Mostrar un streaming en vivo de la vista en el casco (Windows Mixed Reality ultra Only) seleccionando "detener vista previa" o "iniciar vista previa". También puede activar y desactivar la vista previa en el menú Inicio de realidad mixta.
-* Vea el estado de los auriculares y los controladores. Seleccione "menú" para ver toda la información.
-* Configurar nuevos controladores. Seleccione **menú > configurar controladores**.
-* Activar o desactivar el límite. Activar **o desactivar el límite de > de menús**. (Si lo desactiva, deberá permanecer en un lugar por seguridad).
-* Cree un nuevo límite. Seleccione el **menú > ejecutar el programa de instalación**.
-* Llegue a sus fotos de realidad mixta. Seleccione **menú > consulte fotos de realidad mixta**.
-* Obtenga aplicaciones y juegos de realidad mixta. Seleccione **menú > obtener aplicaciones de realidad mixta**.
+* Muestre una secuencia en vivo de la vista en el casco (solo Windows Mixed Reality Ultra) seleccionando "Detener vista previa" o "Iniciar vista previa". También puede activar y desactivar la versión preliminar desde la versión preliminar de mixed reality menú Inicio.
+* Vea el estado de los cascos y los controladores. Seleccione "Menú" para ver toda la información.
+* Configure nuevos controladores. Seleccione **Menú > Configurar controladores.**
+* Active o desactive el límite. Seleccione **Menú > límite en / Desactivado.** (Si lo desactiva, deberá permanecer en un solo lugar por motivos de seguridad).
+* Cree un nuevo límite. Seleccione **Menú > ejecutar el programa de instalación.**
+* Obtenga sus fotos de realidad mixta. Seleccione **Menú > Ver fotos de realidad mixta**.
+* Obtenga aplicaciones y juegos de realidad mixta. Seleccione **Menú > Obtener aplicaciones de realidad mixta.**
 
 ## <a name="download-windows-mixed-reality"></a>Descargar Windows Mixed Reality
 
-Windows Mixed Reality tiene un tamaño de 1 GB y los tiempos de descarga variarán en función de la conexión a Internet. Si se encuentra con un mensaje que dice "no se pudo descargar el software de realidad mixta", eche un vistazo a estos [pasos de solución de problemas](installation_errors.md#we-couldnt-download-the-mixed-reality-software-or-hang-tight-while-we-do-some-downloading).
+Windows Mixed Reality tiene un tamaño de 1 GB y los tiempos de descarga variarán en función de la conexión a Internet. Si aparece un mensaje que dice "No se pudo descargar el software Mixed Reality", consulte estos pasos de [solución de problemas.](installation_errors.md#we-couldnt-download-the-mixed-reality-software-or-hang-tight-while-we-do-some-downloading)
 
 ## <a name="general-troubleshooting"></a>Solución general de problemas
 
-Si experimenta problemas u obtiene un mensaje de error al usar el portal de realidad mixta, Pruebe estas soluciones.
+Si tiene problemas u recibe un mensaje de error al usar Portal de realidad mixta, pruebe estas soluciones.
 
 **Reiniciar Windows Mixed Reality**
 
 1. Desconecte el casco del equipo (ambos cables).
-2. Reinicie el equipo y, a continuación, vuelva a conectar el casco.
+2. Reinicie el equipo y vuelva a conectar el casco.
 
-**Asegúrese de que el equipo reconoce los auriculares**
+**Asegúrese de que el equipo reconoce el casco.**
 
-Si el reinicio no funciona, asegúrese de que el equipo reconoce el casco. Seleccione Inicio, escriba administrador de dispositivos en el cuadro de búsqueda y, a continuación, selecciónelo en la lista. Expanda dispositivos de realidad mixta y compruebe si aparece el casco.
+Si el reinicio no funciona, asegúrese de que el equipo reconoce el casco. Seleccione Inicio, escriba Administrador de dispositivos en el cuadro de búsqueda y selecciónelo en la lista. Expanda dispositivos de realidad mixta y vea si aparece el casco.
 
-Si no aparece, intente lo siguiente:
+Si no aparece en la lista, pruebe lo siguiente:
 
-* Conecte los auriculares a puertos diferentes en el equipo, si está disponible.
-* Busque las actualizaciones de software más recientes desde [Windows Update](https://support.microsoft.com/help/12373).
-* Desinstalar y reinstalar Windows Mixed Reality:
+* Conecte el casco a distintos puertos del equipo, si está disponible.
+* Busque las actualizaciones de software más recientes [de Windows Update](https://support.microsoft.com/help/12373).
+* Desinstale y vuelva Windows Mixed Reality:
     1. Desconecte el casco del equipo (ambos cables).
-    2. Seleccione **configuración > realidad mixta > desinstalar**.
-    3. Desemparejar los controladores de movimiento: seleccione la **configuración > dispositivos > Bluetooth & otros dispositivos**. Seleccione cada controlador y, a continuación, seleccione **quitar dispositivo**.
-    4. Para volver a instalar Windows Mixed Reality, conecte el casco a su PC.
+    2. Seleccione **Configuración > Mixed reality > Uninstall (Desinstalar).**
+    3. Desasoyen los controladores de movimiento: seleccione **Configuración > dispositivos > Bluetooth & otros dispositivos.** Seleccione cada controlador y, a continuación, **seleccione Quitar dispositivo.**
+    4. Para volver a Windows Mixed Reality, vuelva a conectar el casco al equipo.
 
 ## <a name="common-error-messages"></a>Mensajes comunes de error
 
-A continuación se indican algunas cosas para probar [los mensajes de error](error-codes.md) que puede ver.
+Estos son algunos aspectos que puede probar para los [mensajes de error](error-codes.md) que puede ver.
 
 | Si ve este mensaje | Probar esto |
 | --- | --- |
-| Comprobar el cable USB | Conecte los auriculares a otro puerto USB (y asegúrese de que es un SuperSpeed USB 3,0). Además, pruebe a quitar cualquier dispositivo extender o concentrador entre los auriculares y el equipo. |
-| Comprobar el cable para mostrar | Realice estos pasos: <ul><li>Conecte los auriculares a un DisplayPort 1,2 o posterior, o HDMI 1,4 o posterior. Asegúrese de que el puerto corresponde a la tarjeta de gráficos más avanzada del equipo.</li><li>Si usa un adaptador, asegúrese de que tiene la capacidad de 4K</li><li>Pruebe a usar un puerto HDMI diferente</li><li>Si tiene un monitor externo conectado a un puerto HDMI, intente conectarlo a un DisplayPort en su lugar y use el puerto HDMI para sus auriculares</li></ul> |
-| Hubo un problema | Siga los pasos de solución de problemas generales anteriores. |
+| Comprobación del cable USB | Conecte el casco a un puerto USB diferente (y asegúrese de que se trata de superspeed USB 3.0). Además, intente quitar los extensores o concentradores entre el casco y el equipo. |
+| Comprobación del cable de pantalla | Realice estos pasos: <ul><li>Conecte el casco a DisplayPort 1.2 o posterior, o HDMI 1.4 o posterior. Asegúrese de que el puerto se corresponde con la tarjeta gráfica más avanzada del equipo.</li><li>Si usa un adaptador, asegúrese de que es compatible con 4K.</li><li>Pruebe a usar un puerto HDMI diferente</li><li>Si tiene un monitor externo conectado a un puerto HDMI, pruebe a conectarlo a displayPort en su lugar y use el puerto HDMI para el casco.</li></ul> |
+| Hubo un problema | Siga los pasos generales de solución de problemas anteriores. |
 
-## <a name="review-and-accept-terms-and-conditions"></a>Revisar y aceptar los términos y condiciones
+## <a name="review-and-accept-terms-and-conditions"></a>Revisión y aceptación de términos y condiciones
 
-Para continuar con la instalación, debe tener 2 GB de espacio disponible en el equipo. Revisar **y presionar acepto** los términos y condiciones para continuar
+Para continuar con la instalación, debe tener 2 GB de espacio libre en el equipo. Revise y presione **Acepto los** términos y condiciones para continuar.
 
-![Aceptación de los términos y condiciones](images/1050px-mixedrealityportalpage2.png)
+![Aceptación de términos y condiciones](images/1050px-mixedrealityportalpage2.png)
 
 ## <a name="compatibility-check"></a>Comprobación de compatibilidad
 
-A continuación se encuentra la comprobación compatible. El portal de realidad mixta comprobará que el equipo sea compatible con la realidad mixta. Las comprobaciones **verdes** indican que el equipo ha pasado el elemento necesario. Los triángulos **naranja** significan que puede haber problemas con el equipo para el requisito determinado. Si encuentra algún problema, es posible que tenga que solucionar problemas o actualizar el equipo. **Red** XS significa que el equipo no cumple los requisitos del elemento especificado.
+A continuación se encuentra la comprobación compatible. Portal de realidad mixta comprobará si el equipo es compatible con la realidad mixta. **Las comprobaciones** verdes significan que el equipo superó el elemento necesario. **Los** triángulos naranjas significan que puede haber problemas con el equipo para el requisito dado. Si encuentra algún problema, es posible que tenga que solucionar problemas o actualizar el equipo. **Rojo** X significa que el equipo no cumple los requisitos del elemento especificado.
 
 ![Comprobación de compatibilidad](images/1050px-compatcheck.png)
 
 ## <a name="getting-ready"></a>Preparación
 
-Verá el mensaje "Prepárese para configurar" en la pantalla con un icono de giro, que solo tardará unos minutos:
+Verá un mensaje "Prepararse para configurarlo" en la pantalla con un icono de giro, que solo debería tardar unos minutos:
 
-![Preparación para configurar](images/1050px-gettingsetup.png)
+![Prepararse para configurarlo](images/1050px-gettingsetup.png)
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Preguntar a la comunidad](https://answers.microsoft.com)
-* [Póngase en contacto con nosotros para obtener soporte técnico](https://support.microsoft.com/contactus/)
+* [Póngase en contacto con nosotros para obtener soporte técnico.](https://support.microsoft.com/contactus/)
 * [Solución de problemas de instalación](installation_errors.md)
-* [Solución de problemas de configuración](wmr-setup-faq.md)
+* [Solución de problemas de configuración](wmr-setup-faq.yml)
 * [Configuración de Windows Mixed Reality](set-up-windows-mixed-reality.md)

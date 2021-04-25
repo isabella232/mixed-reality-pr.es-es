@@ -1,0 +1,100 @@
+### YamlMime:FAQ
+metadata:
+  title: Preguntas más frecuentes sobre el uso de Windows Mixed Reality
+  description: Busque recursos para preguntas comunes al trabajar con Windows Mixed Reality y hardware.
+  author: hferrone
+  ms.author: v-hferrone
+  ms.date: 09/15/2020
+  ms.topic: article
+  keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Feedback, Feedback Hub, bugs
+  appliesto:
+  - Windows 10
+  ms.openlocfilehash: 2369f44eab8717e94d86cb62dabfe45dfbc32646
+  ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
+  ms.translationtype: MT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 04/24/2021
+  ms.locfileid: "107953776"
+title: Preguntas más frecuentes sobre el uso de Windows Mixed Reality
+summary: >
+  Si necesita ayuda con el uso de los cascos envolventes Windows Mixed Reality, consulte estos temas para obtener información general y solucionar problemas.
+
+
+  ¿Aún necesita ayuda? Para solucionar problemas avanzados, consulte este artículo.
+sections:
+- name: Omitido
+  questions:
+  - question: >
+      Veo un mensaje que dice "Seguimiento perdido" o "No tenemos un límite para este espacio".
+    answer: "Seleccione **Iniciar > Portal de realidad mixta** en el escritorio. Seleccione **Menú** y, a continuación, **seleccione Ejecutar configuración** para crear un nuevo límite. Windows Mixed Reality admite varias ubicaciones e identificará el espacio en el que se encuentra en el inicio, siempre y cuando la sala no haya cambiado.  \n"
+  - question: >
+      No puedo escuchar ningún sonido o el sonido viene de mi equipo en lugar de mi casco.
+    answer: "Si el casco envolvente no incluye cascos integrados, deberá conectar los auriculares al conector de audio del casco. (A menudo, el conector se encuentra justo detrás del visor o las lentes del casco; consulte con el fabricante del casco si tiene problemas para encontrarlo). \n\nAlgunos cascos de audio tienen botones físicos para controlar el volumen. Si el audio no funciona, compruebe si el volumen está apagado o apagado.\n\nWindows Mixed Reality está diseñado para reproducir sonido a través de los cascos envolventes cuando lo lleva y tiene cascos conectados a él. Cuando se quita el casco o se voltea el visor, el audio cambia al dispositivo de reproducción predeterminado de Windows. Puede cambiar esta configuración en Configuración **> Mixed reality > Audio y voz.**\n\n> [!NOTE]\n> * Windows Mixed Reality audio espacial funciona mejor con auriculares integrados o conectados directamente a los cascos envolventes. Es posible que los altavoces o auriculares de PC conectados al equipo no funcionen bien para el audio espacial.\n> * Windows Mixed Reality no admite cascos de audio Bluetooth.\n"
+  - question: >
+      Los comandos de voz no funcionan
+    answer: >
+      Para usar comandos de voz, la configuración de idioma y voz del equipo debe establecerse en un idioma [Windows Mixed Reality región y idioma admitidos.](other-questions.md#what-languages-are-supported-in-windows-mixed-reality) Para comprobar la región e idioma de Windows, seleccione Configuración > hora & **idioma > región & idioma.** Para comprobar el idioma de voz, seleccione **Configuración > tiempo & idioma > Voz.**
+
+
+      Si el casco no tiene un micrófono integrado, adjunte un par de cascos con un micrófono al casco o al equipo. Seleccione Configuración > Mixed reality > Audio and speech (Audio y voz de **Mixed Reality)** para cambiar automáticamente la entrada de micrófono al casco cuando los cascos estén conectados. Asegúrese de que **cuando me ponga el casco,** cambie al micrófono del casco.
+
+
+      Algunos cascos de audio tienen un botón físico para silenciar y desactivar el micrófono. Si los comandos de voz no funcionan, compruebe si el micrófono está silenciado.
+  - question: >
+      El límite siempre está visible. ¿Cómo puedo hacerlo desaparecer?
+    answer: "Cuando esté cerca del límite, aparecerá. Si el límite incluye secciones con una forma estrecha o irregular, es posible que termine cerca de él y haga que aparezca con más frecuencia de lo que le gustaría. Para corregirlo, intente crear de nuevo el límite con una forma más grande y regular. Seleccione **Iniciar > Portal de realidad mixta** en el escritorio y, a continuación, seleccione Ejecutar **configuración.** \n\nTambién puede desactivar temporalmente el límite desde Portal de realidad mixta: seleccione **Menú** y, a continuación, use el botón de alternancia para desactivar el límite. Cuando el límite esté desactivado, deberá permanecer en un solo lugar para evitar obstáculos.\n"
+  - question: >
+      Tengo problemas con mis controladores de movimiento
+    answer: "Si los controladores de movimiento no funcionan correctamente, no se conectan o si no ve una imagen de los controladores cuando lleva el casco:\n\n* Asegúrese de que los controladores están activados. Para activarlos, mantenga presionado el botón **de Windows** durante 2 segundos.\n* Seleccione **Iniciar > Portal de realidad mixta** en el equipo y, a continuación, seleccione **Menú** Debería ver los controladores de movimiento en la lista, junto con un mensaje de estado:\n    * Listo: todos los controladores están establecidos.\n    * Seguimiento perdido: Portal de realidad mixta no puede encontrar los controladores. Manténlas delante del casco y reinícielas presionando el botón **de Windows** durante 4 segundos y, después, de nuevo durante 2 segundos.\n    * Batería baja: reemplace las baterías del controlador.\n* Si usa Wi-Fi, intente conectar el equipo a una red de Wi-Fi 5 GHz para reducir las interferencias inalámbricas. \n* En el caso de los cascos más recientes que se emparejan directamente con los controladores, seleccione **el botón \"...\"** en **Portal de realidad mixta** y elija **Configurar controladores.** Esto le llevará a la aplicación de casco para emparejar los controladores con el casco.  \n* Para cascos antiguos que no tienen Bluetooth integrado para que los controladores se empare den el par directamente:  \n    * Seleccione Configuración > dispositivos > Bluetooth & otros dispositivos del equipo y asegúrese de que los controladores aparecen como emparejados.Si no es así, deberá emparejarlos. \n    * Si tienes otros dispositivos Bluetooth emparejados con tu PC, como auriculares o mandos para juegos, intenta quitar algunos. Seleccione **Configuración > dispositivos > Bluetooth &** otros dispositivos del equipo, seleccione los dispositivos y, a continuación, seleccione Quitar **dispositivo.**\n    * Quite los altavoces y auriculares Bluetooth en Configuración **> dispositivos > Bluetooth &** otros dispositivos y apague los dispositivos. \n    * Si usa un adaptador Bluetooth USB, asegúrese de que está conectado a un puerto USB 2.0 negro. Asegúrese también de que el adaptador está conectado lo más lejos posible de cualquier otro transmisor inalámbrico o unidades flash USB, incluido el conector USB para el casco. \n    * Si el equipo tiene Bluetooth integrado y tiene problemas de conexión, pruebe a usar un adaptador Bluetooth USB en su lugar. (Para ello, también deberá desactivar la radio Bluetooth integrada en Administrador de dispositivos y, [a](https://support.microsoft.com/help/4026149)continuación, emparejar los demás dispositivos Bluetooth con el nuevo adaptador).\n* Si la aplicación Configuración está abierta en la página Bluetooth & otros dispositivos, cándala.\n"
+  - question: >
+      Tengo molestias cuando uso el casco
+    answer: >
+      Para obtener información general sobre la comodidad Windows Mixed Reality, consulte Windows Mixed Reality mantenimiento, seguridad y confort de los cascos [envolventes.](wmr-health-safety-comfort.md) Para más información sobre el casco específico, consulte con el fabricante del casco.
+  - question: >
+      Mis objetos visuales son lentos, se cargan lentamente o no tienen buen aspecto.
+    answer: >
+      Si los objetos visuales de realidad mixta no tienen el mejor aspecto:
+
+
+      * Asegúrese de que el casco está conectado a la tarjeta gráfica correcta del equipo. Algunos equipos tienen tarjetas gráficas integradas y discretas. Por lo general, la tarjeta discreta proporcionará el mejor rendimiento. [Obtenga más información sobre el hardware del equipo.](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md)
+
+      * Cierre las aplicaciones no usadas en el escritorio.
+
+      * Ajuste el ajuste del casco: muévelo más abajo y superior, o bien a la izquierda y a la derecha, y asegúrese de que se ajuste perfectamente.
+
+      * Ajuste la configuración visual del casco **(Configuración > Mixed reality > Headset display**). Cuando **Calidad visual** se establece en **Automático,** elegiremos la mejor experiencia de realidad mixta para el equipo. Para obtener una experiencia con más detalles visuales, establezca **Calidad visual** en **Alto.** Si los objetos visuales son acortados, es posible que quiera seleccionar una configuración inferior.
+
+      * Intente ajustar la calibración del casco. Las lentes deben ajustarse para que coincidan con la distancia interpupillaria (IPD), la distancia entre los alumnos. Si no conoce el IPD, un optometrista puede medirlo por usted. También hay sitios web diseñados para medir el IPD. Una vez que conozca el IPD, use el mando de calibración del casco para realizar ajustes. Si el casco no tiene un mando de calibración, seleccione Configuración > Mixed reality > Headset display (Configuración de **Mixed Reality > Headset)** y ajuste el control Calibración.
+  - question: >
+      Tengo preguntas sobre el hardware de los cascos
+    answer: >
+      Para más información sobre el casco, consulte con el fabricante. Puede haber una guía de producto en el cuadro o puede probar el sitio web del fabricante.
+  - question: >
+      El suelo de la realidad mixta parece estar en el lugar equivocado
+    answer: >
+      Si el suelo parece apagado (por ejemplo, parece que está flotante), seleccione Start **> Room adjustment** while headset to make changes (Iniciar > ajuste de la sala mientras lleva el casco para realizar cambios).
+  - question: >
+      He recibido un mensaje que dice que debo conectarme y cargar mi PC. ¿Por qué?
+    answer: >
+      Si usa un equipo portátil, Windows Mixed Reality funciona mejor cuando el equipo está totalmente cargado y conectado.
+  - question: >
+      Cómo desinstalación Windows Mixed Reality?
+    answer: "Seleccione **Iniciar > configuración > Mixed reality** y, a continuación, seleccione **Desinstalar**. Asegúrese de desconectar el casco del equipo y cierre Portal de realidad mixta antes de desinstalar.\n\nCuando esté listo para empezar a usar el casco de nuevo, conéctelo y Portal de realidad mixta le llevará a través de la configuración.\n\n> [!NOTE]\n> Si ve un mensaje que dice \"No hemos podido terminar de quitar Windows Mixed Reality\", esto significa que algunos archivos, incluida la información sobre su entorno, podrían seguir estando en el equipo. Esto puede causar problemas si decide volver a instalar Windows Mixed Reality más adelante.\n> \n> Para obtener información sobre cómo quitar manualmente cualquier información Windows Mixed Reality del equipo, consulte **[este artículo.](installation_errors.md)**\n"
+  - question: >
+      Mi Wi-Fi se ralentiza cuando uso Windows Mixed Reality
+    answer: >
+      Si usa una conexión de 2,4 GHz Wi-Fi, los controladores de movimiento podrían ralentizar la red Wi-Fi:
+
+
+      <!-- TODO: Use Windows Mixed Reality PC hardware guidelines interlink -->
+
+      * Cambie a una conexión de Wi-Fi 5 GHz, si hay una disponible. [Más información](https://support.microsoft.com/help/4000461)
+
+      * Use un adaptador Bluetooth independiente para conectar los controladores de movimiento al equipo. [Consulte los adaptadores recomendados.](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
+  - question: >
+      ¿Cuál es la configuración de opciones de experiencia?
+    answer: "La opción Opciones de experiencia (Configuración > Mixed Reality > Headset display > Experience options ) le ofrece la capacidad de cambiar la configuración de rendimiento Windows Mixed Reality **Mixed Reality.** Esto le permite elegir la mejor experiencia posible para la configuración de hardware en una variedad de contenido. La experiencia de 90 Hz está disponible para todos los sistemas, pero es posible que primero quiera probar Automático para ver qué configuración prefiere.\n\nEstas son las opciones:\n\n* Automático o Permitir que Windows decida: Windows Mixed Reality determinará la mejor experiencia para la configuración de hardware. Para la mayoría de las personas, esta es la mejor opción para empezar.\n* 60 Hz: establece la frecuencia de actualización en 60 Hz y desactiva ciertas características, como la captura de vídeo y la vista previa en Portal de realidad mixta.\n* 90 Hz: establece la frecuencia de actualización en 90 Hz si el casco se puede ejecutar a esa velocidad. Si los problemas de cable impiden que el casco se ejecute a 90 Hz, es posible que vea un error al iniciar con este modo seleccionado. \n"
+  - question: >
+      Veo un mensaje que dice "Put on your headset" (Ponerse el casco), aunque tenga el casco puesto
+    answer: "Cuando se pone el casco, Windows Mixed Reality un poco de tiempo para volver a cargar el espacio. Esta operación puede tardar unos segundos. Si este mensaje no desaparece, asegúrese de que se ha quitado el protector del sensor de proximidad, que está en el interior del casco, entre las lentes. Si se ha quitado el adhesivo y sigue teniendo problemas, póngase en contacto con el fabricante del casco. Al **presionar Win+Y** en el teclado, se desencadenará manualmente el casco para que se ejecute si el sensor de proximidad no se desencadena automáticamente. \n\n¿Aún necesita ayuda? Para solucionar problemas avanzados, consulte [este artículo](troubleshooting-windows-mixed-reality.md).\n"
+additionalContent: "\n## <a name=\"see-also\"></a>Vea también\n\n* [Preguntar a la comunidad](https://answers.microsoft.com)\n* [Póngase en contacto con nosotros para obtener soporte técnico.](https://support.microsoft.com/contactus/)"

@@ -1,158 +1,158 @@
 ---
-title: Usar voz en Windows Mixed Reality
-description: Obtenga información sobre cómo usar la entrada de voz para controlar comandos, objetos 3D y dictado en las aplicaciones de Windows Mixed Reality.
+title: Uso de Voz en Windows Mixed Reality
+description: Aprenda a usar la entrada de voz para controlar comandos, objetos 3D y dictado en las Windows Mixed Reality aplicaciones.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/16/2020
 ms.topic: article
-keywords: Windows Mixed Reality, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
+keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Feedback, Centro de opiniones, bugs
 appliesto:
 - Windows 10
-ms.openlocfilehash: 9c1863a3fb0c7d8681f82aa6e0d93400bef578c9
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+ms.openlocfilehash: 0254b7c4ac6a9602517adb3d9e5c024ebd69db4e
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98007675"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107944682"
 ---
-# <a name="using-speech-in-windows-mixed-reality"></a>Usar voz en Windows Mixed Reality
+# <a name="using-speech-in-windows-mixed-reality"></a>Uso de Voz en Windows Mixed Reality
 
-Puede usar su voz para acercarse a Windows Mixed Reality con mayor rapidez. La creación de una foto rápida, la apertura de una aplicación, incluso la telemigración sin un controlador, están fuera de la palabra. Para obtener una forma sencilla de escribir, pruebe el modo de dictado en el teclado Mixed Reality. 
+Puede usar su voz para moverse por Windows Mixed Reality más rápido. Tomar una foto rápida, abrir una aplicación, incluso teleportar sin un controlador es una palabra de distancia. Para una manera fácil de escribir, pruebe el modo de dictado en el teclado de realidad mixta. 
 
-¿Tiene problemas con la voz? [Obtener ayuda](using-wmr-faq.md#speech-commands-arent-working)
+¿Tiene problemas con voz? [Obtener ayuda](using-wmr-faq.yml#speech-commands-aren-t-working)
 
 <!-- NEED VIDEO: https://support.microsoft.com/en-us/help/4041322/windows-10-speech-in-windows-mixed-reality -->
 
 > [!NOTE]
-> * Cuando la voz está activada, Windows Mixed Reality siempre está escuchando. Cuando esté conectado a Internet, enviamos todo lo que digas a la nube para que Microsoft Speech Services pueda reconocer incluso más comandos.
-> * Los comandos de voz no se admiten en todos los lenguajes. Saber más
-> * Los auriculares y los altavoces Bluetooth no se admiten en Windows Mixed Reality.
+> * Cuando la voz está activada, Windows Mixed Reality escucha siempre. Cuando se conecta a Internet, le enviamos todo lo que dice a la nube para que los servicios de voz de Microsoft puedan reconocer aún más de sus comandos.
+> * Los comandos de voz no se admiten en todos los idiomas. Más información
+> * Los cascos Bluetooth y los altavoces no se admiten en Windows Mixed Reality.
 
 ## <a name="see-it-say-it"></a>Verlo, decirlo
 
-En la Página principal de Windows Mixed Reality, si ve una palabra, a menudo se puede usar como un comando de voz. Por ejemplo, simplemente indique el nombre de un botón para seleccionarlo. Si no ve un nombre, apunte el controlador de movimiento en el botón para averiguar qué decir. En el caso de los juegos de Xbox, apoye el botón.
+En la Windows Mixed Reality inicio, si ve una palabra, a menudo puede usarla como un comando de voz. Por ejemplo, simplemente diga el nombre de un botón para seleccionarlo. Si no ve un nombre, apunte el controlador de movimiento al botón para averiguar qué decir. En el caso de los gamepads de Xbox, mire con la mirada en el botón.
 
-## <a name="general-speech-commands"></a>Comandos de voz generales
+## <a name="general-speech-commands"></a>Comandos generales de voz
 
-Use los siguientes comandos de voz a lo largo de Windows Mixed Reality para ponerse en marcha con mayor rapidez. Algunos comandos usan el cursor de miras, que se mostrarán al decir "Select".
+Use los siguientes comandos de voz en Windows Mixed Reality para moverse más rápido. Algunos comandos usan el cursor de mirada, que se muestra al decir "seleccionar".
 
 | Para hacer esto | Diga esto |
 | --- | --- |
-| Seleccionar | Supongamos "seleccionar" para que aparezca el cursor de miras. A continuación, cambie el encabezado para colocar el cursor sobre lo que desea seleccionar y, a continuación, indique "seleccionar" de nuevo. |
+| Seleccionar | Diga "seleccionar" para abrir el cursor de mirada. A continuación, desplace la cabeza para colocar el cursor sobre lo que desea seleccionar y vuelva a decir "seleccionar". |
 | Abrir el menú Inicio | Ir a Inicio |
-| Dejar una aplicación envolvente | Di "ir a Inicio" para abrir el menú acciones rápidas y, a continuación, decir "Página principal de realidad mixta". |
-| Activar o desactivar la linterna | Di "ir a Inicio" para abrir el menú acciones rápidas y, a continuación, decir "Página principal de realidad mixta". |
-| Te | Gire el dedo hacia el lugar que desee y, a continuación, "teletranspórtate". (Para los destinos más precisos, supongamos primero "seleccionar" para que aparezca el cursor de miración y, a continuación, "teletranspórtate". |
-| Convertir a la izquierda o a la derecha | Girar a la izquierda o a la derecha |
-| Convertir 180 grados | Cambia |
+| Dejar una aplicación inmersiva | Diga "Ir a Inicio" para mostrar el menú de acciones rápidas y, a continuación, diga "Mixed reality home" (Inicio de realidad mixta). |
+| Activar o desactivar La linterna | Diga "Ir a Inicio" para mostrar el menú de acciones rápidas y, a continuación, diga "Mixed reality home" (Inicio de realidad mixta). |
+| Teleport | Girar la cabeza hacia el lugar al que quiere ir y, a continuación, decir "teleportar". (Para una selección de destino más precisa, primero diga "seleccionar" para que se active el cursor de mirada y, a continuación, diga "teleportar"). |
+| Girar a la izquierda o a la derecha | Girar a la izquierda o a la derecha |
+| Girar 180 grados | Cambia |
 | Avanzar | Avanzar o avanzar |
-| Copia de seguridad | Retroceder o retroceder |
-| Moverse a la izquierda | Desplazarse a la izquierda o a la izquierda |
-| Moverse a la derecha | Desplazarse a la derecha o a la derecha |
+| Copia de seguridad | Volver atrás o volver atrás |
+| Desplazarse a la izquierda | Desplazarse a la izquierda o a la izquierda |
+| Desplazarse a la derecha | Desplazarse a la derecha o a la derecha |
 
-## <a name="3d-object-commands"></a>comandos de objeto 3D
+## <a name="3d-object-commands"></a>Comandos de objeto 3D
 
-Mira un objeto 3D, holograma o una ventana de la aplicación para usar estos comandos:
-
-| Para hacer esto | Diga esto |
-| --- | --- |
-| Aumentar su tamaño | Indentación |
-| Reducir el tamaño | Disminuye |
-| Enciéndalo para que se enfrente | Me encuentro |
-| Prepárese para su traslado: seguirá su mirada | Mueva este |
-| Colóquelo cuando haya terminado de moverlo | Lugar |
-
-## <a name="app-bar-commands"></a>Comandos de la barra de la aplicación
-
-Mira una ventana de la aplicación o un objeto 3D para usar estos comandos:
+Mire un objeto 3D, un holograma o una ventana de aplicación para usar estos comandos:
 
 | Para hacer esto | Diga esto |
 | --- | --- |
-| Cerrar una aplicación o un objeto 3D | Cerrar |
-| Ajuste algo (cambio de tamaño o movimiento) | Ajustar |
-| Detener el ajuste | Listo |
+| Hacer que sea más grande | Mayor |
+| Hacer que sea más pequeño | Más pequeño |
+| Turn it to face you | Orientar hacia mí |
+| Prepárese para moverse; seguirá la mirada. | Mover esto... |
+| Colóctela cuando haya terminado de moverla. | Lugar |
+
+## <a name="app-bar-commands"></a>Comandos de la barra de aplicaciones
+
+Mire una ventana de aplicación o un objeto 3D para usar estos comandos:
+
+| Para hacer esto | Diga esto |
+| --- | --- |
+| Cierre de una aplicación o un objeto 3D | Cerrar |
+| Ajustar algo (cambiar el tamaño o mover) | Ajustar |
+| Detener ajuste | Listo |
 | Ocultar la barra de la aplicación en un objeto 3D | Ocultar menú |
 | Mostrar la barra de la aplicación en un objeto 3D | Mostrar menú |
-| Volver a la pantalla o página anterior en una aplicación que tenga el botón volver atrás  | Volver |
-| Use el controlador Xbox como controlador de juegos, en lugar de como un controlador de realidad mixta, en la aplicación que está examinando | Usar como controlador para juegos |
-| Usar el controlador Xbox como un controlador de realidad mixta (cuando lo haya usado como controlador de juegos) | Usar con miras |
+| Vuelva a la pantalla o página anterior de una aplicación que tiene un botón Atrás.  | Volver |
+| Use el controlador de Xbox como controlador de juegos, en lugar de como un controlador de realidad mixta, en la aplicación que está viendo. | Usar como controlador para juegos |
+| Use el controlador de Xbox como controlador de realidad mixta (cuando lo haya estado usando como controlador de juegos) | Usar con mirada |
 
-## <a name="start-menu-commands"></a>Comandos del menú Inicio
+## <a name="start-menu-commands"></a>menú Inicio comandos
 
-Mira al menú Inicio para usar estos comandos:
+Mire el menú Inicio para usar estos comandos:
 
 | Para hacer esto | Diga esto |
 | --- | --- |
-| Vaya a la lista todas las aplicaciones. | Todas las aplicaciones |
-| Subir o bajar en el inicio o en todas las aplicaciones | Retroceder/avanzar página |
-| Volver al menú Inicio desde todas las aplicaciones | Volver |
+| Vaya a la lista Todas las aplicaciones. | Todas las aplicaciones |
+| Subir o bajar en Inicio o Todas las aplicaciones | Retroceder/avanzar página |
+| Volver a menú Inicio desde Todas las aplicaciones | Volver |
 | Hacer una foto | Cámara |
 | Tomar un vídeo | Vídeo |
-| Mostrar la vista de auriculares en el portal de realidad mixta en el escritorio | Vista previa |
-| Abrir el control de volumen al inicio | Cambio de volumen |
+| Mostrar la vista del casco en Portal de realidad mixta en el escritorio | Vista previa |
+| Abra el control de volumen en Inicio. | Cambio de volumen |
 | Silencio | Silencio |
 | Reactivar audio | Reactivar audio |
-| Cerrar el menú Inicio | Cerrar o cancelar |
+| Cierre el menú Inicio | Cerrar o cancelar |
 
-## <a name="hey-cortana-commands"></a>Comandos de Hola a Cortana
+## <a name="hey-cortana-commands"></a>Comandos de Hola Cortana
 
-Por ejemplo, "Hola Cortana", use uno de los siguientes comandos:
+Diga "Hola Cortana" y, a continuación, use uno de los siguientes comandos:
 
 | Para hacer esto | Diga esto |
 | --- | --- |
-| Averigüe lo que puede decir en Cortana | What can I say? (¿Qué puedo decir?) |
-| Aumentar o disminuir el volumen | Subir o bajar el volumen |
-| Silenciar/dessilenciar | Silenciar/dessilenciar |
-| Inicio de una aplicación | Iniciar [nombre de la aplicación] |
-| Abrir un sitio web en Microsoft Edge | Abra [nombre del sitio web] (por ejemplo, "abrir bing.com"). |
-| Hacer una foto | Tomar imagen |
+| Descubra lo que puede decir a Cortana. | What can I say? (¿Qué puedo decir?) |
+| Aumento o disminución del volumen | Subir o bajar el volumen |
+| Mute/unmute | Silenciar o desactivar lamute |
+| Inicio de una aplicación | Inicio [nombre de la aplicación] |
+| Abra un sitio web en Microsoft Edge | Abra [nombre del sitio web] (por ejemplo, "abrir bing.com") |
+| Hacer una foto | Tomar una imagen |
 | Inicio de la grabación de un vídeo | Iniciar la grabación |
 | Detener la grabación de un vídeo | Detener grabación |
 | Mostrar la hora | ¿Qué horas son? |
-| Abrir el menú Inicio | Abrir el menú Inicio |
+| Abrir el menú Inicio | Abra menú Inicio |
 | Establecer un temporizador | Establecer un temporizador |
 | Establecer un recordatorio | Establecer un recordatorio |
 
 > [!NOTE]
-> * Cortana no está disponible en todas las regiones y los idiomas. [Más información](https://support.microsoft.com/help/4026948).
-> * Si Cortana no responde a "Hola Cortana", seleccione **configuración > privacidad > voz** y activar el reconocimiento de voz en línea.
-> * Si desactiva Cortana, los comandos de voz "Hola Cortana" no estarán disponibles, pero seguirá pudiendo usar otros comandos (como "seleccionar" y "teletranspórtate").
+> * Cortana no está disponible en todas las regiones e idiomas. [Más información](https://support.microsoft.com/help/4026948).
+> * Si Cortana no responde a "Hola Cortana", seleccione Configuración > **Privacidad > Voz** y haga que el reconocimiento de voz en línea esté activado.
+> * Si desactiva Cortana, los comandos de voz "Hola Cortana" no estarán disponibles, pero podrá seguir utilizando otros comandos (como "select" y "teleport").
 
 ## <a name="keyboard-dictation"></a>Dictado de teclado
 
-Cambie al modo de dictado siempre que el teclado esté activo para una manera fácil de escribir. Seleccione micrófono en el teclado, o simplemente "iniciar dictado", para empezar.
+Cambie al modo de dictado cada vez que el teclado esté activo para una manera fácil de escribir. Seleccione el micrófono en el teclado, o simplemente diga "empezar a dictar", para empezar.
 
 > [!NOTE]
-> El teclado Mixed Reality solo está disponible en inglés, pero puede usar dictado en cualquiera de los idiomas admitidos de [Windows Mixed Reality](other-questions.md#what-languages-are-supported-in-windows-mixed-reality).
+> El teclado de realidad mixta solo está disponible en inglés, pero puede usar dictado en cualquiera de los idiomas [Windows Mixed Reality admitidos.](other-questions.md#what-languages-are-supported-in-windows-mixed-reality)
 
 ### <a name="keyboard-dictation-commands"></a>Comandos de dictado de teclado
 
 | Para hacer esto | Diga esto |
 | --- | --- |
-| Cerrar el teclado | Cerrar |
-| Iniciar dictado | Iniciar dictado |
-| Detener dictado | Detener dictado |
+| Cierre del teclado | Cerrar |
+| Inicio del dictado | Empezar a dictar |
+| Detener dictado | Dejar de dictar |
 | Eliminación de lo que ha dictado | Eliminar eso |
-| Seleccionar todo en el cuadro dictado | Seleccionar todo |
+| Selección de todo en el cuadro de dictado | Seleccionar todo |
 
 ### <a name="punctuation"></a>Signos de puntuación
 
-Deberá indicar los nombres de los signos de puntuación que quiere usar. Por ejemplo, podría decir **"Hola, ¿cuál es el** signo de **interrogación**".
+Tendrá que decir los nombres de los signos de puntuación que desea usar. Por ejemplo, podría decir "Hey **comma** what are you up to **question mark".**
 
 Estas son las palabras clave de puntuación que puede usar:
 
 * Punto, coma, signo de interrogación, signo de exclamación o signo de exclamación
-* Nueva línea/nuevo párrafo
+* Nueva línea/párrafo nuevo
 * Punto y coma, dos puntos
-* Abrir comillas, cerrar comillas
-* Hashtag, cara sonriente, enfadado, Winky
+* Comillas abiertas, comillas de cierre
+* Hashtag, cara sonriente o sonriente, ceño fruncido, winky
 * Dólar, porcentaje
 
-A veces resulta útil deletrear aspectos como las direcciones de correo electrónico. Por ejemplo, para dictar example@outlook.com , diría "E X a M P L E en Outlook dot-com".
+A veces resulta útil deletrear aspectos como las direcciones de correo electrónico. Por ejemplo, para dictar , debe decir example@outlook.com "E X A M P L E en outlook dot-com".
 
-Para detener el dictado, seleccione **listo**.
+Para detener el dictado, seleccione **Listo.**
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Preguntar a la comunidad](https://answers.microsoft.com)
-* [Póngase en contacto con nosotros para obtener soporte técnico](https://support.microsoft.com/contactus/)
+* [Póngase en contacto con nosotros para obtener soporte técnico.](https://support.microsoft.com/contactus/)
