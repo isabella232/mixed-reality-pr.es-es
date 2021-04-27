@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2b0dc328a1a47d9a0bd385cac6a88563dcc3938d
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: d8d46da1a1a095074f059b53ebd997e1b6f89961
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107327768"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107984266"
 ---
 # <a name="unity-20192020--windows-xr-plugin"></a>[Complemento XR para Unity 2019/2020 y Windows](#tab/winxr)
 
@@ -60,13 +60,13 @@ Después de que Unity haya terminado de instalar XR Plug-in Management. Asegúre
 
 ![Configuración de XR de Unity con la opción para agregar OpenXR y las características de Microsoft HoloLens seleccionadas](../images/mr-learning-base/base-02-section5-step2-2-1-openxr.png)
 
-En la barra de menús de la parte superior de la pantalla, vaya a **Mixed Reality> OpenXR > Apply recommended project settings for HoloLens 2 (Aplicar la configuración de proyecto recomendada para HoloLens 2)** para obtener un mejor rendimiento de la aplicación.
-
-![Menú de Mixed Reality con las opciones OpenXR y Apply recommended project settings for HoloLens 2 (Aplicar la configuración de proyecto recomendada para HoloLens 2) seleccionadas](../images/mr-learning-base/base-02-section5-step2-openxr-2.png)
-
 >[!Important]
 >Si ve un icono de advertencia rojo junto al complemento OpenXR (versión preliminar), haga clic en el icono y seleccione Fix all (Corregir todo) antes de continuar. Es posible que el editor de Unity tenga que reiniciarse para que los cambios surtan efecto.
 >![Menú de validación del proyecto de OpenXR con todos los problemas seleccionados que se van a corregir.](../images/mr-learning-base/base-02-section5-step2-openxr-3.png)
+
+En la barra de menús de la parte superior de la pantalla, vaya a **Mixed Reality> OpenXR > Apply recommended project settings for HoloLens 2 (Aplicar la configuración de proyecto recomendada para HoloLens 2)** para obtener un mejor rendimiento de la aplicación.
+
+![Menú de Mixed Reality con las opciones OpenXR y Apply recommended project settings for HoloLens 2 (Aplicar la configuración de proyecto recomendada para HoloLens 2) seleccionadas](../images/mr-learning-base/base-02-section5-step2-openxr-2.png)
 
 Una vez que Unity haya terminado de importar los archivos necesarios, debe volver a aparecer la ventana MRTK Project Configurator (Configurador del proyecto de MRTK). Si no es así, use el menú de Unity para abrirla.
 
