@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2a2dcb6ec9133eb5efa0dc04e4d757cabd48461a
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: d7232ca645c2a8cfb2508b090fdb7ae02c2ab010
+ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107327208"
+ms.lasthandoff: 04/24/2021
+ms.locfileid: "107984413"
 ---
 # <a name="unity-20192020--windows-xr-plugin"></a>[Complemento XR para Unity 2019/2020 y Windows](#tab/winxr)
 
@@ -33,11 +33,13 @@ En el menú de Unity, selecciona **File** > **Build Settings...** (Archivo > Con
 En la ventana de configuración de compilación, selecciona **Universal Windows Platform** (Plataforma universal de Windows) y:
 1.  Establezca **Target Device** (Dispositivo de destino) en **HoloLens**.
 2.  Establezca la **arquitectura** en **ARM 64**
-3.  Establezca **Build Type** (Tipo de compilación) en **D3D**.
-4.  Establezca **Minimum Platform Version** (Versión mínima de la plataforma) en **10.0.18362**.
-5.  Establezca el **SDK de UWP** en la **Latest installed** (última versión instalada)
-6.  Establezca la **configuración de compilación** en **Release** (Publicación) porque hay problemas de rendimiento conocidos con Debug (Depuración).
-7.  Haga clic en el botón Switch Platform (Cambiar plataforma).
+3.  Establezca **Build Type** (Tipo de compilación) en **D3D Project** (Proyecto de D3D).
+4.  Establezca la **versión del SDK de destino** en **Instalada la más reciente**.
+5.  Establezca **Minimum Platform Version** (Versión mínima de la plataforma) en **10.0.18362**.
+6.  Establezca la **versión de Visual Studio**  en **Instalada la más reciente**.
+7.  Establezca **Compilar y ejecutar en** en **Dispositivo USB**.
+8.  Establezca la **configuración de compilación** en **Release** (Publicación) porque hay problemas de rendimiento conocidos con Debug (Depuración).
+9.  Haga clic en el botón Switch Platform (Cambiar plataforma).
 
 
 ![Configuración de compilación de Unity con la configuración establecida para Plataforma universal de Windows](../images/mr-learning-base/base-02-section2-step1-2-openxr.png)
