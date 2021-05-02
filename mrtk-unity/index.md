@@ -6,12 +6,12 @@ ms.author: kesemple
 ms.date: 03/03/2021
 ms.localizationpriority: high
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 85a203f22c62871265f7775c364f5388194b53a1
-ms.sourcegitcommit: ac315c1d35f2b9c431e79bc3f1212215301bb867
+ms.openlocfilehash: 6576eaedbfba11fae62e59fa9777fe928f0c6a69
+ms.sourcegitcommit: 728f4523188628950478cc03ec7145e89569e0d3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "105550975"
+ms.lasthandoff: 04/28/2021
+ms.locfileid: "108172567"
 ---
 # <a name="what-is-the-mixed-reality-toolkit"></a>¿Qué es Mixed Reality Toolkit?
 
@@ -26,32 +26,31 @@ MRTK Unity es un proyecto controlado por Microsoft que proporciona un conjunto d
 * Proporciona el **sistema de entrada multiplataforma y los bloques de creación para las interacciones espaciales y la interfaz de usuario**.
 * Permite la **creación rápida de prototipos** gracias a la simulación en el editor, que permite ver los cambios inmediatamente.
 * Funciona como **plataforma extensible** que permite a los desarrolladores intercambiar los componentes principales.
-* **Es compatible con una amplia gama de plataformas**, entre las que se incluyen:
-  * OpenXR (Unity 2020.2 o posterior)
-    * Microsoft HoloLens 2
-    * Cascos de Windows Mixed Reality
-  * Windows Mixed Reality
-    * Microsoft HoloLens
-    * Microsoft HoloLens 2
-    * Cascos de Windows Mixed Reality
-  * Oculus (Unity 2019.3 o posterior)
-    * Oculus Quest
-  * OpenVR
-    * Cascos de Windows Mixed Reality
-    * HTC Vive
-    * Oculus Rift
-  * Seguimiento de manos de Ultraleap
-  * Dispositivos móviles, como iOS y Android
+* **Es compatible con una amplia gama de plataformas**:
+
+| Plataforma | Dispositivos compatibles |
+|---|---|
+| OpenXR (Unity 2020.2 o posterior) | Microsoft HoloLens 2 <br> Cascos de Windows Mixed Reality |
+| Windows Mixed Reality | Microsoft HoloLens <br> Microsoft HoloLens 2 <br> Cascos de Windows Mixed Reality  |
+| Oculus (Unity 2019.3 o posterior) | Oculus Quest |
+| OpenVR |  Cascos de Windows Mixed Reality <br> HTC Vive <br> Oculus Rift |
+| Seguimiento de manos de Ultraleap | Leap Motion Controller de Ultraleap |
+| Móvil | iOS y Android |
 
 ## <a name="getting-started-with-mrtk"></a>Introducción a MRTK
 
-Si no está familiarizado con MRTK ni el desarrollo para realidad mixta en Unity, se recomienda instalar las herramientas necesarias y seguir la serie de tutoriales de HoloLens 2.
+Si no está familiarizado con MRTK ni con el desarrollo de realidad mixta en Unity, se recomienda instalar y explorar la aplicación de ejemplo MRTK Examples Hub en el dispositivo o emulador. 
 
 > [!div class="nextstepaction"]
-> [Instalar las herramientas](install-the-tools.md)
+> [Descargar la aplicación MRTK Examples Hub](running-examples-hub.md)
+
+Una vez que haya comprendido lo que la realidad mixta y MRTK tienen para ofrecer, instale las herramientas necesarias y siga nuestra serie de tutoriales de HoloLens 2 para principiantes.
 
 > [!div class="nextstepaction"]
-> [Serie de tutoriales de HoloLens 2](/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02)
+> [Instalación de las herramientas](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools?tabs=unity)
+
+> [!div class="nextstepaction"]
+> [Serie de tutoriales de HoloLens 2](https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02)
 
 ¿Quiere conocer lo que se esconde bajo la superficie?
 > [!div class="nextstepaction"]

@@ -1,36 +1,36 @@
 ---
 title: Detalles del hardware de los cascos envolventes
-description: Describe las especificaciones de los auriculares que se encuentran en la realidad mixta de Windows y ofrece el seguimiento de protección interior (no se requiere ninguna instalación externa).
+description: Describe las especificaciones de los Windows Mixed Reality envolventes, lo que proporciona VR con seguimiento interno (no se requiere ninguna configuración externa).
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: VR, hardware, especificaciones, especificaciones, tecnología, sensores, medios ópticos, pantalla, auriculares de realidad mixta, auriculares de realidad virtual, qué es realidad virtual, auriculares envolventes
-ms.openlocfilehash: c4c6457f3a32994dc242f603c48fe90eb8194ed0
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+keywords: vr, hardware, especificaciones, especificaciones, tecnología, sensores, óptica, pantalla, casco de realidad mixta, casco de realidad virtual, ¿qué es la realidad virtual?
+ms.openlocfilehash: a8febeb10dde40cbb4faba49881ee156544d698f
+ms.sourcegitcommit: 9ab1d2de03bb046bb73bddbaa38907d0890f6e66
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757713"
+ms.lasthandoff: 04/30/2021
+ms.locfileid: "108293553"
 ---
 # <a name="immersive-headset-hardware-details"></a>Detalles del hardware de los cascos envolventes
 
-![Gran variedad de auriculares con Windows Mixed Reality](images/MR-headsets.png)
+![Variedad de cascos Windows Mixed Reality de seguridad](images/MR-headsets.png)
 
-Puede adquirir todos los auriculares de la realidad mixta de Windows, que se encuentran disponibles públicamente, de varios distribuidores globales. También puede buscar auriculares en el [Microsoft Store en línea](https://www.microsoft.com/store/collections/VRandMixedrealityheadsets); todos ellos se pueden usar para el desarrollo de realidad mixta. Estos auriculares envolventes ofrecen un seguimiento interno integrado, lo que significa que no es necesario comprar ni instalar detectores externos ni poner sensores en la pared. No hay ninguna configuración complicada, simplemente plug and Play.
+Puede comprar cualquiera de los cascos envolventes disponibles públicamente Windows Mixed Reality varios minoristas globales. También puede encontrar cascos en la página de [Microsoft Store](https://www.microsoft.com/en-us/store/collections/AR-MR-VRheadsets), que se pueden usar para el desarrollo de realidad mixta. Estos cascos envolventes ofrecen un seguimiento interno integrado, lo que significa que no es necesario comprar ni instalar rastreadores externos ni colocar sensores en la pared. No hay ninguna configuración complicada, solo plug and play.
 
 ## <a name="device-specifications"></a>Especificaciones del dispositivo
 
-* Dos pantallas de cristal líquido de alta resolución en 1440 x 1440 (HMD Odyssey de Samsung incluye una pantalla de AMOLED con una resolución de 1440 x 1600)
-* Mostrar la frecuencia de actualización hasta 90 Hz (nativo)
-* Compatibilidad integrada de audio y micrófono a través de un jack de 3,5 mm (el Odyssey de Samsung HMD incluye auriculares y micrófono integrados)
-* Cable único con HDMI 2,0 (pantalla) y USB 3,0 (datos) para la conectividad
+* Dos pantallas de cristales liquidos de alta resolución a 1440 x 1440 (Samsung HMD Galaxy incluye una pantalla AMOLED con una resolución de 1440 x 1600)
+* Mostrar una frecuencia de actualización de hasta 90 Hz (nativa)
+* Audio integrado y compatibilidad con micrófonos a través de un conector de 3,5 mm (Samsung HMD Galaxy incluye micrófono y cascos integrados)
+* Cable único con HDMI 2.0 (pantalla) y USB 3.0 (datos) para la conectividad
 * Seguimiento de la interacción directa
 
-## <a name="input-support"></a>Compatibilidad de entrada
+## <a name="input-support"></a>Compatibilidad con entradas
 
 * [Controladores de movimiento](../design/motion-controllers.md)
-* [Controladores de juegos compatibles con UWP](hardware-accessories.md)
+* [Gamepads compatibles con UWP](hardware-accessories.md)
 * [Mouse y teclado](hardware-accessories.md)
-* [Voz](../design/voice-input.md) (mediante auriculares conectados o micrófono)
+* [Voz](../design/voice-input.md) (a través de cascos o micrófonos conectados)
 
