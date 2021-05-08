@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity,HoloLens, HoloLens 2, Mixed Reality, development, MRTK, PR,
-ms.openlocfilehash: c49934139ae23b714addcb9c015e95377f47900e
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
-ms.translationtype: HT
+ms.openlocfilehash: 008e719cd2fd3c854cbbe6876090b2de96f369be
+ms.sourcegitcommit: e89431d12b5fe480c9bc40e176023798fc35001b
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "104693292"
+ms.lasthandoff: 05/07/2021
+ms.locfileid: "109489235"
 ---
 # <a name="pull-requests"></a>Solicitudes de incorporación de cambios
 
@@ -24,7 +24,7 @@ Un comentario en la solicitud de incorporación de cambios le indicará si debe 
 
 ## <a name="creating-a-pull-request"></a>Crear una solicitud de incorporación de cambios
 
-Cuando esté listo para enviar una solicitud de incorporación de cambios, [créela](https://github.com/microsoft/MixedRealityToolkit-Unity/compare/mrtk_development...mrtk_development?expand=1) orientada a la rama [mrtk_development](https://github.com/microsoft/mixedrealitytoolkit-unity/tree/mrtk_development).
+Cuando esté listo para enviar una solicitud de extracción, [cree una solicitud de extracción](https://github.com/microsoft/MixedRealityToolkit-Unity/compare/main...main?expand=1) destinada a la [rama](https://github.com/microsoft/mixedrealitytoolkit-unity/tree/main) principal. Para ver las correcciones de errores durante un período de estabilización de la versión, busque la rama `prerelease/*` más reciente. Las nuevas características siempre deben ir a `main` .
 
 Lea las instrucciones y asegúrese de que se respetan en la solicitud de incorporación de cambios.
 

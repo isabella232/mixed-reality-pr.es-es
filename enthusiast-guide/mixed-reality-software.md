@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, componentes de software, historial de versiones, notas de la versión, historial de versiones
 appliesto:
 - Windows 10
-ms.openlocfilehash: 5e6cdcbc7d91a6c1fadb519f94fc0339bdd39ca7
-ms.sourcegitcommit: 229c33afab7c70341982f48962028aad13956356
+ms.openlocfilehash: 5e0673f8ead5bd1211b403a7b67287cec95c0d4a
+ms.sourcegitcommit: 0c717ed0043c7a65e2caf1452eb0f49059cdf154
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2021
-ms.locfileid: "108069209"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "108644831"
 ---
 # <a name="mixed-reality-software-overview-and-release-history"></a>Información general de software de Mixed Reality e historial de versiones
 
@@ -23,10 +23,10 @@ Windows Mixed Reality consta de los siguientes componentes de software principal
 
 1. **Portal de realidad mixta**, que proporciona la experiencia Windows Mixed Reality principal
     * En Windows 10 versiones 1709 y 1803, Portal de realidad mixta es un componente clave del sistema operativo Windows 10 actualizado a través de Windows Update.
-    * En Windows 10 versión 1809 y posteriores, Portal de realidad mixta se actualiza a través de la Microsoft Store aplicación.
+    * En Windows 10 versión 1809 y versiones más recientes, Portal de realidad mixta se actualiza a través de la Microsoft Store aplicación.
 2. El **Mixed Reality paquete de** características a petición (FOD), que se descarga e instala automáticamente durante Portal de realidad mixta primera ejecución del paquete. Puede encontrar más información sobre el paquete FOD [aquí.](/windows/application-management/manage-windows-mixed-reality)
-3. El **controlador Mixed Reality** casco y controlador de movimiento de Mixed Reality, también conocido como controlador holoLens Sensors, es el paquete de controladores clave que permite que los cascos Windows Mixed Reality funcionen con Windows Mixed Reality. Se descarga e instala automáticamente a través de Windows Update la primera vez que el casco de Mixed Reality está conectado y se actualiza periódicamente a través de Windows Update
-4. Los controladores **Mixed Reality modelo de controlador de movimiento contienen los modelos 3D de los controladores de movimiento Mixed Reality y necesarios para experiencias de Mixed Reality de terceros. Se descarga e instala automáticamente a través de Windows Update la primera vez que los controladores de movimiento de Mixed Reality se emparejan con el equipo y se actualizan a través de Windows Update
+3. El **controlador Mixed Reality** casco y controlador de movimiento de Mixed Reality, también conocido como controlador de sensores holoLens, es el paquete de controladores clave que permite que los cascos Windows Mixed Reality funcionen con Windows Mixed Reality. Se descarga e instala automáticamente a través de Windows Update la primera vez que el casco de Mixed Reality está conectado y se actualiza periódicamente a través de Windows Update
+4. Los controladores **Mixed Reality modelo de controlador de movimiento contienen los modelos 3D de los controladores de movimiento Mixed Reality y necesarios para experiencias de Mixed Reality de terceros. Se descarga e instala automáticamente a través de Windows Update la primera vez que los controladores de movimiento de Mixed Reality se emparejan con el equipo y se actualiza a través de Windows Update
 5. **Windows 10, la versión 1709 (Fall Creator's Update)** o posterior contiene componentes y tecnologías clave del sistema operativo que permiten Windows Mixed Reality
 
 El Windows Mixed Reality en SteamVR requiere el siguiente software:
@@ -42,7 +42,7 @@ Administración de Windows Mixed Reality casco:
 
 La actualización Windows 10 mayo de **2020 (v2004)** incluye nuevas características para cascos de Windows Mixed Reality (VR), como la capacidad de iniciar aplicaciones Win32 en el ambiente principal. HoloLens (1.ª generación) está en mantenimiento a largo plazo (LTS), con actualizaciones de mantenimiento que se lanzarán mensualmente.
 
-Al actualizar a la versión más reciente del equipo para Windows Mixed Reality cascos envolventes (VR), abra Configuración **> Actualizar & Seguridad** y seleccione Buscar **actualizaciones.** En un Windows 10, también puede instalar manualmente la actualización de Windows 10 **de mayo de 2020** mediante la herramienta de creación [de medios de Windows](https://www.microsoft.com/software-download/windows10).
+Al actualizar a la versión más reciente del equipo para Windows Mixed Reality cascos envolventes (VR), abra Configuración **> Actualizar & Seguridad** y seleccione Buscar **actualizaciones.** En un Windows 10, también puede instalar manualmente la actualización de Windows 10 **mayo de 2020** mediante la herramienta de creación de [medios de Windows](https://www.microsoft.com/software-download/windows10).
 
 **Versión más reciente de Desktop:** Windows 10 v2004 (10.0.19041.264)
 
@@ -62,9 +62,9 @@ Gracias a sus comentarios, hemos agregado y aclarado la configuración en la pá
 
 * **Cambiar la resolución de la** ventana de la aplicación: de forma predeterminada, la mayoría de las ventanas 2D iniciadas en la página principal se inician con una resolución de 720 p. Aunque puede cambiar el tamaño horizontalmente & verticalmente, también puede optar por que todos se inicien a 1080p en su lugar. Anteriormente, esta opción estaba disponible como opción Muy alta (beta) en Calidad visual. Lo hemos dividido correctamente como una configuración independiente ahora.
 
-* **Opciones de experiencia:** estas opciones ajustan la experiencia de realidad mixta para reducir la carga en los sistemas en los que el hardware podría tener dificultades para mantenerse al día con 90 fps sin restricciones. Puede habilitar o deshabilitar explícitamente esta configuración adicional, o bien elegir Permitir que Windows decida y dejar que nuestra heurística siga decidiendo cuándo activarlas y desactivarlas.
+* **Opciones de experiencia:** estas opciones ajustan la experiencia de realidad mixta para reducir la carga en sistemas en los que el hardware podría tener dificultades para mantenerse al día con 90 fps sin restricciones. Puede habilitar o deshabilitar explícitamente esta configuración adicional, o bien elegir Permitir que Windows decida y dejar que nuestra heurística siga decidiendo cuándo activarlas y desactivarlas.
 
-* **Resolución:** si tiene un casco de alta resolución como HP Reverb, se admite su ejecución a su resolución nativa o a una resolución reducida por motivos de rendimiento. Los cascos anteriores, como Samsung Samsung Samsung y Samsung Samsung+ , solo admiten una única resolución, por lo que no se puede cambiar esta configuración en esos cascos.
+* **Resolución:** si tiene un casco de alta resolución como HP Reverb, se admite su ejecución en su resolución nativa o a una resolución reducida por motivos de rendimiento. Los cascos anteriores, como Samsung Samsung Samsung y Samsung Samsung+ , solo admiten una única resolución, por lo que no se puede cambiar esta configuración en esos cascos.
 
 * **Velocidad de** fotogramas: ahora puede establecer manualmente la velocidad de fotogramas de la pantalla del casco, o bien seguir haciendo que Windows use su heurística para determinar si 60 Hz o 90 Hz es más adecuado.
 
@@ -74,7 +74,7 @@ Gracias a sus comentarios, hemos agregado y aclarado la configuración en la pá
 
 #### <a name="new-cortana-app"></a>Nueva aplicación Cortana
 
-Esta actualización a Windows incluye la versión más reciente de la aplicación Cortana, que actualmente es solo en inglés de Estados Unidos y ya no admite determinados comandos específicos de realidad mixta, como "Tomar una imagen" y "Tomar un vídeo". Puede usar la nueva Cortana para iniciar aplicaciones y también admite nuevos comandos centrados en la productividad, como "¿Cuándo es mi próxima reunión?". o "Enviar un correo <name> electrónico a para que se esté ejecutando tarde".
+Esta actualización a Windows incluye la versión más reciente de la aplicación Cortana, que actualmente solo está en inglés en Estados Unidos y ya no admite determinados comandos específicos de realidad mixta, como "Tomar una imagen" y "Tomar un vídeo". Puede usar la nueva Cortana para iniciar aplicaciones y también admite nuevos comandos centrados en la productividad, como "¿Cuándo es mi próxima reunión?". o "Enviar un correo <name> electrónico a para que se esté ejecutando tarde".
     
 #### <a name="additional-updates-in-available-in-19041546-released-october-2020"></a>Actualizaciones adicionales disponibles en la versión 19041.546 (publicada en octubre de 2020)
 
@@ -105,9 +105,9 @@ Este controlador se descarga e instala automáticamente a través de Windows Upd
 
    | Versión          | Fecha de la versión          | Cambios importantes                                                 |
    |------------------|-----------------------|---------------------------------------------------------------|
-   | [10.0.19041.2041](https://www.microsoft.com/download/details.aspx?id=102903)  | 23 de marzo de 2021  | Compatible con Windows 10, versión 1903 y versiones más recientes.<br/><ul><li>Actualice el orden de sinuoso de la malla de área oculta para que HP Reverb G2 sea coherente con otros cascos.</li><li>Mejoras en la calidad de los objetos visuales para los cascos HP Reverb G2.</li><li>Windows Mixed Reality plataforma de cascos y mejoras de confiabilidad.</li>|
+   | [10.0.19041.2041](https://www.microsoft.com/download/details.aspx?id=102903)  | 23 de marzo de 2021  | Compatible con Windows 10, versión 1903 y versiones más recientes.<br/><ul><li>Actualice el orden de sinuoso de la malla de área oculta para que HP Reverb G2 sea coherente con otros cascos.</li><li>Mejoras en la calidad de los objetos visuales para los cascos HP Reverb G2.</li><li>Windows Mixed Reality de la plataforma de cascos y las mejoras de confiabilidad.</li>|
    | [10.0.19041.2037](https://www.microsoft.com/en-us/download/details.aspx?id=102527)  | 10 de diciembre de 2020  | Compatible con Windows 10, versión 1903 y versiones más recientes.<br/><ul><li>Nuevo firmware del controlador de HP para solucionar un problema en el que algunos controladores tienen desencadenadores que no funcionan.</li>|
-   | [10.0.19041.2034](https://www.microsoft.com/en-us/download/details.aspx?id=102156)  | 8 de octubre de 2020  | Compatible con Windows 10, versión 1903 y versiones más recientes.<br/><ul><li>Compatibilidad oficial con HP Reverb G2, HP Omnicept y el nuevo controlador hp.</li><li>Correcciones de pantalla secundarias para los cascos HP Reverb y Samsung Samsung+ . (Requiere la compilación del sistema operativo [19041.546](https://support.microsoft.com/en-us/help/4577063/windows-10-update-kb4577063) o superior o compilaciones del sistema operativo [18362.1110 y 18363.1110](https://support.microsoft.com/en-us/help/4577062/windows-10-update-kb4577062) o superior).</li><li>Mejoras en la transición del estado de energía del equipo de suspensión para reducir los errores de SWW 1-4.</li><li>Windows Mixed Reality correcciones secundarias de la plataforma de cascos y mejoras de confiabilidad.|
+   | [10.0.19041.2034](https://www.microsoft.com/en-us/download/details.aspx?id=102156)  | 8 de octubre de 2020  | Compatible con Windows 10, versión 1903 y versiones más recientes.<br/><ul><li>Compatibilidad oficial con HP Reverb G2, HP Omnicept y el nuevo controlador hp.</li><li>Correcciones de pantalla secundarias para los cascos HP Reverb y Samsung Samsung+ . (Requiere la compilación del sistema operativo [19041.546](https://support.microsoft.com/en-us/help/4577063/windows-10-update-kb4577063) o superior o las compilaciones del sistema operativo [18362.1110 y 18363.1110](https://support.microsoft.com/en-us/help/4577062/windows-10-update-kb4577062) o superior).</li><li>Mejoras en la transición del estado de energía del equipo de suspensión para reducir los errores de SWW 1-4.</li><li>Windows Mixed Reality correcciones secundarias de la plataforma de cascos y mejoras de confiabilidad.|
    | [10.0.19041.1009](https://www.microsoft.com/en-us/download/details.aspx?id=101260)  | 7 de mayo de 2020      | Compatible con Windows 10, versión 1903 y versiones más recientes.<br/><ul><li>Windows Mixed Reality correcciones menores de la plataforma de cascos y mejoras de confiabilidad.</li></ul>  |
 
 #### <a name="windows-10-version-1903-may-2019-update"></a>Windows 10, versión 1903 (actualización de mayo de 2019) ####
@@ -116,7 +116,7 @@ Este controlador se descarga e instala automáticamente a través de Windows Upd
    |------------------|-----------------------|---------------------------------------------------------------|
    | [10.0.18362.1162](https://www.microsoft.com/en-us/download/details.aspx?id=100421)  | 14 de octubre de 2019      | Compatible con Windows 10, versión 1809 y versiones más recientes.<br/><ul><li>Windows Mixed Reality correcciones secundarias de la plataforma de cascos.</li></ul>  | 
    | [10.0.18362.1062](https://www.microsoft.com/en-us/download/details.aspx?id=58492)  | 24 de junio de 2019      | Compatible con Windows 10, versión 1809 y versiones más recientes.<br/><ul><li>Windows Mixed Reality plataforma de cascos y mejoras de confiabilidad en torno a equipos en modo de inmociones y transiciones de estado de energía.</li></ul>  | 
-   | [10.0.18362.1024](https://www.microsoft.com/en-us/download/details.aspx?id=58225)  | 1 de mayo de 2019      | Compatible con Windows 10, versión 1809 y versiones más recientes.<br/><ul><li>Contiene la actualización de firmware de 2017 para los cascos de Windows Mixed Reality, Acer, Asín, Dell, Fujitsu, HP, Lenovo Windows Mixed Reality medion. Esta actualización de firmware mejora la compatibilidad y confiabilidad de la pantalla del casco con determinados adaptadores gráficos o controladores de gráficos.</li><li>Windows Mixed Reality plataforma de cascos y mejoras de confiabilidad</li></ul>  | 
+   | [10.0.18362.1024](https://www.microsoft.com/en-us/download/details.aspx?id=58225)  | 1 de mayo de 2019      | Compatible con Windows 10, versión 1809 y versiones más recientes.<br/><ul><li>Contiene la actualización de firmware para los cascos de Windows Mixed Reality, Acer, Conmutadore, Dell, Fujitsu, HP, Lenovo Windows Mixed Reality Medion. Esta actualización de firmware mejora la compatibilidad y confiabilidad de la pantalla del casco con determinados adaptadores gráficos o controladores de gráficos.</li><li>Windows Mixed Reality plataforma de cascos y mejoras de confiabilidad</li></ul>  | 
 
 #### <a name="windows-10-version-1803-april-2018-update-and-version-1809-october-2018-update"></a>Windows 10, versión 1803 (actualización de abril de 2018) y versión 1809 (actualización de octubre de 2018) ####
 
@@ -130,11 +130,11 @@ Este controlador se descarga e instala automáticamente a través de Windows Upd
 
    | Versión          | Fecha de la versión          | Cambios importantes                                                 |
    |------------------|-----------------------|---------------------------------------------------------------|
-   | [10.0.16299.1070](https://www.microsoft.com/en-us/download/details.aspx?id=56571)  | 6 de febrero de 2018    | <ul><li>Compatibilidad oficial con el casco de 3GlassesBur S2 Mixed Reality 3Glasses</li></ul> |
+   | [10.0.16299.1070](https://www.microsoft.com/en-us/download/details.aspx?id=56571)  | 6 de febrero de 2018    | <ul><li>Compatibilidad oficial con 3GlassesBur S2 Mixed Reality casco</li></ul> |
    | [10.0.16299.1062](https://www.microsoft.com/en-us/download/details.aspx?id=56332)  | 19 de diciembre de 2017   | <ul><li>Resuelve el problema de HID que provocaba un *error* de código de error 2181038087-7 en algunos equipos</li><li>Diversas correcciones de estabilidad y confiabilidad</li></ul> |
    | [10.0.16299.1058](https://www.microsoft.com/en-us/download/details.aspx?id=56277)  | 5 de diciembre de 2017    | <ul><li>Seguimiento mejorado de cascos</li><li>Mejoras en la capacidad de respuesta del panel táctil del controlador de movimiento</li><li>Resuelve el problema por el que a veces se podía producir un error en la instalación del controlador.</li><li>Diversas correcciones de estabilidad y confiabilidad</li></ul> |
    | [10.0.16299.1042](https://www.microsoft.com/en-us/download/details.aspx?id=56265)  | 21 de noviembre de 2017   | <ul><li>Resuelve un problema que provocó que las pantallas de los cascos a veces se en negro durante el uso.</li><li>Resuelve un problema que a veces ha provocado que los controladores de movimiento desaparezcan.</li><li>Mejoras de rendimiento del sensor de presencia para el casco de Dell Visor</li><li>Diversas correcciones de estabilidad y confiabilidad</li></ul> |
-   | 10.0.16299.1036  | 7 de noviembre de 2017    | <ul><li>Mejoras mecánicas en el controlador de movimiento:<ul><li>La velocidad ahora se notifica correctamente cuando la precisión de la posición es aproximada, por lo que ahora puede lanzarse detrás de la cabeza.</li><li>Puede encontrar código de ejemplo para iniciar en el paquete de Unity "ThrowingStarter" [aquí.](https://github.com/keluecke/MixedRealityToolkit-Unity/tree/master/External/Unitypackages/) Abra la escena de lanzamiento para empezar.</li></ul></li><li>Informes mejorados de baterías del controlador de movimiento</li><li>Diversas correcciones de estabilidad y confiabilidad</li></ul> |
+   | 10.0.16299.1036  | 7 de noviembre de 2017    | <ul><li>Mejoras mecánicas en el controlador de movimiento:<ul><li>Ahora, la velocidad se notifica correctamente cuando la precisión de la posición es aproximada, por lo que ahora puede lanzarse detrás de la cabeza.</li><li>Puede encontrar código de ejemplo para iniciar en el paquete de Unity "ThrowingStarter" [aquí.](https://github.com/keluecke/MixedRealityToolkit-Unity/tree/master/External/Unitypackages/) Abra la escena de lanzamiento para empezar.</li></ul></li><li>Informes mejorados de baterías del controlador de movimiento</li><li>Diversas correcciones de estabilidad y confiabilidad</li></ul> |
    | 10.0.16299.1012  | 17 de octubre de 2017    | Versión pública inicial del controlador                              |
 
 ### <a name="mixed-reality-motion-controller-model-driver-release-history"></a>Mixed Reality de lanzamiento del controlador de modelo de movimiento ###
@@ -168,15 +168,15 @@ En Windows 10, versión 1809 y versiones [más recientes, Portal de realidad mix
 
    | Versión            | Fecha de la versión          | Cambios importantes                                                 |
    |--------------------|-----------------------|---------------------------------------------------------------|
-   | 2000.21041.1051.0  | 26 de abril de 2020        | <ul><li>Actualiza el icono de aplicación para Portal de realidad mixta.</li></ul>  |
+   | 2000.21041.1051.0  | 26 de abril de 2021        | <ul><li>Actualiza el icono de aplicación para Portal de realidad mixta.</li></ul>  |
    | 2000.20111.1381.0  | 10 de diciembre de 2020        | <ul><li>Actualiza la página de aterrizaje de Portal de realidad mixta.</li><li>Reduce los errores de conectividad de los cascos durante las actualizaciones de firmware. </li></ul>  |
    | 2000.20071.1133.0  | 5 de agosto de 2020        | <ul><li>Compatibilidad con [OpenXR para](/windows/mixed-reality/openxr) pausar la ventana de vista previa.</li></ul>  | 
    | 2000.20041.1212.0  | 11 de mayo de 2020          | <ul><li>Soluciona un problema de tiempo que provocaba un error incoherente de 15 a 5.</li><li>Compatibilidad mejorada para ejecutar Windows Mixed Reality sin conexión a Internet.</li><li>Compatibilidad mejorada para emparejar controladores de movimiento a través **de controladores de configuración**.</li></ul>  | 
    | 2000.20031.1202.0  | 14 de abril de 2020        | <ul><li>Soporte técnico para registrarse para obtener información, sugerencias y ofertas sobre Windows Mixed Reality.</li></ul>  | 
-   | 2000.20011.1312.0  | 11 de febrero de 2020     | <ul><li>Se ha mejorado la compatibilidad con aplicaciones que [usan OpenXR](/windows/mixed-reality/openxr) en dispositivos con la actualización de mayo de 2019.</li><li>Aborda los problemas de accesibilidad y foco de teclado</li></ul>  | 
+   | 2000.20011.1312.0  | 11 de febrero de 2020     | <ul><li>Se ha mejorado la compatibilidad con aplicaciones [que usan OpenXR](/windows/mixed-reality/openxr) en dispositivos con la actualización de mayo de 2019.</li><li>Aborda los problemas de accesibilidad y foco de teclado</li></ul>  | 
    | 2000.19101.1211.0  | 11 de noviembre de 2019     | <ul><li>Soluciona un problema que impide alternar los objetos visuales de límite de sala.</li><li>Soluciona un problema que impide centrar un casco durante la configuración de los límites de la sala.</li></ul>  | 
    | 2000.19081.1301.0  | 23 de septiembre de 2019    | <ul><li>Soluciona un problema por el que se mostró un mensaje de error incorrecto a los cascos con problemas de hardware. Los usuarios que recibieron un código de error 1 a 4 en versiones anteriores ahora pueden recibir un código de error más específico para su estado de dispositivo.</li></ul>  |
-   | 2000.19071.1302.0  | 13 de agosto de 2019     | <ul><li>Compatibilidad con aplicaciones que [usan OpenXR](/windows/mixed-reality/openxr) en dispositivos con la actualización de mayo de 2019.</li></ul>  | 
+   | 2000.19071.1302.0  | 13 de agosto de 2019     | <ul><li>Compatibilidad con aplicaciones que [usan OpenXR en](/windows/mixed-reality/openxr) dispositivos con la actualización de mayo de 2019.</li></ul>  | 
    | 2000.19061.1011.0  | 16 de julio de 2019         | <ul><li>Compatibilidad con opciones de configuración json para personalizar el comportamiento de la aplicación. Obtenga más información en https://docs.microsoft.com/windows/mixed-reality/location-based-experiences#setup .</li></ul>  | 
 
 ### <a name="steamvr-release-history"></a>Historial de versiones de SteamVR ###
@@ -185,4 +185,4 @@ Las notas de la versión de Valve para SteamVR se pueden encontrar aquí: [https
 
 ### <a name="windows-mixed-reality-for-steamvr-release-history"></a>Windows Mixed Reality para el historial de versiones de SteamVR ###
 
-Nuestras notas de la versión de Windows Mixed Reality para el componente DerVr se pueden encontrar aquí: [http://steamcommunity.com/games/719950/announcements/](http://steamcommunity.com/games/719950/announcements/)
+Nuestras notas de la versión de Windows Mixed Reality para el componente de SteamVR se pueden encontrar aquí: [http://steamcommunity.com/games/719950/announcements/](http://steamcommunity.com/games/719950/announcements/)
