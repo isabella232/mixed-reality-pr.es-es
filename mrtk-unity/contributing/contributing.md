@@ -5,16 +5,16 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 03/17/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, informe de errores,
-ms.openlocfilehash: 525e704ae2f09580c8c19ca7e8a25dad4aed2647
-ms.sourcegitcommit: e89431d12b5fe480c9bc40e176023798fc35001b
+ms.openlocfilehash: 11a62708b4cb1a5acc3d230f933be2e88e0ac87b
+ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "109489265"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109850371"
 ---
 # <a name="contributing"></a>Contribuciones
 
-El Mixed Reality Toolkit (MRTK) agradece las contribuciones de la comunidad. Todos los cambios, ya sean pequeños o grandes, deben cumplir los estándares de codificación [MRTK,](coding-guidelines.md)por lo que debe asegurarse de que está familiarizado con estos durante el desarrollo para evitar retrasos cuando se está revisando el cambio.
+El Mixed Reality Toolkit (MRTK) da la bienvenida a las contribuciones de la comunidad. Todos los cambios, ya sean pequeños o grandes, deben cumplir los estándares de codificación [MRTK,](coding-guidelines.md)por lo que debe asegurarse de que está familiarizado con estos durante el desarrollo para evitar retrasos cuando se está revisando el cambio.
 
 Si tiene alguna pregunta, póngase en contacto con el canal [mixed-reality-toolkit en Slack.](https://holodevelopers.slack.com/messages/C2H4HT858)
 Puede unirse a la comunidad de Slack a través del [remitente de invitación automática](https://holodevelopersslack.azurewebsites.net/).
@@ -51,9 +51,9 @@ Si no está nuevo en el flujo de trabajo de Git, [consulte esta introducción en
 
 Al agregar una corrección de errores o una característica, siga estos pasos:
 
-1. Implemente la corrección de errores o la característica. Las instrucciones para compilar e implementar MRTK se encuentran [en BuildAndDeploy](../updates-deployment/build-and-deploy.md). No olvide seguir las instrucciones [de codificación](../contributing/coding-guidelines.md).
+1. Implemente la corrección de errores o la característica. Las instrucciones para compilar e implementar MRTK se encuentran en Implementación en [dispositivos Hololens y WMR.](../supported-devices/wmr-mrtk.md) No olvide seguir las instrucciones [de codificación](../contributing/coding-guidelines.md).
 1. Si agrega una característica, agregue también una escena de ejemplo que demuestre la característica.
-1. Si agrega una característica experimental, no es necesario escribir pruebas ni documentación. En su lugar, siga [las directrices de características experimentales](../contributing/experimental-features.md).
+1. Si agrega una característica experimental, no es necesario escribir pruebas y documentación. En su lugar, siga [las directrices de características experimentales](../contributing/experimental-features.md).
 1. Agregue pruebas para comprobar la corrección de errores o la característica. Las instrucciones para escribir y ejecutar pruebas se encuentran [en UnitTests](../contributing/unit-tests.md).
 1. Asegúrese de que el código y las características están documentados como se describe en las [directrices de documentación](../contributing/documentation-guide.md).
 1. Asegúrese de que el código funciona según lo previsto en todas las plataformas. Consulte las [notas de la versión](../release-notes/mrtk-26-release-notes.md) para obtener la lista de plataformas admitidas. En el caso de los proyectos de Windows para UWP, el código debe ser [compatible con WACK.](https://developer.microsoft.com/windows/develop/app-certification-kit) Para ello, genere una solución Visual Studio, haga clic con el botón derecho en el proyecto; **Tienda**  >  **Crear paquetes de aplicación**. Siga las indicaciones y ejecute pruebas WACK. Asegúrese de que todos se realicen correctamente.

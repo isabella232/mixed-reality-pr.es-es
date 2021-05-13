@@ -4,13 +4,15 @@
   href: running-examples-hub.md
 - name: Configuración
   href: configuration/toc.yml
+- name: Introducción a los dispositivos compatibles
+  href: supported-devices/toc.yml
 - name: Architecture
   href: architecture/toc.yml
 - name: Introducción a las características
   href: features/toc.yml
 - name: Rendimiento y procedimientos recomendados
   href: performance/toc.yml
-- name: Actualizaciones e implementación
+- name: Actualización
   href: updates-deployment/toc.yml
 - name: Paquetes
   href: packages/toc.yml
@@ -20,3 +22,5 @@
   href: roadmap.md
 - name: Contribuir
   href: contributing/toc.yml
+- name: "Documentos archivados (anteriores a la versión\_2.6)"
+  href: 'https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/WelcomeToMRTK.html'

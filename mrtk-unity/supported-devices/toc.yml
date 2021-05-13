@@ -1,0 +1,10 @@
+- name: Implementación en HoloLens y WMR
+  href: wmr-mrtk.md
+- name: Implementación en Oculus Quest
+  href: oculus-quest-mrtk.md
+- name: Uso de Leap Motion
+  href: leap-motion-mrtk.md
+- name: Uso de AR Foundation
+  href: using-ar-foundation.md
+- name: Detección de las capacidades de la plataforma
+  href: detecting-platform-capabilities.md

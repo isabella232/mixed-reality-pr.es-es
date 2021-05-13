@@ -6,12 +6,12 @@ ms.author: kesemple
 ms.date: 03/03/2021
 ms.localizationpriority: high
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: cb8b95cf9e563e8a277fa0d4b253639a763f5ad5
-ms.sourcegitcommit: e89431d12b5fe480c9bc40e176023798fc35001b
+ms.openlocfilehash: cef4bcf671caaaf8d5cb7cdc639446c6c6e91fa0
+ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "109489305"
+ms.lasthandoff: 05/13/2021
+ms.locfileid: "109850441"
 ---
 # <a name="what-is-the-mixed-reality-toolkit"></a>¿Qué es Mixed Reality Toolkit?
 
@@ -47,10 +47,10 @@ Si no está familiarizado con MRTK ni con el desarrollo de realidad mixta en Uni
 Una vez que haya comprendido lo que la realidad mixta y MRTK tienen para ofrecer, instale las herramientas necesarias y siga nuestra serie de tutoriales de HoloLens 2 para principiantes.
 
 > [!div class="nextstepaction"]
-> [Instalación de las herramientas](https://docs.microsoft.com/windows/mixed-reality/develop/install-the-tools?tabs=unity)
+> [Instalación de las herramientas](/windows/mixed-reality/develop/install-the-tools?tabs=unity)
 
 > [!div class="nextstepaction"]
-> [Serie de tutoriales de HoloLens 2](https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02)
+> [Serie de tutoriales de HoloLens 2](/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02)
 
 ¿Quiere conocer lo que se esconde bajo la superficie?
 > [!div class="nextstepaction"]
@@ -90,8 +90,8 @@ Una vez que haya comprendido lo que la realidad mixta y MRTK tienen para ofrecer
 
 :::row:::
     :::column:::
-       [![Seguimiento de manos (Ultraleap)](features/images/MRTK_Icon_HandTracking.png)](features/cross-platform/leap-motion-mrtk.md)<br>
-        **[Seguimiento de manos <br/> (Ultraleap)](features/cross-platform/leap-motion-mrtk.md)**<br>
+       [![Seguimiento de manos (Ultraleap)](features/images/MRTK_Icon_HandTracking.png)](supported-devices/leap-motion-mrtk.md)<br>
+        **[Seguimiento de manos <br/> (Ultraleap)](supported-devices/leap-motion-mrtk.md)**<br>
     :::column-end:::
     :::column:::
         [![Controles de la interfaz de usuario](features/images/MRTK_Icon_UIControls.png)](#ux-building-blocks)<br>
