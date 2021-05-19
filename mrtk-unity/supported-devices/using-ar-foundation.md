@@ -1,22 +1,22 @@
 ---
-title: UsingARFoundation
+title: Uso de AR Foundation
 description: Documentación para usar ARFoundation en Unity
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, AR Core, AR Kit
-ms.openlocfilehash: d96c5cab2439b581c0de9d59a1a349abccf34fb5
-ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
+ms.openlocfilehash: 1c39950e8b64968e182ddc551ef344dee42060e9
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109852557"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110143940"
 ---
 # <a name="how-to-configure-mrtk-for-ios-and-android-experimental"></a>Configuración de MRTK para iOS y Android [Experimental]
 
 ## <a name="install-required-packages"></a>Instalación de los paquetes requeridos
 
-1. Descargue e importe el **paquete Microsoft.MixedReality.Toolkit.Unity.Foundation,** [desde GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/tag/v2.3.0) o el [Administrador de paquetes](../configuration/usingupm.md)
+1. Descargue e importe el **paquete Microsoft.MixedReality.Toolkit.Unity.Foundation,** [desde GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/tag/v2.3.0) o [el](../configuration/usingupm.md) Administrador de paquetes
 
 1. En unity Administrador de paquetes (UPM), instale los siguientes paquetes:
 
@@ -25,7 +25,7 @@ ms.locfileid: "109852557"
     | **Android** | **iOS** | Comentarios |
     | --- | --- | --- |
     | AR Foundation  <br/> Versión: 1.5.0 - versión preliminar 6 | AR Foundation  <br/> Versión: 1.5.0 - versión preliminar 6 | Para Unity 2018.4, este paquete se incluye como versión preliminar. Para ver el paquete: `Window` > `Package Manager` > `Advanced` > `Show Preview Packages` |
-    | Complemento ARCore XR <br/> Versión: 2.1.2 | Complemento XR de ARKit <br/> Versión: 2.1.2 | |
+    | Complemento ARCore XR <br/> Versión: 2.1.2 | Complemento ARKit XR <br/> Versión: 2.1.2 | |
 
     **Unity 2019.4.x**
 
@@ -80,7 +80,7 @@ En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los 
 
 ## <a name="building-a-scene-for-android-and-ios-devices"></a>Creación de una escena para dispositivos Android e iOS
 
-1. Asegúrese de que ha agregado el proveedor de configuración de la cámara UnityAR a la escena.
+1. Asegúrese de que ha agregado el proveedor de configuración de cámara UnityAR a la escena.
 
 1. Cambie la plataforma a Android o iOS en la configuración de compilación de Unity.
 

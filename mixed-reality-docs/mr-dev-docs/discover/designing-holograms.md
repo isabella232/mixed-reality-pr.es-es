@@ -1,187 +1,199 @@
 ---
 title: Designing Holograms
-description: Obtenga información sobre la realidad mixta a través de la nueva aplicación de hologramas de diseño de Microsoft.
+description: Obtenga información Mixed Reality a través de la nueva aplicación Diseño de hologramas de Microsoft.
 author: hferrone
 ms.author: daescu
 ms.date: 11/24/2020
 ms.topic: article
-keywords: MRTK, kit de herramientas de realidad mixta, hologramas, diseño de hologramas, aprendizaje, aplicación de ejemplo, auriculares de realidad mixta, auriculares de realidad virtual, qué es realidad virtual
-ms.openlocfilehash: 2480b5e0b4dca502c746dad6f070226ffa8cd1f9
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+keywords: MRTK, Mixed Reality Toolkit, hologramas, diseño de hologramas, aprendizaje, aplicación de ejemplo, casco de realidad mixta, casco de realidad virtual, ¿qué es la realidad virtual?
+ms.openlocfilehash: 6e37c3f1ba98f202addb9c323632bca8bffae3b6
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757763"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110143634"
 ---
-# <a name="the-making-of-designing-holograms"></a>La realización del diseño de hologramas
+# <a name="the-making-of-designing-holograms"></a>La realización de diseño de hologramas
 
 > [!NOTE]
-> Permita que una pequeña ventana de carga tenga en cuenta todos los archivos GIF y los vídeos insertados en esta página.
+> Permita que una pequeña ventana de carga tenga en cuenta todos los GIF es cool y los vídeos insertados en esta página.
 
-Aprender a diseñar una realidad mixta puede ser difícil, ya que el medio no siempre se convierte bien en procesos de diseño 2D. Aquí, en Microsoft, hemos creado una aplicación gratuita para HoloLens 2 que le ayudará a conocer los aspectos básicos del diseño de la experiencia de usuario de realidad mixta de primera mano. El enfoque único de la aplicación de diseño de hologramas se adentra en comportamientos de realidad mixta, sugerencias y recomendaciones para ayudarle a crear aplicaciones de HoloLens atractivas y increíbles propias. Descargue la aplicación de forma gratuita desde el Microsoft Store y aprenda del equipo de diseño de la realidad mixta de Microsoft.
+Aprender a diseñar para la realidad mixta puede ser difícil porque el medio no siempre se traduce bien en procesos de diseño 2D. Aquí, en Microsoft, hemos creado una aplicación gratuita para el HoloLens 2 que le ayudará a conocer de primera mano los aspectos básicos del diseño de la experiencia de usuario de realidad mixta. El enfoque único de la aplicación Diseño de hologramas se a profundizar en comportamientos de realidad mixta, sugerencias y recomendaciones para ayudarle a crear aplicaciones holoLens atractivas y sorprendentes propias. Descargue la aplicación de forma gratuita desde el Microsoft Store y aprenda del equipo de diseño de Mixed Reality Microsoft.
 
 > [!div class="nextstepaction"]
-> [Descarga de la aplicación de diseño de hologramas](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd)
+> [Descarga de la aplicación Diseño de hologramas](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd)
 
 <br>
 
-![GIF animado de la escena de seguimiento de cabeza en el salón de demostración del holograma de diseño](images/designing-holograms/demo-room.gif)
+![GIF animado de la escena de seguimiento de la cabeza en la sala de demostración del holograma de diseño](images/designing-holograms/demo-room.gif)
 
-*Diseñar el salón de demostración del holograma (también conocido como la casa de muñecas)*
+*Diseño de la sala de demostración del holograma (también conocida como casa de las cámaras)*
 
 ## <a name="designing-for-mixed-reality"></a>Diseño para la realidad mixta
 
-Al igual que muchos de los demás, se usa para diseñar aplicaciones móviles. Desde un mundo de diseño 2D, pasar a todo en informática espacial, donde todo está ahora en todo el mundo, era un cambio significativo. En realidad mixta, las aplicaciones ya no se limitan a una pantalla 2D; de hecho, son casi gratis, se colocan en el mundo real e interactúan con objetos reales.
+Al igual que muchos de los usuarios, solía diseñar aplicaciones móviles. Procedente de un mundo de diseño 2D, saltar a la informática espacial, donde todo está ahora en el mundo, fue un cambio significativo. En realidad mixta, las aplicaciones ya no se limitan a una pantalla 2D; de hecho, son casi gratis, se colocan en el mundo real e interactúan con objetos reales.
 
-Para mí, la conexión de experiencias 3D a procesos de diseño 2D convencionales es el aspecto más desafiante del desarrollo de realidad mixta. En conversaciones con los clientes, oigo cosas como "sé qué características incluir y cómo ponerlas en funcionamiento. Código, puedo seguir los documentos y tutoriales, pero la experiencia del usuario. Muchas características, distintas opciones de entrada, diferentes escenarios y entornos físicos, son abrumadoras ".
+Para mí, la conexión de experiencias 3D a procesos de diseño 2D convencionales es el aspecto más complicado del desarrollo de realidad mixta. En las conversaciones con los clientes, oiría cosas como "Sé qué características incluir y cómo hacer que se ejecuten. Es código, puedo seguir los documentos y tutoriales, pero ¿la experiencia del usuario? Tantas características, distintas opciones de entrada, diferentes escenarios y entornos físicos, es abrumador".
 
-![Imagen de la imagen de HoloLens 2 Design Workshop en San Francisco ](images/designing-holograms/workshop.jpeg)
- *del taller de diseño de hololens 2 en San Francisco*
+![Imagen de HoloLens 2 Design Workshop en San Francisco Image from the HoloLens 2 Design Workshop in San Francisco (Imagen del taller de diseño de HoloLens 2 ](images/designing-holograms/workshop.jpeg)
+ *en San Francisco)*
 
 ## <a name="an-opportunity-to-teach"></a>Una oportunidad para enseñar
 
-No resultó obvio al principio, pero se presentó una excelente oportunidad para usar la realidad mixta como medio para enseñarla.
+Al principio no era obvio, pero se presentaba una excelente oportunidad para usar la realidad mixta como medio para enseñarla.
 
-El diseño de hologramas es una experiencia visual que explica los conceptos y las recomendaciones del diseño de realidad mixta. Simplemente usted y un profesor virtual muestran conceptos de diseño de realidad mixta. Todo está desde una perspectiva de tercera persona con la experiencia firmemente en su propio espacio.
+El diseño de hologramas es una experiencia visual que explica los conceptos y recomendaciones de diseño de realidad mixta. Solo usted y un profesor virtual muestran los conceptos de diseño de realidad mixta. Todo es desde una perspectiva de tercera persona con la experiencia en firme en su propio espacio.
 
 <br>
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Designing-Holograms-app-trailer/player]
 
-*Vídeo de diseño de hologramas*
+*Vídeo del finalizador de diseño de hologramas*
 
-## <a name="exploring-the-doll-house"></a>Exploración de la casa de muñecas
+## <a name="exploring-the-doll-house"></a>Exploración de la casa del hogar
 
-La casa de muñecas es el entorno virtual que usamos en toda la aplicación. El entorno es una habitación en miniatura de 80 x 60 x 40 cm que contiene los elementos básicos que la mayoría de los salones tienen en común, como las paredes, las lámparas, el mobiliario, una tabla y un televisor. La casa de muñecas es el protagonist principal de la experiencia de la aplicación, por lo que es necesario asegurarse de que funcionaría bien en cualquier entorno. Piense en ello como un pequeño salón de demostración para visualizar todo tipo de conceptos de realidad mixta.
+La casa del hogar es el entorno virtual que usamos en toda la aplicación. El entorno es una sala de 80 x 60 x 40 cm que contiene los elementos básicos que la mayoría de las salas tienen en común, como las paredes, las luces, los suelos, una mesa y un televisor. La casa de cámaras es la principal fuente de la experiencia de la aplicación, por lo que es necesario asegurarnos de que funcionaría bien en cualquier entorno. Conséndalo como una pequeña sala de demostración para visualizar todo tipo de conceptos de realidad mixta.
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Dollhouse-adjustment-behavior-in-the-Designing-Holograms-app/player]
-*Vídeo del comportamiento de ajuste de dollhouse*
+*Vídeo del comportamiento de ajuste deHouse Desajuste*
 
-### <a name="11-vs-110-prototypes"></a>1:1 prototipos de vs 1:10
+### <a name="11-vs-110-prototypes"></a>Prototipos de 1:1 frente a 1:10
 
-Nuestra suposición inicial era que las demostraciones de 1:1 serían increíbles, casi como mirar a un profesor real. El usuario verá todo lo que ve el profesor en una escala de vida real. Sin embargo, inmediatamente se ha dado cuenta de que hay algunos problemas:
+Nuestra suposición inicial era que las demostraciones de 1:1 serían increíbles, casi como mirar a un profesor de la vida real. El usuario vería todo lo que el profesor ve a escala real. Sin embargo, inmediatamente nos dimos cuenta de que habría algunos problemas:
 
-- La mayoría de los desarrolladores ejecutarán sus aplicaciones en oficinas o salas más pequeñas que el salón de demostración, por lo que no cabe.
-- Las pantallas son aditivas, lo que significa que todo el entorno virtual se superpone a la habitación de un usuario. Esto puede resultar confuso con dos tablas, quizás bisofás y paredes que no se alinean.
-- Y el peor de los entornos virtuales están muy restringidos por un campo de vista.
+- La mayoría de los desarrolladores ejecutarán sus aplicaciones en oficinas o en salas más pequeñas que la sala de demostración, por lo que no cabría.
+- Las pantallas son aditivas, lo que significa que todo el entorno virtual se superará sobre la sala de un usuario. Esto puede resultar confuso con dos tablas, quizás dobles y paredes que no se alinean.
+- Y lo peor de todo es que un entorno virtual está muy restringido por un campo de vista.
 
-Cuando se intentó una pequeña escala de 1:10, el resultado era una fantástica vista de pájaro de un salón realista. Podría ver todo lo que estaba pasando desde cualquier ángulo al mismo tiempo. Lo más sorprendente es que la mayoría de los evaluadores lo encontraron mucho más envolventes para ver una versión pequeña y, después, nunca se han vuelto a la escala 1:1. Por lo tanto, hemos decidido rechazar la versión 1:1 y evitar el trabajo adicional necesario para adaptar la interfaz de usuario y otros aspectos de la aplicación.
+Cuando hemos probado una escala mini 1:10, el resultado fue una vista fantástica de una sala realista. Podía ver todo lo que estaba pasando desde cualquier ángulo al mismo tiempo. Lo más sorprendente es que a la mayoría de los evaluadores les hizo mucho más envolvente ver una versión pequeña y, después, nunca cambiaron a la escala 1:1. Por lo tanto, decidimos realmente desechar la versión 1:1 y evitar el trabajo adicional necesario para adaptar la interfaz de usuario y otros aspectos de la aplicación.
 
-![Campo de vista con el ](images/designing-holograms/1-1-scale.png)
- *campo de escala 1:1 de la vista con la escala 1:1*
+![Campo de vista con escala 1:1 ](images/designing-holograms/1-1-scale.png)
+ *Campo de vista con escala 1:1*
 
-![Campo de vista con el ](images/designing-holograms/1-10-scale.png)
- *campo de escala 1:10 de la vista con la escala 1:10*
+![Campo de vista con escala 1:10 ](images/designing-holograms/1-10-scale.png)
+ *Campo de vista con escala 1:10*
 
-## <a name="using-mixed-reality-capture"></a>Uso de la captura de realidad mixta
+## <a name="using-mixed-reality-capture"></a>Uso de Captura de realidad mixta
 
-Una de las características más característicos de esta aplicación es el uso de la captura de realidad mixta para enseñar y demostrar conceptos de diseño de realidad mixta.
+Una de las características más características de esta aplicación es el uso de Captura de realidad mixta para enseñar y demostrar conceptos de diseño de realidad mixta.
 
-Microsoft tiene un estudio de captura de realidad mixta en San Francisco. Microsoft también concede licencias para esta tecnología a otros estudios, que incluyen la dimensión de Avatar en Washington D.C., metastage en los Ángeles, estudios de Dimension en Londres, SK Telecom en Seúl y Volucap en Berlín. Puede encontrar más información sobre nuestros [estudios de captura de realidad mixta aquí](https://www.microsoft.com/mixed-reality/capture-studios).
+Microsoft tiene un Captura de realidad mixta studio en San Francisco. Microsoft también licencia esta tecnología a otros estudios, como Avatar Dimension en Washington D.C., Metastage en Los Ángeles, Dimension Studios en Londres, SK Telecom in London y Volucap en París. Puede encontrar más información sobre nuestros [estudios de Captura de realidad mixta aquí.](https://www.microsoft.com/mixed-reality/capture-studios)
 
 <br>
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Raw-capture-footage-for-the-Designing-Holograms-app/player]
-*Material de estudio de Daniel escudero de una de las cámaras 106 en el estudio de captura de realidad mixta en San Francisco.*
+*Secuencia sin procesar de Daniel Escudero de una de las 106 cámaras del Captura de realidad mixta Studio en San Francisco.*
 
-El proceso de captura genera una malla, normales y texturas fotogramas clave, que se pueden entregar como archivos OBJ/PNG para posteriores a la producción o listas para su reproducción como un archivo MP4 comprimido H. 264. Estos archivos se pueden importar en proyectos Unity, no reales, nativos y WebXR. Los archivos se pueden ejecutar en Windows, iOS, Mac, Android, Magic Leap y PlayStation VR.
+El proceso de captura genera una malla con fotogramas clave, normales y texturas, que se pueden entregar como archivos OBJ/PNG para su posterior postproducción o listas para la reproducción como un archivo MP4 comprimido H.264. Estos archivos se pueden importar en proyectos de Unity, Unreal, Native y WebXR. Los archivos se pueden ejecutar en Windows, iOS, Mac, Android, Magic Leap y Playstation VR.
 
 <br>
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Mixed-Reality-Capture-footage-for-the-Designing-Holograms-app/player]
-*El reproductor de captura proporcionado para analizar MP4 que contienen vídeo con audio y mallas incrustadas.*
+*Capture Player proporciona para analizar archivos MP4 que contienen vídeo con audio y mallas insertadas.*
 
-## <a name="manipulating-captures-and-virtual-objects"></a>Manipular capturas y objetos virtuales
+## <a name="manipulating-captures-and-virtual-objects"></a>Manipulación de capturas y objetos virtuales
 
-Las capturas de realidad mixta producen representaciones virtuales de personas o animales, pero en ocasiones puede que necesite esos caracteres para interactuar con otros objetos virtuales. En los dos ejemplos siguientes se muestran distintas formas de manipular las escenas para lograr este efecto.
+Mixed Reality captures generan representaciones virtuales de personas o animales, pero en ocasiones es posible que necesite esos caracteres para interactuar con otros objetos virtuales. En los dos ejemplos siguientes se muestran distintas formas de manipular las escenas para lograr este efecto.
 
-### <a name="head-gaze-adjustment"></a>Ajuste de mira hacia abajo
+### <a name="head-gaze-adjustment"></a>Ajuste de la mirada con la cabeza
 
-El ajuste Headgaze permite trasladar el encabezado de una persona capturada en tiempo de ejecución, lo que significa que podría tener una superficie de captura hacia un usuario. En nuestro caso, se usa para mostrar el campo de vista y el campo de interés. Lo que se ve a continuación es un GameObject en movimiento que actúa como un destino para que la mirada mire. A medida que se mueve el destino de lado a lado, se sigue el encabezado de la captura.
+El ajuste de headgaze le permite mover la cabeza de una persona capturada en tiempo de ejecución, lo que significa que podría tener una cara de captura hacia un usuario. En nuestro caso, lo hemos usado para mostrar el campo de vista y el campo de interés. Lo que se ve a continuación es un objeto de juego en movimiento que actúa como destino para que la mirada con la cabeza la mire. A medida que movemos el destino de lado a lado, el jefe de la captura sigue.
 
-Usamos este truco para asegurarnos de que la captura inactiva siempre se encontraba en los hologramas colocados en distintas partes de la casa de muñecas. 
+Hemos usado este truco para asegurarnos de que la captura inactiva siempre se enfrentaría a hologramas colocados en distintas partes de la casa de la cámara. 
 
-![El encabezado de la captura se mueve en el tiempo de ejecución después de un GameObject de destino en Unity.](images/designing-holograms/head-adjustment.gif)
+![La cabeza de la captura se mueve en tiempo de ejecución después de un gameobject de destino en Unity](images/designing-holograms/head-adjustment.gif)
 
-*El encabezado de la captura se mueve en el tiempo de ejecución después de un GameObject de destino en Unity.*
+*La cabeza de la captura se mueve en tiempo de ejecución después de un gameobject de destino en Unity.*
 
 ### <a name="syncing-animated-objects"></a>Sincronizar objetos animados
 
-El segundo, estaba animando objetos para sincronizar con el movimiento de una captura. En diferentes partes de la aplicación, se han importado obj secuenciales de una captura específica cada cinco fotogramas. Después, los obj se animaron en la escena para asegurarse de que coincidirían con el fotograma correspondiente de la captura. Es un proceso tedioso de animación y fotogramas clave, pero el resultado es excelente. Ahora puede ver una captura de realidad mixta que interactúa con objetos no capturados.
+La segunda, animaba objetos para sincronizar con el movimiento de una captura. En diferentes partes de la aplicación, importamos OBJ secuenciales de una captura específica cada cinco fotogramas. A continuación, los OBJETOSJ se animaron en la escena para asegurarse de que coincidirían con el fotograma correspondiente de la captura. Se trata de un proceso tedioso de animar y defraudar claves, pero el resultado es excelente. Ahora puede ver un Captura de realidad mixta interactuar con objetos no capturados.
 
-![Animación sincronizada entre una captura de realidad mixta y un panel de interfaz de usuario](images/designing-holograms/synced-objects.gif)
+![Animación sincronizada entre un panel Captura de realidad mixta interfaz de usuario](images/designing-holograms/synced-objects.gif)
 
-*Animación sincronizada entre una captura de realidad mixta y un panel de interfaz de usuario*
+*Animación sincronizada entre un panel Captura de realidad mixta interfaz de usuario*
 
-### <a name="ui-creative-process"></a>Proceso de creación de interfaz de usuario
+### <a name="ui-creative-process"></a>Proceso creativo de la interfaz de usuario
 
-Cuando comenzamos el diseño de la interfaz de usuario, quisiéramos mostrar algunos de los casos de magia y la posibilidad de que los hologramas lo ofrezcan. Simplemente mostrar ventanas 2D estáticas y cuadros de texto no se siente bien en el mundo 3D. Muchas de las posibilidades que hay a mano no se muestran, así que desde el principio decidimos apartarse de eso y hacer uso completo del espacio 3D holográfica.
+Cuando iniciamos el diseño de la interfaz de usuario, queríamos mostrar parte de la magia y la posibilidad de que los hologramas tengan que ofrecer. Mostrar ventanas 2D estáticas y cuadros de texto no es adecuado en el mundo 3D. Muchas de las posibilidades disponibles no se muestran, por lo que, desde el principio, decidimos dejar de hacerlo y hacer un uso completo del espacio holográfico en 3D.
 
-En primer lugar, empezamos por agregar cierto grosor a los paneles, iconos e información de texto. Aún así, como usuario, lo que veo es un cuadro de texto. Cuadros de texto con imágenes, pero no estamos ahí. Hemos ido más lejos mediante el uso de los sombreadores de kit de herramientas de realidad mixta (MRTK). Los sombreadores de MRTK se convierten en una herramienta eficaz y hicimos uso de sus características de estarcido para agregar profundidad negativa a los paneles. Esto significa que, en lugar de agregar elementos delante de un cuadro de texto, los iconos aparecen ahora detrás de un panel transparente. Lo que veo ahora como usuario es algo que simplemente no puedo replicar en el mundo real, y aquí es donde se empezó a producir holográfica mágica. Además, como usuario realmente no me gustaría leer, hago mucho en el mundo físico.
+Al principio, empezamos con la adición de cierto grosor a los paneles, iconos e información de texto. Aun así, como usuario, lo que veo es un cuadro de texto. Cuadros de texto con imágenes, pero no estamos allí. Hemos ido más allá haciendo uso de los sombreadores Mixed Reality Toolkit (MRTK). Los sombreadores MRTK se han convertido en una herramienta eficaz y hemos hecho uso de sus características de galería de símbolos para agregar profundidad negativa a los paneles. Esto significa que, en lugar de agregar elementos delante de un cuadro de texto, los iconos ahora aparecen detrás de un panel transparente. Lo que veo ahora como usuario es algo que ya no puedo replicar en el mundo real y aquí es donde comenzó a producirse la magia holográfica. Además, como usuario no me gusta leer, ya hago muchas cosas en el mundo físico.
 
-Obviamente, los iconos funcionan mucho mejor que el texto sencillo, para proporcionar una guía aún más eficaz y, a continuación, empezaron a crear un conjunto de objetos animados y avatares, cada uno de ellos indicando una pequeña historia sobre lo que se hace en el escenario respectivo y cómo se usa.
+Obviamente, los iconos funcionan mucho mejor que el texto simple. Para proporcionar una guía aún más eficaz, he empezado a crear un conjunto de objetos animados y avatares, y cada uno de ellos cuenta una pequeña historia sobre lo que se hace en el escenario respectivo y cómo se usa.
 
-![GIF animado de un sistema de menús de Holographic interactivo](images/designing-holograms/creative-process.gif)
+![GIF animado de un sistema interactivo de menús holográficos](images/designing-holograms/creative-process.gif)
 
 ## <a name="core-concepts"></a>Conceptos principales
 
+**Seguimiento de la cabeza y seguimiento de los ojos**
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Head-Tracking-and-Eye-Tracking-Chapter/player]
+
+**Seguimiento de manos**
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Hand-Tracking-Chapter/player]
+
+**Reconocimiento espacial**
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Spatial-Awareness-Chapter/player]
+
 **Marco holográfico**
 
-![GIF animado de un usuario que mira el dollhouse con el marco holográfica resaltado](images/designing-holograms/FOVandFOI.gif)
+![GIF animado de un usuario que mira alrededor de la casa de fotos con el marco holográfico resaltado](images/designing-holograms/FOVandFOI.gif)
 
 **Sistemas de coordenadas**
 
-![GIF animado de un usuario que busca Dollhouse con los sistemas de coordenadas resaltados](images/designing-holograms/CoordinateSystems.gif)
+![GIF animado de un usuario que mira alrededor de la coordenada con los sistemas de coordenadas resaltados](images/designing-holograms/CoordinateSystems.gif)
 
 **Seguimiento de los ojos**
 
-![GIF animado de un usuario que mira los hologramas estacionales con el rayo ojo mirado](images/designing-holograms/EyeTracking.gif)
+![GIF animado de un usuario que mira hologramas estacionados con el rayo de mirada con los ojos resaltado](images/designing-holograms/EyeTracking.gif)
 
-**Visualización de detección de salón y asignación espacial**
+**Visualización del examen de sala y asignación espacial**
 
-![GIF animado de todas las superficies dentro del dollhouse que se está asignando](images/designing-holograms/SpatialMapping.gif)
+![GIF animado de todas las superficies dentro de la casa de seguridad que se está asignando](images/designing-holograms/SpatialMapping.gif)
 
 **Descripción de escenas**
 
-![GIF animado de objetos en el dollhouse que se está reconociendo](images/designing-holograms/SceneUnderstanding.gif)
+![GIF animado de objetos en el centro de reuniones que se reconoce](images/designing-holograms/SceneUnderstanding.gif)
 
-**Punto y confirmación con rayos mano**
+**Apuntar y confirmar con rayos de mano**
 
-![GIF animado de un usuario que levanta su mano con un rayo de mano resaltado](images/designing-holograms/HandRays.gif)
+![GIF animado de un usuario que eleva la mano con un rayo de mano resaltado](images/designing-holograms/HandRays.gif)
 
-## <a name="try-it-out-moments"></a>Momentos "pruébelo"
+## <a name="try-it-out-moments"></a>Momentos de "Pruébalo"
 
-El diseño de hologramas enseña conceptos de realidad mixta, pero también le permite probarlos en su habitación. Después de algunas de esas explicaciones, se pone en pausa y sacamos de la casa de muñecas y en un momento interactivo. Estos son algunos ejemplos de esos momentos interactivos:
+El diseño de hologramas enseña conceptos de realidad mixta, pero también permite probarlos en su habitación. Después de algunas de esas explicaciones, se pone en pausa y se sale de la casa de la cocina y se entra en un momento interactivo. Estos son algunos ejemplos de esos momentos interactivos:
 
-![GIF animado del marco de seguimiento de mano que se muestra cuando se detectan manos y cuando entran en el campo de la vista](images/designing-holograms/try-out-1.gif)
+![GIF animado del marco de seguimiento de manos que muestra cuándo se detectan las manos y cuándo entran en el campo de vista](images/designing-holograms/try-out-1.gif)
 
-*El marco de seguimiento de mano que se muestra cuando se detectan manos y cuando entran en el campo de la vista.*
+*El marco de seguimiento de manos que muestra cuándo se detectan las manos y cuándo entran en el campo de vista.*
 
-![GIF animado de interactuar con cristales en conflicto a través de la interacción Far](images/designing-holograms/try-out-2.gif)
+![GIF animado de interacción con cristales en colisión a través de la interacción lejana](images/designing-holograms/try-out-2.gif)
 
-*Interactuar con los cristales en conflicto a través de la interacción lejana*
+*Interacción con cristales en colisión a través de la interacción lejana*
 
-![GIF animado de explorar prestaciones de casi interacción](images/designing-holograms/try-out-3.gif)
+![GIF animado de exploración de las asequibilidades de interacción cercana](images/designing-holograms/try-out-3.gif)
 
-*Exploración de las prestaciones de casi interacción*
+*Exploración de las asequibilidades de interacción cercanas*
 
 ## <a name="about-the-team"></a>Acerca del equipo
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60"><img alt="Picture of Daniel Escudero" width="60" height="60" src="images/designing-holograms/daniel-escudero.jpeg"></td>
-<td style="border-style: none"><b>Daniel Escudero</b><br><i>Diseñador técnico líder</i><br>Dan es el director creativo sobre el diseño de hologramas y actualmente funciona como responsable de diseño de la Academia de la realidad mixta de Microsoft en San Francisco y antes era un diseñador en uno de los estudios de realidad mixta de Microsoft en Londres.</td>
+<td style="border-style: none"><b>Daniel Escudero</b><br><i>Diseñador técnico de cliente potencial</i><br>Dan es el director creativo de Diseño de hologramas y actualmente trabaja como responsable de diseño de la Academia Mixed Reality de Microsoft en San Francisco y anteriormente fue diseñador en uno de los estudios de Mixed Reality de Microsoft en Londres.</td>
 </tr>
 </table>
 
 <table style="border-collapse:collapse" padding-left="0px">
 <tr>
 <td style="border-style: none" width="60"><img alt="Picture of Martin Wettig" width="60" height="60" src="images/designing-holograms/martin-wettig.jpeg"></td>
-<td style="border-style: none"><b>Martin Wettig</b><br><i>Artista Senior en 3D</i><br>Martin lidera el diseño de la interfaz de usuario y la imagen en 3D al diseñar hologramas y antes era un artista Senior en 3D en uno de los estudios de realidad mixta de Microsoft en Berlín.</td>
+<td style="border-style: none"><b>Martin Wettig</b><br><i>Senior 3D Artist</i><br>Martin dirige 3D Art and UI Design on Designing Holograms (Diseño de hologramas en 3D Art y UI Designing Holograms) y anteriormente fue un autor sénior en 3D en uno de los estudios Mixed Reality De Microsoft en Alemania.</td>
 </tr>
 </table>
 
-Le agradecemos enormemente el equipo de diseño de la realidad mixta con el fin de compartir tanto conocimiento como el increíble personal en [teoría de objetos](https://objecttheory.com/) para ser integrantes de los compañeros de equipo en cada paso del proyecto. Gracias por su gran talento, por su pasión y una mirada excepcional para el diseño.
+Un enorme gracias al equipo de diseño de Mixed Reality por compartir tantos conocimientos y a la increíble gente de Teoría de objetos por ser compañeros de equipo esenciales en cada paso del proyecto. [](https://objecttheory.com/) Gracias a todos por su increíble actor, por su pasión y un ojo excepcional por el diseño.
 
 > [!div class="nextstepaction"]
-> [Descarga de la aplicación de diseño de hologramas](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd)
+> [Descarga de la aplicación Diseño de hologramas](https://www.microsoft.com/p/designing-holograms/9nxwnjklrzwd)

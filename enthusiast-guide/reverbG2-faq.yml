@@ -8,21 +8,21 @@ metadata:
   keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Troubleshoot, Errors, Help, Support, Performance
   appliesto:
   - Windows 10
-  ms.openlocfilehash: 7715af5f2a94378a0c56ddcdcb83d1d21fc83700
-  ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
+  ms.openlocfilehash: a15a29f36d4ad053f9f76016239c94365695d7c3
+  ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
   ms.translationtype: MT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 04/24/2021
-  ms.locfileid: "107953795"
+  ms.lasthandoff: 05/19/2021
+  ms.locfileid: "110143263"
 title: Preguntas más frecuentes sobre HP Reverb G2
 summary: ''
 sections:
 - name: Omitido
   questions:
   - question: >
-      ¿Hay un pedido específico que debo seguir para conectar los cables de los cascos a un equipo?
+      ¿Hay un orden específico que debo seguir para conectar los cables de los cascos a un equipo?
     answer: >
-      HP recomienda:
+      HP recomienda lo siguiente:
 
 
       - Conecte primero el cable de 6 metros al casco antes de conectarse al equipo o a la fuente de alimentación.
@@ -31,12 +31,12 @@ sections:
 
       - Cuando el casco no esté en uso, desconecte el adaptador de alimentación del cable de 6 metros.
   - question: >
-      ¿Qué debo hacer para obtener una imagen más nítida?
+      ¿Qué debo hacer para obtener una imagen más brillante?
     answer: >
       Hay algunas cosas que puede probar si cree que la pantalla tiene un aspecto un poco desenfocado:
 
 
-      - Asegúrese de que el casco está correctamente en la cabeza con los ojos centrados en las lentes.
+      - Asegúrese de que el casco está en la cabeza correctamente con los ojos centrados en las lentes.
 
       - Intente ajustar el IPD (distancia interpupillaria). Reverb G2 usa un IPD de hardware. Para cambiarlo, busque el ajuste de IPD en el casco.
 
@@ -44,14 +44,14 @@ sections:
 
       - Compruebe que las lentes están limpias (solo microfibras, sin fluidos).
 
-      - Debido al diseño avanzado de los cascos, puede haber algún fantasma de imagen menor en los primeros minutos al iniciar el dispositivo mientras está en frío hasta que los LCD tengan la oportunidad de realizar el arranque.
+      - Debido al diseño avanzado de los cascos, puede haber algunas imágenes secundarias fantasma en los primeros minutos al iniciar el dispositivo mientras está en frío hasta que los LCD tengan la oportunidad de realizar el arranque.
   - question: >
-      Aparece un error de 7 a 14 "Algo salió mal" al conectar el casco
+      Aparece un error 7-14 "Something Went Wrong" (Algo salió mal) al conectar el casco
     answer: >
       El código 7-14 Something Went Wrong significa que no se encontraron algunos de los componentes USB2 necesarios.  Debido al cable extra largo de HP Reverb G2, algunas de las tolerancias para las señales USB son más estrictas.  Esto significa que un puerto del equipo puede funcionar de forma más confiable que otro.
 
 
-      Si ve un error de 7 a 14 "algo salió mal", pruebe los pasos siguientes:
+      Si ve un error 7-14 "algo salió mal", pruebe los pasos siguientes:
 
 
       - Asegúrese de que tiene instalados los controladores más recientes para el casco y el controlador USB.
@@ -67,8 +67,6 @@ sections:
 
       > [!NOTE]
 
-      > HP recomienda usar solo controladores USB integrados en la placa base con dispositivos Reverb G2.
-
       > Si no puede conectar el dispositivo, póngase en contacto con el soporte [técnico de HP.](https://support.hp.com/us-en)
   - question: >
       Obtengo un error 13-14 "Something Went Wrong" (Algo salió mal) cuando mi PC se reanuda desde hibernación (S4)
@@ -79,25 +77,25 @@ sections:
     answer: >
       Este problema se corrige al deprimir completamente el ala izquierda hasta que haga clic y se moverá libremente.
   - question: >
-      Otros dicen que estoy en voz alta o que el audio se está recortando mientras uso el micrófono con algunas aplicaciones.
+      Otros dicen que estoy en voz alta o que el audio se está recortando mientras estoy usando el micrófono con algunas aplicaciones.
     answer: >
-      Los niveles de volumen de entrada se establecen automáticamente en el 100 % cuando un equipo Windows reconoce por primera vez el micrófono HP Reverb G2. Debido a los micrófonos de alta calidad de Reverb G2, la sensibilidad de entrada es mucho mayor de lo que espera la configuración Windows 10 configuración predeterminada. Se recomienda establecer el nivel de entrada del micrófono Reverb G2 a partir del 50 % y escalar verticalmente desde allí. Una configuración óptima es específica del usuario, especialmente cuando se usan aplicaciones que no tienen una configuración de micrófono de "ganancia automática". Algunos ejemplos de aplicaciones que tienen "ganancia automática" son Skype, Zoom, Teams y Cisco WebEx, pero no todas las aplicaciones sociales o de difusión de REALIDAD virtual tienen esta característica.
+      Los niveles de volumen de entrada se establecen automáticamente en el 100 % cuando un equipo Windows reconoce por primera vez el micrófono HP Reverb G2. Debido a los micrófonos de alta calidad de Reverb G2, la sensibilidad de entrada es mucho mayor de lo que espera la configuración Windows 10 configuración predeterminada. Se recomienda establecer el nivel de entrada del micrófono Reverb G2 a partir del 50 % y escalar verticalmente desde allí. Una configuración óptima es específica del usuario, especialmente cuando se usan aplicaciones que no tienen una configuración de micrófono de "ganancia automática". Algunos ejemplos de aplicaciones que tienen "ganancia automática" son Skype, Zoom, Teams y Cisco WebEx, pero no todas las aplicaciones de redes sociales o de difusión de realidad virtual tienen esta característica.
   - question: >
       El Portal de realidad mixta indica "No se puede ejecutar la realidad mixta en este casco", pero esto funcionaba bien con el casco WMR anterior.
     answer: >
       Esto puede ocurrir porque hp Reverb G2 requiere un equipo más eficaz para garantizar la mejor experiencia. Para obtener más información, revise los requisitos mínimos [de PC.](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md)
   - question: >
-      Parece que mi pantalla izquierda está elástica y la pantalla derecha está fuera del centro y medio negro.
+      Parece que mi pantalla izquierda está estirada y la pantalla derecha está fuera del centro y medio negro.
     answer: >
-      Esto puede ocurrir cuando el casco no se ejecuta en la resolución nativa. Debido a la naturaleza de las pantallas de alta resolución en HP Reverb G2 HMD, no todos los sistemas pueden representar la resolución nativa. Hay una corrección en un futuro Windows Update que solucionará el problema de representación cuando el casco no está en la resolución nativa.
+      Esto puede ocurrir cuando el casco no se ejecuta en la resolución nativa. Debido a la naturaleza de las pantallas de alta resolución en HP Reverb G2 HMD, no todos los sistemas pueden representar la resolución nativa. Hay una corrección en un futuro Windows Update que abordará el problema de representación cuando el casco no esté en la resolución nativa.
 
 
       Hay algunas razones por las que el sistema no puede representarse en la resolución nativa:
 
 
-      - Es posible que DisplayPort en el sistema no sea compatible con la versión 1.3 o que no admita los cuatro carriles.
+      - Es posible que displayPort del sistema no sea compatible con la versión 1.3 o que no admita los cuatro sentidos.
 
-      - Si usa un adaptador, es posible que no admita HBR3 o que no admita los cuatro carriles.
+      - Si usa un adaptador, es posible que no sea compatible con HBR3 o que no admita los cuatro sentidos.
 
       - Si el sistema tiene una GPU híbrida, podría limitar el ancho de banda disponible para DisplayPort.
   - question: >
@@ -105,9 +103,9 @@ sections:
     answer: >
       Aunque la mayoría de los juegos no muestran los controladores ni usan los modelos instalados por el controlador, algunos juegos usan sus propias versiones de los modelos de controlador, ya sea para personalizarlos o para mostrar ayuda contextual para las entradas disponibles. Normalmente, esto no bloquea ninguna de las características de los juegos, pero puede provocar confusión o incluso artefactos visuales. Esto solo se puede solucionar con una actualización del propio juego.
   - question: >
-      Mis juegos de SteamVR no parecen funcionar correctamente con los controladores de movimiento de HP
+      Mis juegos de SteamVR no parecen funcionar correctamente con mis controladores hp motion
     answer: >
-      Mientras los desarrolladores trabajan para actualizar sus juegos para la compatibilidad con hp motion controller, hemos proporcionado enlaces de controlador personalizados para muchos de los juegos más populares en Steam. Con "Windows Mixed Reality for SteamVR" totalmente actualizado a la versión 1.2.444, estos enlaces se deben seleccionar automáticamente cuando se ejecuta el juego. Sin embargo, si el juego no parece registrar sus acciones en este momento, puede buscar manualmente perfiles de enlace personalizados mediante el menú Configuración de SteamVR.
+      Aunque los desarrolladores están trabajando para actualizar sus juegos para la compatibilidad con HP Motion Controller, hemos proporcionado enlaces de controlador personalizados para muchos de los juegos más populares en Steam. Con "Windows Mixed Reality for SteamVR" totalmente actualizado a la versión 1.2.444, estos enlaces se deben seleccionar automáticamente cuando se ejecuta el juego. Sin embargo, si el juego no parece registrar sus acciones en este momento, puede buscar manualmente perfiles de enlace personalizados mediante el menú Configuración de SteamVR.
 
       Para hacer esto
 

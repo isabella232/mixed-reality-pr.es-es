@@ -1,0 +1,81 @@
+---
+title: Introducción al sistema de límites
+description: Página de aterrizaje del sistema de límites en MRTK
+author: davidkline-ms
+ms.author: davidkl
+ms.date: 01/12/2021
+keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, sistema de límites,
+ms.openlocfilehash: 2858b770fb49a44d1e2d704e8d3a81affe74d272
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110144737"
+---
+# <a name="boundary-system"></a>Sistema de límites
+
+El sistema de límites proporciona compatibilidad para visualizar los componentes de límites de realidad virtual en aplicaciones de realidad mixta. Los límites definen el área en la que los usuarios pueden moverse de forma segura mientras usan un casco de realidad virtual. Los límites son un componente importante de una experiencia de realidad mixta para ayudar a los usuarios a evitar obstáculos desconocidos mientras llevan cascos de realidad virtual.
+
+Muchas plataformas de realidad virtual proporcionan una pantalla automática, por ejemplo, un contorno blanco superpuesto en el mundo virtual cuando el usuario o su controlador se acerca al límite. El sistema de límites del kit de herramientas de Mixed Reality amplía esta característica para permitir la presentación de un esquema del área con seguimiento, un plano de suelo y otras características que se pueden usar para proporcionar información adicional a los usuarios.
+
+## <a name="getting-started"></a>Introducción
+
+La adición de compatibilidad con límites requiere dos componentes clave del kit de herramientas de Mixed Reality: el sistema de límites y una plataforma de realidad virtual configurada con un límite.
+
+1. [Habilitación](#enable-boundary-system) del sistema de límites
+2. [Configuración de](#configure-boundary-visualization) la visualización de límites
+3. [Compilación e implementación](#build-and-deploy) en una plataforma vr con un límite configurado
+
+## <a name="enable-boundary-system"></a>Habilitación del sistema de límites
+
+El sistema de límites se administra mediante el objeto MixedRealityToolkit (u otro componente [del registrador de](xref:Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar) servicios).
+
+En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los pasos necesarios para otros registradores de servicios pueden ser diferentes.
+
+1. Seleccione el objeto MixedRealityToolkit en la jerarquía de escena.
+
+    ![Jerarquía de escena configurada de MRTK](../images/MRTK_ConfiguredHierarchy.png)
+
+1. Vaya al panel Inspector a la sección Sistema de límites y active Habilitar.
+
+    ![Habilitar el sistema de límites](../images/boundary/MRTKConfig_Boundary.png)
+
+1. Seleccione la implementación del sistema de límites. La implementación de clase predeterminada proporcionada por MRTK es la [`MixedRealityBoundarySystem`](xref:Microsoft.MixedReality.Toolkit.Boundary.MixedRealityBoundarySystem)
+
+    ![Selección de la implementación del sistema de límites](../images/boundary/BoundarySelectSystemType.png)
+
+> [!NOTE]
+> Toda la implementación del sistema de límites debe extender [`IMixedRealityBoundarySystem`](xref:Microsoft.MixedReality.Toolkit.Boundary.IMixedRealityBoundarySystem)
+
+## <a name="configure-boundary-visualization"></a>Configuración de la visualización de límites
+
+El [sistema de límites usa un perfil de configuración](configuring-boundary-visualization.md) para especificar qué componentes de límite se van a mostrar y para configurar su apariencia.
+
+![Opciones de visualización de límites](../images/boundary/BoundaryVisualizationProfile.png)
+
+> [!NOTE]
+> Los usuarios del perfil predeterminado (Assets/MRTK/SDK/Profiles) tendrán el sistema de límites preconfigurado para mostrar un plano de planta, el área de juego y el área de `DefaultMixedRealityBoundaryVisualizationProfile` seguimiento.
+
+## <a name="build-and-deploy"></a>Compilación e implementación
+
+Una vez configurado el sistema de límites con las opciones de visualización deseadas, el proyecto se puede crear implementado en la plataforma de destino.
+
+> [!NOTE]
+> El modo de reproducción de Unity habilita la visualización en el editor del límite configurado. Esta característica permite un desarrollo y pruebas rápidos sin necesidad del paso de compilación e implementación. Asegúrese de realizar pruebas de aceptación finales mediante una versión integrada e implementada de la aplicación, que se ejecuta en el hardware y la plataforma de destino.
+
+## <a name="accessing-boundary-system-via-code"></a>Acceso al sistema de límites mediante código
+
+Si está habilitado y configurado, se puede acceder al sistema de límites a través de la clase auxiliar estática CoreServices. A continuación, la referencia se puede usar para cambiar dinámicamente los parámetros boundary y acceder a los GameObjects relacionados administrados por el sistema.
+
+```c#
+// Hide Boundary Walls at runtime
+CoreServices.BoundarySystem.ShowBoundaryWalls = false;
+
+// Get Unity GameObject for the floor visualization in scene
+GameObject floorVisual = CoreServices.BoundarySystem.GetFloorVisualization();
+```
+
+## <a name="see-also"></a>Consulte también
+
+- [Documentación de la API de límites](xref:Microsoft.MixedReality.Toolkit.Boundary)
+- [Configuración de la visualización de límites](configuring-boundary-visualization.md)

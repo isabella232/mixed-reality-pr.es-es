@@ -1,24 +1,24 @@
 ---
-title: GettingStartedWithMRTKAndXRSDK
+title: Tareas iniciales con MRTK y XRSDK
 description: Página de aterrizaje de MRTK con XRSDK
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, XRSDK,
-ms.openlocfilehash: fe50de31ae24b415738db64073822b2aff061636
-ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
+ms.openlocfilehash: ef6d8c9205a9d801e8cb0ec2690d77b74c72b5fb
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109850431"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110143528"
 ---
 # <a name="getting-started-with-mrtk-and-xr-sdk"></a>Introducción al SDK de MRTK y XR
 
 El SDK de XR es la nueva canalización de XR de [Unity en Unity 2019.3 y posteriores.](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/) En Unity 2019, proporciona una alternativa a la canalización XR existente. En Unity 2020, se convertirá en la única canalización XR en Unity.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
-Para empezar a trabajar con Mixed Reality Toolkit, siga los pasos [proporcionados](../install-the-tools.md#importing-the-mixed-reality-toolkit) para agregar MRTK a un proyecto.
+Para empezar a trabajar con Mixed Reality Toolkit, siga [los](../install-the-tools.md#importing-the-mixed-reality-toolkit) pasos proporcionados para agregar MRTK a un proyecto.
 
 ## <a name="configuring-unity-for-the-xr-sdk-pipeline"></a>Configuración de Unity para la canalización del SDK de XR
 
@@ -41,7 +41,7 @@ Vaya a **unity's Administrador de paquetes** e instale el paquete del complement
 
 ![Administración de complementos XR con la pestaña Independiente seleccionada](images/xr-management-img-02.png)
 
-7. (**_Opcional)_** Haga clic en la Windows Mixed Reality en Administración de complementos XR y cree un perfil de configuración personalizado para cambiar los valores predeterminados. Si la lista de configuraciones ya está ahí, no es necesario crear ningún perfil.
+7. (**_Opcional_**) Haga clic en la Windows Mixed Reality en Administración de complementos XR y cree un perfil de configuración personalizado para cambiar los valores predeterminados. Si la lista de configuraciones ya está ahí, no es necesario crear ningún perfil.
 
 ![Administración de complementos XR con la pestaña Windows seleccionada](images/xr-management-img-01.png)
 

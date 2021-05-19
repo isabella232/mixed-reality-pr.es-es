@@ -1,16 +1,16 @@
 ---
-title: UnityArCameraSettings
+title: Configuración de la cámara ar de Unity
 description: Documentación para usar la cámara ar en MRTK
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, cámara ar,
-ms.openlocfilehash: 15aacae4cb543a3a94660ef1ab057ad0febcb715
-ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
+ms.openlocfilehash: baa54f4a7c6238b136a108cf5adcbddd29c3ee1b
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109850421"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110143461"
 ---
 # <a name="unity-ar-camera-settings-provider"></a>Proveedor de configuración de la cámara ar de Unity
 
@@ -24,7 +24,7 @@ Para obtener una guía sobre cómo agregar el proveedor a la escena: [Configurac
 
 ### <a name="tracking-settings"></a>Configuración de seguimiento
 
-El proveedor de configuración de la cámara ar de Unity permite opciones de configuración para cómo se realiza el seguimiento. Esta configuración es específica de la implementación del proveedor de configuración de cámara ar de Unity.
+El proveedor de configuración de la cámara AR de Unity permite opciones de configuración sobre cómo se realiza el seguimiento. Esta configuración es específica de la implementación del proveedor de configuración de la cámara ar de Unity.
 
 **Pos Source**
 
@@ -70,9 +70,9 @@ Las opciones disponibles se describen en la tabla siguiente.
 | Actualizar | Durante la fase de actualización del marco. |
 | Actualizar y antes de representar | Durante la fase de actualización y justo antes de la representación. |
 
-El valor predeterminado para el tipo de seguimiento **es Update y Before Render** para habilitar la latencia de seguimiento más baja.
+El valor predeterminado para el tipo de seguimiento **es Update y Before Render**, para habilitar la latencia de seguimiento más baja.
 
 ## <a name="see-also"></a>Consulte también
 
 - [Información general del sistema de cámara](camera-system-overview.md)
-- [Creación de un proveedor de configuración de cámara](create-settings-provider.md)
+- [Crear un proveedor de configuración de cámara](create-settings-provider.md)

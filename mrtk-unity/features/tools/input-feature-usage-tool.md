@@ -1,49 +1,49 @@
 ---
-title: InputFeatureUsageTool
-description: Herramienta InputFeatureUsage de documentación de MRTK
+title: Herramienta de uso de las características de entrada
+description: Herramienta InputFeatureUsage de documentación en MRTK
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 35b28557df37abee19a0c950b362117eb6a120b0
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 0f2d3d3eb07d8b631f3f11a8b497a22a028a2f24
+ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300209"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110145011"
 ---
 # <a name="inputfeatureusage-tool"></a>Herramienta InputFeatureUsage
 
-La herramienta InputFeatureUsage es una herramienta de tiempo de ejecución (en el dispositivo o en el editor) que permite a los desarrolladores determinar rápidamente el InputFeatureUsages de Unity disponible para un origen de entrada detectado (por ejemplo, un controlador de movimiento o una mano articulada).
+La herramienta InputFeatureUsage es una herramienta en tiempo de ejecución (en el dispositivo o en el editor) que permite a los desarrolladores determinar rápidamente la entrada de Unity disponibleFeatureUsages para un origen de entrada detectado (por ejemplo, controlador de movimiento o mano articulada).
 
 > [!NOTE]
-> Esta escena solo funciona en Unity 2019,3 o posterior.
+> Esta escena solo funciona en Unity 2019.3 o posterior.
 
-Esta herramienta es muy útil al desarrollar compatibilidad con un nuevo controlador de hardware. También puede ayudar a confirmar un problema de asignación de control sospechoso en la clase de soporte de un controlador existente.
+Esta herramienta es muy útil al desarrollar compatibilidad con un nuevo controlador de hardware. También puede ayudar a confirmar un problema sospechoso de asignación de controles en la clase de soporte técnico para un controlador existente.
 
 ![Herramienta InputFeatureUsage](../images/controller-mapping-tool/InputFeatureUsages.png)
 
 ## <a name="using-the-inputfeatureusage-tool"></a>Uso de la herramienta InputFeatureUsage
 
-Para empezar a trabajar con la herramienta InputFeatureUsage, vaya a **MRTK/Tools/RuntimeTools/Tools/InputFeatureUsageTool** y abra la escena **InputFeatureUsageTool** . Una vez cargada la escena, el proyecto puede ejecutarse en el editor, usar el modo de reproducción o compilarse y ejecutarse en un dispositivo.
+Para empezar a trabajar con la herramienta InputFeatureUsage, vaya a **MRTK/Tools/RuntimeTools/Tools/InputFeatureUsageTool** y abra la **escena InputFeatureUsageTool.** Una vez cargada la escena, el proyecto se puede ejecutar en el editor, mediante el modo de reproducción, o bien se puede crear y ejecutar en un dispositivo.
 
 Para examinar las asignaciones de Unity para un controlador:
 
-- Conectar el controlador
-- Presione cada botón y mueva cada eje
-- Tenga en cuenta los usos de las características en la pantalla
-- Actualizar las asignaciones de control en el proveedor de datos del sistema de entrada para el controlador
+- Conexión del controlador
+- Presione cada botón y mueva cada eje.
+- Tenga en cuenta los usos de características en la pantalla
+- Actualización de las asignaciones de controles en el proveedor de datos del sistema de entrada para el controlador
 
 > [!NOTE]
-> La herramienta InputFeatureUsage no hace uso de los componentes del kit de herramientas de la realidad mixta de Microsoft. Se comunica directamente con Unity para determinar y mostrar los usos de las características.
+> La herramienta InputFeatureUsage no usa componentes de Microsoft Mixed Reality Toolkit. Se comunica directamente con Unity para determinar y mostrar los usos de características.
 
 ### <a name="panels"></a>Paneles
 
-Los paneles muestran el estado actual de todos los InputFeatureUsages indicados en todos los orígenes de entrada de Unity detectados.
+Los paneles muestran el estado actual de todos los inputFeatureUsages notificados en todos los orígenes de entrada de Unity detectados.
 
-El panel más pequeño de la parte superior muestra los nombres de todos los orígenes detectados.
+En el panel más pequeño de la parte superior se enumeran los nombres de todos los orígenes detectados.
 
 ## <a name="see-also"></a>Consulte también
 
-- [Crear un proveedor de datos del sistema de entrada](../input/create-data-provider.md)
+- [Creación de un proveedor de datos del sistema de entrada](../input/create-data-provider.md)
 - [Herramienta de asignación de controladores](controller-mapping-tool.md)
