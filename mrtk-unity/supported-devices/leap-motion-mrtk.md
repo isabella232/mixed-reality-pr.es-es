@@ -5,12 +5,12 @@ author: CDiaz-ms
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Leap Motion,
-ms.openlocfilehash: 285328b1248f04504f30192f1294e9ae665b3fc9
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 44593713f08a00fa53325eebfae2cf9042d386be
+ms.sourcegitcommit: 62beb626b2db6ce7df86014bd22bf1946b8906b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145195"
+ms.lasthandoff: 05/20/2021
+ms.locfileid: "110207477"
 ---
 # <a name="how-to-configure-leap-motion-by-ultraleap-hand-tracking-in-mrtk"></a>Configuración del seguimiento de manos de Leap Motion (by Ultraleap) en MRTK
 
@@ -22,21 +22,22 @@ El proveedor de datos Leap Motion permite el seguimiento de manos articulado par
 
 Este proveedor se puede usar en el editor y en el dispositivo en la plataforma independiente.  También se puede usar en el editor en la plataforma UWP, pero NO en una compilación de UWP.
 
-|Versiones admitidas de los módulos de Unity de Leap Motion|
-|---|
-|4.5.0|
-|4.5.1|
+| Versión de MRTK | Versiones admitidas de los módulos de Unity de Leap Motion |
+| --- | --- |
+|2.6.x | 4.5.0, 4.5.1|
+|2.7.x| 4.5.0, 4.5.1, 4.6.0, 4.7.0, 4.7.1|
+
 
 ## <a name="using-leap-motion-by-ultraleap-hand-tracking-in-mrtk"></a>Uso del seguimiento manual de Leap Motion (by Ultraleap) en MRTK
 
 1. Importación de MRTK y los módulos leap motion de Unity
-    - Instale [el SDK de Leap Motion 4.0.0](https://developer.leapmotion.com/releases/?category=orion) si aún no está instalado
+    - Instale el [SDK de Leap Motion](https://developer.leapmotion.com/releases/?category=orion) más reciente si aún no está instalado.
     - Importe el **paquete Microsoft.MixedReality.Toolkit.Foundation** en el proyecto de Unity.
     - Descarga e importación de la versión más reciente de los módulos [de Unity leap motion](https://developer.leapmotion.com/unity) en el proyecto
         - Importar solo el **paquete Principal** dentro de los módulos de Unity
 
-1. Integración de los módulos de Unity leap motion con MRTK
-    - Una vez que los módulos de Unity estén en el proyecto, vaya a **Mixed Reality Toolkit**  >  **Leap Motion** Integrate Leap Motion Unity Modules (Integración de los módulos leap motion de  >  **Unity).**
+1. Integración de los módulos de Unity de Leap Motion con MRTK
+    - Una vez que los módulos de Unity estén en el proyecto, vaya a **Mixed Reality Toolkit** Leap Motion Integrate Leap Motion Unity Modules (Integración  >    >  **de módulos leap motion de Unity).**
     > [!NOTE]
     > La integración de los módulos de Unity en MRTK agrega 10 definiciones de ensamblado al proyecto y agrega referencias a la definición del ensamblado **Microsoft.MixedReality.Toolkit.Providers.LeapMotion.** Asegúrese de que Visual Studio esté cerrado.
 
@@ -146,12 +147,12 @@ public class LeapHandJoints : MonoBehaviour, IMixedRealityHandJointHandler
 
 El uso del proveedor de datos Leap Motion no requiere un casco de realidad virtual.  Los cambios en una aplicación MRTK se pueden probar en el editor con las manos leap sin casco.
 
-Las manos leap motion se mostrarán en el editor, sin un casco de realidad virtual conectado.  Si está establecido en Casco, el controlador Leap Motion tendrá que mantener el control Leap Motion con una mano con la `LeapControllerOrientation` cámara orientada hacia delante. 
+Las manos leap motion se mostrarán en el editor, sin un casco de realidad virtual conectado.  Si se establece en Casco, el controlador Leap Motion tendrá que mantener el control Leap Motion con una mano con la `LeapControllerOrientation` cámara orientada hacia delante. 
 
 > [!NOTE]
-> Si la cámara se mueve mediante teclas WASD en el editor y es Casco , las manos `LeapControllerOrientation` no seguirán a la cámara.  Las manos solo seguirán el movimiento de la cámara si un casco vr está conectado mientras `LeapControllerOrientation` está establecido el **casco**.  Las manos bisiesta seguirán el movimiento de la cámara en el editor si `LeapControllerOrientation` está establecido en **Desk**.
+> Si la cámara se mueve mediante teclas WASD en el editor y es Casco, las manos `LeapControllerOrientation` no seguirán la cámara.  Las manos solo seguirán el movimiento de la cámara si un casco de realidad virtual está conectado mientras `LeapControllerOrientation` está establecido el **casco**.  Las manos bisiesta seguirán el movimiento de la cámara en el editor si `LeapControllerOrientation` está establecido en **Desk**.
 
-## <a name="removing-leap-motion-from-the-project"></a>Quitar Leap Motion del proyecto
+## <a name="removing-leap-motion-from-the-project"></a>Eliminación de Leap Motion del proyecto
 
 1. Vaya a los **módulos de Unity leap** motion independientes  >  **Mixed Reality Toolkit Leap Motion**  >  
     - Permitir que Unity se actualice como referencias en el **archivo Microsoft.MixedReality.Toolkit.Providers.LeapMotion.asmdef** se modifica en este paso.
@@ -179,7 +180,7 @@ Para probar si los módulos de Unity leap motion se han integrado con MRTK:
   - Asegúrese de que se admite la versión agregada, consulte la tabla en la parte superior de la página para ver las versiones admitidas.
   - Pruebe **Mixed Reality Toolkit > Utilities > Leap Motion > integrar módulos de Unity leap motion**
 
-### <a name="copying-assembly-multiplayer-hlapi-failed"></a>Error al copiar HLAPI multijugador de ensamblado
+### <a name="copying-assembly-multiplayer-hlapi-failed"></a>Error al copiar el ensamblado HLAPI multijugador
 
 Al importar los recursos principales de Unity De Leap Motion, este error podría registrarse:
 
@@ -199,5 +200,5 @@ La escena de ejemplo se encuentra en el **paquete Microsoft.MixedReality.Toolkit
 
 ## <a name="see-also"></a>Consulte también
 
--[Proveedores de entrada](../features/input/input-providers.md) 
+- [Proveedores de entrada](../features/input/input-providers.md)
 - [Seguimiento de manos](../features/input/hand-tracking.md)

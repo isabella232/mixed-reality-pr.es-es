@@ -1,3 +1,5 @@
+- name: Ventana de compilación
+  href: build-window.md
 - name: Utilidad de intercambio de recursos
   href: asset-swap-utility.md
 - name: Herramienta de asignación de controladores
