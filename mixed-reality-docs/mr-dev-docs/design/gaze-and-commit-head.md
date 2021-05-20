@@ -1,21 +1,21 @@
 ---
 title: Mirada con la cabeza y confirmación
-description: Empiece a trabajar con el modelo de entrada y de confirmación del encabezado, incluido el ajuste de tamaño, la ubicación y la estabilización de destino.
+description: Introducción al modelo de entrada de mirada con la cabeza y confirmación, incluido el tamaño, la colocación y la estabilización del destino.
 author: caseymeekhof
 ms.author: cmeekhof
 ms.date: 03/31/2019
 ms.topic: article
-keywords: Realidad mixta, miración rápida, interacción, diseño, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, destino, enfoque, suavizado
-ms.openlocfilehash: a69b855e2246327affeeb0f771f565b94ea65cb2
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: Mixed Reality, mirada, mirada dirigida, interacción, diseño, casco de realidad mixta, casco de windows de realidad mixta, casco de realidad virtual, HoloLens, MRTK, kit de herramientas de Mixed Reality, destino, enfoque, suavizado
+ms.openlocfilehash: 74f963a6b450d1fb7f1302886a01c12cf79ce28a
+ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582288"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110196520"
 ---
 # <a name="head-gaze-and-commit"></a>Mirada con la cabeza y confirmación
 
-La acción de _mirar y confirmar_ es un caso especial del modelo de entrada de [mirada y de confirmación](gaze-and-commit.md) que implica el destino de un objeto con la dirección del encabezado de un usuario. Puede actuar en el destino con una entrada secundaria, como el gesto de mano tocar o "seleccionar" comando de voz. 
+_La mirada con la cabeza_ y [](gaze-and-commit.md) la confirmación son un caso especial del modelo de entrada de mirada y confirmación que implica el destino de un objeto con una dirección principal de los usuarios. Puede actuar en el destino con una entrada secundaria, como el gesto de la mano pulsación en el aire o el comando de voz "Seleccionar". 
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -42,12 +42,20 @@ La acción de _mirar y confirmar_ es un caso especial del modelo de entrada de [
 
 ---
 
+## <a name="head-and-eye-tracking-design-concepts-demo"></a>Demostración de conceptos de diseño de seguimiento de la cabeza y los ojos
+
+Si quiere ver los conceptos de diseño de Head and Eye Tracking en acción, consulte la demostración de vídeo Diseño de **hologramas:** seguimiento de la cabeza y seguimiento de los ojos a continuación. Cuando haya terminado, continúe para obtener un análisis más detallado de temas específicos.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Head-Tracking-and-Eye-Tracking-Chapter/player]
+
+*Este vídeo se tomó de la aplicación "Diseño de hologramas" HoloLens 2 aplicación. Descargue y disfrute de la experiencia [completa aquí.](https://aka.ms/dhapp)*
+
 ## <a name="target-sizing-and-feedback"></a>Ajuste de tamaño del destino y comentarios
 
-El vector de miras hacia abajo se ha mostrado varias veces para que se pueda usar para lograr objetivos más precisos, pero a menudo funciona mejor para la segmentación bruta: adquisición de destinos más grandes. Los tamaños mínimos de destino de 1 grado a 1,5 grados permiten acciones de usuario correctas en la mayoría de los escenarios, aunque los destinos de 3 grados a menudo permiten una mayor velocidad. El tamaño que tiene como destino el usuario es, en efecto, un área 2D incluso para los elementos 3D, lo que se enfrente a la proyección debe ser el área de destino. Proporcionar alguna indicación destacada de que un elemento está "activo" (que el usuario tiene como destino) es útil. Esto puede incluir tratamientos como efectos visibles de "mantener el mouse", resaltados de audio o clics o alineación clara de un cursor con un elemento.
+Se ha mostrado repetidamente que el vector de mirada con la cabeza se puede usar para la selección de destino correcta, pero a menudo funciona mejor para la selección de destinos brutos: adquirir destinos más grandes. Los tamaños de destino mínimos de 1 grado a 1,5 grados permiten acciones correctas del usuario en la mayoría de los escenarios, aunque los destinos de 3 grados a menudo permiten una mayor velocidad. El tamaño que el usuario tiene como destino es efectivamente un área 2D incluso para los elementos 3D, la proyección que tenga como destino debe ser el área de destino. Proporcionar alguna indicación destacada de que un elemento está "activo" (que el usuario tiene como destino) es útil. Esto puede incluir tratamientos como efectos visibles de "mantener el mouse", resaltados o clics de audio, o borrar la alineación de un cursor con un elemento.
 
 ![Tamaño de objetivo óptimo a una distancia de 2 metros](images/gazetargeting-size-1000px.jpg)<br>
-*Tamaño óptimo de destino a una distancia de 2 metros*
+*Tamaño de destino óptimo a 2 metros de distancia*
 
 <br>
 
@@ -56,38 +64,38 @@ El vector de miras hacia abajo se ha mostrado varias veces para que se pueda usa
 
 ## <a name="target-placement"></a>Situación del destino
 
-A menudo, los usuarios no pueden encontrar elementos de la interfaz de usuario ubicados demasiado altos o bajos en su campo de vista. La mayor parte de su atención termina en áreas en torno a su enfoque principal, que es aproximadamente en el nivel de ojo. Quizás resulte útil colocar la mayoría de los destinos en una banda razonable a la altura de los ojos. Dado que la tendencia de los usuarios a centrarse en un área visual relativamente pequeña en cualquier momento (el cono de visión es aproximadamente de 10 grados), la agrupación de los elementos de la interfaz de usuario en el grado en que se relacionan conceptualmente puede usar los comportamientos de encadenamiento de atención entre el elemento y el elemento cuando un usuario mueve su vista hacia abajo por un área Al diseñar la interfaz de usuario, se deben tener en cuenta las posibles grandes variaciones en el campo de visión entre HoloLens y los cascos envolventes.
+A menudo, los usuarios no encuentran elementos de interfaz de usuario que se encuentran demasiado altos o bajos en su campo de vista. La mayor parte de su atención termina en áreas en torno a su enfoque principal, que es aproximadamente a nivel de los ojos. Quizás resulte útil colocar la mayoría de los destinos en una banda razonable a la altura de los ojos. Dada la tendencia de los usuarios a centrarse en un área visual relativamente pequeña en cualquier momento (el cono de atención de la visión es aproximadamente de 10 grados), agrupar los elementos de la interfaz de usuario hasta el grado en que están relacionados conceptualmente puede usar comportamientos de encadenamiento de atención de elemento a elemento a medida que un usuario mueve la mirada a través de un área. Al diseñar la interfaz de usuario, se deben tener en cuenta las posibles grandes variaciones en el campo de visión entre HoloLens y los cascos envolventes.
 
 ![Ejemplo de elementos de la interfaz de usuario agrupados para facilitar el establecimiento del destino con la mirada en Galaxy Explorer](images/gazetargeting-grouping-1000px.jpg)<br>
 *Ejemplo de elementos de la interfaz de usuario agrupados para facilitar el establecimiento del destino con la mirada en Galaxy Explorer*
 
-## <a name="improving-targeting-behaviors"></a>Mejora de los comportamientos de establecimiento de destino
+## <a name="improving-targeting-behaviors&quot;></a>Mejora de los comportamientos de establecimiento de destino
 
-Si la intención del usuario de destinar algo puede determinarse o aproximarse, puede ser útil aceptar los intentos de interacción aproximados como si estuviesen dirigidos correctamente. Estos son algunos de los métodos correctos que se pueden incorporar en experiencias de realidad mixta:
+Si la intención del usuario de dirigirse a algo se puede determinar o aproximar estrechamente, puede ser útil aceptar intentos de interacción casi desasistidos como si se hubieran dirigido correctamente. Estos son algunos métodos de éxito que se pueden incorporar en experiencias de realidad mixta:
 
-### <a name="head-gaze-stabilization-gravity-wells"></a>Estabilización de la mirada con la cabeza ("pozos de gravedad")
+### <a name=&quot;head-gaze-stabilization-gravity-wells&quot;></a>Estabilización de la mirada con la cabeza (&quot;pozos de gravedad")
 
-Esto se debe activar la mayoría o la totalidad del tiempo. Esta técnica elimina las vibraciones de cabeza natural y cuello que los usuarios podrían tener como movimiento debido a los comportamientos de mirar y hablar.
+Esto debe estar activado la mayoría del tiempo o todo el tiempo. Esta técnica elimina los movimientos naturales de cabeza y cuello que los usuarios pueden tener también debido a comportamientos de aspecto y habla.
 
 ### <a name="closest-link-algorithms"></a>Algoritmos de vínculo más cercano
 
-Estos algoritmos funcionan mejor en áreas con contenido interactivo disperso. Si hay una probabilidad alta de que pueda determinar con qué un usuario estaba intentando interactuar, puede complementar sus capacidades de destino suponiendo cierto nivel de intento.
+Estos algoritmos funcionan mejor en áreas con contenido interactivo disperso. Si hay una alta probabilidad de que pueda determinar con qué estaba intentando interactuar un usuario, puede complementar sus capacidades de destino suponiendo algún nivel de intención.
 
-### <a name="backdating-and-postdating-actions"></a>Acciones de la
+### <a name="backdating-and-postdating-actions"></a>Acciones de backdating y postdating
 
-Este mecanismo es útil en las tareas que requieren velocidad. Cuando un usuario está pasando por una serie de destinos y maniobras de activación a velocidad, resulta útil asumir algún intento. También resulta útil permitir que los pasos perdidos actúen en los destinos que el usuario tenía enfocado ligeramente antes o ligeramente después de la pulsación (50 ms antes/después era efectivo en las primeras pruebas).
+Este mecanismo es útil en las tareas que requieren velocidad. Cuando un usuario se mueve a través de una serie de maniobras de destino y activación a gran velocidad, resulta útil asumir alguna intención. También es útil permitir que los pasos perdidos actúen en los destinos que el usuario tenía en el foco ligeramente antes o ligeramente después de la pulsación (50 ms antes o después de que fuera efectivo en las primeras pruebas).
 
 ### <a name="smoothing"></a>Suavizado
 
-Este mecanismo es útil para los movimientos de las acciones, lo que reduce la ligera vibración y wobbles debido a las características de movimiento del cabezal natural. Al suavizar los movimientos de las acciones, smoothándose por el tamaño y la distancia de los movimientos en lugar de a lo largo del tiempo.
+Este mecanismo es útil para la ruta de desplazamiento, lo que reduce la ligera vibración y los problemas debido a las características naturales del movimiento de la cabeza. Al suavizar los movimientos de trazado, suaviza el tamaño y la distancia de los movimientos en lugar de hacerlo a lo largo del tiempo.
 
 ### <a name="magnetism"></a>Magnetismo
 
-Este mecanismo puede considerarse como una versión más general de los algoritmos de vínculo más cercanos: dibujar un cursor hacia un destino o simplemente aumentar hitboxes, ya sea visible o no, a medida que los usuarios se aproximan a los objetivos más probables mediante el uso de algún conocimiento del diseño interactivo para un mejor enfoque de la intención del usuario. Esto puede ser eficaz para destinos pequeños.
+Este mecanismo se puede pensar como una versión más general de los algoritmos de vínculo más cercanos: dibujar un cursor hacia un destino o simplemente aumentar los cuadros de acceso, ya sea visiblemente o no, a medida que los usuarios se aproximan a los destinos probables mediante el uso de cierto conocimiento del diseño interactivo para abordar mejor la intención del usuario. Esto puede ser eficaz para destinos pequeños.
 
 ### <a name="focus-stickiness"></a>Permanencia del foco
 
-A la hora de determinar qué elementos interactivos cercanos se deben dar, centrarse en, el ajuste del foco proporciona una inclinación al elemento que está enfocado actualmente. Esto ayuda a reducir los comportamientos de cambio de foco errático al flotar en un punto medio entre dos elementos con ruido natural.
+Al determinar a qué elementos interactivos cercanos se va a dar, céntrate en él, la stickiness del foco proporciona un sesgo al elemento que está actualmente centrado. Esto ayuda a reducir los comportamientos erráticos de cambio de foco al flotar en un punto medio entre dos elementos con ruido natural.
 
 ## <a name="see-also"></a>Consulte también
 

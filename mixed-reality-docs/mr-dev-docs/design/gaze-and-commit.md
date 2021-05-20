@@ -1,31 +1,31 @@
 ---
 title: Mirada y confirmación
-description: Obtenga información sobre el modelo de entrada de la vista y la confirmación, incluidos dos tipos de mirados (mirados y mirados) y varios tipos de confirmación.
+description: Obtenga información sobre el modelo de entrada de mirada y confirmación, incluidos dos tipos de mirada (mirada con la cabeza y mirada con los ojos) y varios tipos de confirmación.
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
-keywords: Realidad mixta, miración de miración, interacción, diseño, seguimiento ocular, seguimiento de cabezales, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: bfbf58ad065f91b27208d36ba63672ee5c28dfdd
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: Mixed Reality, mirada, objetivo de mirada, interacción, diseño, seguimiento de los ojos, seguimiento de la cabeza, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: db394ab4aded7136550e8e88eb3d66e06f3eeb92
+ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582338"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110196570"
 ---
 # <a name="gaze-and-commit"></a>Mirada y confirmación
 
-La acción de _mirar y confirmar_ es un modelo de entrada fundamental estrechamente relacionado con la forma en que interactuamos con nuestros equipos mediante el mouse: _punto & clic_. En esta página, se presentan dos tipos de entradas de miradas (de encabezado y ojo) y distintos tipos de acciones de confirmación. La acción de _mirar y confirmar_ se considera un modelo de entrada lejano con manipulación indirecta. Se usa mejor para interactuar con el contenido holográfica que no está disponible.
+_La mirada y confirmación_ es un modelo de entrada fundamental que está estrechamente relacionado con la forma en que interactuamos con nuestros equipos mediante el mouse: haga clic _& clic en_. En esta página, se presentan dos tipos de entrada de mirada (mirada con la cabeza y los ojos) y diferentes tipos de acciones de confirmación. _La mirada y la confirmación_ se consideran un modelo de entrada lejana con manipulación indirecta. Se usa mejor para interactuar con contenido holográfico que está fuera de alcance.
 
-Los auriculares de realidad mixta pueden usar la posición y la orientación del encabezado del usuario para determinar su vector de dirección principal. Piense en un láser que apunta directamente desde el principio del usuario. Esto es una aproximación bastante general de dónde mira el usuario. La aplicación puede formar una intersección con este rayo con objetos virtuales o del mundo real y dibujar un cursor en esa ubicación para que el usuario sepa de qué se dirige.
+Los cascos de realidad mixta pueden usar la posición y la orientación de la cabeza del usuario para determinar el vector de dirección de la cabeza. Piense en la mirada como un rayo que apunta directamente directamente entre los ojos del usuario. Esto es una aproximación bastante general de dónde mira el usuario. La aplicación puede formar una intersección con objetos virtuales o reales y dibujar un cursor en esa ubicación para que el usuario sepa a qué se dirigirá.
 
-Además de los cabezales, algunos auriculares de realidad mixta, como HoloLens 2, incluyen sistemas de seguimiento ocular que producen un vector de mirada ocular. Esto proporciona una medida específica de adónde mira el usuario. En ambos casos, la mirada representa una señal importante para la intención del usuario. Cuanto mejor sea el sistema para interpretar y predecir las acciones deseadas del usuario, mayor será la satisfacción y el rendimiento del usuario.
+Además de la mirada con la cabeza, algunos cascos de realidad mixta, como HoloLens 2, incluyen sistemas de seguimiento ocular que producen un vector de mirada con los ojos. Esto proporciona una medida específica de adónde mira el usuario. En ambos casos, la mirada representa una señal importante para la intención del usuario. Entre mejor el sistema pueda interpretar y predecir las acciones previstas del usuario, mayor será la satisfacción y el rendimiento del usuario.
 
-A continuación se muestran algunos ejemplos de cómo puede beneficiarse de un desarrollador de realidad mixta con miras a la mirada:
-* La aplicación puede intersectar con los hologramas de la escena para determinar dónde se encuentra la atención del usuario (con más precisión con miras).
-* La aplicación puede realizar gestos de canal y pulsaciones del controlador en función de la mirada del usuario, lo que permite al usuario seleccionar, activar, capturar, desplazarse o interactuar de otro modo con sus hologramas.
-* La aplicación puede permitir que el usuario coloque hologramas en superficies del mundo real intersectando su rayo con la malla de asignación espacial.
-* La aplicación puede saber si el usuario no está buscando la dirección de un objeto importante, lo que puede conducir a que la aplicación proporcione indicaciones visuales y de audio para que se conviertan en ese objeto.
+A continuación se muestran algunos ejemplos de cómo usted como desarrollador de realidad mixta puede beneficiarse de la mirada con la cabeza o los ojos:
+* La aplicación puede formar intersección con la mirada con los hologramas de la escena para determinar dónde está la atención del usuario (más precisa con la mirada con los ojos).
+* La aplicación puede canalizar gestos y presiones del controlador en función de la mirada del usuario, lo que permite al usuario seleccionar, activar, agarrar, desplazarse o interactuar sin problemas con sus hologramas.
+* La aplicación puede permitir que el usuario coloque hologramas en superficies del mundo real mediante la intersección de su rayo de mirada con la malla de asignación espacial.
+* La aplicación puede saber cuándo el usuario no busca en la dirección de un objeto importante, lo que puede llevar a la aplicación a proporcionar indicaciones visuales y de audio para dirigirse hacia ese objeto.
 
 <br>
 
@@ -58,14 +58,21 @@ A continuación se muestran algunos ejemplos de cómo puede beneficiarse de un d
     </tr>
 </table>
 
+## <a name="head-and-eye-tracking-design-concepts-demo"></a>Demostración de conceptos de diseño de seguimiento de la cabeza y los ojos
+
+Si quiere ver los conceptos de diseño de Head and Eye Tracking en acción, consulte la demostración de vídeo Diseño de **hologramas:** seguimiento de la cabeza y seguimiento de los ojos a continuación. Cuando haya terminado, continúe para obtener un análisis más detallado de temas específicos.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Head-Tracking-and-Eye-Tracking-Chapter/player]
+
+*Este vídeo se tomó de la aplicación "Diseño de hologramas" HoloLens 2 aplicación. Descargue y disfrute de la experiencia [completa aquí.](https://aka.ms/dhapp)*
 
 ## <a name="gaze"></a>Mirar
 
-### <a name="eye--or-head-gaze"></a>¿Está atento o mira la cabeza?
-Hay varias consideraciones que deben tenerse en cuenta a la hora de usar el modelo de entrada "mira fijamente y confirmar" o "encabezado de mira y confirmación". Si va a desarrollar para un casco envolvente o para HoloLens (1ª generación), la elección es sencilla: encabezado y confirmación. Si está desarrollando para HoloLens 2, la elección es un poco más difícil. Es importante comprender las ventajas y los desafíos que acompañan a cada uno de ellos.
-Hemos compilado algunos grandes Pro y con en la tabla siguiente para diferenciar las orientaciones de mirada y miradas. Esta información es muy completa y le sugerimos que obtenga más información sobre el objetivo de mirarnos en la realidad mixta aquí:
-* [Seguimiento ocular de hololens 2](eye-tracking.md): introducción general de nuestra nueva funcionalidad de seguimiento ocular en hololens 2, que incluye algunas instrucciones para desarrolladores. 
-* [Interacción ocular](eye-gaze-interaction.md): consideraciones de diseño y recomendaciones cuando se planea usar el seguimiento ocular como entrada.
+### <a name="eye--or-head-gaze"></a>¿Mirada con los ojos o con la cabeza?
+Hay varias consideraciones cuando se enfrenta a la pregunta de si debe usar el modelo de entrada "mirada con los ojos y confirmación" o "mirada con la cabeza y confirmación". Si está desarrollando para un casco envolvente o para HoloLens (1.ª generación), la elección es sencilla: mirada con la cabeza y confirmación. Si va a desarrollar para HoloLens 2, la elección se vuelve un poco más difícil. Es importante comprender las ventajas y los desafíos que se incluyen con cada uno de ellos.
+Hemos compilado algunas ventajas y desventajas generales en la tabla siguiente para contrastar el objetivo de la cabeza frente a la mirada con los ojos. Esto está lejos de completarse y se recomienda obtener más información sobre el objetivo de la mirada con los ojos en la realidad mixta aquí:
+* [Seguimiento de los HoloLens 2:](eye-tracking.md)introducción general de nuestra nueva funcionalidad de seguimiento de los HoloLens 2 incluir algunas instrucciones para desarrolladores. 
+* [Interacción con la mirada con los](eye-gaze-interaction.md)ojos: consideraciones y recomendaciones de diseño al planear el uso del seguimiento de los ojos como entrada.
 
 <table>
     <colgroup>
@@ -75,28 +82,28 @@ Hemos compilado algunos grandes Pro y con en la tabla siguiente para diferenciar
     <col width="25%" />
     </colgroup>
    <tr>
-        <td><strong>Apuntar a la mirada</strong></td>
+        <td><strong>Objetivo de la mirada con los ojos</strong></td>
         <td><strong>Establecer el destino de la mirada con la cabeza</strong></td>
     </tr>
     <tr>
-        <td>Fast!</td>
-        <td>Lentamente</td>
+        <td>¡rápido!</td>
+        <td>más despacio</td>
     </tr>
     <tr>
-        <td>Bajo esfuerzo (apenas se necesitan movimientos del cuerpo)</td>
-        <td>Puede ser fatiguing (por ejemplo, la presión del cuello)</td>
+        <td>Poco esfuerzo (casi todos los movimientos corporales necesarios)</td>
+        <td>Puede ser fatiguing: posibles molestias (por ejemplo, presión de cuello)</td>
     </tr>
     <tr>
         <td>No requiere un cursor, pero se recomiendan comentarios sutiles</td>
-        <td>Requiere para mostrar un cursor</td>
+        <td>Requiere mostrar un cursor</td>
     </tr>
     <tr>
-        <td>Sin movimientos sin efecto ocular (por ejemplo, no es bueno para dibujar)</td>
+        <td>Sin movimientos de los ojos suavizados; por ejemplo, no es bueno para dibujar</td>
         <td>Más controlado y explícito</td>
     </tr>
     <tr>
-        <td>Difícil para destinos pequeños (por ejemplo, botones pequeños o weblinks)</td>
-        <td>Estable! ¡ Gran retroceso!</td>
+        <td>Difícil para destinos pequeños (por ejemplo, botones pequeños o vínculos web)</td>
+        <td>¡fidedigno! ¡Excelente reserva!</td>
     </tr>
     <tr>
         <td>...</td>
@@ -104,7 +111,7 @@ Hemos compilado algunos grandes Pro y con en la tabla siguiente para diferenciar
     </tr>
 </table>
 
-Tanto si usa la vista de encabezado o miras hacia abajo para el modelo de entrada de la mirada y la confirmación, cada uno viene con distintos conjuntos de restricciones de diseño. Estos se describen por separado en los artículos de [miras](gaze-and-commit-eyes.md) y de la [mirada y el](gaze-and-commit-head.md) dedo.
+Tanto si usa la mirada con la cabeza como la mirada con los ojos para el modelo de entrada de mirada y confirmación, cada uno incluye distintos conjuntos de restricciones de diseño. Se tratan por separado en los [artículos de](gaze-and-commit-eyes.md) mirada con los ojos y confirmación y mirada con la cabeza [y confirmación.](gaze-and-commit-head.md)
 
 <br>
 
@@ -114,9 +121,9 @@ Tanto si usa la vista de encabezado o miras hacia abajo para el modelo de entrad
 
 :::row:::
     :::column:::
-        En el caso de la mirada, la mayoría de las aplicaciones deben usar un [cursor](cursors.md) u otra indicación visual o de auditoría para dar la confianza del usuario en lo que están a punto de interactuar. Normalmente, este cursor se coloca en el mundo en el que su rayo de miras hacia abajo intersecta primero con un objeto, que puede ser un holograma o una superficie del mundo real.<br>
+        Para la mirada con la cabeza, la mayoría de las aplicaciones deben usar un [cursor](cursors.md) u otra indicación auditiva o visual para proporcionar al usuario confianza en lo que están a punto de interactuar. Normalmente, este cursor se coloca en el mundo donde su rayo de mirada con la cabeza forma primero una intersección con un objeto, que puede ser un holograma o una superficie real.<br>
         <br>
-        En general, se recomienda *no* mostrar un cursor, ya que esto puede resultar más rápido y molesto para el usuario. En su lugar, resalte de forma sutilmente los destinos visuales o use un cursor de ojo tenue para proporcionar confianza sobre lo que está a punto de interactuar con el usuario. Para obtener más información, consulte nuestra [Guía de diseño para la entrada basada en ojo](eye-tracking.md) en HoloLens 2.
+        En el caso de  la mirada con los ojos, por lo general se recomienda no mostrar un cursor, ya que esto puede llegar a distraer e incoerablemente al usuario. En su lugar, resalte de forma sutil los destinos visuales o use un cursor de ojo atractivo para proporcionar confianza sobre lo que el usuario está a punto de interactuar. Para obtener más información, consulte nuestra guía de diseño para [obtener información](eye-tracking.md) detallada sobre HoloLens 2.
     :::column-end:::
         :::column:::
        ![Un cursor visual de ejemplo para mostrar la mirada](images/cursor.jpg)<br>
@@ -129,63 +136,63 @@ Tanto si usa la vista de encabezado o miras hacia abajo para el modelo de entrad
 ---
 
 ## <a name="commit"></a>Commit
-Después de hablar sobre las distintas formas de _mirarnos_ en un destino, vamos a hablar un poco más sobre la parte de _confirmación_ en la _mirada y la confirmación_.
-Después de establecer como destino un objeto o un elemento de la interfaz de usuario, el usuario puede interactuar o hacer clic en él mediante una entrada secundaria. Esto se conoce como el paso de confirmación del modelo de entrada. 
+Después de hablar  sobre diferentes maneras de mirar un destino, vamos a hablar un poco más sobre la parte de confirmación en la mirada _y confirmar_. 
+Después de tener como destino un objeto o elemento de interfaz de usuario, el usuario puede interactuar o hacer clic en él mediante una entrada secundaria. Esto se conoce como el paso de confirmación del modelo de entrada. 
 
 Se admiten los siguientes métodos de confirmación:
-- Gesto de puntear en el aire (es decir, levantar la mano del usuario y reunir el dedo del índice y el control de posición)
-- Decir _"seleccionar"_ o uno de los comandos de voz de destino
-- Presionar un solo botón en un [clic de HoloLens](/hololens/hololens1-clicker)
-- Presione el botón ' A ' en un controlador para juegos de Xbox
-- Presione el botón ' A ' en un controlador adaptable de Xbox
+- Gesto de pulsar en el aire (es decir, elevar la mano delante de usted y reunir el dedo índice y el dedo)
+- Diga _"seleccionar"_ o uno de los comandos de voz de destino.
+- Presionar un solo botón en un [clicker de HoloLens](/hololens/hololens1-clicker)
+- Presione el botón "A" en un gamepad de Xbox.
+- Presione el botón "A" en un controlador adaptable de Xbox.
 
-### <a name="gaze-and-air-tap-gesture"></a>Gesto de puntear y tocar el aire
-Pulsar en el aire es hacer el gesto de pulsar con la mano vertical. Para usar una derivación de aire, eleve el dedo del índice a la posición listo y, a continuación, acerque el dedo y vuelva a colocar el dedo de índice en la versión. En HoloLens (1ª generación), Air TAP es la entrada secundaria más común.
+### <a name="gaze-and-air-tap-gesture"></a>Gesto de mirada y pulsación en el aire
+Pulsar en el aire es hacer el gesto de pulsar con la mano vertical. Para usar una pulsación en el aire, coloque el dedo índice en la posición lista, luego práctese con el dedo y vuelva a subir el dedo del índice hasta liberarlo. En HoloLens (1.ª generación), el toque de aire es la entrada secundaria más común.
 
 
 :::row:::
     :::column:::
-       ![Dedo en la posición listo](images/readyandpress-ready.jpg)<br>
-       **Dedo en la posición listo**<br>
+       ![Dedo en la posición lista](images/readyandpress-ready.jpg)<br>
+       **Dedo en la posición lista**<br>
     :::column-end:::
     :::column:::
-       ![Presione el dedo para pulsar o hacer clic en](images/readyandpress-press.jpg)<br>
-        **Presione el dedo para pulsar o hacer clic en**<br>
+       ![Presione el dedo hacia abajo para pulsar o hacer clic en](images/readyandpress-press.jpg)<br>
+        **Presione el dedo hacia abajo para pulsar o hacer clic en**<br>
     :::column-end:::
 :::row-end:::
 
 
-Air TAP también está disponible en HoloLens 2. Se ha relajado de la versión original. Ahora se admiten casi todos los tipos de gestos, siempre y cuando la mano esté en vertical y manteniendo todavía. Esto hace que sea mucho más fácil para los usuarios aprender y usar el gesto. Esta nueva derivación de aire reemplaza a la antigua a través de la misma API, por lo que las aplicaciones existentes tendrán el nuevo comportamiento automáticamente después de volver a compilar para HoloLens 2.
+La pulsación en el aire también está disponible HoloLens 2. Se ha relajado con la versión original. Ahora se admiten casi todos los tipos de pesquete, siempre y cuando la mano esté vertical y deteniendo. Esto facilita a los usuarios aprender y usar el gesto. Esta nueva pulsación en el aire reemplaza la anterior a través de la misma API, por lo que las aplicaciones existentes tendrán el nuevo comportamiento automáticamente después de volver a compilar HoloLens 2.
 
 <br>
 
 ---
 
-### <a name="gaze-and-select-voice-command"></a>Mira y "selecciona" comando de voz
-Los comandos de voz son uno de los métodos de interacción principales en la realidad mixta. Proporciona un potente mecanismo gratuito para controlar el sistema. Existen diferentes tipos de modelos de interacción de voz:
+### <a name="gaze-and-select-voice-command&quot;></a>Comando de voz &quot;Seleccionar&quot; y mirada
+Los comandos de voz son uno de los métodos de interacción principales de la realidad mixta. Proporciona un eficaz mecanismo de manos libres para controlar el sistema. Hay diferentes tipos de modelos de interacción de voz:
 
-- Comando "Select" genérico que usa una acción de hacer clic o confirmar como entrada secundaria.
-- Los comandos de objeto (por ejemplo, "cerrar" o "hacer que sean más grandes") realizan y confirman una acción como entrada secundaria.
-- Los comandos globales (por ejemplo, "ir a Inicio") no requieren un destino.
-- Las interfaces o entidades de usuario de conversación como Cortana tienen una capacidad de lenguaje natural de AI.
+- El comando genérico &quot;Select&quot; que usa una acción de clic o confirmación como entrada secundaria.
+- Los comandos object (por ejemplo, &quot;Close&quot; o &quot;Make it bigger") realizan y confirman una acción como entrada secundaria.
+- Los comandos globales (por ejemplo, "Ir al inicio") no requieren un destino.
+- Las interfaces de usuario de conversación o entidades como Cortana tienen una funcionalidad de lenguaje natural de inteligencia artificial.
 - Comandos de voz personalizados
 
-Para obtener más información acerca de los detalles y una lista completa de los comandos de voz disponibles y cómo usarlos, consulte nuestra guía de [comandos de voz](../out-of-scope/voice-design.md) .
+Para obtener más información sobre los detalles y una lista completa de los comandos de voz disponibles y cómo usarlos, consulte nuestra guía [de comandos de](../out-of-scope/voice-design.md) voz.
 
 <br>
 
 ---
 
 
-### <a name="gaze-and-hololens-clicker"></a>Clic en fijamente y HoloLens
+### <a name="gaze-and-hololens-clicker"></a>Gaze y HoloLens Clicker
 
 :::row:::
     :::column:::
-        El clic de HoloLens es el primer dispositivo periférico creado específicamente para HoloLens. Está incluida en la edición de desarrollo de HoloLens (1º gen). El clic de HoloLens permite que un usuario haga clic con el movimiento mínimo de mano y se confirme como una entrada secundaria. El clic de HoloLens se conecta a HoloLens (1º gen) o a HoloLens 2 con Bluetooth de baja energía (BTLE).<br>
+        HoloLens Clicker es el primer dispositivo periférico creado específicamente para HoloLens. Se incluye con HoloLens (1.ª generación) Development Edition. HoloLens Clicker permite que un usuario haga clic con movimiento mínimo de la mano y se confirme como una entrada secundaria. HoloLens Clicker se conecta a HoloLens (1ª generación) o HoloLens 2 mediante Bluetooth de bajo consumo (BTLE).<br>
         <br>
         [Más información e instrucciones para emparejar el dispositivo](../discover/hardware-accessories.md#pairing-bluetooth-accessories)<br>
         <br>
-        *Imagen: clic de HoloLens*
+        *Imagen: HoloLens Clicker*
     :::column-end:::
         :::column:::
        ![HoloLens Clicker](images/hololens-clicker-500px.jpg)<br>
@@ -197,15 +204,15 @@ Para obtener más información acerca de los detalles y una lista completa de lo
 ---
 
 
-### <a name="gaze-and-xbox-wireless-controller"></a>Controlador inalámbrico de mira y Xbox
+### <a name="gaze-and-xbox-wireless-controller"></a>Control inalámbrico de Mirada y Xbox
 
 :::row:::
     :::column:::
-        La controladora inalámbrica Xbox realiza una acción de clic como entrada secundaria mediante el botón "A". El dispositivo se asigna a un conjunto predeterminado de acciones que ayudan a navegar y controlar el sistema. Si desea personalizar el controlador, use la aplicación accesorios de Xbox para configurar el controlador inalámbrico de Xbox.<br>
+        El controlador inalámbrico xbox realiza una acción de clic como entrada secundaria mediante el botón "A". El dispositivo se asigna a un conjunto predeterminado de acciones que ayudan a navegar y controlar el sistema. Si quieres personalizar el controlador, usa la aplicación Accesorios de Xbox para configurar el controlador inalámbrico xbox.<br>
         <br>
-        [Cómo emparejar un controlador Xbox con su PC](../discover/hardware-accessories.md#pairing-bluetooth-accessories)<br>
+        [Cómo emparejar un controlador de Xbox con el equipo](../discover/hardware-accessories.md#pairing-bluetooth-accessories)<br>
         <br>
-        *Imagen: controlador inalámbrico Xbox*
+        *Imagen: Xbox Wireless Controller*
     :::column-end:::
         :::column:::
        ![Controlador inalámbrico de Xbox](images/xboxcontroller.jpg)<br>
@@ -219,15 +226,15 @@ Para obtener más información acerca de los detalles y una lista completa de lo
 ---
 
 
-### <a name="gaze-and-xbox-adaptive-controller"></a>Mira el controlador adaptable de la consola Xbox
-Diseñado principalmente para satisfacer las necesidades de los jugadores con movilidad limitada, el controlador adaptable Xbox es un concentrador unificado para dispositivos que ayuda a hacer que la realidad mixta sea más accesible.
+### <a name="gaze-and-xbox-adaptive-controller"></a>Mirada y controlador adaptable de Xbox
+Diseñado principalmente para satisfacer las necesidades de los jugadores con movilidad limitada, el controlador adaptable de Xbox es un centro unificado para dispositivos que ayuda a que la realidad mixta sea más accesible.
 
-El controlador adaptable de la Xbox realiza una acción de clic como entrada secundaria mediante el botón "A". El dispositivo se asigna a un conjunto predeterminado de acciones que ayudan a navegar y controlar el sistema. Si desea personalizar el controlador, use la aplicación accesorios de Xbox para configurar el controlador adaptable de Xbox.
+El controlador adaptable de Xbox realiza una acción de clic como entrada secundaria mediante el botón "A". El dispositivo se asigna a un conjunto predeterminado de acciones que ayudan a navegar y controlar el sistema. Si desea personalizar el controlador, use la aplicación Accesorios de Xbox para configurar el controlador adaptable de Xbox.
 
 ![Xbox Adaptive Controller](images/xbox-adaptive-controller-devices.jpg)<br>
 *Xbox Adaptive Controller*
 
-Conecte dispositivos externos como conmutadores, botones, montajes y joysticks para crear una experiencia de controlador personalizada que sea suya exclusiva. Las entradas de los botones, el stick analógico y el desencadenador se controlan con dispositivos de asistencia conectados a través de conectores 3,5-mm y puertos USB.
+Conecte dispositivos externos, como conmutadores, botones, montajes y flechas, para crear una experiencia de controlador personalizada que sea exclusiva de usted. Las entradas de botones, de botones y desencadenadores se controlan con dispositivos de asistencia conectados a través de conectores de 3,5 mm y puertos USB.
 
 ![Puertos del Xbox Adaptive Controller](images/xbox-adaptive-controller-ports.jpg)<br>
 *Puertos del Xbox Adaptive Controller*
@@ -243,46 +250,46 @@ Conecte dispositivos externos como conmutadores, botones, montajes y joysticks p
 ## <a name="composite-gestures"></a>Gestos compuestos
 
 ### <a name="air-tap"></a>Pulsar en el aire
-El gesto de pulsación de aire (y los otros gestos que aparecen a continuación) reacciona solo en una derivación específica. Para detectar otras pulsaciones, como menú o agarre, la aplicación debe usar directamente las interacciones de nivel inferior descritas en la sección dos gestos de componentes clave anteriores.
+El gesto de pulsación de aire (y los demás gestos siguientes) reacciona solo a una pulsación específica. Para detectar otras pulsaciones, como Menu o Ctrl, la aplicación debe usar directamente las interacciones de nivel inferior descritas en la sección anterior de los dos gestos de componente clave.
 
 ### <a name="tap-and-hold"></a>Mantener pulsado
-Mantener pulsado simplemente consiste en mantener la posición del dedo hacia abajo al pulsar en el aire. La combinación de la pulsación de aire y la suspensión permite varias interacciones "hacer clic y arrastrar" más complejas al combinarse con el movimiento de ARM, como la selección de un objeto en lugar de activarlo o de las interacciones secundarias de MouseDown, como mostrar un menú contextual.
-Sin embargo, debe tener cuidado al diseñar para este gesto, ya que los usuarios pueden ser propensos a relajar sus posturas de mano durante cualquier gesto extendido.
+Mantener pulsado simplemente consiste en mantener la posición del dedo hacia abajo al pulsar en el aire. La combinación de pulsación y retención del aire permite varias interacciones más complejas de "hacer clic y arrastrar" cuando se combina con el movimiento de los brazos, como la selección de un objeto en lugar de activarlo o las interacciones secundarias del mouse, como mostrar un menú contextual.
+Sin embargo, se debe tener cuidado al diseñar para este gesto, ya que los usuarios pueden ser propensos a relajar sus posturas de mano durante cualquier gesto extendido.
 
 ### <a name="manipulation"></a>Manipulación
-Los gestos de manipulación se pueden usar para desplazar, cambiar de tamaño o girar un holograma cuando se desea que el holograma reaccione 1:1 a los movimientos del usuario. Uno de los usos de estos movimientos 1:1 es permitir al usuario dibujar o pintar en el mundo.
-El destino inicial de un gesto de manipulación debe establecerse con la mirada o apuntando. Una vez que se inicia la acción de pulsar y mantener, cualquier manipulación de objetos se controla a través de los movimientos manuales, lo que libera al usuario para que mire mientras manipula.
+Los gestos de manipulación se pueden usar para mover, cambiar el tamaño o girar un holograma cuando quiera que el holograma reaccione 1:1 a los movimientos de las manos del usuario. Uno de los usos de estos movimientos 1:1 es permitir al usuario dibujar o pintar en el mundo.
+El destino inicial de un gesto de manipulación debe establecerse con la mirada o apuntando. Una vez que se inicia la pulsación y la retención, cualquier manipulación de objetos se controla mediante movimientos de mano, lo que permite al usuario mirar alrededor mientras manipula.
 
 ### <a name="navigation"></a>Navegación
-Los gestos de navegación funcionan como un joystick virtual y se pueden usar para navegar por los widgets de la interfaz de usuario, como los menús circulares. Se mantiene pulsado para iniciar el gesto y, después, se mueve la mano dentro de un cubo 3D normalizado centrado alrededor de la pulsación inicial. Puede desplace la mano a lo largo del eje X, Y o Z de un valor de-1 a 1, siendo 0 el punto inicial.
+Los gestos de navegación funcionan como un joystick virtual y se pueden usar para navegar por los widgets de la interfaz de usuario, como los menús circulares. Se mantiene pulsado para iniciar el gesto y, después, se mueve la mano dentro de un cubo 3D normalizado centrado alrededor de la pulsación inicial. Puede mover la mano a lo largo del eje X, Y o Z de un valor de -1 a 1, siendo 0 el punto inicial.
 La navegación se puede utilizar para crear gestos de zoom o desplazamiento continuo basado en la velocidad, similares al desplazamiento en una interfaz de usuario 2D cuando se hace clic con el botón central del ratón para después mover el ratón hacia arriba y abajo.
 
-La navegación con raíles se refiere a la capacidad de reconocer movimientos en cierto eje hasta que se alcanza un umbral determinado en dicho eje. Esto solo es útil cuando el desarrollador habilita el movimiento en más de un eje en una aplicación, por ejemplo, si una aplicación está configurada para reconocer los gestos de navegación por el eje X, Y, pero también especifica el eje X con raíles. En este caso, el sistema reconocerá los movimientos de mano en el eje X siempre y cuando permanezcan dentro de un raíl imaginario (guía) en el eje X, si el movimiento de mano también se produce en el eje Y.
+La navegación con raíles hace referencia a la capacidad de reconocer los movimientos en determinado eje hasta que se alcanza un umbral determinado en ese eje. Esto solo es útil cuando el desarrollador habilita el movimiento en más de un eje en una aplicación, por ejemplo, si una aplicación está configurada para reconocer gestos de navegación en los ejes X e Y, pero también en el eje X especificado con raíles. En este caso, el sistema reconocerá los movimientos de las manos a través del eje X siempre que permanezcan dentro de un raíl imaginario (guía) en el eje X, si también se produce el movimiento de la mano en el eje Y.
 
-En las aplicaciones 2D, los usuarios pueden usar gestos de navegación vertical para desplazarse, hacer zoom o arrastrar dentro de la aplicación. Esto inserta entradas táctiles virtuales en la aplicación para simular gestos táctiles del mismo tipo. Los usuarios pueden seleccionar cuál de estas acciones tienen lugar alternando entre las herramientas de la barra situada encima de la aplicación, ya sea seleccionando el botón o diciendo ' <herramienta de desplazamiento/arrastrar/zoom> '.
+En las aplicaciones 2D, los usuarios pueden usar gestos de navegación vertical para desplazarse, hacer zoom o arrastrar dentro de la aplicación. Esto inserta entradas táctiles virtuales en la aplicación para simular gestos táctiles del mismo tipo. Los usuarios pueden seleccionar cuál de estas acciones se lleva a cabo al alternar entre las herramientas de la barra encima de la aplicación; para ello, seleccione el botón o diga "<Scroll/Drag/Zoom> Tool".
 
 [Más información sobre los gestos compuestos](gaze-and-commit.md#composite-gestures)
 
 ## <a name="gesture-recognizers"></a>Reconocedores de gestos
 
-Una ventaja de usar el reconocimiento de gestos es que puede configurar un reconocedor de gestos solo para los gestos que el holograma de destino actual puede aceptar. La plataforma solo realiza la desambiguación según sea necesario para distinguir los gestos admitidos en particular. De esta manera, un holograma que solo admita Air TAP puede aceptar cualquier período de tiempo entre la prensa y la versión, mientras que un holograma que admita tanto tap como Hold puede promover la derivación a una retención después del umbral de tiempo de espera.
+Una ventaja de usar el reconocimiento de gestos es que solo puede configurar un reconocedor de gestos para los gestos que el holograma de destino puede aceptar. La plataforma solo realiza la desambiguación según sea necesario para distinguir esos gestos admitidos concretos. De este modo, un holograma que solo admite el toque de aire puede aceptar cualquier período de tiempo entre presionar y soltar, mientras que un holograma que admita pulsar y mantener pulsado puede promover la pulsación a una retención después del umbral de tiempo de retención.
 
 ## <a name="hand-recognition"></a>Reconocimiento de la mano
-HoloLens reconoce los gestos de la mano mediante el seguimiento de la posición de una o ambas manos si son visibles para el dispositivo. HoloLens ve las manos cuando están en el estado preparado (parte posterior de la mano hacia ti con el dedo índice arriba) o el estado presionado (parte posterior de la mano hacia ti con el dedo índice hacia abajo). Cuando las manos están en otras, HoloLens las omite.
-Para cada mano que HoloLens detecta, puede tener acceso a su posición sin orientación y su estado presionado. A medida que la mano se acerca al borde del marco gestual, obtendrás un vector de dirección que puedes mostrar al usuario para que sepa cómo mover la mano para volver a ponerla donde HoloLens pueda verla.
+HoloLens reconoce los gestos de la mano mediante el seguimiento de la posición de una o ambas manos si son visibles para el dispositivo. HoloLens ve las manos cuando están en el estado preparado (parte posterior de la mano hacia ti con el dedo índice arriba) o el estado presionado (parte posterior de la mano hacia ti con el dedo índice hacia abajo). Cuando las manos están en otras poses, HoloLens las omite.
+Por cada mano que HoloLens detecte, puede acceder a su posición sin orientación y su estado presionado. A medida que la mano se acerca al borde del marco gestual, obtendrás un vector de dirección que puedes mostrar al usuario para que sepa cómo mover la mano para volver a ponerla donde HoloLens pueda verla.
 
 ## <a name="gesture-frame"></a>Marco gestual
-En el caso de los gestos en HoloLens, la mano debe estar dentro de un marco de gestos, en un intervalo en el que las cámaras de detección de gestos pueden ver adecuadamente, de la nariz a la waist y entre los hombros. Los usuarios deben estar entrenados en esta área de reconocimiento tanto para el éxito de la acción como para su comodidad. En principio, muchos usuarios suponen que el marco de gestos debe estar dentro de la vista a través de HoloLens y mantener sus ramas de forma no cómoda de interactuar. Al usar el clic de HoloLens, no es necesario que las manos estén dentro del marco de gestos.
+En el caso de los gestos en HoloLens, la mano debe estar dentro de un marco de gestos, en un intervalo que las cámaras de detección de gestos puedan ver adecuadamente, desde la sensibilidad hasta la sensibilidad y entre las manos. Los usuarios deben estar entrenados en esta área de reconocimiento tanto para el éxito de la acción como para su propia comodidad. Inicialmente, muchos usuarios asumirán que el marco de gestos debe estar dentro de su vista a través de HoloLens y mantener los manos presionados para interactuar. Al usar HoloLens Clicker, no es necesario que las manos se encuentran dentro del marco de gestos.
 
-Para los gestos continuos en concreto, hay algún riesgo de que los usuarios muevan sus manos fuera del marco de gestos mientras están en movimiento intermedio al mover un objeto holográfica, por ejemplo, y perder el resultado previsto.
+En concreto, en el caso de los gestos continuos, hay cierto riesgo de que los usuarios muevan las manos fuera del marco de gestos mientras están en medio del gesto al mover un objeto holográfico, por ejemplo, y perder el resultado previsto.
 
 Hay tres cosas que hay que tener en cuenta:
 
-- Educación del usuario sobre la existencia y los límites aproximados del marco de gestos. Esto se enseña durante la instalación de HoloLens.
+- Educación del usuario sobre la existencia del marco de gestos y los límites aproximados. Esto se enseña durante la configuración de HoloLens.
 
-- Notificar a los usuarios cuando sus gestos están próximos o rompiendo los límites del marco de gestos dentro de una aplicación hasta el grado en que un movimiento perdido conduce a resultados no deseados. La investigación ha mostrado las cualidades clave de este sistema de notificación. El shell de HoloLens proporciona un buen ejemplo de este tipo de notificación: visual, en el cursor central, que indica la dirección en la que se está llevando a cabo el cruce de límites.
+- Notificación a los usuarios cuando sus gestos se acercan o traspasan los límites del marco de gestos dentro de una aplicación hasta el punto de que un gesto perdido conduce a resultados no deseados. La investigación ha mostrado las principales calidades de este sistema de notificación. El shell de HoloLens proporciona un buen ejemplo de este tipo de notificación: visual, en el cursor central, que indica la dirección en la que se realiza el cruce de límites.
 
-- Se deben minimizar las consecuencias de traspasar los límites del marco gestual. En general, esto significa que el resultado de un gesto debe detenerse en el límite y no revertirse. Por ejemplo, si un usuario mueve algún objeto holográfica a través de una habitación, el movimiento debe detenerse cuando se infrinja el marco de gestos y no se devuelva al punto inicial. El usuario puede experimentar cierta frustración, pero es posible que comprenda más rápidamente los límites y no tenga que reiniciar todas las acciones previstas en cada momento.
+- Se deben minimizar las consecuencias de traspasar los límites del marco gestual. En general, esto significa que el resultado de un gesto debe detenerse en el límite y no invertirse. Por ejemplo, si un usuario mueve algún objeto holográfico a través de una sala, el movimiento debe detenerse cuando se infringe el marco de gestos y no se devuelve al punto inicial. Es posible que el usuario experimente cierta frustración, pero podría comprender más rápidamente los límites y no tener que reiniciar todas las acciones previstas cada vez.
 
 
 

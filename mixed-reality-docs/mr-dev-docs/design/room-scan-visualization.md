@@ -6,12 +6,12 @@ ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, patrones de aplicación, diseño, HoloLens, examen de sala, asignación espacial, malla, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens
-ms.openlocfilehash: 8c7f1ae95cfdb520e84835f7fd5d78522e62e341
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 87312a5d5361ac0e8c24a622cf69fe3e9b147ff5
+ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143618"
+ms.locfileid: "110196410"
 ---
 # <a name="room-scan-visualization"></a>Visualización de la exploración de la sala
 
@@ -19,12 +19,14 @@ Las aplicaciones que requieren asignación espacial dependen del dispositivo par
 
 Para garantizar datos útiles de asignación espacial, los desarrolladores de aplicaciones tienen varias opciones:
 * Dependa de lo que ya se haya recopilado. Estos datos pueden estar incompletos inicialmente.
-* Pida al usuario que use el gesto de Bloom para llegar al Windows Mixed Reality inicio y, a continuación, explore el área que desea usar para la experiencia. Pueden usar el toque de aire para confirmar que el dispositivo conoce toda la área necesaria.
+* Pida al usuario que use el gesto de Bloom para llegar al Windows Mixed Reality inicio y, a continuación, explore el área que desea usar para la experiencia. Pueden usar la pulsación en el aire para confirmar que el dispositivo conoce toda la área necesaria.
 * Cree una experiencia de exploración personalizada en su propia aplicación.
 
-En todos estos casos, el sistema almacena los datos reales recopilados durante la exploración y la aplicación no necesita hacerlo. Si quiere ver la visualización del examen de sala en acción, consulte nuestra demostración de vídeo Diseño de [hologramas:]() reconocimiento espacial a continuación:
+En todos estos casos, el sistema almacena los datos reales recopilados durante la exploración y la aplicación no necesita hacerlo. Si quiere ver la visualización del examen de sala en acción, consulte nuestra demostración de vídeo Diseño de **hologramas:** reconocimiento espacial a continuación:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Spatial-Awareness-Chapter/player]
+
+*Este vídeo se tomó de la aplicación "Diseño de hologramas" HoloLens 2 aplicación. Descargue y disfrute de la experiencia [completa aquí.](https://aka.ms/dhapp)*
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -60,26 +62,26 @@ En muchos casos, es mejor decir al usuario lo que necesita hacer para obtener la
 
 Los datos de asignación espacial son las aplicaciones de origen de datos de mayor peso que pueden consumir. Para evitar problemas de rendimiento, como fotogramas descartados o desordenes, el consumo de estos datos debe realizarse cuidadosamente.
 
-El análisis activo durante una experiencia puede ser beneficioso y perjudicial, por lo que deberá decidir qué método usar en función de la experiencia.
+El examen activo durante una experiencia puede ser beneficioso y perjudicial, por lo que deberá decidir qué método usar en función de la experiencia.
 
 ### <a name="cached-spatial-mapping"></a>Asignación espacial almacenada en caché
 
 Si hay datos de asignación espacial almacenados en caché, la aplicación normalmente toma una instantánea de los datos de asignación espacial y usa esta instantánea durante la experiencia.
 
 **Ventajas**
-* Se ha reducido la sobrecarga en el sistema mientras se ejecuta la experiencia, lo que provoca importantes mejoras en el rendimiento de la energía, las temperaturas y la cpu.
+* Se ha reducido la sobrecarga en el sistema mientras se ejecuta la experiencia, lo que provoca importantes mejoras en el rendimiento de la energía, las temperaturas y la CPU.
 * Una implementación más sencilla de la experiencia principal, ya que los cambios en los datos espaciales no la interrumpen.
 * Un solo costo de un solo tiempo en cualquier procesamiento posterior de los datos espaciales para fines físicos, gráficos y otros fines.
 
 **Inconvenientes**
-* Los datos almacenados en caché no reflejan el movimiento de objetos o personas reales. Por ejemplo, la aplicación podría considerar una puerta abierta cuando está cerrada ahora.
+* Los datos almacenados en caché no reflejan el movimiento de objetos o personas del mundo real. Por ejemplo, la aplicación podría considerar una puerta abierta cuando está cerrada ahora.
 * Potencialmente más memoria de aplicación para mantener la versión almacenada en caché de los datos.
 
 Un buen caso para este método es un entorno controlado o un juego de mesa.
 
 ### <a name="continuous-spatial-mapping"></a>Asignación espacial continua
 
-Ciertas aplicaciones pueden basarse en el examen continuo para actualizar los datos de asignación espacial.
+Algunas aplicaciones pueden basarse en el análisis continuo para actualizar los datos de asignación espacial.
 
 **Ventajas**
 * No es necesario compilar en una experiencia de exploración o exploración independiente por adelantado en la aplicación.
