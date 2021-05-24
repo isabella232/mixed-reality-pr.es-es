@@ -1,28 +1,29 @@
 ---
-title: Uso del Mixed Reality openXR para Unity
+title: Uso del complemento OpenXR de Mixed Reality
 description: Aprenda a habilitar el complemento Mixed Reality OpenXR para proyectos de Unity.
 author: hferrone
 ms.author: alexturn
 ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr, unity, hololens, hololens 2, mixed reality, MRTK, Mixed Reality Toolkit, realidad aumentada, realidad virtual, cascos de realidad mixta, aprendizaje, tutorial, introducción
-ms.openlocfilehash: 4c220deeca13c6807857375b71640207823b94ed
-ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
+ms.openlocfilehash: 733bbbd75dd170241e8781e24989d23902781fb9
+ms.sourcegitcommit: b195b82f7e83e2ac4f5d8937d169e9dcb865d46d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "107944666"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110333447"
 ---
-# <a name="using-the-mixed-reality-openxr-plugin-for-unity"></a>Uso del Mixed Reality openXR para Unity
+# <a name="using-the-mixed-reality-openxr-plugin"></a>Uso del complemento OpenXR de Mixed Reality
 
-A partir de la versión 2020.2 de Unity, el paquete Mixed Reality complemento OpenXR de Microsoft está disponible con la herramienta Mixed Reality feature tool de [Microsoft.](welcome-to-mr-feature-tool.md)
+Para los desarrolladores que usan Unity 2020 para compilar aplicaciones HoloLens 2 o Mixed Reality, se puede usar el complemento OpenXR en lugar del complemento WindowsXR para mejorar las compatibilidades multiplataforma.  El Mixed Reality complemento OpenXR también funciona bien con la herramienta de [características Mixed Reality más reciente.](welcome-to-mr-feature-tool.md)
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
-* Unity 2020.3 LTS o posterior
-* Complemento OpenXR de Unity 1.1.1 o posterior
-* Visual Studio 2019 o posterior
-* Instalación de la compatibilidad con la plataforma **UWP** en Unity para HoloLens 2 aplicaciones
+* La versión más reciente de Unity 2020.3 LTS, se recomienda 2020.3.6f1 o superior.
+* El complemento OpenXR de Unity más reciente, recomendado 1.2 o posterior
+* Herramientas [más recientes para HoloLens 2 desarrollo](/windows/mixed-reality/develop/install-the-tools?tabs=unity#installation-checklist)
+* Versión más reciente de MRTK (opcional), se recomienda la versión 2.6 o posterior.
+* Versión Mixed Reality complemento OpenXR, se recomienda la versión 0.9.5 o posterior.
 
 > [!NOTE]
 > Si va a compilar aplicaciones de realidad virtual en equipos Windows, Mixed Reality complemento OpenXR no es necesariamente necesario. Sin embargo, querrá instalar el complemento si va a personalizar la asignación de controladores para controladores HP Reverb G2 o crear aplicaciones que funcionen en cascos de realidad virtual HoloLens 2 y de realidad virtual.
@@ -32,7 +33,7 @@ A partir de la versión 2020.2 de Unity, el paquete Mixed Reality complemento Op
 MRTK para Unity proporciona un sistema de entrada multiplataforma, componentes básicos y bloques de creación comunes para interacciones espaciales. La versión 2 de MRTK está diseñada para acelerar el desarrollo de aplicaciones de Microsoft HoloLens, cascos envolventes (VR) de Windows Mixed Reality y la plataforma OpenVR. El proyecto está pensado para reducir las barreras en la creación de aplicaciones de realidad mixta y para contribuir al crecimiento conjunto de la comunidad.
 
 > [!div class="nextstepaction"]
-> [Configuración del proyecto mediante MRTK](https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02?tabs=openxr)
+> [Configuración del proyecto mediante MRTK](/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02?tabs=openxr)
 
 Eche un vistazo a la [documentación de MRTK](/windows/mixed-reality/mrtk-unity) para obtener más detalles sobre las características.
 
@@ -50,17 +51,14 @@ Si tiene como destino Desktop VR, se recomienda usar la plataforma independiente
 
 Si tiene como destino HoloLens 2, debe cambiar al Plataforma universal de Windows:
 
-1.  Seleccione File > Build Settings... (Configuración **de compilación de archivos).**
-2.  Seleccione **Plataforma universal de Windows** en la lista Plataforma y seleccione **Cambiar plataforma.**
-3.  Establezca la **arquitectura** en **ARM 64**
-4.  Establezca **Target Device** (Dispositivo de destino) en **HoloLens**.
-5.  Establezca **Build Type** (Tipo de compilación) en **D3D**.
-6.  Establezca el **SDK de UWP** en la **Latest installed** (última versión instalada)
-7.  Establezca la **configuración de compilación** en **Release** (Publicación) porque hay problemas de rendimiento conocidos con Debug (Depuración).
+1. Seleccione File > Build Settings... (Configuración **de compilación de archivos).**
+2. Seleccione **Plataforma universal de Windows** en la lista Plataforma y seleccione **Cambiar plataforma.**
+3. Establezca la **arquitectura** en **ARM 64**
+4. Establezca **Target Device** (Dispositivo de destino) en **HoloLens**.
+5. Establezca **Build Type** (Tipo de compilación) en **D3D**.
+6. Establezca el **SDK de UWP** en la **Latest installed** (última versión instalada)
 
 ![Captura de pantalla de la ventana Configuración de compilación abierta en el editor de Unity Plataforma universal de Windows resaltado](images/wmr-config-img-4.png)
-
-Después de configurar la plataforma, debe hacer [](../../design/app-views.md) que Unity sepa que debe crear una vista inmersiva en lugar de una vista 2D cuando se exporte.
 
 ## <a name="configuring-xr-plugin-management-for-openxr"></a>Configuración de la administración de complementos XR para OpenXR
 
@@ -86,30 +84,13 @@ Si va a desarrollar para HoloLens 2, vaya a Mixed Reality> **OpenXR > Apply reco
 
 Ya está listo para empezar a desarrollar con OpenXR en Unity.  Continúe con la sección siguiente para aprender a usar los ejemplos de OpenXR.
 
-## <a name="try-out-the-unity-sample-scenes"></a>Prueba de las escenas de ejemplo de Unity
+## <a name="unity-sample-projects-for-openxr-and-hololens-2"></a>Proyectos de ejemplo de Unity para OpenXR y HoloLens 2
 
-### <a name="hololens-2-samples"></a>HoloLens 2 ejemplos
-
-1. En el Editor de Unity, vaya a **Ventana > Administrador de paquetes**
-2. En la lista de paquetes, **seleccione Mixed Reality complemento OpenXR.**
-3. Busque el ejemplo en la **lista Ejemplos** y seleccione **Importar.**
-
-![Captura de pantalla de unity Administrador de paquetes en el editor de Unity con Mixed Reality complemento OpenXR seleccionado y el botón de importación de ejemplos resaltado](images/openxr-img-03.png)
-
-<!-- ### For all other OpenXR samples
-
-1. In the Unity Editor, navigate to **Window > Package Manager**
-2. In the list of packages, select **OpenXR Plugin**
-3. Locate the sample in the **Samples** list and select **Import**
-
-![Screenshot of Unity Package Manager open in Unity editor with OpenXR Plugin selected and samples import button highlighted](images/openxr-img-10.png) -->
-
-> [!NOTE]
-> Cuando se actualiza un paquete, Unity proporciona la opción de actualizar los ejemplos importados.  Al actualizar un ejemplo importado, se sobrescribirán los cambios realizados en el ejemplo y los recursos asociados.
+Consulte el repositorio de ejemplos de [OpenXR Mixed Reality](https://github.com/microsoft/OpenXR-Unity-MixedReality-Samples) para ver proyectos de Unity de ejemplo que muestran cómo compilar aplicaciones de Unity para cascos HoloLens 2 o Mixed Reality mediante el complemento Mixed Reality OpenXR.
 
 ## <a name="using-mrtk-with-openxr-support"></a>Uso de MRTK con compatibilidad con OpenXR
 
-MRTK-Unity admite Mixed Reality complemento OpenXR a partir de la versión 2.5.3.
+MRTK-Unity admite el Mixed Reality complemento OpenXR a partir de la versión 2.5.3.
 
 1. Abra de [nuevo Mixed Reality Feature Tool](welcome-to-mr-feature-tool.md) para instalar Mixed Reality Toolkit, si aún no lo ha hecho. La compatibilidad con OpenXR está en el **paquete de Foundation.**
 2. Vaya al script del componente MixedReality Toolkit en el inspector y cambie al perfil **DefaultOpenXRConfigurationProfile:**
@@ -119,7 +100,7 @@ MRTK-Unity admite Mixed Reality complemento OpenXR a partir de la versión 2.5.3
     1. Consulte la documentación de MRTK para obtener información más [detallada sobre la migración a OpenXR.](/windows/mixed-reality/mrtk-unity/configuration/getting-started-with-mrtk-and-xrsdk#configuring-mrtk-for-the-xr-sdk-pipeline)
 
 > [!NOTE]
-> Al actualizar desde una versión anterior de MRTK, asegúrese de que la línea siguiente está en el archivo **Assets/MixedRealityToolkit.Generated/link.xml:**
+> Al actualizar desde una versión anterior de MRTK, asegúrese de que la siguiente línea se encuentra en el archivo **Assets/MixedRealityToolkit.Generated/link.xml:**
 >
 > ```xml
 > <assembly fullname = "Microsoft.MixedReality.Toolkit.Providers.OpenXR" preserve="all"/>
@@ -135,7 +116,7 @@ Ahora que tiene el proyecto configurado para OpenXR y [](openxr-supported-featur
 
 OpenXR sigue siendo experimental, por lo que agradecemos cualquier comentario que pueda proporcionarnos para mejorarlo. Para encontrarnos en los foros de [Unity,](https://aka.ms/unityforums) debe etiquetar la publicación del foro con **Microsoft**  +  **OpenXR** y HoloLens 2 **o Windows Mixed Reality**. 
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Configuración de un proyecto sin MRTK](configure-unity-project.md)
 * [Configuración recomendada para Unity](recommended-settings-for-unity.md)

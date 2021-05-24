@@ -5,60 +5,60 @@ author: hferrone
 ms.author: alexturn
 ms.date: 03/16/2021
 ms.topic: article
-keywords: openxr, Unity, hololens, hololens 2, reality Mixed, MRTK, kit de herramientas de realidad mixta, realidad aumentada, realidad virtual, auriculares de realidad mixta, información, tutorial, introducción, comunicación remota de Holographic, escritorio
-ms.openlocfilehash: f3cf43d59b74b0f47e701acc1d7312544867b0df
-ms.sourcegitcommit: d5e4eb94c87b86a7774a639f11cd9e35a7050107
+keywords: openxr, unity, hololens, hololens 2, mixed reality, MRTK, Mixed Reality Toolkit, realidad aumentada, realidad virtual, cascos de realidad mixta, aprendizaje, tutorial, introducción, comunicación remota holográfica, escritorio
+ms.openlocfilehash: 18557af1f08ea05715b92b5072460871bb05a329
+ms.sourcegitcommit: b195b82f7e83e2ac4f5d8937d169e9dcb865d46d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "103624328"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110333427"
 ---
 # <a name="holographic-remoting-in-desktop-app"></a>Holographic Remoting en la aplicación de escritorio
 
 > [!NOTE]
-> La compatibilidad con la comunicación remota de aplicaciones independiente de Windows se agregó en la versión del paquete 0.1.3.
-> A partir de la versión 0.1.3, esta característica no es compatible con las compilaciones de UWP.
+> La compatibilidad con la comunicación remota de aplicaciones independientes de Windows se agregó en la versión del paquete 0.1.3.
+> A partir de la versión 0.1.3, esta característica no admite compilaciones de UWP.
 
-1. Siga los pasos del [programa de instalación de Holographic Remoting](openxr-supported-features.md#holographic-remoting-setup)
-2. Abra **configuración del proyecto de edición >**, vaya a **Administración de complementos de XR** y active la casilla **conjunto de características de Windows Mixed Reality** . Además, desactive **inicializar XR en el inicio**:
+1. Siga los pasos descritos en [Configuración de Holographic Remoting.](unity-play-mode.md#holographic-remoting-setup)
+2. Abra **Editar -> configuración** del proyecto, vaya a Administración del complemento **XR** y active Windows Mixed Reality conjunto de **características.** Además, desactive **Initialize XR on Startup (Inicializar XR al iniciar):**
 
-    ![Captura de pantalla del panel de configuración del proyecto abierta en el editor de Unity con Initialize XR on Startup desactivada](images/openxr-features-img-02-app.png)
+    ![Captura de pantalla del panel de configuración del proyecto abierto en el Editor de Unity con Inicializar XR al iniciar desactivada](images/openxr-features-img-02-app.png)
 
-3. Expanda la sección **características** en **OpenXR** y seleccione **Mostrar todas**
-4. Active la casilla de verificación remota de la **aplicación Holographic** :
+3. Expanda la **sección Características** en **OpenXR** y seleccione **Mostrar todo.**
+4. Active la **casilla Holographic App Remoting (Comunicación remota de aplicaciones holográficas):**
 
-    ![Captura de pantalla del panel de configuración del proyecto abierta en el editor de Unity con la comunicación remota de la aplicación habilitada](images/openxr-features-img-03-app.png)
+    ![Captura de pantalla del panel de configuración del proyecto abierto en el Editor de Unity con la comunicación remota de aplicaciones habilitada](images/openxr-features-img-03-app.png)
 
-5. A continuación, escriba código para establecer la configuración de comunicación remota y desencadenar la inicialización de XR. La aplicación de ejemplo distribuida con el [complemento Mixed Reality OpenXR](openxr-getting-started.md#hololens-2-samples) contiene AppRemoting.CS, que muestra un escenario de ejemplo para conectarse a una dirección IP específica en tiempo de ejecución. La implementación de la aplicación de ejemplo en un equipo local en este momento mostrará un campo de entrada de dirección IP con un botón conectar. Al escribir una dirección IP y hacer clic en conectar se inicializará XR e intentará conectarse al dispositivo de destino:
+5. A continuación, escriba código para establecer la configuración de comunicación remota y desencadenar la inicialización de XR. La aplicación de ejemplo distribuida con [Mixed Reality complemento OpenXR](openxr-getting-started.md#unity-sample-projects-for-openxr-and-hololens-2) contiene AppRemoting.cs, que muestra un escenario de ejemplo para conectarse a una dirección IP específica en tiempo de ejecución. La implementación de la aplicación de ejemplo en un equipo local en este momento mostrará un campo de entrada de dirección IP con un botón conectar. Al escribir una dirección IP y hacer clic en Conectar, se inicializará XR e intentará conectarse al dispositivo de destino:
 
-    ![Captura de pantalla de la aplicación de ejemplo que muestra la interfaz de usuario de comunicación remota](images/openxr-sample-app-remoting.png)
+    ![Captura de pantalla de la aplicación de ejemplo que muestra la interfaz de usuario de comunicación remota de aplicaciones de ejemplo](images/openxr-sample-app-remoting.png)
 
-6. Para escribir código de conexión personalizado, llame a `Microsoft.MixedReality.OpenXR.Remoting.AppRemoting.Connect` con un rellenado `RemotingConfiguration` . La aplicación de ejemplo expone esto en el inspector y muestra cómo rellenar la dirección IP desde un campo de texto. Al llamar a, `Connect` se establecerá la configuración y se inicializará automáticamente XR, motivo por el que debe llamarse como corrutina:
+6. Para escribir código de conexión personalizado, llame `Microsoft.MixedReality.OpenXR.Remoting.AppRemoting.Connect` a con un elemento rellenado. `RemotingConfiguration` La aplicación de ejemplo expone esto en el inspector y muestra cómo rellenar la dirección IP desde un campo de texto. Al `Connect` llamar a se establecerá la configuración y se inicializará automáticamente XR, por lo que se debe llamar a ella como una corrotina:
 
     ``` cs
     StartCoroutine(Remoting.AppRemoting.Connect(remotingConfiguration));
     ```
 
-7. Mientras se ejecuta, puede obtener el estado de conexión actual con la `AppRemoting.TryGetConnectionState` API y, opcionalmente, desconectar y desinicializar XR mediante `AppRemoting.Disconnect()` . Esto podría usarse para desconectarse y volver a conectarse a un dispositivo diferente dentro de la misma sesión de la aplicación. La aplicación de ejemplo proporciona un cubo de tappable que desconectará la sesión de comunicación remota si se puntea.
+7. Mientras se ejecuta, puede obtener el estado de conexión actual con la API y, opcionalmente, desconectar y `AppRemoting.TryGetConnectionState` des inicializar XR mediante `AppRemoting.Disconnect()` . Esto se podría usar para desconectarse y volver a conectarse a un dispositivo diferente dentro de la misma sesión de la aplicación. La aplicación de ejemplo proporciona un cubo que se puede aplicar y que desconectará la sesión de comunicación remota si se pulsa.
 
 ### <a name="migration-from-previous-apis"></a>Migración desde API anteriores
 
-#### <a name="unityenginexrwsaholographicremoting"></a>UnityEngine. XR. WSA. HolographicRemoting
+#### <a name="unityenginexrwsaholographicremoting"></a>UnityEngine.XR.WSA.HolographicRemoting
 
-En el código de ejemplo de los [documentos de Unity](https://docs.unity3d.com/2018.4/Documentation/ScriptReference/XR.WSA.HolographicRemoting.html):
+En el código de ejemplo [de los documentos de Unity:](https://docs.unity3d.com/2018.4/Documentation/ScriptReference/XR.WSA.HolographicRemoting.html)
 
-| XR. WSA. HolographicRemoting | OpenXR. Remoting. AppRemoting |
+| Xr. Wsa. HolographicRemoting | OpenXR.Remoting.AppRemoting |
 | ---- | ---- |
 | `HolographicRemoting.Connect(String)` | `AppRemoting.Connect(RemotingConfiguration)` |
 | `HolographicRemoting.ConnectionState` | `AppRemoting.TryGetConnectionState(out ConnectionState, out DisconnectReason)`|
-| `StartCoroutine(LoadDevice("WindowsMR"))`| [N/A: se produce automáticamente cuando se llama a `AppRemoting.Connect` ]  |
+| `StartCoroutine(LoadDevice("WindowsMR"))`| [N/A: Se produce automáticamente al llamar a `AppRemoting.Connect` ]  |
 
-#### <a name="unityenginexrwindowsmrwindowsmrremoting"></a>UnityEngine. XR. WindowsMR. WindowsMRRemoting
+#### <a name="unityenginexrwindowsmrwindowsmrremoting"></a>UnityEngine.XR.WindowsMR.WindowsMRRemoting
 
-| XR. WindowsMR.WindowsMRRemoting | OpenXR. Remoting. AppRemoting |
+| Xr. WindowsMR.WindowsMRRemoting | OpenXR.Remoting.AppRemoting |
 | ---- | ---- |
 | `WindowsMRRemoting.Connect()` | `AppRemoting.Connect(RemotingConfiguration)` |
 | `WindowsMRRemoting.Disconnect()` | `AppRemoting.Disconnect()` |
 | `WindowsMRRemoting.TryGetConnectionState(out ConnectionState)` y `WindowsMRRemoting.TryGetConnectionFailureReason(out ConnectionFailureReason)`| `AppRemoting.TryGetConnectionState(out ConnectionState, out DisconnectReason)`|
-| `WindowsMRRemoting.isAudioEnabled`, `WindowsMRRemoting.maxBitRateKbps`, `WindowsMRRemoting.remoteMachineName` | Se pasa a `AppRemoting.Connect` través del `RemotingConfiguration` struct |
+| `WindowsMRRemoting.isAudioEnabled`, `WindowsMRRemoting.maxBitRateKbps`, `WindowsMRRemoting.remoteMachineName` | Pasado a `AppRemoting.Connect` a través de la `RemotingConfiguration` estructura |
 | `WindowsMRRemoting.isConnected` | `AppRemoting.TryGetConnectionState(out ConnectionState state, out _) && state == ConnectionState.Connected`
