@@ -5,49 +5,45 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, interacciones con las manos, control de límites, botones presionables,
-ms.openlocfilehash: 1cbf4efe9075ea6e86401e041cdf5b07098b22e0
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 229933dfd2414e485da6c1a77a2ffb08c9982249
+ms.sourcegitcommit: 2f69fb62eb81f91e655d7b55306b0550a1162496
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144677"
+ms.lasthandoff: 06/10/2021
+ms.locfileid: "111908413"
 ---
 # <a name="hand-interaction-examples-scene"></a>Escena de ejemplos de interacción con la mano
 
-![Ejemplos de interacción con la mano 1](../images/MRTK_Examples.png)
+![Ejemplos de interacción con la mano 1](../images/hand-interaction-examples/MRTK_HandInteractionExamples.png)
 
-La escena de ejemplo (Assets/MRTK/Examples/Demos/HandTracking/Scenes/HandInteractionExamples.unity) contiene varios tipos de interacciones y controles de interfaz de usuario que resaltan la entrada de mano `HandInteractionExamples` articulada.
+La **escena de ejemplo HandInteractionExamples** contiene varios tipos de interacciones y controles de interfaz de usuario que resaltan la entrada de mano articulada. Con la simulación de entrada de MRTK, puede experimentar interacciones de seguimiento manual en el editor de Unity. 
+
+**La escena HandInteractionExamples** se incluye en el paquete Examples de MRTK. Puede descargar e importar el paquete **Mixed Reality Toolkit Examples** mediante Mixed Reality Feature [Tool](/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool)
+
+<img src="../images/hand-interaction-examples/MRTK_Examples_Package_MRFT.png" width="550" alt="Example Package 1"><br/>
+
+En Unity, use el menú Ventana > Administrador de paquetes > En proyecto > personalizado y seleccione Mixed Reality Toolkit Examples (Ejemplos **del kit de herramientas).** Haga **clic en el botón Importar** en el proyecto situado junto a **Demostraciones - HandTracking**. Podrá encontrar la escena **HandInteractionExamples** en la carpeta Assets > Samples (Recursos > ejemplos).
+
+<img src="../images/hand-interaction-examples/MRTK_Examples_Package_2.png" width="300" alt="Example Package 2"><br/>
+
+<img src="../images/hand-interaction-examples/MRTK_Examples_Package_3.png" width="650" alt="Example Package 3"><br/>
+
+<img src="../images/hand-interaction-examples/MRTK_Examples_Package_4.png" width="650" alt="Example Package 4"><br/>
+
+* Si no usa Mixed Reality Feature Tool, puede descargar e importar directamente **Microsoft.MixedReality.Toolkit.Unity.Examples.unitypackage** desde la página de lanzamiento de GITHub de [MRTK.](https://github.com/microsoft/MixedRealityToolkit-Unity/releases)
 
 > [!NOTE]
-> En esta escena de ejemplo se *usa TextMesh Pro*. Para abrir la escena, haga clic *en "Importar TMP Essentials"* cuando se muestra el símbolo del sistema correspondiente durante la importación de la escena. Unity importará los paquetes de TextMesh Pro.
+> En esta escena de ejemplo se *usa TextMesh Pro*. Para abrir la escena, haga clic en *"Importar TMP Essentials"* cuando se muestra el símbolo del sistema correspondiente durante la importación de la escena. Unity importará los paquetes de TextMesh Pro.
 
 <img src="../images/hand-interaction-examples/MRTK_Examples_TMP2.png" width="450" alt="Example TMP2">
 
-Si ve texto grande después de la importación de TextMesh Pro, abra otra escena de Unity y vuelva a abrir la escena de ejemplo.
 
-<img src="../images/hand-interaction-examples/MRTK_Examples_TMP1.png" width="350" alt="Example TMP1">
 
-## <a name="pressable-button"></a>Botón presionable
+Puede experimentar estos componentes en la **escena HandInteractionExamples.**
 
-Consulte [la página](../ux-building-blocks/button.md) del botón para obtener más información.
-![Ejemplos de interacción con la mano 2](../images/hand-interaction-examples/MRTK_Examples_PressTouch.png)
-
-## <a name="bounds-control"></a>Control de límites
-
-Consulte [la página de control de](../ux-building-blocks/bounds-control.md) límites para obtener más información.
-![Ejemplos de interacción con la mano 3](../images/hand-interaction-examples/MRTK_Examples_BoundingBox.png)
-
-## <a name="manipulation-handler"></a>Controlador de manipulación
-
-Consulte [la página del controlador](../ux-building-blocks/manipulation-handler.md) de manipulación para obtener más información.
-![Ejemplos de interacción manual](../images/hand-interaction-examples/MRTK_Examples_Manipulation.png)
-
-## <a name="slate"></a>Claqueta
-
-Consulte [la página](../ux-building-blocks/slate.md) de pizarra para obtener más información.
-![Pizarra de ejemplos de interacción con la mano](../images/hand-interaction-examples/MRTK_Examples_Slate.png)
-
-## <a name="system-keyboard"></a>Teclado del sistema
-
-Consulte [la página del teclado](../ux-building-blocks/system-keyboard.md) del sistema para obtener más información.
-![Teclado de ejemplos de interacción con la mano](../images/hand-interaction-examples/MRTK_Examples_Keyboard.png)
+- [Botón presionable](../ux-building-blocks/button.md)
+- [Control Límites](../ux-building-blocks/bounds-control.md)
+- [Manipulador de objetos](../ux-building-blocks/object-manipulator.md)
+- [Claqueta](../ux-building-blocks/slate.md)
+- [Control deslizante](../ux-building-blocks/sliders.md)
+- [Teclado del sistema](../ux-building-blocks/system-keyboard.md)
