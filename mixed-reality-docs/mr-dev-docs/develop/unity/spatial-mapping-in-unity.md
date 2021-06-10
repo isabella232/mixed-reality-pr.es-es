@@ -1,243 +1,230 @@
 ---
 title: Asignación espacial en Unity
-description: Obtenga información acerca de cómo usar y administrar la representación y la colisión con la geometría del mundo real en lugar de las aplicaciones de la realidad mixta de Unity.
+description: Obtenga información sobre cómo usar y administrar la representación y la colisión con la geometría real que le rodea en las aplicaciones de realidad mixta de Unity.
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Unity, asignación espacial, representador, Colisionador, malla, escaneo, componente, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: f7fe6e86f9672f36a34f9d7c32d25fccd7760f5e
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: Unity, asignación espacial, representador, colisionador, malla, examen, componente, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: fa571a13ce192b29b2a35033b55061f3ffb707da
+ms.sourcegitcommit: ec80ef1e496bf0b17a161735535517e87ffdd364
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300170"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110351783"
 ---
-# <a name="spatial-mapping-in-unity"></a><span data-ttu-id="92b06-104">Asignación espacial en Unity</span><span class="sxs-lookup"><span data-stu-id="92b06-104">Spatial mapping in Unity</span></span>
+# <a name="spatial-mapping-in-unity"></a><span data-ttu-id="90b8b-104">Asignación espacial en Unity</span><span class="sxs-lookup"><span data-stu-id="90b8b-104">Spatial mapping in Unity</span></span>
 
-<span data-ttu-id="92b06-105">la [asignación espacial](../../design/spatial-mapping.md) permite recuperar mallas de triángulo que representan las superficies del mundo en torno a un dispositivo HoloLens.</span><span class="sxs-lookup"><span data-stu-id="92b06-105">[spatial mapping](../../design/spatial-mapping.md) lets you retrieve triangle meshes that represent the surfaces in the world around a HoloLens device.</span></span> <span data-ttu-id="92b06-106">Puede usar datos de superficie para la selección de ubicación, oclusión y análisis de habitación para dar a los proyectos de Unity una dosis adicional de inmersión.</span><span class="sxs-lookup"><span data-stu-id="92b06-106">You can use surface data for placement, occlusion, and room analysis to give your Unity projects an extra dose of immersion.</span></span>
+<span data-ttu-id="90b8b-105">[La asignación](../../design/spatial-mapping.md) espacial permite recuperar mallas de triángulo que representan las superficies del mundo alrededor de un dispositivo HoloLens.</span><span class="sxs-lookup"><span data-stu-id="90b8b-105">[spatial mapping](../../design/spatial-mapping.md) lets you retrieve triangle meshes that represent the surfaces in the world around a HoloLens device.</span></span> <span data-ttu-id="90b8b-106">Puede usar los datos de la superficie para la selección de ubicación, oclusión y análisis de sala para proporcionar a los proyectos de Unity una mayor cantidad de inmersiones.</span><span class="sxs-lookup"><span data-stu-id="90b8b-106">You can use surface data for placement, occlusion, and room analysis to give your Unity projects an extra dose of immersion.</span></span>
 
-<span data-ttu-id="92b06-107">Unity incluye compatibilidad total con la asignación espacial, que se expone a los desarrolladores de las siguientes maneras:</span><span class="sxs-lookup"><span data-stu-id="92b06-107">Unity includes full support for spatial mapping, which is exposed to developers in the following ways:</span></span>
+<span data-ttu-id="90b8b-107">Unity incluye compatibilidad completa con la asignación espacial, que se expone a los desarrolladores de las maneras siguientes:</span><span class="sxs-lookup"><span data-stu-id="90b8b-107">Unity includes full support for spatial mapping, which is exposed to developers in the following ways:</span></span>
 
-1. <span data-ttu-id="92b06-108">Componentes de asignación espacial disponibles en MixedRealityToolkit, que proporcionan una ruta de acceso cómoda y rápida para empezar a trabajar con la asignación espacial</span><span class="sxs-lookup"><span data-stu-id="92b06-108">Spatial mapping components available in the MixedRealityToolkit, which provide a convenient and rapid path for getting started with spatial mapping</span></span>
-2. <span data-ttu-id="92b06-109">API de asignación espacial de nivel inferior, que proporcionan control total y permiten una personalización específica de la aplicación más sofisticada.</span><span class="sxs-lookup"><span data-stu-id="92b06-109">Lower-level spatial mapping APIs, which provide full control and enable more sophisticated application-specific customization</span></span>
+1. <span data-ttu-id="90b8b-108">Componentes de asignación espacial disponibles en MixedRealityToolkit, que proporcionan una ruta de acceso cómoda y rápida para empezar a trabajar con la asignación espacial.</span><span class="sxs-lookup"><span data-stu-id="90b8b-108">Spatial mapping components available in the MixedRealityToolkit, which provide a convenient and rapid path for getting started with spatial mapping</span></span>
+2. <span data-ttu-id="90b8b-109">API de asignación espacial de nivel inferior, que proporcionan control total y permiten una personalización más sofisticada específica de la aplicación</span><span class="sxs-lookup"><span data-stu-id="90b8b-109">Lower-level spatial mapping APIs, which provide full control and enable more sophisticated application-specific customization</span></span>
 
-<span data-ttu-id="92b06-110">Para usar la asignación espacial en la aplicación, debe establecerse la funcionalidad spatialPerception en el AppxManifest.</span><span class="sxs-lookup"><span data-stu-id="92b06-110">To use spatial mapping in your app, the spatialPerception capability needs to be set in your AppxManifest.</span></span>
+<span data-ttu-id="90b8b-110">Para usar la asignación espacial en la aplicación, la funcionalidad spatialPerception debe establecerse en AppxManifest.</span><span class="sxs-lookup"><span data-stu-id="90b8b-110">To use spatial mapping in your app, the spatialPerception capability needs to be set in your AppxManifest.</span></span>
 
-## <a name="device-support"></a><span data-ttu-id="92b06-111">Compatibilidad con dispositivos</span><span class="sxs-lookup"><span data-stu-id="92b06-111">Device support</span></span>
+## <a name="device-support"></a><span data-ttu-id="90b8b-111">Compatibilidad con dispositivos</span><span class="sxs-lookup"><span data-stu-id="90b8b-111">Device support</span></span>
 
-<table>
-    <colgroup>
-    <col width="25%" />
-    <col width="25%" />
-    <col width="25%" />
-    <col width="25%" />
-    </colgroup>
-    <tr>
-        <td><span data-ttu-id="92b06-112"><strong>Característica</strong></span><span class="sxs-lookup"><span data-stu-id="92b06-112"><strong>Feature</strong></span></span></td>
-        <td><span data-ttu-id="92b06-113"><a href="/hololens/hololens1-hardware"><strong>HoloLens (primera generación)</strong></a></span><span class="sxs-lookup"><span data-stu-id="92b06-113"><a href="/hololens/hololens1-hardware"><strong>HoloLens (first gen)</strong></a></span></span></td>
-        <td><span data-ttu-id="92b06-114"><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></span><span class="sxs-lookup"><span data-stu-id="92b06-114"><a href="https://docs.microsoft.com/hololens/hololens2-hardware"><strong>HoloLens 2</strong></span></span></td>
-        <td><span data-ttu-id="92b06-115"><a href="../../discover/immersive-headset-hardware-details.md"><strong>Cascos envolventes</strong></a></span><span class="sxs-lookup"><span data-stu-id="92b06-115"><a href="../../discover/immersive-headset-hardware-details.md"><strong>Immersive headsets</strong></a></span></span></td>
-    </tr>
-     <tr>
-        <td><span data-ttu-id="92b06-116">Asignación espacial</span><span class="sxs-lookup"><span data-stu-id="92b06-116">Spatial mapping</span></span></td>
-        <td><span data-ttu-id="92b06-117">✔️</span><span class="sxs-lookup"><span data-stu-id="92b06-117">✔️</span></span></td>
-        <td><span data-ttu-id="92b06-118">✔️</span><span class="sxs-lookup"><span data-stu-id="92b06-118">✔️</span></span></td>
-        <td>❌</td>
-    </tr>
-</table>
+| <span data-ttu-id="90b8b-112">Característica</span><span class="sxs-lookup"><span data-stu-id="90b8b-112">Feature</span></span> | [<span data-ttu-id="90b8b-113">HoloLens (primera generación)</span><span class="sxs-lookup"><span data-stu-id="90b8b-113">HoloLens (first gen)</span></span>](/hololens/hololens1-hardware) | [<span data-ttu-id="90b8b-114">HoloLens 2</span><span class="sxs-lookup"><span data-stu-id="90b8b-114">HoloLens 2</span></span>](/hololens/hololens2-hardware) | [<span data-ttu-id="90b8b-115">Cascos envolventes</span><span class="sxs-lookup"><span data-stu-id="90b8b-115">Immersive headsets</span></span>](../../discover/immersive-headset-hardware-details.md) |
+| ---- | ---- | ---- | ---- |
+| <span data-ttu-id="90b8b-116">Asignación espacial</span><span class="sxs-lookup"><span data-stu-id="90b8b-116">Spatial mapping</span></span> | <span data-ttu-id="90b8b-117">✔️</span><span class="sxs-lookup"><span data-stu-id="90b8b-117">✔️</span></span> | <span data-ttu-id="90b8b-118">✔️</span><span class="sxs-lookup"><span data-stu-id="90b8b-118">✔️</span></span> | ❌ |
 
-## <a name="setting-the-spatialperception-capability"></a><span data-ttu-id="92b06-119">Establecimiento de la funcionalidad SpatialPerception</span><span class="sxs-lookup"><span data-stu-id="92b06-119">Setting the SpatialPerception capability</span></span>
+## <a name="setting-the-spatialperception-capability"></a><span data-ttu-id="90b8b-119">Establecimiento de la funcionalidad SpatialPerception</span><span class="sxs-lookup"><span data-stu-id="90b8b-119">Setting the SpatialPerception capability</span></span>
 
-<span data-ttu-id="92b06-120">Para que una aplicación consuma datos de asignación espacial, la funcionalidad SpatialPerception debe estar habilitada.</span><span class="sxs-lookup"><span data-stu-id="92b06-120">In order for an app to consume spatial mapping data, the SpatialPerception capability must be enabled.</span></span>
+<span data-ttu-id="90b8b-120">Para que una aplicación consuma datos de asignación espacial, se debe habilitar la funcionalidad SpatialPerception.</span><span class="sxs-lookup"><span data-stu-id="90b8b-120">In order for an app to consume spatial mapping data, the SpatialPerception capability must be enabled.</span></span>
 
-<span data-ttu-id="92b06-121">Cómo habilitar la funcionalidad SpatialPerception:</span><span class="sxs-lookup"><span data-stu-id="92b06-121">How to enable the SpatialPerception capability:</span></span>
+<span data-ttu-id="90b8b-121">Habilitación de la funcionalidad SpatialPerception:</span><span class="sxs-lookup"><span data-stu-id="90b8b-121">How to enable the SpatialPerception capability:</span></span>
 
-1. <span data-ttu-id="92b06-122">En el editor de Unity, abra el panel de **configuración del reproductor** (editar > configuración del proyecto > Player).</span><span class="sxs-lookup"><span data-stu-id="92b06-122">In the Unity Editor, open the **"Player Settings"** pane (Edit > Project Settings > Player)</span></span>
-2. <span data-ttu-id="92b06-123">Seleccione en la pestaña **"tienda Windows"**</span><span class="sxs-lookup"><span data-stu-id="92b06-123">Select on the **"Windows Store"** tab</span></span>
-3. <span data-ttu-id="92b06-124">Expanda **"configuración de publicación"** y seleccione la funcionalidad **"SpatialPerception"** en la lista **"funcionalidades"** .</span><span class="sxs-lookup"><span data-stu-id="92b06-124">Expand **"Publishing Settings"** and check the **"SpatialPerception"** capability in the **"Capabilities"** list</span></span>
+1. <span data-ttu-id="90b8b-122">En el Editor de Unity, abra el **panel "Configuración** del reproductor" (Editar > project settings > Player)</span><span class="sxs-lookup"><span data-stu-id="90b8b-122">In the Unity Editor, open the **"Player Settings"** pane (Edit > Project Settings > Player)</span></span>
+2. <span data-ttu-id="90b8b-123">Seleccione en la **pestaña "Tienda Windows".**</span><span class="sxs-lookup"><span data-stu-id="90b8b-123">Select on the **"Windows Store"** tab</span></span>
+3. <span data-ttu-id="90b8b-124">Expanda **"Configuración de publicación"** y compruebe la **funcionalidad "SpatialPerception"** en la **lista "Funcionalidades".**</span><span class="sxs-lookup"><span data-stu-id="90b8b-124">Expand **"Publishing Settings"** and check the **"SpatialPerception"** capability in the **"Capabilities"** list</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="92b06-125">Si ya ha exportado el proyecto de Unity a una solución de Visual Studio, deberá exportar a una nueva carpeta o establecer manualmente [esta funcionalidad en el AppxManifest de Visual Studio](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).</span><span class="sxs-lookup"><span data-stu-id="92b06-125">If you have already exported your Unity project to a Visual Studio solution, you will need to either export to a new folder or manually [set this capability in the AppxManifest in Visual Studio](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).</span></span>
+> <span data-ttu-id="90b8b-125">Si ya ha exportado el proyecto de Unity a una solución de Visual Studio, deberá exportar a una nueva carpeta o establecer manualmente esta funcionalidad en [AppxManifest](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability)en Visual Studio .</span><span class="sxs-lookup"><span data-stu-id="90b8b-125">If you have already exported your Unity project to a Visual Studio solution, you will need to either export to a new folder or manually [set this capability in the AppxManifest in Visual Studio](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability).</span></span>
 
-<span data-ttu-id="92b06-126">La asignación espacial también requiere un MaxVersionTested de al menos 10.0.10586.0:</span><span class="sxs-lookup"><span data-stu-id="92b06-126">Spatial mapping also requires a MaxVersionTested of at least 10.0.10586.0:</span></span>
+<span data-ttu-id="90b8b-126">La asignación espacial también requiere maxVersionTested de al menos 10.0.10586.0:</span><span class="sxs-lookup"><span data-stu-id="90b8b-126">Spatial mapping also requires a MaxVersionTested of at least 10.0.10586.0:</span></span>
 
-1. <span data-ttu-id="92b06-127">En Visual Studio, haga clic con el botón derecho en **Package. appxmanifest** en el explorador de soluciones y seleccione **Ver código** .</span><span class="sxs-lookup"><span data-stu-id="92b06-127">In Visual Studio, right-click on **Package.appxmanifest** in the Solution Explorer and select **View Code**</span></span>
-2. <span data-ttu-id="92b06-128">Busque la línea que especifica **TargetDeviceFamily** y cambie **MaxVersionTested = "10.0.10240.0"** por **MaxVersionTested = "10.0.10586.0"**</span><span class="sxs-lookup"><span data-stu-id="92b06-128">Find the line specifying **TargetDeviceFamily** and change **MaxVersionTested="10.0.10240.0"** to **MaxVersionTested="10.0.10586.0"**</span></span>
-3. <span data-ttu-id="92b06-129">**Guarde** el paquete. appxmanifest.</span><span class="sxs-lookup"><span data-stu-id="92b06-129">**Save** the Package.appxmanifest.</span></span>
+1. <span data-ttu-id="90b8b-127">En Visual Studio, haga clic con el botón derecho en **Package.appxmanifest** en la Explorador de soluciones y seleccione **Ver código.**</span><span class="sxs-lookup"><span data-stu-id="90b8b-127">In Visual Studio, right-click on **Package.appxmanifest** in the Solution Explorer and select **View Code**</span></span>
+2. <span data-ttu-id="90b8b-128">Busque la línea que especifica **TargetDeviceFamily** y cambie **MaxVersionTested="10.0.10240.0"** a **MaxVersionTested="10.0.10586.0"**</span><span class="sxs-lookup"><span data-stu-id="90b8b-128">Find the line specifying **TargetDeviceFamily** and change **MaxVersionTested="10.0.10240.0"** to **MaxVersionTested="10.0.10586.0"**</span></span>
+3. <span data-ttu-id="90b8b-129">**Guarde** package.appxmanifest.</span><span class="sxs-lookup"><span data-stu-id="90b8b-129">**Save** the Package.appxmanifest.</span></span>
 
-## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a><span data-ttu-id="92b06-130">Introducción a los componentes de asignación espacial integrados de Unity</span><span class="sxs-lookup"><span data-stu-id="92b06-130">Getting started with Unity's built-in spatial mapping components</span></span>
+## <a name="getting-started-with-unitys-built-in-spatial-mapping-components"></a><span data-ttu-id="90b8b-130">Introducción a los componentes de asignación espacial integrados de Unity</span><span class="sxs-lookup"><span data-stu-id="90b8b-130">Getting started with Unity's built-in spatial mapping components</span></span>
 
-<span data-ttu-id="92b06-131">Unity ofrece dos componentes para agregar fácilmente la asignación espacial a la aplicación, el **representador de asignación espacial** y el **Colisionador de asignación espacial**.</span><span class="sxs-lookup"><span data-stu-id="92b06-131">Unity offers two components for easily adding spatial mapping to your app, **Spatial Mapping Renderer** and **Spatial Mapping Collider**.</span></span>
+<span data-ttu-id="90b8b-131">Unity ofrece dos componentes para agregar fácilmente la asignación espacial a la aplicación: Representador de **asignación espacial** y **Colisionador de asignación espacial.**</span><span class="sxs-lookup"><span data-stu-id="90b8b-131">Unity offers two components for easily adding spatial mapping to your app, **Spatial Mapping Renderer** and **Spatial Mapping Collider**.</span></span>
 
-### <a name="spatial-mapping-renderer"></a><span data-ttu-id="92b06-132">Representador de asignación espacial</span><span class="sxs-lookup"><span data-stu-id="92b06-132">Spatial Mapping Renderer</span></span>
+### <a name="spatial-mapping-renderer"></a><span data-ttu-id="90b8b-132">Representador de asignación espacial</span><span class="sxs-lookup"><span data-stu-id="90b8b-132">Spatial Mapping Renderer</span></span>
 
-<span data-ttu-id="92b06-133">El representador de asignación espacial permite la visualización de la malla de asignación espacial.</span><span class="sxs-lookup"><span data-stu-id="92b06-133">The Spatial Mapping Renderer allows for visualization of the spatial mapping mesh.</span></span>
+<span data-ttu-id="90b8b-133">El representador de asignación espacial permite la visualización de la malla de asignación espacial.</span><span class="sxs-lookup"><span data-stu-id="90b8b-133">The Spatial Mapping Renderer allows for visualization of the spatial mapping mesh.</span></span>
 
 ![Representador de asignación espacial en Unity](images/spatialmappingrenderer.png)
 
-### <a name="spatial-mapping-collider"></a><span data-ttu-id="92b06-135">Colisionador de asignación espacial</span><span class="sxs-lookup"><span data-stu-id="92b06-135">Spatial Mapping Collider</span></span>
+### <a name="spatial-mapping-collider"></a><span data-ttu-id="90b8b-135">Colisionador de asignación espacial</span><span class="sxs-lookup"><span data-stu-id="90b8b-135">Spatial Mapping Collider</span></span>
 
-<span data-ttu-id="92b06-136">El Colisionador de asignación espacial permite la interacción de contenido holográfica (o de caracteres), como la física, con la malla de asignación espacial.</span><span class="sxs-lookup"><span data-stu-id="92b06-136">The Spatial Mapping Collider allows for holographic content (or character) interaction, such as physics, with the spatial mapping mesh.</span></span>
+<span data-ttu-id="90b8b-136">El colisionador de asignación espacial permite la interacción de contenido holográfico (o carácter), como la física, con la malla de asignación espacial.</span><span class="sxs-lookup"><span data-stu-id="90b8b-136">The Spatial Mapping Collider allows for holographic content (or character) interaction, such as physics, with the spatial mapping mesh.</span></span>
 
 ![Colisionador de asignación espacial en Unity](images/spatialmappingcollider.png)
 
-### <a name="using-the-built-in-spatial-mapping-components"></a><span data-ttu-id="92b06-138">Usar los componentes de asignación espacial integrados</span><span class="sxs-lookup"><span data-stu-id="92b06-138">Using the built-in spatial mapping components</span></span>
+### <a name="using-the-built-in-spatial-mapping-components"></a><span data-ttu-id="90b8b-138">Uso de los componentes de asignación espacial integrados</span><span class="sxs-lookup"><span data-stu-id="90b8b-138">Using the built-in spatial mapping components</span></span>
 
-<span data-ttu-id="92b06-139">Puede Agregar ambos componentes a la aplicación si desea visualizar y interactuar con las superficies físicas.</span><span class="sxs-lookup"><span data-stu-id="92b06-139">You may add both components to your app if you'd like to both visualize and interact with physical surfaces.</span></span>
+<span data-ttu-id="90b8b-139">Puede agregar ambos componentes a la aplicación si quiere visualizar e interactuar con superficies físicas.</span><span class="sxs-lookup"><span data-stu-id="90b8b-139">You may add both components to your app if you'd like to both visualize and interact with physical surfaces.</span></span>
 
-<span data-ttu-id="92b06-140">Para usar estos dos componentes en la aplicación de Unity:</span><span class="sxs-lookup"><span data-stu-id="92b06-140">To use these two components in your Unity app:</span></span>
+<span data-ttu-id="90b8b-140">Para usar estos dos componentes en la aplicación de Unity:</span><span class="sxs-lookup"><span data-stu-id="90b8b-140">To use these two components in your Unity app:</span></span>
 
-1. <span data-ttu-id="92b06-141">Seleccione un GameObject en el centro del área en la que desea detectar mallas de superficie espacial.</span><span class="sxs-lookup"><span data-stu-id="92b06-141">Select a GameObject at the center of the area in which you'd like to detect spatial surface meshes.</span></span>
-2. <span data-ttu-id="92b06-142">En la ventana del inspector, **agregue el elemento**  >    >  **Colisionador de asignación espacial** del componente XR o el **representador de asignación espacial**.</span><span class="sxs-lookup"><span data-stu-id="92b06-142">In the Inspector window, **Add Component** > **XR** > **Spatial Mapping Collider** or **Spatial Mapping Renderer**.</span></span>
+1. <span data-ttu-id="90b8b-141">Seleccione un GameObject en el centro del área en la que desea detectar mallas de superficie espacial.</span><span class="sxs-lookup"><span data-stu-id="90b8b-141">Select a GameObject at the center of the area in which you'd like to detect spatial surface meshes.</span></span>
+2. <span data-ttu-id="90b8b-142">En la ventana Inspector, **agregue el colisionador** de  >  **asignación espacial XR**  >  **de componente** o **el representador de asignación espacial**.</span><span class="sxs-lookup"><span data-stu-id="90b8b-142">In the Inspector window, **Add Component** > **XR** > **Spatial Mapping Collider** or **Spatial Mapping Renderer**.</span></span>
 
-<span data-ttu-id="92b06-143">Puede encontrar más detalles sobre cómo usar estos componentes en el sitio de <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">documentación de Unity</a>.</span><span class="sxs-lookup"><span data-stu-id="92b06-143">You can find more details on how to use these components at the <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">Unity documentation site</a>.</span></span>
+<span data-ttu-id="90b8b-143">Puede encontrar más detalles sobre cómo usar estos componentes en el sitio <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">de documentación de Unity.</a></span><span class="sxs-lookup"><span data-stu-id="90b8b-143">You can find more details on how to use these components at the <a href="https://docs.unity3d.com/Manual/SpatialMappingComponents.html" target="_blank">Unity documentation site</a>.</span></span>
 
-### <a name="going-beyond-the-built-in-spatial-mapping-components"></a><span data-ttu-id="92b06-144">Ir más allá de los componentes de asignación espacial integrados</span><span class="sxs-lookup"><span data-stu-id="92b06-144">Going beyond the built-in spatial mapping components</span></span>
+### <a name="going-beyond-the-built-in-spatial-mapping-components"></a><span data-ttu-id="90b8b-144">Ir más allá de los componentes de asignación espacial integrados</span><span class="sxs-lookup"><span data-stu-id="90b8b-144">Going beyond the built-in spatial mapping components</span></span>
 
-<span data-ttu-id="92b06-145">Estos componentes facilitan la tarea de arrastrar y colocar para empezar a trabajar con la asignación espacial.</span><span class="sxs-lookup"><span data-stu-id="92b06-145">These components make it drag-and-drop easy to get started with Spatial Mapping.</span></span>  <span data-ttu-id="92b06-146">Si desea continuar, hay dos rutas principales para explorar:</span><span class="sxs-lookup"><span data-stu-id="92b06-146">When you want to go further, there are two main paths to explore:</span></span>
+<span data-ttu-id="90b8b-145">Estos componentes hacen que sea fácil arrastrar y colocar para empezar a trabajar con la asignación espacial.</span><span class="sxs-lookup"><span data-stu-id="90b8b-145">These components make it drag-and-drop easy to get started with Spatial Mapping.</span></span>  <span data-ttu-id="90b8b-146">Si desea ir más allá, hay dos rutas de acceso principales que explorar:</span><span class="sxs-lookup"><span data-stu-id="90b8b-146">When you want to go further, there are two main paths to explore:</span></span>
 
-* <span data-ttu-id="92b06-147">Para realizar su propio procesamiento de malla de nivel inferior, consulte la sección siguiente sobre la API de script de asignación espacial de bajo nivel.</span><span class="sxs-lookup"><span data-stu-id="92b06-147">To do your own lower-level mesh processing, see the section below about the low-level Spatial Mapping script API.</span></span>
-* <span data-ttu-id="92b06-148">Para realizar análisis de malla de nivel superior, consulte la sección siguiente sobre la biblioteca SpatialUnderstanding en <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>.</span><span class="sxs-lookup"><span data-stu-id="92b06-148">To do higher-level mesh analysis, see the section below about the SpatialUnderstanding library in <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>.</span></span>
+* <span data-ttu-id="90b8b-147">Para realizar su propio procesamiento de malla de nivel inferior, consulte la sección siguiente sobre la API de script de asignación espacial de bajo nivel.</span><span class="sxs-lookup"><span data-stu-id="90b8b-147">To do your own lower-level mesh processing, see the section below about the low-level Spatial Mapping script API.</span></span>
+* <span data-ttu-id="90b8b-148">Para realizar análisis de malla de nivel superior, consulte la sección siguiente sobre la biblioteca SpatialUnderstanding en <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>.</span><span class="sxs-lookup"><span data-stu-id="90b8b-148">To do higher-level mesh analysis, see the section below about the SpatialUnderstanding library in <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit/SpatialUnderstanding" target="_blank">MixedRealityToolkit</a>.</span></span>
 
-## <a name="using-the-low-level-unity-spatial-mapping-api"></a><span data-ttu-id="92b06-149">Uso de la API de asignación espacial de Unity de bajo nivel</span><span class="sxs-lookup"><span data-stu-id="92b06-149">Using the low-level Unity Spatial Mapping API</span></span>
+## <a name="using-the-low-level-unity-spatial-mapping-api"></a><span data-ttu-id="90b8b-149">Uso de la API de asignación espacial de Unity de bajo nivel</span><span class="sxs-lookup"><span data-stu-id="90b8b-149">Using the low-level Unity Spatial Mapping API</span></span>
 
-<span data-ttu-id="92b06-150">Si necesita más control que el representador de asignación espacial y la oferta de componentes de Colisionador de asignación espacial, use las API de asignación espacial de bajo nivel.</span><span class="sxs-lookup"><span data-stu-id="92b06-150">If you need more control than the Spatial Mapping Renderer and Spatial Mapping Collider components offer, use the low-level Spatial Mapping APIs.</span></span>
+<span data-ttu-id="90b8b-150">Si necesita más control que los componentes Representador de asignación espacial y Colisionador de asignación espacial, use las API de asignación espacial de bajo nivel.</span><span class="sxs-lookup"><span data-stu-id="90b8b-150">If you need more control than the Spatial Mapping Renderer and Spatial Mapping Collider components offer, use the low-level Spatial Mapping APIs.</span></span>
 
-<span data-ttu-id="92b06-151">**Espacio de nombres:** *UnityEngine. XR. WSA*</span><span class="sxs-lookup"><span data-stu-id="92b06-151">**Namespace:** *UnityEngine.XR.WSA*</span></span><br>
-<span data-ttu-id="92b06-152">**Tipos**: *SurfaceObserver*, *SurfaceChange*, *SurfaceData*, *SurfaceId*</span><span class="sxs-lookup"><span data-stu-id="92b06-152">**Types**: *SurfaceObserver*, *SurfaceChange*, *SurfaceData*, *SurfaceId*</span></span>
+<span data-ttu-id="90b8b-151">**Espacio de nombres:** *UnityEngine.XR.WSA*</span><span class="sxs-lookup"><span data-stu-id="90b8b-151">**Namespace:** *UnityEngine.XR.WSA*</span></span><br>
+<span data-ttu-id="90b8b-152">**Tipos:** *SurfaceObserver,* *SurfaceChange,* *SurfaceData,* *SurfaceId*</span><span class="sxs-lookup"><span data-stu-id="90b8b-152">**Types**: *SurfaceObserver*, *SurfaceChange*, *SurfaceData*, *SurfaceId*</span></span>
 
-<span data-ttu-id="92b06-153">Hemos descrito el flujo sugerido para una aplicación que usa las API de asignación espacial en las secciones siguientes.</span><span class="sxs-lookup"><span data-stu-id="92b06-153">We've outlined the suggested flow for an application that uses the spatial mapping APIs in the sections below.</span></span>
+<span data-ttu-id="90b8b-153">Hemos descrito el flujo sugerido para una aplicación que usa las API de asignación espacial en las secciones siguientes.</span><span class="sxs-lookup"><span data-stu-id="90b8b-153">We've outlined the suggested flow for an application that uses the spatial mapping APIs in the sections below.</span></span>
 
-### <a name="set-up-the-surfaceobservers"></a><span data-ttu-id="92b06-154">Configuración de los SurfaceObserver</span><span class="sxs-lookup"><span data-stu-id="92b06-154">Set up the SurfaceObserver(s)</span></span>
+### <a name="set-up-the-surfaceobservers"></a><span data-ttu-id="90b8b-154">Configuración de SurfaceObserver(s)</span><span class="sxs-lookup"><span data-stu-id="90b8b-154">Set up the SurfaceObserver(s)</span></span>
 
-<span data-ttu-id="92b06-155">Cree una instancia de un objeto SurfaceObserver para cada región de espacio definida por la aplicación para la que necesite datos de asignación espacial.</span><span class="sxs-lookup"><span data-stu-id="92b06-155">Instantiate one SurfaceObserver object for each application-defined region of space that you need spatial mapping data for.</span></span>
+<span data-ttu-id="90b8b-155">Cree una instancia de un objeto SurfaceObserver para cada región de espacio definida por la aplicación para la que necesite datos de asignación espacial.</span><span class="sxs-lookup"><span data-stu-id="90b8b-155">Instantiate one SurfaceObserver object for each application-defined region of space that you need spatial mapping data for.</span></span>
 
 ```cs
 SurfaceObserver surfaceObserver;
 
- void Start () {
-     surfaceObserver = new SurfaceObserver();
- }
-```
-
-<span data-ttu-id="92b06-156">Especifique la región de espacio para la que cada objeto SurfaceObserver proporcionará los datos mediante una llamada a SetVolumeAsSphere, SetVolumeAsAxisAlignedBox, SetVolumeAsOrientedBox o SetVolumeAsFrustum.</span><span class="sxs-lookup"><span data-stu-id="92b06-156">Specify the region of space that each SurfaceObserver object will provide data for by calling either SetVolumeAsSphere, SetVolumeAsAxisAlignedBox, SetVolumeAsOrientedBox, or SetVolumeAsFrustum.</span></span> <span data-ttu-id="92b06-157">Para volver a definir la región de espacio en el futuro, simplemente vuelva a llamar a uno de estos métodos.</span><span class="sxs-lookup"><span data-stu-id="92b06-157">You can redefine the region of space in the future by simply calling one of these methods again.</span></span>
-
-```cs
-void Start () {
-    ...
-     surfaceObserver.SetVolumeAsAxisAlignedBox(Vector3.zero, new Vector3(3, 3, 3));
+private void Start()
+{
+    surfaceObserver = new SurfaceObserver();
 }
 ```
 
-<span data-ttu-id="92b06-158">Cuando se llama a SurfaceObserver. Update (), debe proporcionar un controlador para cada superficie espacial en la región de espacio de SurfaceObserver para la que el sistema de asignación espacial tiene información nueva.</span><span class="sxs-lookup"><span data-stu-id="92b06-158">When you call SurfaceObserver.Update(), you must provide a handler for each spatial surface in the SurfaceObserver's region of space that the spatial mapping system has new information for.</span></span> <span data-ttu-id="92b06-159">El controlador recibe, para una superficie espacial:</span><span class="sxs-lookup"><span data-stu-id="92b06-159">The handler receives, for one spatial surface:</span></span>
+<span data-ttu-id="90b8b-156">Especifique la región de espacio para la que cada objeto SurfaceObserver proporcionará datos llamando a SetVolumeAsSphere, SetVolumeAsAxisAlignedBox, SetVolumeAsOrientedBox o SetVolumeAsFrustum.</span><span class="sxs-lookup"><span data-stu-id="90b8b-156">Specify the region of space that each SurfaceObserver object will provide data for by calling either SetVolumeAsSphere, SetVolumeAsAxisAlignedBox, SetVolumeAsOrientedBox, or SetVolumeAsFrustum.</span></span> <span data-ttu-id="90b8b-157">Puede volver a definir la región del espacio en el futuro simplemente llamando a uno de estos métodos de nuevo.</span><span class="sxs-lookup"><span data-stu-id="90b8b-157">You can redefine the region of space in the future by simply calling one of these methods again.</span></span>
+
+```cs
+private void Start()
+{
+    surfaceObserver.SetVolumeAsAxisAlignedBox(Vector3.zero, new Vector3(3, 3, 3));
+}
+```
+
+<span data-ttu-id="90b8b-158">Al llamar a SurfaceObserver.Update(), debe proporcionar un controlador para cada superficie espacial de la región de espacio de SurfaceObserver para la que el sistema de asignación espacial tiene información nueva.</span><span class="sxs-lookup"><span data-stu-id="90b8b-158">When you call SurfaceObserver.Update(), you must provide a handler for each spatial surface in the SurfaceObserver's region of space that the spatial mapping system has new information for.</span></span> <span data-ttu-id="90b8b-159">El controlador recibe, para una superficie espacial:</span><span class="sxs-lookup"><span data-stu-id="90b8b-159">The handler receives, for one spatial surface:</span></span>
 
 ```cs
 private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bounds bounds, System.DateTime updateTime)
- {
-    //see Handling Surface Changes
- }
+{
+    // see Handling Surface Changes
+}
 ```
 
-### <a name="handling-surface-changes"></a><span data-ttu-id="92b06-160">Control de cambios de superficie</span><span class="sxs-lookup"><span data-stu-id="92b06-160">Handling Surface Changes</span></span>
+### <a name="handling-surface-changes"></a><span data-ttu-id="90b8b-160">Control de cambios de superficie</span><span class="sxs-lookup"><span data-stu-id="90b8b-160">Handling Surface Changes</span></span>
 
-<span data-ttu-id="92b06-161">Hay varios casos principales que se deben tratar: agregar y actualizar, que pueden utilizar la misma ruta de acceso del código y quitarse.</span><span class="sxs-lookup"><span data-stu-id="92b06-161">There are several main cases to handle - added and updated, which can use the same code path, and removed.</span></span>
+<span data-ttu-id="90b8b-161">Hay varios casos principales para controlar: agregados y actualizados, que pueden usar la misma ruta de acceso de código y quitarse.</span><span class="sxs-lookup"><span data-stu-id="90b8b-161">There are several main cases to handle - added and updated, which can use the same code path, and removed.</span></span>
 
-* <span data-ttu-id="92b06-162">En los casos agregados y actualizados, se agrega u obtiene el GameObject que representa esta malla del diccionario, se crea un struct SurfaceData con los componentes necesarios y, después, se llama a RequestMeshDataAsync para rellenar el GameObject con los datos de la malla y la posición en la escena.</span><span class="sxs-lookup"><span data-stu-id="92b06-162">In the added and updated cases, we add or get the GameObject representing this mesh from the dictionary, create a SurfaceData struct with the necessary components, then call RequestMeshDataAsync to populate the GameObject with the mesh data and position in the scene.</span></span>
-* <span data-ttu-id="92b06-163">En el caso de que se quite, se quita el GameObject que representa esta malla del diccionario y se destruye.</span><span class="sxs-lookup"><span data-stu-id="92b06-163">In the removed case, we remove the GameObject representing this mesh from the dictionary and destroy it.</span></span>
+* <span data-ttu-id="90b8b-162">En los casos agregados y actualizados, agregamos u obtienemos el Objeto GameObject que representa esta malla desde el diccionario, creamos una estructura SurfaceData con los componentes necesarios y, a continuación, llamamos a RequestMeshDataAsync para rellenar el GameObject con los datos de malla y la posición en la escena.</span><span class="sxs-lookup"><span data-stu-id="90b8b-162">In the added and updated cases, we add or get the GameObject representing this mesh from the dictionary, create a SurfaceData struct with the necessary components, then call RequestMeshDataAsync to populate the GameObject with the mesh data and position in the scene.</span></span>
+* <span data-ttu-id="90b8b-163">En el caso quitado, se quita el Objeto GameObject que representa esta malla del diccionario y se destruye.</span><span class="sxs-lookup"><span data-stu-id="90b8b-163">In the removed case, we remove the GameObject representing this mesh from the dictionary and destroy it.</span></span>
 
 ```cs
-System.Collections.Generic.Dictionary<SurfaceId, GameObject> spatialMeshObjects = 
+System.Collections.Generic.Dictionary<SurfaceId, GameObject> spatialMeshObjects =
     new System.Collections.Generic.Dictionary<SurfaceId, GameObject>();
 
-   private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bounds bounds, System.DateTime updateTime)
-   {
-       switch (changeType)
-       {
-           case SurfaceChange.Added:
-           case SurfaceChange.Updated:
-               if (!spatialMeshObjects.ContainsKey(surfaceId))
-               {
-                   spatialMeshObjects[surfaceId] = new GameObject("spatial-mapping-" + surfaceId);
-                   spatialMeshObjects[surfaceId].transform.parent = this.transform;
-                   spatialMeshObjects[surfaceId].AddComponent<MeshRenderer>();
-               }
-               GameObject target = spatialMeshObjects[surfaceId];
-               SurfaceData sd = new SurfaceData(
-                   //the surface id returned from the system
-                   surfaceId,
-                   //the mesh filter that is populated with the spatial mapping data for this mesh
-                   target.GetComponent<MeshFilter>() ?? target.AddComponent<MeshFilter>(),
-                   //the world anchor used to position the spatial mapping mesh in the world
-                   target.GetComponent<WorldAnchor>() ?? target.AddComponent<WorldAnchor>(),
-                   //the mesh collider that is populated with collider data for this mesh, if true is passed to bakeMeshes below
-                   target.GetComponent<MeshCollider>() ?? target.AddComponent<MeshCollider>(),
-                   //triangles per cubic meter requested for this mesh
-                   1000,
-                   //bakeMeshes - if true, the mesh collider is populated, if false, the mesh collider is empty.
-                   true
-                   );
+private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bounds bounds, System.DateTime updateTime)
+{
+    switch (changeType)
+    {
+        case SurfaceChange.Added:
+        case SurfaceChange.Updated:
+            if (!spatialMeshObjects.ContainsKey(surfaceId))
+            {
+                spatialMeshObjects[surfaceId] = new GameObject("spatial-mapping-" + surfaceId);
+                spatialMeshObjects[surfaceId].transform.parent = this.transform;
+                spatialMeshObjects[surfaceId].AddComponent<MeshRenderer>();
+            }
+            GameObject target = spatialMeshObjects[surfaceId];
+            SurfaceData sd = new SurfaceData(
+                // the surface id returned from the system
+                surfaceId,
+                // the mesh filter that is populated with the spatial mapping data for this mesh
+                target.GetComponent<MeshFilter>() ?? target.AddComponent<MeshFilter>(),
+                // the world anchor used to position the spatial mapping mesh in the world
+                target.GetComponent<WorldAnchor>() ?? target.AddComponent<WorldAnchor>(),
+                // the mesh collider that is populated with collider data for this mesh, if true is passed to bakeMeshes below
+                target.GetComponent<MeshCollider>() ?? target.AddComponent<MeshCollider>(),
+                // triangles per cubic meter requested for this mesh
+                1000,
+                // bakeMeshes - if true, the mesh collider is populated, if false, the mesh collider is empty.
+                true
+            );
 
-               SurfaceObserver.RequestMeshAsync(sd, OnDataReady);
-               break;
-           case SurfaceChange.Removed:
-               var obj = spatialMeshObjects[surfaceId];
-               spatialMeshObjects.Remove(surfaceId);
-               if (obj != null)
-               {
-                   GameObject.Destroy(obj);
-               }
-               break;
-           default:
-               break;
-       }
-   }
+            SurfaceObserver.RequestMeshAsync(sd, OnDataReady);
+            break;
+        case SurfaceChange.Removed:
+            var obj = spatialMeshObjects[surfaceId];
+            spatialMeshObjects.Remove(surfaceId);
+            if (obj != null)
+            {
+                GameObject.Destroy(obj);
+            }
+            break;
+        default:
+            break;
+    }
+}
 ```
 
-### <a name="handling-data-ready"></a><span data-ttu-id="92b06-164">Controlar los datos preparados</span><span class="sxs-lookup"><span data-stu-id="92b06-164">Handling Data Ready</span></span>
+### <a name="handling-data-ready"></a><span data-ttu-id="90b8b-164">Control de datos listo</span><span class="sxs-lookup"><span data-stu-id="90b8b-164">Handling Data Ready</span></span>
 
-<span data-ttu-id="92b06-165">El controlador OnDataReady recibe un objeto SurfaceData.</span><span class="sxs-lookup"><span data-stu-id="92b06-165">The OnDataReady handler receives a SurfaceData object.</span></span> <span data-ttu-id="92b06-166">Los objetos WorldAnchor, MeshFilter y (opcionalmente) MeshCollider que contiene reflejan el estado más reciente de la superficie espacial asociada.</span><span class="sxs-lookup"><span data-stu-id="92b06-166">The WorldAnchor, MeshFilter, and (optionally) MeshCollider objects it contains reflect the latest state of the associated spatial surface.</span></span> <span data-ttu-id="92b06-167">Opcionalmente, analice y/o [procese](../../design/spatial-mapping.md#mesh-processing) los datos de la malla mediante el acceso al miembro de la malla del objeto MeshFilter.</span><span class="sxs-lookup"><span data-stu-id="92b06-167">Optionally, analyze and/or [process](../../design/spatial-mapping.md#mesh-processing) the mesh data by accessing the Mesh member of the MeshFilter object.</span></span> <span data-ttu-id="92b06-168">Represente la superficie espacial con la malla más reciente y, opcionalmente, Úsela para las colisiones físicas y raycasts.</span><span class="sxs-lookup"><span data-stu-id="92b06-168">Render the spatial surface with the latest mesh and (optionally) use it for physics collisions and raycasts.</span></span> <span data-ttu-id="92b06-169">Es importante confirmar que el contenido de SurfaceData no es NULL.</span><span class="sxs-lookup"><span data-stu-id="92b06-169">It's important to confirm that the contents of the SurfaceData aren't null.</span></span>
+<span data-ttu-id="90b8b-165">El controlador OnDataReady recibe un objeto SurfaceData.</span><span class="sxs-lookup"><span data-stu-id="90b8b-165">The OnDataReady handler receives a SurfaceData object.</span></span> <span data-ttu-id="90b8b-166">Los objetos WorldAnchor, MeshFilter y (opcionalmente) MeshCollider que contiene reflejan el estado más reciente de la superficie espacial asociada.</span><span class="sxs-lookup"><span data-stu-id="90b8b-166">The WorldAnchor, MeshFilter, and (optionally) MeshCollider objects it contains reflect the latest state of the associated spatial surface.</span></span> <span data-ttu-id="90b8b-167">Opcionalmente, analice o [procese los](../../design/spatial-mapping.md#mesh-processing) datos de malla mediante el acceso al miembro Mesh del objeto MeshFilter.</span><span class="sxs-lookup"><span data-stu-id="90b8b-167">Optionally, analyze and/or [process](../../design/spatial-mapping.md#mesh-processing) the mesh data by accessing the Mesh member of the MeshFilter object.</span></span> <span data-ttu-id="90b8b-168">Represente la superficie espacial con la malla más reciente y úsela (opcionalmente) para colisiones físicas y difusión de rayos.</span><span class="sxs-lookup"><span data-stu-id="90b8b-168">Render the spatial surface with the latest mesh and (optionally) use it for physics collisions and raycasts.</span></span> <span data-ttu-id="90b8b-169">Es importante confirmar que el contenido de SurfaceData no es NULL.</span><span class="sxs-lookup"><span data-stu-id="90b8b-169">It's important to confirm that the contents of the SurfaceData aren't null.</span></span>
 
-### <a name="start-processing-on-updates"></a><span data-ttu-id="92b06-170">Iniciar el procesamiento en las actualizaciones</span><span class="sxs-lookup"><span data-stu-id="92b06-170">Start processing on updates</span></span>
+### <a name="start-processing-on-updates"></a><span data-ttu-id="90b8b-170">Iniciar el procesamiento en las actualizaciones</span><span class="sxs-lookup"><span data-stu-id="90b8b-170">Start processing on updates</span></span>
 
-<span data-ttu-id="92b06-171">Se debe llamar a SurfaceObserver. Update () en un retraso, no en todos los fotogramas.</span><span class="sxs-lookup"><span data-stu-id="92b06-171">SurfaceObserver.Update() should be called on a delay, not every frame.</span></span>
+<span data-ttu-id="90b8b-171">Se debe llamar a SurfaceObserver.Update() en un retraso, no a todos los fotogramas.</span><span class="sxs-lookup"><span data-stu-id="90b8b-171">SurfaceObserver.Update() should be called on a delay, not every frame.</span></span>
 
 ```cs
-void Start () {
-    ...
-     StartCoroutine(UpdateLoop());
+void Start ()
+{
+    StartCoroutine(UpdateLoop());
 }
 
- IEnumerator UpdateLoop()
+IEnumerator UpdateLoop()
+{
+    var wait = new WaitForSeconds(2.5f);
+    while(true)
     {
-        var wait = new WaitForSeconds(2.5f);
-        while(true)
-        {
-            surfaceObserver.Update(OnSurfaceChanged);
-            yield return wait;
-        }
+        surfaceObserver.Update(OnSurfaceChanged);
+        yield return wait;
     }
+}
 ```
 
-## <a name="higher-level-mesh-analysis-spatialunderstanding"></a><span data-ttu-id="92b06-172">Análisis de malla de nivel superior: SpatialUnderstanding</span><span class="sxs-lookup"><span data-stu-id="92b06-172">Higher-level mesh analysis: SpatialUnderstanding</span></span>
+## <a name="higher-level-mesh-analysis-spatial-understanding"></a><span data-ttu-id="90b8b-172">Análisis de malla de nivel superior: Spatial Understanding</span><span class="sxs-lookup"><span data-stu-id="90b8b-172">Higher-level mesh analysis: Spatial Understanding</span></span>
 
-<span data-ttu-id="92b06-173"><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a> es una colección de código de utilidad para el desarrollo holográfica basado en las API holográficas de Unity.</span><span class="sxs-lookup"><span data-stu-id="92b06-173">The <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a> is a collection of utility code for holographic development built on Unity's holographic APIs.</span></span>
+> [!CAUTION]
+> <span data-ttu-id="90b8b-173">La comprensión espacial ha quedado en desuso en favor de [Scene Understanding.](../../design/scene-understanding.md)</span><span class="sxs-lookup"><span data-stu-id="90b8b-173">Spatial Understanding has been deprecated in favor of [Scene Understanding](../../design/scene-understanding.md).</span></span>
 
-### <a name="spatial-understanding"></a><span data-ttu-id="92b06-174">Descripción espacial</span><span class="sxs-lookup"><span data-stu-id="92b06-174">Spatial Understanding</span></span>
+<span data-ttu-id="90b8b-174"><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit es</a> una colección de código de utilidad para el desarrollo holográfico basado en las API holográficas de Unity.</span><span class="sxs-lookup"><span data-stu-id="90b8b-174">The <a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a> is a collection of utility code for holographic development built on Unity's holographic APIs.</span></span>
 
-<span data-ttu-id="92b06-175">Al colocar hologramas en el mundo físico, a menudo es conveniente ir más allá de los planos de malla y de superficie de la asignación espacial.</span><span class="sxs-lookup"><span data-stu-id="92b06-175">When placing holograms in the physical world, it's often desirable to go beyond spatial mapping’s mesh and surface planes.</span></span> <span data-ttu-id="92b06-176">Cuando la selección de ubicación se realiza con procedimientos, es deseable un nivel más alto de comprensión del entorno.</span><span class="sxs-lookup"><span data-stu-id="92b06-176">When placement is done procedurally, a higher level of environmental understanding is desirable.</span></span> <span data-ttu-id="92b06-177">Normalmente, esto requiere tomar decisiones sobre qué es el suelo, el techo y las paredes.</span><span class="sxs-lookup"><span data-stu-id="92b06-177">This usually requires making decisions about what is floor, ceiling, and walls.</span></span> <span data-ttu-id="92b06-178">También tiene la capacidad de optimizarse frente a un conjunto de restricciones de selección de ubicación para determinar las ubicaciones físicas más adecuadas para los objetos holográficas.</span><span class="sxs-lookup"><span data-stu-id="92b06-178">You also have the ability to optimize against a set of placement constraints to determine the most best physical locations for holographic objects.</span></span>
+### <a name="spatial-understanding"></a><span data-ttu-id="90b8b-175">Comprensión espacial</span><span class="sxs-lookup"><span data-stu-id="90b8b-175">Spatial Understanding</span></span>
 
-<span data-ttu-id="92b06-179">Durante el desarrollo de conkers y fragmentos jóvenes, Asobo Studios se enfrentó a este problema al desarrollar una sala de Solver.</span><span class="sxs-lookup"><span data-stu-id="92b06-179">During development of Young Conker and Fragments, Asobo Studios faced this problem head on by developing a room solver.</span></span> <span data-ttu-id="92b06-180">Cada uno de estos juegos tenía necesidades específicas del juego, pero compartimos la tecnología de comprensión espacial básica.</span><span class="sxs-lookup"><span data-stu-id="92b06-180">Each of these games had game-specific needs, but they shared core spatial understanding technology.</span></span> <span data-ttu-id="92b06-181">La biblioteca HoloToolkit. SpatialUnderstanding encapsula esta tecnología, lo que permite encontrar rápidamente espacios vacíos en las paredes, colocar objetos en el límite superior, identificar colocadas para que el carácter quede sentado y una gran cantidad de consultas espaciales.</span><span class="sxs-lookup"><span data-stu-id="92b06-181">The HoloToolkit.SpatialUnderstanding library encapsulates this technology, allowing you to quickly find empty spaces on the walls, place objects on the ceiling, identify placed for character to sit, and a myriad of other spatial understanding queries.</span></span>
+<span data-ttu-id="90b8b-176">Al colocar hologramas en el mundo físico, a menudo es deseable ir más allá de los planos de malla y superficie de la asignación espacial.</span><span class="sxs-lookup"><span data-stu-id="90b8b-176">When placing holograms in the physical world, it's often desirable to go beyond spatial mapping’s mesh and surface planes.</span></span> <span data-ttu-id="90b8b-177">Cuando la selección de ubicación se realiza por procedimientos, es deseable un mayor nivel de comprensión del entorno.</span><span class="sxs-lookup"><span data-stu-id="90b8b-177">When placement is done procedurally, a higher level of environmental understanding is desirable.</span></span> <span data-ttu-id="90b8b-178">Esto normalmente requiere tomar decisiones sobre lo que es el suelo, el límite superior y las paredes.</span><span class="sxs-lookup"><span data-stu-id="90b8b-178">This usually requires making decisions about what is floor, ceiling, and walls.</span></span> <span data-ttu-id="90b8b-179">También tiene la capacidad de optimizar frente a un conjunto de restricciones de selección de ubicación para determinar las mejores ubicaciones físicas para los objetos holográficos.</span><span class="sxs-lookup"><span data-stu-id="90b8b-179">You also have the ability to optimize against a set of placement constraints to determine the most best physical locations for holographic objects.</span></span>
 
-<span data-ttu-id="92b06-182">Se incluye todo el código fuente, lo que le permite personalizarlo según sus necesidades y compartir sus mejoras con la comunidad.</span><span class="sxs-lookup"><span data-stu-id="92b06-182">All of the source code is included, allowing you to customize it to your needs and share your improvements with the community.</span></span> <span data-ttu-id="92b06-183">El código de Solver de C++ se ha encapsulado en un archivo dll de UWP y expuesto a Unity con una colocación en recurso prefabricado dentro de MixedRealityToolkit.</span><span class="sxs-lookup"><span data-stu-id="92b06-183">The code for the C++ solver has been wrapped into a UWP dll and exposed to Unity with a drop in prefab contained within the MixedRealityToolkit.</span></span>
+<span data-ttu-id="90b8b-180">Durante el desarrollo de Young Conker y Fragments, Asobo Studios se enfrentaba a este problema de frente mediante el desarrollo de un solucionador de sala.</span><span class="sxs-lookup"><span data-stu-id="90b8b-180">During development of Young Conker and Fragments, Asobo Studios faced this problem head on by developing a room solver.</span></span> <span data-ttu-id="90b8b-181">Cada uno de estos juegos tenía necesidades específicas del juego, pero compartían la tecnología de comprensión espacial básica.</span><span class="sxs-lookup"><span data-stu-id="90b8b-181">Each of these games had game-specific needs, but they shared core spatial understanding technology.</span></span> <span data-ttu-id="90b8b-182">La biblioteca HoloToolkit.SpatialUnderstanding encapsula esta tecnología, lo que le permite encontrar rápidamente espacios vacíos en las paredes, colocar objetos en el límite, identificar colocados para que el carácter se sitúe y una gran cantidad de otras consultas de comprensión espacial.</span><span class="sxs-lookup"><span data-stu-id="90b8b-182">The HoloToolkit.SpatialUnderstanding library encapsulates this technology, allowing you to quickly find empty spaces on the walls, place objects on the ceiling, identify placed for character to sit, and a myriad of other spatial understanding queries.</span></span>
 
-### <a name="understanding-modules"></a><span data-ttu-id="92b06-184">Descripción de los módulos</span><span class="sxs-lookup"><span data-stu-id="92b06-184">Understanding Modules</span></span>
+<span data-ttu-id="90b8b-183">Se incluye todo el código fuente, lo que le permite personalizarlo según sus necesidades y compartir sus mejoras con la comunidad.</span><span class="sxs-lookup"><span data-stu-id="90b8b-183">All of the source code is included, allowing you to customize it to your needs and share your improvements with the community.</span></span> <span data-ttu-id="90b8b-184">El código del solucionador de C++ se ha encapsulado en un archivo DLL de UWP y se ha expuesto a Unity con una colocación de prefab incluida en MixedRealityToolkit.</span><span class="sxs-lookup"><span data-stu-id="90b8b-184">The code for the C++ solver has been wrapped into a UWP dll and exposed to Unity with a drop in prefab contained within the MixedRealityToolkit.</span></span>
 
-<span data-ttu-id="92b06-185">Hay tres interfaces principales que expone el módulo: la topología para las consultas simples de superficie y espacial, la forma de detección de objetos y la colocación de objetos de Solver para la colocación basada en restricciones de los conjuntos de objetos.</span><span class="sxs-lookup"><span data-stu-id="92b06-185">There are three primary interfaces exposed by the module: topology for simple surface and spatial queries, shape for object detection, and the object placement solver for constraint-based placement of object sets.</span></span> <span data-ttu-id="92b06-186">Cada una de ellas se describe a continuación.</span><span class="sxs-lookup"><span data-stu-id="92b06-186">Each of these is described below.</span></span> <span data-ttu-id="92b06-187">Además de las tres interfaces de módulos principales, se puede usar una interfaz de conversión de rayos para recuperar tipos de superficie etiquetada y se puede copiar una malla Playspace estanco personalizada.</span><span class="sxs-lookup"><span data-stu-id="92b06-187">In addition to the three primary module interfaces, a ray casting interface can be used to retrieve tagged surface types and a custom watertight playspace mesh can be copied out.</span></span>
+### <a name="understanding-modules"></a><span data-ttu-id="90b8b-185">Descripción de los módulos</span><span class="sxs-lookup"><span data-stu-id="90b8b-185">Understanding Modules</span></span>
 
-### <a name="ray-casting"></a><span data-ttu-id="92b06-188">Conversión de rayos</span><span class="sxs-lookup"><span data-stu-id="92b06-188">Ray Casting</span></span>
+<span data-ttu-id="90b8b-186">Hay tres interfaces principales expuestas por el módulo: topología para consultas espaciales y de superficie sencillas, forma para la detección de objetos y solucionador de colocación de objetos para la colocación basada en restricciones de conjuntos de objetos.</span><span class="sxs-lookup"><span data-stu-id="90b8b-186">There are three primary interfaces exposed by the module: topology for simple surface and spatial queries, shape for object detection, and the object placement solver for constraint-based placement of object sets.</span></span> <span data-ttu-id="90b8b-187">Cada uno de ellos se describe a continuación.</span><span class="sxs-lookup"><span data-stu-id="90b8b-187">Each of these is described below.</span></span> <span data-ttu-id="90b8b-188">Además de las tres interfaces de módulo principal, se puede usar una interfaz de conversión de rayos para recuperar los tipos de superficie etiquetados y se puede copiar una malla de espacio de juego estanca personalizada.</span><span class="sxs-lookup"><span data-stu-id="90b8b-188">In addition to the three primary module interfaces, a ray casting interface can be used to retrieve tagged surface types and a custom watertight playspace mesh can be copied out.</span></span>
 
-<span data-ttu-id="92b06-189">Una vez completado el examen del salón, las etiquetas se generan internamente para las superficies como el piso, el techo y las paredes.</span><span class="sxs-lookup"><span data-stu-id="92b06-189">After the room scan is completed, labels are internally generated for surfaces like the floor, ceiling, and walls.</span></span> <span data-ttu-id="92b06-190">La función "PlayspaceRaycast" toma un rayo y devuelve si el rayo entra en conflicto con una superficie conocida y, en caso afirmativo, información sobre esa superficie en forma de "RaycastResult".</span><span class="sxs-lookup"><span data-stu-id="92b06-190">The “PlayspaceRaycast” function takes a ray and returns if the ray collides with a known surface and if so, information about that surface in the form of a “RaycastResult”.</span></span>
+### <a name="ray-casting"></a><span data-ttu-id="90b8b-189">Conversión de rayos</span><span class="sxs-lookup"><span data-stu-id="90b8b-189">Ray Casting</span></span>
+
+<span data-ttu-id="90b8b-190">Una vez completado el examen de la sala, las etiquetas se generan internamente para superficies como el suelo, el techo y las paredes.</span><span class="sxs-lookup"><span data-stu-id="90b8b-190">After the room scan is completed, labels are internally generated for surfaces like the floor, ceiling, and walls.</span></span> <span data-ttu-id="90b8b-191">La función toma un rayo y devuelve si el rayo colisiona con una superficie conocida y, si es así, información sobre esa superficie en `PlayspaceRaycast` forma de `RaycastResult` .</span><span class="sxs-lookup"><span data-stu-id="90b8b-191">The `PlayspaceRaycast` function takes a ray and returns if the ray collides with a known surface and if so, information about that surface in the form of a `RaycastResult`.</span></span>
 
 ```cpp
 struct RaycastResult
@@ -247,39 +234,39 @@ struct RaycastResult
         Invalid,    // No intersection
         Other,
         Floor,
-        FloorLike,  // Not part of the floor topology, 
+        FloorLike,  // Not part of the floor topology,
                     //  but close to the floor and looks like the floor
-        Platform,   // Horizontal platform between the ground and 
+        Platform,   // Horizontal platform between the ground and
                     //  the ceiling
         Ceiling,
         WallExternal,
-        WallLike,   // Not part of the external wall surface, 
-                    //  but vertical surface that looks like a 
+        WallLike,   // Not part of the external wall surface,
+                    //  but vertical surface that looks like a
                     //  wall structure
     };
     SurfaceTypes SurfaceType;
-    float SurfaceArea;  // Zero if unknown 
+    float SurfaceArea;  // Zero if unknown
                         //  (i.e. if not part of the topology analysis)
     DirectX::XMFLOAT3 IntersectPoint;
     DirectX::XMFLOAT3 IntersectNormal;
 };
 ```
 
-<span data-ttu-id="92b06-191">Internamente, el Raycast se calcula con la representación de voxel en cubo de 8 cm calculada de Playspace.</span><span class="sxs-lookup"><span data-stu-id="92b06-191">Internally, the raycast is computed against the computed 8-cm cubed voxel representation of the playspace.</span></span> <span data-ttu-id="92b06-192">Cada voxel contiene un conjunto de elementos Surface con datos de topología procesados (también conocido como surfels).</span><span class="sxs-lookup"><span data-stu-id="92b06-192">Each voxel contains a set of surface elements with processed topology data (aka surfels).</span></span> <span data-ttu-id="92b06-193">Se comparan los surfels contenidos en la celda voxel intersectada y la mejor coincidencia utilizada para buscar la información de la topología.</span><span class="sxs-lookup"><span data-stu-id="92b06-193">The surfels contained within the intersected voxel cell is compared and the best match used to look up the topology information.</span></span> <span data-ttu-id="92b06-194">Estos datos de topología contienen la etiqueta devuelta en forma de enumeración "SurfaceTypes", así como el área expuesta de la superficie intersectada.</span><span class="sxs-lookup"><span data-stu-id="92b06-194">This topology data contains the labeling returned in the form of the “SurfaceTypes” enum, as well as the surface area of the intersected surface.</span></span>
+<span data-ttu-id="90b8b-192">Internamente, la transmisión por rayos se calcula en la representación de vóxel en cubo de 8 cm calculada del espacio de reproducción.</span><span class="sxs-lookup"><span data-stu-id="90b8b-192">Internally, the raycast is computed against the computed 8-cm cubed voxel representation of the playspace.</span></span> <span data-ttu-id="90b8b-193">Cada vóxel contiene un conjunto de elementos de superficie con datos de topología procesados (también conocido como tablas).</span><span class="sxs-lookup"><span data-stu-id="90b8b-193">Each voxel contains a set of surface elements with processed topology data (aka surfels).</span></span> <span data-ttu-id="90b8b-194">Se comparan las tablas contenidas en la celda de vóxel intersección y la mejor coincidencia que se usa para buscar la información de la topología.</span><span class="sxs-lookup"><span data-stu-id="90b8b-194">The surfels contained within the intersected voxel cell is compared and the best match used to look up the topology information.</span></span> <span data-ttu-id="90b8b-195">Estos datos de topología contienen el etiquetado devuelto en forma de enumeración "SurfaceTypes", así como el área de superficie de la superficie intersectada.</span><span class="sxs-lookup"><span data-stu-id="90b8b-195">This topology data contains the labeling returned in the form of the “SurfaceTypes” enum, as well as the surface area of the intersected surface.</span></span>
 
-<span data-ttu-id="92b06-195">En el ejemplo de Unity, el cursor convierte un rayo en cada fotograma.</span><span class="sxs-lookup"><span data-stu-id="92b06-195">In the Unity sample, the cursor casts a ray each frame.</span></span> <span data-ttu-id="92b06-196">En primer lugar, con los colisionadores de Unity.</span><span class="sxs-lookup"><span data-stu-id="92b06-196">First, against Unity’s colliders.</span></span> <span data-ttu-id="92b06-197">En segundo lugar, en la representación mundial del módulo de comprensión.</span><span class="sxs-lookup"><span data-stu-id="92b06-197">Second, against the understanding module’s world representation.</span></span> <span data-ttu-id="92b06-198">Y, por último, los elementos de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="92b06-198">And finally, again UI elements.</span></span> <span data-ttu-id="92b06-199">En esta aplicación, la interfaz de usuario obtiene prioridad, después del resultado de comprensión y, por último, los colisionadores de Unity.</span><span class="sxs-lookup"><span data-stu-id="92b06-199">In this application, UI gets priority, next the understanding result, and lastly, Unity’s colliders.</span></span> <span data-ttu-id="92b06-200">El SurfaceType se muestra como texto junto al cursor.</span><span class="sxs-lookup"><span data-stu-id="92b06-200">The SurfaceType is reported as text next to the cursor.</span></span>
+<span data-ttu-id="90b8b-196">En el ejemplo de Unity, el cursor convierte un rayo en cada fotograma.</span><span class="sxs-lookup"><span data-stu-id="90b8b-196">In the Unity sample, the cursor casts a ray each frame.</span></span> <span data-ttu-id="90b8b-197">En primer lugar, contra los colisiondores de Unity.</span><span class="sxs-lookup"><span data-stu-id="90b8b-197">First, against Unity’s colliders.</span></span> <span data-ttu-id="90b8b-198">En segundo lugar, frente a la representación mundial del módulo de comprensión.</span><span class="sxs-lookup"><span data-stu-id="90b8b-198">Second, against the understanding module’s world representation.</span></span> <span data-ttu-id="90b8b-199">Y, por último, de nuevo elementos de la interfaz de usuario.</span><span class="sxs-lookup"><span data-stu-id="90b8b-199">And finally, again UI elements.</span></span> <span data-ttu-id="90b8b-200">En esta aplicación, la interfaz de usuario obtiene prioridad, después el resultado de la comprensión y, por último, los colisiondores de Unity.</span><span class="sxs-lookup"><span data-stu-id="90b8b-200">In this application, UI gets priority, next the understanding result, and lastly, Unity’s colliders.</span></span> <span data-ttu-id="90b8b-201">SurfaceType se notifica como texto junto al cursor.</span><span class="sxs-lookup"><span data-stu-id="90b8b-201">The SurfaceType is reported as text next to the cursor.</span></span>
 
-<span data-ttu-id="92b06-201">![El tipo de superficie se etiqueta junto al cursor](images/su-raycastresults-300px.jpg)</span><span class="sxs-lookup"><span data-stu-id="92b06-201">![Surface type is labeled next to the cursor](images/su-raycastresults-300px.jpg)</span></span><br>
-<span data-ttu-id="92b06-202">*El tipo de superficie se etiqueta junto al cursor*</span><span class="sxs-lookup"><span data-stu-id="92b06-202">*Surface type is labeled next to the cursor*</span></span>
+<span data-ttu-id="90b8b-202">![El tipo de superficie se etiqueta junto al cursor](images/su-raycastresults-300px.jpg)</span><span class="sxs-lookup"><span data-stu-id="90b8b-202">![Surface type is labeled next to the cursor](images/su-raycastresults-300px.jpg)</span></span><br>
+<span data-ttu-id="90b8b-203">*El tipo de superficie se etiqueta junto al cursor*</span><span class="sxs-lookup"><span data-stu-id="90b8b-203">*Surface type is labeled next to the cursor*</span></span>
 
-### <a name="topology-queries"></a><span data-ttu-id="92b06-203">Consultas de topología</span><span class="sxs-lookup"><span data-stu-id="92b06-203">Topology Queries</span></span>
+### <a name="topology-queries"></a><span data-ttu-id="90b8b-204">Consultas de topología</span><span class="sxs-lookup"><span data-stu-id="90b8b-204">Topology Queries</span></span>
 
-<span data-ttu-id="92b06-204">En el archivo DLL, el administrador de topología controla el etiquetado del entorno.</span><span class="sxs-lookup"><span data-stu-id="92b06-204">Within the DLL, the topology manager handles labeling of the environment.</span></span> <span data-ttu-id="92b06-205">Como se mencionó anteriormente, gran parte de los datos se almacenan en surfels, contenidos en un volumen de voxel.</span><span class="sxs-lookup"><span data-stu-id="92b06-205">As mentioned above, much of the data is stored within surfels, contained within a voxel volume.</span></span> <span data-ttu-id="92b06-206">Además, la estructura "PlaySpaceInfos" se usa para almacenar información sobre Playspace, incluida la alineación del mundo (más detalles a continuación), piso y alto del techo.</span><span class="sxs-lookup"><span data-stu-id="92b06-206">In addition, the “PlaySpaceInfos” structure is used to store information about the playspace, including the world alignment (more details on this below), floor, and ceiling height.</span></span> <span data-ttu-id="92b06-207">La heurística se usa para determinar el piso, el techo y las paredes.</span><span class="sxs-lookup"><span data-stu-id="92b06-207">Heuristics are used for determining floor, ceiling, and walls.</span></span> <span data-ttu-id="92b06-208">Por ejemplo, la superficie horizontal mayor y menor con una superficie mayor que 1-m2 se considera la planta.</span><span class="sxs-lookup"><span data-stu-id="92b06-208">For example, the largest and lowest horizontal surface with greater than 1-m2 surface area is considered the floor.</span></span>
+<span data-ttu-id="90b8b-205">Dentro del archivo DLL, el administrador de topologías controla el etiquetado del entorno.</span><span class="sxs-lookup"><span data-stu-id="90b8b-205">Within the DLL, the topology manager handles labeling of the environment.</span></span> <span data-ttu-id="90b8b-206">Como se mencionó anteriormente, gran parte de los datos se almacenan en tablas, contenidas dentro de un volumen de vóxel.</span><span class="sxs-lookup"><span data-stu-id="90b8b-206">As mentioned above, much of the data is stored within surfels, contained within a voxel volume.</span></span> <span data-ttu-id="90b8b-207">Además, la estructura "PlaySpaceInfos" se usa para almacenar información sobre el espacio de juego, incluida la alineación del mundo (más detalles sobre esto a continuación), el suelo y la altura del límite superior.</span><span class="sxs-lookup"><span data-stu-id="90b8b-207">In addition, the “PlaySpaceInfos” structure is used to store information about the playspace, including the world alignment (more details on this below), floor, and ceiling height.</span></span> <span data-ttu-id="90b8b-208">La heurística se usa para determinar el suelo, el techo y las paredes.</span><span class="sxs-lookup"><span data-stu-id="90b8b-208">Heuristics are used for determining floor, ceiling, and walls.</span></span> <span data-ttu-id="90b8b-209">Por ejemplo, la superficie horizontal más grande y más baja con un área de superficie superior a 1 m2 se considera el suelo.</span><span class="sxs-lookup"><span data-stu-id="90b8b-209">For example, the largest and lowest horizontal surface with greater than 1-m2 surface area is considered the floor.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="92b06-209">La ruta de acceso de la cámara durante el proceso de digitalización también se usa en este proceso.</span><span class="sxs-lookup"><span data-stu-id="92b06-209">The camera path during the scanning process is also used in this process.</span></span>
+> <span data-ttu-id="90b8b-210">La ruta de acceso de la cámara durante el proceso de examen también se usa en este proceso.</span><span class="sxs-lookup"><span data-stu-id="90b8b-210">The camera path during the scanning process is also used in this process.</span></span>
 
-<span data-ttu-id="92b06-210">Un subconjunto de las consultas expuestas por el administrador de topología se expone a través de la dll.</span><span class="sxs-lookup"><span data-stu-id="92b06-210">A subset of the queries exposed by the Topology manager are exposed out through the dll.</span></span> <span data-ttu-id="92b06-211">Las consultas de topologías expuestas son las siguientes.</span><span class="sxs-lookup"><span data-stu-id="92b06-211">The exposed topology queries are as follows.</span></span>
+<span data-ttu-id="90b8b-211">Un subconjunto de las consultas expuestas por el administrador de topologías se expone a través de la dll.</span><span class="sxs-lookup"><span data-stu-id="90b8b-211">A subset of the queries exposed by the Topology manager are exposed out through the dll.</span></span> <span data-ttu-id="90b8b-212">Las consultas de topología expuestas son las siguientes.</span><span class="sxs-lookup"><span data-stu-id="90b8b-212">The exposed topology queries are as follows.</span></span>
 
 ```cpp
 QueryTopology_FindPositionsOnWalls
@@ -290,7 +277,7 @@ QueryTopology_FindLargestPositionsOnFloor
 QueryTopology_FindPositionsSittable
 ```
 
-<span data-ttu-id="92b06-212">Cada una de las consultas tiene un conjunto de parámetros, específico del tipo de consulta.</span><span class="sxs-lookup"><span data-stu-id="92b06-212">Each of the queries has a set of parameters, specific to the query type.</span></span> <span data-ttu-id="92b06-213">En el ejemplo siguiente, el usuario especifica el alto mínimo & ancho del volumen deseado, el alto mínimo de la ubicación por encima del piso y la cantidad mínima de holgura delante del volumen.</span><span class="sxs-lookup"><span data-stu-id="92b06-213">In the following example, the user specifies the minimum height & width of the desired volume, minimum placement height above the floor, and the minimum amount of clearance in front of the volume.</span></span> <span data-ttu-id="92b06-214">Todas las medidas están en metros.</span><span class="sxs-lookup"><span data-stu-id="92b06-214">All measurements are in meters.</span></span>
+<span data-ttu-id="90b8b-213">Cada una de las consultas tiene un conjunto de parámetros, específicos del tipo de consulta.</span><span class="sxs-lookup"><span data-stu-id="90b8b-213">Each of the queries has a set of parameters, specific to the query type.</span></span> <span data-ttu-id="90b8b-214">En el ejemplo siguiente, el usuario especifica el alto mínimo & ancho del volumen deseado, la altura de colocación mínima por encima del suelo y la cantidad mínima de autorización delante del volumen.</span><span class="sxs-lookup"><span data-stu-id="90b8b-214">In the following example, the user specifies the minimum height & width of the desired volume, minimum placement height above the floor, and the minimum amount of clearance in front of the volume.</span></span> <span data-ttu-id="90b8b-215">Todas las medidas están en metros.</span><span class="sxs-lookup"><span data-stu-id="90b8b-215">All measurements are in meters.</span></span>
 
 ```cpp
 EXTERN_C __declspec(dllexport) int QueryTopology_FindPositionsOnWalls(
@@ -302,30 +289,30 @@ EXTERN_C __declspec(dllexport) int QueryTopology_FindPositionsOnWalls(
     _Inout_ Dll_Interface::TopologyResult* locationData)
 ```
 
-<span data-ttu-id="92b06-215">Cada una de estas consultas toma una matriz preasignada de estructuras "TopologyResult".</span><span class="sxs-lookup"><span data-stu-id="92b06-215">Each of these queries takes a pre-allocated array of “TopologyResult” structures.</span></span> <span data-ttu-id="92b06-216">El parámetro "locationCount" especifica la longitud de la matriz pasada.</span><span class="sxs-lookup"><span data-stu-id="92b06-216">The “locationCount” parameter specifies the length of the passed in array.</span></span> <span data-ttu-id="92b06-217">El valor devuelto informa del número de ubicaciones devueltas.</span><span class="sxs-lookup"><span data-stu-id="92b06-217">The return value reports the number of returned locations.</span></span> <span data-ttu-id="92b06-218">Este número nunca es mayor que el pasado en el parámetro "locationCount".</span><span class="sxs-lookup"><span data-stu-id="92b06-218">This number is never greater than the passed in “locationCount” parameter.</span></span>
+<span data-ttu-id="90b8b-216">Cada una de estas consultas toma una matriz preasignada de estructuras "TopologyResult".</span><span class="sxs-lookup"><span data-stu-id="90b8b-216">Each of these queries takes a pre-allocated array of “TopologyResult” structures.</span></span> <span data-ttu-id="90b8b-217">El parámetro "locationCount" especifica la longitud de la matriz pasada.</span><span class="sxs-lookup"><span data-stu-id="90b8b-217">The “locationCount” parameter specifies the length of the passed in array.</span></span> <span data-ttu-id="90b8b-218">El valor devuelto informa del número de ubicaciones devueltas.</span><span class="sxs-lookup"><span data-stu-id="90b8b-218">The return value reports the number of returned locations.</span></span> <span data-ttu-id="90b8b-219">Este número nunca es mayor que el parámetro "locationCount" pasado.</span><span class="sxs-lookup"><span data-stu-id="90b8b-219">This number is never greater than the passed in “locationCount” parameter.</span></span>
 
-<span data-ttu-id="92b06-219">"TopologyResult" contiene la posición central del volumen devuelto, la dirección orientada (es decir, normal) y las dimensiones del espacio encontrado.</span><span class="sxs-lookup"><span data-stu-id="92b06-219">The “TopologyResult” contains the center position of the returned volume, the facing direction (i.e. normal), and the dimensions of the found space.</span></span>
+<span data-ttu-id="90b8b-220">"TopologyResult" contiene la posición central del volumen devuelto, la dirección orientada (es decir, normal) y las dimensiones del espacio encontrado.</span><span class="sxs-lookup"><span data-stu-id="90b8b-220">The “TopologyResult” contains the center position of the returned volume, the facing direction (i.e. normal), and the dimensions of the found space.</span></span>
 
 ```cpp
-struct TopologyResult 
-{ 
-    DirectX::XMFLOAT3 position; 
-    DirectX::XMFLOAT3 normal; 
-    float width; 
+struct TopologyResult
+{
+    DirectX::XMFLOAT3 position;
+    DirectX::XMFLOAT3 normal;
+    float width;
     float length;
 };
 ```
 
 > [!NOTE]
-> <span data-ttu-id="92b06-220">En el ejemplo de Unity, cada una de estas consultas se vincula a un botón en el panel de interfaz de usuario virtual.</span><span class="sxs-lookup"><span data-stu-id="92b06-220">In the Unity sample, each of these queries is linked up to a button in the virtual UI panel.</span></span> <span data-ttu-id="92b06-221">En el ejemplo se codifican los parámetros de cada una de estas consultas en valores razonables.</span><span class="sxs-lookup"><span data-stu-id="92b06-221">The sample hard codes the parameters for each of these queries to reasonable values.</span></span> <span data-ttu-id="92b06-222">Vea SpaceVisualizer. CS en el código de ejemplo para obtener más ejemplos.</span><span class="sxs-lookup"><span data-stu-id="92b06-222">See SpaceVisualizer.cs in the sample code for more examples.</span></span>
+> <span data-ttu-id="90b8b-221">En el ejemplo de Unity, cada una de estas consultas está vinculada a un botón en el panel de interfaz de usuario virtual.</span><span class="sxs-lookup"><span data-stu-id="90b8b-221">In the Unity sample, each of these queries is linked up to a button in the virtual UI panel.</span></span> <span data-ttu-id="90b8b-222">El ejemplo codifica los parámetros de cada una de estas consultas a valores razonables.</span><span class="sxs-lookup"><span data-stu-id="90b8b-222">The sample hard codes the parameters for each of these queries to reasonable values.</span></span> <span data-ttu-id="90b8b-223">Vea SpaceVisualizer.cs en el código de ejemplo para obtener más ejemplos.</span><span class="sxs-lookup"><span data-stu-id="90b8b-223">See SpaceVisualizer.cs in the sample code for more examples.</span></span>
 
-### <a name="shape-queries"></a><span data-ttu-id="92b06-223">Consultas de forma</span><span class="sxs-lookup"><span data-stu-id="92b06-223">Shape Queries</span></span>
+### <a name="shape-queries"></a><span data-ttu-id="90b8b-224">Dar forma a las consultas</span><span class="sxs-lookup"><span data-stu-id="90b8b-224">Shape Queries</span></span>
 
-<span data-ttu-id="92b06-224">En el archivo dll, el analizador de formas ("ShapeAnalyzer_W") utiliza el analizador de topología para buscar coincidencias con las formas personalizadas definidas por el usuario.</span><span class="sxs-lookup"><span data-stu-id="92b06-224">In the dll, the shape analyzer (“ShapeAnalyzer_W”) uses the topology analyzer to match against custom shapes defined by the user.</span></span> <span data-ttu-id="92b06-225">En el ejemplo de Unity se define un conjunto de formas y se exponen los resultados a través del menú de consulta en la aplicación, dentro de la pestaña forma. La intención es que el usuario pueda definir sus propias consultas de forma de objeto y hacer uso de ellas, según las necesidades de su aplicación.</span><span class="sxs-lookup"><span data-stu-id="92b06-225">The Unity sample defines a set of shapes and exposes the results out through the in-app query menu, within the shape tab. The intention is that the user can define their own object shape queries and make use of those, as needed by their application.</span></span>
+<span data-ttu-id="90b8b-225">En el archivo dll, el analizador de formas ("ShapeAnalyzer_W") usa el analizador de topología para coincidir con las formas personalizadas definidas por el usuario.</span><span class="sxs-lookup"><span data-stu-id="90b8b-225">In the dll, the shape analyzer (“ShapeAnalyzer_W”) uses the topology analyzer to match against custom shapes defined by the user.</span></span> <span data-ttu-id="90b8b-226">El ejemplo de Unity define un conjunto de formas y expone los resultados a través del menú de consulta en la aplicación, dentro de la pestaña forma. La intención es que el usuario pueda definir sus propias consultas de forma de objeto y usarlas, según sea necesario para su aplicación.</span><span class="sxs-lookup"><span data-stu-id="90b8b-226">The Unity sample defines a set of shapes and exposes the results out through the in-app query menu, within the shape tab. The intention is that the user can define their own object shape queries and make use of those, as needed by their application.</span></span>
 
-<span data-ttu-id="92b06-226">El análisis de formas solo funciona en superficies horizontales.</span><span class="sxs-lookup"><span data-stu-id="92b06-226">The shape analysis works on horizontal surfaces only.</span></span> <span data-ttu-id="92b06-227">Por ejemplo, un sofá se define mediante la superficie de asiento plana y la parte superior plana del sofá.</span><span class="sxs-lookup"><span data-stu-id="92b06-227">A couch, for example, is defined by the flat seat surface and the flat top of the couch back.</span></span> <span data-ttu-id="92b06-228">La consulta de forma busca dos superficies de un tamaño, alto y intervalo de aspecto específicos, con las dos superficies alineadas y conectadas.</span><span class="sxs-lookup"><span data-stu-id="92b06-228">The shape query looks for two surfaces of a specific size, height, and aspect range, with the two surfaces aligned and connected.</span></span> <span data-ttu-id="92b06-229">Con la terminología de las API, el asiento del sofá y la parte superior son componentes de forma y los requisitos de alineación son restricciones de componentes de forma.</span><span class="sxs-lookup"><span data-stu-id="92b06-229">Using the APIs terminology, the couch seat and back top are shape components and the alignment requirements are shape component constraints.</span></span>
+<span data-ttu-id="90b8b-227">El análisis de formas solo funciona en superficies horizontales.</span><span class="sxs-lookup"><span data-stu-id="90b8b-227">The shape analysis works on horizontal surfaces only.</span></span> <span data-ttu-id="90b8b-228">Un diván, por ejemplo, se define mediante la superficie del puesto plano y la parte superior plana del respaldo del diván.</span><span class="sxs-lookup"><span data-stu-id="90b8b-228">A couch, for example, is defined by the flat seat surface and the flat top of the couch back.</span></span> <span data-ttu-id="90b8b-229">La consulta de formas busca dos superficies de un tamaño, un alto y un intervalo de aspecto específicos, con las dos superficies alineadas y conectadas.</span><span class="sxs-lookup"><span data-stu-id="90b8b-229">The shape query looks for two surfaces of a specific size, height, and aspect range, with the two surfaces aligned and connected.</span></span> <span data-ttu-id="90b8b-230">Con la terminología de las API, el puesto del diván y la parte posterior son componentes de forma y los requisitos de alineación son restricciones de componentes de forma.</span><span class="sxs-lookup"><span data-stu-id="90b8b-230">Using the APIs terminology, the couch seat and back top are shape components and the alignment requirements are shape component constraints.</span></span>
 
-<span data-ttu-id="92b06-230">A continuación se muestra una consulta de ejemplo definida en el ejemplo de Unity (ShapeDefinition. CS) para objetos "sittable".</span><span class="sxs-lookup"><span data-stu-id="92b06-230">An example query defined in the Unity sample (ShapeDefinition.cs), for “sittable” objects is as follows.</span></span>
+<span data-ttu-id="90b8b-231">A continuación se muestra una consulta de ejemplo definida en el ejemplo de Unity (ShapeDefinition.cs) para objetos "sittable".</span><span class="sxs-lookup"><span data-stu-id="90b8b-231">An example query defined in the Unity sample (ShapeDefinition.cs), for “sittable” objects is as follows.</span></span>
 
 ```cs
 shapeComponents = new List<ShapeComponent>()
@@ -342,9 +329,9 @@ shapeComponents = new List<ShapeComponent>()
 AddShape("Sittable", shapeComponents);
 ```
 
-<span data-ttu-id="92b06-231">Cada consulta de forma se define mediante un conjunto de componentes de forma, cada uno con un conjunto de restricciones de componentes y un conjunto de restricciones de forma que enumeran las dependencias entre los componentes.</span><span class="sxs-lookup"><span data-stu-id="92b06-231">Each shape query is defined by a set of shape components, each with a set of component constraints and a set of shape constraints which listing dependencies between the components.</span></span> <span data-ttu-id="92b06-232">En este ejemplo se incluyen tres restricciones en una definición de componente único y no hay restricciones de forma entre los componentes (como solo hay un componente).</span><span class="sxs-lookup"><span data-stu-id="92b06-232">This example includes three constraints in a single component definition and no shape constraints between components (as there's only one component).</span></span>
+<span data-ttu-id="90b8b-232">Cada consulta de forma se define mediante un conjunto de componentes de forma, cada uno con un conjunto de restricciones de componentes y un conjunto de restricciones de forma que enumeran las dependencias entre los componentes.</span><span class="sxs-lookup"><span data-stu-id="90b8b-232">Each shape query is defined by a set of shape components, each with a set of component constraints and a set of shape constraints which listing dependencies between the components.</span></span> <span data-ttu-id="90b8b-233">Este ejemplo incluye tres restricciones en una única definición de componente y ninguna restricción de forma entre componentes (ya que solo hay un componente).</span><span class="sxs-lookup"><span data-stu-id="90b8b-233">This example includes three constraints in a single component definition and no shape constraints between components (as there's only one component).</span></span>
 
-<span data-ttu-id="92b06-233">En cambio, la forma sofá tiene dos componentes de forma y cuatro restricciones de forma.</span><span class="sxs-lookup"><span data-stu-id="92b06-233">In contrast, the couch shape has two shape components and four shape constraints.</span></span> <span data-ttu-id="92b06-234">Los componentes se identifican por su índice en la lista de componentes del usuario (0 y 1 en este ejemplo).</span><span class="sxs-lookup"><span data-stu-id="92b06-234">Components are identified by their index in the user’s component list (0 and 1 in this example).</span></span>
+<span data-ttu-id="90b8b-234">Por el contrario, la forma del diván tiene dos componentes de forma y cuatro restricciones de forma.</span><span class="sxs-lookup"><span data-stu-id="90b8b-234">In contrast, the couch shape has two shape components and four shape constraints.</span></span> <span data-ttu-id="90b8b-235">Los componentes se identifican por su índice en la lista de componentes del usuario (0 y 1 en este ejemplo).</span><span class="sxs-lookup"><span data-stu-id="90b8b-235">Components are identified by their index in the user’s component list (0 and 1 in this example).</span></span>
 
 ```cs
 shapeConstraints = new List<ShapeConstraint>()
@@ -356,14 +343,14 @@ shapeConstraints = new List<ShapeConstraint>()
 };
 ```
 
-<span data-ttu-id="92b06-235">Las funciones de contenedor se proporcionan en el módulo Unity para facilitar la creación de definiciones de formas personalizadas.</span><span class="sxs-lookup"><span data-stu-id="92b06-235">Wrapper functions are provided in the Unity module for easy creation of custom shape definitions.</span></span> <span data-ttu-id="92b06-236">La lista completa de restricciones de componente y forma se puede encontrar en "SpatialUnderstandingDll. cs" dentro de las estructuras "ShapeComponentConstraint" y "ShapeConstraint".</span><span class="sxs-lookup"><span data-stu-id="92b06-236">The full list of component and shape constraints can be found in “SpatialUnderstandingDll.cs” within the “ShapeComponentConstraint” and the “ShapeConstraint” structures.</span></span>
+<span data-ttu-id="90b8b-236">Las funciones contenedoras se proporcionan en el módulo de Unity para facilitar la creación de definiciones de formas personalizadas.</span><span class="sxs-lookup"><span data-stu-id="90b8b-236">Wrapper functions are provided in the Unity module for easy creation of custom shape definitions.</span></span> <span data-ttu-id="90b8b-237">La lista completa de restricciones de componentes y formas se puede encontrar en "SpatialUnderstandingDll.cs" dentro de las estructuras "ShapeComponentConstraint" y "ShapeConstraint".</span><span class="sxs-lookup"><span data-stu-id="90b8b-237">The full list of component and shape constraints can be found in “SpatialUnderstandingDll.cs” within the “ShapeComponentConstraint” and the “ShapeConstraint” structures.</span></span>
 
-<span data-ttu-id="92b06-237">![La forma de rectángulo se encuentra en esta superficie](images/su-shapequery-300px.jpg)</span><span class="sxs-lookup"><span data-stu-id="92b06-237">![Rectangle shape is found on this surface](images/su-shapequery-300px.jpg)</span></span><br>
-<span data-ttu-id="92b06-238">*La forma de rectángulo se encuentra en esta superficie*</span><span class="sxs-lookup"><span data-stu-id="92b06-238">*Rectangle shape is found on this surface*</span></span>
+<span data-ttu-id="90b8b-238">![La forma del rectángulo se encuentra en esta superficie](images/su-shapequery-300px.jpg)</span><span class="sxs-lookup"><span data-stu-id="90b8b-238">![Rectangle shape is found on this surface](images/su-shapequery-300px.jpg)</span></span><br>
+<span data-ttu-id="90b8b-239">*La forma del rectángulo se encuentra en esta superficie*</span><span class="sxs-lookup"><span data-stu-id="90b8b-239">*Rectangle shape is found on this surface*</span></span>
 
-### <a name="object-placement-solver"></a><span data-ttu-id="92b06-239">Selección de ubicación de objetos</span><span class="sxs-lookup"><span data-stu-id="92b06-239">Object Placement Solver</span></span>
+### <a name="object-placement-solver"></a><span data-ttu-id="90b8b-240">Solucionador de colocación de objetos</span><span class="sxs-lookup"><span data-stu-id="90b8b-240">Object Placement Solver</span></span>
 
-<span data-ttu-id="92b06-240">La selección de ubicación de objetos se puede usar para identificar las ubicaciones ideales en la habitación física para colocar los objetos.</span><span class="sxs-lookup"><span data-stu-id="92b06-240">The object placement solver can be used to identify ideal locations in the physical room to place your objects.</span></span> <span data-ttu-id="92b06-241">El Solver encontrará la ubicación más adecuada en función de las reglas y restricciones del objeto.</span><span class="sxs-lookup"><span data-stu-id="92b06-241">The solver will find the best fit location given the object rules and constraints.</span></span> <span data-ttu-id="92b06-242">Además, las consultas de objeto se conservan hasta que se quita el objeto con llamadas "Solver_RemoveObject" o "Solver_RemoveAllObjects", lo que permite la selección de ubicación de varios objetos restringidos.</span><span class="sxs-lookup"><span data-stu-id="92b06-242">In addition, object queries persist until the object is removed with “Solver_RemoveObject” or “Solver_RemoveAllObjects” calls, allowing constrained multi-object placement.</span></span> <span data-ttu-id="92b06-243">Las consultas de selección de ubicación de objetos constan de tres partes: tipo de ubicación con parámetros, una lista de reglas y una lista de restricciones.</span><span class="sxs-lookup"><span data-stu-id="92b06-243">Objects placement queries consist of three parts: placement type with parameters, a list of rules, and a list of constraints.</span></span> <span data-ttu-id="92b06-244">Para ejecutar una consulta, use la siguiente API.</span><span class="sxs-lookup"><span data-stu-id="92b06-244">To run a query, use the following API.</span></span>
+<span data-ttu-id="90b8b-241">El solucionador de colocación de objetos se puede usar para identificar ubicaciones ideales en la sala física para colocar los objetos.</span><span class="sxs-lookup"><span data-stu-id="90b8b-241">The object placement solver can be used to identify ideal locations in the physical room to place your objects.</span></span> <span data-ttu-id="90b8b-242">El solucionador encontrará la mejor ubicación de ajuste dadas las restricciones y las reglas de objeto.</span><span class="sxs-lookup"><span data-stu-id="90b8b-242">The solver will find the best fit location given the object rules and constraints.</span></span> <span data-ttu-id="90b8b-243">Además, las consultas de objetos se conservan hasta que se quita el objeto con llamadas "Solver_RemoveObject" o "Solver_RemoveAllObjects", lo que permite la colocación restringida de varios objetos.</span><span class="sxs-lookup"><span data-stu-id="90b8b-243">In addition, object queries persist until the object is removed with “Solver_RemoveObject” or “Solver_RemoveAllObjects” calls, allowing constrained multi-object placement.</span></span> <span data-ttu-id="90b8b-244">Las consultas de selección de ubicación de objetos constan de tres partes: tipo de selección de ubicación con parámetros, una lista de reglas y una lista de restricciones.</span><span class="sxs-lookup"><span data-stu-id="90b8b-244">Objects placement queries consist of three parts: placement type with parameters, a list of rules, and a list of constraints.</span></span> <span data-ttu-id="90b8b-245">Para ejecutar una consulta, use la API siguiente.</span><span class="sxs-lookup"><span data-stu-id="90b8b-245">To run a query, use the following API.</span></span>
 
 ```cpp
 public static int Solver_PlaceObject(
@@ -376,24 +363,24 @@ public static int Solver_PlaceObject(
             [Out] IntPtr placementResult)
 ```
 
-<span data-ttu-id="92b06-245">Esta función toma un nombre de objeto, una definición de ubicación y una lista de reglas y restricciones.</span><span class="sxs-lookup"><span data-stu-id="92b06-245">This function takes an object name, placement definition, and a list of rules and constraints.</span></span> <span data-ttu-id="92b06-246">Los contenedores de C# proporcionan funciones auxiliares de construcción para facilitar la creación de reglas y restricciones.</span><span class="sxs-lookup"><span data-stu-id="92b06-246">The C# wrappers provides construction helper functions to make rule and constraint construction easy.</span></span> <span data-ttu-id="92b06-247">La definición de ubicación contiene el tipo de consulta, es decir, uno de los siguientes.</span><span class="sxs-lookup"><span data-stu-id="92b06-247">The placement definition contains the query type – that is, one of the following.</span></span>
+<span data-ttu-id="90b8b-246">Esta función toma un nombre de objeto, una definición de selección de ubicación y una lista de reglas y restricciones.</span><span class="sxs-lookup"><span data-stu-id="90b8b-246">This function takes an object name, placement definition, and a list of rules and constraints.</span></span> <span data-ttu-id="90b8b-247">Los contenedores de C# proporcionan funciones auxiliares de construcción para facilitar la construcción de reglas y restricciones.</span><span class="sxs-lookup"><span data-stu-id="90b8b-247">The C# wrappers provides construction helper functions to make rule and constraint construction easy.</span></span> <span data-ttu-id="90b8b-248">La definición de selección de ubicación contiene el tipo de consulta, es decir, uno de los siguientes.</span><span class="sxs-lookup"><span data-stu-id="90b8b-248">The placement definition contains the query type – that is, one of the following.</span></span>
 
 ```cpp
 public enum PlacementType
-            {
-                Place_OnFloor,
-                Place_OnWall,
-                Place_OnCeiling,
-                Place_OnShape,
-                Place_OnEdge,
-                Place_OnFloorAndCeiling,
-                Place_RandomInAir,
-                Place_InMidAir,
-                Place_UnderFurnitureEdge,
-            };
+{
+    Place_OnFloor,
+    Place_OnWall,
+    Place_OnCeiling,
+    Place_OnShape,
+    Place_OnEdge,
+    Place_OnFloorAndCeiling,
+    Place_RandomInAir,
+    Place_InMidAir,
+    Place_UnderFurnitureEdge,
+};
 ```
 
-<span data-ttu-id="92b06-248">Cada uno de los tipos de ubicación tiene un conjunto de parámetros únicos para el tipo.</span><span class="sxs-lookup"><span data-stu-id="92b06-248">Each of the placement types has a set of parameters unique to the type.</span></span> <span data-ttu-id="92b06-249">La estructura "ObjectPlacementDefinition" contiene un conjunto de funciones auxiliares estáticas para crear estas definiciones.</span><span class="sxs-lookup"><span data-stu-id="92b06-249">The “ObjectPlacementDefinition” structure contains a set of static helper functions for creating these definitions.</span></span> <span data-ttu-id="92b06-250">Por ejemplo, para encontrar un lugar donde colocar un objeto en el piso, puede usar la función siguiente.</span><span class="sxs-lookup"><span data-stu-id="92b06-250">For example, to find a place to put an object on the floor, you can use the following function.</span></span> <span data-ttu-id="92b06-251">public static ObjectPlacementDefinition Create_OnFloor (Vector3 halfDims) además del tipo de selección de ubicación, puede proporcionar un conjunto de reglas y restricciones.</span><span class="sxs-lookup"><span data-stu-id="92b06-251">public static ObjectPlacementDefinition Create_OnFloor(Vector3 halfDims) In addition to the placement type, you can provide a set of rules and constraints.</span></span> <span data-ttu-id="92b06-252">No se pueden infringir las reglas.</span><span class="sxs-lookup"><span data-stu-id="92b06-252">Rules cannot be violated.</span></span> <span data-ttu-id="92b06-253">Las ubicaciones de ubicación posibles que satisfacen el tipo y las reglas se optimizan con el conjunto de restricciones para seleccionar la ubicación de colocación óptima.</span><span class="sxs-lookup"><span data-stu-id="92b06-253">Possible placement locations that satisfy the type and rules are then optimized against the set of constraints in order to select the optimal placement location.</span></span> <span data-ttu-id="92b06-254">Cada una de las reglas y restricciones se pueden crear mediante las funciones de creación estáticas proporcionadas.</span><span class="sxs-lookup"><span data-stu-id="92b06-254">Each of the rules and constraints can be created by the provided static creation functions.</span></span> <span data-ttu-id="92b06-255">A continuación se proporciona una función de ejemplo y una función de construcción de restricciones.</span><span class="sxs-lookup"><span data-stu-id="92b06-255">An example rule and constraint construction function is provided below.</span></span>
+<span data-ttu-id="90b8b-249">Cada uno de los tipos de selección de ubicación tiene un conjunto de parámetros únicos para el tipo.</span><span class="sxs-lookup"><span data-stu-id="90b8b-249">Each of the placement types has a set of parameters unique to the type.</span></span> <span data-ttu-id="90b8b-250">La estructura "ObjectPlacementDefinition" contiene un conjunto de funciones auxiliares estáticas para crear estas definiciones.</span><span class="sxs-lookup"><span data-stu-id="90b8b-250">The “ObjectPlacementDefinition” structure contains a set of static helper functions for creating these definitions.</span></span> <span data-ttu-id="90b8b-251">Por ejemplo, para buscar un lugar donde colocar un objeto en el suelo, puede usar la siguiente función.</span><span class="sxs-lookup"><span data-stu-id="90b8b-251">For example, to find a place to put an object on the floor, you can use the following function.</span></span> <span data-ttu-id="90b8b-252">public static ObjectPlacementDefinition Create_OnFloor(Vector3 halfDims) Además del tipo placement, puede proporcionar un conjunto de reglas y restricciones.</span><span class="sxs-lookup"><span data-stu-id="90b8b-252">public static ObjectPlacementDefinition Create_OnFloor(Vector3 halfDims) In addition to the placement type, you can provide a set of rules and constraints.</span></span> <span data-ttu-id="90b8b-253">No se pueden infringir las reglas.</span><span class="sxs-lookup"><span data-stu-id="90b8b-253">Rules cannot be violated.</span></span> <span data-ttu-id="90b8b-254">Las posibles ubicaciones de selección de ubicación que cumplen el tipo y las reglas se optimizan con el conjunto de restricciones para seleccionar la ubicación de ubicación óptima.</span><span class="sxs-lookup"><span data-stu-id="90b8b-254">Possible placement locations that satisfy the type and rules are then optimized against the set of constraints in order to select the optimal placement location.</span></span> <span data-ttu-id="90b8b-255">Las funciones de creación estática proporcionadas pueden crear cada una de las reglas y restricciones.</span><span class="sxs-lookup"><span data-stu-id="90b8b-255">Each of the rules and constraints can be created by the provided static creation functions.</span></span> <span data-ttu-id="90b8b-256">A continuación se proporciona una regla de ejemplo y una función de construcción de restricciones.</span><span class="sxs-lookup"><span data-stu-id="90b8b-256">An example rule and constraint construction function is provided below.</span></span>
 
 ```cs
 public static ObjectPlacementRule Create_AwayFromPosition(
@@ -402,15 +389,15 @@ public static ObjectPlacementConstraint Create_NearPoint(
     Vector3 position, float minDistance = 0.0f, float maxDistance = 0.0f)
 ```
 
-<span data-ttu-id="92b06-256">La siguiente consulta de selección de ubicación de objetos busca un lugar donde colocar un cubo de media metro en el borde de una superficie, lejos de otros objetos colocados anteriormente y cerca del centro de la habitación.</span><span class="sxs-lookup"><span data-stu-id="92b06-256">The below object placement query is looking for a place to put a half meter cube on the edge of a surface, away from other previously place objects and near the center of the room.</span></span>
+<span data-ttu-id="90b8b-257">La siguiente consulta de selección de ubicación de objetos busca un lugar donde colocar un cubo de medio metro en el borde de una superficie, lejos de otros objetos situados anteriormente y cerca del centro de la sala.</span><span class="sxs-lookup"><span data-stu-id="90b8b-257">The below object placement query is looking for a place to put a half meter cube on the edge of a surface, away from other previously place objects and near the center of the room.</span></span>
 
 ```cs
-List<ObjectPlacementRule> rules = 
+List<ObjectPlacementRule> rules =
     new List<ObjectPlacementRule>() {
         ObjectPlacementRule.Create_AwayFromOtherObjects(1.0f),
     };
 
-List<ObjectPlacementConstraint> constraints = 
+List<ObjectPlacementConstraint> constraints =
     new List<ObjectPlacementConstraint> {
         ObjectPlacementConstraint.Create_NearCenter(),
     };
@@ -418,7 +405,7 @@ List<ObjectPlacementConstraint> constraints =
 Solver_PlaceObject(
     “MyCustomObject”,
     new ObjectPlacementDefinition.Create_OnEdge(
-        new Vector3(0.25f, 0.25f, 0.25f), 
+        new Vector3(0.25f, 0.25f, 0.25f),
         new Vector3(0.25f, 0.25f, 0.25f)),
     rules.Count,
     UnderstandingDLL.PinObject(rules.ToArray()),
@@ -427,88 +414,88 @@ Solver_PlaceObject(
     UnderstandingDLL.GetStaticObjectPlacementResultPtr());
 ```
 
-<span data-ttu-id="92b06-257">Si se realiza correctamente, se devuelve una estructura "ObjectPlacementResult" que contiene la posición de colocación, las dimensiones y la orientación.</span><span class="sxs-lookup"><span data-stu-id="92b06-257">If successful, a “ObjectPlacementResult” structure containing the placement position, dimensions, and orientation is returned.</span></span> <span data-ttu-id="92b06-258">Además, la selección de ubicación se agrega a la lista interna de objetos colocados del archivo dll.</span><span class="sxs-lookup"><span data-stu-id="92b06-258">In addition, the placement is added to the dll’s internal list of placed objects.</span></span> <span data-ttu-id="92b06-259">Las consultas de selección de ubicación posteriores tendrán en cuenta este objeto.</span><span class="sxs-lookup"><span data-stu-id="92b06-259">Subsequent placement queries will take this object into account.</span></span> <span data-ttu-id="92b06-260">El archivo "LevelSolver. cs" en el ejemplo de Unity contiene más consultas de ejemplo.</span><span class="sxs-lookup"><span data-stu-id="92b06-260">The “LevelSolver.cs” file in the Unity sample contains more example queries.</span></span>
+<span data-ttu-id="90b8b-258">Si se realiza correctamente, se devuelve una estructura "ObjectPlacementResult" que contiene la posición de colocación, las dimensiones y la orientación.</span><span class="sxs-lookup"><span data-stu-id="90b8b-258">If successful, a “ObjectPlacementResult” structure containing the placement position, dimensions, and orientation is returned.</span></span> <span data-ttu-id="90b8b-259">Además, la colocación se agrega a la lista interna del archivo DLL de objetos colocados.</span><span class="sxs-lookup"><span data-stu-id="90b8b-259">In addition, the placement is added to the dll’s internal list of placed objects.</span></span> <span data-ttu-id="90b8b-260">Las consultas de selección de ubicación posteriores tendrán en cuenta este objeto.</span><span class="sxs-lookup"><span data-stu-id="90b8b-260">Subsequent placement queries will take this object into account.</span></span> <span data-ttu-id="90b8b-261">El archivo "LevelSolver.cs" del ejemplo de Unity contiene más consultas de ejemplo.</span><span class="sxs-lookup"><span data-stu-id="90b8b-261">The “LevelSolver.cs” file in the Unity sample contains more example queries.</span></span>
 
-<span data-ttu-id="92b06-261">![Resultados de la colocación del objeto](images/su-objectplacement-1000px.jpg)</span><span class="sxs-lookup"><span data-stu-id="92b06-261">![Results of object placement](images/su-objectplacement-1000px.jpg)</span></span><br>
-<span data-ttu-id="92b06-262">*Figura 3: los cuadros azules del resultado de tres consultas en planta con respecto a las reglas de posición de la cámara*</span><span class="sxs-lookup"><span data-stu-id="92b06-262">*Figure 3: The blue boxes how the result from three place on floor queries with away from camera position rules*</span></span>
+<span data-ttu-id="90b8b-262">![Resultados de la selección de ubicación de objetos](images/su-objectplacement-1000px.jpg)</span><span class="sxs-lookup"><span data-stu-id="90b8b-262">![Results of object placement](images/su-objectplacement-1000px.jpg)</span></span><br>
+<span data-ttu-id="90b8b-263">*Figura 3: Cuadros azules en los que el resultado de las consultas de tres posiciones en el suelo se encuentra fuera de las reglas de posición de la cámara*</span><span class="sxs-lookup"><span data-stu-id="90b8b-263">*Figure 3: The blue boxes how the result from three place on floor queries with away from camera position rules*</span></span>
 
-<span data-ttu-id="92b06-263">En la resolución de ubicación de varios objetos necesarios para un escenario de nivel o aplicación, primero se resuelven objetos grandes e indispensables con el fin de maximizar la probabilidad de que se pueda encontrar un espacio.</span><span class="sxs-lookup"><span data-stu-id="92b06-263">When solving for placement location of multiple objects required for a level or application scenario, first solve indispensable and large objects in order to maximizing the probability that a space can be found.</span></span> <span data-ttu-id="92b06-264">El orden de la ubicación es importante.</span><span class="sxs-lookup"><span data-stu-id="92b06-264">Placement order is important.</span></span> <span data-ttu-id="92b06-265">Si no se encuentran colocaciones de objeto, pruebe con menos configuraciones restringidas.</span><span class="sxs-lookup"><span data-stu-id="92b06-265">If object placements cannot be found, try less constrained configurations.</span></span> <span data-ttu-id="92b06-266">Tener un conjunto de configuraciones de reserva es fundamental para admitir la funcionalidad en muchas configuraciones de salón.</span><span class="sxs-lookup"><span data-stu-id="92b06-266">Having a set of fallback configurations is critical to supporting functionality across many room configurations.</span></span>
+<span data-ttu-id="90b8b-264">Al resolver la ubicación de colocación de varios objetos necesarios para un escenario de nivel o aplicación, primero debe resolver objetos imprescindibles y grandes para maximizar la probabilidad de que se pueda encontrar un espacio.</span><span class="sxs-lookup"><span data-stu-id="90b8b-264">When solving for placement location of multiple objects required for a level or application scenario, first solve indispensable and large objects in order to maximizing the probability that a space can be found.</span></span> <span data-ttu-id="90b8b-265">El orden de selección de ubicación es importante.</span><span class="sxs-lookup"><span data-stu-id="90b8b-265">Placement order is important.</span></span> <span data-ttu-id="90b8b-266">Si no se pueden encontrar colocaciones de objetos, pruebe con configuraciones menos restringidas.</span><span class="sxs-lookup"><span data-stu-id="90b8b-266">If object placements cannot be found, try less constrained configurations.</span></span> <span data-ttu-id="90b8b-267">Tener un conjunto de configuraciones de reserva es fundamental para admitir la funcionalidad en muchas configuraciones de sala.</span><span class="sxs-lookup"><span data-stu-id="90b8b-267">Having a set of fallback configurations is critical to supporting functionality across many room configurations.</span></span>
 
-### <a name="room-scanning-process"></a><span data-ttu-id="92b06-267">Proceso de detección de salas</span><span class="sxs-lookup"><span data-stu-id="92b06-267">Room Scanning Process</span></span>
+### <a name="room-scanning-process"></a><span data-ttu-id="90b8b-268">Proceso de examen de sala</span><span class="sxs-lookup"><span data-stu-id="90b8b-268">Room Scanning Process</span></span>
 
-<span data-ttu-id="92b06-268">Aunque la solución de asignación espacial proporcionada por HoloLens está diseñada para ser lo suficientemente genérica como para satisfacer las necesidades de la gama completa de espacios problemáticos, el módulo de comprensión espacial se creó para admitir las necesidades de dos juegos específicos.</span><span class="sxs-lookup"><span data-stu-id="92b06-268">While the spatial mapping solution provided by the HoloLens is designed to be generic enough to meet the needs of the entire gamut of problem spaces, the spatial understanding module was built to support the needs of two specific games.</span></span> <span data-ttu-id="92b06-269">Su solución está estructurada en torno a un proceso específico y un conjunto de supuestos, que se resumen a continuación.</span><span class="sxs-lookup"><span data-stu-id="92b06-269">Its solution is structured around a specific process and set of assumptions, summarized below.</span></span>
+<span data-ttu-id="90b8b-269">Aunque la solución de asignación espacial proporcionada por HoloLens está diseñada para ser lo suficientemente genérica como para satisfacer las necesidades de toda la gama de espacios con problemas, el módulo de comprensión espacial se creó para admitir las necesidades de dos juegos específicos.</span><span class="sxs-lookup"><span data-stu-id="90b8b-269">While the spatial mapping solution provided by the HoloLens is designed to be generic enough to meet the needs of the entire gamut of problem spaces, the spatial understanding module was built to support the needs of two specific games.</span></span> <span data-ttu-id="90b8b-270">Su solución se estructura en torno a un proceso específico y un conjunto de suposiciones, que se resumen a continuación.</span><span class="sxs-lookup"><span data-stu-id="90b8b-270">Its solution is structured around a specific process and set of assumptions, summarized below.</span></span>
 
-```
+```txt
 Fixed size playspace – The user specifies the maximum playspace size in the init call.
 
-One-time scan process – 
+One-time scan process –
     The process requires a discrete scanning phase where the user walks around,
-    defining the playspace. 
+    defining the playspace.
     Query functions will not function until after the scan has been finalized.
 ```
 
-<span data-ttu-id="92b06-270">Playspace controlada por el usuario "Painting": durante la fase de análisis, el usuario se mueve y se desplaza por el ritmo de las jugadas, con lo que se pintan las áreas que se deben incluir.</span><span class="sxs-lookup"><span data-stu-id="92b06-270">User driven playspace “painting” – During the scanning phase, the user moves and looks around the plays pace, effectively painting the areas, which should be included.</span></span> <span data-ttu-id="92b06-271">La malla generada es importante para proporcionar comentarios de los usuarios durante esta fase.</span><span class="sxs-lookup"><span data-stu-id="92b06-271">The generated mesh is important to provide user feedback during this phase.</span></span> <span data-ttu-id="92b06-272">Instalación en casa o en el programa de instalación de Office: las funciones de consulta están diseñadas en torno a superficies planas y paredes en los ángulos correctos.</span><span class="sxs-lookup"><span data-stu-id="92b06-272">Indoors home or office setup – The query functions are designed around flat surfaces and walls at right angles.</span></span> <span data-ttu-id="92b06-273">Se trata de una limitación flexible.</span><span class="sxs-lookup"><span data-stu-id="92b06-273">This is a soft limitation.</span></span> <span data-ttu-id="92b06-274">Sin embargo, durante la fase de examen, se completa un análisis de eje principal para optimizar la teselación de malla junto con el eje principal y el secundario.</span><span class="sxs-lookup"><span data-stu-id="92b06-274">However, during the scanning phase, a primary axis analysis is completed to optimize the mesh tessellation along major and minor axis.</span></span> <span data-ttu-id="92b06-275">El archivo SpatialUnderstanding. CS incluido administra el proceso de la fase de análisis.</span><span class="sxs-lookup"><span data-stu-id="92b06-275">The included SpatialUnderstanding.cs file manages the scanning phase process.</span></span> <span data-ttu-id="92b06-276">Llama a las siguientes funciones.</span><span class="sxs-lookup"><span data-stu-id="92b06-276">It calls the following functions.</span></span>
+<span data-ttu-id="90b8b-271">"dibujo" del espacio de juego controlado por el usuario: durante la fase de examen, el usuario se mueve y busca alrededor del ritmo de reproducción, pintando eficazmente las áreas, que deben incluirse.</span><span class="sxs-lookup"><span data-stu-id="90b8b-271">User driven playspace “painting” – During the scanning phase, the user moves and looks around the plays pace, effectively painting the areas, which should be included.</span></span> <span data-ttu-id="90b8b-272">La malla generada es importante para proporcionar comentarios de los usuarios durante esta fase.</span><span class="sxs-lookup"><span data-stu-id="90b8b-272">The generated mesh is important to provide user feedback during this phase.</span></span> <span data-ttu-id="90b8b-273">Configuración del hogar u oficina interior: las funciones de consulta están diseñadas en torno a superficies planas y paredes en ángulos derecho.</span><span class="sxs-lookup"><span data-stu-id="90b8b-273">Indoors home or office setup – The query functions are designed around flat surfaces and walls at right angles.</span></span> <span data-ttu-id="90b8b-274">Se trata de una limitación temporal.</span><span class="sxs-lookup"><span data-stu-id="90b8b-274">This is a soft limitation.</span></span> <span data-ttu-id="90b8b-275">Sin embargo, durante la fase de análisis, se completa un análisis del eje principal para optimizar la teselación de malla a lo largo de los ejes principal y secundario.</span><span class="sxs-lookup"><span data-stu-id="90b8b-275">However, during the scanning phase, a primary axis analysis is completed to optimize the mesh tessellation along major and minor axis.</span></span> <span data-ttu-id="90b8b-276">El archivo SpatialUnderstanding.cs incluido administra el proceso de fase de examen.</span><span class="sxs-lookup"><span data-stu-id="90b8b-276">The included SpatialUnderstanding.cs file manages the scanning phase process.</span></span> <span data-ttu-id="90b8b-277">Llama a las siguientes funciones.</span><span class="sxs-lookup"><span data-stu-id="90b8b-277">It calls the following functions.</span></span>
 
-```
+```txt
 SpatialUnderstanding_Init – Called once at the start.
 
 GeneratePlayspace_InitScan – Indicates that the scan phase should begin.
 
-GeneratePlayspace_UpdateScan_DynamicScan – 
-    Called each frame to update the scanning process. The camera position and 
-    orientation is passed in and is used for the playspace painting process, 
+GeneratePlayspace_UpdateScan_DynamicScan –
+    Called each frame to update the scanning process. The camera position and
+    orientation is passed in and is used for the playspace painting process,
     described above.
 
-GeneratePlayspace_RequestFinish – 
-    Called to finalize the playspace. This will use the areas “painted” during 
-    the scan phase to define and lock the playspace. The application can query 
-    statistics during the scanning phase as well as query the custom mesh for 
+GeneratePlayspace_RequestFinish –
+    Called to finalize the playspace. This will use the areas “painted” during
+    the scan phase to define and lock the playspace. The application can query
+    statistics during the scanning phase as well as query the custom mesh for
     providing user feedback.
 
-Import_UnderstandingMesh – 
-    During scanning, the “SpatialUnderstandingCustomMesh” behavior provided by 
-    the module and placed on the understanding prefab will periodically query the 
-    custom mesh generated by the process. In addition, this is done once more 
+Import_UnderstandingMesh –
+    During scanning, the “SpatialUnderstandingCustomMesh” behavior provided by
+    the module and placed on the understanding prefab will periodically query the
+    custom mesh generated by the process. In addition, this is done once more
     after scanning has been finalized.
 ```
 
-<span data-ttu-id="92b06-277">El flujo de análisis, controlado por el comportamiento "SpatialUnderstanding" llama a InitScan y, a continuación, UpdateScan cada fotograma.</span><span class="sxs-lookup"><span data-stu-id="92b06-277">The scanning flow, driven by the “SpatialUnderstanding” behavior calls InitScan, then UpdateScan each frame.</span></span> <span data-ttu-id="92b06-278">Cuando la consulta de estadísticas notifica una cobertura razonable, se permite al usuario airtap llamar a RequestFinish para indicar el final de la fase de análisis.</span><span class="sxs-lookup"><span data-stu-id="92b06-278">When the statistics query reports reasonable coverage, the user is allowed to airtap to call RequestFinish to indicate the end of the scanning phase.</span></span> <span data-ttu-id="92b06-279">UpdateScan sigue siendo llamado hasta que su valor devuelto indica que el archivo DLL ha finalizado el procesamiento.</span><span class="sxs-lookup"><span data-stu-id="92b06-279">UpdateScan continues to be called until its return value indicates that the dll has completed processing.</span></span>
+<span data-ttu-id="90b8b-278">El flujo de examen, controlado por el comportamiento "SpatialUnderstanding", llama a InitScan y, a continuación, UpdateScan a cada fotograma.</span><span class="sxs-lookup"><span data-stu-id="90b8b-278">The scanning flow, driven by the “SpatialUnderstanding” behavior calls InitScan, then UpdateScan each frame.</span></span> <span data-ttu-id="90b8b-279">Cuando la consulta de estadísticas informa de una cobertura razonable, el usuario puede usar airtap para llamar a RequestFinish para indicar el final de la fase de examen.</span><span class="sxs-lookup"><span data-stu-id="90b8b-279">When the statistics query reports reasonable coverage, the user is allowed to airtap to call RequestFinish to indicate the end of the scanning phase.</span></span> <span data-ttu-id="90b8b-280">Se sigue llamando a UpdateScan hasta que su valor devuelto indica que el archivo DLL ha completado el procesamiento.</span><span class="sxs-lookup"><span data-stu-id="90b8b-280">UpdateScan continues to be called until its return value indicates that the dll has completed processing.</span></span>
 
-### <a name="understanding-mesh"></a><span data-ttu-id="92b06-280">Descripción de la malla</span><span class="sxs-lookup"><span data-stu-id="92b06-280">Understanding Mesh</span></span>
+### <a name="understanding-mesh"></a><span data-ttu-id="90b8b-281">Descripción de Mesh</span><span class="sxs-lookup"><span data-stu-id="90b8b-281">Understanding Mesh</span></span>
 
-<span data-ttu-id="92b06-281">La dll de comprensión almacena internamente el Playspace como una cuadrícula de voxel cubos de tamaño de 8 cm.</span><span class="sxs-lookup"><span data-stu-id="92b06-281">The understanding dll internally stores the playspace as a grid of 8 cm sized voxel cubes.</span></span> <span data-ttu-id="92b06-282">Durante la parte inicial del análisis, se completa un análisis de componentes principales para determinar los ejes de la habitación.</span><span class="sxs-lookup"><span data-stu-id="92b06-282">During the initial part of scanning, a primary component analysis is completed to determine the axes of the room.</span></span> <span data-ttu-id="92b06-283">Internamente, almacena su espacio voxel alineado con estos ejes.</span><span class="sxs-lookup"><span data-stu-id="92b06-283">Internally, it stores its voxel space aligned to these axes.</span></span> <span data-ttu-id="92b06-284">Una malla se genera aproximadamente cada segundo mediante la extracción de la isosuperficie del volumen voxel.</span><span class="sxs-lookup"><span data-stu-id="92b06-284">A mesh is generated approximately every second by extracting the isosurface from the voxel volume.</span></span>
+<span data-ttu-id="90b8b-282">La dll de comprensión almacena internamente el espacio de reproducción como una cuadrícula de cubos de vóxel de 8 cm de tamaño.</span><span class="sxs-lookup"><span data-stu-id="90b8b-282">The understanding dll internally stores the playspace as a grid of 8 cm sized voxel cubes.</span></span> <span data-ttu-id="90b8b-283">Durante la parte inicial del análisis, se completa un análisis de componentes principales para determinar los ejes de la sala.</span><span class="sxs-lookup"><span data-stu-id="90b8b-283">During the initial part of scanning, a primary component analysis is completed to determine the axes of the room.</span></span> <span data-ttu-id="90b8b-284">Internamente, almacena su espacio de vóxel alineado con estos ejes.</span><span class="sxs-lookup"><span data-stu-id="90b8b-284">Internally, it stores its voxel space aligned to these axes.</span></span> <span data-ttu-id="90b8b-285">Una malla se genera aproximadamente cada segundo mediante la extracción del isosurface del volumen de vóxel.</span><span class="sxs-lookup"><span data-stu-id="90b8b-285">A mesh is generated approximately every second by extracting the isosurface from the voxel volume.</span></span>
 
-<span data-ttu-id="92b06-285">![Malla generada generada a partir del volumen voxel](images/su-custommesh.jpg)</span><span class="sxs-lookup"><span data-stu-id="92b06-285">![Generated mesh produced from the voxel volume](images/su-custommesh.jpg)</span></span><br>
-<span data-ttu-id="92b06-286">*Malla generada generada a partir del volumen voxel*</span><span class="sxs-lookup"><span data-stu-id="92b06-286">*Generated mesh produced from the voxel volume*</span></span>
+<span data-ttu-id="90b8b-286">![Malla generada a partir del volumen de vóxel](images/su-custommesh.jpg)</span><span class="sxs-lookup"><span data-stu-id="90b8b-286">![Generated mesh produced from the voxel volume](images/su-custommesh.jpg)</span></span><br>
+<span data-ttu-id="90b8b-287">*Malla generada a partir del volumen de vóxel*</span><span class="sxs-lookup"><span data-stu-id="90b8b-287">*Generated mesh produced from the voxel volume*</span></span>
 
-## <a name="troubleshooting"></a><span data-ttu-id="92b06-287">Solución de problemas</span><span class="sxs-lookup"><span data-stu-id="92b06-287">Troubleshooting</span></span>
+## <a name="troubleshooting"></a><span data-ttu-id="90b8b-288">Solución de problemas</span><span class="sxs-lookup"><span data-stu-id="90b8b-288">Troubleshooting</span></span>
 
-* <span data-ttu-id="92b06-288">Asegúrese de que ha establecido la funcionalidad [SpatialPerception](#setting-the-spatialperception-capability)</span><span class="sxs-lookup"><span data-stu-id="92b06-288">Ensure you have set the [SpatialPerception](#setting-the-spatialperception-capability) capability</span></span>
-* <span data-ttu-id="92b06-289">Cuando se pierde el seguimiento, el siguiente evento OnSurfaceChanged quitará todas las mallas.</span><span class="sxs-lookup"><span data-stu-id="92b06-289">When tracking is lost, the next OnSurfaceChanged event will remove all meshes.</span></span>
+* <span data-ttu-id="90b8b-289">Asegúrese de que ha establecido [la funcionalidad SpatialPerception.](#setting-the-spatialperception-capability)</span><span class="sxs-lookup"><span data-stu-id="90b8b-289">Ensure you have set the [SpatialPerception](#setting-the-spatialperception-capability) capability</span></span>
+* <span data-ttu-id="90b8b-290">Cuando se pierde el seguimiento, el siguiente evento OnSurfaceChanged quitará todas las mallas.</span><span class="sxs-lookup"><span data-stu-id="90b8b-290">When tracking is lost, the next OnSurfaceChanged event will remove all meshes.</span></span>
 
-## <a name="spatial-mapping-in-mixed-reality-toolkit"></a><span data-ttu-id="92b06-290">Asignación espacial en el kit de herramientas de realidad mixta</span><span class="sxs-lookup"><span data-stu-id="92b06-290">Spatial Mapping in Mixed Reality Toolkit</span></span>
+## <a name="spatial-mapping-in-mixed-reality-toolkit"></a><span data-ttu-id="90b8b-291">Asignación espacial en Mixed Reality Toolkit</span><span class="sxs-lookup"><span data-stu-id="90b8b-291">Spatial Mapping in Mixed Reality Toolkit</span></span>
 
-<span data-ttu-id="92b06-291">Para obtener más información sobre el uso de la asignación espacial con el kit de herramientas de realidad mixta V2, consulte la <a href="/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started" target="_blank">sección de reconocimiento espacial</a> de los documentos de MRTK.</span><span class="sxs-lookup"><span data-stu-id="92b06-291">For more information on using Spatial Mapping with Mixed Reality Toolkit v2, see the <a href="/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started" target="_blank">Spatial Awareness section</a> of the MRTK docs.</span></span>
+<span data-ttu-id="90b8b-292">Para más información sobre el uso de la asignación espacial con Mixed Reality Toolkit, consulte la sección de reconocimiento [espacial](/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started) de los documentos de MRTK.</span><span class="sxs-lookup"><span data-stu-id="90b8b-292">For more information on using Spatial Mapping with Mixed Reality Toolkit, see the [spatial awareness section](/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started) of the MRTK docs.</span></span>
 
-## <a name="next-development-checkpoint"></a><span data-ttu-id="92b06-292">Siguiente punto de control de desarrollo</span><span class="sxs-lookup"><span data-stu-id="92b06-292">Next Development Checkpoint</span></span>
+## <a name="next-development-checkpoint"></a><span data-ttu-id="90b8b-293">Siguiente punto de control de desarrollo</span><span class="sxs-lookup"><span data-stu-id="90b8b-293">Next Development Checkpoint</span></span>
 
-<span data-ttu-id="92b06-293">Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK.</span><span class="sxs-lookup"><span data-stu-id="92b06-293">If you're following the Unity development journey we've laid out, you're in the midst of exploring the MRTK core building blocks.</span></span> <span data-ttu-id="92b06-294">Desde aquí, puede continuar con el siguiente bloque de compilación:</span><span class="sxs-lookup"><span data-stu-id="92b06-294">From here, you can continue to the next building block:</span></span>
-
-> [!div class="nextstepaction"]
-> [<span data-ttu-id="92b06-295">Texto</span><span class="sxs-lookup"><span data-stu-id="92b06-295">Text</span></span>](text-in-unity.md)
-
-<span data-ttu-id="92b06-296">O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:</span><span class="sxs-lookup"><span data-stu-id="92b06-296">Or jump to Mixed Reality platform capabilities and APIs:</span></span>
+<span data-ttu-id="90b8b-294">Si sigue el recorrido de desarrollo de Unity que hemos diseñado, está en medio de la exploración de los bloques de creación principales de MRTK.</span><span class="sxs-lookup"><span data-stu-id="90b8b-294">If you're following the Unity development journey we've laid out, you're in the midst of exploring the MRTK core building blocks.</span></span> <span data-ttu-id="90b8b-295">Desde aquí, puede continuar con el siguiente bloque de compilación:</span><span class="sxs-lookup"><span data-stu-id="90b8b-295">From here, you can continue to the next building block:</span></span>
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="92b06-297">Experiencias compartidas</span><span class="sxs-lookup"><span data-stu-id="92b06-297">Shared experiences</span></span>](shared-experiences-in-unity.md)
+> [<span data-ttu-id="90b8b-296">Texto</span><span class="sxs-lookup"><span data-stu-id="90b8b-296">Text</span></span>](text-in-unity.md)
 
-<span data-ttu-id="92b06-298">Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.</span><span class="sxs-lookup"><span data-stu-id="92b06-298">You can always go back to the [Unity development checkpoints](unity-development-overview.md#2-core-building-blocks) at any time.</span></span>
+<span data-ttu-id="90b8b-297">O bien puede saltar a las funcionalidades y las API de la plataforma de realidad mixta:</span><span class="sxs-lookup"><span data-stu-id="90b8b-297">Or jump to Mixed Reality platform capabilities and APIs:</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="92b06-299">Consulte también</span><span class="sxs-lookup"><span data-stu-id="92b06-299">See also</span></span>
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="90b8b-298">Experiencias compartidas</span><span class="sxs-lookup"><span data-stu-id="90b8b-298">Shared experiences</span></span>](shared-experiences-in-unity.md)
 
-* [<span data-ttu-id="92b06-300">Sistemas de coordenadas</span><span class="sxs-lookup"><span data-stu-id="92b06-300">Coordinate systems</span></span>](../../design/coordinate-systems.md)
-* [<span data-ttu-id="92b06-301">Sistemas de coordenadas de Unity</span><span class="sxs-lookup"><span data-stu-id="92b06-301">Coordinate systems in Unity</span></span>](coordinate-systems-in-unity.md)
-* <span data-ttu-id="92b06-302"><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a></span><span class="sxs-lookup"><span data-stu-id="92b06-302"><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a></span></span>
-* <span data-ttu-id="92b06-303"><a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine. MeshFilter</a></span><span class="sxs-lookup"><span data-stu-id="92b06-303"><a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine.MeshFilter</a></span></span>
-* <span data-ttu-id="92b06-304"><a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine. MeshCollider</a></span><span class="sxs-lookup"><span data-stu-id="92b06-304"><a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine.MeshCollider</a></span></span>
-* <span data-ttu-id="92b06-305"><a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine. Bounds</a></span><span class="sxs-lookup"><span data-stu-id="92b06-305"><a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine.Bounds</a></span></span>
+<span data-ttu-id="90b8b-299">Puede volver a los [puntos de control de desarrollo de Unity](unity-development-overview.md#2-core-building-blocks) en cualquier momento.</span><span class="sxs-lookup"><span data-stu-id="90b8b-299">You can always go back to the [Unity development checkpoints](unity-development-overview.md#2-core-building-blocks) at any time.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="90b8b-300">Consulte también</span><span class="sxs-lookup"><span data-stu-id="90b8b-300">See also</span></span>
+
+* [<span data-ttu-id="90b8b-301">Sistemas de coordenadas</span><span class="sxs-lookup"><span data-stu-id="90b8b-301">Coordinate systems</span></span>](../../design/coordinate-systems.md)
+* [<span data-ttu-id="90b8b-302">Sistemas de coordenadas de Unity</span><span class="sxs-lookup"><span data-stu-id="90b8b-302">Coordinate systems in Unity</span></span>](coordinate-systems-in-unity.md)
+* <span data-ttu-id="90b8b-303"><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a></span><span class="sxs-lookup"><span data-stu-id="90b8b-303"><a href="https://github.com/Microsoft/MixedRealityToolkit-Unity" target="_blank">MixedRealityToolkit</a></span></span>
+* <span data-ttu-id="90b8b-304"><a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine.MeshFilter</a></span><span class="sxs-lookup"><span data-stu-id="90b8b-304"><a href="https://docs.unity3d.com/ScriptReference/MeshFilter.html" target="_blank">UnityEngine.MeshFilter</a></span></span>
+* <span data-ttu-id="90b8b-305"><a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine.MeshCollider</a></span><span class="sxs-lookup"><span data-stu-id="90b8b-305"><a href="https://docs.unity3d.com/ScriptReference/MeshCollider.html" target="_blank">UnityEngine.MeshCollider</a></span></span>
+* <span data-ttu-id="90b8b-306"><a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine.Bounds</a></span><span class="sxs-lookup"><span data-stu-id="90b8b-306"><a href="https://docs.unity3d.com/ScriptReference/Bounds.html" target="_blank">UnityEngine.Bounds</a></span></span>
