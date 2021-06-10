@@ -1,17 +1,17 @@
 ---
 title: Indicación del progreso
-description: Obtenga información sobre cómo los controles de progreso proporcionan comentarios al usuario de que se está llevando a cabo una operación de ejecución prolongada en las aplicaciones de realidad mixta.
+description: Obtenga información sobre cómo los controles de progreso proporcionan comentarios al usuario sobre la ejecución de una operación de larga duración en las aplicaciones de realidad mixta.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, diseño, controles, IU, experiencia de usuario, indicador de progreso, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: e949d8805446429d3853a3fedb1b776c50c710dd
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: Windows Mixed Reality, diseño, controles, interfaz de usuario, experiencia de usuario, indicador de progreso, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: 01f032efb887ecfc6f8d66683fb954cd0574a4f3
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299740"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600554"
 ---
 # <a name="progress-indicator"></a>Indicador de progreso
 
@@ -19,7 +19,7 @@ ms.locfileid: "107299740"
 
 <img src="images/MRTK_ProgressIndicator.gif" alt="Progress ring example in HoloLens" width="940px">
 
-Un control de progreso proporciona comentarios de que se está llevando a cabo una operación de ejecución prolongada. Cuando un indicador de progreso está visible, los usuarios pueden ver el tiempo de espera y no pueden interactuar con la aplicación.
+Un control de progreso proporciona comentarios sobre una operación de ejecución larga en curso. Cuando un indicador de progreso está visible, los usuarios pueden ver el tiempo de espera y no pueden interactuar con la aplicación.
 
 <br>
 
@@ -27,14 +27,14 @@ Un control de progreso proporciona comentarios de que se está llevando a cabo u
 
 ## <a name="types-of-progress"></a>Tipos de progreso
 
-Es importante proporcionar información de usuario sobre lo que está ocurriendo. En realidad mixta, los usuarios pueden distraerse fácilmente por el entorno físico u objetos si la aplicación no tiene buenos comentarios visuales. En situaciones en las que se tardan unos segundos, como cuando se cargan los datos o se actualiza una escena, es una buena idea mostrar un indicador visual. Hay dos opciones para mostrar el usuario que está realizando una operación: una **barra de progreso** o un **anillo de progreso**.
+Es importante proporcionar al usuario información sobre lo que sucede. En realidad mixta, el entorno físico u los objetos pueden distraer fácilmente a los usuarios si la aplicación no tiene buenos comentarios visuales. Para situaciones que tarden unos segundos, como cuando se cargan datos o se actualiza una escena, es una buena idea mostrar un indicador visual. Hay dos opciones para mostrar al usuario que hay una operación en curso: una **barra de progreso** o un anillo de **progreso**.
 
 :::row:::
     :::column:::
         ### <a name="progress-barbr"></a>Barra de progreso<br>
-        Una barra de progreso muestra el porcentaje completado de una tarea. Se debe usar durante una operación cuya duración se conoce (determinan), pero su progreso no debe bloquear la interacción del usuario con la aplicación.<br>
+        Una barra progreso muestra el porcentaje completado de una tarea. Debe usarse durante una operación cuya duración se conoce (determinada), pero su progreso no debe bloquear la interacción del usuario con la aplicación.<br>
         <br>
-        *Imagen: ejemplo de barra de progreso en HoloLens*
+        *Imagen: Ejemplo de barra de progreso en HoloLens*
     :::column-end:::
         :::column:::
         ![space](images/spacer-20x582.png)<br>
@@ -49,13 +49,13 @@ Es importante proporcionar información de usuario sobre lo que está ocurriendo
 :::row:::
     :::column:::
         ### <a name="progress-ringbr"></a>Círculo de progreso<br>
-        Un anillo de progreso solo tiene un estado indeterminado y debe usarse cuando se bloquea la interacción del usuario hasta que se haya completado la operación.<br>
+        Un anillo de progreso solo tiene un estado indeterminado y debe usarse cuando se bloquea la interacción del usuario hasta que se complete la operación.<br>
         <br>
-        *Imagen: ejemplo de anillo de progreso en HoloLens*
+        *Imagen: Ejemplo de anillo de progreso en HoloLens*
     :::column-end:::
         :::column:::
         ![space](images/spacer-20x582.png)<br>
-       ![Ejemplo de anillo de progreso en el dispositivo HoloLens](images/640px-progressring.jpg)<br>
+       ![Ejemplo de anillo de progreso en un dispositivo HoloLens](images/640px-progressring.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -66,13 +66,13 @@ Es importante proporcionar información de usuario sobre lo que está ocurriendo
 :::row:::
     :::column:::
         ### <a name="progress-with-a-custom-objectbr"></a>Progreso con un objeto personalizado<br>
-        Puede Agregar a la identidad de personalidad y marca de la aplicación personalizando el control de progreso con sus propios objetos 2D/3D personalizados.<br>
+        Puede agregar a la personalidad y la identidad de marca de la aplicación personalizando el control Progreso con sus propios objetos 2D/3D personalizados.<br>
         <br>
-        *Imagen: progreso con el ejemplo de malla personalizada en HoloLens*
+        *Imagen: Ejemplo de progreso con malla personalizada en HoloLens*
     :::column-end:::
         :::column:::
         ![space](images/spacer-20x582.png)<br>
-       ![Progreso con el ejemplo de malla personalizada en HoloLens](images/640px-progresscustom.jpg)<br>
+       ![Ejemplo de progreso con malla personalizada en HoloLens](images/640px-progresscustom.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -82,24 +82,24 @@ Es importante proporcionar información de usuario sobre lo que está ocurriendo
 
 ## <a name="best-practices"></a>Procedimientos recomendados
 
-* Encadenar estrechamente la [cartelera o etiqueta, junto](billboarding-and-tag-along.md) con la presentación de progreso, ya que el usuario puede trasladar fácilmente el encabezado a un espacio vacío y perder el contexto. La aplicación podría parecerse a que se ha bloqueado si el usuario no puede ver nada. La cartelera y el etiquetado están integrados en el recurso prefabricado de progreso.
-* Siempre es conveniente proporcionar información de estado sobre lo que está ocurriendo al usuario. El recurso prefabricado de progreso proporciona varios estilos visuales, incluido el progreso de tipo anillo estándar de Windows para proporcionar el estado. También puede usar una malla personalizada con una animación si desea que el estilo del progreso se alinee con la marca de la aplicación.
+* Ajuste estrechamente [el formato o](billboarding-and-tag-along.md) la etiqueta junto a la presentación de Progreso, ya que el usuario puede mover fácilmente la cabeza a un espacio vacío y perder el contexto. Es posible que la aplicación parezca que se ha bloqueado si el usuario no puede ver nada. La marcación y la etiqueta se han integrado en el prefab Progreso.
+* Siempre es bueno proporcionar información de estado sobre lo que sucede al usuario. El objeto prefab Progreso proporciona varios estilos visuales, incluido el progreso de tipo de anillo estándar de Windows para proporcionar el estado. También puede usar una malla personalizada con una animación si desea que el estilo del progreso se alinee con la marca de la aplicación.
 
 <br>
 
 ---
 
-## <a name="progress-indicator-in-mrtk-mixed-reality-toolkit-for-unity"></a>Indicador de progreso en MRTK (kit de herramientas de realidad mixta) para Unity
+## <a name="progress-indicator-in-mrtk-mixed-reality-toolkit-for-unity"></a>Indicador de progreso en MRTK (Mixed Reality Toolkit) para Unity
 
-* [MRTK: indicador de progreso Prefabs](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/SDK/Features/UX/Prefabs/ProgressIndicators)
-* [MRTK: servicio de transición de escenas](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/extensions/scene-transition-service)
+* [MRTK: prefabs del indicador de progreso](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/main/Assets/MRTK/SDK/Features/UX/Prefabs/ProgressIndicators)
+* [MRTK: servicio de transición de escena](/windows/mixed-reality/mrtk-unity/features/extensions/scene-transition-service)
 
 
 <br>
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)

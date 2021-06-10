@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Feedback, Centro de opiniones, bugs
 appliesto:
 - Windows 10
-ms.openlocfilehash: 0254b7c4ac6a9602517adb3d9e5c024ebd69db4e
-ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
+ms.openlocfilehash: 23e3ea9014612d5df8935552d7b767454b9eefa7
+ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "107944682"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110647017"
 ---
 # <a name="using-speech-in-windows-mixed-reality"></a>Uso de Voz en Windows Mixed Reality
 
@@ -38,17 +38,17 @@ Use los siguientes comandos de voz en Windows Mixed Reality para moverse más r�
 
 | Para hacer esto | Diga esto |
 | --- | --- |
-| Seleccionar | Diga "seleccionar" para abrir el cursor de mirada. A continuación, desplace la cabeza para colocar el cursor sobre lo que desea seleccionar y vuelva a decir "seleccionar". |
+| Seleccionar | Diga "seleccionar" para abrir el cursor de mirada. A continuación, gire la cabeza para colocar el cursor en lo que desea seleccionar y vuelva a decir "seleccionar". |
 | Abrir el menú Inicio | Ir a Inicio |
-| Dejar una aplicación inmersiva | Diga "Ir a Inicio" para mostrar el menú de acciones rápidas y, a continuación, diga "Mixed reality home" (Inicio de realidad mixta). |
-| Activar o desactivar La linterna | Diga "Ir a Inicio" para mostrar el menú de acciones rápidas y, a continuación, diga "Mixed reality home" (Inicio de realidad mixta). |
-| Teleport | Girar la cabeza hacia el lugar al que quiere ir y, a continuación, decir "teleportar". (Para una selección de destino más precisa, primero diga "seleccionar" para que se active el cursor de mirada y, a continuación, diga "teleportar"). |
-| Girar a la izquierda o a la derecha | Girar a la izquierda o a la derecha |
+| Dejar una aplicación inmersiva | Diga "Ir a Inicio" para abrir el menú de acciones rápidas y, a continuación, diga "Mixed reality home" (Inicio de realidad mixta). |
+| Activar o desactivar Flashlight | Flashlight on/Flashlight off |
+| Teleport | Gire la cabeza hacia el lugar al que desea ir y, a continuación, diga "teleportar". (Para una selección de destino más precisa, primero diga "seleccionar" para que se active el cursor de mirada y, después, diga "teleportar"). |
+| Girar a la izquierda o derecha | Girar a la izquierda o a la derecha |
 | Girar 180 grados | Cambia |
 | Avanzar | Avanzar o avanzar |
 | Copia de seguridad | Volver atrás o volver atrás |
-| Desplazarse a la izquierda | Desplazarse a la izquierda o a la izquierda |
-| Desplazarse a la derecha | Desplazarse a la derecha o a la derecha |
+| Desplazarse a la izquierda | Desplazarse a la izquierda/desplazarse a la izquierda |
+| Desplazarse a la derecha | Desplazarse a la derecha o desplazarse a la derecha |
 
 ## <a name="3d-object-commands"></a>Comandos de objeto 3D
 
@@ -60,7 +60,7 @@ Mire un objeto 3D, un holograma o una ventana de aplicación para usar estos com
 | Hacer que sea más pequeño | Más pequeño |
 | Turn it to face you | Orientar hacia mí |
 | Prepárese para moverse; seguirá la mirada. | Mover esto... |
-| Colóctela cuando haya terminado de moverla. | Lugar |
+| Colóctelo cuando haya terminado de moverlo. | Lugar |
 
 ## <a name="app-bar-commands"></a>Comandos de la barra de aplicaciones
 
@@ -75,7 +75,7 @@ Mire una ventana de aplicación o un objeto 3D para usar estos comandos:
 | Mostrar la barra de la aplicación en un objeto 3D | Mostrar menú |
 | Vuelva a la pantalla o página anterior de una aplicación que tiene un botón Atrás.  | Volver |
 | Use el controlador de Xbox como controlador de juegos, en lugar de como un controlador de realidad mixta, en la aplicación que está viendo. | Usar como controlador para juegos |
-| Use el controlador de Xbox como controlador de realidad mixta (cuando lo haya estado usando como controlador de juegos) | Usar con mirada |
+| Usar el controlador de Xbox como un controlador de realidad mixta (cuando lo has estado usando como un controlador de juegos) | Usar con mirada |
 
 ## <a name="start-menu-commands"></a>menú Inicio comandos
 
@@ -85,10 +85,10 @@ Mire el menú Inicio para usar estos comandos:
 | --- | --- |
 | Vaya a la lista Todas las aplicaciones. | Todas las aplicaciones |
 | Subir o bajar en Inicio o Todas las aplicaciones | Retroceder/avanzar página |
-| Volver a menú Inicio desde Todas las aplicaciones | Volver |
+| Vuelva a menú Inicio desde Todas las aplicaciones | Volver |
 | Hacer una foto | Cámara |
 | Tomar un vídeo | Vídeo |
-| Mostrar la vista del casco en Portal de realidad mixta en el escritorio | Vista previa |
+| Mostrar la vista de casco en Portal de realidad mixta en el escritorio | Vista previa |
 | Abra el control de volumen en Inicio. | Cambio de volumen |
 | Silencio | Silencio |
 | Reactivar audio | Reactivar audio |
@@ -102,10 +102,10 @@ Diga "Hola Cortana" y, a continuación, use uno de los siguientes comandos:
 | --- | --- |
 | Descubra lo que puede decir a Cortana. | What can I say? (¿Qué puedo decir?) |
 | Aumento o disminución del volumen | Subir o bajar el volumen |
-| Mute/unmute | Silenciar o desactivar lamute |
-| Inicio de una aplicación | Inicio [nombre de la aplicación] |
+| Mute/unmute | Mute/unmute |
+| Inicio de una aplicación | Iniciar [nombre de la aplicación] |
 | Abra un sitio web en Microsoft Edge | Abra [nombre del sitio web] (por ejemplo, "abrir bing.com") |
-| Hacer una foto | Tomar una imagen |
+| Hacer una foto | Hacer una foto |
 | Inicio de la grabación de un vídeo | Iniciar la grabación |
 | Detener la grabación de un vídeo | Detener grabación |
 | Mostrar la hora | ¿Qué horas son? |
@@ -123,15 +123,15 @@ Diga "Hola Cortana" y, a continuación, use uno de los siguientes comandos:
 Cambie al modo de dictado cada vez que el teclado esté activo para una manera fácil de escribir. Seleccione el micrófono en el teclado, o simplemente diga "empezar a dictar", para empezar.
 
 > [!NOTE]
-> El teclado de realidad mixta solo está disponible en inglés, pero puede usar dictado en cualquiera de los idiomas [Windows Mixed Reality admitidos.](other-questions.md#what-languages-are-supported-in-windows-mixed-reality)
+> El teclado de realidad mixta solo está disponible en inglés, pero puede usar dictado en cualquiera de los idiomas [Windows Mixed Reality compatibles.](other-questions.md#what-languages-are-supported-in-windows-mixed-reality)
 
 ### <a name="keyboard-dictation-commands"></a>Comandos de dictado de teclado
 
 | Para hacer esto | Diga esto |
 | --- | --- |
 | Cierre del teclado | Cerrar |
-| Inicio del dictado | Empezar a dictar |
-| Detener dictado | Dejar de dictar |
+| Iniciar dictado | Empezar a dictar |
+| Detener dictado | Detener dictado |
 | Eliminación de lo que ha dictado | Eliminar eso |
 | Selección de todo en el cuadro de dictado | Seleccionar todo |
 

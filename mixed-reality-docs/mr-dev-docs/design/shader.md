@@ -1,26 +1,26 @@
 ---
 title: Sombreador
-description: Obtenga información sobre cómo el sombreador estándar del kit de herramientas de realidad mixta proporciona varios tipos de efectos visuales que se pueden usar con hologramas en las aplicaciones de realidad mixta.
+description: Obtenga información sobre cómo el sombreador Mixed Reality Toolkit Standard proporciona varios tipos de efectos visuales que se pueden usar con hologramas en las aplicaciones de realidad mixta.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, sombreador, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, efectos visuales
-ms.openlocfilehash: 4bf8205ac9dfbd22a0deb9ffe796fd4e33a96f89
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: Mixed Reality, controles, interacción, interfaz de usuario, experiencia de usuario, sombreador, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit, efectos visuales
+ms.openlocfilehash: 9a60c5065ddb5bcf410bb43b318575da50f7ccf8
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300390"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600184"
 ---
 # <a name="shader"></a>Sombreador
 
 ![Sombreador](images/UX_Hero_StandardShader.jpg)
 
-Dado que los objetos holográficas se mezclan con los físicos en el entorno real, es importante proporcionar indicaciones visuales al usuario. El sombreador estándar del kit de herramientas de realidad mixta proporciona varios tipos de efectos visuales para su uso con hologramas. El sistema de sombreado usa un único sombreador flexible para lograr objetos visuales similares al sombreador estándar de Unity. El sombreador implementa [principios del sistema de diseño fluida](https://www.microsoft.com/design/fluent/#/) y sigue teniendo un rendimiento en dispositivos de realidad mixta.
+Dado que los objetos holográficos se mezclan con los físicos en el entorno real, es importante proporcionar indicaciones visuales al usuario. El sombreador Mixed Reality Toolkit Standard proporciona varios tipos de efectos visuales para su uso con hologramas. El sistema de sombreado usa un sombreador único y flexible para lograr objetos visuales similares al sombreador estándar de Unity. El sombreador implementa [Sistema Fluent Design principios y](https://www.microsoft.com/design/fluent/#/) sigue funcionando en dispositivos de realidad mixta.
 <br>
 
-## <a name="examples-of-visual-effects-using-mrtk-mixed-reality-toolkit-standard-shader"></a>Ejemplos de efectos visuales con el sombreador estándar de MRTK (kit de herramientas de realidad mixta) 
+## <a name="examples-of-visual-effects-using-mrtk-mixed-reality-toolkit-standard-shader"></a>Ejemplos de efectos visuales mediante el sombreador estándar de MRTK (Mixed Reality Toolkit) 
 :::row:::
     :::column:::
        ![Mover](images/UX_Button_Affordance_ProximityLight.jpg)<br>
@@ -28,7 +28,7 @@ Dado que los objetos holográficas se mezclan con los físicos en el entorno rea
     :::column-end:::
     :::column:::
        ![Girar](images/UX_Button_Affordance_FocusHighlight.jpg)<br>
-        **Borde claro**<br>
+        **Luz de borde**<br>
     :::column-end:::
 :::row-end:::
 
@@ -38,13 +38,13 @@ Dado que los objetos holográficas se mezclan con los físicos en el entorno rea
 
 ## <a name="standard-shader-in-mrtk-for-unity"></a>Sombreador estándar en MRTK para Unity
 
-* [MRTK: sombreador estándar](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)
+* [MRTK: sombreador estándar](/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)
 
 <br>
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)

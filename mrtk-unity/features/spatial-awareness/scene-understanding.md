@@ -3,26 +3,29 @@ title: Descripción de la escena
 description: describe Scene Understanding in MRTK (Descripción de la escena en MRTK)
 author: MaxWang-MS
 ms.author: wangmax
-ms.date: 03/02/2021
+ms.date: 05/27/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Scene Understanding
-ms.openlocfilehash: ac90359a71267dc64e659f446f35ec2510c42599
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 1ed6f93216fc90e7c6332f2b9c40911d25d96d2a
+ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143883"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "110743552"
 ---
 # <a name="scene-understanding"></a>Descripción de la escena
 
-[Scene Understanding](/windows/mixed-reality/scene-understanding) devuelve una representación semántica de entidades de escena, así como sus formas geométricas en __HoloLens 2__ (no se admite HoloLens 1st Gen).
+[Scene Understanding](/windows/mixed-reality/scene-understanding) devuelve una representación semántica de entidades de escena, así como sus formas geométricas __en HoloLens 2__ (no se admite HoloLens 1.ª generación).
 
 Algunos casos de uso esperados de esta tecnología son:
 * Colocar objetos en la superficie más cercana de un tipo determinado (por ejemplo, la pared y el suelo)
-* Construcción de una malla de navegación para juegos de estilo de plataforma
-* Proporcionar geometría fácil de usar en el motor físico como cuadrándes
+* Construcción de malla de navegación para juegos de estilo de plataforma
+* Proporcionar geometría fácil de usar en el motor físico como quads
 * Acelerar el desarrollo evitando la necesidad de escribir algoritmos similares
 
-Scene Understanding está disponible como una __característica experimental__ a partir de MRTK 2.6. Se integra en MRTK como un [observador espacial](spatial-awareness-getting-started.md#register-observers) denominado [`WindowsSceneUnderstandingObserver`](xref:Microsoft.MixedReality.Toolkit.WindowsSceneUnderstanding.Experimental.WindowsSceneUnderstandingObserver) . Scene Understanding funciona tanto con la canalización XR heredada como con la canalización del SDK de XR. En ambos casos `WindowsSceneUnderstandingObserver` se usa .
+Scene Understanding se presenta como una __característica experimental__ en MRTK 2.6. Se integra en MRTK como un [observador espacial](spatial-awareness-getting-started.md#register-observers) denominado [`WindowsSceneUnderstandingObserver`](xref:Microsoft.MixedReality.Toolkit.WindowsSceneUnderstanding.Experimental.WindowsSceneUnderstandingObserver) . Scene Understanding funciona tanto con la canalización de XR heredada como con la canalización del SDK de XR (tanto OpenXR (a partir de MRTK 2.7) como con el complemento XR de Windows. En ambos casos `WindowsSceneUnderstandingObserver` se usa .
+
+> [!NOTE] 
+> No se admite el uso de Scene Understanding in Remoting.
 
 ## <a name="observer-overview"></a>Información general del observador
 
@@ -44,9 +47,11 @@ La manera más rápida de empezar a trabajar con Scene Understanding es consulta
 
 En Unity, use el Explorador de proyectos para abrir el archivo de escena en `Examples/Experimental/SceneUnderstanding/Scenes/SceneUnderstandingExample.unity` y presione reproducir.
 
+::: moniker range="< mrtkunity-2021-05"
 > [!IMPORTANT]
-> Al usar la herramienta de características Mixed Reality o importar de otro modo a través de UPM, importe el ejemplo Demos - SpatialAwareness antes de importar el ejemplo Experimental - SceneUnderstanding debido a un problema de dependencia. Consulte este [problema de GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/9431) para obtener más información.
+> Solo se aplica a MRTK 2.6.0: al usar la herramienta de características de Mixed Reality o importar de otro modo a través de UPM, importe el ejemplo Demos - SpatialAwareness antes de importar el ejemplo Experimental - SceneUnderstanding debido a un problema de dependencia. Consulte este [problema de GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/9431) para obtener más información.
 
+::: moniker-end
 En la escena se muestra lo siguiente:
 
 * Visualización de objetos de escena observados con en la interfaz de usuario de la aplicación para configurar el observador
@@ -54,8 +59,18 @@ En la escena se muestra lo siguiente:
 * Guardar datos de escena en el dispositivo para el desarrollo sin conexión
 * Carga de datos de escena previamente guardados (archivos .bytes) para admitir el flujo de trabajo de desarrollo en el editor
 
+> [!IMPORTANT]
+> De forma `ShouldLoadFromFile` predeterminada, la propiedad del observador se establece en false. Para ver la visualización de una sala de ejemplo serializada, consulte la sección configuración del servicio [de](#configuring-the-observer-service) observador a continuación y establezca la propiedad en true en el editor.
+::: moniker range="< mrtkunity-2021-05"
+
 > [!NOTE] 
 > La escena de ejemplo se basa en la canalización XR heredada. Si usa la canalización del SDK de XR, debe modificar los perfiles en consecuencia. El perfil del sistema de reconocimiento espacial de Scene Understanding proporcionado ( ) y los perfiles de observador de `DemoSceneUnderstandingSystemProfile` Scene Understanding ( y ) funcionan para ambas `DefaultSceneUnderstandingObserverProfile` `DemoSceneUnderstandingObserverProfile` canalizaciones.
+::: moniker-end
+::: moniker range="= mrtkunity-2021-05"
+
+> [!NOTE] 
+> La escena de ejemplo registra una `There is no active AsyncCoroutineRunner when an action is posted.` advertencia en determinadas circunstancias debido al orden de ejecución de inicialización o subproceso. Si puede confirmar que el componente está asociado al GameObject "Demo Controller" y el componente/GameObject permanece habilitado o activo en la escena (el caso predeterminado), la advertencia se puede omitir de forma `AsyncCoroutineRunner` segura.
+::: moniker-end
 
 #### <a name="configuring-the-observer-service"></a>Configuración del servicio de observador
 
@@ -65,7 +80,7 @@ Seleccione el objeto de juego "MixedRealityToolkit" y compruebe el inspector.
 
 ![Ubicación de MRTK en inspector](../images/spatial-awareness/MRTKLocation.png)
 
-Estas opciones le permitirán configurar `WindowsSceneUnderstandingObserver` .
+Estas opciones permitirán que se configure `WindowsSceneUnderstandingObserver` .
 
 ### <a name="example-script"></a>Script de ejemplo
 
@@ -75,17 +90,17 @@ El script de _ejemplo DemoSceneUnderstandingController.cs_ muestra los conceptos
 * Control de eventos de Scene Understanding
 * Configuración de en `WindowsSceneUnderstandingObserver` tiempo de ejecución
 
-Los alternancias en el panel de la escena cambian el comportamiento del observador de comprensión de la escena mediante una llamada a las funciones públicas de este script de ejemplo.
+Los alternancias del panel de la escena cambian el comportamiento del observador de comprensión de la escena mediante una llamada a las funciones públicas de este script de ejemplo.
 
-Al activar *Crear instancias prefabs,* se mostrará la creación de objetos de ese tamaño para ajustarse a todos los [objetos SpatialAwarenessSceneObject,](xref:Microsoft.MixedReality.Toolkit.Experimental.SpatialAwareness.SpatialAwarenessSceneObject)recopilados perfectamente debajo de un objeto primario.
+Al activar Crear instancias *prefabs*, se mostrará la creación de objetos de ese tamaño para ajustarse a todos [los objetos SpatialAwarenessSceneObject,](xref:Microsoft.MixedReality.Toolkit.Experimental.SpatialAwareness.SpatialAwarenessSceneObject)recopilados perfectamente bajo un objeto primario.
 
-![Opciones del controlador de demostración](../images/spatial-awareness/Controller.png)
+![opciones del controlador de demostración](../images/spatial-awareness/Controller.png)
 
-### <a name="built-app-notes"></a>Notas de la aplicación integrada
+### <a name="built-app-notes"></a>Notas de la aplicación creada
 
 Compile e implemente en HoloLens de la manera estándar. Una vez en ejecución, debería aparecer una serie de botones para reproducir con las características.
 
-Tenga en cuenta que hay algunas dificultades en la realización de consultas al observador. La configuración incorrecta de una solicitud de captura hace que la carga del evento no contenga los datos esperados. Por ejemplo, si no se solicitan cuatros, no habrá texturas de máscara de oclusión. Como es aconsejable, no aparecerá ninguna malla de mundo si el observador no está configurado para solicitar mallas. El `DemoSceneUnderstandingController` script se encarga de algunas de estas dependencias, pero no todas.
+Tenga en cuenta que hay algunas dificultades en la realización de consultas al observador. La configuración incorrecta de una solicitud de captura hace que la carga del evento no contenga los datos esperados. Por ejemplo, si no se solicitan quads, no habrá texturas de máscara de oclusión. Como es aconsejable, no aparecerá ninguna malla del mundo si el observador no está configurado para solicitar mallas. El `DemoSceneUnderstandingController` script se encarga de algunas de estas dependencias, pero no de todas.
 
 Se puede acceder a los archivos de escena guardados a través del [portal del dispositivo](/windows/mixed-reality/using-the-windows-device-portal) en `User Folders/LocalAppData/[APP_NAME]/LocalState/PREFIX_yyyyMMdd_hhmmss.bytes` . Estos archivos de escena se pueden usar en el editor si se especifican en el perfil de observador que se encuentra en el inspector.
 
@@ -95,5 +110,5 @@ Se puede acceder a los archivos de escena guardados a través del [portal del di
 
 ## <a name="see-also"></a>Consulte también
 
-* [Información general sobre la asignación espacial WMR](/windows/mixed-reality/scene-understanding)
-* [Información general sobre la asignación espacial WMR](/windows/mixed-reality/scene-understanding-sdk)
+* [Información general de Scene Understanding](/windows/mixed-reality/scene-understanding)
+* [Introducción al SDK de Scene Understanding](/windows/mixed-reality/scene-understanding-sdk)

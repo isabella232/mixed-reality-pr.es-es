@@ -1,38 +1,38 @@
 ---
 title: Menú Cerca
-description: Aprenda a usar menús cercanos, que son una colección de botones en un panel que le siguen con el comportamiento de etiqueta en un entorno de realidad mixta.
+description: Aprenda a usar menús cercanos, que son una colección de botones en un panel que le siguen con el comportamiento de etiquetas en un entorno de realidad mixta.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, menú, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 2536652f78c0643f8b527878565c1a4f0328ce9a
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: Mixed Reality, controles, interacción, interfaz de usuario, experiencia de usuario, menú, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: ecee6182d64ab1c843a9948984565d49ae313923
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299700"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600174"
 ---
 # <a name="near-menu"></a>Menú Cerca
 
 ![Menú Cerca](images/UX_Hero_NearMenu.jpg)
 
-Un menú cercano es una colección de botones de un panel que siguen a los usuarios con el [comportamiento de etiqueta](billboarding-and-tag-along.md#what-is-a-tag-along). El panel permanece dentro de un intervalo y un ángulo de distancia establecidos, lo que permite a los usuarios interactuar con el contenido de forma cómoda. Si necesita bloquear o deshabilitar el comportamiento de la etiqueta del panel, use el botón anclar o arrastre y coloque el menú. Anclar el panel permite a los usuarios centrarse en el contenido de destino sin distracciones. Puede volver a habilitar el comportamiento de la etiqueta en cualquier momento si presiona el botón anclar para que el menú siga el usuario de nuevo.
+Un menú cercano es una colección de botones de un panel que siguen a los usuarios con un [comportamiento de etiquetas.](billboarding-and-tag-along.md#what-is-a-tag-along) El panel permanece dentro de un intervalo y ángulo de distancia establecidos, lo que permite a los usuarios interactuar cómodamente con el contenido. Si necesita bloquear el mundo o deshabilitar el comportamiento de etiqueta del panel, use el botón anclar o pulse y coloque el menú. Anclar el panel permite a los usuarios centrarse en el contenido de destino sin distracciones. Puede volver a habilitar el comportamiento de la etiqueta en cualquier momento presionando el botón anclar para que el menú siga de nuevo al usuario.
 
 <br>
 
 ---
 
-## <a name="near-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Menú Near en MRTK (kit de herramientas de realidad mixta) para Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona varios ejemplos de recurso prefabricado de menú cercanos.
+## <a name="near-menu-in-mrtk-mixed-reality-toolkit-for-unity"></a>Menú Cerca de MRTK (Mixed Reality Toolkit) para Unity
+**[MRTK proporciona](https://github.com/Microsoft/MixedRealityToolkit-Unity)** varios ejemplos de elementos prefab del menú cercano.
 
-* [MRTK: menú Near](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/near-menu)
+* [MRTK: menú Cerca](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/near-menu)
 
 <br>
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)

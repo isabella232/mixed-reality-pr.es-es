@@ -1,17 +1,17 @@
 ---
 title: Etiquetado y vista frontal continua
-description: Obtenga información sobre cómo usar objetos con la cartelera, que siempre se orientan a los usuarios en aplicaciones de realidad mixta.
+description: Aprenda a usar objetos con paneles, que siempre se orientan a sí mismos para enfrentarse al usuario en aplicaciones de realidad mixta.
 author: radicalad
 ms.author: adlinv
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, la cartelera, la etiqueta, junto con el casco de realidad mixta, el casco de la realidad mixta de Windows, el casco de realidad virtual, HoloLens, MRTK, el kit de herramientas de realidad mixta
-ms.openlocfilehash: 48c7aa28217a38c6c226b65a6e16ed7c950cec59
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: Windows Mixed Reality, paneles, etiquetas, cascos de realidad mixta, cascos de realidad mixta de Windows, cascos de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: 0bd1ac2168284d714240c6775468a61ed3e665b8
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299890"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600344"
 ---
 # <a name="billboarding-and-tag-along"></a>Etiquetado y vista frontal continua
 
@@ -20,44 +20,44 @@ ms.locfileid: "107299890"
 <img src="images/MRTK_TagAlong.gif" alt="HoloLens perspective of a menu system that always faces the user" width="940px">
 <br>
 
-## <a name="what-is-billboarding"></a>¿Qué es la cartelera?
+## <a name="what-is-billboarding"></a>¿Qué es la asociación?
 
-La cartelera es un concepto de comportamiento que se puede aplicar a los objetos de realidad mixta. Los objetos con la cartelera siempre se orientan a sí mismos para que se enfrente al usuario. Los sistemas de texto y de menú son casos de uso comunes, donde los objetos estáticos que se colocan en el entorno del usuario (con bloqueo mundial) estarán ocultos o ilegibles cuando los usuarios se desplacen.
+La asociación es un concepto de comportamiento que se puede aplicar a objetos en realidad mixta. Los objetos con paneles siempre se orientan a sí mismos para enfrentarse al usuario. Los sistemas de texto y menú son casos de uso comunes, donde los objetos estáticos colocados en el entorno del usuario (bloqueados por el mundo) se ocultarían o no serían legibles cuando los usuarios se mueven.
 
-Los objetos con la cartelera habilitada pueden girar libremente en el entorno del usuario. También se pueden restringir a un único eje en función de las consideraciones de diseño. Tenga en cuenta que los objetos con cartelera se pueden recortar o tapaba cuando se colocan demasiado cerca de otros objetos, o bien en HoloLens, demasiado cerca de las superficies digitalizadas. Para evitar esto, piense en la superficie total que un objeto puede producir cuando se gira en el eje habilitado para la cartelera.
+Los objetos con el acodado habilitado pueden girar libremente en el entorno del usuario. También se pueden restringir a un solo eje en función de las consideraciones de diseño. Tenga en cuenta que los objetos delimitados pueden recortarse u occluir ellos mismos cuando se colocan demasiado cerca de otros objetos, o en HoloLens, demasiado cerca de las superficies examinadas. Para evitarlo, piense en la superficie total que puede producir un objeto cuando se gira en el eje habilitado para el movimiento de paneles.
 
 <br>
 
 ---
 ## <a name="what-is-a-tag-along"></a>¿Qué es una etiqueta?
 
-La etiqueta es un concepto de comportamiento que se puede Agregar a los hologramas. Una etiqueta a lo largo del objeto intenta permanecer en un intervalo que permite al usuario interactuar de forma cómoda.
+La etiqueta es un concepto de comportamiento que se puede agregar a los hologramas. Un objeto de etiquetas intenta permanecer en un intervalo que permite al usuario interactuar cómodamente.
 
-![El panel de PIN de HoloLens es un buen ejemplo de cómo se comparan las etiquetas](images/tagalong-1000px.jpg)<br>
-*El menú Inicio de HoloLens es un buen ejemplo de comportamiento de etiqueta.*
+![El panel de pines de HoloLens es un excelente ejemplo de cómo se comporta la etiqueta](images/tagalong-1000px.jpg)<br>
+*El menú Inicio HoloLens es un excelente ejemplo de comportamiento de etiquetas*
 
-Los objetos de etiqueta incluyen parámetros, que pueden ajustarse de la forma en que se comportan. El contenido puede estar dentro o fuera de la línea de visión del usuario mientras el usuario se mueve por el entorno. A medida que se mueve, el contenido intenta permanecer dentro del perímetro del usuario desplazándose hacia el borde de la vista. El contenido podría estar temporalmente fuera de la vista, en función de la rapidez con la que se mueva el usuario. Cuando el usuario mira hacia el objeto de etiqueta, resulta más completo ver. Piense que el contenido siempre es "un vistazo", por lo que los usuarios nunca olvidan en qué dirección se encuentra el contenido.
+Los objetos de etiquetas tienen parámetros, que pueden ajustar la forma en que se comportan. El contenido puede estar dentro o fuera de la línea de visión del usuario mientras el usuario se mueve por su entorno. A medida que se mueve, el contenido intenta permanecer dentro de la periferia del usuario deslizándose hacia el borde de la vista. El contenido podría estar temporalmente fuera de la vista en función de la rapidez con la que se mueva el usuario. Cuando el usuario mira hacia el objeto de etiqueta, se ve más a la vista. Piense que el contenido siempre está "a un vistazo" para que los usuarios nunca olviden en qué dirección se encuentra su contenido.
 
-Los parámetros adicionales pueden hacer que la etiqueta a lo largo del objeto se adjunte al encabezado del usuario mediante una banda elástica. La amortiguación de aceleración o desaceleración da peso al objeto, lo que hace que se sienta más físicamente presente. Este comportamiento del muelle es una prestación que ayuda al usuario a crear un modelo mental exacto de cómo funciona la etiqueta. Audio le ayuda a proporcionar otras guías para cuando los usuarios tienen objetos en el modo de etiqueta. El audio debe reforzar la velocidad de movimiento; un cambio de cabeza rápido debe proporcionar un efecto de sonido más perceptible, mientras que recorrer una velocidad natural debe tener efectos de audio mínimos o no.
+Los parámetros adicionales pueden hacer que el objeto de etiqueta se sinta adjunto a la cabeza del usuario mediante una banda de almohadillas. La aceleración o la reducción de la aceleración de la aceleración da peso al objeto, lo que hace que se sienta más presente físicamente. Este comportamiento de spring es una ayuda que ayuda al usuario a crear un modelo mental preciso de cómo funciona la etiqueta. El audio ayuda a proporcionar otras indicaciones para cuando los usuarios tienen objetos en modo de etiqueta. El audio debe reforzar la velocidad de movimiento; Un giro rápido en la cabeza debe proporcionar un efecto de sonido más perceptible, mientras que la marcha a una velocidad natural debe tener un mínimo o ningún efecto de audio.
 
-Al igual que el contenido bloqueado realmente por el encabezado, los objetos de etiquetas pueden resultar abrumadores o nauseating si se mueven de forma desigual o muelle demasiado en la vista del usuario. A medida que un usuario mira, se detiene rápidamente, sus sentidos les indican que se han detenido. Su saldo les informa de que su cabeza ha dejado de activar y su visión ve que el mundo deja de activar. Sin embargo, si la etiqueta se mantiene en movimiento cuando el usuario se detiene, puede confundir sus sentidos.
-
-<br>
-
----
-
-## <a name="billboarding-and-tag-along-in-mrtk-mixed-reality-toolkit-for-unity"></a>La cartelera y la etiqueta en MRTK (kit de herramientas de realidad mixta) para Unity
-**[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** proporciona scripts para el comportamiento de la cartelera y la etiqueta. Asigne el script de cartelera. CS a cualquier objeto para agregar el comportamiento de la cartelera y hacer que el objeto siempre se enfrente a usted. Para agregar el comportamiento de etiqueta, use el script RadialView. cs. Puede ajustar varias opciones, como lerping Time, Distance y degree.
-
-* [MRTK: Solver de vista radial](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver#radialview)
-* [MRTK: script de la cartelera](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Utilities/Billboard.cs)
-
+Al igual que sucede con el contenido realmente bloqueado, los objetos de etiquetas pueden resultar abrumadores o abrumadores si se mueven demasiado en la vista del usuario. A medida que un usuario examina y, a continuación, se detiene rápidamente, sus sentidos le dicen que se ha detenido. Su equilibrio les informa de que su cabeza ha dejado de girar y su visión ve que el mundo deja de girar. Sin embargo, si la etiqueta continúa en movimiento cuando el usuario se ha detenido, puede confundir sus sentidos.
 
 <br>
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="billboarding-and-tag-along-in-mrtk-mixed-reality-toolkit-for-unity"></a>Etiquetado y etiquetado en MRTK (Mixed Reality Toolkit) para Unity
+**[MRTK proporciona](https://github.com/Microsoft/MixedRealityToolkit-Unity)** scripts para el comportamiento de etiquetado y etiquetado. Asigne el script de Recordset.cs a cualquier objeto para agregar el comportamiento de afilación y hacer que el objeto siempre se le aleme. Para agregar el comportamiento de etiquetas, use el script RadialView.cs. Puede ajustar varias opciones, como el tiempo de lerping, la distancia y el grado.
+
+* [MRTK: solucionador de vistas radiales](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver#radialview)
+* [MRTK: script de Scripts](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/Utilities/Billboard.cs)
+
+
+<br>
+
+---
+
+## <a name="see-also"></a>Vea también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)

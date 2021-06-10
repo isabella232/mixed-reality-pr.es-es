@@ -1,37 +1,37 @@
 ---
 title: Información sobre herramientas
-description: Obtenga información sobre cómo usar la información sobre herramientas en aplicaciones de realidad mixta, que son breves descripciones que están vinculadas a otro control u objeto.
+description: Aprenda a usar información sobre herramientas en aplicaciones de realidad mixta, que son descripciones cortas que están vinculadas a otro control u objeto.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Realidad mixta, controles, interacción, interfaz de usuario, UX, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, información sobre herramientas, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 1ab3c00557329fbe53161cbb58c06ee7ede0b66b
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: Mixed Reality, controles, interacción, interfaz de usuario, experiencia de usuario, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, información sobre herramientas, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: cd490a260c5caedc3f315d72f9a47bce563695a0
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300320"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600595"
 ---
 # <a name="tooltip"></a>Información sobre herramientas
 
 ![Información sobre herramientas](images/UX_Hero_Tooltip.jpg)
 
-La información sobre herramientas es una breve descripción que está vinculada con otro control u objeto. Se usan para proporcionar una sugerencia o información adicional cuando se realiza una inspección más detallada. La información sobre herramientas ayuda a los usuarios a comprender objetos desconocidos en el entorno físico que no se describen directamente. 
+La información sobre herramientas es una breve descripción que está vinculada con otro control u objeto. Se usan para transmitir una sugerencia o información adicional tras una inspección más detallada. La información sobre herramientas ayuda a los usuarios a comprender objetos desconocidos en el entorno físico que no se describen directamente. 
 
 <br>
 
 ---
 
-## <a name="tooltip-in-mrtk-mixed-reality-toolkit-for-unity"></a>Información sobre herramientas en MRTK (kit de herramientas de realidad mixta) para Unity
+## <a name="tooltip-in-mrtk-mixed-reality-toolkit-for-unity"></a>Información sobre herramientas en MRTK (Mixed Reality Toolkit) para Unity
 
-* [MRTK-información sobre herramientas](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/tooltip)
+* [MRTK: información sobre herramientas](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/tooltip)
 
 <br>
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)

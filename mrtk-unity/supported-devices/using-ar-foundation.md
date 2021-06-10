@@ -1,16 +1,16 @@
 ---
-title: Uso de AR Foundation
-description: Documentación para usar ARFoundation en Unity
+title: Configuración de MRTK de Android e iOS (ARFoundation)
+description: Documentación para configurar MRTK para Android e iOS (ARFoundation) en Unity
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, AR Core, AR Kit, iOS, IOS, Android, AR Foundation
-ms.openlocfilehash: 0f02eb94d95c2900348adaa9e1a02c3e54832a96
-ms.sourcegitcommit: 62beb626b2db6ce7df86014bd22bf1946b8906b9
+ms.openlocfilehash: 9f621008db76e3f8e443545b795db442d7c17dda
+ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2021
-ms.locfileid: "110207461"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110345138"
 ---
 # <a name="how-to-configure-mrtk-for-ios-and-android-experimental"></a>Configuración de MRTK para iOS y Android [Experimental]
 
@@ -32,16 +32,16 @@ ms.locfileid: "110207461"
     | **Android** | **iOS** |
     | --- | --- |
     | AR Foundation  <br/> Versión: 2.1.8 |  AR Foundation  <br/> Versión: 2.1.8 |
-    | Complemento ARCore XR <br/> Versión: 2.1.11 | Complemento XR de ARKit <br/> Versión: 2.1.9 |
+    | Complemento ARCore XR <br/> Versión: 2.1.11 | Complemento ARKit XR <br/> Versión: 2.1.9 |
 
-    **Unity 2020.1.x (actualmente no se admite formalmente, se incluye solo con fines informativos)**
+    **Unity 2020.1.x (actualmente no compatible formalmente, incluido solo con fines informativos)**
 
     | **Android** | **iOS** |
     | --- | --- |
     | AR Foundation  <br/> Versión: 3.1.3 |  AR Foundation  <br/> Versión: 3.1.3 |
-    | Complemento ARCore XR <br/> Versión: 3.1.4 | Complemento XR de ARKit <br/> Versión: 3.1.3 |
+    | Complemento ARCore XR <br/> Versión: 3.1.4 | Complemento ARKit XR <br/> Versión: 3.1.3 |
 
-1. Actualice el scripting de UnityAR de MRTK mediante la invocación del elemento de menú: **Mixed Reality > Toolkit > Utilities > UnityAR > Update Scripting Defines**
+1. Actualice el scripting de UnityAR de MRTK invocando el elemento de menú: Mixed Reality > **Toolkit > Utilities > UnityAR > Update Scripting Defines**
 
     ![Actualizar scripting define](../features/images/UpdateScriptingDefineUnityAR.png)
 
@@ -62,7 +62,7 @@ En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los 
 
     ![Clonación del perfil de cámara de MRTK](../features/images/camera-system/CloneCameraProfileARFoundation.png)
 
-1. Vaya al panel Inspector a la sección del sistema de cámara y expanda la **sección Proveedores de configuración de** cámara.
+1. Vaya al panel Inspector a la sección sistema de cámara y expanda la **sección Proveedores de configuración de** cámara.
 
     ![Expandir proveedores de configuración](../features/images/camera-system/ExpandProviders.png)
 
@@ -93,6 +93,6 @@ En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los 
 
 1. Compilación y ejecución de la escena
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Configuración de la cámara ar de Unity](../features/camera-system/unity-ar-camera-settings.md)

@@ -1,84 +1,84 @@
 ---
 title: Color, luz y materiales
-description: El diseño de contenido para la realidad mixta requiere una consideración cuidadosa del color, la iluminación y los materiales para todos los recursos visuales.
+description: El diseño de contenido para la realidad mixta requiere una cuidadosa consideración del color, la iluminación y los materiales de todos los recursos visuales.
 author: mavitazk
 ms.author: pinkb
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Windows Mixed Reality, diseño, color, luz, materiales, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: b3ee769208bdcd0d86beb05760de377f2a776a47
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: Windows Mixed Reality, diseño, color, luz, materiales, cascos de realidad mixta, cascos de realidad mixta de Windows, cascos de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: 2e1626e72d49107c2a83bf1123b306d3ee5c8640
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299750"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600364"
 ---
 # <a name="color-light-and-materials"></a>Color, luz y materiales
 
-![Color, Light y material](images/RemoteRendering.jpg)
+![Color, luz y materiales](images/RemoteRendering.jpg)
 
-El diseño de contenido para la realidad mixta requiere una consideración cuidadosa del color, la iluminación y los materiales de todos los recursos virtuales. Los fines estéticos pueden incluir el uso de luz y material para establecer el tono de un entorno envolvente, mientras que los propósitos funcionales pueden incluir el uso de colores impactantes para alertar a los usuarios de una acción inminente. Cada una de estas decisiones se debe sopesar con respecto a las oportunidades y las restricciones del dispositivo de destino de su experiencia.
+El diseño de contenido para la realidad mixta requiere una cuidadosa consideración del color, la iluminación y los materiales de todos los recursos virtuales. Los propósitos éticos pueden incluir el uso de luz y material para establecer el tono de un entorno envolvente, mientras que los propósitos funcionales pueden incluir el uso de colores sorprendentes para alertar a los usuarios de una acción inminente. Cada una de estas decisiones debe ponderarse con las oportunidades y restricciones del dispositivo de destino de su experiencia.
 
-A continuación se muestran las instrucciones específicas para la representación de recursos en auriculares envolvente y holográfica. Muchos de ellos están estrechamente vinculados a otras áreas técnicas y se puede encontrar una lista de temas relacionados en la sección [Consulte también](color-light-and-materials.md#see-also) al final de este artículo.
+A continuación se muestran instrucciones específicas para representar recursos en cascos envolventes y holográficos. Muchas de ellas están estrechamente vinculadas a otras áreas técnicas [](color-light-and-materials.md#see-also) y se puede encontrar una lista de temas relacionados en la sección Ver también al final de este artículo.
 
-## <a name="rendering-on-immersive-vs-holographic-devices"></a>Representación en dispositivos envolventes frente a holográficas
+## <a name="rendering-on-immersive-vs-holographic-devices"></a>Representación en dispositivos envolventes frente a holográficos
 
-El contenido representado en auriculares envolventes tendrá una apariencia visual diferente en comparación con el contenido representado en auriculares holográficas. Aunque los auriculares más envolventes suelen representar el contenido de la forma que cabría esperar en una pantalla 2D, los auriculares holográficas como HoloLens usan el color de secuencia de colores, consulte la muestra sobre RGB para representar hologramas.
+El contenido representado en cascos envolventes aparecerá visualmente diferente en comparación con el contenido representado en cascos holográficos. Aunque los cascos envolventes suelen representar el contenido de la forma esperada en una pantalla 2D, los cascos holográficos como HoloLens usan pantallas RGB secuenciales de color y de visualización a través para representar hologramas.
 
-Siempre Tómese tiempo para probar sus experiencias holográficas en un casco holográfica. La apariencia del contenido, incluso si se ha creado específicamente para dispositivos holográficas, variará según se muestra en monitores secundarios, instantáneas y en la vista Spectator. Recuerde recorrer las experiencias con un dispositivo, probar la iluminación de los hologramas y observar a partir de todos los lados (así como de arriba y abajo) cómo se representa el contenido. Asegúrese de probar con una gama de opciones de brillo en el dispositivo. No es probable que todos los usuarios compartan un valor predeterminado asumido y un conjunto diverso de condiciones de iluminación.
+Tómese siempre tiempo para probar sus experiencias holográficas en un casco holográfico. La apariencia del contenido, incluso si se ha creado específicamente para dispositivos holográficos, será diferente como se ve en monitores secundarios, instantáneas y en la vista del espectador. No olvide recorrer las experiencias con un dispositivo, probar la iluminación de hologramas y observar desde todos los lados (así como desde arriba y abajo) cómo se representa el contenido. Asegúrese de probar con una variedad de configuraciones de brillo en el dispositivo. Es poco probable que todos los usuarios compartan un supuesto valor predeterminado y un conjunto diverso de condiciones de iluminación.
 
-## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Aspectos básicos de la representación en dispositivos holográficas
+## <a name="fundamentals-of-rendering-on-holographic-devices"></a>Aspectos básicos de la representación en dispositivos holográficos
 
-* Los **dispositivos holográficas tienen pantallas aditivas** : los hologramas se crean agregando luz a la luz del mundo real: el blanco aparecerá brillante, mientras que el negro aparecerá transparente.
+* **Los dispositivos holográficos** tienen pantallas de suma: los hologramas se crean mediante la adición de luz a la luz del mundo real; el blanco aparecerá de forma brillante, mientras que el negro aparecerá transparente.
 
-* **El impacto de los colores varía en el entorno del usuario** : hay muchas condiciones de iluminación diferentes en el salón de un usuario. Cree contenido con los niveles de contraste adecuados para ayudar a mejorar la claridad.
+* **El impacto en los colores varía en función** del entorno del usuario: hay muchas condiciones de iluminación diversas en la habitación de un usuario. Cree contenido con los niveles de contraste adecuados para ayudar a mejorar la claridad.
 
-* **Evitar la iluminación dinámica** : los hologramas que están iluminados uniformemente en las experiencias holográficas son los más eficaces. Con la iluminación avanzada, el alumbrado dinámico probablemente superará las capacidades de los dispositivos móviles. Cuando se requiere la iluminación dinámica, se recomienda usar el [sombreador estándar del kit de herramientas de realidad mixta](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md). 
+* **Evitar la iluminación dinámica:** los hologramas que se encienden uniformemente en experiencias holográficas son los más eficaces. Es probable que el uso de iluminación dinámica avanzada supere las funcionalidades de los dispositivos móviles. Cuando se requiere iluminación dinámica, se recomienda usar el [sombreador Mixed Reality Toolkit Standard](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md). 
 
-## <a name="designing-with-color"></a>Diseñar con color
+## <a name="designing-with-color"></a>Diseño con color
 
-Debido a la naturaleza de las pantallas aditivas, algunos colores pueden aparecer diferentes en pantallas holográficas. Algunos colores aparecerán en entornos de iluminación, mientras que otros aparecerán como menos impactantes. Los colores fríos tienden a recede en segundo plano mientras que los colores cálidos saltan al primer plano. Tenga en cuenta estos factores a medida que explora el color de sus experiencias:
+Debido a la naturaleza de las pantallas de adiciones, determinados colores pueden aparecer diferentes en las pantallas holográficas. Algunos colores aparecerán en entornos de iluminación, mientras que otros aparecerán como menos afectados. Los colores es cool tienden a retroceder al fondo, mientras que los colores en caliente saltan al primer plano. Tenga en cuenta estos factores a medida que explora el color en sus experiencias:
 
-* **Colores claros de representación** : el blanco aparece brillante y debe usarse con moderación. En la mayoría de los casos, considere un valor blanco alrededor de R 235 G 235 B 235. Las áreas brillantes de gran tamaño pueden ocasionar la molestia del usuario. En el caso del fondo de la ventana de la interfaz de usuario, se recomienda usar colores oscuros.
+* **Representación de colores claros:** el blanco aparece claro y se debe usar con moderación. En la mayoría de los casos, considere un valor blanco alrededor de R 235 G 235 B 235. Las áreas brillantes de gran tamaño pueden causar molestias en el usuario. Para la placa trasera de la ventana de interfaz de usuario, se recomienda usar colores oscuros.
 
-* **Representación de colores oscuros** : debido a la naturaleza de las pantallas aditivas, los colores oscuros aparecen transparentes. Un objeto de negro sólido no será diferente del mundo real. Consulte canal alfa a continuación. Para dar la apariencia de "Black", pruebe un valor RGB gris muy oscuro como 16, 16, 16.
+* **Representación de colores oscuros:** debido a la naturaleza de las pantallas de suma, los colores oscuros aparecen transparentes. Un objeto negro sólido no aparecerá diferente del mundo real. Consulte canal alfa a continuación. Para dar la apariencia de "negro", pruebe un valor RGB gris muy oscuro, como 16,16,16.
 
-* **Uniformidad de color** : normalmente los hologramas se representan lo suficientemente brillantes como para mantener la uniformidad del color, sea cual sea el fondo. Es posible que las áreas de gran tamaño estén desfavorecidas. Evite grandes regiones de color sólido y brillante.
+* **Uniformidad del color:** normalmente, los hologramas se representan lo suficientemente claros como para mantener la uniformidad del color, sea cual sea el fondo. Las áreas grandes pueden volverse blotchy. Evite regiones grandes de color sólido y brillante.
 
-* **Gama** -HoloLens se beneficia de una "amplia gama" de color, conceptualmente similar a Adobe RGB. Como resultado, algunos colores pueden mostrar distintas calidades y representaciones en el dispositivo.
+* **Gama:** HoloLens se beneficia de una "amplia gama" de color, conceptualmente similar a Adobe RGB. Como resultado, algunos colores pueden mostrar diferentes calidades y representación en el dispositivo.
 
-* **Gamma** : el brillo y el contraste de la imagen representada variarán entre dispositivos envolventes y holográficas. Estas diferencias de dispositivo suelen parecer que las áreas oscuras de color y de sombras son más o menos brillantes.
+* **Gamma:** el brillo y el contraste de la imagen representada variarán entre los dispositivos envolventes y holográficos. A menudo, estas diferencias de dispositivo parecen hacer que las áreas oscuras de color y sombras, más o menos brillantes.
 
-* **Separación de colores** : también denominada "división de color" o "halo de color", la separación de colores suele producirse con los hologramas móviles (incluido el cursor) cuando un usuario realiza un seguimiento de los objetos con sus ojos.
+* **Separación de** colores: también denominada "separación de colores" o "fringing de color", la separación de colores se produce normalmente con hologramas móviles (incluido el cursor) cuando un usuario realiza un seguimiento de los objetos con los ojos.
 
 ## <a name="technical-considerations"></a>Consideraciones técnicas
 
-* **Alias** : tenga de alias, escalonados o "pasos de escalera", donde el borde de la geometría de un holograma cumple el mundo real. El uso de texturas con un alto nivel de detalle puede agravar este efecto. Las texturas deben estar asignadas y filtrados habilitados. Considere la posibilidad de difuminar los bordes de los hologramas o de agregar una textura que cree un borde de borde negro alrededor de los objetos. Evite la geometría fina siempre que sea posible.
+* **Aliasing:** tenga en cuenta los alias, escalonados o "pasos de escalón" donde el borde de la geometría de un holograma se encuentra con el mundo real. El uso de texturas con detalles elevados puede ayudar a este efecto. Las texturas se deben asignar y habilitar el filtrado. Considere la posibilidad de desvanerse los bordes de los hologramas o agregar una textura que cree un borde de borde negro alrededor de los objetos. Evite la geometría fina siempre que sea posible.
 
-* **Canal alfa** : debe borrar el canal alfa completamente transparente para cualquier parte en la que no se represente un holograma. Dejar el alfa sin definir conduce a artefactos visuales al tomar imágenes o vídeos del dispositivo o con la vista Spectator.
+* **Canal alfa:** debe borrar el canal alfa para que sea totalmente transparente para cualquier parte en la que no esté representando un holograma. Dejar el alfa sin definir conduce a artefactos visuales al tomar imágenes o vídeos desde el dispositivo o con la vista del espectador.
 
-* **Suavizado de textura** : puesto que la luz es aditiva en pantallas holográficas, es mejor evitar grandes regiones de color sólido y brillante, ya que a menudo no producen el efecto visual previsto.
+* **Suavizado de textura:** dado que la luz se suma en pantallas holográficas, es mejor evitar regiones grandes de color sólido y brillante, ya que a menudo no producen el efecto visual previsto.
 
-## <a name="design-guidelines-for-holographic-display"></a>Directrices de diseño para pantalla holográfica
+## <a name="design-guidelines-for-holographic-display"></a>Directrices de diseño para la presentación holográfica
 
-![Color y oclusión de mano](images/color_handocclusion.jpg)
+![Color y oclusión de manos](images/color_handocclusion.jpg)
 
-Al diseñar contenido para pantallas holográficas, hay varios elementos que debe tener en cuenta para lograr la mejor experiencia. Visite [diseño de contenido para pantallas holográficas](designing-content-for-holographic-display.md) para obtener instrucciones y recomendaciones.
+Al diseñar contenido para pantallas holográficas, hay varios elementos que debe considerar para lograr la mejor experiencia. Visite [Diseño de contenido para la presentación holográfica](designing-content-for-holographic-display.md) para obtener instrucciones y recomendaciones.
 
-## <a name="storytelling-with-light-and-color"></a>Contar historias con luz y color
+## <a name="storytelling-with-light-and-color"></a>Narración con luz y color
 
-La luz y el color pueden ayudar a que los hologramas aparezcan de forma más natural en el entorno de un usuario y ofrecen orientación y ayuda para el usuario. En el caso de las experiencias holográficas, tenga en cuenta estos factores a medida que explora la iluminación y el color:
+La luz y el color pueden ayudar a que los hologramas aparezcan de forma más natural en el entorno de un usuario y ofrecer orientación y ayuda para el usuario. Para las experiencias holográficas, tenga en cuenta estos factores a medida que explora la iluminación y el color:
 
 :::row:::
     :::column:::
-* **Viñetas** : un efecto de ' viñetas ' para oscurecer materiales puede ayudar a centrar la atención del usuario en el centro del campo de la vista. Este efecto oscurece el material del holograma en algún radio desde el vector de mirada del usuario. Esto también es efectivo cuando el usuario ve los hologramas desde un ángulo oblicuo o glancing.
+* **Aderezo:** un efecto de "viñeta" para los materiales oscuros puede ayudar a centrar la atención del usuario en el centro del campo de vista. Este efecto oscurece el material del holograma en algún radio del vector de mirada del usuario. Esto también es eficaz cuando el usuario ve hologramas desde un ángulo oblicuo o de glancing.
 
-* Recalque la atención de los objetos o puntos de interacción mediante el **contraste de los** colores, el brillo y la iluminación. Para obtener una visión más detallada de los métodos de iluminación de contar historias, consulte el cine de los [píxeles: un enfoque de iluminación para gráficos informáticos](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).<br>
+* **Énfasis:** preste atención a objetos o puntos de interacción mediante el contraste de colores, brillo e iluminación. Para obtener una vista más detallada de los métodos de iluminación en la narración, vea [Pixel Quetography - A Lighting Approach for Computer Graphics](http://media.siggraph.org/education/cgsource/Archive/ConfereceCourses/S96/course30.pdf).<br>
         <br>
-        *Imagen: uso de color para mostrar el énfasis de los elementos contar historias, que se muestran aquí en una escena de [fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8).*
+        *Imagen: uso del color para mostrar el énfasis en la narración de elementos, que se muestra aquí en una escena de [Fragmentos](https://www.microsoft.com/p/fragments/9nblggh5ggm8).*
     :::column-end:::
         :::column:::
-        ![Uso de color para mostrar el énfasis de los elementos contar historias, que se muestran aquí en una escena de fragmentos.](images/640px-fragments.jpg)<br>
+        ![Uso de color para mostrar énfasis en los elementos de narración, que se muestran aquí en una escena de Fragmentos.](images/640px-fragments.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -86,13 +86,13 @@ La luz y el color pueden ayudar a que los hologramas aparezcan de forma más nat
 
 :::row:::
     :::column:::
-Los materiales son elementos fundamentales para crear hologramas realistas. Al proporcionar características visuales adecuadas, puede crear objetos holográficas atractivos que se pueden combinar correctamente con el entorno físico. Los materiales también son importantes para proporcionar comentarios visuales para los distintos tipos de interacciones de entrada del usuario.  
+Los materiales son elementos fundamentales para crear hologramas realistas. Al proporcionar las características visuales adecuadas, puede crear objetos holográficos atractivos que se puedan combinar bien con el entorno físico. Los materiales también son importantes para proporcionar comentarios visuales para los distintos tipos de interacciones de entrada del usuario.  
 
-[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity) proporciona un sombreador estándar de MRTK con varias opciones de efectos visuales que se pueden usar para los comentarios visuales. Por ejemplo, puede usar la propiedad ' proximidad Light ' para proporcionar un efecto de iluminación cuando el dedo del usuario se acerque a la superficie del objeto. Más información sobre el [sombreador estándar de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)
+[MRTK proporciona](https://github.com/Microsoft/MixedRealityToolkit-Unity) un sombreador estándar de MRTK con varias opciones de efecto visual que se pueden usar para los comentarios visuales. Por ejemplo, puede usar la propiedad "Luz de proximidad" para proporcionar un efecto de iluminación cuando el dedo del usuario se aproxima a la superficie del objeto. Más información sobre el [sombreador estándar de MRTK](/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)
     :::column-end:::
         :::column:::
-    *Bucle de vídeo: ejemplo de comentarios visuales basados en proximidad a un cuadro* 
-     ![ de límite Comentarios visuales en proximidad](images/HoloLens2_Proximity.gif)
+    *Bucle de vídeo: ejemplo de comentarios visuales basados en la proximidad a un cuadro de límite* 
+     ![ Comentarios visuales sobre proximidad a mano](images/HoloLens2_Proximity.gif)
 
     :::column-end:::
 :::row-end:::
@@ -100,9 +100,9 @@ Los materiales son elementos fundamentales para crear hologramas realistas. Al p
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 * [Diseño de contenido para la pantalla holográfica](designing-content-for-holographic-display.md)
 * [Separación de colores](../develop/platform-capabilities-and-apis/hologram-stability.md#color-separation)
 * [Hologramas](../discover/hologram.md)
 * [Lenguaje de diseño de Microsoft: color](https://www.microsoft.com/design/color)
-* [Color de Plataforma universal de Windows](/windows/uwp/style/color)
+* [Plataforma universal de Windows: color](/windows/uwp/style/color)

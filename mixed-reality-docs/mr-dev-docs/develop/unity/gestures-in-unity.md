@@ -1,56 +1,56 @@
 ---
 title: Gestos en Unity
-description: Obtenga información sobre cómo realizar una acción en Unity en Unity con la entrada de gestos de mano mediante XR y las API de eje y de botón comunes.
+description: Obtenga información sobre cómo realizar acciones en la mirada en Unity con la entrada de gestos con la mano mediante XR y las API comunes de botones y ejes.
 author: hferrone
 ms.author: alexturn
 ms.date: 12/1/2020
 ms.topic: article
-keywords: gestos, Unity, miras, entrada, auriculares de realidad mixta, auriculares de la realidad mixta de Windows, auriculares de realidad virtual, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: 523f05f9b3dd05a140bb40168b654a2dc0b00bb5
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: gestos, unity, mirada, entrada, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, MRTK, kit de herramientas Mixed Reality
+ms.openlocfilehash: 87666c120686547b1a07f6da41519219d4a47720
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299720"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600644"
 ---
 # <a name="gestures-in-unity"></a>Gestos en Unity
 
-Hay dos formas clave de tomar medidas en su [mirada en Unity](gaze-in-unity.md), [gestos de mano](../../design/gaze-and-commit.md#composite-gestures) y [controladores de movimiento](../../design/motion-controllers.md) en HoloLens y HMDs envolventes. Puede tener acceso a los datos de los dos orígenes de entrada espacial a través de las mismas API en Unity.
+Hay dos maneras clave de tomar medidas en [](../../design/motion-controllers.md) la mirada en [Unity:](gaze-in-unity.md) [gestos](../../design/gaze-and-commit.md#composite-gestures) de mano y controladores de movimiento en HoloLens y HMD inmersivo. Puede acceder a los datos de ambos orígenes de entrada espacial a través de las mismas API en Unity.
 
-Unity proporciona dos maneras principales de tener acceso a los datos de entrada espacial para Windows Mixed Reality. Las API de *Input. GetButton/Input. GetAxis* comunes funcionan en varios SDK de Unity XR, mientras que la API *InteractionManager/GestureRecognizer* específica de Windows Mixed Reality expone el conjunto completo de datos de entrada espacial.
+Unity proporciona dos formas principales de acceder a los datos de entrada espacial para Windows Mixed Reality. Las API *Input.GetButton/Input.GetAxis* comunes funcionan en varios SDK XR de Unity, mientras que la API *InteractionManager/GestureRecognizer* específica de Windows Mixed Reality expone el conjunto completo de datos de entrada espacial.
 
-## <a name="high-level-composite-gesture-apis-gesturerecognizer"></a>API de gesto compuesto de alto nivel (GestureRecognizer)
+## <a name="high-level-composite-gesture-apis-gesturerecognizer"></a>API de gestos compuestos de alto nivel (GestureRecognizer)
 
-**Espacio de nombres:** *UnityEngine. XR. WSA. Input*<br>
-**Tipos**: *GestureRecognizer*, *GestureSettings*, *InteractionSourceKind*
+**Espacio de nombres:** *UnityEngine.XR.WSA.Input*<br>
+**Tipos:** *GestureRecognizer*, *GestureSettings*, *InteractionSourceKind*
 
-La aplicación también puede reconocer gestos compuestos de nivel superior para orígenes de entrada espaciales, puntear, retener, manipular y gestos de navegación. Puede reconocer estos gestos compuestos a través de las [manos](../../design/gaze-and-commit.md#composite-gestures) y [los controladores de movimiento](../../design/motion-controllers.md) mediante GestureRecognizer.
+La aplicación también puede reconocer gestos compuestos de nivel superior para orígenes de entrada espaciales, gestos de pulsación, retención, manipulación y navegación. Puede reconocer estos gestos compuestos en [las](../../design/gaze-and-commit.md#composite-gestures) manos y los controladores [de movimiento](../../design/motion-controllers.md) mediante GestureRecognizer.
 
-Cada evento de gesto en el GestureRecognizer proporciona el SourceKind para la entrada, así como el rayo del cabezal de destino en el momento del evento. Algunos eventos proporcionan información adicional específica del contexto.
+Cada evento Gesture en GestureRecognizer proporciona SourceKind para la entrada, así como el rayo de destino de la cabeza en el momento del evento. Algunos eventos proporcionan información adicional específica del contexto.
 
-Solo se requieren algunos pasos para capturar gestos mediante un reconocedor de gestos:
-1. Crear un nuevo reconocedor de gestos
-2. Especificar los gestos que se van a inspeccionar
-3. Suscripción a eventos para esos gestos
-4. Iniciar la captura de gestos
+Solo hay unos pocos pasos necesarios para capturar gestos mediante un reconocedor de gestos:
+1. Creación de un reconocedor de gestos
+2. Especificación de los gestos que se deben observar
+3. Suscribirse a eventos para esos gestos
+4. Inicio de la captura de gestos
 
-### <a name="create-a-new-gesture-recognizer"></a>Crear un nuevo reconocedor de gestos
+### <a name="create-a-new-gesture-recognizer"></a>Creación de un reconocedor de gestos
 
-Para usar *GestureRecognizer*, debe haber creado un *GestureRecognizer*:
+Para usar *GestureRecognizer,* debe haber creado *un objeto GestureRecognizer*:
 
 ```cs
 GestureRecognizer recognizer = new GestureRecognizer();
 ```
 
-### <a name="specify-which-gestures-to-watch-for"></a>Especificar los gestos que se van a inspeccionar
+### <a name="specify-which-gestures-to-watch-for"></a>Especificación de los gestos que se deben observar
 
-Especifique los gestos que le interesan a través de *SetRecognizableGestures ()*:
+Especifique los gestos que le interesan a través *de SetRecognizableGestures():*
 
 ```cs
 recognizer.SetRecognizableGestures(GestureSettings.Tap | GestureSettings.Hold);
 ```
 
-### <a name="subscribe-to-events-for-those-gestures"></a>Suscripción a eventos para esos gestos
+### <a name="subscribe-to-events-for-those-gestures"></a>Suscribirse a eventos para esos gestos
 
 Suscríbase a eventos para los gestos que le interesan.
 
@@ -65,17 +65,17 @@ void Start()
 ```
 
 >[!NOTE]
->Los gestos de navegación y manipulación se excluyen mutuamente en una instancia de un *GestureRecognizer*.
+>Los gestos de navegación y manipulación se excluyen mutuamente en una instancia de *GestureRecognizer.*
 
-### <a name="start-capturing-gestures"></a>Iniciar la captura de gestos
+### <a name="start-capturing-gestures"></a>Inicio de la captura de gestos
 
-De forma predeterminada, un *GestureRecognizer* no supervisa la entrada hasta que se llama a *StartCapturingGestures ()* . Es posible que se genere un evento de gesto después de que se llame a *StopCapturingGestures ()* si la entrada se realizó antes que el marco en el que se procesó *StopCapturingGestures ()* . El *GestureRecognizer* recordará si está activado o desactivado durante el fotograma anterior en el que se produjo realmente el gesto, por lo que es confiable iniciar y detener la supervisión de gestos según el destino de la mirada a este fotograma.
+De forma predeterminada, *GestureRecognizer* no supervisa la entrada hasta que se llama a *StartCapturingGestures().* Es posible que se genere un evento de gesto después de llamar a *StopCapturingGestures()* si la entrada se realizó antes del fotograma donde se procesó *StopCapturingGestures().* *GestureRecognizer* recordará si estaba o no en el marco anterior en el que se produjo realmente el gesto, por lo que es confiable iniciar y detener la supervisión de gestos en función de la orientación de la mirada de este marco.
 
 ```cs
 recognizer.StartCapturingGestures();
 ```
 
-### <a name="stop-capturing-gestures"></a>Detener captura de movimientos
+### <a name="stop-capturing-gestures"></a>Detener la captura de gestos
 
 Para detener el reconocimiento de gestos:
 
@@ -83,9 +83,9 @@ Para detener el reconocimiento de gestos:
 recognizer.StopCapturingGestures();
 ```
 
-### <a name="removing-a-gesture-recognizer"></a>Quitar un reconocedor de gestos
+### <a name="removing-a-gesture-recognizer"></a>Eliminación de un reconocedor de gestos
 
-Recuerde cancelar la suscripción a los eventos suscritos antes de destruir un objeto *GestureRecognizer* .
+No olvide cancelar la suscripción a eventos suscritos antes de destruir un objeto *GestureRecognizer.*
 
 ```cs
 void OnDestroy()
@@ -99,58 +99,58 @@ void OnDestroy()
 
 ## <a name="rendering-the-motion-controller-model-in-unity"></a>Representación del modelo de controlador de movimiento en Unity
 
-![Modelo de controlador de movimiento y teleportabilidad](images/motioncontrollertest-teleport-1000px.png)<br>
-*Modelo de controlador de movimiento y teleportabilidad*
+![Modelo y teleportación del controlador de movimiento](images/motioncontrollertest-teleport-1000px.png)<br>
+*Modelo de controlador de movimiento y teleportación*
 
-Para representar los controladores de movimiento en la aplicación que coincidan con las controladoras físicas que están manteniendo los usuarios y articular a medida que se presionan varios botones, puede usar **MotionController recurso prefabricado** en el [Kit de herramientas de realidad mixta](https://github.com/Microsoft/MixedRealityToolkit-Unity/).  Este recurso prefabricado carga dinámicamente el modelo de glTF correcto en tiempo de ejecución desde el controlador de controlador de movimiento instalado del sistema.  Es importante cargar estos modelos dinámicamente en lugar de importarlos manualmente en el editor, de modo que la aplicación muestre modelos 3D físicamente precisos para cualquier controlador actual y futuro que puedan tener los usuarios.
+Para representar controladores de movimiento en la aplicación que coincidan con los controladores físicos que los usuarios mantienen y articulan a medida que se presionan varios botones, puede usar el **elemento prefab MotionController** en el kit [de herramientas Mixed Reality.](https://github.com/Microsoft/MixedRealityToolkit-Unity/)  Este objeto prefab carga dinámicamente el modelo glTF correcto en tiempo de ejecución desde el controlador de movimiento instalado del sistema.  Es importante cargar estos modelos dinámicamente en lugar de importarlos manualmente en el editor, para que la aplicación muestre modelos 3D físicamente precisos para cualquier controlador actual y futuro que puedan tener los usuarios.
 
-1. Siga las instrucciones [Introducción](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/GettingStarted.md) para descargar el kit de herramientas de realidad mixta y agréguelo al proyecto de Unity.
-2. Si ha reemplazado la cámara con el recurso prefabricado de *MixedRealityCameraParent* como parte de los pasos introducción, está listo para empezar.  Ese recurso prefabricado incluye la representación del controlador de movimiento.  En caso contrario, agregue *assets/HoloToolkit/INPUT/Prefabs/MotionControllers. recurso prefabricado* a la escena desde el panel Proyecto.  Querrá agregar ese recurso prefabricado como elemento secundario del objeto primario que usa para mover la cámara cuando el usuario teletransporta dentro de la escena, de modo que los controladores entren junto con el usuario.  Si la aplicación no implica teletransportarse, solo tiene que agregar el recurso prefabricado en la raíz de la escena.
+1. Siga las [Tareas iniciales](https://github.com/Microsoft/MixedRealityToolkit-Unity/blob/htk_release/GettingStarted.md) instrucciones para descargar Mixed Reality Toolkit y agregarlo al proyecto de Unity.
+2. Si ha reemplazado la cámara por el prefab *MixedRealityCameraParent* como parte de los pasos Tareas iniciales, ya puede ir.  Ese prefab incluye la representación del controlador de movimiento.  De lo contrario, agregue *Assets/HoloToolkit/Input/Prefabs/MotionControllers.prefab* a la escena desde el panel Proyecto.  Querrá agregar ese objeto prefab como elemento secundario de cualquier objeto primario que use para mover la cámara cuando el usuario teleporte dentro de la escena, de modo que los controladores se unan con el usuario.  Si la aplicación no implica la teleportación, solo tiene que agregar el objeto prefab en la raíz de la escena.
 
-## <a name="throwing-objects"></a>Producir objetos
+## <a name="throwing-objects"></a>Iniciar objetos
 
-Lanzar objetos en realidad virtual es un problema más difícil de lo que puede parecer al principio. Al igual que con la mayoría de las interacciones basadas físicamente, al iniciar el juego funciona de forma inesperada, es evidente de inmediato e interrumpe la inmersión. Hemos dedicado mucho tiempo a pensar en el modo de representar un comportamiento de lanzamiento que se ha corregido físicamente y han llegado algunas directrices, habilitadas a través de las actualizaciones de nuestra plataforma, que nos gustaría compartir con usted.
+El lanzamiento de objetos en la realidad virtual es un problema más difícil de lo que puede parecer al principio. Al igual que con la mayoría de las interacciones basadas físicamente, cuando el lanzamiento en el juego actúa de forma inesperada, es inmediatamente obvio y se interrumpe. Hemos dedicado un tiempo a pensar profundamente en cómo representar un comportamiento de lanzamiento físicamente correcto, y hemos encontrado algunas directrices, habilitadas a través de actualizaciones en nuestra plataforma, que nos gustaría compartir con usted.
 
-Puede encontrar un ejemplo de cómo se recomienda implementar el lanzamiento [aquí](https://github.com/keluecke/MixedRealityToolkit-Unity/blob/master/External/Unitypackages/ThrowingStarter.unitypackage). Este ejemplo sigue estas cuatro instrucciones:
-* **Use la *velocidad* del controlador en lugar de la posición**. En la actualización de noviembre de Windows, se presentó un cambio de comportamiento en el [Estado de seguimiento posicional ' ' aproximado](../../design/motion-controllers.md#controller-tracking-state)' '. Cuando se encuentra en este estado, se seguirá informando de la información de velocidad de la controladora mientras creemos su alta precisión, que suele ser mayor que la posición es una precisión alta.
-* **Incorpore la *velocidad angular* del controlador**. Esta lógica está contenida en el `throwing.cs` archivo en el `GetThrownObjectVelAngVel` método estático, dentro del paquete vinculado anteriormente:
+Puede encontrar un ejemplo de cómo se recomienda implementar throwing [aquí.](https://github.com/keluecke/MixedRealityToolkit-Unity/blob/master/External/Unitypackages/ThrowingStarter.unitypackage) Este ejemplo sigue estas cuatro directrices:
+* **Use la velocidad del controlador *en* lugar de la posición**. En la actualización de noviembre de Windows, se introdujo un cambio de comportamiento cuando se encuentra en el estado de seguimiento [posicional "Aproximado".](../../design/motion-controllers.md#controller-tracking-state) Cuando se encuentra en este estado, la información de velocidad sobre el controlador se seguirá notificando mientras creamos su alta precisión, que a menudo es más larga que la posición sigue siendo alta precisión.
+* **Incorpore *la velocidad angular* del controlador**. Esta lógica está contenida en el archivo del `throwing.cs` método `GetThrownObjectVelAngVel` estático, dentro del paquete vinculado anteriormente:
    1. A medida que se conserva la velocidad angular, el objeto producido debe mantener la misma velocidad angular que tenía en el momento del lanzamiento: `objectAngularVelocity = throwingControllerAngularVelocity;`
-   2. Dado que es probable que el centro de la masa del objeto iniciado no sea el origen de la representación del puño, es probable que tenga una velocidad distinta a la del controlador en el marco de referencia del usuario. La parte de la velocidad del objeto aportada de esta manera es la velocidad tangencial instantánea del centro de la masa del objeto producido en torno al origen del controlador. Esta velocidad tangencial es el producto cruzado de la velocidad angular del controlador con el vector que representa la distancia entre el origen del controlador y el centro de la masa del objeto iniciado.
+   2. Como es probable que el centro de masa del objeto que se produce no esté en el origen de la posición de control, es probable que tenga una velocidad diferente a la del controlador en el marco de referencia del usuario. La parte de la velocidad del objeto aportada de esta manera es la velocidad tangencial instantánea del centro de masa del objeto que se produce alrededor del origen del controlador. Esta velocidad tangencial es el producto cruzado de la velocidad angular del controlador con el vector que representa la distancia entre el origen del controlador y el centro de masa del objeto lanzado.
 
       ```cs
       Vector3 radialVec = thrownObjectCenterOfMass - throwingControllerPos;
       Vector3 tangentialVelocity = Vector3.Cross(throwingControllerAngularVelocity, radialVec);
       ```
 
-   3. La velocidad total del objeto generado es la suma de la velocidad del controlador y esta velocidad tangencial: `objectVelocity = throwingControllerVelocity + tangentialVelocity;`
+   3. La velocidad total del objeto que se produce es la suma de la velocidad del controlador y esta velocidad tangencial: `objectVelocity = throwingControllerVelocity + tangentialVelocity;`
 
-* **Preste mucha atención a la *hora* a la que se aplica la velocidad**. Cuando se presiona un botón, puede tardar hasta 20 ms para ese evento en pasar a través de Bluetooth al sistema operativo. Esto significa que, si sondea un cambio de estado del controlador de presionado a no presionado o viceversa, el controlador de la información de la forma que se obtiene se encuentra realmente por encima de este cambio en el estado. Además, la causa del controlador presentada por nuestra API de sondeo se predice para reflejar una posible suposición en el momento en que se muestra el fotograma, lo que podría ser superior a 20 MS en el futuro. Esto es adecuado para la *representación* de objetos retenidos, pero proporciona un problema de tiempo para el *objetivo* del objeto a medida que calculamos la trayectoria en el momento en que el usuario liberó el lanzamiento. Afortunadamente, con la actualización de noviembre, cuando se envía un evento de Unity, como *InteractionSourcePressed* o *InteractionSourceReleased* , el estado incluye los datos de la representación histórica al presionar o soltar el botón.  Para obtener la representación del controlador y el destino del controlador más precisos durante las throws, debe usar correctamente el sondeo y los eventos, según corresponda:
-   * Para que el **controlador presente** cada fotograma, la aplicación debe colocar el *GameObject* del controlador en la representación del controlador de predicción para la hora de Photon del marco actual.  Estos datos se obtienen de las API de sondeo de Unity como *[XR. InputTracking. GetLocalPosition](https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html)* o *[XR. WSA. Input. InteractionManager. GetCurrentReading](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.GetCurrentReading.html)*.
-   * En el caso de que el **controlador se dirija** a una imprenta o una versión, la aplicación debe Raycast y calcular las trayectorias en función de la suposición del controlador histórico para ese evento Press o Release.  Estos datos se obtienen de las API de eventos de Unity, como *[InteractionManager. InteractionSourcePressed](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.InteractionSourcePressed.html)*.
-* **Utilice la postura de control**. La velocidad y la velocidad de angular se registran en relación con la pose de control, no con la función de puntero.
+* **Preste mucha atención al momento *en que* se aplica la velocidad**. Cuando se presiona un botón, ese evento puede tardar hasta 20 ms en llegar a través de Bluetooth al sistema operativo. Esto significa que si sondea un cambio de estado del controlador de presionado a no presionado o al revés, el controlador que posea la información que obtiene con él se adelantará realmente a este cambio de estado. Además, la posición del controlador presentada por nuestra API de sondeo se predice hacia delante para reflejar una posición probable en el momento en que se mostrará el marco, que podría ser superior a 20 ms en el futuro. Esto es bueno *para* representar objetos mantenidos,  pero representa nuestro problema de tiempo para dirigirse al objeto a medida que calculamos la trayectoria en el momento en que el usuario lanzó el lanzamiento. Afortunadamente, con la actualización de noviembre, cuando se envía un evento de Unity como *InteractionSourcePressed* o *InteractionSourceReleased,* el estado incluye los datos de posición históricos de atrás cuando se presiona o se libera el botón.  Para obtener la representación del controlador y el destino del controlador más precisos durante los lanzamientos, debe usar correctamente el sondeo y los eventos, según corresponda:
+   * Para **que el** controlador represente cada fotograma, la aplicación debe colocar el *GameObject* del controlador en la posición del controlador de predicción hacia delante para el tiempo de foton del fotograma actual.  Estos datos se obtienen de las API de sondeo de Unity, como *[XR. InputTracking.GetLocalPosition](https://docs.unity3d.com/ScriptReference/XR.InputTracking.GetLocalPosition.html)* o *[XR. Wsa. Input.InteractionManager.GetCurrentReading](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.GetCurrentReading.html)*.
+   * En **el caso de los** controladores que tienen como destino una publicación o una publicación, la aplicación debe convertir y calcular los cálculos en función de la posición histórica del controlador para ese evento de lanzamiento o de presión.  Estos datos se obtienen de las API de eventos de Unity, como *[InteractionManager.InteractionSourcePressed.](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.InteractionManager.InteractionSourcePressed.html)*
+* **Use la posición de control**. La velocidad y la velocidad angulares se notifican en relación con la posición del control, no con la posición del puntero.
 
-El lanzamiento continuará mejorando con futuras actualizaciones de Windows y puede esperar encontrar más información aquí.
+El lanzamiento seguirá mejorando con futuras actualizaciones de Windows y puede encontrar más información al respecto aquí.
 
-## <a name="gesture-and-motion-controllers-in-mrtk"></a>Gestos y controladores de movimiento en MRTK
+## <a name="gesture-and-motion-controllers-in-mrtk"></a>Controladores de gestos y movimiento en MRTK
 
-Puede tener acceso al gesto y al controlador de movimiento desde el administrador de entrada.
+Puede acceder al gesto y al controlador de movimiento desde el Administrador de entrada.
 
-* [Gesto en MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/gestures)
-* [Controlador de movimiento en MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/controllers)
+* [Gesto en MRTK](/windows/mixed-reality/mrtk-unity/features/input/gestures)
+* [Controlador de movimiento en MRTK](/windows/mixed-reality/mrtk-unity/features/input/controllers)
 
 ## <a name="follow-along-with-tutorials"></a>Seguimiento de tutoriales
 
-Los tutoriales paso a paso, con ejemplos de personalización más detallados, están disponibles en la Academia de realidad mixta:
+Los tutoriales paso a paso, con ejemplos de personalización más detallados, están disponibles en Mixed Reality Academy:
 
 - [MR Input 211: gesto](tutorials/holograms-211.md)
 - [MR Input 213: controladores de movimiento](../../deprecated/mixed-reality-213.md)
 
-[![Entrada MR 213-controlador de movimiento](images/mr213-main-600px.jpg)](/windows/mixed-reality/mixed-reality-213)<br>
-*Entrada MR 213-controlador de movimiento*
+[![Mr Input 213 : controlador de movimiento](images/mr213-main-600px.jpg)](/windows/mixed-reality/mixed-reality-213)<br>
+*Mr Input 213 : controlador de movimiento*
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
+Si va a seguir el recorrido de desarrollo de Unity que hemos diseñado, se encuentra a la mitad de la exploración de los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Seguimiento de manos y ocular](./hand-eye-in-unity.md)

@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 10/15/2020
 ms.topic: overview
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR,
-ms.openlocfilehash: c238ec41c75e565cc3eb2bb8bcb9b68eff015f59
-ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
+ms.openlocfilehash: 88aab47a943fd004ef0a90a8c6749da1a403ff2f
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "107944656"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600514"
 ---
 # <a name="start-your-vr-journey"></a>Inicio del recorrido de VR
 
@@ -23,7 +23,7 @@ Use los puntos de control siguientes para configurar, configurar y usar los disp
 
 ### <a name="1-before-you-buy"></a>1. Antes de comprar
 
-El equipo debe controlar el hardware de realidad virtual que compra para tener la mejor experiencia de configuración y uso. En algunos casos, es posible que tenga que pedir [adaptadores adicionales o hardware](recommended-adapters-for-windows-mixed-reality-capable-pcs.md). Esta sección le ayudará a través de:
+El equipo debe controlar el hardware de realidad virtual que compra para tener la mejor experiencia de configuración y uso. En algunos casos, es posible que tenga que pedir [adaptadores adicionales o hardware](recommended-adapters-for-windows-mixed-reality-capable-pcs.md). En esta sección se le ayudará a:
 
 * Requisitos mínimos de PC
 * Comprobaciones de compatibilidad
@@ -40,19 +40,19 @@ El equipo debe controlar el hardware de realidad virtual que compra para tener l
 
 ### <a name="2-getting-started"></a>2. Introducción
 
-Una vez que tenga el dispositivo, deberá configurarlo y configurarlo correctamente para su uso. Al final de esta sección tendrá todos los requisitos de software instalados y estará listo para empezar a usar Windows Mixed Reality.
+Una vez que tenga el dispositivo, deberá configurarlo y configurarlo correctamente para su uso. Al final de esta sección, tendrá todos los requisitos de software instalados y estará listo para empezar a usar Windows Mixed Reality.
 
 <br>
 
 |  Punto de control  |  Resultado  |
 | --- | --- |
-| [Configuración de Windows Mixed Reality](set-up-windows-mixed-reality.md) | Familiarse con los controladores, los límites de la sala, la entrada de voz y Microsoft Edge en el nuevo dispositivo vr. |
+| [Configuración de Windows Mixed Reality](set-up-windows-mixed-reality.md) | Familiarse con los controladores, los límites de la sala, la entrada de voz y los Microsoft Edge en el nuevo dispositivo vr. |
 | [Windows Mixed Reality preguntas más frecuentes sobre la configuración](wmr-setup-faq.yml) | Obtenga respuestas y ayuda para solucionar problemas conocidos al configurar Windows Mixed Reality |
-| [Directrices de salud, seguridad y comodidad](wmr-health-safety-comfort.md) | Recomendaciones para mantener la seguridad al usar Windows Mixed Reality antes de usar el casco  |
+| [Directrices de salud, seguridad y confort](wmr-health-safety-comfort.md) | Recomendaciones para mantener la seguridad mientras se usa Windows Mixed Reality antes de usar el casco  |
 
 ### <a name="3-using-windows-mixed-reality"></a>3. Uso de Windows Mixed Reality
 
-Hay diferentes características y servicios disponibles a través de cascos Windows Mixed Reality realidad virtual inmersiva. Al final de esta sección, estará cómodo:
+Hay diferentes características y servicios disponibles a través de cascos Windows Mixed Reality realidad virtual envolventes. Al final de esta sección, estará cómodo:
 
 * Navegación por el entorno de inicio virtual
 * Uso de controladores y voz como entradas
@@ -63,12 +63,12 @@ Hay diferentes características y servicios disponibles a través de cascos Wind
 |  Punto de control  |  Característica  |
 | --- | --- |
 | [Información sobre Mixed Reality](learn-mixed-reality.md) | Aprenda a usar la mirada, la voz, los controladores y las entradas de teclado y mouse. |
-| [Navegar por la Windows Mixed Reality inicio](your-mixed-reality-home.md) | Exploración del entorno virtual de la Windows Mixed Reality inicio  |
+| [Navegar por el Windows Mixed Reality inicio](your-mixed-reality-home.md) | Explorar el entorno virtual de la Windows Mixed Reality principal  |
 | [Uso de controladores](controllers-in-wmr.md) | Configuración, información y uso de los controladores de movimiento |
-| [Uso de la entrada de voz](using-speech-in-wmr.md) | Familiarícese con los distintos comandos de voz que pueden interactuar con objetos 3D, la barra de aplicaciones, menú Inicio y Cortana. |
+| [Uso de la entrada de voz](using-speech-in-wmr.md) | Familiarícese con los diferentes comandos de voz que pueden interactuar con objetos 3D, la barra de la aplicación, menú Inicio y Cortana. |
 
 > [!NOTE]
-> Si tiene problemas con cualquiera de las características anteriores, consulte El uso de Windows Mixed Reality **[preguntas más frecuentes.](using-wmr-faq.yml)**
+> Si tiene problemas con cualquiera de las características anteriores, consulte las preguntas más **[frecuentes Windows Mixed Reality uso.](using-wmr-faq.yml)**
 
 ## <a name="4-discover-apps-and-content"></a>4. Detectar aplicaciones y contenido
 
@@ -81,8 +81,8 @@ Busque juegos envolventes, aplicaciones de escritorio y contenido de realidad vi
 | [Juegos, vídeo 360 y aplicaciones](using-games-and-apps-in-windows-mixed-reality.md) | Introducción a su primer juego envolvente, pizarras de tienda 2D, aplicaciones de escritorio y experiencias de WebVR |
 | [Uso de SteamVR](using-steamvr-with-windows-mixed-reality.md) | Conecte el dispositivo y jugar a juegos de SteamVR y obtenga información sobre Programa Windows Insider |
 | [Uso de Microsoft Edge](using-microsoft-edge.md) | Instalación de la versión más reciente de Microsoft Edge en el dispositivo inmersivo |
-| [Uso de WebVR](webvr.md) | Configuración para experimentar vr en el entorno del explorador |
-| [Exploración de AltspaceVR](https://docs.microsoft.com/windows/mixed-reality/altspace-vr/journey) | Explorar el mundo en expansión de los eventos de realidad virtual con AltspaceVR |
+| [Uso de WebVR](webvr.md) | Configuración para experimentar realidad virtual en el entorno del explorador |
+| [Exploración de AltspaceVR](/windows/mixed-reality/altspace-vr/journey) | Explorar el mundo en expansión de los eventos de realidad virtual con AltspaceVR |
 
 ## <a name="troubleshooting-tips--resources"></a>Solución de problemas, sugerencias & recursos
 

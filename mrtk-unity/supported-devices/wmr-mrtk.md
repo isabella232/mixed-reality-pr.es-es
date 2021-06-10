@@ -1,26 +1,35 @@
 ---
-title: Implementación en dispositivos Hololens y WMR
+title: Implementación en cascos Hololens y WMR
 description: Documentación para compilar e implementar aplicaciones en varios dispositivos.
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Visual Studio
-ms.openlocfilehash: ec66c6ccb8cf1c702fed804230f5cf3ca0526139
-ms.sourcegitcommit: 8e1a1d48d9c7cd94dab4ce6246aa2c0f49ff5308
+ms.openlocfilehash: 1547f0630d307e9e87505890adef4cad366d6c00
+ms.sourcegitcommit: 4c1dd5c22af69eeb192425118c2bfb95344b8dd9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2021
-ms.locfileid: "109852560"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110441157"
 ---
-# <a name="building-and-deploying-mrtk-uwp"></a>Compilación e implementación de MRTK (UWP)
+# <a name="deploying-to-hololens-and-wmr-headsets"></a>Implementación en cascos Hololens y WMR
 
-Para ejecutar una aplicación en un dispositivo como aplicación independiente (para HoloLens, Android, iOS, etc.), el paso de compilación e implementación debe ejecutarse en el proyecto de Unity. Compilar e implementar una aplicación que usa MRTK es como compilar e implementar cualquier otra aplicación de Unity. No hay instrucciones específicas para MRTK. Siga leyendo para obtener información detallada sobre los pasos para compilar e implementar una aplicación de Unity para HoloLens. Obtenga más información sobre la compilación para otras plataformas en [Publicación de compilaciones](https://docs.unity3d.com/Manual/PublishingBuilds.html).
+Hay dos maneras de implementar aplicaciones compiladas con MRTK en el dispositivo Windows, la Plataforma univeral de Windows (UWP) y la Plataforma independiente. Las aplicaciones compiladas para HoloLens 1 o HoloLens 2 deben tener como destino UWP, mientras que las aplicaciones creadas para cascos WMR pueden tener como destino UWP o independiente.
 
 ## <a name="building-and-deploying-mrtk-to-hololens-1-hololens-2-and-wmr-headsets-uwp"></a>Compilación e implementación de MRTK en HoloLens 1, HoloLens 2 y cascos WMR (UWP)
 
-Puede encontrar instrucciones sobre cómo compilar e implementar para **HoloLens 1** **y HoloLens 2** (UWP) en Compilar la aplicación en [el dispositivo](/windows/mixed-reality/mrlearning-base-ch1#build-your-application-to-your-device). Estos pasos también le permiten implementar en **cascos WMR.**
+Puede encontrar instrucciones sobre cómo compilar e implementar **para HoloLens 1** **y HoloLens 2** (UWP) en Compilación de la aplicación en [el dispositivo](/windows/mixed-reality/mrlearning-base-ch1#build-your-application-to-your-device). Estos pasos también le permiten implementar en **cascos WMR.**
 
-**Sugerencia:** Al compilar para HoloLens 1, HoloLens 2 o WMR, se recomienda que las opciones de compilación "Versión del SDK de destino" y "Versión mínima de la plataforma" se parezcan a las de la imagen siguiente:
+> [!NOTE]
+> Al implementar la aplicación en el dispositivo en Visual Studio, debe configurar Visual Studio de forma ligeramente diferente en función del dispositivo. Las configuraciones son las siguientes:
+>
+>| Plataforma | Configuración | Architecture | Destino |
+|---|---|---|---|
+| HoloLens 2 | Versión o maestra | ARM64 | Dispositivo |
+| HoloLens 1 | Versión o maestra | x86 | Dispositivo |
+| Cascos WMR | Versión o maestra | x64 | Equipo local |
+
+**Sugerencia:** Al compilar para HoloLens 1, HoloLens 2 o WMR, se recomienda que los valores de compilación "Versión del SDK de destino" y "Versión mínima de la plataforma" se parezcan a los de la siguiente imagen:
 
 ![Ventana de compilación](../features/images/getting-started/BuildWindow.png)
 
@@ -50,7 +59,7 @@ Si usa el complemento XR:
 >
 > Si se requiere la arquitectura de ARM, vaya a **Edit > Project Settings, Player** (Editar > Configuración del proyecto, Jugador) y, en el menú **Other Settings** (Otras opciones) , deshabilite **Graphics Jobs** (Trabajos de gráficos). Al deshabilitar **Graphics Jobs** (Trabajos de gráficos) permitirá que la aplicación se implemente con la arquitectura de compilación de ARM para Unity 2019.3.x, pero se recomienda ARM64.
 
-## <a name="building-and-deploying-mrtk-standalone"></a>Compilar e implementar MRTK (independiente)
+## <a name="building-and-deploying-mrtk-to-wmr-headsets-standalone"></a>Creación e implementación de MRTK en cascos WMR (independiente)
 
 Las compilaciones independientes de MRTK se pueden usar en cascos WMR. Una compilación independiente para un casco de WMR requiere los siguientes pasos adicionales:
 

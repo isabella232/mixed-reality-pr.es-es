@@ -1,70 +1,70 @@
 ---
-title: Usar el complemento de Windows XR
-description: Aprenda a configurar los proyectos de Unity con y sin MRTK con la compatibilidad de Windows XR.
+title: Uso del complemento XR de Windows
+description: Obtenga información sobre cómo configurar los proyectos de Unity con y sin MRTK mediante la compatibilidad con Windows XR.
 author: hferrone
 ms.author: alexturn
 ms.date: 03/26/2021
 ms.topic: article
-keywords: Unity, realidad mixta, desarrollo, introducción, nuevo proyecto, Windows Mixed Reality, UWP, XR, rendimiento, heredado, MRTK, Windows
-ms.openlocfilehash: 81d1c3113dcf2c301077bcfec44afa80bd5d9be3
-ms.sourcegitcommit: 8d386bf6c82ec9860815e873e1f2870ea410f40f
+keywords: Unity, realidad mixta, desarrollo, introducción, nuevo proyecto, Windows Mixed Reality, UWP, XR, rendimiento, heredado, mrtk, windows
+ms.openlocfilehash: 44de6b418995b75d9e199f03922f89016b76c5cd
+ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/31/2021
-ms.locfileid: "106088584"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "110743641"
 ---
-# <a name="using-windows-xr-plugin"></a>Uso del complemento de Windows XR
+# <a name="using-windows-xr-plugin"></a>Uso del complemento XR de Windows
 
-Para los desarrolladores que tienen como destino Unity 2020, el complemento de Windows XR permite el acceso a características de realidad mixta en auriculares de la realidad de HoloLens 2 y Windows Mixed Reality.  Este complemento también se admite en Unity 2019, aunque hay algunas incompatibilidades conocidas con los delimitadores espaciales de Azure al usar este complemento en esa versión.
+Para los desarrolladores que tienen como destino Unity 2020, el complemento XR de Windows permite el acceso a las características de realidad mixta en HoloLens 2 y Windows Mixed Reality cascos.  Este complemento también se admite en Unity 2019, aunque hay algunas incompatibilidades conocidas con Azure Spatial Anchors al usar este complemento en esa versión.
 
-Aunque Microsoft y la comunidad han creado herramientas de código abierto, como el kit de herramientas de la [realidad mixta (MRTK)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html) , que configurará automáticamente el entorno de WMR, muchos desarrolladores quieren crear sus experiencias desde cero.  En la siguiente documentación se muestra cómo configurar correctamente un proyecto para el desarrollo de realidad mixta, tanto si usa MRTK como si no.  La configuración que debe cambiar se divide en dos categorías: configuración por proyecto y configuración por escena.
+Aunque Microsoft y la comunidad han creado herramientas de código abierto como [Mixed Reality Toolkit (MRTK)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/Installation.html) que configurarán automáticamente el entorno WMR, muchos desarrolladores desean crear sus experiencias desde cero.  En la siguiente documentación se muestra cómo configurar correctamente un proyecto para Mixed Reality desarrollo independientemente de si usa MRTK o no.  La configuración que debe cambiar se divide en dos categorías: configuración por proyecto y configuración por escena.
 
-## <a name="setting-up-your-project-with-mrtk"></a>Configurar el proyecto con MRTK
+## <a name="setting-up-your-project-with-mrtk"></a>Configuración del proyecto con MRTK
 
 MRTK para Unity proporciona un sistema de entrada multiplataforma, componentes básicos y bloques de creación comunes para interacciones espaciales. La versión 2 de MRTK está diseñada para acelerar el desarrollo de aplicaciones de Microsoft HoloLens, cascos envolventes (VR) de Windows Mixed Reality y la plataforma OpenVR. El proyecto está pensado para reducir las barreras en la creación de aplicaciones de realidad mixta y para contribuir al crecimiento conjunto de la comunidad.
 
 > [!div class="nextstepaction"]
-> [Pruebe nuestros tutoriales de MRTK](https://docs.microsoft.com/windows/mixed-reality/develop/unity/tutorials/mr-learning-base-02?tabs=winxr)
+> [Pruebe nuestros tutoriales de MRTK](./tutorials/mr-learning-base-02.md?tabs=winxr)
 
-Eche un vistazo a [la documentación de MRTK](/windows/mixed-reality/mrtk-unity) para obtener más detalles sobre las características.
+Eche un vistazo a la [documentación de MRTK](/windows/mixed-reality/mrtk-unity) para obtener más detalles sobre las características.
 
 ## <a name="manual-setup-without-mrtk"></a>Configuración manual sin MRTK
 
 Si tiene como destino Desktop VR, se recomienda usar la plataforma independiente de PC seleccionada de forma predeterminada en un nuevo proyecto de Unity:
 
-![Captura de pantalla de la ventana de configuración de compilación abierta en el editor de Unity con PC, Mac & plataforma independiente resaltada](images/wmr-config-img-3.png)
+![Captura de pantalla de la ventana Configuración de compilación abierta en el editor de Unity con PC, Mac & independiente resaltado](images/wmr-config-img-3.png)
 
-Si tiene como destino HoloLens 2, debe cambiar a la Plataforma universal de Windows:
+Si tiene como destino HoloLens 2, debe cambiar al Plataforma universal de Windows:
 
-1.  Seleccionar **archivo > configuración de compilación...**
-2.  Seleccione **plataforma universal de Windows** en la lista plataforma y seleccione **Switch Platform (cambiar plataforma** ).
-3.  Establecimiento de la **arquitectura** en **ARM 64**
-4.  Establecimiento del **dispositivo de destino** en **HoloLens**
-5.  Establecer el **tipo de compilación** en **D3D**
-6.  Establecimiento del **SDK de UWP** en la **versión más reciente instalada**
-7.  Establezca la **configuración de compilación** en **Release** porque hay problemas de rendimiento conocidos con debug
+1.  Seleccione File > Build Settings... (Configuración **> compilación de archivos...**
+2.  Seleccione **Plataforma universal de Windows** en la lista Plataforma y seleccione **Cambiar plataforma.**
+3.  Establezca la **arquitectura** en **ARM 64**
+4.  Establezca **Target Device** (Dispositivo de destino) en **HoloLens**.
+5.  Establezca **Build Type** (Tipo de compilación) en **D3D**.
+6.  Establezca el **SDK de UWP** en la **Latest installed** (última versión instalada)
+7.  Establezca la **configuración de compilación** en **Release** (Publicación) porque hay problemas de rendimiento conocidos con Debug (Depuración).
 
-![Captura de pantalla de la ventana Configuración de compilación abierta en el editor de Unity con Plataforma universal de Windows resaltado](images/wmr-config-img-4.png)
+![Captura de pantalla de la ventana Configuración de compilación abierta en el editor de Unity Plataforma universal de Windows resaltado](images/wmr-config-img-4.png)
 
-Después de establecer la plataforma, debe dejar que Unity sepa crear una [vista envolvente](../../design/app-views.md) en lugar de una vista 2D cuando se exporte:
+Después de configurar la plataforma, debe hacer [](../../design/app-views.md) que Unity sepa que debe crear una vista inmersiva en lugar de una vista 2D cuando se exporte:
 
-1. En el editor de Unity, navegue a **editar > configuración del proyecto** y seleccione **Administración de complementos de XR** .
+1. En el Editor de Unity, vaya **a Editar > configuración del proyecto y** seleccione Administración de complementos **XR.**
 
-2. Seleccione **instalar administración de complementos de XR**
+2. Seleccione **Install XR Plugin Management (Instalar administración de complementos XR).**
 
-![Captura de pantalla de la ventana Configuración del proyecto abierta en el editor de Unity con la administración de complementos de XR resalta](images/wmr-config-img-5.png)
+![Captura de pantalla de la ventana Configuración del proyecto abierta en el editor de Unity con la administración de complementos XR resaltada](images/wmr-config-img-5.png)
 
-3. Seleccione **inicializar XR en el inicio** y **Windows Mixed Reality** .
+3. Seleccione **Initialize XR on Startup (Inicializar XR)** en **Startup (Inicio) Windows Mixed Reality**
 
-![Captura de pantalla de la ventana Configuración del proyecto abierta en el editor de Unity con la administración de complementos de XR resalta](images/wmr-config-img-7.png)
+![Captura de pantalla de la ventana Configuración del proyecto abierta en el editor de Unity con la administración de complementos XR resaltada](images/wmr-config-img-7.png)
 
-4. Expanda la sección **Administración de complementos de XR** y seleccione la pestaña Configuración de la **plataforma de Windows universal** .
-5. Si usa Unity 2020 o una versión posterior, verá las opciones para comprobar **OpenXR** o **Windows Mixed Reality**. 
-    * Puede elegir en tiempo de ejecución.  Si está desarrollando específicamente para HoloLens 2 o la reverberación de HP G2 y decide probar el **OpenXR**, seleccione el cuadro OpenXR y revise nuestra guía para [usar el complemento Mixed Reality OpenXR para Unity](openxr-getting-started.md) con el fin de configurarlo correctamente para estos dispositivos antes de volver a este tutorial.
+4. Expanda la **sección XR Plug-in Management (Administración** de complementos XR) y seleccione la pestaña **Univeral Windows Platform Settings (Configuración de plataforma de Windows univeral)**
+5. Si usa Unity 2020 o posterior, verá las opciones para comprobar **OpenXR** o **Windows Mixed Reality**. 
+    * Puede elegir cualquiera de los entornos de ejecución.  Si está desarrollando específicamente para HoloLens 2 o HP Reverb G2 y decide probar **OpenXR,** seleccione el cuadro OpenXR y revise nuestra guía uso del complemento [openXR](openxr-getting-started.md) de Mixed Reality para Unity para configurarse correctamente para estos dispositivos antes de volver a este tutorial.
 
 > [!NOTE]
-> A partir de Unity 2020 LTS, Microsoft adopta el desarrollo con OpenXR.  Al migrar a esta ruta de acceso, en Unity 2021,1 el complemento de Windows XR dejará de usarse y se quitará en 2021,2, de modo que OpenXR la única ruta de acceso admitida. Puede encontrar más información en [uso del complemento OpenXR de realidad mixta](openxr-getting-started.md).
+> A partir de Unity 2020 LTS, Microsoft está adoptando el desarrollo con OpenXR.  A medida que migramos a esta ruta de acceso, en Unity 2021.1, el complemento XR de Windows estará en desuso y se quitará en 2021.2, lo que hace que OpenXR sea la única ruta de acceso admitida. Puede encontrar más información en [Uso del complemento Mixed Reality OpenXR.](openxr-getting-started.md)
 
-6. Si decide elegir el complemento de **Windows Mixed Reality** , active todas las casillas y establezca el **modo de envío de profundidad** en profundidad de **16 bits** .
+6. Si decide elegir  el complemento de Windows Mixed Reality, active todas las casillas y establezca **Modo de envío de** profundidad en Profundidad **de 16 bits.**
 
-![Captura de pantalla de la ventana de configuración del proyecto abierta en el editor de Unity con Windows Mixed Reality sección resaltada](images/wmr-config-img-8.png)
+![Captura de pantalla de la ventana Configuración del proyecto abierta en el editor de Unity Windows Mixed Reality sección resaltada](images/wmr-config-img-8.png)

@@ -1,23 +1,23 @@
 ---
 title: Solución de problemas Windows Mixed Reality
-description: Manténgase al día con la Windows Mixed Reality solución de problemas que va más allá de la documentación de soporte técnico al consumidor estándar.
+description: Manténgase al día con la solución Windows Mixed Reality solución de problemas que va más allá de la documentación de soporte técnico al consumidor estándar.
 ms.topic: article
 ms.author: rajhawar
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Troubleshoot, Errors, Help, Support
-ms.openlocfilehash: b347145e73c3e3f96d9a387edbfdb6dc0360b094
-ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
+ms.openlocfilehash: 24120e9c1bb34b8b32c00e2b677f530c4ba563ab
+ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110196650"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110345088"
 ---
 # <a name="troubleshooting-in-windows-mixed-reality"></a>Solución de problemas en Windows Mixed Reality
 
 ![Solución de problemas del logotipo de encabezado](images/1050px-Mixedrealityportal.png)
 
-Si tiene problemas con el hardware inmersivo, es importante diagnosticar el área de problemas general y, a continuación, consulte los artículos siguientes para obtener ayuda más detallada.
+Si tiene problemas con el hardware envolvente, es importante diagnosticar el área de problemas general y, a continuación, consulte los siguientes artículos para obtener ayuda más detallada.
 
-Aquí encontrará las opciones de soporte técnico para las siguientes opciones, lo que garantiza que se le dirige a la información correcta con la menor complicaciones. También se incluyen los recursos de la comunidad y las opciones de contenido de autoservicio para que explore:
+Aquí encontrará las opciones de soporte técnico para las siguientes opciones, lo que garantiza que se le dirige a la información correcta con la menor complicaciones. También se incluyen los recursos de la comunidad y las opciones de contenido de autoservicio para explorar:
 
 >[!Note]
 >En honor a los controladores y cascos HP Reverb G2 recién publicados, hemos compilado una página de preguntas más frecuentes dedicada para todo G2. [](reverbG2-faq.yml) En este artículo se trata todo, desde problemas de conexión y claridad de imágenes hasta problemas de controladores de movimiento y ejecución Mixed Reality.
@@ -45,18 +45,18 @@ Para obtener respuestas sobre las preguntas de los desarrolladores del ecosistem
 
 ## <a name="troubleshooting-topics"></a>Temas de solución de problemas
 
-Cuando se encuentra con problemas con el hardware inmersivo, es importante diagnosticar el área de problemas general y, a continuación, consultar los artículos siguientes para obtener ayuda más detallada. 
+Cuando se encuentra con problemas con el hardware envolvente, es importante diagnosticar el área de problemas general y, a continuación, consultar los siguientes artículos para obtener ayuda más detallada. 
 
 ### <a name="installation-and-setup-issues"></a>Problemas de instalación y configuración
 
 Para problemas de instalación, ejecución de Windows Mixed Reality, errores de instalación, requisitos mínimos de EQUIPO o permisos de administrador, consulte estas dos preguntas más frecuentes:
 
 - [Errores de instalación](installation_errors.md)
-- [Configuración de problemas reales](wmr-setup-faq.yml)
+- [Problemas relacionados con la configuración](wmr-setup-faq.yml)
 
 ### <a name="hardware-issues"></a>Problemas de hardware
 
-Para problemas con el dispositivo de casco físico, las conexiones de cable, los errores de conexión, el inicio del Portal de realidad mixta y las pantallas de casco en blanco o negro, consulte los artículos siguientes:
+Para problemas con el dispositivo de casco físico, las conexiones de cable, los errores de conexión, el inicio de la Portal de realidad mixta y las pantallas de casco en blanco o negro, consulte los artículos siguientes:
 
 - [Conectividad con el casco](headset-connectivity.md)
 - [Pantalla del casco](headset-display.md)

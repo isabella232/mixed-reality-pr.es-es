@@ -1,16 +1,16 @@
 ---
-title: Diálogo de configuración de MRTK
+title: Cuadro de diálogo de configuración de MRTK
 description: Configuración de MRTK en el proyecto de Unity
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Unity
-ms.openlocfilehash: ef326a4e4c9e34479cebacf3f3f575cd902ff24e
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: fd05f7f3b579522a1225e11b0411b255a43e1e3f
+ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144836"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "110345098"
 ---
 # <a name="mrtk-project-configuration-dialog"></a>Cuadro de diálogo de configuración del proyecto de MRTK
 
@@ -21,7 +21,7 @@ El cuadro de diálogo de configuración de MRTK se muestra cuando Unity carga un
 Para aplicar los cambios, haga clic en **el botón** Aplicar. El **botón** Más adelante aplazará los cambios hasta que el proyecto se vuelva a cargar en un momento futuro.
 
 > [!NOTE]
-> El cuadro de diálogo de configuración volverá a aparecer si se deja desactivada una o varias de las opciones recomendadas. Para evitar que esto ocurra, aplique las opciones deseadas y, a continuación, vuelva a iniciar el cuadro de diálogo a través de **utilidades** de Mixed Reality Toolkit Configure Unity Project (Configurar proyecto de  >    >  **Unity)** y haga clic **en Omitir**. Esto impedirá que el cuadro de diálogo de configuración vuelva a aparecer automáticamente.
+> El cuadro de diálogo de configuración volverá a aparecer si se deja desactivada una o varias de las opciones recomendadas. Para evitar que esto ocurra, aplique las opciones deseadas y, a continuación, vuelva a iniciar el cuadro de diálogo a través de utilidades de **Mixed Reality Toolkit** Configure Unity Project (Configurar proyecto de  >    >  **Unity)** y haga clic **en Omitir**. Esto impedirá que el cuadro de diálogo de configuración vuelva a aparecer automáticamente.
 
 ## <a name="common-settings"></a>Configuración común
 
@@ -29,7 +29,7 @@ Todos los destinos de compilación comparten una colección de opciones comunes.
 
 ![Configuración común](../features/images/configuration-dialog/ConfigurationDialogCommonSettings.png)
 
-### <a name="force-text-asset-serialization-and-enable-visible-meta-files"></a>Forzar la serialización de recursos de texto y habilitar metadatos visibles
+### <a name="force-text-asset-serialization-and-enable-visible-meta-files"></a>Forzar la serialización de recursos de texto y Habilitar metadatos visibles
 
 Esta configuración ayuda a simplificar el trabajo con proyectos de Unity y sistemas de control de código fuente (por ejemplo, Git).
 
@@ -58,21 +58,21 @@ Los espacializadores de audio son los componentes que desbloquean la potencia de
 
 - Microsoft Spatializer
 
-Microsoft proporcionó un espacializador que admite el uso de la aceleración de hardware en HoloLens 2.
+Espacializador proporcionado por Microsoft que admite el uso de la aceleración de hardware en HoloLens 2.
 
 Este espacializador está disponible a través [de NuGet](https://www.nuget.org/packages/Microsoft.SpatialAudio.Spatializer.Unity/) y [GitHub.](https://github.com/microsoft/spatialaudio-unity)
 
-Puede encontrar más detalles sobre Microsoft Spatializer en la [documentación de Spatial Sound](/windows/mixed-reality/spatial-sound-in-unity).
+Puede encontrar más detalles sobre Microsoft Spatializer en la documentación [de sonido espacial](/windows/mixed-reality/spatial-sound-in-unity).
 
 - Espacializador HRTF de MS
 
-Espacializador de Microsoft Windows proporcionado por Unity como parte de los paquetes Windows Mixed Reality y Windows XR Platform.
+Espacializador de Microsoft Windows proporcionado por Unity como parte de los paquetes Windows Mixed Reality y windows XR Platform.
 
-- Audio de sed de sonido
+- Audio desaía
 
 Espacializador multiplataforma de Google proporcionado por Unity.
 
-Puede encontrar más información en el sitio de [documentación de Audio de sedán.](https://resonance-audio.github.io/resonance-audio/develop/unity/getting-started)
+Puede encontrar más información en el sitio de documentación [de Audio de resalte.](https://resonance-audio.github.io/resonance-audio/develop/unity/getting-started)
 
 ## <a name="universal-windows-platform-settings"></a>Plataforma universal de Windows configuración
 
@@ -80,7 +80,7 @@ Puede encontrar más información en el sitio de [documentación de Audio de sed
 
 ### <a name="uwp-capabilities"></a>Funcionalidades de UWP
 
-Habilita funcionalidades de aplicación específicas para Plataforma universal de Windows aplicación. Estas funcionalidades permiten a la plataforma informar y solicitar permiso para habilitar funcionalidades específicas.
+Habilita funcionalidades de aplicación específicas para Plataforma universal de Windows aplicación. Estas funcionalidades permiten a la plataforma informar y solicitar permiso para habilitar una funcionalidad específica.
 
 - Micrófono
 
@@ -115,7 +115,7 @@ Opciones de configuración para admitir aplicaciones de AR en dispositivos con t
 
 ### <a name="disable-multi-threaded-rendering"></a>Deshabilitar la representación multiproceso
 
-Deshabilita la **configuración del reproductor** Otra  >  **configuración**  >  **Representación multiproceso** según lo requiera la compatibilidad con AR de Android.
+Deshabilita la **configuración del reproductor Otra**  >  **configuración**  >  **Representación multiproceso** según sea necesario para la compatibilidad con AR de Android.
 
 ### <a name="set-minimum-api-level"></a>Establecer el nivel mínimo de API
 
@@ -133,8 +133,8 @@ Establece el valor de Configuración del **reproductor**  >  **Otras configuraci
 
 ### <a name="set-required-architecture"></a>Establecer la arquitectura necesaria
 
-Establece el valor de Configuración del **reproductor Otra**  >  **arquitectura de** configuración  >  **para** aplicar los requisitos de plataforma para las aplicaciones de AR.
+Establece el valor de Configuración del **reproductor** Otra  >  **arquitectura de configuración**  >  **para** aplicar los requisitos de plataforma para las aplicaciones de AR.
 
 ### <a name="set-camera-usage-descriptions"></a>Establecer descripciones de uso de la cámara
 
-Establece el valor de Configuración del **reproductor**  >  **Otras configuraciones** Descripción de uso de la cámara que se usa  >   para solicitar permiso para usar la cámara del dispositivo.
+Establece el valor de Player **Settings** Other Settings Camera Usage Description (Configuración del reproductor Descripción del uso de la cámara de configuración que se usa para solicitar  >    >   permiso para usar la cámara del dispositivo).

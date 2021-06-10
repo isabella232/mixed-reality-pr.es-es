@@ -4,19 +4,19 @@ description: Documentación sobre el uso de varios controladores con MRTK
 author: RogPodge
 ms.author: roliu
 ms.date: 05/13/2021
-keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, controladores, HP Reverb, Oculus, HOLO Vive, Hands
-ms.openlocfilehash: 953b1cd56dbf7d7a548a3aba8da07ce5875fec74
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity,HoloLens, HoloLens 2, Mixed Reality, development, MRTK, Controllers, HP Reverb, Oculus, HOLO Vive, Hands
+ms.openlocfilehash: 111ebf2b1eb26bbef8cde16832f780acfa758595
+ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145490"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "110743580"
 ---
 # <a name="controllers-in-mrtk"></a>Controladores en MRTK
 
-MRTK admite muchos controladores diferentes. Muchos controladores, como VLAN Vive Knuckles y VLAN Vive Wands, funcionarán de forma nativa una vez que se inicia una aplicación creada con MRTK en el dispositivo compatible. Otros controladores, como las manos articuladas de Oculus Packs y los controladores HP Reverb G2, requieren paquetes adicionales antes de que MRTK los reconozca.
+MRTK admite muchos controladores diferentes. Muchos controladores, comoCARE Vive Knuckles y USB Vive Wands, funcionarán de forma nativa una vez que se inicia una aplicación creada con MRTK en el dispositivo compatible. Otros controladores, como las manos articuladas de Oculus Packs y los controladores HP Reverb G2, requieren paquetes adicionales antes de que MRTK los reconozca.
 
-En este documento se describen los escenarios comunes en los que es necesario instalar paquetes adicionales. Para obtener información adicional sobre los controladores, visite la [**página de características**](../features/input/controllers.md). Para depurar problemas con controladores, consulte la herramienta [ **de asignación de controladores.**](../features/tools/controller-mapping-tool.md)
+En este documento se describen los escenarios comunes en los que es necesario instalar paquetes adicionales. Para obtener instrucciones sobre cómo implementar en el dispositivo, consulte las páginas de implementación [**hololens/WMR**](./wmr-mrtk.md) o [**Oculus Pages.**](/windows/mixed-reality/mrtk-unity/supported-devices/oclus-quest-mrtk) Para obtener información adicional sobre los controladores, visite la [**página de características**](../features/input/controllers.md). Para depurar problemas con controladores, consulte la herramienta [ **de asignación de controladores.**](../features/tools/controller-mapping-tool.md)
 
 ## <a name="hp-reverb-g2-controllers"></a>Controladores HP Reverb G2
 
@@ -26,6 +26,6 @@ Para mostrar los controladores en el editor, debe asegurarse de que usa el media
 
 ## <a name="oculus-controllers"></a>Controladores de Oculus 
 
-Para visualizar los modelos de controlador de Oculus, siga las instrucciones de implementación de Oculus Raid. Si desea mostrar las manos virtuales al usar los controladores, asegúrese de que La opción Representar las manos **de avatar** en lugar de los controladores está activada en el sdk de XR Oculus Administrador de dispositivos. De lo contrario, desactive esta opción.
+Para visualizar los modelos de controlador de Oculus, siga las instrucciones de implementación de Oculus Raid. Si desea mostrar las manos virtuales al usar los controladores, asegúrese de que la opción Representar las manos **de Avatar** en lugar de controladores está activada en el sdk de XR Oculus Administrador de dispositivos. De lo contrario, desactive esta opción.
 
 ![OculusDeviceManagerVisualizationSettings](../images/cross-platform/oculus-quest/OculusDeviceManager.png)

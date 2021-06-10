@@ -1,29 +1,29 @@
 ---
 title: Mirada en Unity
-description: Obtenga información sobre cómo usar la entrada de pág como método principal para que los usuarios tengan como destino los hologramas que crea la aplicación en realidad mixta.
+description: Obtenga información sobre cómo usar la entrada de mirada como una forma principal para que los usuarios puedan dirigirse a los hologramas que la aplicación crea en realidad mixta.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: miras hacia abajo, a la punta, por la cabeza, el holograma, la realidad mixta, el casco de realidad mixta, el casco de realidad mixta de Windows, el casco de realidad virtual, MRTK, el kit de herramientas de realidad mixta
-ms.openlocfilehash: 98eb4445d04b236dea74917d9c51108b66d6df3b
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: mirada con los ojos, mirada con la cabeza, unity, holograma, realidad mixta, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: f10079d36f737e5d8a2ee74a88ca0f8b2b3d791c
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300370"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600154"
 ---
-# <a name="head-gaze-in-unity"></a>Encabezado de la mirada en Unity
+# <a name="head-gaze-in-unity"></a>Mirada con la cabeza en Unity
 
-[Miramos](../../design/gaze-and-commit.md) el método principal para que los usuarios tengan como destino los [hologramas](../../discover/hologram.md) que crea la aplicación en [realidad mixta](../../discover/mixed-reality.md).
+[La](../../design/gaze-and-commit.md) mirada es la manera principal para que los usuarios se [descumenten los hologramas](../../discover/hologram.md) que la [aplicación crea Mixed Reality](../../discover/mixed-reality.md).
 
-## <a name="implementing-head-gaze"></a>Implementación del encabezado de mira
+## <a name="implementing-head-gaze"></a>Implementación de la mirada con la cabeza
 
-Conceptualmente, para determinar el [encabezado](../../design/gaze-and-commit.md) , puede proyectar un rayo hacia delante desde los auriculares del usuario para ver lo que llega. En Unity, la posición y la dirección principales del usuario se exponen a través de la [cámara](camera-in-unity.md), concretamente [UnityEngine. Camera. Main](https://docs.unity3d.com/ScriptReference/Camera-main.html). [Transform. forward](https://docs.unity3d.com/ScriptReference/Transform-forward.html) y [UnityEngine. Camera. Main](https://docs.unity3d.com/ScriptReference/Camera-main.html). [Transform. Position](https://docs.unity3d.com/ScriptReference/Transform-position.html).
+Conceptualmente, puede determinar la [mirada](../../design/gaze-and-commit.md) con la cabeza proyectando un rayo hacia delante desde el casco del usuario para ver lo que alcanza. En Unity, la posición y la dirección de la cabeza del usuario se exponen a través de [la cámara](camera-in-unity.md), específicamente [UnityEngine.Camera.main.](https://docs.unity3d.com/ScriptReference/Camera-main.html) [transform.forward](https://docs.unity3d.com/ScriptReference/Transform-forward.html) y [UnityEngine.Camera.main.](https://docs.unity3d.com/ScriptReference/Camera-main.html) [transform.position](https://docs.unity3d.com/ScriptReference/Transform-position.html).
 
-La llamada a [física. RayCast](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) le proporciona un [RaycastHit](https://docs.unity3d.com/ScriptReference/RaycastHit.html) que contiene información sobre la colisión, incluido el punto de colisión 3D y el otro GameObject el toque del rayo de la punta.
+Llamar [a Physics.RayCast](https://docs.unity3d.com/ScriptReference/Physics.Raycast.html) proporciona un [Objeto RaycastHit](https://docs.unity3d.com/ScriptReference/RaycastHit.html) que contiene información sobre la colisión, incluido el punto de colisión 3D y el otro GameObject al que se ha alcanzado el rayo de mirada con la cabeza.
 
-### <a name="example-implement-head-gaze"></a>Ejemplo: implementación de la cabeza de mira
+### <a name="example-implement-head-gaze"></a>Ejemplo: Implementación de la mirada con la cabeza
 
 ```cs
 void Update()
@@ -45,19 +45,19 @@ void Update()
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
-Aunque en el ejemplo anterior se activa un solo Raycast desde el bucle de actualización para buscar el destino al que apunta el encabezado del usuario, se recomienda usar un solo objeto para administrar todos los procesos de mirados. La combinación de la lógica de mirada le ahorrará la potencia de procesamiento de la aplicación y limitará la raycasting a una por fotograma.
+Aunque en el ejemplo anterior se muestra un único raycast desde el bucle de actualización para buscar el destino en el que se encuentran los puntos principales del usuario, se recomienda usar un solo objeto para administrar todos los procesos de mirada con la cabeza. La combinación de la lógica de mirada con la cabeza ahorrará la potencia de procesamiento valiosa de la aplicación y limitará la difusión por rayos a uno por fotograma.
 
-## <a name="visualizing-head-gaze"></a>Visualización del encabezado
+## <a name="visualizing-head-gaze"></a>Visualización de la mirada con la cabeza
 
-Al igual que con un puntero del mouse en un equipo, debe implementar un [cursor](../../design/cursors.md) que represente el encabezado del usuario. Conocer el contenido de destino de un usuario aumenta la confianza con respecto a la forma en que va a interactuar.
+Al igual que con un puntero del mouse en un equipo, debe implementar un [cursor](../../design/cursors.md) que represente la mirada con la cabeza del usuario. Saber qué contenido tiene como destino un usuario aumenta la confianza en lo que está a punto de interactuar.
 
-## <a name="head-gaze-in-the-mixed-reality-toolkit"></a>Mira al principio en el kit de herramientas de la realidad mixta
+## <a name="head-gaze-in-the-mixed-reality-toolkit"></a>Mirada con la cabeza en el kit de herramientas Mixed Reality
 
-Puede acceder al encabezado de la mirada desde el [Administrador de entrada](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/overview) en MRTK.
+Puede acceder a la mirada con la cabeza desde [el Administrador de entrada](/windows/mixed-reality/mrtk-unity/features/input/overview) en MRTK.
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si está siguiendo el viaje de desarrollo de Unity que hemos diseñado, está a la mitad de explorar los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
+Si sigue el recorrido de desarrollo de Unity que hemos diseñado, se encuentra en medio de la exploración de los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Controladores de movimiento](motion-controllers-in-unity.md)

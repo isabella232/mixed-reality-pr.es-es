@@ -1,17 +1,17 @@
 ---
 title: Magnetismo de superficie
-description: Mediante la técnica de magnetismo de superficie, puede colocar un objeto holográfico en una superficie física real.
+description: Con la técnica de magnetismo de superficie, puede colocar un objeto holográfico en una superficie física real.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Mixed Reality, controles, interacción, interfaz de usuario, experiencia de usuario, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, kit de herramientas de Mixed Reality, magnetismo de superficie
-ms.openlocfilehash: e3cf8511a2486c8ea862fcc70a20f5956e5095c4
-ms.sourcegitcommit: e89431d12b5fe480c9bc40e176023798fc35001b
+ms.openlocfilehash: 4afed1ff9a1e8a7cb46f4810ac388739bca1b19e
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "109489225"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600624"
 ---
 # <a name="surface-magnetism"></a>Magnetismo de superficie
 
@@ -25,16 +25,16 @@ El magnetismo de superficie le permite colocar objetos holográficos en superfic
 
 ## <a name="surface-magnetism-in-mrtk-mixed-reality-toolkit-for-unity"></a>Magnetismo de superficie en MRTK (Mixed Reality Toolkit) para Unity
 
-**[MRTK proporciona](https://github.com/Microsoft/MixedRealityToolkit-Unity)** scripts y escenas de ejemplo para la técnica de magnetismo de superficie. Puede usar el magnetismo de superficie con varios tipos de entradas, como controladores de movimiento, mirada con los ojos y rayos de la mano.
+**[MRTK proporciona](https://github.com/Microsoft/MixedRealityToolkit-Unity)** scripts y escenas de ejemplo para la técnica de magnetismo de superficie. Puede usar el magnetismo de superficie con varios tipos de entradas, como el rayo de la mano, la mirada con los ojos y los controladores de movimiento.
 
-* [MRTK: solucionador de magnetismo de superficie](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver#surfacemagnetism)
+* [MRTK: solucionador de magnetismo de superficie](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver#surfacemagnetism)
 * [MRTK: escenas de ejemplo de reconocimiento espacial y magnetismo de superficie](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/main/Assets/MRTK/Examples/Demos/Solvers/Scenes/SurfaceMagnetismSpatialAwarenessExample.unity)
 
 <br>
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)

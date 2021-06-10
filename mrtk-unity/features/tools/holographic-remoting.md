@@ -1,22 +1,22 @@
 ---
 title: Control remoto de holografías
-description: Documentación sobre la comunicación remota holográfica MRTK
+description: Documentación sobre la comunicación remota holográfica con MRTK
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 637f68e5ad5f360aea4b5c0603a682d61d152a89
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 196bbb7027389ea75ddc577e4efc397ca779d550
+ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144588"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110647183"
 ---
 # <a name="holographic-remoting"></a>Control remoto de holografías
 
-La comunicación remota holográfica transmite contenido holográfico desde un equipo a la Microsoft HoloLens en tiempo real, mediante una conexión de Wi-Fi o usb. Esta característica puede aumentar significativamente la productividad de los desarrolladores al desarrollar aplicaciones de realidad mixta.
+La comunicación remota holográfica transmite contenido holográfico de un equipo a su Microsoft HoloLens en tiempo real, mediante una conexión de Wi-Fi o USB. Esta característica puede aumentar significativamente la productividad de los desarrolladores al desarrollar aplicaciones de realidad mixta.
 
-El SDK de XR como se mencionó a continuación hace referencia a la nueva canalización de XR de [Unity en Unity 2019.3](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/)y más allá de . Consulte [aquí](../../configuration/getting-started-with-mrtk-and-xrsdk.md) para obtener más información sobre el uso del SDK de XR con MRTK. XR heredado hace referencia a la canalización XR existente que se incluye en Unity 2018, está en desuso en Unity 2019.3 y se ha quitado en Unity 2020.
+El SDK de XR como se mencionó a continuación hace referencia a la nueva canalización de XR de [Unity en Unity 2019.3 y posteriores.](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/) Consulte [aquí](../../configuration/getting-started-with-mrtk-and-xrsdk.md) para obtener más información sobre el uso del SDK de XR con MRTK. XR heredado hace referencia a la canalización XR existente que se incluye en Unity 2018, está en desuso en Unity 2019.3 y se ha quitado en Unity 2020.
 
 ## <a name="initial-setup"></a>Instalación inicial
 
@@ -31,20 +31,20 @@ Continúe con las [instrucciones de instalación de XR heredadas](#legacy-xr-set
 
 ## <a name="legacy-xr-setup-instructions"></a>Instrucciones de configuración de XR heredadas
 
-Las instrucciones siguientes solo se aplican a la comunicación remota con HoloLens 2. Si solo realiza comunicación remota con HoloLens (1.ª generación), vaya directamente a Conexión a [HoloLens con Wi-Fi.](#connecting-to-the-hololens-with-wi-fi)
+Las instrucciones siguientes solo se aplican a la comunicación remota con HoloLens 2. Si solo realiza comunicación remota con HoloLens (1ª generación), vaya directamente a Conexión a [HoloLens con Wi-Fi.](#connecting-to-the-hololens-with-wi-fi)
 
-Cuando se usa un HoloLens 2, se ha agregado compatibilidad con la comunicación remota con datos de seguimiento de la mano y los ojos articulados a MRTK. Para habilitar estas características, siga los pasos documentados en [Importación de DotNetWinRT en el proyecto](#import-dotnetwinrt-into-the-project).
+Cuando se usa una HoloLens 2, se ha agregado compatibilidad con la comunicación remota de datos de seguimiento ocular y de manos articuladas a MRTK. Para habilitar estas características, siga los pasos descritos en [Importación de DotNetWinRT en el proyecto](#import-dotnetwinrt-into-the-project).
 
-Una vez importado, el siguiente paso consiste en seleccionar Mixed Reality  >  **Toolkit Utilities**  >  **Windows Mixed Reality** Check Configuration  >  **(Comprobar configuración).** Este paso agrega una definición de scripting que habilita la dependencia DotNetWinRT.
+Una vez importado, el siguiente paso consiste en seleccionar **Mixed Reality**  >    >  **Toolkit Utilities**  >  **Windows Mixed Reality**  >  **Check Configuration (Comprobar configuración).** Este paso agrega una definición de scripting que habilita la dependencia DotNetWinRT.
 
 > [!NOTE]
-> Cuando se usa Unity 2019.4 y versiones posteriores, no es necesario ejecutar la utilidad Comprobar configuración.
+> Cuando se usa Unity 2019.4 y versiones más recientes, no es necesario ejecutar la utilidad Comprobar configuración.
 
 Para habilitar el seguimiento de las uniones de manos y el seguimiento ocular, siga los pasos de las secciones Depuración HoloLens 2 comunicación remota a través de la importación de paquetes de **Unity** y las secciones relacionadas.
 
 ### <a name="debugging-hololens-2-remoting-via-unity-package-import"></a>Depuración de HoloLens 2 comunicación remota a través de la importación de paquetes de Unity
 
-Si HoloLens 2 de las manos y el seguimiento de los ojos no funcionan sobre la comunicación remota, hay algunos puntos comunes de posibles problemas. Se enumeran a continuación en el orden en que se deben comprobar.
+Si HoloLens 2 de las manos y el seguimiento de los ojos no funcionan con la comunicación remota, hay algunos puntos comunes de posibles problemas. Se enumeran a continuación en el orden en que se deben comprobar.
 
 Estos problemas son especialmente relevantes cuando se ejecutan **en Unity 2019.3** o posterior.
 
@@ -72,33 +72,33 @@ A partir de la versión 2.5.0 de MRTK, por motivos de rendimiento, este #define 
 
 ### <a name="removing-hololens-2-specific-remoting-support"></a>Eliminación de HoloLens 2 de comunicación remota específica
 
-Si tiene conflictos u otros problemas debidos a la presencia del adaptador dotNetWinRT, póngase en contacto con uno de nuestros recursos [de ayuda.](../../index.md#getting-help)
+Si tiene conflictos u otros problemas debido a la presencia del adaptador de DotNetWinRT, póngase en contacto con uno de nuestros recursos [de ayuda.](../../index.md#getting-help)
 
 ## <a name="xr-sdk-setup-instructions"></a>Instrucciones de configuración del SDK de XR
 
-Siga las instrucciones Windows Mixed Reality configuración en la página Introducción a [MRTK](../../configuration/getting-started-with-mrtk-and-xrsdk.md#windows-mixed-reality) y el SDK de XR y asegúrese de realizar el paso necesario para la comunicación remota de HoloLens en el editor.
+Siga las Windows Mixed Reality de configuración de la página Introducción a [MRTK](../../configuration/getting-started-with-mrtk-and-xrsdk.md#windows-mixed-reality) y el SDK de XR y asegúrese de realizar el paso necesario para la comunicación remota de HoloLens en el editor.
 
 ## <a name="connecting-to-the-hololens-with-wi-fi"></a>Conexión a HoloLens con Wi-Fi
 
 Una vez configurado el proyecto, se puede establecer una conexión con HoloLens.
 
-1. En File > Build Settings (Configuración de **compilación** de archivos), asegúrese de que el tipo de compilación del proyecto está **establecido en Plataforma universal de Windows**
+1. En File > Build Settings (Configuración **de compilación** de archivos), asegúrese de que el tipo de compilación del proyecto está **establecido en Plataforma universal de Windows**
 1. En HoloLens, inicie la **aplicación Holographic Remoting.**
-1. En Unity, seleccione **Window > XR > Holographic Emulation (if using legacy XR) /Windows XR Plugin Remoting (if using XR SDK) (Emulación de XR > holographic emulation (si usa XR heredado) o Windows XR Plugin Remoting (si** usa el SDK de XR).
+1. En Unity, seleccione **Window > XR > Holographic Emulation (if using legacy XR) /Windows XR Plugin Remoting (if using XR SDK)**[Emulación holográfica de XR (si usa XR SDK heredado)].
 
     ![Iniciar emulación holográfica](../images/tools/remoting/StartHolographicEmulation.png)
 
 1. Establezca **Modo de emulación** **en Remoto en Dispositivo.**
 
-    ![Establecer modo de emulación](../images/tools/remoting/SelectEmulationMode.png)
+    ![Establecer el modo de emulación](../images/tools/remoting/SelectEmulationMode.png)
 
 1. (**_Solo se aplica a XR heredado)_** Seleccione la versión **del dispositivo.**
 
     ![Selección de la versión del dispositivo](../images/tools/remoting/SelectDeviceVersion.png)
 
-1. Con la dirección IP mostrada por la aplicación Holographic Remoting Player, establezca el **campo Equipo** remoto.
+1. Con la dirección IP que muestra la aplicación Holographic Remoting Player, establezca el **campo Equipo** remoto.
 
-    ![Escribir dirección IP](../images/tools/remoting/EnterIPAddress.png)
+    ![Escriba la dirección IP.](../images/tools/remoting/EnterIPAddress.png)
 
 1. Haga clic en **Conectar**.
 
@@ -118,7 +118,7 @@ Una vez completada la sesión, salga del modo de reproducción.
 > [!NOTE]
 > Hay un problema conocido con algunas versiones de Unity en las que el editor puede que se bloquee al entrar en modo de reproducción durante una sesión de comunicación remota. Este problema puede manifestarse si la ventana Holográfica está abierta cuando se carga el proyecto. Para asegurarse de que este problema no se produce, cierre siempre el cuadro de diálogo Holográfico antes de salir de Unity.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 - [Solución de problemas y limitaciones de Holographic Remoting](/windows/mixed-reality/holographic-remoting-troubleshooting)
 - [Términos de licencia del software de Comunicación remota holográfica de Microsoft](/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)

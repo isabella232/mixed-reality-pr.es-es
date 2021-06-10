@@ -1,25 +1,25 @@
 ---
-ms.openlocfilehash: 25e42ba872764a98d4cb966b5a4922cc1dea0dc9
-ms.sourcegitcommit: 3e36b2fbbcc250c49aaf8ca1b6133cf0e9db69fa
+ms.openlocfilehash: 96da41f28533c227fb106d8842907747f34098ec
+ms.sourcegitcommit: b195b82f7e83e2ac4f5d8937d169e9dcb865d46d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107528800"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "110349954"
 ---
 # <a name="world-locking-tools-recommended"></a>[World Locking Tools (recomendado)](#tab/wlt)
 
-De forma predeterminada, World Locking Tools restaurará el sistema de coordenadas de Unity en relación con el mundo físico entre sesiones. Esto significa que para que un holograma aparezca en el mismo lugar en el mundo físico después de salir y volver a ejecutar la aplicación, el holograma solo necesita volver a tener la misma posición.
+De forma predeterminada, World Locking Tools restaurará el sistema de coordenadas de Unity con respecto al mundo físico entre sesiones. Esto significa que para que un holograma aparezca en el mismo lugar del mundo físico después de salir y volver a ejecutar la aplicación, el holograma solo debe tener la misma posición de nuevo.
 
-![Componente de contexto de bloqueo del mundo en el inspector de Unity](../../images/world-locking-tools-img-02.png)
+![Componente de contexto de bloqueo de mundo en el inspector de Unity](../../images/world-locking-tools-img-02.png)
 
-Si la aplicación necesita un control  más **preciso,** se pueden deshabilitar el guardado automático y la carga automática en el inspector y administrar la persistencia desde un script como se describe en la sección de persistencia de la [documentación](https://microsoft.github.io/MixedReality-WorldLockingTools-Unity/DocGen/Documentation/Concepts/Advanced/Persistence.html).
+Si la aplicación necesita un control  más **preciso,** se pueden deshabilitar el guardado automático y la carga automática en el inspector y administrar la persistencia desde un script, como se describe en la sección de persistencia de la [documentación](https://microsoft.github.io/MixedReality-WorldLockingTools-Unity/DocGen/Documentation/Concepts/Advanced/Persistence.html).
 
 # <a name="aranchormanager"></a>[ARAnchorManager](#tab/anchorstore)
 
-Una API adicional denominada **XRAnchorStore** permite que los delimitadores se conserven entre sesiones. XRAnchorStore es una representación de los anclajes guardados en un dispositivo. Los anclajes se pueden conservar desde **ARAnchors** en la escena de Unity, cargarse desde el almacenamiento en **el nuevo ARAnchors** o eliminarse del almacenamiento.
+Una API adicional denominada **XRAnchorStore** permite que los delimitadores se conserven entre sesiones. XRAnchorStore es una representación de los delimitadores guardados en un dispositivo. Los delimitadores se pueden conservar desde **ARAnchors** en la escena de Unity, cargarse desde el almacenamiento en **los nuevos ARAnchors** o eliminarse del almacenamiento.
 
 > [!NOTE]
-> Estos anclajes se guardarán y cargarán en el mismo dispositivo. El almacenamiento de delimitadores entre dispositivos se admite a través de Azure Spatial Anchors en una versión futura.
+> Estos anclajes se guardarán y cargarán en el mismo dispositivo. El almacenamiento de anclajes entre dispositivos se admite a través de Azure Spatial Anchors en una versión futura.
 
 ### <a name="namespaces"></a>Espacios de nombres
 
@@ -80,7 +80,7 @@ public static Task<XRAnchorStore> TryGetAnchorStoreAsync(this XRAnchorSubsystem 
 
 ### <a name="loading-an-anchor-store"></a>Carga de un almacén de anclajes
 
-Para cargar un almacén de anclajes **en Unity 2020 y OpenXR,** acceda a él desde el subsistema de ARAnchorManager como se muestra a continuación:
+Para cargar un almacén de anclajes **en Unity 2020 y OpenXR,** acceda a él desde el subsistema de ARAnchorManager de la siguiente manera:
 
 ``` cs
 ARAnchorManager arAnchorManager = GetComponent<ARAnchorManager>();
@@ -99,7 +99,7 @@ ARAnchorManager arAnchorManager = GetComponent<ARAnchorManager>();
 XRAnchorStore anchorStore = await arAnchorManager.subsystem.TryGetAnchorStoreAsync();
 ```
 
-Para ver un ejemplo completo de anclajes persistentes o no persistentes, consulte los scripts GameObject y AnchorsSample.cs del ejemplo Anchors -> Anchors En la escena de ejemplo del complemento [OpenXR](../../openxr-getting-started.md#hololens-2-samples)de Mixed Reality :
+Para ver un ejemplo completo de anclajes persistentes o no persistentes, consulte los scripts GameObject y AnchorsSample.cs del ejemplo Anchors -> Anchors En la escena de ejemplo del complemento [OpenXR](../../openxr-getting-started.md#unity-sample-projects-for-openxr-and-hololens-2)de Mixed Reality :
 
 ![Captura de pantalla del panel de jerarquía abierto en el Editor de Unity con el ejemplo de delimitadores resaltado](../../images/openxr-features-img-04.png)
 
@@ -117,7 +117,7 @@ WorldAnchorStore le permitirá conservar la ubicación de WorldAnchor entre sesi
 Para cargar hologramas de sesiones anteriores:
 
 1. Obtener WorldAnchorStore
-2. Carga de datos de la aplicación relacionados con el anclaje mundial, que le proporciona el identificador del anclaje mundial.
+2. Carga de datos de la aplicación relacionados con el anclaje mundial, que le proporciona el identificador del delimitador mundial.
 3. Carga de un delimitador de mundo desde su identificador
 
 Para guardar hologramas para sesiones futuras:
@@ -147,7 +147,7 @@ Ahora tenemos una referencia a WorldAnchorStore, que usaremos para guardar y car
 
 ### <a name="saving-a-worldanchor"></a>Guardar un WorldAnchor
 
-Para guardarlo, basta con que asignemos un nombre a lo que guardamos y pasarlo al WorldAnchor que hemos conseguido antes cuando queremos guardar. Nota: Se producirá un error al intentar guardar dos delimitadores en la misma cadena (almacenar. Guardar devolverá false). Elimine el guardado anterior antes de guardar el nuevo:
+Para guardarlo, basta con que asignemos un nombre a lo que guardamos y pasarlo al WorldAnchor que tenemos antes cuando queremos guardar. Nota: Se producirá un error al intentar guardar dos delimitadores en la misma cadena (almacenar. Guardar devolverá false). Elimine el guardado anterior antes de guardar el nuevo:
 
 ```cs
 private void SaveGame()
@@ -177,9 +177,9 @@ private void LoadGame()
 }
 ```
 
-Además, podemos usar store. Delete() para quitar un delimitador que hemos guardado y almacenado previamente. Clear() para quitar todos los datos guardados previamente.
+Además, podemos usar store. Delete() para quitar un delimitador que anteriormente guardamos y almacenamos. Clear() para quitar todos los datos guardados anteriormente.
 
-### <a name="enumerating-existing-anchors"></a>Enumeración de delimitadores existentes
+### <a name="enumerating-existing-anchors"></a>Enumerar delimitadores existentes
 
 Para detectar delimitadores almacenados previamente, llame a GetAllIds.
 
@@ -193,8 +193,8 @@ for (int index = 0; index < ids.Length; index++)
 
 ## <a name="persisting-holograms-for-multiple-devices"></a>Conservación de hologramas para varios dispositivos
 
-Puede usar <a href="/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> para crear un anclaje de nube duradero a partir de un WorldAnchor local, que la aplicación puede encontrar en varios dispositivos HoloLens, iOS y Android, incluso si esos dispositivos no están presentes juntos al mismo tiempo.  Dado que los delimitadores de nube son persistentes, varios dispositivos a lo largo del tiempo pueden ver el contenido representado en relación con ese delimitador en la misma ubicación física.
+Puede usar <a href="/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors para</a> crear un anclaje de nube duradero a partir de un WorldAnchor local, que la aplicación puede localizar a continuación en varios dispositivos HoloLens, iOS y Android, incluso si esos dispositivos no están presentes juntos al mismo tiempo.  Dado que los delimitadores de nube son persistentes, varios dispositivos a lo largo del tiempo pueden ver el contenido representado en relación con ese delimitador en la misma ubicación física.
 
 Para empezar a crear experiencias compartidas en Unity, pruebe los inicios rápidos de 5 minutos <a href="/azure/spatial-anchors/unity-overview" target="_blank">de Azure Spatial Anchors Unity.</a>
 
-Una vez que esté en funcionamiento con Azure Spatial Anchors, puede crear <a href="/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">y buscar anclajes en Unity.</a>
+Una vez que esté en funcionamiento con Azure Spatial Anchors, puede crear y buscar <a href="/azure/spatial-anchors/concepts/create-locate-anchors-unity" target="_blank">delimitadores en Unity.</a>

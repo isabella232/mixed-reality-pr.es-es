@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 59bf0df2a32030281c8bf0a1a8574b4dd9bf4607
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: a0c66969a9058adc790919f0054783b7368da8f6
+ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143790"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "110647070"
 ---
 # <a name="screenshot-utility"></a>Utilidad de captura de pantalla
 
@@ -20,7 +20,7 @@ La clase ScreenshotUtility ayuda a obtener capturas de pantallas a través de el
 
 ## <a name="taking-screenshots"></a>Obtención de capturas de pantallas
 
-Para obtener capturas de pantalla fácilmente, en el editor seleccione *Mixed Reality Toolkit -> Utilities -> Take Screenshot* (Mixed Reality Toolkit -> Utilidades -> Obtener captura de pantalla) y, luego, la opción que quiera. Asegúrese de que la pestaña de la ventana de juego esté visible si obtiene la captura de pantalla mientras no está jugando, o es posible que no se guarde una captura.
+Las capturas de pantalla se pueden capturar fácilmente en el editor seleccionando **Mixed Reality** Utilidades del kit de herramientas Tomar captura de pantalla y, a continuación,  >    >    >   seleccionando la opción deseada. Asegúrese de que la pestaña de la ventana de juego esté visible si obtiene la captura de pantalla mientras no está jugando, o es posible que no se guarde una captura.
 
 De manera predeterminada, todas las capturas de pantalla se guardan en la [ruta de acceso de caché temporal](https://docs.unity3d.com/ScriptReference/Application-temporaryCachePath.html); la ruta de acceso a la captura de pantalla se mostrará en la consola de Unity.
 

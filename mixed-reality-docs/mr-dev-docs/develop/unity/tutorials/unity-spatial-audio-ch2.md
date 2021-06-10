@@ -1,101 +1,101 @@
 ---
 title: 'Tutoriales de audio espacial: 2. Sonidos de interacción del botón de espacialización'
-description: Agregue un botón al proyecto y Spatial los sonidos de interacción del botón.
+description: Agregue un botón al proyecto y espacialice los sonidos de interacción del botón.
 author: kegodin
 ms.author: v-hferrone
 ms.date: 02/05/2021
 ms.topic: article
-keywords: mixed reality, Unity, tutorial, hololens2, audio espacial, MRTK, kit de herramientas de realidad mixta, UWP, Windows 10, HRTF, función de transferencia relacionada con el encabezado, reverberación, Microsoft Spatializer, Prefabs, curva de volumen
-ms.openlocfilehash: 12d159cb162cbf136483f7be94b0d297319a0737
-ms.sourcegitcommit: 68140e9ce84e69a99c2b3d970c7b8f2927a7fc93
+keywords: realidad mixta, unity, tutorial, hololens2, audio espacial, MRTK, kit de herramientas de realidad mixta, UWP, Windows 10, HRTF, función de transferencia relacionada con la cabeza, reverberación, Microsoft Spatializer, prefabs, curva de volumen
+ms.openlocfilehash: f3f2faf8220eaebcc674bcf02a45d99d58169076
+ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "99590767"
+ms.lasthandoff: 05/29/2021
+ms.locfileid: "110712848"
 ---
 # <a name="2-spatializing-button-interaction-sounds"></a>2. Sonidos de interacción del botón de espacialización
 
 ## <a name="overview"></a>Información general
 
-En este tutorial, obtendrá información sobre cómo espaciale los sonidos de interacción del botón y aprenderá a usar un clip de audio para probar la interacción del botón espacial.  
+En este tutorial, aprenderá a espacializar los sonidos de interacción del botón y también a usar un clip de audio para probar la interacción de botones espacializados.  
 
 ## <a name="objectives"></a>Objetivos
 
-* Agregar y espaciales los sonidos de clic del botón
+* Agregar y espacializar los sonidos de clic del botón
 
 ## <a name="add-a-button"></a>Adición de un botón
 
-Para agregar el botón recurso prefabricado, en la ventana **proyecto** , seleccione **paquetes** y escriba "PressableButtonHoloLens2" en la barra de búsqueda.
+Para agregar el prefab  Botón, en la ventana Proyecto, seleccione **Paquetes** y escriba "PressableButtonHoloLens2" en la barra de búsqueda.
 
-![Botón recurso prefabricado en activos](images/spatial-audio/spatial-audio-02-section1-step1-1.png)
+![Prefab de botón en Recursos](images/spatial-audio/spatial-audio-02-section1-step1-1.PNG)
 
-El botón recurso prefabricado es la entrada representada por un icono azul. Haga clic y arrastre **PressableButtonHoloLens2** recurso prefabricado a la jerarquía. Con el objeto **PressableButtonHoloLens2** aún seleccionado, en la ventana del inspector, configure el componente de **transformación** como se indica a continuación:
+El botón prefab es la entrada representada por un icono azul. Haga clic y arrastre **el objeto prefab PressableButtonHoloLens2** a la jerarquía. Con el **objeto PressableButtonHoloLens2** aún seleccionado, en la ventana Inspector, configure el componente **Transformar** de la siguiente manera:
 
-* **Posición**: X = 0, y =-0,4, Z = 2
+* **Position:** X = 0, Y = -0.4, Z = 2
 * **Rotación**: X = 0, Y = 0, Z = 0
 * **Escala**: X = 1, Y = 1, Z = 1
 
-![Transformación de botón](images/spatial-audio/spatial-audio-02-section1-step1-2.png)
+![Transformación de botón](images/spatial-audio/spatial-audio-02-section1-step1-2.PNG)
 
-Para centrarse en los objetos de la escena, puede hacer doble clic en el objeto **PressableButtonHoloLens2** y, a continuación, hacer zoom ligeramente de nuevo:
+Para centrarse en los objetos de la escena, puede hacer doble clic en el objeto **PressableButtonHoloLens2** y, a continuación, acercar ligeramente:
 
-## <a name="spatialize-button-feedback"></a>Comentario del botón de Spatial
+## <a name="spatialize-button-feedback"></a>Comentarios del botón Espacializar
 
-En este paso, creará un espacial de los comentarios de audio para el botón. Para obtener sugerencias de diseño relacionadas, consulte [diseño de sonido espacial](../../../design/spatial-sound-design.md).
+En este paso, espacializará los comentarios de audio del botón. Para obtener sugerencias de diseño relacionadas, vea [diseño de sonido espacial.](../../../design/spatial-sound-design.md)
 
-En la ventana **mezclador de audio** , definirá destinos denominados grupos de **mezclador** para la reproducción de audio de componentes de origen de **audio** .
+En la ventana **Mezclador de audio,** definirá destinos denominados **Grupos de mezcladores** para la reproducción de audio desde componentes **de origen de** audio.
 
-Para abrir la ventana **mezclador de audio** , en el menú de Unity, seleccione **Windows**  >  **audio**  >  **audio mixer**: ![ abrir la ventana mezclador de audio.](images/spatial-audio/spatial-audio-02-section2-step1-1.png)
+Para abrir la ventana **Mezclador de audio,** en el menú de Unity, seleccione **Ventana** Mezclador de audio de  >    >  **audio:** ![ Abrir ventana mezcladora de audio](images/spatial-audio/spatial-audio-02-section2-step1-1.PNG)
 
- Para crear un **mezclador** , haga clic en el "+" junto a **mixers** y escriba un nombre adecuado para el mezclador, por ejemplo, _mezclador de audio espacial_. El nuevo mezclador incluirá un **Grupo** predeterminado denominado **maestro**.
+ Cree un **mezclador** haciendo clic en "+" junto a **Mezcladores** y escriba un nombre adecuado para el mezclador, por ejemplo, _Mezclador de audio espacial._ El nuevo mezclador incluirá un grupo **predeterminado denominado** **Maestro.**
 
-![Panel de mezclador con el primer mezclador](images/spatial-audio/spatial-audio-02-section2-step1-2.png)
-
-> [!NOTE]
-> Hasta que se habilita la reverberación en el [quinto capítulo: usar reverberación para agregar distancia al audio espacial](unity-spatial-audio-ch5.md), el medidor de volumen del mezclador no muestra la actividad de los sonidos que se reproducen a través de Microsoft Spatializer
-
-En la ventana jerarquía, seleccione **PressableButtonHoloLens2** en la ventana del inspector busque el componente **origen de audio** y configure el componente origen de audio como se indica a continuación:
-
-1. En la propiedad **salida** , haga clic en el selector y elija el **mezclador** que creó.
-2. Active la casilla **Spatial** .
-3. Mueva el control deslizante de **mezcla espacial** a 3D (1).
-
-![Origen de audio de botón](images/spatial-audio/spatial-audio-02-section2-step1-3.png)
+![Panel mezclador con el primer mezclador](images/spatial-audio/spatial-audio-02-section2-step1-2.PNG)
 
 > [!NOTE]
-> Si mueve la **mezcla espacial** a 1 (3D) sin activar la casilla **Spatial** , Unity usará su spatializer de movimiento panorámico, en lugar de **spatializer de Microsoft** con HRTFs.
+> Hasta que se habilita la reverberación en el quinto capítulo: Uso de [la reverberación](unity-spatial-audio-ch5.md)para agregar distancia al audio espacial, el medidor de volumen del mezclador no muestra la actividad de los sonidos que se reproducen a través de Microsoft Spatializer.
 
-## <a name="adjust-the-volume-curve"></a>Ajustar la curva del volumen
+En la ventana Hierarchy (Jerarquía), seleccione **PressableButtonHoloLens2** y, en la ventana Inspector, busque el componente Audio Source (Origen de **audio)** y Configure the Audio Source component (Configurar el componente de origen de audio) como se muestra a continuación:
 
-De forma predeterminada, Unity atenúa los sonidos espaciales a medida que se alejan del agente de escucha. Cuando se aplica esta atenuación a los sonidos de interacción, la interfaz puede resultar más difícil de usar.
+1. En la **propiedad Salida,** haga clic en el selector y elija el **mezclador** que ha creado.
+2. Active la casilla **Espacializar.**
+3. Mueva el **control deslizante de Spatial Blend** a 3D (1).
 
-Para deshabilitar esta atenuación, debe ajustar la curva del **volumen** en el componente **origen de audio** .
+![Origen de audio de botón](images/spatial-audio/spatial-audio-02-section2-step1-3.PNG)
 
-En la ventana de jerarquía, seleccione el **PressableButtonHoloLens2** y, a continuación, en la ventana del inspector, navegue hasta configuración de sonido 3D de **origen de audio**  >   y configure de la manera siguiente:
+> [!NOTE]
+> Si mueve **Spatial Blend** a 1 (3D) sin activar la casilla **Spatialize** (Espacializar), Unity usará su espacializador de desplazamiento panorámico, en lugar de **Microsoft Spatializer** con HRFS.
 
-1. Establezca la propiedad **Volume rolloff** en rolloff lineal
-2. Arrastre el punto de conexión en la curva de **volumen** (la curva roja) desde ' 0 ' en el eje y hasta ' 1 '
-3. Para ajustar la forma de la curva de **volumen** para que sea plana, arrastre el control de forma de curva blanca para que sea paralelo al eje X.
+## <a name="adjust-the-volume-curve"></a>Ajuste de la curva volumen
 
-![Configuración de sonido 3D del botón](images/spatial-audio/spatial-audio-02-section3-step1-1.png)
+De forma predeterminada, Unity atenuará los sonidos espacializados a medida que se alejan más del agente de escucha. Cuando esta atenuación se aplica a los sonidos de comentarios de interacción, la interfaz puede ser más difícil de usar.
 
-## <a name="testing-the-spatialize-audio"></a>Prueba del audio espacial
+Para deshabilitar esta atenuación, debe ajustar la curva **Volumen** en el **componente Origen de** audio.
 
-Para probar el audio espacial en el editor de Unity, tiene que agregar un clip de audio en la opción componente de **origen de audio** with **Loop** activada en el objeto **PressableButtonHoloLens2** .
+En la ventana Hierarchy (Jerarquía), seleccione **PressableButtonHoloLens2** y, en la ventana Inspector, vaya a Audio Source 3D Sound Settings (Configuración de sonido 3D de origen de **audio)** y  >   Configure (Configurar) como se muestra a continuación:
 
-En el modo de reproducción, mueva el objeto **PressableButtonHoloLens2** de izquierda a derecha y compare con y sin el audio espacial habilitado en la estación de trabajo. También puede cambiar la configuración de origen de audio para realizar pruebas:
+1. Establezca la **propiedad Rolloff de** volumen en Linear Rolloff (Reversión lineal).
+2. Arrastre el punto de conexión **en la curva** Volumen (la curva roja) desde "0" en el eje y hasta "1".
+3. Para ajustar la forma de la curva **volumen** para que sea plana, arrastre el control de forma de curva blanca para que sea paralelo al eje X.
 
-* Movimiento de la propiedad de **Blend espacial** entre 0-1 (sonido en 2D no espacial y 3D)
-* Activar y desactivar la propiedad **Spatial**
+![Configuración de sonido 3D de botón](images/spatial-audio/spatial-audio-02-section3-step1-1.PNG)
 
-Pruebe la aplicación en HoloLens 2. En la aplicación, puede hacer clic en el botón y oír los sonidos de interacción del botón espacial.
+## <a name="testing-the-spatialize-audio"></a>Prueba del audio de espacialización
+
+Para probar el audio de espacialización en el editor de Unity, debe agregar un clip de audio en el componente **Origen** de audio con la opción **Bucle** activada en el objeto **PressableButtonHoloLens2.**
+
+En el modo de reproducción, mueva el objeto **PressableButtonHoloLens2** de izquierda a derecha y compárelo con y sin audio espacial habilitado en la estación de trabajo. También puede cambiar la configuración del origen de audio para las pruebas mediante:
+
+* Mover la **propiedad Spatial Blend** entre 0 y 1 (sonido 2D no espacializado y 3D espacializado)
+* Comprobación y desactivación de la **propiedad Spatialize**
+
+Pruebe la aplicación en HoloLens 2. En la aplicación, puede hacer clic en el botón y escuchar los sonidos de interacción del botón espacializado.
 
 > [!TIP]
 > Para obtener un recordatorio sobre cómo compilar e implementar el proyecto de Unity en HoloLens 2, puede consultar las instrucciones de [Compilación de la aplicación para el HoloLens 2](mr-learning-base-02.md#building-your-application-to-your-hololens-2).
 
 ## <a name="congratulations"></a>Enhorabuena
 
-En este tutorial, ha aprendido a espaciales los sonidos de interacción del botón y a usar un clip de audio para probar la interacción de los botones espaciales. En el siguiente tutorial aprenderá a encargar el audio de un origen de vídeo.
+En este tutorial ha aprendido a espacializar los sonidos de interacción del botón y a usar un clip de audio para probar la interacción de botones espacializados. En el siguiente tutorial aprenderá a espacializar el audio desde un origen de vídeo.
 
 > [!div class="nextstepaction"]
-> [Siguiente tutorial: 3. espacialización de audio desde un vídeo](unity-spatial-audio-ch3.md)
+> [Tutorial siguiente: 3. Espacialización del audio de un vídeo](unity-spatial-audio-ch3.md)

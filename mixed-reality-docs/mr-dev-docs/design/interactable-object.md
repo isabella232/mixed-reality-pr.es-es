@@ -1,23 +1,23 @@
 ---
 title: Objeto con el que se puede interactuar
-description: Aprenda a desencadenar eventos, proporcionar indicaciones visuales e interactuar con objetos en las aplicaciones de realidad mixta.
+description: Obtenga información sobre cómo desencadenar eventos, proporcionar indicaciones visuales e interactuar con objetos en las aplicaciones de realidad mixta.
 author: cre8ivepark
 ms.author: v-hferrone
 ms.date: 06/06/2019
 ms.topic: article
-keywords: Realidad mixta, controles, interacción, señales, interfaz de usuario, experiencia de usuario, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, audio
-ms.openlocfilehash: 0e9f4dc09e3c4a4c38ffeb1a9042f39996918e36
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+keywords: Mixed Reality, controles, interacción, indicaciones, interfaz de usuario, experiencia de usuario, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit, audio
+ms.openlocfilehash: 8a68006d68b985f8d26a3d1a11e4d52fcfb5acb5
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300470"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600444"
 ---
 # <a name="interactable-object"></a>Objeto con el que se puede interactuar
 
-![Objetos interactivos](images/UX_Hero_Interactable.jpg)
+![Objetos interactuables](images/UX_Hero_Interactable.jpg)
 
-Un botón ha sido una metáfora usada para desencadenar un evento en el mundo abstracto 2D. En el mundo de la realidad mixta de tres dimensiones, ya no es necesario limitarnos a este mundo de la abstracción. Cualquier elemento puede ser un **objeto interactuable** que desencadene un evento. Un objeto interactuable puede ser cualquier cosa, desde una taza de café de una tabla hasta un globo de midair. Todavía hacemos uso de botones tradicionales en ciertas situaciones, como en la interfaz de usuario del cuadro de diálogo. La representación visual del botón depende del contexto.
+Un botón ha sido durante mucho tiempo una metáfora usada para desencadenar un evento en el mundo abstracto 2D. En el mundo de la realidad mixta tridimensional, ya no tenemos que limitarnos a este mundo de abstracción. Cualquier elemento puede ser un **objeto interactuable** que desencadene un evento. Un objeto interactuable puede ser cualquier cosa, desde una cafetera de una mesa hasta un globo en el aire. Todavía usamos los botones tradicionales en determinadas situaciones, como en la interfaz de usuario del cuadro de diálogo. La representación visual del botón depende del contexto.
 
 <br>
 
@@ -27,9 +27,9 @@ Un botón ha sido una metáfora usada para desencadenar un evento en el mundo ab
 
 ### <a name="visual-cues"></a>Indicaciones visuales
 
-Las indicaciones visuales son indicaciones organolépticas de la luz, recibidas por el ojo y procesadas por el sistema visual durante la percepción visual. Dado que el sistema visual es dominante en muchas especies, especialmente en los seres humanos, las indicaciones visuales son una gran fuente de información sobre cómo se percibe el mundo.
+Las indicaciones visuales son indicaciones sensorias de la luz, recibidas por el ojo y procesadas por el sistema visual durante la percepción visual. Dado que el sistema visual es dominante en muchas especie, especialmente en los seres humanos, las indicaciones visuales son una gran fuente de información sobre cómo se percibe el mundo.
 
-Dado que los objetos holográficas se mezclan con el entorno real en realidad mixta, podría ser difícil comprender con qué objetos puede interactuar. En el caso de cualquier objeto interactuable de su experiencia, es importante proporcionar indicaciones visuales diferenciadas para cada estado de entrada. Esto ayuda al usuario a comprender qué parte de su experiencia es interactivable y hace que el usuario esté seguro mediante el uso de un método de interacción coherente.
+Puesto que los objetos holográficos se combinan con el entorno real en la realidad mixta, podría ser difícil comprender con qué objetos puede interactuar. Para los objetos que pueden interactuar en su experiencia, es importante proporcionar indicaciones visuales diferenciadas para cada estado de entrada. Esto ayuda al usuario a comprender qué parte de su experiencia es interactuable y hace que el usuario esté seguro mediante un método de interacción coherente.
 
 <br>
 
@@ -37,26 +37,26 @@ Dado que los objetos holográficas se mezclan con el entorno real en realidad mi
 
 ### <a name="far-interactions"></a>Interacciones lejanas
 
-En el caso de los objetos a los que el usuario pueda interactuar con la mirada, el rayo y el rayo del controlador de movimiento, se recomienda tener una indicación visual diferente para estos tres Estados de entrada:
+Para cualquier objeto que el usuario pueda interactuar con la mirada, el rayo de la mano y el rayo del controlador de movimiento, se recomienda tener una indicación visual diferente para estos tres estados de entrada:
 
 :::row:::
     :::column:::
        ![Objeto interactuable con estado predeterminado](images/interactibleobject-states-default.jpg)<br>
        **Estado predeterminado (observación)**<br>
         Estado de inactividad predeterminado del objeto.
-    El cursor no está en el objeto. No se detecta la mano.
+    El cursor no está en el objeto . No se detecta la mano.
     :::column-end:::
     :::column:::
-       ![Objeto interactuable con estado de destino y de desplazamiento](images/interactibleobject-states-targeted.jpg)<br>
-        **Estado de destino (mantener el mouse)**<br>
-        Cuando el objeto se destine con el cursor de miración, la proximidad del dedo o el puntero del controlador de movimiento.
-    El cursor está en el objeto. La mano se detecta y está lista.
+       ![Objeto que se puede interactuar con el estado de destino y de mantener el puntero](images/interactibleobject-states-targeted.jpg)<br>
+        **Estado de destino (mantener el puntero)**<br>
+        Cuando el objeto tiene como destino el cursor de mirada, la proximidad del dedo o el puntero del controlador de movimiento.
+    El cursor está en el objeto . Se detecta la mano, está lista.
     :::column-end:::
     :::column:::
        ![Objeto interactuable con estado presionado](images/interactibleobject-states-pressed.jpg)<br>
        **Estado presionado**<br>
-        Cuando el objeto se presiona con un gesto de pulsación de aire, presionar el dedo o el botón seleccionar del controlador de movimiento.
-    El cursor está en el objeto. Se detecta una mano, se puntea en el aire.
+        Cuando el objeto se presiona con un gesto de pulsación en el aire, presione el dedo o el botón de selección del controlador de movimiento.
+    El cursor está en el objeto . Se detecta la mano, se pulsa en el aire.
     :::column-end:::
 :::row-end:::
 
@@ -64,21 +64,21 @@ En el caso de los objetos a los que el usuario pueda interactuar con la mirada, 
 
 ---
 
-Puede usar técnicas como resaltado o escalado para proporcionar indicaciones visuales para el estado de entrada del usuario. En la realidad mixta, puede encontrar ejemplos de visualización de distintos Estados de entrada en el menú Inicio y con botones de barra de la aplicación. 
+Puede usar técnicas como el resaltado o el escalado para proporcionar indicaciones visuales para el estado de entrada del usuario. En realidad mixta, puede encontrar ejemplos de visualización de diferentes estados de entrada en el menú Inicio y con botones de la barra de la aplicación. 
 
-Este es el aspecto de estos Estados en un **botón holográfica**:
+Este es el aspecto de estos estados en un **botón holográfico:**
 
 :::row:::
     :::column:::
-       ![Botón holográfica en estado predeterminado](images/MRTK_InteractableState-default.jpg)<br>
+       ![Botón holográfico en estado predeterminado](images/MRTK_InteractableState-default.jpg)<br>
        **Estado predeterminado (observación)**<br>
     :::column-end:::
     :::column:::
-       ![Botón Holographic en el estado de destino y de desplazamiento](images/MRTK_InteractableState-targeted.jpg)<br>
-        **Estado de destino (mantener el mouse)**<br>
+       ![Botón holográfico en estado de destino y mantener el puntero](images/MRTK_InteractableState-targeted.jpg)<br>
+        **Estado de destino (mantener el puntero)**<br>
     :::column-end:::
     :::column:::
-       ![Botón holográfica en estado presionado](images/MRTK_InteractableState-pressed.jpg)<br>
+       ![Botón holográfico en estado presionado](images/MRTK_InteractableState-pressed.jpg)<br>
        **Estado presionado**<br>
     :::column-end:::
 :::row-end:::
@@ -89,15 +89,15 @@ Este es el aspecto de estos Estados en un **botón holográfica**:
 
 ### <a name="near-interactions-direct"></a>Interacciones cercanas (directas) 
 
-HoloLens 2 admite la entrada de seguimiento de mano articulada, que permite interactuar con objetos. Sin comentarios hápticos e percepción de profundidad perfecta, puede ser difícil saber hasta dónde se encuentra la mano de un objeto o si se está tocando. Es importante proporcionar suficientes indicaciones visuales para comunicar el estado del objeto, en particular el estado de las manos basadas en ese objeto.
+HoloLens 2 admite la entrada de seguimiento de manos articulada, que permite interactuar con objetos. Sin comentarios hápticos y una percepción de profundidad perfecta, puede ser difícil saber a qué distancia está la mano de un objeto o si lo está tocándose. Es importante proporcionar suficientes indicaciones visuales para comunicar el estado del objeto, en particular el estado de las manos en función de ese objeto.
 
-Use los comentarios visuales para comunicar los siguientes Estados:
-* **Predeterminado (observación)**: estado de inactividad predeterminado del objeto.
-* **Mantener el mouse**: cuando una mano está cerca de un holograma, cambie los objetos visuales para comunicar que esa mano está dirigida al holograma. 
-* **Distancia y punto de interacción**: a medida que la mano se aproxima a un holograma, el diseño de comentarios para comunicar el punto de interacción previsto y la distancia desde el objeto que es el dedo
-* **Inicio de contacto**: cambie los objetos visuales (Light, color) para comunicar que se ha producido una entrada táctil
-* **Agarre**: cambiar objetos visuales (claros, de color) cuando se agarre el objeto
-* **Extremos de contacto**: cambios visuales (claros, de color) cuando la entrada táctil ha finalizado
+Use comentarios visuales para comunicar los estados siguientes:
+* **Default (Observation):** estado de inactividad predeterminado del objeto.
+* **Mantener** el puntero: cuando una mano está cerca de un holograma, cambie los objetos visuales para comunicar que la mano tiene como destino el holograma. 
+* **Distancia y punto de** interacción: a medida que la mano se acerca a un holograma, diseña los comentarios para comunicar el punto de interacción proyectado y lo lejos que está el dedo del objeto.
+* **Contacto comienza:** cambia los objetos visuales (claro, color) para comunicar que se ha producido un toque.
+* **Se entiende:** cambia los objetos visuales (claro, color) cuando se sujete el objeto.
+* **Extremos de contacto:** cambia los objetos visuales (claro, color) cuando la función táctil ha finalizado.
 
 <br>
 
@@ -105,27 +105,27 @@ Use los comentarios visuales para comunicar los siguientes Estados:
 
 :::row:::
     :::column:::
-        ![Mantener el mouse (lejano)](images/640px-interactibleobject-states-near-hover.jpg)<br>
-        **Mantener el mouse (lejano)**<br>
+        ![Mantener el puntero (lejos)](images/640px-interactibleobject-states-near-hover.jpg)<br>
+        **Mantener el puntero (lejos)**<br>
         Resaltado en función de la proximidad de la mano.
     :::column-end:::
     :::column:::
-        ![Mantener el mouse (Near)](images/640px-interactibleobject-states-near-hovernear.jpg)<br>
-        **Mantener el mouse (Near)**<br>
-        Resaltar cambios de tamaño en función de la distancia a la mano.
+        ![Mantener el puntero (cerca)](images/640px-interactibleobject-states-near-hovernear.jpg)<br>
+        **Mantener el puntero (cerca)**<br>
+        Resalte los cambios de tamaño en función de la distancia a la mano.
     :::column-end:::
 :::row-end:::
 
 :::row:::
     :::column:::
-        ![Tocar y presionar](images/640px-interactibleobject-states-near-press.jpg)<br>
-        **Tocar y presionar**<br>
-        Comentarios de Visual Plus audio.
+        ![Tocar o presionar](images/640px-interactibleobject-states-near-press.jpg)<br>
+        **Tocar o presionar**<br>
+        Visual más comentarios de audio.
     :::column-end:::
     :::column:::
-        ![Visión](images/640px-interactibleobject-states-near-grasp.jpg)<br>
-        **Visión**<br>
-        Comentarios de Visual Plus audio.
+        ![Agarran](images/640px-interactibleobject-states-near-grasp.jpg)<br>
+        **Agarran**<br>
+        Visual más comentarios de audio.
     :::column-end:::
 :::row-end:::
 
@@ -135,17 +135,17 @@ Use los comentarios visuales para comunicar los siguientes Estados:
 
 ---
 
-Un [botón de HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) es un ejemplo de cómo se visualizan los distintos Estados de interacción de entrada:
+Un [botón en HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) es un ejemplo de cómo se visualizan los distintos estados de interacción de entrada:
 
 :::row:::
     :::column:::
         ![Default](images/640px-interactibleobject-pressablebutton-default.jpg)<br>
-        **Predeterminado**<br>
+        **Valor predeterminado**<br>
     :::column-end:::
     :::column:::
         ![Al mantener el puntero](images/640px-interactibleobject-pressablebutton-hover.jpg)<br>
         **Al mantener el puntero**<br>
-        Revela un efecto de iluminación basado en proximidad.
+        Mostrar un efecto de iluminación basado en proximidad.
     :::column-end:::
 :::row-end:::
 
@@ -153,11 +153,11 @@ Un [botón de HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/
     :::column:::
         ![Tocar](images/640px-interactibleobject-pressablebutton-touch.jpg)<br>
         **Tocar**<br>
-        Mostrar efecto de rizo.
+        Mostrar efecto de ondulación.
     :::column-end:::
     :::column:::
         ![Presione](images/640px-interactibleobject-pressablebutton-press.jpg)<br>
-        **Presione**<br>
+        **Pulse**<br>
         Mueva la placa frontal.
     :::column-end:::
 :::row-end:::
@@ -168,14 +168,14 @@ Un [botón de HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/
 
 :::row:::
     :::column:::
-        ### <a name="the-ring-visual-cue-on-hololens-2br"></a>La indicación visual "Ring" en HoloLens 2<br>
-        En HoloLens 2, hay una indicación visual adicional, que puede ayudar a la percepción del usuario de la profundidad. Se muestra un anillo cerca de su dedo y se reduce verticalmente a medida que la mano se acerca al objeto. El anillo finalmente converge en un punto cuando se alcanza el estado presionado. Esta prestación visual ayuda al usuario a comprender hasta qué punto proceden del objeto.<br>
+        ### <a name="the-ring-visual-cue-on-hololens-2br"></a>La indicación visual "anillo" en HoloLens 2<br>
+        En HoloLens 2, hay una indicación visual adicional, que puede ayudar a la percepción de profundidad del usuario. Un anillo cerca de su dedo se muestra verticalmente y se escala verticalmente a medida que el dedo se acerca al objeto. El anillo finalmente converge en un punto cuando se alcanza el estado presionado. Esta asequibilidad visual ayuda al usuario a comprender lo lejos que está del objeto.<br>
         <br>
-        *Bucle de vídeo: ejemplo de comentarios visuales basados en proximidad a un cuadro de límite*
+        *Bucle de vídeo: ejemplo de comentarios visuales basados en la proximidad a un rectángulo de selección*
     :::column-end:::
         :::column:::
         ![space](images/spacer-20x582.png)<br>
-       ![Comentarios visuales en proximidad](images/HoloLens2_Proximity.gif)<br>
+       ![Comentarios visuales sobre la proximidad a mano](images/HoloLens2_Proximity.gif)<br>
     :::column-end:::
 :::row-end:::
 
@@ -185,13 +185,13 @@ Un [botón de HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/
 ---
 
 
-### <a name="audio-cues"></a>Señales de audio
+### <a name="audio-cues"></a>Indicaciones de audio
 
-En el caso de las interacciones directas, los comentarios de audio adecuados pueden mejorar drásticamente la experiencia del usuario. Use comentarios de audio para comunicar las siguientes indicaciones:
-* **Inicio de contacto**: reproducir un sonido cuando se inicie Touch
-* **Contactos** finales: reproducir sonido en el extremo táctil
-* **Inicio** de la toma: reproducir sonido cuando se inicie la captura
-* Acabado de **agarre**: reproducir un sonido al finalizar la toma
+En el caso de las interacciones directas con las manos, los comentarios de audio adecuados pueden mejorar considerablemente la experiencia del usuario. Use comentarios de audio para comunicar las indicaciones siguientes:
+* **Contacto comienza:** reproducir sonido cuando comienza la táctil
+* **Extremos de contacto:** reproducir sonido en el extremo táctil
+* **Comienza la toma:** reproducir sonido cuando se inicia la toma
+* **Extremos de toma:** reproducir sonido cuando finaliza la toma
 
 <br>
 
@@ -200,9 +200,9 @@ En el caso de las interacciones directas, los comentarios de audio adecuados pue
 :::row:::
     :::column:::
         ### <a name="voice-commandingbr"></a>Comandos de voz<br>
-        En el caso de los objetos interactuables, es importante admitir opciones de interacción alternativas. De forma predeterminada, se recomienda que se admitan los [comandos de voz](../out-of-scope/voice-design.md) para cualquier objeto que sea interactuable. Para mejorar la capacidad de detección, también puede proporcionar una información sobre herramientas durante el estado de mantener el mouse.<br>
+        Para los objetos que se pueden interactuar, es importante admitir opciones de interacción alternativas. De forma predeterminada, se recomienda que [los comandos de](../out-of-scope/voice-design.md) voz sean compatibles con cualquier objeto que pueda interactuar. Para mejorar la detectabilidad, también puede proporcionar información sobre herramientas durante el estado del mouse.<br>
         <br>
-        *Image: información sobre herramientas para el comando Voice*
+        *Imagen: Información sobre herramientas para el comando de voz*
     :::column-end:::
         :::column:::
        ![comandos de voz](images/640px-interactibleobject-voicecommand.png)<br>
@@ -216,24 +216,24 @@ En el caso de las interacciones directas, los comentarios de audio adecuados pue
 
 ## <a name="sizing-recommendations"></a>Recomendaciones de tamaño
 
-Para asegurarse de que todos los objetos interactivos se pueden tocar fácilmente, se recomienda asegurarse de que el interactuable cumple un tamaño mínimo en función de la distancia que se coloca del usuario. El ángulo visual se mide a menudo en grados de arco visual. El ángulo visual se basa en la distancia entre los ojos del usuario y el objeto y permanece constante, mientras que el tamaño físico del destino puede cambiar a medida que cambia la distancia del usuario. Para determinar el tamaño físico necesario de un objeto en función de la distancia del usuario, pruebe a usar una calculadora de ángulo visual como [esta](https://elvers.us/perception/visualAngle/).
+Para asegurarse de que todos los objetos interactuables se puedan tocar fácilmente, se recomienda asegurarse de que el objeto interactuable cumple un tamaño mínimo en función de la distancia que se coloca desde el usuario. El ángulo visual a menudo se mide en grados de arco visual. El ángulo visual se basa en la distancia entre los ojos del usuario y el objeto y permanece constante, mientras que el tamaño físico del destino puede cambiar a medida que cambia la distancia desde el usuario. Para determinar el tamaño físico necesario de un objeto en función de la distancia del usuario, pruebe a usar una calculadora de ángulo visual como [esta](https://elvers.us/perception/visualAngle/).
 
-A continuación se muestran las recomendaciones para tamaños mínimos de contenido interactuable.
+A continuación se muestran las recomendaciones para los tamaños mínimos de contenido que se puede interactuar.
 
-### <a name="target-size-for-direct-hand-interaction"></a>Tamaño de destino para la interacción directa
+### <a name="target-size-for-direct-hand-interaction"></a>Tamaño de destino para la interacción directa con la mano
 
-| Distancia | Ángulo de visualización | Size |
+| Distancia | Ángulo | Size |
 |---------|---------|---------|
-| 45 cm  | no menor que 2 ° | 1,6 x 1,6 cm |
+| 45 cm  | no menor que 2° | 1,6 x 1,6 cm |
 
-![Tamaño de destino para la interacción directa](images/TargetSizingNear.jpg)<br>
-*Tamaño de destino para la interacción directa*
+![Tamaño de destino para la interacción directa con la mano](images/TargetSizingNear.jpg)<br>
+*Tamaño de destino para la interacción directa con la mano*
 
 <br>
 
 ### <a name="target-size-for-buttons"></a>Tamaño de destino de los botones
 
-Al crear botones para la interacción directa, se recomienda un tamaño mínimo mayor de 3,2 x 3,2 cm para asegurarse de que hay espacio suficiente para contener un icono y un posible texto.
+Al crear botones para la interacción directa, se recomienda un tamaño mínimo mayor de 3,2 x 3,2 cm para asegurarse de que hay suficiente espacio para contener un icono y, posiblemente, algún texto.
 
 | Distancia | Tamaño mínimo |
 |---------|---------|
@@ -244,35 +244,35 @@ Al crear botones para la interacción directa, se recomienda un tamaño mínimo 
 
 <br>
 
-### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Tamaño de destino para la interacción de mano o de rayo
-| Distancia | Ángulo de visualización | Size |
+### <a name="target-size-for-hand-ray-or-gaze-interaction"></a>Tamaño objetivo para la interacción de rayos de mano o mirada
+| Distancia | Ángulo | Size |
 |---------|---------|---------|
-| 2 m  | no menor que 1 ° | 3,5 x 3,5 cm |
+| 2 m  | no menor que 1° | 3,5 x 3,5 cm |
 
-![Tamaño de destino para la interacción de mano o de rayo](images/TargetSizingFar.jpg)<br>
-*Tamaño de destino para la interacción de mano o de rayo*
-
-<br>
-
----
-
-## <a name="interactable-object-in-mrtk-mixed-reality-toolkit-for-unity"></a>Objeto interactuable en MRTK (kit de herramientas de realidad mixta) para Unity
-
-En **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**, puede usar el script [**interactúable**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) para que los objetos respondan a diversos tipos de Estados de interacción de entrada. Admite varios tipos de temas que permiten definir Estados visuales mediante el control de las propiedades del objeto como el color, el tamaño, el material y el sombreador.
-
-* [Interactuable](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/interactable)
-* [Botón](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/button)
-* [Escena de ejemplos de interacción de mano](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
-
-El sombreador estándar de MixedRealityToolkit proporciona varias opciones, como la **luz de proximidad** , que le ayuda a crear indicaciones visuales y de audio.
-
-* [Sombreador estándar de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)
+![Tamaño objetivo para la interacción de rayos de mano o mirada](images/TargetSizingFar.jpg)<br>
+*Tamaño objetivo para la interacción de rayos de mano o mirada*
 
 <br>
 
 ---
 
-## <a name="see-also"></a>Consulte también
+## <a name="interactable-object-in-mrtk-mixed-reality-toolkit-for-unity"></a>Objeto interactuable en MRTK (Mixed Reality Toolkit) para Unity
+
+En **[MRTK,](https://github.com/Microsoft/MixedRealityToolkit-Unity)** puede usar el script [**Interactable**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) para que los objetos respondan a varios tipos de estados de interacción de entrada. Admite varios tipos de temas que permiten definir estados visuales mediante el control de propiedades de objeto como el color, el tamaño, el material y el sombreador.
+
+* [Interactuable](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/interactable)
+* [Button](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/button)
+* [Escena de ejemplos de interacción con la mano](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_HandInteractionExamples.md)
+
+El sombreador Estándar de MixedRealityToolkit  proporciona varias opciones, como la luz de proximidad, que le ayuda a crear indicaciones visuales y de audio.
+
+* [Sombreador estándar de MRTK](/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader)
+
+<br>
+
+---
+
+## <a name="see-also"></a>Vea también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)
