@@ -6,18 +6,18 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, controles, diseño, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, colección de objetos, 2D, 3D, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: 9648f3bd22a09c53de2f903ed8ba0274c634db7c
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+ms.openlocfilehash: fd5629f58e092b33410c833885037582ba5ca4a1
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600204"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110136"
 ---
 # <a name="object-collection"></a>Colección de objetos
 
-![Colección de objetos usada en la aplicación Tabla periódica de elementos](images/UX_Hero_ObjectCollection.jpg)<br>
+![Colección de objetos usada en la tabla periódica de la aplicación Elements](images/UX_Hero_ObjectCollection.jpg)<br>
 
-La colección de objetos es un control de diseño, que ayuda a crear una matriz de objetos en una forma tridimensional predefinida. Admite varios estilos de superficie: **plano, cilindro, esfera y **radial.** Puede ajustar el radio y el tamaño de los objetos y el espacio entre ellos. La colección de objetos admite cualquier objeto de Unity: 2D y 3D. En el **[kit Mixed Reality herramientas,](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_ObjectCollection.html)** hemos creado un script de Unity y ejemplos que le ayudarán a crear una colección de objetos.
+La colección de objetos es un control de diseño, que ayuda a crear una matriz de objetos en una forma tridimensional predefinida. Admite varios estilos de superficie: **plano, cilindro, esfera y **radial.** Puede ajustar el radio y el tamaño de los objetos y el espacio entre ellos. La colección de objetos admite cualquier objeto de Unity: 2D y 3D. En el **[kit Mixed Reality herramientas,](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/object-collection)** hemos creado un script de Unity y ejemplos que le ayudarán a crear una colección de objetos.
 
 ## <a name="object-collection-examples"></a>Ejemplos de colección de objetos
 

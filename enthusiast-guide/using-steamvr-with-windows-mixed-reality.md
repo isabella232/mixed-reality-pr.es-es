@@ -3,12 +3,12 @@ title: Uso de SteamVR con Windows Mixed Reality
 description: Aprenda a configurar y reproducir juegos de SteamVR en Windows Mixed Reality cascos y controladores con equipos compatibles.
 ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, juegos, SteamVR, Steam, requisitos del sistema
-ms.openlocfilehash: 641f2b7db890229b88c0614b6b2bc2e3e88ec309
-ms.sourcegitcommit: 65f58055c831d58a3d38fb333f09b323ee2ac9b7
+ms.openlocfilehash: 0d79b0c2079875b32387d616e77c5f497ab4aa59
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2021
-ms.locfileid: "112064129"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110144"
 ---
 # <a name="using-steamvr-with-windows-mixed-reality"></a>Uso de SteamVR con Windows Mixed Reality
 
@@ -43,9 +43,18 @@ Windows Mixed Reality para SteamVR permite a los usuarios ejecutar experiencias 
 
 **Ejecución de SteamVR en el equipo de destino**
 1. Después de conectar el dispositivo de almacenamiento portátil al equipo de destino, mueva las carpetas SteamVR, MixedRealityVRDriver y otras carpetas a un lugar cómodo en el equipo de destino.
-2. Asegurarse de que SteamVR y MixedRealityVRDriver [](scripts/steamvr-add-wmr-driver.bat) están en la misma carpeta, descarguesteamvr-add-wmr-driver.baten la carpeta que lo contiene y haga doble clic en ella. Esto permitirá que el tiempo de ejecución encuentre el Windows Mixed Reality controlador de SteamVR en la instalación personalizada.
 ![SteamVR y Windows Mixed Reality para SteamVR instalados en el equipo de destino](images/steamvr-install-files.png)
-3. Para ejecutar SteamVR, debe hacer doble clic en el archivo "vrstartup.exe"  ubicado en *SteamVR\bin\win64\vrstartup.exe* oSteamVR\bin\win32\vrstartup.exesi el equipo de destino ejecuta una versión de 32 bits de Windows.
+
+2. Para asegurarse de que SteamVR y MixedRealityVRDriver están en la misma carpeta, abra un símbolo del sistema. Para este ejemplo, se supone que la carpeta que contiene está en *C:\SteamVRInstall*. En ese caso, en el símbolo del sistema debe ejecutar:
+```powershell
+chdir "C:\SteamVRInstall"
+.\SteamVR\bin\win64\vrpathreg.exe adddriver "C:\SteamVRInstall\MixedRealityVRDriver"
+```
+(Tenga en cuenta que si ejecuta una versión de 32 bits de Windows, la parte de la ruta de acceso anterior `win64` debe ser en su `win32` lugar).
+
+Esto permitirá que el tiempo de ejecución encuentre el Windows Mixed Reality controlador de SteamVR en la instalación personalizada.
+
+4. Para ejecutar SteamVR, debe hacer doble clic en el archivo "vrstartup.exe"  ubicado en *SteamVR\bin\win64\vrstartup.exe* oSteamVR\bin\win32\vrstartup.exesi el equipo de destino ejecuta una versión de 32 bits de Windows.
 
 Consulte la página [de documentación de Steamworks para obtener más información y solucionar problemas.](https://partner.steamgames.com/doc/features/steamvr/enterprise#2)
 
@@ -113,14 +122,14 @@ Cuando se habilita la reproducción de movimiento, todos los juegos de VR de Ste
 Los modos de reproyecto de movimiento disponibles son los siguientes:
 
 * **Configuración de SteamVR por aplicación:** permite controlar la reproducción de movimiento a través de la interfaz de usuario de configuración de SteamVR. A continuación, puede abrir Configuración de SteamVR, ir a Video > Per-Application Configuración de vídeo y seleccionar una opción para "Suavizado de movimiento".
-* **Automático:** permite que la reproducción de movimiento se active automáticamente cuando un juego se representa demasiado lentamente para mantener 90 FPS. Cuando un juego comienza a mantener 90 FPS o empieza a representarse a menos de 45 FPS, se desactivará la reproducción del movimiento. La reproducción de rotación asincrónica siempre está habilitada.
+* **Automático:** permite que la reproducción de movimiento se active automáticamente cuando un juego se representa demasiado lentamente para mantener 90 FPS. Cuando un juego comienza a mantener 90 FPS o comienza a representarse a menos de 45 FPS, se desactivará la reproducción del movimiento. La reproducción de rotación asincrónica siempre está habilitada.
 * **Vector de movimiento:** fuerza a la aplicación a ejecutarse siempre a una velocidad de fotogramas media con la reproducción de vectores de movimiento.
 * **Ninguno:** deshabilita la reproducción de movimiento.
 
 **Artefactos visuales esperados** 
 
 1. Cuando se usa una resolución de aplicación superior al 150 %, puede experimentar desenfoque. Al usar la reproducción de movimiento, se recomienda usar un valor inferior al 150 %.
-2. Los bordes o texto de contraste nítido, especialmente en los menús o huds del juego, pueden parecer deformes o distorsionados temporalmente debido a la desoclusión.
+2. Los bordes o el texto de contraste nítido, especialmente en los menús o huds del juego, pueden parecer deformes o distorsionados temporalmente debido a la desoclusión.
 3. SteamVR Home y muchos otros juegos que no alcanzarán de forma confiable 50-60 FPS en el equipo seguirán teniendo una experiencia deficiente con este modo.
 4. Se ha notificado que algunos juegos se ejecutan a una velocidad del 50 % o con mayor latencia (retraso). Informe de estos juegos a través [de las Centro de opiniones sobre Windows](filing-feedback.md) a continuación.
 
@@ -134,7 +143,7 @@ Para habilitar la reproducción de movimiento:
 2. Abra el panel de SteamVR.
 3. Seleccione el botón del lado izquierdo con el logotipo Windows Mixed Reality para abrir **Windows Mixed Reality configuración de SteamVR.**
 4. En la interfaz de usuario que aparece, seleccione la pestaña Gráficos.
-5. Seleccione "Auto" (Automático) en "Default SteamVR app motion reprojection mode" (Modo de reproducción de movimiento de la aplicación SteamVR predeterminado) para habilitar la reproducción automática de movimiento.
+5. Seleccione "Auto" (Automático) en "Default SteamVR app motion reprojection mode" (Modo predeterminado de reproducción de movimiento de la aplicación SteamVR) para habilitar la reproducción automática del movimiento.
 
 ![Habilitación del indicador LSR & LSR con configuraciónUX](images/settingsux-enable-lsr.gif)
 
@@ -146,7 +155,7 @@ El indicador de reproducción de movimiento ayuda a diagnosticar problemas con l
 
 Verde = la reproducción de movimiento está desactivada porque la aplicación puede representarse a una velocidad de fotogramas completa.
 
-Cian = la reproducción de movimiento está en porque la aplicación está enlazada a la CPU.
+Cian = la reproducción de movimiento está en porque la aplicación está enlazada a cpu.
 
 Azul = la reproducción de movimiento está en porque la aplicación está enlazada a gpu.
 

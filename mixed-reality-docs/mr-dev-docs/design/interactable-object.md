@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 06/06/2019
 ms.topic: article
 keywords: Mixed Reality, controles, interacción, indicaciones, interfaz de usuario, experiencia de usuario, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit, audio
-ms.openlocfilehash: 8a68006d68b985f8d26a3d1a11e4d52fcfb5acb5
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+ms.openlocfilehash: b25c25a6dd48bcc85a556787099734d147d18df2
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600444"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110214"
 ---
 # <a name="interactable-object"></a>Objeto con el que se puede interactuar
 
@@ -23,11 +23,11 @@ Un botón ha sido durante mucho tiempo una metáfora usada para desencadenar un 
 
 ---
 
-## <a name="important-properties-of-the-interactable-object"></a>Propiedades importantes del objeto interactuable
+## <a name="important-properties-of-the-interactable-object"></a>Propiedades importantes del objeto que se puede interactuar
 
 ### <a name="visual-cues"></a>Indicaciones visuales
 
-Las indicaciones visuales son indicaciones sensorias de la luz, recibidas por el ojo y procesadas por el sistema visual durante la percepción visual. Dado que el sistema visual es dominante en muchas especie, especialmente en los seres humanos, las indicaciones visuales son una gran fuente de información sobre cómo se percibe el mundo.
+Las indicaciones visuales son indicaciones sensoras de la luz, recibidas por el ojo y procesadas por el sistema visual durante la percepción visual. Dado que el sistema visual es dominante en muchas especie, especialmente en los seres humanos, las indicaciones visuales son una gran fuente de información sobre cómo se percibe el mundo.
 
 Puesto que los objetos holográficos se combinan con el entorno real en la realidad mixta, podría ser difícil comprender con qué objetos puede interactuar. Para los objetos que pueden interactuar en su experiencia, es importante proporcionar indicaciones visuales diferenciadas para cada estado de entrada. Esto ayuda al usuario a comprender qué parte de su experiencia es interactuable y hace que el usuario esté seguro mediante un método de interacción coherente.
 
@@ -64,7 +64,7 @@ Para cualquier objeto que el usuario pueda interactuar con la mirada, el rayo de
 
 ---
 
-Puede usar técnicas como el resaltado o el escalado para proporcionar indicaciones visuales para el estado de entrada del usuario. En realidad mixta, puede encontrar ejemplos de visualización de diferentes estados de entrada en el menú Inicio y con botones de la barra de la aplicación. 
+Puede usar técnicas como el resaltado o el escalado para proporcionar indicaciones visuales para el estado de entrada del usuario. En realidad mixta, puede encontrar ejemplos de visualización de distintos estados de entrada en el menú Inicio y con botones de la barra de la aplicación. 
 
 Este es el aspecto de estos estados en un **botón holográfico:**
 
@@ -135,7 +135,7 @@ Use comentarios visuales para comunicar los estados siguientes:
 
 ---
 
-Un [botón en HoloLens 2](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Button.html) es un ejemplo de cómo se visualizan los distintos estados de interacción de entrada:
+Un [botón en HoloLens 2](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/button) es un ejemplo de cómo se visualizan los distintos estados de interacción de entrada:
 
 :::row:::
     :::column:::
@@ -216,9 +216,9 @@ En el caso de las interacciones directas con las manos, los comentarios de audio
 
 ## <a name="sizing-recommendations"></a>Recomendaciones de tamaño
 
-Para asegurarse de que todos los objetos interactuables se puedan tocar fácilmente, se recomienda asegurarse de que el objeto interactuable cumple un tamaño mínimo en función de la distancia que se coloca desde el usuario. El ángulo visual a menudo se mide en grados de arco visual. El ángulo visual se basa en la distancia entre los ojos del usuario y el objeto y permanece constante, mientras que el tamaño físico del destino puede cambiar a medida que cambia la distancia desde el usuario. Para determinar el tamaño físico necesario de un objeto en función de la distancia del usuario, pruebe a usar una calculadora de ángulo visual como [esta](https://elvers.us/perception/visualAngle/).
+Para asegurarse de que todos los objetos interactuables se puedan tocar fácilmente, se recomienda asegurarse de que el objeto interactuable cumple un tamaño mínimo en función de la distancia que se coloca desde el usuario. El ángulo visual se suele medir en grados de arco visual. El ángulo visual se basa en la distancia entre los ojos del usuario y el objeto y permanece constante, mientras que el tamaño físico del destino puede cambiar a medida que cambia la distancia desde el usuario. Para determinar el tamaño físico necesario de un objeto en función de la distancia del usuario, pruebe a usar una calculadora de ángulo visual como [esta](https://elvers.us/perception/visualAngle/).
 
-A continuación se muestran las recomendaciones para los tamaños mínimos de contenido que se puede interactuar.
+A continuación se muestran las recomendaciones para los tamaños mínimos de contenido interactuable.
 
 ### <a name="target-size-for-direct-hand-interaction"></a>Tamaño de destino para la interacción directa con la mano
 
@@ -258,7 +258,7 @@ Al crear botones para la interacción directa, se recomienda un tamaño mínimo 
 
 ## <a name="interactable-object-in-mrtk-mixed-reality-toolkit-for-unity"></a>Objeto interactuable en MRTK (Mixed Reality Toolkit) para Unity
 
-En **[MRTK,](https://github.com/Microsoft/MixedRealityToolkit-Unity)** puede usar el script [**Interactable**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) para que los objetos respondan a varios tipos de estados de interacción de entrada. Admite varios tipos de temas que permiten definir estados visuales mediante el control de propiedades de objeto como el color, el tamaño, el material y el sombreador.
+En **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)**, puede usar el script [**Interactable**](https://github.com/microsoft/MixedRealityToolkit-Unity/tree/mrtk_release/Assets/MixedRealityToolkit.SDK/Features/UX/Interactable/Scripts) para que los objetos respondan a varios tipos de estados de interacción de entrada. Admite varios tipos de temas que permiten definir estados visuales mediante el control de propiedades de objeto como color, tamaño, material y sombreador.
 
 * [Interactuable](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/interactable)
 * [Button](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/button)

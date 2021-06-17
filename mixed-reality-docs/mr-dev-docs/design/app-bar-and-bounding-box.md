@@ -6,12 +6,12 @@ ms.author: adlinv
 ms.date: 06/07/2019
 ms.topic: article
 keywords: Windows Mixed Reality, barra de la aplicación, rectángulo de selección, casco de realidad mixta, casco de windows de realidad mixta, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: 750fb238e5b7f22998a86f71607498c8f6982076
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+ms.openlocfilehash: 5c437b303ec5462179a1ddf43687aa1653419b08
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600524"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110089"
 ---
 # <a name="bounding-box-and-app-bar"></a>Cuadro de límite y barra de la aplicación
 ![El límite es la interfaz estándar para la manipulación de objetos en Mixed Reality.](images/UX_Hero_BoundingBox.jpg)<br>
@@ -24,7 +24,7 @@ El límite es la interfaz estándar para la manipulación de objetos en Mixed Re
 :::row:::
     :::column:::
         ### <a name="scaling-an-objectbr"></a>Escalado de un objeto<br>
-        Las esquinas del cuadro de límite le dicen al usuario que el objeto se puede escalar. Los identificadores siguen un patrón ampliamente comprendido para ajustar la escala. Esta indicación visual muestra a los usuarios el área total del objeto, incluso si no está visible fuera de un modo de ajuste. Sin esta característica, un objeto ajustado a otro objeto o superficie puede parecer que se comporta como si hubiera espacio alrededor que no debería estar ahí.<br>
+        Las esquinas del cuadro de límite le dicen al usuario que el objeto se puede escalar. Los identificadores siguen un patrón ampliamente comprendido para ajustar la escala. Esta indicación visual muestra a los usuarios el área total del objeto, incluso si no está visible fuera de un modo de ajuste. Sin esta característica, puede parecer que un objeto ajustado a otro objeto o superficie se comporta como si hubiera espacio alrededor que no debería estar ahí.<br>
         <br>
         *Bucle de vídeo: Escalado de un objeto mediante el rectángulo de selección*
     :::column-end:::
@@ -66,7 +66,7 @@ El límite es la interfaz estándar para la manipulación de objetos en Mixed Re
 
 <br>
 
-**Para el desarrollo de aplicaciones de Unity, consulte [Rectángulo de selección en Mixed Reality Toolkit-Unity.](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_BoundingBox.html)**
+**Para el desarrollo de aplicaciones de Unity, consulte [Rectángulo de selección en Mixed Reality Toolkit-Unity.](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/bounding-box)**
 
 <br>
 
@@ -74,7 +74,7 @@ El límite es la interfaz estándar para la manipulación de objetos en Mixed Re
 
 ## <a name="what-is-the-app-bar"></a>¿Qué es la barra de aplicaciones?
 
-La barra Aplicación es un menú de nivel de objeto que contiene una serie de botones que se muestran en el borde inferior de los límites de un holograma. Este patrón se usa normalmente para permitir que los usuarios quiten y ajusten hologramas. La barra de la aplicación se diseñó principalmente como una manera de administrar los objetos colocados en el entorno de un usuario. Junto con el cuadro de límite, un usuario tiene control total sobre dónde y cómo se orientan los objetos en la realidad mixta.
+La barra Aplicación es un menú de nivel de objeto que contiene una serie de botones que se muestran en el borde inferior de los límites de un holograma. Este patrón se usa normalmente para permitir que los usuarios quiten y ajusten los hologramas. La barra de la aplicación se diseñó principalmente como una manera de administrar los objetos colocados en el entorno de un usuario. Junto con el cuadro de límite, un usuario tiene control total sobre dónde y cómo se orientan los objetos en la realidad mixta.
 
 :::row:::
     :::column:::

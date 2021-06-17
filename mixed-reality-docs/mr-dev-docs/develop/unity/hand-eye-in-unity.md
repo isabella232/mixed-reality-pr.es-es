@@ -1,17 +1,17 @@
 ---
 title: Seguimiento de manos y ojos articulados en Unity
-description: Obtenga información sobre las dos formas clave de tomar medidas en la mirada en Unity, los gestos de las manos y los controladores de movimiento.
+description: Obtenga información sobre las dos formas clave de realizar acciones en la mirada en Unity, los gestos de la mano y los controladores de movimiento.
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
 keywords: gestos, controladores de movimiento, unity, mirada, entrada, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, MRTK, kit de herramientas Mixed Reality
-ms.openlocfilehash: ff4c4b064e11e0cad45f4b0c1aaa90c61eda51d7
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+ms.openlocfilehash: 2daa02a0681fe4f3da24fa32379e10877750af7e
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600664"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110229"
 ---
 # <a name="articulated-hand-and-eye-tracking-in-unity"></a>Seguimiento de manos y ojos articulados en Unity
 
@@ -35,12 +35,12 @@ MRTK v2 proporciona un conjunto de controles de interfaz de usuario y bloques de
 | Varios comportamientos de posicionamiento de objetos, como la etiqueta a lo largo, el bloqueo de cuerpo, el tamaño de vista constante y el magnetismo de la superficie | Script para la diseño de una matriz de objetos en una forma tridimensional | Interfaz de usuario de anotación con sistema de anclaje/pivote flexible, que se puede usar para etiquetar controladores de movimiento y objetos. |
 |  [![Barra de aplicaciones](images/MRTK_AppBar_Main.png)](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/app-bar) [Barra de aplicaciones](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/app-bar) | [![Punteros](images/MRTK_Pointer_Main.png)](/windows/mixed-reality/mrtk-unity/features/input/pointers) [Punteros](/windows/mixed-reality/mrtk-unity/features/input/pointers) | [![Visualización de la punta del dedo](images/MRTK_FingertipVisualization_Main.png)](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/fingertip-visualization) [Visualización de la punta del dedo](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/fingertip-visualization) |
 | Interfaz de usuario para la activación manual de Bounding Box | Información sobre los distintos tipos de punteros. | Asequibilidad visual en el dedo, lo que mejora la confianza para la interacción directa |
-|  [![Seguimiento ocular: selección de destino](images/mrtk_et_targetselect.png)](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-target-selection) [Seguimiento ocular: selección de destino](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-target-selection) | [![Seguimiento ocular: navegación](images/mrtk_et_navigation.png)](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-navigation) [Seguimiento ocular: navegación](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-navigation) | [![Seguimiento ocular: mapa térmico](images/mrtk_et_heatmaps.png)](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Visualization.html) [Seguimiento ocular: mapa térmico](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/EyeTracking/EyeTracking_Visualization.html) |
+|  [![Seguimiento ocular: selección de destino](images/mrtk_et_targetselect.png)](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-target-selection) [Seguimiento ocular: selección de destino](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-target-selection) | [![Seguimiento ocular: navegación](images/mrtk_et_navigation.png)](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-navigation) [Seguimiento ocular: navegación](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-navigation) |
 | Combine los ojos, la voz y la entrada de la mano para seleccionar hologramas de forma rápida y sencilla en toda la escena. | Obtenga información sobre cómo desplazar texto automáticamente o acercar el contenido centrado en función de lo que está viendo.| Ejemplos de registro, carga y visualización de lo que los usuarios han visto en la aplicación |
 
 ## <a name="example-scenes"></a>Escenas de ejemplo
 
-Explore los distintos tipos de interacciones y controles de interfaz de usuario de MRTK en [esta escena de ejemplo](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_HandInteractionExamples.html).
+Explore los distintos tipos de interacciones y controles de interfaz de usuario de MRTK en [esta escena de ejemplo](/windows/mixed-reality/mrtk-unity/features/example-scenes/hand-interaction-examples).
 
 Puede encontrar otras escenas de ejemplo [en Mixed Reality Toolkit GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity) en la carpeta **Assets/MixedRealityToolkit.Examples/Demos.**
 
@@ -48,7 +48,7 @@ Puede encontrar otras escenas de ejemplo [en Mixed Reality Toolkit GitHub](https
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido de desarrollo de Unity que hemos diseñado, se encuentra a la mitad de la exploración de los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
+Si va a seguir el recorrido de desarrollo de Unity que hemos diseñado, se encuentra a la mitad de la exploración de los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Asignación espacial](spatial-mapping-in-unity.md)
