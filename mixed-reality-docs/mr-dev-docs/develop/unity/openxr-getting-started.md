@@ -7,11 +7,11 @@ ms.date: 01/11/2021
 ms.topic: article
 keywords: openxr, unity, hololens, hololens 2, mixed reality, MRTK, Mixed Reality Toolkit, realidad aumentada, realidad virtual, cascos de realidad mixta, aprendizaje, tutorial, introducción
 ms.openlocfilehash: ffec0cbe2ea9fd87cbb5f38010dad2d64e2e82ee
-ms.sourcegitcommit: adbe3baa6b1c284ed1c4fd796d8b5612c3ca3f42
+ms.sourcegitcommit: bdf4babd13e021f41fb04cdb3611bb759bd77537
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2021
-ms.locfileid: "112270440"
+ms.lasthandoff: 06/19/2021
+ms.locfileid: "112392683"
 ---
 # <a name="using-the-mixed-reality-openxr-plugin"></a>Uso del complemento OpenXR de Mixed Reality
 
