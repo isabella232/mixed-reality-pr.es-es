@@ -5,12 +5,12 @@ author: MaxWang-MS
 ms.author: wangmax
 ms.date: 05/27/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Scene Understanding
-ms.openlocfilehash: 1ed6f93216fc90e7c6332f2b9c40911d25d96d2a
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+ms.openlocfilehash: 67a8b99a281b6deecd621edb5600578806812d8a
+ms.sourcegitcommit: 86fafb3a7ac6a5f60340ae5041619e488223f4f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110743552"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "112449754"
 ---
 # <a name="scene-understanding"></a>Descripción de la escena
 
@@ -29,7 +29,7 @@ Scene Understanding se presenta como una __característica experimental__ en MRT
 
 ## <a name="observer-overview"></a>Información general del observador
 
-Cuando se le pregunte, [`WindowsSceneUnderstandingObserver`](xref:Microsoft.MixedReality.Toolkit.WindowsSceneUnderstanding.Experimental.WindowsSceneUnderstandingObserver) devolverá [SpatialAwarenessSceneObject](xref:Microsoft.MixedReality.Toolkit.Experimental.SpatialAwareness.SpatialAwarenessSceneObject) con atributos útiles para que la aplicación comprenda su entorno. La frecuencia de observación, el tipo de objeto devuelto (por ejemplo, la pared, el suelo) y otros comportamientos del observador dependen de la configuración del observador a través del perfil. Por ejemplo, si se desea la máscara de oclusión, el observador debe configurarse para generar quads. La escena observada se puede guardar como archivo serializado que se puede cargar más adelante para volver a crear la escena en modo de reproducción del editor.
+Cuando se le pregunte, [`WindowsSceneUnderstandingObserver`](xref:Microsoft.MixedReality.Toolkit.WindowsSceneUnderstanding.Experimental.WindowsSceneUnderstandingObserver) devolverá [SpatialAwarenessSceneObject con](xref:Microsoft.MixedReality.Toolkit.Experimental.SpatialAwareness.SpatialAwarenessSceneObject) atributos útiles para que la aplicación comprenda su entorno. La frecuencia de observación, el tipo de objeto devuelto (por ejemplo, la pared, el suelo) y otros comportamientos del observador dependen de la configuración del observador a través del perfil. Por ejemplo, si se desea la máscara de oclusión, el observador debe configurarse para generar quads. La escena observada se puede guardar como archivo serializado que se puede cargar más adelante para volver a crear la escena en modo de reproducción del editor.
 
 ## <a name="setup"></a>Configurar
 
@@ -69,7 +69,7 @@ En la escena se muestra lo siguiente:
 ::: moniker range="= mrtkunity-2021-05"
 
 > [!NOTE] 
-> La escena de ejemplo registra una `There is no active AsyncCoroutineRunner when an action is posted.` advertencia en determinadas circunstancias debido al orden de ejecución de inicialización o subproceso. Si puede confirmar que el componente está asociado al GameObject "Demo Controller" y el componente/GameObject permanece habilitado o activo en la escena (el caso predeterminado), la advertencia se puede omitir de forma `AsyncCoroutineRunner` segura.
+> La escena de ejemplo registra una `There is no active AsyncCoroutineRunner when an action is posted.` advertencia en determinadas circunstancias debido al orden de ejecución de inicialización o subproceso. Si puede confirmar que el componente está asociado al GameObject "Demo Controller" y el componente/GameObject permanece habilitado o activo en la escena (el caso predeterminado), la advertencia se puede omitir de forma `AsyncCoroutineRunner` segura. **Sin embargo, al crear una nueva escena con Scene Understanding, asegúrese de crear un GameObject vacío en la raíz y adjuntar el script a ella; de lo contrario, Es posible que Scene Understanding no funcione `AsyncCoroutineRunner` correctamente.**
 ::: moniker-end
 
 #### <a name="configuring-the-observer-service"></a>Configuración del servicio de observador

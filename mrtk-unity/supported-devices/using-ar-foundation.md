@@ -1,22 +1,22 @@
 ---
-title: Configuración de MRTK de Android e iOS (ARFoundation)
+title: Creación e implementación en Android e iOS a través de AR Foundation
 description: Documentación para configurar MRTK para Android e iOS (ARFoundation) en Unity
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
-keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, AR Core, AR Kit, iOS, IOS, Android, AR Foundation
-ms.openlocfilehash: 9f621008db76e3f8e443545b795db442d7c17dda
-ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
+keywords: Unity,HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, AR Core, AR Kit, iOS, IOS, Android, AR Foundation
+ms.openlocfilehash: 352afbbc11c7cc6fcd2557395c5dd36d956f396d
+ms.sourcegitcommit: 86fafb3a7ac6a5f60340ae5041619e488223f4f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110345138"
+ms.lasthandoff: 06/22/2021
+ms.locfileid: "112449744"
 ---
-# <a name="how-to-configure-mrtk-for-ios-and-android-experimental"></a>Configuración de MRTK para iOS y Android [Experimental]
+# <a name="building-and-deploying-to-android-and-ios-via-ar-foundation-experimental"></a>Compilar e implementar en Android e iOS a través de AR Foundation [Experimental]
 
 ## <a name="install-required-packages"></a>Instalación de los paquetes requeridos
 
-1. Descargue e importe el **paquete Microsoft.MixedReality.Toolkit.Unity.Foundation,** [desde GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/tag/v2.3.0) o [el](../configuration/usingupm.md) Administrador de paquetes
+1. Descargue e importe el **paquete Microsoft.MixedReality.Toolkit.Unity.Foundation,** [desde GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/releases/) o el [Administrador de paquetes](../configuration/usingupm.md)
 
 1. En unity Administrador de paquetes (UPM), instale los siguientes paquetes:
 
@@ -25,23 +25,23 @@ ms.locfileid: "110345138"
     | **Android** | **iOS** | Comentarios |
     | --- | --- | --- |
     | AR Foundation  <br/> Versión: 1.5.0 - versión preliminar 6 | AR Foundation  <br/> Versión: 1.5.0 - versión preliminar 6 | Para Unity 2018.4, este paquete se incluye como versión preliminar. Para ver el paquete: `Window` > `Package Manager` > `Advanced` > `Show Preview Packages` |
-    | Complemento ARCore XR <br/> Versión: 2.1.2 | Complemento ARKit XR <br/> Versión: 2.1.2 | |
+    | Complemento ARCore XR <br/> Versión: 2.1.2 | Complemento XR de ARKit <br/> Versión: 2.1.2 | |
 
     **Unity 2019.4.x**
 
     | **Android** | **iOS** |
     | --- | --- |
     | AR Foundation  <br/> Versión: 2.1.8 |  AR Foundation  <br/> Versión: 2.1.8 |
-    | Complemento ARCore XR <br/> Versión: 2.1.11 | Complemento ARKit XR <br/> Versión: 2.1.9 |
+    | Complemento ARCore XR <br/> Versión: 2.1.11 | Complemento XR de ARKit <br/> Versión: 2.1.9 |
 
-    **Unity 2020.1.x (actualmente no compatible formalmente, incluido solo con fines informativos)**
+    **Unity 2020.3.x**
 
     | **Android** | **iOS** |
     | --- | --- |
-    | AR Foundation  <br/> Versión: 3.1.3 |  AR Foundation  <br/> Versión: 3.1.3 |
-    | Complemento ARCore XR <br/> Versión: 3.1.4 | Complemento ARKit XR <br/> Versión: 3.1.3 |
+    | AR Foundation  <br/> Versión: 3.1.3 |  AR Foundation  <br/> Versión: 4.0.12 |
+    | Complemento ARCore XR <br/> Versión: 3.1.4 | Complemento XR de ARKit <br/> Versión: 4.1.7 |
 
-1. Actualice el scripting de UnityAR de MRTK invocando el elemento de menú: Mixed Reality > **Toolkit > Utilities > UnityAR > Update Scripting Defines**
+1. Actualice el scripting de UnityAR de MRTK invocando el elemento de menú: **Mixed Reality > Toolkit > Utilities > UnityAR > Update Scripting Defines**
 
     ![Actualizar scripting define](../features/images/UpdateScriptingDefineUnityAR.png)
 
@@ -62,34 +62,34 @@ En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los 
 
     ![Clonación del perfil de cámara de MRTK](../features/images/camera-system/CloneCameraProfileARFoundation.png)
 
-1. Vaya al panel Inspector a la sección sistema de cámara y expanda la **sección Proveedores de configuración de** cámara.
+1. Navegue por el panel Inspector hasta la sección sistema de cámara y expanda la **sección Proveedores de configuración de cámara.**
 
     ![Expandir proveedores de configuración](../features/images/camera-system/ExpandProviders.png)
 
-1. Haga **clic en Agregar proveedor de configuración de** cámara y expanda la entrada Nueva configuración de cámara **recién** agregada.
+1. Haga clic **en Agregar proveedor de configuración de** cámara y expanda la entrada Nueva configuración de cámara **recién** agregada.
 
     ![Expansión del nuevo proveedor de configuración](../features/images/camera-system/ExpandNewProvider.png)
 
-1. Selección del proveedor de configuración de la cámara ar de Unity
+1. Selección del proveedor de configuración de la cámara de AR de Unity
 
     ![Selección del proveedor de configuración de AR de Unity](../features/images/camera-system/SelectUnityArSettings.png)
 
-    Para obtener más información sobre cómo configurar el proveedor de configuración de la cámara ar de Unity: [Proveedor de configuración de la cámara ar de Unity](../features/camera-system/unity-ar-camera-settings.md).
+    Para obtener más información sobre cómo configurar el proveedor de configuración de la cámara ar de Unity: Proveedor [de configuración de la cámara ar de Unity](../features/camera-system/unity-ar-camera-settings.md).
 
 > [!NOTE]
 > Esta instalación comprueba (cuando se inicia la aplicación) si los componentes de AR Foundation están en la escena. Si no es así, se agregan automáticamente para que funcione con ARCore y ARKit.
 > Si necesita establecer un comportamiento específico, debe agregar los componentes que necesita por sí mismo.
-> Para obtener más información sobre los componentes e instalación de AR Foundation, consulte esta [documentación.](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@2.2/manual/index.html#samples)
+> Para obtener más información sobre los componentes y la instalación de AR Foundation, consulte esta [documentación.](https://docs.unity3d.com/Packages/com.unity.xr.arfoundation@2.2/manual/index.html#samples)
 
-## <a name="building-a-scene-for-android-and-ios-devices"></a>Creación de una escena para dispositivos Android e iOS
+## <a name="building-a-scene-for-android-and-ios-devices"></a>Creación de una escena para dispositivos iOS y Android
 
 1. Asegúrese de que ha agregado el proveedor de configuración de cámara UnityAR a la escena.
 
 1. Cambie la plataforma a Android o iOS en la configuración de compilación de Unity.
 
-1. Asegúrese de que el proveedor de administración del complemento XR asociado está habilitado.
+1. Asegúrese de que el proveedor de administración del complemento XR asociado está habilitado
 
-    Administración de complementos XR de iOS:  ![ Administración de complementos XR para iOS](../features/images/XRManagementiOS.png)
+    Administración de complementos XR de iOS:  ![ XR Plug-in Management iOS](../features/images/XRManagementiOS.png)
 
 1. Compilación y ejecución de la escena
 
