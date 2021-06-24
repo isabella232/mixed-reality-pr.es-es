@@ -1,16 +1,16 @@
 ---
 title: Notas de la versión de MRTK 2.6
-description: Notas de la versión 2.6 de MRTK
+description: Notas de la versión de MRTK versión 2.6
 author: polar-kev
 ms.author: kesemple
 ms.date: 05/27/2021
-keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 4ac82f7e07135e840886fef810844ff00ef1ac1e
-ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
+keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK,
+ms.openlocfilehash: c172e5d071bba22626e9c35b2b4318f1ff779335
+ms.sourcegitcommit: f7839221c9549e60a2c3ac2dbd39f07a6851dcd2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "110647192"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "112562515"
 ---
 # <a name="microsoft-mixed-reality-toolkit-26-release-notes"></a>Notas de la versión de Microsoft Mixed Reality Toolkit 2.6
 
@@ -29,7 +29,7 @@ Corrige el [problema por](https://github.com/microsoft/MixedRealityToolkit-Unity
 
 Corrige una regresión que impedía que la compatibilidad con OpenXR de MRTK se ejecutara en UWP.
 
-### <a name="fixes-leap-motion-objectmanipulator-not-rotating"></a>Corrige El objeto Leap MotionManipulator no gira
+### <a name="fixes-leap-motion-objectmanipulator-not-rotating"></a>Corrige el objeto Leap MotionManipulator no girando
 
 Corrige una regresión en la que el script ObjectManipulator no tuvo en cuenta la rotación de una mano leap motion.
 
@@ -40,17 +40,18 @@ Actualiza la escena que entiende la escena de ejemplo para reflejar correctament
 Actualiza la escena de ejemplo de diálogo para describir correctamente los escenarios de diálogo actuales.
 
 ## <a name="whats-new-in-260"></a>Novedades de la versión 2.6.0
+
 <iframe width="940" height="530" src="https://www.youtube.com/embed/qfONlUCSWdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
 
 ### <a name="add-support-for-openxr"></a>Adición de compatibilidad con OpenXR
 
-Se ha agregado compatibilidad inicial con el paquete de versión preliminar de OpenXR de Unity y el paquete Mixed Reality OpenXR de Microsoft. Consulte la página de introducción de [MRTK/XRSDK,](../configuration/getting-started-with-mrtk-and-xrsdk.md)la publicación del foro de [Unity](https://forum.unity.com/threads/unity-support-for-openxr-in-preview.1023613/)o la documentación de [Microsoft](/windows/mixed-reality/develop/unity/openxr-getting-started) para obtener más información.
+Se ha agregado compatibilidad inicial con el paquete de versión preliminar de OpenXR de Unity Mixed Reality paquete openXR de Microsoft. Consulte [la página de introducción de MRTK/XRSDK,](../configuration/getting-started-with-mrtk-and-xrsdk.md)la entrada del foro de [Unity](https://forum.unity.com/threads/unity-support-for-openxr-in-preview.1023613/)o la documentación de [Microsoft](/windows/mixed-reality/develop/unity/openxr-getting-started) para obtener más información.
 
 > [!IMPORTANT]
 > OpenXR en Unity solo se admite en Unity 2020.2 y versiones posteriores.
 >
-> Actualmente, solo admite compilaciones x64 y ARM64.
+> Actualmente, también solo admite compilaciones x64 y ARM64.
 
 ### <a name="asset-swap-utility"></a>Utilidad de intercambio de recursos
 
@@ -66,7 +67,7 @@ Interactive Element es un punto de entrada centralizado simplificado para el sis
 
 ![InteractiveElementAddCoreState](../features/images/interactive-element/InEditor/Gifs/InspectorHighlightEditor.gif)
 
-El visualizador de estado es un componente de animación que depende del elemento interactivo.  Este componente crea clips de animación, establece fotogramas clave y genera una máquina de estado del animador. Para obtener más información, consulte [la documentación del visualizador de estado.](../features/experimental/interactive-element.md#state-visualizer-experimental)
+El visualizador de estado es un componente de animación que depende del elemento interactivo. Este componente crea clips de animación, establece fotogramas clave y genera una máquina de estado del animador. Para más información, consulte [la documentación del visualizador de estado.](../features/experimental/interactive-element.md#state-visualizer-experimental)
 
 ![StateVisualizerColorChangeOnFocus](../features/images/interactive-element/InEditor/Gifs/FocusColorChange.gif)
 
@@ -74,7 +75,7 @@ El visualizador de estado es un componente de animación que depende del element
 
 Los usuarios ahora pueden usar el gesto de teleportar para desplazarse por su espacio de juego en todas las plataformas. Para teleportar con un controlador en dispositivos mr con configuraciones predeterminadas, use la herramienta thumbstick. Para teleportar con las manos articuladas, haga un gesto con la mano hacia arriba con el índice y el dedo del dedo hacia el exterior, para lo que debe completar el teleportador. Para realizar la teleportación con la simulación de entrada, consulte nuestra documentación [actualizada de Input Simulation Service](../features/input-simulation/input-simulation-service.md).
 
-  ![Gesto de teleportar](../features/images/teleport/handteleport.gif)
+![Gesto de teleportar](../features/images/teleport/handteleport.gif)
 
 ### <a name="scene-understanding-now-available-in-mrtk-as-an-experimental-spatial-awareness-observer"></a>Scene Understanding ya está disponible en MRTK como observador de reconocimiento espacial experimental
 
@@ -86,28 +87,29 @@ La compatibilidad experimental [de Scene Understanding](/windows/mixed-reality/s
 > Esta característica requiere el paquete Scene Understanding, que ahora está disponible a través de [Mixed Reality Feature Tool](https://aka.ms/MRFeatureTool).
 > Al usar la herramienta de características de Mixed Reality o importar de otro modo a través de UPM, importe el ejemplo Demos - SpatialAwareness antes de importar el ejemplo Experimental - SceneUnderstanding debido a un problema de dependencia. Consulte este [problema de GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/9431) para obtener más información.
 
-  ![Descripción de la escena](images/SceneUnderstanding.gif)
+![Descripción de la escena](images/SceneUnderstanding.gif)
 
 ### <a name="runtime-profile-switching-support"></a>Compatibilidad con la conmutación de perfiles en tiempo de ejecución
 
-MRTK ahora permite la conmutación de perfiles antes de la inicialización de la instancia de MRTK (es decir, el modificador de perfil de inicialización previo a MRTK) y después de que un perfil haya estado en uso activo (es decir, modificador de perfil activo). El modificador anterior se puede usar para habilitar componentes seleccionados en función de las funcionalidades del hardware, mientras que el último se puede usar para modificar la experiencia a medida que el usuario entra en un subpart de la aplicación. Lea la documentación [sobre la conmutación de perfiles](../configuration/mixed-reality-configuration-guide.md#changing-profiles-at-runtime) para obtener más información y ejemplos de código.
+MRTK ahora permite la conmutación de perfiles antes de la inicialización de la instancia de MRTK (es decir, el modificador de perfil de inicialización previo a MRTK) y después de que un perfil haya estado en uso activo (es decir, modificador de perfil activo). El modificador anterior se puede usar para habilitar los componentes seleccionados en función de las funcionalidades del hardware, mientras que el último se puede usar para modificar la experiencia a medida que el usuario entra en una subpart de la aplicación. Lea la documentación [sobre la conmutación de perfiles](../configuration/mixed-reality-configuration-guide.md#changing-profiles-at-runtime) para obtener más información y ejemplos de código.
 
 ### <a name="directional-indicator-and-follow-solvers-graduated-from-experimental"></a>Indicador direccional y solucionadores de seguimiento egresados de experimentales
 
 Dos nuevos solucionadores están listos para su uso con MRTK de línea principal.
 
-  ![Solucionador de indicadores direccionales](images/DirectionalIndicatorExampleScene.gif)
+![Solucionador de indicadores direccionales](images/DirectionalIndicatorExampleScene.gif)
 
 ### <a name="hand-coach-graduated-from-experimental"></a>Hand Coach se ha graduado de experimental
 
 La característica Hand Coach ya está lista para su uso con MRTK de línea principal.
-  ![Ejemplo de técnico de mano](/windows/mixed-reality/design/images/handcoach/airtap.gif)
 
-### <a name="dialog-controls-graduated-from-experimental"></a>Controles de diálogo egresados de experimentales
+![Ejemplo de técnico de mano](/windows/mixed-reality/design/images/handcoach/airtap.gif)
+
+### <a name="dialog-controls-graduated-from-experimental"></a>Los controles de diálogo han pasado de ser experimentales
 
 Los controles de diálogo ya están listos para su uso con MRTK de línea principal.
 
-  ![Controles de cuadro de diálogo](https://user-images.githubusercontent.com/13754172/101927792-3326e200-3c18-11eb-88d3-44b4b50c7f7d.png)
+![Controles de cuadro de diálogo](https://user-images.githubusercontent.com/13754172/101927792-3326e200-3c18-11eb-88d3-44b4b50c7f7d.png)
 
 ### <a name="pulse-shader-graduated-from-experimental"></a>Sombreador de pulsos se ha pasado de experimental
 
@@ -123,13 +125,13 @@ Los scripts del sombreador Pulse han pasado de ser experimentales. Para obtener 
 
 Se ha agregado compatibilidad con [el modo de](/hololens/hololens2-display#what-improvements-are-coming-that-will-improve-hololens-2-image-quality) lectura HoloLens 2. El modo de lectura reduce el campo de vista del sistema, pero elimina un escalado de la salida de Unity. Un píxel representado por Unity se corresponderá con un píxel proyectado en HoloLens 2. Los autores de aplicaciones deben realizar pruebas con varias personas para asegurarse de que se trata de un intercambio que desean en su aplicación.
 
-  ![Windows Mixed Reality modo de lectura](images/WMRReadingMode.gif)
+![Windows Mixed Reality modo de lectura](images/WMRReadingMode.gif)
 
 ### <a name="support-for-3d-app-launchers-on-uwp"></a>Compatibilidad con los iniciadores de aplicaciones 3D en UWP
 
 Agrega la capacidad de establecer un [iniciador de aplicaciones 3D](/windows/mixed-reality/distribute/3d-app-launcher-design-guidance) para UWP. Esta configuración se expone tanto en la ventana de compilación de MRTK como en la configuración del proyecto de MRTK, en Configuración de compilación. Se escribe automáticamente en el proyecto durante la compilación en Unity.
 
-  ![Configuración de compilación](images/ProjectBuildSettings.png)
+![Configuración de compilación](images/ProjectBuildSettings.png)
 
 ## <a name="breaking-changes"></a>Últimos cambios
 
@@ -150,7 +152,7 @@ La compatibilidad con MSBuild para Unity se ha quitado a partir de la versión 2
 ### <a name="openxr"></a>OpenXR
 
 Actualmente hay un problema conocido con la comunicación remota holográfica y OpenXR, donde las juntas de mano no están disponibles de forma coherente.
-Además, las escenas de ejemplo de seguimiento de los ojos no son compatibles actualmente, aunque el seguimiento de los ojos *funciona.*
+Además, las escenas de ejemplo de seguimiento de los ojos no son compatibles actualmente, aunque el seguimiento de los ojos _funciona._
 
 ### <a name="some-mixed-reality-toolkit-standard-shader-features-require-the-foundation-package"></a>Algunas Mixed Reality Toolkit Standard Shader requieren el paquete Foundation
 
@@ -170,7 +172,7 @@ Aparecerá una advertencia "No spatializer was specified" (No se especificó nin
 
 Para resolverlo, asegúrese de que:
 
-- **Ventana**  >  **Administrador de paquetes** uno o varios paquetes XR instalados
+- **Ventana**  >  **Administrador de paquetes** tiene uno o varios paquetes XR instalados
 - **Mixed Reality Toolkit**  >  **Utilidades**  >  **Configuración del proyecto de Unity** y selección de Audio **Spatializer**
 
   ![Selección del espacializador de audio](images/SpatializerSelection.png)
@@ -178,7 +180,7 @@ Para resolverlo, asegúrese de que:
 ### <a name="nullreferenceexception-object-reference-not-set-to-an-instance-of-an-object-scenetransitionserviceinitialize"></a>NullReferenceException: referencia de objeto no establecida en una instancia de un objeto (SceneTransitionService.Initialize)
 
 En algunas situaciones, la apertura puede provocar una excepción NullReferenceException en el `EyeTrackingDemo-00-RootScene` método Initialize de la clase SceneTransitionService.
-Este error se debe a que el perfil de configuración del servicio Scene Transition está sin conjunto. Para resolverlo, siga estos pasos:
+Este error se debe a que el perfil de configuración del servicio Scene Transition no está en estado de configuración. Para resolverlo, siga estos pasos:
 
 - Navegar al objeto `MixedRealityToolkit` en la jerarquía
 - En la ventana Inspector, seleccione `Extensions`
@@ -189,7 +191,7 @@ Este error se debe a que el perfil de configuración del servicio Scene Transiti
 
 ### <a name="oculus-quest"></a>Oculus Quest
 
-Actualmente hay un problema conocido para usar el complemento [Oculus XR con al](https://forum.unity.com/threads/unable-to-start-oculus-xr-plugin.913883/)tener como destino plataformas independientes .  Consulte el seguimiento de errores de Oculus, los foros y las notas de la versión para obtener actualizaciones.
+Actualmente hay un problema conocido para usar el complemento [Oculus XR con al](https://forum.unity.com/threads/unable-to-start-oculus-xr-plugin.913883/)tener como destino plataformas independientes . Consulte el seguimiento de errores de Oculus, los foros y las notas de la versión para obtener actualizaciones.
 
 El error se significa con este conjunto de 3 errores:
 
