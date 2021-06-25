@@ -6,12 +6,12 @@ ms.author: sostel
 ms.date: 10/29/2019
 ms.topic: article
 keywords: Seguimiento de los ojos, realidad mixta, entrada, mirada con los ojos, calibración, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, kit de herramientas de Mixed Reality, intención, acciones
-ms.openlocfilehash: 4dac059f72dd043802286081a54137c392c1e912
-ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
+ms.openlocfilehash: 6bcd64a0ecc6e5c92966569d0675703afde5cbd5
+ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112110119"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112906860"
 ---
 # <a name="eye-tracking-on-hololens-2"></a>Seguimiento de los ojos en HoloLens 2
 
@@ -74,7 +74,7 @@ Para obtener más información sobre la calibración y sobre cómo garantizar un
 ## <a name="available-eye-tracking-data"></a>Datos de seguimiento de los ojos disponibles
 
 Antes de entrar en detalles sobre casos de uso específicos para la entrada de mirada con los ojos, queremos señalar brevemente las funcionalidades que proporciona HoloLens 2 [Eye Tracking API.](/uwp/api/windows.perception.people.eyespose) Los desarrolladores obtienen acceso a un solo rayo de mirada con los ojos (origen y dirección de la mirada) a aproximadamente _30 FPS (30 Hz)._
-Para obtener información más detallada sobre cómo acceder a los datos de seguimiento de los ojos, consulte nuestras guías para desarrolladores para usar la mirada con los ojos en [DirectX](../develop/native/gaze-in-directx.md) y la mirada [con los ojos en Unity.](https://aka.ms/mrtk-eyes)
+Para obtener información más detallada sobre cómo acceder a los datos de seguimiento de los ojos, consulte nuestras guías para desarrolladores para usar la mirada con los ojos en [DirectX](../develop/native/gaze-in-directx.md) y la mirada [con los ojos en Unity.](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-main)
 
 La mirada con los ojos predicho está aproximadamente en 1,5 grados en ángulo visual alrededor del destino real (consulte la ilustración siguiente). Como se esperan ligeras imprecisiones, los desarrolladores deben planear algún margen alrededor de este valor de límite inferior (por ejemplo, entre 2,0 y 3,0 grados puede dar lugar a una experiencia mucho más cómoda). A continuación se explica cómo abordar la selección de destinos pequeños con más detalle. Para que el seguimiento de los ojos funcione con precisión, cada usuario debe realizar una calibración de seguimiento de los ojos. 
 
@@ -100,9 +100,9 @@ Además, un ejemplo de intención del usuario podría incluir el uso de informac
 ### <a name="implicit-actions"></a>Acciones implícitas
 
 La categoría de acciones implícitas está estrechamente relacionada con la intención del usuario.
-La idea es que los hologramas o los elementos de la interfaz de usuario reaccionen de forma instintiva que ni siquiera parece que el usuario interactúa con el sistema, sino que el sistema y el usuario están sincronizados. Un ejemplo  es el desplazamiento automático basado en la mirada con los ojos, donde el usuario puede leer un texto largo, que comienza automáticamente a desplazarse una vez que el usuario llega a la parte inferior del cuadro de texto para mantener al usuario en el flujo de lectura, sin mover un dedo.  
+La idea es que los hologramas o los elementos de la interfaz de usuario reaccionen de forma instintiva que puede que ni siquiera tenga la sensación de que el usuario interactúa con el sistema en absoluto, sino que el sistema y el usuario están sincronizados. Un ejemplo  es el desplazamiento automático basado en la mirada con los ojos, donde el usuario puede leer un texto largo, que comienza automáticamente a desplazarse una vez que el usuario llega a la parte inferior del cuadro de texto para mantener al usuario en el flujo de lectura, sin mover un dedo.  
 Un aspecto clave de esto es que la velocidad de desplazamiento se adapta a la velocidad de lectura del usuario.
-Otro ejemplo es **el zoom y** el desplazamiento panorámico compatibles con los ojos en los que el usuario puede tener la sensación de que se está centrando exactamente en lo que se centra. La activación y el control de la velocidad de zoom se pueden controlar mediante la entrada de voz o mano, lo que es importante para proporcionar al usuario la sensación de control y evitar que se sobresalte. A continuación hablaremos sobre estas consideraciones de diseño con más detalle. Una vez acercado, el usuario puede seguir sin problemas, por ejemplo, el curso de una calle para explorar su barrio mediante la mirada con los ojos.
+Otro ejemplo es **el zoom y** el desplazamiento panorámico compatibles con los ojos en los que el usuario puede tener la sensación de que se está centrando exactamente en lo que se centra. El desencadenamiento y el control de la velocidad de zoom se pueden controlar mediante la entrada de voz o de mano, lo que es importante para proporcionar al usuario la sensación de control a la vez que evita sobrecargarse. A continuación hablaremos sobre estas consideraciones de diseño con más detalle. Una vez acercado, el usuario puede seguir sin problemas, por ejemplo, el curso de una calle para explorar su barrio mediante la mirada con los ojos.
 Puedes consultar ejemplos de demostración de estos tipos de interacciones en el ejemplo [Mixed Reality Toolkit - Navegación con los ojos](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-navigation).
 
 Otros casos de uso _para acciones implícitas_ pueden incluir:
@@ -116,15 +116,15 @@ La visualización y el análisis del seguimiento de los ojos son una práctica c
 Microsoft se dedica a facilitar la innovación y garantiza que los usuarios tengan una experiencia informada y transparente con la forma en que se usa su información de seguimiento de los ojos.  Trabajaremos con nuestros desarrolladores y equipos de experiencias de usuario para proporcionar instrucciones a terceros para garantizar que las experiencias se centren en torno al usuario.  
 
 Algunas aplicaciones en esta área son las siguientes: 
--   **Visualización remota de la mirada con los ojos:** Visualizaciones remotas de mirada con los ojos: visualice lo que los colaboradores remotos están viendo, para poder proporcionar comentarios inmediatos y facilitar el procesamiento de información más preciso.
--   **Estudios de investigación de usuarios:** El seguimiento de la atención puede ayudar a los investigadores a obtener más información sobre cómo los usuarios perciben y interactúan con el entorno natural, sin interferir, para diseñar interacciones humanas-informáticas más instintiva. El seguimiento de los ojos puede proporcionar información no articulada directamente por los participantes en el estudio, que de lo contrario el investigador podría perder fácilmente. 
+-   **Visualización remota de la mirada con los ojos:** Visualizaciones remotas de mirada con los ojos: visualice lo que están viendo los colaboradores remotos para poder proporcionar comentarios inmediatos y facilitar un procesamiento de información más preciso.
+-   **Estudios de investigación de usuarios:** El seguimiento de la atención puede ayudar a los investigadores a obtener más información sobre cómo los usuarios perciben el entorno natural e interactúan con él, sin interferir, para diseñar interacciones humanas-informáticas más instintiva. El seguimiento de los ojos puede proporcionar información no articulada directamente por los participantes en el estudio, que de lo contrario el investigador podría perder fácilmente. 
 -   **Supervisión del entrenamiento y el rendimiento:** Practique y optimice la ejecución de tareas mediante la identificación de cuellos de botella de forma más eficaz en el flujo de ejecución. El seguimiento de los ojos puede proporcionar información natural, en tiempo real y objetivo para ayudar a mejorar el entrenamiento, la productividad y la seguridad en el área de trabajo. 
 -   **Diseño de evaluaciones, marketing e investigación de consumidores:** El seguimiento de los ojos permite a las empresas comerciales realizar estudios de marketing y consumidor en entornos del mundo real o analizar lo que captura la atención de un usuario para mejorar el diseño de productos o espacios. 
 
 ### <a name="other-use-cases"></a>Otros casos de uso
 
 - **Juegos:** ¿Alguna vez ha deseado tener superpoderes? Esta es tu oportunidad. Puede lear hologramas si los mira fijamente. Sacar haces de rayos de rayos de los ojos: pruébalo en [RoboRaid para HoloLens 2](https://www.microsoft.com/p/roboraid/9nblggh5fv3j).
-Convierta los insensos en piedras o inutilizarlos. Usa tu visión de rayos X para explorar edificios. El límite es tu imaginación.
+Convierta los apedreados en piedras o inutilizarlos. Usa tu visión de rayos X para explorar edificios. El límite es tu imaginación.
 Tenga cuidado de no sobresalar al usuario; para más información, consulte nuestras directrices de diseño de entrada basadas en la [mirada con los ojos.](eye-gaze-interaction.md)
 
 - **Avatares expresivos:** El seguimiento de los ojos ayuda en avatares 3D más expresivos mediante el uso de datos de seguimiento de los ojos en directo para animar los ojos del avatar que indican lo que el usuario está mirando. 
@@ -136,7 +136,7 @@ Tenga cuidado de no sobresalar al usuario; para más información, consulte nues
 ## <a name="using-eye-gaze-for-interaction"></a>Uso de la mirada con los ojos para la interacción
 
 Crear una interacción que aproveche las ventajas de la orientación con los ojos de movimiento rápido puede ser un desafío.
-Por un lado, los ojos se mueven tan rápido que debe tener cuidado sobre cómo usar la entrada de mirada con los ojos, ya que de lo contrario, los usuarios pueden encontrar la experiencia abrumadora o distraída. Por otro lado, también puede crear experiencias realmente mágicas que excite a los usuarios. Para ayudarle, consulte nuestra introducción a las principales ventajas, desafíos y recomendaciones de diseño para la mirada con los ojos [para la interacción.](eye-gaze-interaction.md) 
+Por un lado, los ojos se mueven tan rápido que debe tener cuidado sobre cómo usar la entrada de mirada con los ojos, ya que de lo contrario, los usuarios pueden encontrar la experiencia abrumadora o distraída. Por otro lado, también puede crear experiencias realmente mágicas que excite a los usuarios. Para ayudarle, consulte nuestra introducción a las principales ventajas, desafíos y recomendaciones de diseño para la mirada con los ojos [para la interacción](eye-gaze-interaction.md). 
  
 ## <a name="fallback-solutions-when-eye-tracking-isnt-available"></a>Soluciones de reserva cuando el seguimiento de los ojos no está disponible
 
@@ -146,7 +146,7 @@ Esto puede deberse a diferentes razones de las que se enumeran las más comunes 
 * El usuario omitió la [calibración](/hololens/hololens-calibration).   
 * El usuario está calibrado, pero decidió no conceder permiso a la aplicación para usar sus datos de seguimiento de los ojos.    
 * El usuario tiene gafas únicas o alguna condición ocular que el sistema aún no admite. 
-* Factores externos que impiden el seguimiento de los ojos confiables, como los movimientos en el visor o las gafas de HoloLens, la intensa presión directa y las oclusiones debido al vello delante de los ojos.
+* Factores externos que impiden el seguimiento de los ojos confiables, como los movimientos en el visor o las gafas de HoloLens, una intensa presión directa y oclusiones debido al vello delante de los ojos.
 
 Los desarrolladores deben asegurarse de que hay compatibilidad con la reserva adecuada para estos usuarios. En la [página Seguimiento de los ojos en DirectX,](../develop/native/gaze-in-directx.md#fallback-when-eye-tracking-isnt-available) se explican las API necesarias para detectar si los datos de seguimiento de los ojos están disponibles. 
 
@@ -158,9 +158,9 @@ Por ejemplo, si puede detectar que el sistema admite el seguimiento de los ojos,
 
 Hay casos excepcionales de usuarios para los que es posible que el seguimiento de los ojos no funcione. Por lo tanto, tenga en cuenta que permite descartar o incluso deshabilitar los recordatorios para habilitar el seguimiento de los ojos en la aplicación.
 
-### <a name="fall-back-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>Re atrás para aplicaciones que usan la mirada con los ojos como puntero de entrada principal
+### <a name="fall-back-for-apps-using-eye-gaze-as-a-primary-input-pointer"></a>Resalte aplicaciones que usan la mirada con los ojos como puntero de entrada principal
 
-Si la aplicación usa la mirada con los ojos como entrada de puntero para seleccionar rápidamente hologramas en la escena, pero los datos de seguimiento de los ojos no están disponibles, se recomienda volver a la mirada con la cabeza y empezar a mostrar el cursor de mirada con la cabeza. Se recomienda usar un tiempo de espera (por ejemplo, de 500 a 1500 ms) para determinar si se debe cambiar o no. Esta acción evita que los cursores aparezcan cada vez que el sistema puede perder brevemente el seguimiento debido a movimientos rápidos de los ojos o guijos y parpadeos. Si es desarrollador de Unity, la reserva automática de la mirada con la cabeza ya se controla en Mixed Reality Toolkit. Si es desarrollador de DirectX, debe controlar este cambio usted mismo.
+Si la aplicación usa la mirada con los ojos como entrada de puntero para seleccionar rápidamente hologramas en la escena, pero los datos de seguimiento de los ojos no están disponibles, se recomienda volver a la mirada con la cabeza y empezar a mostrar el cursor de mirada con la cabeza. Se recomienda usar un tiempo de espera (por ejemplo, de 500 a 1500 ms) para determinar si se debe cambiar o no. Esta acción evita que aparezcan cursores cada vez que el sistema puede perder brevemente el seguimiento debido a movimientos rápidos de los ojos o a guijos y parpadeos. Si es desarrollador de Unity, la reserva automática de la mirada con la cabeza ya se controla en Mixed Reality Toolkit. Si es desarrollador de DirectX, debe controlar este cambio usted mismo.
 
 ### <a name="fall-back-for-other-eye-tracking-specific-applications"></a>Resalte para otras aplicaciones específicas del seguimiento de los ojos
 
@@ -169,14 +169,14 @@ Una vez más, se recomienda comunicar esto claramente al usuario que puede no se
 
 <br>
 
-Esta página le ha proporcionado una buena información general para empezar a comprender el rol del seguimiento de los ojos y la entrada de mirada con los ojos para HoloLens 2. Para empezar a desarrollar, consulte nuestra información sobre el rol de la mirada con los ojos para interactuar con [hologramas,](eye-gaze-interaction.md)la mirada con los ojos en [Unity](https://aka.ms/mrtk-eyes) y la mirada con los ojos [en DirectX.](../develop/native/gaze-in-directx.md)
+Esta página le ha proporcionado una buena información general para empezar a comprender el rol del seguimiento de los ojos y la entrada de mirada con los ojos para HoloLens 2. Para empezar a desarrollar, consulte nuestra información sobre el rol de la mirada con los ojos para interactuar con [hologramas,](eye-gaze-interaction.md)la mirada con los ojos en [Unity](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-main) y la mirada con los ojos [en DirectX.](../develop/native/gaze-in-directx.md)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulta también
 
 * [Calibración](/hololens/hololens-calibration)
 * [Comodidad](comfort.md)
 * [Interacción basada en el control con los ojos](eye-gaze-interaction.md)
 * [Mirada con los ojos en DirectX](../develop/native/gaze-in-directx.md)
-* [Mirada con los ojos en Unity (Mixed Reality Toolkit)](https://aka.ms/mrtk-eyes)
+* [Mirada con los ojos en Unity (Mixed Reality Toolkit)](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-main)
 * [Mirada y confirmación](gaze-and-commit.md)
 * [Entrada de voz](../out-of-scope/voice-design.md)

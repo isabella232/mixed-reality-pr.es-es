@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 06/18/2021
 ms.topic: article
 keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, unity
-ms.openlocfilehash: 452692b1be98459cc242833149b1cfd91f0f4d4a
-ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
+ms.openlocfilehash: f37dbdccf175a5cea9a647f0c14b90682b19dfb3
+ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394425"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112906861"
 ---
 # <a name="choosing-a-unity-version-and-xr-plugin"></a>Elección de una versión de Unity y un complemento XR
 
@@ -41,7 +41,7 @@ La mejor manera de instalar y administrar Unity es a través de <a href="https:/
 Para empezar a trabajar con XR integrado heredado en Unity 2019.4 LTS, haga clic aquí:
 
 > [!div class="nextstepaction"]
-> [Configuración de XR integrado heredado](/windows/mixed-reality/develop/unity/xr-project-setup?tabs=legacy)
+> [Configuración de XR integrado heredado](./xr-project-setup.md?tabs=legacy)
 
 > [!NOTE]
 > Unity ha dejado de ser compatible con XR integrado heredado a partir de Unity 2019.  Aunque Unity 2019 ofrece un nuevo marco de complementos XR, Microsoft no recomienda actualmente esa ruta de acceso en Unity 2019 debido a las incompatibilidades de Azure Spatial Anchors con AR Foundation 2.  En Unity 2020, Azure Spatial Anchors se admite en el marco del complemento XR.
@@ -61,7 +61,7 @@ Sin embargo, hay problemas conocidos que afectan a los proyectos de Unity 2020 L
 Si decide iniciar un nuevo proyecto en Unity 2020 hoy mismo, asegúrese de realizar un seguimiento en las próximas semanas de las compilaciones de Unity y los paquetes URP actualizados antes de enviar la aplicación.  Esto garantizará que los usuarios experimente la estabilidad adecuada del holograma.
 
 > [!div class="nextstepaction"]
-> [Uso del complemento OpenXR](/windows/mixed-reality/develop/unity/xr-project-setup?tabs=openxr)
+> [Uso del complemento OpenXR](./xr-project-setup.md?tabs=openxr)
 
 ## <a name="unity-20211"></a>Unity 2021.1
 

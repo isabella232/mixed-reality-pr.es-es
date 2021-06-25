@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ca3589364fb27c3f8087572113f09e48d30e087e
-ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
+ms.openlocfilehash: d39f6032eaf9a59ca52a6e7ae9b8e4d227175738
+ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394579"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112906950"
 ---
 # <a name="openxr"></a>[OpenXR](#tab/openxr)
 
@@ -14,7 +14,7 @@ El Mixed Reality complemento OpenXR es totalmente compatible con AR Foundation 4
 
 ### <a name="prerequisites"></a>Requisitos previos 
 
-* Herramientas [más recientes para HoloLens 2 desarrollo](/windows/mixed-reality/develop/install-the-tools?tabs=unity#installation-checklist)
+* Herramientas [más recientes para HoloLens 2 desarrollo](../../../install-the-tools.md?tabs=unity#installation-checklist)
 * Versión más reciente de Unity 2020.3 LTS(se recomienda 2020.3.8f1 o superior)
 
 ### <a name="minimum-versions"></a>Versiones mínimas
@@ -29,7 +29,7 @@ Las instrucciones de esta página le configurarán con los requisitos más recie
 <!-- ![Screenshot of the open xr unity basic sample running on a HoloLens](../../images/openxr-example.png) -->
 
 > [!NOTE]
-> Si va a compilar aplicaciones de realidad virtual en pc Windows, Mixed Reality complemento OpenXR no es necesariamente necesario. Sin embargo, querrá instalar el complemento si va a personalizar la asignación de controladores para controladores HP Reverb G2 o crear aplicaciones que funcionen en cascos de realidad virtual HoloLens 2 y de realidad virtual.
+> Si va a compilar aplicaciones de realidad virtual en equipos Windows, Mixed Reality complemento OpenXR no es necesariamente necesario. Sin embargo, querrá instalar el complemento si va a personalizar la asignación de controladores para controladores HP Reverb G2 o crear aplicaciones que funcionen en cascos de realidad virtual HoloLens 2 y de realidad virtual.
 
 # <a name="windows-xr"></a>[Windows XR](#tab/windowsxr)
 
