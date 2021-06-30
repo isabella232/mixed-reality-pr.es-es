@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 06/24/2021
 ms.topic: article
 keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, mixed reality headset, windows mixed reality headset, virtual reality headset, unity
-ms.openlocfilehash: 646a0ec3b3b332b038509cba39caa085c1590c1a
-ms.sourcegitcommit: 593e8f80297ac0b5eccb2488d3f333885eab9adf
+ms.openlocfilehash: 11f930f014ff579db1f8845d52b7a2d65dd85d6b
+ms.sourcegitcommit: 4ea9ba1ca1cde426b016111c4176a4b0a9c17553
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112921433"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113080702"
 ---
 # <a name="choosing-a-unity-version-and-xr-plugin"></a>Elección de una versión de Unity y un complemento XR
 
@@ -19,18 +19,15 @@ Aunque actualmente se recomienda instalar **Unity 2020.3 LTS** con el complement
 
 ## <a name="unity-20203-lts-recommended"></a>Unity 2020.3 LTS (recomendado)
 
-La configuración de Unity recomendada actualmente de Microsoft para el desarrollo de HoloLens 2 y Windows Mixed Reality es **Unity 2020.3 LTS** con la versión más reciente Mixed Reality complemento OpenXR. DEBE usar la versión de revisión de Unity 2020.3.8f1 o posterior para evitar problemas de rendimiento conocidos con compilaciones anteriores de la versión 2020.3.
+La configuración de Unity recomendada actualmente de Microsoft para el desarrollo HoloLens 2 y Windows Mixed Reality es **Unity 2020.3 LTS** con la versión más reciente Mixed Reality complemento OpenXR. DEBE usar la versión de revisión de Unity 2020.3.8f1 o posterior para evitar problemas de rendimiento conocidos con compilaciones anteriores de la versión 2020.3.
 
 > [!IMPORTANT]
-> Unity 2020 no admite el destino HoloLens (1ª generación). Estos cascos siguen siendo compatibles con **[Unity 2019 LTS](#unity-20194-lts)** con XR integrado heredado durante el ciclo de vida completo de Unity 2019 LTS hasta mediados de 2022.
+> Unity 2020 no admite el destino HoloLens (1.ª generación). Estos cascos siguen siendo compatibles con **[Unity 2019 LTS](#unity-20194-lts)** con XR integrado heredado para el ciclo de vida completo de Unity 2019 LTS hasta mediados de 2022.
 >
 > [!NOTE]
-> Algunos paquetes aún no son compatibles con proyectos de realidad mixta en Unity 2020 LTS:
-> 
-> * La canalización de representación universal (URP) 10.5.0 o anterior tiene un problema de rendimiento conocido en HoloLens 2 dispositivos. _(corregido en la próxima versión de URP)_
-> * Azure Remote Rendering ha enviado aún una versión actualizada compatible con Unity 2020.
+> Azure Remote Rendering ha enviado aún una versión actualizada compatible con Unity 2020.
 >
-> Si el proyecto de Unity usa la canalización de representación universal o Azure Remote Rendering, se recomienda no actualizar el proyecto a Unity 2020 hasta que haya paquetes actualizados disponibles.
+> Si el proyecto de Unity usa Azure Remote Rendering, se recomienda no actualizar el proyecto a Unity 2020 hasta que haya disponible un paquete actualizado.
 
 La mejor manera de instalar y administrar Unity es mediante <a href="https://unity3d.com/get-unity/download" target="_blank">Unity Hub</a>. Cuando esté instalado, abra Unity Hub:
 
@@ -53,7 +50,7 @@ La mejor manera de instalar y administrar Unity es mediante <a href="https://uni
 > [Uso del complemento OpenXR](/windows/mixed-reality/develop/unity/xr-project-setup?tabs=openxr)
 
 > [!NOTE]
-> Aunque se recomienda usar OpenXR para todos los proyectos nuevos, Unity 2020.3 LTS también admite el complemento [XR de Windows.](/windows/mixed-reality/develop/unity/xr-project-setup?tabs=windowsxr) Este complemento es totalmente compatible, aunque no recibirá nuevas características como la compatibilidad con AR Foundation 4.0.
+> Aunque se recomienda usar OpenXR para todos los proyectos nuevos, Unity 2020.3 LTS también admite el [complemento XR de Windows.](/windows/mixed-reality/develop/unity/xr-project-setup?tabs=windowsxr) Este complemento es totalmente compatible, aunque no recibirá nuevas características como la compatibilidad con AR Foundation 4.0.
 
 ## <a name="unity-20194-lts"></a>Unity 2019.4 LTS
 
