@@ -1,16 +1,16 @@
 ---
 title: Instrucciones de codificación
-description: principios y convenciones de codificación que se deben seguir al contribuir a MRTK.
+description: Principios y convenciones de codificación que se deben seguir al contribuir a MRTK.
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
-keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, C#,
-ms.openlocfilehash: 8887e248bd550bdd7a59f19c16df1ec3647ceff7
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+keywords: Unity,HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, C#,
+ms.openlocfilehash: 122c51962c55796c037302c7b79cc4df643a47b7
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145243"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121443"
 ---
 # <a name="coding-guidelines"></a>Instrucciones de codificación
 
@@ -20,19 +20,19 @@ En este documento se describen los principios y convenciones de codificación qu
 
 ## <a name="philosophy"></a>Filosofía
 
-### <a name="be-concise-and-strive-for-simplicity"></a>Sea conciso y esfuérzate por la simplicidad
+### <a name="be-concise-and-strive-for-simplicity"></a>Ser conciso y procurar la simplicidad
 
-La solución más sencilla suele ser la mejor. Este es un objetivo reemplazable de estas directrices y debe ser el objetivo de toda la actividad de codificación. Parte de ser simple es ser conciso y coherente con el código existente. Intente que el código sea sencillo.
+La solución más sencilla suele ser la mejor. Este es un objetivo reemplazable de estas directrices y debe ser el objetivo de toda la actividad de codificación. Parte de ser sencillo es ser conciso y coherente con el código existente. Intente que el código sea sencillo.
 
-Los lectores solo deben encontrar artefactos que proporcionen información útil. Por ejemplo, los comentarios que restablecen lo obvio no proporcionan información adicional y aumentan la proporción de ruido y señal.
+Los lectores solo deben encontrar artefactos que proporcionen información útil. Por ejemplo, los comentarios que restablecen lo que es obvio no proporcionan ninguna información adicional y aumentan la proporción de ruido y señal.
 
-Mantenga la lógica de código simple. Tenga en cuenta que no se trata de una instrucción sobre el uso del menor número de líneas, lo que minimiza el tamaño de los nombres de identificador o el estilo de llaves, sino que reduce el número de conceptos y maximiza la visibilidad de las líneas a través de patrones conocidos.
+Mantenga la lógica de código simple. Tenga en cuenta que no se trata de una instrucción sobre cómo usar el menor número de líneas, minimizar el tamaño de los nombres de identificador o el estilo de llave, sino reducir el número de conceptos y maximizar la visibilidad de las líneas a través de patrones conocidos.
 
 ### <a name="produce-consistent-readable-code"></a>Generación de código coherente y legible
 
-La legibilidad del código se correlaciona con tasas de defectos bajas. Esfuérctese por crear código que sea fácil de leer. Esfuérzate por crear código que tenga una lógica simple y vuelva a usar los componentes existentes, ya que también ayudará a garantizar la corrección.
+La legibilidad del código está correlacionada con tasas de defectos bajas. Esfuérzse por crear código fácil de leer. Esfuérzate por crear código que tenga lógica simple y vuelva a usar los componentes existentes, ya que también ayudará a garantizar la corrección.
 
-Todos los detalles del código que genera son importantes, desde los detalles más básicos de la corrección hasta el estilo y el formato coherentes. Mantenga el estilo de codificación coherente con lo que ya existe, incluso si no coincide con sus preferencias. Esto aumenta la legibilidad del código base general.
+Todos los detalles del código que se genera son importantes, desde los detalles más básicos de corrección hasta el estilo y el formato coherentes. Mantenga el estilo de codificación coherente con lo que ya existe, aunque no coincida con sus preferencias. Esto aumenta la legibilidad del código base general.
 
 ### <a name="support-configuring-components-both-in-editor-and-at-run-time"></a>Compatibilidad con la configuración de componentes en el editor y en tiempo de ejecución
 
@@ -54,13 +54,13 @@ Los nuevos miembros públicos deben examinarse cuidadosamente. Cualquier campo p
 
 ### <a name="prioritize-writing-tests"></a>Priorizar la escritura de pruebas
 
-MRTK es un proyecto de la comunidad, modificado por una amplia gama de colaboradores. Es posible que estos colaboradores no conozcan los detalles de la corrección o característica de errores y que la característica se rompa accidentalmente. [MRTK ejecuta pruebas de integración continuas](https://dev.azure.com/aipmr/MixedRealityToolkit-Unity-CI/_build?definitionId=16) antes de completar cada solicitud de incorporación de extracción. Los cambios que interrumpirán las pruebas no se pueden comprobar. Por lo tanto, las pruebas son la mejor manera de asegurarse de que otras personas no interrumpirán la característica.
+MRTK es un proyecto de la comunidad, modificado por una amplia gama de colaboradores. Es posible que estos colaboradores no conozcan los detalles de la corrección o característica de errores y que la característica se rompa accidentalmente. [MRTK ejecuta pruebas de integración continuas](https://dev.azure.com/aipmr/MixedRealityToolkit-Unity-CI/_build?definitionId=16) antes de completar cada solicitud de incorporación de extracción. Los cambios que rompen las pruebas no se pueden comprobar. Por lo tanto, las pruebas son la mejor manera de asegurarse de que otras personas no interrumpirán la característica.
 
 Cuando corrija un error, escriba una prueba para asegurarse de que no se revierte en el futuro. Si agrega una característica, escriba pruebas que comprueben que la característica funciona. Esto es necesario para todas las características de la experiencia de usuario, excepto las características experimentales.
 
 ## <a name="c-coding-conventions"></a>Convenciones de codificación de C#
 
-### <a name="script-license-information-headers"></a>Script de encabezados de información de licencia
+### <a name="script-license-information-headers"></a>Encabezados de información de licencia de script
 
 Todos los empleados de Microsoft que contribuyen a nuevos archivos deben agregar el siguiente encabezado de licencia estándar en la parte superior de los archivos nuevos, exactamente como se muestra a continuación:
 
@@ -92,7 +92,7 @@ Se rechazarán los archivos de script enviados sin las etiquetas de resumen adec
 
 ### <a name="mrtk-namespace-rules"></a>Reglas de espacio de nombres de MRTK
 
-El Mixed Reality toolkit usa un modelo de espacio de nombres basado en características, donde todos los espacios de nombres fundamentales comienzan por "Microsoft.MixedReality.Toolkit". En general, no es necesario especificar la capa del kit de herramientas (por ejemplo, Core, Providers, Services) en los espacios de nombres.
+El Mixed Reality Toolkit usa un modelo de espacio de nombres basado en características, donde todos los espacios de nombres fundamentales comienzan por "Microsoft.MixedReality.Toolkit". En general, no es necesario especificar la capa del kit de herramientas (por ejemplo, Core, Providers, Services) en los espacios de nombres.
 
 Los espacios de nombres definidos actualmente son:
 
@@ -124,7 +124,7 @@ public class MyNewComponent : MonoBehaviour
 
 En general, intente evitar la creación de scripts de inspector personalizados para los componentes de MRTK. Agrega sobrecarga adicional y administración del código base que podría controlar el motor de Unity.
 
-Si es necesaria una clase inspectora, intente usar el elemento de [`DrawDefaultInspector()`](https://docs.unity3d.com/ScriptReference/Editor.DrawDefaultInspector.html) Unity. Esto simplifica de nuevo la clase inspector y deja gran parte del trabajo a Unity.
+Si se necesita una clase inspectora, intente usar el de [`DrawDefaultInspector()`](https://docs.unity3d.com/ScriptReference/Editor.DrawDefaultInspector.html) Unity. Esto simplifica de nuevo la clase inspector y deja gran parte del trabajo a Unity.
 
 ```c#
 public override void OnInspectorGUI()
@@ -135,11 +135,11 @@ public override void OnInspectorGUI()
 }
 ```
 
-Si se requiere una representación personalizada en la clase inspector, intente utilizar [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) y [`EditorGUILayout.PropertyField`](https://docs.unity3d.com/ScriptReference/EditorGUILayout.PropertyField.html) . Esto garantizará que Unity controla correctamente la representación de elementos prefabs anidados y valores modificados.
+Si se requiere una representación personalizada en la clase inspector, intente utilizar [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) y [`EditorGUILayout.PropertyField`](https://docs.unity3d.com/ScriptReference/EditorGUILayout.PropertyField.html) . Esto garantizará que Unity controla correctamente la representación de objetos prefab anidados y valores modificados.
 
 Si no se puede usar debido a un requisito en la lógica personalizada, asegúrese de que todo [`EditorGUILayout.PropertyField`](https://docs.unity3d.com/ScriptReference/EditorGUILayout.PropertyField.html) el uso se ajusta alrededor de [`EditorGUI.PropertyScope`](https://docs.unity3d.com/ScriptReference/EditorGUI.PropertyScope.html) . Esto garantizará que Unity represente el inspector correctamente para los elementos prefab anidados y los valores modificados con la propiedad dada.
 
-Además, intente decorar la clase inspectora personalizada con [`CanEditMultipleObjects`](https://docs.unity3d.com/ScriptReference/CanEditMultipleObjects.html) un . Esta etiqueta garantiza que se pueden seleccionar y modificar juntos varios objetos con este componente en la escena. Las nuevas clases de inspector deben probar que su código funciona en esta situación en la escena.
+Además, intente decorar la clase de inspector personalizado con [`CanEditMultipleObjects`](https://docs.unity3d.com/ScriptReference/CanEditMultipleObjects.html) un . Esta etiqueta garantiza que se pueden seleccionar y modificar juntos varios objetos con este componente en la escena. Las nuevas clases de inspector deben probar que su código funciona en esta situación en la escena.
 
 ```c#
     // Example inspector class demonstrating usage of SerializedProperty & EditorGUILayout.PropertyField
@@ -184,11 +184,11 @@ Además, intente decorar la clase inspectora personalizada con [`CanEditMultiple
 
 ### <a name="adding-new-scriptableobjects"></a>Adición de nuevos objetos ScriptableObjects
 
-Al agregar nuevos scripts ScriptableObject, asegúrese de que [`CreateAssetMenu`](https://docs.unity3d.com/ScriptReference/CreateAssetMenu.html) el atributo se aplica a todos los archivos aplicables. Esto garantiza que el componente se pueda detectar fácilmente en el editor a través de los menús de creación de recursos. La marca de atributo no es necesaria si el componente no se puede mostrar en el editor, como una clase abstracta.
+Al agregar nuevos scripts ScriptableObject, asegúrese de [`CreateAssetMenu`](https://docs.unity3d.com/ScriptReference/CreateAssetMenu.html) que el atributo se aplica a todos los archivos aplicables. Esto garantiza que el componente se pueda detectar fácilmente en el editor a través de los menús de creación de recursos. La marca de atributo no es necesaria si el componente no se puede mostrar en el editor, como una clase abstracta.
 
 En el ejemplo siguiente, la *subcarpeta* debe rellenarse con la subcarpeta MRTK, si procede. Si coloca un elemento en *la carpeta MRTK/Providers,* el paquete será *Providers*. Si coloca un elemento en la *carpeta MRTK/Core,* establezca esta opción en "Perfiles".
 
-En el ejemplo siguiente, *el | MyNewProvider* debe rellenarse con el nombre de la nueva clase, si procede. Si coloca un elemento en la *carpeta MixedRealityToolkit,* deje esta cadena fuera.
+En el ejemplo siguiente, el archivo *MyNewService | MyNewProvider* debe rellenarse con el nombre de la nueva clase, si procede. Si coloca un elemento en la *carpeta MixedRealityToolkit,* deje esta cadena fuera.
 
 ```c#
 [CreateAssetMenu(fileName = "MyNewProfile", menuName = "Mixed Reality Toolkit/{Subfolder}/{MyNewService | MyNewProvider}/MyNewProfile")]
@@ -197,7 +197,7 @@ public class MyNewProfile : ScriptableObject
 
 ### <a name="logging"></a>Registro
 
-Al agregar nuevas características o actualizar las características existentes, considere la posibilidad de agregar registros DebugUtilities.LogVerbose a código interesante que puede ser útil para la depuración futura. Aquí hay un equilibrio entre agregar el registro y el ruido agregado y no hay suficiente registro (lo que dificulta el diagnóstico).
+Al agregar nuevas características o actualizar las características existentes, considere la posibilidad de agregar registros DebugUtilities.LogVerbose a código interesante que puede ser útil para la depuración futura. Aquí hay un equilibrio entre agregar registro y el ruido agregado y no hay suficiente registro (lo que dificulta el diagnóstico).
 
 Un ejemplo interesante en el que el registro es útil (junto con una carga útil interesante):
 
@@ -205,7 +205,7 @@ Un ejemplo interesante en el que el registro es útil (junto con una carga útil
 DebugUtilities.LogVerboseFormat("RaiseSourceDetected: Source ID: {0}, Source Type: {1}", source.SourceId, source.SourceType);
 ```
 
-Este tipo de registro puede ayudar a detectar problemas como , causados por eventos de origen no [https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016) coincidentes detectados y pérdidas de origen.
+Este tipo de registro puede ayudar a detectar problemas como , causados por eventos de origen no [https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016) coincidentes detectados y de pérdida de origen.
 
 Evite agregar registros para los datos y eventos que se producen en cada fotograma; idealmente, el registro debe cubrir eventos "interesantes" controlados por distintas entradas de usuario (es decir, un "clic" por parte de un usuario y el conjunto de cambios y eventos que proceden de que son interesantes de registrar). El estado continuo de "el usuario sigue manteniendo un gesto" registrado en cada fotograma no es interesante y sobrecargará los registros.
 
@@ -337,7 +337,7 @@ private Foo()
 
 ### <a name="public-classes-structs-and-enums-should-all-go-in-their-own-files"></a>Las clases públicas, las estructuras y las enumeraciones deben ir en sus propios archivos.
 
-Si la clase, la estructura o la enumeración se pueden convertir en privadas, es correcto que se incluyan en el mismo archivo.  Esto evita problemas de compilación con Unity y garantiza que se produce la abstracción de código adecuada, también reduce los conflictos y los cambios importantes cuando es necesario cambiar el código.
+Si la clase, la estructura o la enumeración se pueden convertir en privadas, es correcto que se incluyan en el mismo archivo.  Esto evita problemas de compilación con Unity y garantiza que se produce la abstracción de código adecuada, también reduce los conflictos y los cambios importantes cuando el código necesita cambiar.
 
 #### <a name="dont"></a>Lo que debe evitar:
 
@@ -397,7 +397,7 @@ public class MyClass
 
 ### <a name="initialize-enums"></a>Inicialización de enumeraciones
 
-Para asegurarse de que todas las enumeraciones se inicializan correctamente a partir de 0, .NET proporciona un acceso directo ordenado para inicializar automáticamente la enumeración simplemente agregando el primer valor (iniciador). (Por ejemplo, el valor 1 = 0 los valores restantes no son necesarios)
+Para asegurarse de que todas las enumeraciones se inicializan correctamente a partir de 0, .NET proporciona un acceso directo ordenado para inicializar automáticamente la enumeración agregando simplemente el primer valor (inicio). (Por ejemplo, valor 1 = 0 No se requieren valores restantes)
 
 #### <a name="dont"></a>Lo que debe evitar:
 
@@ -421,9 +421,9 @@ public enum ValueType
 }
 ```
 
-### <a name="order-enums-for-appropriate-extension"></a>Ordenar enumeraciones para la extensión adecuada
+### <a name="order-enums-for-appropriate-extension"></a>Ordenación de enumeraciones para la extensión adecuada
 
-Es fundamental que si es probable que una enumeración se pueda extender en el futuro, para ordenar los valores predeterminados en la parte superior de la enumeración, esto garantiza que los índices de enumeración no se ven afectados con nuevas adiciones.
+Es fundamental que, si es probable que una enumeración se pueda extender en el futuro, para ordenar los valores predeterminados en la parte superior de la enumeración, esto garantiza que los índices de enumeración no se ven afectados con nuevas adiciones.
 
 #### <a name="dont"></a>Lo que debe evitar:
 
@@ -500,9 +500,9 @@ public enum Handedness
 }
 ```
 
-### <a name="hard-coded-file-paths"></a>Rutas de acceso de archivo codificadas de forma hard-coded
+### <a name="hard-coded-file-paths"></a>Rutas de acceso de archivo codificadas de forma fuerte
 
-Al generar rutas de acceso de archivo de cadena y, en concreto, escribir rutas de acceso de cadena codificadas de forma fuerte, haga lo siguiente:
+Al generar rutas de acceso de archivo de cadena y, en particular, escribir rutas de acceso de cadena codificadas de forma fuerte, haga lo siguiente:
 
 1. Use las API de C# [ `Path` siempre](/dotnet/api/system.io.path?preserve-view=true&view=netframework-4.8) que sea posible, como `Path.Combine` o `Path.GetFullPath` .
 1. Use / o [`Path.DirectorySeparatorChar`](/dotnet/api/system.io.path.directoryseparatorchar?preserve-view=true&view=netframework-4.8) en lugar de \ o \\ \\ .
@@ -532,7 +532,7 @@ string cleanedFilePath = Path.GetFullPath(unknownSourceFilePath);
 
 ## <a name="best-practices-including-unity-recommendations"></a>Procedimientos recomendados, incluidas las recomendaciones de Unity
 
-Algunas de las plataformas de destino de este proyecto requieren tener en cuenta el rendimiento. Con esto en mente, tenga siempre cuidado al asignar memoria en código que se llama con frecuencia en bucles de actualización o algoritmos estrictos.
+Algunas de las plataformas de destino de este proyecto requieren tener en cuenta el rendimiento. Con esto en mente, tenga siempre cuidado al asignar memoria en código con frecuencia llamado en bucles de actualización o algoritmos estrictos.
 
 ### <a name="encapsulation"></a>Encapsulación
 
@@ -676,7 +676,7 @@ public class MyClass
 ### <a name="use-platform-dependent-compilation-to-ensure-the-toolkit-wont-break-the-build-on-another-platform"></a>Uso [de la compilación dependiente de](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) la plataforma para asegurarse de que el kit de herramientas no interrumpirá la compilación en otra plataforma
 
 - Use `WINDOWS_UWP` para usar API específicas de UWP que no son de Unity. Esto impedirá que intenten ejecutarse en el editor o en plataformas no admitidas. Esto es equivalente a `UNITY_WSA && !UNITY_EDITOR` y debe usarse en favor de .
-- Use para usar LAS API de `UNITY_WSA` Unity específicas de UWP, como el espacio de `UnityEngine.XR.WSA` nombres . Esto se ejecutará en el Editor cuando la plataforma esté establecida en UWP, así como en aplicaciones para UWP integradas.
+- Use `UNITY_WSA` para usar LAS API de Unity específicas de UWP, como el espacio de nombres `UnityEngine.XR.WSA` . Esto se ejecutará en el Editor cuando la plataforma esté establecida en UWP, así como en aplicaciones para UWP integradas.
 
 Este gráfico puede ayudarle a decidir qué usar, en función de los casos `#if` de uso y la configuración de compilación que espera.
 

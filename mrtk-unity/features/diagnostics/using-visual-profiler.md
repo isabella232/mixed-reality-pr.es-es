@@ -1,16 +1,16 @@
 ---
-title: Usar Visual Profiler
+title: Uso del profiler visual
 description: documentación para usar Visual Profiler en MRTK
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 4830615fd55a39614dd775dd7628938ee3af1c3b
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: c3238aed60f6bbf824c74c034ddf506f49f436c7
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143712"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121653"
 ---
 # <a name="using-the-visual-profiler"></a>Uso del profiler visual
 
@@ -47,16 +47,16 @@ La configuración específica de la plataforma y el hardware desempeñará un pa
 - Windows Mixed Reality Ultra: 90
 
 > [!NOTE]
-> Debido a la limitación de velocidad de fotogramas en [HoloLens](/windows/mixed-reality/mixed-reality-capture-for-developers#what-to-expect-when-mrc-is-enabled-on-hololens)cuando mrc predeterminado está activo, el profiler visual se oculta mientras se capturan vídeos y fotos. Esta configuración se puede invalidar en el perfil del sistema de diagnósticos.
+> Debido a la limitación de velocidad de fotogramas en [HoloLens](/windows/mixed-reality/mixed-reality-capture-for-developers#what-to-expect-when-mrc-is-enabled-on-hololens)cuando mrc predeterminado está activo, el profiler visual se oculta mientras se capturan vídeos y fotos. Esta configuración se puede invalidar en el perfil del sistema de diagnóstico.
 
 ### <a name="frame-time"></a>Tiempo entre fotogramas
 
-A la derecha de la velocidad de fotogramas está el tiempo de fotograma, en milisegundos, empleado en la CPU. Para lograr las velocidades de fotogramas de destino mencionadas anteriormente, una aplicación puede dedicar la siguiente cantidad de tiempo por fotograma:
+A la derecha de la velocidad de fotogramas se encuentra el tiempo de fotograma, en milisegundos, empleado en la CPU. Para lograr las tasas de fotogramas de destino mencionadas anteriormente, una aplicación puede dedicar la siguiente cantidad de tiempo por fotograma:
 
 - 60 fps: 16,6 ms
 - 90 fps: 11,1 ms
 
-El tiempo de GPU está planeado para agregarse en una versión futura.
+Está previsto que el tiempo de GPU se agregó en una versión futura.
 
 ### <a name="frame-graph"></a>Gráfico de fotogramas
 
@@ -64,7 +64,7 @@ El gráfico de fotogramas proporciona una presentación gráfica del historial d
 
 ![Gráfico de fotogramas perdidos de Visual Profiler](../images/diagnostics/VisualProfilerMissedFrames.png)
 
-Al usar la aplicación, busque fotogramas perdidos que indiquen que la aplicación no alcanza su velocidad de fotogramas objetivo y puede que necesite trabajo de optimización.
+Al usar la aplicación, busque fotogramas perdidos que indiquen que la aplicación no está alcanzando su velocidad de fotogramas objetivo y puede que necesite trabajo de optimización.
 
 ### <a name="memory-utilization"></a>Uso de memoria
 
@@ -72,7 +72,7 @@ La presentación de uso de memoria permite comprender fácilmente cómo afecta l
 
 ![Gráfico de memoria de Visual Profiler](../images/diagnostics/VisualProfilerMemory.png)
 
-Al usar la aplicación, busque el uso total de memoria. Los indicadores clave incluyen la proximidad del límite de memoria y los cambios rápidos en el uso.
+Al usar la aplicación, busque el uso total de memoria. Entre los indicadores clave se incluyen la proximidad del límite de memoria y los cambios rápidos en el uso.
 
 ## <a name="customizing-the-visual-profiler"></a>Personalización del profiler visual
 

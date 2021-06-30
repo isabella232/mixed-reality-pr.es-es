@@ -1,20 +1,20 @@
 ---
-title: Configuración de cámara de Windows Mixed Reality
-description: Documentación para usar Windows Mixed Reality camera en MRTK
+title: Windows Mixed Reality configuración de la cámara
+description: Documentación para usar la Windows Mixed Reality de la cámara en MRTK
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, cámara,
-ms.openlocfilehash: 94e00f47dc565af0824ef6acf5c08a9e99d4529f
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 49b178b7ebd1fbcdaab9648baeaa6abfa9e885ea
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145162"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121643"
 ---
 # <a name="windows-mixed-reality-camera-settings-provider"></a>Windows Mixed Reality de configuración de la cámara
 
-El Windows Mixed Reality configuración de la cámara determina el tipo de dispositivo en el que se ejecuta la aplicación y aplica los valores de configuración adecuados en función de la pantalla (transparente u opaca).
+El Windows Mixed Reality configuración de la cámara determina el tipo de dispositivo en el que se ejecuta la aplicación y aplica las opciones de configuración adecuadas en función de la pantalla (transparente u opaca).
 
 ## <a name="enabling-the-windows-mixed-reality-camera-settings-provider"></a>Habilitación del proveedor Windows Mixed Reality configuración de la cámara
 
@@ -24,17 +24,17 @@ En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los 
 
     ![Jerarquía de escena configurada de MRTK](../images/MRTK_ConfiguredHierarchy.png)
 
-2. Vaya al panel Inspector a la sección del sistema de cámara y expanda la **sección Proveedores de configuración de** cámara.
+2. Vaya al panel Inspector a la sección sistema de cámara y expanda la **sección Proveedores de configuración de cámara.**
 
     ![Expandir proveedores de configuración](../images/camera-system/ExpandProviders.png)
 
-3. Haga **clic en Agregar proveedor de configuración de** cámara y expanda la entrada Nueva configuración de cámara **recién** agregada.
+3. Haga clic **en Agregar proveedor de configuración de cámara** y expanda la entrada Nueva configuración de cámara **recién** agregada.
 
     ![Expansión del nuevo proveedor de configuración](../images/camera-system/ExpandNewProvider.png)
 
-4. Selección del proveedor Windows Mixed Reality configuración de la cámara
+4. Seleccione el proveedor Windows Mixed Reality configuración de la cámara
 
-    ![Selección de Windows Mixed Reality de configuración](../images/camera-system/SelectWindowsMixedRealitySettings.png)
+    ![Selección del Windows Mixed Reality configuración de configuración](../images/camera-system/SelectWindowsMixedRealitySettings.png)
 
 > [!NOTE]
 > Al usar los perfiles predeterminados de Microsoft Mixed Reality Toolkit, el proveedor Windows Mixed Reality configuración de la cámara ya estará habilitado y configurado.

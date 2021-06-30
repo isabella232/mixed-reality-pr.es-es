@@ -1,16 +1,16 @@
 ---
-title: Información general del sistema de cámara
+title: Introducción al sistema de cámara
 description: Página de aterrizaje del sistema de cámara en MRTK
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, cámara,
-ms.openlocfilehash: 1dc5328f2a6390246918063b6564837f150d28d8
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: e3b7caacaa9baa67fd81f6d32f3fd8c9f123e66d
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144478"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121293"
 ---
 # <a name="camera-system"></a>Sistema de cámara
 
@@ -49,25 +49,25 @@ Los proveedores de configuración de cámara habilitan la configuración especí
 Los proveedores se pueden agregar haciendo clic en el **botón Agregar proveedor de configuración de** cámara. Se pueden quitar haciendo clic en **-** el botón situado a la derecha del nombre del proveedor.
 
 > [!Note]
-> No todas las plataformas requerirán un proveedor de configuración de cámara. Si no hay proveedores compatibles con la plataforma en la que se ejecuta la aplicación, Microsoft Mixed Reality Toolkit aplicará los valores predeterminados básicos.
+> No todas las plataformas requerirán un proveedor de configuración de cámara. Si no hay ningún proveedor que sea compatible con la plataforma en la que se ejecuta la aplicación, Microsoft Mixed Reality Toolkit aplicará los valores predeterminados básicos.
 
 ### <a name="display-settings"></a>Configuración de pantalla
 
 ![Configuración de la pantalla de la cámara](../images/camera-system/CameraDisplaySettings.png)
 
-La configuración de pantalla se especifica para las pantallas opacas (por ejemplo, Virtual Reality) y transparentes (por ejemplo, Microsoft HoloLens). La cámara se configura, en tiempo de ejecución, con esta configuración.
+La configuración de pantalla se especifica para las pantallas opacas (por ejemplo, virtual) y transparentes (por ejemplo, Microsoft HoloLens). La cámara se configura, en tiempo de ejecución, con esta configuración.
 
 **Near Clip**
 
-El plano de recorte cercano es el más cercano, en metros, que un objeto virtual puede estar en la cámara y representarse. Para mayor comodidad del usuario, se recomienda que este valor sea mayor que cero. La imagen anterior contiene valores que se han encontrado cómodos en una variedad de dispositivos.
+El plano de recorte cercano es el más cercano, en metros, que un objeto virtual puede estar en la cámara y seguir representando. Para mayor comodidad del usuario, se recomienda que este valor sea mayor que cero. La imagen anterior contiene valores que se han encontrado cómodos en diversos dispositivos.
 
 **Recorte lejano**
 
-El plano de recorte lejano es el más alejado, en metros, que un objeto virtual puede estar en la cámara y representarse todavía. En el caso de los dispositivos transparentes, se recomienda que este valor sea relativamente cercano, ya que no supere demasiado el espacio real y que se rompa la calidad inmersiva de la aplicación.
+El plano de recorte lejano es el más alejado, en metros, que un objeto virtual puede estar en la cámara y seguir representando. En el caso de los dispositivos transparentes, se recomienda que este valor sea relativamente cercano a no superar demasiado el espacio real y interrumpir las calidades inmersivas de la aplicación.
 
 **Borrar marcas**
 
-El valor clear flags indica cómo se borra la presentación a medida que se dibuja. En el caso de las experiencias de realidad virtual, este valor suele establecerse en Skybox. Para las pantallas transparentes, se recomienda establecer esta opción en Color.
+El valor clear flags indica cómo se borra la presentación a medida que se dibuja. En el caso de las experiencias de realidad virtual, este valor suele establecerse en Skybox. En el caso de las pantallas transparentes, se recomienda establecer esta opción en Color.
 
 **Color de fondo**
 

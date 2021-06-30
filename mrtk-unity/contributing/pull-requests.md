@@ -1,16 +1,16 @@
 ---
 title: Solicitudes de incorporación de cambios
-description: Detalles relacionados con las solicitudes de incorporación de cambios.
+description: Detalles relacionados con las solicitudes de extracción de GitHub.
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity,HoloLens, HoloLens 2, Mixed Reality, development, MRTK, PR,
-ms.openlocfilehash: 7fb0dea4616acbf91b0459397f4a05f05a167947
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 580a57972f3356143fa796ae6ff4b08db2eb447a
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144740"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121373"
 ---
 # <a name="pull-requests"></a>Solicitudes de incorporación de cambios
 
@@ -24,7 +24,7 @@ Un comentario en la solicitud de incorporación de cambios le indicará si debe 
 
 ## <a name="creating-a-pull-request"></a>Crear una solicitud de incorporación de cambios
 
-Cuando esté listo para enviar una solicitud de extracción, [cree una solicitud de extracción](https://github.com/microsoft/MixedRealityToolkit-Unity/compare/main...main?expand=1) destinada a la [rama](https://github.com/microsoft/mixedrealitytoolkit-unity/tree/main) principal. Para obtener correcciones de errores durante un período de estabilización de versión, busque la rama más `prerelease/*` reciente. Las nuevas características siempre deben ir a `main` .
+Cuando esté listo para enviar una solicitud de extracción, [cree una solicitud de extracción](https://github.com/microsoft/MixedRealityToolkit-Unity/compare/main...main?expand=1) destinada a la [rama](https://github.com/microsoft/mixedrealitytoolkit-unity/tree/main) principal. Para ver las correcciones de errores durante un período de estabilización de la versión, busque la rama `prerelease/*` más reciente. Las nuevas características siempre deben ir a `main` .
 
 Lea las instrucciones y asegúrese de que se respetan en la solicitud de incorporación de cambios.
 

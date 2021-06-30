@@ -5,22 +5,22 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 705b7ab96d22c5c94c04476de30e5524095c1ce2
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 341ba0ee3e5900cc52f1ef715232f49064102309
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144783"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121383"
 ---
 # <a name="experimental-features"></a>Características experimentales
 
-Algunas características en las que trabaja el equipo de MRTK parecen tener una gran cantidad de valor inicial, aunque no hayamos aprendido por completo los detalles. Para estos tipos de características, queremos que la comunidad pueda verlas pronto. Dado que están al principio del ciclo, las etiquetamos como experimentales para indicar que siguen evolucionando y sujetas a cambios con el tiempo.
+Algunas características en las que trabaja el equipo de MRTK parecen tener un gran valor inicial, aunque no hayamos aprendido por completo los detalles. Para estos tipos de características, queremos que la comunidad pueda verlas pronto. Dado que están al principio del ciclo, las etiquetamos como experimentales para indicar que siguen evolucionando y sujetas a cambios con el tiempo.
 
 ## <a name="what-to-expect-from-an-experimental-feature"></a>Qué esperar de una característica experimental
 
 Si un componente está marcado como experimental, puede esperar lo siguiente:
 
-- Una escena de ejemplo que muestra el uso, ubicada en `MRTK/Examples/Experimental` la sub carpeta
+- Una escena de ejemplo que muestra el uso, que se encuentra en `MRTK/Examples/Experimental` la sub carpeta
 - Es posible que las características experimentales no tengan documentos.
 - Probablemente no tengan pruebas.
 - Las características experimentales están sujetas a cambios.
@@ -32,7 +32,7 @@ Si un componente está marcado como experimental, puede esperar lo siguiente:
 El código experimental debe ir a una carpeta experimental de nivel superior seguida del nombre de la característica experimental. Por ejemplo, si intenta aportar una nueva característica FooBar, coloque el código en lo siguiente:
 
 - Escenas de ejemplo en las que los scripts van a `MRTK/Examples/Experimental/FooBar/`
-- Los scripts de componentes, los elementos prefijos van a `MRTK/SDK/Experimental/FooBar/`
+- Scripts de componentes, elementos prefabs `MRTK/SDK/Experimental/FooBar/`
 - Los inspectores de componentes van a `MRTK/SDK/Inspectors/Experimental/FooBar`
 
 Al usar subcarpetas con el nombre de característica experimental, intente reflejar la misma estructura de carpetas de MRTK.
@@ -50,9 +50,9 @@ Asegúrese de que el código experimental reside en un espacio de nombres experi
 
 Consulte [esta pr.](https://github.com/microsoft/MixedRealityToolkit-Unity/pull/4532) para obtener un ejemplo.
 
-### <a name="experimental-features-should-have-an-experimental-attribute"></a>Las características experimentales deben tener un atributo [Experimental].
+### <a name="experimental-features-should-have-an-experimental-attribute"></a>Las características experimentales deben tener un atributo [Experimental]
 
-Agregue un atributo encima de uno de los campos para que aparezca un pequeño cuadro de diálogo en el editor de componentes que mencione que la característica es experimental y está `[Experimental]` sujeta a cambios significativos.
+Agregue un atributo encima de uno de los campos para que aparezca un pequeño cuadro de diálogo en el editor de componentes que mencione que la característica es experimental y está sujeta `[Experimental]` a cambios importantes.
 
 ### <a name="menus-for-experimental-features-should-go-under-experimental-sub-menu"></a>Los menús de las características experimentales deben ir en el submenú "Experimental".
 
@@ -116,6 +116,6 @@ Pruebe la escena de ejemplo en la plataforma de destino y asegúrese de que func
 
 Si una característica termina viendo bastante uso, debemos convertirla en código MRTK básico. Para ello, la característica debe tener pruebas, documentación y una escena de ejemplo.
 
-Cuando esté listo para licenciar la característica MRTK, cree un problema con el que comprobar la pr. La pr. debe incluir todo lo necesario para que esta sea una característica principal: pruebas, documentación y una escena de ejemplo que muestre el uso.
+Cuando esté listo para recibir la característica MRTK, cree un problema con el que comprobar la pr. La PR debe incluir todas las cosas necesarias para convertir esta característica en una característica principal: pruebas, documentación y una escena de ejemplo que muestra el uso.
 
 Además, no olvide actualizar los espacios de nombres para quitar el subespacio "Experimental".

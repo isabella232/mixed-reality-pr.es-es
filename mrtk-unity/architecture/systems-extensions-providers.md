@@ -5,12 +5,12 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, extensiones del sistema,
-ms.openlocfilehash: add1f443edb687edfc387a316d83443779e079f9
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 358294702971b7d9e8de1b842d3bc1844e5dc9bf
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143508"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121473"
 ---
 # <a name="systems-extension-services-and-data-providers"></a>Sistemas, servicios de extensión y proveedores de datos
 
@@ -42,10 +42,10 @@ Para poder acceder a MRTK, los servicios de extensión se registran y configuran
 
 ## <a name="data-providers"></a>Proveedores de datos
 
-Los proveedores de datos son componentes que, por su nombre, proporcionan datos a un servicio Mixed Reality Toolkit. Todos los proveedores de datos deben especificar que implementan la [`IMixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider) interfaz .
+Los proveedores de datos son componentes que, por su nombre, proporcionan datos a un servicio Mixed Reality Toolkit. Todos los proveedores de datos deben especificar que implementen la [`IMixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider) interfaz .
 
 > [!NOTE]
-> No todos los servicios requerirán proveedores de datos. De los sistemas Mixed Reality Toolkit, los sistemas de entrada y de reconocimiento espacial son los únicos servicios que usan proveedores de datos.
+> No todos los servicios requerirán proveedores de datos. De los sistemas Mixed Reality Toolkit, los sistemas de entrada y reconocimiento espacial son los únicos servicios que usan proveedores de datos.
 
 Para que el servicio MRTK específico sea accesible, los proveedores de datos se registran en el perfil de configuración del servicio.
 

@@ -5,12 +5,12 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, sistema de límites,
-ms.openlocfilehash: 36717493107b129a7200dd3f912bcbdc3337b9a1
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 0f1a9edd9f9a31e7ba20f630406b299909a4864c
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144495"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121253"
 ---
 # <a name="configuring-the-boundary-visualization"></a>Configuración de la visualización de límites
 
@@ -56,7 +56,7 @@ Indica si se crea o no un rectángulo de área de reproducción y se agrega a la
 
 Indica el material que se debe usar al crear el objeto de área de reproducción.
 
-**Capa de física**
+**Capa física**
 
 Capa en la que se debe establecer el área de juego. El valor predeterminado es la *capa Omitir raycast.*
 
@@ -72,7 +72,7 @@ Indica si se crea o no el contorno del área de seguimiento y se agrega a la esc
 
 Indica el material que se debe usar al crear el contorno del área de seguimiento.
 
-**Capa de física**
+**Capa física**
 
 Capa en la que se debe establecer el área de seguimiento. El valor predeterminado es la *capa Omitir raycast.*
 
@@ -88,12 +88,12 @@ Indica si los planos de la pared de límites se van a crear y agregar a la escen
 
 Indica el material que se debe usar al crear los planos de la pared de límites.
 
-**Capa de física**
+**Capa física**
 
-Capa en la que se deben establecer las paredes de límite. El valor predeterminado es la *capa Omitir Raycast.*
+Capa en la que se deben establecer las paredes de límite. El valor predeterminado es la *capa Omitir raycast.*
 
 > [!NOTE]
-> Establecer el componente de la pared de límites en una capa física que no sea *Omitir Raycast* puede impedir que los usuarios interactúen con objetos dentro de la escena.
+> Establecer el componente de la pared de límites en una capa física que no sea *Ignore Raycast* puede impedir que los usuarios interactúen con objetos dentro de la escena.
 
 ## <a name="boundary-ceiling-settings"></a>Configuración del límite superior
 
@@ -107,12 +107,12 @@ Indica si se va a crear o no un plano de límite superior y agregarlo a la escen
 
 Indica el material que se debe usar al crear el plano de límite superior.
 
-**Capa de física**
+**Capa física**
 
 Capa en la que se deben establecer las paredes de límite. El valor predeterminado es la *capa Omitir raycast.*
 
 > [!NOTE]
-> Establecer el componente de límite superior en una capa física que no sea *Omitir Raycast* puede impedir que los usuarios interactúen con objetos dentro de la escena.
+> Establecer el componente de límite superior en una capa física que no sea *Ignore Raycast* puede impedir que los usuarios interactúen con objetos dentro de la escena.
 
 ## <a name="see-also"></a>Consulte también
 

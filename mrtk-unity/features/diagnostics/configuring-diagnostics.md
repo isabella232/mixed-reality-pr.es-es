@@ -1,16 +1,16 @@
 ---
 title: Configuración de diagnósticos
-description: documentación para configurar diagnósticos en MRTK
+description: Documentación para configurar diagnósticos en MRTK
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 2ff761baa728017eb011cb9105cf203e6e3a72e4
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 211ee2ed06ba9b13bd90169bcc7ee50da4594034
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144174"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121803"
 ---
 # <a name="configuring-the-diagnostics-system"></a>Configuración del sistema de diagnóstico
 
@@ -26,7 +26,7 @@ Tenga en cuenta que esta opción es independiente de si el sistema de diagnósti
 
 ### <a name="show-diagnostics"></a>Mostrar diagnósticos
 
-Indica si el sistema de diagnóstico debe mostrar o no las opciones de diagnóstico configuradas.
+Indica si el sistema de diagnóstico va a mostrar o no las opciones de diagnóstico configuradas.
 
 Cuando se deshabilita, se ocultarán todas las opciones de diagnóstico configuradas.
 
@@ -40,7 +40,7 @@ Indica si se va a mostrar o no Visual Profiler.
 
 ### <a name="frame-sample-rate"></a>Velocidad de muestreo de fotogramas
 
-Cantidad de tiempo, en segundos, para recopilar fotogramas para el cálculo de la velocidad de fotogramas. El intervalo es de 0 a 5 segundos.
+Cantidad de tiempo, en segundos, para recopilar fotogramas para el cálculo de velocidad de fotogramas. El intervalo es de 0 a 5 segundos.
 
 ### <a name="window-anchor"></a>Delimitador de ventana
 

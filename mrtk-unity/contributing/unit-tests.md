@@ -1,22 +1,22 @@
 ---
 title: Pruebas unitarias
-description: UnitTests para comprobar la fiabilidad de MRTK.
+description: Pruebas unitarias para comprobar la confiabilidad de MRTK.
 author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity,HoloLens, HoloLens 2, Mixed Reality, development, MRTK, UnitTest,
-ms.openlocfilehash: 76d246634cf190787fcfd78c849a0bd6da3a2135
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: a915b005a69de1864a5674bbb0363f18d1c74b19
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144709"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121353"
 ---
 # <a name="writing-and-running-tests-in-mrtk"></a>Escritura y ejecución de pruebas en MRTK
 
 Para asegurarse de que MRTK es confiable, MRTK tiene un conjunto de pruebas para asegurarse de que los cambios en el código no revierta el comportamiento existente. Tener una buena cobertura de prueba en un código base grande como MRTK es fundamental para la estabilidad y tener confianza al realizar cambios.
 
-MRTK usa la [Test Runner Unity](https://docs.unity3d.com/Manual/testing-editortestsrunner.html) que usa una integración de Unity de [NUnit.](https://nunit.org/) En esta guía se proporciona un punto de partida sobre cómo agregar pruebas a MRTK. No explicará el nombre [Test Runner Unity](https://docs.unity3d.com/Manual/testing-editortestsrunner.html) y [NUnit](https://nunit.org/) que se pueden buscar en los vínculos proporcionados.
+MRTK usa la [Test Runner Unity](https://docs.unity3d.com/Manual/testing-editortestsrunner.html) que usa una integración de Unity de [NUnit.](https://nunit.org/) En esta guía se proporciona un punto de partida sobre cómo agregar pruebas a MRTK. No explicará los vínculos [Test Runner Unity](https://docs.unity3d.com/Manual/testing-editortestsrunner.html) y [NUnit](https://nunit.org/) que se pueden buscar en los vínculos proporcionados.
 
 Antes de enviar una solicitud de extracción, asegúrese de:
 
@@ -58,15 +58,15 @@ También es posible ejecutar las pruebas de playmode varias veces a través del 
 
 ### <a name="pull-request-validation"></a>Validación de solicitudes de extracción
 
-La CI de MRTK compilará MRTK en todas las configuraciones y ejecutará todas las pruebas de modo de edición y reproducción. La integración continua se puede desencadenar mediante la publicación de un comentario en la pr. de GitHub `/azp run mrtk_pr` si el usuario tiene derechos suficientes. Las ejecuciones de CI se pueden ver en la pestaña "comprobaciones" de la pr.
+La CI de MRTK compilará MRTK en todas las configuraciones y ejecutará todas las pruebas de modo de edición y reproducción. Ci se puede desencadenar mediante la publicación de un comentario en la pr. de GitHub `/azp run mrtk_pr` si el usuario tiene derechos suficientes. Las ejecuciones de CI se pueden ver en la pestaña "comprobaciones" de la pr.
 
-Solo una vez que todas las pruebas se han superado correctamente, la PR se puede combinar en main.
+Solo después de que todas las pruebas se han superado correctamente, la pr. se puede combinar en main.
 
-### <a name="stress-tests--bulk-tests"></a>Pruebas de esfuerzo/pruebas masivas
+### <a name="stress-tests--bulk-tests"></a>Pruebas de esfuerzo y pruebas masivas
 
 A veces, las pruebas solo producirán errores ocasionalmente, lo que puede resultar frustrante de depurar.
 
-Para que varias ejecuciones de pruebas se ejecuten localmente, modifique los scripts de prueba según corresponda. El siguiente script de Python debe hacer que este escenario sea más práctico.
+Para que varias pruebas se ejecuten localmente, modifique los scripts de prueba según corresponda. El siguiente script de Python debe hacer que este escenario sea más cómodo.
 
 El requisito previo para ejecutar el script de Python es tener [instalado Python 3.X.](https://www.python.org/downloads/)
 
@@ -93,7 +93,7 @@ cd scripts\tests
 python .\generate_repeat_tests.py -n 5 -t MyTest MySecondTest
 ```
 
-El nuevo archivo de prueba debe contener ahora
+El nuevo archivo de prueba ahora debe contener
 
 ```c#
 [UnityTest]
@@ -108,11 +108,11 @@ public IEnumerator A4MyTest0(){ yield return MyTest();}
 public IEnumerator MyTest() {...}
 ```
 
-Abra el ejecutor de pruebas y observe las nuevas pruebas a las que se puede llamar varias veces.
+Abra el ejecutor de pruebas y observe las nuevas pruebas a las que ahora se puede llamar repetidamente.
 
 ## <a name="writing-tests"></a>Escritura de pruebas
 
-Hay dos tipos de pruebas que se pueden agregar para el código nuevo.
+Hay dos tipos de pruebas que se pueden agregar para el nuevo código.
 
 * Pruebas de modo de reproducción
 * Pruebas de modo de edición
@@ -244,9 +244,9 @@ namespace Microsoft.MixedReality.Toolkit.Tests
 }
 ```
 
-### <a name="test-naming-conventions"></a>Convenciones de nomenclatura de prueba
+### <a name="test-naming-conventions"></a>Prueba de convenciones de nomenclatura
 
-Por lo general, las pruebas deben tener un nombre basado en la clase que están probando o en el escenario que están probando.
+Por lo general, las pruebas se deben denominar en función de la clase que están probando o del escenario que están probando.
 Por ejemplo, dada una clase que se va a probar:
 
 ```c#
@@ -279,14 +279,14 @@ Test: Assets/MRTK/Tests/EditModeTests/Core/Utilities/InterestingUtilityClassTest
 
 Esto es para asegurarse de que hay una manera clara de buscar la clase de prueba correspondiente de cada clase, si existe dicha clase de prueba.
 
-La selección de ubicación de las pruebas basadas en escenarios está menos definida: si la prueba realiza el sistema de entrada general, por ejemplo, considere la posibilidad de colocarla en una carpeta "InputSystem" en el modo de edición correspondiente o en la carpeta de pruebas del modo de reproducción correspondiente.
+La colocación de pruebas basadas en escenarios está menos definida: si la prueba realiza el sistema de entrada general, por ejemplo, considere la posibilidad de colocarlo en una carpeta "InputSystem" en el modo de edición correspondiente o en la carpeta de pruebas del modo de reproducción correspondiente.
 
 ### <a name="test-script-icons"></a>Iconos de script de prueba
 
 Al agregar una nueva prueba, modifique el script para que tenga el icono de MRTK correcto. Hay una sencilla herramienta MRTK para hacerlo:
 
 1. Vaya al elemento de menú Mixed Reality Toolkit.
-1. Haga clic en Utilidades, luego en Actualizar y, a continuación, en Iconos.
+1. Haga clic en Utilidades, luego en Actualizar y, después, en Iconos.
 1. Haga clic en Pruebas y el actualizador se ejecutará automáticamente, actualizando los scripts de prueba que faltan en sus iconos.
 
 ### <a name="mrtk-utility-methods"></a>Métodos de la utilidad MRTK

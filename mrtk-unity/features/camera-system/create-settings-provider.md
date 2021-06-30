@@ -1,16 +1,16 @@
 ---
-title: Crear proveedor de configuración
-description: proveedor de datos para la configuración de la cámara en MRTK
+title: Creación de un proveedor de configuración
+description: Proveedor de datos para la configuración de la cámara en MRTK
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 6ec3fc1c88c1a32334cb2869ad1994863e55bf9a
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: d07b84c3cf550f9a235e58286b4cd239ac43b649
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144898"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121193"
 ---
 # <a name="creating-a-camera-settings-provider"></a>Creación de un proveedor de configuración de cámara
 
@@ -24,9 +24,9 @@ El sistema de cámara es un sistema extensible para proporcionar compatibilidad 
 Los proveedores de datos se pueden distribuir de una de estas dos maneras:
 
 1. Complementos de terceros
-1. Parte del kit de herramientas Mixed Reality Microsoft
+1. Parte de Microsoft Mixed Reality Toolkit
 
-El proceso de aprobación para los envíos de nuevos proveedores de datos a MRTK variará caso por caso y se comunicará en el momento de la propuesta inicial. Las propuestas se pueden enviar mediante la creación de un nuevo problema [ *de tipo de solicitud* de características](https://github.com/microsoft/MixedRealityToolkit-Unity/issues).
+El proceso de aprobación de envíos de nuevos proveedores de datos a MRTK variará caso por caso y se comunicará en el momento de la propuesta inicial. Las propuestas se pueden enviar mediante la creación de un nuevo problema [ *de tipo de solicitud* de características](https://github.com/microsoft/MixedRealityToolkit-Unity/issues).
 
 ### <a name="third-party-add-ons"></a>Complementos de terceros
 
@@ -51,7 +51,7 @@ Cuando la *carpeta ContosoCamera* contiene la implementación del proveedor de d
 
 **Espacio de nombres**
 
-Si se envía un proveedor de configuración de cámara al repositorio  [de Mixed Reality Toolkit,](https://github.com/Microsoft/MixedRealityToolkit-Unity)el espacio de nombres debe comenzar por Microsoft.MixedReality.Toolkit (por ejemplo, *Microsoft.MixedReality.Toolkit.CameraSystem).*
+Si se envía un proveedor de configuración de cámara al repositorio  [de Mixed Reality Toolkit,](https://github.com/Microsoft/MixedRealityToolkit-Unity)el espacio de nombres debe comenzar por Microsoft.MixedReality.Toolkit (por ejemplo: *Microsoft.MixedReality.Toolkit.CameraSystem).*
 
 **Estructura de carpetas**
 
@@ -164,7 +164,7 @@ namespace namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
 }
 ```
 
-El atributo se puede aplicar a la clase de perfil para permitir que los clientes creen una instancia de perfil mediante el menú `CreateAssetMenu`   >    >  **Crear recursos Mixed Reality**  >  **Toolkit Profiles** .
+El atributo se puede aplicar a la clase de perfil para permitir que los clientes creen una instancia de perfil mediante el menú `CreateAssetMenu`   >    >  **Crear recursos Mixed Reality perfiles** del kit  >  **de** herramientas.
 
 ### <a name="implement-the-inspector"></a>Implementación del inspector
 
@@ -183,7 +183,7 @@ namespace namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
 
 ## <a name="create-assembly-definitions"></a>Creación de definiciones de ensamblado
 
-El Mixed Reality Toolkit usa archivos de definición de ensamblado[(.asmdef)](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html)para especificar dependencias entre componentes, así como para ayudar a Unity a reducir el tiempo de compilación.
+El Mixed Reality Toolkit usa archivos de definición de ensamblado[(.asmdef)](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html)para especificar las dependencias entre componentes, así como para ayudar a Unity a reducir el tiempo de compilación.
 
 Se recomienda crear archivos de definición de ensamblado para todos los proveedores de datos y sus componentes del editor.
 

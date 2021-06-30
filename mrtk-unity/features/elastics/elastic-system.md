@@ -1,24 +1,24 @@
 ---
 title: Sistema elástico
-description: documentación relacionada con la simulación de elásticos en MRTK
+description: Documentación relacionada con la simulación de elásticos en MRTK
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, ElasticsSystem,
-ms.openlocfilehash: 01a4c4a337593252e0955c03e883e35e1329fc45
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 1f90864ee6d3b6756b863de600ade8423a44cacc
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145179"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121243"
 ---
 # <a name="elastic-system-experimental"></a>Sistema elástico (experimental)
 
 ![Sistema elástico](../images/elastics/Elastics_Main1.gif)
 
-MRTK incluye un sistema de simulación elástica que incluye una amplia variedad de subclases extensibles y flexibles, que ofrecen enlaces para sistemas de cuaternión de cuaternión 4 dimensionales, sonidos de volumen tridimensionales y sistemas de spring lineales simples.
+MRTK incluye un sistema de simulación elástica que incluye una amplia variedad de subclases extensibles y flexibles, que ofrece enlaces para cuaternión de cuaternión de 4 dimensiones, sonidos de volumen tridimensionales y sistemas de spring lineales simples.
 
-Actualmente, los siguientes componentes de MRTK que admiten [el administrador de elásticos](xref:Microsoft.MixedReality.Toolkit.Experimental.Physics.ElasticsManager) pueden aprovechar la funcionalidad de los elásticos:
+Actualmente, los siguientes componentes de MRTK que [admiten el administrador de elásticos](xref:Microsoft.MixedReality.Toolkit.Experimental.Physics.ElasticsManager) pueden aprovechar la funcionalidad de los elásticos:
 
 - [Control Bounds](../ux-building-blocks/bounds-control.md)
 - [Manipulador de objetos](../ux-building-blocks/object-manipulator.md)
@@ -27,21 +27,21 @@ Actualmente, los siguientes componentes de MRTK que admiten [el administrador de
 
 ![Elastic System2](../images/elastics/Elastics_Main.gif)
 
-El administrador de elásticos procesa las transformaciones pasadas y las alimenta en el sistema elástico.
+Los procesos del administrador de elásticos pasan transformaciones y las alimentan en el sistema elástico.
 
-La habilitación de los elásticos para los componentes personalizados se puede lograr mediante dos pasos:
+La habilitación de elásticos para componentes personalizados se puede lograr mediante dos pasos:
 
 1. Llamar al método Initialize al iniciar la manipulación, actualizando el sistema con la transformación de host actual.
-1. Consulta de ApplyHostTransform cada vez que se debe realizar un cálculo elástico en la transformación de destino actualizada.
+1. Consultar ApplyHostTransform siempre que se deba realizar un cálculo elástico en la transformación de destino actualizada.
 
-Tenga en cuenta que los elásticos seguirán simulando una vez que finalice la manipulación (a través del bucle de actualización del administrador de elásticos). Para bloquear el comportamiento, la actualización automática de [elastics EnableElasticsUpdate](xref:Microsoft.MixedReality.Toolkit.Experimental.Physics.ElasticsManager.EnableElasticsUpdate) se puede establecer en false.
+Tenga en cuenta que los elásticos seguirán simulando una vez que finalice la manipulación (a través del bucle de actualización del administrador de elásticos). Para bloquear el comportamiento, la actualización automática de [los elásticos EnableElasticsUpdate](xref:Microsoft.MixedReality.Toolkit.Experimental.Physics.ElasticsManager.EnableElasticsUpdate) se puede establecer en false.
 
 De forma predeterminada, el componente de administrador de elásticos, cuando se agrega a un objeto de juego, no tendrá elásticos habilitados para ningún tipo de transformación.
 El campo `Manipulation types using elastic feedback` debe habilitarse para tipos de transformación específicos para crear configuraciones elásticas y extensiones para el tipo seleccionado.
 
 ### <a name="elastics-configurations"></a>Configuraciones elásticas
 
-De forma similar a las configuraciones de control de [límites,](../ux-building-blocks/bounds-control.md#configuration-objects)Elastic Manager incluye un conjunto de objetos de configuración que se pueden almacenar como objetos que pueden incluirse en scripts y compartirse entre instancias diferentes o instancias previas. Las configuraciones se pueden compartir y vincular como archivos de recursos individuales que pueden incluirse en scripts o recursos que se pueden incluir en scripts anidados dentro de objetos prefab. También se pueden definir otras configuraciones directamente en la instancia sin vincular a un recurso que permite scripts externo o anidado.
+De forma similar a las configuraciones de [control de límites,](../ux-building-blocks/bounds-control.md#configuration-objects)Elastic Manager incluye un conjunto de objetos de configuración que se pueden almacenar como objetos que pueden incluirse en scripts y compartirse entre instancias o elementos prefab diferentes. Las configuraciones se pueden compartir y vincular como archivos de recursos individuales que pueden incluirse en scripts o recursos anidados que se pueden incluir en scripts dentro de objetos prefab. También se pueden definir otras configuraciones directamente en la instancia sin vincular a un recurso que permite scripts externo o anidado.
 
 El inspector del administrador elástico indicará si una configuración se comparte o se inline como parte de la instancia actual mostrando un mensaje en el inspector de propiedades. Además, las instancias compartidas no se podrán editar directamente en la propia ventana de propiedades del administrador de elásticos, sino que el recurso al que está vinculando debe modificarse directamente para evitar cambios accidentales en las configuraciones compartidas.
 
@@ -53,7 +53,7 @@ Elastics Manager ofrece opciones de objetos de configuración para los siguiente
 
 #### <a name="elastic-configuration-object"></a>Objeto de configuración elástica
 
-Una configuración de elásticos define las propiedades de un sistema diferencial de oscilación armónica desasistido.
+Una configuración de elásticos define las propiedades de un sistema diferencial de diferenciales de diferenciales armónicos.
 Las siguientes propiedades se pueden ajustar, pero ya vienen con un conjunto de valores predeterminados en MRTK:
 
 - **Masa:** masa del elemento de oscilador simulado.
@@ -74,21 +74,21 @@ Las extensiones de volumen definen un espacio tridimensional en el que el oscila
 
 - **StretchBounds:** representa los límites inferiores del espacio elástico.
 - **UseBounds:** indica si el sistema debe respetar los límites de extensión. Si es true, cuando la iteración actual de la posición de destino está fuera de los límites de extensión, se aplicará la fuerza final.
-- **Puntos de instantánea:** apunta dentro del espacio al que se ajustará el sistema.
+- **Puntos de instantánea:** puntos dentro del espacio al que se ajustará el sistema.
 - **RepeatSnapPoints:** repite los puntos de ajuste al infinito. Los puntos de ajuste existentes servirán como módulo donde los puntos de ajuste reales se asignan a los múltiples enteros más cercanos de cada punto de instantánea.
-- **SnapRadius:** distancia a la que los puntos de instantánea comienzan a forzar el spring.
+- **SnapRadius:** distancia a la que los puntos de ajuste comienzan a forzar el resorte.
 
 ![Elastic Volume Snap Grid](../images/elastics/Elastics_Volume_Snap.gif)
 
 #### <a name="quaternion-elastic-extent"></a>Extensión elástica de cuaternión
 
-Las extensiones de cuaternión definen un espacio de rotación de cuatro dimensiones en el que el oscilador tortico desasistido es libre de girar.
+Las extensiones de cuaternión definen un espacio de rotación dimensional de cuatro dimensiones en el que el oscilador del armónico desasistido es libre de girar.
 
 ![Ejemplo de rotación elástica](../images/elastics/Elastics_Rotation.gif)
 
-- **Puntos de instantánea:** ángulos euler a los que se ajustará el sistema.
+- **SnapPoints:** ángulos euler a los que se ajustará el sistema.
 - **RepeatSnapPoints:** repite los puntos de ajuste. Los puntos de ajuste existentes servirán como módulo donde los puntos de ajuste reales se asignan a los múltiples enteros más cercanos de cada punto de instantánea.
-- **SnapRadius:** ángulo de arco en el que los puntos de ajuste comienzan a forzar el spring en grados euler.
+- **SnapRadius:** ángulo de arco en el que los puntos de ajuste comienzan a forzar el resorte en grados euler.
 
 ## <a name="elastics-example-scene"></a>Escena de ejemplo de elastics
 

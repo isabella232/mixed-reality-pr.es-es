@@ -5,14 +5,14 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, cámara ar,
-ms.openlocfilehash: baa54f4a7c6238b136a108cf5adcbddd29c3ee1b
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: e1c032805bc4b733cfcc51e1ceac5096c73715cf
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143461"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121203"
 ---
-# <a name="unity-ar-camera-settings-provider"></a>Proveedor de configuración de la cámara ar de Unity
+# <a name="unity-ar-camera-settings-provider"></a>Proveedor de configuración de cámara ar de Unity
 
 El proveedor de configuración de la cámara AR de Unity es un componente experimental de MRTK que permite que las aplicaciones de realidad mixta se ejecuten en dispositivos iOS y Android.
 
@@ -24,7 +24,7 @@ Para obtener una guía sobre cómo agregar el proveedor a la escena: [Configurac
 
 ### <a name="tracking-settings"></a>Configuración de seguimiento
 
-El proveedor de configuración de la cámara AR de Unity permite opciones de configuración sobre cómo se realiza el seguimiento. Esta configuración es específica de la implementación del proveedor de configuración de la cámara ar de Unity.
+El proveedor de configuración de la cámara ar de Unity permite opciones de configuración para cómo se realiza el seguimiento. Esta configuración es específica de la implementación del proveedor de configuración de cámara ar de Unity.
 
 **Pos Source**
 
@@ -42,7 +42,7 @@ Las opciones disponibles se describen en la tabla siguiente.
 | Ojo derecho | El ojo derecho de un dispositivo montado en la cabeza. |
 | Posición derecha | Posición del controlador derecho. |
 
-El valor predeterminado para el origen de posición es **Color Camera**, para habilitar una pantalla transparente en dispositivos móviles, como un teléfono o una tableta.
+El valor predeterminado para el origen de la posición es **Color Camera**, para habilitar una pantalla transparente en dispositivos móviles, como un teléfono o una tableta.
 
 **Tipo de seguimiento**
 
@@ -66,13 +66,13 @@ Las opciones disponibles se describen en la tabla siguiente.
 
 | Opción | Descripción |
 | --- | --- |
-| Antes de la representación | Justo antes de la representación. |
+| Antes de representar | Justo antes de la representación. |
 | Actualizar | Durante la fase de actualización del marco. |
 | Actualizar y antes de representar | Durante la fase de actualización y justo antes de la representación. |
 
-El valor predeterminado para el tipo de seguimiento **es Update y Before Render**, para habilitar la latencia de seguimiento más baja.
+El valor predeterminado para el tipo de seguimiento **es Update y Before Render** para habilitar la latencia de seguimiento más baja.
 
 ## <a name="see-also"></a>Consulte también
 
 - [Información general del sistema de cámara](camera-system-overview.md)
-- [Crear un proveedor de configuración de cámara](create-settings-provider.md)
+- [Creación de un proveedor de configuración de cámara](create-settings-provider.md)

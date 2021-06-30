@@ -1,34 +1,34 @@
 ---
-title: Introducción al sistema de límites
+title: Información general del sistema de límites
 description: Página de aterrizaje del sistema de límites en MRTK
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, sistema de límites,
-ms.openlocfilehash: 2858b770fb49a44d1e2d704e8d3a81affe74d272
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 405a2d06be5d929d5c276fc8cd7ab36b6b3cf68c
+ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144737"
+ms.lasthandoff: 06/30/2021
+ms.locfileid: "113121363"
 ---
 # <a name="boundary-system"></a>Sistema de límites
 
-El sistema de límites proporciona compatibilidad para visualizar los componentes de límites de realidad virtual en aplicaciones de realidad mixta. Los límites definen el área en la que los usuarios pueden moverse de forma segura mientras usan un casco de realidad virtual. Los límites son un componente importante de una experiencia de realidad mixta para ayudar a los usuarios a evitar obstáculos desconocidos mientras llevan cascos de realidad virtual.
+El sistema de límites proporciona compatibilidad para visualizar componentes de límite de realidad virtual en aplicaciones de realidad mixta. Los límites definen el área en la que los usuarios pueden moverse de forma segura mientras llevan un casco de realidad virtual. Los límites son un componente importante de una experiencia de realidad mixta para ayudar a los usuarios a evitar obstáculos desconocidos al usar un casco de realidad virtual.
 
-Muchas plataformas de realidad virtual proporcionan una pantalla automática, por ejemplo, un contorno blanco superpuesto en el mundo virtual cuando el usuario o su controlador se acerca al límite. El sistema de límites del kit de herramientas de Mixed Reality amplía esta característica para permitir la presentación de un esquema del área con seguimiento, un plano de suelo y otras características que se pueden usar para proporcionar información adicional a los usuarios.
+Muchas plataformas de realidad virtual proporcionan una pantalla automática, por ejemplo, un contorno blanco superpuesto en el mundo virtual cuando el usuario o su controlador se acerca al límite. El sistema de límites del kit de herramientas de Mixed Reality amplía esta característica para habilitar la presentación de un esquema del área con seguimiento, un plano de la planta y otras características que se pueden usar para proporcionar información adicional a los usuarios.
 
 ## <a name="getting-started"></a>Introducción
 
-La adición de compatibilidad con límites requiere dos componentes clave del kit de herramientas de Mixed Reality: el sistema de límites y una plataforma de realidad virtual configurada con un límite.
+La adición de compatibilidad con límites requiere dos componentes clave de Mixed Reality Toolkit: el sistema de límites y una plataforma de realidad virtual configurada con un límite.
 
 1. [Habilitación](#enable-boundary-system) del sistema de límites
 2. [Configuración de](#configure-boundary-visualization) la visualización de límites
-3. [Compilación e implementación](#build-and-deploy) en una plataforma vr con un límite configurado
+3. [Compilación e implementación](#build-and-deploy) en una plataforma de realidad virtual con un límite configurado
 
 ## <a name="enable-boundary-system"></a>Habilitación del sistema de límites
 
-El sistema de límites se administra mediante el objeto MixedRealityToolkit (u otro componente [del registrador de](xref:Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar) servicios).
+El sistema de límites se administra mediante el objeto MixedRealityToolkit (u otro componente [registrador de](xref:Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar) servicios).
 
 En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los pasos necesarios para otros registradores de servicios pueden ser diferentes.
 
@@ -45,7 +45,7 @@ En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los 
     ![Selección de la implementación del sistema de límites](../images/boundary/BoundarySelectSystemType.png)
 
 > [!NOTE]
-> Toda la implementación del sistema de límites debe extender [`IMixedRealityBoundarySystem`](xref:Microsoft.MixedReality.Toolkit.Boundary.IMixedRealityBoundarySystem)
+> Toda la implementación del sistema de límites debe extender el [`IMixedRealityBoundarySystem`](xref:Microsoft.MixedReality.Toolkit.Boundary.IMixedRealityBoundarySystem)
 
 ## <a name="configure-boundary-visualization"></a>Configuración de la visualización de límites
 
@@ -54,7 +54,7 @@ El [sistema de límites usa un perfil de configuración](configuring-boundary-vi
 ![Opciones de visualización de límites](../images/boundary/BoundaryVisualizationProfile.png)
 
 > [!NOTE]
-> Los usuarios del perfil predeterminado (Assets/MRTK/SDK/Profiles) tendrán el sistema de límites preconfigurado para mostrar un plano de planta, el área de juego y el área de `DefaultMixedRealityBoundaryVisualizationProfile` seguimiento.
+> Los usuarios del perfil predeterminado `DefaultMixedRealityBoundaryVisualizationProfile` (Assets/MRTK/SDK/Profiles) tendrán el sistema de límites preconfigurado para mostrar un plano de planta, el área de juego y el área de seguimiento.
 
 ## <a name="build-and-deploy"></a>Compilación e implementación
 
