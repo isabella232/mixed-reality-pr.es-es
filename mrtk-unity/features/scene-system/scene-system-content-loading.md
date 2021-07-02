@@ -1,20 +1,20 @@
 ---
-title: Carga de contenido del sistema de escenas
+title: Carga de contenido del sistema de escena
 description: Documentación sobre la carga del sistema de escena con MRTK
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: f310b3687a6773404c7a998a3764163daf159857
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: c6bc6474afd50fe265853e53c0f29009d816cf51
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145146"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177582"
 ---
-# <a name="content-scene-loading"></a>Carga de escena de contenido
+# <a name="scene-system-content-loading"></a>Carga de contenido del sistema de escena
 
-Todas las operaciones de carga de contenido son asincrónicas y, de forma predeterminada, toda la carga de contenido es aditiva. Las operaciones de carga de contenido nunca afectan al administrador ni a las escenas de iluminación. Para obtener información sobre cómo supervisar el progreso de carga y la activación de la escena, vea [Supervisión de la carga de contenido.](scene-system-load-progress.md)
+Todas las operaciones de carga de contenido son asincrónicas y, de forma predeterminada, toda la carga de contenido es aditiva. Las escenas de iluminación y administrador nunca se ven afectadas por las operaciones de carga de contenido. Para obtener información sobre cómo supervisar el progreso de la carga y la activación de la escena, vea [Supervisión de la carga de contenido.](scene-system-load-progress.md)
 
 ## <a name="loading-content"></a>Carga de contenido
 
@@ -49,11 +49,11 @@ await sceneSystem.LoadContent("SingleContentScene", LoadSceneMode.Single);
 
 ## <a name="next--previous-scene-loading"></a>Carga de la escena siguiente o anterior
 
-El contenido se puede cargar por orden de índice de compilación. Esto es útil para presentar aplicaciones que llevan a los usuarios a través de un conjunto de escenas de demostración uno a uno.
+El contenido se puede cargar de forma singly en orden de índice de compilación. Esto es útil para presentar aplicaciones que llevan a los usuarios a través de un conjunto de escenas de demostración una a una.
 
 ![Escenas actuales en la compilación en la configuración del reproductor](../images/scene-system/MRTK_SceneSystemBuildSettings.png)
 
-Tenga en cuenta que la carga de contenido siguiente o anterior usa LoadSceneMode.Single de forma predeterminada para asegurarse de que se descarga el contenido anterior.
+Tenga en cuenta que la siguiente carga de contenido o anterior usa LoadSceneMode.Single de forma predeterminada para asegurarse de que se descarga el contenido anterior.
 
 ```c#
 IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService<IMixedRealitySceneSystem>();
@@ -69,9 +69,9 @@ if (prevSceneRequested && sceneSystem.PrevContentExists)
 }
 ```
 
-`PrevContentExists` devolverá true si hay al menos una escena de contenido que tenga un índice de compilación inferior al índice de compilación más bajo cargado actualmente. `NextContentExists` devolverá true si hay al menos una escena de contenido que tenga un índice de compilación mayor que el índice de compilación más alto cargado actualmente.
+`PrevContentExists` devolverá true si hay al menos una escena de contenido con un índice de compilación inferior al índice de compilación más bajo cargado actualmente. `NextContentExists` devolverá true si hay al menos una escena de contenido que tenga un índice de compilación mayor que el índice de compilación más alto cargado actualmente.
 
-Si el argumento es true, el contenido volverá al primer y último `wrap` índice de compilación. Esto elimina la necesidad de comprobar el contenido siguiente o anterior:
+Si el `wrap` argumento es true, el contenido volverá al primer y último índice de compilación. Esto elimina la necesidad de comprobar el contenido siguiente o anterior:
 
 ```c#
 IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService<IMixedRealitySceneSystem>();
@@ -131,7 +131,7 @@ Nombre de la escena | Etiqueta de escena | Cargado por script
 ---|---|---
 DebugXiainPhysics | DoNotInclude |
 StructureTesting | DoNotInclude |
-Las herramientas Desalentación | DoNotInclude |
+DeserciónTools | DoNotInclude |
 Mountain | Terreno | •
 Cabin | Estructuras | •
 Árboles | Vegetación | •
@@ -140,6 +140,6 @@ Cabin | Estructuras | •
 
 ## <a name="editor-behavior"></a>Comportamiento del editor
 
-Puede realizar todas estas operaciones en el editor y en el modo de reproducción mediante el inspector de servicio del sistema de [escena.](../../configuration/mixed-reality-configuration-guide.md#editor-utilities) En el modo de edición, las cargas de escena serán instantáneas, mientras que en el modo de reproducción puede observar el progreso de la carga y usar [tokens de activación.](scene-system-load-progress.md)
+Puede realizar todas estas operaciones en el editor y en modo de reproducción mediante el inspector de servicio del sistema de [escena.](../../configuration/mixed-reality-configuration-guide.md#editor-utilities) En el modo de edición, las cargas de escena serán instantáneas, mientras que en el modo de reproducción puede observar el progreso de la carga y usar [tokens de activación.](scene-system-load-progress.md)
 
 ![Sistema de escena en el inspector con la carga de contenido resaltada](../images/scene-system/MRTK_SceneSystemServiceInspector.PNG)

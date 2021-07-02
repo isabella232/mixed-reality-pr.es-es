@@ -1,16 +1,16 @@
 ---
-title: Ventana de migración
+title: El plazo de migración
 description: Documentación sobre cómo migrar a una actualización en MRTK
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: a6e268dd28be2a3d485f937ec5b5ce6b1f29851f
-ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
+ms.openlocfilehash: 9d960d01e738736edd452a124db5c306b5d752ce
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "110647123"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176129"
 ---
 # <a name="migration-window"></a>El plazo de migración
 
@@ -21,7 +21,7 @@ La ventana de migración es una herramienta que ayuda a los usuarios a migrar au
 
 ## <a name="usage"></a>Uso
 
-Para abrir la ventana, seleccione Mixed Reality  >  **Ventana de**  >  **migración de utilidades del** kit  >  **de herramientas**. Una vez abierta la ventana de migración, las pestañas de navegación del modo de selección se pueden habilitar eligiendo la implementación específica del componente del controlador de migración.  
+Para abrir la ventana, seleccione **Mixed Reality**  >  **Toolkit**  >  **migración de**  >  **utilidades.** Una vez abierta la ventana de migración, las pestañas de navegación del modo de selección se pueden habilitar eligiendo la implementación específica del componente del controlador de migración.  
 
 ![Modos de selección de migración](../images/migration-window/MRTK_Migration_Modes.png)
 
@@ -40,14 +40,14 @@ Permite al usuario arrastrar y colocar recursos de escena que contienen objetos 
 
 ![Selección de escenas para la migración](../images/migration-window/MRTK_Scene_Selection.png)
 
-### <a name="project-mode"></a>Modo de proyecto
+### <a name="project-mode"></a>Project modo de configuración
 
 Al presionar *el botón* Migrar, se actualizará el componente de destino de la implementación del controlador de migración para todos los objetos prefabs y escenas del proyecto.
 
 ![Migración de un proyecto completo](../images/migration-window/MRTK_Project_Migration.png)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Actualización desde versiones anteriores](../../updates-deployment/updating.md)
-- [Versiones de Microsoft Mixed Reality Toolkit](../../release-notes/mrtk-26-release-notes.md)
+- [Versiones Mixed Reality Toolkit Microsoft](../../release-notes/mrtk-26-release-notes.md)
 - [Mapa de ruta de MRTK](../../roadmap.md)

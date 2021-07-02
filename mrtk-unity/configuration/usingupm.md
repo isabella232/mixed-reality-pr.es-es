@@ -5,14 +5,14 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, paquetes MRTK,
-ms.openlocfilehash: e3e7a2d06cd38d7a9e8daf579f1a312904a86280
-ms.sourcegitcommit: bb9f54f3e872a5464a5d9ba88b7ab5b8896efd82
+ms.openlocfilehash: 524783c48b82722aec26648ea54477a6c7bcd4ae
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110345078"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177326"
 ---
-# <a name="mixed-reality-toolkit-and-unity-package-manager"></a>Mixed Reality Toolkit y Unity Administrador de paquetes
+# <a name="using-the-unity-package-manager"></a>Uso del administrador de paquetes de Unity
 
 A partir de la versión 2.5.0, con la herramienta de características de [Mixed Reality,](/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool)Microsoft Mixed Reality Toolkit se integra con Unity Administrador de paquetes (UPM) cuando se usa Unity 2019.4 y versiones más recientes.
 
@@ -37,14 +37,14 @@ Al seleccionar características, no es necesario preocuparse por las dependencia
 
 ## <a name="managing-mixed-reality-features-with-the-unity-package-manager"></a>Administración Mixed Reality características con unity Administrador de paquetes
 
-Una vez que Mixed Reality Toolkit se ha agregado al manifiesto del paquete, se puede administrar mediante la interfaz de usuario Administrador de paquetes Unity.
+Una vez Mixed Reality Toolkit paquete de paquete se ha agregado al manifiesto del paquete, se puede administrar mediante la interfaz de usuario Administrador de paquetes Unity.
 
 ![Paquete UPM de MRTK Foundation](../features/images/packaging/MRTK_FoundationUPM.png)
 
 > [!NOTE]
-> Si se quita Mixed Reality Toolkit mediante el Administrador de paquetes Unity, tendrá que volver a agregarlo mediante los pasos descritos [anteriormente.](#using-the-mixed-reality-feature-tool)
+> Si se Mixed Reality Toolkit un paquete de Administrador de paquetes con unity, tendrá que volver a agregarlo mediante los pasos [descritos anteriormente.](#using-the-mixed-reality-feature-tool)
 
-### <a name="using-mixed-reality-toolkit-examples"></a>Uso de Mixed Reality Toolkit
+### <a name="using-mixed-reality-toolkit-examples"></a>Uso de Mixed Reality Toolkit ejemplos
 
 A diferencia de cuando se usan archivos de paquete de recursos (.unitypackage), y no importan automáticamente los recursos y las escenas `com.microsoft.mixedreality.toolkit.examples` `com.microsoft.mixedreality.toolkit.handphysicsservice` de ejemplo.
 
@@ -64,4 +64,4 @@ Cuando se actualiza un paquete de ejemplo, Unity proporciona la opción de actua
 
 ## <a name="see-also"></a>Consulte también
 
-- [paquetes Mixed Reality Toolkit](../packages/mrtk-packages.md)
+- [Mixed Reality Toolkit paquetes](../packages/mrtk-packages.md)

@@ -1,24 +1,24 @@
 ---
-title: README_HandCoach
-description: descripción y ejemplos de Hand coach.
+title: Asesor manual
+description: descripción y ejemplos para hand coach.
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 8b4069f25692c4058c912ccd06ae678d67882fcd
-ms.sourcegitcommit: e89431d12b5fe480c9bc40e176023798fc35001b
+ms.openlocfilehash: f6042fce7c95c106de9c72adc854e2b7112da63c
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "109489275"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177157"
 ---
 # <a name="hand-coach"></a>Asesor manual
 
-![Menú del seleccionador de mano](../images/hand-coach/MRTK_UX_HandCoach_Main.jpg)
+![Menú del asistente de mano](../images/hand-coach/MRTK_UX_HandCoach_Main.jpg)
 
-El autocar es una mano modelada en 3D que se desencadena cuando el sistema no detecta las manos del usuario. Esto se implementa como un componente de "enseñanza" que ayuda a guiar al usuario cuando no se ha aprendido el gesto. Si los usuarios no han realizado el gesto especificado durante un período, las manos se pondrán en bucle con un retraso. El carro de la mano se puede usar para representar la pulsación de un botón o la selección de un holograma.
+El técnico de la mano es una mano modelada en 3D que se desencadena cuando el sistema no detecta las manos del usuario. Esto se implementa como un componente de "enseñanza" que ayuda a guiar al usuario cuando no se ha enseñado el gesto. Si los usuarios no han realizado el gesto especificado durante un período, las manos se recorrerán en bucle con un retraso. El entrenador de la mano puede usarse para representar la pulsación de un botón o la selección de un holograma.
 
-El modelo de interacción actual representa una amplia variedad de controles de gestos, como desplazamiento, selección lejana y pulsación cercana. A continuación se muestra una lista completa de ejemplos de seleccionador de mano existentes:
+El modelo de interacción actual representa una amplia variedad de controles de gestos, como el desplazamiento, la selección lejana y la pulsación próxima. A continuación se muestra una lista completa de ejemplos de seleccionador de mano existentes:
 
 - Pulsar cerca: se usa para botones o cerrar objetos interactuables.
 - Selección lejana: se usa para objetos que están lejos
@@ -26,8 +26,8 @@ El modelo de interacción actual representa una amplia variedad de controles de 
 - Girar: se usa para mostrar cómo girar hologramas u objetos
 - Escala: se usa para mostrar cómo manipular hologramas para que sean más grandes o más pequeños.
 - Volteo con la mano: se usa para abrir un panel de inicio de la interfaz de usuario o menús de mano
-- Pie arriba: se usa para disfrutar de un momento en el que se usa de forma personalizada. Otra sugerencia podría ser abrir un panel de inicio de la interfaz de usuario.
-- Scroll: se usa para desplazar una lista o un documento largo
+- Pie arriba: se usa para la experiencia del momento en el que está lista para usarse. Otra sugerencia podría ser abrir un panel de inicio de la interfaz de usuario
+- Scroll: se usa para desplazarse por una lista o un documento largo.
 
 ## <a name="example-scene"></a>Escena de ejemplo
 
@@ -40,8 +40,8 @@ Puede encontrar los recursos en: [MixedRealityToolkit.SDK/Experimental/HandCoach
 ## <a name="quality"></a>Calidad
 
 Si observa distorsión en la malla con máscara, debe asegurarse de que el proyecto usa la cantidad adecuada de uniones.
-Vaya a Editar la configuración del proyecto > de Unity > calidad > otras > blend weights(Pesos de blend). Asegúrese de que se seleccionan "4 esqueletos" para ver Smooth Joints (Juntas suavizadas).
-![Configuración del proyecto](../images/hand-coach/MRTK_ProjectSettings.png)
+Vaya a Edit (Editar) de Unity > Project Configuración > Quality > Other > Blend Weights (Otros pesos > Blend). Asegúrese de que se seleccionan "4 esqueletos" para ver Smooth Joints (Juntas suavizadas).
+![Project Ajuste](../images/hand-coach/MRTK_ProjectSettings.png)
 
 ## <a name="scripts"></a>Scripts
 
@@ -64,22 +64,22 @@ De lo contrario, deberá colocar el script en un elemento gameObject de un nivel
 
 - **UseMaxTimer** Si este valor booleano se establece en false, deshabilita el temporizador máximo y solo permite mostrar la sugerencia de mano cuando las manos del usuario están fuera de la vista o la condición personalizada devuelve false.
 
-- **Repeticiones** Esta propiedad controla cuántas veces se reproduce la animación de sugerencias cuando ha pasado el temporizador mínimo o máximo. A continuación, la sugerencia se oculta y espera de nuevo el retraso.
+- **Repeticiones** Esta propiedad controla cuántas veces se reproduce la animación de sugerencias cuando se ha pasado el temporizador mínimo o máximo. A continuación, la sugerencia se oculta y espera de nuevo el retraso.
 
-- **Autoactivate** Cuando este valor booleano se establece en true, la sugerencia se ejecutará automáticamente a través de la lógica del temporizador cuando el Elemento GameObject del script esté activo en la jerarquía y el script esté habilitado. Esto solo debe establecerse en false si tiene previsto controlar manualmente la apariencia de la sugerencia y la insondimiento a través del código.
+- **Autoactivate** Cuando este valor booleano se establece en true, la sugerencia se ejecutará automáticamente a través de la lógica del temporizador cuando el Elemento GameObject del script esté activo en la jerarquía y el script esté habilitado. Esto solo debe establecerse en false si piensa controlar manualmente la apariencia de la sugerencia y la insondimiento a través del código.
 
-- **AnimationState** Nombre del estado de animación que debe reproducirse cuando la sugerencia está activa. Debe establecerse antes de llamar a la función StartHintLoop() (durante OnEnable si se activa AutoActivate).
+- **AnimationState** Nombre del estado de animación que se debe reproducir cuando la sugerencia está activa. Debe establecerse antes de llamar a la función StartHintLoop() (durante OnEnable si se activa AutoActivate).
 
 #### <a name="controlling-interactionhint-via-script"></a>Controlar InteractionHint mediante script
 
 - **StartHintLoop** Esta función inicia el bucle show/hide que, de lo contrario, inicia OnEnable si la marca AutoActivate está establecida en true.
 - **StopHintLoop** Esta función llama al estado de animación de atenuación si no se está reproduciendo actualmente, desactivará el bucle show/hide y establecerá el mano a mano inactivo en la jerarquía.
-- **AnimationState** Esta cadena determina qué estado de animación se reproduce durante el bucle. Puede cambiar esta cadena para cambiar qué estado se reproduce, pero debe hacerlo después de llamar a StopHintLoop y debe volver a llamar a StartHintLoop después de haber cambiado el estado.
+- **AnimationState** Esta cadena determina qué estado de animación se reproduce durante el bucle. Puede cambiar esta cadena para cambiar qué estado se reproduce, pero debe hacerlo después de llamar a StopHintLoop y debe llamar de nuevo a StartHintLoop después de haber cambiado el estado.
 - **CustomShouldHideVisuals** Puede establecer esto con su propia función, que debe devolver true cuando desee ocultar los objetos visuales de la mano (tenga en cuenta MinMaxTimer, específicamente el parámetro max).
 
 #### <a name="custom-animation-considerations"></a>Consideraciones sobre animaciones personalizadas
 
-El valor predeterminado de los atenuados es 0,5 segundos, por lo que las animaciones personalizadas creadas para su uso con la plataforma deben ser de 1,5 segundos como mínimo para que se transmita cualquier información significativa.
+El valor predeterminado de las atenuaciones es 0,5 segundos, por lo que las animaciones personalizadas creadas para su uso con la plataforma deben ser 1,5 segundos como mínimo para que se transmita cualquier información significativa.
 
 Los estados de atenuación y atenuación predeterminados proporcionados, Fade_In y Fade_Out se pueden ajustar cambiando la marca de tiempo del segundo fotograma clave para establecer la longitud de atenuación.
 
@@ -91,7 +91,7 @@ El script MoveToTarget.cs proporciona funcionalidad para mover la sugerencia de 
 
 #### <a name="how-to-set-up-movetotarget"></a>Configuración de MoveToTarget
 
-Los objetos prefabs "MovingHandCoachRoot_L.prefab" y "MovingHandCoachRoot_R.prefab" proporcionados contienen un objeto MoveToTarget en sus jerarquías. Si quiere usar este script en su propia configuración, debe colocarlo en el objeto gameobject raíz que contiene el animador para el equipo.
+Los elementos prefabs "MovingHandCoachRoot_L.prefab" y "MovingHandCoachRoot_R.prefab" proporcionados contienen un objeto MoveToTarget en sus jerarquías. Si quiere usar este script en su propia configuración, debe colocarlo en el objeto gameobject raíz que contiene el animador para el equipo.
 
 #### <a name="inspector-properties"></a>Propiedades del inspector
 
@@ -104,11 +104,11 @@ Los objetos prefabs "MovingHandCoachRoot_L.prefab" y "MovingHandCoachRoot_R.pref
 
 #### <a name="controlling-movetotarget-via-script"></a>Control de MoveToTarget mediante script
 
-En el script personalizado, realice una llamada a Follow() mientras quiere que el dispositivo de mano siga el objeto TrackingObject y, a continuación, realice una llamada a MoveToTargetPosition() cuando desee que el dispositivo de mano comience su movimiento al Objeto Target.
+En el script personalizado, realice una llamada a Follow() mientras desea que el equipo de mano siga el objeto TrackingObject y, a continuación, realice una llamada a MoveToTargetPosition() cuando desee que el ala de mano comience su movimiento al TargetObject.
 
 #### <a name="controlling-movetotarget-via-animations"></a>Control de MoveToTarget mediante animaciones
 
-En la animación que debe moverse, establezca dos eventos: uno con una llamada a Follow() y otro con una llamada a MoveToTargetPosition(). Debe establecerse Follow en el primer fotograma clave, ya que hace que el panel de mano siga el objeto TrackingObject. MoveToTargetPosition debe establecerse en el fotograma clave donde desea que la plataforma comience a moverse al destino. Así es como se usa la funcionalidad de script en los requisitos previos proporcionados.
+En la animación que debe moverse, establezca dos eventos: uno con una llamada a Follow() y otro con una llamada a MoveToTargetPosition(). La función Follow debe establecerse en el primer fotograma clave, ya que hace que el panel de mano siga el objeto TrackingObject. MoveToTargetPosition debe establecerse en el fotograma clave donde desea que el equipo empiece a moverse al destino. Así es como se usa la funcionalidad de script en los requisitos previos proporcionados.
 
 ### <a name="rotatearoundpoint"></a>RotateAroundPoint
 
@@ -116,15 +116,15 @@ El script RotateAroundPoint.cs proporciona funcionalidad para girar la sugerenci
 
 #### <a name="how-to-set-up-rotatearoundpoint"></a>Configuración de RotateAroundPoint
 
-Los elementos prefabs "RotatingHandCoachRoot_L.prefab" y "RotatingHandCoachRoot_R.prefab" proporcionados contienen rotateAroundPoint en sus jerarquías. Si desea usar este script en su propia configuración, debe colocarlo en el objeto gameobject raíz que contiene animator para el equipo.
+Los objetos prefabs "RotatingHandCoachRoot_L.prefab" y "RotatingHandCoachRoot_R.prefab" proporcionados contienen un RotateAroundPoint en sus jerarquías. Si quiere usar este script en su propia configuración, debe colocarlo en el objeto gameobject raíz que contiene el animador para el equipo.
 
 #### <a name="inspector-properties"></a>Propiedades del inspector
 
-- **CenteredParent** Establezca esta opción con el objeto primario en el que desea que el equipo pivote.
+- **CenteredParent** Establezca esta opción con el objeto primario al que desea que pivote el conjunto.
 - **InverseParent** Establezca esta opción con el elemento primario para girar inversamente a centeredParent con el fin de mantener la orientación de la mano igual. En general, este será el objeto primario con el script InteractionHint en él.
-- **PivotPosition** Establezca esta opción en un punto en el que desee que la sugerencia empiece a movement.
-- **Duración** Cantidad de tiempo que se debe tardar (en segundos) en girar alrededor de CenteredParent.
-- **AnimationCurve** El valor predeterminado es una curva lineal, pero puede modificarla para proporcionar una aceleración de entrada y salida al iniciar y detener la ruta de movimiento.
+- **PivotPosition** Establezca esta opción en un punto en el que desee que la sugerencia empiece a desplazamiento.
+- **Duración** La cantidad de tiempo que debe tardar (en segundos) en girar alrededor de CenteredParent.
+- **AnimationCurve** El valor predeterminado es una curva lineal, pero puede modificar la curva para facilitar la entrada y salida al iniciar y detener la ruta de movimiento.
 - **RotationVector** Número de grados que se giran a lo largo de cada eje.
 
 #### <a name="controlling-rotatearoundpoint-via-script"></a>Controlar RotateAroundPoint mediante script
@@ -133,4 +133,4 @@ En el script personalizado, realice una llamada a RotateToTarget() cuando desee 
 
 #### <a name="controlling-rotatearoundpoint-via-animations"></a>Controlar RotateAroundPoint a través de animaciones
 
-En la animación que debe moverse, establezca dos eventos: uno con una llamada a ResetAndDeterminePivot() y otro con una llamada a RotateToTarget(). ResetAndDeterminePivot debe establecerse en el primer fotograma clave, ya que hace que la mano se restablezca a pivotPosition. RotateToTarget debe establecerse en el fotograma clave en el que desea que la plataforma comience a girar alrededor de CenteredParent. Así es como se usa la funcionalidad de script en los requisitos previos proporcionados.
+En la animación que debe moverse, establezca dos eventos: uno con una llamada a ResetAndDeterminePivot() y otro con una llamada a RotateToTarget(). ResetAndDeterminePivot debe establecerse en el primer fotograma clave, ya que hace que el dispositivo de mano se restablezca a pivotPosition. RotateToTarget debe establecerse en el fotograma clave donde desea que el apareado comience a girar alrededor del elemento CenteredParent. Así es como se usa la funcionalidad de script en los requisitos previos proporcionados.

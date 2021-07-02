@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, eventos,
-ms.openlocfilehash: 450c6dbbed8fc9bbb1a648b7a22f0de66747cbaf
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: c8871aa575e2aa4507e9dbbdcc8bdf0fc0604633
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145221"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176787"
 ---
 # <a name="input-events"></a>Eventos de entrada
 
@@ -22,14 +22,14 @@ En la lista siguiente se describen todas las interfaces de eventos de entrada di
 | Controlador | Eventos | Descripción |
 | --- | :---: | --- |
 | [`IMixedRealitySourceStateHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourceStateHandler) | Origen detectado o perdido | Se genera cuando se detecta o se pierde un origen de entrada, como cuando se detecta o se pierde el seguimiento de una mano articulada. |
-| [`IMixedRealitySourcePoseHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourcePoseHandler) | Posición de origen cambiada | Se genera en los cambios de posición de origen. La posición de origen representa la posición general del origen de entrada. Las poses específicas, como la posición de control o puntero en un controlador de seis DOF, se pueden obtener a través de `IMixedRealityInputHandler<MixedRealityPose>` . |
+| [`IMixedRealitySourcePoseHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealitySourcePoseHandler) | Posición de origen modificada | Se genera en los cambios de posición de origen. La posición de origen representa la posición general del origen de entrada. Las poses específicas, como el control o la posición del puntero en un controlador doF de seis, se pueden obtener a través de `IMixedRealityInputHandler<MixedRealityPose>` . |
 | [`IMixedRealityInputHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler) | Entrada hacia abajo o hacia arriba | Se genera en los cambios en las entradas binarias, como los botones. |
-| [`IMixedRealityInputHandler<T>`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler`1) | Entrada cambiada | Se genera en los cambios en las entradas del tipo especificado. **T** puede tomar los siguientes valores: <br/> - *float* (por ejemplo, devuelve un desencadenador análogo)<br/> - *Vector2* (por ejemplo, devuelve la dirección del mando del mando) <br/> - *Vector3* (por ejemplo, la posición de retorno del dispositivo con seguimiento) <br/> - *Cuaternión* (por ejemplo, devuelve la orientación del dispositivo con seguimiento)<br/> - [MixedRealityPose](xref:Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose) (por ejemplo, devuelve un dispositivo con seguimiento completo) |
+| [`IMixedRealityInputHandler<T>`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputHandler`1) | Entrada cambiada | Se genera en los cambios en las entradas del tipo especificado. **T** puede tomar los siguientes valores: <br/> - *float* (por ejemplo, devuelve un desencadenador análogo)<br/> - *Vector2* (por ejemplo, devuelve la dirección del control de posición del mando) <br/> - *Vector3* (por ejemplo, la posición de retorno del dispositivo con seguimiento) <br/> - *Cuaternión* (por ejemplo, devuelve la orientación del dispositivo con seguimiento)<br/> - [MixedRealityPose](xref:Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose) (por ejemplo, devuelve un dispositivo con seguimiento completo) |
 | [`IMixedRealitySpeechHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler) | Palabra clave de voz reconocida | Se genera al reconocer una de las palabras clave configuradas en el perfil *de comandos de voz*. |
-| [`IMixedRealityDictationHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationHandler) | Dictado<br/> Hipótesis <br/> Resultado <br/> Completo <br/> Error | Creado por sistemas de dictado para informar de los resultados de una sesión de dictado. |
+| [`IMixedRealityDictationHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityDictationHandler) | Dictado<br/> Hipótesis <br/> Resultado <br/> Completo <br/> Error | Los sistemas de dictado los elevan para informar de los resultados de una sesión de dictado. |
 | [`IMixedRealityGestureHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityGestureHandler) | Eventos de gesto en: <br/> Iniciado <br/> Actualizado <br/> Completado <br/> Canceled | Se genera al detectar gestos. |
 | [`IMixedRealityGestureHandler<T>`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityGestureHandler`1) | Gesto actualizado o completado | Se genera al detectar gestos que contienen datos adicionales del tipo especificado. Vea [**eventos de gesto**](gestures.md#gesture-events) para obtener más información sobre los valores posibles para **T**. |
-| [`IMixedRealityHandJointHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityHandJointHandler) | Uniones de mano actualizadas | Se genera mediante controladores de mano articulados cuando se actualizan las uniones de mano. |
+| [`IMixedRealityHandJointHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityHandJointHandler) | Juntas de mano actualizadas | Se genera mediante controladores de mano articulados cuando se actualizan las uniones de mano. |
 | [`IMixedRealityHandMeshHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityHandMeshHandler) | Malla de mano actualizada | Se genera mediante controladores de mano articulados cuando se actualiza una malla de mano. |
 | [`IMixedRealityInputActionHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputActionHandler) | Acción iniciada/finalizada | Se genera para indicar el inicio y el final de la acción para las entradas asignadas a acciones. |
 
@@ -41,18 +41,18 @@ En el nivel de script, los eventos de entrada se pueden consumir implementando u
 1. El sistema de entrada MRTK desaconse la función de interfaz pertinente del evento de entrada a todos los [controladores de entrada globales registrados](#register-for-global-input-events)
 1. Para cada puntero activo registrado con el sistema de entrada:
     1. El sistema de entrada determina qué GameObject está en el foco para el puntero actual.
-    1. El sistema de entrada utiliza el sistema de eventos de [Unity](https://docs.unity3d.com/Manual/EventSystem.html) para usar la función de interfaz pertinente para todos los componentes correspondientes en el GameObject centrado.
+    1. El sistema de entrada usa el sistema de eventos de [Unity](https://docs.unity3d.com/Manual/EventSystem.html) para abrir la función de interfaz pertinente para todos los componentes correspondientes en el GameObject centrado.
     1. Si en algún momento se ha marcado un evento de entrada como [usado,](#how-to-stop-input-events)el proceso finalizará y ningún gameObject más recibirá devoluciones de llamada.
-        - Ejemplo: los componentes que implementan la interfaz [`IMixedRealitySpeechHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler) se buscarán cuando se reconozca un comando de voz.
-        - Nota: El sistema de eventos de Unity se burbujas para buscar el Elemento GameObject primario si no se encuentra ningún componente que coincida con la interfaz deseada en el GameObject actual.
-1. Si no se registra ningún controlador de entrada global y no se encuentra gameObject con un componente o interfaz que coincida, el sistema de entrada llamará a cada controlador de entrada registrado de reserva.
+        - Ejemplo: los componentes que implementan la interfaz se buscarán cuando se reconozca [`IMixedRealitySpeechHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler) un comando de voz.
+        - Nota: El sistema de eventos de Unity se burbujas para buscar el Elemento GameObject primario si no se encuentra ningún componente que coincida con la interfaz deseada en el Elemento GameObject actual.
+1. Si no se registran controladores de entrada globales y no se encuentra ningún GameObject con un componente o interfaz que coincida, el sistema de entrada llamará a cada controlador de entrada registrado de reserva.
 
 > [!NOTE]
-> [Los eventos de entrada](pointers.md#pointer-event-interfaces) de puntero se controlan de una manera ligeramente diferente a las interfaces de eventos de entrada enumeradas anteriormente. En concreto, los eventos de entrada de puntero solo los controla gameObject en el foco mediante el puntero que ha desencadenado el evento de entrada, así como cualquier controlador de entrada global. GameObjects controla los eventos de entrada normales en el foco para todos los punteros activos.
+> [Los eventos de entrada](pointers.md#pointer-event-interfaces) de puntero se controlan de una manera ligeramente diferente a las interfaces de eventos de entrada enumeradas anteriormente. En concreto, los eventos de entrada de puntero solo los controla el elemento GameObject en el foco mediante el puntero que ha desencadenado el evento de entrada, así como cualquier controlador de entrada global. Los eventos de entrada normales se controlan mediante GameObjects en el foco para todos los punteros activos.
 
-### <a name="input-event-interface-example"></a>Ejemplo de interfaz de evento de entrada
+### <a name="input-event-interface-example"></a>Ejemplo de interfaz de eventos de entrada
 
-El código siguiente muestra el uso de la [`IMixedRealitySpeechHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler) interfaz . Cuando el usuario dice las palabras "más pequeño" o "más grande" mientras se centra en un GameObject con esta clase, GameObject se escalará a la mitad o al `ShowHideSpeechHandler` doble.
+El código siguiente muestra el uso de la [`IMixedRealitySpeechHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealitySpeechHandler) interfaz . Cuando el usuario dice las palabras "más pequeño" o "más grande" mientras se centra en un Elemento GameObject con esta clase, GameObject se escalará a sí mismo a la mitad o `ShowHideSpeechHandler` al doble.
 
 ```c#
 public class ShowHideSpeechHandler : MonoBehaviour, IMixedRealitySpeechHandler
@@ -78,7 +78,7 @@ public class ShowHideSpeechHandler : MonoBehaviour, IMixedRealitySpeechHandler
 
 ## <a name="register-for-global-input-events"></a>Registro para eventos de entrada globales
 
-Para crear un componente que escuche eventos de entrada globales, sin tener en cuenta qué GameObject puede estar en el foco, un componente debe registrarse en el sistema de entrada. Una vez registrado, las instancias de este MonoBehaviour recibirán eventos de entrada junto con cualquier GameObject actualmente en el foco y otros agentes de escucha registrados globalmente.
+Para crear un componente que escuche eventos de entrada globales, sin tener en cuenta qué GameObject puede estar en el foco, un componente debe registrarse en el sistema de entrada. Una vez registrado, todas las instancias de este MonoBehaviour recibirán eventos de entrada junto con cualquier GameObject que esté actualmente en el foco y otros agentes de escucha registrados globalmente.
 
 Si un evento de entrada se ha [marcado como usado,](#how-to-stop-input-events)los controladores registrados globales seguirán recibiendo devoluciones de llamada. Sin embargo, ningún elemento GameObjects centrado recibirá el evento.
 
@@ -142,7 +142,7 @@ public class GlobalHandListenerExample : MonoBehaviour,
 
 ## <a name="register-for-fallback-input-events"></a>Registro para eventos de entrada de reserva
 
-Los controladores de entrada de reserva son similares a los controladores de entrada globales registrados, pero se tratan como el último recurso para el control de eventos de entrada. Solo si no se han encontrado controladores de entrada globales y no hay ningún gameObject en el foco, se aprovecharán los controladores de entrada de reserva.
+Los controladores de entrada de reserva son similares a los controladores de entrada globales registrados, pero se tratan como el último recurso para el control de eventos de entrada. Solo si no se han encontrado controladores de entrada globales y no hay gameObjects en el foco, se aprovecharán los controladores de entrada de reserva.
 
 ### <a name="fallback-input-handler-example"></a>Ejemplo de controlador de entrada de reserva
 

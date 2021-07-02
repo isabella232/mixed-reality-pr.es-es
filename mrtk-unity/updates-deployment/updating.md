@@ -1,18 +1,18 @@
 ---
-title: Actualización
+title: Actualización desde versiones anteriores
 description: Documentación para migrar desde una versión inferior de MRTK.
 author: polar-kev
 ms.author: kesemple
 ms.date: 04/19/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 97f45328bc8f9b811e815da0240138790db699c6
-ms.sourcegitcommit: 0b09536c16f6802acc120a973d720aec7e30f617
+ms.openlocfilehash: 5a914d6408d346dac0bf6c683f401564e875f4d8
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2021
-ms.locfileid: "107742241"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175106"
 ---
-# <a name="updating-the-microsoft-mixed-reality-toolkit"></a>Actualización de Microsoft Mixed Reality Toolkit
+# <a name="updating-from-earlier-versions"></a>Actualización desde versiones anteriores
 
 - [Actualización a una nueva versión de MRTK](#upgrading-to-a-new-version-of-mrtk)
 - [De 2.3.0 a 2.4.0](#updating-230-to-240)
@@ -26,7 +26,7 @@ ms.locfileid: "107742241"
 Siga estas instrucciones para averiguar qué versión de MRTK está usando actualmente:
 
 1. Apertura del proyecto de MRTK en Unity
-2. Vaya a la carpeta "MixedRealityToolkit" en la ventana del proyecto.
+2. Vaya a la carpeta "MixedRealityToolkit" en la Project aplicación.
 3. Abra el archivo denominado "Version"
 
 Si el archivo y la carpeta anteriores no existen, se encuentra en una versión más reciente de MRTK. En ese caso, pruebe lo siguiente:
@@ -37,22 +37,22 @@ Si el archivo y la carpeta anteriores no existen, se encuentra en una versión m
 
 ## <a name="upgrading-to-a-new-version-of-mrtk"></a>Actualización a una nueva versión de MRTK
 
-*Se recomienda encarecidamente ejecutar [](../features/tools/migration-window.md)* la herramienta de migración después de obtener la actualización de MRTK para corregir y actualizar automáticamente los componentes en desuso y ajustarse a los cambios importantes. La herramienta de migración forma parte del **paquete Herramientas.**
+*Se recomienda encarecidamente ejecutar [](../features/tools/migration-window.md)* la herramienta de migración después de obtener la actualización de MRTK para corregir y actualizar automáticamente los componentes en desuso y ajustarse a los cambios importantes. La herramienta de migración forma parte del **paquete De** herramientas.
 
 Las instrucciones siguientes describen la ruta de actualización de 2.4.0 a 2.5.0. Si el proyecto está en la versión 2.3.0 o anterior, siga leyendo los [](https://microsoft.github.io/MixedRealityToolkit-Unity/version/releases/2.4.0/Documentation/Updating.html) cambios entre versiones para comprender la ruta de actualización o lea las instrucciones de la versión anterior para realizar una actualización versión por versión. [](#updating-230-to-240)
 
 ### <a name="mixed-reality-feature-tool"></a>Herramienta de características de Mixed Reality
-La manera más fácil de actualizar MRTK a una versión más reciente de MRTK es usar la herramienta de características de [Mixed Reality](/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool) para descargar los paquetes más recientes y cargarlos directamente en el proyecto de Unity.
+La manera más fácil de actualizar MRTK a una versión más reciente de MRTK es mediante la herramienta de características de [Mixed Reality](/windows/mixed-reality/develop/unity/welcome-to-mr-feature-tool) para descargar los paquetes más recientes y cargarlos directamente en el proyecto de Unity.
 
 Si el proyecto usó previamente archivos de recursos de Unity (.unitypackage), consulte [estas instrucciones.](#switching-from-unity-asset-files-to-mixed-reality-feature-tool) 
 
 ### <a name="unity-asset-unitypackage-files"></a>Archivos de recursos de Unity (.unitypackage)
 
-Otra ruta de actualización consiste en descargar manualmente los paquetes de Unity de MRTK y aplicarlos al proyecto. Consulte los pasos siguientes:
+Otra ruta de actualización consiste en descargar manualmente paquetes de Unity de MRTK y aplicarlos al proyecto. Consulte los pasos siguientes:
 
-1. Guarde una copia del proyecto actual, en caso de que se presione algún grupo de seguridad en cualquier punto de los pasos de actualización.
+1. Guarde una copia del proyecto actual, en caso de que se lo haga en cualquier momento de los pasos de actualización.
 1. Cerrar Unity
-1. Dentro de *la carpeta Activos,* elimine las siguientes carpetas **MRTK,** junto con sus archivos .meta (es posible que el proyecto no tenga todas las carpetas enumeradas)
+1. Dentro de *la carpeta Activos,* elimine las siguientes carpetas **MRTK,** junto con sus archivos .meta (es posible que el proyecto no tenga todas las carpetas enumeradas).
     - MRTK/Core
     - MRTK/Examples
     - MRTK/Extensions
@@ -81,28 +81,28 @@ Otra ruta de actualización consiste en descargar manualmente los paquetes de Un
     - Elimine **MixedRealityToolkit** y **MixedRealityPlayspace,** si está presente, de la jerarquía. Esto eliminará la cámara principal, pero se volverá a crear en el paso siguiente. Si alguna de las propiedades de la cámara principal se ha cambiado manualmente, estas se tendrán que volver a aplicar manualmente una vez creada la nueva cámara.
     - Seleccione **MixedRealityToolkit -> Agregar a la escena y configurar**
     - Seleccione **MixedRealityToolkit -> Utilities -> Update -> Controller Mapping Profiles** (solo debe realizarse una vez): se actualizarán todos los perfiles de asignación de controladores personalizados con ejes y datos actualizados, a la vez que se mantienen intactas las acciones de entrada asignadas de forma personalizada.
-1. Ejecute la [herramienta de migración](../features/tools/migration-window.md) y ejecute la herramienta en el proyecto *completo* para asegurarse de que todo el código se actualiza a la versión más reciente.
+1. Ejecute la [herramienta de migración](../features/tools/migration-window.md)  y ejecute la herramienta en el Project para asegurarse de que todo el código se actualiza a la versión más reciente.
    La ventana de migración contiene una serie de controladores de migración diferentes, que se deben ejecutar cada uno por su cuenta. Este paso implica lo siguiente:
-   - Seleccione el primer controlador de migración en la lista **desplegable Selección del controlador de** migración.
-   - Haga clic en el botón "Proyecto completo".
-   - Haga clic en el botón "Add full project for migration" (Agregar proyecto completo para la migración) (examinará todo el proyecto en busca de objetos que se van a migrar).
+   - Seleccione el primer controlador de migración en la lista **desplegable Selección del controlador de migración.**
+   - Haga clic en el botón "Project completo".
+   - Haga clic en el botón "Agregar proyecto completo para la migración" (esto examinará todo el proyecto en busca de objetos para migrar).
    - Haga clic en el botón "Migrar", que debe habilitarse si se han encontrado objetos migrables.
    - Repita los tres pasos anteriores para cada uno de los controladores de migración de la lista desplegable.
      (Vea [este problema que](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8552) trata el trabajo que se puede realizar para simplificar este proceso de migración en una versión futura).
 
 ### <a name="switching-from-unity-asset-files-to-mixed-reality-feature-tool"></a>Cambio de archivos de recursos de Unity a Mixed Reality Feature Tool
 
-El cambio de archivos de recursos de Unity Mixed Reality paquetes de Feature Tool aporta una serie de ventajas:
+Cambiar de archivos de recursos de Unity a Mixed Reality paquetes de Feature Tool ofrece una serie de ventajas:
 
 - Actualización más sencilla
 - Tiempos de compilación más rápidos
 - Menos proyectos en la solución Visual Studio proyecto
 
-Cambiar al uso de Mixed Reality Feature Tool requiere un conjunto único de pasos manuales.
+Cambiar a mediante la herramienta Mixed Reality características requiere un conjunto único de pasos manuales.
 
 1. Guarde una copia del proyecto actual.
 1. Cerrar Unity
-1. Dentro de *la carpeta Activos,* elimine las siguientes carpetas **MRTK,** junto con sus archivos .meta (es posible que el proyecto no tenga todas las carpetas enumeradas)
+1. Dentro de *la carpeta Activos,* elimine las siguientes carpetas **MRTK,** junto con sus archivos .meta (es posible que el proyecto no tenga todas las carpetas enumeradas).
     - MRTK/Core
     - MRTK/Examples
     - MRTK/Extensions
@@ -120,7 +120,7 @@ Cambiar al uso de Mixed Reality Feature Tool requiere un conjunto único de paso
     > Algunas herramientas de Unity, como Unity Collab, guarda la información de configuración en la carpeta Biblioteca. Si usa una herramienta que lo hace, copie primero la carpeta de datos de la herramienta de La biblioteca antes de eliminarla y, después, restáurela después de volver a generar la biblioteca.
 1. Volver a abrir el proyecto en Unity
 
-Una vez que se hayan realizado los pasos anteriores, ejecute [Mixed Reality Feature Tool](#mixed-reality-feature-tool) e importe la versión deseada de Mixed Reality Toolkit.
+Una vez realizados los pasos anteriores, ejecute la herramienta [Mixed Reality características](#mixed-reality-feature-tool) e importe la versión deseada de la Mixed Reality Toolkit.
 
 ## <a name="updating-230-to-240"></a>Actualización de 2.3.0 a 2.4.0
 
@@ -147,11 +147,11 @@ Se ha cambiado el nombre de las carpetas de MixedRealityToolkit y se han movido 
 
 ### <a name="eye-gaze-setup-in-240"></a>Configuración de la mirada con los ojos en la versión 2.4.0
 
-Esta versión de MRTK modifica los pasos necesarios para la configuración de la mirada con los ojos. La _casilla "IsEyeTrackingEnabled"_ se puede encontrar en la configuración de mirada del perfil de puntero de entrada. Al activar esta casilla, se habilitará la mirada con los ojos, en lugar de la mirada basada en la cabeza predeterminada.
+Esta versión de MRTK modifica los pasos necesarios para la configuración de la mirada con los ojos. La _casilla "IsEyeTrackingEnabled"_ se puede encontrar en la configuración de mirada del perfil de puntero de entrada. Al activar esta casilla, se habilitará la mirada basada en los ojos, en lugar de la mirada basada en la cabeza predeterminada.
 
-Para obtener más información sobre estos cambios e instrucciones completas para la configuración del seguimiento ocular, consulte el artículo [seguimiento ocular.](../features/input/eye-tracking/eye-tracking-basic-setup.md)
+Para obtener más información sobre estos cambios e instrucciones completas para la configuración del seguimiento de los ojos, consulte el artículo [seguimiento de](../features/input/eye-tracking/eye-tracking-basic-setup.md) los ojos.
 
-### <a name="eye-gaze-pointer-behavior-in-240"></a>Comportamiento del puntero de mirada con los ojos en 2.4.0
+### <a name="eye-gaze-pointer-behavior-in-240"></a>Comportamiento del puntero de mirada con los ojos en la versión 2.4.0
 
 El comportamiento del puntero predeterminado de la mirada con los ojos se ha modificado para que coincida con el comportamiento predeterminado del puntero de mirada con la cabeza. Un puntero de mirada con los ojos se suprimirá automáticamente una vez que se detecte una mano. El puntero de mirada con los ojos volverá a estar visible después de decir "Seleccionar".
 
@@ -200,13 +200,13 @@ No hay ningún plan para agregar propiedades a WindowsApiChecker para futuras ve
 
 **GltfMeshPrimitiveAttributes de solo lectura**
 
-Los atributos primitivos de la malla gltf que se solían establecer, ahora son de solo lectura. Sus valores se establecerán una vez cuando se deserialice.
+Los atributos primitivos de malla gltf que se solían establecer, ahora son de solo lectura. Sus valores se establecerán una vez cuando se deserialice.
 
 ### <a name="custom-button-icon-migration"></a>Migración de icono de botón personalizado
 
-Anteriormente, los iconos de botón personalizados requerían asignar un nuevo material al representador de cuatro botones. Esto ya no es necesario y se recomienda mover texturas de icono personalizadas a iconSet. Se conservan los iconos y materiales personalizados existentes. Sin embargo, serán menos óptimos hasta que se actualicen.
+Anteriormente, los iconos de botón personalizados requerían asignar un nuevo material al representador cuadrántico del botón. Esto ya no es necesario y se recomienda mover texturas de icono personalizadas a iconSet. Se conservan los iconos y los materiales personalizados existentes. Sin embargo, serán menos óptimos hasta que se actualicen.
 Para actualizar los recursos de todos los botones del proyecto al nuevo formato recomendado, use ButtonConfigHelperMigrationHandler.
-(Mixed Reality Toolkit -> Utilities -> Migration Window -> Migration Handler Selection -> Microsoft.MixedReality.Toolkit.Utilities.ButtonConfigHelperMigrationHandler)
+(Mixed Reality Toolkit -> Utilities -> Migration Window -> Migration Handler Selection -> Microsoft.MixedReality. Toolkit. Utilities.ButtonConfigHelperMigrationHandler)
 
 ![Cuadro de diálogo actualizar ventana](https://user-images.githubusercontent.com/39840334/82096923-bd28bf80-96b6-11ea-93a9-ceafcb822242.png)
 
@@ -232,7 +232,7 @@ Esta versión de MRTK usa una versión más reciente de MSBuild para Unity que l
 
 **ScriptingUtilities**
 
-La clase ScriptingUtilities se ha marcado como obsoleta y se ha reemplazado por ScriptUtilities, en el ensamblado Microsoft.MixedReality.Toolkit.Editor.Utilities. La nueva clase refina el comportamiento anterior y agrega compatibilidad para quitar definiciones de scripting.
+La clase ScriptingUtilities se ha marcado como obsoleta y se ha reemplazado por ScriptUtilities, en Microsoft.MixedReality. Toolkit. Ensamblado Editor.Utilities. La nueva clase refina el comportamiento anterior y agrega compatibilidad para quitar definiciones de scripting.
 
 Aunque el código existente seguirá funcionando en la versión 2.3.0, se recomienda actualizar a la nueva clase.
 
@@ -265,11 +265,11 @@ Los siguientes elementos prefab ahora usan el componente PressableButton en luga
 - UnityUIRadialButton
 - UnityUIToggleButton
 
-El código de la aplicación puede requerir la actualización debido a este cambio.
+El código de la aplicación puede requerir actualización debido a este cambio.
 
 **Espacio de nombres WindowsMixedRealityUtilities**
 
-El espacio de nombres de WindowsMixedRealityUtilities ha cambiado de Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input a Microsoft.MixedReality.Toolkit.WindowsMixedReality ([#6863](https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6989)).
+El espacio de nombres de WindowsMixedRealityUtilities cambió de Microsoft.MixedReality. Toolkit. WindowsMixedReality.Input para Microsoft.MixedReality. Toolkit. WindowsMixedReality ([#6863](https://github.com/microsoft/MixedRealityToolkit-Unity/pull/6989)).
 
 Actualice las #using para resolver errores de compilación.
 
@@ -281,7 +281,7 @@ Actualice las #using para resolver errores de compilación.
 
 **IMixedRealityBoundarySystem.Contains**
 
-Anteriormente, este método tomaba una enumeración experimental específica definida por Unity. Ahora toma una enumeración definida por MRTK que es idéntica a la enumeración de Unity. Este cambio ayuda a preparar MRTK para las FUTURAS API de límites de Unity.
+Este método anteriormente tomaba una enumeración experimental específica definida por Unity. Ahora toma una enumeración definida por MRTK que es idéntica a la enumeración de Unity. Este cambio ayuda a preparar MRTK para las FUTURAS API de límites de Unity.
 
 **MixedRealityServiceProfileAttribute**
 
@@ -321,7 +321,7 @@ La `MouseInputProfile` propiedad se ha marcado como obsoleta y se quitará de un
 
 **Interactuable**
 
-Los siguientes métodos y propiedades han quedado en desuso y se quitarán de una versión futura de Microsoft Mixed Reality Toolkit. La recomendación es actualizar el código de la aplicación según las instrucciones contenidas en el atributo Obsoleto y que se muestran en la consola.
+Los siguientes métodos y propiedades han quedado en desuso y se quitarán de una versión futura de Microsoft Mixed Reality Toolkit. La recomendación es actualizar el código de la aplicación según las instrucciones contenidas en el atributo Obsolete y que se muestran en la consola.
 
 - `public bool Enabled`
 - `public bool FocusEnabled`
@@ -381,22 +381,22 @@ Se ha actualizado el sistema de simulación de entrada, que cambia algunos valor
 
 1. `MouseLookToggle` anteriormente se incluía en la `MouseLookButton` enumeración como `InputSimulationMouseButton.Focused` , ahora es una opción independiente. Cuando esté habilitada, la cámara seguirá girando con el mouse después de soltar el botón hasta que se presione la tecla de escape.
 1. `HandDepthMultiplier` El valor predeterminado se ha reducido de 0,1 a 0,03 para dar cabida a algunos cambios en la simulación de entrada. Si la cámara se mueve demasiado rápido al desplazarse, intente reducir este valor.
-1. Se han quitado las teclas para girar las manos, la rotación de las manos ahora también se controla mediante el mouse. Mantener presionado (Ctrl) junto con la tecla de manipulación de la mano `HandRotateButton` izquierda/derecha (LShift/Espacio) habilitará la rotación de la mano.
-1. Se ha introducido un nuevo eje "UpDown" en la lista de ejes de entrada. Esto controla el movimiento de la cámara en vertical y tiene como valor predeterminado las teclas Q/E, así como los botones del desencadenador del controlador.
+1. Se han quitado las teclas para girar las manos, el mouse también controla la rotación de las manos. Mantener presionado (Ctrl) junto con la tecla de manipulación de la mano `HandRotateButton` izquierda/derecha (LShift/Espacio) habilitará la rotación de la mano.
+1. Se ha introducido un nuevo eje "UpDown" en la lista de ejes de entrada. Esto controla el movimiento de la cámara en vertical y tiene como valor predeterminado las claves de Preguntas y respuestas, así como los botones de desencadenador del controlador.
 
-Para obtener más información sobre estos cambios, consulte el artículo sobre [el servicio de simulación de](../features/input-simulation/input-simulation-service.md) entrada.
+Para más información sobre estos cambios, consulte el artículo sobre el servicio [de simulación de](../features/input-simulation/input-simulation-service.md) entrada.
 
 **Perfil del proveedor de datos del mouse**
 
-El perfil del proveedor de datos del mouse se ha actualizado para exponer las propiedades `CursorSpeed` y `WheelSpeed` nuevas. Los perfiles personalizados existentes tendrán automáticamente valores predeterminados proporcionados. Cuando se guarde el perfil, estos nuevos valores se conservarán.
+El perfil del proveedor de datos del mouse se ha actualizado para exponer las `CursorSpeed` propiedades y `WheelSpeed` nuevas. Los perfiles personalizados existentes tendrán automáticamente valores predeterminados proporcionados. Cuando se guarde el perfil, estos nuevos valores se conservarán.
 
 **Perfil de asignación de controlador**
 
-Algunos ejes y tipos de entrada se han actualizado en la versión 2.1.0, especialmente en torno a la plataforma OpenVR. Asegúrese de seleccionar **MixedRealityToolkit -> Utilities -> Update -> Controller Mapping Profiles** al actualizar. Esto actualizará los perfiles de asignación de controladores personalizados con los ejes y los datos actualizados, al tiempo que deja intactas las acciones de entrada asignadas de forma personalizada.
+Algunos ejes y tipos de entrada se han actualizado en la versión 2.1.0, especialmente en torno a la plataforma OpenVR. Asegúrese de seleccionar **MixedRealityToolkit -> Utilities -> Update -> Controller Mapping Profiles** al actualizar. Esto actualizará los perfiles de asignación de controladores personalizados con los ejes y los datos actualizados, a la vez que deja intactas las acciones de entrada asignadas de forma personalizada.
 
 ## <a name="updating-rc2-to-200"></a>Actualización de RC2 a 2.0.0
 
-Entre las versiones RC2 y 2.0.0 del kit de herramientas de Microsoft Mixed Reality, se realizaron cambios que pueden afectar a los proyectos existentes. En este documento se describen esos cambios y cómo actualizar los proyectos a la versión 2.0.0.
+Entre las versiones RC2 y 2.0.0 de Microsoft Mixed Reality Toolkit, se realizaron cambios que pueden afectar a los proyectos existentes. En este documento se describen esos cambios y cómo actualizar los proyectos a la versión 2.0.0.
 
 - [Cambios en la API](#api-changes-in-200)
 - [Cambios en el nombre del ensamblado](#assembly-name-changes-in-200)
@@ -413,7 +413,7 @@ Las siguientes propiedades públicas del objeto MixedRealityToolkit han quedado 
 
 Para acceder a los servicios de extensión, use `MixedRealityServiceRegistry.TryGetService<T>` . Para acceder a los proveedores de datos, convierte la instancia de servicio en [`IMixedRealityDataProviderAccess`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProviderAccess) y usa `GetDataProvider<T>` .
 
-Use [`MixedRealityServiceRegistry`](xref:Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry) o en su lugar para las siguientes propiedades en [`CoreServices`](xref:Microsoft.MixedReality.Toolkit.CoreServices) desuso
+Use [`MixedRealityServiceRegistry`](xref:Microsoft.MixedReality.Toolkit.MixedRealityServiceRegistry) o en su lugar para las siguientes propiedades en [`CoreServices`](xref:Microsoft.MixedReality.Toolkit.CoreServices) desuso.
 
 - `ActiveSystems`
 - `InputSystem`
@@ -475,8 +475,8 @@ Nueva API `RegisterHandler` y `UnregisterHandler` :
 **_Migración_**
 
 - Si ha llamado a `Register` / `Unregister` la API directamente antes, reemplace estas llamadas por llamadas a `RegisterHandler` / `UnregisterHandler` . Use interfaces de controlador que implemente como parámetros genéricos. Si implementa varias interfaces y varias de ellas escuchan eventos de entrada globales, llame `RegisterHandler` a varias veces.
-- Si ha heredado de , cambie `InputSystemGlobalListener` la herencia a `InputSystemGlobalHandlerListener` . Implemente `RegisterHandlers` `UnregisterHandlers` métodos abstractos y . En la llamada de implementación ( ) para registrarse en todas las interfaces de controlador para las `inputSystem.RegisterHandler` que desea escuchar eventos `inputSystem.UnregisterHandler` globales.
-- Si ha heredado de `BaseInputHandler` , implemente los `RegisterHandlers` métodos `UnregisterHandlers` abstractos y (igual que para `InputSystemGlobalListener` ).
+- Si ha heredado de , cambie `InputSystemGlobalListener` la herencia a `InputSystemGlobalHandlerListener` . Implemente `RegisterHandlers` `UnregisterHandlers` métodos abstractos y . En la llamada de implementación `inputSystem.RegisterHandler` ( ) para registrarse en todas las interfaces de controlador para las que desea escuchar eventos `inputSystem.UnregisterHandler` globales.
+- Si ha heredado de , implemente los métodos `BaseInputHandler` `RegisterHandlers` `UnregisterHandlers` abstractos y (igual que para `InputSystemGlobalListener` ).
 
 **_Ejemplos de migración_**
 
@@ -567,7 +567,7 @@ Se ha cambiado el nombre de los métodos siguientes para describir mejor su uso.
 
 **_Adiciones_**
 
-En función de los comentarios de los clientes, se ha agregado soporte técnico para la eliminación sencilla de los datos de reconocimiento espacial observados anteriormente.
+En función de los comentarios de los clientes, se ha agregado compatibilidad para facilitar la eliminación de los datos de reconocimiento espacial observados anteriormente.
 
 - `IMixedRealitySpatialAwarenessSystem.ClearObservations()`
 - `IMixedRealitySpatialAwarenessSystem.ClearObservations<T>(string name)`
@@ -581,14 +581,14 @@ Algunos componentes del solucionador y la clase de administrador SolverHandler h
 
 - La clase ya no se extiende desde `ControllerFinder`
 - `TrackedObjectToReference` propiedad pública en desuso y se ha cambiado el nombre a `TrackedTargetType`
-- `TrackedObjectType` en desuso a & de controlador derecho. En su lugar, use los valores o y actualice la nueva propiedad para limitar el seguimiento al controlador izquierdo `MotionController` o `HandJoint` `TrackedHandedness` derecho.
+- `TrackedObjectType` deja en desuso & los valores del controlador derecho. En su lugar, `MotionController` use los valores o y actualice la nueva propiedad para limitar el seguimiento al controlador izquierdo o `HandJoint` `TrackedHandedness` derecho.
 
 **_InBetween_**
 
 - `TrackedObjectForSecondTransform` propiedad pública en desuso y se ha cambiado el nombre a `SecondTrackedObjectType`
 - `AttachSecondTransformToNewTrackedObject()` se ha quitado. Para actualizar el solucionador, modifique las propiedades públicas (es decir, `SecondTrackedObjectType`)
 
-**_Surface Surface (Surface )Surface (Surface )Surface (Surface_**
+**_Surface Magnetismo_**
 
 - `MaxDistance` propiedad pública en desuso y se ha cambiado el nombre a `MaxRaycastDistance`
 - `CloseDistance` propiedad pública en desuso y se ha cambiado el nombre a `ClosestDistance`
@@ -621,27 +621,27 @@ El `Microsoft.MixedReality.Toolkit` espacio de nombres se ha agregado a , y `Rea
 
 La clase `PointerClickHandler` está desusada. Debe `PointerHandler` usarse en su lugar, proporciona la misma funcionalidad.
 
-**Compatibilidad con el clicker de HoloLens**
+**HoloLens de clicker**
 
-Las asignaciones del controlador del clicker de HoloLens han cambiado de ser sin control [`WindowsMixedRealityController`](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityController) a ser un control sin [`WindowsMixedRealityGGVHand`](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityGGVHand) control. Para tener esto en cuenta, se ejecutará un actualizador automático la primera vez que abra el perfil de ControllerMapping. Abra los perfiles personalizados al menos una vez después de actualizar a 2.0.0 para desencadenar este paso de migración único.
+Las HoloLens controlador del clicker han cambiado de ser sin control a [`WindowsMixedRealityController`](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityController) ser sin [`WindowsMixedRealityGGVHand`](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityGGVHand) control. Para tener esto en cuenta, un actualizador automático se ejecutará la primera vez que abra el perfil de ControllerMapping. Abra los perfiles personalizados al menos una vez después de actualizar a 2.0.0 para desencadenar este paso de migración único.
 
 **InteractableHighlight**
 
-La clase `InteractableHighlight` está desusada. En `InteractableOnFocus` su `FocusInteractableStates` lugar, se deben usar la clase y el recurso. Para crear un nuevo recurso para , haga clic con el botón derecho en la ventana del proyecto y seleccione Create Mixed Reality Toolkit Interactable Theme (Crear un tema `Theme` `InteractableOnFocus`   >    >  *interactuable*  >  del kit de herramientas).
+La clase `InteractableHighlight` está desusada. En `InteractableOnFocus` su `FocusInteractableStates` lugar, se deben usar la clase y el recurso. Para crear un nuevo recurso para , haga clic con el botón derecho en la ventana del proyecto y `Theme` `InteractableOnFocus` seleccione Crear   >  *Mixed Reality Toolkit*  >  *tema*  >  *interactuable.*
 
 **HandInteractionPanZoom**
 
-`HandInteractionPanZoom` se ha movido al espacio de nombres de la interfaz de usuario, ya que no era un componente de entrada. `HandPanEventData` también se ha movido a este espacio de nombres y se ha simplificado para que se corresponda con otros datos de eventos de la interfaz de usuario.
+`HandInteractionPanZoom` se ha movido al espacio de nombres de la interfaz de usuario porque no era un componente de entrada. `HandPanEventData` también se ha movido a este espacio de nombres y se ha simplificado para que se corresponda con otros datos de eventos de interfaz de usuario.
 
 ### <a name="assembly-name-changes-in-200"></a>Cambios en el nombre del ensamblado en la versión 2.0.0
 
-En la versión 2.0.0, todos los nombres de ensamblado oficial de Mixed Reality Toolkit y sus archivos de definición de ensamblado asociados (.asmdef) se han actualizado para ajustarse al siguiente patrón.
+En la versión 2.0.0, todos los nombres oficiales de ensamblado de Mixed Reality Toolkit y sus archivos de definición de ensamblado asociados (.asmdef) se han actualizado para ajustarse al siguiente patrón.
 
 ```c#
 Microsoft.MixedReality.Toolkit[.<name>]
 ```
 
-En algunos casos, se han combinado varios ensamblados para crear una mejor unidad de su contenido. Si el proyecto usa archivos .asmdef personalizados, es posible que deba actualizarse.
+En algunos casos, se han combinado varios ensamblados para crear una mejor unidad de su contenido. Si el proyecto usa archivos .asmdef personalizados, es posible que requieran actualización.
 
 En las tablas siguientes se describe cómo se asignan los nombres de archivo RC2 .asmdef a la versión 2.0.0. Todos los nombres de ensamblado coinciden con el nombre de archivo .asmdef.
 
@@ -649,54 +649,54 @@ En las tablas siguientes se describe cómo se asignan los nombres de archivo RC2
 
 | RC2 | 2.0.0 |
 | --- | --- |
-| MixedRealityToolkit.asmdef | Microsoft.MixedReality.Toolkit.asmdef |
-| MixedRealityToolkit.Core.BuildAndDeploy.asmdef | Microsoft.MixedReality.Toolkit.Editor.BuildAndDeploy.asmdef |
-| MixedRealityToolkit.Core.Definitions.Utilities.Editor.asmdef | Quitado, use Microsoft.MixedReality.Toolkit.Editor.Utilities.asmdef |
-| MixedRealityToolkit.Core.Extensions.EditorClassExtensions.asmdef | Microsoft.MixedReality.Toolkit.Editor.ClassExtensions.asmdef
-| MixedRealityToolkit.Core.Inspectors.asmdef | Microsoft.MixedReality.Toolkit.Editor.Inspectors.asmdef |
-| MixedRealityToolkit.Core.Inspectors.ServiceInspectors.asmdef | Microsoft.MixedReality.Toolkit.Editor.ServiceInspectors.asmdef |
-| MixedRealityToolkit.Core.UtilitiesAsync.asmdef | Microsoft.MixedReality.Toolkit.Async.asmdef |
-| MixedRealityToolkit.Core.Utilities.Editor.asmdef | Microsoft.MixedReality.Toolkit.Editor.Utilities.asmdef |
-| MixedRealityToolkit.Utilities.Gltf.asmdef | Microsoft.MixedReality.Toolkit.Gltf.asmdef |
-| MixedRealityToolkit.Utilities.Gltf.Importers.asmdef | Microsoft.MixedReality.Toolkit.Gltf.Importers.asmdef |
+| MixedRealityToolkit.asmdef | Microsoft.MixedReality. Toolkit.asmdef |
+| MixedRealityToolkit.Core.BuildAndDeploy.asmdef | Microsoft.MixedReality. Toolkit. Editor.BuildAndDeploy.asmdef |
+| MixedRealityToolkit.Core.Definitions.Utilities.Editor.asmdef | Quitado, use Microsoft.MixedReality. Toolkit. Editor.Utilities.asmdef |
+| MixedRealityToolkit.Core.Extensions.EditorClassExtensions.asmdef | Microsoft.MixedReality. Toolkit. Editor.ClassExtensions.asmdef
+| MixedRealityToolkit.Core.Inspectors.asmdef | Microsoft.MixedReality. Toolkit. Editor.Inspectors.asmdef |
+| MixedRealityToolkit.Core.Inspectors.ServiceInspectors.asmdef | Microsoft.MixedReality. Toolkit. Editor.ServiceInspectors.asmdef |
+| MixedRealityToolkit.Core.UtilitiesAsync.asmdef | Microsoft.MixedReality. Toolkit. Async.asmdef |
+| MixedRealityToolkit.Core.Utilities.Editor.asmdef | Microsoft.MixedReality. Toolkit. Editor.Utilities.asmdef |
+| MixedRealityToolkit.Utilities.Gltf.asmdef | Microsoft.MixedReality. Toolkit. Gltf.asmdef |
+| MixedRealityToolkit.Utilities.Gltf.Importers.asmdef | Microsoft.MixedReality. Toolkit. Gltf.Importers.asmdef |
 
 **MixedRealityToolkit.Providers**
 
 | RC2 | 2.0.0 |
 | --- | --- |
-| MixedRealityToolkit.Providers.OpenVR.asmdef | Microsoft.MixedReality.Toolkit.Providers.OpenVR.asmdef |
-| MixedRealityToolkit.Providers.WindowsMixedReality.asmdef | Microsoft.MixedReality.Toolkit.Providers.WindowsMixedReality.asmdef |
-| MixedRealityToolkit.Providers.WindowsVoiceInput.asmdef | Microsoft.MixedReality.Toolkit.Providers.WindowsVoiceInput.asmdef |
+| MixedRealityToolkit.Providers.OpenVR.asmdef | Microsoft.MixedReality. Toolkit. Providers.OpenVR.asmdef |
+| MixedRealityToolkit.Providers.WindowsMixedReality.asmdef | Microsoft.MixedReality. Toolkit. Providers.WindowsMixedReality.asmdef |
+| MixedRealityToolkit.Providers.WindowsVoiceInput.asmdef | Microsoft.MixedReality. Toolkit. Providers.WindowsVoiceInput.asmdef |
 
 **MixedRealityToolkit.Services**
 
 | RC2 | 2.0.0 |
 | --- | --- |
-| MixedRealityToolkit.Services.BoundarySystem.asmdef | Microsoft.MixedReality.Toolkit.Services.BoundarySystem.asmdef |
-| MixedRealityToolkit.Services.CameraSystem.asmdef | Microsoft.MixedReality.Toolkit.Services.CameraSystem.asmdef |
-| MixedRealityToolkit.Services.DiagnosticsSystem.asmdef | Microsoft.MixedReality.Toolkit.Services.DiagnosticsSystem.asmdef |
-| MixedRealityToolkit.Services.InputSimulation.asmdef | Microsoft.MixedReality.Toolkit.Services.InputSimulation.asmdef |
-| MixedRealityToolkit.Services.InputSimulation.Editor.asmdef | Microsoft.MixedReality.Toolkit.Services.InputSimulation.Editor.asmdef |
-| MixedRealityToolkit.Services.InputSystem.asmdef | Microsoft.MixedReality.Toolkit.Services.InputSystem.asmdef |
-| MixedRealityToolkit.Services.Inspectors.asmdef | Microsoft.MixedReality.Toolkit.Services.InputSystem.Editor.asmdef |
-| MixedRealityToolkit.Services.SceneSystem.asmdef | Microsoft.MixedReality.Toolkit.Services.SceneSystem.asmdef |
-| MixedRealityToolkit.Services.SpatialAwarenessSystem.asmdef | Microsoft.MixedReality.Toolkit.Services.SpatialAwarenessSystem.asmdef |
-| MixedRealityToolkit.Services.TeleportSystem.asmdef | Microsoft.MixedReality.Toolkit.Services.TeleportSystem.asmdef |
+| MixedRealityToolkit.Services.BoundarySystem.asmdef | Microsoft.MixedReality. Toolkit. Services.BoundarySystem.asmdef |
+| MixedRealityToolkit.Services.CameraSystem.asmdef | Microsoft.MixedReality. Toolkit. Services.CameraSystem.asmdef |
+| MixedRealityToolkit.Services.DiagnosticsSystem.asmdef | Microsoft.MixedReality. Toolkit. Services.DiagnosticsSystem.asmdef |
+| MixedRealityToolkit.Services.InputSimulation.asmdef | Microsoft.MixedReality. Toolkit. Services.InputSimulation.asmdef |
+| MixedRealityToolkit.Services.InputSimulation.Editor.asmdef | Microsoft.MixedReality. Toolkit. Services.InputSimulation.Editor.asmdef |
+| MixedRealityToolkit.Services.InputSystem.asmdef | Microsoft.MixedReality. Toolkit. Services.InputSystem.asmdef |
+| MixedRealityToolkit.Services.Inspectors.asmdef | Microsoft.MixedReality. Toolkit. Services.InputSystem.Editor.asmdef |
+| MixedRealityToolkit.Services.SceneSystem.asmdef | Microsoft.MixedReality. Toolkit. Services.SceneSystem.asmdef |
+| MixedRealityToolkit.Services.SpatialAwarenessSystem.asmdef | Microsoft.MixedReality. Toolkit. Services.SpatialAwarenessSystem.asmdef |
+| MixedRealityToolkit.Services.TeleportSystem.asmdef | Microsoft.MixedReality. Toolkit. Services.TeleportSystem.asmdef |
 
 **MixedRealityToolkit.SDK**
 
 | RC2 | 2.0.0 |
 | --- | --- |
-| MixedRealityToolkit.SDK.asmdef | Microsoft.MixedReality.Toolkit.SDK.asmdef |
-| MixedRealityToolkit.SDK.Inspectors.asmdef | Microsoft.MixedReality.Toolkit.SDK.Inspectors.asmdef |
+| MixedRealityToolkit.SDK.asmdef | Microsoft.MixedReality. Toolkit. SDK.asmdef |
+| MixedRealityToolkit.SDK.Inspectors.asmdef | Microsoft.MixedReality. Toolkit. Sdk. Inspectors.asmdef |
 
 **MixedRealityToolkit.Examples**
 
 | RC2 | 2.0.0 |
 | --- | --- |
-| MixedRealityToolkit.Examples.asmdef | Microsoft.MixedReality.Toolkit.Examples.asmdef |
-| MixedRealityToolkit.Examples.Demos.Gltf.asmdef | Microsoft.MixedReality.Toolkit.Demos.Gltf.asmdef |
-| MixedRealityToolkit.Examples.Demos.StandardShader.Inspectors.asmdef | Microsoft.MixedReality.Toolkit.Demos.StandardShader.Inspectors.asmdef |
-| MixedRealityToolkit.Examples.Demos.Utilities.InspectorFields.asmdef | Microsoft.MixedReality.Toolkit.Demos.InspectorFields.asmdef |
-| MixedRealityToolkit.Examples.Demos.Utilities.InspectorFields.Inspectors.asmdef | Microsoft.MixedReality.Toolkit.Demos.InspectorFields.Inspectors.asmdef |
-| MixedRealityToolkit.Examples.Demos.UX.Interactables.asmdef | Microsoft.MixedReality.Toolkit.Demos.UX.Interactables.asmdef |
+| MixedRealityToolkit.Examples.asmdef | Microsoft.MixedReality. Toolkit. Examples.asmdef |
+| MixedRealityToolkit.Examples.Demos.Gltf.asmdef | Microsoft.MixedReality. Toolkit. Demos.Gltf.asmdef |
+| MixedRealityToolkit.Examples.Demos.StandardShader.Inspectors.asmdef | Microsoft.MixedReality. Toolkit. Demos.StandardShader.Inspectors.asmdef |
+| MixedRealityToolkit.Examples.Demos.Utilities.InspectorFields.asmdef | Microsoft.MixedReality. Toolkit. Demos.InspectorFields.asmdef |
+| MixedRealityToolkit.Examples.Demos.Utilities.InspectorFields.Inspectors.asmdef | Microsoft.MixedReality. Toolkit. Demos.InspectorFields.Inspectors.asmdef |
+| MixedRealityToolkit.Examples.Demos.UX.Interactables.asmdef | Microsoft.MixedReality. Toolkit. Demos.UX.Interactables.asmdef |

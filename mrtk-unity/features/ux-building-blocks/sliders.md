@@ -1,16 +1,16 @@
 ---
-title: Control deslizante
+title: Controles deslizantes
 description: Información general de MRTK de controles deslizantes
 author: RogPodge
 ms.author: roliu
 ms.date: 06/18/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, controles deslizantes,
-ms.openlocfilehash: be19806e0202f6cb3ddcea1a80c2c40811aff4f2
-ms.sourcegitcommit: e9661d3bab061f9499134226ef3b87751ec56277
+ms.openlocfilehash: c8a2b6c377762918bfff79008ab34d3dfe4e20bb
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2021
-ms.locfileid: "112426881"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177501"
 ---
 # <a name="sliders"></a>Controles deslizantes
 

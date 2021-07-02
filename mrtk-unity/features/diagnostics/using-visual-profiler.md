@@ -5,16 +5,16 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: c3238aed60f6bbf824c74c034ddf506f49f436c7
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: 018d6bf2087b73697a1e1f43e206c96ae25e1f21
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121653"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177221"
 ---
 # <a name="using-the-visual-profiler"></a>Uso del profiler visual
 
-VisualProfiler proporciona una vista en la aplicación fácil de usar del rendimiento de una aplicación de realidad mixta. El profiler se admite en todas las plataformas Mixed Reality Toolkit, incluidas:
+VisualProfiler proporciona una vista en la aplicación fácil de usar del rendimiento de una aplicación de realidad mixta. El profiler se admite en todas las Mixed Reality Toolkit plataformas, incluidas:
 
 - Microsoft HoloLens (1.ª generación)
 - Microsoft HoloLens 2
@@ -34,7 +34,7 @@ La interfaz de Visual Profiler incluye los siguientes componentes:
 
 - [Velocidad de fotogramas](#frame-rate)
 - [Tiempo de fotogramas](#frame-time)
-- [Gráfico de fotogramas](#frame-graph)
+- [Marco Graph](#frame-graph)
 - [Uso de memoria](#memory-utilization)
 
 ### <a name="frame-rate"></a>Velocidad de fotogramas
@@ -47,7 +47,7 @@ La configuración específica de la plataforma y el hardware desempeñará un pa
 - Windows Mixed Reality Ultra: 90
 
 > [!NOTE]
-> Debido a la limitación de velocidad de fotogramas en [HoloLens](/windows/mixed-reality/mixed-reality-capture-for-developers#what-to-expect-when-mrc-is-enabled-on-hololens)cuando mrc predeterminado está activo, el profiler visual se oculta mientras se capturan vídeos y fotos. Esta configuración se puede invalidar en el perfil del sistema de diagnóstico.
+> Debido a [la limitación](/windows/mixed-reality/mixed-reality-capture-for-developers#what-to-expect-when-mrc-is-enabled-on-hololens)de velocidad de fotogramas en HoloLens cuando mrc predeterminado está activo, el profiler visual se oculta mientras se capturan vídeos y fotos. Esta configuración se puede invalidar en el perfil del sistema de diagnóstico.
 
 ### <a name="frame-time"></a>Tiempo entre fotogramas
 
@@ -62,7 +62,7 @@ Está previsto que el tiempo de GPU se agregó en una versión futura.
 
 El gráfico de fotogramas proporciona una presentación gráfica del historial de velocidad de fotogramas de la aplicación.
 
-![Gráfico de fotogramas perdidos de Visual Profiler](../images/diagnostics/VisualProfilerMissedFrames.png)
+![Visual Profiler Missed Frame Graph](../images/diagnostics/VisualProfilerMissedFrames.png)
 
 Al usar la aplicación, busque fotogramas perdidos que indiquen que la aplicación no está alcanzando su velocidad de fotogramas objetivo y puede que necesite trabajo de optimización.
 
@@ -70,7 +70,7 @@ Al usar la aplicación, busque fotogramas perdidos que indiquen que la aplicaci�
 
 La presentación de uso de memoria permite comprender fácilmente cómo afecta la vista actual al consumo de memoria de una aplicación.
 
-![Gráfico de memoria de Visual Profiler](../images/diagnostics/VisualProfilerMemory.png)
+![Memoria de Visual Profiler Graph](../images/diagnostics/VisualProfilerMemory.png)
 
 Al usar la aplicación, busque el uso total de memoria. Entre los indicadores clave se incluyen la proximidad del límite de memoria y los cambios rápidos en el uso.
 

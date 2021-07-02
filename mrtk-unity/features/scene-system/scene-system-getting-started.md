@@ -1,18 +1,18 @@
 ---
-title: Introducción al sistema de escenas
+title: Introducción al sistema de escena
 description: Página de aterrizaje del sistema de escena con MRTK
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 205b89d4defdeb5418a8a82896551d681cccde3d
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 16adf431498f8146ca2cc60565e59dc8ae03fd92
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144304"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177572"
 ---
-# <a name="scene-system-overview"></a>Información general del sistema de escena
+# <a name="scene-system-getting-started"></a>Introducción al sistema de escena
 
 ## <a name="when-to-use-the-scene-system"></a>Cuándo usar el sistema de escena
 
@@ -32,11 +32,11 @@ De forma predeterminada, scene system usa un par de objetos de escena (escena De
 
 >! [Nota] Si el proyecto usa escenas de iluminación y administrador personalizados, este mensaje se puede omitir de forma segura.
 
-En las secciones siguientes se describe ahora para resolver este mensaje, en función del método que se usó para importar Mixed Reality Toolkit.
+En las secciones siguientes se describe ahora para resolver este mensaje, en función del método que se usó para importar el Mixed Reality Toolkit.
 
 ### <a name="unity-package-manager-upm"></a>Unity Administrador de paquetes (UPM)
 
-En los paquetes upm de Mixed Reality Toolkit, los recursos del sistema de escena se empaquetan como ejemplo. Debido a que los paquetes UPM son inmutables, Unity no puede abrir el archivo de escena necesario a menos que se importen explícitamente en el proyecto.
+En el Mixed Reality Toolkit paquetes UPM, los recursos del sistema de escena se empaquetan como ejemplo. Debido a que los paquetes UPM son inmutables, Unity no puede abrir el archivo de escena necesario a menos que se importen explícitamente en el proyecto.
 
 Para importar, siga estos pasos:
 
@@ -52,8 +52,8 @@ Para importar, siga estos pasos:
 
 Si se ha eliminado la carpeta SceneSystemResources o se ha deseleccionado durante la importación, se puede recuperar mediante los pasos siguientes:
 
-- Seleccionar **recursos Importar** paquete  >  **paquete**  >  **personalizado**
-- Abra el **paquete Microsoft.MixedReality.Toolkit.Foundation.**
+- Seleccionar recursos  >  **Import Package** Custom  >  **Package**
+- Abra **Microsoft.MixedReality.Toolkit. Paquete foundation**
 - Asegúrese de **que Services/SceneSystem/SceneSystemResources** y todas las opciones secundarias están seleccionadas.
 
   ![Volver a importar recursos del sistema de escena](../images/scene-system/ReimportSceneSystemResources.png)
@@ -69,7 +69,7 @@ Si se ha eliminado la carpeta SceneSystemResources o se ha deseleccionado durant
 
 ## <a name="editor-settings"></a>Configuración del editor
 
-De forma predeterminada, scene system aplica varios comportamientos en el editor de Unity. Si encuentra cualquiera de estos comportamientos pesados, se pueden deshabilitar en la sección Configuración del **editor** del perfil del sistema de escena.
+De forma predeterminada, scene system aplica varios comportamientos en el editor de Unity. Si encuentra cualquiera de estos comportamientos con mucha mano, se pueden deshabilitar en la sección **Editor Configuración** del perfil del sistema de escena.
 
 - `Editor Manage Build Settings:` Si es true, el servicio actualizará la configuración de compilación automáticamente, lo que garantiza que se agregan todas las escenas de contenido, iluminación y administrador. Deshabilite esta opción si desea un control total sobre la configuración de compilación.
 

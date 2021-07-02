@@ -1,16 +1,16 @@
 ---
-title: Asistente para la creación del servicio de extensión
+title: Asistente para la creación de servicios de extensión
 description: Documentación sobre el Asistente para realizar la transición de singletons a servicios MRTK
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 83797a9d6d465a150406b27162a5e84c157567f1
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 4be9a58c7d63ab3bc93bcc326a90260cf6a3366b
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143539"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176615"
 ---
 # <a name="extension-service-creation-wizard"></a>Asistente para la creación de servicios de extensión
 
@@ -52,4 +52,4 @@ namespace Microsoft.MixedReality.Toolkit.Extensions
 }
 ```
 
-Si eligió registrar el servicio en el asistente, lo único que tiene que hacer es editar este script y el servicio se actualizará automáticamente. De lo contrario, puede leer [sobre cómo registrar el nuevo servicio aquí.](../../configuration/mixed-reality-configuration-guide.md)
+Si decide registrar el servicio en el asistente, lo único que tiene que hacer es editar este script y el servicio se actualizará automáticamente. De lo contrario, puede leer [sobre cómo registrar el nuevo servicio aquí.](../../configuration/mixed-reality-configuration-guide.md)

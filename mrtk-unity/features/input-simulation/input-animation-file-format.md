@@ -5,18 +5,18 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: ba232818c0a49d803ca6fae0b5adbc64e6deefa8
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 400212d80833f5d8dfbb3c5265c755ed2e127131
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145124"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177002"
 ---
-# <a name="input-animation-binary-file-format-specification"></a>Especificación de formato de archivo binario de animación de entrada
+# <a name="input-animation-file-format"></a>Formato de archivo de animación de entrada
 
 ## <a name="overall-structure"></a>Estructura general
 
-El archivo binario de animación de entrada comienza con un número mágico entero de 64 bits. El valor de este número en notación hexadecimal es `0x6a8faf6e0f9e42c6` y se puede usar para identificar archivos de animación de entrada válidos.
+El archivo binario de animación de entrada comienza con un número mágico entero de 64 bits. El valor de este número en notación hexadecimal es y se puede usar para identificar archivos `0x6a8faf6e0f9e42c6` de animación de entrada válidos.
 
 Los ocho bytes siguientes son dos valores Int32 que declaran el número de versión principal y secundaria del archivo.
 
@@ -42,8 +42,8 @@ Los datos de animación de entrada constan de tres valores booleanos que indican
 | Izquierda con seguimiento a mano | [Curva booleana](#boolean-curve) | Solo si tiene datos de mano es true |
 | Derecha con seguimiento a mano | [Curva booleana](#boolean-curve) | Solo si tiene datos de mano es true |
 | Acercamiento de la mano a la izquierda | [Curva booleana](#boolean-curve) | Solo si tiene datos de mano es true |
-| Apreción de la mano a la derecha | [Curva booleana](#boolean-curve) | Solo si tiene datos de mano es true |
-| Uniones de mano izquierda | [Curvas de posición conjuntas](#joint-pose-curves) | Solo si tiene datos de mano es true |
+| Acercamiento de la mano a la derecha | [Curva booleana](#boolean-curve) | Solo si tiene datos de mano es true |
+| Uniones de mano a la izquierda | [Curvas de posición conjuntas](#joint-pose-curves) | Solo si tiene datos de mano es true |
 | Derecha de las uniones de mano | [Curvas de posición conjuntas](#joint-pose-curves) | Solo si tiene datos de mano es true |
 | Mirada con los ojos | [Curvas de rayo](#ray-curves)] | Solo si la mirada con los ojos es verdadera |
 
@@ -88,7 +88,7 @@ Para cada mano se almacena una secuencia de curvas de animación conjuntas. El n
 | RingKnuckle | [Curvas de posición](#pose-curves) |
 | RingMiddleJoint | [Curvas de posición](#pose-curves) |
 | RingDistalJoint | [Curvas de posición](#pose-curves) |
-| RingTip | [Curvas de posición](#pose-curves) |
+| Información sobre anillos | [Curvas de posición](#pose-curves) |
 | PinkyMetacarpal | [Curvas de posición](#pose-curves) |
 | PinkyKnuckle | [Curvas de posición](#pose-curves) |
 | PinkyMiddleJoint | [Curvas de posición](#pose-curves) |
@@ -105,9 +105,9 @@ Las curvas de posición son una secuencia de 3 curvas de animación para el vect
 | Posición Y | [Curva float](#float-curve) |
 | Posición Z | [Curva float](#float-curve) |
 | Rotación X | [Curva float](#float-curve) |
-| Rotación Y | [Curva flotante](#float-curve) |
+| Rotación Y | [Curva float](#float-curve) |
 | Rotación Z | [Curva float](#float-curve) |
-| Rotación W | [Curva flotante](#float-curve) |
+| Rotación W | [Curva float](#float-curve) |
 
 ### <a name="ray-curves"></a>Curvas de rayo
 
@@ -115,16 +115,16 @@ Las curvas de rayo son una secuencia de 3 curvas de animación para el vector de
 
 | Sección | Tipo |
 |---------|------|
-| Origen X | [Curva flotante](#float-curve) |
-| Origen Y | [Curva flotante](#float-curve) |
-| Origen Z | [Curva flotante](#float-curve) |
-| Dirección X | [Curva flotante](#float-curve) |
-| Dirección Y | [Curva flotante](#float-curve) |
+| Origen X | [Curva float](#float-curve) |
+| Origen Y | [Curva float](#float-curve) |
+| Origen Z | [Curva float](#float-curve) |
+| Dirección X | [Curva float](#float-curve) |
+| Dirección Y | [Curva float](#float-curve) |
 | Dirección Z | [Curva float](#float-curve) |
 
 ### <a name="float-curve"></a>Curva float
 
-Las curvas de punto flotante son curvas bézier totalmente inquentes con un número variable de fotogramas clave. Cada fotograma clave almacena un tiempo y un valor de curva, así como tangentes y pesos en el lado izquierdo y derecho de cada fotograma clave.
+Las curvas de punto flotante son curvas bézier completamente inquentes con un número variable de fotogramas clave. Cada fotograma clave almacena un tiempo y un valor de curva, así como tangentes y pesos en el lado izquierdo y derecho de cada fotograma clave.
 
 | Sección | Tipo |
 |---------|------|
@@ -133,13 +133,13 @@ Las curvas de punto flotante son curvas bézier totalmente inquentes con un núm
 | Número de fotogramas clave | Int32 |
 | Fotogramas clave | [Fotograma clave flotante](#float-keyframe) |
 
-### <a name="float-keyframe"></a>Fotograma clave float
+### <a name="float-keyframe"></a>Fotograma clave flotante
 
 Un fotograma clave flotante almacena valores tangentes y de peso junto con el tiempo y el valor básicos.
 
 | Sección | Tipo |
 |---------|------|
-| Hora | Float32 |
+| Time | Float32 |
 | Valor | Float32 |
 | InTangent | Float32 |
 | OutTangent | Float32 |
@@ -154,7 +154,7 @@ Las curvas booleanas son secuencias simples de valores de encendido y apagado. E
 | Sección | Tipo |
 |---------|------|
 | Modo de encapsulado previo | Int32, [modo de encapsulado](#wrap-mode) |
-| Modo posterior al encapsulado | Int32, [modo de encapsulado](#wrap-mode) |
+| Modo posterior al ajuste | Int32, [modo de encapsulado](#wrap-mode) |
 | Número de fotogramas clave | Int32 |
 | Fotogramas clave | [Fotograma clave booleano](#boolean-keyframe) |
 
@@ -164,24 +164,24 @@ Un fotograma clave booleano solo almacena una hora y un valor.
 
 | Sección | Tipo |
 |---------|------|
-| Hora | Float32 |
+| Time | Float32 |
 | Valor | Float32 |
 
 ### <a name="wrap-mode"></a>Modo de encapsulado
 
-La semántica de los modos Pre y Post-Wrap sigue la definición [de WrapMode de Unity.](https://docs.unity3d.com/ScriptReference/WrapMode.html) Son una combinación de los bits siguientes:
+La semántica de los modos Pre y Post-Wrap sigue la definición [wrapMode de Unity.](https://docs.unity3d.com/ScriptReference/WrapMode.html) Son una combinación de los bits siguientes:
 
 | Valor | Significado |
 |-------|---------|
 | 0 | Valor predeterminado: lee el modo de repetición predeterminado configurado más arriba. |
 | 1 | Una vez: cuando el tiempo llegue al final del clip de animación, el clip dejará de reproducirse automáticamente y la hora se restablecerá al principio del clip. |
 | 2 | Bucle: cuando el tiempo llega al final del clip de animación, la hora continuará al principio. |
-| 4 | PingPong: cuando el tiempo llega al final del clip de animación, el tiempo vuelve a hacer ping entre el principio y el final. |
+| 4 | PingPong: cuando el tiempo llega al final del clip de animación, el tiempo volverá a hacer ping a ping entre el principio y el final. |
 | 8 | ClampForever: reproduce la animación. Cuando llegue al final, seguirá reproduciendo el último fotograma y nunca dejará de reproducirse. |
 
 ### <a name="weighted-mode"></a>Modo ponderado
 
-La semántica del modo ponderado sigue la [definición weightedMode de Unity.](https://docs.unity3d.com/ScriptReference/WeightedMode.html)
+La semántica del modo ponderado sigue la definición [de WeightedMode de Unity.](https://docs.unity3d.com/ScriptReference/WeightedMode.html)
 
 | Valor | Significado |
 |-------|---------|

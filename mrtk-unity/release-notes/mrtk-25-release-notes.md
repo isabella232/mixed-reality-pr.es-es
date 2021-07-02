@@ -5,17 +5,17 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK,
-ms.openlocfilehash: 536a37b56b4c7de9875ce1e1642922bd363fecb1
-ms.sourcegitcommit: f7839221c9549e60a2c3ac2dbd39f07a6851dcd2
+ms.openlocfilehash: c9458e5236cc7de18eb27c3c3e13221a366c89a4
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "112562495"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177509"
 ---
 # <a name="microsoft-mixed-reality-toolkit-25-release-notes"></a>Notas de la versión de Microsoft Mixed Reality Toolkit 2.5
 
 > [!IMPORTANT]
-> Hay un problema conocido del compilador que afecta a las aplicaciones compiladas para Microsoft HoloLens 2 mediante ARM64. Este problema se soluciona actualizando Visual Studio 2019 a la versión 16.8 o posterior. Si no puede actualizar el Visual Studio, importe el `com.microsoft.mixedreality.toolkit.tools` paquete para aplicar una solución alternativa.
+> Hay un problema conocido del compilador que afecta a las aplicaciones compiladas para Microsoft HoloLens 2 mediante ARM64. Este problema se ha corregido actualizando Visual Studio 2019 a la versión 16.8 o posterior. Si no puede actualizar el Visual Studio, importe el `com.microsoft.mixedreality.toolkit.tools` paquete para aplicar una solución alternativa.
 
 ## <a name="whats-new-in-254"></a>Novedades de la versión 2.5.4
 
@@ -47,9 +47,9 @@ Se ha agregado compatibilidad inicial con el paquete de versión preliminar de O
 
 Las visualizaciones de límites, como el suelo o las paredes, ahora se configurarán correctamente y estarán visibles en tiempo de ejecución según el perfil de límite.
 
-### <a name="msbuild-for-unity-support"></a>Compatibilidad con MSBuild para Unity
+### <a name="msbuild-for-unity-support"></a>MSBuild compatibilidad con Unity
 
-La compatibilidad con MSBuild para Unity se ha quitado a partir de la versión 2.5.2, para alinearse con la nueva guía de [paquetes de Unity.](https://forum.unity.com/threads/updates-to-our-terms-of-service-and-new-package-guidelines.999940/)
+La compatibilidad MSBuild para Unity se ha quitado a partir de la versión 2.5.2, para alinearse con la nueva guía de [paquetes de Unity.](https://forum.unity.com/threads/updates-to-our-terms-of-service-and-new-package-guidelines.999940/)
 
 ## <a name="whats-new-in-251"></a>Novedades de la versión 2.5.1
 
@@ -67,14 +67,14 @@ En esta versión se corrige [un problema por](https://github.com/microsoft/Mixed
 
 ## <a name="whats-new-in-250"></a>Novedades de la versión 2.5.0
 
-### <a name="unity-package-manager-upm-support"></a>Compatibilidad Administrador de paquetes Unity (UPM)
+### <a name="unity-package-manager-upm-support"></a>Compatibilidad Administrador de paquetes unity (UPM)
 
-Ahora Mixed Reality Toolkit se puede administrar mediante unity Administrador de paquetes.
+El Mixed Reality Toolkit ahora se puede administrar mediante el Administrador de paquetes de Unity.
 
 ![Paquete UPM de MRTK Foundation](../features/images/packaging/MRTK_FoundationUPM.png)
 
 > [!NOTE]
-> Hay algunos pasos manuales necesarios para importar los paquetes UPM de MRTK. Revise Mixed Reality [Toolkit y Unity Administrador de paquetes](../configuration/usingupm.md) para obtener más información.
+> Hay algunos pasos manuales necesarios para importar los paquetes UPM de MRTK. Revise los [Mixed Reality Toolkit y unity Administrador de paquetes](../configuration/usingupm.md) para obtener más información.
 
 ### <a name="oculus-quest-xr-sdk-support"></a>Compatibilidad con el SDK XR de Oculus Quest
 
@@ -118,7 +118,7 @@ Los punteros de toma ahora se pueden configurar para consultar objetos cercanos 
 
 ### <a name="testutilities-package"></a>Paquete TestUtilities
 
-Ahora hay un paquete (Microsoft.MixedReality.Toolkit.Unity.TestUtilities.2.5.0.unitypackage) que contiene la infraestructura de pruebas PlayMode y TestMode que usa MRTK para crear pruebas de un extremo a otro. Esta infraestructura ha sido muy útil para el propio equipo de MRTK y nos complace que los consumidores lo usen para agregar cobertura de prueba a sus propios proyectos.
+Ahora hay un paquete (Microsoft.MixedReality.Toolkit. Unity.TestUtilities.2.5.0.unitypackage) que contiene la infraestructura de pruebas PlayMode y TestMode que usa MRTK para crear pruebas de un extremo a otro. Esta infraestructura ha sido muy útil para el propio equipo de MRTK y nos complace que los consumidores lo usen para agregar cobertura de prueba a sus propios proyectos.
 
 En el código siguiente se muestra cómo crear una mano de prueba, mostrarla en una ubicación determinada, moverla y, a continuación, acercar y abrir.
 
@@ -154,8 +154,8 @@ Puede encontrar más información sobre el archivo de link.xml MRTK en el [artí
 
 ### <a name="unity-20193-mrtk-configuration-dialog-no-longer-attempts-to-enable-legacy-xr-support"></a>Unity 2019.3+: el cuadro de diálogo de configuración de MRTK ya no intenta habilitar la compatibilidad con XR heredada
 
-Para evitar posibles conflictos al usar la plataforma XR de Unity, la opción para habilitar la compatibilidad con XR heredada se ha quitado del cuadro de diálogo de configuración de MRTK. Si lo desea, se puede habilitar la compatibilidad con XR heredada, en Unity 2019, mediante **Editar** configuración del proyecto Player  >    >
-   >  **XR Settings** Virtual  >  **Reality Supported**.
+Para evitar posibles conflictos al usar la plataforma XR de Unity, la opción para habilitar la compatibilidad con XR heredada se ha quitado del cuadro de diálogo de configuración de MRTK. Si lo desea, se puede habilitar la compatibilidad con XR heredada, en Unity 2019, con **Edit**  >  **Project Configuración**  >
+ **Player**  >  **XR Configuración** Virtual  >  **Reality Supported**.
 
 ### <a name="reduction-in-initializeonload-overhead"></a>Reducción de la sobrecarga initializeOnLoad
 
@@ -170,9 +170,9 @@ En algunos casos, se tuvo que realizar un intercambio:
 
 ### <a name="bounds-control-graduated"></a>Control de límites egresado
 
-![Control Bounds](../features/images/bounds-control/MRTK_BoundsControl_Main.png)
+![Control Límites](../features/images/bounds-control/MRTK_BoundsControl_Main.png)
 
-[El control de](../features/ux-building-blocks/bounds-control.md) límites se ha consolidado como experimental y viene con una serie de nuevas características y una gran cantidad de correcciones de errores.
+[El control de](../features/ux-building-blocks/bounds-control.md) límites se ha consolidado de forma experimental y viene con una serie de nuevas características y montones de correcciones de errores.
 Aquí se muestra una lista de los aspectos destacados de esta actualización:
 
 - Las propiedades se dividen en configuraciones, lo que facilita la configuración del control de límites.
@@ -183,7 +183,7 @@ Aquí se muestra una lista de los aspectos destacados de esta actualización:
 - compatibilidad con restricciones completa a través del administrador de restricciones
 - integración del sistema elástico (experimental)
 
-El cuadro de límite anterior está ahora en desuso y los objetos de juego existentes que usan el rectángulo de selección se pueden actualizar mediante la herramienta de migración o el [inspector de rectángulo de selección](../features/ux-building-blocks/bounding-box.md#migrating-to-bounds-control). [](../features/tools/migration-window.md)
+El cuadro de límite anterior está ahora en desuso y los objetos de juego existentes mediante el cuadro de límite se pueden actualizar mediante la herramienta de migración o el [inspector de rectángulo de selección](../features/ux-building-blocks/bounding-box.md#migrating-to-bounds-control). [](../features/tools/migration-window.md)
 
 ### <a name="constraint-manager-component"></a>Componente del administrador de restricciones
 
@@ -219,7 +219,7 @@ Se ha actualizado el ejemplo del sombreador de pulsos para que la malla espacial
 
 ![Elastic System2](../features/images/elastics/Elastics_Main.gif)
 
-MRTK ahora incluye [](../features/elastics/elastic-system.md) un sistema de simulación elástica que incluye una amplia variedad de subclases extensibles y flexibles, que ofrece enlaces para cuaternión de cuaternión de 4 dimensiones, sonidos de volumen tridimensionales y sistemas de spring lineales simples.
+MRTK ahora incluye [](../features/experimental/elastic-system.md) un sistema de simulación elástica que incluye una amplia variedad de subclases extensibles y flexibles, que ofrece enlaces para sistemas de cuaternión de cuaternión de 4 dimensiones, sonidos de volumen tridimensionales y sistemas de spring lineales simples.
 
 Actualmente, los siguientes componentes de MRTK que [admiten el administrador de elásticos](xref:Microsoft.MixedReality.Toolkit.Experimental.Physics.ElasticsManager) pueden aprovechar la funcionalidad de los elásticos:
 
@@ -231,7 +231,7 @@ Actualmente, los siguientes componentes de MRTK que [admiten el administrador de
 
 ### <a name="joystick-experimental"></a>Estación (experimental)
 
-Un ejemplo de interfaz de puerto que puede controlar un objeto de destino grande.
+Un ejemplo de interfaz de interfaz de interfaz que puede controlar un objeto de destino grande.
 
 ![Joystick](https://user-images.githubusercontent.com/43013191/86156887-769ef100-babb-11ea-85be-ed6a6aed89d2.png)
 
@@ -277,7 +277,7 @@ DevicePortal.UseSSL = true
 
 ### <a name="linkxml"></a>Link.xml
 
-Si anteriormente una aplicación usaba la distribución de NuGet de MRTK, el archivo se `link.xml` ha quitado del paquete Foundation. Para restaurar las reglas de conservación de código, al abrir el proyecto en Unity una vez se creará un archivo `link.xml` predeterminado en `Assets/MixedRealityToolkit.Generated` . Se recomienda agregar este archivo (y ) al `link.xml.meta` control de código fuente.
+Si anteriormente una aplicación usaba la NuGet distribución de MRTK, el archivo se ha `link.xml` quitado del paquete foundation. Para restaurar las reglas de conservación de código, al abrir el proyecto en Unity una vez se creará un archivo `link.xml` predeterminado en `Assets/MixedRealityToolkit.Generated` . Se recomienda agregar este archivo (y ) al `link.xml.meta` control de código fuente.
 
 ### <a name="transform-constraint-changes"></a>Cambios de restricción de transformación
 
@@ -299,9 +299,9 @@ El código restante asociado a la característica de fachada de servicio se quit
 
 ### <a name="addition-of-motion-controller-to-input-simulation-service"></a>Adición del controlador de movimiento al servicio de simulación de entrada
 
-La simulación del controlador de movimiento ahora se ofrece en el modo de reproducción del editor junto con la simulación de mano existente. Para habilitar este cambio, muchas funciones, campos o propiedades actuales ahora están marcados como obsoletos, con y `InputSimulationService.cs` `MixedRealityInputSimulationProfile.cs` obteniendo los cambios más significativos. La lógica y el comportamiento del código pertinente siguen siendo en gran medida los mismos, y la mayoría de las funciones obsoletas, etc., están relacionados con la sustitución de la referencia a "mano" por el término más genérico "controlador" (por ejemplo, de `DefaultHandSimulationMode` a `DefaultControllerSimulationMode` ). Además de obtener nuevos nombres, el tipo de valor devuelto de determinadas funciones nuevas se actualiza para que coincida con el cambio de nombre o comportamiento (por ejemplo, en función del valor devuelto original ahora en lugar `GetControllerDevice` `GetHandDevice` de `BaseController` `SimulatedHand` ).
+La simulación del controlador de movimiento ahora se ofrece en el modo de reproducción del editor junto con la simulación de mano existente. Para habilitar este cambio, muchas funciones, campos o propiedades actuales están ahora marcados como obsoletos, con y `InputSimulationService.cs` `MixedRealityInputSimulationProfile.cs` obteniendo los cambios más significativos. La lógica y el comportamiento del código pertinente siguen siendo en gran medida los mismos, y la mayoría de las funciones obsoletas, etc., están relacionados con la sustitución de la referencia a "mano" por el término más genérico "controlador" (por ejemplo, de `DefaultHandSimulationMode` a `DefaultControllerSimulationMode` ). Además de obtener nuevos nombres, el tipo de valor devuelto de determinadas funciones nuevas se actualiza para que coincida con el cambio de nombre o comportamiento (por ejemplo, en función del valor devuelto original ahora en lugar `GetControllerDevice` `GetHandDevice` de `BaseController` `SimulatedHand` ).
 
-`IInputSimulationService` ahora tiene nuevas propiedades `MotionControllerDataLeft` y `MotionControllerDataRight` . `MixedRealityInputSimulationProfile` ahora incluye nuevos campos para la asignación de teclado de determinados botones de controlador de movimiento.
+`IInputSimulationService` ahora tiene nuevas propiedades `MotionControllerDataLeft` y `MotionControllerDataRight` . `MixedRealityInputSimulationProfile` ahora incluye nuevos campos para la asignación de teclado de determinados botones del controlador de movimiento.
 
 ## <a name="known-issues"></a>Problemas conocidos
 
@@ -320,7 +320,7 @@ Aparecerá una advertencia "No spatializer was specified" (No se especificó nin
 Para resolverlo, asegúrese de que:
 
 - **Ventana**  >  **Administrador de paquetes** tiene uno o varios paquetes XR instalados
-- **Mixed Reality Toolkit**  >  **Utilidades**  >  **Configuración del proyecto de Unity** y selección de Audio **Spatializer**
+- **Mixed Reality Toolkit**  >  **Utilidades**  >  **Configuración de unity Project** y realización de una selección para **El espacializador de audio**
 
   ![Selección del espacializador de audio](images/SpatializerSelection.png)
 

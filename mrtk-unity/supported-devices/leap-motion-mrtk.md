@@ -1,18 +1,18 @@
 ---
-title: MRTK de movimiento intercalar
+title: Uso de Leap Motion
 description: Documentación que se debe configurar para Leap Motion
 author: CDiaz-ms
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Leap Motion,
-ms.openlocfilehash: 8ef5d26512d50a93691932789e84c099c6246bc3
-ms.sourcegitcommit: b4bdac2c4d7315902712ce74fd909fb8383d4bfd
+ms.openlocfilehash: 3ddf039f8409022d8aa2e425c46cd4d47ede16a0
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110543241"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176512"
 ---
-# <a name="how-to-configure-leap-motion-by-ultraleap-hand-tracking-in-mrtk"></a>Configuración del seguimiento de manos de Leap Motion (by Ultraleap) en MRTK
+# <a name="using-leap-motion"></a>Uso de Leap Motion
 
 Se [requiere un controlador leap motion](https://www.ultraleap.com/product/leap-motion-controller/) para usar este proveedor de datos.
 
@@ -32,20 +32,20 @@ Este proveedor se puede usar en el editor y en el dispositivo en la plataforma i
 
 1. Importación de MRTK y los módulos leap motion de Unity
     - Instale el [SDK de Leap Motion](https://developer.leapmotion.com/releases/?category=orion) más reciente si aún no está instalado
-    - Importe el **paquete Microsoft.MixedReality.Toolkit.Foundation** en el proyecto de Unity.
+    - Importe **Microsoft.MixedReality.Toolkit. Paquete** básico en el proyecto de Unity.
     - Descarga e importación de la versión más reciente de los módulos [de Unity leap motion](https://developer.leapmotion.com/unity) en el proyecto
         - Importar solo el **paquete Principal** dentro de los módulos de Unity
 
 1. Integración de los módulos de Unity leap motion con MRTK
-    - Una vez que los módulos de Unity estén en el proyecto, vaya a **Mixed Reality Toolkit**  >  **Leap Motion** Integrate Leap Motion Unity Modules (Integración de los módulos leap motion de  >  **Unity).**
+    - Una vez que los módulos de Unity estén en el proyecto, vaya a **Mixed Reality Toolkit**  >  Leap Motion Integrate Leap Motion Unity Modules **(Integración** de  >  **Leap Motion Unity Modules).**
     > [!NOTE]
-    > La integración de los módulos de Unity en MRTK agrega 10 definiciones de ensamblado al proyecto y agrega referencias a la definición del ensamblado **Microsoft.MixedReality.Toolkit.Providers.LeapMotion.** Asegúrese de que Visual Studio esté cerrado.
+    > La integración de los módulos de Unity en MRTK agrega 10 definiciones de ensamblado al proyecto y agrega referencias a **Microsoft.MixedReality.Toolkit. Definición del ensamblado Providers.LeapMotion.** Asegúrese de que Visual Studio esté cerrado.
 
      ![LeapMotionIntegration](../images/cross-platform/leap-motion/LeapMotionIntegrateMenu.png)
 
 1. Adición del proveedor de datos Leap Motion
     - Creación de una nueva escena de Unity
-    - Para agregar MRTK a la escena, vaya a **Mixed Reality Toolkit** Add to Scene and Configure (Agregar a la escena y  >  **configurar)**
+    - Para agregar MRTK a la escena, vaya a **Mixed Reality Toolkit**  >  **Agregar a la escena y configurar**
     - Seleccione el objeto de juego MixedRealityToolkit en la jerarquía y seleccione Copiar y **personalizar** para clonar el perfil de realidad mixta predeterminado.
 
     ![LeapMotionProfileClone](../images/cross-platform/CloneProfile.png)
@@ -58,7 +58,7 @@ Este proveedor se puede usar en el editor y en el dispositivo en la plataforma i
 
     ![LeapMotionInputProfileClone](../images/cross-platform/CloneInputSystemProfile.png)
 
-    - Abra la sección Proveedores  de datos **de** entrada, seleccione Agregar proveedor de datos en la parte superior y se agregará un nuevo proveedor de datos al final de la lista.  Abra el nuevo proveedor de datos y establezca **el** tipo en **Microsoft.MixedReality.Toolkit.LeapMotion.Input > LeapMotionDeviceManager.**
+    - Abra la sección Proveedores  de datos **de** entrada, seleccione Agregar proveedor de datos en la parte superior y se agregará un nuevo proveedor de datos al final de la lista.  Abra el nuevo proveedor de datos y establezca **El tipo** en **Microsoft.MixedReality.Toolkit. LeapMotion.Input > LeapMotionDeviceManager**
 
     ![Leap Add Data Provider](../images/cross-platform/leap-motion/LeapAddDataProvider.png)
 
@@ -89,7 +89,7 @@ Este proveedor se puede usar en el editor y en el dispositivo en la plataforma i
     - Después de agregar el proveedor de datos leap motion al perfil del sistema de entrada, presione reproducir, mueva la mano delante del controlador leap motion y debería ver la representación conjunta de la mano.
 
 1. Creación del proyecto
-    - Vaya a **File > Build Settings (Configuración de compilación de archivos).**
+    - Vaya a **File > Build Configuración**
     - Solo se admiten compilaciones independientes si se usa el proveedor de datos Leap Motion.
     - Para obtener instrucciones sobre cómo usar un casco Windows Mixed Reality para compilaciones independientes, consulte Building [and deploying MRTK to WMR Headsets (Standalone) (Compilación e implementación de MRTK en cascos WMR [independiente]).](wmr-mrtk.md#building-and-deploying-mrtk-to-wmr-headsets-standalone)
 
@@ -147,15 +147,15 @@ public class LeapHandJoints : MonoBehaviour, IMixedRealityHandJointHandler
 
 El uso del proveedor de datos Leap Motion no requiere un casco de realidad virtual.  Los cambios en una aplicación MRTK se pueden probar en el editor con las manos Leap sin casco.
 
-Las manos leap motion se mostrarán en el editor, sin un casco de realidad virtual conectado.  Si está establecido en Casco, el controlador Leap Motion tendrá que mantener el control Leap Motion con una mano con la `LeapControllerOrientation` cámara orientada hacia delante. 
+Las manos leap motion se mostrarán en el editor, sin un casco de realidad virtual conectado.  Si se establece en Casco, el controlador Leap Motion tendrá que mantener el control Leap Motion con una mano con la `LeapControllerOrientation` cámara orientada hacia delante. 
 
 > [!NOTE]
-> Si la cámara se mueve mediante teclas WASD en el editor y es Casco , las manos `LeapControllerOrientation` no seguirán a la cámara.  Las manos solo seguirán el movimiento de la cámara si un casco de realidad virtual está conectado mientras `LeapControllerOrientation` está establecido el **casco**.  Las manos bisiesta seguirán el movimiento de la cámara en el editor si `LeapControllerOrientation` está establecido en **Desk**.
+> Si la cámara se mueve mediante teclas WASD en el editor y es Casco, las manos `LeapControllerOrientation` no seguirán la cámara.  Las manos solo seguirán el movimiento de la cámara si un casco de realidad virtual está conectado mientras `LeapControllerOrientation` está establecido el **casco**.  Las manos bisiesta seguirán el movimiento de la cámara en el editor si `LeapControllerOrientation` está establecido en **Desk**.
 
-## <a name="removing-leap-motion-from-the-project"></a>Eliminación de Leap Motion del proyecto
+## <a name="removing-leap-motion-from-the-project"></a>Quitar Leap Motion del Project
 
-1. Vaya a los **módulos de Unity leap** motion independientes  >  **Mixed Reality Toolkit Leap Motion**  >  
-    - Permitir que Unity se actualice como referencias en el **archivo Microsoft.MixedReality.Toolkit.Providers.LeapMotion.asmdef** se modifica en este paso.
+1. Vaya a la página **Mixed Reality Toolkit** Leap Motion Separate Leap Motion Unity Modules  >  **(Módulos de** Unity de Leap Motion independientes de Leap  >  **Motion).**
+    - Deje que Unity se actualice como referencias **en Microsoft.MixedReality.Toolkit. El archivo Providers.LeapMotion.asmdef** se modifica en este paso
 1. Cerrar Unity
 1. Cierre Visual Studio, si está abierto
 1. Abra Explorador de archivos y vaya a la raíz del proyecto de Unity de MRTK.
@@ -171,16 +171,16 @@ Si se registran errores después de volver a abrir, reinicie Unity de nuevo.
 
 ### <a name="leap-motion-has-not-integrated-with-mrtk"></a>Leap Motion no se ha integrado con MRTK
 
-Para probar si los módulos de Unity leap motion se han integrado con MRTK:
+Para probar si los módulos leap motion de Unity se han integrado con MRTK:
 
-- Vaya a **Mixed Reality Toolkit > Utilities > Leap Motion > Estado de integración**
-  - Se mostrará una ventana emergente con un mensaje sobre si los módulos de Unity leap motion se han integrado con MRTK o no.
+- Vaya a Mixed Reality Toolkit > Utilities > Leap Motion > Check Integration Status (Estado de **integración).**
+  - Se mostrará una ventana emergente con un mensaje sobre si los módulos leap motion de Unity se han integrado o no con MRTK.
 - Si el mensaje indica que los recursos no se han integrado:
   - Asegúrese de que los módulos leap motion de Unity están en el proyecto.
   - Asegúrese de que se admite la versión agregada, consulte la tabla en la parte superior de la página para ver las versiones admitidas.
-  - Pruebe **Mixed Reality Toolkit > Utilities > Leap Motion > integrar módulos leap motion de Unity**
+  - Pruebe **Mixed Reality Toolkit > Utilities > Leap Motion > integración de módulos leap motion de Unity**
 
-### <a name="copying-assembly-multiplayer-hlapi-failed"></a>Error al copiar HLAPI multijugador de ensamblado
+### <a name="copying-assembly-multiplayer-hlapi-failed"></a>Error al copiar el ensamblado HLAPI multijugador
 
 Al importar los recursos principales de Unity De Leap Motion, este error podría registrarse:
 
@@ -192,13 +192,13 @@ Copying assembly from 'Temp/com.unity.multiplayer-hlapi.Runtime.dll' to 'Library
 
 - Una solución a corto plazo es reiniciar Unity. Consulte [el problema 7761](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/7761) para obtener más información.
 
-## <a name="leap-motion-example-scene"></a>Escena de ejemplo de Leap Motion
+## <a name="leap-motion-example-scene"></a>Escena de ejemplo de leap motion
 
-La escena de ejemplo usa el perfil DefaultLeapMotionConfiguration y determina si el proyecto de Unity se ha configurado correctamente para usar el proveedor de datos Leap Motion.
+En la escena de ejemplo se usa el perfil DefaultLeapMotionConfiguration y se determina si el proyecto de Unity se ha configurado correctamente para usar el proveedor de datos Leap Motion.
 
-La escena de ejemplo se encuentra en el **paquete Microsoft.MixedReality.Toolkit.Examples** del **directorio MRTK/Examples/Demos/HandTracking/.**  
+La escena de ejemplo se encuentra en **Microsoft.MixedReality.Toolkit. Paquete** de ejemplos en **el directorio MRTK/Examples/Demos/HandTracking/.**  
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Proveedores de entrada](../features/input/input-providers.md)
 - [Seguimiento de manos](../features/input/hand-tracking.md)

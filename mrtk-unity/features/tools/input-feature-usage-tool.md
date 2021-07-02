@@ -1,20 +1,20 @@
 ---
-title: Herramienta de uso de las características de entrada
+title: Herramienta de uso de características de entrada
 description: Herramienta InputFeatureUsage de documentación en MRTK
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 0f2d3d3eb07d8b631f3f11a8b497a22a028a2f24
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 413d2a3105294411f9c08f4a2add9365389ea783
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110145011"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176127"
 ---
-# <a name="inputfeatureusage-tool"></a>Herramienta InputFeatureUsage
+# <a name="input-feature-usage-tool"></a>Herramienta de uso de características de entrada
 
-La herramienta InputFeatureUsage es una herramienta en tiempo de ejecución (en el dispositivo o en el editor) que permite a los desarrolladores determinar rápidamente la entrada de Unity disponibleFeatureUsages para un origen de entrada detectado (por ejemplo, controlador de movimiento o mano articulada).
+La herramienta InputFeatureUsage es una herramienta en tiempo de ejecución (en el dispositivo o en el editor) que permite a los desarrolladores determinar rápidamente las entradas disponibles de UnityFeatureUsages para un origen de entrada detectado (por ejemplo, controlador de movimiento o mano articulada).
 
 > [!NOTE]
 > Esta escena solo funciona en Unity 2019.3 o posterior.
@@ -29,13 +29,13 @@ Para empezar a trabajar con la herramienta InputFeatureUsage, vaya a **MRTK/Tool
 
 Para examinar las asignaciones de Unity para un controlador:
 
-- Conexión del controlador
+- Conectar el controlador
 - Presione cada botón y mueva cada eje.
 - Tenga en cuenta los usos de características en la pantalla
-- Actualización de las asignaciones de controles en el proveedor de datos del sistema de entrada para el controlador
+- Actualización de las asignaciones de control en el proveedor de datos del sistema de entrada para el controlador
 
 > [!NOTE]
-> La herramienta InputFeatureUsage no usa componentes de Microsoft Mixed Reality Toolkit. Se comunica directamente con Unity para determinar y mostrar los usos de características.
+> La herramienta InputFeatureUsage no hace uso de los componentes Mixed Reality Toolkit Microsoft. Se comunica directamente con Unity para determinar y mostrar los usos de características.
 
 ### <a name="panels"></a>Paneles
 

@@ -1,16 +1,16 @@
 ---
 title: Instrucciones de codificación
-description: Principios y convenciones de codificación que se deben seguir al contribuir a MRTK.
+description: Principios y convenciones de codificación que deben seguirse al contribuir a MRTK.
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
-keywords: Unity,HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, C#,
-ms.openlocfilehash: 122c51962c55796c037302c7b79cc4df643a47b7
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, C#,
+ms.openlocfilehash: c14f5f72d391c5474a01c798bfdaa5529700a509
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121443"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175336"
 ---
 # <a name="coding-guidelines"></a>Instrucciones de codificación
 
@@ -20,25 +20,25 @@ En este documento se describen los principios y convenciones de codificación qu
 
 ## <a name="philosophy"></a>Filosofía
 
-### <a name="be-concise-and-strive-for-simplicity"></a>Ser conciso y procurar la simplicidad
+### <a name="be-concise-and-strive-for-simplicity"></a>Sea conciso y esfuérzate por la simplicidad
 
-La solución más sencilla suele ser la mejor. Este es un objetivo reemplazable de estas directrices y debe ser el objetivo de toda la actividad de codificación. Parte de ser sencillo es ser conciso y coherente con el código existente. Intente que el código sea sencillo.
+La solución más sencilla suele ser la mejor. Este es un objetivo reemplazable de estas directrices y debe ser el objetivo de toda la actividad de codificación. Parte de ser simple es ser conciso y coherente con el código existente. Intente que el código sea sencillo.
 
-Los lectores solo deben encontrar artefactos que proporcionen información útil. Por ejemplo, los comentarios que restablecen lo que es obvio no proporcionan ninguna información adicional y aumentan la proporción de ruido y señal.
+Los lectores solo deben encontrar artefactos que proporcionen información útil. Por ejemplo, los comentarios que restablecen lo obvio no proporcionan información adicional y aumentan la proporción de ruido y señal.
 
-Mantenga la lógica de código simple. Tenga en cuenta que no se trata de una instrucción sobre cómo usar el menor número de líneas, minimizar el tamaño de los nombres de identificador o el estilo de llave, sino reducir el número de conceptos y maximizar la visibilidad de las líneas a través de patrones conocidos.
+Mantenga la lógica de código simple. Tenga en cuenta que no se trata de una instrucción sobre cómo usar el menor número de líneas, minimizar el tamaño de los nombres de identificador o el estilo de llaves, sino reducir el número de conceptos y maximizar la visibilidad de las líneas a través de patrones conocidos.
 
-### <a name="produce-consistent-readable-code"></a>Generación de código coherente y legible
+### <a name="produce-consistent-readable-code"></a>Generar código coherente y legible
 
-La legibilidad del código está correlacionada con tasas de defectos bajas. Esfuérzse por crear código fácil de leer. Esfuérzate por crear código que tenga lógica simple y vuelva a usar los componentes existentes, ya que también ayudará a garantizar la corrección.
+La legibilidad del código se correlaciona con tasas de defectos bajas. Esfuérzse por crear código que sea fácil de leer. Esfuérzate por crear código que tenga una lógica simple y vuelva a usar los componentes existentes, ya que también ayudará a garantizar la corrección.
 
-Todos los detalles del código que se genera son importantes, desde los detalles más básicos de corrección hasta el estilo y el formato coherentes. Mantenga el estilo de codificación coherente con lo que ya existe, aunque no coincida con sus preferencias. Esto aumenta la legibilidad del código base general.
+Todos los detalles del código que se generan importan, desde los detalles más básicos de la corrección hasta el estilo y el formato coherentes. Mantenga el estilo de codificación coherente con lo que ya existe, incluso si no coincide con sus preferencias. Esto aumenta la legibilidad del código base general.
 
 ### <a name="support-configuring-components-both-in-editor-and-at-run-time"></a>Compatibilidad con la configuración de componentes en el editor y en tiempo de ejecución
 
-MRTK admite un conjunto diverso de usuarios: personas que prefieren configurar componentes en el editor de Unity y cargar objetos prefabs, y personas que necesitan crear instancias y configurar objetos en tiempo de ejecución.
+MRTK admite un conjunto diverso de usuarios: personas que prefieren configurar componentes en el editor de Unity y cargar elementos prefijos, y personas que necesitan crear instancias y configurar objetos en tiempo de ejecución.
 
-Todo el código debe funcionar agregando un componente a un GameObject en una escena guardada y mediante la creación de instancias de ese componente en el código. Las pruebas deben incluir un caso de prueba para crear instancias de los elementos prefab y crear instancias, y configurar el componente en tiempo de ejecución.
+Todo el código debe funcionar agregando un componente a un GameObject en una escena guardada y mediante la creación de instancias de ese componente en el código. Las pruebas deben incluir un caso de prueba tanto para crear instancias previas como para crear instancias, y configurar el componente en tiempo de ejecución.
 
 ### <a name="play-in-editor-is-your-first-and-primary-target-platform"></a>Play-in-editor es la primera plataforma de destino principal
 
@@ -48,19 +48,19 @@ Haga que todo funcione en el editor y, a continuación, haga que funcione en cua
 
 ### <a name="add-new-public-fields-properties-methods-and-serialized-private-fields-with-care"></a>Agregar nuevos campos públicos, propiedades, métodos y campos privados serializados con cuidado
 
-Cada vez que se agrega un método público, un campo y una propiedad, se convierte en parte de la superficie de LA API pública de MRTK. Los campos privados marcados con `[SerializeField]` también exponen campos al editor y forman parte de la superficie de la API pública. Otras personas pueden usar ese método público, configurar objetos prefab personalizados con el campo público y tomar una dependencia de él.
+Cada vez que se agrega un método público, un campo o una propiedad, se convierte en parte de la superficie de API pública de MRTK. Los campos privados marcados con `[SerializeField]` también exponen campos al editor y forman parte de la superficie de API pública. Otras personas pueden usar ese método público, configurar elementos prefab personalizados con el campo público y tomar una dependencia de él.
 
-Los nuevos miembros públicos deben examinarse cuidadosamente. Cualquier campo público deberá mantenerse en el futuro. Recuerde que si el tipo de un campo público (o campo privado serializado) cambia o se quita de un MonoBehaviour, podría interrumpir a otras personas. En primer lugar, el campo debe estar en desuso para una versión y es necesario proporcionar código para migrar los cambios de las personas que han tomado dependencias.
+Los nuevos miembros públicos deben examinarse detenidamente. Cualquier campo público tendrá que mantenerse en el futuro. Recuerde que si el tipo de un campo público (o campo privado serializado) cambia o se quita de un monobehaviour, esto podría interrumpir a otras personas. El campo deberá estar en desuso para una versión y es necesario proporcionar código para migrar los cambios de las personas que han tomado dependencias.
 
 ### <a name="prioritize-writing-tests"></a>Priorizar la escritura de pruebas
 
-MRTK es un proyecto de la comunidad, modificado por una amplia gama de colaboradores. Es posible que estos colaboradores no conozcan los detalles de la corrección o característica de errores y que la característica se rompa accidentalmente. [MRTK ejecuta pruebas de integración continuas](https://dev.azure.com/aipmr/MixedRealityToolkit-Unity-CI/_build?definitionId=16) antes de completar cada solicitud de incorporación de extracción. Los cambios que rompen las pruebas no se pueden comprobar. Por lo tanto, las pruebas son la mejor manera de asegurarse de que otras personas no interrumpirán la característica.
+MRTK es un proyecto de la comunidad, modificado por una amplia gama de colaboradores. Es posible que estos colaboradores no conozcan los detalles de la corrección o característica de errores y que la característica se rompa accidentalmente. [MRTK ejecuta pruebas de integración continuas antes](https://dev.azure.com/aipmr/MixedRealityToolkit-Unity-CI/_build?definitionId=16) de completar todas las solicitudes de incorporación de extracción. Los cambios que interrumpirán las pruebas no se pueden comprobar. Por lo tanto, las pruebas son la mejor manera de asegurarse de que otras personas no interrumpirán la característica.
 
 Cuando corrija un error, escriba una prueba para asegurarse de que no se revierte en el futuro. Si agrega una característica, escriba pruebas que comprueben que la característica funciona. Esto es necesario para todas las características de la experiencia de usuario, excepto las características experimentales.
 
 ## <a name="c-coding-conventions"></a>Convenciones de codificación de C#
 
-### <a name="script-license-information-headers"></a>Encabezados de información de licencia de script
+### <a name="script-license-information-headers"></a>Script de encabezados de información de licencia
 
 Todos los empleados de Microsoft que contribuyen a nuevos archivos deben agregar el siguiente encabezado de licencia estándar en la parte superior de los archivos nuevos, exactamente como se muestra a continuación:
 
@@ -92,26 +92,26 @@ Se rechazarán los archivos de script enviados sin las etiquetas de resumen adec
 
 ### <a name="mrtk-namespace-rules"></a>Reglas de espacio de nombres de MRTK
 
-El Mixed Reality Toolkit usa un modelo de espacio de nombres basado en características, donde todos los espacios de nombres fundamentales comienzan por "Microsoft.MixedReality.Toolkit". En general, no es necesario especificar la capa del kit de herramientas (por ejemplo, Core, Providers, Services) en los espacios de nombres.
+El Mixed Reality Toolkit un modelo de espacio de nombres basado en características, donde todos los espacios de nombres fundamentales comienzan por "Microsoft.MixedReality. Toolkit". En general, no es necesario especificar la capa del kit de herramientas (por ejemplo, Core, Providers, Services) en los espacios de nombres.
 
 Los espacios de nombres definidos actualmente son:
 
-- Microsoft.MixedReality.Toolkit
-- Microsoft.MixedReality.Toolkit.Boundary
-- Microsoft.MixedReality.Toolkit.Diagnostics
-- Microsoft.MixedReality.Toolkit.Editor
-- Microsoft.MixedReality.Toolkit.Input
-- Microsoft.MixedReality.Toolkit.SpatialAwareness
-- Microsoft.MixedReality.Toolkit.Teleport
-- Microsoft.MixedReality.Toolkit.Utilities
+- Microsoft.MixedReality. Toolkit
+- Microsoft.MixedReality. Toolkit. Límite
+- Microsoft.MixedReality. Toolkit. Diagnóstico
+- Microsoft.MixedReality. Toolkit. Editor
+- Microsoft.MixedReality. Toolkit. Entrada
+- Microsoft.MixedReality. Toolkit. SpatialAwareness
+- Microsoft.MixedReality. Toolkit. Teleport
+- Microsoft.MixedReality. Toolkit. Utilidades
 
-En el caso de los espacios de nombres con una gran cantidad de tipos, es aceptable crear un número limitado de subparátipos de espacio de nombres para ayudar a limitar el uso.
+En el caso de los espacios de nombres con una gran cantidad de tipos, es aceptable crear un número limitado de subparátipos de nombres para ayudar a limitar el uso del ámbito.
 
-Si se omite el espacio de nombres de una interfaz, clase o tipo de datos, se bloqueará el cambio.
+Si se omite el espacio de nombres de una interfaz, una clase o un tipo de datos, se bloqueará el cambio.
 
 ### <a name="adding-new-monobehaviour-scripts"></a>Adición de nuevos scripts de MonoBehaviour
 
-Al agregar nuevos scripts de MonoBehaviour con una solicitud de incorporación de cambios, asegúrese de que el atributo se aplica a [`AddComponentMenu`](https://docs.unity3d.com/ScriptReference/AddComponentMenu.html) todos los archivos aplicables. Esto garantiza que el componente se pueda detectar fácilmente en el editor en el *botón Agregar* componente. La marca de atributo no es necesaria si el componente no se puede mostrar en el editor, como una clase abstracta.
+Al agregar nuevos scripts MonoBehaviour con una solicitud de incorporación de cambios, asegúrese de que el atributo se aplica a [`AddComponentMenu`](https://docs.unity3d.com/ScriptReference/AddComponentMenu.html) todos los archivos aplicables. Esto garantiza que el componente se pueda detectar fácilmente en el editor en el *botón Agregar* componente. La marca de atributo no es necesaria si el componente no se puede mostrar en el editor, como una clase abstracta.
 
 En el ejemplo siguiente, el *paquete debe* rellenarse con la ubicación del paquete del componente. Si coloca un elemento en *la carpeta MRTK/SDK,* el paquete será *SDK*.
 
@@ -124,7 +124,7 @@ public class MyNewComponent : MonoBehaviour
 
 En general, intente evitar la creación de scripts de inspector personalizados para los componentes de MRTK. Agrega sobrecarga adicional y administración del código base que podría controlar el motor de Unity.
 
-Si se necesita una clase inspectora, intente usar el de [`DrawDefaultInspector()`](https://docs.unity3d.com/ScriptReference/Editor.DrawDefaultInspector.html) Unity. Esto simplifica de nuevo la clase inspector y deja gran parte del trabajo a Unity.
+Si se necesita una clase inspectora, intente usar el elemento de [`DrawDefaultInspector()`](https://docs.unity3d.com/ScriptReference/Editor.DrawDefaultInspector.html) Unity. Esto simplifica de nuevo la clase inspector y deja gran parte del trabajo a Unity.
 
 ```c#
 public override void OnInspectorGUI()
@@ -135,7 +135,7 @@ public override void OnInspectorGUI()
 }
 ```
 
-Si se requiere una representación personalizada en la clase inspector, intente utilizar [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) y [`EditorGUILayout.PropertyField`](https://docs.unity3d.com/ScriptReference/EditorGUILayout.PropertyField.html) . Esto garantizará que Unity controla correctamente la representación de objetos prefab anidados y valores modificados.
+Si se requiere representación personalizada en la clase inspector, intente utilizar [`SerializedProperty`](https://docs.unity3d.com/ScriptReference/SerializedProperty.html) y [`EditorGUILayout.PropertyField`](https://docs.unity3d.com/ScriptReference/EditorGUILayout.PropertyField.html) . Esto garantizará que Unity controla correctamente la representación de elementos prefabs anidados y valores modificados.
 
 Si no se puede usar debido a un requisito en la lógica personalizada, asegúrese de que todo [`EditorGUILayout.PropertyField`](https://docs.unity3d.com/ScriptReference/EditorGUILayout.PropertyField.html) el uso se ajusta alrededor de [`EditorGUI.PropertyScope`](https://docs.unity3d.com/ScriptReference/EditorGUI.PropertyScope.html) . Esto garantizará que Unity represente el inspector correctamente para los elementos prefab anidados y los valores modificados con la propiedad dada.
 
@@ -188,7 +188,7 @@ Al agregar nuevos scripts ScriptableObject, asegúrese de [`CreateAssetMenu`](ht
 
 En el ejemplo siguiente, la *subcarpeta* debe rellenarse con la subcarpeta MRTK, si procede. Si coloca un elemento en *la carpeta MRTK/Providers,* el paquete será *Providers*. Si coloca un elemento en la *carpeta MRTK/Core,* establezca esta opción en "Perfiles".
 
-En el ejemplo siguiente, el archivo *MyNewService | MyNewProvider* debe rellenarse con el nombre de la nueva clase, si procede. Si coloca un elemento en la *carpeta MixedRealityToolkit,* deje esta cadena fuera.
+En el ejemplo siguiente, *el | MyNewProvider* debe rellenarse con el nombre de la nueva clase, si procede. Si coloca un elemento en la *carpeta MixedRealityToolkit,* deje esta cadena fuera.
 
 ```c#
 [CreateAssetMenu(fileName = "MyNewProfile", menuName = "Mixed Reality Toolkit/{Subfolder}/{MyNewService | MyNewProvider}/MyNewProfile")]
@@ -507,7 +507,7 @@ Al generar rutas de acceso de archivo de cadena y, en particular, escribir rutas
 1. Use las API de C# [ `Path` siempre](/dotnet/api/system.io.path?preserve-view=true&view=netframework-4.8) que sea posible, como `Path.Combine` o `Path.GetFullPath` .
 1. Use / o [`Path.DirectorySeparatorChar`](/dotnet/api/system.io.path.directoryseparatorchar?preserve-view=true&view=netframework-4.8) en lugar de \ o \\ \\ .
 
-Estos pasos garantizan que MRTK funciona en sistemas basados en Windows y Unix.
+Estos pasos garantizan que MRTK funciona en sistemas basados Windows y Unix.
 
 ### <a name="dont"></a>Lo que debe evitar:
 
@@ -596,7 +596,7 @@ public float AbsMyValue
 
 ### <a name="cache-values-and-serialize-them-in-the-sceneprefab-whenever-possible"></a>Almacenar en caché valores y serializarlos en la escena o prefab siempre que sea posible
 
-Con HoloLens en mente, es mejor optimizar el rendimiento y almacenar en caché las referencias en la escena o prefab para limitar las asignaciones de memoria en tiempo de ejecución.
+Con la HoloLens en mente, es mejor optimizar el rendimiento y las referencias de caché en la escena o prefab para limitar las asignaciones de memoria en tiempo de ejecución.
 
 #### <a name="dont"></a>Lo que debe evitar:
 
@@ -673,7 +673,7 @@ public class MyClass
 > [!NOTE]
 > Como alternativa, use la propiedad "SharedMaterial" de Unity, que no crea un nuevo material cada vez que se hace referencia a él.
 
-### <a name="use-platform-dependent-compilation-to-ensure-the-toolkit-wont-break-the-build-on-another-platform"></a>Uso [de la compilación dependiente de](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) la plataforma para asegurarse de que el kit de herramientas no interrumpirá la compilación en otra plataforma
+### <a name="use-platform-dependent-compilation-to-ensure-the-toolkit-wont-break-the-build-on-another-platform"></a>Use [la compilación dependiente de](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) la plataforma para Toolkit no interrumpirá la compilación en otra plataforma.
 
 - Use `WINDOWS_UWP` para usar API específicas de UWP que no son de Unity. Esto impedirá que intenten ejecutarse en el editor o en plataformas no admitidas. Esto es equivalente a `UNITY_WSA && !UNITY_EDITOR` y debe usarse en favor de .
 - Use `UNITY_WSA` para usar LAS API de Unity específicas de UWP, como el espacio de nombres `UnityEngine.XR.WSA` . Esto se ejecutará en el Editor cuando la plataforma esté establecida en UWP, así como en aplicaciones para UWP integradas.

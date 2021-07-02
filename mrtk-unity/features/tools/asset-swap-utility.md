@@ -5,12 +5,12 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 03/9/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: c277cadffb356b93ffc359233b0b8307f43e8d57
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 50ef252913575988b5f377dd9ff92f9e9ade3a72
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144135"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176162"
 ---
 # <a name="asset-swap-utility"></a>Utilidad de intercambio de recursos
 
@@ -33,4 +33,4 @@ A continuación, seleccione "Esferas azules" en la lista desplegable "Tema selec
 En este ejemplo hemos realizado un reemplazo completo de la escena, pero puede reemplazar partes de la escena cambiando el "Modo de selección". También puede volver a cambiar a cubos rojos seleccionando "Cubos rojos" en la lista desplegable "Tema seleccionado" y presionando de nuevo "Aplicar".
 
 > [!NOTE]
-> Es posible intercambiar cualquier tipo de recurso, como archivos de audio, fuentes, prefabs, etc. realizará `AssetSwapUtility` algunas comprobaciones de integridad para asegurarse de que está intercambiando a tipos similares.
+> Es posible intercambiar cualquier tipo de recurso, como archivos de audio, fuentes, requisitos previos, etc. realizará `AssetSwapUtility` algunas comprobaciones de integridad para asegurarse de que está intercambiando a tipos similares.

@@ -1,32 +1,32 @@
 ---
-title: Modularización MRTK
+title: Modularización de MRTK
 description: Describe la componenteización en MRTK.
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 04b2e6155e591a918b95aed20961a0450afe5f43
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: eac96e309afc21f9a2b6efe9c3aef5975e4f0dff
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144421"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177013"
 ---
-# <a name="mixed-reality-toolkit-componentization"></a>componentes Mixed Reality Toolkit
+# <a name="mrtk-modularization"></a>Modularización de MRTK
 
-Una de las excelentes características nuevas de Mixed Reality Toolkit v2 es la mejora de la componenteización. Siempre que sea posible, los componentes individuales están aislados de todos los componentes, menos de la capa principal de la base.
+Una de las nuevas características excelentes de Mixed Reality Toolkit v2 es la mejora de la componenteización. Siempre que sea posible, los componentes individuales están aislados de todos, menos de la capa principal de la base.
 
 ## <a name="minimized-dependencies"></a>Dependencias minimizadas
 
 MRTK v2 se desarrolló intencionadamente para ser modular y minimizar las dependencias entre los servicios del sistema (por ejemplo, el reconocimiento espacial).
 
-Debido a la naturaleza de algunos servicios del sistema (por ejemplo, entrada y teleportación), existe un pequeño número de dependencias.
+Debido a la naturaleza de algunos servicios del sistema (por ejemplo, entrada y teleportación), existe un número pequeño de dependencias.
 
 Aunque se espera que los servicios necesiten uno o varios componentes del proveedor de datos, no hay vínculos directos entre ellos. Lo mismo sucede con las características del SDK (por ejemplo, Interfaz de usuario componentes).
 
 ## <a name="component-communication"></a>Comunicación de componentes
 
-Para asegurarse de que no hay vínculos directos entre componentes, MRTK v2 usa interfaces para comunicarse entre servicios, proveedores de datos y código de aplicación. Estas interfaces se definen en y toda la comunicación se enruta a través del componente principal Mixed Reality Toolkit.
+Para asegurarse de que no hay vínculos directos entre componentes, MRTK v2 usa interfaces para comunicarse entre servicios, proveedores de datos y código de aplicación. Estas interfaces se definen en y toda la comunicación se enruta a través del Mixed Reality Toolkit principal.
 
 ![Uso del sistema de reconocimiento espacial a través de interfaces](../features/images/packaging/AccessingViaInterfaces.png)
 
@@ -34,7 +34,7 @@ Para asegurarse de que no hay vínculos directos entre componentes, MRTK v2 usa 
 
 En este momento, mrtk se importa como un único paquete básico (omitiendo por un momento la existencia del paquete de ejemplos, que es un paquete completamente opcional). Es posible reducir esta superficie si se recortan manualmente los archivos importados, aunque se trata de un proceso muy manual que no tiene una guía bien definida.
 
-Es posible desactivar los elementos arbitrarios durante la importación del paquete de Foundation. Sin embargo, no se recomienda hacerlo en una fase temprana del desarrollo, ya que podría interrumpir la funcionalidad. Después de haber descubierto el conjunto de características final de una aplicación, los proveedores y servicios innecesarios se pueden realizar en las carpetas siguientes:
+Es posible desactivar los elementos arbitrarios durante la importación del paquete foundation. Sin embargo, no se recomienda hacerlo en una fase temprana del desarrollo, ya que podría interrumpir la funcionalidad. Después de haber descubierto el conjunto de características final de una aplicación, los proveedores y servicios innecesarios se pueden realizar en las carpetas siguientes:
 
 - MRTK/Services
 - MRTK/Providers
@@ -58,7 +58,7 @@ Al seleccionar una arquitectura de aplicación, es importante tener en cuenta la
 
 #### <a name="mixedrealitytoolkit-service-locator"></a>Localizador de servicios MixedRealityToolkit
 
-MrTK permite (y configura automáticamente) las escenas de aplicación para usar el componente de [`MixedRealityToolkit`](xref:Microsoft.MixedReality.Toolkit.MixedRealityToolkit) localizador de servicios predeterminado. Este componente incluye compatibilidad para configurar sistemas MRTK y proveedores de datos a través de inspectores de configuración y administra la duración de los componentes y los comportamientos principales (por ejemplo, cuándo actualizar).
+MRTK permite (y configura automáticamente) las escenas de aplicación para usar el componente de [`MixedRealityToolkit`](xref:Microsoft.MixedReality.Toolkit.MixedRealityToolkit) localizador de servicios predeterminado. Este componente incluye compatibilidad para configurar sistemas MRTK y proveedores de datos a través de inspectores de configuración y administra la duración de los componentes y los comportamientos principales (por ejemplo, cuándo actualizar).
 
 Todos los sistemas se representan en el inspector de configuración principal, independientemente de si están presentes o no en el proyecto. Consulte la Guía [Mixed Reality configuración de datos](../configuration/mixed-reality-configuration-guide.md) para obtener más información.
 

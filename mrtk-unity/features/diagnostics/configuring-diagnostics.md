@@ -1,22 +1,22 @@
 ---
-title: Configuración de diagnósticos
+title: Configuración del sistema de diagnóstico
 description: Documentación para configurar diagnósticos en MRTK
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 211ee2ed06ba9b13bd90169bcc7ee50da4594034
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: d81b441cd9bcd40846eb94320f6f7de1bbd2f0a8
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121803"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177250"
 ---
 # <a name="configuring-the-diagnostics-system"></a>Configuración del sistema de diagnóstico
 
 ## <a name="general-settings"></a>Configuración general
 
-![Configuración general de diagnósticos](../images/diagnostics/DiagnosticsGeneralSettings.png)
+![Diagnósticos generales Configuración](../images/diagnostics/DiagnosticsGeneralSettings.png)
 
 ### <a name="enable-verbose-logging"></a>Habilitar el registro detallado
 
@@ -26,13 +26,13 @@ Tenga en cuenta que esta opción es independiente de si el sistema de diagnósti
 
 ### <a name="show-diagnostics"></a>Mostrar diagnósticos
 
-Indica si el sistema de diagnóstico va a mostrar o no las opciones de diagnóstico configuradas.
+Indica si el sistema de diagnóstico debe mostrar o no las opciones de diagnóstico configuradas.
 
 Cuando se deshabilita, se ocultarán todas las opciones de diagnóstico configuradas.
 
 ## <a name="profiler-settings"></a>Configuración del profiler
 
-![Configuración del profiler de diagnósticos](../images/diagnostics/DiagnosticsProfilerSettings.png)
+![Diagnostics Profiler Configuración](../images/diagnostics/DiagnosticsProfilerSettings.png)
 
 ### <a name="show-profiler"></a>Mostrar el profiler
 
@@ -58,7 +58,7 @@ Multiplicador de tamaño aplicado a la ventana del profiler. Por ejemplo, si se 
 
 Velocidad a la que se va a mover la ventana del profiler para mantener la visibilidad dentro del puerto de vista.
 
-## <a name="programmatically-controlling-the-diagnostics-system"></a>Control mediante programación del sistema de diagnóstico
+## <a name="programmatically-controlling-the-diagnostics-system"></a>Control del sistema de diagnóstico mediante programación
 
 También es posible alternar la visibilidad del sistema de diagnóstico y del profiler en tiempo de ejecución. Por ejemplo, el código siguiente ocultará el sistema de diagnóstico y el profiler.
 

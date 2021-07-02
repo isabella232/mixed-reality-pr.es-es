@@ -5,20 +5,20 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, sistema de límites,
-ms.openlocfilehash: 0f1a9edd9f9a31e7ba20f630406b299909a4864c
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: 77bdaedb60700bac27643ae718c795c02e5ee7e7
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121253"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177094"
 ---
-# <a name="configuring-the-boundary-visualization"></a>Configuración de la visualización de límites
+# <a name="configuring-boundary-visualization"></a>Configuración de la visualización de límites
 
 El *perfil de visualización de límites* proporciona opciones para configurar la apariencia visual y otros parámetros relacionados para el sistema de límites. Las visualizaciones de límites se adjuntan al Mixed Reality objeto Playspace de la escena y se teletransporta con el usuario.
 
 ## <a name="general-settings"></a>Configuración general
 
-![Configuración general de visualización de límites](../images/boundary/BoundaryVisualizationGeneralSettings.png)
+![Visualización general de límites Configuración](../images/boundary/BoundaryVisualizationGeneralSettings.png)
 
 ### <a name="boundary-height"></a>Alto del límite
 
@@ -26,7 +26,7 @@ El alto del límite indica la distancia por encima del plano de suelo en el que 
 
 ## <a name="floor-settings"></a>Configuración de la planta
 
-![Configuración de la planta de visualización de límites](../images/boundary/BoundaryVisualizationFloorSettings.png)
+![Zona de visualización de límites Configuración](../images/boundary/BoundaryVisualizationFloorSettings.png)
 
 **Mostrar**
 
@@ -46,7 +46,7 @@ Capa en la que se debe establecer el plano de suelo. El valor predeterminado es 
 
 ## <a name="play-area-settings"></a>Configuración del área de reproducción
 
-![Configuración del área de reproducción de visualización de límites](../images/boundary/BoundaryVisualizationPlayAreaSettings.png)
+![Área de reproducción de visualización de límites Configuración](../images/boundary/BoundaryVisualizationPlayAreaSettings.png)
 
 **Mostrar**
 
@@ -62,7 +62,7 @@ Capa en la que se debe establecer el área de juego. El valor predeterminado es 
 
 ## <a name="tracked-area-settings"></a>Configuración del área de seguimiento
 
-![Configuración del área de seguimiento de visualización de límites](../images/boundary/BoundaryVisualizationTrackedAreaSettings.png)
+![Área de seguimiento de visualización de límites Configuración](../images/boundary/BoundaryVisualizationTrackedAreaSettings.png)
 
 **Mostrar**
 
@@ -78,7 +78,7 @@ Capa en la que se debe establecer el área de seguimiento. El valor predetermina
 
 ## <a name="boundary-wall-settings"></a>Configuración de la pared de límites
 
-![Configuración de la pared de límites de visualización de límites](../images/boundary/BoundaryVisualizationWallSettings.png)
+![Límites de la visualización de límites Configuración](../images/boundary/BoundaryVisualizationWallSettings.png)
 
 **Mostrar**
 
@@ -97,7 +97,7 @@ Capa en la que se deben establecer las paredes de límite. El valor predetermina
 
 ## <a name="boundary-ceiling-settings"></a>Configuración del límite superior
 
-![Configuración del límite de límites de visualización de límites](../images/boundary/BoundaryVisualizationCeilingSettings.png)
+![Límite de límites de visualización de límites Configuración](../images/boundary/BoundaryVisualizationCeilingSettings.png)
 
 **Mostrar**
 

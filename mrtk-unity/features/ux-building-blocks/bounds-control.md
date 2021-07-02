@@ -1,20 +1,20 @@
 ---
-title: BoundsControl
+title: Control Bounds
 description: Información general sobre el control de límites en MRTK
 author: thalbern
 ms.author: bethalha
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, control de límites,
-ms.openlocfilehash: 65558861955f782cf9d81a8bb4ec3a31dee03fde
-ms.sourcegitcommit: 95ea5f3cf873acc93c4614fbccaa093e0f5186f0
+ms.openlocfilehash: f5f5e1f463f741eb23f75c9826034b8974baf947
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "110487732"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176458"
 ---
-# <a name="bounds-control"></a>Control Límites
+# <a name="bounds-control"></a>Control Bounds
 
-![Control Límites](../images/bounds-control/MRTK_BoundsControl_Main.png)
+![Control Bounds](../images/bounds-control/MRTK_BoundsControl_Main.png)
 
 *BoundsControl es* el nuevo componente para el comportamiento de manipulación, que se encontró anteriormente *en BoundingBox*. El control de límites realiza una serie de mejoras y simplificaciones en la configuración y agrega nuevas características. Este componente es un reemplazo del rectángulo de selección, que estará en desuso.
 
@@ -37,10 +37,10 @@ Esta propiedad especifica qué objeto se transformará mediante la manipulación
 Hay varias opciones para activar la interfaz de control de límites.
 
 * *Activar al iniciar:* el control Límites se vuelve visible una vez que se inicia la escena.
-* *Activar por proximidad:* el control límites se hace visible cuando una mano articulada está cerca del objeto.
+* *Activar por proximidad:* el control de límites se hace visible cuando una mano articulada está cerca del objeto.
 * *Activar por puntero:* el control Límites se vuelve visible cuando se apunta a él mediante un puntero de rayo de mano.
-* *Activar por proximidad y* puntero: el control de límites se vuelve visible cuando el destino es un puntero de rayo de mano o una mano articulada está cerca del objeto.
-* *Activar manualmente:* el control Límites no se hace visible automáticamente. Puede activarlo manualmente a través de un script accediendo a la propiedad boundsControl.Active.
+* *Activar por proximidad y* puntero: el control Límites se vuelve visible cuando se apunta a él mediante un puntero de rayo de mano o una mano articulada está cerca del objeto.
+* *Activar manualmente:* el control Límites no se vuelve visible automáticamente. Puede activarlo manualmente a través de un script accediendo a la propiedad boundsControl.Active.
 
 ### <a name="bounds-override"></a>Invalidación de límites
 
@@ -53,7 +53,7 @@ Agrega un relleno a los límites del colisionador utilizados para calcular las e
 ### <a name="flatten-axis"></a>Eje aplanado
 
 Indica si el control está aplanado en uno de los ejes, lo que lo hace 2 dimensiones y no permite la manipulación a lo largo de ese eje. Esta característica se puede usar para objetos finos como pizarras.
-Si el eje de aplanado se establece *en Aplanar* automáticamente, el script seleccionará automáticamente el eje con la extensión más pequeña como eje plano.
+Si el eje de aplanado se establece en *Aplanar* automáticamente, el script seleccionará automáticamente el eje con la extensión más pequeña como eje plano.
 
 ### <a name="smoothing"></a>Suavizado
 
@@ -66,7 +66,7 @@ Las configuraciones visuales son objetos vinculados o que pueden incluirse en sc
 
 ## <a name="configuration-objects"></a>Objetos de configuración
 
-El control incluye un conjunto de objetos de configuración que se pueden almacenar como objetos que pueden incluirse en scripts y compartirse entre instancias o elementos prefabs diferentes. Las configuraciones se pueden compartir y vincular como archivos de recursos individuales que pueden incluirse en scripts o recursos anidados que se pueden incluir en scripts dentro de objetos prefab. También se pueden definir otras configuraciones directamente en la instancia sin vincular a un recurso que puede incluir scripts externo o anidado.
+El control incluye un conjunto de objetos de configuración que se pueden almacenar como objetos que pueden incluirse en scripts y compartirse entre instancias o elementos prefab diferentes. Las configuraciones se pueden compartir y vincular como archivos de recursos individuales que pueden incluirse en scripts o recursos anidados que se pueden incluir en scripts dentro de objetos prefab. También se pueden definir otras configuraciones directamente en la instancia sin vincular a un recurso que permite scripts externo o anidado.
 
 El inspector de control de límites indicará si una configuración se comparte o se inline como parte de la instancia actual mostrando un mensaje en el inspector de propiedades. Además, las instancias compartidas no se podrán editar directamente en la propia ventana de propiedades de control de límites, sino que el recurso al que está vinculando debe modificarse directamente para evitar cambios accidentales en las configuraciones compartidas.
 
@@ -114,7 +114,7 @@ Esta configuración define el comportamiento del identificador de rotación.
 * **Relleno del colisionador:** relleno que se agrega al colisionador del controlador.
 * **Dibujar tether al manipular**: cuando está activo dibujará una línea de tether desde el punto de inicio de la interacción hasta la posición actual de la mano o del puntero.
 * **Los controladores omiten al** colisionador: si un colisionador se vincula aquí, los controladores omitirán cualquier colisión con este colisionador.
-* **Controlar el tipo de colisionador prefab:** tipo de colisionador que se va a usar con el identificador creado.
+* **Controlar el tipo de colisionador prefab:** tipo de colisionador que se usará con el identificador creado.
 * **Mostrar identificador para X:** controla la visibilidad del identificador para el eje X.
 * **Mostrar identificador para Y:** controla la visibilidad del identificador para el eje Y.
 * **Mostrar identificador para Z:** controla la visibilidad del identificador para el eje Z.
@@ -130,8 +130,8 @@ Permite habilitar y configurar identificadores de traducción para el control de
 * **Relleno del colisionador:** relleno que se agrega al colisionador del controlador.
 * **Dibujar tether al manipular**: cuando está activo dibujará una línea de tether desde el punto de inicio de la interacción hasta la posición actual de la mano o del puntero.
 * **Los controladores omiten al** colisionador: si un colisionador se vincula aquí, los controladores omitirán cualquier colisión con este colisionador.
-* **Controlar el tipo de colisionador prefab:** tipo de colisionador que se va a usar con el identificador creado.
-* **Mostrar identificador para X:** controla la visibilidad del identificador del eje X.
+* **Controlar el tipo de colisionador prefab:** tipo de colisionador que se usará con el identificador creado.
+* **Mostrar identificador para X:** controla la visibilidad del identificador para el eje X.
 * **Mostrar identificador para Y:** controla la visibilidad del identificador para el eje Y.
 * **Mostrar identificador para Z:** controla la visibilidad del identificador para el eje Z.
 
@@ -140,7 +140,7 @@ Permite habilitar y configurar identificadores de traducción para el control de
 La configuración de vínculos habilita la característica wireframe del control de límites. Se pueden configurar las siguientes propiedades:
 
 * **Material de wireframe:** el material aplicado a la malla de wireframe.
-* **Radio del borde de la trama** de conexión: grosor de la trama de conexión.
+* **Radio del borde de wireframe:** grosor de la trama de conexión.
 * **Forma de wireframe:** la forma del wireframe puede ser cúbica o cilíndrica.
 * **Mostrar wireframe:** controla la visibilidad del wireframe.
 
@@ -153,11 +153,11 @@ Mostrar y ocultar los controladores con animación en función de la distancia a
 * **Efecto de proximidad activo:** habilitación de la activación del identificador basado en proximidad
 * **Proximidad media del objeto:** distancia para el escalado del primer paso
 * **Proximidad de cierre de objeto:** distancia para el escalado del segundo paso
-* **Escala lejana:** valor de escala predeterminado del recurso de controlador cuando las manos están fuera del intervalo de la interacción de control de límites (distancia definida anteriormente por "Controlar la proximidad media". Use 0 para ocultar el identificador de forma predeterminada)
+* **Escala lejana:** valor de escala predeterminado del recurso de controlador cuando las manos están fuera del intervalo de la interacción de control de límites (distancia definida anteriormente por "Controlar proximidad media". Use 0 para ocultar el identificador de forma predeterminada)
 * **Escala media:** valor de escala del recurso de identificador cuando las manos están dentro del intervalo de la interacción de control de límites (distancia definida anteriormente por "Controlar proximidad cercana". Use 1 para mostrar el tamaño normal)
-* **Close Scale**(Escala de cierre): valor de escala del recurso de controlador cuando las manos están dentro del intervalo de la interacción de la toma (distancia definida anteriormente por "Controlar proximidad cercana". Usar 1.x para mostrar un tamaño mayor)
+* **Close Scale**(Escala de cierre): valor de escala del recurso de identificador cuando las manos están dentro del intervalo de la interacción de la toma (distancia definida anteriormente por "Controlar proximidad cercana". Usar 1.x para mostrar un tamaño mayor)
 * **Frecuencia de crecimiento lejano:** la velocidad de escala de un objeto escalado por proximidad se escala cuando la mano se mueve de proximidad media a lejana.
-* **Tasa de crecimiento medio:** la velocidad de escala de un objeto escalado de proximidad se escala cuando la mano se mueve de proximidad media a cercana.
+* **Tasa de crecimiento medio:** la velocidad de escalado de un objeto escalado por proximidad se escala cuando la mano pasa de una proximidad media a una cercana.
 * **Close Grow Rate**(Velocidad de crecimiento de cierre): la velocidad de escalado de un objeto con escala de proximidad se escala cuando la mano pasa de una proximidad cercana al centro de objetos.
 
 ## <a name="constraint-system"></a>Sistema de restricciones
@@ -183,17 +183,17 @@ El control Bounds proporciona los siguientes eventos. En este ejemplo se usan es
 
 ## <a name="elastics-experimental"></a>Elásticos (experimentales)
 
-Los elásticos se pueden usar al manipular objetos a través del control de límites. Tenga en cuenta que [el sistema elástico](../elastics/elastic-system.md) sigue en estado experimental. Para habilitar los elásticos, vincule un componente de administrador elástico existente o cree y vincule un nuevo administrador de elásticos mediante el `Add Elastics Manager` botón .
+Los elásticos se pueden usar al manipular objetos a través del control de límites. Tenga en cuenta que [el sistema elástico](../experimental/elastic-system.md) sigue en estado experimental. Para habilitar los elásticos, vincule un componente de administrador elástico existente o cree y vincule un nuevo administrador de elásticos mediante el `Add Elastics Manager` botón .
 
 <img src="../images/bounds-control/MRTK_BoundsControl_Elastics.png" width="450" alt="Bounds control Elastics">
 
 ## <a name="handle-styles"></a>Estilos de control
 
-De forma predeterminada, al asignar el script, se mostrará el identificador del estilo de [`BoundsControl.cs`](xref:Microsoft.MixedReality.Toolkit.UI.BoundsControl) 1.ª generación de HoloLens. Para usar HoloLens 2 estilo, debe asignar prefabs y materiales de identificador adecuados.
+De forma predeterminada, al asignar el script, se mostrará el identificador del HoloLens [`BoundsControl.cs`](xref:Microsoft.MixedReality.Toolkit.UI.BoundsControl) de primera generación. Para usar HoloLens 2 estilo, debe asignar prefabs y materiales de identificador adecuados.
 
 ![Estilos de identificador de control de límites 2](../images/bounds-control/MRTK_BoundsControl_HandleStyles1.png)
 
-A continuación se muestran los requisitos previos, los materiales y los valores de escalado para los identificadores HoloLens 2 control de límites de estilo. Puede encontrar este ejemplo en la `BoundsControlExamples` escena.
+A continuación se muestran los requisitos previos, los materiales y los valores de escalado para los identificadores de control HoloLens 2 de estilo. Puede encontrar este ejemplo en la `BoundsControlExamples` escena.
 
 <img src="../images/bounds-control/MRTK_BoundsControl_HandleStyles2.png" width="450" alt="Bounds control HandleStyles">
 
@@ -222,16 +222,16 @@ Para que los bordes del control de límites se comporten de la misma manera al m
 1. Agregar Box Collider a un objeto
 2. Asignación `BoundsControl` de un script a un objeto
 3. Configurar opciones, como los métodos de activación (consulte la [sección Propiedades del inspector](#inspector-properties) a continuación)
-4. (Opcional) Asignación de prefabs y materiales para un control HoloLens 2 de estilo (consulte [la](#handle-styles) sección Estilos de control a continuación)
+4. (Opcional) Asignar prefabs y materiales para un control de límites HoloLens 2 estilo (consulte [la](#handle-styles) sección Estilos de control a continuación)
 
 > [!NOTE]
 > Use *el campo Target Object* (Objeto de destino) y Bounds Override (Invalidación de *límites)* en el inspector para asignar un objeto específico y un colisionador en el objeto con varios componentes secundarios.
 
 ![Control de límites](../images/bounds-control/MRTK_BoundsControl_Assign.png)
 
-## <a name="how-to-add-and-configure-a-bounds-control-in-the-code"></a>Adición y configuración de un control de límites en el código
+## <a name="how-to-add-and-configure-a-bounds-control-in-the-code"></a>Cómo agregar y configurar un control de límites en el código
 
-1. Creación de instancias de GameObject de cubo
+1. Creación de instancias del cubo GameObject
 
     ```c#
     GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
@@ -281,7 +281,7 @@ rotationHandleConfiguration.ColliderPadding = 0.016f;
 
 ### <a name="example-set-minimum-maximum-bounds-control-scale-using-minmaxscaleconstraint"></a>Ejemplo: Establecer la escala de control de límites mínimos y máximos mediante MinMaxScaleConstraint
 
-Para establecer la escala mínima y máxima, adjunte un al [`MinMaxScaleConstraint`](xref:Microsoft.MixedReality.Toolkit.UI.MinMaxScaleConstraint) control . A medida que el control de límites asocia y activa automáticamente el administrador de restricciones, MinMaxScaleConstraint se aplicará automáticamente a los cambios de transformación una vez asociado y configurado.
+Para establecer la escala mínima y máxima, adjunte un al [`MinMaxScaleConstraint`](xref:Microsoft.MixedReality.Toolkit.UI.MinMaxScaleConstraint) control. A medida que el control de límites asocia y activa automáticamente el administrador de restricciones, MinMaxScaleConstraint se aplicará automáticamente a los cambios de transformación una vez asociado y configurado.
 
 También puede usar MinMaxScaleConstraint para establecer la escala mínima y máxima para [`ObjectManipulator`](xref:Microsoft.MixedReality.Toolkit.UI.ObjectManipulator) .
 
@@ -314,9 +314,9 @@ Para actualizar instancias individuales del rectángulo de selección, también 
 
 <img src="../images/bounds-control/MRTK_BoundsControl_Migrate.png" width="450" alt="Bounds control Migrate">
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Manipulador de objetos](object-manipulator.md)
 * [Administrador de restricciones](constraint-manager.md)
 * [El plazo de migración](../tools/migration-window.md)
-* [Sistema elástico (experimental)](../elastics/elastic-system.md)
+* [Sistema elástico (experimental)](../experimental/elastic-system.md)

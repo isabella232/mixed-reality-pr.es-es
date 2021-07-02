@@ -1,24 +1,24 @@
 ---
-title: Implementación en cascos HoloLens y WMR
+title: Implementación en cascos HoloLens WMR
 description: Documentación para compilar e implementar aplicaciones en varios dispositivos.
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Visual Studio
-ms.openlocfilehash: 12384c3d3c0c2208d86a9a946580d0311f8a8955
-ms.sourcegitcommit: 12ea3fb2df4664c5efd07dcbb9040c2ff173afb6
+ms.openlocfilehash: 137e1b699e9a0cda1e8a454a6c3219b581fa71b4
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "113042306"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113176373"
 ---
-# <a name="deploying-to-hololens-and-wmr-headsets"></a>Implementación en cascos HoloLens y WMR
+# <a name="deploying-to-hololens-and-wmr-headsets"></a>Implementación en cascos HoloLens WMR
 
-Hay dos maneras de implementar aplicaciones compiladas con MRTK en el dispositivo Windows, la Plataforma univeral de Windows (UWP) y la Plataforma independiente. Las aplicaciones creadas para HoloLens 1 o HoloLens 2 deben tener como destino UWP, mientras que las aplicaciones creadas para cascos WMR pueden tener como destino UWP o independiente.
+Hay dos maneras de implementar aplicaciones compiladas con MRTK en el dispositivo Windows: univeral Windows Platform (UWP) y la plataforma independiente. Las aplicaciones creadas para HoloLens 1 o HoloLens 2 deben tener como destino UWP, mientras que las aplicaciones creadas para cascos WMR pueden tener como destino UWP o independiente.
 
-## <a name="building-and-deploying-mrtk-to-hololens-1-hololens-2-and-wmr-headsets-uwp"></a>Compilación e implementación de MRTK en HoloLens 1, HoloLens 2 y cascos WMR (UWP)
+## <a name="building-and-deploying-mrtk-to-hololens-1-hololens-2-and-wmr-headsets-uwp"></a>Compilación e implementación de MRTK para HoloLens 1, HoloLens 2 y cascos WMR (UWP)
 
-Puede encontrar instrucciones sobre cómo compilar e implementar para **HoloLens 1** **y HoloLens 2** (UWP) en Compilar la aplicación en [el dispositivo](/windows/mixed-reality/mrlearning-base-ch1#build-your-application-to-your-device). Estos pasos también le permiten implementar en **cascos WMR.**
+Puede encontrar instrucciones sobre cómo compilar e implementar para **HoloLens 1** y **HoloLens 2** (UWP) en Compilar la aplicación [en el dispositivo](/windows/mixed-reality/mrlearning-base-ch1#build-your-application-to-your-device). Estos pasos también le permiten implementar en **cascos WMR.**
 
 > [!NOTE]
 > Al implementar la aplicación en el dispositivo en Visual Studio, debe configurar los Visual Studio de forma ligeramente diferente en función del dispositivo. Las configuraciones son las siguientes:
@@ -29,7 +29,7 @@ Puede encontrar instrucciones sobre cómo compilar e implementar para **HoloLens
 | HoloLens 1 | Versión o maestra | x86 | Dispositivo |
 | Cascos WMR | Versión o maestra | x64 | Equipo local |
 
-**Sugerencia:** Al compilar para HoloLens 1, HoloLens 2 o WMR, se recomienda que las opciones de compilación "Versión del SDK de destino" y "Versión mínima de la plataforma" se parezcan a las de la imagen siguiente:
+**Sugerencia:** Al compilar para HoloLens 1, HoloLens 2 o WMR, se recomienda que las opciones de compilación "Versión del SDK de destino" y "Versión mínima de la plataforma" se parezcan a las de la siguiente imagen:
 
 ![Ventana de compilación](../features/images/getting-started/BuildWindow.png)
 
@@ -39,7 +39,7 @@ Asegúrese de que la lista desplegable de versión de SDK de destino incluya la 
 
 ### <a name="unity-20192020-and-hololens"></a>Unity 2019/2020 y HoloLens
 
-Si una aplicación HoloLens aparece como un panel 2D en el dispositivo, asegúrese de que se han configurado las siguientes opciones en Unity antes de implementar la aplicación para UWP:
+Si una HoloLens aplicación aparece como un panel 2D en el dispositivo, asegúrese de que se han configurado las siguientes opciones en Unity antes de implementar la aplicación para UWP:
 
 Si usa la compatibilidad con XR integrada heredada (solo Unity 2019):
 
@@ -47,7 +47,7 @@ Si usa la compatibilidad con XR integrada heredada (solo Unity 2019):
 1. En **XR Settings** (Configuración de XR) en la pestaña UWP, asegúrese de que la opción **Virtual Reality Supported** (Compatible con realidad virtual) está habilitada y de que el SDK de **Windows Mixed Reality** se ha agregado a los SDK.
 1. Compilación e implementación en Visual Studio
 
-Si usa los complementos de OpenXR o Windows XR:
+Si usa OpenXR o Windows complementos XR:
 
 1. Siga los pasos que encontrará en [Introducción a XRSDK](../configuration/getting-started-with-mrtk-and-xrsdk.md)
 1. Asegúrese de que el perfil de configuración sea **DefaultXRSDKConfigurationProfile**

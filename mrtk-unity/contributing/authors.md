@@ -4,112 +4,112 @@ description: Lista de autores de MRTK
 author: cadia
 ms.author: cadia
 ms.date: 05/27/2021
-keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, C#, Colaboradores, Comunidad
-ms.openlocfilehash: e952926f067cb6be10621b2914372aaa47af5b7d
-ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
+keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, C#, Colaboradores, Community
+ms.openlocfilehash: ae8cc8b1ab26a12188622a2c846dddd381491dc2
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "110647883"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177297"
 ---
 # <a name="authors"></a>Authors
 
-Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contribuciones de personas de todo el mundo. Agradecemos a todos los que tienen y siguen contribuyendo.
+Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contribuciones de personas de todo el mundo. Gracias a todos los que tienen y siguen contribuyendo.
 
 - achaperon
-- Adam Adam (AdamMitmitmit-ms)
+- Adam Adam (AdamMitcca-ms)
 - Addison Linville (radicalad)
 - ADP-JoNeff
 - afarquía
 - Against Lightning (AgainstLightning)
 - alandergrouse (alandergrouse)
-- Alex Adam (elbuuerantasma)
+- AlexCredit (elbutimaantasma)
 - Andrew Hall (ryzngard)
-- Seg. Nisov (googlan)
+- Van Nisov (googlan)
 - Anuraag Puri (anuraag016)
-- hsmouflMS
+- dmouflMS
 - Ben Ben Benard (genbod)
-- Sedette Dúplex (anderbern)
+- Sedette Dúplex (zolbern)
 - Bertrand Oustrirev (BertrandOustriere)
-- Gross Gross (blgrossMS)
-- Brandon Furtgulaler (brandf)
+- Gross (blgrossMS)
+- Brandon Furtler (brandf)
 - Osd Truong (truong93)
 - C. M. Barth (chrisfromwork)
-- Asínto (Asínco)
+- Ría (Ría-Ría)
 - cartwright hooke
-- Casey Subb (ptc-ccrabb)
+- Casey Desangreb (ptc-ccrabb)
 - CDiaz-MS
 - cefoot
 - desaconsolación
 - cihanhant98
 - CoPrez
-- Querencia Carvalhuya (ccarvalhcarp)
+- Resalte Carvalhuya (ccarvalhuya)
 - DanielMann (danielmann-ms)
-- David Evans (sinfón)
+- David Evans (sincronos)
 - David Johnson (djohnsomsft)
 - David Kline (davidkline-ms)
 - deibich
 - deibu
-- Noé (mifredo)
+- Perorón (fredo)
 - Dino Fejzagitivos (FejZa)
-- Dirk Songür (DirkSon lun)
-- RíaAílloro
+- Dirk Songür (DirkSonchan)
+- DominicAílloro
 - Eric Eric (Ecnassianer)
 - Eric Fiscus (MRW-Eric)
 - Eric O'Omisión (ericob)
 - Eric Provencher (provencher)
-- ffmargraff (meulta)
+- ymargraff (meulta)
 - Eusebiu Marcu (eusebiu)
 - Evan Tice (in2dair)
-- Finn Sinclair (Horizontal2)
-- Asínte Jasche (Yasche)
+- Finn Sinclair (Pero2)
+- Ches Jasche (Asínja)
 - Forrest Trepte (ForrestTrepte)
-- Asínto Clasadonte (af)
+- Francisco Clasadonte (nidsaf)
 - gauravb4
-- Johnhn (gejohnst)
-- ybdev (uno de los dos)
+- Johnston (gejohnst)
+- ybdev (se desvíabdev)
 - Grace Lee (grayclee)
-- Maria Bury (grbury)
+- Indeste (grbury)
 - AsínstroNe (hferrone)
 - Yu Yu (yuyu)
 - hybridherbst
-- Glg-il Kim (yungilkim)
+- Yung-il Kim (yungilkim)
 - Jack Yang (jackzzzzh)
 - Jared Bienz [MSFT] (jbienzms)
 - Jarod (Jarodshow)
-- Jerome Djrome (djee-ms)
-- Vander Does (DesconciertoTheMighty)
+- Jerome Djbert (djee-ms)
+- Jessie Vander Does (DesconcertadoTheMighty)
 - John (johnppella)
 - Jon Jon (JonathanPalmerGD)
-- JonÁn (Gada)
-- Jonán Suámez (JPalmerDev)
+- JonathanTalo (Gada)
+- Jonathan Jonathan (JPalmerDev)
 - Joost vanIk (LocalJoost)
 - Wittner Wittner (jwittner)
-- juliosra
+- julioesra
 - Julia Julia (julioenka)
-- kgloehr-kg
+- élloehr-kg
 - JimJik Lee (fnwinter)
-- Ken Rovubzak (KenUbzak)
-- Perorón1 (Lg1LG)
-- Kevin John (KevinKennedy)
+- Ken Cububzak (KenUbzak)
+- Peronía1 (Gmail1LG)
+- Kevin Kevin (KevinKennedy)
 - Kevin Semple (polar-kev)
-- cher1
-- kiyasu (holo holo
-- K kcubzak (Kubzak)
-- Perois (kevedev)
+- porracher1
+- kiyasu (holo holo)
+- Kkovubzak (Kubzak)
+- Kpiis (kevedev)
 - LaneMax
-- Lars Simkins (Railkins)
+- Lars Simkins (Rail rail)
 - Luis Val lunés (luval-microsoft)
-- Luis Valntes (luis-val vals)
-- Debidos Tönne (hsmstonneMS)
+- Luis Valncia (luis-valncia-ms)
+- Imoss Tönne (nidstoenneMS)
 - Maciej Borowik (macborow)
-- Utón Despándalo (MbreteTyrrell)
+- Asínquete Despándalo (Tyrrell)
 - Marek Stój (marek-stoj)
 - Mark Finch (fast-slow-still)
-- Ariao Valoriani (mvaloriani)
-- Matt Johnson (matthejo)
+- Runo Valoriani (mvaloriani)
+- John Johnson (matthejo)
 - Max Wang-MS
-- ageagley-MS
+- agagley-MS
 - michael (insominx)
 - Michael House (michael-house)
 - Michael Mikelsky (mpkoz)
@@ -121,12 +121,12 @@ Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contrib
 - Salandin (ossala)
 - PatientEz
 - Patrick Cook (darax)
-- Adiós (AllBecomesGood)
+- Contrabando (AllBecomesGood)
 - ritijain
 - Robert Onulak (Ziugy)
 - Roberto Sonnino (robertos)
 - Podge dePodge
-- Rima Smeenk (insmeenk)
+- Rima Smeenk (imasmeenk)
 - Rosthouse (Rosthouse)
 - rwinj
 - SabinMGeorge
@@ -138,12 +138,12 @@ Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contrib
 - Srinjoy Majumdar (srinjoym)
 - Stefan Wasserbauer (wassx)
 - Stephen Hodgson (StephenHodgson)
-- Steve Hle (xwipeoutx)
+- Steve Igh (xwipeoutx)
 - Sue Loh [MS] (sloh-ms)
 - taruksu (taruksu)
-- TimKen (timGerken)
+- Tim TimKen (timGerken)
 - SerialÍa (antz)
-- Utía Ferrell (Troyano-Ferrell)
+- Tanto Ferrell (Troy-Ferrell)
 - Tux (NoTuxNoBux)
 - Vaoliva (Vaoliva)
 - Weasy (Weasy666)

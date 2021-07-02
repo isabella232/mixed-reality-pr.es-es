@@ -1,28 +1,28 @@
 ---
-title: Proyectos grandes
+title: Uso de MRTK en proyectos grandes
 description: Sugerencias para consumidores de MRTK con proyectos grandes.
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 5db750048cf996b10062e638572b578ba383d5ee
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 28ba272a48b0a0c524185ac7114a09cf8e0e91f8
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144557"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113177119"
 ---
 # <a name="using-mrtk-in-large-projects"></a>Uso de MRTK en proyectos grandes
 
-Esta página contiene algunas sugerencias útiles para los consumidores de MRTK que la están arrastrando a proyectos de gran tamaño existentes o la configuración de algo nuevo que se controlará mediante código fuente y tendrá varios desarrolladores.
+Esta página contiene algunas sugerencias útiles para los consumidores de MRTK que la están sacando a proyectos grandes existentes o configurando algo nuevo que se controlará mediante código fuente y tendrá varios desarrolladores.
 
-*Se recomienda leer todas las instrucciones siguientes; seguirlas le ayudará a evitar algunos problemas complicados al trabajar en bases de código más grandes.*
+*Se recomienda leer todas las instrucciones siguientes, ya que seguirlas le ayudará a evitar algunos problemas complicados al trabajar en código base más grandes.*
 
 ## <a name="gitignore"></a>gitignore
 
-El siguiente archivo .gitignore es una base recomendada para extraer al consumir MRTK: hay partes de MRTK que crean un estado local que el control de código fuente puede omitir de forma segura, lo que de lo contrario podría desajustar el estado de Git local.
+El siguiente archivo .gitignore es una base recomendada para extraer al consumir MRTK: hay partes de MRTK que crean un estado local que el control de código fuente puede omitir de forma segura, lo que de lo contrario desvía el estado de Git local.
 
-Tenga en cuenta que las partes iniciales de esto se toman del archivo .gitignore de Github Unity predeterminado con adiciones específicas de MRTK más adelante. Tenga en cuenta también que algunas de estas reglas asumen ciertas rutas de acceso y se pueden modificar en función de dónde se encuentra MRTK en el proyecto.
+Tenga en cuenta que las partes iniciales de esto se toman del archivo .gitignore de Unity de GitHub predeterminado con adiciones específicas de MRTK más adelante. Tenga en cuenta también que algunas de estas reglas asumen ciertas rutas de acceso y se pueden modificar en función de dónde se encuentra MRTK en el proyecto.
 
 ```
 # This .gitignore file should be placed at the root of your Unity project directory
@@ -101,16 +101,16 @@ crashlytics-build.properties
 
 ## <a name="projectpreferencesasset-file"></a>Archivo ProjectPreferences.asset
 
-La configuración de MRTK para todo el proyecto se puede encontrar en la ubicación Edit -> Project Settings -> Mixed Reality Toolkit (Editar -> project settings -> Mixed Reality Toolkit). Esta configuración se guardará en un archivo en esta ubicación de la carpeta Recursos:
+Project la configuración de MRTK de todo el sistema se puede encontrar en la opción Editar -> Project Configuración -> Mixed Reality Toolkit ubicación. Esta configuración se guardará en un archivo en esta ubicación de la carpeta Activos:
 
 ```
 Assets/MixedRealityToolkit.Generated/ProjectPreferences.asset
 ```
 
-Si el proyecto va a tener varios colaboradores, se recomienda que este archivo de recursos se pueda comprobar después de realizar una configuración inicial de la configuración de MRTK. En concreto, considere la posibilidad de tener **activada la siguiente configuración:**
+Si el proyecto tendrá varios colaboradores, se recomienda que este archivo de recursos se pueda comprobar después de realizar una configuración inicial de la configuración de MRTK. En concreto, considere la posibilidad de tener **activada la siguiente configuración:**
 
-**Bloquear perfiles** del SDK: si está deshabilitado, los perfiles de MRTK predeterminados se podrán editar globalmente, lo que hará que las actualizaciones de MRTK sean difíciles (puede provocar conflictos de combinación en el propio marco).
+**Bloquear perfiles** del SDK: si está deshabilitado, los perfiles de MRTK predeterminados se podrán editar globalmente, lo que hará que las actualizaciones de MRTK sean complicadas (puede provocar conflictos de combinación en el propio marco).
 
-Omitir el configurador de proyectos de **MRTK:** si está deshabilitado, el configurador de proyecto mostrará si la configuración actual de MRTK no coincide con los valores predeterminados recomendados de MRTK. Dado que es posible que el proyecto haya elegido explícitamente no tener algunas opciones habilitadas, tener activada esta configuración impedirá que otros colaboradores vean este cuadro de diálogo como una configuración cambiante por accidente. Esta configuración la debe configurar la persona que configura el proyecto y, a continuación, la deben omitir los demás colaboradores.
+Omitir el configurador de proyectos de **MRTK:** si está deshabilitado, el configurador de proyectos mostrará si la configuración actual de MRTK no coincide con los valores predeterminados recomendados de MRTK. Dado que es posible que el proyecto haya elegido explícitamente no tener algunas opciones habilitadas, si se activa esta opción, se impedirá que otros colaboradores vean este cuadro de diálogo de forma involuntaria. Esta configuración debe ser configurada por la persona que configura el proyecto y, a continuación, omitida por los demás colaboradores.
 
-Habilitar automáticamente las funcionalidades de **UWP:** si esta opción está deshabilitada, cierta funcionalidad (por ejemplo, el seguimiento ocular) puede producir un error en modo silencioso cuando se implementa en un dispositivo porque Unity no agregará automáticamente las funcionalidades de tiempo de ejecución necesarias al manifiesto de aplicación. Si se comprueba esta configuración, se protegerá la experiencia de implementación de la aplicación de esta clase de problemas.
+Habilitar automáticamente las funcionalidades de **UWP:** si esta opción está deshabilitada, cierta funcionalidad (por ejemplo, el seguimiento de los ojos) puede producir un error en modo silencioso cuando se implementa en un dispositivo porque Unity no agregará automáticamente las funcionalidades de tiempo de ejecución necesarias al manifiesto de aplicación. Si se comprueba esta configuración, se protegerá la experiencia de implementación de la aplicación de esta clase de problemas.
