@@ -29,52 +29,43 @@ highlightedContent:
       url: wmr-health-safety-comfort.md
     - title: Exploración de AltspaceVR
       itemType: whats-new
-      url: 'https://docs.microsoft.com/windows/mixed-reality/altspace-vr/journey?tabs=application'
-conceptualContent:
+      url: /windows/mixed-reality/altspace-vr/journey?tabs=application
+productDirectory:
   title: Empezar a usar Windows Mixed Reality
   summary: 'Encuentre información adicional sobre el software, el hardware y la solución de problemas de Mixed Reality.'
   items:
     - title: Instrucciones
+      imageSrc: images/WMR_Docs_Landing_How-To's.png
       links:
         - url: plug-in-your-headset.md
-          itemType: quickstart
           text: Conecte el casco de realidad mixta
         - url: install-windows-mixed-reality.md
-          itemType: quickstart
           text: Instale el software de Windows Mixed Reality
         - url: learn-mixed-reality.md
-          itemType: quickstart
           text: Ejecute la experiencia de aprendizaje
         - url: using-games-and-apps-in-windows-mixed-reality.md
-          itemType: quickstart
           text: Use juegos y aplicaciones
     - title: Referencias
+      imageSrc: images/WMR_Docs_Landing_References.png
       links:
         - url: your-mixed-reality-home.md
-          itemType: concept
           text: Página de inicio de Mixed Reality
         - url: controllers-in-wmr.md
-          itemType: concept
           text: Controladores de movimiento en Windows Mixed Reality
         - url: using-steamvr-with-windows-mixed-reality.md
-          itemType: concept
           text: SteamVR con Windows Mixed Reality
         - url: using-speech-in-wmr.md
-          itemType: concept
           text: Opciones de voz en Windows Mixed Reality
     - title: Solución de problemas
+      imageSrc: images/WMR_Docs_Landing_TroubleShooting.png
       links:
         - url: troubleshooting-windows-mixed-reality.md
-          itemType: concept
           text: Opciones de ayuda y soporte técnico
         - url: filing-feedback.md
-          itemType: concept
           text: Registro de problemas y comentarios
         - url: error-codes.md
-          itemType: concept
           text: Códigos de error
         - url: installation_errors.md
-          itemType: concept
           text: Errores de instalación
 additionalContent:
   sections:

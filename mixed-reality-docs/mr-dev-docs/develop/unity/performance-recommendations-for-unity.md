@@ -7,12 +7,12 @@ ms.date: 03/26/2019
 ms.topic: article
 keywords: gráficos, CPU, GPU, representación, recolección de elementos no utilizados, hololens
 ms.localizationpriority: high
-ms.openlocfilehash: 2ff766c3fb2c9f8a91c3c8cc81bb21adae9956e8
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 7d672af0c9309e4dd2965cc3cb315671a720a58a
+ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300160"
+ms.lasthandoff: 06/02/2021
+ms.locfileid: "110743431"
 ---
 # <a name="performance-recommendations-for-unity"></a>Recomendaciones de rendimiento para Unity
 
@@ -309,7 +309,7 @@ Por lo tanto, reducir el número de operaciones en el sombreador de fragmentos n
 
 #### <a name="unity-standard-shader-alternatives"></a>Alternativas del sombreador estándar de Unity
 
-En lugar de usar una representación basada físicamente (PBR) u otro sombreador de alta calidad, consulta el uso de un sombreador más eficaz y económico. [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity) proporciona el [sombreador estándar de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader) que se ha optimizado para proyectos de realidad mixta.
+En lugar de usar una representación basada físicamente (PBR) u otro sombreador de alta calidad, consulta el uso de un sombreador más eficaz y económico. [Mixed Reality Toolkit](https://github.com/Microsoft/MixedRealityToolkit-Unity) proporciona el [sombreador estándar de MRTK](/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader) que se ha optimizado para proyectos de realidad mixta.
 
 Unity también proporciona opciones sin iluminación, iluminación de vértice, iluminación difusa y otras opciones simplificadas de sombreador que son más rápidas en comparación con el sombreador estándar de Unity. Consulta [Uso y rendimiento de los sombreadores integrados](https://docs.unity3d.com/Manual/shader-Performance.html) para obtener información más detallada.
 
