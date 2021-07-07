@@ -2,15 +2,19 @@
   href: index.md
 - name: Prueba de Examples Hub
   href: running-examples-hub.md
+- name: Escenas de ejemplo
+  href: running-example-scenes.md
 - name: Configuración
   href: configuration/toc.yml
+- name: Introducción a los dispositivos compatibles
+  href: supported-devices/toc.yml
 - name: Architecture
   href: architecture/toc.yml
 - name: Introducción a las características
   href: features/toc.yml
 - name: Rendimiento y procedimientos recomendados
   href: performance/toc.yml
-- name: Actualizaciones e implementación
+- name: Actualización
   href: updates-deployment/toc.yml
 - name: Paquetes
   href: packages/toc.yml

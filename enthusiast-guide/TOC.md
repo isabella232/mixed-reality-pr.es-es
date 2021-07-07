@@ -22,7 +22,7 @@
 ### [Qué es WebVR](webvr.md)
 ### [Preguntas más frecuentes sobre el uso de Windows Mixed Reality](using-wmr-faq.yml)
 
-## Opciones de ayuda y soporte técnico
+## Solución de problemas y preguntas frecuentes
 ### [Solución de problemas en Windows Mixed Reality](troubleshooting-windows-mixed-reality.md)
 ### [Registro de problemas y comentarios](filing-feedback.md)
 ### [Códigos de error](error-codes.md)
@@ -41,6 +41,7 @@
 ### [Preguntas más frecuentes sobre HP Reverb G2](reverbG2-faq.yml)
 
 ## Recursos
+### [Información sobre Windows Mixed Reality](get-wmr-info.md)
 ### [Estado, seguridad y comodidad del casco envolvente](wmr-health-safety-comfort.md)
 ### [Información general de software de Mixed Reality e historial de versiones](mixed-reality-software.md)
 ### [Funcionamiento del seguimiento de la interacción directa](tracking-system.md)

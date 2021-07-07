@@ -1,6 +1,6 @@
 - name: Barra de la aplicación
   href: app-bar.md
-- name: Cuadro de límite
+- name: Rectángulo de selección
   href: bounding-box.md
 - name: Control de límites
   href: bounds-control.md
@@ -10,6 +10,8 @@
   href: constraint-manager.md
 - name: Diálogo
   href: dialog.md
+- name: Permanencia
+  href: dwell.md
 - name: Visualización del dedo
   href: fingertip-visualization.md
 - name: Asesor manual

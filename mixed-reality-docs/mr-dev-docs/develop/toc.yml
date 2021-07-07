@@ -1,11 +1,15 @@
 - name: Introducción al desarrollo con Mixed Reality
-  href: development.md
+  items:
+    - name: Introducción
+      href: development.md
+    - name: Instalación de las herramientas
+      href: install-the-tools.md
+    - name: Elección de un motor
+      href: choosing-an-engine.md
 - name: Introducción a los servicios en la nube de realidad mixta de Azure
   href: mixed-reality-cloud-services.md
 - name: Aplicaciones de ejemplo y características
   href: features-and-samples.md
-- name: Instalar las herramientas
-  href: install-the-tools.md
 - name: Migración de aplicaciones
   items:
     - name: Introducción a la portabilidad
@@ -156,7 +160,7 @@
                   href: unity/tutorials/mr-azure-307.md
                 - name: 'HoloLens de primera generación y Azure (308): notificaciones entre dispositivos'
                   href: unity/tutorials/mr-azure-308.md
-                - name: 'HoloLens de primera generación y Azure (309): Application Insights'
+                - name: 'HoloLens (primera generación) y Azure (309): Application Insights'
                   href: unity/tutorials/mr-azure-309.md
                 - name: 'HoloLens de primera generación y Azure (310): detección de objetos'
                   href: unity/tutorials/mr-azure-310.md
@@ -170,14 +174,8 @@
       items:
         - name: Elección de una versión de Unity y un complemento XR
           href: unity/choosing-unity-version.md
-        - name: Uso de la compatibilidad con XR integrada heredada
-          href: unity/legacy-xr-support.md
-        - name: Uso del complemento XR de Windows
-          href: unity/windows-xr-plugin.md
-        - name: Uso del complemento OpenXR
-          href: unity/openxr-getting-started.md
-        - name: Características compatibles del complemento OpenXR
-          href: unity/openxr-supported-features.md
+        - name: Establecimiento de la configuración de XR
+          href: unity/xr-project-setup.md
         - name: Herramienta de características de Mixed Reality
           items:
             - name: Le damos la bienvenida a la herramienta de características de Mixed Reality
@@ -234,7 +232,7 @@
           href: unity/udp-packets-in-unity.md
         - name: Uso del espacio de nombres de Windows con las aplicaciones de Unity para HoloLens
           href: unity/using-the-windows-namespace-with-unity-apps-for-hololens.md
-        - name: Objetos nativos de Mixed Reality
+        - name: Interoperabilidad nativa de Mixed Reality en Unity
           href: unity/unity-xrdevice-advanced.md
         - name: Uso de Vuforia
           href: unity/vuforia-development-overview.md
@@ -262,7 +260,7 @@
               href: unity/lunar-module.md
     - name: Depuración y rendimiento
       items:
-        - name: Depuración administrada con Unity IL2CPP
+        - name: Depuración administrada con Unity
           href: unity/managed-debugging-with-unity-il2cpp.md
         - name: Configuración recomendada para Unity
           href: unity/recommended-settings-for-unity.md
@@ -274,12 +272,18 @@
           href: unity/exporting-and-building-a-unity-visual-studio-solution.md
         - name: Procedimientos recomendados para trabajar con Unity y Visual Studio
           href: unity/best-practices-for-working-with-unity-and-visual-studio.md
+    - name: Notas de la versión
+      items:
+        - name: Complemento OpenXR para Mixed Reality
+          href: unity/openxr-release-notes.md
 - name: Unreal
   items:
     - name: Introducción al desarrollo con Unreal
       href: unreal/unreal-development-overview.md
     - name: Introducción a MRTK
       href: unreal/unreal-mrtk-introduction.md
+    - name: Configurar tu proyecto
+      href: unreal/unreal-project-setup.md
     - name: Actualización de proyectos en Unreal
       href: unreal/unreal-porting.md
     - name: Guías de inicio rápido
@@ -361,12 +365,10 @@
 - name: JavaScript
   items:
     - name: Introducción al desarrollo con JavaScript
-      href: javascript/javascript-development-overview.md
-    - name: WebXR
       href: javascript/webxr-overview.md
     - name: Tutoriales
       items:
-        - name: Hola mundo usando BabylonJS
+        - name: Hola mundo de VR con BabylonJS
           items:
             - name: 1. Introducción
               href: javascript/tutorials/babylonjs-webxr-helloworld/introduction-01.md
@@ -374,9 +376,9 @@
               href: javascript/tutorials/babylonjs-webxr-helloworld/prepare-scene-02.md
             - name: 3. Interactuar con un objeto 3D
               href: javascript/tutorials/babylonjs-webxr-helloworld/interact-03.md
-- name: Nativa
+- name: Motor personalizado
   items:
-    - name: Introducción al desarrollo con Native
+    - name: Introducción al desarrollo del motor personalizado
       href: native/directx-development-overview.md
     - name: OpenXR
       items:
@@ -469,9 +471,9 @@
         - name: Términos de licencia del software de control remoto de holografías
           href: /legal/mixed-reality/microsoft-holographic-remoting-software-license-terms
         - name: Comunicación remota de holografías para HoloLens (1.ª generación)
-          href: null
-        - name: Adición de comunicación remota de holografías
-          href: platform-capabilities-and-apis/add-holographic-remoting.md
+          items:
+            - name: Adición de comunicación remota de holografías
+              href: platform-capabilities-and-apis/add-holographic-remoting.md
     - name: Calidad y pruebas de las aplicaciones
       items:
         - name: Criterios de calidad de aplicaciones

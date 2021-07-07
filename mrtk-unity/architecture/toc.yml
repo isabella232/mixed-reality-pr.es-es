@@ -8,7 +8,7 @@
       href: terminology.md
     - name: Sistema principal
       href: core-system.md
-    - name: Punteros y foco de controladores
+    - name: 'Controladores, punteros y foco'
       href: controllers-pointers-and-focus.md
 - name: 'Sistemas, servicios de extensión y proveedores de datos'
   href: systems-extensions-providers.md
