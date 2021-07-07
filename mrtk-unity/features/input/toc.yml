@@ -8,9 +8,9 @@
   href: gaze.md
 - name: Gestos
   href: gestures.md
-- name: Seguimiento de manos
+- name: Seguimiento de las manos
   href: hand-tracking.md
-- name: Cómo agregar una interactividad casi
+- name: Cómo agregar una interactividad cercana
   href: how-to-add-near-interactivity.md
 - name: Acciones de entrada
   href: input-actions.md

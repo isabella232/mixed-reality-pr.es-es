@@ -2,11 +2,11 @@
   href: wmr-mrtk.md
 - name: Implementación en Oculus Quest
   href: oculus-quest-mrtk.md
+- name: Implementación en Android e iOS (AR Foundation)
+  href: using-ar-foundation.md
 - name: Uso de Leap Motion
   href: leap-motion-mrtk.md
 - name: Detección de controladores en MRTK
   href: controllers-mrtk.md
-- name: Uso de AR Foundation
-  href: using-ar-foundation.md
-- name: Detección de las capacidades de la plataforma
+- name: Detección de las funcionalidades de la plataforma
   href: detecting-platform-capabilities.md

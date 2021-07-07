@@ -1,8 +1,10 @@
+- name: Authors
+  href: authors.md
 - name: Información general sobre la contribución
   href: contributing.md
 - name: Instrucciones de codificación
   href: coding-guidelines.md
-- name: Escribir y ejecutar pruebas
+- name: Escritura y ejecución de pruebas
   href: unit-tests.md
 - name: Guías de la documentación
   href: documentation-guide.md
@@ -10,5 +12,5 @@
   href: pull-requests.md
 - name: Características experimentales
   href: experimental-features.md
-- name: Últimos cambios
+- name: Cambios importantes
   href: breaking-changes.md
