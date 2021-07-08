@@ -1,18 +1,18 @@
 ---
 title: ¿Qué es Mixed Reality?
-description: En este artículo se define la realidad mixta y se muestra dónde se colocan los dispositivos de realidad aumentada y virtual a lo largo del espectro de realidad mixta.
+description: Debate sobre la realidad mixta, demostración del uso de dispositivos de AR y VR en el espectro de la realidad mixta.
 author: brandonbray
 ms.author: branbray
 ms.date: 08/26/2020
 ms.topic: article
 keywords: Mixed Reality, holographic, AR, VR, MR, XR, augmented reality, virtual reality, explanation, case study, mixed reality headset, windows mixed reality headset, virtual reality headset, what is virtual reality, what is augmented reality
 ms.localizationpriority: high
-ms.openlocfilehash: 2eac20b85ceeb9413dfc0b6820cceda2ddf335c5
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: e524312b2e479b1c3d05039403aba10de864ae18
+ms.sourcegitcommit: 5603dc9f6511707cb8b215f20f6c6485ef480538
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98583011"
+ms.lasthandoff: 06/16/2021
+ms.locfileid: "112230205"
 ---
 # <a name="what-is-mixed-reality"></a>¿Qué es Mixed Reality?
 

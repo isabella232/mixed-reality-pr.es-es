@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, prefabs, holograms, tooltips
 ms.localizationpriority: high
-ms.openlocfilehash: 4400ce669863b719b409e11076ceb5689e21893e
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: 0abfb4ea2fac3a2e50837c219a465c4ab002e69d
+ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105982978"
+ms.lasthandoff: 06/15/2021
+ms.locfileid: "112110280"
 ---
 # <a name="6-creating-user-interfaces"></a>6. Creación de interfaces de usuario
 
@@ -67,7 +67,7 @@ En la ventana Hierarchy (Jerarquí)a, seleccione el objeto del botón **Hints** 
 ![Unity con el evento OnClick del objeto de botón Hints configurado](images/mr-learning-base/base-06-section1-step1-5.png)
 
 > [!TIP]
-> El componente Interactable es un contenedor todo en uno que hace que se puede interactuar fácilmente con cualquier objeto y que este tenga capacidad de respuesta a las entradas. Interactable actúa como una instrucción comodín para todos los tipos de entradas como, por ejemplo, entradas táctiles, haces de mano, voz, etc., y canaliza estas interacciones en eventos y respuestas de tema visual. Para aprender a configurarlo para diferentes tipos de entrada y personalizar su tema visual, puede consultar la guía sobre [Interactable](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/README_Interactable.html) en el [Portal de documentación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/).
+> El componente Interactable es un contenedor todo en uno que hace que se puede interactuar fácilmente con cualquier objeto y que este tenga capacidad de respuesta a las entradas. Interactable actúa como una instrucción comodín para todos los tipos de entradas como, por ejemplo, entradas táctiles, haces de mano, voz, etc., y canaliza estas interacciones en eventos y respuestas de tema visual. Para aprender a configurarlo para diferentes tipos de entrada y personalizar su tema visual, puede consultar la guía sobre [Interactable](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/interactable) en el [Portal de documentación de MRTK](/windows/mixed-reality/mrtk-unity/).
 
 En la ventana Hierarchy (Jerarquía), seleccione el objeto del botón **Explode** y, a continuación, en la ventana Inspector, configure el evento **OnClick ()** de la siguiente manera:
 
@@ -116,6 +116,9 @@ Para deshabilitar el objeto Indicator en forma de cheurón, en la ventana Hierar
 
 > [!NOTE]
 > Ahora, cuando se inicia la aplicación, el objeto Indicator en forma de cheurón está deshabilitado de forma predeterminada y se puede habilitar presionando el botón Indicator.
+
+> [!NOTE]
+> El componente Directional Indicator Controller (Script) (Controlador de indicador direccional [script]) no forma parte de MRTK, pero se incluyó con los recursos del tutorial.
 
 Cambie el nombre del segundo botón por **TapToPlace** y, a continuación, en la ventana Inspector, configure el componente **Button Config Helper (Script)** (Asistente de configuración del botón [script]) de la siguiente manera:
 
@@ -175,7 +178,7 @@ En la ventana Hierarchy (Jerarquía), expanda el objeto RoverExplorer > **RoverP
 
 ![Unity con todos los objetos de partes del róver seleccionados y el componente ToolTipSpawner agregado y configurado](images/mr-learning-base/base-06-section4-step1-2.png)
 
-En la ventana Hierarchy (Jerarquía), seleccione la primera parte del rover, RoverParts > **Camera_Part** y configure el componente **ToolTipSpawner** como se indica a continuación:
+En la ventana Hierarchy (Jerarquía), seleccione Capmera_Part, RoverParts > **Camera_Part** y configure el componente **ToolTipSpawner** como se indica a continuación:
 
 * Cambie **Tool Tip Text** para reflejar el nombre de la parte; por ejemplo, **Camera**.
 
@@ -197,4 +200,4 @@ Presione el botón Play (Reproducir) para entrar en el modo de juego y, a contin
 En este tutorial, aprendió a crear una interfaz de usuario sencilla con los elementos prefabricados de botón y menú proporcionados por MRTK junto con el componente TextMeshPro de Unity y a configurar los botones para desencadenar eventos cuando se presionan. También ha aprendido a agregar elementos dinámicos de información sobre herramientas en la interfaz de usuario para proporcionar información adicional al usuario.
 
 > [!div class="nextstepaction"]
->[Tutorial siguiente: 7. Interacción con objetos 3D](mr-learning-base-07.md)
+> [Tutorial siguiente: 7. Interacción con objetos 3D](mr-learning-base-07.md)

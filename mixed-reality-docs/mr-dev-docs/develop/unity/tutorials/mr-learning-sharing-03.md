@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, multi-user capabilities, Photon, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: 58ea52332485a3e0ca460322f6af60266b119ede
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 976593fd2f107d456da4f04da19621dd253f2ae1
+ms.sourcegitcommit: 943489923c69c3a28bc152f1cb516dcdcea2880a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590197"
+ms.lasthandoff: 06/09/2021
+ms.locfileid: "111772428"
 ---
 # <a name="3-connecting-multiple-users"></a>3. Conexión de varios usuarios
 
@@ -69,7 +69,7 @@ En la ventana Inspector, usa el botón **Agregar componente** para agregar el co
 
 ### <a name="2-create-the-avatar"></a>2. Creación del avatar
 
-En la ventana Project (Proyecto), vaya a la carpeta **Packages** > **Mixed Reality Toolkit Foundation** > **SDK** > **StandardAssets** > **Materials** (Paquetes > Mixed Reality Toolkit Foundation > SDK > Recursos estándar > Materiales) para buscar los materiales de MRTK.
+En la ventana Project (Proyecto), vaya a la carpeta **Packages** > **Mixed Reality Toolkit Standard Assets** > **Materials** (Paquetes > Recursos estándar de Mixed Reality Toolkit> Materiales) para buscar los materiales de MRTK.
 
 Después, en la ventana Jerarquía, haga clic con el botón derecho en el objeto **PhotonUser** y seleccione **Objeto 3D** > **Esfera** para crear un objeto con forma de esfera como elemento secundario del objeto PhotonUser, y configúrelo de la manera siguiente:
 

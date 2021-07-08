@@ -7,12 +7,12 @@ ms.date: 04/11/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hololens, MMR, multimodal , mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens
-ms.openlocfilehash: 37ac7475172977c8741c17817568cc9b5ad2a4e5
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 55e23ac2fb802af599fb9cc7d771d89d6ba36c47
+ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "97847296"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110196420"
 ---
 # <a name="introducing-instinctual-interactions"></a>Introducción a las interacciones instintivas
 
@@ -28,6 +28,14 @@ Aunque sabemos que existen miles de interacciones posibles eficaces, atractivas 
 * Instrucciones específicas en torno a los tres modelos de interacción principales y los componentes y patrones necesarios para cada uno.
 * Instrucciones complementarias acerca de las demás ventajas que ofrece nuestra plataforma.
 * Instrucciones generales para ayudarte a seleccionar el modelo de interacción adecuado para tu escenario de desarrollo.
+
+## <a name="basic-hand-tracking-and-instinctual-interactions-demo"></a>Demostración básica de seguimiento de manos e interacciones instintivas
+
+Consulte nuestra demostración de vídeo **Diseño de hologramas: Seguimiento de cabeza y seguimiento de manos** a continuación y, luego, avance a temas más específicos:
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Hand-Tracking-Chapter/player]
+
+*Este vídeo se tomó de la aplicación "Designing Holograms" para HoloLens 2. Descargue y disfrute de la experiencia completa [aquí](https://aka.ms/dhapp).*
 
 ## <a name="multimodal-interaction-models"></a>Modelos de interacción multimodal
 

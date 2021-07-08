@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, discover, distribute, index, landing page, design, development, tutorials, sample apps, fundamentals, case studies, resources, HoloLens how-to, Open source projects, core concepts, interaction, mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: 36af6b1c439c47eef2126408d1185ecfe151cf8b
-ms.sourcegitcommit: e9a0ba97fd288479ad324cdaabee9b6abc9f4dc2
+ms.openlocfilehash: c4d9f9b4c4be1c5012ac8dc84fb55e6c5fa9eaee
+ms.sourcegitcommit: 85ba3af69ec2a9056f759bab7b66f79f09a016b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2021
-ms.locfileid: "107221567"
+ms.lasthandoff: 06/05/2021
+ms.locfileid: "111454776"
 ---
 # <a name="start-designing-and-prototyping"></a>Empezar a diseñar y a crear prototipos
 
@@ -89,20 +89,20 @@ El trabajo de los diseñadores nunca termina, especialmente cuando se aprende a 
 
 :::row:::   
     :::column:::    
-       [![Información sobre Unity](images/logo-unity.png)](https://learn.unity.com/)<br>
+        [![Kit de herramientas de Figma de MRTK](images/74-13.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
+        **[Kit de herramientas de Figma](figma-toolkit.md)**<br>   
+        El kit de herramientas de Figma proporciona los recursos que se pueden usar para esbozar y crear la interfaz de usuario. Todos los controles de la interfaz de usuario se basan en los componentes disponibles en MRTK.
+    :::column-end:::        
+    :::column:::    
+       [![Información sobre Unity](../images/Final_unity_logo.png)](https://learn.unity.com/)<br>
         **[Información sobre Unity](https://learn.unity.com/)**<br>
         Aprende a crear experiencias interactivas con Unity. Aprende con la práctica, de principio a fin.
     :::column-end:::    
     :::column:::    
         [![Mixed Reality Toolkit (MRTK)](images/74-12.png)](https://github.com/Microsoft/MixedRealityToolkit-Unity)<br>
-        **[Mixed Reality Toolkit (MRTK)](https://github.com/Microsoft/MixedRealityToolkit-Unity)**<br>  
+        **[Mixed Reality Toolkit (MRTK)](/windows/mixed-reality/mrtk-unity/)**<br>  
         Con la interacción espacial y los bloques de creación de la interfaz de usuario, pon en marcha el diseño y desarrollo de la realidad mixta con Unity.   
     :::column-end:::
-    :::column:::    
-        [![Laboratorios de diseño de realidad mixta](images/74-13.png)](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)<br>
-        **[Laboratorios de diseño de realidad mixta](https://github.com/Microsoft/MRDL_Unity_PeriodicTable)**<br>  
-        Obtén aplicaciones de ejemplo que te muestren cómo usar los bloques de creación de MRTK para crear experiencias de realidad mixta.
-    :::column-end:::        
     :::column:::    
         [![Microsoft Maquette](images/74-14.png)](https://www.maquette.ms/)<br>
         **[Microsoft Maquette](https://www.maquette.ms/)**<br>  

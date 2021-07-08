@@ -3,16 +3,16 @@ title: Aplicaciones de ejemplo y características
 description: Manténgase al día con todos los ejemplos de Microsoft disponibles y las aplicaciones de características de realidad mixta para HoloLens.
 author: hferrone
 ms.author: jemccull
-ms.date: 12/3/2020
+ms.date: 6/7/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, learn, ejemplos, MRTK, modo de investigación, HoloLens 2, códigos qr, WebRTC, captura de realidad mixta, control remoto de holografías, UX Tools
 ms.localizationpriority: high
-ms.openlocfilehash: 78cfc726bdffdb461a83bd1e9805d8f0e64b0f01
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 78a9e343fde4a6cbc23268f0be353577498d67b6
+ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "98583190"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112906901"
 ---
 # <a name="samples-and-feature-apps"></a>Aplicaciones de ejemplo y características
 
@@ -27,6 +27,17 @@ Cada recorrido de desarrollo comienza con un vistazo a lo que otros desarrollado
 ## <a name="feature-samples"></a>Ejemplos de características
 
 Los ejemplos de características que se enumeran a continuación corresponden a implementaciones específicas que se tratan en nuestra documentación y abarcan una variedad de plataformas de desarrollo y dispositivos de hardware.
+
+### <a name="openxr"></a>OpenXR
+
+Para los desarrolladores que usan Unity 2020 para compilar aplicaciones para HoloLens 2 o Mixed Reality, se puede usar el complemento de OpenXR en lugar del complemento de WindowsXR para mejorar las compatibilidades multiplataforma. Mixed Reality OpenXR Plugin también funciona bien con la versión Mixed Reality Toolkit 2.7 más reciente.
+
+<br>
+
+| Artículo de referencia | Muestra |
+| --- | --- |
+| [Uso del complemento OpenXR](./unity/xr-project-setup.md) | [Mixed Reality OpenXR con ejemplos de Unity](https://github.com/microsoft/OpenXR-Unity-MixedReality-Samples) |
+| N/D | [Proyecto OpenXR MRTK Base de Unity](https://github.com/microsoft/UnityOpenXRMRTKBase) |
 
 ### <a name="research-mode"></a>Modo de investigación
 
@@ -47,7 +58,17 @@ HoloLens 2 puede detectar códigos QR en el entorno alrededor del caso, estable
 
 | Artículo de referencia | Muestra |
 | --- | --- |
-| [Códigos QR](platform-capabilities-and-apis/qr-code-tracking.md) | [Seguimiento de códigos QR en Unity](https://github.com/chgatla-microsoft/QRTracking/tree/master/SampleQRCodes) |
+| [Códigos QR](platform-capabilities-and-apis/qr-code-tracking.md) | [Seguimiento de códigos QR en Unity](https://github.com/microsoft/MixedReality-QRCode-Sample) |
+
+### <a name="scene-understanding"></a>Descripción de escenas
+
+La descripción de escenas aporta a los desarrolladores de realidad mixta una representación estructurada y general del entorno, diseñada para que el desarrollo para aplicaciones con control del entorno sea intuitivo. Para ello, la descripción de escenas combina la potencia de los entornos en tiempo de ejecución de realidad mixta existentes, como la asignación espacial altamente precisa, pero menos estructurada, y los nuevos entornos en tiempo de ejecución controlados por IA.
+
+<br>
+
+| Artículo de referencia | Muestra |
+| --- | --- |
+| [Descripción de escenas](../design/scene-understanding.md) | [Ejemplos de descripción de escenas de realidad mixta](https://github.com/microsoft/MixedReality-SceneUnderstanding-Samples) |
 
 ### <a name="webrtc"></a>WebRTC
 

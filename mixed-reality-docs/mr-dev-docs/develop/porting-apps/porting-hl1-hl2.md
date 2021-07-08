@@ -7,12 +7,12 @@ ms.date: 12/9/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Windows Mixed Reality, test, MRTK, MRTK version 2, HoloLens 2, unity, porting, HoloLens 1st gen, mixed reality headset, windows mixed reality headset, virtual reality headset, migration, best practices, ARM
-ms.openlocfilehash: 5315e4d391824bbc17bc4cc4c3c047d671063895
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 512bd3e841d40ffd606d59ee4bb4d955306cc2d0
+ms.sourcegitcommit: 12ea3fb2df4664c5efd07dcbb9040c2ff173afb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107299900"
+ms.lasthandoff: 06/29/2021
+ms.locfileid: "113042256"
 ---
 # <a name="porting-hololens-1st-gen-apps-to-hololens-2"></a>Portabilidad de aplicaciones de HoloLens (1.ª generación) a HoloLens 2
 
@@ -36,26 +36,13 @@ Se **recomienda encarecidamente** usar el control de código fuente para guardar
 
 ## <a name="migrate-project-to-the-latest-version-of-unity"></a>Migración del proyecto a la última versión de Unity
 
-Si usa [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity), [Unity 2019 LTS](https://unity3d.com/unity/qa/lts-releases) será la mejor vía de compatibilidad a largo plazo sin cambios importantes en Unity ni en MRTK. Debe evaluar cualquier [dependencia de complemento](https://docs.unity3d.com/Manual/Plugins.html) que exista actualmente en el proyecto, y determinar si estos archivos DLL pueden compilarse para ARM64. En el caso de los proyectos con un complemento dependiente de ARM64, es posible que deba seguir compilando la aplicación para ARM.
-
-<!-- MRTK v2 always guarantees support for Unity 2018 LTS, but does not necessarily guarantee support for every iteration of Unity 2019.x.
-
-To help clarify additional differences between [Unity 2018 LTS](https://unity3d.com/unity/qa/lts-releases) and Unity 2019.x, the following table outlines the trade-offs between the two versions. The primary difference between the two is the ability to compile for ARM64 in Unity 2019.
-
-| Unity 2018 LTS | Unity 2019.x |
-|----------|-------------------|
-| ARM32 build support | ARM32 and ARM64 build support |
-| Stable LTS build release | Beta stability |
-| [.NET Scripting back-end](https://docs.unity3d.com/2018.4/Documentation/Manual/windowsstore-dotnet.html) *deprecated* | [.NET Scripting back-end](https://docs.unity3d.com/2018.4/Documentation/Manual/windowsstore-dotnet.html) *removed* |
-| UNET Networking *deprecated* | UNET Networking *deprecated* |
-
--->
+Si usa [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity), se recomienda actualizar a MRTK 2.7 antes de actualizar el proyecto a [Unity 2020.3 LTS](../unity/choosing-unity-version.md). MRTK 2.7 admite Unity 2018, 2019 y 2020, lo que le permite asegurarse de que el proyecto esté listo para Unity 2020 incluso antes de actualizar Unity. Debe evaluar cualquier [dependencia de complemento](https://docs.unity3d.com/Manual/Plugins.html) que exista actualmente en el proyecto, y determinar si estos archivos DLL pueden compilarse para ARM64. En el caso de los proyectos con un complemento dependiente de ARM64, es posible que deba seguir compilando la aplicación para ARM.
 
 ## <a name="update-sceneproject-settings-in-unity"></a>Actualización de la configuración de la escena o proyecto en Unity
 
-Después de actualizar a [Unity 2019 LTS](https://unity3d.com/unity/qa/lts-releases), se recomienda actualizar valores concretos en Unity para obtener los mejores resultados en el dispositivo. Estos valores se describen en detalle en [Configuración recomendada para Unity](../unity/Recommended-settings-for-Unity.md).
+Después de actualizar a [Unity 2020.3 LTS](https://unity3d.com/unity/qa/lts-releases), se recomienda actualizar valores concretos en Unity para obtener los mejores resultados en el dispositivo. Estos valores se describen en detalle en [Configuración recomendada para Unity](../unity/Recommended-settings-for-Unity.md).
 
-Recuerde que el [back-end de scripting de .NET](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) estará en desuso en Unity 2018 y se habrá **eliminado** de Unity 2019. Es muy recomendable que los desarrolladores consideren la posibilidad de cambiar su proyecto a [IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html).
+Recuerde que el [back-end de scripting de .NET](https://docs.unity3d.com/Manual/windowsstore-dotnet.html) estará en desuso en Unity 2018 y se habrá **eliminado** a partir de Unity 2019. Es muy recomendable que los desarrolladores consideren la posibilidad de cambiar su proyecto a [IL2CPP](https://docs.unity3d.com/Manual/IL2CPP.html).
 
 > [!NOTE]
 > El back-end del scripting de IL2CPP puede aumentar los tiempos de compilación de Unity a Visual Studio, y los desarrolladores deben configurar la máquina de desarrollo para [optimizar los tiempos de compilación de IL2CPP](https://docs.unity3d.com/Manual/IL2CPP-OptimizingBuildTimes.html).
@@ -65,7 +52,7 @@ Después de solucionar los cambios importantes tras el cambio a la versión actu
 
 ## <a name="compile-dependenciesplugins-for-arm-processor"></a>Compilación de dependencias/complementos para procesadores ARM
 
-HoloLens (1.ª generación) ejecuta las aplicaciones en un procesador x86, mientras que el dispositivo HoloLens 2 usa un procesador ARM. Por lo tanto, las aplicaciones de HoloLens existentes se tienen que portar para admitir ARM. Como se indicó anteriormente, Unity 2018 LTS admite la compilación para las aplicaciones de ARM32, mientras que Unity 2019.x admite la compilación para las aplicaciones de ARM32 y ARM64. Es preferible desarrollar para aplicaciones de ARM64, ya que existe una diferencia sustancial en el rendimiento. Sin embargo, esto requiere que todas [las dependencias de complemento](https://docs.unity3d.com/Manual/Plugins.html) se compilen también para ARM64.
+HoloLens (1.ª generación) ejecuta las aplicaciones en un procesador x86, mientras que el dispositivo HoloLens 2 usa un procesador ARM. Por lo tanto, las aplicaciones de HoloLens existentes se tienen que portar para admitir ARM. Como se indicó anteriormente, Unity 2018 LTS admite la compilación para las aplicaciones de ARM32, mientras que Unity 2019 y versiones posteriores admiten la compilación para las aplicaciones de ARM32 y ARM64. Es preferible desarrollar para aplicaciones de ARM64, ya que existe una diferencia sustancial en el rendimiento. Sin embargo, esto requiere que todas [las dependencias de complemento](https://docs.unity3d.com/Manual/Plugins.html) se compilen también para ARM64.
 
 Revisa todas las dependencias DLL en la aplicación. Se recomienda quitar las dependencias que ya no sean necesarias para el proyecto. Para el resto de complementos que son necesarios, se deben ingerir los respectivos archivos binarios de ARM32 o ARM64 en el proyecto de Unity.
 
@@ -80,27 +67,27 @@ Después de la ingesta de las DLL pertinentes, compile una solución de Visual 
 
 Consulte los recursos siguientes para obtener más información sobre el uso de la versión 2 de MRTK:
 
-- [Página principal de documentación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity)
-- [Guía de instalación](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/install-the-tools)
-- [Seguimiento de manos de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/hand-tracking)
-- [Seguimiento de los ojos de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-main)
+- [Página principal de documentación de MRTK](/windows/mixed-reality/mrtk-unity)
+- [Guía de instalación](/windows/mixed-reality/mrtk-unity/install-the-tools)
+- [Seguimiento de manos de MRTK](/windows/mixed-reality/mrtk-unity/features/input/hand-tracking)
+- [Seguimiento de los ojos de MRTK](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-main)
 
 ### <a name="prepare-for-the-migration"></a>Preparación para la migración
 
-Antes de realizar la ingesta de los nuevos [archivos *.unitypackage para la versión 2 de MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases), se recomienda realizar un inventario de **1) cualquier código personalizado que se integre con la versión 1 de MRTK** y **2) cualquier código personalizado para las interacciones de entrada o los componentes de la experiencia de usuario**. El conflicto más común y que se da con más frecuencia para un desarrollador de realidad mixta en relación con la ingesta de la versión 2 de MRTK tiene que ver con las entradas y las interacciones. Se recomienda comenzar a leer el [modelo de entrada de la versión 2 de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/input/overview) para obtener una mejor comprensión del mismo.
+Antes de realizar la ingesta de los nuevos [archivos *.unitypackage para la versión 2 de MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases), se recomienda realizar un inventario de **1) cualquier código personalizado que se integre con la versión 1 de MRTK** y **2) cualquier código personalizado para las interacciones de entrada o los componentes de la experiencia de usuario**. El conflicto más común y que se da con más frecuencia para un desarrollador de realidad mixta en relación con la ingesta de la versión 2 de MRTK tiene que ver con las entradas y las interacciones. Se recomienda comenzar a leer el [modelo de entrada de la versión 2 de MRTK](/windows/mixed-reality/mrtk-unity/features/input/overview) para obtener una mejor comprensión del mismo.
 
-Por último, la nueva [versión 2 de MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity) ha pasado de un modelo de scripts y objetos de administrador en la escena a una arquitectura de configuración y proveedor de servicios. Esto da como resultado un modelo de arquitectura y jerarquía de escena más limpio, pero requiere una curva de aprendizaje para comprender los nuevos perfiles de configuración. Por ello, le recomendamos que lea [Guía de configuración del kit de herramientas de Mixed Reality](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/configuration/mixed-reality-configuration-guide) para familiarizarse con los perfiles y opciones más importantes con los que podrá ajustarse a las necesidades de la aplicación.
+Por último, la nueva [versión 2 de MRTK](https://github.com/microsoft/MixedRealityToolkit-Unity) ha pasado de un modelo de scripts y objetos de administrador en la escena a una arquitectura de configuración y proveedor de servicios. Esto da como resultado un modelo de arquitectura y jerarquía de escena más limpio, pero requiere una curva de aprendizaje para comprender los nuevos perfiles de configuración. Por ello, le recomendamos que lea [Guía de configuración del kit de herramientas de Mixed Reality](/windows/mixed-reality/mrtk-unity/configuration/mixed-reality-configuration-guide) para familiarizarse con los perfiles y opciones más importantes con los que podrá ajustarse a las necesidades de la aplicación.
 
 ### <a name="migrating-the-project"></a>Migración del proyecto
 
 Después de importar [MRTK v2](https://github.com/microsoft/MixedRealityToolkit-Unity), el proyecto de Unity probablemente tenga muchos errores relacionados con el compilador. Generalmente, estos errores se deben a la nueva estructura del espacio de nombres y de los nuevos nombres de componente. Puede resolver estos errores mediante la modificación de los scripts con los espacios de nombres y componentes nuevos.
 
-Para más información sobre las diferencias de API específicas entre HTK/MRTK y MRTK v2, consulta la guía de migración en la [wiki de la versión 2 de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/updates-deployment/htk-to-mrtk-porting-guide).
+Para más información sobre las diferencias de API específicas entre HTK/MRTK y MRTK v2, consulta la guía de migración en la [wiki de la versión 2 de MRTK](/windows/mixed-reality/mrtk-unity/updates-deployment/htk-to-mrtk-porting-guide).
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
-- Da preferencia al uso del [sombreador MRTK Standard](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader).
-- Trabaja en un solo tipo de cambio importante a la vez (por ejemplo: IFocusable a [IMixedRealityFocusHandler](https://docs.microsoft.com/dotnet/api/microsoft.mixedreality.toolkit.input.imixedrealityfocushandler)).
+- Da preferencia al uso del [sombreador MRTK Standard](/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader).
+- Trabaja en un solo tipo de cambio importante a la vez (por ejemplo: IFocusable a [IMixedRealityFocusHandler](/dotnet/api/microsoft.mixedreality.toolkit.input.imixedrealityfocushandler)).
 - Haz una prueba después de cada cambio y usa el control de código fuente.
 - Use experiencias de usuario de MRTK predeterminadas (botones, tabletas táctiles, etc.) cuando sea posible.
 - Intenta evitar la modificación de los archivos de MRTK directamente; en su lugar, crea contenedores en torno a los componentes de MRTK.
@@ -109,7 +96,7 @@ Para más información sobre las diferencias de API específicas entre HTK/MRTK 
 - Vuelve a generar la interfaz de usuario basada en lienzo con cuadrángulos, colisionadores y texto TextMeshPro.
 - Habilita el [uso compartido del búfer de profundidad](../unity/camera-in-unity.md#sharing-depth-buffers) o [establece el punto de enfoque](../unity/focus-point-in-unity.md); es preferible usar un búfer de profundidad de 16 bits para mejorar el rendimiento. Al representar el color, asegúrate de representar también la profundidad. Por lo general, Unity no escribe la profundidad de objetos GameObject de texto y transparentes.
 - Establece la ruta de representación de instancia de paso único.
-- Use el [perfil de configuración de HoloLens 2 para MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/profiles/profiles#hololens-2-profile).
+- Use el [perfil de configuración de HoloLens 2 para MRTK](/windows/mixed-reality/mrtk-unity/features/profiles/profiles#hololens-2-profile).
 
 ### <a name="testing-your-application"></a>Prueba de la aplicación
 
@@ -152,8 +139,8 @@ Cada aplicación y escenario son diferentes, y vamos a seguir mejorando y public
 ## <a name="see-also"></a>Consulta también
 
 * [Instalación de las herramientas](../install-the-tools.md)
-* [Guía de instalación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/install-the-tools)
-* [Página principal de documentación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity)
-* [Migración de HoloToolkit/MRTK a MRTK, versión 2](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/updates-deployment/htk-to-mrtk-porting-guide)
+* [Guía de instalación de MRTK](/windows/mixed-reality/mrtk-unity/install-the-tools)
+* [Página principal de documentación de MRTK](/windows/mixed-reality/mrtk-unity)
+* [Migración de HoloToolkit/MRTK a MRTK, versión 2](/windows/mixed-reality/mrtk-unity/updates-deployment/htk-to-mrtk-porting-guide)
 * [Configuración recomendada para Unity](../unity/recommended-settings-for-unity.md)
 * [Análisis de rendimiento de la realidad mixta](../platform-capabilities-and-apis/understanding-performance-for-mixed-reality.md)

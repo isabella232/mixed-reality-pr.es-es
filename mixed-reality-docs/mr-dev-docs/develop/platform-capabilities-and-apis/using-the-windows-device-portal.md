@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: 83bc2183d40f9dbfb00799475522606ff59ccfa0
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: d772175683208ac0e3ed4b3163ca561da416c1cf
+ms.sourcegitcommit: 593e8f80297ac0b5eccb2488d3f333885eab9adf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102117649"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "112919816"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso de Portal de dispositivos Windows
 
@@ -49,8 +49,9 @@ Esta documentación trata específicamente sobre el Portal de dispositivos Windo
 
 1. [Conecta HoloLens a una red Wi-Fi](/hololens/hololens-network).
 2. Busque la dirección IP del dispositivo mediante una de las siguientes acciones:
-   * Vaya a **Configuración > Red e Internet > Wi-Fi > Opciones avanzadas**.
-   * Vaya a **Configuración > Red e Internet** y seleccione **Propiedades de hardware**.
+  * Vaya a **Configuración > Red e Internet > Wi-Fi > Opciones avanzadas**.
+  * Vaya a **Configuración > Red e Internet** y seleccione **Propiedades de hardware**.
+  * Uso del comando de voz "¿Cuál es mi dirección IP?".
 
 ![Configuración de HoloLens 2](images/using-windows-portal-img-02.jpg)
 
@@ -59,13 +60,30 @@ Esta documentación trata específicamente sobre el Portal de dispositivos Windo
 
 ## <a name="connecting-over-usb"></a>Conexión mediante USB
 
-1. [Instale las herramientas](../install-the-tools.md) para asegurarse de que tiene Visual Studio con las herramientas de desarrollo de Windows 10 instaladas en el equipo a fin de habilitar la conectividad USB.
-
 > [!IMPORTANT]
-> Si tiene problemas con la conectividad USB, asegúrese de que el componente opcional Conectividad del dispositivo USB está instalado como parte del **[paquete de herramientas de Visual Studio](../install-the-tools.md#installation-checklist)** .
+> IpOverUsb ya no se recomienda según los nuevos estándares del explorador, ya que requiere el uso del puerto 10080. Si aun así desea usar IpOverUsb, active la casilla "Conectividad del dispositivo USB" durante la instalación de Visual Studio, que no está activada de manera predeterminada. En su lugar, se recomienda conectarse con UsbNcm, que se admite de manera predeterminada en HoloLens 2. Si usa un HoloLens 1, se recomienda conectarse al equipo mediante Wi-Fi.
 
-2. Conecta tu HoloLens a tu equipo con un cable micro USB para HoloLens (1.ª generación) o USB-C para HoloLens 2.
-3. Desde un explorador web de tu equipo, ve a [http://127.0.0.1:10080](http://127.0.0.1:10080).
+1. Si el HoloLens 2 ejecuta Windows Holographic, versión 21H1 o posterior, vaya a Para desarrolladores en la aplicación Configuración y asegúrese de que la opción Detección de dispositivos esté activa. 
+2. Conecte el HoloLens 2 al equipo con un cable USB-C.
+3. Busque la dirección IP de UsbNcm. Existen algunas maneras de hacerlo:
+  * En la aplicación Configuración en el dispositivo (este método solo funciona para dispositivos HoloLens que ejecutan Windows Holographic, versión 21H1 o posterior, con la opción "Detección de dispositivos" activada).
+    1. Vaya a la aplicación Configuración en el dispositivo.
+    2. Vaya a Actualización y seguridad > Para desarrolladores. Este es el mismo lugar en el que habilitó el Portal de dispositivos.
+    3. Al final de la página, copie la dirección IP de **Ethernet**. Esta es la dirección IP de UsbNcm. 
+    ![Configuración de HoloLens 2: IP de UsbNcm](images/deviceportal_usbncm_ipaddress.jpg)
+
+  * En el Portal de dispositivos 
+    1. En el dispositivo, abra el Portal de dispositivos con la dirección de Wi-Fi del HoloLens. Si no conoce la dirección Wi-Fi del HoloLens, puede usar el comando de voz "¿Cuál es mi dirección IP?".
+    2. Vaya a Sistema > Redes.
+    3. En el extremo derecho de la página, en el panel "Configuración de IP", busque la sección que comienza con "Descripción: Función UsbNcm".
+    4. Su dirección IP de UsbNcm es la línea "Dirección IPv4". Puede copiar la dirección o simplemente hacer clic en ella: es un hipervínculo que se volverá a abrir en el Portal de dispositivos con la dirección IP de UsbNcm.
+  
+  * En un símbolo del sistema
+    1. En cualquier símbolo del sistema, vaya a la carpeta bin\<SDK version>\x86, donde está instalado el SDK de Windows 10, por ejemplo: C:\Archivos de programa (x86)\Windows Kits\10\bin\10.0.19041.0\x86.
+    2. Escriba "dispositivos winappdeploycmd" y presione ENTRAR.
+    3. En la salida, busque la entrada donde la columna Modelo/Nombre sea el nombre de su dispositivo HoloLens, como HOLOLENS-xxxxxx. La dirección IP de UsbNcm está al principio de esta línea y será una dirección IP privada automática con el formato 169.254.x.x. Copie esta dirección. 
+ 
+4. Si copió la dirección IP de UsbNcm, desde un explorador web del equipo, vaya a https://, seguido de la dirección IP de UsbNcm.
 
 ### <a name="moving-files-over-usb"></a>Transferencia de archivos a través de USB
 
@@ -371,7 +389,7 @@ Haga clic o pulse **Activar** para iniciar el seguimiento. El proveedor se agreg
    1. En el caso de los criterios que se aplican a la misma propiedad, se muestran los eventos que pueden cumplir cualquiera de ellos.
    2. En el caso de los criterios que se aplican a una propiedad diferente, los eventos deben cumplir todos los criterios.
 
-Por ejemplo, puedes especificar los criterios *(el nombre de tarea contiene "Foo" o "Bar") y (el texto contiene "error" o "advertencia")*
+Por ejemplo, puedes especificar los criterios *(el nombre de tarea contiene "Foo&quot; o &quot;Bar") y (el texto contiene "error" o "advertencia")*
 
 ### <a name="simulation"></a>Simulation
 
@@ -381,6 +399,8 @@ Por ejemplo, puedes especificar los criterios *(el nombre de tarea contiene "Foo
 Te permite grabar y reproducir datos de entrada para las pruebas.
 * **Capture room** (Espacio de captura): se usa para descargar un archivo de espacio simulado que contiene la malla espacial de asignación del entorno del usuario. Asigne un nombre al espacio y, a continuación, haga clic en **Capturar** para guardar los datos como un archivo .xef en el equipo. Puedes cargar este archivo de espacio en el emulador HoloLens.
 * **Grabación**: marca los flujos que quieres grabar, asigna un nombre a la grabación y haz clic o pulsa en **Grabar** para iniciar la grabación. Realice acciones con HoloLens y, a continuación, haga clic en **Detener** para guardar los datos como un archivo .xef en el equipo. Este archivo se puede cargar en el dispositivo o emulador HoloLens.
+  >[!NOTE]
+  >La característica Grabación solo está disponible actualmente en la HoloLens de 1.ª generación. La grabación aún no se admite en HoloLens 2, pero se admite la reproducción de las grabaciones existentes.
 * **Reproducción**: haz clic o pulsa en **Cargar grabación** para seleccionar un archivo .xef desde tu equipo y enviar los datos a HoloLens.
 * **Modo de control**: selecciona **Valor predeterminado** o **Simulación** en la lista desplegable y pulsa o haz clic en el botón **Establecer** para seleccionar el modo en HoloLens. Si eliges "Simulación", se deshabilitan los sensores reales de HoloLens y se usan los datos simulados cargados en su lugar. Si cambia a "Simulación", HoloLens no responderá al usuario real hasta que vuelva al "Valor predeterminado".
 

@@ -7,12 +7,12 @@ ms.date: 04/02/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, Gaze, gaze targeting, interaction, design, hands near, HoloLens, mixed reality headset, windows mixed reality headset, virtual reality headset, MRTK, Mixed Reality Toolkit, button, colliders, bounding box, 2D, instinctual gestures
-ms.openlocfilehash: 555b27764d077332a2d8618672e6aed7def1dd3f
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 7a689f887bfd358b0d6e0826d41ef409bf887042
+ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300100"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110600474"
 ---
 # <a name="direct-manipulation-with-hands"></a>Manipulación directa con las manos
 
@@ -50,6 +50,14 @@ La manipulación directa es un modelo de entrada principal de HoloLens 2, que us
 <br>
 
 ---
+
+## <a name="basic-hand-tracking-and-instinctual-interactions-demo"></a>Demostración básica de seguimiento de manos e interacciones instintivas
+
+Si quiere ver en acción los conceptos de diseño de seguimiento de cabeza y manos, consulte nuestra demostración de vídeo **Diseño de hologramas: Seguimiento de cabeza y seguimiento de manos** a continuación. Cuando haya terminado, continúe para profundizar más en detalle en temas específicos.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Hand-Tracking-Chapter/player]
+
+*Este vídeo se tomó de la aplicación "Designing Holograms" para HoloLens 2. Descargue y disfrute de la experiencia completa [aquí](https://aka.ms/dhapp).*
 
 ## <a name="collidable-fingertip"></a>Dedo de colisión
 
@@ -327,7 +335,7 @@ Si el usuario lleva un tiempo sin mirar un holograma, pero se ha detectado un ev
 ## <a name="manipulation-in-mrtk-mixed-reality-toolkit-for-unity"></a>Manipulación en MRTK (Mixed Reality Toolkit) para Unity
 Con **[MRTK](https://github.com/Microsoft/MixedRealityToolkit-Unity)** , puede conseguir un comportamiento de manipulación común con el script **ObjectManipulator**. Con ManipulationHandler, puede agarrar y mover objetos directamente con las manos o con el haz de mano. También admite la manipulación con dos manos para escalar y girar un objeto.
 
-* [MRTK: manipulación](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/object-manipulator)
+* [MRTK: manipulación](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/object-manipulator)
 
 ---
 

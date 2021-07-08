@@ -7,12 +7,12 @@ ms.date: 04/13/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Visual Studio, HoloLens, realidad mixta, depurar, implementar
-ms.openlocfilehash: 2ab89311163a48ee3c14511446a1498ce883a232
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 5510646c058f683babff5e9e34dd296f88cd06c3
+ms.sourcegitcommit: b4bdac2c4d7315902712ce74fd909fb8383d4bfd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "100496102"
+ms.lasthandoff: 05/27/2021
+ms.locfileid: "110543231"
 ---
 # <a name="using-visual-studio-to-deploy-and-debug"></a>Uso de Visual Studio para implementaciones y depuraciones
 
@@ -37,7 +37,7 @@ Para empezar, habilita el **Modo de desarrollador** en tu dispositivo, para que 
 3. Selecciona el icono **Configuración** para iniciar la aplicación en tu entorno.
 4. Selecciona el elemento de menú **Actualizar**.
 5. Selecciona el elemento de menú **Para desarrolladores**.
-6. Habilite el **Modo de desarrollador** para implementar aplicaciones de Visual Studio en HoloLens.
+6. Habilite **Usar las funciones de desarrollador** para implementar aplicaciones de Visual Studio en HoloLens. Si el dispositivo ejecuta Windows Holographic, versión 21H1 o posterior, habilite también **Detección de dispositivos**.
 7. Opcional: Desplácese hacia abajo y habilite el **Portal de dispositivos**, que le permitirá conectarse al [Portal de dispositivos Windows](using-the-windows-device-portal.md) en HoloLens desde un explorador web.
 
 ### <a name="windows-pc"></a>Equipo Windows

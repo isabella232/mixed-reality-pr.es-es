@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, PC holographic remoting, tooltips, eye-tracking
 ms.localizationpriority: high
-ms.openlocfilehash: 3c564c28485ca7e0595b9fd438af961dc5bc5986
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: 05831ff19a998bd5e99ab5d20c3fb045a09c55e9
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105982968"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175442"
 ---
 # <a name="1-getting-started-with-pc-holographic-remoting"></a>1. Introducción a la comunicación remota holográfica para PC
 
@@ -34,13 +34,12 @@ En el segundo tutorial, [Creación de una aplicación de comunicación remota ho
 * Un equipo Windows 10 configurado con las [herramientas correctas instaladas](../../install-the-tools.md)
 * Conocimientos básicos de programación de C#
 * Un dispositivo HoloLens 2 [configurado para el desarrollo](../../platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)
-* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2019 LTS montado y el módulo de compatibilidad con la compilación de la Plataforma universal de Windows agregado
+* <a href="https://docs.unity3d.com/Manual/GettingStartedInstallingHub.html" target="_blank">Unity Hub</a> con Unity 2020/2019 LTS montado y el módulo de compatibilidad con la compilación de la Plataforma universal de Windows agregado
 
 Se **recomienda encarecidamente** completar la serie de tutoriales de [introducción](mr-learning-base-01.md) o contar con experiencia previa básica en el uso de Unity y MRTK antes de continuar.
 
 > [!IMPORTANT]
-> * La versión de Unity recomendada para esta serie de tutoriales es Unity 2019 LTS. Sustituye los requisitos de versión de Unity o las recomendaciones descritas en los requisitos previos vinculados anteriormente.
-> * La comunicación remota holográfica con proyectos de MRTK solo funcionará con el XR heredado. De momento no se admite el SDK de XR.
+> * Esta serie de tutoriales admite Unity 2020 LTS (actualmente 2020.3.x) si usa Open XR, y Unity 2019 LTS (actualmente 2019.4.x) si usa WSA heredado. Esto reemplaza los requisitos de versión de Unity indicados en los requisitos previos vinculados anteriormente.
 
 ## <a name="creating-and-preparing-the-unity-project"></a>Creación y preparación del proyecto de Unity
 
@@ -49,29 +48,16 @@ En esta sección, crearás un nuevo proyecto de Unity y lo prepararás para el d
 Para ello, antes debes seguir las instrucciones de [Inicialización de tu proyecto y primera aplicación](mr-learning-base-02.md), a excepción de la sección [Compilación de la aplicación para el dispositivo](mr-learning-base-02.md#building-your-application-to-your-hololens-2), que incluyen los pasos siguientes:
 
 1. [Crear el proyecto de Unity](mr-learning-base-02.md#creating-the-unity-project) y asignarle un nombre adecuado; por ejemplo, *MRTK Tutorials*
-
 2. [Cambiar la plataforma de compilación](mr-learning-base-02.md#switching-the-build-platform)
-
-3. [Importar los recursos esenciales de TextMeshPro](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
-
-4. [Importar Mixed Reality Toolkit](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-
-5. [Configurar el proyecto de Unity](mr-learning-base-02.md#configuring-the-unity-project)
-
-6. [Crear y configurar la escena](mr-learning-base-02.md#creating-and-configuring-the-scene) y asignarle un nombre adecuado; por ejemplo, **PC Holographic Remoting**
+3. [Importar los recursos esenciales de TextMeshPro](mr-learning-base-04.md#importing-the-textmeshpro-essential-resources)
+4. [Importación de Mixed Reality Toolkit y configuración del proyecto de Unity](mr-learning-base-02.md#importing-the-mixed-reality-toolkit-and-configuring-the-unity-project)
+5. [Crear y configurar la escena](mr-learning-base-02.md#creating-the-scene-and-configuring-mrtk) y asignarle un nombre adecuado; por ejemplo, **PC Holographic Remoting**
 
 A continuación, siga las instrucciones de la sección [Cambio de la opción de visualización de reconocimiento espacial](mr-learning-base-03.md#changing-the-spatial-awareness-display-option) para cambiar el perfil de configuración de MRTK para la escena por el perfil **DefaultHoloLens2ConfigurationProfile**. Cambie las opciones de visualización de la malla de reconocimiento espacial a **Oclusión**.
 
 ## <a name="importing-the-tutorial-assets"></a>Importación de los recursos del tutorial
 
-Descargue e **importe** el paquete [MRTK.Tutorials.PCHolographicRemoting.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/pc-holographic-remoting-v2.4.0/MRTK.Tutorials.PCHolographicRemoting.unitypackage).
-
->[!TIP]
-> Para repasar cómo se importa un paquete personalizado de Unity, consulte las instrucciones de [Importación de los recursos del tutorial](mr-learning-base-02.md#importing-the-tutorial-assets).
-
-Una vez importados los recursos del tutorial, la ventana Proyecto debería tener un aspecto similar al siguiente:
-
-![Ventanas Hierarchy (Jerarquía), Scene (Escena) y Project (Proyecto) después de importar los recursos del tutorial](images/mrlearning-pc-holographic-remoting/Tutorial1-Section2-Step1-1.png)
+[!INCLUDE[](includes/importing-tutorial-assets-pc-holographic-remoting.md)]
 
 ## <a name="configuring-and-preparing-the-scene"></a>Configuración y preparación de la escena
 

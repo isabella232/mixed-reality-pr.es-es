@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: 5f16d3c12e6dbb977ecedc1598a28073cfb39222
-ms.sourcegitcommit: 4fb961beeebd158e2f65b7c714c5e471454400a3
+ms.openlocfilehash: eddde9b827dcf2a2f054f48a50f38946e5d98533
+ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2021
-ms.locfileid: "105983148"
+ms.lasthandoff: 07/01/2021
+ms.locfileid: "113175562"
 ---
 # <a name="2-getting-started-with-azure-spatial-anchors"></a>2. Introducción a Azure Spatial Anchors
 
@@ -31,43 +31,15 @@ Primero, debe seguir las instrucciones de [Inicialización de su proyecto e impl
 
 1. [Crear el proyecto de Unity](mr-learning-base-02.md#creating-the-unity-project) y asignarle un nombre adecuado; por ejemplo, *MRTK Tutorials*
 2. [Cambiar la plataforma de compilación](mr-learning-base-02.md#switching-the-build-platform)
-3. [Importar los recursos esenciales de TextMeshPro](mr-learning-base-02.md#importing-the-textmeshpro-essential-resources)
-4. [Importar Mixed Reality Toolkit](mr-learning-base-02.md#importing-the-mixed-reality-toolkit)
-5. [Configurar el proyecto de Unity](mr-learning-base-02.md#configuring-the-unity-project)
-6. [Crear y configurar la escena](mr-learning-base-02.md#creating-and-configuring-the-scene) y asignarle un nombre adecuado; por ejemplo, *AzureSpatialAnchors*
+3. [Importar los recursos esenciales de TextMeshPro](mr-learning-base-04.md#importing-the-textmeshpro-essential-resources)
+4. [Importación de Mixed Reality Toolkit y configuración del proyecto de Unity](mr-learning-base-02.md#importing-the-mixed-reality-toolkit-and-configuring-the-unity-project)
+5. [Crear y configurar la escena](mr-learning-base-02.md#creating-the-scene-and-configuring-mrtk) y asignarle un nombre adecuado; por ejemplo, *AzureSpatialAnchors*
 
-A continuación, siga las instrucciones de la sección [Cambio de la opción de visualización de reconocimiento espacial](mr-learning-base-03.md#changing-the-spatial-awareness-display-option) para:
+A continuación, siga las instrucciones de [Cambio de la opción de visualización del reconocimiento espacial](mr-learning-base-03.md#changing-the-spatial-awareness-display-option) para asegurarse de que el perfil de configuración de MRTK de la escena sea **DefaultHoloLens2ConfigurationProfile** y cambie las opciones de presentación de la malla de reconocimiento espacial a **Occlusion** (Oclusión).
 
-1. Cambiar el **perfil de configuración de MRTK** por **DefaultHoloLens2ConfigurationProfile**.
-1. Cambiar las **opciones de visualización de la malla de reconocimiento espacial** a **Occlusion** (Oclusión).
+## <a name="installing-inbuilt-unity-packages-and-importing-the-tutorial-assets"></a>Instalación de paquetes de Unity integrados e importación de los recursos del tutorial
 
-## <a name="installing-inbuilt-unity-packages"></a>Instalación de paquetes de Unity integrados
-
-En el menú de Unity, seleccione **Window** > **Package Manager** (Ventana > Administrador de paquetes) para abrir la ventana Package Manager y, a continuación, seleccione **AR Foundation** y haga clic en el botón **Install** (Instalar) para instalar el paquete:
-
-![Unity Package Manager con AR Foundation seleccionado](images/mr-learning-asa/asa-02-section2-step1-1.png)
-
-> [!NOTE]
-> Se instalará el paquete de AR Foundation porque así lo requiere el SDK de Azure Spatial Anchors que se importará en la siguiente sección.
-
-## <a name="importing-the-tutorial-assets"></a>Importación de los recursos del tutorial
-
-Agregue el SDK de Azure Spatial Anchors V2.7.1 al proyecto de Unity. Para agregar los paquetes, siga este [tutorial](/azure/spatial-anchors/how-tos/setup-unity-project?tabs=UPMPackage).
-
-Descarga e **importa** los siguientes paquetes personalizados de Unity **en el orden en que aparecen**:
-
-* [MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/getting-started-v2.4.0/MRTK.HoloLens2.Unity.Tutorials.Assets.GettingStarted.2.4.0.unitypackage)
-* [MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.5.3.unitypackage](https://github.com/microsoft/MixedRealityLearning/releases/download/azure-spatial-anchors-v2.5.3/MRTK.HoloLens2.Unity.Tutorials.Assets.AzureSpatialAnchors.2.5.3.unitypackage)
-
-Después de importar los recursos del tutorial, la ventana Project (Proyecto) debería tener un aspecto similar al siguiente:
-
-![Ventanas Hierarchy (Jerarquía), Scene (Escena) y Project (Proyecto) después de importar los recursos del tutorial](images/mr-learning-asa/asa-02-section3-step1-1.png)
-
-> [!NOTE]
-> Si ve que las advertencias de CS0618 con respecto a "WorldAnchor.SetNativeSpatialAnchorPtr(IntPtr)" están en desuso, puede omitir estas advertencias.
-
-> [!TIP]
-> Para repasar cómo se importa un paquete personalizado de Unity, consulte las instrucciones de [Importación de los recursos del tutorial](mr-learning-base-02.md#importing-the-tutorial-assets).
+[!INCLUDE[](includes/installing-packages-for-asa.md)]
 
 ## <a name="preparing-the-scene"></a>Preparación de la escena
 
@@ -84,6 +56,20 @@ En la ventana Project (Proyecto), desplácese hasta la carpeta **Assets** > **MR
 
 > [!TIP]
 > Si le molestan los grandes iconos de la escena; por ejemplo, los grandes iconos "T" enmarcados, puede ocultarlos. Para hacerlo, desactive los <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">gizmos</a>, como se muestra en la imagen anterior.
+
+Seleccione el objeto **MixedRealityToolkit** en la ventana Hierarchy (Jerarquía) y, a continuación, en la ventana Inspector, use el botón **Add Component** (Agregar componente) para agregar los componentes siguientes:
+
+* AR Anchor Manager (Script) (Administrador de delimitadores de AR [script])
+* DisableDiagnosticsSystem (Script)
+
+![Objeto MixedRealityToolkit de Unity con los componentes AR Anchor Manager y DisableDiagnosticsSystem agregados ](images/mr-learning-asa/asa-02-section4-step1-2.PNG)
+
+> [!WARNING]
+> Hay un problema conocido con ASA v2.9.0 y v2.10.0-preview.1 que requiere que se sitúen en la escena dos objetos adicionales. Use el botón **Add Component** (Agregar componente) de la ventana Inspector para agregar AR Camera Manager (Script) (Administrador de la cámara de AR [script]) y AR Session (Script) (Sesión de AR [script]) al objeto **MixedRealityToolkit.** Asegúrese de deshabilitar la cámara que se crea automáticamente al agregar AR Camera Manager (Script) (Administrador de la cámara de AR [script]); para ello, desactive la casilla situada junto al objeto Camera en la ventana Inspector. Este problema se solucionará en la versión completa de ASA v2.10.0.
+> 
+
+> [!NOTE]
+> Cuando se agregue el componente AR Anchor Manager (Script) (Administrador de anclaje de AR [script]), se agregará automáticamente el componente AR Session Origin (Script) (Origen de la sesión de AR [script]) según lo requiere el componente AR Anchor Manager (Script).
 
 ## <a name="configuring-the-buttons-to-operate-the-scene"></a>Configuración de los botones para el funcionamiento de la escena
 
@@ -153,15 +139,15 @@ Azure Spatial Anchors no se puede ejecutar en Unity, de modo que, para probar la
 Cuando la aplicación se ejecute en el dispositivo, siga las instrucciones en pantalla que se muestran en el panel de instrucciones del tutorial de Azure Spatial Anchors:
 
 1. Mueva el cubo a una ubicación diferente.
-1. Inicie una sesión de Azure.
-1. Cree un anclaje de Azure (se crea un anclaje en la ubicación del cubo).
-1. Detenga la sesión de Azure.
-1. Quite el anclaje local (permite que el usuario mueva el cubo).
-1. Mueva el cubo a otro lugar.
-1. Inicie una sesión de Azure.
-1. Busque el anclaje de Azure (posiciona el cubo en la ubicación del paso 3).
-1. Elimine el anclaje de Azure.
-1. Detenga la sesión de Azure.
+2. Inicie una sesión de Azure.
+3. Cree un anclaje de Azure (se crea un anclaje en la ubicación del cubo).
+4. Detenga la sesión de Azure.
+5. Quite el anclaje local (permite que el usuario mueva el cubo).
+6. Mueva el cubo a otro lugar.
+7. Inicie una sesión de Azure.
+8. Busque el anclaje de Azure (posiciona el cubo en la ubicación del paso 3).
+9. Elimine el anclaje de Azure.
+10. Detenga la sesión de Azure.
 
 ![Unity con el objeto Instructions (Instrucciones) seleccionado](images/mr-learning-asa/asa-02-section7-step1-1.png)
 

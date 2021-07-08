@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, solvers
 ms.localizationpriority: high
-ms.openlocfilehash: b2d23601419c36f2a79a0c6e19d06eda6dc54d09
-ms.sourcegitcommit: 1c9035487270af76c6eaba11b11f6fc56c008135
+ms.openlocfilehash: 8398c4d6fdc69801beff1b7c6de5e4c3847dd5e4
+ms.sourcegitcommit: adbe3baa6b1c284ed1c4fd796d8b5612c3ca3f42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/13/2021
-ms.locfileid: "107300400"
+ms.lasthandoff: 06/17/2021
+ms.locfileid: "112270430"
 ---
 # <a name="5-creating-dynamic-content-using-solvers"></a>5. Creación de contenido dinámico mediante solucionadores
 
@@ -30,7 +30,7 @@ En este tutorial, explorará distintas formas de colocar hologramas de forma din
 
 ![Ventana Project (Proyecto) de Unity con la carpeta Solvers seleccionada](images/mr-learning-base/base-05-section1-step1-1.png)
 
-En este tutorial, revisaremos la implementación de los solucionadores Directional Indicator (Indicador direccional) y Tap To Place (Pulsar para colocar). Para obtener más información acerca de la gama completa de solucionadores disponibles en MRTK, puede consultar la guía [Solucionadores](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver) en el [portal de documentación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity).
+En este tutorial, revisaremos la implementación de los solucionadores Directional Indicator (Indicador direccional) y Tap To Place (Pulsar para colocar). Para obtener más información acerca de la gama completa de solucionadores disponibles en MRTK, puede consultar la guía [Solucionadores](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver) en el [portal de documentación de MRTK](/windows/mixed-reality/mrtk-unity).
 
 > [!NOTE]
 > El solucionador Directional Indicator (Indicador direccional) no se encuentra en las carpetas Solvers a las que se hace referencia anteriormente, sino en las carpetas Packages > Mixed Reality Toolkit Foundation > SDK > Experimental > Features > Utilities (Paquetes > Mixed Reality Toolkit Foundation > SDK > Experimental > Características > Utilidades), porque es una característica experimental.
@@ -44,15 +44,12 @@ En la ventana Proyecto, navegue hasta **Assets** (Recursos)  > **MRTK.Tutorials.
 > [!TIP]
 > Si observa que la cámara u otros iconos de la escena ocultan otros objetos o son distracciones, puede ocultarlos al <a href="https://docs.unity3d.com/2019.1/Documentation/Manual/GizmosMenu.html" target="_blank">desactivar el menú Gizmos</a>, tal como se muestra en la imagen anterior. Para obtener más información sobre el menú Gizmos y cómo puede usarlo para optimizar la vista de escenas, consulte la documentación sobre el <a href="https://docs.unity3d.com/Manual/GizmosMenu.html" target="_blank">menú de Gizmos </a> de Unity.
 
-Cambie el nombre del objeto de botón de contenido adicional **Indicador** recién agregado y, a continuación, en la ventana Inspector, use el botón **Agregar componente** para agregar el componente **DirectionalIndicator**:
+Cambie el nombre del objeto de botón de contenido adicional al **Indicador** recién agregado y, a continuación, en la ventana Inspector, use el botón **Add Component** (Agregar componente) para agregar el componente **DirectionalIndicator**:
 
 ![Unity con el componente solucionador DirectionalIndicator agregado](images/mr-learning-base/base-05-section2-step1-2.png)
 
 > [!NOTE]
 > Al agregar un solucionador (en este caso, el componente DirectionalIndicator), se agrega automáticamente el componente SolverHandler porque los solucionadores lo requieren.
-
-> [!NOTE]
-> El componente Directional Indicator Controller (Script) (Controlador de indicador direccional [script]) no forma parte de MRTK, pero se incluyó con los recursos del tutorial.
 
 Configure los componentes DirectionalIndicator y SolverHandler como se indica a continuación:
 
@@ -72,7 +69,7 @@ Presione el botón Play (Jugar) para entrar en el modo de juego y mantenga presi
 > Si no ve el rayo de la cámara en la ventana de la escena, asegúrese de que el menú Gizmos esté habilitado como se muestra en la imagen anterior.
 
 > [!TIP]
-> Para obtener información sobre cómo usar la simulación de entrada del editor, puedes consultar la guía [Uso de la simulación de entrada de mano en el editor para probar una escena](https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/GettingStartedWithTheMRTK.html#using-the-in-editor-hand-input-simulation-to-test-a-scene) del [portal de documentación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity).
+> Para obtener información sobre cómo usar la simulación de entrada del editor, puedes consultar la guía [Uso de la simulación de entrada de mano en el editor para probar una escena](/windows/mixed-reality/mrtk-unity/features/input-simulation/input-simulation-service) del [portal de documentación de MRTK](/windows/mixed-reality/mrtk-unity).
 
 > [!TIP]
 > Si el equipo tiene un micrófono, puede alternar fácilmente el estado activo del panel Diagnóstico que aparece en la ventana del juego mediante el comando de voz "toggle diagnostics" (alternar diagnóstico). También puede deshabilitarlo en MRTK Configuration Profile > Diagnostics > Enable Diagnostics System (Perfil de configuración de MRTK > Diagnóstico > Habilitar sistema de diagnóstico). Sin embargo, por lo general, se recomienda mantener el sistema de diagnóstico activo durante el desarrollo.
@@ -91,7 +88,7 @@ En la ventana Jerarquía, seleccione RoverExplorer > objeto **RoverAssembly** y,
 > [!NOTE]
 > La configuración de superficies magnéticas determina qué objetos puede detectar el componente Tap to Place (Pulsar para colocar) al colocar un objeto. Al cambiar la configuración a solo Reconocimiento espacial, el componente Tap To Place (Script) (Pulsar para colocar [script]) solo podrá colocar el Rover en objetos de la capa de Unity denominada Spatial Awareness, que de forma predeterminada es la malla de reconocimiento espacial generada por HoloLens.
 >
->Para obtener más información sobre las capas, puede consultas la documentación sobre <a href="https://docs.unity3d.com/Manual/Layers.html" target="_blank">capas</a> de Unity.
+> Para obtener más información sobre las capas, puede consultas la documentación sobre <a href="https://docs.unity3d.com/Manual/Layers.html" target="_blank">capas</a> de Unity.
 
 > [!TIP]
 > Si quiere ver la malla de reconocimiento espacial al probar la función Tap To Place (Pulsar para colocar) en HoloLens, puede establecer temporalmente la opción de visualización del observador de malla espacial en Visible. Para recibir un recordatorio sobre cómo cambiar la opción de visualización, puede consultar las instrucciones de la sección [Cambio de la opción de visualización de reconocimiento espacial](mr-learning-base-03.md#changing-the-spatial-awareness-display-option).
@@ -140,7 +137,7 @@ Una vez que haya terminado de probar la característica en el modo de juego, hag
 
 En este tutorial, aprendió a usar el solucionador Directional Indicator (Indicador direccional) de MRTK para que un elemento de la interfaz de usuario dirige de forma intuitiva al usuario a los objetos. También aprendió a usar el solucionador Tap To Place (Pulsar para colocar) para cambiar la posición de los objetos fácilmente.
 
-Para más información sobre estos y otros solucionadores incluidos con MRTK, consulte la guía de [solucionadores](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver) del [portal de documentación de MRTK](https://docs.microsoft.com/windows/mixed-reality/mrtk-unity/).
+Para más información sobre estos y otros solucionadores incluidos con MRTK, consulte la guía de [solucionadores](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/solvers/solver) del [portal de documentación de MRTK](/windows/mixed-reality/mrtk-unity/).
 
 > [!div class="nextstepaction"]
->[Tutorial siguiente: 6. Creación de interfaces de usuario](mr-learning-base-06.md)
+> [Tutorial siguiente: 6. Creación de interfaces de usuario](mr-learning-base-06.md)

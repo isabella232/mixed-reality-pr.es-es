@@ -7,12 +7,12 @@ ms.date: 05/05/2019
 ms.topic: article
 ms.localizationpriority: high
 keywords: Eye Tracking, Mixed Reality, Input, Eye Gaze, Eye Targeting, HoloLens 2, Eye-based Selection, mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit, gaze
-ms.openlocfilehash: 1f337d3cbc1f82b4f69194d4b903687be067f9d6
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 1dff0ded282678a695070feca2b578004610d2c7
+ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "97847867"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "110196470"
 ---
 # <a name="eye-gaze-and-commit"></a>Mirada con los ojos y confirmación
 
@@ -26,8 +26,18 @@ Con HoloLens 2 se nos presenta la gran oportunidad de _mirar y confirmar_ de man
    - Emita un comando de voz (por ejemplo, "Select")
    - Mantenga la mirada (es decir, siga mirando el destino para seleccionarlo)
 
-Aun así, la mirada con los ojos se comporta de manera diferente a la mirada con la cabeza en determinados aspectos y presenta numerosos desafíos específicos. En las [Directrices para el diseño de mirada con los ojos](eye-tracking.md), se resumen las ventajas generales y los desafíos al usar el seguimiento de los ojos como modelo de entrada en la aplicación holográfica. En esta sección, vamos a centrarnos en las consideraciones de diseño específicas de la función de _control con los ojos y confirmación_.
+Aun así, la mirada con los ojos se comporta de manera diferente a la mirada con la cabeza en determinados aspectos y presenta numerosos desafíos específicos. 
+
+En las [Directrices para el diseño de mirada con los ojos](eye-tracking.md), se resumen las ventajas generales y los desafíos al usar el seguimiento de los ojos como modelo de entrada en la aplicación holográfica. En esta sección, vamos a centrarnos en las consideraciones de diseño específicas de la función de _control con los ojos y confirmación_.
 En primer lugar, los ojos se mueven a una velocidad increíblemente rápida y son estupendos para fijar rápidamente un destino en la vista. La mirada con los ojos resulta idónea para realizar acciones rápidas de mirada y confirmación, sobre todo cuando se combina con confirmaciones rápidas, como pulsar en el aire o presionar un botón.
+
+## <a name="head-and-eye-tracking-design-concepts-demo"></a>Demostración de los conceptos de diseño de seguimiento de la cabeza y los ojos
+
+Si quiere ver en acción los conceptos de diseño de seguimiento de cabeza y manos, consulte nuestra demostración de vídeo **Diseño de hologramas: Seguimiento de cabeza y seguimiento de manos** a continuación. Cuando haya terminado, continúe para profundizar más en detalle en temas específicos.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Head-Tracking-and-Eye-Tracking-Chapter/player]
+
+*Este vídeo se tomó de la aplicación "Designing Holograms" para HoloLens 2. Descargue y disfrute de la experiencia completa [aquí](https://aka.ms/dhapp).*
    
 ## <a name="design-guidelines-for-eye-gaze-and-commit"></a>Directrices de diseño para la mirada con los ojos y la confirmación
 
