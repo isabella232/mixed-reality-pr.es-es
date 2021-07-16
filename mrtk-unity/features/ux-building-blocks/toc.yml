@@ -4,7 +4,7 @@
   href: bounding-box.md
 - name: Control de límites
   href: bounds-control.md
-- name: Botón
+- name: Botones
   href: button.md
 - name: Administrador de restricciones
   href: constraint-manager.md
