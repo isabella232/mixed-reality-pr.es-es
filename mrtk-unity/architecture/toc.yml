@@ -1,4 +1,4 @@
-- name: Información general
+- name: Información general sobre la arquitectura
   href: overview.md
 - name: Marco de trabajo y tiempo de ejecución
   href: framework-and-runtime.md
