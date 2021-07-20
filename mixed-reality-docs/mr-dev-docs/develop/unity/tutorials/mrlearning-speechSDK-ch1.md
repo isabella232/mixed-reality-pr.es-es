@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, speech recognition, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: a728e3520539723c4b38849eeb60524995e572eb
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 39eaa8a17d4616dc9c044f9bff7522dde41cffb7
+ms.sourcegitcommit: fd1964ec6c645e8088ec120661f73739bb7775a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175457"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "113656629"
 ---
 # <a name="1-integrating-and-using-speech-recognition-and-transcription"></a>1. Integración y uso del reconocimiento de voz y la transcripción
 
@@ -166,4 +166,4 @@ Has implementado el reconocimiento de voz con tecnología de Azure. Ejecuta la a
 En el próximo tutorial, obtendrás información sobre cómo ejecutar comandos con el reconocimiento de voz de Azure.
 
 > [!div class="nextstepaction"]
-> [Tutorial siguiente: 2. Usar el reconocimiento de voz para ejecutar comandos](mrlearning-speechSDK-ch2.md)
+> [Siguiente tutorial: 2. Ejecución de comandos mediante el reconocimiento de voz de Azure](mrlearning-speechSDK-ch2.md)

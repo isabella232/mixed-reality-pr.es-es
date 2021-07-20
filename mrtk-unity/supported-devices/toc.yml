@@ -1,8 +1,8 @@
-- name: Implementación en HoloLens y WMR
+- name: Implementación en HoloLens y cascos de WMR
   href: wmr-mrtk.md
 - name: Implementación en Oculus Quest
   href: oculus-quest-mrtk.md
-- name: Implementación en Android e iOS (AR Foundation)
+- name: 'Implementación en Android e iOS (AR Foundation) [Experimental]'
   href: using-ar-foundation.md
 - name: Uso de Leap Motion
   href: leap-motion-mrtk.md

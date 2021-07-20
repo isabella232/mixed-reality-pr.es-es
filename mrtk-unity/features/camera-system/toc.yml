@@ -1,6 +1,6 @@
 - name: Información general del sistema de cámara
   href: camera-system-overview.md
-- name: Creación del proveedor de configuración
+- name: Creación de un proveedor de configuración de la cámara
   href: create-settings-provider.md
 - name: Configuración de la cámara de AR de Unity
   href: unity-ar-camera-settings.md

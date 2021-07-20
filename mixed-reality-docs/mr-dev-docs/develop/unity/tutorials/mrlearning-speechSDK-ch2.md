@@ -1,20 +1,20 @@
 ---
-title: Adición de un modo sin conexión para la traducción de voz a texto local
-description: Complete este curso para aprender a agregar el modo sin conexión para la traducción de voz a texto local en aplicaciones de realidad mixta.
+title: Ejecución de comandos mediante el reconocimiento de voz de Azure
+description: Complete este curso para aprender a ejecutar comandos mediante el reconocimiento de voz de Azure en aplicaciones de realidad mixta.
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, MRTK, mixed reality toolkit, UWP, Azure spatial anchors, speech recognition, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 2e7a48dc4bb64eb177e6fa290f4918345c3d642f
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 8d031896a1725c0121272b68578016edf38a36cf
+ms.sourcegitcommit: fd1964ec6c645e8088ec120661f73739bb7775a9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590157"
+ms.lasthandoff: 07/13/2021
+ms.locfileid: "113656623"
 ---
-# <a name="2-adding-an-offline-mode-for-local-speech-to-text-translation"></a>2. Adición de un modo sin conexión para la traducción de voz a texto local
+# <a name="2-execute-commands-using-azure-speech-recognition"></a>2. Ejecución de comandos mediante el reconocimiento de voz de Azure
 
 En este tutorial, agregarás la posibilidad de ejecutar comandos con el reconocimiento de voz de Azure, lo que te permitirá hacer que pase algo en función de la palabra o frase que definas.
 

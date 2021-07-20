@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, hololens 2, azure custom vision, azure cognitive services, azure cloud services, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: cb391aa2cdb7944234cdeede7dd05825c008d0d8
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 7624ed28c337f3621a29f15f1ab3b0e98aeb89db
+ms.sourcegitcommit: 114c304a416bfe9d9b294c4adbb4c23cbe60ea4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590577"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114224238"
 ---
 # <a name="3-integrating-azure-custom-vision"></a>3. Integración de Azure Custom Vision
 
@@ -87,10 +87,6 @@ Una vez que tenga suficientes imágenes, haga clic en el botón **Train** (Entre
 > **ObjectDetectionManager (script)** carga directamente las imágenes tomadas en el servicio Custom Vision. Como alternativa, Custom Vision API acepta las direcciones URL de las imágenes; como ejercicio, puede modificar **ObjectDetectionManager (script)** para que cargue las imágenes en un almacenamiento de blobs en su lugar.
 
 ## <a name="detect-objects"></a>Detección de objetos
-
-Para poder detectar los objetos, es necesario cambiar la clave de API que existe en **ObjectDetectionManager (script)** de la configuración del proyecto que ya se ha asignado por la de Custom Vision.
-
-Busque el recurso de Custom Vision en Azure Portal. Haga clic en *Claves y punto de conexión* para recuperar la clave de API y reemplácela por la clave de API anterior de la configuración del proyecto.
 
 Ahora puede poner a prueba el modelo entrenado; ejecute la aplicación y, en el *menú principal* haga clic en **Search Object** (Buscar objeto) y escriba el nombre del **objeto con seguimiento** en cuestión. Aparecerá **Object Card** (Tarjeta de objeto) y haga clic en el botón **Custom Vision**. Desde aquí, **ObjectDetectionManager** comenzará a tomar capturas de imagen en segundo plano desde la cámara, y el progreso se indicará en el menú. Apunte la cámara al objeto que usó para entrenar el modelo y verá que, después de un breve lapso, detectará el objeto.
 
