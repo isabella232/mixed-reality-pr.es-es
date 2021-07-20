@@ -1,4 +1,4 @@
-- name: Actualización de HTK
+- name: Actualización desde HoloToolkit
   href: htk-to-mrtk-porting-guide.md
 - name: MRTK y eliminación de código administrado
   href: mrtk-and-managed-code-stripping.md
