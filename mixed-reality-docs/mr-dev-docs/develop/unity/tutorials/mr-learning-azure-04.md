@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, hololens 2, Azure spatial anchors, azure cloud services, azure custom vision, Windows 10
 ms.localizationpriority: high
-ms.openlocfilehash: 0837ebd9d34ba12d660098fc765824da3c561d07
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: ab5bcfe92e5de2149e844fc02164f5079e215142
+ms.sourcegitcommit: 114c304a416bfe9d9b294c4adbb4c23cbe60ea4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590547"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114224288"
 ---
 # <a name="4-integrating-azure-spatial-anchors"></a>4. Integración de Azure Spatial Anchors
 
@@ -39,9 +39,16 @@ Obtenga información sobre cómo crear un [recurso de anclaje espacial](/azure/s
 
 En esta sección, aprenderá a configurar la escena y realizar los cambios necesarios.
 
+Seleccione el objeto **MixedRealityToolkit** en la ventana Hierarchy (Jerarquía) y use el botón **Add Component** (Agregar componente) en la ventana Inspector para agregar **AR Anchor Manager (Script)** .
+
+![Objeto MixedRealityToolkit de Unity con los componentes AR Anchor Manager agregados ](images/mr-learning-azure/tutorial4-section1-step1-1.png)
+
+> [!NOTE]
+> Cuando se agregue el componente AR Anchor Manager (Script) (Administrador de anclaje de AR [script]), se agregará automáticamente el componente AR Session Origin (Script) (Origen de la sesión de AR [script]) según lo requiere el componente AR Anchor Manager (Script).
+
 En la ventana Proyecto, navegue a **Assets > MRTK.Tutorials.AzureCloudServices > Prefabs > Manager** (Recursos > MRTK.Tutorials.AzureCloudServices > Objetos prefabricados > Administrador).
 
-![Unity con el objeto prefabricado AnchorManager seleccionado](images/mr-learning-azure/tutorial4-section1-step1-1.png)
+![Unity con el objeto prefabricado AnchorManager seleccionado](images/mr-learning-azure/tutorial4-section1-step1-2.png)
 
 En la carpeta **Manager** (Administrador), arrastre y coloque el objeto prefabricado **Anchor Manager** (Administrador de anclajes) en la jerarquía de la escena.
 

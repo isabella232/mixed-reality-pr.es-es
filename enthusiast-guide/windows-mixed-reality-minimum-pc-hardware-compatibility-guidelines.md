@@ -1,6 +1,6 @@
 ---
-title: Windows Mixed Reality de compatibilidad de PC
-description: Gráfico de información general que muestra los requisitos mínimos del sistema de PC para la compatibilidad con Windows Mixed Reality.
+title: Windows Mixed Reality Directrices de compatibilidad de PC
+description: Gráfico de información general que esquematización de los requisitos mínimos del sistema de PC para la compatibilidad con Windows Mixed Reality.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 09/16/2020
@@ -8,46 +8,46 @@ ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Ultra, compatible, compatibilidad, requisitos del sistema, PC
 appliesto:
 - Windows 10
-ms.openlocfilehash: e73b00dcf8d6974f06c22c3b0ab0771a8e1a5969
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 754110c3fa0b5e98508f843d251c24c04b8c0a89
+ms.sourcegitcommit: 78746bef0e1ffe1480e89fed8cd30f6f8b389e8d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110143309"
+ms.lasthandoff: 07/27/2021
+ms.locfileid: "114713568"
 ---
 # <a name="windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines"></a>Windows Mixed Reality de compatibilidad de hardware de equipo mínimo
 
 ## <a name="features-and-experiences"></a>Características y experiencias
 
-Windows 10 potencia Windows Mixed Reality varios cascos en un conjunto diverso de hardware de PC.  La potencia del equipo determinará qué experiencias puede tener.
-Con los equipos de gama superior, se obtienen algunas funcionalidades y características adicionales:
+Windows 10 se Windows Mixed Reality en diversos cascos en un conjunto diverso de hardware de PC.  La potencia del equipo determinará qué experiencias puede tener.
+Con los equipos de gama superior, obtiene algunas funcionalidades y características adicionales:
 
-* Objetos visuales más claros y una mayor frecuencia de actualización.
+* Objetos visuales más claros y una frecuencia de actualización mayor.
 * Más aplicaciones y experiencias, incluidos los juegos con mayor uso de gráficos.
-* Una ventana "mirror" en el escritorio que muestra lo que ve en realidad mixta.
-* Grabar y compartir vídeos y fotos de sus experiencias de realidad mixta.
+* Una ventana "mirror" en el escritorio que muestra lo que se ve en la realidad mixta.
+* Grabe y comparta vídeos y fotos de sus experiencias de realidad mixta.
 
 ## <a name="minimum-pc-hardware-guidelines"></a>Directrices mínimas de hardware de PC
 
-Para ver si el equipo puede ejecutar Windows Mixed Reality, revise las instrucciones de hardware siguientes y ejecute [la Portal de realidad mixta](https://www.microsoft.com/store/apps/9NG1H8B3ZC7M) aplicación.
+Para ver si el equipo puede ejecutar Windows Mixed Reality, revise las instrucciones de hardware siguientes y ejecute [Portal de realidad mixta](https://www.microsoft.com/store/apps/9NG1H8B3ZC7M) aplicación.
 
-Recuerde que el rendimiento variará en función de la configuración exacta. También deberá asegurarse de que el [](recommended-adapters-for-windows-mixed-reality-capable-pcs.md) equipo tiene los puertos adecuados para el Windows Mixed Reality envolvente que está usando.
+Recuerde que el rendimiento variará en función de la configuración exacta. También deberá asegurarse de que el [](recommended-adapters-for-windows-mixed-reality-capable-pcs.md) equipo tiene los puertos adecuados para el casco Windows Mixed Reality envolvente que está usando.
 
 >[!NOTE]
->Las directrices para equipos de desarrollo son superiores a las de los equipos de los consumidores que ejecutan aplicaciones de realidad mixta. Si es desarrollador de realidad mixta, consulte las especificaciones recomendadas [del equipo de desarrollo.](https://developer.microsoft.com/en-us/windows/mixed-reality/install_the_tools#immersive_headset_development)
+>Las directrices para equipos de desarrollo son superiores a las de los equipos de los consumidores que ejecutan aplicaciones de realidad mixta. Si es un desarrollador de realidad mixta, consulte las especificaciones recomendadas [del equipo de desarrollo.](https://developer.microsoft.com/en-us/windows/mixed-reality/install_the_tools#immersive_headset_development)
 
 ## <a name="mixed-reality-portal-app"></a>Portal de realidad mixta aplicación
 
 [Portal de realidad mixta](https://www.microsoft.com/store/productid/9ng1h8b3zc7m) es la mejor manera de asegurarse de que el equipo está listo para ejecutarse Windows Mixed Reality.
 
-Después de ejecutar la aplicación, verá uno de los siguientes mensajes:
+Después de ejecutar la aplicación, verá uno de los mensajes siguientes:
 
 * **Está bien para ir.**  El equipo está listo para ejecutar juegos y experiencias de realidad mixta.
 * **Admite algunas características.** El equipo puede ejecutar algunas experiencias de realidad mixta.
 * **No se puede ejecutar la realidad mixta.** Este equipo no cumple los requisitos mínimos necesarios para ejecutar Windows Mixed Reality.
 
 A continuación, se obtiene un análisis del equipo con el hardware, los controladores y el sistema operativo necesarios.
-![Captura de pantalla de Comprobación de PC de Windows Mixed Reality](images/screenshot-mr-pc-check.jpg)
+![Captura de pantalla de Windows Mixed Reality PC Check](images/screenshot-mr-pc-check.jpg)
 
 <table>
 <tr>
@@ -66,19 +66,19 @@ A continuación, se obtiene un análisis del equipo con el hardware, los control
 ## <a name="compatibility-guidelines"></a>Directrices de compatibilidad
 
 > [!IMPORTANT]
-> Actualizaremos, realizaremos adiciones a estas directrices de compatibilidad de pc y las revisaremos Windows Mixed Reality de compatibilidad de pc. Consulte periódicamente las directrices y los requisitos más recientes.
+> Vamos a actualizar, realizar adiciones a estas directrices de compatibilidad de pc y revisar estas Windows Mixed Reality de compatibilidad de pc. Consulte periódicamente las directrices y los requisitos más recientes.
 
 ### <a name="high-resolution-headset-requirements"></a>Requisitos de cascos de alta resolución
 
 Debido a la mayor resolución, los siguientes requisitos se aplican a las líneas de productos HP Reverb G1, G2 y Omnicept para garantizar una experiencia óptima de resolución completa de 90 Hz:
 
 <ul>
-<li> Intel Core i5, i7, Intel Intel E3-1240 v5, equivalente o mejor. AMD Ryzen 5 equivalente o mejor. </li>
+<li> Intel Core i5, i7, Intel Xeon E3-1240 v5, equivalente o mejor. AMD Ryzen 5 equivalente o mejor. </li>
 <li> NVIDIA GeForce GTX 1080, AMD Radeon RX 5700, equivalente o mejor </li>
 <li> Memoria: 8 GB de RAM o más </li>
 <li> 1x Display Port 1.3 </li>
 <li> 1x USB 3.0 Type-C con entrega de energía (o adaptador de alimentación incluido)</li>
-<li> Windows 10 de mayo de 2019 o posterior </li>
+<li> Windows 10 Actualización de mayo de 2019 o posterior </li>
 </ul>
 
 **Todos los demás cascos compatibles con WMR** <br>
@@ -86,14 +86,14 @@ Para todos los demás HMD, consulte los siguientes requisitos:
 
 <table>
 <tr>
-    <th style="width:10%"></th><th style="vertical-align: middle; text-align: center; width:30%">Windows Mixed Reality equipos de 90Hz</th>
+    <th style="width:10%"></th><th style="vertical-align: middle; text-align: center; width:30%">Windows Mixed Reality equipos a 90Hz</th>
     <th style="vertical-align: middle; text-align: center; width:30%">Windows Mixed Reality equipos de 60Hz</th>
 </tr><tr>
-    <td style="vertical-align: middle">Sistema operativo</td><td colspan="2" style="vertical-align: middle; text-align: center;">Windows 10 Fall Creators Update (RS3) o posterior: Home, Pro, Business, Education.<br/>    (<b>Nota:</b>No se admite en N versiones ni Windows 10 Pro en modo S)</td>
+    <td style="vertical-align: middle">Sistema operativo</td><td colspan="2" style="vertical-align: middle; text-align: center;">Windows 10 Fall Creators Update (RS3) o posterior: Inicio, Pro, Empresa, Educación.<br/>    (<b>Nota:</b>No se admite en N versiones o Windows 10 Pro en modo S)</td>
 </tr><tr>
     <td style="vertical-align: middle">Procesador</td>
     <td style="vertical-align: middle; text-align: center;">Intel Core i5 4590 (4ª generación), cuatro núcleos (o superior) <br>AMD Ryzen 5 1400 3,4 Ghz (escritorio), cuatro núcleos (o superior)</td>
-    <td style="vertical-align: middle; text-align: center;">Intel Core i5 7200U (7.ª generación móvil), doble núcleo con Intel Hyper-Threading Technology habilitado (o mejor) <br>AMD Ryzen 5 1400 3,4 Ghz (escritorio), cuatro núcleos (o superior)</td>
+    <td style="vertical-align: middle; text-align: center;">Intel Core i5 7200U (7ª generación móvil), doble núcleo con Intel Hyper-Threading Technology habilitado (o mejor) <br>AMD Ryzen 5 1400 3,4 Ghz (escritorio), cuatro núcleos (o superior)</td>
 </tr><tr>
     <td style="vertical-align: middle">RAM</td>
     <td style="vertical-align: middle; text-align: center;">8 GB DDR3 (o mejor)</td>
@@ -121,22 +121,22 @@ Para todos los demás HMD, consulte los siguientes requisitos:
     </td>
 </tr><tr>
     <td style="vertical-align: middle">Controlador de gráficos</td>
-    <td colspan="3" td style="vertical-align: middle; text-align: center;">Windows Display Driver Model (WDDM) 2.2</td>
+    <td colspan="3" td style="vertical-align: middle; text-align: center;">Windows Mostrar modelo de controlador (WDDM) 2.2</td>
 </tr><tr>
     <td style="vertical-align: middle"><a href="Recommended-adapters-for-Windows-Mixed-Reality-Capable-PCs.md">Puerto de presentación de gráficos</a></td>
     <td style="vertical-align: middle; text-align: center;">HDMI 2.0 o DisplayPort 1.2</td>
     <td style="vertical-align: middle; text-align: center;">HDMI 1.4 o DisplayPort 1.2</td>
 </tr><tr>
-    <td style="vertical-align: middle">Mostrar</td>
-    <td colspan="3" style="vertical-align: middle; text-align: center;">Pantalla VGA (800x600) conectada externa o integrada (o mejor)</td>
+    <td style="vertical-align: middle">Pantalla</td>
+    <td colspan="3" style="vertical-align: middle; text-align: center;">Pantalla VGA externa o integrada conectada (800 x 600) (o mejor)</td>
 </tr><tr>
     <td style="vertical-align: middle"><a href="Recommended-adapters-for-Windows-Mixed-Reality-Capable-PCs.md">Conectividad USB</a></td>
     <td colspan="2" style="vertical-align: middle; text-align: center;">USB 3.0 </td>
 </tr><tr>
-    <td style="vertical-align: middle">Conectividad Bluetooth (para controladores <a href="controllers-in-wmr.md">de movimiento)</a></td>
+    <td style="vertical-align: middle">Bluetooth conectividad (para controladores <a href="controllers-in-wmr.md">de movimiento)</a></td>
     <td colspan="3" style="vertical-align: middle; text-align: center;">Bluetooth 4.0</td>
 </tr><tr>
-    <td style="vertical-align: middle">Velocidad de fotogramas de casco esperada</td>
+    <td style="vertical-align: middle">Velocidad de fotogramas esperada del casco</td>
     <td style="vertical-align: middle; text-align: center;">90 Hz</td>
     <td style="vertical-align: middle; text-align: center;">60 Hz</td>
 </tr>
@@ -149,10 +149,10 @@ Para todos los demás HMD, consulte los siguientes requisitos:
 
 **Información adicional:**
 
-* Los equipos portátiles más grandes con pantallas de al menos 15 pulgadas hacen lo mejor.
-* Las configuraciones de gráficos híbridos solo son compatibles Windows Mixed Reality 90Hz. El adaptador de gráficos discreto en cualquier configuración híbrida debe cumplir todos los requisitos enumerados en las Windows Mixed Reality para adaptadores de gráficos discretos.
+* Los portátiles más grandes con pantallas de al menos 15 pulgadas hacen lo mejor.
+* Las configuraciones de gráficos híbridos solo son compatibles Windows Mixed Reality 90Hz. El adaptador de gráficos discretos en cualquier configuración híbrida debe cumplir todos los requisitos enumerados en las directrices de Windows Mixed Reality para adaptadores gráficos discretos.
 * Si tiene una tarjeta gráfica discreta que debe ejecutarse Windows Mixed Reality 90Hz, pero su valor predeterminado es una frecuencia de actualización de 60Hz (60 fotogramas por segundo), use un adaptador DisplayPort a HDMI 2.0 de tamaño completo para conectar el casco y habilitar una frecuencia de actualización de 90Hz.
-* Los cascos diferentes pueden requerir puertos de hardware diferentes, por lo que debe asegurarse de que el equipo tiene los puertos correctos o los adaptadores [necesarios](Recommended-adapters-for-Windows-Mixed-Reality-Capable-PCs.md) para conectarse al casco.
+* Los cascos diferentes pueden requerir puertos de hardware diferentes, por lo que debe asegurarse de que el equipo tiene los puertos correctos o los adaptadores [necesarios](Recommended-adapters-for-Windows-Mixed-Reality-Capable-PCs.md) para conectarse a los cascos.
 
 >[!NOTE]
 >El hardware gráfico discreto e integrado que no cumple las especificaciones mínimas confirmadas no se ha probado, confirmado ni optimizado para Windows Mixed Reality y puede que no funcione correctamente o en absoluto.
@@ -163,10 +163,10 @@ Para obtener la mejor experiencia Windows Mixed Reality en un dispositivo Surfac
 
 **Requisitos:**
 
-* Los productos surface requieren que las actualizaciones de controladores sean compatibles con Windows Mixed Reality. Estos controladores se pueden instalar en Surface; para ello, vaya a Configuración > actualización y seguridad **> Buscar actualizaciones.**
-* Los productos [](Recommended-adapters-for-Windows-Mixed-Reality-Capable-PCs.md) de Surface requieren un adaptador desde el puerto de vídeo (Mini DisplayPort o USB-C, dependiendo de Surface PC) a HDMI 2.0 para Windows Mixed Reality cascos. La versión más reciente del adaptador de Surface Mini-DisplayPort a HDMI AV es compatible con HDMI 2.0 (la versión anterior no lo es). Del mismo modo, el <a href="https://www.microsoft.com/en-us/store/d/surface-usb-c-to-hdmi-adapter/94chb2m80s54/4gj5">adaptador de Surface USB-C a HDMI</a> también es compatible con HDMI 2.0.
+* Los productos surface requieren que las actualizaciones de controladores sean compatibles con Windows Mixed Reality. Estos controladores se pueden instalar en Surface; para ello, vaya a Configuración > actualización y seguridad **> buscar actualizaciones.**
+* Los productos [](Recommended-adapters-for-Windows-Mixed-Reality-Capable-PCs.md) surface requieren un adaptador desde el puerto de vídeo (Mini DisplayPort o USB-C, dependiendo de Surface PC) a HDMI 2.0 para Windows Mixed Reality cascos. La versión más reciente del adaptador Mini-DisplayPort av de Surface a HDMI es compatible con HDMI 2.0 (la versión anterior no). Del mismo modo, el <a href="https://www.microsoft.com/en-us/store/d/surface-usb-c-to-hdmi-adapter/94chb2m80s54/4gj5">adaptador de Surface USB-C a HDMI</a> también es compatible con HDMI 2.0.
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Preguntar a la comunidad](https://answers.microsoft.com)
 * [Póngase en contacto con nosotros para obtener soporte técnico.](https://support.microsoft.com/contactus/)

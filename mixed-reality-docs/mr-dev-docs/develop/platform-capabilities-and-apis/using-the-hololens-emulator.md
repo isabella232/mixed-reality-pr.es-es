@@ -7,12 +7,12 @@ ms.date: 05/11/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulator
-ms.openlocfilehash: db6d2675f4ca4ab1c85ef2581ebe35de53ceebfd
-ms.sourcegitcommit: 943489923c69c3a28bc152f1cb516dcdcea2880a
+ms.openlocfilehash: a9ecb121652dde39be0f91a24a4d57856a874071
+ms.sourcegitcommit: eb39526f9620f0459bd30e4484307892f4609334
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2021
-ms.locfileid: "111772358"
+ms.lasthandoff: 07/15/2021
+ms.locfileid: "114201636"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso del emulador de HoloLens
 
@@ -28,7 +28,7 @@ Si buscas desarrollar aplicaciones para cascos envolventes (VR) de Windows Mixed
 Descargue el emulador HoloLens.
 
 Versiones:
-* [Emulador de HoloLens 2 (Windows Holographic, versión 21H1, actualización de junio de 2021)](https://go.microsoft.com/fwlink/?linkid=2165258).
+* [Emulador de HoloLens 2 (Windows Holographic, versión 21H1, actualización de julio de 2021)](https://go.microsoft.com/fwlink/?linkid=2167725).
 * [Emulador de HoloLens (primera generación) y plantillas de proyecto holográficas](https://go.microsoft.com/fwlink/?linkid=2065980).
 
 Puedes encontrar notas de la versión y compilaciones anteriores del emulador de HoloLens en la página [Archivo del emulador de HoloLens](hololens-emulator-archive.md).
