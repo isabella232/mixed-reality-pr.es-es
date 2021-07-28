@@ -252,6 +252,8 @@
               href: 'https://medium.com/@dongyoonpark/bringing-the-periodic-table-of-the-elements-app-to-hololens-2-with-mrtk-v2-a6e3d8362158'
             - name: Galaxy Explorer 2.0
               href: unity/galaxy-explorer-update.md
+            - name: Aspectos básicos de la calidad
+              href: unity/quality-fundamentals.md
         - name: "HoloLens (1.ª\_generación)"
           items:
             - name: Tabla periódica de los elementos

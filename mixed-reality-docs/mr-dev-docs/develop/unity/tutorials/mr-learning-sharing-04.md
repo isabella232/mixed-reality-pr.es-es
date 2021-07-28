@@ -7,12 +7,12 @@ ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, multi-user capabilities, Photon, MRTK, mixed reality toolkit, UWP, Azure spatial anchors
 ms.localizationpriority: high
-ms.openlocfilehash: d4dc943c8ca57331b4916e40db67df3cd3d6d2e6
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 4be0fc30b6d1b401bf137be4060704f54515ceb1
+ms.sourcegitcommit: cf8df1720ddb8236207ab581bc149edcc76e6199
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "99590067"
+ms.lasthandoff: 07/26/2021
+ms.locfileid: "114702489"
 ---
 # <a name="4-sharing-object-movements-with-multiple-users"></a>4. Uso compartido de movimientos de objetos con varios usuarios
 
@@ -27,9 +27,17 @@ En este tutorial, aprenderá a compartir los movimientos de objetos para que tod
 
 En esta sección, agregaras elementos prefabricados del tutorial para preparar la escena.
 
+En la ventana "Jerarquía", expanda el objeto **MixedRealityPlayspace** y seleccione el objeto secundario **Cámara principal**; a continuación, en la ventana Inspector, use el botón **Agregar componente** para agregar el componente **Administrador de cámara de AR (script)** al objeto **Cámara principal**:
+
+![Unity con el componente Administrador de cámara de AR configurado parcialmente](images/mr-learning-sharing/sharing-04-section1-step1-0.png)
+
 En la ventana Project (Proyecto), vaya a la carpeta **Assets** > **MRTK.Tutorials.MultiUserCapabilities** > **Prefabs** y arrastre el elemento prefabricado **TableAnchor** para colocarlo encima del objeto **SharedPlayground** de la ventana Hierarchy (Jerarquía) y agregarlo a la escena como elemento secundario del objeto SharedPlayground:
 
 ![Unity con el objeto prefabricado TableAnchor recién agregado seleccionado](images/mr-learning-sharing/sharing-04-section1-step1-1.png)
+
+En la ventana Jerarquía, asegúrese de que el objeto **MixedRealityPlayspace** está expandido y de que el objeto **TableAnchor** está seleccionado. Arrastre el componente **Cámara principal** al campo **Cámara** del componente **Origen de la sesión de AR** de **TableAnchor**:
+
+![Unity con la asignación de la cámara principal del origen de sesión de AR configurada](images/mr-learning-sharing/sharing-04-section1-step1-2.png)
 
 ## <a name="configuring-pun-to-instantiate-the-objects"></a>Configuración de PUN para crear instancias de los objetos
 
