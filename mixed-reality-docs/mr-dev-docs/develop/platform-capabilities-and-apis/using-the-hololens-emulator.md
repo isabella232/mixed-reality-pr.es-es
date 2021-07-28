@@ -7,12 +7,12 @@ ms.date: 05/11/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: HoloLens, emulator
-ms.openlocfilehash: a9ecb121652dde39be0f91a24a4d57856a874071
-ms.sourcegitcommit: eb39526f9620f0459bd30e4484307892f4609334
+ms.openlocfilehash: 701cffbe576c64333874fc88c3cd6a6b821bc458
+ms.sourcegitcommit: 78746bef0e1ffe1480e89fed8cd30f6f8b389e8d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114201636"
+ms.lasthandoff: 07/27/2021
+ms.locfileid: "114713589"
 ---
 # <a name="using-the-hololens-emulator"></a>Uso del emulador de HoloLens
 
@@ -283,20 +283,6 @@ Si la lista de destinos de depuración de Visual Studio está vacía (por ejemp
 
 Si el sistema se bloquea cuando se inicia el emulador, deshabilita la aceleración de hardware para los gráficos del emulador.
 * Crea un valor DWORD del Registro llamado "DisableGPU" en HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\XDE\10.0 y establece su valor en 1.
-
-## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
-
-Si sigue el recorrido de puntos de control de desarrollo de Unity que hemos diseñado, significa que ya se encuentra a la mitad de la fase de implementación. Desde aquí, puede continuar con el siguiente tema:
-
-> [!div class="nextstepaction"]
-> [Implementación en el emulador de HoloLens](using-the-hololens-emulator.md)
-
-O bien puede ir directamente a agregar servicios avanzados:
-
-> [!div class="nextstepaction"]
-> [Servicios avanzados](../../develop/unity/unity-development-overview.md#5-adding-services)
-
-Puede volver a los [puntos de control de desarrollo de Unity](../../develop/unity/unity-development-overview.md#4-deploying-to-a-device-or-emulator) en cualquier momento.
 
 ## <a name="see-also"></a>Consulta también
 * [Introducción de datos avanzada en el emulador de HoloLens y el simulador de realidad mixta](advanced-hololens-emulator-and-mixed-reality-simulator-input.md)
