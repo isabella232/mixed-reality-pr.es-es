@@ -1,110 +1,112 @@
 ---
 title: Explorador de la galaxia
-description: Siga con nosotros a medida que creamos la aplicación de realidad mixta Galaxy Explorer, el ganador de la campaña compartir su idea.
+description: Siga con nosotros mientras creamos la aplicación de realidad mixta Galaxy Explorer, la ganador de la campaña Compartir tu idea.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Explorador de Galaxy, caso práctico, proyecto, ejemplo, MRTK, kit de herramientas de realidad mixta, Unity, aplicaciones de ejemplo, aplicaciones de ejemplo, código abierto, Microsoft Store, HoloLens, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual
-ms.openlocfilehash: 7ab439a1248895975c5ebff676862515ee79ecf0
-ms.sourcegitcommit: 87b54c75044f433cfadda68ca71c1165608e2f4b
+keywords: galaxy explorer, case study, project, sample, MRTK, Mixed Reality Toolkit, Unity, sample apps, example apps, open source, Microsoft Store, HoloLens, mixed reality headset, windows mixed reality headset, virtual reality headset
+ms.openlocfilehash: c1294a197878ecf0c6672b028284ad51eaef6955
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/10/2020
-ms.locfileid: "97010306"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114757346"
 ---
 # <a name="galaxy-explorer"></a>Explorador de la galaxia
+![Explorador de Galaxy](../images/HTK_GalaxyExplorer.jpg)
 
-**Compartimos sus ideas. Estamos compartiendo el código.**
+**Ha compartido sus ideas. Compartimos el código.**
 
-El proyecto del explorador de la galaxia está preparado. Ha compartido sus ideas con la comunidad, ha elegido una aplicación, ha visto que un equipo la ha creado y ahora puede obtener el código fuente. Si tiene un dispositivo, el proyecto de Galaxy Explorer está disponible para su descarga desde la tienda Windows para Microsoft HoloLens.
+El proyecto del explorador de la galaxia está preparado. Ha compartido sus ideas con la comunidad, ha elegido una aplicación, ha visto a un equipo compilarla y ahora puede obtener el código fuente. Si tiene un dispositivo, el Project Galaxy Explorer está disponible para su descarga desde Windows Store para Microsoft HoloLens.
 
->[!TIP]
->[Obtención del código](https://github.com/Microsoft/GalaxyExplorer) en github
+>[!NOTE]
+>Esta aplicación de ejemplo se diseñó para HoloLens 1.ª generación. Consulte [Galaxy Explorer 2.0 para](galaxy-explorer-update.md) obtener HoloLens 2 versión.
 
-Nuestro [equipo de desarrollo](galaxy-explorer.md#meet-the-team) de HoloLens de diseñadores, artistas y desarrolladores crearon el explorador de Galaxy y le invitamos a que forme parte de este viaje con ellos. Después de seis semanas de desarrollo básico y dos semanas de perfeccionamiento, esta aplicación ya está lista. También puede seguir nuestro viaje completo a través de la serie de vídeos siguiente.
+Nuestro HoloLens [de](galaxy-explorer.md#meet-the-team) desarrollo de diseñadores, creadores y desarrolladores crearon Galaxy Explorer e invitaron a todos a formar parte de este recorrido con ellos. Después de seis semanas de desarrollo básico y dos semanas de perfeccionamiento, esta aplicación ya está lista para usted. También puede seguir todo el recorrido por la serie de vídeos siguiente.
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/HsnH2Q7HxOA]
 
-## <a name="share-your-idea"></a>Comparta su idea
+## <a name="share-your-idea"></a>Compartir su idea
 
-El recorrido del explorador de Galaxy comienza con la campaña "compartir su idea".
+El recorrido de Galaxy Explorer comienza con la campaña "Compartir tu idea".
 
 <br>
 
 >[!VIDEO https://www.youtube.com/embed/ZxGdW_ASrRc]
 
-La comunidad de Microsoft HoloLens está ampliando ideas espectaculares para la forma en que la informática holográfica transformará nuestro mundo. Creemos que las aplicaciones de HoloLens más increíbles dejarán de ser ideas que imagine.
+La Microsoft HoloLens está llena de ideas interesantes sobre cómo la informática holográfica transformará nuestro mundo. Creemos que las aplicaciones de HoloLens increíbles se mostrarán de las ideas que se imaginen juntas.
 
-Compartimos más de 5000 increíbles ideas a lo largo de esas pocas semanas. Nuestro equipo de desarrollo revisó las ideas más correctas y viables, y se ofrecía para crear una de las tres ideas más importantes.
+Ha compartido más de 5000 ideas increíbles a lo largo de esas semanas. Nuestro equipo de desarrollo ha revisado las ideas más correctas y viables y se ha ofrecido a crear una de las tres ideas principales.
 
-Después de un sondeo de Twitter de 24 horas, Galaxy Explorer fue la idea ganadora. Nuestro equipo de desarrollo de HoloLens de diseñadores, artistas y desarrolladores crearon el explorador de Galaxy y le invitamos a que forme parte de este viaje con ellos. Puede seguir el proceso de desarrollo en los vídeos siguientes.
+Después de un sondeo de Twitter de 24 horas, Galaxy Explorer fue la idea ganador. Nuestro HoloLens de diseñadores, creadores y desarrolladores crearon Galaxy Explorer e invitaron a todos a formar parte de este recorrido con ellos. Puede seguir el proceso de desarrollo en los vídeos siguientes.
 
-## <a name="ep-1-trust-the-process"></a>EP 1: confiar en el proceso
+## <a name="ep-1-trust-the-process"></a>Ep 1: Confiar en el proceso
 
 >[!VIDEO https://www.youtube.com/embed/rIX2XrRQgDg]
 
-En el episodio 1, el equipo de desarrollo comienza el proceso creativo: lluvia de ideas, concepto y decisión sobre lo que se debe establecer como prototipo.
+En el Episodio 1, el equipo de desarrollo comienza el proceso creativo: lluvia de ideas, conceptos y decisión sobre qué crear prototipos.
 
-## <a name="ep-2-lets-do-this"></a>EP 2: vamos a hacer esto
+## <a name="ep-2-lets-do-this"></a>Ep 2: Let's Do This
 
 >[!VIDEO https://www.youtube.com/embed/q1ee8a-84Ro]
 
-En el episodio 2, el equipo de desarrollo completa la fase de creación de prototipos, con lo que se abordan los problemas de hardware y se averigua qué ideas se deben seguir.
+En el Episodio 2, el equipo de desarrollo completa la fase de creación de prototipos: abordar los problemas difíciles y averiguar qué ideas seguir buscando.
 
-## <a name="ep-3-laying-foundations"></a>EP 3: establecimiento de bases
+## <a name="ep-3-laying-foundations"></a>Ep 3: Laying Foundations
 
 >[!VIDEO https://www.youtube.com/embed/fUqni6C4nmo]
 
-En el episodio 3, el equipo comienza la primera semana de desarrollo: creación de un plan, escritura de código de producción, creación de activos gráficos y averiguación de la interfaz de usuario.
+En el Episodio 3, el equipo comienza la primera semana de desarrollo: crear un plan, escribir código de producción, crear recursos de arte y averiguar la interfaz de usuario.
 
-## <a name="ep-4-make-it-real"></a>EP 4: hacer que sea real
+## <a name="ep-4-make-it-real"></a>Ep 4: Make It Real
 
 >[!VIDEO https://www.youtube.com/embed/ePA6hcaqoug]
 
-En el episodio 4, el equipo profundiza en el desarrollo: incorporar datos científicos, optimizar el proceso de representación e incorporar la asignación espacial.
+En el Episodio 4, el equipo profundiza en el desarrollo: incorpora datos científicos, optimiza el proceso de representación e incorpora asignación espacial.
 
-## <a name="ep-5-see-what-happens"></a>EP 5: ver qué ocurre
+## <a name="ep-5-see-what-happens"></a>Ep 5: Ver lo que sucede
 
 >[!VIDEO https://www.youtube.com/embed/Up1EDRrCrho]
 
-En el episodio 5, el equipo de desarrollo prueba la aplicación, busca errores que deben corregirse y refina la experiencia.
+En el Episodio 5, el equipo de desarrollo prueba la aplicación, busca errores que deben corregirse y refina la experiencia.
 
-## <a name="ep-6-coming-to-life"></a>EP 6: ciclo de vida
+## <a name="ep-6-coming-to-life"></a>Ep 6: Coming to Life
 
 >[!VIDEO https://www.youtube.com/embed/sMuJFKbylY4]
 
-En el episodio 6, el equipo finaliza la última semana de desarrollo, se prepara para dos semanas de trabajo polaco y refleja el progreso que han realizado.
+En el Episodio 6, el equipo finaliza la última semana de desarrollo, se prepara para dos semanas de trabajo polaco y refleja el progreso que han realizado.
 
-## <a name="ep-7-the-final-product"></a>EP 7: el producto final
+## <a name="ep-7-the-final-product"></a>Ep 7: The Final Product
 
 >[!VIDEO https://www.youtube.com/embed/HsnH2Q7HxOA]
 
-En el episodio 7, el equipo completa el proyecto y comparte su código.
+En el Episodio 7, el equipo completa el proyecto y comparte su código.
 
 ## <a name="case-study"></a>Caso práctico
 
-Puede encontrar más información y lecciones sobre el desarrollo de Galaxy Explorer mediante la lectura del [caso práctico "creación de una galaxia en la realidad mixta"](../../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md).
+Puede encontrar aún más información y lecciones sobre el desarrollo de Galaxy Explorer mediante la lectura del caso práctico "Creación de una galaxy en realidad [mixta".](../../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md)
 
 ## <a name="meet-the-team"></a>Conozca al equipo
 
 ![Equipo de desarrollo de Galaxy Explorer](images/syiteampic.jpg)<br>
 *Equipo de desarrollo de Galaxy Explorer*
 
-Hemos aprendido que la creación del equipo adecuado es una de las inversiones más importantes que pudimos tomar y decidió organizarse de forma similar a un estudio de juego para aquellos con los que está familiarizado con ese modelo de desarrollo. Hemos optado por tener 11 miembros principales del equipo para controlar el ámbito, ya que disponíamos de un período de tiempo fijo (creamos algo frío antes de la compilación el 30 de marzo de 2016).
+Hemos aprendido que la creación del equipo adecuado es una de las inversiones más importantes que podríamos realizar y que decidimos organizar de forma similar a un estudio de juegos para aquellos que está familiarizados con ese modelo de desarrollo. Elegimos tener 11 miembros principales del equipo para controlar el ámbito, ya que teníamos un período de tiempo fijo (crear algo interesante antes de la compilación del 30 de marzo de 2016).
 
-Para este proyecto, comenzamos con un productor, Jessica quién llevó a cabo la planeación, la revisión del progreso y el mantenimiento de todo el día. Es la que tiene un pelo rosa. Teníamos un director de diseño (Jon) y un Diseñador Senior (Peter). Contenían la visión creativa del explorador de Galaxy. Jon es el en gafas de la fila de front-end y Peter es el segundo de la derecha de la parte posterior.
+Para este proyecto, empezamos con un productor, Que fue director de planeamiento, revisión del progreso y mantenimiento de las cosas en funcionamiento día a día. Es la que tiene el vello rosa. Teníamos un director de diseño (Jon) y un diseñador sénior (Peter). Tenían la visión creadora de Galaxy Explorer. Jon es el primero en gafas de la primera fila y Peter es el segundo desde la derecha en la parte posterior.
 
-Teníamos tres desarrolladores: BJ (entre Jon y Jessica), Mike (segunda fila a la izquierda) y Karim (segunda fila intermedia, junto a BJ). Han descubierto las soluciones técnicas necesarias para obtener esa visión creativa.
+Hemos tenido tres desarrolladores: DESPUÉS (entre Jon y Mike), Mike (segunda fila a la izquierda) y Karim (segunda fila en el centro, junto a PASADO). Averiguaron las soluciones técnicas necesarias para lograr esa visión creadora.
 
-Comenzamos con cuatro artistas a tiempo completo: un intérprete de concepto (Jedd, segundo de la izquierda en atrás), un modelador (Andy, tercer de derecha en atrás), un intérprete técnico (Alex (persona derecha)) y un animador (Steve (el más a la izquierda). Cada una de ellas hace más que eso, pero son sus responsabilidades principales.
+Empezamos con cuatro intérpretes a tiempo completo: un intérprete conceptual (Jedd, segundo de izquierda en la parte posterior), un modelador (Andy, tercero de derecha a derecha), un intérprete técnico (Alex (persona más a la derecha) y un animador (Steve( persona más a la izquierda). Cada uno de ellos también hace algo más que eso, pero esas son sus responsabilidades principales.
 
-Teníamos un evaluador a tiempo completo: Lena: quién probó nuestras compilaciones cada día, configuró nuestras revisiones de compilación y revisó las características a medida que se ponen en línea. Sin embargo, todos los usuarios probaron constantemente, ya que siempre examinamos nuestras compilaciones. Lena es el que se encuentra en el chaqueta de piel.
+Hemos tenido un evaluador de tiempo completo, Lena, que ha probado nuestras compilaciones todos los días, ha configurado nuestras revisiones de compilación y ha revisado las características a medida que se poner en línea. Sin embargo, todos los usuarios se han probado constantemente, ya que siempre hemos examinado nuestras compilaciones. Lena es la que está mezciendo la lona.
 
-Somos parte de un estudio más grande aquí en Microsoft (piense en el equipo en el desarrollo que no es de juegos). También había una gran cantidad de personas involucradas: llamamos en el talento de nuestro Director de arte, el ingeniero de audio y el liderazgo de estudio con frecuencia a lo largo del proyecto, pero esas personas eran recursos compartidos con otros proyectos que el equipo más amplio tiene.
+Todos formamos parte de un estudio más grande aquí en Microsoft (piense en equipo en el desarrollo sin juegos). También hubo otras personas implicadas: llamamos a los actores de nuestro director de arte, ingeniero de audio y director de estudio con frecuencia a lo largo del proyecto, pero esos compañeros compartieron recursos con otros proyectos que tiene nuestro equipo más amplio.
 
 ## <a name="see-also"></a>Consulte también
-* [Caso práctico: creación de una galaxia en una realidad mixta](../../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md)
-* [Repositorio de GitHub de Galaxy Explorer](https://github.com/Microsoft/GalaxyExplorer)
+* [Caso práctico: creación de una galaxy en realidad mixta](../../out-of-scope/case-study-creating-a-galaxy-in-mixed-reality.md)
+* [Repositorio de GitHub Galaxy Explorer](https://github.com/Microsoft/GalaxyExplorer)
+* [Galaxy Explorer 2.0](galaxy-explorer-update.md)

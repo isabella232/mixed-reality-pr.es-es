@@ -1,19 +1,21 @@
 ---
-title: Modo de reproducción de Unity
-description: Aprenda a usar el modo de reproducción en el editor de Unity para obtener una vista previa de los cambios de la aplicación en un dispositivo sin implementar una aplicación.
+title: Vista previa del trabajo con Holographic Remoting
+description: Use la comunicación remota holográfica en modo de reproducción para obtener una vista previa de los cambios de la aplicación en un dispositivo sin implementar una aplicación.
 author: keveleigh
-ms.author: kurtie
-ms.date: 05/21/2021
+ms.author: v-vtieto
+ms.date: 07/26/2021
 ms.topic: article
 keywords: Unity, comunicación remota, comunicación remota holográfica, reproductor de comunicación remota holográfica, HoloLens, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, modo de juego de Unity
-ms.openlocfilehash: b998233fda34beee0c98795a1efa2c86a53541ba
-ms.sourcegitcommit: bdf4babd13e021f41fb04cdb3611bb759bd77537
+ms.openlocfilehash: 0c71791c80a5e84ee48241baa756064a800e5a41
+ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112392301"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "114757217"
 ---
-# <a name="unity-play-mode"></a>Modo de reproducción de Unity
+# <a name="preview-your-work-with-holographic-remoting"></a>Vista previa del trabajo con Holographic Remoting
+
+Puede usar Holographic Remoting para transmitir contenido holográfico a su HoloLens 2 en tiempo real. Esta es una excelente manera de depurar rápidamente la aplicación sin compilar e implementar un proyecto completo. 
 
 Una manera rápida de trabajar en el proyecto de Unity es usar el "Modo de reproducción", que ejecuta la aplicación localmente en el editor de Unity en el equipo. Unity usa Holographic Remoting para proporcionar una manera rápida de obtener una vista previa del contenido en un dispositivo HoloLens real. El modo de reproducción también se puede usar con un Windows Mixed Reality casco conectado al equipo de desarrollo.
 
@@ -27,7 +29,7 @@ Una manera rápida de trabajar en el proyecto de Unity es usar el "Modo de repro
 
 ## <a name="unity-play-mode-with-holographic-remoting"></a>Modo de reproducción de Unity con comunicación remota holográfica
 
-Con Holographic Remoting, puede experimentar la aplicación en HoloLens mientras se ejecuta en el editor de Unity en el equipo. La entrada de mirada, gesto, voz y asignación espacial se envía desde HoloLens al equipo. Los fotogramas representados se envían de vuelta a HoloLens. Esta es una excelente manera de depurar rápidamente la aplicación sin compilar e implementar un proyecto completo.
+Con Holographic Remoting, puede experimentar la aplicación en el HoloLens mientras se ejecuta en el editor de Unity en el equipo. La entrada de mirada, gesto, voz y asignación espacial se envía desde HoloLens al equipo. A continuación, los fotogramas representados se envían de nuevo a la HoloLens. Esta es una excelente manera de depurar rápidamente la aplicación sin compilar e implementar un proyecto completo.
 
 [!INCLUDE[](includes/unity-play-mode.md)]
 
