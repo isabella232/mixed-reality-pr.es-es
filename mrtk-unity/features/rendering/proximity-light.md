@@ -5,18 +5,18 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 6e57a76d54d0f3f63ce8dcb80582e178effa39d9
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 1be58cd22228258d51f63b2a4db0294bceaec1320640ecbbfa2795edde5e39bd
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176379"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115208325"
 ---
 # <a name="proximity-light"></a>Luz de proximidad
 
 Un [`ProximityLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) es un paradigma [Sistema Fluent Design](https://www.microsoft.com/design/fluent/) que imita una "luz de punto inverso de degradado" que se mantiene cerca de la superficie de un objeto. A menudo se usa para interacciones cercanas, la aplicación puede controlar las propiedades de una luz de proximidad a través del [`ProximityLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) componente .
 
-Para que un material se influye en un [`ProximityLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) *sombreador Mixed Reality Toolkit/Estándar* se debe usar y la propiedad *Luz* de proximidad debe estar habilitada.
+Para que un material se influye en un [`ProximityLight`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) *sombreador Mixed Reality Toolkit/Estándar* debe usarse y la *propiedad Luz* de proximidad debe estar habilitada.
 
 > [!NOTE]
 > De forma [`ProximityLights`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) predeterminada, se admiten hasta dos.
@@ -27,10 +27,10 @@ La mayoría de las escenas dentro de MRTK usan [`ProximityLight`](xref:Microsoft
 
 ## <a name="advanced-usage"></a>Uso avanzado
 
-De forma predeterminada, [`ProximityLights`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) solo dos pueden ilustrar un [material](https://docs.unity3d.com/ScriptReference/Material.html) a la vez. Si el proyecto requiere más de dos [`ProximityLights`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) para influir en un [material,](https://docs.unity3d.com/ScriptReference/Material.html) el código de ejemplo siguiente muestra cómo lograrlo.
+De forma predeterminada, [`ProximityLights`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) solo dos pueden iluminación de un [material](https://docs.unity3d.com/ScriptReference/Material.html) a la vez. Si el proyecto requiere más de dos para influir en un material, el código de [`ProximityLights`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) ejemplo siguiente muestra cómo lograr esto. [](https://docs.unity3d.com/ScriptReference/Material.html)
 
 > [!NOTE]
-> Tener muchas [`ProximityLights`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) luces de un [material](https://docs.unity3d.com/ScriptReference/Material.html) aumentará las instrucciones del sombreador de píxeles y afectará al rendimiento. Desenlaza estos cambios en el proyecto.
+> Tener muchos [`ProximityLights`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) iluminación de un [material](https://docs.unity3d.com/ScriptReference/Material.html) aumentará las instrucciones del sombreador de píxeles y afectará al rendimiento. Desenlaza estos cambios dentro del proyecto.
 
 *Cómo aumentar el número de disponibles [`ProximityLights`](xref:Microsoft.MixedReality.Toolkit.Utilities.ProximityLight) de dos a cuatro.*
 

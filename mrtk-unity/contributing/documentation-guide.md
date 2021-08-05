@@ -1,18 +1,18 @@
 ---
-title: Directrices de documentación
+title: Guías de la documentación
 description: directrices y estándares de documentación para MRTK.
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 95af19b71a9fe06dabad058e75f78d951262ba4a
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: aa583876d4ca9e115d4ea4507638eebab838207230693cb7c24b781d8f0b020b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175353"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115210730"
 ---
-# <a name="documentation-guidelines"></a>Directrices de documentación
+# <a name="documentation-guidelines"></a>Guías de la documentación
 
 <img src="../features/images/MRTK_Logo_Rev.png" alt="MRTK">
 
@@ -37,12 +37,12 @@ En esta sección se describen las características que se necesitan con frecuenc
    1. El número real del código es irrelevante; El análisis se encarga de establecer el número de elemento correcto.
 
 - Listas de puntos de viñeta
-  - Listas de puntos de viñeta anidadas
-- Texto en **negrita** con \* \* asterisco doble\*\*
+  - Listas de puntos de viñeta anidados
+- Texto en **negrita con** \* \* asterisco doble\*\*
 - _texto_ *cursiva* \_ con carácter de subrayado o asterisco \_ \* único\*
 - Texto `highlighted as code` dentro de una \` oración mediante comillas\`
 - Vínculos a páginas de documentos [Directrices de documentación de MRTK](documentation-guide.md)
-- Vínculos [a delimitadores dentro de una página](#style); Los delimitadores se forman reemplazando espacios por guiones y convirtiendo a minúsculas
+- Vínculos [a delimitadores dentro de una página](#style); los delimitadores se forman reemplazando espacios por guiones y convertiendo a minúsculas.
 
 En el caso de los ejemplos de código, usamos los bloques con tres signos de subrayado y especificamos csharp como lenguaje para el resaltado \` \` \` de sintaxis: 
 
@@ -95,7 +95,7 @@ Use una línea de texto en negrita para los bloques que deben destacar. Esto se 
 
 ### <a name="see-also-section"></a>Sección "Ver también"
 
-La mayoría de las páginas deben terminar con un capítulo denominado *Vea también*. Este capítulo es simplemente una lista con viñetas de vínculos a páginas relacionadas con este tema. Estos vínculos también pueden aparecer en el texto de la página cuando corresponda, pero esto no es necesario. De forma similar, el texto de la página puede contener vínculos a páginas que no están relacionadas con el tema principal; no deben incluirse en la *lista Ver* también. Vea [el capítulo "Ver también"](#see-also) de esta página como ejemplo para la elección de vínculos.
+La mayoría de las páginas deben terminar con un capítulo denominado *Vea también*. Este capítulo es simplemente una lista con viñetas de vínculos a páginas relacionadas con este tema. Estos vínculos también pueden aparecer en el texto de la página cuando corresponda, pero esto no es necesario. De forma similar, el texto de la página puede contener vínculos a páginas que no están relacionadas con el tema principal; no deben incluirse en la *lista Ver* también. Vea [el capítulo "Ver también"](#see-also) de esta página como ejemplo para elegir los vínculos.
 
 ## <a name="table-of-contents-toc"></a>Tabla de contenido (TOC)
 
@@ -111,7 +111,7 @@ Regla general: intente parecer **profesional.** Esto suele significar evitar un 
 1. No intente ser (en exceso) desastoso.
 2. No escribir nunca "I"
 3. Evite "we". Normalmente, esto se puede volver a cambiar fácilmente mediante "MRTK". Ejemplo: "se admite esta característica" -> "MRTK admite esta característica" o "se admiten las siguientes características...".
-4. De forma similar, intente evitar "usted". Ejemplo: "Con este simple cambio, el sombreador se vuelve configurable" -> "Los sombreadores se pueden configurar con poco esfuerzo".
+4. De forma similar, intente evitar "usted". Ejemplo: "Con este simple cambio, el sombreador se vuelve configurable". -> "Los sombreadores se pueden configurar con poco esfuerzo".
 5. No use "frases desasechas".
 6. Evite parecer demasiado entusiasmado, no es necesario vender nada.
 7. Del mismo modo, evite ser muy drástico. Rara vez se necesitan signos de exclamación.
@@ -130,13 +130,13 @@ Hay dos maneras de resaltar las palabras, ponerlas en negrita o ponerlas en curs
 
 A menudo, se quiere "agrupar" algo que pertenezca de forma lógica o resaltar un término específico, ya que tiene un significado especial. Estas cosas no necesitan destacarse del texto general. Use texto cursiva como *método ligero para* resaltar algo.
 
-De forma similar, cuando un nombre de archivo, una ruta de acceso o una entrada de menú se mencionan en texto, prefiere que sea cursiva para agruparlo lógicamente, sin distraer.
+Del mismo modo, cuando un nombre de archivo, una ruta de acceso o una entrada de menú se mencionan en texto, prefiere que sea cursiva para agruparlo lógicamente, sin distraer.
 
 En general, intente evitar **el resaltado de texto innecesario.** Los términos especiales se pueden resaltar una vez para que el lector tenga en cuenta, no repita este resaltado en todo el texto, cuando ya no sirve para nada y solo distrae.
 
 ### <a name="mentioning-menu-entries"></a>Mencione las entradas del menú
 
-Al mencionar una entrada de menú en la que un usuario debe hacer clic, la convención actual es: Project > Files > Create > Leaf (Crear *> hoja).*
+Al mencionar una entrada de menú en la que debe hacer clic un usuario, la convención actual es: Project > Files > Create > Leaf (Crear *> hoja).*
 
 ### <a name="links"></a>Vínculos
 
@@ -159,7 +159,7 @@ Al agregar un vínculo, considere si también debe aparecer en la [sección Ver]
 2. No incluya cosas en una captura de pantalla que sean irrelevantes para lo que se muestra. Por ejemplo, cuando se muestra un efecto de representación, realice una captura de pantalla de la ventanilla, pero excluya cualquier interfaz de usuario que la rodea. Al mostrar alguna interfaz de usuario, intente mover las ventanas de forma que solo esa parte importante esté en la imagen.
 3. Al incluir la interfaz de usuario de captura de pantalla, solo se muestran las partes importantes. Por ejemplo, al hablar de botones en una barra de herramientas, realice una imagen pequeña que muestre los botones importantes de la barra de herramientas, pero excluya todo lo que le rodea.
 4. Use solo imágenes que sean fáciles de reproducir. Esto significa que no pinte marcadores ni resaltados en capturas de pantalla. En primer lugar, no hay reglas coherentes en cuanto a su aspecto. En segundo lugar, reproducir este tipo de captura de pantalla es un esfuerzo adicional. En su lugar, describa las partes importantes del texto. Hay excepciones a esta regla, pero son poco frecuentes.
-5. Obviamente, es mucho más esfuerzo volver a crear un GIF animado. Espere ser responsable de volver a crearla hasta el final del tiempo o espere que los usuarios lo lancen, si no quieren dedicar ese tiempo.
+5. Obviamente, es mucho más esfuerzo volver a crear un GIF animado. Espere ser responsable de volver a crearlo hasta el final del tiempo o esperar que los usuarios lo lancen, si no quieren dedicar ese tiempo.
 6. Mantenga bajo el número de imágenes de un artículo. A menudo, un buen método consiste en realizar una captura de pantalla general de alguna herramienta, que muestra todo y, a continuación, describir el resto en texto. Esto facilita la sustitución de la captura de pantalla cuando sea necesario.
 
 Otros aspectos:
@@ -279,7 +279,7 @@ Al definir y enumerar, el código también debe documentar el significado de los
 
 Es posible que muchos Mixed Reality Toolkit no necesiten usar la documentación de la API. Estos usuarios aprovecharán nuestros prefabs y scripts reutilizables y creados previamente para crear sus experiencias.
 
-Cada área de características contendrá uno o varios archivos markdown (.md) que describen en un nivel bastante alto, lo que se proporciona. Según el tamaño o la complejidad de un área de características determinada, puede que sea necesario tener archivos adicionales, hasta uno por cada característica proporcionada.
+Cada área de características contendrá uno o varios archivos markdown (.md) que describen en un nivel bastante alto, lo que se proporciona. Dependiendo del tamaño o la complejidad de un área de características determinada, puede haber una necesidad de archivos adicionales, hasta uno por característica proporcionada.
 
 Cuando se agrega una característica (o se cambia el uso), se debe proporcionar documentación general.
 
@@ -310,11 +310,11 @@ When using the spatial mapping component, the performance impact will increase w
 It is recommended to use the least detail possible for the desired experience.
 ```
 
-Se recomiendan notas de rendimiento para los componentes pesados de CPU o GPU y **se** pueden solicitar como parte de una revisión de la solicitud de extracción. Las notas de rendimiento aplicables se incluirán en la documentación de api **y** de información general.
+Las notas de rendimiento se recomiendan para los componentes de CPU o GPU intensivos y **se** pueden solicitar como parte de una revisión de la solicitud de extracción. Las notas de rendimiento aplicables se incluirán en la documentación de api **y** de información general.
 
 ## <a name="breaking-changes"></a>Últimos cambios
 
-La documentación de cambios importantes consiste en un archivo de [nivel](../contributing/breaking-changes.md) superior que se vincula a los datos individuales de cada área breaking-changes.md.
+La documentación de cambios importantes consiste en un archivo de [nivel](../contributing/breaking-changes.md) superior que vincula a cada área de características breaking-changes.md.
 
 El área de características breaking-changes.md archivos deben contener la lista de  todos los cambios importantes conocidos de una versión determinada, así como el historial de cambios importantes de versiones anteriores.
 
@@ -334,21 +334,21 @@ No known breaking changes
 ...
 ```
 
-La información contenida en el nivel de característica breaking-changes.md archivos se agregará a las notas de la versión de cada nueva versión de MRTK.
+La información contenida en el nivel de breaking-changes.md archivos se agregará a las notas de la versión de cada nueva versión de MRTK.
 
 Los cambios importantes que forman parte de un cambio **deben** documentarse como parte de una solicitud de extracción.
 
 ## <a name="tools-for-editing-markdown"></a>Herramientas para editar MarkDown
 
-[Visual Studio Code](https://code.visualstudio.com/) es una excelente herramienta para editar archivos Markdown que forman parte de la documentación de MRTK.
+[Visual Studio Code](https://code.visualstudio.com/) es una excelente herramienta para editar archivos markdown que forman parte de la documentación de MRTK.
 
 Al escribir documentación, también se recomienda encarecidamente instalar las dos extensiones siguientes:
 
-- Extensión Markdown de Docs Visual Studio Code: use Alt+M para abrir un menú de opciones de creación de documentos.
+- Extensión Markdown de Docs para Visual Studio Code: use Alt+M para abrir un menú de opciones de creación de documentos.
 
-- Corrector ortográfico de código: las palabras mal escritas se subrayan; Haga clic con el botón derecho en una palabra mal escrita para cambiarla o guardarla en el diccionario.
+- Corrector ortográfico de código: las palabras mal escritas se subrayan; Haga clic con el botón derecho en una palabra mal escrita para cambiarla o guárdela en el diccionario.
 
-Ambos vienen empaquetados en el paquete de creación de Docs publicado por Microsoft.
+Ambos se empaquetan en el paquete de creación de Docs publicado por Microsoft.
 
 ## <a name="see-also"></a>Consulte también
 

@@ -5,12 +5,12 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 04/06/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, compilación, ventana de compilación, herramientas
-ms.openlocfilehash: b0b2bb1d06a561f5f647d01145fe88f562c53017
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: d01fefd09337e2639388a43d94bd8beb93716e3ef7f12a9c924b5755fb594447
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176148"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211393"
 ---
 # <a name="build-window"></a>Ventana de compilación
 ![Compilación & flujo de implementación](images/MRTK_BuildWindow0.png)
@@ -26,7 +26,7 @@ Estas escenas son de la compilación de Unity Configuración. Puede cambiar el t
 ## <a name="appx-build-options"></a>Opciones de compilación de Appx
 ![Ventana De compilación: Opciones de compilación de Appx 2](images/MRTK_BuildWindow2.png)
 
-En esta pestaña se muestra la configuración de Visual Studio solución. Para habilitar HoloLens 2 entrada de seguimiento de los ojos, active la opción **Capacidad de entrada de mirada.** 
+En esta pestaña se muestra la configuración de Visual Studio solución. Para habilitar HoloLens 2 entrada de seguimiento ocular, active la opción **Gaze Input Capability (Funcionalidad de** entrada de mirada). 
 
 Puede asignar el archivo .glb en el campo 3D App Selector Model (Modelo de aplicación **3D)** para el icono personalizado del iniciador de aplicaciones 3D. Consulte [la guía de diseño del iniciador de aplicaciones 3D](/windows/mixed-reality/distribute/3d-app-launcher-design-guidance) para obtener más información.
 

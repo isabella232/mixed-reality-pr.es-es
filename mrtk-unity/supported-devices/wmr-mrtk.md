@@ -1,24 +1,24 @@
 ---
-title: Implementación en cascos HoloLens WMR
+title: Implementación en HoloLens y cascos de WMR
 description: Documentación para compilar e implementar aplicaciones en varios dispositivos.
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Visual Studio
-ms.openlocfilehash: 137e1b699e9a0cda1e8a454a6c3219b581fa71b4
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 622c7ca4b9c527630b5677fe377d1d3108bdfe08c9dc616bfd4d3256b83b9ab0
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176373"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209516"
 ---
-# <a name="deploying-to-hololens-and-wmr-headsets"></a>Implementación en cascos HoloLens WMR
+# <a name="deploying-to-hololens-and-wmr-headsets"></a>Implementación en HoloLens y cascos de WMR
 
 Hay dos maneras de implementar aplicaciones compiladas con MRTK en el dispositivo Windows: univeral Windows Platform (UWP) y la plataforma independiente. Las aplicaciones creadas para HoloLens 1 o HoloLens 2 deben tener como destino UWP, mientras que las aplicaciones creadas para cascos WMR pueden tener como destino UWP o independiente.
 
 ## <a name="building-and-deploying-mrtk-to-hololens-1-hololens-2-and-wmr-headsets-uwp"></a>Compilación e implementación de MRTK para HoloLens 1, HoloLens 2 y cascos WMR (UWP)
 
-Puede encontrar instrucciones sobre cómo compilar e implementar para **HoloLens 1** y **HoloLens 2** (UWP) en Compilar la aplicación [en el dispositivo](/windows/mixed-reality/mrlearning-base-ch1#build-your-application-to-your-device). Estos pasos también le permiten implementar en **cascos WMR.**
+Puede encontrar instrucciones sobre cómo compilar e implementar para **HoloLens 1** **y HoloLens 2** (UWP) en Compilar la aplicación en [el dispositivo](/windows/mixed-reality/mrlearning-base-ch1#build-your-application-to-your-device). Estos pasos también le permiten implementar en **cascos WMR.**
 
 > [!NOTE]
 > Al implementar la aplicación en el dispositivo en Visual Studio, debe configurar los Visual Studio de forma ligeramente diferente en función del dispositivo. Las configuraciones son las siguientes:
@@ -29,7 +29,7 @@ Puede encontrar instrucciones sobre cómo compilar e implementar para **HoloLens
 | HoloLens 1 | Versión o maestra | x86 | Dispositivo |
 | Cascos WMR | Versión o maestra | x64 | Equipo local |
 
-**Sugerencia:** Al compilar para HoloLens 1, HoloLens 2 o WMR, se recomienda que las opciones de compilación "Versión del SDK de destino" y "Versión mínima de la plataforma" se parezcan a las de la siguiente imagen:
+**Sugerencia:** Al compilar para HoloLens 1, HoloLens 2 o WMR, se recomienda que las opciones de compilación "Versión del SDK de destino" y "Versión mínima de la plataforma" se parezcan a las de la imagen siguiente:
 
 ![Ventana de compilación](../features/images/getting-started/BuildWindow.png)
 

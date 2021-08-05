@@ -1,25 +1,25 @@
 ---
-ms.openlocfilehash: 3f65fa90279e9a10c1aad9bd46f02233808936b8
-ms.sourcegitcommit: a5afc24a4887880e394ef57216b8fd9de9760004
+ms.openlocfilehash: 97ef4f466355f39e01ce0b916b4d0f45fb4c40f3fd6f0cb001b1bcccb35740eb
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "110647016"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115188025"
 ---
 ![Colibrí virtual con mano humana](mixed-reality-docs/mr-dev-docs/discover/images/01_MixedReality.png)
 
-Bienvenido a Mixed Reality documentación, el lugar para todo lo que mr, VR y ar en Microsoft.
+Le damos la Mixed Reality documentación, el lugar para todas las cosas de realidad virtual, realidad virtual y ar en Microsoft.
 
-## <a name="contributing"></a>Contribuir
+## <a name="contributing"></a>Contribuciones
 
-Si va a contribuir o actualizar el contenido de la documentación, asegúrese de que las solicitudes de extracción tienen como destino el subconjunto de documentos correcto (mr-dev-docs, enthusiast-guide, entre otros). Los nuevos colaboradores deben consultar nuestras directrices de contribución más detalladas para cada subdocset:
+Si está contribuyendo o actualizando contenido de documentos, asegúrese de que las solicitudes de extracción tienen como destino el subconjunto correcto (mr-dev-docs, la guía para la afición, y así sucesivamente). Los nuevos colaboradores deben consultar nuestras directrices de contribución más detalladas para cada subdocset:
 
 * [Mixed Reality colaboradores](mixed-reality-docs/mr-dev-docs/CONTRIBUTING.md)
-* [Colaboradores de VR Enthusiast Guide](enthusiast-guide/CONTRIBUTING.md)
+* [Colaboradores de vr-guide](enthusiast-guide/CONTRIBUTING.md)
 
 Para problemas relacionados con documentos, use los pies de página de la parte inferior de cada documento o envíe directamente a [MicrosoftDocs/mixed-reality/issues](https://github.com/MicrosoftDocs/mixed-reality/issues).
 
-No dude en enviar cualquier pregunta sobre las directivas de contribución o los procesos a Noé Quervalane o Sean Kervala a través de Teams o correo electrónico. 
+No dude en enviar cualquier pregunta sobre las directivas o los procesos de contribución a Nora Quene o Sean Kerawala a través de Teams correo electrónico. 
 
 ## <a name="getting-started"></a>Introducción 
 
@@ -31,7 +31,7 @@ Se recomienda empezar con los **Mixed Reality básicos y** pasar a partir de ah�
 
 * [Introducción a Mixed Reality](mixed-reality-docs/mr-dev-docs/discover/get-started-with-mr.md)
 
-Si está interesado en el lado del **diseño** de las cosas:
+Si está interesado en el lado **del diseño** de las cosas:
 
 * [Empezar a diseñar y a crear prototipos](mixed-reality-docs/mr-dev-docs/design/design.md)
 
@@ -51,7 +51,7 @@ Cuando por fin esté listo para que la aplicación llegue a los usuarios:
 
 ### <a name="vr-enthusiast-guide"></a>Guía para entusiastas de la realidad virtual
 
-Si no está nuevo en los dispositivos vr, se recomienda empezar con nuestra guía para principiantes:
+Si no está nuevo en los dispositivos vr, se recomienda comenzar con nuestra guía para principiantes:
 
 * [Empezar el recorrido de VR](enthusiast-guide/vr-journey.md)
 

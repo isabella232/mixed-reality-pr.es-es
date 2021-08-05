@@ -1,33 +1,33 @@
 ---
 title: Entrada de realidad mixta (213)
-description: Siga este tutorial de codificación con Unity, Visual Studio y auriculares envolventes para aprender los detalles de los controladores de movimiento.
+description: Siga este tutorial de codificación con Unity, Visual Studio cascos envolventes para aprender los detalles de los controladores de movimiento.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, inmersivo, controlador de movimiento, Academia, tutorial
-ms.openlocfilehash: 1f747c73846f59fdc62a0559068123a50f8a1b07
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, inmersivo, controlador de movimiento, academy, tutorial
+ms.openlocfilehash: 1cb53ed619a978e2aef17b5006b6254e5c7d3b9f53a39fbcb5932ebcc44ca98b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583055"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115210230"
 ---
 # <a name="mr-input-213-motion-controllers"></a>Entrada de realidad mixta (213): Controladores de movimiento
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](../develop/unity/tutorials/mr-learning-base-01.md) para HoloLens 2.
 
-Los controladores de movimiento del mundo de la realidad mixta agregan otro nivel de interactividad. Con [los controladores de movimiento](../design/motion-controllers.md), podemos interactuar directamente con los objetos de una manera más natural, de forma similar a las interacciones físicas en la vida real, lo que aumenta la inmersión y la alegría en la experiencia de la aplicación.
+Los controladores de movimiento en el mundo de la realidad mixta agregan otro nivel de interactividad. Con [los controladores de](../design/motion-controllers.md)movimiento, podemos interactuar directamente con los objetos de una manera más natural, similar a nuestras interacciones físicas en la vida real, lo que aumenta la experiencia de la aplicación.
 
-En la entrada MR 213, exploraremos los eventos de entrada del controlador de movimiento mediante la creación de una sencilla experiencia de dibujo espacial. Con esta aplicación, los usuarios pueden pintar en un espacio tridimensional con varios tipos de pinceles y colores.
+En mr input 213, exploraremos los eventos de entrada del controlador de movimiento mediante la creación de una experiencia de dibujo espacial simple. Con esta aplicación, los usuarios pueden pintar en un espacio tridimensional con varios tipos de pinceles y colores.
 
 ## <a name="topics-covered-in-this-tutorial"></a>Temas tratados en este tutorial
 
-|![MixedReality213 Topic1](images/mr213-topic1.png)|![MixedReality213 Topic2](images/mr213-topic2.png)|![MixedReality213 Topic3](images/mr213-topic3.png)|
+|![Tema MixedReality2131](images/mr213-topic1.png)|![MixedReality213 Topic2](images/mr213-topic2.png)|![MixedReality213 Topic3](images/mr213-topic3.png)|
 | :--- | :--- | :--- |
-|**Visualización del controlador**|**Eventos de entrada del controlador**|**Controlador y interfaz de usuario personalizados**|
-|Aprenda a representar los modelos de control de movimiento en el modo de juego y el tiempo de ejecución de Unity.|Comprenda los distintos tipos de eventos de botón y sus aplicaciones.|Obtenga información sobre cómo superponer los elementos de la interfaz de usuario sobre el controlador o personalizarlos totalmente.|
+|**Visualización del controlador**|**Eventos de entrada del controlador**|**Controlador personalizado e interfaz de usuario**|
+|Obtenga información sobre cómo representar modelos de controlador de movimiento en el modo de juego y el entorno de ejecución de Unity.|Comprenda los distintos tipos de eventos de botón y sus aplicaciones.|Obtenga información sobre cómo superponer elementos de la interfaz de usuario sobre el controlador o personalizarlo por completo.|
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -43,16 +43,16 @@ En la entrada MR 213, exploraremos los eventos de entrada del controlador de mov
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-Consulte la lista de comprobación de instalación para los auriculares que se envolverán en [esta página](../develop/install-the-tools.md).
+Consulte la lista de comprobación de instalación de cascos envolventes en [esta página](../develop/install-the-tools.md).
 
-* En este tutorial se requiere [Unity 2017.2.1 P2](https://beta.unity3d.com/download/1dc514532f08/UnityDownloadAssistant-2017.2.1p2.exe)
+* Este tutorial requiere [Unity 2017.2.1p2](https://beta.unity3d.com/download/1dc514532f08/UnityDownloadAssistant-2017.2.1p2.exe)
 
 ### <a name="project-files"></a>Archivos de proyecto
 
 * [Descargue los archivos](https://github.com/Microsoft/MixedReality213/archive/master.zip) requeridos por el proyecto y extraiga los archivos en el escritorio.
 
 >[!NOTE]
->Si desea examinar el código fuente antes de la descarga, está [disponible en github](https://github.com/Microsoft/MixedReality213).
+>Si desea buscar en el código fuente antes de descargarlo, está [disponible en GitHub](https://github.com/Microsoft/MixedReality213).
 
 ## <a name="unity-setup"></a>Configuración de Unity
 
@@ -60,118 +60,118 @@ Consulte la lista de comprobación de instalación para los auriculares que se e
 
 ### <a name="objectives"></a>Objetivos
 
-* Optimizar el desarrollo de Unity para Windows Mixed Reality
-* Configuración de una cámara de realidad mixta
-* Entorno de configuración
+* Optimización de Unity para Windows Mixed Reality desarrollo
+* Configuración Cámara de realidad mixta
+* Configura el entorno
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
 * Inicie Unity.
-* seleccione **Open**(Abrir).
-* Navegue hasta el escritorio y busque la carpeta **MixedReality213-Master** que ha desarchivado anteriormente.
+* Seleccione **Open** (Abrir).
+* Vaya al escritorio y busque **la carpeta MixedReality213-master** que anteriormente no ha jerarquíado.
 * Haga clic en **Seleccionar carpeta**.
-* Una vez que Unity termine de cargar los archivos de proyecto, podrá ver el editor de Unity.
-* En Unity, seleccione **archivo > configuración de compilación**.
+* Una vez que Unity termine de cargar los archivos del proyecto, podrá ver el editor de Unity.
+* En Unity, seleccione **File > Build Configuración**.
 
     ![MR213_BuildSettings](images/mr213-buildsettings-450px.png)
 
-* Seleccione **plataforma universal de Windows** en la lista **plataforma** y haga clic en el botón **cambiar plataforma** .
-* Establecimiento del dispositivo de destino en **cualquier dispositivo**
-* Establecer el tipo de compilación en **D3D**
-* Establecer SDK en la **versión más reciente instalada**
-* Comprobar los **proyectos de C# de Unity**
-    * Esto permite modificar archivos de script en el proyecto de Visual Studio sin volver a generar el proyecto de Unity.
-* Haga clic en **configuración del reproductor**.
-* En el panel **Inspector** , desplácese hacia abajo hasta la parte inferior.
-* En configuración de XR, Active **realidad compatible**
-* En SDK de realidad virtual, seleccione **Windows Mixed Reality** .
+* Seleccione **Universal Windows Platform en** la lista **Plataforma** y haga clic en el **botón Cambiar** plataforma.
+* Establecer dispositivo de destino en **Cualquier dispositivo**
+* Establezca Build Type (Tipo de compilación) en **D3D**.
+* Establezca SDK en **Instalado más reciente**
+* Comprobar **proyectos de C# de Unity**
+    * Esto le permite modificar los archivos de script del Visual Studio sin volver a generar el proyecto de Unity.
+* Haga clic **en Player Configuración**.
+* En el **panel Inspector,** desplácese hacia abajo hasta la parte inferior.
+* En XR Configuración, compruebe **Virtual Reality Supported (Compatible con Virtual Reality)**
+* En SDK de realidad virtual, **seleccione Windows Mixed Reality**
 
     ![MR213_XRSettings](images/mr213-xrsettings-500px.png)
 
-* Cierre la ventana de **configuración de compilación** .
+* Cierre **la ventana Configuración** compilación.
 
 ### <a name="project-structure"></a>Estructura del proyecto
 
-En este tutorial se usa **[Mixed Reality Toolkit-Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)**. Puede encontrar las versiones en [esta página](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases).
+En este tutorial **[se Mixed Reality Toolkit: Unity](https://github.com/Microsoft/MixedRealityToolkit-Unity)**. Puede encontrar las versiones en [esta página.](https://github.com/Microsoft/MixedRealityToolkit-Unity/releases)
 
 ![ProjectStructure](images/mr213-projectstructure-650px.png)
 
-**Escenas completadas para su referencia**
+**Escenas completadas para la referencia**
 
-* Encontrará dos escenas de Unity completadas en la carpeta **Scenes** .
-    * **MixedReality213**: escena completada con un solo pincel
-    * **MixedReality213Advanced**: escena completada para diseño avanzado con varios pinceles
+* Encontrará dos escenas de Unity completadas en la **carpeta Escenas.**
+    * **MixedReality213:** escena completada con un solo pincel
+    * **MixedReality213 Avanzado:** escena completada para el diseño avanzado con varios pinceles
 
-**Nueva configuración de escenas para el tutorial**
+**Nueva configuración de escena para el tutorial**
 
-* En Unity, haga clic en **archivo > nueva escena** .
-* Eliminar la **cámara principal** y la **luz direccional**
-* En el **panel Proyecto**, busque y arrastre el siguiente Prefabs al panel **jerarquía** :
-    * Assets/HoloToolkit/INPUT/Prefabs/**MixedRealityCamera**
-    * Activos/AppPrefabs/**entorno**
+* En Unity, haga clic **en Archivo > Nueva escena.**
+* Eliminar **cámara principal y** luz **direccional**
+* En el **Project,** busque y arrastre los siguientes elementos prefabs al panel **Jerarquía:**
+    * Assets/HoloToolkit/Input/Prefabs/**MixedRealityCamera**
+    * Assets/AppPrefabs/Environment
 
     ![Cámara y entorno](images/mr213-cameraenvironment-300px.jpg)
 
-* Hay dos Prefabs de cámara en el kit de herramientas de realidad mixta:
-    * **MixedRealityCamera. recurso prefabricado**: solo cámara
-    * **MixedRealityCameraParent. recurso prefabricado**: cámara + teleportabilidad + límite
-    * En este tutorial, usaremos **MixedRealityCamera** sin la característica de teleportabilidad. Por este motivo, hemos agregado recurso prefabricado de **entorno** sencillo, que contiene una planta básica para que el usuario sienta.
-    * Para obtener más información acerca de la teleportabilidad con **MixedRealityCameraParent**, consulte el artículo sobre el [diseño avanzado: teleportabilidad y Locomotion](#advanced-design---teleportation-and-locomotion)
+* Hay dos prefabs de cámara en Mixed Reality Toolkit:
+    * **MixedRealityCamera.prefab:** solo cámara
+    * **MixedRealityCameraParent.prefab:** Cámara + Teleportación + Límite
+    * En este tutorial, usaremos **la característica MixedRealityCamera** sin teleportación. Por este motivo, se  ha agregado un prefab de entorno sencillo que contiene una planta básica para que el usuario se sienta arrobado.
+    * Para más información sobre la teleportación con **MixedRealityCameraParent,** consulte Diseño avanzado: [teleportación y conmoción.](#advanced-design---teleportation-and-locomotion)
 
-**Configuración de SKYBOX**
+**Configuración de Skybox**
 
-* Haga clic en **ventana > iluminación > configuración**
-* Haga clic en el círculo en el lado derecho del **campo material de SKYBOX**
-* Escriba "Gray" y seleccione **SkyboxGray** (assets/AppPrefabs/support/Materials/SkyboxGray. MAT)
+* Haga **clic en Window > Lighting > Configuración**
+* Haga clic en el círculo del lado derecho del **campo Material de Skybox.**
+* Escriba "gray" y seleccione **SkyboxGray** (Assets/AppPrefabs/Support/Materials/SkyboxGray.mat)
 
-    ![Establecer SKYBOX](images/mr123-skyboxsetting-400px.jpg)
+    ![Configuración de Skybox](images/mr123-skyboxsetting-400px.jpg)
 
-* Active la opción **SKYBOX** para poder ver el degradado gris asignado SKYBOX
+* Active **la opción Skybox** para poder ver el skybox degradado gris asignado
 
-    ![Alternar opción SKYBOX](images/mr213-skyboxcheck-400px.jpg)
+    ![Alternancia de la opción skybox](images/mr213-skyboxcheck-400px.jpg)
 
-* La escena con MixedRealityCamera, entorno y gris SKYBOX tendrá el siguiente aspecto.
+* La escena con MixedRealityCamera, Environment y skybox gris tendrá este aspecto.
 
     ![Entorno de MixedReality213](images/mr213-environment-600px.jpg)
 
-* Haga clic en **archivo > guardar escena como**
-* **Guardar** la escena en la carpeta Scenes con cualquier nombre
+* Haga **clic en File > Save Scene as (Guardar escena como).**
+* **Guarde la** escena en la carpeta Escenas con cualquier nombre.
 
-## <a name="chapter-1---controller-visualization"></a>Capítulo 1: visualización del controlador
+## <a name="chapter-1---controller-visualization"></a>Capítulo 1: Visualización del controlador
 
 >[!VIDEO https://www.youtube.com/embed/Kw0bf5NqyRg]
 
 ### <a name="objectives"></a>Objetivos
 
-* Aprenda a representar modelos de controlador de movimiento en el modo de juego de Unity y en tiempo de ejecución.
+* Obtenga información sobre cómo representar modelos de controlador de movimiento en el modo de juego de Unity y en tiempo de ejecución.
 
-Windows Mixed Reality proporciona un modelo de controlador animado para la visualización del controlador. Hay varios enfoques que puede realizar para la visualización del controlador en la aplicación:
+Windows Mixed Reality proporciona un modelo de controlador animado para la visualización del controlador. Hay varios enfoques que puede seguir para la visualización del controlador en la aplicación:
 
-* Predeterminado: uso del controlador predeterminado sin modificación
-* Híbrido: uso del controlador predeterminado, pero personalización de algunos de sus elementos o de la superposición de componentes de interfaz de usuario
-* Reemplazo: usar su propio modelo 3D personalizado para el controlador
+* Valor predeterminado: uso del controlador predeterminado sin modificación
+* Híbrido: uso del controlador predeterminado, pero personalización de algunos de sus elementos o superposición de componentes de interfaz de usuario
+* Reemplazo: uso de su propio modelo 3D personalizado para el controlador
 
-En este capítulo, veremos los ejemplos de estas personalizaciones del controlador.
+En este capítulo, conoceremos los ejemplos de estas personalizaciones de controlador.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
-* En el panel **proyecto** , escriba **MotionControllers** en el cuadro de búsqueda. También puede encontrarlo en assets/HoloToolkit/INPUT/Prefabs/.
-* Arrastre **MotionControllers** recurso prefabricado en el panel **jerarquía** .
-* Haga clic en **MotionControllers** recurso prefabricado en el panel **jerarquía** .
+* En el **Project,** escriba **MotionControllers** en el cuadro de búsqueda. También puede encontrarlo en Assets/HoloToolkit/Input/Prefabs/.
+* Arrastre el **prefab MotionControllers** al panel **Jerarquía.**
+* Haga clic en el prefab **MotionControllers** en el panel **Jerarquía.**
 
-**MotionControllers recurso prefabricado**
+**MotionControllers prefab**
 
-**MotionControllers** recurso prefabricado tiene un script **MotionControllerVisualizer** que proporciona las ranuras para los modelos de controladores alternativos. Si asigna sus propios modelos 3D personalizados, como una mano o un valor de espada, y activa la casilla "usar siempre el modelo alternativo de la izquierda o la derecha", se verán en lugar del modelo predeterminado. Usaremos esta ranura en el capítulo 4 para reemplazar el modelo de controlador por un pincel.
+**MotionControllers** prefab tiene un script **MotionControllerVisualizer** que proporciona las ranuras para los modelos de controlador alternativos. Si asigna sus propios modelos 3D personalizados, como una mano o un pregón, y marca "Usar siempre un modelo alternativo a la izquierda o la derecha", los verá en lugar del modelo predeterminado. Usaremos esta ranura en el capítulo 4 para reemplazar el modelo de controlador por un pincel.
 
 ![MR213_ControllerVisualizer](images/mr213-controllervisualizer-600px.png)
 
 **Instrucciones**
 
-* En el panel **Inspector** , haga doble clic en **MotionControllerVisualizer** script para ver el código en Visual Studio
+* En el **panel Inspector,** haga doble clic en El script **MotionControllerVisualizer** para ver el código en la Visual Studio
 
 **Script MotionControllerVisualizer**
 
-Las clases **MotionControllerVisualizer** y **MotionControllerInfo** proporcionan los medios para tener acceso a & modificar los modelos de controlador predeterminados. **MotionControllerVisualizer** se suscribe al evento **InteractionSourceDetected** de Unity y crea automáticamente instancias de los modelos de controlador cuando se encuentran.
+Las **clases MotionControllerVisualizer** y **MotionControllerInfo** proporcionan los medios para acceder a & modificar los modelos de controlador predeterminados. **MotionControllerVisualizer** se suscribe al evento **InteractionSourceDetected** de Unity y crea automáticamente instancias de los modelos de controlador cuando se encuentran.
 
 ```cs
 protected override void Awake()
@@ -183,64 +183,64 @@ protected override void Awake()
 }
 ```
 
-Los modelos de controlador se entregan según [la especificación glTF](https://github.com/KhronosGroup/glTF). Este formato se ha creado para proporcionar un formato común, a la vez que mejora el proceso que subyace a la transmisión y desempaquetado de recursos 3D. En este caso, es necesario recuperar y cargar los modelos de controlador en tiempo de ejecución, ya que queremos que la experiencia del usuario sea lo más fluida posible y no se garantice qué versión de los controladores de movimiento puede estar usando el usuario. Este curso, a través del kit de herramientas de la realidad mixta, usa una versión del [proyecto UnityGLTF](https://github.com/KhronosGroup/UnityGLTF)del Grupo Khronos.
+Los modelos de controlador se entregan según [la especificación glTF](https://github.com/KhronosGroup/glTF). Este formato se ha creado para proporcionar un formato común, a la vez que se mejora el proceso de transmisión y desempaquete de recursos 3D. En este caso, es necesario recuperar y cargar los modelos de controlador en tiempo de ejecución, ya que queremos que la experiencia del usuario sea lo más fluida posible y no se garantiza qué versión de los controladores de movimiento podría estar usando el usuario. Este curso, a través de la Mixed Reality Toolkit, usa una versión del proyecto [UnityGLTF del grupo Derronos](https://github.com/KhronosGroup/UnityGLTF).
 
-Una vez que se ha entregado el controlador, los scripts pueden usar **MotionControllerInfo** para buscar las transformaciones de elementos de controlador específicos para que puedan colocarse correctamente.
+Una vez entregado el controlador, los scripts pueden usar **MotionControllerInfo** para buscar las transformaciones de elementos de controlador específicos para que puedan colocarse correctamente.
 
-En un capítulo posterior, se aprenderá a usar estos scripts para adjuntar elementos de interfaz de usuario a los controladores.
+En un capítulo posterior, aprenderemos a usar estos scripts para adjuntar elementos de la interfaz de usuario a los controladores.
 
-*En algunos scripts, encontrará bloques de código con **#if. UNITY_EDITOR** o **UNITY_WSA**. Estos bloques de código solo se ejecutan en el tiempo de ejecución de UWP al implementar en Windows. Esto se debe a que el conjunto de API que usa el editor de Unity y el tiempo de ejecución de la aplicación para UWP son diferentes.*
+*En algunos scripts, encontrará bloques de código **con #if ! UNITY_EDITOR** o **UNITY_WSA**. Estos bloques de código solo se ejecutan en el entorno de ejecución de UWP cuando se implementa en Windows. Esto se debe a que el conjunto de API que usan el editor de Unity y el entorno de ejecución de la aplicación para UWP son diferentes.*
 
-* **Guarde** la escena y haga clic en el botón **reproducir** .
+* **Guarde la** escena y haga clic en **el botón de** reproducción.
 
-Podrá ver la escena con controladores de movimiento en el casco. Puede ver animaciones detalladas para los clics de botón, el movimiento del stick analógico y el resaltado táctil de Touchpad.
+Podrá ver la escena con controladores de movimiento en el casco. Puede ver animaciones detalladas para los clics de botón, el movimiento de la chincheta y el resaltado táctil.
 
-![MR213_Controller valor predeterminado de visualización](images/mr213-controllervisualizationdefault-500px.jpg)
+![MR213_Controller de visualización predeterminada](images/mr213-controllervisualizationdefault-500px.jpg)
 
-## <a name="chapter-2---attaching-ui-elements-to-the-controller"></a>Capítulo 2: adjuntar elementos de la interfaz de usuario al controlador
+## <a name="chapter-2---attaching-ui-elements-to-the-controller"></a>Capítulo 2: Adjuntar elementos de la interfaz de usuario al controlador
 
 >[!VIDEO https://www.youtube.com/embed/e-mLlwmTzJo]
 
 ### <a name="objectives"></a>Objetivos
 
-* Más información sobre los elementos de los controladores de movimiento
-* Obtenga información acerca de cómo adjuntar objetos a partes específicas de los controladores
+* Obtenga información sobre los elementos de los controladores de movimiento.
+* Obtenga información sobre cómo adjuntar objetos a partes específicas de los controladores.
 
-En este capítulo, aprenderá a agregar elementos de la interfaz de usuario al controlador, al que el usuario puede acceder y manipular fácilmente en cualquier momento. También aprenderá a agregar una interfaz de usuario del selector de colores simple mediante la entrada del panel táctil.
+En este capítulo, aprenderá a agregar elementos de la interfaz de usuario al controlador a los que el usuario puede acceder y manipular fácilmente en cualquier momento. También aprenderá a agregar una interfaz de usuario sencilla del selector de colores mediante la entrada del panel táctil.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
-* En el panel **proyecto** , busque el script **MotionControllerInfo** .
-* En el resultado de la búsqueda, haga doble clic en **MotionControllerInfo** script para ver el código en Visual Studio.
+* En el **panel Project,** busque El script **MotionControllerInfo.**
+* En el resultado de la búsqueda, haga doble clic en el script **MotionControllerInfo** para ver el código en Visual Studio.
 
 **Script MotionControllerInfo**
 
-El primer paso es elegir a qué elemento del controlador desea asociar la interfaz de usuario. Estos elementos se definen en **ControllerElementEnum** en **MotionControllerInfo.CS**.
+El primer paso consiste en elegir a qué elemento del controlador desea que se adjunte la interfaz de usuario. Estos elementos se definen en **ControllerElementEnum** en **MotionControllerInfo.cs**.
 
 ![MR213 MotionControllerElements](images/mr213-motioncontrollerelements-1000px.jpg)
 
 * **Página principal**
 * **Menú**
-* **Visión**
-* **Palanca**
+* **Agarran**
+* **Stick**
 * **Select**
 * **Panel táctil**
-* **Pose de puntero** : este elemento representa la punta de la dirección de reenvío hacia delante del controlador.
+* **Posición de apuntar:** este elemento representa la punta del controlador que apunta hacia delante.
 
 **Instrucciones**
 
-* En el panel **proyecto** , busque el script **AttachToController** .
-* En el resultado de la búsqueda, haga doble clic en **AttachToController** script para ver el código en Visual Studio.
+* En el **panel Project,** busque **Script AttachToController.**
+* En el resultado de la búsqueda, haga doble clic en el script **AttachToController** para ver el código en Visual Studio.
 
 **Script AttachToController**
 
-El script **AttachToController** proporciona una manera sencilla de adjuntar cualquier objeto a un elemento y una manecilla de controlador especificados.
+El script **AttachToController** proporciona una manera sencilla de asociar cualquier objeto a una entrega y un elemento de controlador especificados.
 
-En **AttachElementToController ()**,
+En **AttachElementToController()**,
 
-* Comprobar la mano mediante **MotionControllerInfo. Handl**
-* Obtiene un elemento específico del controlador mediante **MotionControllerInfo. TryGetElement ()**
-* Después de recuperar la transformación del elemento del modelo del controlador, el objeto primario que se encuentra en él y establecer la posición local del objeto & la rotación en cero.
+* Comprobación de la entrega **mediante MotionControllerInfo.Handedness**
+* Obtener un elemento específico del controlador mediante **MotionControllerInfo.TryGetElement()**
+* Después de recuperar la transformación del elemento del modelo de controlador, primaria el objeto debajo de él y establezca la posición local del objeto & rotación en cero.
 
 ```cs
 public MotionControllerInfo.ControllerElementEnum Element { get { return element; } }
@@ -251,7 +251,7 @@ private void AttachElementToController(MotionControllerInfo newController)
      {
           if (!newController.TryGetElement(element, out elementTransform))
           {
-               Debug.LogError("Unable to find element of type " + element + " under controller " + newController.ControllerParent.name + "; not attaching.");
+               Debug.LogError("Unable to find element of type &quot; + element + &quot; under controller &quot; + newController.ControllerParent.name + &quot;; not attaching.");
                return;
           }
 
@@ -275,24 +275,24 @@ private void AttachElementToController(MotionControllerInfo newController)
 }
 ```
 
-La manera más sencilla de usar el script **AttachToController** es heredar de él, como hemos hecho en el caso de **ColorPickerWheel.** Simplemente invalide las funciones **OnAttachToController** y **OnDetachFromController** para realizar la instalación o el desglose cuando el controlador se detecta o se desconecta.
+La manera más sencilla de usar el script **AttachToController** es heredar de él, como hemos hecho en el caso de **ColorPickerWheel.** Simplemente invalide las funciones **OnAttachToController** y **OnDetachFromController** para realizar la configuración o el desglose cuando se detecta o desconecta el controlador.
 
 **Instrucciones**
 
-* En el panel **proyecto** , escriba en el cuadro de búsqueda **ColorPickerWheel**. También puede encontrarlo en assets/AppPrefabs/.
-* Arrastre **ColorPickerWheel** recurso prefabricado en el panel **jerarquía** .
-* Haga clic en **ColorPickerWheel** recurso prefabricado en el panel **jerarquía** .
-* En el panel **Inspector** , haga doble clic en **ColorPickerWheel** script para ver el código en Visual Studio.
+* En el **panel Project,** escriba en el cuadro de búsqueda **ColorPickerWheel**. También puede encontrarlo en Assets/AppPrefabs/.
+* Arrastre **el prefab ColorPickerWheel** al panel **Jerarquía.**
+* Haga clic en el prefab **ColorPickerWheel** en el panel **Jerarquía.**
+* En el **panel Inspector,** haga doble clic **en ColorPickerWheel** Script para ver el código en Visual Studio.
 
-![ColorPickerWheel recurso prefabricado](images/mr213-colorpickerwheel-1000px.jpg)
+![Prefab ColorPickerWheel](images/mr213-colorpickerwheel-1000px.jpg)
 
 **Script ColorPickerWheel**
 
-Dado que **ColorPickerWheel** hereda **AttachToController**, muestra la **mano** y el **elemento** en el panel del **Inspector** . Vamos a asociar la interfaz de usuario al elemento Touchpad del controlador izquierdo.
+Dado **que ColorPickerWheel** hereda **AttachToController,** muestra **Handedness** y **Element** en el **panel Inspector.** Se adjuntará la interfaz de usuario al elemento Touchpad del controlador izquierdo.
 
 ![Script ColorPickerWheel](images/mr213-attachtocontroller-300px.jpg)
 
-**ColorPickerWheel** invalida **OnAttachToController** y **OnDetachFromController** para suscribirse al evento de entrada que se usará en el capítulo siguiente para la selección de color con entrada de Touchpad.
+**ColorPickerWheel** invalida **OnAttachToController** y **OnDetachFromController** para suscribirse al evento de entrada que se usará en el capítulo siguiente para la selección de colores con entrada de panel táctil.
 
 ```cs
 public class ColorPickerWheel : AttachToController, IPointerTarget
@@ -314,11 +314,11 @@ public class ColorPickerWheel : AttachToController, IPointerTarget
 }
 ```
 
-* **Guarde** la escena y haga clic en el botón **reproducir** .
+* **Guarde la** escena y haga clic en **el botón de** reproducción.
 
 **Método alternativo para adjuntar objetos a los controladores**
 
-Se recomienda que los scripts hereden de **AttachToController** e invalide **OnAttachToController**. Sin embargo, esto no siempre es posible. Una alternativa es usarla como componente independiente. Esto puede ser útil si desea adjuntar un recurso prefabricado existente a un controlador sin refactorizar los scripts. Basta con que la clase espere a que Isattached (se establezca en true antes de realizar la instalación. La manera más sencilla de hacerlo es usar una corutina para ' Start '.
+Se recomienda que los scripts hereden **de AttachToController** e invalide **OnAttachToController.** Sin embargo, puede que esto no siempre sea posible. Una alternativa es usarlo como componente independiente. Esto puede ser útil cuando se desea asociar un objeto prefab existente a un controlador sin refactorizar los scripts. Simplemente haga que la clase espere a que IsAttached se establezca en true antes de realizar cualquier configuración. La manera más sencilla de hacerlo es mediante una corertina para "Iniciar".
 
 ```cs
 private IEnumerator Start() {
@@ -332,42 +332,42 @@ private IEnumerator Start() {
 }
 ```
 
-## <a name="chapter-3---working-with-touchpad-input"></a>Capítulo 3: trabajar con la entrada de Touchpad
+## <a name="chapter-3---working-with-touchpad-input"></a>Capítulo 3: Trabajar con la entrada del panel táctil
 
 >[!VIDEO https://www.youtube.com/embed/SUyw0kxZPFw]
 
 ### <a name="objectives"></a>Objetivos
 
-* Obtenga información sobre cómo obtener eventos de datos de entrada de Touchpad
-* Aprenda a usar la información de posición del eje Touchpad para la experiencia de la aplicación
+* Obtenga información sobre cómo obtener eventos de datos de entrada del panel táctil.
+* Obtenga información sobre cómo usar la información de posición del eje del panel táctil para la experiencia de la aplicación.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
-* En el panel **jerarquía** , haga clic en **ColorPickerWheel**
-* En el panel **Inspector** , en **animación**, haga doble clic en **ColorPickerWheelController**
-* Podrá ver la pestaña **animador** abierta
+* En el panel **Jerarquía,** haga clic **en ColorPickerWheel.**
+* En el **panel Inspector,** en **Animator**, haga doble clic **en ColorPickerWheelController.**
+* Podrá ver la pestaña **Animator** abierta.
 
-**Mostrar u ocultar la interfaz de usuario con el controlador de animación de Unity**
+**Mostrar o ocultar la interfaz de usuario con el controlador de animación de Unity**
 
-Para mostrar y ocultar la interfaz de usuario de **ColorPickerWheel** con la animación, usamos el [sistema de animación de Unity](https://docs.unity3d.com/Manual/AnimationOverview.html). Si se establece la propiedad **visible** de **ColorPickerWheel** en los desencadenadores true o false, se **muestran** y **ocultan** los desencadenadores de animación. Los parámetros de **Mostrar** y **ocultar** se definen en el controlador de animación **ColorPickerWheelController** .
+Para mostrar y ocultar la interfaz **de usuario colorPickerWheel** con animación, se usa el sistema [de animación de Unity](https://docs.unity3d.com/Manual/AnimationOverview.html). Establecer la propiedad Visible  **de ColorPickerWheel** en los desencadenadores true o false **Mostrar** y ocultar **desencadenadores de** animación. **Los** parámetros **Mostrar y** Ocultar se definen en el controlador de animación **ColorPickerWheelController.**
 
 ![Controlador de animación de Unity](images/mr123-animationcontroller-550px.jpg)
 
 **Instrucciones**
 
-* En el panel **jerarquía** , seleccione **ColorPickerWheel** recurso prefabricado
-* En el panel **Inspector** , haga doble clic en **ColorPickerWheel** script para ver el código en Visual Studio
+* En el panel **Jerarquía,** seleccione **ColorPickerWheel** prefab
+* En el **panel Inspector,** haga doble clic en el script **ColorPickerWheel** para ver el código en la Visual Studio
 
 **Script ColorPickerWheel**
 
-**ColorPickerWheel** se suscribe al evento **InteractionSourceUpdated** de Unity para escuchar eventos Touchpad.
+**ColorPickerWheel** se suscribe al evento **InteractionSourceUpdated** de Unity para escuchar los eventos del panel táctil.
 
-En **InteractionSourceUpdated ()**, el script primero comprueba para asegurarse de que:
+En **InteractionSourceUpdated()**, el script comprueba primero para asegurarse de que:
 
-* es realmente un evento Touchpad (obj. state.**touchpadTouched**)
-* se origina desde el controlador izquierdo (obj. state. Source).**zurdo**)
+* es realmente un evento touchpad (obj.state.**touchpadTouched**)
+* se origina en el controlador izquierdo (obj.state.source.**handedness**)
 
-Si ambos son true, la posición del panel táctil (obj. state.**touchpadPosition**) se asigna a **selectorPosition**.
+Si ambos son true, la posición del panel táctil (obj.state.**touchpadPosition**) se asigna a **selectorPosition**.
 
 ```cs
 private void InteractionSourceUpdated(InteractionSourceUpdatedEventArgs obj)
@@ -380,7 +380,7 @@ private void InteractionSourceUpdated(InteractionSourceUpdatedEventArgs obj)
 }
 ```
 
-En **Update ()**, en función de la propiedad **visible** , desencadena los desencadenadores Mostrar y ocultar animación en el componente de animación del selector de colores.
+En **Update()**, en función de la **propiedad visible,** desencadena los desencadenadores de animación Mostrar y Ocultar en el componente del animador del selector de colores.
 
 ```cs
 if (visible != visibleLastFrame)
@@ -396,9 +396,9 @@ if (visible != visibleLastFrame)
 }
 ```
 
-En **Update ()**, **selectorPosition** se usa para convertir un rayo en el Colisionador de malla de la rueda de colores, que devuelve una posición UV. Esta posición se puede usar para buscar la coordenada de píxeles y el valor de color de la textura de la rueda de colores. Este valor es accesible para otros scripts a través de la propiedad **SelectedColor** .
+En **Update()**, **selectorPosition** se usa para convertir un rayo en el colisionador de malla de la rueda de color, que devuelve una posición UV. A continuación, esta posición se puede usar para buscar la coordenada de píxeles y el valor de color de la textura de la rueda de color. Este valor es accesible para otros scripts a través de **la propiedad SelectedColor.**
 
-![Rueda del selector de colores raycasting](images/mr213-colorpickerwheel-raycast-700px.png)
+![Selector de colores Wheel Raycasting](images/mr213-colorpickerwheel-raycast-700px.png)
 
 ```cs
 ...
@@ -429,7 +429,7 @@ En **Update ()**, **selectorPosition** se usa para convertir un rayo en el Colis
 }
 ```
 
-## <a name="chapter-4---overriding-controller-model"></a>Capítulo 4: invalidación del modelo de controlador
+## <a name="chapter-4---overriding-controller-model"></a>Capítulo 4: Invalidación del modelo de controlador
 
 >[!VIDEO https://www.youtube.com/embed/8gBFqA_DZ_U]
 
@@ -439,42 +439,42 @@ En **Update ()**, **selectorPosition** se usa para convertir un rayo en el Colis
 
 ![MR213_BrushToolOverride](images/mr213-brushtooloverride-500px.jpg)
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
-* Haga clic en **MotionControllers** en el panel **jerarquía** .
-* Haga clic en el círculo en el lado derecho del campo **alternativo de controlador derecho** .
-* Escriba **"BrushController**" y seleccione recurso prefabricado en el resultado. Puede encontrarlo en assets/AppPrefabs/**BrushController**.
-* Comprobar **usar siempre el modelo derecho alternativo**
+* Haga **clic en MotionControllers** en el panel **Jerarquía.**
+* Haga clic en el círculo del lado derecho del **campo Controlador derecho** alternativo.
+* Escriba **"BrushController"** y seleccione el objeto prefab del resultado. Puede encontrarlo en Assets/AppPrefabs/**BrushController**.
+* Comprobar **usar siempre un modelo de derecha alternativo**
 
 ![MR213_BrushToolOverrideSlot](images/mr213-motioncontrollersoverride-700px.jpg)
 
-No es necesario que **BrushController** recurso prefabricado esté incluido en el panel de **jerarquías** . Sin embargo, para desproteger sus componentes secundarios:
+El **prefab BrushController** no tiene que incluirse en el panel **Jerarquía.** Sin embargo, para comprobar sus componentes secundarios:
 
-* En el panel **proyecto** , escriba **BrushController** y arrastre **BrushController** recurso prefabricado al panel **jerarquía** .
+* En el **panel Project,** escriba **BrushController** y arrastre el objeto prefab **BrushController** al panel **Jerarquía.**
 
 ![MR213_BrushTool_Prefab2](images/mr213-brushtool-prefab-1000px.jpg)
 
-Encontrará el componente de **información** en **BrushController**. Usaremos su transformación para iniciar o detener las líneas de dibujo.
+Encontrará el componente **Tip en** **BrushController.** Usaremos su transformación para iniciar o detener el dibujo de líneas.
 
-* Elimine el **BrushController** en el panel de **jerarquías** .
-* **Guarde** la escena y haga clic en el botón **reproducir** . Podrá ver el modelo de pincel reemplazado por el controlador de movimiento de la derecha.
+* Elimine **BrushController** del panel **Jerarquía.**
+* **Guarde la** escena y haga clic en **el botón de** reproducción. Podrá ver que el modelo de pincel ha reemplazado al controlador de movimiento derecho.
 
-## <a name="chapter-5---painting-with-select-input"></a>Capítulo 5: pintar con seleccionar entrada
+## <a name="chapter-5---painting-with-select-input"></a>Capítulo 5: Pintar con la entrada Select
 
 >[!VIDEO https://www.youtube.com/embed/QTrYaMHIs7w]
 
 ### <a name="objectives"></a>Objetivos
 
-* Obtenga información sobre cómo usar el evento de botón Seleccionar para iniciar y detener un dibujo de línea
+* Obtenga información sobre cómo usar el evento de botón Seleccionar para iniciar y detener un dibujo de línea.
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
-* Busque **BrushController** recurso prefabricado en el panel **proyecto** .
-* En el panel **Inspector** , haga doble clic en **BrushController** script para ver el código en Visual Studio
+* Busque **brushController** prefab en el **panel Project** datos.
+* En el **panel Inspector,** haga doble clic **en BrushController** Script para ver el código en Visual Studio
 
 **Script BrushController**
 
-**BrushController** se suscribe a los eventos **InteractionSourcePressed** y **InteractionSourceReleased** de InteractionManager. Cuando se desencadena el evento **InteractionSourcePressed** , la propiedad **Draw** del pincel se establece en true. Cuando se desencadena el evento **InteractionSourceReleased** , la propiedad **Draw** del pincel se establece en false.
+**BrushController** se suscribe a los eventos **InteractionSourcePressed** e **InteractionSourceReleased de** InteractionManager. Cuando se desencadena el evento **InteractionSourcePressed,** la propiedad **Draw** del pincel se establece en true; cuando **se desencadena el evento InteractionSourceReleased,** la propiedad **Draw** del pincel se establece en false.
 
 ```cs
 private void InteractionSourcePressed(InteractionSourcePressedEventArgs obj)
@@ -494,7 +494,7 @@ private void InteractionSourceReleased(InteractionSourceReleasedEventArgs obj)
 }
 ```
 
-Mientras **Draw** está establecido en true, el pincel generará puntos en una instancia de Unity **LineRenderer**. Se mantiene una referencia a este recurso prefabricado en el campo **Stroke recurso prefabricado** del pincel.
+Aunque **Draw** está establecido en true, el pincel generará puntos en un representador de línea **de** Unity con instancias. Se mantiene una referencia a este objeto prefab en el campo **Stroke Prefab (Prefab de** trazo) del pincel.
 
 ```cs
 private IEnumerator DrawOverTime()
@@ -535,7 +535,7 @@ private IEnumerator DrawOverTime()
 }
 ```
 
-Para usar el color seleccionado actualmente en la interfaz de usuario de la rueda del selector de colores, **BrushController** debe tener una referencia al objeto **ColorPickerWheel** . Dado que se crea una instancia de recurso prefabricado de **BrushController** en tiempo de ejecución como controlador de reemplazo, cualquier referencia a los objetos de la escena tendrá que establecerse en tiempo de ejecución. En este caso, usamos **GameObject. FindObjectOfType** para encontrar **ColorPickerWheel**:
+Para usar el color seleccionado actualmente en la interfaz de usuario de la rueda del selector de colores, **BrushController** debe tener una referencia al **objeto ColorPickerWheel.** Dado que se crea una instancia del objeto **prefab BrushController** en tiempo de ejecución como controlador de reemplazo, cualquier referencia a los objetos de la escena tendrá que establecerse en tiempo de ejecución. En este caso, usamos **GameObject.FindObjectOfType para** buscar **ColorPickerWheel**:
 
 ```cs
 private void OnEnable()
@@ -549,35 +549,35 @@ private void OnEnable()
 }
 ```
 
-* **Guarde** la escena y haga clic en el botón **reproducir** . Podrá dibujar las líneas y pintar con el botón seleccionar del controlador de la derecha.
+* **Guarde la** escena y haga clic en **el botón de** reproducción. Podrá dibujar las líneas y pintar con el botón seleccionar del controlador derecho.
 
-## <a name="chapter-6---object-spawning-with-select-input"></a>Capítulo 6: generación de objetos con selección de entrada
+## <a name="chapter-6---object-spawning-with-select-input"></a>Capítulo 6: Generación de objetos con la entrada Select
 
 >[!VIDEO https://www.youtube.com/embed/z4IxyzFHP0U]
 
 ### <a name="objectives"></a>Objetivos
 
-* Obtenga información sobre cómo usar los eventos de entrada del botón seleccionar y agarre
-* Obtener información sobre cómo crear instancias de objetos
+* Obtenga información sobre cómo usar los eventos de entrada del botón Seleccionar y comprender.
+* Aprenda a crear instancias de objetos
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
-* En el panel **proyecto** , escriba **ObjectSpawner** en el cuadro de búsqueda. También puede encontrarlo en assets/AppPrefabs/
-* Arrastre **ObjectSpawner** recurso prefabricado en el panel **jerarquía** .
-* Haga clic en **ObjectSpawner** en el panel **jerarquía** .
-* **ObjectSpawner** tiene un campo denominado **origen de color**.
-* En el panel **jerarquía** , arrastre la referencia **ColorPickerWheel** a este campo.
+* En el **Project,** escriba **ObjectSpawner en** el cuadro de búsqueda. También puede encontrarlo en Assets/AppPrefabs/
+* Arrastre el **objeto Prefab ObjectSpawner** al panel **Jerarquía.**
+* Haga **clic en ObjectSpawner en** el panel Hierarchy **(Jerarquía).**
+* **ObjectSpawner tiene** un campo denominado **Origen de color.**
+* En el panel **Jerarquía,** arrastre la **referencia ColorPickerWheel** a este campo.
 
-    ![Inspector de generación de objetos](images/mr213-objectspawnercolorpickerwheel-650px.jpg)
+    ![Object Spawner Inspector](images/mr213-objectspawnercolorpickerwheel-650px.jpg)
 
-* Haga clic en **ObjectSpawner** recurso prefabricado en el panel **jerarquía** .
-* En el panel **Inspector** , haga doble clic en **ObjectSpawner** script para ver el código en Visual Studio.
+* Haga clic en el objeto **Prefab ObjectSpawner** en el panel **Jerarquía.**
+* En el **panel Inspector,** haga doble clic **en ObjectSpawner Script (ObjectSpawner** Script) para ver el código en Visual Studio.
 
 **Script ObjectSpawner**
 
-El **ObjectSpawner** crea instancias de las copias de una malla primitiva (cubo, esfera, cilindro) en el espacio. Cuando se detecta un **InteractionSourcePressed** , comprueba la mano y si se trata de un evento **InteractionSourcePressType. agarre** o **InteractionSourcePressType. Select** .
+**ObjectSpawner crea** instancias de copias de una malla primitiva (cubo, esfera, cilindro) en el espacio. Cuando se **detecta interactionSourcePressed,** comprueba la entrega y si se trata de un evento **InteractionSourcePressType.Grasp** o **InteractionSourcePressType.Select.**
 
-Para un evento de **agarre** , incrementa el índice del tipo de malla actual (esfera, Cube, cylinder)
+En el **caso de un evento Dedo,** incrementa el índice del tipo de malla actual (esfera, cubo, cilindro)
 
 ```cs
 private void InteractionSourcePressed(InteractionSourcePressedEventArgs obj)
@@ -615,7 +615,7 @@ private void InteractionSourcePressed(InteractionSourcePressedEventArgs obj)
 }
 ```
 
-En el caso de un evento **Select** , en **SpawnObject ()**, se crea una instancia de un nuevo objeto, no primario y se publica en el mundo.
+Para un **evento Select,** en **SpawnObject()**, se crea una instancia de un nuevo objeto, no tiene elementos primarios y se libera en el mundo.
 
 ```cs
 private void SpawnObject()
@@ -631,88 +631,88 @@ private void SpawnObject()
 }
 ```
 
-**ObjectSpawner** usa **ColorPickerWheel** para establecer el color del material del objeto de presentación. A los objetos generados se les asigna una instancia de este material para conservar su color.
+**ObjectSpawner usa** **ColorPickerWheel** para establecer el color del material del objeto de presentación. A los objetos generados se les da una instancia de este material para que conserven su color.
 
-* **Guarde** la escena y haga clic en el botón **reproducir** .
+* **Guarde la** escena y haga clic en **el botón de** reproducción.
 
-Podrá cambiar los objetos con el botón de agarre y generar objetos con el botón seleccionar.
+Podrá cambiar los objetos con el botón Comprender y generar objetos con el botón Seleccionar.
 
-## <a name="build-and-deploy-app-to-mixed-reality-portal"></a>Creación e implementación de una aplicación en el portal de realidad mixta
+## <a name="build-and-deploy-app-to-mixed-reality-portal"></a>Compilación e implementación de una aplicación en Portal de realidad mixta
 
-* En Unity, seleccione **archivo > configuración de compilación**.
-* Haga clic en **Agregar escenas abiertas** para agregar la escena actual a las **escenas de la compilación**.
+* En Unity, seleccione **File > Build Configuración**.
+* Haga **clic en Add Open Scenes** (Agregar escenas abiertas) para agregar la escena actual a Scenes In Build **(Escenas en la compilación).**
 * Haga clic en **Generar**.
-* Cree una **nueva carpeta** denominada "app".
-* Haga clic en la carpeta de la **aplicación** .
+* Cree una **nueva carpeta** denominada "App".
+* Haga clic en la **carpeta** Aplicación.
 * Haga clic en **Seleccionar carpeta**.
-* Cuando se haya realizado Unity, aparecerá una ventana del explorador de archivos.
-* Abra la carpeta de la **aplicación** .
-* Haga doble clic en el archivo de solución de Visual Studio **YourSceneName. sln** .
-* Con la barra de herramientas superior de Visual Studio, cambie el destino de Debug a **Release** y de ARM a **x64**.
-* Haga clic en la flecha desplegable situada junto al botón dispositivo y seleccione **equipo local**.
-* Haga clic en **depurar-> iniciar sin depurar** en el menú o presione **Ctrl + F5**.
+* Cuando Unity haya terminado, aparecerá Explorador de archivos ventana.
+* Abra la **carpeta** Aplicación.
+* Haga doble clic **en YourSceneName.sln** Visual Studio archivo de solución.
+* Con la barra de herramientas superior Visual Studio, cambie el destino de Depurar a **Versión** y de ARM a **X64.**
+* Haga clic en la flecha desplegable situada junto al botón Dispositivo y seleccione **Equipo local.**
+* Haga **clic en Depurar -> Iniciar sin depurar** en el menú o presione Ctrl + **F5**.
 
-Ahora la aplicación se crea e instala en el portal de realidad mixta. Puede volver a iniciarlo a través del menú Inicio en el portal de realidad mixta.
+Ahora la aplicación se ha creado e instalado en Portal de realidad mixta. Puede iniciarla de nuevo a través de menú Inicio en Portal de realidad mixta.
 
-## <a name="advanced-design---brush-tools-with-radial-layout"></a>Herramientas de pincel de diseño avanzadas con diseño radial
+## <a name="advanced-design---brush-tools-with-radial-layout"></a>Diseño avanzado: herramientas de pincel con diseño radial
 
 ![MixedReality213 Main](images/mr213-main-600px.jpg)
 
-En este capítulo, obtendrá información sobre cómo reemplazar el modelo de controlador de movimiento predeterminado con una colección de herramientas de pincel personalizada. Como referencia, puede encontrar la escena completada **MixedReality213Advanced** en la carpeta **Scenes** .
+En este capítulo, aprenderá a reemplazar el modelo de controlador de movimiento predeterminado por una colección de herramientas de pincel personalizada. Como referencia, puede encontrar la escena completada **MixedReality213Advanced en** la **carpeta Scenes.**
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
-* En el panel **proyecto** , escriba **BrushSelector** en el cuadro de búsqueda. También puede encontrarlo en assets/AppPrefabs/
-* Arrastre **BrushSelector** recurso prefabricado en el panel **jerarquía** .
-* Para la organización, cree un GameObject vacío denominado **brushes** .
-* Arrastre los siguientes Prefabs desde el panel **proyecto** a los **pinceles**
-    * Assets/AppPrefabs/**BrushFat**
-    * Assets/AppPrefabs/**BrushThin**
-    * Activos/AppPrefabs/**borrador**
-    * Assets/AppPrefabs/**MarkerFat**
-    * Assets/AppPrefabs/**MarkerThin**
-    * Activos/AppPrefabs/**lápiz**
+* En el **panel Project,** escriba **BrushSelector en** el cuadro de búsqueda . También puede encontrarlo en Assets/AppPrefabs/
+* Arrastre el **objeto prefab BrushSelector** al panel **Jerarquía.**
+* Para la organización, cree un Objeto GameObject vacío denominado **Brushes.**
+* Arrastre los siguientes elementos prefabs **desde Project** panel a **Pinceles.**
+    * Assets/AppPrefabs/BrushRev
+    * Assets/AppPrefabs/BrushThin
+    * Assets/AppPrefabs/Eraser
+    * Assets/AppPrefabs/MarkerRev
+    * Assets/AppPrefabs/MarkerThin
+    * Assets/AppPrefabs/Pencil
 
     ![Pinceles](images/mixedreality213-brushes-250px.png)
 
-* Haga clic en **MotionControllers** recurso prefabricado en el panel **jerarquía** .
-* En el panel **Inspector** , desactive **usar modelo de derecho alternativo siempre** en el **visualizador de controlador de movimiento**
-* En el panel **jerarquía** , haga clic en **BrushSelector**
+* Haga clic en el prefab **MotionControllers** en el panel **Jerarquía.**
+* En el **panel Inspector,** desactive **Usar siempre el modelo derecho alternativo** en el **visualizador del controlador de movimiento.**
+* En el panel **Jerarquía,** haga clic **en BrushSelector.**
 * **BrushSelector** tiene un campo denominado **ColorPicker**
-* En el panel **jerarquía** , arrastre el campo **ColorPickerWheel** al **ColorPicker** en el panel **Inspector** .
+* En el panel **Jerarquía,** arrastre **ColorPickerWheel** al **campo ColorPicker** **del** panel Inspector.
 
-    ![Asignar ColorPickerWheel al selector de pincel](images/mr213-brushselector-500px.jpg)
+    ![Asignación de ColorPickerWheel al selector de pinceles](images/mr213-brushselector-500px.jpg)
 
-* En el panel **jerarquía** , en **BrushSelector** recurso prefabricado, seleccione el objeto de **menú** .
-* En el panel **Inspector** , en el componente **LineObjectCollection** , abra la lista desplegable de la matriz de **objetos** . Verá 6 ranuras vacías.
-* En el panel **jerarquía** , arrastre cada uno de los Prefabs primarios bajo los **pinceles** GameObject a estas ranuras en cualquier orden. (Asegúrese de que está arrastrando el Prefabs de la escena, no el Prefabs en la carpeta del proyecto).
+* En el panel **Jerarquía,** en **BrushSelector** prefab, seleccione el **objeto Menu.**
+* En el **panel Inspector,** en el **componente LineObjectCollection,** abra la lista **desplegable Matriz** de objetos. Verá 6 ranuras vacías.
+* En el panel **Jerarquía,** arrastre cada uno de los elementos prefabs primarios bajo el objeto GameObject **Brushes** a estas ranuras en cualquier orden. (Asegúrese de arrastrar los elementos prefabs desde la escena, no los elementos prefab en la carpeta del proyecto).
 
-![Selector de pincel](images/mr213-brushselectorbrushes-700px.jpg)
+![Selector de pinceles](images/mr213-brushselectorbrushes-700px.jpg)
 
-**BrushSelector recurso prefabricado**
+**Prefab BrushSelector**
 
-Dado que **BrushSelector** hereda **AttachToController**, muestra las opciones de la **mano** y el **elemento** en el panel del **Inspector** . Hemos seleccionado **right** y **Pointing** para adjuntar herramientas de pincel al controlador de la derecha con dirección hacia delante.
+Dado que **BrushSelector** hereda **AttachToController,** muestra las opciones **Handedness** y **Element** en el **panel Inspector.** Hemos seleccionado **Right (Derecha)** **y Pointing Pose (Posición** de apuntar) para adjuntar herramientas de pincel al controlador derecho con dirección hacia delante.
 
-El **BrushSelector** hace uso de dos utilidades:
+**BrushSelector usa** dos utilidades:
 
-* **Ellipse**: se usa para generar puntos en el espacio a lo largo de una forma de elipse.
-* **LineObjectCollection**: distribuye objetos usando los puntos generados por cualquier clase de línea (por ejemplo, elipse). Esto es lo que vamos a usar para colocar los pinceles a lo largo de la forma de elipse.
+* **Elipse:** se usa para generar puntos en el espacio a lo largo de una forma de elipse.
+* **LineObjectCollection:** distribuye objetos mediante los puntos generados por cualquier clase Line (por ejemplo, Ellipse). Esto es lo que usaremos para colocar los pinceles a lo largo de la forma Elipse.
 
 Cuando se combinan, estas utilidades se pueden usar para crear un menú radial.
 
 **Script LineObjectCollection**
 
-**LineObjectCollection** tiene controles para el tamaño, la posición y la rotación de objetos distribuidos a lo largo de su línea. Esto resulta útil para crear menús radiales como el selector de pincel. Para crear la apariencia de los pinceles que se escalan verticalmente desde cero a medida que se aproximan a la posición seleccionada del centro, los picos de la curva **ObjectScale** en el centro y en las cintas se desconectan en los bordes.
+**LineObjectCollection tiene** controles para el tamaño, la posición y la rotación de los objetos distribuidos a lo largo de su línea. Esto resulta útil para crear menús radiales como el selector de pinceles. Para crear la apariencia de pinceles que se escalan verticalmente desde nada cuando se aproximan a la posición central seleccionada, la curva **ObjectScale** alcanza los picos en el centro y se apaga en los bordes.
 
 **Script BrushSelector**
 
-En el caso de **BrushSelector**, hemos elegido usar la animación de procedimientos. En primer lugar, el script **LineObjectCollection** distribuye los modelos de pincel en una elipse. Después, cada pincel es responsable de mantener su posición en la mano del usuario en función de su valor de **DisplayMode** , que cambia en función de la selección. Elegimos un enfoque de procedimiento debido a la alta probabilidad de que las transiciones de posición del pincel se interrumpan cuando el usuario selecciona pinceles. Las animaciones Mecanim pueden controlar las interrupciones correctamente, pero suelen ser más complicadas que una sencilla operación lerp.
+En el caso de **BrushSelector,** hemos elegido usar la animación de procedimientos. En primer lugar, el script **LineObjectCollection** distribuye los modelos de pincel en una elipse. A continuación, cada pincel es responsable de mantener su posición en la mano del usuario en función de su valor **DisplayMode,** que cambia en función de la selección. Elegimos un enfoque de procedimiento debido a la alta probabilidad de que se interrumpan las transiciones de posición del pincel a medida que el usuario selecciona pinceles. Las animaciones Mecanim pueden controlar las interrupciones correctamente, pero tienden a ser más complicadas que una sencilla operación Lerp.
 
-**BrushSelector** usa una combinación de ambos. Cuando se detecta la entrada del panel táctil, las opciones de pincel se vuelven visibles y se escalan verticalmente a lo largo del menú radial. Después de un período de tiempo de espera (que indica que el usuario ha realizado una selección), las opciones de pincel se vuelven a reducir de nuevo y solo se mantiene el pincel seleccionado.
+**BrushSelector** usa una combinación de ambos. Cuando se detecta la entrada del panel táctil, las opciones de pincel se vuelven visibles y se escalan verticalmente a lo largo del menú radial. Después de un período de tiempo de espera (que indica que el usuario ha realizado una selección), las opciones de pincel se escalan verticalmente de nuevo, dejando solo el pincel seleccionado.
 
 **Visualización de la entrada del panel táctil**
 
-Incluso en los casos en los que el modelo de controlador se ha reemplazado por completo, puede resultar útil Mostrar la entrada en las entradas del modelo original. Esto ayuda a realizar las acciones del usuario en realidad. En el caso de **BrushSelector** , hemos optado por hacer que el Touchpad esté brevemente visible cuando se recibe la entrada. Para ello, se recupera el elemento Touchpad del controlador, se sustituye su material por un material personalizado y, después, se aplica un degradado al color de ese material en función de la última vez que se recibió la entrada Touchpad.
+Incluso en los casos en los que el modelo de controlador se ha reemplazado por completo, puede resultar útil mostrar la entrada en las entradas del modelo original. Esto ayuda a reducir las acciones del usuario en realidad. Para **BrushSelector,** hemos elegido hacer que el panel táctil sea brevemente visible cuando se recibe la entrada. Esto se hizo recuperando el elemento Touchpad del controlador, reemplazando su material por un material personalizado y aplicando después un degradado al color de ese material en función de la última vez que se recibió la entrada del panel táctil.
 
 ```cs
 protected override void OnAttachToController()
@@ -745,13 +745,13 @@ private void Update()
 }
 ```
 
-**Selección de la herramienta pincel con entrada Touchpad**
+**Selección de herramientas de pincel con entrada de panel táctil**
 
-Cuando el selector de pincel detecta la entrada presionada del Touchpad, comprueba la posición de la entrada para determinar si estaba a la izquierda o a la derecha.
+Cuando el selector de pincel detecta la entrada presionada del panel táctil, comprueba la posición de la entrada para determinar si estaba a la izquierda o a la derecha.
 
 **Grosor del trazo con selectPressedAmount**
 
-En lugar del evento **InteractionSourcePressType. Select** en **InteractionSourcePressed ()**, puede obtener el valor analógico de la cantidad presionada a través de **selectPressedAmount**. Este valor se puede recuperar en **InteractionSourceUpdated ()**.
+En lugar **del evento InteractionSourcePressType.Select** en **InteractionSourcePressed(),** puede obtener el valor análogo de la cantidad presionada mediante **selectPressedAmount**. Este valor se puede recuperar en **InteractionSourceUpdated()**.
 
 ```cs
 private void InteractionSourceUpdated(InteractionSourceUpdatedEventArgs obj)
@@ -795,50 +795,50 @@ private void InteractionSourceUpdated(InteractionSourceUpdatedEventArgs obj)
 
 **Script de borrador**
 
-El **borrador** es un tipo especial de pincel que reemplaza la función **DrawOverTime ()** del **pincel** base. Mientras que Draw es true, el borrador comprueba si su sugerencia se corta con cualquier trazo de pincel existente. Si lo hace, se agregan a una cola para que se reduzcan y se eliminen.
+**Eraser** es un tipo especial de pincel que invalida la **función** **DrawOverTime()** del pincel base. Aunque Draw es true, el borrador comprueba si su propina forma una intersección con los trazos de pincel existentes. Si es así, se agregan a una cola que se va a bajar y eliminar.
 
-## <a name="advanced-design---teleportation-and-locomotion"></a>Diseño avanzado: teleportabilidad y Locomotion
+## <a name="advanced-design---teleportation-and-locomotion"></a>Diseño avanzado: teleportación y degradación
 
-Si desea permitir que el usuario se mueva por la escena con la teleportabilidad mediante el Stick, use **MixedRealityCameraParent** en lugar de **MixedRealityCamera**. También debe agregar **InputManager** y **DefaultCursor**. Dado que **MixedRealityCameraParent** ya incluye **MotionControllers** y el **límite** como componentes secundarios, debe quitar **MotionControllers** y recurso prefabricado de **entorno** existentes.
+Si desea permitir que el usuario se mueva por la escena con la teleportación mediante la herramienta thumbstick, use **MixedRealityCameraParent en** lugar de **MixedRealityCamera**. También debe agregar **InputManager y** **DefaultCursor**. Puesto **que MixedRealityCameraParent** ya incluye **MotionControllers** y **Boundary** como componentes secundarios, debe quitar los elementos MotionController y **Environment** prefab **existentes.**
 
-### <a name="instructions"></a>Instructions
+### <a name="instructions"></a>Instrucciones
 
-* En el panel **jerarquía** , elimine **MixedRealityCamera**, **Environment** y **MotionControllers**
-* En el **panel Proyecto**, busque y arrastre el siguiente Prefabs al panel **jerarquía** :
-    * Assets/AppPrefabs/INPUT/Prefabs/**MixedRealityCameraParent**
-    * Assets/AppPrefabs/INPUT/Prefabs/**InputManager**
-    * Assets/AppPrefabs/INPUT/Prefabs/cursor/**DefaultCursor**
+* En el panel **Jerarquía,** elimine **MixedRealityCamera**, **Environment** y **MotionControllers.**
+* En el **panel Project ,** busque y arrastre los siguientes elementos prefabs al panel **Jerarquía:**
+    * Assets/AppPrefabs/Input/Prefabs/**MixedRealityCameraParent**
+    * Assets/AppPrefabs/Input/Prefabs/**InputManager**
+    * Assets/AppPrefabs/Input/Prefabs/Cursor/**DefaultCursor**
 
-    ![Cámara principal de realidad mixta](images/mr213-cameraparent-300px.png)
+    ![Cámara de realidad mixta principal](images/mr213-cameraparent-300px.png)
 
-* En el panel **jerarquía** , haga clic en **Administrador de entrada** .
-* En el panel **Inspector** , desplácese hacia abajo hasta la sección **selector simple de puntero único** .
-* En el panel **jerarquía** , arrastre **DefaultCursor** al campo **cursor** .
+* En el panel **Jerarquía,** haga clic en **Administrador de entrada.**
+* En el **panel Inspector,** desplácese hacia abajo hasta la **sección Simple Single Pointer Selector (Selector de puntero simple).**
+* En el panel **Jerarquía,** arrastre **DefaultCursor** al **campo Cursor.**
 
     ![Asignación de DefaultCursor](images/mr213-defaultcursor-500px.png)
 
-* **Guarde** la escena y haga clic en el botón **reproducir** . Podrá usar el stick analógico para girar izquierda/derecha o teletranspórtate.
+* **Guarde la** escena y haga clic en **el botón de** reproducción. Podrá usar el botón de posición para girar a la izquierda o a la derecha o teleportar.
 
 ## <a name="the-end"></a>Fin
 
 Y este es el final de este tutorial. Ha aprendido:
 
-* Cómo trabajar con modelos de controlador de movimiento en el modo de juego y el tiempo de ejecución de Unity.
+* Cómo trabajar con modelos de controlador de movimiento en el modo de juego y el entorno de ejecución de Unity.
 * Cómo usar diferentes tipos de eventos de botón y sus aplicaciones.
-* Cómo superponer los elementos de la interfaz de usuario en la parte superior del controlador o personalizarlos totalmente.
+* Cómo superponer elementos de la interfaz de usuario sobre el controlador o personalizarlo por completo.
 
-Ya está listo para empezar a crear su propia experiencia envolvente con los controladores de movimiento.
+Ya está listo para empezar a crear su propia experiencia inmersiva con controladores de movimiento.
 
 ## <a name="completed-scenes"></a>Escenas completadas
 
-* En el panel del **proyecto** de Unity, haga clic en la carpeta **Scenes** .
+* En el panel **de** Project de Unity, haga clic en la carpeta **Escenas.**
 * Encontrará dos escenas de Unity **MixedReality213** y **MixedReality213Advanced**.
-    * **MixedReality213**: escena completada con un solo pincel
-    * **MixedReality213Advanced**: escena completada con varios pinceles en el ejemplo de la cantidad de imprenta del botón seleccionar
+    * **MixedReality213:** escena completada con un solo pincel
+    * **MixedReality213Advanced:** escena completada con varios pinceles con el ejemplo de cantidad de presión del botón select
 
 ## <a name="see-also"></a>Consulte también
 
-* [MR 213 archivos de proyecto de entrada](https://github.com/Microsoft/MixedReality213)
-* [Kit de herramientas de realidad mixta: escena de prueba de controlador de movimiento](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/Input/Scenes)
-* [Kit de herramientas de realidad mixta: mecánica de captación](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/MotionControllers-GrabMechanics)
-* [Instrucciones de desarrollo de controlador de movimiento](../design/motion-controllers.md)
+* [Archivos de proyecto mr input 213](https://github.com/Microsoft/MixedReality213)
+* [Mixed Reality Toolkit: escena de prueba del controlador de movimiento](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/Input/Scenes)
+* [Mixed Reality Toolkit- Mecánica de toma](https://github.com/Microsoft/MixedRealityToolkit-Unity/tree/htk_release/Assets/HoloToolkit-Examples/MotionControllers-GrabMechanics)
+* [Directrices de desarrollo del controlador de movimiento](../design/motion-controllers.md)

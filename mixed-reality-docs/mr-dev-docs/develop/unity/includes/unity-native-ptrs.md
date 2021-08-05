@@ -1,19 +1,19 @@
 ---
-ms.openlocfilehash: 612168d7a1e56f74350ee8244e26e5ad886503c2
-ms.sourcegitcommit: 441ef99e6090081c6cd3aa88ed21e13e941f0cc6
+ms.openlocfilehash: 78296dd4e6667c34926c954774547b21a223c5f4b6635476c51046c7ca22cdc3
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "102475084"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115208410"
 ---
 # <a name="mrtk"></a>[MRTK](#tab/mrtk)
 
 ## <a name="windowsmixedrealityutilities"></a>WindowsMixedRealityUtilities
 
-**Espacio de nombres:** *Microsoft. MixedReality. Toolkit. WindowsMixedReality*<br>
+**Espacio de nombres:** *Microsoft.MixedReality.Toolkit. WindowsMixedReality*<br>
 **Tipo:** *WindowsMixedRealityUtilities*
 
-MRTK proporciona tipos ya basados en el SDK de WSA y XR heredado a través de la clase **WindowsMixedRealityUtilities** .
+MRTK proporciona tipos ya clasificados en el SDK de WSA y XR heredados a través de la **clase WindowsMixedRealityUtilities.**
 
 ```cs
 public static HolographicFrame CurrentHolographicFrame { get; }
@@ -21,14 +21,14 @@ public static SpatialCoordinateSystem SpatialCoordinateSystem { get; }
 public static SpatialInteractionManager SpatialInteractionManager { get; }
 ```
 
-# <a name="xr-sdk"></a>[SDK DE XR](#tab/xr)
+# <a name="xr-sdk"></a>[XR SDK](#tab/xr)
 
 ## <a name="windowsmrenvironment"></a>WindowsMREnvironment
 
-**Espacio de nombres:** *UnityEngine. XR. WindowsMR*<br>
+**Espacio de nombres:** *UnityEngine.XR.WindowsMR*<br>
 **Tipo:** *WindowsMREnvironment*
 
-La clase estática **WindowsMREnvironment** proporciona acceso a varios punteros nativos.
+La clase **estática WindowsMREnvironment** proporciona acceso a varios punteros nativos.
 
 ```cs
 public static IntPtr CurrentHolographicRenderFrame { get; } // Windows::Graphics::Holographic::IHolographicFrame
@@ -40,10 +40,10 @@ public static IntPtr OriginSpatialCoordinateSystem { get; } // Windows::Percepti
 
 ## <a name="xrdevice"></a>XRDevice
 
-**Espacio de nombres:** *UnityEngine. XR*<br>
+**Espacio de nombres:** *UnityEngine.XR*<br>
 **Tipo:** *XRDevice*
 
-El tipo <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.html" target="_blank">**XRDevice**</a> permite obtener acceso a los objetos nativos subyacentes mediante el método <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.GetNativePtr.html" target="_blank">GetNativePtr</a> . Lo que GetNativePtr devuelve varía entre distintas plataformas. En el Plataforma universal de Windows cuando el destino es Windows Mixed Reality, XRDevice. GetNativePtr devuelve un puntero (IntPtr) a la estructura siguiente:
+El <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.html" target="_blank">**tipo XRDevice**</a> permite obtener acceso a objetos nativos subyacentes mediante el <a href="https://docs.unity3d.com/ScriptReference/XR.XRDevice.GetNativePtr.html" target="_blank">método GetNativePtr.</a> Lo que devuelve GetNativePtr varía entre distintas plataformas. En la plataforma Windows universal al tener como destino Windows Mixed Reality, XRDevice.GetNativePtr devuelve un puntero (IntPtr) a la estructura siguiente:
 
 ```cs
 using System;
@@ -60,11 +60,11 @@ struct HolographicFrameNativeData
 }
 ```
 
-Puede convertirlo en HolographicFrameNativeData mediante el método Marshal. PtrToStructure:
+Puede convertirlo a HolographicFrameNativeData mediante el método Marshal.PtrToStructure:
 
 ```cs
 IntPtr nativePtr = UnityEngine.XR.XRDevice.GetNativePtr();
 HolographicFrameNativeData hfd = Marshal.PtrToStructure<HolographicFrameNativeData>(nativePtr);
 ```
 
-***IHolographicCameraPtr** es una matriz de referencias de IntPtr calculadas como UnmanagedType. ByValArray con una longitud igual a MaxNumberOfCameras*
+***IHolographicCameraPtr es** una matriz de IntPtr serializada como UnmanagedType.ByValArray con una longitud igual a MaxNumberOfCamera*

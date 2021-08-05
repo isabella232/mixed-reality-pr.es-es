@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 6c8e060af585d7994774ea0bb575b6e5172b9558
-ms.sourcegitcommit: 912fa204ef79e9b973eab9b862846ba5ed5cd69f
+ms.openlocfilehash: 50128100d058b5ec3bca7eac523c78287ce657925c3ac116e4336174e34e75c8
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "114281765"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211190"
 ---
 # <a name="performance"></a>Rendimiento
 
@@ -25,7 +25,7 @@ Para realizar un seguimiento continuo del rendimiento a lo largo de la duración
 Además, es especialmente importante usar Visual Profiler para realizar un seguimiento de la velocidad de fotogramas cuando se ejecuta en el dispositivo en lugar de ejecutarse en el editor de Unity o en un emulador. Los resultados de rendimiento más precisos se representarán cuando se ejecute en el dispositivo con [compilaciones de configuración de versión](/visualstudio/debugger/how-to-set-debug-and-release-configurations?preserve-view=true&view=vs-2019).
 
 > [!NOTE]
-> Si compila para Windows Mixed Reality, implemente con [compilaciones de configuración MASTER.](/windows/mixed-reality/exporting-and-building-a-unity-visual-studio-solution#building_and_deploying_a_unity_visual_studio_solution)
+> Si se compila para Windows Mixed Reality, implemente con [compilaciones de configuración MASTER.](/windows/mixed-reality/exporting-and-building-a-unity-visual-studio-solution#building_and_deploying_a_unity_visual_studio_solution)
 
 ![Visual Profiler (Interfaz)](../features/images/Diagnostics/VisualProfiler.png)
 
@@ -35,7 +35,7 @@ La ventana Optimización de [MRTK](../features/tools/optimize-window.md) ofrece 
 
 Por lo general, estas opciones implican configuraciones de representación que son ideales para la realidad mixta. Las aplicaciones de realidad mixta son únicas en comparación con el desarrollo tradicional de gráficos 3D, ya que hay dos pantallas (es decir, dos ojos) para representar toda la escena.
 
-La configuración recomendada a la que se hace referencia a continuación se puede configurar automáticamente en un proyecto de Unity aprovechando la ventana de optimización de MRTK.
+Las opciones recomendadas a las que se hace referencia a continuación se pueden configurar automáticamente en un proyecto de Unity aprovechando la ventana de optimización de MRTK.
 
 ![Optimización de la ventana de MRTK Configuración](../features/images/performance/OptimizeWindow_Settings.png)
 
@@ -47,7 +47,7 @@ La configuración recomendada a la que se hace referencia a continuación se pue
 
 ![Ejemplo de unity Profiler Graph](../features/images/performance/UnityProfilerGraph.png)
 
-Para mantener velocidades de fotogramas cómodas (normalmente 60 fotogramas por segundo), las aplicaciones deben lograr un tiempo de fotograma máximo de 16,6 milisegundos de tiempo de CPU. Para ayudar a identificar el costo de la funcionalidad de MRTK, microsoft Mixed Reality Toolkit contiene un marcador para las rutas de acceso de código de bucle interno (por fotograma). Estos marcadores usan el formato siguiente para ayudar a comprender la funcionalidad específica que se usa:
+Para mantener velocidades de fotogramas cómodas (normalmente 60 fotogramas por segundo), las aplicaciones deben lograr un tiempo de fotograma máximo de 16,6 milisegundos de tiempo de CPU. Para ayudar a identificar el costo de la funcionalidad de MRTK, microsoft Mixed Reality Toolkit contiene un marcador para las rutas de acceso de código de bucle interno (por fotograma). Estos marcadores usan el formato siguiente para ayudar a comprender la funcionalidad específica que se está utilizando:
 
 ```
 [MRTK] className.methodName
@@ -60,7 +60,7 @@ Para mantener velocidades de fotogramas cómodas (normalmente 60 fotogramas por 
 
 En este ejemplo, la jerarquía se ha expandido para mostrar que el método UpdateHandData de la clase WindowsMixedRealityArticulatedHand consume 0,44 ms de tiempo de CPU durante el fotograma que se está analizando. Estos datos se pueden usar para ayudar a determinar si un problema de rendimiento está relacionado con el código de la aplicación o desde otra parte del sistema.
 
-Se recomienda encarecidamente que los desarrolladores instrumente el código de la aplicación de forma similar. Las áreas principales de foco para la instrumentación de código de aplicación se encuentran dentro de los controladores de eventos, ya que estos métodos se cobran al bucle de actualización de MRTK a medida que se elevan los eventos. Los tiempos de fotogramas altos dentro del bucle de actualización de MRTK pueden ser indicativos de código costoso en los métodos de controlador de eventos.
+Se recomienda encarecidamente que los desarrolladores instrumente el código de la aplicación de forma similar. Las áreas principales de foco para la instrumentación de código de aplicación se encuentran dentro de los controladores de eventos, ya que estos métodos se cobran al bucle de actualización de MRTK a medida que se elevan los eventos. Los tiempos altos de fotogramas dentro del bucle de actualización de MRTK pueden ser indicativos de código costoso en los métodos de controlador de eventos.
 
 ## <a name="recommended-settings-for-unity"></a>Configuración recomendada para Unity
 
@@ -117,23 +117,23 @@ Unity proporciona valores [preestablecidos para controlar la calidad de](https:/
 
 ### <a name="depth-buffer-sharing-hololens"></a>Uso compartido del búfer de profundidad (HoloLens)
 
-Si desarrolla para la plataforma Windows Mixed Reality y, en particular, HoloLens, habilitar el uso compartido del búfer de profundidad en *XR Configuración* puede ayudar con la estabilización [del holograma](../performance/hologram-stabilization.md).  Sin embargo, el procesamiento del búfer de profundidad puede incurrir en un costo de rendimiento, especialmente si se usa el formato de [profundidad de 24 bits](https://docs.unity3d.com/ScriptReference/PlayerSettings.VRWindowsMixedReality-depthBufferFormat.html). Por lo tanto, *se recomienda encarecidamente* configurar el búfer de profundidad en una precisión de 16 bits.
+Si desarrolla para la plataforma Windows Mixed Reality y, en particular, HoloLens, habilitar el uso compartido del búfer de profundidad en *XR Configuración* puede ayudar con la estabilización [del holograma](../performance/hologram-stabilization.md).  Sin embargo, el procesamiento del búfer de profundidad puede incurrir en un costo de rendimiento, especialmente si se usa el formato de profundidad [de 24 bits](https://docs.unity3d.com/ScriptReference/PlayerSettings.VRWindowsMixedReality-depthBufferFormat.html). Por lo tanto, *se recomienda encarecidamente* configurar el búfer de profundidad en una precisión de 16 bits.
 
 Si [z-fighting se](https://en.wikipedia.org/wiki/Z-fighting) produce debido al formato [](https://docs.unity3d.com/Manual/class-Camera.html) de bits inferior, confirme que el plano de recorte lejano de todas las cámaras está establecido en el valor más bajo posible para la aplicación. Unity establece de forma predeterminada un plano de recorte lejano de 1000 m. En HoloLens, un plano de recorte lejano de 50 m suele ser más que suficiente para la mayoría de los escenarios de aplicación.
 
 > [!NOTE]
-> Si usa el formato de profundidad de *16* bits , los efectos necesarios del búfer de galería de símbolos no funcionarán porque Unity no crea un búfer [de](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html) galería de símbolos en esta configuración. Al seleccionar el formato de profundidad de *24* bits por el contrario, normalmente se creará un búfer de galería de símbolos de 8 bits, si procede en la plataforma de gráficos de punto de conexión.
+> Si usa el formato de profundidad de *16* bits , los efectos necesarios del búfer de galería de símbolos no funcionarán porque [Unity](https://docs.unity3d.com/ScriptReference/RenderTexture-depth.html) no crea un búfer de galería de símbolos en esta configuración. Al seleccionar el formato de profundidad de *24* bits por el contrario, normalmente se creará un búfer de galería de símbolos de 8 bits, si procede en la plataforma de gráficos de punto de conexión.
 >
 > Si usa un componente [Mask](https://docs.unity3d.com/Manual/script-Mask.html) que requiere el búfer de galería de símbolos, considere la posibilidad de usar [RectMask2D](https://docs.unity3d.com/Manual/script-RectMask2D.html) en su lugar, que no requiere el búfer de la galería de símbolos y, por tanto, se puede usar junto con un formato de profundidad de *16* bits .
 
 > [!NOTE]
-> Para determinar rápidamente qué objetos de una escena no escriben visualmente en el búfer de profundidad, se puede usar la utilidad Render [ *Depth Buffer*](../configuration/mixed-reality-configuration-guide.md#editor-utilities) en el editor *Configuración* en el perfil de configuración de MRTK.
+> Para determinar rápidamente qué objetos de una escena no escriben visualmente en el búfer de profundidad, se puede usar la utilidad Render [ *Depth Buffer*](../configuration/mixed-reality-configuration-guide.md#editor-utilities) en el editor *Configuración* perfil de configuración de MRTK.
 
 ### <a name="optimize-mesh-data"></a>Optimización de datos de malla
 
 La [configuración Optimizar datos de](https://docs.unity3d.com/ScriptReference/PlayerSettings-stripUnusedMeshComponents.html) malla intenta quitar atributos de vértice no usados dentro de la aplicación. Para ello, el valor se ejecuta en cada paso del sombreador de cada material que se encuentra en cada malla de la compilación. Esto es bueno para el tamaño de los datos del juego y el rendimiento en tiempo de ejecución, pero puede dificultar drásticamente los tiempos de compilación.
 
-Se recomienda deshabilitar esta configuración durante el desarrollo y volver a habilitarla durante la creación de la compilación "Maestra". La configuración se puede encontrar en **Editar**  >  **Project Configuración**  >  **Player**  >  **Other Configuración** Optimize Mesh Data  >  (Optimizar datos de **malla).**
+Se recomienda deshabilitar esta configuración durante el desarrollo y volver a habilitarla durante la creación de la compilación "Maestra". La configuración se puede encontrar en **Editar**  >  **Project Configuración**  >  **Player**  >  **Other Configuración** Optimize Mesh Data  >  **(Optimizar datos de malla).**
 
 ## <a name="general-recommendations"></a>Recomendaciones generales
 
@@ -150,28 +150,28 @@ Al centrarse en la GPU, generalmente hay dos fases importantes en las que una ap
 1. Ejecución del [sombreador de vértices](https://en.wikipedia.org/wiki/Shader#Vertex_shaders)
 2. Ejecutar el [sombreador de píxeles](https://en.wikipedia.org/wiki/Shader#Pixel_shaders) (también conocido como sombreador de fragmentos)
 
-Sin entrar en profundidad en el campo complejo de [gráficos](https://en.wikipedia.org/wiki/Graphics_pipeline)de equipo & canalizaciones de representación, cada fase del sombreador es un programa que se ejecuta en la GPU para generar lo siguiente.
+Sin entrar en profundidad en el complejo campo de [gráficos](https://en.wikipedia.org/wiki/Graphics_pipeline)de equipo & canalizaciones de representación, cada fase del sombreador es un programa que se ejecuta en la GPU para generar lo siguiente.
 
 1. Los sombreadores de vértices transforman los vértices de malla en coordenadas en el espacio de pantalla (es decir, código ejecutado por vértice)
 2. Los sombreadores de píxeles calculan el color que se dibujará para un fragmento de píxel y malla determinado (es decir, ejecución de código por píxel)
 
 En lo que respecta al ajuste del rendimiento, suele ser más fetivo centrarse en optimizar las operaciones en el sombreador de píxeles. Es posible que una aplicación solo necesite dibujar un cubo que será solo 8 vértices. Sin embargo, el espacio de pantalla que ocupa el cubo es probable que esté en el orden de millones de píxeles. Por lo tanto, reducir el código del sombreador al decir 10 operaciones puede ahorrar mucho más trabajo si se reduce en el sombreador de píxeles que el sombreador de vértices.
 
-Esta es una de las principales razones para aprovechar el sombreador ESTÁNDAR DE [MRTK,](../features/rendering/mrtk-standard-shader.md) ya que este sombreador suele ejecutar muchas instrucciones menos por píxel & vértice que el sombreador estándar de Unity, al tiempo que se logran resultados de la apariencia comparables.
+Esta es una de las razones principales para aprovechar el sombreador estándar de [MRTK,](../features/rendering/mrtk-standard-shader.md) ya que este sombreador suele ejecutar muchas menos instrucciones por píxel & vértice que el sombreador estándar de Unity, al tiempo que se logran resultados béticos comparables.
 
 |    Optimizaciones de CPU      |             Optimizaciones de GPU              |
 |---------------------------|--------------------------------------------|
-| Lógica de simulación de aplicación      | Operaciones de representación |
+| Lógica de simulación de aplicaciones      | Operaciones de representación |
 | Simplificar la física          | Reducción de los cálculos de iluminación |
-| Simplificar animaciones       | Reducir el número de & número de objetos drawables |
+| Simplificar animaciones       | Reducir el número de & número de objetos drawable |
 | Administrar la recolección de elementos no utilizados | Reducir el número de objetos transparentes |
 | Referencias de caché          | Evitar efectos posteriores al procesamiento o a pantalla completa  |
 
-### <a name="draw-call-instancing"></a>Creación de instancias de llamada a Draw
+### <a name="draw-call-instancing"></a>Creación de instancias de llamada a draw
 
-Uno de los errores más comunes de Unity que reduce el rendimiento es la clonación de materiales en tiempo de ejecución. Si gameObjects comparte el mismo material o son la misma malla, se pueden optimizar en *[](https://docs.unity3d.com/Manual/DrawCallBatching.html)* llamadas de dibujo único a través de técnicas como el procesamiento por lotes *[estático,](https://docs.unity3d.com/Manual/DrawCallBatching.html)* el procesamiento por lotes dinámico y la creación de instancias de *[GPU.](https://docs.unity3d.com/Manual/GPUInstancing.html)* Sin embargo, si el desarrollador modifica las propiedades del [material](https://docs.unity3d.com/ScriptReference/Renderer-material.html) de un representador en tiempo de ejecución, Unity creará una copia clonada del material asignado.
+Uno de los errores más comunes de Unity que reduce el rendimiento es clonar materiales en tiempo de ejecución. Si los Objetos GameObject comparten el mismo material o son la misma malla, se pueden *[](https://docs.unity3d.com/Manual/DrawCallBatching.html)* optimizar en llamadas de dibujo único a través de técnicas como el procesamiento por lotes *[estático,](https://docs.unity3d.com/Manual/DrawCallBatching.html)* el procesamiento por lotes dinámico y la creación de instancias de *[GPU.](https://docs.unity3d.com/Manual/GPUInstancing.html)* Sin embargo, si el desarrollador modifica las propiedades del [material](https://docs.unity3d.com/ScriptReference/Renderer-material.html) de un representador en tiempo de ejecución, Unity creará una copia clonada del material asignado.
 
-Por ejemplo, si hay 100 cubos en una escena, es posible que un desarrollador quiera asignar un color único a cada uno en tiempo de ejecución. El acceso de [*renderer.material.color*](https://docs.unity3d.com/ScriptReference/Material-color.html) en C# hará que Unity cree un nuevo material en memoria para este representador o GameObject en particular. Cada uno de los 100 cubos tendrá su propio material y, por tanto, no se pueden combinar en una llamada a draw, sino que se convertirán en 100 solicitudes de llamada draw de la CPU a la GPU.
+Por ejemplo, si hay 100 cubos en una escena, es posible que un desarrollador quiera asignar un color único a cada uno en tiempo de ejecución. El acceso de [*renderer.material.color*](https://docs.unity3d.com/ScriptReference/Material-color.html) en C# hará que Unity cree un nuevo material en memoria para este representador o GameObject en particular. Cada uno de los 100 cubos tendrá su propio material y, por tanto, no se pueden combinar en una sola llamada a draw, sino que se convertirán en 100 solicitudes de llamada a draw de la CPU a la GPU.
 
 Para superar este obstáculo y seguir asignando un color único por cubo, los desarrolladores deben aprovechar [MaterialPropertyBlock](https://docs.unity3d.com/ScriptReference/MaterialPropertyBlock.html).
 
@@ -205,7 +205,7 @@ Unity proporciona excelentes herramientas de rendimiento integradas en el editor
 - [Unity Profiler](https://docs.unity3d.com/Manual//Profiler.html)
 - [Depurador de fotogramas de Unity](https://docs.unity3d.com/Manual/FrameDebugger.html)
 
-Si calcula el equilibrio de rendimiento aproximado entre un sombreador y otro, resulta útil compilar cada sombreador y ver el número de operaciones por fase de sombreador. Para ello, seleccione un recurso de [sombreador](https://docs.unity3d.com/Manual/class-Shader.html) y haga clic en el botón *Compilar y mostrar* código. Esto compilará todas las variantes del sombreador y abrirá Visual Studio con los resultados. Nota: Los resultados estadísticos generados pueden variar en función de las características que se hayan habilitado en los materiales que utilizan el sombreador especificado. Unity solo compilará las variantes del sombreador que se usan directamente en el proyecto actual.
+Si calcula el equilibrio de rendimiento aproximado entre un sombreador y otro, resulta útil compilar cada sombreador y ver el número de operaciones por fase de sombreador. Para ello, seleccione un recurso de [sombreador](https://docs.unity3d.com/Manual/class-Shader.html) y haga clic en el *botón Compilar y mostrar* código. Esto compilará todas las variantes del sombreador y abrirá Visual Studio con los resultados. Nota: Los resultados estadísticos generados pueden variar en función de las características que se hayan habilitado en los materiales que utilizan el sombreador especificado. Unity solo compilará las variantes del sombreador que se usan directamente en el proyecto actual.
 
 Ejemplo de estadísticas de sombreador estándar de Unity
 
@@ -215,7 +215,7 @@ Ejemplo de estadísticas de sombreador estándar de MRTK
 
 ![Estadísticas de sombreador estándar de MRTK 2](../features/images/performance/MRTKStandardShader-Stats.PNG)
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 ### <a name="unity"></a>Unity
 

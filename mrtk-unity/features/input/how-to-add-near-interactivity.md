@@ -1,48 +1,48 @@
 ---
-title: Adición de interactividad cercana
+title: Cómo agregar una interactividad cercana
 description: Documentación sobre la interacción próxima en MRTK
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, interacción cercana,
-ms.openlocfilehash: 241425f0c158d684cad6dad8c88c8d692cbec42f
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 174623ebf340e800848c15e22dc2299aaf997b484a1329d67c28540acd79515a
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176868"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115212601"
 ---
-# <a name="how-to-add-near-interactivity"></a>Adición de interactividad cercana
+# <a name="how-to-add-near-interactivity"></a>Cómo agregar una interactividad cercana
 
-Las interacciones cercanas tienen la forma de toques y agarrar. Los eventos de entrada táctil y de captura se elevan como eventos de puntero mediante los objetos [Detepointer](pointers.md#pokepointer) [y SpherePointer,](pointers.md#spherepointer)respectivamente.
+Las interacciones cercanas tienen la forma de toques y agarres. Los eventos touch y grab se elevan como eventos de puntero por [parte de Los objetos Depointer](pointers.md#pokepointer) y [SpherePointer,](pointers.md#spherepointer)respectivamente.
 
 Se requieren tres pasos clave para escuchar eventos de entrada táctiles o de entrada en un GameObject determinado.
 
-1. Asegúrese de que el puntero correspondiente está registrado en el perfil [de configuración de MRTK principal.](../../configuration/mixed-reality-configuration-guide.md)
-1. Asegúrese de que el Elemento GameObject deseado tiene el componente de script [táctil](#add-grab-interactions) [o](#add-touch-interactions) de toma adecuado y [`Unity Collider`](https://docs.unity3d.com/ScriptReference/Collider.html) .
+1. Asegúrese de que el puntero correspondiente está registrado en el perfil de configuración de [MRTK principal.](../../configuration/mixed-reality-configuration-guide.md)
+1. Asegúrese de que el Elemento GameObject deseado tiene el componente de script [de agarre](#add-grab-interactions) [o](#add-touch-interactions) táctil adecuado y [`Unity Collider`](https://docs.unity3d.com/ScriptReference/Collider.html) .
 1. Implemente una interfaz de controlador de entrada en un script adjunto al GameObject deseado para escuchar los [eventos de entrada](#grab-code-example) [táctil.](#touch-code-example)
 
-## <a name="add-grab-interactions"></a>Adición de interacciones de captura
+## <a name="add-grab-interactions"></a>Adición de interacciones de toma
 
 1. Asegúrese de [que spherepointer](pointers.md#spherepointer) está registrado en el perfil de *puntero MRTK*.
 
-    El perfil de MRTK predeterminado y el HoloLens 2 predeterminado ya contienen *un spherepointer*. Para confirmar que se creará spherepointer, seleccione el perfil de configuración de MRTK y vaya a **Input**  >  **Pointers** Pointer Options (Opciones de puntero de puntero de  >  **entrada).** El `GrabPointer` objeto prefab predeterminado (Assets/MRTK/SDK/Features/UX/Prefabs/Pointers)  debe aparecer con un tipo de controlador *de mano articulada.* Un objeto prefab personalizado se puede usar siempre que implemente la [`SpherePointer`](xref:Microsoft.MixedReality.Toolkit.Input.SpherePointer) clase .
+    El perfil de MRTK predeterminado y el HoloLens 2 predeterminado ya contienen *un spherepointer*. Para confirmar que se creará spherepointer, seleccione el perfil de configuración de MRTK y vaya a **Input**  >  **Pointers** Pointer Options (Opciones de puntero de puntero de  >  **entrada).** El `GrabPointer` objeto prefab predeterminado (Assets/MRTK/SDK/Features/UX/Prefabs/Pointers)  debe aparecer con un tipo de controlador *de mano articulada.* Se puede usar un prefab personalizado siempre que implemente la [`SpherePointer`](xref:Microsoft.MixedReality.Toolkit.Input.SpherePointer) clase .
 
-    ![Ejemplo de perfil de puntero de captura](../images/input/Pointers/GrabPointer_MRTKProfile.png)
+    ![Ejemplo de perfil de puntero de toma](../images/input/Pointers/GrabPointer_MRTKProfile.png)
 
     El puntero de toma predeterminado consulta objetos cercanos en un cono alrededor del punto de toma para que coincida con la interfaz predeterminada de Hololens 2.
 
     ![Puntero de toma cónica](https://user-images.githubusercontent.com/39840334/82500569-72d58300-9aa8-11ea-8102-ec9a62832d4e.png)
 
-1. En el Elemento GameObject que se debe poder agarrar, agregue [`NearInteractionGrabbable`](xref:Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable) un elemento , así como un colisionador.
+1. En el Elemento GameObject que se debe poder agarrar, agregue [`NearInteractionGrabbable`](xref:Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable) , así como un colisionador.
 
-    Asegúrese de que la capa de GameObject está en una capa que se puede agarrar. De forma predeterminada, se pueden capturar todas las *capas excepto Reconocimiento* espacial e Ignorar *raycasts.* Vea qué capas se pueden agarrar inspeccionando las *máscaras* de capa de captura en el prefab *de GrabPointer.*
+    Asegúrese de que la capa de GameObject está en una capa que se puede agarrar. De forma predeterminada, se  pueden capturar todas las *capas excepto Reconocimiento* espacial y Omitir raycasts. Vea qué capas se pueden capturar inspeccionando las *máscaras de capa* de agarre en el prefab de *GrabPointer.*
 
 1. En GameObject o en uno de sus antecesores, agregue un componente de script que implemente la [`IMixedRealityPointerHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler) interfaz . Cualquier antecesor del objeto con [`NearInteractionGrabbable`](xref:Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable) también podrá recibir eventos de puntero.
 
 ### <a name="grab-code-example"></a>Ejemplo de código de captura
 
-A continuación se muestra un script que se imprimirá si un evento es un toque o una toma. En la función de *interfaz IMixedRealityPointerHandler* pertinente, se puede ver el tipo de puntero que desencadena ese evento a través de [`MixedRealityPointerEventData`](xref:Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData) . Si el puntero es *spherepointer,* la interacción es una toma.
+A continuación se muestra un script que se imprimirá si un evento es un toque o una toma. En la función *de interfaz IMixedRealityPointerHandler pertinente,* se puede ver el tipo de puntero que desencadena ese evento a través de [`MixedRealityPointerEventData`](xref:Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerEventData) . Si el puntero es *spherepointer*, la interacción es una toma.
 
 ```c#
 public class PrintPointerEvents : MonoBehaviour, IMixedRealityPointerHandler
@@ -69,34 +69,34 @@ public class PrintPointerEvents : MonoBehaviour, IMixedRealityPointerHandler
 
 El proceso para agregar interacciones táctiles en elementos UnityUI es diferente al de gameObjects 3D de la vaina. Puede ir directamente a la sección siguiente, Interfaz de usuario *de Unity,* para habilitar los componentes de la interfaz de usuario de Unity.
 
-Sin **embargo,** para ambos tipos de elementos de la experiencia del usuario, asegúrese de que Se ha registrado [Un elemento Detener](pointers.md#pokepointer) en el perfil de puntero de *MRTK*.
+Sin **embargo,** para ambos tipos de elementos de la experiencia de usuario, asegúrese de que Se haya registrado [Un elemento Depointer](pointers.md#pokepointer) en el perfil de puntero de *MRTK.*
 
-El perfil de MRTK predeterminado y el HoloLens 2 predeterminado ya contienen *un valor de Tipo Depointer*. Se puede confirmar que se creará un elemento PointerePointer seleccionando el perfil de configuración de MRTK y navegando a Input  >  **Pointers** Pointer Options (Opciones de puntero de puntero de  >  **entrada).** El `PokePointer` objeto prefab predeterminado (Assets/MRTK/SDK/Features/UX/Prefabs/Pointers)  debe aparecer con un tipo de controlador *de mano articulada.* Un objeto prefab personalizado se puede usar siempre que implemente la [`PokePointer`](xref:Microsoft.MixedReality.Toolkit.Input.PokePointer) clase .
+El perfil de MRTK predeterminado y el perfil HoloLens 2 predeterminado ya contienen *un valor de Tipo Depointer*. Para confirmar que se creará un elemento PointerePointer, seleccione el perfil de configuración de MRTK y vaya a Input  >  **Pointers** Pointer Options (Opciones de puntero de puntero de  >  **entrada).** El `PokePointer` prefab predeterminado (Assets/MRTK/SDK/Features/UX/Prefabs/Pointers) debe  aparecer con un tipo de controlador *de mano articulada.* Se puede usar un prefab personalizado siempre que implemente la [`PokePointer`](xref:Microsoft.MixedReality.Toolkit.Input.PokePointer) clase .
 
-![Ejemplo de perfil de puntero de puntero de puntero de puntero de puntero](../images/input/Pointers/PokePointer_MRTKProfile.png)
+![Ejemplo de perfil de puntero de pointer de Pointer de Pointer de Tipo Pointer](../images/input/Pointers/PokePointer_MRTKProfile.png)
 
 ### <a name="3d-gameobjects"></a>GameObjects 3D
 
-Hay dos maneras diferentes de agregar interacciones táctiles a objetos GameObject 3D, en función de si el objeto 3d solo debe tener un solo plano táctil, o de si debe ser táctil en función de todo su colisionador.
-La primera forma suele ser en objetos con BoxColliders, donde solo se desea que una sola cara del colisionador reaccione a eventos táctiles. El otro es para objetos que deben ser táctiles desde cualquier dirección en función de su colisionador.
+Hay dos maneras diferentes de agregar interacciones táctiles a gameObjects 3D, en función de si el objeto 3d solo debe tener un único plano táctil, o de si debe ser táctil en función de todo su colisionador.
+La primera forma suele ser en objetos con BoxColliders, donde solo se desea que una sola cara del colisionador reaccione a eventos táctiles. La otra es para objetos que deben ser táctiles desde cualquier dirección en función de su colisionador.
 
-### <a name="single-face-touch"></a>Toque facial único
+### <a name="single-face-touch"></a>Single face touch
 
-Esto es útil para habilitar situaciones en las que solo es necesario tocar una sola cara. Esta opción supone que el objeto de juego tiene boxcollider. es posible usar esto con objetos que no son BoxCollider, en cuyo caso las propiedades "Bounds" y "Local Center" se establecen de forma manual para configurar el plano táctil (es decir, los límites deben establecerse en un valor distinto de cero-cero).
+Esto es útil para habilitar situaciones en las que solo una cara debe ser táctil. Esta opción supone que el objeto de juego tiene boxcollider. es posible usar esto con objetos que no son BoxCollider, en cuyo caso las propiedades "Bounds" y "Local Center" se establecen de forma manual para configurar el plano táctil (es decir, los límites deben establecerse en un valor distinto de cero-cero).
 
 1. En el Elemento GameObject que debe ser táctil, agregue boxcollider y [ `NearInteractionTouchable` ] (xref:Microsoft.MixedReality.Toolkit. Componente Input.NearInteractionTouchable).
 
-    1. Establezca **Eventos en Recibir** en *Táctil* si usa [ `IMixedRealityTouchHandler` ] (xref:Microsoft.MixedReality.Toolkit. Interfaz Input.IMixedRealityTouchHandler) en el siguiente script de componente.
+    1. Establezca **Eventos en Receive** *(Recibir)* en Touch si usa [ ] `IMixedRealityTouchHandler` (xref:Microsoft.MixedReality.Toolkit. Interfaz Input.IMixedRealityTouchHandler) en el siguiente script de componente.
 
-    1. Haga clic **en Fix bounds (Corregir límites)** **y fix center (Centro de corrección).**
+    1. Haga clic **en Fix bounds (Límites de** corrección) y fix center **(Centro de corrección).**
 
     ![Instalación de NearInteractionTouchable](../images/input/Pointers/NearInteractionTouchableSetup.gif)
 
-1. En ese objeto o uno de sus antecesores, agregue un componente de script que implemente el [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler)
+1. En ese objeto o en uno de sus antecesores, agregue un componente de script que implemente el [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler)
    Interfaz. Cualquier antecesor del objeto con [ `NearInteractionTouchable` ] (xref:Microsoft.MixedReality.Toolkit. Input.NearInteractionTouchable) también podrá recibir eventos de puntero.
 
 > [!NOTE]
-> En la vista de escena del editor con *el elemento GameObject NearInteractionTouchable* seleccionado, observe un cuadrado de contorno blanco y una flecha. La flecha apunta a la "parte delantera" del control táctil. El colisionable solo será táctil desde esa dirección. Para que un colisionador sea táctil desde todas las direcciones, consulte la sección sobre la función táctil [de colisionador arbitrario](#arbitrary-collider-touch).
+> En la vista de escena del editor con *el elemento GameObject NearInteractionTouchable* seleccionado, observe un cuadrado y una flecha de contorno blanco. La flecha apunta a la "parte frontal" del control táctil. El que se puede colisionar solo será táctil desde esa dirección. Para que un colisionador sea táctil desde todas las direcciones, consulte la sección sobre [la función táctil arbitraria del colisionador.](#arbitrary-collider-touch)
 > ![NearInteractionTouchable Gizmos ](../images/input/Pointers/NearInteractionTouchableGizmos.png)
 
 ### <a name="arbitrary-collider-touch"></a>Toque de colisionador arbitrario
@@ -105,9 +105,9 @@ Esto es útil para habilitar situaciones en las que el objeto de juego debe ser 
 
 1. En el Elemento GameObject que debe ser táctil, agregue un colisionador y un [ `NearInteractionTouchableVolume` ] (xref:Microsoft.MixedReality.Toolkit. Componente Input.NearInteractionTouchableVolume).
 
-    1. Establezca **Eventos en Recibir** en *Táctil* si usa [ `IMixedRealityTouchHandler` ] (xref:Microsoft.MixedReality.Toolkit. Interfaz Input.IMixedRealityTouchHandler) en el siguiente script de componente.
+    1. Establezca **Eventos en Receive** *(Recibir)* en Touch si usa [ ] `IMixedRealityTouchHandler` (xref:Microsoft.MixedReality.Toolkit. Interfaz Input.IMixedRealityTouchHandler) en el siguiente script de componente.
 
-1. En ese objeto o uno de sus antecesores, agregue un componente de script que implemente el [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler)
+1. En ese objeto o en uno de sus antecesores, agregue un componente de script que implemente el [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler)
    Interfaz. Cualquier antecesor del objeto con [ `NearInteractionTouchable` ] (xref:Microsoft.MixedReality.Toolkit. Input.NearInteractionTouchable) también podrá recibir eventos de puntero.
 
 ### <a name="unity-ui"></a>Interfaz de usuario de Unity
@@ -118,17 +118,17 @@ Esto es útil para habilitar situaciones en las que el objeto de juego debe ser 
 
     1. Establezca **Eventos en Recibir en** *Táctil* si usa la interfaz en el siguiente script [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler) de componente.
 
-1. En ese objeto o uno de sus antecesores, agregue un componente de script que implemente la [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler) interfaz . Cualquier antecesor del objeto con [`NearInteractionTouchableUnityUI`](xref:Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableUnityUI) también podrá recibir eventos de puntero.
+1. En ese objeto o en uno de sus antecesores, agregue un componente de script que implemente la [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler) interfaz . Cualquier antecesor del objeto con [`NearInteractionTouchableUnityUI`](xref:Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchableUnityUI) también podrá recibir eventos de puntero.
 
 > [!IMPORTANT]
-> Es posible que los objetos no se comporten según lo previsto si se encuentran en objetos de lienzo superpuestos. Para garantizar un comportamiento coherente, nunca superponga los objetos de lienzo en la escena.
+> Es posible que los objetos no se comporten según lo previsto si se encuentran en objetos de lienzo superpuestos. Para garantizar un comportamiento coherente, no superponga nunca objetos de lienzo en la escena.
 
 > [!IMPORTANT]
-> En el `NearInteractionTouchable` componente de script, para la propiedad *Eventos que se van a recibir* hay dos opciones: *Puntero* y *Toque*. Establezca *Events (Eventos)* en Receive (Recibir) en *Pointer* (Puntero) si usa la interfaz y establezca en Touch si usa la interfaz del script de componente que [`IMixedRealityPointerHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler) responde o controla los eventos de  [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler) entrada.
+> En el `NearInteractionTouchable` componente de script, para la propiedad *Eventos que se van a recibir* hay dos opciones: *Pointer* y *Touch*. Establezca *Eventos en Recibir* en *Puntero* si usa la interfaz y establezca en Táctil si usa la interfaz en el script de componente que [`IMixedRealityPointerHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityPointerHandler) responde o controla los eventos de  [`IMixedRealityTouchHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityTouchHandler) entrada.
 
 #### <a name="touch-code-example"></a>Ejemplo de código táctil
 
-El código siguiente muestra un MonoBehaviour que se puede adjuntar a un Elemento GameObject con un componente variant y responder a eventos [`NearInteractionTouchable`](xref:Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable) de entrada táctiles.
+El código siguiente muestra un MonoBehaviour que se puede adjuntar a un GameObject con un componente variante y responder a [`NearInteractionTouchable`](xref:Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable) eventos de entrada táctil.
 
 ```c#
 public class TouchEventsExample : MonoBehaviour, IMixedRealityTouchHandler
@@ -143,7 +143,7 @@ public class TouchEventsExample : MonoBehaviour, IMixedRealityTouchHandler
 }
 ```
 
-## <a name="near-interaction-script-examples"></a>Ejemplos de scripts de interacción cercanos
+## <a name="near-interaction-script-examples"></a>Ejemplos de script de interacción cercana
 
 ### <a name="touch-events"></a>Eventos de función táctil
 
@@ -166,7 +166,7 @@ public static void MakeChangeColorOnTouch(GameObject target)
 
 ### <a name="grab-events"></a>Eventos de captura
 
-En el ejemplo siguiente se muestra cómo hacer que un Elemento GameObject se puede arrastrar. Supone que el objeto de juego tiene un colisionador.
+En el ejemplo siguiente se muestra cómo hacer que un GameObject se puede arrastrar. Supone que el objeto de juego tiene un colisionador.
 
 ```c#
 public static void MakeNearDraggable(GameObject target)

@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 07/27/2021
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, aplicación de ejemplo, controles, MRTK, Mixed Reality Toolkit, Unity, aplicaciones de ejemplo, aplicaciones de ejemplo, código abierto, Microsoft Store, HoloLens, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, OpenXR, Open XR, Unity
-ms.openlocfilehash: 29dc4c99505d3f8e2d9bab70e54da25c1ab6c87b
-ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
+ms.openlocfilehash: 78961c73ee01efcd097d2dcc4456bce156287691fa6dc8e2121c817e4812bfac
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "114757444"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211862"
 ---
 # <a name="periodic-table-of-the-elements-20"></a>Tabla periódica de los elementos 2.0
 ![Tabla de períodos de la aplicación Elements](../images/MRDL_PeriodicTable.jpg)
@@ -34,7 +34,7 @@ Puede encontrar una HoloLens 2 de porte en el artículo: Bringing the Periodic T
 Lea una historia sobre cómo actualizar el proyecto de tabla periódica a la canalización de Unity 2020 + OpenXR: Actualización de <a href="https://dongyoonpark.medium.com/updating-mrtk-mixed-reality-project-to-openxr-unity-2020-periodic-table-of-the-elements-4cf55b0479a4" target="_blank"> **MRTK Mixed Reality Project a OpenXR+Unity 2020: Tabla** periódica de los elementos para HoloLens 2 (2021)</a>
 
 ## <a name="design-story"></a>Historia de diseño 
-Consulte la historia de diseño en la tabla periódica de la aplicación Elementos: [ **Tabla periódica de elementos 1.0**](periodic-table-of-the-elements.md)
+Consulte la historia de diseño en la aplicación Tabla periódica de elementos: [ **Tabla periódica de los elementos 1.0**](periodic-table-of-the-elements.md)
 
 ## <a name="about-the-author"></a>Acerca del autor
 

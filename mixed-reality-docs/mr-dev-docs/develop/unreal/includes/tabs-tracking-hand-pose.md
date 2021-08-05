@@ -1,30 +1,30 @@
 ---
-ms.openlocfilehash: 21c29b2c8d540378259200cc834f7a36065f8ab3
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: ec1246085989b4b157504e9b8551694d6116e6f08789fa669200e5425ef75cc6
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581110"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115187508"
 ---
 # <a name="426"></a>[4.26](#tab/426)
 
-La jerarquía se describe mediante `EHandKeypoint` enum:
+La jerarquía se describe mediante `EHandKeypoint` enumeración:
 
-![Imagen de las opciones de keypoint bluprint](../images/hand-keypoint-bp.png)
+![Imagen de las opciones de huella digital del punto de tecla de mano](../images/hand-keypoint-bp.png)
 
-Puede obtener todos estos datos de las manos de un usuario mediante la función **Get Motion Controller Data** . Esa función devuelve una estructura **XRMotionControllerData** . A continuación se muestra un script de plano de ejemplo que analiza la estructura XRMotionControllerData para obtener las ubicaciones de unión a mano y dibuja un sistema de coordenadas de depuración en cada ubicación de la Unión.
+Puede obtener todos estos datos de las manos de un usuario mediante la **función Obtener datos del controlador de** movimiento. Esa función devuelve una **estructura XRMotionControllerData.** A continuación se muestra un script de plano técnico de ejemplo que analiza la estructura XRMotionControllerData para obtener ubicaciones conjuntas de mano y dibuja un sistema de coordenadas de depuración en la ubicación de cada unión.
 
-![Plano de la función de datos de mirada conectada a la función de seguimiento de línea por canal](../images/unreal-hand-tracking-img-03.png)
+![Plano técnico de la función get gaze data conectada al seguimiento de línea por función de canal](../images/unreal-hand-tracking-img-03.png)
 
-Es importante comprobar si la estructura es válida y es una mano. De lo contrario, puede obtener un comportamiento indefinido en el acceso a las posiciones, las rotaciones y las matrices de radios.
+Es importante comprobar si la estructura es válida y si es una mano. De lo contrario, puede obtener un comportamiento indefinido en el acceso a posiciones, rotaciones y matrices radii.
 
 # <a name="425"></a>[4.25](#tab/425)
 
-La `EWMRHandKeypoint` enumeración describe la jerarquía del hueso de la mano. Puede encontrar cada keypoint de mano enumerado en los planos:
+La `EWMRHandKeypoint` enumeración describe la jerarquía de jerarquías de la mano. Puede encontrar cada punto de clave de mano que se muestra en los planos técnico:
 
-![Mano keypoint BP](../images/hand-keypoint-bp.png)
+![Punto de tecla de mano BP](../images/hand-keypoint-bp.png)
 
-La enumeración completa de C++ se muestra a continuación:
+A continuación se muestra la enumeración completa de C++:
 ```cpp
 enum class EWMRHandKeypoint : uint8
 {
@@ -57,17 +57,17 @@ enum class EWMRHandKeypoint : uint8
 };
 ```
 
-Puede encontrar los valores numéricos de cada caso de enumeración en la tabla [Windows. Perception. people. HandJointKind](/uwp/api/windows.perception.people.handjointkind) .
+Puede encontrar los valores numéricos de cada caso de enumeración en [la Windows. Tabla Perception.People.HandJointKind.](/uwp/api/windows.perception.people.handjointkind)
 
-### <a name="supporting-hand-tracking"></a>Compatibilidad con el seguimiento de la mano
+### <a name="supporting-hand-tracking"></a>Compatibilidad con el seguimiento de manos
 
-Puede usar el seguimiento de manos en Blueprints agregando **compatibilidad con** el seguimiento de la mano **> Windows Mixed Reality**:
+Puede usar el seguimiento de manos en Planos técnico agregando **Supports Hand Tracking** from Hand Tracking **> Windows Mixed Reality**:
 
-![Seguimiento de mano BP](../images/unreal/hand-tracking-bp.png)
+![Bp de seguimiento de manos](../images/unreal/hand-tracking-bp.png)
 
-Esta función devuelve `true` si se admite el seguimiento manual en el dispositivo y `false` si el seguimiento de mano no está disponible.
+Esta función devuelve `true` si se admite el seguimiento de manos en el dispositivo y si el seguimiento de manos no está `false` disponible.
 
-![Admite el seguimiento de manos BP](../images/unreal/supports-hand-tracking-bp.png)
+![Admite la bp de seguimiento de manos](../images/unreal/supports-hand-tracking-bp.png)
 
 C++:
 
@@ -77,11 +77,11 @@ Incluya `WindowsMixedRealityHandTrackingFunctionLibrary.h`.
 static bool UWindowsMixedRealityHandTrackingFunctionLibrary::SupportsHandTracking()
 ```
 
-### <a name="getting-hand-tracking"></a>Obtención del seguimiento manual
+### <a name="getting-hand-tracking"></a>Obtención del seguimiento a mano
 
-Puede usar **GetHandJointTransform** para devolver datos espaciales desde la mano. Los datos se actualizan cada fotograma, pero si se encuentra dentro de un marco, los valores devueltos se almacenan en caché. No se recomienda tener una lógica pesada en esta función por motivos de rendimiento.
+Puede usar **GetHandJointTransform para** devolver datos espaciales de la mano. Los datos actualiza cada fotograma, pero si está dentro de un marco, los valores devueltos se almacenan en caché. No se recomienda tener una lógica pesada en esta función por motivos de rendimiento.
 
-![Obtener transformación Unión a mano](../images/unreal/get-hand-joint-transform.png)
+![Get Hand Joint Transform](../images/unreal/get-hand-joint-transform.png)
 
 C++:
 ```cpp
@@ -90,8 +90,8 @@ static bool UWindowsMixedRealityHandTrackingFunctionLibrary::GetHandJointTransfo
 
 Este es un desglose de los parámetros de función de GetHandJointTransform:
 
-* **Mano** : puede ser la mano izquierda o derecha.
-* **Keypoint** : el hueso de la mano.
-* **Transformación** : coordenadas y orientación de la base del hueso. Puede solicitar la base del siguiente hueso para obtener los datos de transformación para el final de un hueso. Un hueso de la sugerencia especial proporciona el final de distal.
-* * * Radio: radio de la base del hueso.
-* * * Valor devuelto: true si se realiza un seguimiento del hueso de este fotograma, false si no se realiza el seguimiento del hueso.
+* **Mano:** puede ser la mano izquierda o derecha de los usuarios.
+* **Punto de clave:** el dedo de la mano.
+* **Transformación:** coordenadas y orientación de la base del aire. Puede solicitar la base del siguiente tejido para obtener los datos de transformación para el final de un desenlazón. Una propina especial proporciona el final del distal.
+* **Radio: radio de la base del póreo.
+* **Valor devuelto: true si se realiza el seguimiento de este marco, false si no se realiza el seguimiento de los restos.

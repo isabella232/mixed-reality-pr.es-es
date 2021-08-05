@@ -5,12 +5,12 @@ author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Oculus HoloLens 2
-ms.openlocfilehash: d910f26374b21be26377bd40b9be0d45872e007a
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: c5633af09cca5e8b20eb81e897ca8129fed86174e30a97f7242efde231fb7aa1
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177457"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115186707"
 ---
 # <a name="deploying-to-oculus-quest"></a>Implementación en Oculus Quest
 
@@ -35,7 +35,7 @@ El [paquete de Unity de integración de Oculus](https://assetstore.unity.com/pac
 
     ![Paquete del complemento XR de Oculus](../images/cross-platform/oculus-quest/OculusXRPluginPackage.png)
 
-1. Asegúrese de que el proveedor de complementos de Oculus está incluido en el proyecto; para ello, vaya **a Edit --> Project Configuración --> XR Plug-in Management --> Plug-in Providers (Editar --> Project Configuración --> XR Plug-in Management --> Plug-in Providers [Editar --> Project Configuración --> XR Plug-in Management --> Plug-in Providers].**
+1. Asegúrese de que el proveedor de complementos de Oculus está incluido en el proyecto; para ello, vaya **a Editar --> Project Configuración --> Administración** de complementos XR --> Proveedores de complementos
 
     ![Proveedor de complementos de Oculus](../images/cross-platform/oculus-quest/OculusPluginProvider.png)
 
@@ -43,7 +43,7 @@ El [paquete de Unity de integración de Oculus](https://assetstore.unity.com/pac
 
 1. Descargue e importe [Oculus Integration desde](https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022) el almacén de recursos de Unity. La versión más reciente probada para funcionar es 20.0.0. Las versiones anteriores se pueden encontrar en este [archivo](https://developer.oculus.com/downloads/package/unity-integration-archive/).
 
-1. Vaya a Mixed Reality Toolkit > Utilities > Oculus > Integrate Oculus Integration Unity Modules (Integrar módulos de Unity de integración de Oculus). Al hacerlo, se actualizarán las definiciones de asmdefs con las definiciones y las referencias necesarias para que el código de Oculus Quest pertinente funcione. También actualizará el archivo csc para filtrar las advertencias obsoletas producidas por los recursos de integración de Oculus. El repositorio de MRTK contiene un archivo csc que convierte las advertencias en errores. Esta conversión detiene el proceso de MRTK-Quest configuración.
+1. Vaya a Mixed Reality Toolkit > Utilities > Oculus > Integrate Oculus Integration Unity Modules (Integrar módulos de Unity de integración de Oculus). Al hacerlo, se actualizarán las definiciones de asmdefs con las definiciones y referencias necesarias para que el código de Oculus Quest pertinente funcione. También actualizará el archivo csc para filtrar las advertencias obsoletas producidas por los recursos de integración de Oculus. El repositorio de MRTK contiene un archivo csc que convierte las advertencias en errores. Esta conversión detiene el proceso de configuración MRTK-Quest configuración.
 
     ![Asmdef de integración de Oculus](../images/cross-platform/oculus-quest/OculusIntegrationAsmdef.png)
 
@@ -109,7 +109,7 @@ El [paquete de Unity de integración de Oculus](https://assetstore.unity.com/pac
 
 ## <a name="build-and-deploy-your-project-to-oculus-quest"></a>Compilación e implementación del proyecto en Oculus Quest
 
-1. Conexión de Oculus Quest a través de un cable USB 3.0 -> USB C
+1. Conecte su Oculus Quest a través de un cable USB 3.0 -> USB C
 1. Vaya a **File > Build Configuración**
 1. Cambio de la implementación a **Android**
 1. Asegúrese de que Oculus Quest está seleccionado como el dispositivo de ejecución aplicable.
@@ -126,7 +126,7 @@ El [paquete de Unity de integración de Oculus](https://assetstore.unity.com/pac
 
 ## <a name="removing-oculus-integration-from-the-project"></a>Quitar la integración de Oculus del Project
 
-1. Vaya a la Mixed Reality Toolkit > Oculus > Módulos de Unity de integración de Oculus independientes ![ Oculus Separation Asmdef](../images/cross-platform/oculus-quest/OculusSeparationAsmdef.png)
+1. Vaya a la Mixed Reality Toolkit > Oculus > Módulos de Unity de integración de ![ Oculus independientes Oculus Separation Asmdef](../images/cross-platform/oculus-quest/OculusSeparationAsmdef.png)
 1. Deje que Unity se actualice como referencias en Microsoft.MixedReality. Toolkit. Providers.Oculus.asmdef y otros archivos se modifican en este paso
 1. Cerrar Unity
 1. Cierre Visual Studio, si está abierto.

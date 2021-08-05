@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, C#,
-ms.openlocfilehash: c14f5f72d391c5474a01c798bfdaa5529700a509
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: fe54a9fe1f906a31ac7ed0417dd3a57fee167314b4b2db29eadcd1eaa22f97b7
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175336"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115210741"
 ---
 # <a name="coding-guidelines"></a>Instrucciones de codificación
 
@@ -38,7 +38,7 @@ Todos los detalles del código que se generan importan, desde los detalles más 
 
 MRTK admite un conjunto diverso de usuarios: personas que prefieren configurar componentes en el editor de Unity y cargar elementos prefijos, y personas que necesitan crear instancias y configurar objetos en tiempo de ejecución.
 
-Todo el código debe funcionar agregando un componente a un GameObject en una escena guardada y mediante la creación de instancias de ese componente en el código. Las pruebas deben incluir un caso de prueba tanto para crear instancias previas como para crear instancias, y configurar el componente en tiempo de ejecución.
+Todo el código debe funcionar agregando un componente a un GameObject en una escena guardada y mediante la creación de instancias de ese componente en el código. Las pruebas deben incluir un caso de prueba para crear instancias previas y crear instancias, y configurar el componente en tiempo de ejecución.
 
 ### <a name="play-in-editor-is-your-first-and-primary-target-platform"></a>Play-in-editor es la primera plataforma de destino principal
 
@@ -50,7 +50,7 @@ Haga que todo funcione en el editor y, a continuación, haga que funcione en cua
 
 Cada vez que se agrega un método público, un campo o una propiedad, se convierte en parte de la superficie de API pública de MRTK. Los campos privados marcados con `[SerializeField]` también exponen campos al editor y forman parte de la superficie de API pública. Otras personas pueden usar ese método público, configurar elementos prefab personalizados con el campo público y tomar una dependencia de él.
 
-Los nuevos miembros públicos deben examinarse detenidamente. Cualquier campo público tendrá que mantenerse en el futuro. Recuerde que si el tipo de un campo público (o campo privado serializado) cambia o se quita de un monobehaviour, esto podría interrumpir a otras personas. El campo deberá estar en desuso para una versión y es necesario proporcionar código para migrar los cambios de las personas que han tomado dependencias.
+Los nuevos miembros públicos deben examinarse detenidamente. Cualquier campo público deberá mantenerse en el futuro. Recuerde que si el tipo de un campo público (o campo privado serializado) cambia o se quita de un monobehaviour, esto podría interrumpir a otras personas. El campo deberá estar en desuso para una versión y es necesario proporcionar código para migrar los cambios de las personas que han tomado dependencias.
 
 ### <a name="prioritize-writing-tests"></a>Priorizar la escritura de pruebas
 
@@ -60,7 +60,7 @@ Cuando corrija un error, escriba una prueba para asegurarse de que no se reviert
 
 ## <a name="c-coding-conventions"></a>Convenciones de codificación de C#
 
-### <a name="script-license-information-headers"></a>Script de encabezados de información de licencia
+### <a name="script-license-information-headers"></a>Encabezados de información de licencia de script
 
 Todos los empleados de Microsoft que contribuyen a nuevos archivos deben agregar el siguiente encabezado de licencia estándar en la parte superior de los archivos nuevos, exactamente como se muestra a continuación:
 
@@ -139,7 +139,7 @@ Si se requiere representación personalizada en la clase inspector, intente util
 
 Si no se puede usar debido a un requisito en la lógica personalizada, asegúrese de que todo [`EditorGUILayout.PropertyField`](https://docs.unity3d.com/ScriptReference/EditorGUILayout.PropertyField.html) el uso se ajusta alrededor de [`EditorGUI.PropertyScope`](https://docs.unity3d.com/ScriptReference/EditorGUI.PropertyScope.html) . Esto garantizará que Unity represente el inspector correctamente para los elementos prefab anidados y los valores modificados con la propiedad dada.
 
-Además, intente decorar la clase de inspector personalizado con [`CanEditMultipleObjects`](https://docs.unity3d.com/ScriptReference/CanEditMultipleObjects.html) un . Esta etiqueta garantiza que se pueden seleccionar y modificar juntos varios objetos con este componente en la escena. Las nuevas clases de inspector deben probar que su código funciona en esta situación en la escena.
+Además, intente decorar la clase inspectora personalizada con [`CanEditMultipleObjects`](https://docs.unity3d.com/ScriptReference/CanEditMultipleObjects.html) un . Esta etiqueta garantiza que se pueden seleccionar y modificar juntos varios objetos con este componente en la escena. Las nuevas clases de inspector deben probar que su código funciona en esta situación en la escena.
 
 ```c#
     // Example inspector class demonstrating usage of SerializedProperty & EditorGUILayout.PropertyField
@@ -205,7 +205,7 @@ Un ejemplo interesante en el que el registro es útil (junto con una carga útil
 DebugUtilities.LogVerboseFormat("RaiseSourceDetected: Source ID: {0}, Source Type: {1}", source.SourceId, source.SourceType);
 ```
 
-Este tipo de registro puede ayudar a detectar problemas como , causados por eventos de origen no [https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016) coincidentes detectados y de pérdida de origen.
+Este tipo de registro puede ayudar a detectar problemas como , causados por eventos de origen no [https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/8016) coincidentes detectados y pérdidas de origen.
 
 Evite agregar registros para los datos y eventos que se producen en cada fotograma; idealmente, el registro debe cubrir eventos "interesantes" controlados por distintas entradas de usuario (es decir, un "clic" por parte de un usuario y el conjunto de cambios y eventos que proceden de que son interesantes de registrar). El estado continuo de "el usuario sigue manteniendo un gesto" registrado en cada fotograma no es interesante y sobrecargará los registros.
 
@@ -596,7 +596,7 @@ public float AbsMyValue
 
 ### <a name="cache-values-and-serialize-them-in-the-sceneprefab-whenever-possible"></a>Almacenar en caché valores y serializarlos en la escena o prefab siempre que sea posible
 
-Con la HoloLens en mente, es mejor optimizar el rendimiento y las referencias de caché en la escena o prefab para limitar las asignaciones de memoria en tiempo de ejecución.
+Con la HoloLens en mente, es mejor optimizar el rendimiento y almacenar en caché las referencias en la escena o el objeto prefab para limitar las asignaciones de memoria en tiempo de ejecución.
 
 #### <a name="dont"></a>Lo que debe evitar:
 
@@ -676,18 +676,18 @@ public class MyClass
 ### <a name="use-platform-dependent-compilation-to-ensure-the-toolkit-wont-break-the-build-on-another-platform"></a>Use [la compilación dependiente de](https://docs.unity3d.com/Manual/PlatformDependentCompilation.html) la plataforma para Toolkit no interrumpirá la compilación en otra plataforma.
 
 - Use `WINDOWS_UWP` para usar API específicas de UWP que no son de Unity. Esto impedirá que intenten ejecutarse en el editor o en plataformas no admitidas. Esto es equivalente a `UNITY_WSA && !UNITY_EDITOR` y debe usarse en favor de .
-- Use `UNITY_WSA` para usar LAS API de Unity específicas de UWP, como el espacio de nombres `UnityEngine.XR.WSA` . Esto se ejecutará en el Editor cuando la plataforma esté establecida en UWP, así como en aplicaciones para UWP integradas.
+- Use para usar LAS API de `UNITY_WSA` Unity específicas de UWP, como el espacio de `UnityEngine.XR.WSA` nombres . Esto se ejecutará en el Editor cuando la plataforma esté establecida en UWP, así como en aplicaciones para UWP integradas.
 
 Este gráfico puede ayudarle a decidir qué usar, en función de los casos `#if` de uso y la configuración de compilación que espera.
 
 |Plataforma | UWP IL2CPP | UWP .NET | Editor |
 | --- | --- | --- | --- |
-| `UNITY_EDITOR` | Falso | False | True |
+| `UNITY_EDITOR` | False | False | True |
 | `UNITY_WSA` | True | True | True |
 | `WINDOWS_UWP` | True | True | False |
 | `UNITY_WSA && !UNITY_EDITOR` | True | True | False |
-| `ENABLE_WINMD_SUPPORT` | True | True | Falso |
-| `NETFX_CORE` | False | True | Falso |
+| `ENABLE_WINMD_SUPPORT` | True | True | False |
+| `NETFX_CORE` | False | True | False |
 
 ### <a name="prefer-datetimeutcnow-over-datetimenow"></a>Preferir DateTime.UtcNow en lugar de DateTime.Now
 

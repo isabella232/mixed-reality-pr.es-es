@@ -1,20 +1,20 @@
 ---
-title: Prefab de texto
+title: Recurso prefabricado de texto
 description: Información general de TextPrefab en MRTK
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, TMP,
-ms.openlocfilehash: 1839109043cfad9a20697c5d6526b349fd7ea2e4
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 1969bc9e3054fec509e9f7d536cbfe4b97e43563e26ba5476601e78e65ad24f9
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175639"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209096"
 ---
-# <a name="text-prefab"></a>Prefab de texto
+# <a name="text-prefab"></a>Recurso prefabricado de texto
 
-Estos objetos prefab están optimizados para la calidad de representación en Windows Mixed Reality. Para obtener más información, lea la guía [Texto en Unity](/windows/mixed-reality/text-in-unity) en Microsoft Windows Centro de desarrollo.
+Estos objetos prefab están optimizados para la calidad de representación en Windows Mixed Reality. Para más información, lea la guía [Text in Unity](/windows/mixed-reality/text-in-unity) on Microsoft Windows Centro de desarrollo(Texto en Unity en Microsoft Windows Centro de desarrollo).
 
 ## <a name="prefabs"></a>Requisitos previos
 
@@ -31,7 +31,7 @@ Interfaz de usuario text mesh prefab (Assets/MRTK/SDK/StandardAssets/Prefabs/Tex
 Fuentes de código abierto (Assets/MRTK/Core/StandardAssets/Fonts) incluidas en Mixed Reality Toolkit.
 
 > [!IMPORTANT]
-> Text Prefab usa la fuente de código abierto 'Selawik'. Para usar Text Prefab con una fuente diferente, importe el archivo de fuente y siga las instrucciones que se indican a continuación. En el ejemplo siguiente se muestra cómo usar la fuente "Segoe UI" con Text Prefab.
+> Text Prefab usa la fuente de código abierto 'Selawik'. Para usar Text Prefab con una fuente diferente, importe el archivo de fuente y siga las instrucciones siguientes. En el ejemplo siguiente se muestra cómo usar la fuente "Segoe UI" con Text Prefab.
 
 ![Importar un Segoe UI fuente](../images/text-prefab/TextPrefabInstructions01.png)
 

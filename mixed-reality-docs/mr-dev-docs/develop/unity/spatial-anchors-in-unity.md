@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 04/7/2021
 ms.topic: article
 keywords: Unity, anclajes espaciales, almacén de anclajes, HoloLens, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, herramientas de bloqueo mundial, hologramas
-ms.openlocfilehash: 4fc982244a766bb34f15b356d608f2aad18f7a88
-ms.sourcegitcommit: 3e36b2fbbcc250c49aaf8ca1b6133cf0e9db69fa
+ms.openlocfilehash: 34ef74ab968bff04188b1010eb4c863fd73d76ee6b1dd8a0bd89c7d4232a2be9
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2021
-ms.locfileid: "107528784"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115208888"
 ---
 # <a name="world-locking-and-spatial-anchors-in-unity"></a>Bloqueo mundial y anclajes espaciales en Unity
 
@@ -23,19 +23,19 @@ Conseguir que los hologramas permanezcan en su lugar, moverse con usted o, en al
 
 En la actualidad, al escribir juegos, aplicaciones de visualización de datos  o aplicaciones de realidad virtual, el enfoque típico es establecer un sistema de coordenadas universal absoluto al que todas las demás coordenadas puedan volver a asignarse de forma confiable. En ese entorno, siempre puede encontrar una transformación estable que defina una relación entre dos objetos cualquiera en ese mundo. Si no movió esos objetos, sus transformaciones relativas siempre seguirán siendo las mismas. Este tipo de sistema de coordenadas global es fácil de obtener cuando se representa un mundo puramente virtual en el que se conoce toda la geometría de antemano. En la actualidad, las aplicaciones de realidad virtual a escala de sala suelen establecer este tipo de sistema de coordenadas de escala de habitación absoluto con su origen en la planta.
 
-Por el contrario, un dispositivo de realidad mixta sin ateso, como HoloLens, tiene un conocimiento dinámico controlado por sensores del mundo, ajustando continuamente sus conocimientos con el tiempo del entorno del usuario a medida que atraviesan muchos metros a través de una planta completa de un edificio. En una experiencia a escala mundial, si colocaste todos los hologramas en un sistema de coordenadas rígidas naïve, esos hologramas acabarían desviando con el tiempo, ya sea en función del mundo o en relación entre sí.
+En cambio, un dispositivo de realidad mixta sin ateso, como HoloLens, tiene una comprensión dinámica controlada por sensores del mundo, ajustando continuamente sus conocimientos con el tiempo del entorno del usuario a medida que atraviesan muchos metros a través de una planta completa de un edificio. En una experiencia a escala mundial, si colocaste todos los hologramas en un sistema de coordenadas rígidas naïve, esos hologramas acabarían desviando con el tiempo, ya sea en función del mundo o en relación entre sí.
 
-Por ejemplo, el casco puede que actualmente crea que dos ubicaciones del mundo están a 4 metros de distancia y, después, refinan esa comprensión, aprendiendo que las ubicaciones están en realidad a 3,9 metros de distancia. Si esos hologramas se hubieran colocado inicialmente a 4 metros de distancia en un único sistema de coordenadas rígidas, uno de ellos siempre aparecería a 0,1 metros del mundo real.
+Por ejemplo, el casco puede pensar actualmente que dos ubicaciones del mundo están a 4 metros de distancia y, después, refinar esa comprensión, aprendiendo que las ubicaciones están de hecho a 3,9 metros de distancia. Si esos hologramas se hubieran colocado inicialmente a 4 metros de distancia en un único sistema de coordenadas rígidas, uno de ellos siempre aparecería a 0,1 metros del mundo real.
 
-Puede colocar manualmente **anclajes** espaciales en Unity para mantener la posición de un holograma en el mundo físico cuando el usuario es móvil; sin embargo, esto sacrificará la coherencia automática dentro del mundo virtual. Los distintos anclajes se mueven constantemente entre sí y también se mueven por el espacio de coordenadas global. En este escenario, tareas sencillas como el diseño se vuelven difíciles y la simulación física problemática.
+Puede colocar manualmente **anclajes** espaciales en Unity para mantener la posición de un holograma en el mundo físico cuando el usuario es móvil; sin embargo, esto sacrificará la coherencia dentro del mundo virtual. Los distintos anclajes se mueven constantemente en relación entre sí y también se mueven a través del espacio de coordenadas global. En este escenario, tareas sencillas como el diseño se vuelven difíciles y la simulación física es problemática.
 
-**World Locking Tools** le permite obtener lo mejor de ambos mundos, estabilizando un único sistema de coordenadas rígidas mediante un suministro interno de anclajes espaciales distribuidos por toda la escena virtual a medida que el usuario se mueve. Las herramientas analizan las coordenadas de la cámara y los anclajes espaciales en cada fotograma. En lugar de cambiar las coordenadas de todo el mundo para compensar las correcciones en las coordenadas de la cabeza del usuario, las herramientas simplemente corrigen las coordenadas de la cabeza en su lugar.
+**World Locking Tools** le ofrece lo mejor de ambos mundos, estabilizando un único sistema de coordenadas rígidas mediante un suministro interno de anclajes espaciales distribuidos por toda la escena virtual a medida que el usuario se mueve. Las herramientas analizan las coordenadas de la cámara y los anclajes espaciales en cada fotograma. En lugar de cambiar las coordenadas de todo el mundo para compensar las correcciones en las coordenadas de la cabeza del usuario, las herramientas simplemente corrigen las coordenadas de la cabeza en su lugar.
 
 ## <a name="choosing-your-world-locking-approach"></a>Elección del enfoque de bloqueo del mundo
 
 * **Nuestra recomendación** es usar **World Locking Tools para** todas las necesidades de posicionamiento del holograma. 
     * World Locking Tools proporciona un sistema de coordenadas estable que minimiza las incoherencias visibles entre los marcadores virtuales y reales. Dicho de otro modo, bloquea toda la escena con un grupo compartido de delimitadores, en lugar de bloquear cada grupo de objetos con el propio delimitador individual del grupo.
-* **Para Unity 2019/2020 mediante OpenXR** o el complemento XR de Windows, debe usar **ARAnchorManager.**
+* **Para Unity 2019/2020 mediante OpenXR** o el complemento XR de Windows , debe usar **ARAnchorManager.**
 * **Para versiones anteriores de Unity o proyectos de WSA,** debe usar **WorldAnchor.**
 
 ## <a name="setting-up-world-locking"></a>Configuración del bloqueo mundial 
@@ -59,7 +59,7 @@ Tenga en cuenta que Azure Spatial Anchors todavía no se admite directamente en 
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido del punto de control de desarrollo de Unity que hemos diseñado, se encuentra a punto de explorar los principales Mixed Reality de creación. Desde aquí, puede continuar con el siguiente bloque de compilación:
+Si sigue el recorrido del punto de control de desarrollo de Unity que hemos diseñado, se encuentra a punto de explorar Mixed Reality bloques de creación principales. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Asignación espacial](spatial-mapping-in-unity.md)
@@ -75,7 +75,7 @@ Puede volver a los [puntos de control de desarrollo de Unity](unity-development-
 * [Introducción a World Locking Tools](https://microsoft.github.io/MixedReality-WorldLockingTools-Unity/DocGen/Documentation/IntroFAQ.html)
 * [Guías de inicio rápido](https://microsoft.github.io/MixedReality-WorldLockingTools-Unity/DocGen/Documentation/HowTos/QuickStart.html)
 * [Tutoriales](https://microsoft.github.io/MixedReality-WorldLockingTools-Samples/Tutorial/01_Minimal/01_Minimal.html)
-* [Ejemplos](https://microsoft.github.io/MixedReality-WorldLockingTools-Unity/DocGen/Documentation/HowTos/SampleApplications.html)
+* [Muestras](https://microsoft.github.io/MixedReality-WorldLockingTools-Unity/DocGen/Documentation/HowTos/SampleApplications.html)
 * [Persistencia del delimitador espacial](../../design/coordinate-systems.md#spatial-anchor-persistence)
 * <a href="/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>
 * <a href="/dotnet/api/Microsoft.Azure.SpatialAnchors" target="_blank">SDK de Azure Spatial Anchors para Unity</a>

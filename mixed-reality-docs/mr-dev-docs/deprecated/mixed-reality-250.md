@@ -1,31 +1,31 @@
 ---
-title: MR Sharing 250-HoloLens y auriculares envolventes
-description: Siga este tutorial de codificación con auriculares con Unity, Visual Studio, HoloLens y Windows Mixed Reality para obtener información detallada sobre el uso compartido de hologramas entre dispositivos de realidad mixta.
+title: 'Mr Sharing 250: cascos HoloLens y envolventes'
+description: Siga este tutorial de codificación con unity, Visual Studio, HoloLens y Windows Mixed Reality cascos para aprender los detalles del uso compartido de hologramas entre dispositivos de realidad mixta.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, inmersivo, controlador de movimiento, uso compartido, controladora Xbox, redes, dispositivos cruzados
-ms.openlocfilehash: 8b6711ab3ee833306742fe938dfa501dc5b4ed0e
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, immersive, motion controller, sharing, xbox controller, networking, cross-device
+ms.openlocfilehash: 9f1b136193feefece3235d853503c05c69dbd451f9c2916fb178f1bcac0e3972
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580122"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115208315"
 ---
 # <a name="mr-sharing-250-hololens-and-immersive-headsets"></a>Uso compartido de la realidad mixta (250): HoloLens y cascos envolventes
 
 >[!NOTE]
 >Los tutoriales de Mixed Reality Academy se han diseñado teniendo en cuenta HoloLens (1.ª generación) y los cascos envolventes de realidad mixta.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos.  Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](../develop/unity/tutorials/mr-learning-base-01.md) para HoloLens 2.
 
-Con la flexibilidad de Plataforma universal de Windows (UWP), es fácil crear una aplicación que abarque varios dispositivos. Con esta flexibilidad, podemos crear experiencias que aprovechen las ventajas de cada dispositivo. En este tutorial se tratará una experiencia básica compartida que se ejecuta tanto en HoloLens como en Windows Mixed Reality. Este contenido se entregó originalmente en la Conferencia de Microsoft Build 2017 en Seattle, WA.
+Con la flexibilidad de la Plataforma Windows universal (UWP), es fácil crear una aplicación que abarque varios dispositivos. Con esta flexibilidad, podemos crear experiencias que aprovechen las ventajas de cada dispositivo. En este tutorial se trata una experiencia compartida básica que se ejecuta en HoloLens y Windows Mixed Reality cascos envolventes. Este contenido se entregó originalmente en la conferencia de Microsoft Build 2017 en Seattle, WA.
 
 **En este tutorial, veremos lo siguiente:**
 
 * Configure una red mediante UNET.
-* Comparta hologramas en dispositivos de realidad mixta.
-* Establezca una vista diferente de la aplicación en función del dispositivo de realidad mixta que se esté usando.
-* Cree una experiencia compartida en la que los usuarios de HoloLens guíen a los auriculares a través de algunos rompecabezas sencillos.
+* Compartir hologramas entre dispositivos de realidad mixta.
+* Establezca una vista diferente de la aplicación en función del dispositivo de realidad mixta que se esté utilizando.
+* Cree una experiencia compartida en la que los HoloLens guían a los usuarios de cascos envolventes a través de una sencilla experiencia.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -41,146 +41,146 @@ Con la flexibilidad de Plataforma universal de Windows (UWP), es fácil crear un
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-* Un equipo con Windows 10 con las [herramientas de desarrollo necesarias](../develop/install-the-tools.md) y [configurada para admitir un casco con Windows Mixed Reality](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines).
-* Un controlador de Xbox que funcione con su PC.
+* Un Windows 10 equipo con las herramientas [de desarrollo necesarias](../develop/install-the-tools.md) y configurado para admitir un casco Windows Mixed Reality [envolvente](/windows/mixed-reality/enthusiast-guide/windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines).
+* Un controlador de Xbox que funcione con el equipo.
 * Al menos un dispositivo HoloLens y un casco envolvente.
-* Una red que permite la difusión de UDP para la detección.
+* Una red que permite la difusión UDP para la detección.
 
 ### <a name="project-files"></a>Archivos de proyecto
 
-* Descargue los [archivos](https://github.com/Microsoft/MixedReality250/archive/master.zip) requeridos por el proyecto. Extraiga los archivos a una ubicación fácil de recordar.
-* Este proyecto requiere [una versión recomendada de Unity con compatibilidad con Windows Mixed Reality](../develop/install-the-tools.md).
+* Descargue los [archivos](https://github.com/Microsoft/MixedReality250/archive/master.zip) requeridos por el proyecto. Extraiga los archivos en una ubicación fácil de recordar.
+* Este proyecto requiere la [versión recomendada de Unity con Windows Mixed Reality compatibilidad con](../develop/install-the-tools.md).
 
 >[!NOTE]
->Si desea examinar el código fuente antes de la descarga, está [disponible en github](https://github.com/Microsoft/MixedReality250).
+>Si desea buscar en el código fuente antes de descargarlo, está [disponible en GitHub](https://github.com/Microsoft/MixedReality250).
 
-## <a name="chapter-1---holo-world"></a>Capítulo 1: Hololens World
+## <a name="chapter-1---holo-world"></a>Capítulo 1: Holo World
 
 >[!VIDEO https://www.youtube.com/embed/IC0rp6rLiEc]
 
 ### <a name="objectives"></a>Objetivos
 
-Asegúrese de que el entorno de desarrollo está listo para usar un proyecto sencillo.
+Asegúrese de que el entorno de desarrollo está listo para usar un proyecto simple.
 
 ### <a name="what-we-will-build"></a>Qué vamos a crear
 
-Una aplicación que muestra un holograma en HoloLens o en un auricular envolvente de Windows Mixed Reality.
+Una aplicación que muestra un holograma en un HoloLens o un casco Windows Mixed Reality envolvente.
 
 ### <a name="steps"></a>Pasos
 
 * Abra Unity.
-    * seleccione **Open**(Abrir).
-    * Vaya a la ubicación donde extrajo los archivos del proyecto.
+    * Seleccione **Open** (Abrir).
+    * Vaya a donde extrajo los archivos del proyecto.
     * Haga clic en **Seleccionar carpeta**.
-    * *Para que Unity procese el proyecto por primera vez, se tardará un poco.*
-* Compruebe que la realidad mixta está habilitada en Unity.
-    * Abra el cuadro de diálogo Configuración de compilación (**Control + Mayús + B** o **configuración de compilación de > de archivos...**).
-    * Seleccione **plataforma universal de Windows** , a continuación, haga clic en **cambiar plataforma**.
-    * Seleccione **editar>configuración del reproductor**.
-    * En el panel **Inspector** , en el lado derecho, expanda la **configuración de XR**.
-    * Active la casilla se **admite Virtual Reality** .
-    * *Windows Mixed Reality debe ser el SDK de realidad virtual.*
+    * *Unity puede tardar un poco en procesar el proyecto por primera vez.*
+* Compruebe que Mixed Reality está habilitado en Unity.
+    * Abra el cuadro de diálogo de configuración de compilación **(Control+Mayús+B** o **Archivo > compilar Configuración...).**
+    * Seleccione **Plataforma Windows universal y, a continuación,** haga clic en Cambiar **plataforma.**
+    * Seleccione **Editar>Player Configuración**.
+    * En el **panel Inspector** del lado derecho, expanda **XR Configuración**.
+    * Active la **casilla Virtual Reality Supported (Realidad** virtual admitida).
+    * *Windows Mixed Reality debe ser el SDK de Virtual Reality.*
 * Cree una escena.
-    * En la **jerarquía** , haga clic con el botón secundario en **cámara principal** y seleccione **eliminar**.
-    * En **HoloToolkit > entrada > Prefabs** arrastre **MixedRealityCameraParent** hasta la **jerarquía**.
-* Agregar hologramas a la escena
-    * En **AppPrefabs** , arrastre **SKYBOX** hasta la **vista escena**.
-    * Desde **AppPrefabs** , arrastre los **administradores** a la **jerarquía**.
-    * En **AppPrefabs** , arrastre **isla** hasta la **jerarquía**.
+    * En Jerarquía, **haga clic con** el botón derecho en Cámara **principal** y **seleccione Eliminar.**
+    * Desde **HoloToolkit > Entrada > prefabs** arrastre **MixedRealityCameraParent** a **hierarchy**.
+* Agregar Hologramas a la escena
+    * Desde **AppPrefabs,** arrastre **Skybox** a la **vista de escena**.
+    * Desde **AppPrefabs,** arrastre **Administradores** a **la jerarquía**.
+    * Desde **AppPrefabs,** arrastre **Isla** a **la jerarquía**.
 * Guardar y compilar
-    * Guardar ( **control + S** o **archivo > guardar escena**)
-    * Dado que se trata de una nueva escena, deberá asignarle un nombre. El nombre no importa, pero usamos SharedMixedReality.
+    * Guardar **(Control+S o** Archivo **> Guardar escena)**
+    * Puesto que se trata de una escena nueva, deberá nombrarla. El nombre no importa, pero usamos SharedMixedReality.
 * Exportar a Visual Studio
-    * Abrir el menú compilar (**Control + Mayús + B** o **configuración de compilación de > de archivos**)
-    * Haga clic en **Agregar escenas abiertas.**
-    * Comprobar los **proyectos de C# de Unity**
+    * Abra el menú de compilación **(Control+Mayús+B** o **Archivo > Compilación Configuración**)
+    * Haga clic **en Agregar escenas abiertas.**
+    * Comprobar proyectos **de C# de Unity**
     * Haga clic en **Generar**.
     * En la ventana del explorador de archivos que aparece, cree una nueva carpeta denominada **App**.
-    * Haga clic en la carpeta de la **aplicación** .
+    * Haga clic en la **carpeta** Aplicación.
     * Presione **Seleccionar carpeta.**
     * **Esperar a que se complete la compilación**
-    * En la ventana del explorador de archivos que aparece, navegue a la carpeta de la **aplicación** .
-    * Haga doble clic en **SharedMixedReality. sln** para iniciar Visual Studio
-* Compilación desde Visual Studio
-    * El uso de la barra de herramientas superior cambia el destino a **Release** y **x86**.
-    * Haga clic en la flecha situada junto a **equipo local** y seleccione el **dispositivo** que desea implementar en HoloLens.
-    * Haga clic en la flecha situada junto a **dispositivo** y seleccione **equipo local** para implementar el casco de realidad mixta.
-    * Haga clic en **depurar->iniciar sin depurar** o **Ctrl + F5** para iniciar la aplicación.
+    * En la ventana del explorador de archivos que aparece, vaya a la **carpeta Aplicación.**
+    * Haga doble clic **en SharedMixedReality.sln** para iniciar Visual Studio
+* Compilar a partir de Visual Studio
+    * Con la barra de herramientas superior, cambie el **destino a Versión** y **x86**.
+    * Haga clic en la flecha situada junto **a Máquina local** y seleccione **Dispositivo** para implementar en HoloLens
+    * Haga clic en la flecha situada junto **a Dispositivo** y seleccione Local **Machine (Máquina local)** para implementar el casco de realidad mixta.
+    * Haga **clic en Depurar->Iniciar sin depurar** o **Control+F5** para iniciar la aplicación.
 
-### <a name="digging-into-the-code"></a>Profundizar en el código
+### <a name="digging-into-the-code"></a>Profundización en el código
 
-En el panel Proyecto, desplácese a **Assets\HoloToolkit\Input\Scripts\Utilities** y haga doble clic en **MixedRealityCameraManager.CS** para abrirlo.
+En el panel del proyecto, vaya a **Assets\HoloToolkit\Input\Scripts\Utilities** y haga doble clic en **MixedRealityCameraManager.cs** para abrirlo.
 
-**Información general:** MixedRealityCameraManager.cs es un script sencillo que ajusta la configuración de nivel de calidad y de fondo en función del dispositivo. La clave aquí es HolographicSettings. IsDisplayOpaque, que permite que un script detecte si el dispositivo es un HoloLens (IsDisplayOpaque devuelve false) o un auricular envolvente (IsDisplayOpaque devuelve true).
+**Información general:** MixedRealityCameraManager.cs es un script simple que ajusta el nivel de calidad y la configuración de fondo en función del dispositivo. La clave aquí es HolographicSettings.IsDisplayOpaque, que permite que un script detecte si el dispositivo es un HoloLens (IsDisplayOpaque devuelve false) o un casco envolvente (IsDisplayOpaque devuelve true).
 
 ### <a name="enjoy-your-progress"></a>Disfrute de su progreso
 
-En este momento, la aplicación solo presentará un holograma. Más adelante se agregará la interacción con el holograma. Ambos dispositivos representarán el holograma. Los auriculares inmersivo también representarán un fondo azul cielo y nubes.
+En este momento, la aplicación simplemente representará un holograma. Más adelante agregaremos interacción al holograma. Ambos dispositivos representarán el holograma de la misma manera. El casco envolvente también representará un cielo azul y un fondo de nubes.
 
-## <a name="chapter-2---interaction"></a>Capítulo 2: interacción
+## <a name="chapter-2---interaction"></a>Capítulo 2: Interacción
 
 >[!VIDEO https://www.youtube.com/embed/Lrb1y4sQRvI]
 
 ### <a name="objectives"></a>Objetivos
 
-Muestra cómo controlar la entrada de una aplicación de Windows Mixed Reality.
+Muestra cómo controlar la entrada de una Windows Mixed Reality aplicación.
 
 ### <a name="what-we-will-build"></a>Qué vamos a crear
 
-Al basarse en la aplicación del capítulo 1, agregaremos funcionalidad para que el usuario pueda seleccionar el holograma y colocarlo en una superficie real de HoloLens o en una tabla virtual en un casco envolvente.
+A partir de la aplicación del capítulo 1, agregaremos funcionalidad para permitir al usuario recoger el holograma y colocarlo en una superficie real en HoloLens o en una tabla virtual en un casco envolvente.
 
-**Actualizador de entrada:** En HoloLens, el gesto de selección es la **TAP del aire**. En los auriculares inmersivo, usaremos el botón **a** del controlador Xbox. Para obtener más información, consulte la información [General sobre el modelo de interacción](../design/interaction-fundamentals.md).
+**Actualizador de entrada:** En HoloLens el gesto de selección es la **pulsación en el aire.** En los cascos envolventes, usaremos el **botón A** en el controlador de Xbox. Para más información, consulte la introducción [al modelo de interacción.](../design/interaction-fundamentals.md)
 
 ### <a name="steps"></a>Pasos
 
 * Agregar administrador de entrada
-    * En **HoloToolkit > entrada > Prefabs** arrastre **InputManager** hasta **jerarquía** como elemento secundario de **Managers**.
-    * En **HoloToolkit > entrada > Prefabs >** **cursor de arrastre** del cursor a la **jerarquía**.
+    * Desde **HoloToolkit > Entrada > prefabs** arrastre **InputManager** a **Hierarchy** como elemento secundario de **Managers**.
+    * Desde **HoloToolkit > entrada > prefabs > Cursor** arrastre cursor **a** **Hierarchy**.
 * Agregar asignación espacial
-    * En **HoloToolkit > SpatialMapping > Prefabs** arrastre **SpatialMapping** hasta **jerarquía**.
-* Agregar Playspace virtuales
-    * En la **jerarquía** , expanda **MixedRealityCameraParent** seleccionar **límite**
-    * En el panel **Inspector** , active la casilla para habilitar el **límite** .
-    * En **AppPrefabs** , arrastre **VRRoom** hasta **jerarquía**.
+    * En **HoloToolkit > SpatialMapping > Prefabs** arrastre **SpatialMapping** a **Hierarchy**.
+* Agregar espacio de reproducción virtual
+    * En **Jerarquía,** expanda **MixedRealityCameraParent y** seleccione **Límite.**
+    * En **el** panel Inspector, active la casilla para habilitar **Límites.**
+    * En **AppPrefabs,** arrastre **VRRoom** a **Hierarchy**.
 * Agregar WorldAnchorManager
-    * En **jerarquía**, seleccione **administradores**.
-    * En **Inspector**, haga clic en **Agregar componente**.
-    * Escriba **World Limit Manager**.
+    * En **Jerarquía,** seleccione **Administradores.**
+    * En **Inspector**, haga clic **en Agregar componente**.
+    * Escriba **World Anchor Manager**.
     * Seleccione **World Anchor Manager** para agregarlo.
 * Agregar TapToPlace a la isla
-    * En **jerarquía**, expanda **isla**.
-    * Seleccione **MixedRealityLand**.
-    * En **Inspector**, haga clic en **Agregar componente**.
-    * Escriba **TAP para colocarlo** y selecciónelo.
-    * Active **colocar primario al pulsar**.
-    * Establezca **desplazamiento de selección de ubicación** en **(0, 0,1, 0)**.
+    * En **Hierarchy (Jerarquía),** expanda **Island**.
+    * Seleccione **MixedRealityLand.**
+    * En **Inspector**, haga clic **en Agregar componente**.
+    * Escriba **Pulse Para colocar** y selecciónelo.
+    * Active **Colocar elemento primario al pulsar**.
+    * Establezca **Desplazamiento de ubicación** en **(0, 0,1, 0).**
 * Guardar y compilar como antes
 
-### <a name="digging-into-the-code"></a>Profundizar en el código
+### <a name="digging-into-the-code"></a>Profundización en el código
 
 **Script 1: GamepadInput.cs**
 
-En el panel Proyecto, vaya a **Assets\HoloToolkit\Input\Scripts\InputSources** y haga doble clic en **GamepadInput.CS** para abrirlo. En la misma ruta de acceso del panel Proyecto, haga doble clic en **InteractionSourceInputSource.CS**.
+En el panel del proyecto, vaya a **Assets\HoloToolkit\Input\Scripts\InputSources** y haga doble clic **en GamepadInput.cs** para abrirlo. En la misma ruta de acceso del panel del proyecto, haga doble clic en **InteractionSourceInputSource.cs**.
 
 Tenga en cuenta que ambos scripts tienen una clase base común, BaseInputSource.
 
-BaseInputSource mantiene una referencia a un InputManager, que permite a un script desencadenar eventos. En este caso, el evento InputClicked es relevante. Esto será importante recordar cuando lleguemos al script 2, TapToPlace. En el caso de GamePadInput, se sondea la presencia de un botón en el controlador que se va a presionar y, a continuación, se genera el evento InputClicked. En el caso de InteractionSourceInputSource, se genera el evento InputClicked en respuesta a TappedEvent.
+BaseInputSource mantiene una referencia a inputManager, lo que permite que un script desencadene eventos. En este caso, el evento InputClicked es relevante. Esto será importante recordar cuando lleguemos al script 2, TapToPlace. En el caso de GamePadInput, sondeamos para que se presione el botón A en el controlador y, a continuación, generamos el evento InputClicked. En el caso de InteractionSourceInputSource, se genera el evento InputClicked en respuesta a TappedEvent.
 
 **Script 2: TapToPlace.cs**
 
-En el panel Proyecto, vaya a **Assets\HoloToolkit\SpatialMapping\Scripts** y haga doble clic en **TapToPlace.CS** para abrirlo.
+En el panel del proyecto, vaya a **Assets\HoloToolkit\SpatialMapping\Scripts y** haga doble clic **en TapToPlace.cs** para abrirlo.
 
-Lo primero que muchos desarrolladores desean implementar al crear una aplicación holográfica es mover hologramas con entrada de gestos. Por lo tanto, hemos hechonos comentar este script minuciosamente. Hay algunas cosas que merece la pena resaltar en este tutorial.
+Lo primero que muchos desarrolladores quieren implementar al crear una aplicación holográfica es mover Hologramas entrada de gestos. Por lo tanto, nos hemos esforzado por comentar exhaustivamente este script. Merece la pena resaltar algunas cosas para este tutorial.
 
-En primer lugar, tenga en cuenta que TapToPlace implementa IInputClickHandler. IInputClickHandler expone las funciones que controlan el evento InputClicked generado por GamePadInput.cs o InteractionSourceInputSource.cs. Se llama a OnInputClicked cuando un BaseInputSource detecta un clic mientras el objeto con TapToPlace está en el foco. Si puntea en HoloLens o si presiona el botón A del controlador Xbox, se desencadenará el evento.
+En primer lugar, tenga en cuenta que TapToPlace implementa IInputClickHandler. IInputClickHandler expone las funciones que controlan el evento InputClicked que genera GamePadInput.cs o InteractionSourceInputSource.cs. Se llama a OnInputClicked cuando BaseInputSource detecta un clic mientras el objeto con TapToPlace está en el foco. El evento se desencadenará al HoloLens o al presionar el botón A en el controlador de Xbox.
 
-Segundo es el código que se ejecuta en la actualización para ver si se está examinando una superficie para que podamos colocar el objeto de juego en una superficie, como una tabla. El casco envolvente no tiene un concepto de superficies reales, por lo que el objeto que representa la tabla superior (Vroom > TableThingy > Cube) se ha marcado con la capa física SpatialMapping, por lo que la conversión de rayo en la actualización entrará en conflicto con la tabla virtual superior.
+En segundo lugar, el código se ejecuta en actualización para ver si se está buscando una superficie para poder colocar el objeto de juego en una superficie, como una tabla. El casco envolvente no tiene un concepto de superficies reales, por lo que el objeto que representa la parte superior de la tabla (Vroom > TableThingy > Cube) se ha marcado con la capa física SpatialMapping, por lo que la conversión de rayos en Update colisionará con la parte superior de la tabla virtual.
 
 ### <a name="enjoy-your-progress"></a>Disfrute de su progreso
 
-Esta vez puede seleccionar la isla para moverla. En HoloLens puede trasladar la isla a una superficie real. En el casco envolvente puede trasladar la isla a la tabla virtual que hemos agregado.
+Esta vez puede seleccionar la isla para moverla. En HoloLens puede mover la isla a una superficie real. En el casco envolvente, puede mover la isla a la tabla virtual que hemos agregado.
 
-## <a name="chapter-3---sharing"></a>Capítulo 3: compartir
+## <a name="chapter-3---sharing"></a>Capítulo 3: Uso compartido
 
 >[!VIDEO https://www.youtube.com/embed/1diycJvxfDc]
 
@@ -190,114 +190,114 @@ Asegúrese de que la red está configurada correctamente y detalle cómo se comp
 
 ### <a name="what-we-will-build"></a>Qué vamos a crear
 
-Convertiremos el proyecto en un proyecto de varios jugadores. Agregaremos la interfaz de usuario y la lógica para hospedar o unirse a sesiones. Los usuarios de HoloLens se verán entre sí en la sesión con nubes a través de sus cabezales y los auriculares de un casco envolventes tienen nubes cerca de donde se encuentra el delimitador. Los usuarios de los auriculares envolventes verán los usuarios de HoloLens en relación con el origen de la escena. Todos los usuarios de HoloLens verán el holograma de la isla en el mismo lugar. Es importante tener en cuenta que los usuarios de los auriculares envolventes no estarán en la isla durante este capítulo, pero se comportarán de forma similar a HoloLens, con una vista de pájaros de la isla.
+Convertiremos el proyecto en un proyecto multijugador. Agregaremos la interfaz de usuario y la lógica para hospedar o unir sesiones. HoloLens usuarios se verán entre sí en la sesión con nubes sobre la cabeza, y los usuarios de cascos envolventes tienen nubes cerca de donde está el anclaje. Los usuarios de los cascos envolventes verán los HoloLens en relación con el origen de la escena. HoloLens usuarios verán el holograma de la isla en el mismo lugar. Es clave tener en cuenta que los usuarios de los cascos envolventes no estarán en la isla durante este capítulo, pero se comportarán de forma muy similar a HoloLens, con una vista visual de la isla.
 
 ### <a name="steps"></a>Pasos
 
-* Quitar isla y VRRoom
-    * En **jerarquía** , haga clic con el botón derecho en **isla** seleccionar **eliminar**
-    * En **jerarquía** , haga clic con el botón derecho en **VRRoom** seleccionar **eliminar**
+* Remove Island y VRRoom
+    * En **Jerarquía,** haga clic con el botón **derecho en Isla** y seleccione **Eliminar.**
+    * En **Jerarquía,** haga clic con el botón **derecho en VRRoom** y seleccione **Eliminar.**
 * Agregar Usland
-    * En **AppPrefabs** , arrastre **Usland** hasta **jerarquía**.
-* En **AppPrefabs** , arrastre cada una de las siguientes a la **jerarquía**:
+    * Desde **AppPrefabs,** arrastre **Usland** a **Hierarchy**.
+* Desde **AppPrefabs,** arrastre cada uno de los elementos siguientes a **Hierarchy**:
     * **UNETSharingStage**
     * **UNetAnchorRoot**
     * **UIContainer**
     * **DebugPanelButton**
 * Guardar y compilar como antes
 
-### <a name="digging-into-the-code"></a>Profundizar en el código
+### <a name="digging-into-the-code"></a>Profundización en el código
 
-En el panel Proyecto, desplácese a **Assets\AppPrefabs\Support\SharingWithUnet\Scripts** y haga doble clic en **UnetAnchorManager.CS**. La capacidad de un HoloLens de compartir información de seguimiento con otro HoloLens, de modo que ambos dispositivos puedan compartir el mismo espacio es un punto mágico. La eficacia de la realidad mixta se pone en conexión cuando dos o más personas pueden colaborar con los mismos datos digitales.
+En el panel del proyecto, vaya a **Assets\AppPrefabs\Support\SharingWithUnet\Scripts** y haga doble clic en **UnetAnchorManager.cs**. La capacidad de una HoloLens compartir información de seguimiento con otra HoloLens, de modo que ambos dispositivos puedan compartir el mismo espacio es casi mágica. La potencia de la realidad mixta cobra vida cuando dos o más personas pueden colaborar con los mismos datos digitales.
 
-Algunos aspectos que se deben señalar en este script:
+Algunos aspectos que hay que señalar en este script:
 
-En la función de inicio, observe la comprobación de **IsDisplayOpaque**. En este caso, supondremos que se establece el delimitador. Esto se debe a que los auriculares envolventes no exponen una manera de importar o exportar delimitadores. Sin embargo, si se ejecuta en HoloLens, este script implementa los delimitadores de uso compartido entre los dispositivos. El dispositivo que inicia la sesión creará un delimitador para la exportación. El dispositivo que se une a una sesión solicitará el delimitador del dispositivo que inició la sesión.
+En la función start, observe la comprobación de **IsDisplayOpaque.** En este caso, simulamos que se ha establecido el delimitador. Esto se debe a que los cascos envolventes no exponen una manera de importar o exportar anclajes. Sin embargo, si se ejecuta en HoloLens, este script implementa el uso compartido de delimitadores entre los dispositivos. El dispositivo que inicia la sesión creará un delimitador para la exportación. El dispositivo que se une a una sesión solicitará el delimitador del dispositivo que inició la sesión.
 
-**Exportador**
+**Exportación:**
 
-Cuando un usuario crea una sesión, NetworkDiscoveryWithAnchors llamará a la función UNETAnchorManagers CreateAnchor. Vamos a seguir el flujo de CreateAnchor.
+Cuando un usuario crea una sesión, NetworkDiscoveryWithAnchors llamará a la función CreateAnchor de UNETAnchorManagers. Vamos a seguir el flujo CreateAnchor.
 
-Comenzaremos llevando a cabo algún mantenimiento, borrando los datos que podamos haber recopilado para los delimitadores anteriores. A continuación, se comprueba si hay un delimitador en caché para cargar. Los datos del delimitador suelen tener entre 5 y 20 MB, por lo que reutilizar los delimitadores en caché puede ahorrar en la cantidad de datos que necesitamos transferir a través de la red. Veremos cómo funciona un poco más adelante. Aunque se vuelva a usar el delimitador, es necesario que los datos del delimitador estén listos en caso de que un nuevo cliente se unan que no tenga el delimitador.
+Empezamos por realizar algunas tareas de mantenimiento, borrando los datos que podamos haber recopilado para anclajes anteriores. A continuación, se comprueba si hay un delimitador almacenado en caché para cargar. Los datos de anclaje tienden a estar entre 5 y 20 MB, por lo que volver a usar los anclajes almacenados en caché puede ahorrar en la cantidad de datos que necesitamos transferir a través de la red. Veremos cómo funciona esto un poco más tarde. Incluso si se va a volver a usar el delimitador, es necesario preparar los datos del anclaje en caso de que se una un cliente nuevo que no tenga el delimitador.
 
-Hablando de la preparación de los datos de delimitador, la clase WorldAnchorTransferBatch expone la funcionalidad para preparar los datos de delimitador para el envío a otro dispositivo o aplicación y la funcionalidad para importar los datos de delimitador. Como estamos en la ruta de acceso de exportación, agregaremos el delimitador a WorldAnchorTransferBatch y llamaremos a la función ExportAsync. ExportAsync llamará a la devolución de llamada WriteBuffer a medida que genera datos para la exportación. Cuando todos los datos se hayan exportado, se llamará a ExportComplete. En WriteBuffer, se agrega el fragmento de datos a una lista que se conserva para la exportación. En ExportComplete, la lista se convierte en una matriz. También se establece la variable AnchorName, que desencadenará que otros dispositivos soliciten el delimitador si no lo tienen.
+Hablando de preparar los datos de anclaje, la clase WorldAnchorTransferBatch expone la funcionalidad para preparar los datos de anclaje para enviarlos a otro dispositivo o aplicación y la funcionalidad para importar los datos de anclaje. Puesto que estamos en la ruta de exportación, agregaremos nuestro delimitador a WorldAnchorTransferBatch y llamaremos a la función ExportAsync. ExportAsync llamará a la devolución de llamada WriteBuffer a medida que genere datos para la exportación. Cuando todos los datos se hayan exportado, se llamará a ExportComplete. En WriteBuffer se agrega el fragmento de datos a una lista que se mantiene para exportar. En ExportComplete, la lista se convierte en una matriz. También se establece la variable AnchorName, que desencadenará que otros dispositivos soliciten el delimitador si no lo tienen.
 
-En algunos casos, el anclaje no se exportará o creará demasiados datos que se volverán a intentar. Aquí simplemente llamaremos a CreateAnchor de nuevo.
+En algunos casos, el delimitador no exportará o creará tan pocos datos que volveremos a intentarlo. Aquí simplemente llamamos a CreateAnchor de nuevo.
 
-Una función final de la ruta de acceso de exportación es AnchorFoundRemotely. Cuando otro dispositivo encuentra el delimitador, ese dispositivo indicará al host y el host lo usará como señal de que el delimitador es un "buen anclaje" y se puede almacenar en caché.
+Una función final en la ruta de acceso de exportación es AnchorFoundRemotely. Cuando otro dispositivo encuentre el delimitador, ese dispositivo lo indicará al host y lo usará como señal de que el anclaje es un "anclaje bueno" y se puede almacenar en caché.
 
-**Importa**
+**Importar:**
 
-Cuando una HoloLens se une a una sesión, debe importar un delimitador. En la función de actualización de UNETAnchorManager, el AnchorName se sondea. Cuando cambia el nombre del delimitador, comienza el proceso de importación. En primer lugar, se intenta cargar el delimitador con el nombre especificado desde el almacén de delimitadores local. Si ya lo tenemos, podemos usarlo sin descargar los datos de nuevo. Si no lo tenemos, llamamos a WaitForAnchor, que iniciará la descarga.
+Cuando un HoloLens se une a una sesión, debe importar un delimitador. En la función Update de UNETAnchorManager, se sondea AnchorName. Cuando cambia el nombre del delimitador, comienza el proceso de importación. En primer lugar, intentamos cargar el delimitador con el nombre especificado desde el almacén de anclajes local. Si ya lo tenemos, podemos usarlo sin volver a descargar los datos. Si no lo tenemos, llamamos a WaitForAnchor, que iniciará la descarga.
 
-Una vez completada la descarga, se llama a NetworkTransmitter_dataReadyEvent. Esto indicará al bucle de actualización que llame a ImportAsync con los datos descargados. ImportAsync llamará a ImportComplete cuando se complete el proceso de importación. Si la importación se realiza correctamente, el delimitador se guardará en el almacén del reproductor local. PlayerController.cs realmente realiza la llamada a AnchorFoundRemotely para que el host sepa que se ha establecido un buen anclaje.
+Una vez completada la descarga, NetworkTransmitter_dataReadyEvent se llama a . Esto señalará el bucle Update para llamar a ImportAsync con los datos descargados. ImportAsync llamará a ImportComplete cuando se complete el proceso de importación. Si la importación se realiza correctamente, el delimitador se guardará en el almacén del reproductor local. PlayerController.cs realiza realmente la llamada a AnchorFoundRemotely para que el host sepa que se ha establecido un buen delimitador.
 
 ### <a name="enjoy-your-progress"></a>Disfrute de su progreso
 
-Esta vez, un usuario con HoloLens hospedará una sesión mediante el botón **iniciar sesión** en la interfaz de usuario. Otros usuarios, tanto en HoloLens como en un casco envolvente, seleccionarán la sesión y, después, seleccionarán el botón unirse a la **sesión** en la interfaz de usuario. Si tiene varias personas con dispositivos HoloLens, tendrán nubes rojas sobre sus cabezales. También habrá una nube azul para cada casco envolvente, pero las nubes azules no estarán por encima de los auriculares, ya que los auriculares no intentan encontrar el mismo espacio de coordenadas universal que los dispositivos HoloLens.
+Esta vez, un usuario con un HoloLens hospedará una sesión mediante el botón **Iniciar sesión** en la interfaz de usuario. Otros usuarios, tanto en HoloLens como en un casco envolvente, seleccionarán la sesión y, a continuación, seleccionarán el botón unir **sesión** en la interfaz de usuario. Si tiene varias personas con HoloLens dispositivos, tendrán nubes rojas sobre sus cabezas. También habrá una nube azul para cada casco envolvente, pero las nubes azules no estarán por encima de los cascos, ya que los cascos no están intentando encontrar el mismo espacio de coordenadas mundial que los dispositivos HoloLens.
 
-Este punto del proyecto es una aplicación de uso compartido independiente; no hace mucho y podría actuar como línea base. En los capítulos siguientes comenzaremos a crear una experiencia para que los usuarios disfruten. Para obtener más información sobre el diseño de la experiencia compartida, vaya aquí.
+Este punto del proyecto es una aplicación de uso compartido independiente; no hace mucho y podría actuar como base de referencia. En los capítulos siguientes, comenzaremos a crear una experiencia para que los usuarios disfruten. Para obtener más instrucciones sobre el diseño de experiencia compartida, vaya aquí.
 
-## <a name="chapter-4---immersion-and-teleporting"></a>Capítulo 4: inmersión y teletraslado
+## <a name="chapter-4---immersion-and-teleporting"></a>Capítulo 4: Consorte y teleportación
 
 >[!VIDEO https://www.youtube.com/embed/kUHZ5tCOfvY]
 
 ### <a name="objectives"></a>Objetivos
 
-Disfrute de la experiencia en cada tipo de dispositivo de realidad mixta.
+Atienden la experiencia a cada tipo de dispositivo de realidad mixta.
 
 ### <a name="what-we-will-build"></a>Qué vamos a crear
 
-Actualizaremos la aplicación para poner a los usuarios con auriculares envolvente en la isla con una vista envolvente. Los usuarios de HoloLens seguirán teniendo la vista de pájaro de la isla. Los usuarios de cada tipo de dispositivo pueden ver a otros usuarios a medida que aparecen en el mundo. Por ejemplo, los auriculares envolventes pueden ver los demás avatares en otras rutas de acceso de la isla y ven a los usuarios de HoloLens como nubes gigantes por encima de la isla. Los auriculares envolventes también verán el cursor del rayo fijamente del usuario de HoloLens si el usuario de HoloLens mira la isla. Los usuarios de HoloLens verán un avatar en la isla para representar cada usuario de auriculares envolvente.
+Actualizaremos la aplicación para colocar a los usuarios de cascos envolventes en la isla con una vista inmersiva. HoloLens usuarios seguirán teniendo la vista de la isla. Los usuarios de cada tipo de dispositivo pueden ver a otros usuarios a medida que aparecen en el mundo. Por ejemplo, los usuarios de cascos envolventes pueden ver los demás avatares en otras rutas de acceso de la isla y ven los usuarios de HoloLens como nubes gigantes sobre la isla. Los usuarios de cascos envolventes también verán el cursor del rayo de mirada del usuario HoloLens si el usuario HoloLens está mirando la isla. HoloLens usuarios verán un avatar en la isla para representar a cada usuario de casco envolvente.
 
-**Entrada actualizada para el dispositivo envolvente:**
+**Entrada actualizada para el dispositivo inmersivo:**
 
-* Los botones del parachoques izquierdo y derecho del controlador Xbox giran el reproductor
-* Si mantiene presionado el botón Y en el controlador de Xbox, se habilitará un cursor [teletranspórtate](../discover/navigating-the-windows-mixed-reality-home.md#getting-around-your-home) . Si el cursor tiene un indicador de flecha giratoria al soltar el botón Y, se teletransporta a la ubicación del cursor.
+* Los botones del parachoques izquierdo y derecho del controlador de Xbox giran el reproductor.
+* Al mantener presionado el botón Y en el controlador de Xbox, se habilitará un cursor [de teleportado.](../discover/navigating-the-windows-mixed-reality-home.md#getting-around-your-home) Si el cursor tiene un indicador de flecha girando al soltar el botón Y, se le teleportará a la ubicación del cursor.
 
 ### <a name="steps"></a>Pasos
 
-* Agregar MixedRealityTeleport a MixedRealityCameraParent
-    * En **jerarquía**, seleccione **Usland**.
-    * En **Inspector**, habilite el **control de nivel**.
-    * En **jerarquía**, seleccione **MixedRealityCameraParent**.
-    * En **Inspector**, haga clic en **Agregar componente**.
-    * Escriba la **realidad mixta teletranspórtate** y selecciónela.
+* Adición de MixedRealityTeleport a MixedRealityCameraParent
+    * En **Jerarquía,** seleccione **Usland.**
+    * En **inspector**, habilite **Control de nivel**.
+    * En **Jerarquía,** seleccione **MixedRealityCameraParent**.
+    * En **Inspector**, haga clic **en Agregar componente**.
+    * Escriba **Mixed Reality Teleport y** selecciónelo.
 
-### <a name="digging-into-the-code"></a>Profundizar en el código
+### <a name="digging-into-the-code"></a>Profundización en el código
 
-Los auriculares envolventes se anclarán a sus equipos con cable, pero nuestra isla es mayor que el cable es largo. Para compensar, necesitamos la capacidad de trasladar la cámara independientemente del movimiento del usuario. Vea la [Página de confort](../design/comfort.md) para obtener más información sobre el diseño de la aplicación de realidad mixta (en particular, Automotion y Locomotion).
+Los usuarios de cascos envolventes se tethered a sus equipos con un cable, pero nuestra isla es más grande que el cable es largo. Para compensarlo, necesitamos la capacidad de mover la cámara independientemente del movimiento del usuario. Consulte la página [de confort para](../design/comfort.md) obtener más información sobre el diseño de la aplicación de realidad mixta (en particular, automoción y movimiento automático).
 
-Para describir este proceso, será útil definir dos términos. En primer lugar, **Dolly** será el objeto que mueve la cámara independientemente del usuario. Un objeto de juego secundario de **Dolly** será la **cámara principal**. La cámara principal se adjunta al encabezado del usuario.
+Para describir este proceso, será útil definir dos términos. En primer **lugar, será** el objeto que mueva la cámara independientemente del usuario. Un objeto de juego secundario de **la clase será** la cámara **principal.** La cámara principal está conectada a la cabeza del usuario.
 
-En el panel Proyecto, desplácese a **Assets\AppPrefabs\Support\Scripts\GameLogic** y haga doble clic en **MixedRealityTeleport.CS**.
+En el panel del proyecto, vaya a **Assets\AppPrefabs\Support\Scripts\GameLogic** y haga doble clic en **MixedRealityTeleport.cs**.
 
-MixedRealityTeleport tiene dos trabajos. En primer lugar, controla la rotación mediante los reboteadores. En la función de actualización, se sondea "ButtonUp" en LeftBumper y RightBumper. GetButtonUp solo devuelve true en el primer fotograma en el que se encuentra un botón después de haber estado inactivo. Si se ha producido algún botón, sabemos que el usuario necesita girar.
+MixedRealityTeleport tiene dos trabajos. En primer lugar, controla la rotación mediante los parachoques. En la función de actualización sondeamos para "ButtonUp" en LeftBumper y RightBumper. GetButtonUp solo devuelve true en el primer fotograma en el que un botón está en marcha después de haber estado fuera de línea. Si se ha producido cualquiera de los botones, sabemos que el usuario debe girar.
 
-Cuando giramos, hacemos un fundido y atenúan el uso de un script simple denominado ' Desvanecer control '. Hacemos esto para evitar que el usuario vea un movimiento no natural que podría dar lugar a molestias. Los efectos de fundido y salida son bastante sencillos. Tenemos un fondo negro en la parte delantera de la **cámara principal**. Cuando se atenúa, se pasa el valor alfa de 0 a 1. Esto hace que los píxeles negros de la cuádruple se representen y oculten todo lo que quede detrás. Al retroceder en, la transición del valor alfa vuelve a ser cero.
+Cuando giramos, hacemos un desvanecimiento y se atenua con un script simple denominado "control de atenuación". Esto se hace para evitar que el usuario vea un movimiento poco natural que podría provocar incomodidad. El efecto de entrada y salida de atenuación es bastante sencillo. Tenemos un cuadrándes negro en la parte delantera de **la cámara principal.** Al desvanezca, se pasa el valor alfa de 0 a 1. Esto hace que los píxeles negros del cuadrándular se representen y oculten todo lo que hay detrás. Al volver a desvanezca en, el valor alfa vuelve a ser cero.
 
-Al calcular la rotación, tenga en cuenta que estamos rotando nuestro **Dolly** pero calculando el giro alrededor de la **cámara principal**. Esto es importante, ya que el más alejado de la **cámara principal** está fuera de 0, 0, 0, con menos precisión un giro alrededor de la Dolly se pasaría del punto de vista del usuario. De hecho, si no gira alrededor de la posición de la cámara, el usuario se desplazará por el **Dolly** en lugar de girar.
+Al calcular la rotación, tenga en  cuenta que estamos girando la rotación, pero calculando la rotación alrededor de la **cámara principal.** Esto es importante, ya  que cuanto más lejos esté la cámara principal de 0,0,0, menos precisa sería una rotación alrededor de la pantalla desde el punto de vista del usuario. De hecho, si no gira alrededor de la posición de la  cámara, el usuario se moverá sobre un arco alrededor del cuerpo en lugar de girar.
 
-El segundo trabajo para MixedRealityTeleport es controlar el movimiento de **Dolly**. Esto se hace en SetWorldPosition. SetWorldPosition toma la posición mundial deseada, la posición en la que el usuario desea percieve que inhabit. Necesitamos colocar el **Dolly** en esa posición menos la posición local de la **cámara principal**, ya que ese desplazamiento se agregará a cada fotograma.
+El segundo trabajo de MixedRealityTeleport es controlar el movimiento del **.** Esto se hace en SetWorldPosition. SetWorldPosition toma la posición de mundo deseada, la posición en la que el usuario quiere percve que se descime. Es necesario colocar  el desplazamiento en esa posición menos la posición local de la cámara **principal,** ya que ese desplazamiento se agregará a cada fotograma.
 
-Un segundo script llama a SetWorldPosition. Echemos un vistazo a ese script. En el panel Proyecto, desplácese a **Assets\AppPrefabs\Support\Scripts\GameLogic** y haga doble clic en **TeleportScript.CS**.
+Un segundo script llama a SetWorldPosition. Echemos un vistazo a ese script. En el panel del proyecto, vaya a **Assets\AppPrefabs\Support\Scripts\GameLogic** y haga doble clic en **TeleportScript.cs**.
 
-Este script es un poco más complicado que MixedRealityTeleport. El script está comprobando si el botón Y del controlador Xbox debe mantenerse inactivo. Mientras se mantiene presionado el botón, se representa un cursor teletranspórtate y el script convierte un rayo de la posición de AvPág del usuario. Si ese rayo entra en conflicto con una superficie que señala más o menos, se considerará que la superficie es una buena superficie para teletranspórtate y se habilitará la animación en el cursor teletranspórtate. Si el rayo no entra en conflicto con una superficie más o menos apuntando, se deshabilitará la animación del cursor. Cuando se suelta el botón y y el punto calculado del rayo es una posición válida, el script llama a SetWorldPosition con la posición en la que se intersecó el rayo.
+Este script está un poco más implicado que MixedRealityTeleport. El script está comprobando si el botón Y del controlador de Xbox se mantiene apagado. Mientras se mantiene el botón hacia abajo, se representa un cursor de teleportador y el script proyecta un rayo desde la posición de la mirada del usuario. Si ese rayo se intercala con una superficie que apunta más o menos hacia arriba, la superficie se considerará una buena superficie a la que teleportar y se habilitará la animación en el cursor de teleport. Si el rayo no colisiona con una superficie que apunta más o menos hacia arriba, la animación del cursor se deshabilitará. Cuando se libera el botón Y y el punto calculado del rayo es una posición válida, el script llama a SetWorldPosition con la posición en la que el rayo se intersecó.
 
 ### <a name="enjoy-your-progress"></a>Disfrute de su progreso
 
-Esta vez necesitará encontrar un amigo.
+Esta vez deberá encontrar un amigo.
 
-Una vez más, un usuario con HoloLens hospedará una sesión. Otros usuarios se unirán a la sesión. La aplicación colocará los tres primeros usuarios para unirse desde un casco inmersivo en una de las tres rutas de acceso de la isla. No dude en explorar la isla en esta sección.
+Una vez más, un usuario con el HoloLens hospedará una sesión. Otros usuarios se unirán a la sesión. La aplicación colocará los tres primeros usuarios que se unirán desde un casco envolvente en una de las tres rutas de acceso de la isla. No dude en explorar la isla en esta sección.
 
-Detalles que se deben tener en cuenta:
+Detalles que debe tener en cuenta:
 
-1. Puede ver caras en las nubes, lo que ayuda a un usuario sumergido a ver la dirección que está buscando un usuario de HoloLens.
-2. Los avatares de la isla tienen cuellos que giran. No se van a seguir lo que el usuario está haciendo es realidad real (no tenemos esa información), pero es una buena experiencia.
-3. Si el usuario de HoloLens mira la isla, los usuarios sumergidos pueden ver su cursor.
-4. Las nubes que representan a los usuarios de HoloLens proyectan sombras.
+1. Puede ver caras en las nubes, lo que ayuda a un usuario inmerso a ver qué dirección HoloLens está buscando un usuario.
+2. Los avatares de la isla tienen cuellos que giran. No seguirán lo que el usuario está haciendo es realidad real (no tenemos esa información), pero resulta una buena experiencia.
+3. Si el HoloLens está mirando la isla, los usuarios inmersos pueden ver su cursor.
+4. Las nubes que representan el HoloLens los usuarios proyectan sombras.
 
-## <a name="chapter-5---finale"></a>Capítulo 5: finalización
+## <a name="chapter-5---finale"></a>Capítulo 5: Final
 
 >[!VIDEO https://www.youtube.com/embed/n_HDWJbfpNg]
 
@@ -307,24 +307,24 @@ Cree una experiencia interactiva colaborativa entre los dos tipos de dispositivo
 
 ### <a name="what-we-will-build"></a>Qué vamos a crear
 
-Basándose en el capítulo 4, cuando un usuario con un casco envolvente se acerque a un rompecabezas de la isla, los usuarios de HoloLens obtendrán una información sobre herramientas con una pista sobre el rompecabezas. Una vez que todos los auriculares envolventes se colocan por encima de sus rompecabezas y en el "panel listo" del salón, se lanzará el cohete.
+A partir del capítulo 4, cuando un usuario con un casco envolvente se acerca a un juego de objetos en la isla, los usuarios de HoloLens recibirán una sugerencia de herramientas con una pista para el juego. Una vez que todos los usuarios de los cascos envolventes se alojen más allá de su casco y lleguen al "panel listo" de la sala de cohetes, el cohete se lanzará.
 
 ### <a name="steps"></a>Pasos
 
-* En **jerarquía**, seleccione **Usland**.
-* En **Inspector**, en **control de nivel**, Active **Habilitar colaboración**.
+* En **Jerarquía,** seleccione **Usland.**
+* En **inspector**, en Control **de nivel**, active Habilitar **colaboración**.
 
-### <a name="digging-into-the-code"></a>Profundizar en el código
+### <a name="digging-into-the-code"></a>Profundización en el código
 
-Ahora, echemos un vistazo a LevelControl.cs. Este script es el núcleo de la lógica del juego y mantiene el estado del juego. Dado que se trata de un juego multijugador que usa UNET, necesitamos comprender cómo fluyen los datos, al menos lo suficientemente bien como para modificar este tutorial. Para obtener una introducción más completa de UNET, consulte la documentación de Unity.
+Ahora echemos un vistazo a LevelControl.cs. Este script es el núcleo de la lógica del juego y mantiene el estado del juego. Puesto que se trata de un juego multijugador que usa UNET, es necesario comprender cómo fluyen los datos, al menos lo suficientemente bien como para modificar este tutorial. Para obtener información general más completa de UNET, consulte la documentación de Unity.
 
-En el panel Proyecto, desplácese a **Assets\AppPrefabs\Support\Scripts\GameLogic** y haga doble clic en **LevelControl.CS**.
+En el panel del proyecto, vaya a **Assets\AppPrefabs\Support\Scripts\GameLogic** y haga doble clic en **LevelControl.cs**.
 
-Vamos a entender cómo un casco inmersivo indica que están preparados para el lanzamiento de Rocket. Rocket Launch Readiness se comunica mediante la configuración de uno de los tres booleanos de una lista de bool que corresponden a las tres rutas de acceso de la isla. El valor booleano de una ruta de acceso se establecerá cuando el usuario asignado a la ruta de acceso se encuentre en la parte superior del panel marrón dentro de la habitación. Bien, ahora a los detalles.
+Veamos cómo un casco envolvente indica que están listos para el lanzamiento del cohete. La preparación para el lanzamiento de cohetes se comunica estableciendo uno de los tres bools en una lista de bools que corresponden a las tres rutas de acceso de la isla. El valor bool de una ruta de acceso se establecerá cuando el usuario asignado a la ruta de acceso esté en la parte superior de la almohadilla marrones dentro de la sala de cohetes. De acuerdo, ahora a los detalles.
 
-Comenzaremos en la función Update (). Observará que hay una función de "trampa". Lo usamos en desarrollo para probar la secuencia de inicio y restablecimiento de Rocket. No funcionará en la experiencia de varios usuarios. Afortunadamente, en el momento en que internalizar la siguiente desactivación, puede hacer que funcione. Después de comprobar si debemos hacernos trampas, comprobamos si el reproductor local está sumergido. Queremos centrarnos en cómo encontramos que estamos en el objetivo. Dentro de la comprobación if (sumergida), hay una llamada a CheckGoal que oculta detrás de **EnableCollaboration** bool. Esto corresponde a la casilla que activó al completar los pasos de este capítulo. Dentro de EnableCollaboration, vemos una llamada a CheckGoal ().
+Comenzaremos en la función Update(). Tendrá en cuenta que hay una función "cheat". Lo hemos usado en el desarrollo para probar el lanzamiento y el restablecimiento de la secuencia del cohete. No funcionará en la experiencia de varios usuarios. Esperemos que en el momento en que internalice la siguiente información, pueda hacer que funcione. Después de comprobar si se debe hacer una infiel, se comprueba si el jugador local está inmerso. Queremos centrarnos en cómo encontramos que estamos en el objetivo. Dentro de la comprobación if (Inmerso), hay una llamada a CheckGoal que se oculta detrás de **enableCollaboration** bool. Esto corresponde a la casilla que ha activado al completar los pasos de este capítulo. Dentro de EnableCollaboration, vemos una llamada a CheckGoal().
 
-CheckGoal realiza algunas operaciones matemáticas para ver si estamos más o menos en el panel. Cuando somos, depure. log "llegó en el objetivo" y, a continuación, llamamos a "SendAtGoalMessage ()". En SendAtGoalMessage se llama a playerController. SendAtGoal. Para ahorrar tiempo, este es el código:
+CheckGoal hace algunos cálculos matemáticos para ver si estamos más o menos de pie en el panel. Cuando estamos, debug.log "Arrived at goal" y, a continuación, llamamos a "SendAtGoalMessage()". En SendAtGoalMessage llamamos a playerController.SendAtGoal. Para ahorrar tiempo, este es el código:
 
 ```cs
 private void CmdSendAtGoal(int GoalIndex)
@@ -344,15 +344,15 @@ public void SendAtGoal(int GoalIndex)
 }
 ```
 
-Tenga en cuenta que SendAtGoalMessage llama a CmdSendAtGoal, que llama a levelState. SetGoalIndex, que vuelve a LevelControl.cs. A primera vista, parece extraño. ¿Por qué no simplemente llamar a SetGoalIndex en lugar de a este enrutamiento extraño a través del controlador del reproductor? La razón es que estamos conformes al modelo de datos que UNET usa para mantener los datos sincronizados. Para evitar la mejora y la paginación, UNET requiere que cada objeto tenga un usuario que tenga autoridad para cambiar las variables sincronizadas. Además, solo el host (el usuario que inició la sesión) puede cambiar los datos directamente. Los usuarios que no son el host, pero que tienen autoridad, deben enviar un comando al host que cambiará la variable. De forma predeterminada, el host tiene autoridad sobre todos los objetos, salvo el objeto generado para representar al usuario. En nuestro caso, este objeto tiene el script playercontroller. Hay una manera de solicitar la autoridad para un objeto y, a continuación, realizar cambios, pero optamos por aprovechar el hecho de que el controlador del reproductor tiene autoautoridad y enrutar los comandos a través del controlador del reproductor.
+Tenga en cuenta que SendAtGoalMessage llama a CmdSendAtGoal, que llama a levelState.SetGoalIndex, que está de vuelta en LevelControl.cs. A primera vista, esto parece extraño. ¿Por qué no llamar simplemente a SetGoalIndex en lugar de a este extraño enrutamiento a través del controlador del reproductor? El motivo es que nos ajustamos al modelo de datos que usa UNET para mantener los datos sincronizados. Para evitar la infidelidad y la modificación, UNET requiere que cada objeto tenga un usuario que tenga autoridad para cambiar las variables sincronizadas. Además, solo el host (el usuario que inició la sesión) puede cambiar los datos directamente. Los usuarios que no son el host, pero tienen autoridad, deben enviar un "comando" al host que cambiará la variable. De forma predeterminada, el host tiene autoridad sobre todos los objetos, excepto el objeto generado para representar al usuario. En nuestro caso, este objeto tiene el script playercontroller. Hay una manera de solicitar autoridad para un objeto y, a continuación, realizar cambios, pero elegimos aprovechar el hecho de que el controlador del reproductor tiene autoridad propia y enruta los comandos a través del controlador del jugador.
 
-Dicho de otro modo, cuando nos encontramos en nuestro objetivo, el jugador debe indicar al host y el host indicará a todos los demás usuarios.
+Dicho de otro modo, cuando nos hayamos encontrado en nuestro objetivo, el jugador debe decir al host y el host se lo dirá a todos los demás.
 
-De nuevo en LevelControl.cs, consulte SetGoalIndex. Aquí se establece el valor de un valor en synclist (AtGoal). Recuerde que estamos en el contexto del host mientras hacemos esto. De forma similar a un comando, una RPC es algo que el host puede emitir y que hará que todos los clientes ejecuten código. Aquí llamamos a ' RpcCheckAllGoals '. Cada cliente comprobará individualmente si se han establecido los tres AtGoals y, si es así, iniciará el Rocket.
+De nuevo en LevelControl.cs, vea SetGoalIndex. Aquí vamos a establecer el valor de un valor en una lista de sincronización (AtGoal). Recuerde que estamos en el contexto del host mientras lo hacemos. De forma similar a un comando, una RPC es algo que el host puede emitir y que hará que todos los clientes ejecuten código. Aquí llamamos a "RpcCheckAllGoals". Cada cliente comprobará individualmente si los tres Dispositivos AtGoal están establecidos y, si es así, lanzarán el cohete.
 
 ### <a name="enjoy-your-progress"></a>Disfrute de su progreso
 
-En el capítulo anterior, se iniciará la sesión como antes. Esta vez, a medida que los usuarios del casco envolvente lleguen a la "puerta" en su ruta de acceso, aparecerá una información sobre herramientas que solo pueden ver los usuarios de HoloLens. Los usuarios de HoloLens son responsables de comunicar esta pista a los usuarios en el casco envolvente. El cohete se iniciará en el espacio una vez que cada Avatar esté escalonado en su correspondiente controlador marrón dentro de la Volcano. La escena se restablecerá después de 60 segundos para que pueda volver a hacerlo.
+A partir del capítulo anterior, iniciaremos la sesión como antes. Esta vez, cuando los usuarios del casco envolvente lleguen a la "puerta" de su ruta de acceso, aparecerá una información sobre herramientas que solo los usuarios HoloLens pueden ver. Los HoloLens usuarios son responsables de comunicar esta pista a los usuarios en el casco envolvente. El cohete se lanzará al espacio una vez que cada avatar haya escalonado su correspondiente panel marron dentro del cohete. La escena se restablecerá después de 60 segundos para que pueda volver a hacerlo.
 
 ## <a name="see-also"></a>Consulte también
 

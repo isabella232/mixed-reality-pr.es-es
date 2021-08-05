@@ -1,23 +1,23 @@
 ---
 title: Mixed Reality Dev Days
-description: Página de eventos de los días de desarrollo de realidad mixta
+description: Página de eventos para Mixed Reality días de desarrollo
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/21/2020
 ms.topic: article
-keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: cba9e18cd58d8d304aca22e755b298270c1a1a9a
-ms.sourcegitcommit: 8d3b84d2aa01f078ecf92cec001a252e3ea7b24d
+keywords: Mixed Reality, conferencia, conferencia, conferencia, desarrollador, HoloLens, HoloLens 2, Kinect
+ms.openlocfilehash: 1723be63bdd3394a4cdec3488cc7ca61f2ddec7a6f858c9f9c4d5721d425b59a
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/23/2020
-ms.locfileid: "97757523"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115213203"
 ---
 # <a name="mixed-reality-dev-days"></a>Mixed Reality Dev Days
 
 ![Mixed Reality Dev Days](images/MRDD/MRDevDaysBanner.png)
 
-Esperamos que se una a nosotros en los días de desarrollo de realidad mixta. Prepárese para un nuevo formato de evento, adaptado a una experiencia digital en 2D y 3D con AltspaceVR, con oportunidades de escuchar a los líderes de Microsoft, aprenda de expertos y conéctese con la comunidad de desarrolladores de realidad mixta. Regístrese hoy mismo para disfrutar de la experiencia digital, sin costo alguno.
+Esperamos que se una a nosotros en Mixed Reality Dev Days. Prepárese para un nuevo formato de evento, adaptado a una experiencia digital en 2D y 3D con AltspaceVR, con oportunidades para escuchar a los líderes de Microsoft, aprender de expertos y conectarse con la comunidad de desarrolladores de realidad mixta. Regístrese para obtener la experiencia digital hoy mismo, sin costo alguno.
 
 ## <a name="important-details"></a>Detalles importantes
 
@@ -25,124 +25,125 @@ Esperamos que se una a nosotros en los días de desarrollo de realidad mixta. Pr
 
 **Ubicación: AltspaceVR**
 
-**SIN registro**
+**Registro: GRATIS**
 
 ## <a name="registration"></a>Registro
 
-[Regístrese ahora](https://mixedrealityprod.microsoftcrmportals.com/MRDDRegistration/)
+[Registrarse ahora](https://mixedrealityprod.microsoftcrmportals.com/MRDDRegistration/)
 
-Nos complace abrir el registro de los días de desarrollo de realidad mixta, que es un evento que se mantiene en AltspaceVR. Sin embargo, todavía estamos solicitando que los asistentes se registren para que podamos enviar actualizaciones de correo electrónico a medida que el evento se acerque y para asegurarse de que haya suficiente personal para el número de asistentes.
+Nos complace abrir el registro para Mixed Reality Dev Days, que es un evento que se realiza en AltspaceVR. Sin embargo, seguimos solicitando que los asistentes se registren para poder enviar actualizaciones por correo electrónico a medida que el evento se acerque y para asegurarse de que hay suficiente personal para el número de asistentes.
 
 ## <a name="about-altspace"></a>Acerca de Altspace
 
-[AltspaceVR](https://altvr.com/) es el lugar Premier para asistir a los programas en vivo, encuentros, clases interesantes y mucho más con personas descriptivas de todo el mundo. Todo gracias a la magia de la realidad virtual.  Altspace se convirtió en parte de la familia de Microsoft en 2017 y nos complace mostrar cómo se pueden ejecutar los eventos en el espacio virtual.
+[AltspaceVR es](https://altvr.com/) el lugar principal para participar en programas en directo, encuentros, clases interesantes y mucho más con personas de todo el mundo. Todo gracias a la magia de la realidad virtual.  Altspace pasó a formar parte de la familia Microsoft en 2017 y nos complace mostrar cómo se pueden ejecutar los eventos en el espacio virtual.
 
 Altspace admite las siguientes plataformas: 
 
-* HTC Naopak
-* Oculus Rift, Go y Quest
-* GearVR de Samsung
+* HTC Vive
+* Oculus Dimensional, Go y Dimensional
+* Samsung GearVR
 * Windows Mixed Reality
 * Modo 2D en PC.  
 
-Los usuarios de Mac deberán usar Parallels o Bootcamp para usar Windows para acceder a AltspaceVR.
+Los usuarios de Mac tendrán que usar Parallels o Bootcamp para Windows acceder a AltspaceVR.
 
 ### <a name="creating-an-account"></a>Creación de una cuenta
 
 Hay dos maneras de crear una cuenta:
 
-- La manera más eficaz es descargar el cliente de AltspaceVR que prefiera para su instalación, completar la instalación y, a continuación, iniciar el cliente. Una vez que esté en el programa, habrá una opción para crear una cuenta.  Las especificaciones mínimas del sistema se pueden encontrar [aquí](https://help.altvr.com/hc/en-us/articles/115003538414-Minimum-System-Specifications).
+- La manera más eficaz es descargar el cliente AltspaceVR que prefiera para la instalación, completar la instalación y, a continuación, iniciar el cliente. Una vez que esté en el programa, habrá una opción para crear una cuenta.  Las especificaciones mínimas del sistema se [pueden encontrar aquí.](https://help.altvr.com/hc/en-us/articles/115003538414-Minimum-System-Specifications)
 
-- La otra opción es visitar el signo de la cuenta en línea] ( https://account.altvr.com/users/sign_up) .
+- La otra opción es visitar el inicio de sesión de la cuenta en línea]( https://account.altvr.com/users/sign_up) .
 
 ### <a name="troubleshooting"></a>Solución de problemas
 
-Si tiene problemas con Altspace, consulte la [Página de solución de problemas](https://help.altvr.com/hc/en-us/sections/115000792634-Troubleshooting). Si eso no soluciona el problema que está experimentando, envíe una [solicitud de soporte técnico](https://help.altvr.com/hc/en-us/requests/new).
+Si tiene algún problema con Altspace, consulte la página [de solución de problemas](https://help.altvr.com/hc/en-us/sections/115000792634-Troubleshooting). Si eso no resuelve el problema que está experimentando, abra una solicitud [de soporte técnico](https://help.altvr.com/hc/en-us/requests/new).
 
 ### <a name="extra-tips"></a>Sugerencias adicionales
 
-- Si esta es la primera vez que usa AltspaceVR, espere un momento antes del primer evento para pasar por el tutorial.
-- (Opcionalmente) se recomienda que asista a uno de los eventos de AltspaceVR 101 para obtener más sugerencias y trucos.
-- Favorito/registrar interés antes del evento para encontrarlo fácilmente más adelante en el cliente.
-- A diferencia de otras reuniones virtuales, AltspaceVR es un entorno inmersivo y, como tal, puede bloquear la vista de otros asistentes. Respete a otros asistentes espacio y vista para asegurarse de que todos los usuarios tengan una buena experiencia.
-- Amigo a quien desea hablar en el evento. Si lo desea, puede invitar a amigos a su página principal de AltspaceVR.
-- Si está cerca de un micrófono, la voz se difundirá a todos los usuarios en el evento. Tenga cuidado cuando esté hablando.
+- Si es la primera vez que usa AltspaceVR, dedícate tiempo antes del primer evento para realizar el tutorial.
+- (Opcionalmente) se recomienda que asista a uno de los eventos altspaceVR 101 para obtener más sugerencias y trucos.
+- Favoritos/Registrar interés antes del evento para encontrarlo fácilmente más adelante en el cliente.
+- A diferencia de otras reuniones virtuales, AltspaceVR es un entorno envolvente y, como tal, puede bloquear la vista de otros asistentes. Respetar el espacio y la vista de otros asistentes para asegurarse de que todos tienen una buena experiencia.
+- Amigo de todos los usuarios con los que quiera hablar en el evento. Si lo desea, puede invitar a amigos a su casa de AltspaceVR a chatear de forma privada.
+- Si está cerca de un micrófono, la voz se difundirá a todos los usuarios del evento. Por lo tanto, debe tener cuidado al hablar.
 
-## <a name="schedule---subject-to-change"></a>Programación: sujeto a cambio
+## <a name="schedule---subject-to-change"></a>Programación: sujeto a cambios
 
-**Todas las horas son hora de verano del Pacífico** 
+**Todas las horas son de horario de verano del Pacífico** 
 
 ### <a name="networking-space"></a>Espacio de red
 
-Disponemos de un espacio de red que se abrirá después de la presentación del primer día, después del chat de informal el día dos y permanecerá abierto hasta las 16:00 horas del Pacífico cada día. Si desea el "RSVP" para este espacio, puede hacerlo [aquí](https://account.altvr.com/events/1472955760198550135). La idea del espacio de red es similar a la "pista de vestíbulo" en una conferencia física.  Un lugar para reunirse con otros desarrolladores, diseñadores, entusiastas e incluso personal de Microsoft.
+Tenemos un espacio de red que se abrirá después de keynote el primer día, después del chat fireside del día 2, y permanecerá abierto hasta las 4 p. m. hora del Pacífico todos los días. Si desea el "RSVP" para este espacio, puede hacerlo [aquí.](https://account.altvr.com/events/1472955760198550135) La idea del espacio de red es similar a la "pista de la pista" en una conferencia física.  Un lugar para reunirse con desarrolladores, diseñadores, aficionados e incluso con el personal de Microsoft.
 
 ### <a name="may-21"></a>21 de mayo
-|**Time**|**Título de la sesión**|**Participante**|**Descripción**|**Vínculo a la página de eventos**|
+|**Time**|**Título de la sesión**|**Altavoz**|**Descripción**|**Vínculo a la página de eventos**|
 |---------|---------|---------|---------|---------|
-|9:9:30-10:9:30|Apertura del discurso|Alex Kipman|Únase a nosotros como Alex Kipman inicia nuestro primer evento de desarrollo de realidad mixta. Si usa un auricular de VR, le recomendamos que se una a nosotros en AltspaceVR. Si se va a unir desde un equipo, consulte nuestro streaming en vivo en [https://aka.ms/MRDDKeynote](https://aka.ms/MRDDKeynote)|[Página RSVP](https://account.altvr.com/events/1475172303389065242)|
-|10:9:30-11: a.m.|**Eliminar**||||
-|11: a.m.-12: p.m.|Introducción a los servicios de Azure Mixed Reality: representación remota de Azure|Jonathan Lyons, Christopher Manthei y Marc Appelsmeier|La representación remota de Azure acaba de especificar la vista previa pública.  Obtenga información sobre cómo puede usar ARR para representar modelos 3D interactivos con cientos de millones de polígonos y transmitirlos por secuencias a dispositivos como HoloLens 2 en tiempo real.|[Página RSVP](https://account.altvr.com/events/1475002657985790153)|
-|11: a.m.-12: p.m.|Introducción a Unreal + MRTK para HoloLens 2|Verano de Wu & Luis Valverde|La compatibilidad con el motor no real de HoloLens 2 alcanzó el estado listo para la producción con la versión de UE 4,25 en mayo. Además de UE 4,25, en respuesta a la primera pregunta que hemos oído de los desarrolladores, dado que el soporte de HoloLens no real se envió por primera vez en la versión preliminar, nuestro equipo lanzó el primer componente del kit de herramientas de realidad mixta para inreal: herramientas de la experiencia del usuario 0,8. En este tema, proporcionaremos una visión general de las características proporcionadas en el motor inreal 4 y MRTK por no real y cómo usarlas para crear experiencias de epopeya para HoloLens 2.|[Página RSVP](https://account.altvr.com/events/1475006046102618860)|
-|11: a.m.-12: p.m.|Introducción a HoloLens 2 y Unity|Dan Miller-Unity|Conozca los aspectos básicos de la configuración de Unity y la compilación para HoloLens 2. En esta presentación se tratarán las prácticas recomendadas, las características básicas de HoloLens 2 y cómo agregar rápidamente la compatibilidad y la interactividad de seguimiento de mano con las API de Unity nativas.|[Página RSVP](https://account.altvr.com/events/1472992231919977379)|
-|12: p.m.-1: p.m.|**Comida**||||
-|1: p.m.-2: p.m.|Introducción a los servicios de realidad mixta de Azure: anclajes espaciales de Azure|Archana Iyer & Vicente Rivera|Información general sobre los delimitadores espaciales (ASA) de Azure y los escenarios pertinentes. En este debate se abordarán las nuevas capacidades desarrolladas en el último año, con ejemplos de código sobre cómo usarlas. Veremos los procedimientos recomendados al compilar con ASA y cómo puede empezar a integrarlo en sus productos.|[Página RSVP](https://account.altvr.com/events/1475008244597392161)|
-|1: p.m.-2: p.m.|Introducción a MRTK-Unity|Catalina Ceballos|La introducción a la sesión de MRTK será un tutorial sobre cómo crear una aplicación MRTK de principio a fin.  En este artículo se hablará sobre los conceptos de interacción y se mostrarán las funcionalidades multiplataforma de MRTK.|[Página RSVP](https://account.altvr.com/events/1475010228134085240)|
-|1: p.m.-2: p.m.|Información de la aplicación de superficies MR|Lars Simkins|Únase a los ingenieros que se encuentran detrás de la aplicación MRDL Surfaces para HoloLens 2, ya que hablan sobre el caso de diseño de la aplicación y los aspectos técnicos.|[Página RSVP](https://account.altvr.com/events/1475013412952998418)|
-|2: p.m.-2: las 16:30|**Eliminar**||||
-|2: las 16:30-3: las 16:30|Integración de Unity de seguimiento de cuerpos de Azure Kinect|Angus Antley| Obtenga información sobre cómo controlar caracteres en Unity con el SDK de seguimiento de cuerpos de Kinect de Azure.|[Página RSVP](https://account.altvr.com/events/1475015668867793376)|
-|2: las 16:30-3: las 16:30|Bloques de creación de la experiencia de usuario de MRTK|Yoon Park|Profundice en los componentes de la experiencia de usuario de MRTK que le ayudarán a crear experiencias de realidad mixta.|[Página RSVP](https://account.altvr.com/events/1475017558024257973)|
-|2: las 16:30-3: las 16:30|Herramientas de rendimiento de MRTK|Kurtis Eveleigh & David Kline|Introducción a las herramientas de rendimiento, tanto en MRTK como en externo, y información general sobre el sombreador estándar de MRTK.|[Página RSVP](https://account.altvr.com/events/1475019477857861856)|
-|3: las 16:30-4: p.m.|**Eliminar**||||
-|4: p.m.-5: p.m.|El estado de la realidad mixta, donde las compañías detectan el éxito|Ori amiga & Matt Fleckenstein|La informática perimetral de latencia muy baja, junto con AI y la realidad mixta, es la base de la próxima generación de experiencias. Mediante la combinación de los mundos digitales y físicos en experiencias informáticas omnipresentes, la realidad mixta es habilitar las posibilidades que podríamos haber hecho solo antes. En esta sesión, Ori y Matt proporcionarán una visión exclusiva de la oportunidad de mercado de la realidad mixta hoy y en el futuro. Resaltarán cómo Microsoft está ayudando a las empresas líderes en fabricación, asistencia sanitaria y, aprovechando la eficacia de la realidad mixta para impulsar la eficiencia empresarial y transformar las experiencias de clientes y empleados.|[Página RSVP](https://account.altvr.com/events/1475759753555608230)|
+|9:30 a. m. - 10:30 a. m.|Apertura de Keynote|Alex Asínsman|Únase a nosotros cuando Alex Days inicie nuestro primer evento virtual Mixed Reality Dev Days. Si usa un casco de realidad virtual, le animamos a unirse a nosotros en AltspaceVR. Si va a unirse desde un equipo, consulte nuestro streaming en vivo en [https://aka.ms/MRDDKeynote](https://aka.ms/MRDDKeynote)|[Página RSVP](https://account.altvr.com/events/1475172303389065242)|
+|10:30 a. m. - 11:00 a. m.|**Romper**||||
+|11:00 a. m. - 12:00 p. m.|Introducción a Azure Mixed Reality Services: Azure Remote Rendering|Jonés, Chris Manthei y Marc Appelsmeier|Azure Remote Rendering acaba de entrar en versión preliminar pública.  Obtenga información sobre cómo puede usar ARR para representar modelos 3D interactivos con cientos de millones de polígonos y transmitirlos a dispositivos como HoloLens 2 en tiempo real.|[Página RSVP](https://account.altvr.com/events/1475002657985790153)|
+|11:00 a. m. - 12:00 p. m.|Introducción a Unreal + MRTK para HoloLens 2|Verano wu & Luis Val val|La compatibilidad de Unreal Engine HoloLens 2 estado listo para producción con el lanzamiento de UE 4.25 en mayo. Junto con UE 4.25, en respuesta a la pregunta principal que hemos recibido de los desarrolladores desde que el soporte técnico de HoloLens de Unreal se publicó por primera vez en versión preliminar, nuestro equipo publicó el primer componente de Mixed Reality Toolkit for Unreal: UX Tools 0.8. En esta charla, proporcionaremos información general sobre las características proporcionadas en Unreal Engine 4 y MRTK para Unreal, y cómo usarlas para crear experiencias de epopeya para HoloLens 2.|[Página RSVP](https://account.altvr.com/events/1475006046102618860)|
+|11:00 a. m. - 12:00 p. m.|Introducción a la HoloLens 2 y Unity|Dan Miller: Unity|Conozca los aspectos básicos de la configuración de Unity y la creación de HoloLens 2. En esta presentación se tratarán los procedimientos recomendados, las características básicas del HoloLens 2 y cómo agregar rápidamente compatibilidad con el seguimiento de manos e interactividad con las API nativas de Unity|[Página RSVP](https://account.altvr.com/events/1472992231919977379)|
+|12:00 p.m. - 1:00 p.m.|**Comida**||||
+|1:00 p.m. - 2:00 p.m.|Introducción a Azure Mixed Reality Services: Azure Spatial Anchors|Archana Iyer & Ría Rivera|Información general de Azure Spatial Anchors (ASA) y escenarios pertinentes. En esta charla se analizarán las nuevas funcionalidades desarrolladas en el último año, con ejemplos de código sobre cómo usarlas. Veremos los procedimientos recomendados durante la creación con ASA y cómo puede empezar a integrarlo en sus productos.|[Página RSVP](https://account.altvr.com/events/1475008244597392161)|
+|1:00 p.m. - 2:00 p.m.|Introducción a MRTK-Unity|Nociones de Nides|La sesión Introduction to MRTK (Introducción a MRTK) será un tutorial sobre cómo crear una aplicación MRTK de principio a fin.  En esta charla se tratarán los conceptos de interacción y se mostrarán las funcionalidades multiplataforma de MRTK.|[Página RSVP](https://account.altvr.com/events/1475010228134085240)|
+|De 13:00 a 14:00|Aprendizajes de la aplicación Mr Surfaces|Lars Simkins|Únase a los ingenieros detrás de la aplicación MRDL Surfaces HoloLens 2 cuando hablen sobre la historia de diseño de la aplicación y los aspectos técnicos destacados.|[Página RSVP](https://account.altvr.com/events/1475013412952998418)|
+|De 2:00 p.m. a 2:30 p. m.|**Romper**||||
+|De 2:30 p. m. a 3:30 p. m.|Integración de Unity Kinect Body Tracking de Azure|Yaly Antley| Aprenda a impulsar caracteres en Unity mediante el SDK de Seguimiento Kinect cuerpo de Azure.|[Página RSVP](https://account.altvr.com/events/1475015668867793376)|
+|De 2:30 p. m. a 3:30 p. m.|Bloques de creación de experiencia de usuario de MRTK|Yoon Park|Profundiza en los componentes de la experiencia de usuario de MRTK que le ayudan a crear experiencias de realidad mixta.|[Página RSVP](https://account.altvr.com/events/1475017558024257973)|
+|De 2:30 p. m. a 3:30 p. m.|Herramientas de rendimiento de MRTK|Kurtis Eveleigh & David Kline|Una introducción a las herramientas de rendimiento, tanto en MRTK como externa, y una introducción al sombreador estándar de MRTK.|[Página RSVP](https://account.altvr.com/events/1475019477857861856)|
+|3:30 p. m. - 4:00 p.m.|**Romper**||||
+|De 4:00 p.m. a 5:00 p.m.|El estado de Mixed Reality: dónde las empresas encuentran éxito|OriArio & MattFlck erc|La informática perimetral de latencia ultrabaja, junto con la inteligencia artificial y la realidad mixta, es la base de la próxima generación de experiencias. Al combinar los mundos digital y físico en experiencias informáticas ubicuas, la realidad mixta permite posibilidades que solo podríamos haber soñado anteriormente. En esta sesión, Ori y Matt proporcionarán información única sobre la oportunidad de mercado de realidad mixta hoy y en el futuro. Resaltarán cómo Microsoft ayuda a las empresas líderes en fabricación, atención sanitaria y comercio minorista a aprovechar la eficacia de la realidad mixta para impulsar la eficiencia empresarial y transformar las experiencias de clientes y empleados.|[Página RSVP](https://account.altvr.com/events/1475759753555608230)|
 ||||||
 
 ### <a name="may-22"></a>22 may.
-|**Time**|**Título de la sesión**|**Participante**|**Descripción**|**Vínculo a la página de eventos**|
+|**Time**|**Título de la sesión**|**Altavoz**|**Descripción**|**Vínculo a la página de eventos**|
 |---------|---------|---------|---------|---------|
-|9:9:30-10:9:30|Chat de informal|Alex Kipman & René Schulte|Al abrir el día dos, hemos invitado a Microsoft MVP, director regional y miembro de la comunidad Extraordinaire René Schulte a destacar un incendio y conversar sobre los temas en los que está interesado la comunidad. René ha estado recopilando preguntas de la comunidad durante aproximadamente una semana y esperamos que sea una excelente conversación.|[Página RSVP](https://account.altvr.com/events/1472969601032651685)|
-|10:9:30-11: a.m.|**Eliminar**||||
-|11: a.m.-12: p.m.|Diseño de experiencias de AR/VR con Microsoft Maquette|Ricardo Acosta|El diseño de una aplicación de teléfono o un sitio web tiene un flujo de trabajo bien definido. Desafortunadamente, debido a su novedad, el diseño de experiencias de realidad espacial puede ser complicado si se usa el mismo conjunto de herramientas o flujo de trabajo 2D. Afortunadamente, la nueva aplicación Microsoft Maquette se centra en ayudar a los diseñadores de UX a diseñar.|[Página RSVP](https://account.altvr.com/events/1475022385332618137)|
-|11: a.m.-12: p.m.|MRTK Unity V2 & más que los comentarios de la comunidad nos ayudaron a mejorar MRTK|Thalhammer de Bernadette|Hablaremos sobre cómo hemos mejorado la experiencia del desarrollador durante el último año escuchando comentarios de la comunidad y cómo los desarrolladores pueden aplicar estas mejoras. Profundizaremos en la documentación y las pruebas unitarias, el nuevo componente manipulador de objetos, el uso de la ventana de migración y explorará algunos fragmentos de código en torno a las preguntas más frecuentes de la comunidad de desarrolladores.|[Página RSVP](https://account.altvr.com/events/1475021020329935837)|
-|11: a.m.-12: p.m.|Complemento del motor desareal de la pendiente oscura para el Kinect de Azure DK|Ben Unsworth-pendiente oscuro|Obtenga información sobre cómo la pendiente oscura usa el sensor de Kinect de Azure DK y sus SDK para crear interacciones interactivas en tiempo real en un motor inreal.|[Página RSVP](https://account.altvr.com/events/1475023906698953482)|
-|12: p.m.-1: p.m.|**Comida**||||
-|1: p.m.-2: p.m.|¡ Introducción a StereoKit-MR!|Nick Klingensmith|StereoKit es una biblioteca de realidad de código abierto fácil de usar para compilar aplicaciones de HoloLens y VR con C# y OpenXR. StereoKit prioriza el desarrollo de aplicaciones de realidad mixta sobre todo lo demás, lo que permite características como un sistema de entrada de realidad mixta de primera clase, un rendimiento rápido, incluso en dispositivos móviles, el tiempo de iteración rápido en el dispositivo y una canalización de recursos en tiempo de ejecución que permite a los usuarios y desarrolladores cargar activos reales del sistema de archivos. Todo esto y otros se empaquetan en una API concisa que está bien documentada, es fácil de aprender y fácil de escribir.|[Página RSVP](https://account.altvr.com/events/1475033325386072983)|
-|1: p.m.-2: p.m.|Creación de experiencias de MR con Babylon.js y WebXR|Jason Carter & Raanan Weber|Descubra lo fácil y eficaz que puede ser desarrollar experiencias de MR directamente en la Web. Babylon.js se esfuerza por ser una de las plataformas de representación Web más potentes, elegantes, sencillas y abiertas del mundo, lo que facilita el desbloqueo de las capacidades de MR completo en plataformas, dispositivos y ecosistemas. Vea los últimos avances de Babylon.js y su compatibilidad con WebXR.|[Página RSVP](https://account.altvr.com/events/1475027067660665006)|
-|1: p.m.-2: p.m.|Uso de la acústica del proyecto con HoloLens 2|Mike Chemistruck|Vea cómo las acústicas del proyecto, que antes solo estaban disponibles para los títulos de la consola y VR, se pueden aplicar a mixed reality. Obtenga información acerca de cómo el sistema vuelve a crear efectos reales, como la oclusión de diffracted y la redirección de los sonidos en torno a las puertas físicas y las esquinas, y la reverberación en geometrías complejas con varios espacios conectados, todo dentro del presupuesto de proceso de un HoloLens 2.|[Página RSVP](https://account.altvr.com/events/1475028307488539424)|
-|2: p.m.-2: las 16:30|**Eliminar**||||
-|2: las 16:30-3: las 16:30|Holographic Remoting: iteración rápida & gráficos superfacturados en HoloLens|Brent Jackson|HoloLens ofrece una plataforma de informática móvil revolucionaria, como ninguna otra, pero está limitada a la potencia de procesamiento de un dispositivo móvil. Holographic Remoting ofrece la capacidad sin procesar de un equipo compatible con VR a HoloLens, y con la comunicación remota de Unity en el editor ya no tiene que compilar e implementar las aplicaciones para probarlas en un dispositivo. Obtenga información sobre cómo Holographic Remoting puede aumentar el rendimiento de las aplicaciones y los desarrolladores.|[Página RSVP](https://account.altvr.com/events/1475030022195512129)|
-|2: las 16:30-3: las 16:30|OpenXR en HoloLens 2: realidad mixta nativa multiplataforma|Alex Turner|OpenXR 1,0 está aquí. ¿Está generando compatibilidad con la realidad mixta en su propio motor o aplicación nativa desde cero? Si es así, obtenga información sobre los detalles clave de la superficie de la API nativa de OpenXR, las extensiones que aportan todo el conjunto de características de HoloLens 2 a la vida y los asociados de la realidad de Firefox a StereoKit ya envían aplicaciones y marcos de trabajo basados en OpenXR. Con OpenXR, puede crear motores de realidad mixta entre proveedores y aplicaciones nativas que abarquen la gran variedad de dispositivos del sector.|[Página RSVP](https://account.altvr.com/events/1475031737691013286)|
-|2: las 16:30-3: las 16:30|Sugerencias de un año de desarrollo de HoloLens 2 |Peter valor|El equipo de comercialización de HoloLens compartirá sugerencias y lecciones aprendidas del último año trabajando con nuestros asociados.  Obtenga información sobre los problemas más comunes junto con las prácticas recomendadas y las técnicas que puede usar para preparar su aplicación de HoloLens 2 para compartir con sus clientes.|[Página RSVP](https://account.altvr.com/events/1475034807686660828)|
+|9:30 a. m. - 10:30 a. m.|Fireside Chat|Alex Schámán & Queráite|Al abrir el día dos, hemos invitado a Microsoft MVP, director regional y extraordinario miembro de la comunidad a dar la voz de alarma y charlar sobre los temas que le interesan a la comunidad. Lleva una semana recopilando preguntas de la comunidad y esperamos que sea una conversación excelente.|[Página RSVP](https://account.altvr.com/events/1472969601032651685)|
+|10:30 a. m. - 11:00 a. m.|**Romper**||||
+|11:00 a. m. - 12:00 p. m.|Diseño de experiencias de AR/VR con Microsoft Maquette|Ramón Tordo|El diseño de una aplicación de teléfono o un sitio web tiene un flujo de trabajo bien definido. Desafortunadamente, debido a su novedad en el diseño de experiencias de realidad espacial puede ser complicado si usa el mismo flujo de trabajo 2D o conjunto de herramientas. Afortunadamente, la nueva aplicación Microsoft Maquette se centra en ayudar a los diseñadores de experiencia de usuario a diseñar.|[Página RSVP](https://account.altvr.com/events/1475022385332618137)|
+|11:00 a. m. - 12:00 p. m.|MrTK Unity v2 & más allá: cómo los comentarios de la comunidad nos ayudaron a mejorar MRTK|Sedette Dúplex|Una charla sobre cómo hemos mejorado la experiencia del desarrollador durante el último año escuchando los comentarios de la comunidad y cómo los desarrolladores pueden aplicar estas mejoras. Analizaremos la documentación y las pruebas unitarias, el nuevo componente de manipulador de objetos, mediante la ventana de migración y exploraremos algunos fragmentos de código en torno a las preguntas más frecuentes de la comunidad de desarrollo.|[Página RSVP](https://account.altvr.com/events/1475021020329935837)|
+|11:00 a. m. - 12:00 p. m.|Complemento Unreal Engine de Dark Slope para Azure Kinect DK|Ben Unsworth: pendiente oscura|Obtenga información sobre cómo Dark Slope usa Azure Kinect DK y sus SDK para crear interacciones interactivas en tiempo real en Unreal Engine.|[Página RSVP](https://account.altvr.com/events/1475023906698953482)|
+|12:00 p.m. - 13:00 p.m.|**Comida**||||
+|De 13:00 a 14:00|Presentación de StereoKit: MR Made Easy!|Nick Ksmithsmith|StereoKit es una biblioteca de realidad mixta de código abierto fácil de usar para compilar aplicaciones HoloLens y VR con C# y OpenXR. StereoKit prioriza el desarrollo de aplicaciones de realidad mixta por encima de todo, lo que permite características como un sistema de entrada de realidad mixta de primera clase, un rendimiento rápido de forma predeterminada incluso en dispositivos móviles, un tiempo de iteración rápida en el dispositivo y una canalización de recursos en tiempo de ejecución que permite a los usuarios y desarrolladores cargar recursos reales desde el sistema de archivos. Todo esto y mucho más se empaquetan en una API terse que está bien documentada, es fácil de aprender y fácil de escribir.|[Página RSVP](https://account.altvr.com/events/1475033325386072983)|
+|De 13:00 a 14:00|Creación de experiencias de mr inmersivas con Babylon.js y WebXR|Jason Carter & Raanan Weber|Descubra lo fácil y eficaz que puede ser desarrollar experiencias de MR directamente en la web. Babylon.js se esfuerza por ser una de las plataformas de representación web más eficaces, sencillas y abiertas del mundo, lo que facilita el desbloqueo de funcionalidades completas de MR en plataformas, dispositivos y ecosistemas. Consulte los últimos desarrollos de Babylon.js y su compatibilidad con WebXR.|[Página RSVP](https://account.altvr.com/events/1475027067660665006)|
+|De 13:00 a 14:00|Uso Project Acoustics con HoloLens 2|MikeTropistruck|Vea cómo Project Acoustics, que anteriormente solo está disponible para los títulos vr y console, se puede aplicar a Mixed Reality. Obtenga información sobre cómo el sistema vuelve a crear efectos reales, como la oclusión diferencial y el redireccionamiento de sonidos alrededor de puertas y esquinas físicas, y la reverberación en geometrías complejas con varios espacios conectados, todo ello dentro del presupuesto de proceso de un HoloLens 2.|[Página RSVP](https://account.altvr.com/events/1475028307488539424)|
+|De 2:00 p.m. a 2:30 p. m.|**Romper**||||
+|De 2:30 p. m. a 3:30 p. m.|Comunicación remota holográfica: iteración rápida & gráficos supercargados en HoloLens|Michael Michael|HoloLens ofrece una plataforma de informática móvil como ninguna otra, pero se limita a la capacidad de procesamiento de un dispositivo móvil. La comunicación remota holográfica aporta la potencia sin procesar de un equipo compatible con VR a HoloLens y, con la comunicación remota en el editor de Unity, ya no tiene que compilar e implementar las aplicaciones para probarlas en un dispositivo. Obtenga información sobre cómo la comunicación remota holográfica puede aumentar el rendimiento de las aplicaciones y de los desarrolladores.|[Página RSVP](https://account.altvr.com/events/1475030022195512129)|
+|De 2:30 p. m. a 3:30 p. m.|OpenXR en HoloLens 2: realidad mixta nativa multiplataforma|AlexRtas|OpenXR 1.0 está aquí. ¿Está creando soporte técnico de realidad mixta en su propio motor o aplicación nativa desde cero? Si es así, obtenga información sobre los detalles clave de la superficie de API nativa de OpenXR, las extensiones que aportan vida al conjunto completo de características de HoloLens 2 y los asociados de Firefox Reality a StereoKit ya están enviando aplicaciones y marcos basados en OpenXR. Con OpenXR, puede crear motores de realidad mixta entre proveedores y aplicaciones nativas que abarcan la gran cantidad de dispositivos del sector.|[Página RSVP](https://account.altvr.com/events/1475031737691013286)|
+|De 2:30 p. m. a 3:30 p. m.|Sugerencias de un año de desarrollo HoloLens 2 desarrollo |Peter Vale|El HoloLens de comercialización compartirá sugerencias y lecciones aprendidas del último año trabajando con nuestros asociados.  Obtenga información sobre los problemas más comunes junto con los procedimientos recomendados y las técnicas que puede usar para preparar la aplicación HoloLens 2 para compartirla con sus clientes.|[Página RSVP](https://account.altvr.com/events/1475034807686660828)|
 ||||||
 
 ## <a name="code-of-conduct-and-microsoft-standard-event-guidelines"></a>Código de conducta y directrices de eventos estándar de Microsoft
 
 ### <a name="code-of-conduct"></a>Código de conducta 
 
-**_La misión de Microsoft es capacitar a todas las personas y a todas las organizaciones del planeta para lograr más. Esto incluye todos los eventos y recopilaciones de Microsoft, incluidos en plataformas digitales, donde se pretende crear una experiencia respetuoso, agradable, divertida e inclusiva para todos los participantes._* _  
+***La misión de Microsoft es capacitar a todas las personas y a todas las organizaciones del planeta para lograr más. Esto incluye todos los eventos y reuniones de Microsoft, incluidas las plataformas digitales, donde se busca crear una experiencia agradable, divertida, divertida e inclusiva para todos los participantes.***  
 
-_*_Esperamos que todos los participantes de eventos digitales mantengan los principios de este código de conducta, que cubre el evento digital principal y todas las actividades relacionadas. No se tolera el comportamiento, las imágenes o las interacciones perjudiciales o desfavoristas de ningún participante de la entidad, de ninguna forma, en cualquier aspecto del programa, incluidas las actividades empresariales y sociales, independientemente de la ubicación. Microsoft no tolerará ningún acoso ni discriminación en función de la edad, la ascendencia, el color, la identidad de sexo o la expresión, el origen nacional, la discapacidad física o mental, la religión, la orientación sexual o cualquier otra característica protegida por las normas, regulaciones y impuestos locales aplicables._*_  
+***Esperamos que todos los participantes de eventos digitales cumplan los principios de este Código de conducta, que abarca el evento digital principal y todas las actividades relacionadas. No toleramos comportamientos perjudiciales o irrespetuosos, mensajes, imágenes o interacciones de ningún participante de la parte, de ninguna forma, en ningún aspecto del programa, incluidas las actividades empresariales y sociales, independientemente de la ubicación. Microsoft no tolerará la discriminación o la halago en función de la edad, el sexo, el color, la identidad o la expresión de género, el origen nacional, la discapacidad física o psíquica, la madre, la orientación sexual o cualquier otra característica protegida por las leyes locales aplicables, las regulaciones y las normas.***  
 
-_*_Está prohibido la fotografía, el vídeo o la grabación de contenido de la sesión o presentaciones en cualquier formato compartido en los canales sociales. Recomendamos a todos los usuarios que le ayuden a crear un entorno de bienvenida y seguridad. Informe de los problemas, el comportamiento de acoso, la actividad sospechosa o perjudicial para el trabajo de la línea de negocio (1-877-320-MSFT o [buscond@microsoft.com](mailto:buscond@microsoft.com) ). Microsoft se reserva el derecho de rechazar admisión o quitar a cualquier persona de los días de desarrollo de realidad mixta en cualquier momento a su entera discreción._*_  
+***Se prohíbe la grabación, vídeo o grabación de contenido de sesión o presentaciones en cualquier formato compartido en canales sociales. Animamos a todos los usuarios a que ayuden a crear un entorno seguro y de bienvenida. Informe a la línea de acceso directa de la conducta empresarial (1-877-320-MSFT o ) de cualquier problema, comportamiento sospechoso o [buscond@microsoft.com](mailto:buscond@microsoft.com) perjudicial. Microsoft se reserva el derecho de rechazar la admisión o quitar a cualquier persona de Mixed Reality Días de desarrollo en cualquier momento a su entera discreción.***  
 
-_*_Se recomienda que todos los usuarios se comporten de forma responsable en el entorno de AltspaceVR inmersivo como lo haría en cualquier evento en persona. Respete el espacio de otros usuarios y no bloquee la vista de otros asistentes de la fase cuando asista al evento.  Tenga en cuenta que, al igual que cualquier evento en persona, cualquier otro usuario que indique puede ser escuchado por otros usuarios en caso de que necesite tener una conversación privada. se recomienda que lo haga en otro espacio dentro de AltspaceVR como su página principal de AltspaceVR._*_
+***Animamos a todos a que se comporten de forma responsable dentro del entorno envolvente altspaceVR como lo haría en cualquier evento en persona. Respete el espacio de otros usuarios y no bloquee la vista de otros asistentes de la fase al asistir al evento.  Tenga en cuenta que, al igual que cualquier evento en persona, cualquier cosa que diga puede ser escuchada por otros usuarios en el evento, si necesita tener una conversación privada, le recomendamos que lo lleve a otro espacio dentro de AltspaceVR, como la página principal de AltspaceVR.***
 
 
 ## <a name="frequently-asked-questions"></a>Preguntas más frecuentes
-Esta sección se actualizará con frecuencia a medida que recibamos más preguntas.
+Esta sección se actualizará con frecuencia a medida que recibamos más preguntas de usted.
 
-_*P**: ¿puedo participar sin un casco de VR? **A: absolutamente** . Aunque creemos que el evento se verá mejor con un casco de VR, queremos incluir a los usuarios que no pueden unirse a nosotros en ese formato.  Altspace tiene un cliente de equipo que se puede usar para unirse al evento. **_Altspace actualmente no tiene un cliente que funcione en la plataforma Mac (se recomienda usar Parallels o Bootcamp para crear una instalación de Windows para usar AltspaceVR en un equipo Mac_*_.  
+**P:** ¿Puedo participar sin casco de realidad virtual?  
+**A:** absolutamente. Aunque creemos que el evento se experimentará mejor con un casco de realidad virtual, queremos ser inclusivos para las personas que no pueden unirse a nosotros en ese formato.  Altspace tiene un cliente de EQUIPO que se puede usar para unirse al evento. Altspace no tiene actualmente un cliente que funcione en la plataforma Mac (se recomienda usar Parallels o Bootcamp para crear una instalación de Windows para usar **_AltspaceVR_** en un equipo MAC.  
   
-_ *Q**-cómo Únase a la experiencia 2D?  
-**A: desde** un equipo tiene la opción de [descargar el cliente de Altspace](https://altvr.com/get-altspacevr/) a través de la tienda Windows o de la secuencia. Después de descargar el cliente, tendrá que crear una cuenta e iniciar sesión. Puede encontrar información sobre cómo navegar dentro de la experiencia 2D [aquí](https://help.altvr.com/hc/en-us/articles/115003528373-How-do-I-control-my-avatar-with-Mouse-Keyboard-).
+**P:** ¿Cómo a la experiencia 2D?  
+**A:** desde un equipo, tiene la opción de descargar el cliente [de Altspace](https://altvr.com/get-altspacevr/) a través de Windows Store o Steam. Después de descargar el cliente, deberá crear una cuenta e iniciar sesión. Puede encontrar información sobre cómo navegar dentro de la experiencia 2D [aquí.](https://help.altvr.com/hc/en-us/articles/115003528373-How-do-I-control-my-avatar-with-Mouse-Keyboard-)
   
-**P** -quién debe asistir a los días de desarrollo de la realidad mixta  
-**A: este** evento está incluido en todos los usuarios que trabajan o se reproducen en el espacio de realidad mixta. Aunque la mayor parte del contenido se va a centrar en el desarrollador, también sabemos que hay contenido interesante para una amplia variedad de roles más allá de los desarrolladores. Recuerde comprobar la programación de actualizaciones para ver el tipo de contenido que se va a proporcionar.  
+**P:** Quién debe asistir a Mixed Reality de desarrollo  
+**A:** este evento incluye a todos los usuarios que trabajan o reproducen en Mixed Reality espacio. Aunque la mayor parte del contenido se centrará en el desarrollador, también sabemos que hay contenido interesante para una amplia variedad de roles más allá de los desarrolladores. Recuerde comprobar la programación de las actualizaciones para ver el tipo de contenido que se va a proporcionar.  
 
-**P** : no encuentro el evento en AltspaceVR  
-**A** : se recomienda seguir el vínculo del explorador de su PC, iniciar sesión en el sitio web de AltspaceVR y hacer clic en "interesado" en el evento.  Esto hará que el evento se muestre en la pestaña "interesado" en la vista eventos del cliente AltspaceVR.  También debe buscar el evento en la lista "destacada".  
+**P:** No encuentro el evento en AltspaceVR  
+**R:** se recomienda seguir el vínculo en el explorador del equipo, iniciar sesión en el sitio web de AltspaceVR y hacer clic en "Interesado" en el evento.  Esto hará que el evento se muestre en la pestaña "Interesado" en la vista Eventos del cliente AltspaceVR.  También debe encontrar el evento en la lista "Destacados".  
 
-**P** : me combinó el evento pero tengo muchos mensajes de tutorial que bloquean la vista  
-**R** : si se ha unido al evento sin pasar primero por el tutorial de primera vez, deberá completar este paso para desbloquear la vista.  Este es el motivo por el que se recomienda iniciar sesión en AltspaceVR antes del evento para completar el tutorial con el fin de conocer los aspectos básicos para usar este entorno envolvente.
+**P:** Me uní al evento, pero tengo muchos mensajes de tutorial que bloquean mi vista  
+**A:** si se ha unido al evento sin pasar primero por el tutorial por primera vez, deberá completarlo para desbloquear la vista.  Este es el motivo por el que se recomienda iniciar sesión en AltspaceVR antes del evento para completar el tutorial y conocer los conceptos básicos para usar este entorno envolvente.
 
 <!--  
 **Q** -  

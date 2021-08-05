@@ -1,18 +1,18 @@
 ---
 layout: LandingPage
 title: Mixed Reality Dev Days
-description: Página de eventos de los días de desarrollo de realidad mixta
+description: Página de eventos para Mixed Reality días de desarrollo
 author: jessemcculloch
 ms.author: jemccull
 ms.date: 02/21/2020
 ms.topic: article
-keywords: Mixed reality, Conference, Summit, Developer, HoloLens, HoloLens 2, Kinect
-ms.openlocfilehash: 9ff4d53b277f23a0b9abc6de7531db11240b800b
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+keywords: Mixed Reality, conferencia, conferencia, conferencia, desarrollador, HoloLens, HoloLens 2, Kinect
+ms.openlocfilehash: b456455b95dc225a012133d22fc5fb04c5a6d0cfe81ea91e016b79712f80d449
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91692687"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209440"
 ---
 ![Mixed Reality Dev Days](../whats-new/images/MRDD/MRDevDaysBanner.png)  
 
@@ -20,9 +20,9 @@ ms.locfileid: "91692687"
 
 ## <a name="code-of-conduct"></a>Código de conducta 
 
-***La misión de Microsoft es capacitar a todas las personas y a todas las organizaciones del planeta para lograr más. Esto incluye todos los eventos y recopilaciones de Microsoft, incluidos en plataformas digitales, donde se pretende crear una experiencia respetuoso, agradable, divertida e inclusiva para todos los participantes.***  
+***La misión de Microsoft es capacitar a todas las personas y a todas las organizaciones del planeta para lograr más. Esto incluye todos los eventos y reuniones de Microsoft, incluidas las plataformas digitales, donde buscamos crear una experiencia divertida, divertida e inclusiva para todos los participantes.***  
 
-***Esperamos que todos los participantes de eventos digitales mantengan los principios de este código de conducta, que cubre el evento digital principal y todas las actividades relacionadas. No se tolera el comportamiento, las imágenes o las interacciones perjudiciales o desfavoristas de ningún participante de la entidad, de ninguna forma, en cualquier aspecto del programa, incluidas las actividades empresariales y sociales, independientemente de la ubicación. Microsoft no tolerará ningún acoso ni discriminación en función de la edad, la ascendencia, el color, la identidad de sexo o la expresión, el origen nacional, la discapacidad física o mental, la religión, la orientación sexual o cualquier otra característica protegida por las normas, regulaciones y impuestos locales aplicables.***  
+***Esperamos que todos los participantes de eventos digitales cumplan los principios de este código de conducta, que abarca el evento digital principal y todas las actividades relacionadas. No toleramos comportamientos perjudiciales o irrespetuosos, mensajes, imágenes o interacciones por parte de ningún participante de la parte, de ninguna forma, en ningún aspecto del programa, incluidas las actividades empresariales y sociales, independientemente de la ubicación. Microsoft no tolerará la discriminación ni la halago en función de la edad, el sexo, el color, la identidad o expresión de género, el origen nacional, la discapacidad física o psíquica, la madre, la orientación sexual ni ninguna otra característica protegida por las leyes, normativas y prácticas locales aplicables.***  
 
-***Está prohibido la fotografía, el vídeo o la grabación de contenido de la sesión o presentaciones en cualquier formato compartido en los canales sociales. Recomendamos a todos los usuarios que le ayuden a crear un entorno de bienvenida y seguridad. Informe de los problemas, el comportamiento de acoso, la actividad sospechosa o perjudicial para el trabajo de la línea de negocio (1-877-320-MSFT o [buscond@microsoft.com](mailto:buscond@microsoft.com) ). Microsoft se reserva el derecho de rechazar admisión o quitar a cualquier persona de los días de desarrollo de realidad mixta en cualquier momento a su entera discreción.***  
+***Se prohíbe la grabación, vídeo o grabación de contenido de sesión o presentaciones en cualquier formato compartido en los canales sociales. Animamos a todos los usuarios a que ayuden a crear un entorno seguro y de bienvenida. Informe de cualquier problema, comportamiento desconfiado, actividad sospechosa o perjudicial a la línea de acceso directa de la conducta empresarial (1-877-320-MSFT o [buscond@microsoft.com](mailto:buscond@microsoft.com) ). Microsoft se reserva el derecho de rechazar la admisión o quitar a cualquier persona de Mixed Reality días de desarrollo en cualquier momento a su entera discreción.***  
 

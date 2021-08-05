@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, seguimiento de manos,
-ms.openlocfilehash: 68e936cb4121027008f37aae72496fe59445b636
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: f9d3b6b0f83a513b849aa27d464595ec8543bc30b64314c9a6e341cd6cb3a519
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176897"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115189501"
 ---
 # <a name="hand-tracking"></a>Seguimiento de las manos
 
@@ -24,7 +24,7 @@ El _perfil de seguimiento de mano_ se encuentra en el perfil del sistema de _ent
 
 Los prefabs conjuntos se visualizan mediante prefabs simples. Las _uniones de la_ mano y el dedo índice son de especial importancia y tienen su propio prefab, mientras que el resto de las uniones comparten el mismo prefab. 
 
-De forma predeterminada, los elementos prefabs de las uniones de mano son primitivos geométricos simples. Se pueden reemplazar si se desea. Si no se especifica ningún elemento prefab, se crean [objetos GameObject vacíos](https://docs.unity3d.com/ScriptReference/GameObject.html) en su lugar.
+De forma predeterminada, los prefabs de las uniones de mano son primitivos geométricos simples. Estos se pueden reemplazar si se desea. Si no se especifica ningún elemento prefab, se crean [objetos GameObject vacíos](https://docs.unity3d.com/ScriptReference/GameObject.html) en su lugar.
 
 > [!WARNING]
 > Evite el uso de scripts complejos o una representación costosa en prefabs conjuntos, ya que los objetos de unión se transforman en cada fotograma y pueden tener un costo de rendimiento considerable.
@@ -39,7 +39,7 @@ La malla manual se usa si el dispositivo de seguimiento de manos proporciona dat
 
 <img src="../images/input-simulation/MRTK_Core_Input_Hands_ArticulatedHandMesh.png" width="350px" alt="Input Hand Mesh"  style="display:block;">
 
-La pantalla de malla de mano puede tener un impacto notable en el rendimiento; por esta razón, se puede deshabilitar completamente desactivando **la opción Habilitar** visualización de malla de mano.
+La pantalla de malla de mano puede tener un impacto notable en el rendimiento; por este motivo, se puede deshabilitar completamente desactivando **la opción** Habilitar visualización de malla de mano.
 
 ## <a name="hand-visualization-settings"></a>Configuración de visualización manual
 
@@ -102,7 +102,7 @@ public void OnSourceDetected(SourceStateEventData eventData)
 
 Si no se proporciona ningún controlador específico, se proporcionan clases de utilidad para un acceso cómodo a los datos conjuntos de mano. Estas funciones solicitan datos conjuntos del primer dispositivo de mano disponible actualmente.
 
-#### <a name="polling-joint-pose-from-handjointutils"></a>Sondeo de la posición conjunta de HandJointUtils
+#### <a name="polling-joint-pose-from-handjointutils"></a>Posición conjunta de sondeo de HandJointUtils
 
 [`HandJointUtils`](xref:Microsoft.MixedReality.Toolkit.Input.HandJointUtils) es una clase estática que consulta el primer dispositivo de mano activo.
 

@@ -5,19 +5,19 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: a44e5f32cda2803091e27ae1a2c30a1976385a2f
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: f2391ab0c67880c8902092be6fcecefcf30f008c7f31ea76879d399e35e1491b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121613"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115212677"
 ---
 # <a name="framework-and-runtime"></a>Marco de trabajo y tiempo de ejecución
 
 ## <a name="changes-to-the-scene"></a>Cambios en la escena
 
 Para usar el kit de herramientas, una instancia del script MixedRealityToolkit debe estar en la escena.
-Para agregar uno, use la opción de menú: Mixed Reality Toolkit -> Agregar a la escena y configurar. Esta instancia es responsable de registrar, actualizar y destruir servicios. También es donde se elige el perfil de configuración.
+Para agregar uno, use la opción de menú: Mixed Reality Toolkit -> Agregar a la escena y Configurar. Esta instancia es responsable de registrar, actualizar y destruir servicios. También es donde se elige el perfil de configuración.
 
 Además de agregar el GameObject de MRTK a la escena, la opción de menú también hará lo siguiente:
 

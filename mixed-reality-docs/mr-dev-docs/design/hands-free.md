@@ -1,23 +1,23 @@
 ---
 title: Manos libres
-description: Obtenga información acerca de las dificultades a las que pueden encontrarse los usuarios con una interfaz de manos y controladores y sobre diversas alternativas gratuitas.
+description: Obtenga información sobre las dificultades a las que pueden enfrentarse los usuarios con una interfaz de manos y controladores y sobre diversas alternativas de manos libres.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 04/20/2019
 ms.topic: article
-keywords: Realidad mixta, manos libres, miradas a la mano, la interacción, el diseño, el casco de realidad mixta, el casco de la realidad mixta de Windows, el casco de realidad virtual, HoloLens, MRTK, el kit de herramientas de realidad mixta, la entrada de voz, la facilidad de uso
-ms.openlocfilehash: 2864e58fdd8a29ae8f981b42f50735eb13a50869
-ms.sourcegitcommit: d340303cda71c31e6c3320231473d623c0930d33
+keywords: Mixed Reality, manos libres, mirada, mirada dirigida, interacción, diseño, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit, entrada de voz, facilidad de uso
+ms.openlocfilehash: 725d8886d21b42ee4643680c0dc91c1d29c25f8409b0ed0828256564dde7545c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/01/2021
-ms.locfileid: "97847678"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115213539"
 ---
 # <a name="hands-free"></a>Manos libres
 
 ## <a name="scenarios"></a>Escenarios
 
-Tal como se describe en [información general sobre el modelo de interacción](interaction-fundamentals.md), una vez que haya identificado los usuarios y sus objetivos, pregúntese qué desafíos ambientales o en situaciones pueden enfrentarse a medida que trabajan para realizar sus tareas. Por ejemplo, muchos usuarios necesitan usar sus manos para lograr sus objetivos del mundo real y tienen dificultades para interactuar con una interfaz basada en manos y controladores.
+Como se describe en la introducción al modelo de [interacción,](interaction-fundamentals.md)una vez que haya identificado a los usuarios y sus objetivos, pregúntese a qué desafíos ambientales o situacionales podrían enfrentarse a medida que trabajan para realizar sus tareas. Por ejemplo, muchos usuarios necesitan usar sus manos para lograr sus objetivos reales y tendrán dificultades para interactuar con una interfaz basada en manos y controladores.
 
 Algunos escenarios específicos incluyen: 
 * Guiar al usuario por una tarea mientras tiene las manos ocupadas.
@@ -25,70 +25,70 @@ Algunos escenarios específicos incluyen:
 * Fatiga manual.
 * Guantes en los que no se puede realizar un seguimiento.
 * Llevar algo en las manos.
-* Awkwardness social al usar gestos de gran tamaño
+* Incomodidad social al usar gestos de mano grandes
 * Espacios estrechos.
 
 ## <a name="hands-free-modalities"></a>Modalidades de manos libres
 
 ### <a name="voice-input"></a>[Entrada de voz](voice-input.md)
 
-El uso de la voz para el comando y el control de una interfaz ofrece una manera cómoda de trabajar de forma gratuita y usar accesos directos para omitir varios pasos si lo desea. Con la entrada de voz, el usuario puede leer el nombre de cualquier botón en voz alta para activarlo _("verlo, decirlo")_ y conversar con un agente digital que puede realizar tareas por usted.
+El uso de la voz para controlar y controlar una interfaz ofrece una manera cómoda de trabajar con manos libres y usar accesos directos para omitir varios pasos si lo desea. Con la entrada de voz, el usuario puede leer el nombre de cualquier botón en voz alta para activarlo _("verlo, decirlo")_ y dialogar con un agente digital que pueda realizar tareas automáticamente.
 
 ### <a name="gaze-and-dwell"></a>[Mirada y permanencia](gaze-and-dwell.md)
 
-En algunas situaciones sin experiencia, el uso de la voz no es lo ideal o incluso posible. Los entornos de fábrica, la privacidad o las normas sociales de alta carga pueden ser restricciones. El modelo de vista y la vivienda permite al usuario navegar por una aplicación sin ninguna información adicional aparte de su ojo o mirarnos: el usuario simplemente mantiene Gazing (con sus cabezales o ojos) en el destino y permanece en él durante un momento para activarlo. Para obtener más información acerca de las consideraciones de diseño individuales para mirarlas y la vivienda, eche [un vistazo a la vista de miras + la vivienda](gaze-and-dwell-eyes.md) y [el cabezal y la vivienda](gaze-and-dwell-head.md).
+En algunas situaciones de manos libres, el uso de la voz no es ideal ni siquiera posible. Los entornos de fábrica, la privacidad o las normas sociales pueden ser restricciones. El modelo de mirada y permanencia permite al usuario navegar por una aplicación sin ninguna entrada adicional aparte de la mirada con los ojos o la cabeza: el usuario simplemente sigue mirando (con la cabeza o los ojos) al destino y permanece allí durante un momento para activarla. Para más información sobre las consideraciones de diseño individuales de mirada y permanencia, consulte mirada con los ojos [y](gaze-and-dwell-eyes.md) permanencia y mirada con la cabeza [y permanencia.](gaze-and-dwell-head.md)
 
-## <a name="transitioning-in-and-out-of-hands-free"></a>Transición dentro y fuera de manos libres
+## <a name="transitioning-in-and-out-of-hands-free"></a>Transición dentro y fuera de las manos libres
 
-En estos casos, la liberación de las manos de la interacción con los hologramas para la navegación y los comandos puede abarcar de ser un requisito absoluto para el funcionamiento de la aplicación, de un extremo a otro, a una mayor comodidad en la que el usuario puede realizar la transición en cualquier momento. 
+En estos escenarios, liberar las manos de la interacción con hologramas para comandos y navegación puede abarcar desde un requisito absoluto hasta el funcionamiento de la aplicación, de un extremo a otro, hasta una mayor comodidad de que el usuario pueda realizar la transición dentro y fuera en cualquier momento. 
 
-Si la aplicación requiere que siempre se use de forma gratuita, ya sea mediante la permanencia, comandos de voz personalizados o el único comando de voz, "seleccionar", asegúrese de tomar las adaptaciones adecuadas en la interfaz de usuario. 
+Si la aplicación requiere que siempre se use sin manos, ya sea mediante permanencia, comandos de voz personalizados o el comando de una sola voz, "select", asegúrese de crear el espacio adecuado en la interfaz de usuario. 
 
-Si el usuario de destino tiene que cambiar de manos libres a su discreción, es importante tener en cuenta los siguientes principios.
+Si el usuario de destino necesita cambiar de manos a manos libres a su discreción, es importante tener en cuenta los siguientes principios.
 
-### <a name="assume-the-user-is-already-in-the-mode-that-they-want-to-switch-to"></a>Supongamos que el usuario ya está en el modo al que desea cambiar
-Por ejemplo, si el usuario está en la fábrica, viendo una referencia de vídeo en su HoloLens y decide tomar una llave para empezar a trabajar, lo más probable es que comience a trabajar en manos libres sin tener que dejar la llave inglesa para presionar un botón. Puede invocar una sesión de voz con un comando de voz, hospedar en una interfaz de usuario ya visible para comenzar la permanencia o decir la palabra "seleccionar".
+### <a name="assume-the-user-is-already-in-the-mode-that-they-want-to-switch-to"></a>Suponga que el usuario ya está en el modo al que desea cambiar.
+Por ejemplo, si el usuario está en la fábrica, viendo una referencia de vídeo en su HoloLens y decide recoger una llave inglesa para empezar a trabajar, lo más probable es que empiece a trabajar en manos libres sin tener que bajar la llave inglesa para presionar un botón. Puede invocar una sesión de voz con un comando de voz, permanencia en una interfaz de usuario ya visible para comenzar la permanencia o decir la palabra "seleccionar".
 
 El usuario puede: 
-* Cambiar a manos libres sin manos libres
-* Cambiar a manos con las manos
+* Cambiar a manos libres mientras se hace uso de las manos libres
+* Cambiar a las manos con las manos
 * Cambiar al controlador mediante un controlador 
 
-### <a name="create-redundant-ways-to-switch-modes"></a>Crear formas redundantes de cambiar de modo
+### <a name="create-redundant-ways-to-switch-modes"></a>Creación de formas redundantes de cambiar de modo
 
-Aunque el primer principio es acerca del acceso, el segundo es acerca de la disponibilidad. No debe haber una única manera de pasar de un modo a otro. 
+Aunque el primer principio es sobre el acceso, el segundo trata sobre la disponibilidad. No debe haber una única manera de realizar la transición dentro y fuera de un modo. 
 
 Algunos ejemplos serían: 
-* Un botón para iniciar las interacciones de voz
-* Un comando de voz para realizar la transición a, con el encabezado de la mirada y la vivienda
+* Un botón para comenzar las interacciones de voz
+* Un comando de voz al que realizar la transición, mediante la mirada con la cabeza y la permanencia
 
-### <a name="add-a-dash-of-drama"></a>Agregar un guion de series
+### <a name="add-a-dash-of-drama"></a>Adición de un guión de guion
 
-Un cambio de modo es un gran negocio. Es importante que cuando estas transiciones sucedan que se trata de un modificador explícito, incluso un cambio drástico, para que el usuario sepa lo que ha sucedido. 
+Un cambio de modo es muy importante. Es importante que cuando se sucedan estas transiciones, sean un cambio explícito, incluso drástico, para que el usuario sepa lo que ha ocurrido. 
 
-## <a name="usability-checklist"></a>Lista de comprobación de usabilidad
+## <a name="usability-checklist"></a>Lista de comprobación de facilidad de uso
 
-**¿Puede el usuario hacer todo lo posible y todo lo que sea gratuito?**
-* Cada interactúable debe ser accesible sin complicaciones
-* Asegúrese de que haya un reemplazo para todos los gestos personalizados, como el cambio de tamaño, la colocación, los deslizamientos, los grifos, etc.
-* Asegúrese de que el usuario tiene el control seguro de la presencia de la interfaz de usuario, la ubicación y el nivel de detalle siempre
+**¿Puede el usuario hacer todo y todo lo que sea manos libres, de un extremo a otro?**
+* Cada interactuable debe ser accesible con manos libres
+* Asegúrese de que hay un reemplazo para todos los gestos personalizados, como el cambio de tamaño, la colocación, los deslizamientos, las pulsaciones, y así sucesivamente.
+* Asegúrese de que el usuario tiene un control seguro de la presencia de la interfaz de usuario, la selección de ubicación y el nivel de detalle siempre.
     * Sacar la interfaz de usuario del camino
-    * Interfaz de usuario de direccionamiento fuera del campo de vista (campo de campo)
-    * ¿Cuánto veo, dónde?
+    * Direccionamiento de la interfaz de usuario que está fuera del campo de vista (FOV)
+    * Cuánto veo, dónde, cuándo
 
-**¿La mecánica de la interacción se enseña y se refuerza con las prestaciones adecuadas?**
+**¿Se enseña y se refuerza la mecánica de la interacción con las asequibilidades correctas?**
 
 ¿Entiende el usuario...
-* ... ¿En qué modo se encuentran?
+* ... ¿En qué modo están?
 * ... ¿Qué pueden hacer en este modo?
 * ... ¿Cuál es el estado actual?
 * ... ¿Cómo pueden realizar la transición?
     
 **¿La interfaz de usuario está optimizada para manos libres?**   
 
-* Ejemplo: las prestaciones de permanencia no están integradas en patrones 2D típicos
-* Ejemplo: el destinatario de la voz es mejor con el resaltado de objetos
-* Ejemplo: las interacciones de voz son mejores con títulos que se deben activar
+* Ejemplo: Las asequibilidades de permanencia no están integradas en patrones 2D típicos
+* Ejemplo: El destino de voz es mejor con el resaltado de objetos
+* Ejemplo: Las interacciones de voz son mejores con subtítulos que deben estar activados
 
 ## <a name="see-also"></a>Consulte también
 

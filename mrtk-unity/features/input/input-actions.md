@@ -5,16 +5,16 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity,HoloLens, HoloLens 2, Mixed Reality, development, MRTK, InputActions,
-ms.openlocfilehash: cf6ce2af304ee1cd706d0111d66a97018113fb09
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: ffa8f201097c8d85b1ea19613b608487529412f3686ddf077f1acc1c34e93c1f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176817"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211265"
 ---
 # <a name="input-actions"></a>Acciones de entrada
 
-[**Las acciones de**](input-actions.md) entrada son abstracciones sobre entradas sin procesar diseñadas para ayudar a aislar la lógica de la aplicación de los orígenes de entrada específicos que producen una entrada. Puede ser útil, por ejemplo,  definir una acción Seleccionar y asignarla al botón izquierdo del mouse, un botón en un controlador de juegos y un desencadenador en un controlador de 6 DOF. A continuación, puede hacer que la lógica de la aplicación escuche los eventos select *input* action en lugar de tener que tener en cuenta todas las distintas entradas que pueden generarla.
+[**Las acciones de**](input-actions.md) entrada son abstracciones sobre entradas sin procesar diseñadas para ayudar a aislar la lógica de la aplicación de los orígenes de entrada específicos que producen una entrada. Puede ser útil, por ejemplo,  definir una acción Seleccionar y asignarla al botón izquierdo del mouse, un botón en un controlador de juegos y un desencadenador en un controlador de 6 DOF. A continuación, puede hacer que la lógica de la aplicación escuche los eventos select *input* action en lugar de tener que tener en cuenta todas las distintas entradas que pueden producirla.
 
 ## <a name="creating-an-input-action"></a>Creación de una acción de entrada
 
@@ -24,18 +24,18 @@ Las acciones de entrada se configuran  en el perfil de acciones de entrada **,**
 
 Estos son los valores que se usan con más frecuencia para **la restricción de eje:**
 
-Restricción de eje | Descripción
+Restricción de eje | Description
 --- | ---
 Digital | Entrada de encendido y apagado como un botón binario en un gamepad o mouse.
 Eje único | Entrada de eje único, como un desencadenador análogo en un gamepad.
-Eje dual | Entrada de eje dual como una chincheta.
+Eje dual | Entrada de eje dual, como una chincheta.
 Six Dof | Posición 3D con traducción y rotación como la producida por 6 controladores DOF.
 
 Puede encontrar la lista completa en [`AxisType`](xref:Microsoft.MixedReality.Toolkit.Utilities.AxisType) .
 
 ## <a name="mapping-input-to-actions"></a>Asignación de entrada a acciones
 
-La forma de asignar una entrada a una acción y depende del tipo de origen de entrada:
+La forma de asignar una entrada a una acción y depende del tipo del origen de entrada:
 
 ### <a name="controller-input"></a>Entrada del controlador
 
@@ -64,7 +64,7 @@ El **perfil de gestos**, en el *perfil del sistema de entrada*, contiene todos l
 > [!WARNING]
 > Actualmente solo se pueden controlar las *acciones de* entrada de tipo Digital mediante los métodos descritos en esta sección. Para otros tipos de acción, tendrá que controlar directamente los eventos de las entradas correspondientes en su lugar. Por ejemplo, para controlar una acción de 6 DOF asignada a las entradas del controlador, tendrá que usar [`IMixedRealityGestureHandler<T>`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityGestureHandler`1) con T = [`MixedRealityPose`](xref:Microsoft.MixedReality.Toolkit.Utilities.MixedRealityPose) .
 
-La manera más fácil de controlar las acciones de entrada es usar el [`InputActionHandler`](xref:Microsoft.MixedReality.Toolkit.Input.InputActionHandler) script. Esto le permite definir la acción que quiere escuchar y reaccionar a los eventos iniciados y finalizados de la acción mediante eventos de Unity.
+La manera más fácil de controlar las acciones de entrada es usar el [`InputActionHandler`](xref:Microsoft.MixedReality.Toolkit.Input.InputActionHandler) script. Esto le permite definir la acción que desea escuchar y reaccionar a los eventos iniciados y finalizados de la acción mediante eventos de Unity.
 
 <img src="../images/input/InputActionHandler.PNG" alt="Acton Handler" style="max-width:100%;">
 

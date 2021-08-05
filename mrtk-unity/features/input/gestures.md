@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, gestos,
-ms.openlocfilehash: 7bbc97ab5e23a69356d523c463aa37c013d70337
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: db6be5845c11efd5bfb199db9c53c867ea315f65bff0a799cd6bf63b9c50a3d1
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176886"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209174"
 ---
 # <a name="gestures"></a>Gestos
 
@@ -20,7 +20,7 @@ Los gestos son eventos de entrada basados en manos humanas. Hay dos tipos de dis
 
   Para obtener más información sobre los HoloLens, consulte la [documentación Windows Mixed Reality Gestures](/windows/mixed-reality/gestures).
 
-  [`WindowsMixedRealityDeviceManager`](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityDeviceManager)ajusta el [XR de Unity. Wsa. Input.GestureRecognizer](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.GestureRecognizer.html) para consumir eventos de gesto de Unity desde HoloLens dispositivos.
+  [`WindowsMixedRealityDeviceManager`](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityDeviceManager)ajusta el [XR de Unity. Wsa. Input.GestureRecognizer para](https://docs.unity3d.com/ScriptReference/XR.WSA.Input.GestureRecognizer.html) consumir eventos de gesto de Unity desde HoloLens dispositivos.
 
 - Dispositivos de pantalla táctil.
 
@@ -34,7 +34,7 @@ Ambos orígenes de entrada usan el perfil _gesture Configuración_ para traducir
 
 Los eventos de gesto se reciben mediante la implementación de una de las interfaces del controlador de gestos: [`IMixedRealityGestureHandler`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityGestureHandler) o [`IMixedRealityGestureHandler<TYPE>`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityGestureHandler`1) (vea la tabla de [controladores de eventos](input-events.md)).
 
-Vea [Escena de ejemplo para](#example-scene) obtener una implementación de ejemplo de un controlador de eventos de gestos.
+Vea [Escena de ejemplo](#example-scene) para obtener una implementación de ejemplo de un controlador de eventos de gestos.
 
 Al implementar la versión genérica, los eventos *OnGestureCompleted* y *OnGestureUpdated* pueden recibir datos con tipo de los siguientes tipos:
 

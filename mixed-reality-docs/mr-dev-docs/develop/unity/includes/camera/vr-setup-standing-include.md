@@ -1,15 +1,15 @@
 ---
-ms.openlocfilehash: 61fe8754192c1fbd0634fd9d1e1994327599321b
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+ms.openlocfilehash: 47dfba0fe2b64e3b7e03ae62af3de1e1e24bd70b8b1e7e6b2cb40995428dbda2
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110748461"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115212343"
 ---
 # <a name="mrtk"></a>[MRTK](#tab/mrtk)
 <!-- NEVER CHANGE THE ABOVE LINE! -->
 
-Use la [clase MixedRealityPlayspace](/dotnet/api/microsoft.mixedreality.toolkit.mixedrealityplayspace) de MRTK para Unity y establezca la escala de destino **en** **Room** o **Standing**:
+Use la [clase MixedRealityPlayspace](/dotnet/api/microsoft.mixedreality.toolkit.mixedrealityplayspace) de MRTK para Unity y establezca **la** escala de destino en **Room** o **Standing**:
 
 ![Ventana de configuración de MRTK](../../images/mrtk-target-scale.png)
 
@@ -23,7 +23,7 @@ MRTK debe controlar la posición del espacio de juego y la cámara automáticame
 # <a name="xr-sdk"></a>[XR SDK](#tab/xr)
 <!-- NEVER CHANGE THE ABOVE LINE! -->
 
-Establezca el modo de origen de seguimiento en [XRInputSubsystem](https://docs.unity3d.com/Documentation/ScriptReference/XR.XRInputSubsystem.html). Después de obtener el subsistema, llame [a TrySetTrackingOriginMode](https://docs.unity3d.com/Documentation/ScriptReference/XR.XRInputSubsystem.TrySetTrackingOriginMode.html):
+Establezca el modo de origen de seguimiento [en XRInputSubsystem](https://docs.unity3d.com/Documentation/ScriptReference/XR.XRInputSubsystem.html). Después de obtener el subsistema, llame [a TrySetTrackingOriginMode](https://docs.unity3d.com/Documentation/ScriptReference/XR.XRInputSubsystem.TrySetTrackingOriginMode.html):
 
 ```cs
 xrInputSubsystem.TrySetTrackingOriginMode(TrackingOriginModeFlags.Floor);
@@ -36,9 +36,9 @@ Y trabaje con [XRRig](https://docs.unity3d.com/Manual/configuring-project-for-xr
 # <a name="legacy-wsa"></a>[WSA heredado](#tab/wsa)
 <!-- NEVER CHANGE THE ABOVE LINE! -->
 
-1. Vaya a **la sección Otras configuraciones** de la Configuración **del Reproductor de la Tienda Windows.**
-2. Elija **Windows Mixed Reality** como dispositivo, que puede aparecer como **Windows Holographic** en versiones anteriores de Unity.
-3. Seleccione **Virtual Reality Supported (Realidad virtual compatible)**
+1. Vaya a **la sección Otros Configuración** del Windows Store Player **Configuración**
+2. Elija **Windows Mixed Reality** como dispositivo, que puede aparecer como Windows **Holographic** en versiones anteriores de Unity.
+3. Seleccione **Virtual Reality Supported (Compatible con virtual Reality)**
 
 Dado que el objeto Cámara principal se etiqueta automáticamente como cámara, Unity potencia todo el movimiento y la traducción.
 
@@ -52,7 +52,7 @@ Dado que el objeto Cámara principal se etiqueta automáticamente como cámara, 
 
 Para una **experiencia de escala** de pie o de escala de **habitación,** deberá colocar contenido relativo al suelo. Para razonar sobre la planta del usuario, se usa la fase espacial **[,](../../../../design/coordinate-systems.md#spatial-coordinate-systems)** que representa el origen de nivel de planta definido del usuario y el límite opcional de la sala, que se configura durante la primera ejecución.
 
-Para asegurarse de que Unity funciona con su sistema de coordenadas mundial en el nivel de planta, puede establecer y probar que Unity usa el tipo de espacio de seguimiento RoomScale:
+Para asegurarse de que Unity funciona con su sistema de coordenadas del mundo en el nivel de planta, puede establecer y probar que Unity usa el tipo de espacio de seguimiento RoomScale:
 
 ```cs
 if (XRDevice.SetTrackingSpaceType(TrackingSpaceType.RoomScale))
@@ -65,7 +65,7 @@ else
 }
 ```
 
-* Si SetTrackingSpaceType devuelve true, Unity ha cambiado correctamente su sistema de coordenadas universal para realizar el seguimiento del marco [de fase de referencia](../../../../design/coordinate-systems.md#spatial-coordinate-systems).
+* Si SetTrackingSpaceType devuelve true, Unity ha cambiado correctamente su sistema de coordenadas del mundo para realizar el seguimiento del marco [de fase de referencia.](../../../../design/coordinate-systems.md#spatial-coordinate-systems)
 * Si SetTrackingSpaceType devuelve false, Unity no pudo cambiar al marco de fase de referencia, probablemente porque el usuario no ha configurado una planta en su entorno. Aunque un valor devuelto falso no es común, puede ocurrir si la fase se configura en otra sala y el dispositivo se mueve a la sala actual sin que el usuario configure una nueva fase.
 
 Una vez que la aplicación establece correctamente el tipo de espacio de seguimiento RoomScale, el contenido situado en el plano y=0 aparecerá en el suelo. El origen en 0, 0, 0 será el lugar específico en la planta donde el usuario se encuentra durante la instalación de la sala, con -Z que representa la dirección hacia delante a la que se enfrentaban durante la instalación.

@@ -1,18 +1,18 @@
 ---
-title: Creación de un proveedor de configuración de cámara
+title: Creación de un proveedor de configuración de la cámara
 description: Proveedor de datos para la configuración de la cámara en MRTK
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 2151887a6162239e993634d5d346065362f1c428
-ms.sourcegitcommit: 912fa204ef79e9b973eab9b862846ba5ed5cd69f
+ms.openlocfilehash: 5efab728905cd9885bf49f54b1939f3957cc5815af00dc816a4044a3f659b3bb
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "114282038"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115210710"
 ---
-# <a name="creating-a-camera-settings-provider"></a>Creación de un proveedor de configuración de cámara
+# <a name="creating-a-camera-settings-provider"></a>Creación de un proveedor de configuración de la cámara
 
 El sistema de cámara es un sistema extensible para proporcionar compatibilidad con configuraciones de cámara específicas de la plataforma. Para agregar compatibilidad con una nueva configuración de cámara, es posible que se requiera un proveedor de configuración personalizado.
 
@@ -41,11 +41,11 @@ Por ejemplo, un proveedor de configuración de cámara creado y enviado por la e
 
 **Estructura de carpetas**
 
-Se recomienda retrasar el código fuente de los proveedores de datos en una jerarquía de carpetas, como se muestra en la imagen siguiente.
+Se recomienda retrasar el código fuente de los proveedores de datos en una jerarquía de carpetas, como se muestra en la siguiente imagen.
 
 ![Ejemplo de estructura de carpetas](../images/camera-system/ExampleProviderFolderStructure.png)
 
-Donde la *carpeta ContosoCamera* contiene la implementación del proveedor de datos, la carpeta *Editor* contiene el inspector (y cualquier otro código específico del editor de Unity) y la carpeta Perfiles contiene uno o varios objetos pre-creados que pueden incluirse en scripts de perfil. 
+Cuando la *carpeta ContosoCamera* contiene la implementación del proveedor de datos, la carpeta *Editor* contiene el inspector (y cualquier otro código específico del editor de Unity) y la carpeta Perfiles contiene uno o varios objetos pre-creados que pueden incluirse en scripts de perfil. 
 
 ### <a name="mrtk-submission"></a>Envío de MRTK
 
@@ -164,7 +164,7 @@ namespace namespace Microsoft.MixedReality.Toolkit.Experimental.UnityAR
 }
 ```
 
-El atributo se puede aplicar a la clase de perfil para permitir que los clientes creen una instancia de perfil mediante el `CreateAssetMenu`   >    >  **menú Crear recursos Mixed Reality Toolkit**  >  **perfiles.**
+El atributo se puede aplicar a la clase de perfil para permitir que los clientes creen una instancia de perfil mediante el menú `CreateAssetMenu`   >    >  **Crear recursos Mixed Reality Toolkit**  >  **perfiles.**
 
 ### <a name="implement-the-inspector"></a>Implementación del inspector
 
@@ -209,7 +209,7 @@ Los proveedores de datos que se distribuyen como componentes de terceros tienen 
 
 Si se envía y acepta un proveedor de datos como parte del paquete microsoft Mixed Reality Toolkit, el equipo de Microsoft MRTK lo empaquetará y distribuirá como parte de las ofertas de MRTK.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Introducción al sistema de cámaras](camera-system-overview.md)
 - [Clase `BaseCameraSettingsProvider`](xref:Microsoft.MixedReality.Toolkit.CameraSystem.BaseCameraSettingsProvider)

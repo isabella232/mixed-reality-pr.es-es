@@ -1,32 +1,32 @@
 ---
-title: Paquetes MRTK
+title: Paquetes de MRTK
 description: Paquetes de MRTK que admiten hardware y plataformas de realidad mixta.
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Unity Administrador de paquetes,
-ms.openlocfilehash: 3c2a11dd4036a78ccb96aa2c640ef8324181c1e0
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 13f18c0a43d8b0cf6cc8eb66949b506c51ca9bbaa733e74cd38de110f70d8ee1
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176503"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115212574"
 ---
-# <a name="mrtk-packages"></a>Paquetes MRTK
+# <a name="mrtk-packages"></a>Paquetes de MRTK
 
-El Mixed Reality Toolkit (MRTK) es una colección de paquetes que permiten el desarrollo de aplicaciones Mixed Reality multiplataforma al proporcionar compatibilidad con hardware y plataformas Mixed Reality aplicaciones.
+El Mixed Reality Toolkit (MRTK) es una colección de paquetes que permiten el desarrollo de aplicaciones Mixed Reality multiplataforma al proporcionar compatibilidad con Mixed Reality hardware y plataformas.
 
 MRTK está disponible como [paquetes de](#asset-packages) recursos (.unitypackage) y a través de [unity Administrador de paquetes](#unity-package-manager).
 
 ## <a name="asset-packages"></a>Paquetes de activos
 
-El recurso de MRTK (.unitypackage) se puede descargar desde [GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/releases).
+El recurso MRTK (.unitypackage) se puede descargar desde [GitHub](https://github.com/microsoft/MixedRealityToolkit-Unity/releases).
 
 Algunas de las ventajas de usar paquetes de recursos incluyen:
 
 - Disponible para Unity 2018.4 y versiones más recientes
 - Fácil de realizar cambios en MRTK
-  - MRTK se encuentra en la carpeta Assets (Recursos).
+  - MRTK está en la carpeta Assets
 
 Algunos de los desafíos son:
 
@@ -34,7 +34,7 @@ Algunos de los desafíos son:
   - Proyectos más grandes
   - Tiempos de compilación más lentos
 - Sin administración de dependencias
-  - Los clientes deben resolver las dependencias de paquetes manualmente
+  - Los clientes deben resolver manualmente las dependencias de paquetes
 - Proceso de actualización manual
   - Varios pasos
   - Actualizaciones de control de código fuente grandes (más de 3000 archivos)
@@ -64,34 +64,34 @@ El paquete de MRTK Foundation contiene lo siguiente.
 | --- | --- | --- |
 | MRTK/Core | | Definiciones de interfaz y tipo, clases base, sombreador estándar. |
 | MRTK/Core/Providers | | Proveedores de datos independientes de la plataforma |
-| | Manos | Compatibilidad con clases base y servicios para el seguimiento manual. |
-| | [InputAnimation](../features/input-simulation/input-animation-recording.md) | Compatibilidad con el movimiento de la cabeza y los datos de seguimiento de manos. |
+| | Manos | Soporte técnico y servicios de clase base para el seguimiento a mano. |
+| | [InputAnimation](../features/input-simulation/input-animation-recording.md) | Compatibilidad con la grabación del movimiento de la cabeza y los datos de seguimiento de las manos. |
 | | [InputSimulation](../features/input-simulation/input-simulation-service.md) | Compatibilidad con la simulación en el editor de la entrada de manos y ojos. |
 | | [ObjectMeshObserver](../features/spatial-awareness/spatial-object-mesh-observer.md) | Observador de reconocimiento espacial que usa un modelo 3D como datos. |
-| | UnityInput | Dispositivos de entrada comunes (mouse, etc.) implementados a través de la API de entrada de Unity. |
+| | UnityInput | Dispositivos de entrada comunes (ratón, etc.) implementados a través de la API de entrada de Unity. |
 | MRTK/Providers | | Proveedores de datos específicos de la plataforma |
-| | LeapMotion | Compatibilidad con el controlador Leap Motion de UltraLeap. |
+| | LeapMotion | Compatibilidad con el controlador UltraLeap Leap Motion. |
 | | OpenVR | Compatibilidad con dispositivos OpenVR. |
-| | Oculus | Compatibilidad con dispositivos Oculus, como La Misión. |
+| | Oculus | Compatibilidad con dispositivos Oculus, como La misión. |
 | | [UnityAR](../features/camera-system/unity-ar-camera-settings.md) | (Experimental) Proveedor de configuración de cámara que permite el uso de MRTK con dispositivos ar móviles. |
-| | WindowsMixedReality | Compatibilidad con Windows Mixed Reality dispositivos, incluidos Microsoft HoloLens y cascos envolventes. |
+| | WindowsMixedReality | Compatibilidad con Windows Mixed Reality dispositivos, incluidos Microsoft HoloLens cascos envolventes y envolventes. |
 | | Windows | Compatibilidad con Microsoft Windows API específicas, por ejemplo, voz y dictado. |
 | | XR SDK | (Experimental) Compatibilidad con [el nuevo marco XR de Unity](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/) en Unity 2019.3 y versiones más recientes. |
 | MRTK/SDK | | |
-| | Habilitación de características | Características experimentales, incluidos sombreadores, controles de interfaz de usuario y administradores del sistema individuales. |
-| | Características | Funcionalidad que se basa en el paquete de Foundation. |
-| | Profiles | Perfiles predeterminados para los sistemas y servicios Mixed Reality Toolkit Microsoft. |
+| | Habilitación de características | Características experimentales, incluidos sombreadores, controles de interfaz de usuario y administradores de sistema individuales. |
+| | Características | Funcionalidad que se basa en el paquete foundation. |
+| | Profiles | Perfiles predeterminados para microsoft Mixed Reality Toolkit sistemas y servicios. |
 | | StandardAssets | Recursos comunes; modelos, texturas, materiales, etc. |
-| MRTK/SceneSystemResources | | Recursos y recursos usados por scene system |
+| MRTK/SceneSystemResources | | Recursos y recursos usados por scene System |
 | MRTK/Services | | |
-| | [BoundarySystem](../features/boundary/boundary-system-getting-started.md) | Sistema que implementa compatibilidad con límites vr. |
+| | [BoundarySystem](../features/boundary/boundary-system-getting-started.md) | Sistema que implementa compatibilidad con límites de VR. |
 | | [CameraSystem](../features/camera-system/camera-system-overview.md) | Sistema que implementa la configuración y administración de la cámara. |
 | | [DiagnosticsSystem](../features/diagnostics/diagnostics-system-getting-started.md) | Implementación del sistema en diagnósticos de aplicaciones, por ejemplo, un profiler visual. |
 | | [InputSystem](../features/input/overview.md) | Sistema que proporciona compatibilidad para acceder a la entrada del usuario y controlarla. |
 | | [SceneSystem](../features/scene-system/scene-system-getting-started.md) | Sistema que proporciona compatibilidad con aplicaciones de varias escenas. |
-| | [SpatialAwarenessSystem](../features/spatial-awareness/spatial-awareness-getting-started.md) | Sistema que proporciona compatibilidad para conocer el entorno del usuario. |
-| | [TeleportSystem](../features/teleport-system/teleport-system.md) | Sistema que proporciona compatibilidad para la teleportación (moverse por la experiencia en saltos). |
-| MRTK/StandardAssets | | Sombreador estándar de MRTK, materiales básicos y otros recursos estándar para experiencias de realidad mixta |
+| | [SpatialAwarenessSystem](../features/spatial-awareness/spatial-awareness-getting-started.md) | Sistema que proporciona compatibilidad para el reconocimiento del entorno del usuario. |
+| | [TeleportSystem](../features/teleport-system/teleport-system.md) | Sistema que proporciona compatibilidad para teleportar (moverse por la experiencia en saltos). |
+| MRTK/StandardAssets | | Sombreador mrtk estándar, materiales básicos y otros recursos estándar para experiencias de realidad mixta |
 
 ### <a name="extensions-package"></a>Paquete de extensiones
 
@@ -127,7 +127,7 @@ Estas herramientas se encuentran en el menú **Mixed Reality Toolkit > utilidade
 | | [RuntimeTools/Tools/ControllerMappingTool](../features/tools/controller-mapping-tool.md) | Utilidad que permite a los desarrolladores determinar rápidamente las asignaciones de Unity para controladores de hardware. |
 | | ScreenshotUtility | Permite capturar imágenes de aplicación en el editor de Unity. |
 | | TextureCombinerWindow | Utilidad para combinar texturas de gráficos. |
-| | [Cuadro de herramientas](../features/ux-building-blocks/toolbox.md) | Interfaz de usuario que facilita la detción y el uso de componentes de la experiencia de usuario de MRTK. |
+| | [Cuadro de herramientas](../features/ux-building-blocks/toolbox.md) | Interfaz de usuario que facilita la descontcución y el uso de componentes de la experiencia de usuario de MRTK. |
 
 ### <a name="test-utilities-package"></a>Paquete de utilidades de prueba
 
@@ -189,31 +189,31 @@ El paquete de base ( `com.microsoft.mixedreality.toolkit.foundation` ) constituy
 | MRTK/Core | | Definiciones de interfaz y tipo, clases base, sombreador estándar. |
 | MRTK/Core/Providers | | Proveedores de datos independientes de la plataforma |
 | | Manos | Compatibilidad con clases base y servicios para el seguimiento manual. |
-| | [InputAnimation](../features/input-simulation/input-animation-recording.md) | Compatibilidad con el movimiento de la cabeza y los datos de seguimiento de manos. |
+| | [InputAnimation](../features/input-simulation/input-animation-recording.md) | Compatibilidad con la grabación del movimiento de la cabeza y los datos de seguimiento de las manos. |
 | | [InputSimulation](../features/input-simulation/input-simulation-service.md) | Compatibilidad con la simulación en el editor de la entrada de manos y ojos. |
 | | [ObjectMeshObserver](../features/spatial-awareness/spatial-object-mesh-observer.md) | Observador de reconocimiento espacial que usa un modelo 3D como datos. |
 | | UnityInput | Dispositivos de entrada comunes (mouse, etc.) implementados a través de la API de entrada de Unity. |
 | MRTK/Providers | | Proveedores de datos específicos de la plataforma |
-| | LeapMotion | Compatibilidad con el controlador UltraLeap Leap Motion. |
+| | LeapMotion | Compatibilidad con el controlador Leap Motion de UltraLeap. |
 | | OpenVR | Compatibilidad con dispositivos OpenVR. |
-| | Oculus | Compatibilidad con dispositivos Oculus, como La misión. |
+| | Oculus | Compatibilidad con dispositivos Oculus, como La Misión. |
 | | [UnityAR](../features/camera-system/unity-ar-camera-settings.md) | (Experimental) Proveedor de configuración de cámara que permite el uso de MRTK con dispositivos ar móviles. |
-| | WindowsMixedReality | Compatibilidad con Windows Mixed Reality dispositivos, incluidos Microsoft HoloLens cascos envolventes y envolventes. |
+| | WindowsMixedReality | Compatibilidad con Windows Mixed Reality dispositivos, incluidos Microsoft HoloLens y cascos envolventes. |
 | | Windows | Compatibilidad con Microsoft Windows API específicas, por ejemplo, voz y dictado. |
 | | XR SDK | (Experimental) Compatibilidad con [el nuevo marco XR de Unity](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/) en Unity 2019.3 y versiones más recientes. |
 | MRTK/SDK | | |
-| | Habilitación de características | Características experimentales, incluidos sombreadores, controles de interfaz de usuario y administradores de sistema individuales. |
-| | Características | Funcionalidad que se basa en el paquete foundation. |
-| | Profiles | Perfiles predeterminados para microsoft Mixed Reality Toolkit sistemas y servicios. |
+| | Habilitación de características | Características experimentales, incluidos sombreadores, controles de interfaz de usuario y administradores del sistema individuales. |
+| | Características | Funcionalidad que se basa en el paquete de Foundation. |
+| | Profiles | Perfiles predeterminados para los sistemas y servicios Mixed Reality Toolkit Microsoft. |
 | | StandardAssets | Recursos comunes; modelos, texturas, materiales, etc. |
 | MRTK/Services | | |
-| | [BoundarySystem](../features/boundary/boundary-system-getting-started.md) | Sistema que implementa compatibilidad con límites de VR. |
+| | [BoundarySystem](../features/boundary/boundary-system-getting-started.md) | Sistema que implementa compatibilidad con límites vr. |
 | | [CameraSystem](../features/camera-system/camera-system-overview.md) | Sistema que implementa la configuración y administración de la cámara. |
 | | [DiagnosticsSystem](../features/diagnostics/diagnostics-system-getting-started.md) | Implementación del sistema en diagnósticos de aplicaciones, por ejemplo, un profiler visual. |
 | | [InputSystem](../features/input/overview.md) | Sistema que proporciona compatibilidad para acceder a la entrada del usuario y controlarla. |
 | | [SceneSystem](../features/scene-system/scene-system-getting-started.md) | Sistema que proporciona compatibilidad con aplicaciones de varias escenas. |
 | | [SpatialAwarenessSystem](../features/spatial-awareness/spatial-awareness-getting-started.md) | Sistema que proporciona compatibilidad para conocer el entorno del usuario. |
-| | [TeleportSystem](../features/teleport-system/teleport-system.md) | Sistema que proporciona compatibilidad con la teleportación (moverse por la experiencia en saltos). |
+| | [TeleportSystem](../features/teleport-system/teleport-system.md) | Sistema que proporciona compatibilidad para la teleportación (moverse por la experiencia en saltos). |
 
 Dependencias:
 
@@ -221,7 +221,7 @@ Dependencias:
 
 ### <a name="standard-assets"></a>Recursos estándar
 
-El paquete de recursos estándar ( es una colección de componentes que se recomiendan para todas `com.microsoft.mixedreality.toolkit.standardassets)` las experiencias de realidad mixta, incluidos:
+El paquete de recursos estándar ( es una colección de componentes que se recomiendan para todas las experiencias `com.microsoft.mixedreality.toolkit.standardassets)` de realidad mixta, incluidos:
 
 - Sombreador estándar de MRTK
 - Materiales básicos que usan el sombreador ESTÁNDAR DE MRTK
@@ -241,11 +241,11 @@ El paquete de extensiones opcional ( `com.microsoft.mixedreality.toolkit.extensi
 
 | Carpeta | Componente | Descripción |
 | --- | --- | --- |
-| MRTK/Extensiones | |
+| MRTK/Extensions | |
 | | [HandPhysicsService](../features/extensions/hand-physics-service.md) | Servicio que agrega compatibilidad física a las manos articuladas. |
 | | LostTrackingService | Servicio que simplifica la entrega de la pérdida de seguimiento en Microsoft HoloLens dispositivos. |
 | | [SceneTransitionService](../features/extensions/scene-transition-service.md) | Servicio que simplifica la adición de transiciones de escena fluidas. |
-| | Ejemplos~ | Una carpeta oculta (en el Editor de Unity) que contiene las escenas y los recursos de ejemplo. |
+| | Ejemplos~ | Una carpeta oculta (en el Editor de Unity) que contiene los recursos y escenas de ejemplo. |
 
 Puede encontrar más detalles sobre el proceso de uso de paquetes que contienen proyectos de ejemplo en el artículo Mixed Reality Toolkit [y Unity Administrador de paquetes.](../configuration/usingupm.md#using-mixed-reality-toolkit-examples)
 
@@ -269,7 +269,7 @@ El paquete de herramientas opcional ( `com.microsoft.mixedreality.toolkit.tools)
 | | [RuntimeTools/Tools/ControllerMappingTool](../features/tools/controller-mapping-tool.md) | Utilidad que permite a los desarrolladores determinar rápidamente las asignaciones de Unity para controladores de hardware. |
 | | ScreenshotUtility | Permite capturar imágenes de aplicación en el editor de Unity. |
 | | TextureCombinerWindow | Utilidad para combinar texturas de gráficos. |
-| | [Cuadro de herramientas](../features/ux-building-blocks/toolbox.md) | Interfaz de usuario que facilita la de detectar y usar componentes de la experiencia de usuario de MRTK. |
+| | [Cuadro de herramientas](../features/ux-building-blocks/toolbox.md) | Interfaz de usuario que facilita la detción y el uso de componentes de la experiencia de usuario de MRTK. |
 
 Dependencias:
 
@@ -277,7 +277,7 @@ Dependencias:
 
 ### <a name="test-utilities-package"></a>Paquete de utilidades de prueba
 
-El paquete de utilidades de prueba opcional ( ) contiene una colección de scripts auxiliares que permiten a los desarrolladores `com.microsoft.mixedreality.toolkit.testutilities` crear fácilmente pruebas en modo de reproducción. Estas utilidades son especialmente útiles para los desarrolladores que crean componentes de MRTK.
+El paquete de utilidades de prueba opcional ( ) contiene una colección de scripts auxiliares que permiten a los desarrolladores crear `com.microsoft.mixedreality.toolkit.testutilities` fácilmente pruebas en modo de reproducción. Estas utilidades son especialmente útiles para los desarrolladores que crean componentes de MRTK.
 
 | Carpeta | Componente | Descripción |
 | --- | --- | --- |
@@ -292,7 +292,7 @@ Dependencias:
 
 El paquete de ejemplos ( `com.microsoft.mixedreality.toolkit.examples` ), está estructurado para permitir a los desarrolladores importar solo los ejemplos de interés.
 
-Puede encontrar más detalles sobre el proceso de uso de paquetes que contienen proyectos de ejemplo en el artículo Mixed Reality Toolkit [y unity Administrador de paquetes.](../configuration/usingupm.md#using-mixed-reality-toolkit-examples)
+Puede encontrar más detalles sobre el proceso de uso de paquetes que contienen proyectos de ejemplo en el artículo Mixed Reality Toolkit [y Unity Administrador de paquetes.](../configuration/usingupm.md#using-mixed-reality-toolkit-examples)
 
 | Carpeta | Componente | Descripción |
 | --- | --- | --- |

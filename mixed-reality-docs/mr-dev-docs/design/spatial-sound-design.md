@@ -5,13 +5,13 @@ author: kegodin
 ms.author: v-hferrone
 ms.date: 11/02/2019
 ms.topic: article
-keywords: Windows Mixed Reality, sonido espacial, diseño, estilo, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, kit de herramientas de Mixed Reality, gestos, interacciones, atenuación
-ms.openlocfilehash: d51fbdf16d7186c386f124c773f75dacc8c157fd
-ms.sourcegitcommit: e89431d12b5fe480c9bc40e176023798fc35001b
+keywords: Windows Mixed Reality, sonido espacial, diseño, estilo, casco de realidad mixta, casco de windows de realidad mixta, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit, gestos, interacciones, atenuación
+ms.openlocfilehash: 687811f23e11cadf6e75129098c9feb0393009f819eb961cf2f55a3208cc5f96
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2021
-ms.locfileid: "109489215"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115208965"
 ---
 # <a name="how-to-use-sound-in-mixed-reality-applications"></a>Uso del sonido en aplicaciones de realidad mixta
 
@@ -47,7 +47,7 @@ Los sonidos que se usan bien son valiosos para los usuarios. Pero asegúrese de 
 
 ## <a name="how-to-sonify-interactions"></a>Cómo sonificar interacciones
 
-Los tipos de interacción en la realidad mixta incluyen gestos, manipulación directa y voz. Use las siguientes características sugeridas para seleccionar o diseñar sonidos para estas interacciones.
+Los tipos de interacción de la realidad mixta incluyen gestos, manipulación directa y voz. Use las siguientes características sugeridas para seleccionar o diseñar sonidos para estas interacciones.
 
 ### <a name="gesture-interactions"></a>Interacciones de gestos
 
@@ -76,19 +76,19 @@ Las interacciones de voz suelen tener elementos visuales sutiles. Use sonidos pa
 
 * Use un tono de sonido positivo para las confirmaciones *de comandos de voz*. Los tonos ascendentes y los intervalos de música principales son efectivos.
 * Use un tono más corto y menos positivo para los errores de *comandos de voz.* Evite sonidos negativos. En su lugar, use un sonido más percusivo y neutro para comunicar que la aplicación está pasando de la interacción.
-* Si la aplicación tiene una palabra de reactivación, use un tono corto y suave cuando el dispositivo *empiece a escuchar*. Use un sonido de bucle sutil mientras la aplicación *está escuchando.*
+* Si la aplicación tiene una palabra de reactivación, use un tono corto y suave cuando el dispositivo empiece a *escuchar*. Use un sonido de bucle sutil mientras la aplicación *está escuchando.*
 
 ### <a name="notifications"></a>Notificaciones
 
-Las notificaciones señalan los cambios de estado de la aplicación y otros eventos que el usuario no inició. Los cambios de estado pueden incluir finalizaciones de procesos, mensajes y llamadas telefónicas.
+Las notificaciones señalan cambios en el estado de la aplicación y otros eventos que el usuario no inició. Los cambios de estado pueden incluir finalizaciones de procesos, mensajes y llamadas telefónicas.
 
 En realidad mixta, los objetos a veces se mueven fuera del campo de vista del usuario. Empareje *el movimiento de* objetos animados con un sonido espacializado que depende del tipo de objeto y la velocidad de movimiento.
 * Ayuda a reproducir un sonido espacializado al final de una animación para informar al usuario de la nueva posición del objeto.
 * Para los movimientos graduales, un sonido "whoosh" durante el movimiento ayuda al usuario a realizar el seguimiento del objeto.
 
-*Los sonidos de* notificación de mensajes se pueden escuchar repetidamente, a veces en sucesión rápida. Es importante que no se destaen ni suenen. Los sonidos tonales positivos de rango medio son efectivos.
+*Los sonidos de* notificación de mensajes se pueden escuchar repetidamente, a veces en sucesión rápida. Es importante que no se desta decir que no son exigentes. Los sonidos tonales positivos de rango medio son eficaces.
 
-* Los sonidos de llamadas entrantes deben tener calidades similares a las de un teléfono móvil. Estos sonidos son frases en bucle que se reproducen hasta que el usuario responde a la llamada.
+* Los sonidos de llamada entrante deben tener calidades similares a las de un teléfono móvil. Estos sonidos son frases en bucle que se reproducen hasta que el usuario responde a la llamada.
 * La conexión de comunicación de voz y la desconexión deben tener un sonido breve y tonal. El sonido de conexión debe ser un tono positivo para indicar una conexión correcta. El sonido de desconexión debe ser un sonido neutro para indicar la finalización de la llamada.
 
 ## <a name="handle-spatialization"></a>Control de la espacialización
@@ -99,7 +99,7 @@ La espacialización usa micrófonos estéreo o altavoces para colocar sonidos en
 
 Un sonido debe espacializarse cuando está asociado a un evento que tiene una ubicación espacial. Esto incluye la interfaz de usuario, voces de IA incorporadas e indicadores visuales.
 
-Espacialice *los elementos de la* interfaz de usuario para ayudar a desasociar el "espacio" sónico del usuario limitando el número de sonidos estéreo que escucha. Las interacciones de manipulación, como tocar, agarrar y liberar, son más naturales cuando se espacializan los comentarios de audio. Tenga en cuenta la siguiente información sobre la atenuación de distancia para estos elementos.
+Espacialice *los elementos de la* interfaz de usuario para ayudar a desaluir el "espacio" sónico del usuario limitando el número de sonidos estéreo que escuchan. Las interacciones de manipulación, como tocar, agarrar y liberar, son más naturales cuando se espacializan los comentarios de audio. Tenga en cuenta la siguiente información sobre la atenuación de distancia para estos elementos.
 
 Espacialice *los indicadores visuales* y las voces de inteligencia artificial *incorporadas* para informar intuitivamente a los usuarios cuando estas cosas están fuera del campo de visión.
     
@@ -113,13 +113,13 @@ En el mundo físico, los sonidos que están más lejos son más silenciosos. El 
 
 Las distancias a *los indicadores visuales,* *los hologramas animados* y otros sonidos informativos son relevantes para el usuario. Use la atenuación basada en la distancia para proporcionar indicaciones de forma intuitiva.
 
-Ajuste la curva de atenuación de cada origen para que se ajuste al tamaño de los espacios del mundo de realidad mixta. La curva predeterminada del motor de audio suele estar pensada para espacios grandes (hasta la mitad del recorrido).
+Ajuste la curva de atenuación de cada origen para que se ajuste al tamaño de los espacios del mundo de realidad mixta. La curva predeterminada del motor de audio a menudo está pensada para espacios grandes (hasta la mitad de lo habitual).
 
-Los sonidos que *refuerzan las fases progresivas* de las acciones de botón y otras interacciones no deben aplicarse atenuación. Los efectos de reforzamiento de estos sonidos son más importantes que comunicar la distancia con el botón. Las variaciones pueden distraer, especialmente con los teclados, cuando se pueden escuchar varios clics de botón en sucesión.
+Los sonidos que *refuerzan las fases progresivas* de las acciones de botón y otras interacciones no deben aplicarse atenuación. Los efectos de refuerzo de estos sonidos son más importantes que comunicar la distancia con el botón. Las variaciones pueden distraer, especialmente con los teclados, cuando se pueden escuchar muchos clics de botón en sucesión.
 
 ### <a name="which-spatialization-technology-to-use"></a>Qué tecnología de espacialización se va a usar
 
-Con auriculares o altavoces HoloLens, use tecnologías de espacialización basadas en la función de transferencia relacionada con la cabeza (HRTF). Estas tecnologías modela la propagación del sonido alrededor de la cabeza en el mundo físico. Incluso cuando una fuente de sonido está en el extremo de la cabeza, el sonido se propaga al oído lejano con alguna atenuación y retraso. El movimiento panorámico del hablante solo se basa en la atenuación y aplica la atenuación total en el oído izquierdo cuando los sonidos están en el lado derecho y al revés. Esta técnica puede ser poco cómoda para los agentes de escucha "normales" e inaccesible para los agentes de escucha que tienen discapacidad auditiva en un solo oído.
+Con micrófonos o altavoces HoloLens, use tecnologías de espacialización basadas en la función de transferencia relacionada con la cabeza (HRTF). Estas tecnologías modela la propagación de sonido alrededor de la cabeza en el mundo físico. Incluso cuando un origen de sonido está en el extremo de la cabeza, el sonido se propaga al oído lejano con alguna atenuación y retraso. El movimiento panorámico del hablante solo se basa en la atenuación y aplica la atenuación total en el oído izquierdo cuando los sonidos están en el lado derecho y al contrario. Esta técnica puede ser poco cómoda para los agentes de escucha de "escucha normal" e inaccesible para los agentes de escucha que tienen discapacidad auditiva en un oído.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

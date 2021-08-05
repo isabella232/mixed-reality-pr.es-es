@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 51b5d4d00d65491a0476068bbdc256ffce67412b
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 1d2382e11092b20aca5bf8480ade521ffb94a70a325540e70487d7f581e8cf15
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144408"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115186621"
 ---
 # <a name="monitoring-content-loading"></a>Supervisión de la carga de contenido
 
@@ -93,26 +93,26 @@ Scene System proporciona varias acciones para que sepa cuándo se cargan o desca
 
 Si una operación de carga o descarga implica varias escenas, las acciones pertinentes se invocarán una vez por cada escena afectada. También se invocan todas a la vez cuando la operación de carga o descarga se *completa.* Por este motivo, se recomienda usar acciones *OnWillUnload* para detectar el contenido que se destruirá, en lugar de usar acciones *OnUnloaded* para detectar contenido destructor después del hecho. 
 
-Por otro lado, dado que las acciones *OnLoaded* solo se invocan cuando todas las escenas se activan y se cargan por completo, se garantiza que el uso de acciones *OnLoaded* para detectar y usar contenido nuevo sea seguro.
+Por otro lado, dado que las acciones *OnLoaded* solo se invocan cuando todas las escenas se activan y se cargan completamente, se garantiza que el uso de acciones *OnLoaded* para detectar y usar contenido nuevo sea seguro.
 
 Acción | Cuando se invoca | Escenas de contenido | Escenas de iluminación | Escenas de administrador
 --- | --- | --- | --- | --- | ---
-`OnWillLoadContent` | Justo antes de cargar una escena de contenido | • | |  
-`OnContentLoaded` | Una vez que todas las escenas de contenido de una operación de carga se han cargado y activado por completo | • | |
-`OnWillUnloadContent` | Justo antes de una operación de descarga de la escena de contenido | • | |
-`OnContentUnloaded` | Una vez que se han descargado completamente todas las escenas de contenido de una operación de descarga | • | |
-`OnWillLoadLighting` | Justo antes de la carga de una escena de iluminación | | • |
+`OnWillLoadContent` | Justo antes de la carga de una escena de contenido | • | |  
+`OnContentLoaded` | Una vez que todas las escenas de contenido de una operación de carga se han cargado y activado completamente | • | |
+`OnWillUnloadContent` | Justo antes de una operación de descarga de escena de contenido | • | |
+`OnContentUnloaded` | Una vez que todas las escenas de contenido de una operación de descarga se han descargado completamente | • | |
+`OnWillLoadLighting` | Justo antes de una carga de escena de iluminación | | • |
 `OnLightingLoaded` | Una vez que una escena de iluminación se ha cargado y activado por completo| | • |
 `OnWillUnloadLighting` | Justo antes de que se descargue una escena de iluminación | | • |
 `OnLightingUnloaded` | Una vez que se ha descargado completamente una escena de iluminación | | • |
 `OnWillLoadScene` | Justo antes de una carga de escena | • | • | •
-`OnSceneLoaded` | Una vez que todas las escenas de una operación están totalmente cargadas y activadas | • | • | •
-`OnWillUnloadScene` | Justo antes de la descarga de una escena | • | • | •
-`OnSceneUnloaded` | Una vez que una escena se descarga completamente |  • | • | •
+`OnSceneLoaded` | Una vez que todas las escenas de una operación se cargan y activan por completo | • | • | •
+`OnWillUnloadScene` | Justo antes de que se descargue una escena | • | • | •
+`OnSceneUnloaded` | Después de descargar completamente una escena |  • | • | •
 
 ### <a name="action-examples"></a>Ejemplos de acciones
 
-Otro ejemplo de diálogo de progreso mediante acciones y una corertina en lugar de Actualizar:
+Otro ejemplo de diálogo de progreso mediante acciones y una corrotina en lugar de Actualizar:
 
 ```c#
 public class ProgressDialog : MonoBehaviour
@@ -161,7 +161,7 @@ public class ProgressDialog : MonoBehaviour
 
 ## <a name="controlling-scene-activation"></a>Control de la activación de la escena
 
-De forma predeterminada, las escenas de contenido se establecen para activarse cuando se cargan. Si desea controlar manualmente la activación de la escena, puede pasar un a `SceneActivationToken` cualquier método de carga de contenido. Si una sola operación carga varias escenas de contenido, este token de activación se aplicará a todas las escenas.
+De forma predeterminada, las escenas de contenido se establecen para activarse cuando se cargan. Si desea controlar manualmente la activación de la escena, puede pasar a cualquier `SceneActivationToken` método de carga de contenido. Si una sola operación carga varias escenas de contenido, este token de activación se aplicará a todas las escenas.
 
 ```c#
 IMixedRealitySceneSystem sceneSystem = MixedRealityToolkit.Instance.GetService<IMixedRealitySceneSystem>();

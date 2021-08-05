@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 2b7e1234ed79a99e826184e42c319f84582ff23a
-ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
+ms.openlocfilehash: 6f86a7b6469a8dc7f6253d81f8cf647fbcfe35830fa8cf044066ba8ae9c5a286
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "114757062"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209378"
 ---
 # <a name="mrtk-examples-hub"></a>Centro de conectividad de ejemplos de MRTK
 
@@ -18,7 +18,7 @@ ms.locfileid: "114757062"
 
 El centro de ejemplos de MRTK es una escena de Unity que facilita la experiencia de varias escenas. Usa el sistema de escena de MRTK para cargar & descargar las escenas.
 
-**MRTKExamplesHub.unity es** la escena de contenedor que tiene componentes compartidos, como ``MixedRealityToolkit`` y ``MixedRealityPlayspace`` . **La escena MRTKExamplesHubMainMenu.unity** tiene los botones de cubo.
+**MRTKExamplesHub.unity es** la escena del contenedor que tiene componentes compartidos, como ``MixedRealityToolkit`` y ``MixedRealityPlayspace`` . **La escena MRTKExamplesHubMainMenu.unity** tiene los botones de cubo.
 
 ## <a name="download-app-from-microsoft-store-in-hololens-2"></a>Descarga de la aplicación Microsoft Store en HoloLens 2
 Si tiene un HoloLens 2, puede descargar e instalar directamente la aplicación en el dispositivo.

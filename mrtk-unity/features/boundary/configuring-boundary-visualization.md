@@ -5,12 +5,12 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, sistema de límites,
-ms.openlocfilehash: 77bdaedb60700bac27643ae718c795c02e5ee7e7
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 29ffe7826d797fd32387fab42f24232f98ab283740848b7fce928718f95f0fc9
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177094"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211591"
 ---
 # <a name="configuring-boundary-visualization"></a>Configuración de la visualización de límites
 
@@ -26,7 +26,7 @@ El alto del límite indica la distancia por encima del plano de suelo en el que 
 
 ## <a name="floor-settings"></a>Configuración de la planta
 
-![Zona de visualización de límites Configuración](../images/boundary/BoundaryVisualizationFloorSettings.png)
+![Área de visualización de límites Configuración](../images/boundary/BoundaryVisualizationFloorSettings.png)
 
 **Mostrar**
 
@@ -78,7 +78,7 @@ Capa en la que se debe establecer el área de seguimiento. El valor predetermina
 
 ## <a name="boundary-wall-settings"></a>Configuración de la pared de límites
 
-![Límites de la visualización de límites Configuración](../images/boundary/BoundaryVisualizationWallSettings.png)
+![Límites de la pared de límites de visualización Configuración](../images/boundary/BoundaryVisualizationWallSettings.png)
 
 **Mostrar**
 
@@ -93,7 +93,7 @@ Indica el material que se debe usar al crear los planos de la pared de límites.
 Capa en la que se deben establecer las paredes de límite. El valor predeterminado es la *capa Omitir raycast.*
 
 > [!NOTE]
-> Establecer el componente de la pared de límites en una capa física que no sea *Ignore Raycast* puede impedir que los usuarios interactúen con objetos dentro de la escena.
+> Establecer el componente de la pared de límites en una capa física que no sea *Omitir Raycast* puede impedir que los usuarios interactúen con objetos dentro de la escena.
 
 ## <a name="boundary-ceiling-settings"></a>Configuración del límite superior
 
@@ -117,4 +117,4 @@ Capa en la que se deben establecer las paredes de límite. El valor predetermina
 ## <a name="see-also"></a>Consulte también
 
 - [Documentación de la API de límites](xref:Microsoft.MixedReality.Toolkit.Boundary)
-- [Sistema  de límites](boundary-system-getting-started.md)
+- [Sistema de límites](boundary-system-getting-started.md)

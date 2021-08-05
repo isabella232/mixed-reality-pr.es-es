@@ -1,18 +1,18 @@
 ---
-title: Servicio de transición de escena
-description: documentación de Scene Transition en MRTK
+title: Servicio de transición de escenas
+description: documentación sobre la transición de escena en MRTK
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
-keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, SceneTransition,
-ms.openlocfilehash: b645012a055f693fdac794b79e24fd20154fdb65
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+keywords: Unity,HoloLens, HoloLens 2, Mixed Reality, development, MRTK, SceneTransition,
+ms.openlocfilehash: a66922f1c9d58018ee856c3054aa71f5213ec690c5f4780b32fd735eb59f2ac7
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176210"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115189237"
 ---
-# <a name="scene-transition-service"></a>Servicio de transición de escena
+# <a name="scene-transition-service"></a>Servicio de transición de escenas
 
 Esta extensión simplifica el negocio de desvanechar una escena, mostrar un indicador de progreso, cargar una escena y, a continuación, volver a desvanerse.
 
@@ -20,13 +20,13 @@ Las operaciones de escena están controladas por el servicio SceneSystem, pero c
 
 ## <a name="enabling-the-extension"></a>Habilitación de la extensión
 
-Para habilitar la extensión, abra el perfil RegisteredServiceProvider. Haga clic en Registrar un nuevo proveedor de servicios para agregar una nueva configuración. En el campo Tipo de componente, seleccione SceneTransitionService. En el campo Perfil de configuración, seleccione el perfil de transición de escena predeterminado incluido con la extensión.
+Para habilitar la extensión, abra el perfil registeredServiceProvider. Haga clic en Registrar un nuevo proveedor de servicios para agregar una nueva configuración. En el campo Tipo de componente, seleccione SceneTransitionService. En el campo Perfil de configuración, seleccione el perfil de transición de escena predeterminado incluido con la extensión.
 
 ## <a name="profile-options"></a>Opciones de perfil
 
 ### <a name="use-default-progress-indicator"></a>Uso del indicador de progreso predeterminado
 
-Si está activada, se usará el prefab del indicador de progreso predeterminado cuando no se proporciona ningún objeto de indicador de progreso al llamar a Si se proporciona un objeto de indicador de progreso, se omitirá `DoSceneTransition.` el valor predeterminado.
+Si está activada, se usará el objeto prefab del indicador de progreso predeterminado cuando no se proporciona ningún objeto de indicador de progreso al llamar a Si se proporciona un objeto de indicador de progreso, se omitirá `DoSceneTransition.` el valor predeterminado.
 
 ### <a name="use-fade-color"></a>Uso del color de atenuación
 
@@ -40,28 +40,28 @@ Controla el color del efecto de atenuación. Se omite Alpha. Esta configuración
 
 Controla qué cámaras tendrán aplicado un efecto de atenuación. Esta configuración se puede cambiar en tiempo de ejecución a través de la propiedad del `FadeTargets` servicio.
 
-Configuración | Cámaras de destino
+Setting | Cámaras de destino
 --- | --- | ---
-Principal | Aplica el efecto de atenuación a la cámara principal.
-UI | Aplica el efecto de atenuación a las cámaras en la capa de interfaz de usuario. (No afecta a la interfaz de usuario superpuesta)
-Todos | Se aplica tanto a las cámaras principales como a las cámaras de interfaz de usuario.
+Método Main | Aplica el efecto de atenuación a la cámara principal.
+UI | Aplica el efecto de atenuación a las cámaras de la capa de interfaz de usuario. (No afecta a la interfaz de usuario superpuesta)
+Todos | Se aplica a las cámaras principal y de interfaz de usuario.
 Personalizado | Se aplica a un conjunto personalizado de cámaras proporcionadas a través de `SetCustomFadeTargetCameras`
 
-### <a name="fade-out-time--fade-in-time"></a>Tiempo de atenuación/atenuación en el tiempo
+### <a name="fade-out-time--fade-in-time"></a>Tiempo de espera de atenuación/atenuación en el tiempo
 
-Configuración predeterminada para la duración de una atenuación al entrar o salir de una transición. Esta configuración se puede cambiar en tiempo de ejecución a través de las propiedades `FadeOutTime` y del `FadeInTime` servicio.
+Configuración predeterminada para la duración de un desvanecimiento al entrar o salir de una transición. Esta configuración se puede cambiar en tiempo de ejecución a través de las propiedades `FadeOutTime` y del `FadeInTime` servicio.
 
 ### <a name="camera-fader-type"></a>Tipo de atenuador de cámara
 
-Clase `ICameraFader` que se va a usar para aplicar un efecto de atenuación a las cámaras. La clase predeterminada crea una instancia de un quad con un material transparente delante de la cámara `CameraFaderQuad` de destino cerca del plano del clip. Otro enfoque podría ser usar un sistema de efectos posteriores.
+Clase `ICameraFader` que se va a usar para aplicar un efecto de atenuación a las cámaras. La clase `CameraFaderQuad` predeterminada crea una instancia de un cuadrántico con un material transparente delante de la cámara de destino cerca del plano de recorte. Otro enfoque podría ser usar un sistema de efectos posteriores.
 
 ## <a name="using-the-extension"></a>Uso de la extensión
 
-Use el servicio de transición pasando las tareas que se ejecutan mientras la cámara está atenuada.
+Para usar el servicio de transición, pase las tareas que se ejecutan mientras la cámara está atenuada.
 
 ### <a name="using-scene-system-tasks"></a>Uso de tareas del sistema de escena
 
-En la mayoría de los casos, va a usar tareas proporcionadas por el servicio SceneSystem:
+En la mayoría de los casos, se usarán las tareas proporcionadas por el servicio SceneSystem:
 
 ```c#
 private async void TransitionToScene()
@@ -80,7 +80,7 @@ private async void TransitionToScene()
 
 ### <a name="using-custom-tasks"></a>Uso de tareas personalizadas
 
-En otros casos, es posible que quiera realizar una transición sin cargar realmente una escena:
+En otros casos, puede que desee realizar una transición sin cargar realmente una escena:
 
 ```c#
 private async void TransitionToScene()
@@ -173,7 +173,7 @@ private async Task FadeAudio(float targetVolume, float duration)
 
 ## <a name="using-the-progress-indicator"></a>Uso del indicador de progreso
 
-Un indicador de progreso es cualquier cosa que implementa la `IProgressIndicator` interfaz . Esto puede tomar la forma de una pantalla de presentación, un indicador de carga de etiquetas 3D o cualquier otra cosa que proporciona comentarios sobre el progreso de la transición.
+Un indicador de progreso es todo lo que implementa la `IProgressIndicator` interfaz . Esto puede tener la forma de una pantalla de presentación, un indicador de carga de etiquetas 3D o cualquier otra cosa que proporciona comentarios sobre el progreso de la transición.
 
 Si `UseDefaultProgressIndicator` está activada en el perfil SceneTransitionService, se crea una instancia de un indicador de progreso cuando se inicia una transición. Durante la transición, se puede acceder a las propiedades y de este indicador a través de `Progress` `Message` los métodos y de ese `SetProgressValue` `SetProgressMessage` servicio.
 

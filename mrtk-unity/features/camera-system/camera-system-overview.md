@@ -1,24 +1,24 @@
 ---
-title: Introducción al sistema de cámara
+title: Información general del sistema de cámara
 description: Página de aterrizaje del sistema de cámara en MRTK
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, cámara,
-ms.openlocfilehash: cfb40b00d81133ad40e0e4d7a7b2ad87ee645e36
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 3c9bdbc96688c4df6ee2f39be2c8bb2023817f9081b5366308ba8b4c2590568d
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177047"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211464"
 ---
-# <a name="camera-system-overview"></a>Introducción al sistema de cámara
+# <a name="camera-system-overview"></a>Información general del sistema de cámara
 
-El sistema de cámara permite a microsoft Mixed Reality Toolkit configurar y optimizar la cámara de la aplicación para su uso en aplicaciones de realidad mixta. Mediante el sistema de cámara, las aplicaciones se pueden escribir para admitir dispositivos opacos (por ejemplo, de realidad virtual) y transparentes (por ejemplo, Microsoft HoloLens) sin necesidad de escribir código para distinguir y adaptarse a cada tipo de pantalla.
+El sistema de cámara permite a microsoft Mixed Reality Toolkit configurar y optimizar la cámara de la aplicación para su uso en aplicaciones de realidad mixta. Con el sistema de cámara, las aplicaciones se pueden escribir para admitir dispositivos opacos (por ejemplo, realidad virtual) y transparentes (por ejemplo, Microsoft HoloLens) sin necesidad de escribir código para distinguir y adaptarse a cada tipo de pantalla.
 
 ## <a name="enabling-the-camera-system"></a>Habilitación del sistema de cámara
 
-El sistema de cámaras se administra mediante el objeto MixedRealityToolkit (u otro componente registrador de servicios).
+El sistema de cámara se administra mediante el objeto MixedRealityToolkit (u otro componente del registrador de servicios).
 
 En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los pasos necesarios para otros registradores de servicios pueden ser diferentes.
 
@@ -26,7 +26,7 @@ En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los 
 
     ![Jerarquía de escena configurada de MRTK](../images/MRTK_ConfiguredHierarchy.png)
 
-2. Vaya al panel Inspector a la sección del sistema de cámara y asegúrese de **que habilitar el sistema de cámara** está activado.
+2. Navegue por el panel Inspector hasta la sección del sistema de cámara y asegúrese de **que habilitar el sistema de cámara** está activado.
 
     ![Habilitación del sistema de cámara](../images/camera-system/EnableCameraSystem.png)
 
@@ -46,10 +46,10 @@ En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los 
 
 Los proveedores de configuración de cámara habilitan la configuración específica de la plataforma de la cámara. Esta configuración puede incluir pasos de configuración personalizados o componentes.
 
-Los proveedores se pueden agregar haciendo clic en el botón **Add Camera Configuración Provider (Agregar Configuración proveedor).** Se pueden quitar haciendo clic en **-** el botón situado a la derecha del nombre del proveedor.
+Los proveedores se pueden agregar haciendo clic en el botón **Agregar cámara Configuración Proveedor.** Se pueden quitar haciendo clic en **-** el botón situado a la derecha del nombre del proveedor.
 
 > [!Note]
-> No todas las plataformas requerirán un proveedor de configuración de cámara. Si no hay ningún proveedor que sea compatible con la plataforma en la que se ejecuta la aplicación, microsoft Mixed Reality Toolkit aplicará los valores predeterminados básicos.
+> No todas las plataformas requerirán un proveedor de configuración de cámara. Si no hay proveedores que sean compatibles con la plataforma en la que se ejecuta la aplicación, microsoft Mixed Reality Toolkit aplicará los valores predeterminados básicos.
 
 ### <a name="display-settings"></a>Configuración de pantalla
 
@@ -59,23 +59,23 @@ La configuración de pantalla se especifica para las pantallas opacas (por ejemp
 
 **Near Clip**
 
-El plano de recorte cercano es el más cercano, en metros, que un objeto virtual puede estar en la cámara y seguir representando. Para mayor comodidad del usuario, se recomienda que este valor sea mayor que cero. La imagen anterior contiene valores que se han encontrado cómodos en diversos dispositivos.
+El plano de recorte cercano es el más cercano, en metros, que un objeto virtual puede estar en la cámara y representarse. Para mayor comodidad del usuario, se recomienda que este valor sea mayor que cero. La imagen anterior contiene valores que se han encontrado cómodos en una variedad de dispositivos.
 
 **Recorte lejano**
 
-El plano de recorte lejano es el más alejado, en metros, que un objeto virtual puede estar en la cámara y seguir representando. En el caso de los dispositivos transparentes, se recomienda que este valor sea relativamente cercano a no superar demasiado el espacio real y interrumpir las calidades inmersivas de la aplicación.
+El plano de recorte lejano es el más alejado, en metros, que un objeto virtual puede estar en la cámara y representarse todavía. En el caso de los dispositivos transparentes, se recomienda que este valor sea relativamente cercano, ya que no supere demasiado el espacio real y que se rompa la calidad inmersiva de la aplicación.
 
 **Borrar marcas**
 
-El valor clear flags indica cómo se borra la presentación a medida que se dibuja. En el caso de las experiencias de realidad virtual, este valor suele establecerse en Skybox. En el caso de las pantallas transparentes, se recomienda establecer esta opción en Color.
+El valor clear flags indica cómo se borra la presentación a medida que se dibuja. En el caso de las experiencias de realidad virtual, este valor suele establecerse en Skybox. Para las pantallas transparentes, se recomienda establecer esta opción en Color.
 
 **Color de fondo**
 
-Si las marcas sin borrar no están establecidas en Skybox, se mostrará la propiedad de color de fondo.
+Si las marcas de borrar no están establecidas en Skybox, se mostrará la propiedad de color de fondo.
 
 **Calidad Configuración**
 
-El valor de configuración de calidad indica la calidad de los gráficos que Unity debe usar al representar la escena. El nivel de calidad es una configuración de nivel de proyecto y no es específico de ninguna cámara. Para más información, consulte el artículo [Calidad en](https://docs.unity3d.com/Manual/class-QualitySettings.html) la documentación de Unity.
+El valor de configuración de calidad indica la calidad de los gráficos que Unity debe usar cuando representa la escena. El nivel de calidad es una configuración de nivel de proyecto y no es específico de ninguna cámara. Para más información, consulte el artículo [Calidad](https://docs.unity3d.com/Manual/class-QualitySettings.html) en la documentación de Unity.
 
 ## <a name="see-also"></a>Consulte también
 

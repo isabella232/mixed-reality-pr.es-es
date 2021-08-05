@@ -5,12 +5,12 @@ author: RogPodge
 ms.author: roliu
 ms.date: 06/18/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, controles deslizantes,
-ms.openlocfilehash: c8a2b6c377762918bfff79008ab34d3dfe4e20bb
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: de95201f381a148defe668ead03c16fac5b3ba4ff3674487057f9227cbe6efba
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177501"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115209544"
 ---
 # <a name="sliders"></a>Controles deslizantes
 
@@ -26,7 +26,7 @@ Puede encontrar ejemplos en la escena **SliderExample** en `MRTK/Examples/Demos/
 
 Arrastre y coloque el prefab **PinchSlider** en la jerarquía de escena. Si desea modificar o crear su propio control deslizante, recuerde hacer lo siguiente:
 
-- Asegúrese de que el objeto de control tiene un colisionador. En el prefab de PinchSlider, el colisionador está en `SliderThumb/Button_AnimationContainer/Slider_Button`
+- Asegúrese de que el objeto thumb tiene un colisionador. En el prefab de PinchSlider, el colisionador está en `SliderThumb/Button_AnimationContainer/Slider_Button`
 - Asegúrese de que el objeto que contiene el colisionador también tiene un componente Near Interaction Grabbable (Interacción cercana que se puede capturar) si desea poder acercar el control deslizante.
 
 También se recomienda usar la siguiente jerarquía
@@ -35,7 +35,7 @@ También se recomienda usar la siguiente jerarquía
   - TouchCollider: colisionador que contiene todo el área seleccionable del control deslizante. Habilita el comportamiento Ajustar a posición.
   - SliderThumb: contiene el control de posición móvil
   - TrackVisuals: contiene la pista y cualquier otro objeto visual.
-  - OtherVisuals: que contiene cualquier otro objeto visual
+  - OtherVisuals: contiene cualquier otro objeto visual
 
 ## <a name="slider-events"></a>Eventos de control deslizante
 
@@ -55,7 +55,7 @@ Puede mover directamente los puntos inicial y final del control deslizante movie
 
 También puede especificar el eje (en el espacio local) del control deslizante a través del _campo Eje deslizante._
 
-Si no puede usar los identificadores, en su lugar puede especificar los puntos inicial y final del control deslizante a través de los campos _Slider Start Distance_ (Distancia de inicio del control deslizante) y Slider End Distance _(Distancia final del_ control deslizante). Estos especifican la posición inicial y final del control deslizante como una distancia desde el centro del control deslizante, en coordenadas locales. Esto significa que, una vez establecidas las distancias de inicio y finalización del control deslizante como quiera, puede escalar el control deslizante para que sea menor o mayor sin necesidad de actualizar las distancias inicial y final.
+Si no puede usar los identificadores, en su lugar puede especificar los puntos inicial y final del control deslizante a través de los campos _Slider Start Distance_ (Distancia de inicio del control deslizante) y Slider End Distance _(Distancia final del_ control deslizante). Estos especifican la posición inicial y final del control deslizante como una distancia desde el centro del control deslizante, en coordenadas locales. Esto significa que, una vez establecidas las distancias de inicio y finalización del control deslizante como quiera, puede escalar el control deslizante para que sea más pequeño o mayor sin necesidad de actualizar las distancias inicial y final.
 
 ## <a name="inspector-properties"></a>Propiedades del inspector
 

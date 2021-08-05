@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, XRSDK, SDK de XR
-ms.openlocfilehash: bc2924f8e080b0c202f7c3e394a5382cf306431c
-ms.sourcegitcommit: e380d56f5504be4e4f069394a58cf0147eb33b66
+ms.openlocfilehash: 1560188d1a69f0083940a37da8c378691ee75a9d569c2c5088e0e3f614a44858
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2021
-ms.locfileid: "113603696"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115188276"
 ---
 # <a name="getting-started-with-mrtk-and-xr-sdk"></a>Introducción a MRTK y al SDK de XR
 
@@ -67,7 +67,7 @@ Vaya a **la aplicación de Unity Administrador de paquetes** instale el paquete 
 ![Administración de complementos OpenXR](../features/images/xrsdk/PluginManagementOpenXR.png)
 
 > [!NOTE]
-> Si tiene un proyecto **preexistente** que usa MRTK de UPM, asegúrese de que la línea siguiente se encuentra en el archivolink.xmlubicado en la carpeta MixedRealityToolkit.Generated.
+> Si tiene un proyecto preexistente que usa MRTK de UPM, asegúrese de que la línea siguiente se encuentra en el archivo **link.xml** ubicado en la carpeta MixedRealityToolkit.Generated.
 
 `<assembly fullname = "Microsoft.MixedReality.Toolkit.Providers.OpenXR" preserve="all"/>`
 
@@ -195,7 +195,7 @@ to
 
 ### <a name="controller-mappings"></a>Asignaciones de controladores
 
-Si usa perfiles de asignación de controladores personalizados, abra uno de ellos y ejecute el elemento de menú Mixed Reality Toolkit -> Utilities -> Update -> Controller Mapping Profiles para asegurarse de que se definen los nuevos tipos de controlador del SDK de XR.
+Si usa perfiles de asignación de controladores personalizados, abra uno de ellos y ejecute el elemento de menú Mixed Reality Toolkit -> Utilities -> Update -> Controller Mapping Profiles (Perfiles de asignación de controladores de Mixed Reality Toolkit -> Utilities -> Update -> Controller Mapping Profiles) para asegurarse de que se definen los nuevos tipos de controlador del SDK de XR.
 
 ## <a name="see-also"></a>Vea también
 

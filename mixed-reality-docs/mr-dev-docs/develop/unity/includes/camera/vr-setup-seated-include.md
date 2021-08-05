@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3bffb5db8f4a36d04c2b408c939cbd2010a7def7
-ms.sourcegitcommit: 719682f70a75f732b573442fae8987be1acaaf19
+ms.openlocfilehash: f55de39af8c9bc59bb23136203bfc093a4e29f1ea9ddc5ccd147f8c81d6f0020
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/02/2021
-ms.locfileid: "110748510"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115212340"
 ---
 # <a name="mrtk"></a>[MRTK](#tab/mrtk)
 <!-- NEVER CHANGE THE ABOVE LINE! -->
@@ -36,8 +36,8 @@ Y trabaje con [XRRig de](https://docs.unity3d.com/Manual/configuring-project-for
 # <a name="legacy-wsa"></a>[WSA heredado](#tab/wsa)
 <!-- NEVER CHANGE THE ABOVE LINE! -->
 
-1. Vaya a **la sección Otras configuraciones** de la Configuración **del Reproductor de la Tienda Windows.**
-2. Elija **Windows Mixed Reality** dispositivo, que puede aparecer como **Windows Holographic** en versiones anteriores de Unity.
+1. Vaya a **la sección Otros Configuración** del reproductor de Windows Store **Configuración**
+2. Elija **Windows Mixed Reality** dispositivo, que puede aparecer como Windows **Holographic** en versiones anteriores de Unity.
 3. Seleccione **Virtual Reality Supported (Realidad virtual admitida)**
 
 Dado que el objeto Cámara principal se etiqueta automáticamente como la cámara, Unity impulsa todo el movimiento y la traducción.
@@ -50,7 +50,7 @@ Dado que el objeto Cámara principal se etiqueta automáticamente como la cámar
 **Espacio de nombres:** *UnityEngine.XR*<br>
 **Tipo:** *XRDevice*
 
-Para crear una **experiencia de solo orientación** o de escala asentada, debe establecer Unity en el tipo de espacio de seguimiento estacionado.  El espacio de seguimiento estacionario establece el sistema de coordenadas universal de Unity para realizar un seguimiento del [marco de referencia estacionada.](../../../../design/coordinate-systems.md#spatial-coordinate-systems) En el modo de seguimiento estacionado, el contenido colocado en el editor justo delante de la ubicación predeterminada de la cámara (el reenvío es -Z) aparecerá delante del usuario cuando se inicie la aplicación.
+Para crear una **experiencia de solo orientación** o de escala asentada, debe establecer Unity en el tipo de espacio de seguimiento estacionado.  El espacio de seguimiento estacionario establece el sistema de coordenadas universal de Unity para realizar el seguimiento [del marco de referencia estacionada.](../../../../design/coordinate-systems.md#spatial-coordinate-systems) En el modo de seguimiento estacionado, el contenido colocado en el editor justo delante de la ubicación predeterminada de la cámara (el reenvío es -Z) aparecerá delante del usuario cuando se inicie la aplicación.
 
 ```cs
 XRDevice.SetTrackingSpaceType(TrackingSpaceType.Stationary);

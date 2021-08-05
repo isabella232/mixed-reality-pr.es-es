@@ -6,16 +6,16 @@ ms.author: v-qianwen
 ms.date: 07/15/2021
 ms.topic: article
 keywords: aspectos básicos de calidad, caso práctico, proyecto, ejemplo, MRTK, Mixed Reality Toolkit, Unity, aplicaciones de ejemplo, aplicaciones de ejemplo, código abierto, Microsoft Store, HoloLens, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual
-ms.openlocfilehash: e91ea1c69aeafaafa9c9bae30af6e5a288754764
-ms.sourcegitcommit: cf8df1720ddb8236207ab581bc149edcc76e6199
+ms.openlocfilehash: a8189ca8cb161bb792ad298535c32eac1a47260d8d5559c2383e0322b2cbeb03
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2021
-ms.locfileid: "114702952"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211996"
 ---
 # <a name="quality-fundamentals"></a>Aspectos básicos de la calidad
 
-Aspectos básicos de calidad es HoloLens 2 aplicación que muestra los aspectos básicos de la creación de una excelente experiencia de realidad mixta.  En lugar de simplemente aprender y leer sobre los problemas de calidad en la realidad mixta, ahora podemos experimentar problemas comunes de entorno, diseño y rendimiento y soluciones de primera mano seleccionando las opciones proporcionadas en la aplicación.
+Aspectos básicos de calidad es HoloLens 2 aplicación que muestra los aspectos básicos de la creación de una gran experiencia de realidad mixta.  En lugar de simplemente aprender y leer sobre los problemas de calidad en la realidad mixta, ahora podemos experimentar problemas comunes de entorno, diseño y rendimiento y soluciones de primera mano seleccionando las opciones proporcionadas en la aplicación.
 
 Para descargar e instalar la aplicación, vaya a la página de descarga de la aplicación:
 
@@ -40,7 +40,7 @@ Inicie la aplicación Quality Fundamentals en HoloLens. Una vez que aparezca la 
 
 Los reflejos o superficies con acabados reflejados pueden confundir los HoloLens sensores sobre la forma del objeto.  El dispositivo puede interpretar los objetos reflejados en la superficie como entorno cambiante, lo que puede hacer que el dispositivo pierda el seguimiento.  Si las superficies reflejadas están causando desafíos para HoloLens, considere la posibilidad de agregar una pantalla o unas invidentes que se pueden agregar.
 
-Para obtener más información, [vea superficies en un espacio en](/hololens/hololens-environment-considerations#surfaces-in-a-space) HoloLens [consideraciones sobre el entorno](/hololens/hololens-environment-considerations).
+Para obtener más información, [vea superficies en un espacio](/hololens/hololens-environment-considerations#surfaces-in-a-space) en HoloLens [consideraciones sobre el entorno](/hololens/hololens-environment-considerations).
 
 ### <a name="lighting"></a>Iluminación
 
@@ -50,13 +50,13 @@ Para obtener más información, vea [iluminación](/hololens/hololens-environmen
 
 ## <a name="anchor-fundamentals"></a>Aspectos básicos del anclaje
 
-Para explorar cómo usar Spatial Anchors para alinear hologramas con un espacio físico, seleccione **Anclaje Denfilametals** en la página principal de la aplicación.
+Para explorar cómo usar los Spatial Anchors para alinear hologramas con un espacio físico, seleccione **Anclaje Depredaciónmetals** en la página principal de la aplicación.
 
 En esta parte de la aplicación, exploraremos los siguientes escenarios de usuario:
 
 >[!div class = "checklist"]
 > * ¿Qué ocurre cuando no se aplica ningún delimitador a un objeto?
-> * Cuando se Spatial Anchors varios objetos para un grupo de objetos .
+> * Cuando se Spatial Anchors varios objetos para un grupo de objetos.
 > * Uso compartido de un delimitador espacial entre varios colaboradores mediante un código QR.
 > * Colocación de delimitadores para objetos muy grandes en un espacio.
 
@@ -92,11 +92,11 @@ Para obtener información detallada, consulte [la reproducción en](/windows/mix
 
 ### <a name="z-fighting"></a>Z-fighting
 
-La Z-fighting se produce cuando la aplicación de realidad mixta no puede distinguir qué objeto está delante del otro.  Observará el parpadeo de los objetos holográficos a medida que se buscan el mismo valor de profundidad z.  Experimente los efectos de z-fighting en la aplicación cambiando la ubicación de un objeto holográfico, el logotipo de una bicicleta en este caso.
+La Z-fighting se produce cuando la aplicación de realidad mixta no puede distinguir qué objeto está delante del otro.  Observará el parpadeo de los objetos holográficos a medida que se buscan el mismo valor de profundidad Z.  Experimente los efectos de z-fighting en la aplicación cambiando la ubicación de un objeto holográfico, el logotipo de una bicicleta en este caso.
 
 ![Experimente z-fighting con colocaciones de objetos.](images\qf-z-fighting.jpg)
 
-Para obtener información detallada sobre z-fighting, consulte [habilitación del](/windows/mixed-reality/develop/unity/recommended-settings-for-unity#enable-depth-buffer-sharing) uso compartido del búfer de profundidad en [el artículo configuración recomendada para Unity.](/windows/mixed-reality/develop/unity/recommended-settings-for-unity)
+Para obtener información detallada sobre z-fighting, consulte [Habilitación del](/windows/mixed-reality/develop/unity/recommended-settings-for-unity#enable-depth-buffer-sharing) uso compartido del búfer de profundidad en [el artículo configuración recomendada para Unity.](/windows/mixed-reality/develop/unity/recommended-settings-for-unity)
 
 ### <a name="anti-aliasing"></a>Suavizado de alias
 
@@ -109,14 +109,14 @@ En la página principal de la aplicación, seleccione **3D Asset Fundamentals (A
 Exploraremos los siguientes conceptos clave:
 
 >[!div class = "checklist"]
-> * [Recuento de triángulos.](#triangle-count)
+> * [Recuento de triángulos](#triangle-count).
 > * [El sombreador pasa](#shader-passes).
 > * [Draw llama a](#draw-calls).
 > * [Finalizar .](#finale)
 
 ### <a name="triangle-count"></a>Recuento de triángulos
 
-Seleccione el número y la complejidad de los modelos de bicicleta para experimentar la diferencia visual en función de FPS.
+Seleccione el número y la complejidad de los modelos de bicicleta para experimentar la diferencia visual basada en FPS.
 
 ![Elija diferentes opciones de recuento de triángulos para ver los efectos en la velocidad de fotogramas.](images\qf-3d-asset-visible-triangles.jpg)
 

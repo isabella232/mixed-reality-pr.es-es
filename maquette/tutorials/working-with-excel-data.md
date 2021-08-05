@@ -1,19 +1,19 @@
 ---
-title: Trabajar con datos de Excel
+title: Trabajo con datos de Excel
 description: Pruebe las aplicaciones de ejemplo de Unity que usan Maquette.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 10/26/2020
 ms.topic: article
-keywords: Windows Mixed Reality, Maquette, prototipo, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
-ms.openlocfilehash: 2082352ddc8b3c1b635c60e76a7b45453710b95a
-ms.sourcegitcommit: fae413a2b0420e787671af90f14ee39cde51640f
+keywords: Windows Mixed Reality, Maquette, prototyping, Mixed Reality, Virtual Reality, VR, MR, Feedback, Centro de opiniones, bugs
+ms.openlocfilehash: 30cc8a033b266e8f17822df799b53a1373a1b540187c155f829c399328f6588a
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94935558"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115189207"
 ---
-# <a name="working-with-excel-data"></a>Trabajar con datos de Excel
+# <a name="working-with-excel-data"></a>Trabajo con datos de Excel
 
 <!-- TODO(Harrison/Stefan): Need cool header image from tutorial -->
 

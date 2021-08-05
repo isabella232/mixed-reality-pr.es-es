@@ -5,12 +5,12 @@ author: cDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, entrada,
-ms.openlocfilehash: 33f423fba286e9e85e6d0bedac82bff0b7aae81f
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: 8046501fdab0a7594800a75ad0306a131adaaa6924ffa870c299571cbd4d8e13
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121463"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211166"
 ---
 # <a name="input-system"></a>Sistema de entrada
 
@@ -21,11 +21,11 @@ El sistema de entrada tiene parte de su propia terminología que merece la pena 
 
 - **Proveedores de datos**
 
-    La configuración de entrada del perfil de entrada tiene referencias a entidades conocidas como proveedores de datos; otra palabra que describe estos son los administradores de dispositivos. Se trata de componentes cuyo trabajo es extender el sistema de entrada de MRTK mediante la interacción con un sistema subyacente específico. Un ejemplo de proveedor es el proveedor de Windows Mixed Reality, cuyo trabajo es hablar con las API de Windows Mixed Reality subyacentes y, a continuación, traducir los datos de esas API en conceptos de entrada específicos de MRTK a continuación. Otro ejemplo sería el proveedor de OpenVR (cuyo trabajo es hablar con la versión abstracta de Unity de las API de OpenVR y, a continuación, traducir esos datos en conceptos de entrada de MRTK).
+    La configuración de entrada del perfil de entrada tiene referencias a entidades conocidas como proveedores de datos; otra palabra que describe estos son los administradores de dispositivos. Se trata de componentes cuyo trabajo es extender el sistema de entrada de MRTK mediante la interacción con un sistema subyacente específico. Un ejemplo de proveedor es el proveedor Windows Mixed Reality, cuyo trabajo es hablar con las API de Windows Mixed Reality subyacentes y, a continuación, traducir los datos de esas API en conceptos de entrada específicos de MRTK a continuación. Otro ejemplo sería el proveedor de OpenVR (cuyo trabajo es hablar con la versión abstracta de Unity de las API de OpenVR y, a continuación, traducir esos datos en conceptos de entrada de MRTK).
 
 - **Controller**
 
-    Representación de un controlador físico (ya sea un controlador de 6 grados de libertad, una mano de estilo HoloLens 1 con compatibilidad con gestos, una mano totalmente articulada, un controlador de movimiento bisiesco, etc.). Los administradores de dispositivos generan controladores (es decir, el administrador de dispositivos WMR genera un controlador y administra su duración cuando ve que existe una mano articulada).
+    Representación de un controlador físico (ya sea un controlador de 6 grados de libertad, una mano de estilo HoloLens 1 con compatibilidad con gestos, una mano totalmente articulada, un controlador de movimiento leap, etc.). Los administradores de dispositivos generan controladores (es decir, el administrador de dispositivos WMR genera un controlador y administra su duración cuando ve que existe una mano articulada).
 
 - **Puntero**
 
@@ -35,7 +35,7 @@ El sistema de entrada tiene parte de su propia terminología que merece la pena 
 
     Tenga en cuenta que un controlador se puede asociar a muchos punteros diferentes al mismo tiempo. Para asegurarse de que esto no se convierta en caos, hay un mediador de puntero que controla qué punteros pueden estar activos (por ejemplo, el mediador deshabilitará los punteros de interacción lejana cuando se detecte una interacción cercana).
 
-- **centro de atención**
+- **Foco**
 
     Los eventos de puntero se envían a objetos en el **foco.** La selección del foco variará según el tipo de puntero; un puntero de rayos de mano usará raycasts, mientras que un puntero a rayas usará los esféricos. Un objeto debe implementar IMixedRealityFocusHandler para recibir el foco. Es posible registrar globalmente un objeto para recibir eventos de puntero sin filtrar, pero no se recomienda este enfoque.
 
