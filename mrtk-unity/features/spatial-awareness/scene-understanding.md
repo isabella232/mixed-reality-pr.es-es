@@ -1,18 +1,18 @@
 ---
-title: Observador de comprensión de la escena
+title: Observador de la descripción de escenas
 description: describe Scene Understanding in MRTK (Descripción de la escena en MRTK)
 author: MaxWang-MS
 ms.author: wangmax
 ms.date: 05/27/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Scene Understanding
-ms.openlocfilehash: d5430e7885055a550347c4ccebc1452f68125922
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: bf6ceaf98f239e725de3e084bd1ca96a63abc6c28f2434e8ae84ba3f70ee025b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176234"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115214367"
 ---
-# <a name="scene-understanding-observer"></a>Observador de comprensión de la escena
+# <a name="scene-understanding-observer"></a>Observador de la descripción de escenas
 
 [Scene Understanding](/windows/mixed-reality/scene-understanding) devuelve una representación semántica de entidades de escena, así como sus formas geométricas __en__ HoloLens 2 (HoloLens no se admite 1.ª generación).
 
@@ -25,7 +25,7 @@ Algunos casos de uso esperados de esta tecnología son:
 Scene Understanding se presenta como una __característica experimental__ en MRTK 2.6. Se integra en MRTK como un [observador espacial](spatial-awareness-getting-started.md#register-observers) denominado [`WindowsSceneUnderstandingObserver`](xref:Microsoft.MixedReality.Toolkit.WindowsSceneUnderstanding.Experimental.WindowsSceneUnderstandingObserver) . Scene Understanding funciona tanto con la canalización XR heredada como con la canalización del SDK de XR (tanto OpenXR (a partir de MRTK 2.7) como Windows complemento XR). En ambos casos `WindowsSceneUnderstandingObserver` se usa .
 
 > [!NOTE] 
-> No se admite el uso de Scene Understanding en comunicación remota.
+> No se admite el uso de Scene Understanding in Remoting.
 
 ## <a name="observer-overview"></a>Información general del observador
 
@@ -69,7 +69,7 @@ En la escena se muestra lo siguiente:
 ::: moniker range="= mrtkunity-2021-05"
 
 > [!NOTE] 
-> La escena de ejemplo registra una `There is no active AsyncCoroutineRunner when an action is posted.` advertencia en determinadas circunstancias debido al orden de ejecución de inicialización o subproceso. Si puedes confirmar que el componente está asociado al GameObject "Demo Controller" y el componente/GameObject permanece habilitado o activo en la escena (el caso predeterminado), la advertencia se puede omitir de forma `AsyncCoroutineRunner` segura. **Sin embargo, al crear una escena con Scene Understanding, asegúrese de crear un objeto GameObject vacío en la raíz y adjuntar el script a ella; de lo contrario, Scene Understanding podría no funcionar `AsyncCoroutineRunner` correctamente.**
+> La escena de ejemplo registra una `There is no active AsyncCoroutineRunner when an action is posted.` advertencia en determinadas circunstancias debido al orden de ejecución de inicialización o subproceso. Si puedes confirmar que el componente está asociado al GameObject "Demo Controller" y que el componente/GameObject permanece habilitado o activo en la escena (el caso predeterminado), la advertencia se puede omitir de forma `AsyncCoroutineRunner` segura. **Sin embargo, al crear una nueva escena con Scene Understanding, asegúrese de crear un Objeto GameObject vacío en la raíz y adjuntar el script a ella; de lo contrario, Scene Understanding podría no funcionar `AsyncCoroutineRunner` correctamente.**
 ::: moniker-end
 
 #### <a name="configuring-the-observer-service"></a>Configuración del servicio de observador
@@ -90,7 +90,7 @@ El script de _ejemplo DemoSceneUnderstandingController.cs_ muestra los conceptos
 * Control de eventos de Scene Understanding
 * Configuración de en `WindowsSceneUnderstandingObserver` tiempo de ejecución
 
-Los alternancias del panel de la escena cambian el comportamiento del observador de comprensión de la escena mediante una llamada a las funciones públicas de este script de ejemplo.
+Los alternancias en el panel de la escena cambian el comportamiento del observador de comprensión de la escena mediante una llamada a las funciones públicas de este script de ejemplo.
 
 Al activar Crear instancias *prefabs,* se mostrará la creación de objetos de ese tamaño para ajustarse a todos [los objetos SpatialAwarenessSceneObject,](xref:Microsoft.MixedReality.Toolkit.Experimental.SpatialAwareness.SpatialAwarenessSceneObject)recopilados perfectamente bajo un objeto primario.
 

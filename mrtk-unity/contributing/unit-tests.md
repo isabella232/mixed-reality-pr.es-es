@@ -5,22 +5,22 @@ author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, UnitTest,
-ms.openlocfilehash: c8efb192982a1cb9ca07e91d29a69b11aaffc290
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: d528b5c16ab39271f9984bdd9e23ebca091efd53ed563149f3933ed31ed656dd
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177110"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115216261"
 ---
 # <a name="writing-and-running-tests"></a>Escritura y ejecución de pruebas
 
 Para asegurarse de que MRTK es confiable, MRTK tiene un conjunto de pruebas para asegurarse de que los cambios en el código no revierta el comportamiento existente. Tener una buena cobertura de prueba en un código base grande como MRTK es fundamental para la estabilidad y tener confianza al realizar cambios.
 
-MRTK usa el Test Runner [Unity](https://docs.unity3d.com/Manual/testing-editortestsrunner.html) que usa una integración de Unity de [NUnit.](https://nunit.org/) Esta guía proporcionará un punto de partida sobre cómo agregar pruebas a MRTK. No explicará los Test Runner [Unity](https://docs.unity3d.com/Manual/testing-editortestsrunner.html) y [NUnit](https://nunit.org/) que se pueden buscar en los vínculos proporcionados.
+MRTK usa el [Test Runner Unity,](https://docs.unity3d.com/Manual/testing-editortestsrunner.html) que usa una integración de Unity de [NUnit.](https://nunit.org/) Esta guía proporcionará un punto de partida sobre cómo agregar pruebas a MRTK. No explicará los Test Runner [Unity](https://docs.unity3d.com/Manual/testing-editortestsrunner.html) y [NUnit](https://nunit.org/) que se pueden buscar en los vínculos proporcionados.
 
 Antes de enviar una solicitud de extracción, asegúrese de:
 
-1. Ejecute las pruebas localmente para que los cambios no vuelvan al comportamiento existente (no se permitirá completar las PR si se producirá un error en las pruebas).
+1. Ejecute las pruebas localmente para que los cambios no vuelvan al comportamiento existente (no se permitirá completar las pruebas de rendimiento si se producirá un error en las pruebas).
 
 1. Si corrige un error, escriba una prueba para probar la corrección y asegurarse de que las modificaciones futuras del código no vuelvan a interrumpirla.
 
@@ -58,7 +58,7 @@ También es posible ejecutar las pruebas de modo de reproducción varias veces a
 
 ### <a name="pull-request-validation"></a>Validación de solicitudes de extracción
 
-La CI de MRTK compilará MRTK en todas las configuraciones y ejecutará todas las pruebas de modo de edición y reproducción. La integración continua se puede desencadenar mediante la publicación de un comentario en la pr. de GitHub `/azp run mrtk_pr` si el usuario tiene derechos suficientes. Las ejecuciones de CI se pueden ver en la pestaña "comprobaciones" de la pr.
+La CI de MRTK compilará MRTK en todas las configuraciones y ejecutará todas las pruebas de modo de edición y reproducción. La integración continua se puede desencadenar mediante la publicación de un comentario en la PR de GitHub `/azp run mrtk_pr` si el usuario tiene derechos suficientes. Las ejecuciones de CI se pueden ver en la pestaña "comprobaciones" de la pr.
 
 Solo una vez que todas las pruebas se han superado correctamente, la PR se puede combinar en main.
 

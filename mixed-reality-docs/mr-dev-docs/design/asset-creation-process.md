@@ -1,32 +1,32 @@
 ---
 title: Proceso de creación de recursos
-description: Aprenda a crear, comprar y trasladar recursos para experiencias de realidad mixta.
+description: Aprenda a crear, comprar y portabilidad recursos para experiencias de realidad mixta.
 author: shengkait
 ms.author: shentan
 ms.date: 03/21/2018
 ms.topic: article
-keywords: activos, creación, proceso, presupuesto, polígonos, texturas, sombreadores, rendimiento, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, recursos
-ms.openlocfilehash: a5f4271de522111b0ef994869b9ecf4910582562
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+keywords: asset, creation, process, budget, polygons, textures, shaders, performance, mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit, assets
+ms.openlocfilehash: 5c5dcdbe24a8028bb8a3c57e57b9d95079f9e832954d12aa31421dd75f1b6982
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98009625"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115214118"
 ---
 # <a name="asset-creation-process"></a>Proceso de creación de recursos
 
-Windows Mixed Reality se basa en las décadas de inversión que Microsoft ha realizado en DirectX. Toda la experiencia y los conocimientos que tienen los desarrolladores con la creación de gráficos 3D continúan siendo valiosos con HoloLens.
+Windows Mixed Reality se basa en las décadas de inversión que Microsoft ha realizado en DirectX. Toda la experiencia y las aptitudes que tienen los desarrolladores con la creación de gráficos 3D sigue siendo valiosa con HoloLens.
 
-Los recursos que se crean para un proyecto de tienen muchas formas y formularios. Pueden estar compuestos por una serie de texturas e imágenes, audio, vídeo, modelos 3D y animaciones. No podemos empezar a cubrir todas las herramientas que están disponibles para crear los diferentes tipos de recursos que se usan en un proyecto. En este artículo, nos centraremos en los métodos de creación de recursos 3D.
+Los recursos que se crean para un proyecto tienen muchas formas y formas. Pueden estar compuestos por una serie de texturas o imágenes, audio, vídeo, modelos 3D y animaciones. No podemos empezar a cubrir todas las herramientas que están disponibles para crear los distintos tipos de recursos usados en un proyecto. En este artículo, nos centraremos en los métodos de creación de recursos 3D.
 
-![Concepto, creación, integración e flujo de iteración](images/concept-creation-integration-iteration-flow-640px.jpg)<br>
-*Concepto, creación, integración y flujo de iteración*
+![Flujo de concepto, creación, integración e iteración](images/concept-creation-integration-iteration-flow-640px.jpg)<br>
+*Flujo de concepto, creación, integración e iteración*
 
 ## <a name="things-to-consider"></a>Aspectos que se deben tener en cuenta:
 
-Al examinar la experiencia, está intentando crearla, piense en ella como un **presupuesto** que puede gastar para intentar crear la mejor experiencia. No hay necesariamente ningún límite estricto en cuanto al número de **polígonos** o **tipos de material** que se pueden usar en los recursos. Piense en ello como un conjunto presupuestado de contrapartidas.
+Al mirar la experiencia, está intentando crearla,  piense en ella como un presupuesto que puede gastar para intentar crear la mejor experiencia. No hay necesariamente límites en el número de **polígonos** o tipos de **material** que puede usar en los recursos. Conséndalo más como un conjunto presupuestado de recompensas.
 
-A continuación se muestra un presupuesto de ejemplo para su experiencia. El rendimiento no es un punto único de error, sino que se produce una muerte de mil cortes.
+A continuación se muestra un presupuesto de ejemplo para su experiencia. El rendimiento no es un único punto de error, sino la muerte por miles de cortes.
 <br>
 
 <table style="float:right; margin-left: 10px;">
@@ -47,80 +47,80 @@ A continuación se muestra un presupuesto de ejemplo para su experiencia. El ren
 </tr><tr>
 <td> Medios (audio y vídeo)</td><td> -</td><td> 15 %</td><td> 25 %</td>
 </tr><tr>
-<td> Script o lógica</td><td> 25 %</td><td> 0 %</td><td> 5 %</td>
+<td> Script/lógica</td><td> 25 %</td><td> 0 %</td><td> 5 %</td>
 </tr><tr>
 <td> Sobrecarga general</td><td> 5 %</td><td> 5 %</td><td> 5 %</td>
 </tr><tr>
-<td> <b>Total</b></td><td> <b>65 %</b></td><td> <b>90 %</b></td><td> <b>70%</b></td>
+<td> <b>Total</b></td><td> <b>65%</b></td><td> <b>90 %</b></td><td> <b>70%</b></td>
 </tr>
 </table>
 
-**Número total de activos**
-* ¿Cuántos activos están activos en la escena?
+**Número total de recursos**
+* ¿Cuántos recursos están activos en la escena?
 
 **Complejidad de los recursos**
-* ¿Cuántos triángulos/polígonos?
-* ¿Qué complejidad tiene el sombreador? Cuando se usa el kit de herramientas de la realidad mixta, se recomienda usar el [sombreador estándar del kit de herramientas de realidad mixta](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md) para reducir la complejidad del sombreador.
+* ¿Cuántos triángulos o polígonos?
+* ¿Qué complejidad tiene el sombreador? Al usar el Mixed Reality Toolkit, se recomienda usar el [sombreador Mixed Reality Toolkit estándar](https://github.com/microsoft/MixedRealityToolkit-Unity/blob/mrtk_release/Documentation/README_MRTKStandardShader.md) para reducir la complejidad del sombreador.
 
-Tanto los desarrolladores como los artistas tienen que tener en cuenta las capacidades del dispositivo y el motor de gráficos. Microsoft HoloLens tiene todo el cálculo y los gráficos integrados en el dispositivo. Comparte las funcionalidades que los desarrolladores encontrarán en una plataforma móvil.
+Tanto los desarrolladores como los creadores tienen que tener en cuenta las funcionalidades del dispositivo y el motor de gráficos. Microsoft HoloLens todos los gráficos y computacionales integrados en el dispositivo. Comparte las funcionalidades que los desarrolladores encontrarían en una plataforma móvil.
 
-El proceso de creación de recursos es el mismo tanto si su experiencia tiene como destino un [dispositivo Holographic o un dispositivo envolvente](../discover/mixed-reality.md#the-mixed-reality-spectrum). Lo principal que hay que tener en cuenta es la capacidad y la escala del dispositivo. Puede ver el mundo real en Mixed Reality, por lo que querrá mantener la escala correcta en función de la experiencia.
+El proceso de creación de recursos es el mismo si la experiencia tiene como destino un [dispositivo holográfico o un dispositivo inmersivo.](../discover/mixed-reality.md#the-mixed-reality-spectrum) Lo principal que debe tener en cuenta es la funcionalidad y la escala del dispositivo. Puede ver el mundo real en realidad mixta, por lo que querrá mantener la escala correcta en función de la experiencia.
 
 ## <a name="authoring-assets"></a>Creación de recursos
 
 Comenzaremos con las formas de obtener recursos para el proyecto:
 1. Crear recursos (herramientas de creación y captura de objetos)
-2. Compra de recursos (compra de activos en línea)
-3. Traslado de recursos (tomando activos existentes)
-4. Recursos de Outsourcing (importación de recursos de terceros)
+2. Adquisición de recursos (compra de recursos en línea)
+3. Porte de recursos (tomar recursos existentes)
+4. Outsourcing Assets (Importar recursos de terceros)
 
-### <a name="creating-assets"></a>Crear recursos
+### <a name="creating-assets"></a>Creación de recursos
 
 **Herramientas de creación**<br>
-En primer lugar, puede crear sus propios recursos de varias maneras diferentes. los artistas 3D usan varias aplicaciones y herramientas para crear modelos, que se componen de **mallas**, **texturas** y **materiales**. A continuación, se guarda en un formato de archivo que se puede importar o usar mediante el motor de gráficos que usa la aplicación, como **. FBX** o **. OBJ**. Cualquier herramienta que genere un modelo compatible con el motor de gráficos elegido funcionará en **HoloLens**. Entre los artistas 3D, muchos eligen usar [Maya de Autodesk porque puede usar HoloLens](https://www.youtube.com/watch?v=q0K3n0Gf8mA) para transformar el modo en que se crean los recursos. Si desea obtener algo rápidamente, también puede usar el [generador 3D](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) incluido en Windows para la exportación. OBJ para su uso en la aplicación.
+En primer lugar, puede crear sus propios recursos de varias maneras diferentes. Los dibujantes 3D usan diversas aplicaciones y herramientas para crear modelos, que constan de **mallas, texturas** y **materiales.** A continuación, se guarda en un formato de archivo que puede importar o usar el motor de gráficos utilizado por la aplicación, como **. FBX** o **. OBJ**. Cualquier herramienta que genere un modelo compatible con el motor de gráficos elegido funcionará en **HoloLens**. Entre los intérpretes en 3D, muchos deciden usar Maya de [Autodesk](https://www.youtube.com/watch?v=q0K3n0Gf8mA) porque puede usar HoloLens transformar la forma en que se crean los recursos. Si desea obtener algo rápidamente, también puede usar 3D Builder [que](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) se incluye con Windows para exportar . OBJ para su uso en la aplicación.
 
-**Captura de objeto**<br>
-También hay la opción de capturar objetos en 3D. La captura de objetos inanimados en 3D y su edición con el software de creación de contenido digital es cada vez más popular con el aumento de la impresión en 3D. Con el sensor de **Kinect 2** y el [generador 3D](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) , puede usar la característica de captura para crear recursos a partir de objetos del mundo real. También es un [conjunto de herramientas](https://en.wikipedia.org/wiki/Comparison_of_photogrammetry_software) para hacer lo mismo con **Photogrammetry** mediante el procesamiento de varias imágenes para unir juntas y mallas y texturas.
+**Captura de objetos**<br>
+También existe la opción de capturar objetos en 3D. La captura de objetos inanimados en 3D y su edición con software de creación de contenido digital es cada vez más popular con el aumento de la impresión 3D. Con el **sensor Kinect 2** y [3D Builder](https://developer.microsoft.com/windows/hardware/3d-print/3d-builder-resources) puede usar la característica de captura para crear recursos a partir de objetos del mundo real. También se trata de un [conjunto de herramientas para](https://en.wikipedia.org/wiki/Comparison_of_photogrammetry_software) hacer lo mismo con la **fotogrametría** mediante el procesamiento de varias imágenes para unir y mallar y texturas.
 
-### <a name="purchasing-assets"></a>Recursos de compra
+### <a name="purchasing-assets"></a>Compra de recursos
 
-Otra opción excelente es adquirir recursos para su experiencia. Hay una gran cantidad de recursos disponibles a través de servicios como el [almacén de recursos de Unity](https://www.assetstore.unity3d.com/) o [TurboSquid](https://www.turbosquid.com/) entre otros.
+Otra excelente opción es comprar recursos para su experiencia. Hay una gran cantidad de recursos disponibles a través de servicios como [Unity Asset Store](https://www.assetstore.unity3d.com/) o [TurboSquid,](https://www.turbosquid.com/) entre otros.
 
-Al adquirir recursos de un tercero, siempre querrá comprobar las siguientes propiedades:
-* **¿Cuál es el número de poli?**
-  * ¿Encaja en el presupuesto?
-* **¿Hay niveles de detalle (LODs) para el modelo?**
-  * Un nivel de detalle de los modelos le permite escalar los detalles de un modelo para el rendimiento.
-* **¿Está disponible el archivo de origen?**
-  * No se incluye con el [almacén de recursos de Unity](https://www.assetstore.unity3d.com/) , pero siempre se incluye con servicios como [TurboSquid](https://www.turbosquid.com/).
-  * Sin el archivo de origen, no se puede modificar el recurso.
-  * Asegúrese de que las herramientas 3D pueden importar el archivo de código fuente proporcionado.
-* **Sepa lo que está obteniendo**
+Al comprar recursos de un tercero, siempre quiere comprobar las siguientes propiedades:
+* **¿Cuál es el recuento de polis?**
+  * ¿Se ajusta a su presupuesto?
+* **¿Hay niveles de detalle (LOD) para el modelo?**
+  * Un nivel de detalle de modelos permite escalar los detalles de un modelo para mejorar el rendimiento.
+* **¿Está disponible el archivo de código fuente?**
+  * No se incluye [con Unity Asset Store,](https://www.assetstore.unity3d.com/) pero siempre se incluye con servicios [como TurboSquid.](https://www.turbosquid.com/)
+  * Sin el archivo de código fuente, no se puede modificar el recurso.
+  * Asegúrese de que las herramientas 3D pueden importar el archivo de origen proporcionado.
+* **Saber lo que está obteniendo**
   * ¿Se proporcionan animaciones?
   * Asegúrese de comprobar la lista de contenido del recurso que está comprando.
 
-### <a name="porting-assets"></a>Trasladar recursos
+### <a name="porting-assets"></a>Porte de recursos
 
-En algunos casos, se le entregarán recursos existentes que se compilaron originalmente para otros dispositivos y aplicaciones diferentes. En la mayoría de los casos, estos recursos se pueden convertir a formatos compatibles con el motor de gráficos que usa su aplicación.
+En algunos casos, se le entregarán los recursos existentes que se han creado originalmente para otros dispositivos y aplicaciones diferentes. En la mayoría de los casos, estos recursos se pueden convertir en formatos compatibles con el motor de gráficos que usa su aplicación.
 
-Al migrar los recursos que se usarán en la aplicación de HoloLens, querrá formular las siguientes preguntas:
-* **¿Se puede importar directamente o tiene que convertirse a otro formato?** Compruebe el formato que está importando con el motor de gráficos que está usando.
-* **Si la conversión a un formato compatible es algo que se pierde?** A veces, los detalles se pueden perder o importar puede producir artefactos que se deben limpiar en una herramienta de creación de 3D.
-* **¿Cuál es el recuento de triángulo/polígono del recurso?** En función del presupuesto de la aplicación, puede usar [Simplygon](https://www.simplygon.com/) o herramientas similares para diezmar (de forma manual o manual) el activo original para ajustarse al presupuesto de las aplicaciones.
+Al portear recursos para usarlos en HoloLens aplicación, querrá hacer las siguientes preguntas:
+* **¿Puede importar directamente o debe convertirse a otro formato?** Compruebe el formato que va a importar con el motor de gráficos que está usando.
+* **¿Si se pierde algo al convertir a un formato compatible?** A veces, los detalles se pueden perder o la importación puede provocar artefactos que deben limpiarse en una herramienta de creación 3D.
+* **¿Cuál es el número de triángulos o polígonos para el recurso?** En función del presupuesto de la aplicación, puede usar [Simplygon](https://www.simplygon.com/) o herramientas similares para desacociar (por procedimientos o manualmente el recuento de polis) el recurso original para ajustarlo al presupuesto de las aplicaciones.
 
-### <a name="outsourcing-assets"></a>Recursos de outsourcing
+### <a name="outsourcing-assets"></a>Externalización de recursos
 
-Otra opción para los proyectos más grandes que requieren más recursos de los que el equipo está equipada para crear es externalizar la creación de recursos. El proceso de outsourcing implica encontrar la agencia o el estudio correcto que se especializa en los recursos de outsourcing. Puede ser la opción más costosa, pero también es la más flexible en lo que se obtiene.
-* **Defina claramente lo que está solicitando**
-  * Proporcione tantos detalles como sea posible
-  * Imágenes de concepto de Front, Side y back
-  * Material gráfico de referencia que muestra recursos en contexto
+Otra opción para proyectos más grandes que requieren más recursos de los que el equipo está equipado para crear es externalizar la creación de recursos. El proceso de externalización implica encontrar el estudio o la agencia adecuados que se especializan en externalizar recursos. Puede ser la opción más costosa, pero también la más flexible en lo que se obtiene.
+* **Defina claramente lo que está solicitando.**
+  * Proporcione tantos detalles como sea posible.
+  * Imágenes de concepto frontal, lateral y posterior
+  * Arte de referencia que muestra el recurso en contexto
   * Escala del objeto (normalmente se especifica en centímetros)
 * **Proporcionar un presupuesto**
   * Intervalo de recuento de poli
   * Número de texturas
-  * Tipo de sombreador (para Unity y HoloLens siempre debe tener primero como valor predeterminado los sombreadores móviles)
+  * Tipo de sombreador (para Unity y HoloLens siempre debe usar primero los sombreadores móviles de forma predeterminada)
 * **Comprender los costos**
-  * ¿Cuál es la Directiva de outsourcing para las solicitudes de cambio?
+  * ¿Cuál es la directiva de externalización para las solicitudes de cambio?
 
-El outsourcing puede funcionar bien en función de la escala de tiempo de los proyectos, pero requiere más supervisión para garantizar que se obtienen los recursos correctos que se necesitan por primera vez.
+La externalización puede funcionar bien en función de la escala de tiempo de los proyectos, pero requiere más supervisión para garantizar que obtiene los recursos adecuados que necesita la primera vez.

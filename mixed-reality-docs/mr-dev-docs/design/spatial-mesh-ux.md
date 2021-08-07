@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 06/19/2020
 ms.topic: article
-keywords: Mixed Reality, HoloLens, controles de interfaz de usuario, interacción, ui, ux, UX Design, spatial UI, spatial interaction, 3D UI, 3D UX, mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: 5bdcba60f38ac67bbf0f394337735f4a2d4ec423
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: Mixed Reality, HoloLens, controles de interfaz de usuario, interacción, interfaz de usuario, experiencia de usuario, diseño de UX, interfaz de usuario espacial, interacción espacial, interfaz de usuario 3D, experiencia de usuario 3D, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: 7fcba586f55e6131235d031327da131aa8ba6c97958e4ac282a8f8d048d37992
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600634"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115216294"
 ---
 # <a name="spatial-mesh"></a>Malla espacial
 
@@ -42,7 +42,7 @@ MRTK proporciona varios materiales para la visualización de malla espacial.
 
 ---
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)

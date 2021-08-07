@@ -1,33 +1,33 @@
 ---
 title: Mirada y permanencia
-description: Obtenga información general sobre el modelo de entrada de ojo y punta de la mirada para aplicaciones de realidad mixta.
+description: Obtenga información general sobre el modelo de entrada de mirada y permanencia con los ojos y la cabeza para las aplicaciones de realidad mixta.
 author: sostel
 ms.author: sostel
 ms.date: 10/31/2019
 ms.topic: article
-keywords: Realidad mixta, miradas, viviendas, interacción, diseño, seguimiento ocular, seguimiento de cabezales, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: aa4fceeb8875da89fd7f84c3709ff6db07fd96f4
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: Mixed Reality, mirada, permanencia, interacción, diseño, seguimiento de los ojos, seguimiento de la cabeza, casco de realidad mixta, casco de windows de realidad mixta, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: c65c13b06df70ed5471b283ad349dd72e1575018a98913177983d7a13571d666
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582137"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115213679"
 ---
 # <a name="gaze-and-dwell"></a>Mirada y permanencia
 
 Si tienes las manos ocupadas con herramientas y piezas, hacer gestos puede ser engorroso o imposible.
-Los comandos de voz también pueden ser poco confiables en determinados contextos, por ejemplo, en condiciones excesivamente altas.
-La mirada y la vivienda ofrecen un mecanismo familiar y fácil de usar para los directivos de trabajo y las manos libres de HoloLens.
-Además, la mirada y la permanencia son una gran reserva, que es independiente de las interferencias de ruido o las restricciones de silencio en el entorno operativo.
-Se distinguen dos variantes de _miradas y_ de la vivienda: [miran hacia la cabeza y la vivienda](gaze-and-dwell-head.md) , y [miran](gaze-and-dwell-eyes.md)y se superponen.
+Los comandos de voz también pueden ser poco confiables en determinados contextos, por ejemplo, en condiciones excesivamente ruidosas.
+La mirada y permanencia ofrece un mecanismo familiar y fácil de dominar para trabajar de forma rápida y sin manos en HoloLens.
+Además, la mirada y permanencia es una gran reserva, que es independiente de las restricciones de interferencia de ruido o silencio en el entorno operativo.
+Se distinguen dos variantes de _mirada y permanencia:_ mirada con la cabeza y [permanencia](gaze-and-dwell-head.md) y mirada con los ojos [y permanencia.](gaze-and-dwell-eyes.md)
 
 ## <a name="scenarios"></a>Escenarios
 
-Miran y colaboran en escenarios en los que las manos de una persona están ocupados con otras tareas y la voz no es 100% confiable o disponible debido a restricciones ambientales o sociales.
+La mirada y permanencia se destacan en escenarios en los que las manos de una persona están ocupadas con otras tareas y la voz no es 100 % confiable o disponible debido a restricciones ambientales o sociales.
 Un buen ejemplo sería el de una persona que lleva un dispositivo HoloLens para ver superpuesta información de referencia mientras repara el motor de un automóvil.
 Puede tener ocupadas las manos con herramientas o usarlas para sostenerse al reclinarse sobre el compartimento del motor.
 En la zona del garaje hay mucho ruido, con los constantes golpes y zumbidos de las herramientas, lo que dificulta el uso de comandos de voz.
-La mirada y la vivienda permiten a la persona que usa HoloLens navegar por confianza su material de referencia sin interrumpir su flujo de trabajo.
+La mirada y permanencia permite a la persona que usa HoloLens navegar con confianza por su material de referencia sin interrumpir su flujo de trabajo.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 

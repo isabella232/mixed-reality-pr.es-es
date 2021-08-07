@@ -1,62 +1,62 @@
 ---
-title: Controladores de HP reverberación G2 en Unity
-description: Obtenga información sobre cómo configurar y usar los nuevos controladores de HP reverberación G2 en aplicaciones SteamVR y Windows Mixed Reality Unity.
+title: Controladores de HP Reverb G2 en Unity
+description: Aprenda a configurar y usar los nuevos controladores HP Reverb G2 en SteamVR y Windows Mixed Reality de Unity.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 10/14/2020
 ms.topic: article
-keywords: Unity, reverberación, reverberación G2, HP reverberación G2, realidad mixta, desarrollo, controladores de movimiento, entrada de usuario, características, nuevo proyecto, emulador, documentación, guías, características, hologramas, desarrollo de juegos
-ms.openlocfilehash: 26435ef57c9baf59b1008fb4750aedd913a19814
-ms.sourcegitcommit: 1304f8f0a838290c1ae3db34670b67c75ea9bdaa
+keywords: Unity, Reverb, Reverb G2, HP Reverb G2, mixed reality, development, motion controllers, user input, features, new project, emulator, documentation, guides, features, holograms, game development
+ms.openlocfilehash: 4e561cb1e46fe487f1b25ed526f0adeafc2de6c525835ffe3b1871d7516b233e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99421403"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115215630"
 ---
-# <a name="hp-reverb-g2-controllers-in-unity"></a>Controladores de HP reverberación G2 en Unity
+# <a name="hp-reverb-g2-controllers-in-unity"></a>Controladores de HP Reverb G2 en Unity
 
-Los controladores de movimiento de HP son un nuevo tipo de controlador de Windows Mixed Reality: la misma tecnología de seguimiento con un conjunto de entradas disponibles ligeramente diferente: 
+Los controladores de movimiento de HP son un nuevo tipo de controladores de Windows Mixed Reality: la misma tecnología de seguimiento con un conjunto ligeramente diferente de entradas disponibles: 
 
-* Touchpad se ha reemplazado por dos botones: A y B para el controlador derecho y X e y para el controlador izquierdo. 
-* El agarre es ahora un desencadenador que publica un flujo de valores entre 0,0 y 1,0 en lugar de un botón con Estados presionados y no presionados. 
+* Touchpad se ha reemplazado por dos botones: A y B para el controlador derecho, y X e Y para el controlador izquierdo. 
+* La comprensión es ahora un desencadenador que publica una secuencia de valores entre 0,0 y 1,0 en lugar de un botón con los estados Presionado y No presionado. 
 
-Dado que no se puede acceder a las nuevas entradas a través de las API de Unity y Windows existentes, necesita el paquete UPM **Microsoft. MixedReality. Input** dedicado. 
+Puesto que las nuevas entradas no son accesibles a través de las API Windows y Unity existentes, necesita el paquete UPM **Dedicado Microsoft.MixedReality.Input.** 
 
 > [!IMPORTANT]
-> **Las clases de este paquete no reemplazan a las API existentes de Windows y Unity, sino que las complementan.** Las características que normalmente están disponibles para los controladores clásicos de Windows Mixed Reality y los controladores de movimiento de HP son accesibles a través de la misma ruta de acceso del código con las API existentes. Solo las nuevas entradas requieren el uso del paquete Microsoft. MixedReality. Input adicional. 
+> **Las clases de este paquete no reemplazan las API Windows y Unity, sino que las complementan.** Las características disponibles habitualmente para los controladores de Windows Mixed Reality clásico y los controladores de movimiento de HP son accesibles a través de la misma ruta de acceso de código mediante las API existentes. Solo las nuevas entradas requieren el uso del paquete Adicional Microsoft.MixedReality.Input. 
 
 ## <a name="hp-motion-controller-overview"></a>Introducción al controlador de movimiento de HP
 
-*Microsoft. MixedReality. Input. MotionController* representa un controlador de movimiento. Cada instancia de *MotionController* tiene un *XR. WSA. Input. InteractionSource* del mismo nivel, que se puede correlacionar mediante la mano, el ID. de proveedor, el ID. de producto y la versión. 
+*Microsoft.MixedReality.Input.MotionController representa* un controlador de movimiento. Cada *instancia de MotionController* tiene *un XR. Wsa. Input.InteractionSource del* mismo nivel, que se puede correlacionar mediante entrega, identificador de proveedor, identificador de producto y versión. 
 
-Puede obtener instancias de MotionController mediante la creación de un *MotionControllerWatcher* y la suscripción a sus eventos, de forma similar al uso de eventos *InteractionManager* para detectar nuevas instancias de *InteractionSource* . Los métodos y propiedades de MotionController describen las entradas admitidas por el controlador, incluidos sus botones, desencadenadores, eje 2D y stick analógico. La clase MotionController también expone métodos para tener acceso a Estados de entrada a través de la clase *MotionControllerReading* . La clase MotionControllerReading representa una instantánea del estado del controlador en un momento dado. 
+Puede tomar instancias de MotionController mediante la creación de *una instancia de MotionControllerWatcher* y la suscripción a sus eventos, de forma similar al uso de eventos *InteractionManager* para detectar nuevas instancias *de InteractionSource.* Los métodos y propiedades de MotionController describen las entradas admitidas por el controlador, incluidos sus botones, desencadenadores, eje 2D y barra de posición. La clase MotionController también expone métodos para acceder a los estados de entrada a través *de la clase MotionControllerReading.* La clase MotionControllerReading representa una instantánea del estado del controlador en un momento dado. 
 
-## <a name="installing-microsoftmixedrealityinput-with-the-mixed-reality-feature-tool"></a>Instalación de Microsoft. MixedReality. Input con la herramienta de característica de realidad mixta
+## <a name="installing-microsoftmixedrealityinput-with-the-mixed-reality-feature-tool"></a>Instalación de Microsoft.MixedReality.Input con Mixed Reality Feature Tool
 
-Instale el complemento Microsoft. MixedReality. Input con la nueva aplicación de herramienta de características de realidad mixta. Siga las [instrucciones de instalación y uso](welcome-to-mr-feature-tool.md) y seleccione el paquete de **entrada de realidad mixta** en la categoría del kit de herramientas de realidad mixta:
+Instale el complemento Microsoft.MixedReality.Input con la nueva Mixed Reality Feature Tool. Siga las [instrucciones de instalación y uso](welcome-to-mr-feature-tool.md) y seleccione el paquete Mixed Reality entrada **en** la Mixed Reality Toolkit siguiente:
 
-![Ventana paquetes de herramientas de característica de realidad mixta con entrada de realidad mixta resaltada](images/feature-tool-mrinput.png)
+![Mixed Reality paquetes de feature tool con la entrada de realidad mixta resaltada](images/feature-tool-mrinput.png)
 
-## <a name="using-microsoftmixedrealityinput"></a>Usar Microsoft. MixedReality. Input 
+## <a name="using-microsoftmixedrealityinput"></a>Uso de Microsoft.MixedReality.Input 
 
 ### <a name="input-values"></a>Valores de entrada
 
 Un MotionController puede exponer dos tipos de entradas: 
 
-* Los botones y los Estados de los desencadenadores se expresan mediante un valor Float único entre 0,0 y 1,0 que indica cuánto están presionados.
-    * Un botón solo puede devolver 0,0 (cuando no se presiona) o 1,0 (cuando se presiona) mientras un desencadenador puede devolver valores continuos entre 0,0 (totalmente liberados) a 1,0 (totalmente presionado). 
-* El estado del Stick está expresado por un Vector2 cuyos componentes X e y están entre-1,0 y 1,0. 
+* Los botones y los estados del desencadenador se expresan mediante un valor flotante único entre 0,0 y 1,0 que indica cuánto se presionan.
+    * Un botón solo puede devolver 0,0 (cuando no se presiona) o 1,0 (cuando se presiona), mientras que un desencadenador puede devolver valores continuos entre 0,0 (totalmente liberado) y 1,0 (totalmente presionado). 
+* El estado de la chincheta se expresa mediante un vector 2 cuyos componentes X e Y están entre -1,0 y 1,0. 
 
-Puede usar *MotionController. GetPressableInputs ()* para devolver una lista de entradas que devuelven un valor presionado (botones y desencadenadores) o el método *MotionController. GetXYInputs ()* para devolver una lista de entradas que devuelven un valor de 2 ejes. 
+Puede usar *MotionController.GetPressableInputs()* para devolver una lista de entradas que devuelven un valor presionado (botones y desencadenadores) o el método *MotionController.GetXYInputs()* para devolver una lista de entradas que devuelven un valor de dos ejes. 
 
 Una instancia de MotionControllerReading representa el estado del controlador en un momento dado: 
 
-* *GetPressedValue ()* recupera el estado de un botón o un desencadenador. 
-* *GetXYValue ()* recupera el estado de un stick. 
+* *GetPressedValue()* recupera el estado de un botón o un desencadenador. 
+* *GetXYValue()* recupera el estado de una chincheta. 
 
-### <a name="creating-a-cache-to-maintain-a-collection-of-motioncontroller-instances-and-their-states"></a>Creación de una memoria caché para mantener una colección de instancias de MotionController y sus Estados 
+### <a name="creating-a-cache-to-maintain-a-collection-of-motioncontroller-instances-and-their-states"></a>Creación de una memoria caché para mantener una colección de instancias de MotionController y sus estados 
 
-Empiece creando una instancia de MotionControllerWatcher y registrando Controladores para sus eventos *MotionControllerAdded* y *MotionControllerRemoved* para mantener una memoria caché de instancias de MotionController disponibles. Esta memoria caché debe ser un monobehavior adjunto a un GameObject como se muestra en el código siguiente:
+Empiece por crear una instancia de MotionControllerWatcher y registrar controladores para sus eventos *MotionControllerAdded* y *MotionControllerRemoved* para mantener una caché de instancias de MotionController disponibles. Esta memoria caché debe ser un Elemento MonoBehavior asociado a un Elemento GameObject, como se muestra en el código siguiente:
 
 ```csharp
 public class MotionControllerStateCache : MonoBehaviour 
@@ -143,7 +143,7 @@ public class MotionControllerStateCache : MonoBehaviour
 
 ### <a name="reading-new-inputs-by-polling"></a>Lectura de nuevas entradas mediante sondeo 
 
-Puede leer el estado actual de cada controlador conocido a través de *MotionController. TryGetReadingAtTime* durante el método *Update* de la clase monobehavior. Desea pasar *DateTime. Now* como parámetro timestamp para asegurarse de que se lee el estado más reciente del controlador. 
+Puede leer el estado actual de cada controlador conocido a través de *MotionController.TryGetReadingAtTime* durante el método *Update* de la clase MonoBehavior. Quiere pasar *DateTime.Now* como parámetro timestamp para asegurarse de que se lee el estado más reciente del controlador. 
 
 ```csharp
 public class MotionControllerStateCache : MonoBehaviour 
@@ -187,7 +187,7 @@ public class MotionControllerStateCache : MonoBehaviour
 } 
 ```
 
-Puede obtener el valor de entrada actual de los controladores mediante la mano del controlador: 
+Puede obtener el valor de entrada actual de los controladores mediante la propiedad Handedness del controlador: 
 
 ```csharp
 public class MotionControllerStateCache : MonoBehaviour 
@@ -240,7 +240,7 @@ public class MotionControllerStateCache : MonoBehaviour
 } 
 ```
 
-Por ejemplo, para leer el valor de agarre análogo de un InteractionSource: 
+Por ejemplo, para leer el valor de comprensión análoga de interactionSource: 
 
 ```csharp
 /// Read the analog grasp value of all connected interaction sources 
@@ -257,9 +257,9 @@ void Update()
 } 
 ```
 
-### <a name="generating-events-from-the-new-inputs"></a>Generar eventos a partir de las nuevas entradas 
+### <a name="generating-events-from-the-new-inputs"></a>Generación de eventos a partir de las nuevas entradas 
 
-En lugar de sondear el estado de un controlador una vez por fotograma, tiene la opción de controlar todos los cambios de estado como eventos, lo que le permite controlar incluso las acciones más rápidas que duran menos que un fotograma. Para que este enfoque funcione, la memoria caché de los controladores de movimiento debe procesar todos los Estados publicados por un controlador desde el último fotograma, lo que se puede hacer mediante el almacenamiento de la marca de tiempo de los últimos MotionControllerReading recuperados de un MotionController y la llamada a *MotionController. TryGetReadingAfterTime ()*: 
+En lugar de sondear el estado de un controlador una vez por fotograma, tiene la opción de controlar todos los cambios de estado como eventos, lo que le permite controlar incluso las acciones más rápidas que duren menos que un fotograma. Para que este enfoque funcione, la caché de controladores de movimiento debe procesar todos los estados publicados por un controlador desde el último fotograma, lo que puede hacer almacenando la marca de tiempo del último MotionControllerReading recuperado de motionController y llamando a *MotionController.TryGetReadingAfterTime():* 
 
 ```csharp
 private class MotionControllerState 
@@ -346,7 +346,7 @@ private class MotionControllerState
 } 
 ```
 
-Ahora que ha actualizado las clases internas de caché, la clase monobehavior puede exponer dos eventos: pressed y released, y generarlos desde su método Update (): 
+Ahora que ha actualizado las clases internas de caché, la clase MonoBehavior puede exponer dos eventos ( Pressed y Released ) y generarlos desde su método Update(): 
 
 ```csharp
 /// <summary> 
@@ -478,7 +478,7 @@ private void stateCache_InputPressed(object sender, MotionControllerStateCache.M
 } 
 ```
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 <!-- ## Getting started
 

@@ -1,25 +1,25 @@
 ---
-title: Primitiva de recorte
+title: Primitivo de recorte
 description: Documentación sobre primitivos de recorte con ejemplos en MRTK
 author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, primitivo de recorte,
-ms.openlocfilehash: c3331084f87ccc57208426910d84ed7bef457bc1
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 1feecbbd51eb80ff6113e66d053f032acb3005b9c7d1debbd5dfd46da0925798
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176747"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115214422"
 ---
-# <a name="clipping-primitive"></a>Primitiva de recorte
+# <a name="clipping-primitive"></a>Primitivo de recorte
 
 Los comportamientos permiten el recorte de formas , y con la capacidad de especificar en qué lado de la primitiva se va a recortar (dentro o fuera) cuando se usa con sombreadores [`ClippingPrimitive`](xref:Microsoft.MixedReality.Toolkit.Utilities.ClippingPrimitive) [`plane`](xref:Microsoft.MixedReality.Toolkit.Utilities.ClippingPlane) [`sphere`](xref:Microsoft.MixedReality.Toolkit.Utilities.ClippingSphere) [`box`](xref:Microsoft.MixedReality.Toolkit.Utilities.ClippingBox) MRTK.
 
 ![gizmos de recorte primitivo](../images/mrtk-standard-shader/MRTK_PrimitiveClippingGizmos.gif)
 
 > [!NOTE]
-> [`ClippingPrimitives`](xref:Microsoft.MixedReality.Toolkit.Utilities.ClippingPrimitive) use [instrucciones de recorte y descarte](https://developer.download.nvidia.com/cg/clip.html) dentro de los sombreadores y deshabilite la capacidad de Unity para procesar por lotes representadores recortados. Al usar primitivas de recorte, debe tener en cuenta estas implicaciones de rendimiento.
+> [`ClippingPrimitives`](xref:Microsoft.MixedReality.Toolkit.Utilities.ClippingPrimitive) use [instrucciones de recorte y descarte](https://developer.download.nvidia.com/cg/clip.html) en sombreadores y deshabilite la capacidad de Unity para procesar por lotes representadores recortados. Al usar primitivas de recorte, debe tener en cuenta estas implicaciones de rendimiento.
 
 [`ClippingPlane.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.ClippingPlane), [`ClippingSphere.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.ClippingSphere) y se pueden usar para controlar fácilmente las propiedades [`ClippingBox.cs`](xref:Microsoft.MixedReality.Toolkit.Utilities.ClippingBox) primitivas de recorte. Use estos componentes con los siguientes sombreadores para aprovechar los escenarios de recorte.
 

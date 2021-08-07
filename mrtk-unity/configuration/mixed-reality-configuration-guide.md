@@ -5,22 +5,22 @@ author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK,
-ms.openlocfilehash: b7ec8d9ca2213ff998f94a6a2d029900ff886a2f
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: e18695610b5e07c4f811e7c43bc13607857a9459407f9b16f39d4f7350f354e6
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176413"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115215005"
 ---
 # <a name="mrtk-profile-configuration-guide"></a>Guía de configuración de perfiles de MRTK
 
-El Mixed Reality Toolkit centraliza la mayor parte de la configuración necesaria para administrar el kit de herramientas lo más posible (excepto para las verdaderas "cosas" en tiempo de ejecución).
+El Mixed Reality Toolkit centralizar la mayor parte de la configuración necesaria para administrar el kit de herramientas como sea posible (excepto para las verdaderas "cosas" en tiempo de ejecución).
 
 Esta guía es un tutorial sencillo para cada una de las pantallas de perfil de configuración disponibles actualmente para el kit de herramientas.
 
-## <a name="the-main-mixed-reality-toolkit-configuration-profile"></a>El perfil de configuración Mixed Reality Toolkit principal
+## <a name="the-main-mixed-reality-toolkit-configuration-profile"></a>Perfil de configuración Mixed Reality Toolkit principal
 
-El perfil de configuración principal, que está asociado a *MixedRealityToolkit* GameObject en la escena, proporciona el punto de entrada principal para la Toolkit en el proyecto.
+El perfil de configuración principal, que está asociado al gameObject *MixedRealityToolkit* de la escena, proporciona el punto de entrada principal para la Toolkit en el proyecto.
 
 > [!NOTE]
 > El Mixed Reality Toolkit "bloquea" las pantallas de configuración predeterminadas para asegurarse de que siempre tiene un punto de inicio común para el proyecto y se recomienda empezar a definir su propia configuración a medida que evoluciona el proyecto. La configuración de MRTK no se puede editar durante el modo de reproducción.
@@ -43,7 +43,7 @@ Esto aloja la configuración actual del entorno de ejecución activo para el pro
 Desde aquí puede navegar a todos los perfiles de configuración de MRTK, incluidos:
 
 - [Mixed Reality Toolkit de configuración de perfiles](#mrtk-profile-configuration-guide)
-  - [El perfil de configuración Mixed Reality Toolkit principal](#the-main-mixed-reality-toolkit-configuration-profile)
+  - [Perfil de configuración Mixed Reality Toolkit principal](#the-main-mixed-reality-toolkit-configuration-profile)
   - [Configuración de la experiencia](#experience-settings)
   - [Configuración de la cámara](#camera-settings)
   - [Configuración del sistema de entrada](#input-system-settings)
@@ -55,7 +55,7 @@ Desde aquí puede navegar a todos los perfiles de configuración de MRTK, inclui
   - [Configuración de servicios adicionales](#additional-services-settings)
   - [Configuración de acciones de entrada](#input-actions-settings)
   - [Reglas de acciones de entrada](#input-actions-rules)
-  - [Configuración del puntero](#pointer-configuration)
+  - [Configuración de puntero](#pointer-configuration)
   - [Configuración de gestos](#gestures-configuration)
   - [Comandos de voz](#speech-commands)
   - [Configuración de asignación de controladores](#controller-mapping-configuration)
@@ -75,7 +75,7 @@ Estos perfiles de configuración se detallan a continuación en sus secciones pe
 
 ## <a name="experience-settings"></a>Configuración de la experiencia
 
-Ubicado en la página Mixed Reality Toolkit configuración principal, esta configuración define la operación predeterminada de la escala de Mixed Reality [de entorno](/windows/mixed-reality/coordinate-systems-in-unity) para el proyecto.
+Ubicado en la página Mixed Reality Toolkit configuración principal, esta configuración define la operación predeterminada de la escala de Mixed Reality [del](/windows/mixed-reality/coordinate-systems-in-unity) proyecto.
 
 <img src="../features/images/mixed-reality-toolkit-configuration-profile-screens/MRTK_ExperienceSettings.png" width="650px" alt="Experiance settings" style="display:block;">
 
@@ -97,7 +97,7 @@ El Mixed Reality Project proporciona un sistema de entrada sólido y bien entren
 
 <img src="../features/images/mixed-reality-toolkit-configuration-profile-screens/MRTK_InputSystemSelection.png" width="650px" alt="Input System settings 1" style="display:block;">
 
-Detrás del sistema de entrada proporcionado por MRTK hay otros sistemas, que ayudan a impulsar y administrar las complejas intercalaciones necesarias para abstraer las complejidades de un marco de trabajo de realidad mixta o multiplataforma.
+Detrás del sistema de entrada proporcionado por MRTK hay otros sistemas, que ayudan a impulsar y administrar las complejas intercalaciones necesarias para abstraer las complejidades de un marco multiplataforma o de realidad mixta.
 
 <img src="../features/images/mixed-reality-toolkit-configuration-profile-screens/MRTK_InputSystemProfile.png" width="650px" alt="Input System settings 2" style="display:block;">
 
@@ -106,7 +106,7 @@ Cada uno de los perfiles individuales se detalla a continuación:
 - Enfoque Configuración
 - [Configuración de acciones de entrada](#input-actions-settings)
 - [Reglas de acciones de entrada](#input-actions-rules)
-- [Configuración del puntero](#pointer-configuration)
+- [Configuración de puntero](#pointer-configuration)
 - [Configuración de gestos](#gestures-configuration)
 - [Comandos de voz](#speech-commands)
 - [Configuración de asignación de controladores](#controller-mapping-configuration)
@@ -117,7 +117,7 @@ Cada uno de los perfiles individuales se detalla a continuación:
 
 ## <a name="boundary-visualization-settings"></a>Configuración de visualización de límites
 
-El sistema de límites traduce el límite percibido notificado por el sistema de protección o límite de las plataformas subyacentes. La configuración del visualizador de límites le ofrece la capacidad de mostrar automáticamente el límite registrado dentro de la escena con respecto a la posición del usuario. El límite también reaccionará o actualizará en función de dónde se teleporte el usuario dentro de la escena.
+El sistema de límites traduce el límite percibido notificado por el sistema de protección o límite de las plataformas subyacentes. La configuración del visualizador de límites le ofrece la capacidad de mostrar automáticamente el límite registrado dentro de la escena en relación con la posición del usuario. El límite también reaccionará o actualizará en función de dónde se teleporte el usuario dentro de la escena.
 
 <img src="../features/images/mixed-reality-toolkit-configuration-profile-screens/MRTK_BoundaryVisualizationProfile.png" width="650px" alt="Boundry Visualization Settings" style="display:block;">
 
@@ -135,11 +135,11 @@ El Mixed Reality Project proporciona un sistema de teleportación completo para 
 
 ## <a name="spatial-awareness-settings"></a>Configuración de reconocimiento espacial
 
-El Mixed Reality Project proporciona un sistema de reconocimiento espacial creado para trabajar con sistemas de análisis espacial en el proyecto que está seleccionado de forma predeterminada.
+El Mixed Reality Project proporciona un sistema de reconocimiento espacial creado para trabajar con sistemas de examen espacial en el proyecto que está seleccionado de forma predeterminada.
 
 <img src="../features/images/mixed-reality-toolkit-configuration-profile-screens/MRTK_SpatialAwarenessSystemSelection.png" width="650px" alt="Spatial Awareness settings 1" style="display:block;">
 
-La Mixed Reality Toolkit de reconocimiento espacial permite adaptar cómo se inicia el sistema, ya sea automáticamente cuando se inicia la aplicación o posterior mediante programación, así como establecer las extensiones para el campo de vista.
+La Mixed Reality Toolkit de reconocimiento espacial le permite adaptar cómo se inicia el sistema, ya sea automáticamente cuando se inicia la aplicación o posterior mediante programación, así como establecer las extensiones para el campo de vista.
 
 También le permite configurar la malla y la superficie, personalizando aún más cómo el proyecto entiende el entorno que le rodea.
 
@@ -165,7 +165,7 @@ El perfil de diagnóstico proporciona varios sistemas sencillos para supervisar 
 
 ## <a name="scene-system-settings"></a>Configuración del sistema de escena
 
-MRTK proporciona este servicio opcional para ayudarle a administrar la carga y descarga complejas de la escena aditiva. Para decidir si scene system sería una buena opción para el proyecto, lea scene system Tareas iniciales Guide (Guía de configuración [del sistema de escena).](../features/scene-system/scene-system-getting-started.md)
+MRTK proporciona este servicio opcional para ayudarle a administrar la carga y descarga complejas de la escena de adición. Para decidir si scene system sería una buena opción para el proyecto, lea scene system Tareas iniciales Guide (Guía de configuración [del sistema de Tareas iniciales escena).](../features/scene-system/scene-system-getting-started.md)
 
 <img src="../features/images/mixed-reality-toolkit-configuration-profile-screens/MRTK_SceneSystemProfile.png" width="650px" alt="Scene System settings 1" style="display:block;">
 
@@ -174,9 +174,9 @@ MRTK proporciona este servicio opcional para ayudarle a administrar la carga y d
 
 ## <a name="additional-services-settings"></a>Configuración de servicios adicionales
 
-Una de las áreas más avanzadas de [](https://en.wikipedia.org/wiki/Service_locator_pattern) la Mixed Reality Toolkit es su implementación del patrón de localizador de servicios, que permite el registro de cualquier "servicio" con el marco. Esto permite ampliar el marco con nuevas características o sistemas fácilmente, pero también permite que los proyectos aprovechen estas funcionalidades para registrar sus propios componentes en tiempo de ejecución.
+Una de las áreas más avanzadas de [](https://en.wikipedia.org/wiki/Service_locator_pattern) la Mixed Reality Toolkit es su implementación del patrón de localizador de servicios que permite el registro de cualquier "servicio" con el marco. Esto permite ampliar el marco con nuevas características o sistemas fácilmente, pero también permite que los proyectos aprovechen estas funcionalidades para registrar sus propios componentes en tiempo de ejecución.
 
-Cualquier servicio registrado sigue aprovechando al máximo todos los eventos de Unity, sin la sobrecarga y el costo de implementar patrones monobehaviour o singleton desordenados. Esto permite componentes de C# puros sin sobrecarga de escena para ejecutar procesos en primer plano y en segundo plano, por ejemplo, sistemas de generación, lógica de juego en tiempo de ejecución o prácticamente cualquier otra cosa.
+Cualquier servicio registrado sigue aprovechando al máximo todos los eventos de Unity, sin la sobrecarga y el costo de implementar patrones monobehaviour o singleton desordenados. Esto permite componentes de C# puros sin sobrecarga de escena para ejecutar procesos en primer plano y en segundo plano, por ejemplo, generación de sistemas, lógica de juego en tiempo de ejecución o prácticamente cualquier otra cosa.
 
 <img src="../features/images/mixed-reality-toolkit-configuration-profile-screens/MRTK_RegisteredServiceProvidersProfile.png" width="650px" alt="additional System settings" style="display:block;">
 
@@ -185,14 +185,14 @@ Cualquier servicio registrado sigue aprovechando al máximo todos los eventos de
 
 ## <a name="input-actions-settings"></a>Configuración de acciones de entrada
 
-Las acciones de entrada proporcionan una manera de abstraer las interacciones físicas y las entradas de un proyecto en tiempo de ejecución. Toda la entrada física (de controladores, manos, mouse, etc.) se traduce en una acción de entrada lógica para su uso en el proyecto en tiempo de ejecución. Esto garantiza que, independientemente de dónde procede la entrada, el proyecto simplemente implementa estas acciones como "Cosas que hacer" o "Interactuar con" en las escenas.
+Las acciones de entrada proporcionan una manera de abstraer las interacciones físicas y las entradas de un proyecto en tiempo de ejecución. Toda la entrada física (de controladores, manos, mouse, etc.) se traduce en una acción de entrada lógica para su uso en el proyecto en tiempo de ejecución. Esto garantiza que, independientemente de dónde procede la entrada, el proyecto simplemente implementa estas acciones como "Cosas que hacer" o "Interactuar con" en sus escenas.
 
 Para crear una nueva acción de entrada, simplemente haga clic en el botón "Agregar una nueva acción" y escriba un nombre de texto descriptivo para lo que representa. A continuación, solo necesita seleccionar un eje (el tipo de datos) que la acción está pensada para transmitir, o en el caso de los controladores físicos, el tipo de entrada física al que se puede adjuntar, por ejemplo:
 
 | Restricción de eje | Tipo de datos | Descripción | Ejemplo de uso |
 | :--- | :--- | :--- | :--- |
-| Ninguno | Sin datos | Se usa para una acción o un evento vacíos | Desencadenador de eventos |
-| Sin procesar (reservado) | object | Reservado para uso futuro | N/D |
+| Ninguno | Sin datos | Se usa para una acción o un evento vacíos. | Desencadenador de eventos |
+| Sin procesar (reservado) | objeto | Reservado para uso futuro | N/D |
 | Digital | bool | Datos de tipo booleanos on o off | Un botón de controlador |
 | Eje único | FLOAT | Un valor de datos de precisión única | Una entrada de intervalo, por ejemplo, un desencadenador |
 | Eje dual | Vector2 | Una fecha de tipo float dual para varios ejes | Un Dpad o thumbstick |
@@ -216,7 +216,7 @@ Las reglas de acción de entrada proporcionan una manera de traducir automática
 
 Por ejemplo, convertir el evento de entrada de eje dual único de un DPad en las 4 acciones "Dpad Up" / "DPad Down" / "Dpad Left" / "Dpad Right" correspondientes (como se muestra en la imagen siguiente).
 
-Esto también se puede hacer en su propio código. Sin embargo, al ver que se trata de un patrón muy común, el marco proporciona un mecanismo para hacerlo de forma "lista para usar".
+Esto también se puede hacer en su propio código. Sin embargo, al ver que se trata de un patrón muy común, el marco proporciona un mecanismo para hacerlo "de forma lista".
 
 Las reglas de acción de entrada se pueden configurar para cualquiera de los ejes de entrada disponibles. Sin embargo, las acciones de entrada de un tipo de eje se pueden traducir a otra acción de entrada del mismo tipo de eje. Puede asignar una acción de eje dual a otra acción de eje dual, pero no a una acción digital o ninguna.
 
@@ -264,7 +264,7 @@ Al igual que los gestos, algunas plataformas en tiempo de ejecución también pr
 2. Comandos de voz: registra "palabras" y las traduce en a acciones de entrada que el proyecto puede recibir. También se pueden adjuntar a las acciones del teclado si es necesario.
 
 > [!IMPORTANT]
-> Actualmente, el sistema solo admite voz cuando se ejecuta en plataformas de Windows 10, por ejemplo, un escritorio de HoloLens y Windows 10, y se mejorará para otros sistemas a medida que se agregan a MRTK en el futuro (aún no hay fechas).
+> Actualmente, el sistema solo admite voz cuando se ejecuta en plataformas de Windows 10, por ejemplo, escritorio de HoloLens y Windows 10, y se mejorará para otros sistemas a medida que se agregan a MRTK en el futuro (aún no hay fechas).
 
 <img src="../features/images/mixed-reality-toolkit-configuration-profile-screens/MRTK_SpeechCommandsProfile.png" width="650px" alt="Configuration Profile screens" style="display:block;">
 
@@ -286,7 +286,7 @@ MRTK proporciona una configuración predeterminada para los siguientes controlad
 - Mandos de Xbox
 - Windows Mixed Reality controladores
 - HoloLens Gestos
-- CONTROLADORES DE WAND DE LA WAND DE SES VIVE
+- CONTROLADORES DE WAND DE LA WAND DE LA PROGRAMACIÓN
 - Controladores táctiles de Oculus
 - Controlador remoto de Oculus
 - Dispositivos OpenVR genéricos (solo usuarios avanzados)
@@ -308,7 +308,7 @@ Esto se puede configurar en un "Global" (todas las instancias de un controlador 
 
 MRTK también admite modelos de controlador de SDK nativos para Windows Mixed Reality y OpenVR. Se cargan como GameObjects en la escena y se posicionan mediante el seguimiento del controlador de la plataforma.
 
-Si la representación del controlador en la escena debe desplazarse desde la posición del controlador físico, simplemente establezca ese desplazamiento con respecto al elemento prefab del modelo del controlador (por ejemplo, establecer la posición de transformación del prefab del controlador con una posición de desplazamiento).
+Si la representación del controlador en la escena debe desplazarse desde la posición del controlador físico, simplemente establezca ese desplazamiento con respecto al prefab del modelo de controlador (por ejemplo, establecer la posición de transformación del prefab del controlador con una posición de desplazamiento).
 
 <img src="../features/images/mixed-reality-toolkit-configuration-profile-screens/MRTK_ControllerVisualizationProfile.png" width="650px" alt="Visualization profile" style="display:block;">
 
@@ -346,7 +346,7 @@ Es posible actualizar perfiles en tiempo de ejecución y, por lo general, hay do
 
 ### <a name="pre-mrtk-initialization-profile-switch"></a>Modificador de perfil de inicialización de MRTK anterior
 
-Esto se puede lograr adjuntando un monobehaviour (ejemplo siguiente) que se ejecuta antes de la inicialización de MRTK (es decir, con el estado Activo()). Tenga en cuenta que el script (es decir, llamar a ) debe ejecutarse antes que el script, lo que se puede lograr estableciendo la configuración del orden `SetProfileBeforeInitialization` `MixedRealityToolkit` de ejecución del [script.](https://docs.unity3d.com/Manual/class-MonoManager.html)
+Esto se puede lograr asociando un monobehaviour (ejemplo siguiente) que se ejecuta antes de la inicialización de MRTK (es decir, con El activo()). Tenga en cuenta que el script (es decir, llamar a ) debe ejecutarse antes que el script, lo que se puede lograr estableciendo la configuración del orden `SetProfileBeforeInitialization` `MixedRealityToolkit` de ejecución del [script.](https://docs.unity3d.com/Manual/class-MonoManager.html)
 
 ```csharp
 using Microsoft.MixedReality.Toolkit;
@@ -387,9 +387,9 @@ Esto se puede lograr estableciendo la `MixedRealityToolkit.Instance.ActiveProfil
 MixedRealityToolkit.Instance.ActiveProfile = profileToUse;
 ```
 
-Tenga en cuenta que, al establecer durante el tiempo de ejecución, la destrucción de los servicios en ejecución se realizará después de la última lateupdate() de todos los servicios y la creación de instancias e inicialización de los servicios asociados con el nuevo perfil se realizará antes de la primera update() de todos los `ActiveProfile` servicios.
+Tenga en cuenta que al establecer durante el tiempo de ejecución, la destrucción de los servicios en ejecución se realizará después de la última lateupdate() de todos los servicios y la creación de instancias e inicialización de los servicios asociados con el nuevo perfil se realizará antes de la primera Actualización() de todos los `ActiveProfile` servicios.
 
-Durante este proceso puede producirse una indeseación apreciable en la aplicación. Además, cualquier script con mayor prioridad que el script puede escribir su actualización antes de `MixedRealityToolkit` que el nuevo perfil se configure correctamente. Consulte [Configuración del orden de ejecución del script](https://docs.unity3d.com/Manual/class-MonoManager.html) para obtener más información sobre la prioridad del script.
+Durante este proceso puede producirse un error apreciable en la aplicación. Además, cualquier script con mayor prioridad que el script puede escribir su actualización antes de `MixedRealityToolkit` que el nuevo perfil se configure correctamente. Consulte [Configuración del orden de ejecución del script](https://docs.unity3d.com/Manual/class-MonoManager.html) para obtener más información sobre la prioridad del script.
 
 En el proceso de cambio de perfil, la cámara de interfaz de usuario existente permanecerá sin cambios, lo que garantiza que los componentes de la interfaz de usuario de Unity que requieren lienzo sigan funcionando después del cambio.
 
