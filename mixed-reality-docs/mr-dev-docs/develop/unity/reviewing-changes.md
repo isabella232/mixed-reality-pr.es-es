@@ -7,12 +7,12 @@ ms.date: 03/04/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: up-to-date, tools, get started, basics, unity, visual studio, toolkit, mixed reality headset, windows mixed reality headset, virtual reality headset, installation, Windows, HoloLens, emulator, unreal, openxr
-ms.openlocfilehash: db7ae079e19c7739f57f0b9e4a375a3e6f9a3cdd
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 67c3b0cd5dbfcc2d0858a098aa3c80f4a8105c5637d26b4e33268d4b830b218e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102230793"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115211759"
 ---
 # <a name="authorizing-project-changes"></a>Autorización de cambios en el proyecto
 

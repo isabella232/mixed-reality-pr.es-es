@@ -5,51 +5,51 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 10/26/2020
 ms.topic: article
-keywords: Windows Mixed Reality, Maquette, prototipo, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
-ms.openlocfilehash: 43a5c465fcc546a09444396cbcaefa6b65e08de4
-ms.sourcegitcommit: fae413a2b0420e787671af90f14ee39cde51640f
+keywords: Windows Mixed Reality, Maquette, creación de prototipos, Mixed Reality, Virtual Reality, VR, MR, Feedback, Centro de opiniones, bugs
+ms.openlocfilehash: 9e91a1cefccb15fd5c454f981c4959748ff4d63ee277da85f21a4e5043a9bf07
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94935592"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115196253"
 ---
 # <a name="support"></a>Soporte técnico
 
-![Logotipo](../images/MaquetteIcon.png) Compatibilidad con el script Maquette
+![Logotipo](../images/MaquetteIcon.png) Compatibilidad con scripts de Maquette
 
 ## <a name="support"></a>Soporte técnico
 
 Vínculos de referencia a:
 * Información general
-* Idioma principal
+* Core Language
 * Referencia de API
   * Objetos
   * Configuración
 * Elementos de interfaz de usuario
 * Interactividad
-* Modelo para extender elementos de la interfaz de usuario, pinceles, etc.
+* Modelo para la extensión: elementos de la interfaz de usuario, pinceles, etc.
 
 ## <a name="tutorials"></a>Tutoriales
 
-Ejemplos que muestran cómo funcionan los scripts: céntrese en cómo realizar operaciones específicas.
+Ejemplos que muestran cómo funciona el scripting: céntrate en cómo realizar operaciones específicas
 * Ejemplo de característica 1
 * Ejemplo de característica 2
 * Ejemplo de característica 3
 * Ejemplo de característica 4
-* Crear cuadro de diálogo desde el script
+* Crear cuadro de diálogo a partir de script
 * Hoja de propiedades de JSON
-* Acceso a JSON Web
+* Acceso a JSON web
 * Datos de Excel
 
 Ejemplos completos
-* Tres en raya
+* Tic Tac Toe
 * Tetris
 
-## <a name="maquette-community"></a>Comunidad de Maquette
+## <a name="maquette-community"></a>Maquette Community
 
 * [Foros de Maquette](https://steamcommunity.com/app/967490/discussions/)
-* Foros de scripting de Maquette: sección TBD-necesita el foro
-* ¿La base de datos de errores expone? necesita vínculo
+* Foro de scripting de Maquette: TBD: necesita sección del foro
+* Base de datos de errores: ¿exponer? need link
 * [YouTube](https://www.youtube.com/channel/UC3LL920zxSo16CmmmVCntxw)
 * [Twitter](https://twitter.com/MadeInMaquette)
 * [Instagram](https://www.instagram.com/microsoftmaquette/)
@@ -58,16 +58,16 @@ Ejemplos completos
 ## <a name="faq"></a>Preguntas más frecuentes
 
 * JS frente a MQJS
-  * ¿Qué puedo incluir/incorporar en MQJS? ¿Node.js? otros?
+  * ¿Qué puedo incluir o incorporar en MQJS? Node.js? ¿Etc?
   * ¿Alguna biblioteca?
-  * ¿Qué ocurre con los tiempos de ejecución del lenguaje? ¿Forman parte de JS como funciones matemáticas o de cadena?
-  * Dom? (No)
-* Rendimiento? (se habla de todo esto?)
-* Generación de perfiles (no)
-* Registro (stdin, stdout, Console, todo lo demás?)
-* Vínculo/referencia de Jint
+  * ¿Qué sucede con los entornos de ejecución de lenguaje? ¿Son parte de JS como funciones matemáticas o de cadena?
+  * ¿Dom? (No)
+* ¿Perf? (¿Se dice algo al respecto?)
+* Generación de perfiles (No)
+* Registro (stdin, stdout, console, anything else?)
+* Referencia o vínculo de Jint
 * Dispositivos compatibles
-* Transmisión remota de la aplicación HL (?)
+* Streaming remoto de aplicaciones HL (?)
 
 ## <a name="release-notes"></a>Notas de la versión
 

@@ -8,18 +8,18 @@ ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Tutorial, Introducción
 appliesto:
 - Windows 10
-ms.openlocfilehash: 9210f9bb7dd4c922c0d202ddc114beab60e66de8
-ms.sourcegitcommit: 95fbb851336b6c5977a2ce4d4ac10f0eeb0df31f
+ms.openlocfilehash: f11aa13b3bcbe1f0f1410fe4572436e51d69554b747415986a9a06036d95f64b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2021
-ms.locfileid: "107944736"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115207632"
 ---
 # <a name="learn-mixed-reality"></a>Información sobre Mixed Reality
 
 ## <a name="running-the-learning-experience-for-the-first-time"></a>Ejecución de la experiencia de aprendizaje por primera vez
 
-Después de finalizar la instalación, Portal de realidad mixta aplicación debe iniciar una experiencia inmersiva en el HMD **llamada Descubrir la realidad mixta**. Esta experiencia envolvente le enseñará a usar Windows Mixed Reality. Mire la gema de la pantalla de carga para empezar. Debería escuchar la voz de Cortana en el casco que le da instrucciones sobre qué hacer a continuación.
+Después de finalizar la instalación, Portal de realidad mixta aplicación debe iniciar una experiencia inmersiva en el HMD denominada **Descubrir la realidad mixta**. Esta experiencia envolvente le enseñará a usar Windows Mixed Reality. Mire la gema en la pantalla de carga para empezar. Debería escuchar Cortana voz en el casco que le da instrucciones sobre qué hacer a continuación.
 
 ![Información sobre Mixed Reality](images/file-learnmixedrealitystart.png)
 
@@ -30,20 +30,20 @@ Descubrir la realidad mixta es una aplicación. La aplicación se puede iniciar 
 ### <a name="use-your-motion-controllers"></a>Uso de los controladores de movimiento
 
 1. Presione el botón Windows en el controlador.
-2. Seleccione "Todas las aplicaciones"
+2. Seleccione "Todas las aplicaciones".
 3. Seleccione "Descubrir la realidad mixta"
-4. Coloque la aplicación en su casa para iniciar la aplicación.
+4. Colocación de la aplicación en su casa para iniciar la aplicación
 
 ### <a name="use-your-mouse--keyboard"></a>Uso del teclado & mouse
 
-1. Presione la tecla Windows en el teclado.
-2. Seleccione "Todas las aplicaciones"
+1. Presione la Windows del teclado.
+2. Seleccione "Todas las aplicaciones".
 3. Seleccione "Descubrir la realidad mixta"
-4. Haga clic con el mouse para colocar la aplicación en su casa e iniciar la aplicación.
+4. Haga clic con el botón izquierdo con el mouse para colocar la aplicación en su casa e iniciar la aplicación.
 
-Para obtener más información sobre cómo moverse por la realidad mixta con controladores de movimiento, revise los [controladores de movimiento en Mixed Reality](controllers-in-wmr.md)
+Para obtener más información sobre cómo moverse por la realidad mixta con controladores de movimiento, revise los controladores [de movimiento en Mixed Reality](controllers-in-wmr.md)
 
-## <a name="use-voice-commands-and-cortana-inside-of-the-windows-mixed-reality-home"></a>Uso de comandos de voz y Cortana dentro del Windows Mixed Reality inicio
+## <a name="use-voice-commands-and-cortana-inside-of-the-windows-mixed-reality-home"></a>Uso de comandos de voz y Cortana dentro de la Windows Mixed Reality inicio
 
 [Obtenga información sobre los comandos de voz que puede usar en Windows Mixed Reality inicio](https://support.microsoft.com/help/4041322/windows-10-speech-in-windows-mixed-reality)
 
@@ -51,7 +51,7 @@ Para obtener más información sobre cómo moverse por la realidad mixta con con
 
 Simplemente presione el **icono Reproducir** en la parte inferior de la Portal de realidad mixta aplicación.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Solución de problemas de instalación](installation_errors.md)
 * [Solución de problemas de configuración](wmr-setup-faq.yml)

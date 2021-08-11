@@ -5,13 +5,13 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Mixed Reality, controles, interacción, interfaz de usuario, experiencia de usuario, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, kit de herramientas de Mixed Reality, magnetismo de superficie
-ms.openlocfilehash: 4afed1ff9a1e8a7cb46f4810ac388739bca1b19e
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: Mixed Reality, controles, interacción, interfaz de usuario, experiencia de usuario, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit, magnetismo de superficie
+ms.openlocfilehash: c3f1a390d6abe259c9cb825a41f757809c85c9565a1280cf82d8badc262cbf30
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600624"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115196251"
 ---
 # <a name="surface-magnetism"></a>Magnetismo de superficie
 
@@ -34,7 +34,7 @@ El magnetismo de superficie le permite colocar objetos holográficos en superfic
 
 ---
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)

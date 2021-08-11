@@ -5,12 +5,12 @@ author: cDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, punteros, controladores
-ms.openlocfilehash: b3e4438c1318abbc60606bcbca42854edae28167
-ms.sourcegitcommit: 8b4c2b1aac83bc8adf46acfd92b564f899ef7735
+ms.openlocfilehash: 00bc0641182c566b045f959dfa361e1311b3cd224fc998f154010ad2996679ae
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/30/2021
-ms.locfileid: "113121623"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115196295"
 ---
 # <a name="controllers-pointers-and-focus"></a>Controladores, punteros y foco
 
@@ -20,7 +20,7 @@ Los controladores, los punteros y el foco son conceptos de nivel superior que se
 
 Los controladores son representaciones de un controlador físico (6 grados de libertad, mano articulada, etc.). Los administradores de dispositivos los crean y son responsables de comunicarse con el sistema subyacente correspondiente y traducirlos en datos y eventos con forma de MRTK.
 
-Por ejemplo, en la plataforma Windows Mixed Reality, es un controlador responsable de la interacción con las API de seguimiento de manos subyacentes de Windows para obtener información sobre las uniones, la posición y otras propiedades de la [`WindowsMixedRealityArticulatedHand`](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand) mano. [](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) Es responsable de convertir estos datos en eventos DE MRTK pertinentes (por ejemplo, llamando a RaisePoseInputChanged o RaiseHandJointsUpdated) y actualizando su propio estado interno para que las consultas de devuelvan los datos [`TryGetJointPose`](xref:Microsoft.MixedReality.Toolkit.Input.HandJointUtils.TryGetJointPose%2A) correctos.
+Por ejemplo, en la plataforma Windows Mixed Reality, es un controlador responsable de la interacción con las API de seguimiento manual de Windows subyacentes para obtener información sobre las uniones, la posición y otras propiedades de la [`WindowsMixedRealityArticulatedHand`](xref:Microsoft.MixedReality.Toolkit.WindowsMixedReality.Input.WindowsMixedRealityArticulatedHand) mano. [](/uwp/api/windows.ui.input.spatial.spatialinteractionsourcestate) Es responsable de convertir estos datos en eventos DE MRTK pertinentes (por ejemplo, llamando a RaisePoseInputChanged o RaiseHandJointsUpdated) y actualizando su propio estado interno para que las consultas para devuelvan los datos [`TryGetJointPose`](xref:Microsoft.MixedReality.Toolkit.Input.HandJointUtils.TryGetJointPose%2A) correctos.
 
 Por lo general, el ciclo de vida de un controlador implicará:
 
@@ -56,7 +56,7 @@ Dado que un solo controlador puede tener varios punteros (por ejemplo, la mano a
 
 Por ejemplo, a medida que la mano del usuario se acerca a un botón que se puede presionar, debe dejar de mostrarse y debe [`ShellHandRayPointer`](xref:Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer) [`PokePointer`](xref:Microsoft.MixedReality.Toolkit.Input.PokePointer) estar activado.
 
-Esto se controla mediante , que es responsable de determinar qué punteros están activos, en función del [`DefaultPointerMediator`](xref:Microsoft.MixedReality.Toolkit.Input.DefaultPointerMediator) estado de todos los punteros. Una de las cosas clave que esto hace es deshabilitar punteros lejanos cuando un puntero cercano está cerca de un objeto (consulte [`DefaultPointerMediator`](xref:Microsoft.MixedReality.Toolkit.Input.DefaultPointerMediator) ).
+Esto se controla mediante , que es responsable de determinar qué punteros están activos, en función del [`DefaultPointerMediator`](xref:Microsoft.MixedReality.Toolkit.Input.DefaultPointerMediator) estado de todos los punteros. Una de las cosas clave que esto hace es deshabilitar punteros lejanos cuando un puntero cercano está cerca de un objeto (vea [`DefaultPointerMediator`](xref:Microsoft.MixedReality.Toolkit.Input.DefaultPointerMediator) ).
 
 Es posible proporcionar una implementación alternativa del mediador de puntero cambiando la [`PointerMediator`](xref:Microsoft.MixedReality.Toolkit.Input.MixedRealityPointerProfile.PointerMediator) propiedad en el perfil de puntero.
 
@@ -89,7 +89,7 @@ El código siguiente forzará la activación de los rayos de mano, independiente
 PointerUtils.SetHandRayPointerBehavior(PointerBehavior.AlwaysOn);
 ```
 
-Vea [`PointerUtils`](xref:Microsoft.MixedReality.Toolkit.Input.PointerUtils) y para obtener más [`TurnPointersOnOff`](xref:Microsoft.MixedReality.Toolkit.Examples.Demos.DisablePointersExample) ejemplos.
+Consulte [`PointerUtils`](xref:Microsoft.MixedReality.Toolkit.Input.PointerUtils) y para obtener más [`TurnPointersOnOff`](xref:Microsoft.MixedReality.Toolkit.Examples.Demos.DisablePointersExample) ejemplos.
 
 ### <a name="focusprovider"></a>FocusProvider
 

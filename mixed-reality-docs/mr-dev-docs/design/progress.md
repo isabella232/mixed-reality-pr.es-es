@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, controles, interfaz de usuario, experiencia de usuario, indicador de progreso, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: 01f032efb887ecfc6f8d66683fb954cd0574a4f3
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+ms.openlocfilehash: 8d397f627b55409d640ac6925a72d6bf169e207c27cb2a90bcee990c7a8d7683
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600554"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115207889"
 ---
 # <a name="progress-indicator"></a>Indicador de progreso
 
@@ -32,9 +32,9 @@ Es importante proporcionar al usuario información sobre lo que sucede. En reali
 :::row:::
     :::column:::
         ### <a name="progress-barbr"></a>Barra de progreso<br>
-        Una barra progreso muestra el porcentaje completado de una tarea. Debe usarse durante una operación cuya duración se conoce (determinada), pero su progreso no debe bloquear la interacción del usuario con la aplicación.<br>
+        Una barra progreso muestra el porcentaje completado de una tarea. Debe usarse durante una operación cuya duración se conoce (determina), pero su progreso no debe bloquear la interacción del usuario con la aplicación.<br>
         <br>
-        *Imagen: Ejemplo de barra de progreso en HoloLens*
+        *Imagen: ejemplo de barra de progreso en HoloLens*
     :::column-end:::
         :::column:::
         ![space](images/spacer-20x582.png)<br>
@@ -55,7 +55,7 @@ Es importante proporcionar al usuario información sobre lo que sucede. En reali
     :::column-end:::
         :::column:::
         ![space](images/spacer-20x582.png)<br>
-       ![Ejemplo de anillo de progreso en un dispositivo HoloLens](images/640px-progressring.jpg)<br>
+       ![Ejemplo de anillo de progreso en HoloLens dispositivo](images/640px-progressring.jpg)<br>
     :::column-end:::
 :::row-end:::
 
@@ -83,7 +83,7 @@ Es importante proporcionar al usuario información sobre lo que sucede. En reali
 ## <a name="best-practices"></a>Procedimientos recomendados
 
 * Ajuste estrechamente [el formato o](billboarding-and-tag-along.md) la etiqueta junto a la presentación de Progreso, ya que el usuario puede mover fácilmente la cabeza a un espacio vacío y perder el contexto. Es posible que la aplicación parezca que se ha bloqueado si el usuario no puede ver nada. La marcación y la etiqueta se han integrado en el prefab Progreso.
-* Siempre es bueno proporcionar información de estado sobre lo que sucede al usuario. El objeto prefab Progreso proporciona varios estilos visuales, incluido el progreso de tipo de anillo estándar de Windows para proporcionar el estado. También puede usar una malla personalizada con una animación si desea que el estilo del progreso se alinee con la marca de la aplicación.
+* Siempre es bueno proporcionar información de estado sobre lo que sucede al usuario. El objeto prefab Progreso proporciona varios estilos visuales, incluido el Windows de tipo de anillo estándar para proporcionar el estado. También puede usar una malla personalizada con una animación si desea que el estilo del progreso se alinee con la marca de la aplicación.
 
 <br>
 
@@ -99,7 +99,7 @@ Es importante proporcionar al usuario información sobre lo que sucede. En reali
 
 ---
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)

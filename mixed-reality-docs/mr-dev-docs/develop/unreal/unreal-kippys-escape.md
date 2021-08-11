@@ -8,17 +8,17 @@ ms.topic: article
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, deploy to device, PC, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: 353df2f2f5bc9a1d70fc354fd3014f10c0ba95d9
-ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
+ms.openlocfilehash: 96799de948cf9e1cbca89b7e781f3f830fbc005810680d1164d04acb757b1a09
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "114757122"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115208228"
 ---
 # <a name="the-making-of-kippys-escape"></a>La realización de Escape de Asínpy
 ![Imagen de escape de Escape hero dePy](images/KippysEscape_1920.jpg)
 
-Py el robot se reactiva para encontrarse en una isla. Depende de usted ponerse en su casco de solución de problemas para ayudarle a encontrar un camino de vuelta a su cohete. Sujete el HoloLens 2 [](https://www.microsoft.com/p/kippys-escape/9nbd7gl86vkd) y descargue la aplicación desde la [](https://github.com/microsoft/MixedReality-Unreal-KippysEscape) Microsoft Store o clone el repositorio desde GitHub y haga que El hogar dePy sea seguro.  
+Py el robot se reactiva para encontrarse en una isla. Depende de usted ponerse en su casco de solución de problemas para ayudarle a encontrar un camino de vuelta a su cohete. Sujete el HoloLens 2 [](https://www.microsoft.com/p/kippys-escape/9nbd7gl86vkd) y descargue la aplicación desde la [](https://github.com/microsoft/MixedReality-Unreal-KippysEscape) Microsoft Store o clone el repositorio desde GitHub y obtenga la seguridad de Home Home de Clonepy.  
 
 > [!IMPORTANT]
 > Asegúrese de que usa **Unreal Engine 4.25** o una versión posterior si va a compilar Escape de Asínpy desde el repositorio de GitHub.
@@ -33,7 +33,7 @@ Si tiene un HoloLens 2, puede descargar e instalar directamente la aplicación e
 
 ## <a name="first-principles"></a>Primeros principios 
 
-Al establecer la creación de escape de Finpy, nuestro objetivo era crear una experiencia que resaltara la compatibilidad con HoloLens 2 de [Unreal Engine,](https://docs.unrealengine.com/Platforms/AR/HoloLens2/index.html)las funcionalidades de HoloLens 2 y la Mixed Reality Toolkit. Queríamos inspirar a los desarrolladores a imaginar lo que podían crear con Unreal y HoloLens 2.  
+Al establecer la creación de Escape de Asínpy, nuestro objetivo era crear una experiencia que resaltara la compatibilidad con HoloLens 2 de [Unreal Engine,](https://docs.unrealengine.com/Platforms/AR/HoloLens2/index.html)las funcionalidades de HoloLens 2 y la Mixed Reality Toolkit. Queríamos inspirar a los desarrolladores a imaginar lo que podían crear con Unreal y HoloLens 2.  
 
 Se han ideado tres principios rectores para la experiencia: que era necesario ser divertido, interactivo y tener una barrera baja para la entrada. Queríamos que la experiencia fuera lo suficientemente intuitiva como para que incluso un usuario de realidad mixta por primera vez no necesite un tutorial para realizarla.  
 
@@ -89,9 +89,9 @@ Aparece [un](https://microsoft.github.io/MixedReality-UXTools-Unreal/Docs/PinchS
 
 ## <a name="optimizing-for-hololens-2"></a>Optimización para HoloLens 2 
 
-Con cualquier experiencia creada para ejecutarse en un dispositivo móvil, es fundamental estar atento al rendimiento. Unreal 4.25 incluye una actualización importante para admitir la vista múltiple móvil, lo que reduce significativamente la sobrecarga de representación y aumenta la velocidad de fotogramas. Se recomienda consultar la otra configuración [de rendimiento recomendada](performance-recommendations-for-unreal.md) para HoloLens 2 desarrollo con Unreal al optimizar.  
+Con cualquier experiencia creada para ejecutarse en un dispositivo móvil, es fundamental estar atento al rendimiento. Unreal 4.25 incluye una actualización importante para admitir la vista múltiple móvil, lo que reduce significativamente la sobrecarga de representación y aumenta la velocidad de fotogramas. Se recomienda consultar la otra configuración de [rendimiento recomendada](performance-recommendations-for-unreal.md) para HoloLens 2 desarrollo con Unreal al optimizar.  
 
-Los objetos físicos siguen siendo costosos para el rendimiento, por lo que se usaron un par de soluciones alternativas inteligentes. Por ejemplo, el tercer "puente" requiere la acumulación de algunos bloqueos que bloquean el sitio. En lugar de tener una fuerza que afecta a los rayos como objetos físicos, la detonación de la bomba desencadena un intercambio, cambiando la estática por un efecto de partícula en expansión. 
+Los objetos físicos siguen siendo costosos para el rendimiento, por lo que se usaron un par de soluciones alternativas inteligentes. Por ejemplo, el tercer "puente" requiere la acumulación de algunos bloqueos que bloquean el sitio. En lugar de tener una fuerza que afecta a los rayos como objetos físicos, la detonación de la bomba desencadena un intercambio, cambiando el efecto estático de la partícula en expansión. 
 
 ![Ejemplo optimizado para HoloLens 2 gif](images/kippys-escape/kippys-escape-img-10.gif) 
 
@@ -104,7 +104,7 @@ Aunque es probable que haya más cosas que podríamos haber hecho, creemos que e
 
 ## <a name="try-it-out"></a>Haga la prueba 
 
-Arranque el HoloLens 2 y [](https://www.microsoft.com/p/kippys-escape/9nbd7gl86vkd) descargue la aplicación desde el Microsoft Store, [](https://github.com/microsoft/MixedReality-Unreal-KippysEscape) o bien clone el repositorio desde GitHub y compile la aplicación usted mismo.  
+Arranque el HoloLens 2 y [](https://www.microsoft.com/p/kippys-escape/9nbd7gl86vkd) descargue la aplicación desde el Microsoft Store, [](https://github.com/microsoft/MixedReality-Unreal-KippysEscape) o clone el repositorio desde GitHub y compile la aplicación usted mismo.  
 
 ## <a name="about-the-team"></a>Acerca del equipo
 

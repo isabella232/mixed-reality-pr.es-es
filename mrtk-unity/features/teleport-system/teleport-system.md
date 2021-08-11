@@ -1,18 +1,18 @@
 ---
-title: Teleport system
+title: Sistema de teletransporte
 description: Información general sobre cómo habilitar y deshabilitar el sistema teleport en MRTK
 author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, teleport system,
-ms.openlocfilehash: 7a49b1fea36eb1809c57abee4cede1216c07d5bf
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: c46438ed30880029760b5155efb3e3cd1d571c81a03bfbf764b2010e2e232c53
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176180"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115197054"
 ---
-# <a name="teleport-system"></a>Teleport system
+# <a name="teleport-system"></a>Sistema de teletransporte
 
 El sistema de teletransporte es un subsistente de MRTK que controla la teleportación del usuario cuando la aplicación usa una pantalla opaca. Para las experiencias de AR (como HoloLens), el sistema de teleportación no está activo. Para las experiencias de HMD envolventes (OpenVR, WMR), se puede habilitar el sistema de teleportado.
 
@@ -35,7 +35,7 @@ void EnableTeleportSystem()
 }
 ```
 
-## <a name="events"></a>Events
+## <a name="events"></a>Eventos
 
 El sistema de teletransporte expone eventos a través de la interfaz para proporcionar señales sobre cuándo comienzan, finalizan o se cancelan [`IMixedRealityTeleportHandler`](xref:Microsoft.MixedReality.Toolkit.Teleport.IMixedRealityTeleportHandler) las acciones de teleport.
 Consulte la documentación de la API vinculada para obtener más detalles sobre la mecánica de los eventos y su carga asociada.
@@ -44,7 +44,7 @@ Consulte la documentación de la API vinculada para obtener más detalles sobre 
 
 ### <a name="how-to-register-for-teleportation-events"></a>Registro de eventos de teleportación
 
-El código siguiente muestra cómo crear un MonoBehaviour que escuchará eventos de teleportación. En este código se da por supuesto que el sistema de teleportado está habilitado.
+El código siguiente muestra cómo crear un MonoBehaviour que escuchará los eventos de teleportación. En este código se da por supuesto que el sistema de teleportado está habilitado.
 
 ```c#
 using Microsoft.MixedReality.Toolkit;

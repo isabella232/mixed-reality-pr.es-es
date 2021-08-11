@@ -6,12 +6,12 @@ ms.author: alexpf
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Windows Mixed Reality, patrones de aplicación, diseño, HoloLens, examen de sala, asignación espacial, malla, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens
-ms.openlocfilehash: 87312a5d5361ac0e8c24a622cf69fe3e9b147ff5
-ms.sourcegitcommit: 8f141a843bcfc57e1b18cc606292186b8ac72641
+ms.openlocfilehash: 0ebfbd9a1f07ffd0671d36dcc63dbd5303a2cdbceb906839be9736f43de76937
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110196410"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115207833"
 ---
 # <a name="room-scan-visualization"></a>Visualización de la exploración de la sala
 
@@ -19,14 +19,14 @@ Las aplicaciones que requieren asignación espacial dependen del dispositivo par
 
 Para garantizar datos útiles de asignación espacial, los desarrolladores de aplicaciones tienen varias opciones:
 * Dependa de lo que ya se haya recopilado. Estos datos pueden estar incompletos inicialmente.
-* Pida al usuario que use el gesto de Bloom para llegar al Windows Mixed Reality inicio y, a continuación, explore el área que desea usar para la experiencia. Pueden usar la pulsación en el aire para confirmar que el dispositivo conoce toda la área necesaria.
+* Pida al usuario que use el gesto de Bloom para llegar al Windows Mixed Reality inicio y, a continuación, explorar el área que desea usar para la experiencia. Pueden usar la pulsación en el aire para confirmar que el dispositivo conoce toda la área necesaria.
 * Cree una experiencia de exploración personalizada en su propia aplicación.
 
-En todos estos casos, el sistema almacena los datos reales recopilados durante la exploración y la aplicación no necesita hacerlo. Si quiere ver la visualización del examen de sala en acción, consulte nuestra demostración de vídeo Diseño de **hologramas:** reconocimiento espacial a continuación:
+En todos estos casos, el sistema almacena los datos reales recopilados durante la exploración y la aplicación no necesita hacerlo. Si desea ver la visualización del examen de sala en acción, consulte la demostración de vídeo **Designing Hologramas - Spatial Awareness** a continuación:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Microsofts-Designing-Holograms-Spatial-Awareness-Chapter/player]
 
-*Este vídeo se tomó de la aplicación "Diseño de hologramas" HoloLens 2 aplicación. Descargue y disfrute de la experiencia [completa aquí.](https://aka.ms/dhapp)*
+*Este vídeo se tomó de la aplicación "Designing Holograms" para HoloLens 2. Descargue y disfrute de la experiencia completa [aquí](https://aka.ms/dhapp).*
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -50,8 +50,8 @@ En todos estos casos, el sistema almacena los datos reales recopilados durante l
 
 ## <a name="building-a-custom-scanning-experience"></a>Creación de una experiencia de análisis personalizada
 
-Las aplicaciones pueden analizar los datos de asignación espacial al principio de la experiencia para determinar si quieren que el usuario realice pasos adicionales para mejorar su integridad y calidad. Si el análisis indica que se debe mejorar la calidad, los desarrolladores deben proporcionar una visualización que se superponga en el mundo para indicar:
-* ¿Cuánto del volumen total en las proximidades de los usuarios debe formar parte de la experiencia?
+Las aplicaciones pueden analizar los datos de asignación espacial al principio de la experiencia para decidir si quieren que el usuario realice pasos adicionales para mejorar su integridad y calidad. Si el análisis indica que se debe mejorar la calidad, los desarrolladores deben proporcionar una visualización para superponer en el mundo para indicar:
+* La cantidad del volumen total en las proximidades de los usuarios debe formar parte de la experiencia
 * Dónde debe ir el usuario para mejorar los datos
 
 Los usuarios no saben qué hace que un examen sea "bueno". Se les debe mostrar o saber qué buscar si se les pide que evalúen un examen: plana, distancia desde las paredes reales, entre otros. El desarrollador debe implementar un bucle de comentarios que incluya la actualización de los datos de asignación espacial durante la fase de exploración o exploración.
@@ -60,9 +60,9 @@ En muchos casos, es mejor decir al usuario lo que necesita hacer para obtener la
 
 ## <a name="cached-versus-continuous-spatial-mapping"></a>Caché frente a asignación espacial continua
 
-Los datos de asignación espacial son las aplicaciones de origen de datos de mayor peso que pueden consumir. Para evitar problemas de rendimiento, como fotogramas descartados o desordenes, el consumo de estos datos debe realizarse cuidadosamente.
+Los datos de asignación espacial son las aplicaciones de origen de datos de mayor peso que pueden consumir. Para evitar problemas de rendimiento, como fotogramas descartados o desordenes, el consumo de estos datos debe realizarse con cuidado.
 
-El examen activo durante una experiencia puede ser beneficioso y perjudicial, por lo que deberá decidir qué método usar en función de la experiencia.
+El análisis activo durante una experiencia puede ser beneficioso y perjudicial, por lo que deberá decidir qué método usar en función de la experiencia.
 
 ### <a name="cached-spatial-mapping"></a>Asignación espacial almacenada en caché
 
@@ -81,15 +81,15 @@ Un buen caso para este método es un entorno controlado o un juego de mesa.
 
 ### <a name="continuous-spatial-mapping"></a>Asignación espacial continua
 
-Algunas aplicaciones pueden basarse en el análisis continuo para actualizar los datos de asignación espacial.
+Ciertas aplicaciones pueden basarse en el examen continuo para actualizar los datos de asignación espacial.
 
 **Ventajas**
 * No es necesario compilar en una experiencia de exploración o exploración independiente por adelantado en la aplicación.
-* El movimiento de objetos del mundo real puede reflejarse en el juego, aunque con algún retraso.
+* El juego puede reflejar el movimiento de objetos del mundo real, aunque con algún retraso.
 
 **Inconvenientes**
 * Mayor complejidad en la implementación de la experiencia principal.
-* Posible sobrecarga del procesamiento físico y gráfico adicional, ya que estos sistemas deben ingerir los cambios de forma incremental.
+* Posible sobrecarga del procesamiento de gráficos y físicos adicionales, ya que estos sistemas deben ingerir los cambios de forma incremental.
 * Mayor impacto en la energía, la temperatura y la CPU.
 
 Un buen caso para este método es aquel en el que se espera que los hologramas interactúen con objetos en movimiento, por ejemplo, un automóvil holográfico que conduce por el suelo puede querer entrar en una puerta en función de si está abierto o cerrado.

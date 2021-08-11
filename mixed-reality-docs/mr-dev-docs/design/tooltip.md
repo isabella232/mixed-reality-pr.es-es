@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
 keywords: Mixed Reality, controles, interacción, interfaz de usuario, experiencia de usuario, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, información sobre herramientas, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: cd490a260c5caedc3f315d72f9a47bce563695a0
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+ms.openlocfilehash: 3bf9230f89ebac3ad14e1e383c0f51a5a8d61c1c498c0a242e4dffbd1488bdbf
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600595"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115196864"
 ---
 # <a name="tooltip"></a>Información sobre herramientas
 
@@ -31,7 +31,7 @@ La información sobre herramientas es una breve descripción que está vinculada
 
 ---
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)
