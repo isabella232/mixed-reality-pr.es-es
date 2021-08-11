@@ -5,12 +5,12 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: fa7442bc968710a31ce3ca379c7fd73928e6e324
-ms.sourcegitcommit: c0ba7d7bb57bb5dda65ee9019229b68c2ee7c267
+ms.openlocfilehash: 407813f52044d3405e5045f64817d87c4f3e4b59ddfd87308586ac2d81924674
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "110144417"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115202573"
 ---
 # <a name="lighting-scene-operations"></a>Operaciones de escena de iluminación
 
@@ -38,11 +38,11 @@ Tipo | Descripción | Duration
 --- | --- | ---
 Ninguno | Se descarga la escena de iluminación anterior, se carga una nueva escena de iluminación. Sin transición. | Omitido
 Fadetoblack | La escena de iluminación anterior se atenua a negro. Se carga una nueva escena de iluminación y, a continuación, se desvanece de negro. Resulta útil para realizar transiciones fluidas entre ubicaciones. | Utilizado
-Crossfade | La escena de iluminación anterior se desvanece a medida que se desvanece la nueva escena de iluminación. Resulta útil para realizar transiciones fluidas entre las configuraciones de iluminación en la misma ubicación. | Utilizado
+Crossfade | La escena de iluminación anterior se atenua a medida que se desvanece la nueva escena de iluminación. Resulta útil para realizar transiciones fluidas entre las configuraciones de iluminación en la misma ubicación. | Utilizado
 
 Tenga en cuenta que algunas configuraciones de iluminación no se pueden interpolar durante las transiciones. Si desea una transición visual fluida, esta configuración tendrá que mantener la coherencia entre escenas de iluminación.
 
-Configuración | Transición Smooth FadeToBlack | Transición smooth crossfade
+Setting | Transición Smooth FadeToBlack | Transición smooth crossfade
 --- | --- | ---
 Skybox | No | No
 Reflexión personalizada | No | No

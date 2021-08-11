@@ -1,26 +1,26 @@
 ---
 title: Sombreador
-description: Obtenga información sobre cómo el sombreador Mixed Reality Toolkit Standard proporciona varios tipos de efectos visuales que se pueden usar con hologramas en las aplicaciones de realidad mixta.
+description: Obtenga información sobre Mixed Reality Toolkit sombreador estándar proporciona varios tipos de efectos visuales que se pueden usar con hologramas en las aplicaciones de realidad mixta.
 author: cre8ivepark
 ms.author: dongpark
 ms.date: 11/01/2019
 ms.topic: article
-keywords: Mixed Reality, controles, interacción, interfaz de usuario, experiencia de usuario, sombreador, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit, efectos visuales
-ms.openlocfilehash: 9a60c5065ddb5bcf410bb43b318575da50f7ccf8
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: Mixed Reality, controles, interacción, ui, ux, sombreador, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit, efectos visuales
+ms.openlocfilehash: dcedd7ef0f41de2cbbad623a192abda63588b5691407397db229ef7796e6926e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600184"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115207406"
 ---
 # <a name="shader"></a>Sombreador
 
 ![Sombreador](images/UX_Hero_StandardShader.jpg)
 
-Dado que los objetos holográficos se mezclan con los físicos en el entorno real, es importante proporcionar indicaciones visuales al usuario. El sombreador Mixed Reality Toolkit Standard proporciona varios tipos de efectos visuales para su uso con hologramas. El sistema de sombreado usa un sombreador único y flexible para lograr objetos visuales similares al sombreador estándar de Unity. El sombreador implementa [Sistema Fluent Design principios y](https://www.microsoft.com/design/fluent/#/) sigue funcionando en dispositivos de realidad mixta.
+Dado que los objetos holográficos se mezclan con los físicos en el entorno real, es importante proporcionar indicaciones visuales al usuario. El Mixed Reality Toolkit sombreador Estándar proporciona varios tipos de efectos visuales para su uso con hologramas. El sistema de sombreado usa un sombreador único y flexible para lograr objetos visuales similares al sombreador estándar de Unity. El sombreador implementa [Sistema Fluent Design principios básicos y](https://www.microsoft.com/design/fluent/#/) sigue funcionando en dispositivos de realidad mixta.
 <br>
 
-## <a name="examples-of-visual-effects-using-mrtk-mixed-reality-toolkit-standard-shader"></a>Ejemplos de efectos visuales mediante el sombreador estándar de MRTK (Mixed Reality Toolkit) 
+## <a name="examples-of-visual-effects-using-mrtk-mixed-reality-toolkit-standard-shader"></a>Ejemplos de efectos visuales mediante el sombreador estándar MRTK (Mixed Reality Toolkit) 
 :::row:::
     :::column:::
        ![Mover](images/UX_Button_Affordance_ProximityLight.jpg)<br>
@@ -44,7 +44,7 @@ Dado que los objetos holográficos se mezclan con los físicos en el entorno rea
 
 ---
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Cursores](cursors.md)
 * [Haces de mano](point-and-commit.md)

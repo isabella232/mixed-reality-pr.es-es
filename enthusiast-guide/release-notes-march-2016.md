@@ -1,37 +1,37 @@
 ---
 title: Notas de la versión (marzo de 2016)
-description: Manténgase al día en las notas de la versión de HoloLens para el lanzamiento de HoloLens y Windows Holographic.
+description: Manténgase al día de las notas de HoloLens para el lanzamiento de HoloLens y Windows Holographic.
 author: mattzmsft
 ms.author: mazeller
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Notas de la versión, HoloLens, so, plataforma, características, compilación, Inicio
-ms.openlocfilehash: d254cd668fc1d1c12f941c84e02c53945a716a73
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: notas de la versión, HoloLens, sistema operativo, plataforma, características, compilación, inicio
+ms.openlocfilehash: c8644c6e2dd6c7908c8b2fe1d4df59a4f560c605193224da88a6d79d2b58f49d
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98581592"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115202447"
 ---
 # <a name="release-notes---march-2016"></a>Notas de la versión (marzo de 2016)
 
-Bienvenido a Windows Holographic, disponible por primera vez en Microsoft HoloLens. Queremos [oír sus comentarios](/windows/mixed-reality/give-us-feedback). Use el centro de comentarios, los [foros para desarrolladores](https://forums.hololens.com) y [Twitter a @HoloLens través ](https://twitter.com/hololens)de.
+Bienvenido a Windows Holographic, disponible por primera vez en Microsoft HoloLens. Queremos conocer [sus comentarios.](/windows/mixed-reality/give-us-feedback) Use la Centro de opiniones, los [foros para desarrolladores](https://forums.hololens.com) y [Twitter a través de @HoloLens ](https://twitter.com/hololens).
 
-**Versión de lanzamiento:** Versión de marzo de 2016 de Windows Holographic (**10.0.11082.1033**)
+**Versión de lanzamiento:** Windows holographic de marzo de 2016 (**10.0.11082.1033**)
 
 >[!VIDEO https://www.youtube.com/embed/C98qaPAMVQU]
 
-## <a name="whats-in-windows-holographic"></a>Qué es Windows Holographic
+## <a name="whats-in-windows-holographic"></a>¿Qué hay en Windows Holographic?
 
-Pruebe las aplicaciones de bandeja de entrada
+Prueba de las aplicaciones de bandeja de entrada
 * **Microsoft Edge.** Explorador web moderno para Windows 10.
-* **Configuración.** Compruebe la información del sistema, [Conéctese a Wi-Fi](/windows/mixed-reality/connecting-to-wi-fi-on-hololens)y [Conéctese a dispositivos Bluetooth](/windows/mixed-reality/discover/hardware-accessories).
-* **Hologramas.** Coloque los hologramas en su mundo, desplácese por ellos y, a continuación, vea y escuche desde cualquier ángulo.
-* **Curva.** Repita la [calibración](/windows/mixed-reality/calibration) realizada durante la ejecución rápida de los usuarios al cambiar de usuario.
-* **Aprender gestos.** Repita el tutorial de gestos realizado durante la ejecución rápida.
-* **Seleccionadas.** Vea las fotos y los vídeos de la realidad mixta que realiza con el dispositivo y colóquelos en el mundo junto con los hologramas.
+* **Configuración.** Compruebe la información del sistema, [conéctese a Wi-Fi](/windows/mixed-reality/connecting-to-wi-fi-on-hololens)y [conéctese a Bluetooth dispositivos](/windows/mixed-reality/discover/hardware-accessories).
+* **Hologramas.** Coloque hologramas en su mundo, cándalos y, a continuación, véalos y oirlos desde cualquier ángulo.
+* **Calibración.** Repita la [calibración](/windows/mixed-reality/calibration) realizada durante la experiencia de configuración estándar cada vez que cambie de usuario.
+* **Obtenga información sobre los gestos.** Repita el tutorial de gestos realizado durante la experiencia lista para su uso.
+* **Fotos.** Vea las fotos y vídeos de captura de realidad mixta que se toman con el dispositivo y colóclelos en el mundo junto con hologramas.
 
-Para desbloquear el dispositivo para el desarrollo, abra la aplicación de *configuración* , vaya a *Actualizar & seguridad*, cambie a la página *para desarrolladores* y establezca la alternancia modo de Desarrollador en activado. También puede habilitar el [portal de dispositivos](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal) desde aquí.
+Para desbloquear el dispositivo para el desarrollo, abra la aplicación *Configuración,* vaya a Update & Security (Actualizar *& Security),* cambie a la página *Para* desarrolladores y establezca el botón de alternancia del modo de desarrollador en on (Activar). También puede habilitar la [Portal de dispositivos](/windows/mixed-reality/develop/platform-capabilities-and-apis/using-the-windows-device-portal) desde aquí.
 
 ## <a name="see-also"></a>Consulte también
 * [Problemas conocidos de HoloLens](/windows/mixed-reality/hololens-known-issues)

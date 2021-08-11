@@ -5,12 +5,12 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: eac96e309afc21f9a2b6efe9c3aef5975e4f0dff
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 1c32486c83eda9b99540d1719753977b6cdb2d18735e799dcd6c2ca3fcf200ce
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177013"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115203635"
 ---
 # <a name="mrtk-modularization"></a>Modularización de MRTK
 
@@ -20,7 +20,7 @@ Una de las nuevas características excelentes de Mixed Reality Toolkit v2 es la 
 
 MRTK v2 se desarrolló intencionadamente para ser modular y minimizar las dependencias entre los servicios del sistema (por ejemplo, el reconocimiento espacial).
 
-Debido a la naturaleza de algunos servicios del sistema (por ejemplo, entrada y teleportación), existe un número pequeño de dependencias.
+Debido a la naturaleza de algunos servicios del sistema (por ejemplo, entrada y teleportación), existen un pequeño número de dependencias.
 
 Aunque se espera que los servicios necesiten uno o varios componentes del proveedor de datos, no hay vínculos directos entre ellos. Lo mismo sucede con las características del SDK (por ejemplo, Interfaz de usuario componentes).
 
@@ -58,7 +58,7 @@ Al seleccionar una arquitectura de aplicación, es importante tener en cuenta la
 
 #### <a name="mixedrealitytoolkit-service-locator"></a>Localizador de servicios MixedRealityToolkit
 
-MRTK permite (y configura automáticamente) las escenas de aplicación para usar el componente de [`MixedRealityToolkit`](xref:Microsoft.MixedReality.Toolkit.MixedRealityToolkit) localizador de servicios predeterminado. Este componente incluye compatibilidad para configurar sistemas MRTK y proveedores de datos a través de inspectores de configuración y administra la duración de los componentes y los comportamientos principales (por ejemplo, cuándo actualizar).
+MrTK permite (y configura automáticamente) las escenas de aplicación para usar el componente de [`MixedRealityToolkit`](xref:Microsoft.MixedReality.Toolkit.MixedRealityToolkit) localizador de servicios predeterminado. Este componente incluye compatibilidad para configurar sistemas MRTK y proveedores de datos a través de inspectores de configuración y administra la duración de los componentes y los comportamientos principales (por ejemplo, cuándo actualizar).
 
 Todos los sistemas se representan en el inspector de configuración principal, independientemente de si están presentes o no en el proyecto. Consulte la Guía [Mixed Reality configuración de datos](../configuration/mixed-reality-configuration-guide.md) para obtener más información.
 

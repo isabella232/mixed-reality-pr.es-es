@@ -5,12 +5,12 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, ElasticsSystem,
-ms.openlocfilehash: 44110cac9ac5aadb7b5e680f18a5e93f43efce12
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: e34b9ea68bfbdc7b7f285686565a1e049ba58ad8677b16e915a2db8272ec1cbe
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177801"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115217907"
 ---
 # <a name="elastic-system"></a>Sistema elástico
 
@@ -20,7 +20,7 @@ MRTK incluye un sistema de simulación elástica que incluye una amplia variedad
 
 Actualmente, los siguientes componentes de MRTK que [admiten el administrador de elásticos](xref:Microsoft.MixedReality.Toolkit.Experimental.Physics.ElasticsManager) pueden aprovechar la funcionalidad de los elásticos:
 
-- [Control Bounds](../ux-building-blocks/bounds-control.md)
+- [Control de límites](../ux-building-blocks/bounds-control.md)
 - [Manipulador de objetos](../ux-building-blocks/object-manipulator.md)
 
 ## <a name="elastics-manager"></a>Administrador de elastics
@@ -43,7 +43,7 @@ El campo `Manipulation types using elastic feedback` debe habilitarse para tipos
 
 De forma similar a las configuraciones de control de [límites,](../ux-building-blocks/bounds-control.md#configuration-objects)Elastic Manager incluye un conjunto de objetos de configuración que se pueden almacenar como objetos que pueden incluirse en scripts y compartirse entre instancias o elementos prefab diferentes. Las configuraciones se pueden compartir y vincular como archivos de recursos individuales que pueden incluirse en scripts o recursos anidados que se pueden incluir en scripts dentro de objetos prefab. También se pueden definir otras configuraciones directamente en la instancia sin vincular a un recurso que puede incluir scripts externo o anidado.
 
-El inspector del administrador de elásticos indicará si una configuración se comparte o se inline como parte de la instancia actual mostrando un mensaje en el inspector de propiedades. Además, las instancias compartidas no se podrán editar directamente en la propia ventana de propiedades del administrador de elásticos, sino que el recurso al que está vinculando debe modificarse directamente para evitar cambios accidentales en las configuraciones compartidas.
+El inspector del administrador elástico indicará si una configuración se comparte o se inline como parte de la instancia actual mostrando un mensaje en el inspector de propiedades. Además, las instancias compartidas no se podrán editar directamente en la propia ventana de propiedades del administrador de elásticos, sino que el recurso al que está vinculando debe modificarse directamente para evitar cambios accidentales en las configuraciones compartidas.
 
 Elastics Manager ofrece opciones de objetos de configuración para los siguientes tipos de transformación, cada uno de ellos representado por un [objeto de configuración elástica](#elastic-configuration-object):
 
@@ -53,12 +53,12 @@ Elastics Manager ofrece opciones de objetos de configuración para los siguiente
 
 #### <a name="elastic-configuration-object"></a>Objeto de configuración elástica
 
-Una configuración de elásticos define las propiedades de un sistema diferencial de oscilación armónica desasistido.
+Una configuración de elásticos define las propiedades de un sistema diferencial de diferenciales de diferenciales armónicos.
 Las siguientes propiedades se pueden ajustar, pero ya vienen con un conjunto de valores predeterminados en MRTK:
 
 - **Masa:** masa del elemento de oscilador simulado.
 - **HandK:** constante de spring de mano.
-- **EndK:** end cap spring constant.
+- **EndK:** constante de extremo de spring.
 - **SnapK:** constante de spring de punto de instantánea.
 - **Arrastre**: factor de arrastre/desastrador, proporcional a la velocidad.
 

@@ -1,18 +1,18 @@
 ---
-title: Mixed Reality registro de servicio
+title: Registro del servicio de Mixed Reality
 description: Documentación sobre MixedRealityServiceRegistry e IMixedRealityServiceRegistrar
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 061e4233d61de817b1aaed7faaa6d461427d6f07
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 16aea46890297dab209c13b6776a0a571b1e05bf5021a5795a33dc88366ee9b1
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176703"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115217441"
 ---
-# <a name="mixed-reality-service-registry"></a>Mixed Reality registro de servicio
+# <a name="mixed-reality-service-registry"></a>Registro del servicio de Mixed Reality
 
 El Mixed Reality Toolkit tiene dos componentes con nombre muy similares que realizan tareas relacionadas: MixedRealityServiceRegistry e IMixedRealityServiceRegistrar.
 

@@ -5,23 +5,23 @@ author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Unity
-ms.openlocfilehash: 50a0f40723c05e96f79eefab933942044afb22f1
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: c2ee07ee061eb66aef58e28b2d893f6902775e77d4aa2f77039fd422fa01d6aa
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177330"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115219025"
 ---
 # <a name="mrtk-configuration-dialog"></a>Cuadro de diálogo de configuración de MRTK
 
 El cuadro de diálogo de configuración de MRTK se muestra cuando Unity carga un proyecto y se determina que una o varias opciones de configuración necesitan la atención del desarrollador.
 
-![Aplicar omitir posteriormente](../features/images/configuration-dialog/ConfigurationDialogHeader.png)
+![Aplicar ignore posterior](../features/images/configuration-dialog/ConfigurationDialogHeader.png)
 
 Para aplicar los cambios, haga clic en **el botón** Aplicar. El **botón** Más adelante aplazará los cambios hasta que el proyecto se vuelva a cargar en un momento futuro.
 
 > [!NOTE]
-> El cuadro de diálogo de configuración volverá a aparecer si se deja desactivada una o varias de las opciones recomendadas. Para evitar que esto ocurra, aplique las opciones deseadas y, a continuación, vuelva a iniciar el cuadro de diálogo a través de utilidades de Mixed Reality Toolkit Configure Unity Project y   >    >  **haga** clic **en Omitir**. Esto impedirá que el cuadro de diálogo de configuración vuelva a aparecer automáticamente.
+> El cuadro de diálogo de configuración volverá a aparecer si se deja desactivada una o varias de las opciones recomendadas. Para evitar que esto ocurra, aplique las opciones deseadas y, a continuación, vuelva a iniciar el cuadro de diálogo a través de Mixed Reality Toolkit   >  **Utilities** Configure Unity Project y  >  **haga** clic **en Omitir**. Esto impedirá que el cuadro de diálogo de configuración vuelva a aparecer automáticamente.
 
 ## <a name="common-settings"></a>Configuración común
 
@@ -29,19 +29,19 @@ Todos los destinos de compilación comparten una colección de opciones comunes.
 
 ![Configuración común](../features/images/configuration-dialog/ConfigurationDialogCommonSettings.png)
 
-### <a name="force-text-asset-serialization-and-enable-visible-meta-files"></a>Forzar la serialización de recursos de texto y habilitar metadatos visibles
+### <a name="force-text-asset-serialization-and-enable-visible-meta-files"></a>Forzar la serialización de recursos de texto y Habilitar metadatos visibles
 
 Esta configuración ayuda a simplificar el trabajo con proyectos de Unity y sistemas de control de código fuente (por ejemplo, Git).
 
-### <a name="enable-vr-supported"></a>Habilitación de vr compatible
+### <a name="enable-vr-supported"></a>Habilitación de VR compatible
 
 **Unity 2018**
 
-Configura las opciones del SDK de Virtual Reality Supported y Virtual Reality en **Player Configuración**  >  **XR Configuración**.
+Configura las opciones Del SDK de virtual Reality compatible y Virtual Reality en **Player Configuración**  >  **XR Configuración**.
 
 ### <a name="set-single-pass-instanced-rendering-path"></a>Establecer la ruta de acceso de representación de instancia de paso único
 
-Configura el reproductor **de Configuración**  >  **XR Configuración** modo de representación estéreo  >   en Instancia de paso **único.**
+Configura player **Configuración**  >  **XR Configuración** modo de representación estéreo  >   en Instancia de **paso único.**
 
 ### <a name="set-default-spatial-awareness-layer"></a>Establecer la capa de reconocimiento espacial predeterminada
 
@@ -56,25 +56,25 @@ Los espacializadores de audio son los componentes que desbloquean la potencia de
 
 #### <a name="common-spatializers"></a>Espacializadores comunes
 
-- Espacializador de Microsoft
+- Microsoft Spatializer
 
-Microsoft proporcionó un espacializador que admite el uso de la aceleración de hardware en HoloLens 2.
+Espacializador proporcionado por Microsoft que admite el uso de la aceleración de hardware en HoloLens 2.
 
 Este espacializador está disponible a través [de NuGet](https://www.nuget.org/packages/Microsoft.SpatialAudio.Spatializer.Unity/) y [GitHub](https://github.com/microsoft/spatialaudio-unity).
 
-Puede encontrar más detalles sobre Microsoft Spatializer en la [documentación de Spatial Sound](/windows/mixed-reality/spatial-sound-in-unity).
+Puede encontrar más detalles sobre Microsoft Spatializer en la documentación [de sonido espacial](/windows/mixed-reality/spatial-sound-in-unity).
 
 - Espacializador HRTF de MS
 
 Microsoft Windows espacializador proporcionado por Unity como parte de los paquetes Windows Mixed Reality y Windows plataforma XR.
 
-- Audio de sed de sonido
+- Audio desaía
 
 Espacializador multiplataforma de Google proporcionado por Unity.
 
-Puede encontrar más información en el sitio de [documentación de Audio de sedán.](https://resonance-audio.github.io/resonance-audio/develop/unity/getting-started)
+Puede encontrar más información en el sitio de documentación [de Audio de sonido.](https://resonance-audio.github.io/resonance-audio/develop/unity/getting-started)
 
-## <a name="universal-windows-platform-settings"></a>Configuración de Windows universal
+## <a name="universal-windows-platform-settings"></a>Configuración de Windows plataforma universal
 
 ![UWP Configuración](../features/images/configuration-dialog/ConfigurationDialogUWPSettings.png)
 
@@ -88,7 +88,7 @@ Habilita funcionalidades de aplicación específicas para la aplicación Windows
 
 - Cliente de Internet
 
-  Habilita la compatibilidad para acceder a los recursos de Internet.
+  Habilita la compatibilidad con el acceso a los recursos en Internet.
 
 - Percepción espacial
 
@@ -115,15 +115,15 @@ Opciones de configuración para admitir aplicaciones de AR en dispositivos con t
 
 ### <a name="disable-multi-threaded-rendering"></a>Deshabilitar la representación multiproceso
 
-Deshabilita player **Configuración**  >  **Otras Configuración**  >  **multiproceso según** lo requiera la compatibilidad con AR de Android.
+Deshabilita Player **Configuración**  >  **Other Configuración**  >  **Multithreaded Rendering** según lo requiera la compatibilidad con AR de Android.
 
 ### <a name="set-minimum-api-level"></a>Establecer el nivel mínimo de API
 
-Establece el valor de **Player Configuración** Other Configuración Minimum API Level para aplicar los requisitos del sistema  >    >  operativo para las aplicaciones de AR.
+Establece el valor de **Player Configuración** Otro Configuración nivel mínimo de  >    >  **API** para aplicar los requisitos del sistema operativo para las aplicaciones de AR.
 
 ## <a name="ios-settings"></a>Configuración de iOS
 
-Opciones de configuración para admitir aplicaciones de AR en dispositivos con tecnología iOS.
+Opciones de configuración para admitir aplicaciones ar en dispositivos con tecnología iOS.
 
 ![IOS Configuración](../features/images/configuration-dialog/ConfigurationDialogiOSSettings.png)
 
@@ -137,4 +137,4 @@ Establece el valor de **Player Configuración** Other Configuración Architectur
 
 ### <a name="set-camera-usage-descriptions"></a>Establecer descripciones de uso de la cámara
 
-Establece el valor de **Player Configuración**  >  **Other Configuración** Camera Usage  >  **Description** used to request permission to use the device's camera (Descripción del uso de la cámara del reproductor que se usa para solicitar permiso para usar la cámara del dispositivo).
+Establece el valor de **Player Configuración**  >  **Other Configuración** Camera Usage  >  **Description** used to request permission to use the device's camera (Descripción del uso de la cámara de Configuración que se usa para solicitar permiso para usar la cámara del dispositivo).

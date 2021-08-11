@@ -7,12 +7,12 @@ ms.date: 07/01/2021
 ms.topic: article
 keywords: Mixed Reality, holographic, AR, VR, MR, XR, augmented reality, virtual reality, explanation, case study, mixed reality headset, windows mixed reality headset, virtual reality headset, what is virtual reality, what is augmented reality
 ms.localizationpriority: high
-ms.openlocfilehash: 088bc9a978bd236069ddc1beab40387c607b906e
-ms.sourcegitcommit: b0b49ad27a0d09eb0a3d5df0c766bb4b7bbd8208
+ms.openlocfilehash: fc2686c409883e948f1e5f3a631060a66cd55849f998f94a201801ac10b65808
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "113634326"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115205083"
 ---
 # <a name="what-is-mixed-reality"></a>¿Qué es Mixed Reality?
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 639a96785e666cc3f5da3577ec3166f364753ed5
-ms.sourcegitcommit: e380d56f5504be4e4f069394a58cf0147eb33b66
+ms.openlocfilehash: c5276943bab0ddc961342f879c0cf4f8986aa7b4f67b16c9c8b5415ca6fc58fd
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2021
-ms.locfileid: "113603732"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115202757"
 ---
 # <a name="openxr"></a>[OpenXR](#tab/openxr)
 
@@ -48,7 +48,7 @@ Para establecer OpenXR como runtime en Unity:
 
 ### <a name="optimization"></a>Optimization
 
-Si va a desarrollar para HoloLens 2, seleccione el Mixed Reality > Project > aplicar la configuración de proyecto recomendada **para** HoloLens 2 elemento de menú para obtener un mejor rendimiento de la aplicación.
+Si va a desarrollar para HoloLens 2, seleccione el Mixed Reality > Project > aplicar la configuración recomendada del proyecto **HoloLens 2** un elemento de menú para obtener un mejor rendimiento de la aplicación.
 
 ![Captura de pantalla del elemento de menú de realidad mixta abierto con OpenXR seleccionado](../../images/openxr-img-08.png)
 
@@ -81,7 +81,7 @@ Si tiene como destino HoloLens 2, debe cambiar a la Plataforma de Windows univer
 
 ![Captura de pantalla de la ventana Configuración compilación abierta en el editor de Unity con Universal Windows Platform resaltado](../../images/wmr-config-img-4.png)
 
-Después de configurar la plataforma, debe dejar [](../../../../design/app-views.md) que Unity sepa que debe crear una vista inmersiva en lugar de una vista 2D cuando se exporte:
+Después de configurar la plataforma, debe hacer [](../../../../design/app-views.md) que Unity sepa que debe crear una vista inmersiva en lugar de una vista 2D cuando se exporte:
 
 1. En el Editor de Unity, vaya **a Editar > Project configuración y** seleccione Administración de complementos **XR.**
 
@@ -91,7 +91,7 @@ Después de configurar la plataforma, debe dejar [](../../../../design/app-views
 
 3. Seleccione **Initialize XR on Startup (Inicializar XR)** **al iniciar Windows Mixed Reality**
 
-![Captura de pantalla Project ventana de configuración abierta en el editor de Unity con la administración de complementos XR resaltada](../../images/wmr-config-img-7.png)
+![Captura de pantalla de Project ventana de configuración abierta en el editor de Unity con la administración de complementos XR resaltada](../../images/wmr-config-img-7.png)
 
 4. Seleccione la **sección XR Plug-in Management** Windows Mixed Reality ,active todas las casillas y establezca Depth Buffer Format (Formato de búfer de profundidad) en Depth Buffer 16 Bit (Búfer de  >   profundidad de  **16 bits).**
 
@@ -121,7 +121,7 @@ Si tiene como destino HoloLens 2, debe cambiar a la Plataforma de Windows univer
 Después de configurar la plataforma, debe hacer [](../../../../design/app-views.md) que Unity sepa que debe crear una vista inmersiva en lugar de una vista 2D cuando se exporte.
 
 1. Abra **player Configuración...** desde el **cuadro de diálogo Configuración... ventana** y expanda el **grupo de Configuración XR**
-2. En la **sección XR Configuración,** seleccione **Virtual Reality Supported (Virtual Reality compatible)** para agregar la lista Dispositivos de realidad virtual.
+2. En la **sección XR Configuración,** seleccione **Virtual Reality Supported (Compatible con Virtual Reality)** para agregar la lista Dispositivos de realidad virtual.
 3. Establezca **Depth Format (Formato de** profundidad) en profundidad de **16 bits** y active Enable Depth Buffer Sharing **(Habilitar uso compartido de búfer de profundidad).**
 4. En **Stereo Rendering Mode** (Modo de representación estéreo), seleccione **Single Pass Instanced** (Instancia de paso único)
 5. Seleccione **WSA Holographic Remoting Supported (Comunicación** remota holográfica de WSA compatible) si desea usar la comunicación remota del modo de reproducción holográfica.

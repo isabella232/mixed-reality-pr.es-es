@@ -1,38 +1,38 @@
 ---
 title: 'Entrada de HoloLens de primera generación (211): gesto'
-description: Siga este tutorial de codificación con Unity, Visual Studio y HoloLens para obtener información detallada sobre los conceptos de gestos.
+description: Siga este tutorial de codificación con Unity, Visual Studio y HoloLens para aprender los detalles de los conceptos de gestos.
 author: keveleigh
 ms.author: kurtie
 ms.date: 10/22/2019
 ms.topic: article
-keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-Unity, Academy, tutorial, gesto, HoloLens, Academia de realidad mixta, Unity, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, Windows 10
-ms.openlocfilehash: 1431c9b53657e2cec1bd6ade1a3629e628e15917
-ms.sourcegitcommit: 3236abcba27335fe3d52e38423d2b265ca883355
+keywords: holotoolkit, mixedrealitytoolkit, mixedrealitytoolkit-unity, academy, tutorial, gesture, HoloLens, Mixed Reality Academy, unity, mixed reality headset, windows mixed reality headset, virtual reality headset, Windows 10
+ms.openlocfilehash: 75cfb836e5a9702c1d949ed57450984081db0c5d6ec14c76cae5148edf637e7e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "106269991"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115206434"
 ---
-# <a name="hololens-1st-gen-input-211-gesture"></a>Entrada de HoloLens (1ª generación) 211: gesto
+# <a name="hololens-1st-gen-input-211-gesture"></a>HoloLens (1ª generación) Entrada 211: Gesto
 
 >[!IMPORTANT]
->Los tutoriales de la Academia de realidad mixta se diseñaron con HoloLens (1ª generación), Unity 2017 y los auriculares con una realidad mixta en mente.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos. Estos tutoriales **_no_** se actualizarán con los conjuntos de herramientas o las interacciones más recientes que se usan para HoloLens 2 y es posible que no sean compatibles con las versiones más recientes de Unity.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](mrlearning-base.md) para HoloLens 2.
+>Los tutoriales de Mixed Reality Academy se diseñaron con HoloLens (1ª generación), Unity 2017 y Mixed Reality cascos envolventes en mente.  Por lo tanto, creemos que es importante conservar estos tutoriales para los desarrolladores que sigan buscando instrucciones sobre el desarrollo para esos dispositivos. Estos tutoriales no **_se actualizarán_** con los conjuntos de herramientas o interacciones más recientes que se usan para HoloLens 2 y es posible que no sean compatibles con las versiones más recientes de Unity.  Se mantendrán para que sigan funcionando en los dispositivos compatibles. Se ha publicado [una nueva serie de tutoriales](mrlearning-base.md) para HoloLens 2.
 
-Los [gestos](../../../design/gaze-and-commit.md#composite-gestures) convierten la intención del usuario en acción. Con los gestos, los usuarios pueden interactuar con los hologramas. En este curso, aprenderá a realizar un seguimiento de las manos del usuario, a responder a la entrada del usuario y a enviar comentarios al usuario en función del estado y la ubicación de la mano.
+[Los gestos](../../../design/gaze-and-commit.md#composite-gestures) convierten la intención del usuario en acción. Con los gestos, los usuarios pueden interactuar con los hologramas. En este curso, aprenderemos a realizar un seguimiento de las manos del usuario, responder a la entrada del usuario y enviar comentarios al usuario en función del estado y la ubicación de la mano.
 
 >[!VIDEO https://www.youtube.com/embed/c9zlpfFeEtc]
 
-En los [conceptos básicos de MR 101](../../../develop/unity/tutorials/holograms-101.md), usamos un sencillo gesto de TAP de aire para interactuar con los hologramas. Ahora, pasaremos más allá del gesto de TAP de aire y exploraremos los nuevos conceptos para:
+En [Mr Basics 101](../../../develop/unity/tutorials/holograms-101.md), hemos usado un sencillo gesto de pulsar el aire para interactuar con nuestros hologramas. Ahora, vamos a ir más allá del gesto de pulsar el aire y exploraremos nuevos conceptos para:
 
-* Detecta cuándo se realiza el seguimiento de la mano del usuario y proporciona comentarios al usuario.
-* Use un gesto de navegación para rotar los hologramas.
-* Proporcione comentarios cuando el usuario esté a punto de salir de la vista.
-* Use los eventos de manipulación para permitir que los usuarios muevan hologramas con sus manos.
+* Detecte cuándo se realiza el seguimiento de la mano del usuario y proporcione comentarios al usuario.
+* Use un gesto de navegación para girar los hologramas.
+* Proporcione comentarios cuando la mano del usuario esté a punto de salir de la vista.
+* Use eventos de manipulación para permitir a los usuarios mover hologramas con las manos.
 
-En este curso, volveremos a visitar el explorador de **modelos** de proyectos de Unity, que hemos creado en la [entrada Mr 210](holograms-210.md). Nuestro amigo Astronaut está de regreso para ayudarnos en nuestra exploración de estos nuevos conceptos de gestos.
+En este curso, volveremos a visitar el explorador de modelos del proyecto de **Unity,** que hemos creado en [mr input 210](holograms-210.md). Nuestro amigo astronauta ha vuelto para ayudarnos a explorar estos nuevos conceptos de gestos.
 
 >[!IMPORTANT]
->Los vídeos insertados en cada uno de los capítulos siguientes se grabaron con una versión anterior de Unity y el kit de herramientas de realidad mixta. Aunque las instrucciones paso a paso son precisas y actuales, es posible que vea scripts y objetos visuales en los vídeos correspondientes que no están actualizados. Los vídeos permanecen incluidos para posterity y porque todavía se aplican los conceptos descritos.
+>Los vídeos insertados en cada uno de los capítulos siguientes se grabaron con una versión anterior de Unity y el Mixed Reality Toolkit. Aunque las instrucciones paso a paso son precisas y actuales, es posible que vea scripts y objetos visuales en los vídeos correspondientes que no están actualizados. Los vídeos permanecen incluidos para la pósteridad y porque los conceptos tratados siguen siendo aplicables.
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -48,150 +48,150 @@ En este curso, volveremos a visitar el explorador de **modelos** de proyectos de
 
 ### <a name="prerequisites"></a>Requisitos previos
 
-* Un equipo con Windows 10 configurado con las [herramientas correctas instaladas](../../../develop/install-the-tools.md).
-* Funcionalidad básica de programación de C#.
-* Debe haber completado los [principios básicos 101](../../../develop/unity/tutorials/holograms-101.md).
-* Debe haber completado la [entrada MR 210](holograms-210.md).
-* Un dispositivo HoloLens [configurado para el desarrollo](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode).
+* Un Windows 10 configurado con las [herramientas correctas instaladas.](../../../develop/install-the-tools.md)
+* Alguna capacidad básica de programación de C#.
+* Debe haber completado [Mr Basics 101](../../../develop/unity/tutorials/holograms-101.md).
+* Debe haber completado la [entrada mr 210](holograms-210.md).
+* Un HoloLens configurado [para el desarrollo.](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#enabling-developer-mode)
 
 ### <a name="project-files"></a>Archivos de proyecto
 
-* Descargue los [archivos](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-211-Gesture.zip) requeridos por el proyecto. Requiere Unity 2017,2 o posterior.
-* Elimine el archivo de los archivos en el escritorio o en otra ubicación de fácil acceso.
+* Descargue los [archivos](https://github.com/Microsoft/HolographicAcademy/archive/Holograms-211-Gesture.zip) requeridos por el proyecto. Requiere Unity 2017.2 o posterior.
+* Des archive los archivos en el escritorio u otra ubicación de fácil acceso.
 
 >[!NOTE]
->Si desea examinar el código fuente antes de la descarga, está [disponible en github](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-211-Gesture).
+>Si desea buscar en el código fuente antes de descargarlo, está [disponible en GitHub](https://github.com/Microsoft/HolographicAcademy/tree/Holograms-211-Gesture).
 
-### <a name="errata-and-notes"></a>Erratas y notas
+### <a name="errata-and-notes"></a>Errata y Notes
 
-* "Habilitar Solo mi código" debe estar deshabilitado *(desactivado*) en Visual Studio en herramientas->opciones->depuración para alcanzar puntos de interrupción en el código.
+* "Habilitar Solo mi código" debe deshabilitarse *(desactivado)* en Visual Studio en Herramientas->Opciones->Depuración para alcanzar puntos de interrupción en el código.
 
-## <a name="chapter-0---unity-setup"></a>Capítulo 0: configuración de Unity
+## <a name="chapter-0---unity-setup"></a>Capítulo 0: Configuración de Unity
 
 ### <a name="instructions"></a>Instrucciones
 
 1. Inicie Unity.
 2. Seleccione **Open** (Abrir).
-3. Navegue hasta la carpeta de **gestos** que ha eliminado previamente.
-4. Busque y seleccione la carpeta de **Inicio** del / **Explorador de modelos** .
-5. Haga clic en el botón **Seleccionar carpeta** .
-6. En el panel **proyecto** , expanda la carpeta **escenas** .
-7. Haga doble clic en **ModelExplorer** Scene para cargarlo en Unity.
+3. Vaya a la **carpeta Gesto** que anteriormente des archivó.
+4. Busque y seleccione la carpeta **Starting** / **Model Explorer (Iniciar explorador de** modelos).
+5. Haga clic en **el botón Seleccionar** carpeta.
+6. En el **panel Project,** expanda la **carpeta Escenas.**
+7. Haga doble clic **en ModeloExplorador** de la escena para cargarla en Unity.
 
 ### <a name="building"></a>Compilación
 
-1. En Unity, seleccione **archivo > configuración de compilación**.
-2. Si **Scenes/ModelExplorer** no aparece en **escenas en la compilación**, haga clic en **Agregar escenas abiertas** para agregar la escena.
-3. Si está desarrollando específicamente para HoloLens, establezca el **dispositivo de destino** en **hololens**. De lo contrario, déjelo en **cualquier dispositivo**.
-4. Asegúrese de que el **tipo de compilación** está establecido en **D3D** y que el **SDK** está establecido en la **versión más reciente instalada** (que debe ser SDK 16299 o posterior).
+1. En Unity, seleccione **File > Build Configuración**.
+2. Si **Scenes/ModelExplorer no** aparece en **Scenes In Build (Escenas** en la compilación), haga clic en **Add Open Scenes** (Agregar escenas abiertas) para agregar la escena.
+3. Si va a desarrollar específicamente para HoloLens, establezca **Dispositivo de destino** en **HoloLens**. De lo contrario, déjelo en **Cualquier dispositivo.**
+4. Asegúrese **de que Tipo** de compilación está establecido en **D3D** y **sdk** está establecido en Instalado más reciente **(que** debe ser SDK 16299 o posterior).
 5. Haga clic en **Generar**.
-6. Cree una **nueva carpeta** denominada "app".
-7. Haga clic en la carpeta de la **aplicación** .
-8. Presione **Seleccionar carpeta** y Unity comenzará a compilar el proyecto para Visual Studio.
+6. Cree una **carpeta denominada** "App".
+7. Haga clic en la **carpeta** Aplicación.
+8. Presione **Seleccionar carpeta y** Unity comenzará a compilar el proyecto para Visual Studio.
 
-Cuando se haya realizado Unity, aparecerá una ventana del explorador de archivos.
+Cuando Unity haya terminado, aparecerá Explorador de archivos ventana.
 
-1. Abra la carpeta de la **aplicación** .
-2. Abra la **solución ModelExplorer de Visual Studio**.
+1. Abra la **carpeta** Aplicación.
+2. Abra la **solución ModelExplorer Visual Studio**.
 
 Si se implementa en HoloLens:
 
-1. Con la barra de herramientas superior de Visual Studio, cambie el destino de Debug a **Release** y de ARM a **x86**.
-2. Haga clic en la flecha desplegable situada junto al botón equipo local y seleccione **equipo remoto**.
-3. Escriba **la dirección IP del dispositivo HoloLens** y establezca el modo de autenticación en **universal (protocolo sin cifrar)**. Haga clic en **Seleccionar**. Si no conoce la dirección IP del dispositivo, consulte **configuración > redes & Internet > opciones avanzadas**.
-4. En la barra de menús superior, haga clic en **depurar-> iniciar sin depurar** o presione **Ctrl + F5**. Si esta es la primera vez que se implementa en el dispositivo, tendrá que [emparejarla con Visual Studio](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device).
-5. Cuando la aplicación se haya implementado, descartará el **Fitbox** con un **gesto de selección**.
+1. Con la barra de herramientas superior Visual Studio, cambie el destino de Depurar a **Versión** y de ARM a **x86.**
+2. Haga clic en la flecha desplegable situada junto al botón Máquina local y seleccione **Equipo remoto.**
+3. Escriba **la HoloLens IP del dispositivo y** establezca Modo de autenticación en Universal **(protocolo sin cifrar).** Haga clic en **Seleccionar**. Si no conoce la dirección IP del dispositivo, busque en Configuración > **Network & Internet > Opciones avanzadas**.
+4. En la barra de menús superior, haga clic en **Depurar -> Iniciar** sin depurar o **presione Ctrl + F5**. Si es la primera vez que se implementa en el dispositivo, deberá emparejar con [Visual Studio](../../../develop/platform-capabilities-and-apis/using-visual-studio.md#pairing-your-device).
+5. Cuando se haya implementado la aplicación, descarte **fitbox** con un **gesto de selección.**
 
-Si se implementa en un auricular envolvente:
+Si se implementa en un casco envolvente:
 
-1. Con la barra de herramientas superior de Visual Studio, cambie el destino de Debug a **Release** y de ARM a **x64**.
-2. Asegúrese de que el destino de implementación está establecido en **equipo local**.
-3. En la barra de menús superior, haga clic en **depurar-> iniciar sin depurar** o presione **Ctrl + F5**.
-4. Cuando la aplicación se haya implementado, descarte el **Fitbox** mediante la extracción del desencadenador en un controlador de movimiento.
+1. Con la barra de herramientas superior Visual Studio, cambie el destino de Depurar a **Versión** y de ARM a **x64.**
+2. Asegúrese de que el destino de implementación está establecido en **Máquina local.**
+3. En la barra de menús superior, haga clic en **Depurar -> Iniciar** sin depurar o **presione Ctrl + F5**.
+4. Cuando la aplicación se haya implementado, descarte **fitbox** mediante la extracción del desencadenador en un controlador de movimiento.
 
 >[!NOTE]
->Es posible que observe algunos errores rojos en el panel de errores de Visual Studio. Es seguro ignorarlos. Cambie al panel de salida para ver el progreso real de la compilación. Los errores en el panel de salida requerirán que se realice una corrección (la mayoría de las veces se deben a un error en un script).
+>Es posible que observe algunos errores rojos en el panel Visual Studio errores. Es seguro omitirlos. Cambie al panel Salida para ver el progreso real de la compilación. Los errores del panel Salida requerirán que realice una corrección (la mayoría de las veces se deben a un error en un script).
 
-## <a name="chapter-1---hand-detected-feedback"></a>Capítulo 1: comentarios de la mano detectados
+## <a name="chapter-1---hand-detected-feedback"></a>Capítulo 1: Comentarios detectados a mano
 
 >[!VIDEO https://www.youtube.com/embed/D1FcIyuFTZQ]
 
 ### <a name="objectives"></a>Objetivos
 
-* Suscríbase a los eventos de seguimiento de la mano.
-* Use los comentarios del cursor para mostrar a los usuarios Cuándo se realiza el seguimiento de una mano.
+* Suscríbase a eventos de seguimiento manual.
+* Use los comentarios del cursor para mostrar a los usuarios cuándo se realiza el seguimiento de una mano.
 
 >[!NOTE]
->En HoloLens 2, las manos detectadas se activan siempre que las manos están visibles (no solo cuando se señala un dedo).
+>En HoloLens 2 , las manos detectadas se activa cada vez que las manos están visibles (no solo cuando un dedo apunta hacia arriba).
 
 ### <a name="instructions"></a>Instrucciones
 
-* En el panel **jerarquía** , expanda el objeto **InputManager** .
-* Busque y seleccione el objeto **GesturesInput** .
+* En el panel **Jerarquía,** expanda el **objeto InputManager.**
+* Busque y seleccione el **objeto GesturesInput.**
 
-El script **InteractionInputSource. CS** realiza estos pasos:
+El script **InteractionInputSource.cs** realiza estos pasos:
 
-1. Se suscribe a los eventos InteractionSourceDetected y InteractionSourceLost.
-2. Establece el estado de HandDetected.
-3. Cancela la suscripción de los eventos InteractionSourceDetected y InteractionSourceLost.
+1. Se suscribe a los eventos InteractionSourceDetected e InteractionSourceLost.
+2. Establece el estado HandDetected.
+3. Cancela la suscripción de los eventos InteractionSourceDetected e InteractionSourceLost.
 
-A continuación, actualizaremos el cursor de la [entrada MR 210](holograms-210.md) a uno que muestra comentarios en función de las acciones del usuario.
+A continuación, actualizaremos el cursor de [mr input 210](holograms-210.md) a uno que muestre comentarios en función de las acciones del usuario.
 
-1. En el panel **jerarquía** , seleccione el objeto **cursor** y elimínelo.
-2. En el panel **proyecto** , busque **CursorWithFeedback** y arrástrelo al panel **jerarquía** .
-3. Haga clic en **InputManager** en el panel de **jerarquías** y, a continuación, arrastre el objeto **CursorWithFeedback** desde la **jerarquía** al campo **cursor** de la **SimpleSinglePointerSelector** de InputManager, situado en la parte inferior del **Inspector**.
-4. Haga clic en **CursorWithFeedback** en la **jerarquía**.
-5. En el panel **Inspector** , expanda **datos de estado de cursor** en el script de cursor de **objeto** .
+1. En el panel **Jerarquía,** seleccione el **objeto Cursor** y elimínelo.
+2. En el **Project,** busque **CursorWithFeedback** y arrástrelo al panel **Jerarquía.**
+3. Haga clic en **InputManager** en el **panel** Jerarquía y arrastre  el objeto **CursorWithFeedback** desde la jerarquía hasta el campo **Cursor** de **SimpleSinglePointerSelector** de InputManager, en la parte inferior del **inspector**.
+4. Haga clic en **cursorWithFeedback en** la **jerarquía**.
+5. En el **panel Inspector,** expanda **Datos de estado del cursor** en el script Cursor **de** objeto.
 
-Los **datos de estado del cursor** funcionan de la siguiente manera:
+Los **datos de estado del cursor** funcionan de esta forma:
 
-* Cualquier estado **observado** significa que no se detecta ninguna mano y que el usuario simplemente está buscando.
-* Cualquier estado de **interacción** significa que se detecta una mano o un controlador.
-* Cualquier estado de **mantener el mouse** significa que el usuario está examinando un holograma.
+* Cualquier **estado observe** significa que no se detecta ninguna mano y el usuario simplemente está mirando alrededor.
+* Cualquier **estado Interact** significa que se detecta una mano o un controlador.
+* Cualquier **estado hover** significa que el usuario está mirando un holograma.
 
 ### <a name="build-and-deploy"></a>Compilación e implementación
 
-* En Unity, use la **configuración de compilación de > de archivos** para recompilar la aplicación.
-* Abra la carpeta de la **aplicación** .
-* Si aún no está abierto, abra la **solución ModelExplorer de Visual Studio**.
-  * (Si ya ha creado o implementado este proyecto en Visual Studio durante la configuración, puede abrir esa instancia de VS y hacer clic en "recargar todo" cuando se le solicite).
-* En Visual Studio, haga clic en **depurar-> iniciar sin depurar** o presione **Ctrl + F5**.
-* Después de que la aplicación se implemente en HoloLens, descartará el fitbox con el gesto de punteo de aire.
-* Mueva la mano a la vista y apunte el dedo del índice al cielo para iniciar el seguimiento de la mano.
+* En Unity, use **File > Build Configuración** para recompilar la aplicación.
+* Abra la **carpeta** Aplicación.
+* Si aún no está abierto, abra el archivo **ModelExplorer Visual Studio solution**.
+  * (Si ya ha creado o implementado este proyecto en Visual Studio durante la configuración, puede abrir esa instancia de VS y hacer clic en "Recargar todo" cuando se le solicite).
+* En Visual Studio, haga clic **en Depurar -> Iniciar** sin depurar o presione Ctrl + **F5**.
+* Una vez que la aplicación se implemente en HoloLens, descarte la caja de ajuste mediante el gesto de pulsar en el aire.
+* Mueva la mano a la vista y apunte el dedo índice al cielo para iniciar el seguimiento de las manos.
 * Mueva la mano a la izquierda, a la derecha, hacia arriba y hacia abajo.
 * Observe cómo cambia el cursor cuando se detecta la mano y, a continuación, se pierde de la vista.
-* Si se encuentra en un casco envolvente, tendrá que conectar y desconectar el controlador. Esta información es menos interesante en un dispositivo envolvente, ya que un controlador conectado siempre estará "disponible".
+* Si está en un casco envolvente, tendrá que conectarse y desconectar el controlador. Estos comentarios se vuelven menos interesantes en un dispositivo inmersivo, ya que un controlador conectado siempre estará "disponible".
 
-## <a name="chapter-2---navigation"></a>Capítulo 2: navegación
+## <a name="chapter-2---navigation"></a>Capítulo 2: Navegación
 
 >[!VIDEO https://www.youtube.com/embed/sm-kxtKksSo]
 
 ### <a name="objectives"></a>Objetivos
 
-* Use los eventos de gestos de navegación para rotar el Astronaut.
+* Use eventos de gesto de navegación para girar al astronauta.
 
 ### <a name="instructions"></a>Instrucciones
 
-Para usar los gestos de navegación en nuestra aplicación, vamos a editar **GestureAction. CS** para girar objetos cuando se produce el gesto de navegación. Además, agregaremos comentarios al cursor para que se muestren cuando la navegación esté disponible.
+Para usar gestos de navegación en nuestra aplicación, vamos a editar **GestureAction.cs** para girar objetos cuando se produzca el gesto de navegación. Además, agregaremos comentarios al cursor para mostrarlos cuando la navegación esté disponible.
 
-1. En el panel **jerarquía** , expanda **CursorWithFeedback**.
-2. En la carpeta **hologramas** , busque el recurso **ScrollFeedback** .
-3. Arrastre y coloque el recurso prefabricado de **ScrollFeedback** en **CursorWithFeedback** GameObject en la **jerarquía**.
-4. Haga clic en **CursorWithFeedback**.
-5. En el panel **Inspector** , haga clic en el botón **Agregar componente** .
+1. En el panel **Jerarquía,** expanda **CursorWithFeedback**.
+2. En la **Hologramas,** busque el **recurso ScrollFeedback.**
+3. Arrastre y coloque el objeto **prefab ScrollFeedback** en **cursorWithFeedback** GameObject en la **jerarquía**.
+4. Haga clic **en CursorWithFeedback**.
+5. En el **panel Inspector,** haga clic en **el botón Agregar** componente.
 6. En el menú, escriba en el cuadro de búsqueda **CursorFeedback**. Seleccione el resultado de la búsqueda.
-7. Arrastre y coloque el objeto **ScrollFeedback** de la **jerarquía** en la propiedad **desplazamiento de objeto de juego detectado** del componente **cursor feedback** en el **Inspector**.
-8. En el panel **jerarquía** , seleccione el objeto **AstroMan** .
-9. En el panel **Inspector** , haga clic en el botón **Agregar componente** .
-10. En el menú, escriba en la acción de **gestos** del cuadro de búsqueda. Seleccione el resultado de la búsqueda.
+7. Arrastre y coloque el objeto **ScrollFeedback** desde la jerarquía hasta la propiedad **Scroll Detected Game Object** del componente **Cursor Feedback** del **inspector**. 
+8. En el panel **Jerarquía,** seleccione el **objeto AstroMan.**
+9. En el **panel Inspector,** haga clic en **el botón Agregar** componente.
+10. En el menú, escriba en el cuadro de búsqueda **Acción de gesto**. Seleccione el resultado de la búsqueda.
 
-A continuación, Abra **GestureAction. CS** en Visual Studio. En el ejercicio de codificación 2. c, edite el script para hacer lo siguiente:
+A continuación, **abra GestureAction.cs** en Visual Studio. En el ejercicio de codificación 2.c, edite el script para hacer lo siguiente:
 
-1. **Gire el objeto AstroMan** cada vez que se lleve a cabo un gesto de navegación.
-2. Calcule el valor de **rotationFactor** para controlar la cantidad de giro aplicada al objeto.
-3. **Gire el objeto** alrededor del eje y cuando el usuario mueva su mano a la izquierda o a la derecha.
+1. **Gira el objeto AstroMan** cada vez que se realiza un gesto de navegación.
+2. Calcule **rotationFactor** para controlar la cantidad de rotación aplicada al objeto.
+3. **Gira el objeto** alrededor del eje Y cuando el usuario mueve la mano a la izquierda o a la derecha.
 
-Complete los ejercicios de codificación 2. c en el script o reemplace el código por la solución completada que aparece a continuación:
+Complete los ejercicios de codificación 2.c en el script o reemplace el código por la solución completa siguiente:
 
 ```cs
 using HoloToolkit.Unity.InputModule;
@@ -296,89 +296,89 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 }
 ```
 
-Observará que los demás eventos de navegación ya se han rellenado con cierta información. La GameObject se envía a la pila modal InputSystem's del kit de herramientas, por lo que el usuario no tiene que mantener el foco en el Astronaut una vez que se ha iniciado la rotación. En consecuencia, se extrae el GameObject de la pila una vez que se completa el gesto.
+Observará que los demás eventos de navegación ya están rellenados con cierta información. Insertamos el Elemento GameObject en la pila modal inputSystem del Toolkit, por lo que el usuario no tiene que mantener el foco en el astronauta una vez que se ha iniciado la rotación. En consecuencia, se quitará el elemento GameObject de la pila una vez completado el gesto.
 
 ### <a name="build-and-deploy"></a>Compilación e implementación
 
-1. Vuelva a compilar la aplicación en Unity y, después, compile e implemente desde Visual Studio para ejecutarla en HoloLens.
-2. Mira el Astronaut, dos flechas deben aparecer a cada lado del cursor. Este nuevo visual indica que el Astronaut se puede girar.
-3. Coloque la mano en la posición listo (el dedo índice apunta hacia el cielo) para que HoloLens empiece a realizar un seguimiento de la mano.
-4. Para girar el Astronaut, baje el dedo del índice a una posición de pinch y, a continuación, mueva la mano hacia la izquierda o hacia la derecha para desencadenar el gesto de NavigationX.
+1. Recompile la aplicación en Unity y, a continuación, compile e implemente desde Visual Studio para ejecutarla en el HoloLens.
+2. Al mirar al astronauta, deben aparecer dos flechas a cada lado del cursor. Este nuevo objeto visual indica que el astronauta se puede girar.
+3. Coloque la mano en la posición lista (dedo índice apuntando hacia el cielo) para que el HoloLens empiece a realizar el seguimiento de la mano.
+4. Para girar el astronauta, reduzca el dedo índice a una posición de reducción y, a continuación, mueva la mano a la izquierda o a la derecha para desencadenar el gesto NavigationX.
 
-## <a name="chapter-3---hand-guidance"></a>Capítulo 3: orientación a mano
+## <a name="chapter-3---hand-guidance"></a>Capítulo 3: Guía de mano
 
 >[!VIDEO https://www.youtube.com/embed/ULzlVw4e14I]
 
 ### <a name="objectives"></a>Objetivos
 
-* Use la puntuación de la **Guía de mano** para ayudar a predecir cuándo se perderá el seguimiento de manos.
-* Proporcione **comentarios sobre el cursor** para mostrar Cuándo el usuario está cerca del borde de la cámara de la vista.
+* Use **la puntuación de instrucciones a mano** para ayudar a predecir cuándo se perderá el seguimiento de las manos.
+* Proporcione **comentarios sobre el cursor para** mostrar cuándo la mano del usuario se acerca al borde de la cámara.
 
 ### <a name="instructions"></a>Instrucciones
 
-1. En el panel **jerarquía** , seleccione el objeto **CursorWithFeedback** .
-2. En el panel **Inspector** , haga clic en el botón **Agregar componente** .
-3. En el menú, escriba en la guía de **mano** del cuadro de búsqueda. Seleccione el resultado de la búsqueda.
-4. En la carpeta **hologramas** del panel de **proyecto** , busque el recurso **HandGuidanceFeedback** .
-5. Arrastre y coloque el recurso **HandGuidanceFeedback** en la propiedad **indicador de orientación a mano** del panel **Inspector** .
+1. En el panel **Jerarquía,** seleccione el **objeto CursorWithFeedback.**
+2. En el **panel Inspector,** haga clic en **el botón Agregar** componente.
+3. En el menú, escriba en el cuadro de búsqueda **Manual de instrucciones.** Seleccione el resultado de la búsqueda.
+4. En el **Project** panel **Hologramas** carpeta, busque el **recurso HandGuidanceFeedback.**
+5. Arrastre y coloque el **recurso HandGuidanceFeedback** en la propiedad **Hand Guidance Indicator** del panel **Inspector.**
 
 ### <a name="build-and-deploy"></a>Compilación e implementación
 
-* Vuelva a compilar la aplicación en Unity y, después, compile e implemente desde Visual Studio para experimentar la aplicación en HoloLens.
-* Traiga su mano a la vista y eleve el dedo del índice para realizar el seguimiento.
-* Empiece a girar Astronaut con el gesto de navegación (acerque el dedo del índice y Thumb juntos).
-* Mueva la mano a la izquierda, a la derecha, hacia arriba y hacia abajo.
-* A medida que su mano esté cerca del borde del marco de gestos, debe aparecer una flecha junto al cursor para avisarle de que se perderá el seguimiento de la mano. La flecha indica la dirección a la que debe DESPLACESE para evitar que se pierda el seguimiento.
+* Recompile la aplicación en Unity y, a continuación, compile e implemente desde Visual Studio para experimentar la aplicación en HoloLens.
+* Lleve la mano a la vista y suba el dedo índice para realizar el seguimiento.
+* Comience a girar al astronauta con el gesto de navegación (acercar el dedo índice y el dedo).
+* Mueva la mano más a la izquierda, a la derecha, hacia arriba y hacia abajo.
+* A medida que la mano se acerca al borde del marco de gestos, debe aparecer una flecha junto al cursor para advertirle de que se perderá el seguimiento de las manos. La flecha indica qué dirección debe mover la mano para evitar que se pierda el seguimiento.
 
-## <a name="chapter-4---manipulation"></a>Capítulo 4: manipulación
+## <a name="chapter-4---manipulation"></a>Capítulo 4: Manipulación
 
 >[!VIDEO https://www.youtube.com/embed/f3m8MvU60-I]
 
 ### <a name="objectives"></a>Objetivos
 
-* Use los eventos de manipulación para trasladar el Astronaut con las manos.
+* Use eventos de manipulación para mover al astronauta con las manos.
 * Proporcione comentarios sobre el cursor para que el usuario sepa cuándo se puede usar la manipulación.
 
 ### <a name="instructions"></a>Instrucciones
 
-GestureManager. CS y AstronautManager. CS nos permitirán hacer lo siguiente:
+GestureManager.cs y AstronautManager.cs nos permitirán hacer lo siguiente:
 
-1. Use la palabra clave de voz "**Move Astronaut**" para habilitar los gestos de **manipulación** y "**rotar Astronaut**" para deshabilitarlos.
-2. Cambie a responder al **reconocedor de gestos de manipulación**.
+1. Use la palabra clave de voz **"Move Astronaut" (Mover astronauta)** para habilitar **los** gestos de manipulación y **"Rotate Astronaut" (Girar astronauta)** para deshabilitarlos.
+2. Cambie a para responder al reconocedor **de gestos de manipulación**.
 
-Empecemos.
+Comencemos.
 
-1. En el panel **jerarquía** , cree un nuevo GameObject vacío. Asígnele el nombre "**AstronautManager**".
-2. En el panel **Inspector** , haga clic en el botón **Agregar componente** .
+1. En el panel **Jerarquía,** cree un elemento GameObject vacío. Asíételo "**AstronautManager**".
+2. En el **panel Inspector,** haga clic en **el botón Agregar** componente.
 3. En el menú, escriba en el cuadro de búsqueda **Astronaut Manager**. Seleccione el resultado de la búsqueda.
-4. En el panel **Inspector** , haga clic en el botón **Agregar componente** .
-5. En el menú, escriba en el cuadro de búsqueda **origen de entrada de voz**. Seleccione el resultado de la búsqueda.
+4. En el **panel Inspector,** haga clic en **el botón Agregar** componente.
+5. En el menú, escriba en el cuadro de búsqueda Origen de **entrada de voz.** Seleccione el resultado de la búsqueda.
 
-Ahora agregaremos los comandos de voz necesarios para controlar el estado de interacción de Astronaut.
+Ahora agregaremos los comandos de voz necesarios para controlar el estado de interacción del astronauta.
 
-1. Expanda la sección **palabras clave** en el **Inspector**.
-2. Haga clic **+** en el lado derecho para agregar una nueva palabra clave.
+1. Expanda la **sección Palabras clave** del **inspector**.
+2. Haga clic **+** en en el lado derecho para agregar una nueva palabra clave.
 3. Escriba la palabra clave como **Move Astronaut**. Si lo desea, no dude en agregar un método abreviado de teclado.
-4. Haga clic **+** en el lado derecho para agregar una nueva palabra clave.
-5. Escriba la palabra clave como **rotar Astronaut**. Si lo desea, no dude en agregar un método abreviado de teclado.
-6. El código de controlador correspondiente se puede encontrar en **GestureAction. CS**, en el controlador **ISpeechHandler. OnSpeechKeywordRecognized** .
+4. Haga clic **+** en en el lado derecho para agregar una nueva palabra clave.
+5. Escriba la palabra clave como **Rotate Astronaut**. Si lo desea, no dude en agregar un método abreviado de teclado.
+6. El código de controlador correspondiente se puede encontrar **en GestureAction.cs**, en el controlador **ISpeechHandler.OnSpeechKeywordRecognized.**
 
-![Cómo configurar el origen de entrada de voz para el capítulo 4](images/holograms211-speech.png)
+![Configuración del origen de entrada de voz para el capítulo 4](images/holograms211-speech.png)
 
 A continuación, configuraremos los comentarios de manipulación en el cursor.
 
-1. En la carpeta **hologramas** del panel de **proyecto** , busque el recurso **PathingFeedback** .
-2. Arrastre y coloque el recurso prefabricado **PathingFeedback** en el objeto **CursorWithFeedback** de la **jerarquía**.
-3. En el panel **jerarquía** , haga clic en **CursorWithFeedback**.
-4. Arrastre y coloque el objeto **PathingFeedback** de la **jerarquía** en la propiedad del **objeto de juego Thing detectado** del componente **cursor feedback** del **Inspector**.
+1. En el **panel Project** de **Hologramas,** busque el **recurso PathingFeedback.**
+2. Arrastre y coloque el objeto **prefab PathingFeedback** en el **objeto CursorWithFeedback** de la **jerarquía**.
+3. En el panel **Jerarquía,** haga clic **en CursorWithFeedback**.
+4. Arrastre y coloque el objeto **PathingFeedback** desde la jerarquía hasta la propiedad **Pathing Detected Game Object** del componente Cursor **Feedback** del **inspector**. 
 
-Ahora debemos agregar código a **GestureAction. CS** para habilitar lo siguiente:
+Ahora es necesario agregar código a **GestureAction.cs** para habilitar lo siguiente:
 
-1. Agregue código a la función **IManipulationHandler. OnManipulationUpdated** , que moverá el Astronaut cuando se detecte un gesto de **manipulación** .
-2. Calcule el **Vector de movimiento** para determinar dónde se debe mover el Astronaut en función de la posición de la mano.
-3. **Mueva** el Astronaut a la nueva posición.
+1. Agregue código **a** **la función IManipulationHandler.OnManipulationUpdated,** que moverá al astronauta cuando se detecte un gesto de manipulación.
+2. Calcule **el vector de** movimiento para determinar a dónde debe moverse el astronauta en función de la posición de la mano.
+3. **Mueva** el astronauta a la nueva posición.
 
-Complete la codificación ejercicio 4. a en **GestureAction. CS** o use nuestra solución completada a continuación:
+Complete el ejercicio de codificación 4.a en **GestureAction.cs** o use nuestra solución completa a continuación:
 
 ```cs
 using HoloToolkit.Unity.InputModule;
@@ -486,18 +486,18 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
 ### <a name="build-and-deploy"></a>Compilación e implementación
 
-* Recompile en Unity y, después, compile e implemente desde Visual Studio para ejecutar la aplicación en HoloLens.
-* Mueva la mano hacia delante de HoloLens y eleve el dedo del índice para que se pueda realizar el seguimiento.
-* Centre el cursor sobre el Astronaut.
-* Por ejemplo, "Move Astronaut" para trasladar Astronaut con un gesto de manipulación.
+* Recompile en Unity y, a continuación, compile e implemente desde Visual Studio para ejecutar la aplicación en HoloLens.
+* Mueva la mano delante de la HoloLens y mueva el dedo índice para que se pueda realizar el seguimiento.
+* Centre el cursor sobre el astronauta.
+* Diga "Move Astronaut" (Mover astronauta) para mover al astronauta con un gesto de manipulación.
 * Deben aparecer cuatro flechas alrededor del cursor para indicar que el programa responderá ahora a los eventos de manipulación.
-* Baje el dedo del índice hasta el pulgar y manténgalos reducidos juntos.
-* A medida que mueve la mano, el Astronaut se moverá también (esta es la manipulación).
-* Eleve el dedo del índice para dejar de manipular el Astronaut.
-* Nota: Si no se indica "mover Astronaut" antes de mover la mano, se usará en su lugar el gesto de navegación.
-* Por ejemplo, "rotar Astronaut" para volver al estado Rotatable.
+* Bajar el dedo índice hacia abajo hasta el control y mantenerlos juntos.
+* Al mover la mano, el astronauta también se moverá (esto es manipulación).
+* Elevar el dedo índice para detener la manipulación del astronauta.
+* Nota: Si no dice "Mover astronauta" antes de mover la mano, se usará en su lugar el gesto navegación.
+* Diga "Rotate Astronaut" (Girar astronauta) para volver al estado rotable.
 
-## <a name="chapter-5---model-expansion"></a>Capítulo 5: expansión del modelo
+## <a name="chapter-5---model-expansion"></a>Capítulo 5: Expansión de modelos
 
 >[!VIDEO https://www.youtube.com/embed/dA11P4P0VO8]
 
@@ -508,43 +508,43 @@ public class GestureAction : MonoBehaviour, INavigationHandler, IManipulationHan
 
 ### <a name="instructions"></a>Instrucciones
 
-En esta sección, se realizarán las siguientes tareas:
+En esta sección, realizaremos las siguientes tareas:
 
-1. Agregue una nueva palabra clave "**Expand Model**" para expandir el modelo Astronaut.
-2. Agregue una nueva palabra clave "**RESET Model**" para devolver el modelo a su forma original.
+1. Agregue una nueva palabra clave "**Expandir modelo**" para expandir el modelo de astronauta.
+2. Agregue una nueva palabra clave "**Reset Model**" para devolver el modelo a su formulario original.
 
-Haremos esto agregando dos palabras clave más al origen de entrada de voz del capítulo anterior. También mostraremos otra manera de controlar los eventos de reconocimiento.
+Para ello, agregaremos dos palabras clave más al origen de entrada de voz del capítulo anterior. También mostraremos otra manera de controlar los eventos de reconocimiento.
 
-1. Haga clic en atrás en **AstronautManager** en el **Inspector** y expanda la sección **palabras clave** en el **Inspector**.
-2. Haga clic **+** en el lado derecho para agregar una nueva palabra clave.
-3. Escriba la palabra clave como **modelo de expansión**. Si lo desea, no dude en agregar un método abreviado de teclado.
-4. Haga clic **+** en el lado derecho para agregar una nueva palabra clave.
-5. Escriba la palabra clave como **restablecer modelo**. Si lo desea, no dude en agregar un método abreviado de teclado.
-6. En el panel **Inspector** , haga clic en el botón **Agregar componente** .
-7. En el menú, escriba en el cuadro de búsqueda **controlador de entrada de voz**. Seleccione el resultado de la búsqueda.
-8. Check **es el agente de escucha global**, ya que queremos que estos comandos funcionen independientemente de la GameObject a la que nos centramos.
-9. Haga clic en el **+** botón y seleccione **expandir modelo** en la lista desplegable palabra clave.
-10. Haga clic en en **+** respuesta y arrastre el **AstronautManager** desde la **jerarquía** hasta el campo **ninguno (objeto)** .
-11. Ahora, haga clic en la lista desplegable **no función** , seleccione **AstronautManager** y **ExpandModelCommand**.
-12. Haga clic en el botón del controlador de entrada de voz **+** y seleccione **restablecer modelo** en la lista desplegable palabra clave.
-13. Haga clic en en **+** respuesta y arrastre el **AstronautManager** desde la **jerarquía** hasta el campo **ninguno (objeto)** .
-14. Ahora, haga clic en la lista desplegable **no función** , seleccione **AstronautManager** y **ResetModelCommand**.
+1. Haga clic de nuevo **en AstronautManager** **en el inspector y** expanda la sección **Palabras** clave del **inspector**.
+2. Haga clic **+** en en el lado derecho para agregar una nueva palabra clave.
+3. Escriba la palabra clave como **Expandir modelo.** Si lo desea, no dude en agregar un método abreviado de teclado.
+4. Haga clic **+** en en el lado derecho para agregar una nueva palabra clave.
+5. Escriba la palabra clave como **Restablecer modelo.** Si lo desea, no dude en agregar un método abreviado de teclado.
+6. En el **panel Inspector,** haga clic en **el botón Agregar** componente.
+7. En el menú, escriba en el cuadro de búsqueda **Controlador de entrada de voz**. Seleccione el resultado de la búsqueda.
+8. Active **Is Global Listener**(Es el agente de escucha global), ya que queremos que estos comandos funcionen independientemente del Elemento GameObject que nos centramos.
+9. Haga clic en **+** el botón y seleccione Expandir modelo **en** la lista desplegable Palabra clave.
+10. Haga clic **+** en en Response (Respuesta) y arrastre **AstronautManager** desde **hierarchy (Jerarquía)** **al campo None (Object) (Ninguno [objeto]).**
+11. Ahora, haga clic en **la lista desplegable Sin** función, seleccione **AstronautManager** y, a continuación, **ExpandaModelCommand**.
+12. Haga clic en el botón del controlador de entrada **+** de voz y seleccione Restablecer **modelo** en la lista desplegable Palabra clave.
+13. Haga clic **+** en en Response (Respuesta) y arrastre **AstronautManager** desde **hierarchy (Jerarquía)** **al campo None (Object) (Ninguno [objeto]).**
+14. Ahora, haga clic en **la lista desplegable Sin** función, seleccione **AstronautManager** y, a continuación, **ResetModelCommand**.
 
-![Cómo configurar el origen y el controlador de entrada de voz para el capítulo 5](images/holograms211-speechhandler.png)
+![Configuración del controlador y el origen de entrada de voz para el capítulo 5](images/holograms211-speechhandler.png)
 
 ### <a name="build-and-deploy"></a>Compilación e implementación
 
-* ¡Pruébelo! Compile e implemente la aplicación en HoloLens.
-* Por ejemplo, **expanda modelo** para ver el modelo Astronaut expandido.
-* Use la **navegación** para girar partes individuales del palo de Astronaut.
-* Por ejemplo, **mueva Astronaut** y, a continuación, use la **manipulación** para desplace partes individuales del palo de Astronaut.
-* Por ejemplo, **gire Astronaut** para volver a girar las piezas.
-* Por ejemplo, **restablezca el modelo** para devolver el Astronaut a su forma original.
+* ¡Pruébelo! Compile e implemente la aplicación en el HoloLens.
+* Diga **Expandir modelo** para ver el modelo de astronauta expandido.
+* Use **Navegación** para girar partes individuales del palo del astronauta.
+* Diga **Move Astronaut (Mover astronauta)** y, a continuación, use **Manipulation** (Manipulación) para mover piezas individuales del palo del astronauta.
+* Diga **Rotate Astronaut (Girar astronauta)** para girar las piezas de nuevo.
+* Diga **Restablecer modelo** para devolver al astronauta a su forma original.
 
 ## <a name="the-end"></a>Fin
 
-Felicidades. Ahora ha completado la **entrada MR 211: gesto**.
+¡Enhorabuena! Ya ha completado mr **input 211: gesture**.
 
-* Sabe cómo detectar y responder a los eventos de seguimiento, navegación y manipulación.
+* Sabe cómo detectar y responder a eventos de manipulación, navegación y seguimiento de manos.
 * Comprende la diferencia entre los gestos de navegación y manipulación.
-* Sabe cómo cambiar el cursor para proporcionar comentarios visuales sobre cuándo se detecta una mano, Cuándo se va a perder una mano y cuándo un objeto admite distintas interacciones (navegación frente a manipulación).
+* Sabe cómo cambiar el cursor para proporcionar comentarios visuales sobre cuándo se detecta una mano, cuándo está a punto de perderse una mano y cuándo un objeto admite interacciones diferentes (navegación frente a manipulación).

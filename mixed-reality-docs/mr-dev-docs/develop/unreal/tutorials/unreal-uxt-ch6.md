@@ -7,12 +7,12 @@ ms.date: 06/10/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 7dbf72a477f376e338d346965b5276eba00ab543
-ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
+ms.openlocfilehash: c50be323bac18984e735517f85724fb087e76cbf0ae8a6ccde6b44c460ef0b8e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2021
-ms.locfileid: "110711564"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115203373"
 ---
 # <a name="6-packaging--deploying-to-device-or-emulator"></a>6. Empaquetado e implementación en el dispositivo o emulador
 

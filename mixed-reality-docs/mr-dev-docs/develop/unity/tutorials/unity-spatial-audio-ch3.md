@@ -6,12 +6,12 @@ ms.author: v-hferrone
 ms.date: 02/05/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens2, spatial audio, MRTK, mixed reality toolkit, UWP, Windows 10, HRTF, head-related transfer function, reverb, Microsoft Spatializer, video importing, Video Player
-ms.openlocfilehash: 60b70fc3b7f49f5b39138a218f93c0b37f29b9d9
-ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
+ms.openlocfilehash: 2926301aac9db67d3e72b0511600720c24e5965f52a23faa1230c381a47c9b90
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2021
-ms.locfileid: "110712921"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115202938"
 ---
 # <a name="3-spatializing-audio-from-a-video"></a>3. Espacialización del audio de un vídeo
 
@@ -34,9 +34,9 @@ Para importar Vídeo en el proyecto de Unity. En el menú de Unity, **seleccione
 
 En la ventana Importar nuevo **recurso...** , seleccione el archivo **Microsoft HoloLens - Spatial Sound-PTPvx7mGall4** que descargó y haga clic en el botón Abrir para importar el recurso en el proyecto: 
 
-![Selección del recurso](images/spatial-audio/spatial-audio-03-section1-step1-2.PNG)
+![Selección de recurso](images/spatial-audio/spatial-audio-03-section1-step1-2.PNG)
 
-El ajuste de la configuración de calidad del clip de vídeo puede garantizar una reproducción sin problemas en HoloLens 2. Seleccione el archivo de vídeo en la **ventana Proyecto** y, en la ventana Inspector del archivo de **vídeo,** invalide la configuración de aplicaciones de la **Tienda Windows** y:
+El ajuste de la configuración de calidad del clip de vídeo puede garantizar una reproducción sin problemas en HoloLens 2. Seleccione el archivo de vídeo en la **Project** y, en la ventana Inspector del archivo de **vídeo,** invalide la configuración de Windows **Store Apps** y:
 
 * Habilitar **transcodificación**
 * Establezca **Códec** en H264
@@ -63,7 +63,7 @@ Haga clic con el botón derecho en Hierarchy (Jerarquía), seleccione 3D Object 
 
 ![Adición de un cuadrándular](images/spatial-audio/spatial-audio-03-section2-step1-1.PNG)
 
-Ahora tiene que  texturar el cuadrángulo con el vídeo. En la ventana Proyecto, haga clic con el botón derecho y elija Crear textura de representación para crear un componente Render Texture (Representar textura), escriba un nombre adecuado para La textura de representación, por    >   ejemplo, Textura de _audio espacial_:
+Ahora tiene que  texturar el cuadrángulo con el vídeo. En la ventana **Project,** haga clic con el botón derecho y elija Crear textura de representación para crear un componente Render Texture (Representar textura), escriba un nombre adecuado para render texture (Textura de representación), por  >   ejemplo, Spatial Audio Texture (Textura de _audio_ espacial):
 
 ![Crear textura de representación](images/spatial-audio/spatial-audio-03-section2-step1-2.PNG)
 
@@ -73,12 +73,12 @@ Seleccione Render **Texture (Representar textura)** y, en la ventana Inspector, 
 
 A continuación, use la textura de **audio espacial** render texture creada como textura para el **cuadrángulo**:
 
-1. Arrastre la **textura de audio espacial** desde la ventana **Proyecto** al **cuadrángulo** de la jerarquía para agregar la textura de representación al cuadrángulo.
-2. Para garantizar un buen rendimiento en HoloLens 2, seleccione Quad en la jerarquía y, en la ventana Inspector del **sombreador, seleccione** el sombreador estándar Mixed Reality  >   Toolkit.
+1. Arrastre la **textura de audio espacial** desde  **Project** ventana al cuadrángulo de la jerarquía para agregar la textura de representación al cuadrángulo.
+2. Para garantizar un buen rendimiento en HoloLens 2, seleccione Quad en la jerarquía y, en la ventana Inspector del **sombreador, seleccione** el Mixed Reality Toolkit  >  **Sombreador** estándar.
 
 ![Propiedades de textura quad](images/spatial-audio/spatial-audio-03-section2-step1-4.PNG)
 
-Para establecer el **Reproductor de vídeo** y **Representar** textura para  reproducir el clip de vídeo, seleccione **el Reproductor** de vídeo en la jerarquía y, en la **ventana Inspector,**
+Para establecer **El Reproductor de vídeo** y **Representar** textura para reproducir el clip de vídeo, seleccione el **Reproductor de** vídeo en la jerarquía **y** en la **ventana Inspector.**
 
 * Establezca la **propiedad Clip de** vídeo en el archivo de vídeo descargado "Microsoft HoloLens - Spatial Sound-PTPvx7mGall4"
 * Active la casilla **Bucle**
@@ -92,7 +92,7 @@ En la ventana Hierarchy (Jerarquía), seleccione **Quad** object (Objeto Quad) y
 
 En el **origen de audio**:
 
-* Establezca **Output (Salida)** en **spatial audio mixer (Mezclador de audio espacial)**
+* Establezca **Output (Salida)** **en spatial audio Mixer**
 * Active la **casilla Espacializar**
 * Mover el **control deslizante de Spatial Blend** a 1 (3D)
 

@@ -7,12 +7,12 @@ ms.date: 11/30/2020
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, learn, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, qué es la realidad virtual, qué es la realidad aumentada, MRTK, kit de herramientas de mixed reality, traducción de idiomas, Azure, Azure cognitive services, Microsoft Learn
 ms.localizationpriority: high
-ms.openlocfilehash: e21f6245be5a47797c2b58fd8f57c4c6179b1751
-ms.sourcegitcommit: 72970dbe6674e28c250f741e50a44a238bb162d4
+ms.openlocfilehash: 24584532fca0872a1ec62f6f2381e0aa076da5bb79eea765cb3a0a0f5736f36f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "112906881"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115204401"
 ---
 # <a name="mixed-reality-learn-overview"></a>Introducción a Learn de Mixed Reality
 

@@ -7,12 +7,12 @@ ms.date: 11/18/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, tutorial, getting started, mrtk, uxt, UX Tools, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: 771dd4028adfacb27544e632aa0f355d3bc91c66
-ms.sourcegitcommit: 4a6c26615d52776bdc4faab70391592092a471fc
+ms.openlocfilehash: 74d4fb7ebab2f5ba2df477cc29d8787367c1f105cc7a65d87460ac1e033b0fbb
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2021
-ms.locfileid: "110712610"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115203820"
 ---
 # <a name="4-making-your-scene-interactive"></a>4. Creación de escenas interactivas
 

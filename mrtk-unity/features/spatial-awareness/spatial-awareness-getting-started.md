@@ -5,12 +5,12 @@ author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 46bb78bc4e2574fd4da14f19edf52624b7b301c2
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: bbe5b923ea7da965424e7fac98adca180c6f91d0c9b4c4ca7a0477e301c362f9
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176713"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115204333"
 ---
 # <a name="spatial-awareness-getting-started"></a>Introducción al reconocimiento espacial
 
@@ -33,13 +33,13 @@ La adición de compatibilidad con el reconocimiento espacial requiere dos compon
 
 El sistema de reconocimiento espacial se administra mediante el objeto MixedRealityToolkit (u otro componente [del registrador de](xref:Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar) servicios). Siga estos pasos para habilitar o deshabilitar el sistema *de reconocimiento espacial* en el perfil de *MixedRealityToolkit.*
 
-El Mixed Reality Toolkit se incluye con algunos perfiles preconfigurados predeterminados. Algunos de ellos tienen el sistema de reconocimiento espacial habilitado o deshabilitado de forma predeterminada. La intención de esta configuración previa, especialmente para cuando está deshabilitada, es evitar la sobrecarga visual de calcular y representar las mallas.
+El Mixed Reality Toolkit incluye algunos perfiles preconfigurados predeterminados. Algunas de ellas tienen el sistema de reconocimiento espacial habilitado o deshabilitado de forma predeterminada. La intención de esta configuración previa, especialmente para cuando está deshabilitada, es evitar la sobrecarga visual de calcular y representar las mallas.
 
 | Perfil | Sistema habilitado de forma predeterminada |
 | --- | --- |
-| `DefaultHoloLens1ConfigurationProfile` (Assets/MRTK/SDK/Profiles/HoloLens1) | Falso |
-| `DefaultHoloLens2ConfigurationProfile` (Assets/MRTK/SDK/Profiles/HoloLens2) | Falso |
-| `DefaultMixedRealityToolkitConfigurationProfile` (Assets/MRTK/SDK/Profiles) | Verdadero |
+| `DefaultHoloLens1ConfigurationProfile` (Assets/MRTK/SDK/Profiles/HoloLens1) | False |
+| `DefaultHoloLens2ConfigurationProfile` (Assets/MRTK/SDK/Profiles/HoloLens2) | False |
+| `DefaultMixedRealityToolkitConfigurationProfile` (Assets/MRTK/SDK/Profiles) | True |
 
 1. Seleccione el objeto MixedRealityToolkit en la jerarquía de escena para abrirlo en el panel inspector.
 
@@ -55,7 +55,7 @@ El Mixed Reality Toolkit se incluye con algunos perfiles preconfigurados predete
 
 ### <a name="register-observers"></a>Registro de observadores
 
-Los servicios de la Mixed Reality Toolkit pueden tener [servicios de](../../architecture/systems-extensions-providers.md) proveedor de datos que complementan el servicio principal con controles de implementación y datos específicos de la plataforma. Un ejemplo de esto es el sistema [](../input/input-providers.md) de entrada Mixed Reality que tiene varios proveedores de datos para obtener el controlador y otra información de entrada relacionada de varias API específicas de la plataforma.
+Los servicios de la Mixed Reality Toolkit pueden tener [servicios de](../../architecture/systems-extensions-providers.md) proveedor de datos que complementan el servicio principal con controles de implementación y datos específicos de la plataforma. Un ejemplo de esto es el sistema [](../input/input-providers.md) de entrada Mixed Reality que tiene varios proveedores de datos para obtener información de controlador y otra información de entrada relacionada de varias API específicas de la plataforma.
 
 El sistema de reconocimiento espacial es similar en que los proveedores de datos suministran al sistema datos de malla sobre el mundo real. El perfil de reconocimiento espacial debe tener al menos un observador espacial registrado. Los observadores espaciales suelen ser componentes específicos de la plataforma que actúan como proveedor para mostrar varios tipos de datos de malla desde un punto de conexión específico de la plataforma (es decir, HoloLens).
 

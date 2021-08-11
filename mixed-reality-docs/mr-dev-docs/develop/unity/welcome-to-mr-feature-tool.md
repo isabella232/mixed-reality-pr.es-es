@@ -7,12 +7,12 @@ ms.date: 03/04/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: up-to-date, tools, get started, basics, unity, visual studio, toolkit, mixed reality headset, windows mixed reality headset, virtual reality headset, installation, Windows, HoloLens, emulator, unreal, openxr
-ms.openlocfilehash: 1244f9cd4da0d6ae0b5c6f92698f87f0edd812e2
-ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
+ms.openlocfilehash: 7db87fdc35f64d57dc03ec607425aeab810608bc0dc0e81a3aeac52feaba444b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "114757102"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115218656"
 ---
 # <a name="welcome-to-the-mixed-reality-feature-tool"></a>Le damos la bienvenida a la herramienta de características de Mixed Reality
 
