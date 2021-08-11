@@ -6,12 +6,12 @@ ms.author: v-vtieto
 ms.date: 07/26/2021
 ms.topic: article
 keywords: openxr, unity, hololens, hololens 2, mixed reality, MRTK, Mixed Reality Toolkit, augmented reality, virtual reality, mixed reality headsets, learn, tutorial, getting started, holographic remoting, desktop
-ms.openlocfilehash: 51244a94fb7e54f2eee41d9d1b7f65b0ba373138
-ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
+ms.openlocfilehash: 0b18bf4a187190da3ef9d17fd87f2c42feaa271210345330887ce618b49a0442
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "114757443"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115192221"
 ---
 # <a name="holographic-remoting-in-unity"></a>Comunicación remota holográfica en Unity
 
@@ -19,11 +19,11 @@ ms.locfileid: "114757443"
 > Windows La compatibilidad con la comunicación remota de aplicaciones independientes se agregó en la versión del paquete 0.1.3.
 > A partir de la versión 0.1.3, esta característica no admite compilaciones de UWP.
 
-[Conozca los conceptos básicos de la comunicación remota holográfica.](../platform-capabilities-and-apis/holographic-remoting-overview.md)
+[Aprenda los conceptos básicos de la comunicación remota holográfica.](../platform-capabilities-and-apis/holographic-remoting-overview.md)
 
 Puede usar Holographic Remoting para transmitir contenido holográfico a su HoloLens 2 en tiempo real. Esta es una excelente manera de depurar rápidamente la aplicación sin compilar e implementar un proyecto completo. 
 
-Antes de empezar, es importante comprender las dos opciones principales de Unity:
+Antes de empezar, es importante comprender las dos opciones principales en Unity:
 * **Holographic Remoting in Unity Play mode**(Comunicación remota holográfica en modo de reproducción de Unity): ejecute la aplicación localmente en el editor de Unity en el equipo en modo de reproducción para proporcionar una manera rápida de obtener una vista previa del contenido en un HoloLens 2. El modo de reproducción también se puede usar con un Windows Mixed Reality casco conectado al equipo de desarrollo.
 * **Comunicación remota holográfica** desde un archivo de compilación de Unity: ejecute la aplicación desde una aplicación remota de Comunicación remota holográfica de Unity que haya exportado al escritorio a su HoloLens 2. Esto puede resultar útil si la aplicación tiene modelos o recursos de alta resolución. la GPU de escritorio controla la representación antes de llegar al HoloLens 2.
 
@@ -47,16 +47,16 @@ Para obtener mejores resultados, asegúrese de que la aplicación establece corr
 
 1. En la barra de menús, **seleccione Editar > Project Configuración**.
 1. En la columna del lado izquierdo, seleccione **Administración del complemento XR.**
-1. En la **sección XR Plug-in Management** (Administración de complementos **XR), seleccione Microsoft HoloLens feature group** (Grupo de características) y **Holographic Remoting remote app feature group (Grupo** de características remotas de holographic remoting).
+1. En la **sección XR Plug-in Management (Administración** de complementos XR), seleccione **Microsoft HoloLens grupo** de características y Holographic Remoting remote app feature group (Grupo de características de aplicaciones remotas **de Holographic Remoting).**
 1. Anule la **selección de Initialize XR on Startup (Inicializar XR al iniciar):**
 
     ![Captura de pantalla del panel de configuración del proyecto abierto en el Editor de Unity con Inicializar XR al iniciar desactivada](images/001-openxr-features.png)
 
-1. Escriba código para establecer la configuración de comunicación remota y desencadenar la inicialización de XR. La aplicación de ejemplo distribuida con [Mixed Reality complemento OpenXR](./xr-project-setup.md#unity-sample-projects-for-openxr-and-hololens-2) contiene AppRemoting.cs, que muestra un escenario de ejemplo para conectarse a una dirección IP específica en tiempo de ejecución. La implementación de la aplicación de ejemplo en un equipo local en este momento mostrará un campo de entrada de dirección IP con un botón conectar. Al escribir una dirección IP y hacer clic Conectar inicializará XR e intentará conectarse al dispositivo de destino:
+1. Escriba código para establecer la configuración de comunicación remota y desencadenar la inicialización de XR. La aplicación de ejemplo distribuida con el complemento [Mixed Reality OpenXR](./xr-project-setup.md#unity-sample-projects-for-openxr-and-hololens-2) contiene AppRemoting.cs, que muestra un escenario de ejemplo para conectarse a una dirección IP específica en tiempo de ejecución. La implementación de la aplicación de ejemplo en un equipo local en este momento mostrará un campo de entrada de dirección IP con un botón conectar. Al escribir una dirección IP y hacer clic Conectar inicializará XR e intentará conectarse al dispositivo de destino:
 
     ![Captura de pantalla de la aplicación de ejemplo que muestra la interfaz de usuario de comunicación remota de aplicaciones de ejemplo](images/openxr-sample-app-remoting.png)
 
-1. Para escribir código de conexión personalizado, llame `Microsoft.MixedReality.OpenXR.Remoting.AppRemoting.Connect` a con un relleno `RemotingConfiguration` . La aplicación de ejemplo expone esto en el inspector y muestra cómo rellenar la dirección IP desde un campo de texto. Al `Connect` llamar a se establecerá la configuración y se inicializará automáticamente XR, por lo que se debe llamar a esta como corrotina:
+1. Para escribir código de conexión personalizado, llame `Microsoft.MixedReality.OpenXR.Remoting.AppRemoting.Connect` a con un rellenado `RemotingConfiguration` . La aplicación de ejemplo expone esto en el inspector y muestra cómo rellenar la dirección IP desde un campo de texto. Al `Connect` llamar a se establecerá la configuración y se inicializará automáticamente XR, por lo que se debe llamar a esta como corrotina:
 
     ``` cs
     StartCoroutine(Remoting.AppRemoting.Connect(remotingConfiguration));

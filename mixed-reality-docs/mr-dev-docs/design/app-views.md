@@ -1,47 +1,47 @@
 ---
 title: Vistas de aplicación
-description: 'Obtenga información sobre cómo usar los dos tipos de vistas en las aplicaciones de Windows Mixed Reality: vistas de envolvente y vistas 2D.'
+description: 'Obtenga información sobre cómo usar los dos tipos de vistas en Windows Mixed Reality aplicaciones: vistas inmersivas y vistas 2D.'
 author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: vista envolvente, vista en 2D, pizarra, aplicación, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta
-ms.openlocfilehash: b6a16fc3b1ac45d74874f37ce44a36d3e144fee8
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: vista envolvente, vista 2D, pizarra, aplicación, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: 1f779749938bfc8893f0e1f1f60c97549d30a24075b5b0926af61e2f88625b9c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98580105"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115191520"
 ---
 # <a name="app-views"></a>Vistas de aplicación
 
-Las aplicaciones de Windows pueden contener dos tipos de vistas: **vistas envolventes** y **vistas 2D**. Las aplicaciones pueden alternar entre las distintas vistas de envolvente y 2D, mostrando sus vistas 2D en un monitor como una ventana o en un casco como pizarra. Las aplicaciones que tienen al menos una vista envolvente se clasifican como **aplicaciones de realidad mixta**. Las aplicaciones que nunca tienen una vista envolvente son **aplicaciones 2D**.
+Windows aplicaciones pueden contener dos tipos de vistas: vistas **inmersivas** y **vistas 2D**. Las aplicaciones pueden cambiar entre sus distintas vistas envolventes y 2D, mostrando sus vistas 2D en un monitor como una ventana o en un casco como una pizarra. Las aplicaciones que tienen al menos una vista inmersiva se clasifican como **aplicaciones de realidad mixta.** Las aplicaciones que nunca tienen una vista envolvente son **aplicaciones 2D**.
 
-## <a name="immersive-views"></a>Vistas envolventes
+## <a name="immersive-views"></a>Vistas inmersivas
 
-Una vista envolvente ofrece a la aplicación la posibilidad de crear hologramas en el mundo que rodea al usuario o sumergirlo en un entorno virtual. Cuando una aplicación está dibujando en la vista envolvente, no se compone ninguna otra aplicación que dibuje en los mismos &mdash; hologramas de varias aplicaciones. Al ajustar continuamente la perspectiva desde la que la [aplicación representa](../develop/platform-capabilities-and-apis/rendering.md) su escena para que coincida con los movimientos principales del usuario, la aplicación puede representar hologramas [de bloque mundial](coordinate-systems.md) . Los hologramas con bloqueo Mundial permanecen en un punto fijo del mundo real o pueden representar un mundo virtual que mantiene su posición a medida que se mueve un usuario.
+Una vista envolvente ofrece a la aplicación la posibilidad de crear hologramas en el mundo que rodea al usuario o sumergirlo en un entorno virtual. Cuando una aplicación dibuja en la vista inmersiva, ninguna otra aplicación está dibujando al mismo tiempo hologramas de varias aplicaciones que no se &mdash; han compuesto juntos. Al ajustar continuamente la [](../develop/platform-capabilities-and-apis/rendering.md) perspectiva desde la que la aplicación representa su escena para [](coordinate-systems.md) que coincida con los movimientos de la cabeza del usuario, la aplicación puede representar hologramas bloqueados por el mundo. Los hologramas bloqueados por el mundo permanecen en un punto fijo del mundo real o pueden representar un mundo virtual que mantiene su posición a medida que se mueve un usuario.
 
-![Cuando se encuentra en una vista envolvente, los hologramas se pueden colocar en todo el mundo.](images/designoverview-940px.jpg)<br>
-*Cuando se encuentra en una vista envolvente, los hologramas se pueden colocar en todo el mundo*
+![Cuando se encuentra en una vista inmersiva, los hologramas se pueden colocar en el mundo que le rodea.](images/designoverview-940px.jpg)<br>
+*Cuando se encuentra en una vista inmersiva, los hologramas se pueden colocar en el mundo que le rodea.*
 
-En [HoloLens](/hololens/hololens1-hardware), la aplicación representa sus hologramas sobre el entorno real del usuario. En un [casco con Windows Mixed Reality](../discover/immersive-headset-hardware-details.md), el usuario no puede ver el mundo real y, por tanto, la aplicación debe representar todo lo que verá el usuario.
+En [HoloLens](/hololens/hololens1-hardware), la aplicación representa sus hologramas sobre el entorno real del usuario. En un [Windows Mixed Reality casco](../discover/immersive-headset-hardware-details.md)envolvente, el usuario no puede ver el mundo real, por lo que la aplicación debe representar todo lo que el usuario verá.
 
-La [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md) (incluido el menú Inicio y los hologramas que ha colocado en torno al entorno) no se representa en una vista envolvente. En HoloLens, Cortana retransmite cualquier notificación del sistema que se produce mientras se muestra una vista envolvente, en la que el usuario puede responder con la entrada de voz.
+La [Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md) principal (incluidos los menú Inicio y los hologramas que ha colocado alrededor del entorno) tampoco se representa mientras se encuentra en una vista inmersiva. En HoloLens, Cortana las notificaciones del sistema que se producen mientras se muestra una vista inmersiva, a la que el usuario puede responder con la entrada de voz.
 
-En una vista envolvente, la aplicación también es responsable de controlar todas las entradas. La entrada en Windows Mixed Reality se compone de [mirados](gaze-and-commit.md), [gestos](gaze-and-commit.md#composite-gestures) (solo HoloLens), [voz y [controladores de movimiento](motion-controllers.md) (solo auriculares inmersivo).
+Mientras se encuentra en una vista inmersiva, la aplicación también es responsable de controlar todas las entradas. La entrada en Windows Mixed Reality se forma de [mirada,](gaze-and-commit.md)gesto [(solo](gaze-and-commit.md#composite-gestures) HoloLens), [controladores de voz y movimiento [(solo](motion-controllers.md) cascos envolventes).
 
-## <a name="2d-views"></a>vistas 2D
+## <a name="2d-views"></a>Vistas 2D
 
-![Varias vistas 2D diseñadas en torno a la Página principal de Windows Mixed Reality](images/teleportation-940px.png)<br>
-*Varias aplicaciones con una vista 2D colocada en torno a la Página principal de Windows Mixed Reality*
+![Varias vistas 2D en torno a la Windows Mixed Reality principal](images/teleportation-940px.png)<br>
+*Varias aplicaciones con una vista 2D colocada alrededor del Windows Mixed Reality principal*
 
-Una aplicación con una vista 2D aparece en la [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md) (a veces denominada "Shell") como una pizarra virtual, representada junto con los iniciadores de aplicaciones y otros hologramas que el usuario ha colocado en su mundo. El usuario puede ajustar esta pizarra para moverla y escalarla, aunque sigue siendo una resolución fija, sea cual sea su tamaño. Si la primera vista de la aplicación es una vista 2D, el contenido 2D rellenará la misma pizarra que se usa para iniciar la aplicación.
+Una aplicación con una vista 2D aparece en la página principal de [Windows Mixed Reality (a](../discover/navigating-the-windows-mixed-reality-home.md) veces denominada "shell") como una pizarra virtual, que se representa junto con los iniciadores de la aplicación y otros hologramas que el usuario ha colocado en su mundo. El usuario puede ajustar esta pizarra para moverla y escalarla, aunque permanece en una resolución fija independientemente de su tamaño. Si la primera vista de la aplicación es una vista 2D, el contenido 2D rellenará la misma pizarra que se usa para iniciar la aplicación.
 
-En un casco de escritorio, puede ejecutar cualquier aplicación Plataforma universal de Windows (UWP) que se ejecute en el monitor de escritorio hoy mismo. Estas aplicaciones ya representan vistas en 2D, y su contenido aparecerá automáticamente en una pizarra en el mundo del usuario cuando se inicie. las aplicaciones para UWP en 2D pueden tener como destino la familia de dispositivos **Windows. universal** para ejecutarse en auriculares de escritorio y en HoloLens como pizarras.
+En un casco de escritorio, puede ejecutar cualquier aplicación de plataforma Windows universal (UWP) que se ejecute actualmente en el monitor de escritorio. Estas aplicaciones ya están representando vistas 2D en la actualidad y su contenido aparecerá automáticamente en una pizarra en el mundo del usuario cuando se inicie. Las aplicaciones para UWP 2D pueden tener como **destino Windows. Familia** de dispositivos universal para ejecutarse en cascos de escritorio y HoloLens como pizarras.
 
-Un uso clave de las vistas 2D es mostrar un formulario de entrada de texto que usa el teclado del sistema. Dado que el shell no se puede representar en la parte superior de una vista envolvente, la aplicación tiene que cambiar a una vista 2D para mostrar el teclado del sistema. Las aplicaciones que quieren aceptar la entrada de texto deben cambiar a una vista 2D con un cuadro de texto. Mientras el cuadro de texto tenga el foco, el sistema mostrará el teclado del sistema, lo que permite al usuario escribir texto.
+Un uso clave de las vistas 2D es mostrar un formulario de entrada de texto que usa el teclado del sistema. Dado que el shell no se puede representar sobre una vista inmersiva, la aplicación tiene que cambiar a una vista 2D para mostrar el teclado del sistema. Las aplicaciones que quieran aceptar la entrada de texto deben cambiar a una vista 2D con un cuadro de texto. Aunque ese cuadro de texto tiene el foco, el sistema mostrará el teclado del sistema, lo que permite al usuario escribir texto.
 
-Una aplicación puede tener vistas 2D en el monitor de escritorio y en un casco conectado en un equipo de escritorio. Por ejemplo, puede examinar el borde en el monitor de escritorio usando su vista de 2D principal para buscar un vídeo de 360 grados. Al reproducir ese vídeo, Edge iniciará una vista envolvente secundaria dentro de los auriculares para mostrar el contenido de vídeo envolvente.
+Una aplicación puede tener vistas 2D en el monitor de escritorio y en un casco conectado en un equipo de escritorio. Por ejemplo, puede examinar Edge en el monitor de escritorio mediante su vista 2D principal para encontrar un vídeo de 360 grados. Al reproducir ese vídeo, Edge iniciará una vista inmersiva secundaria dentro del casco para mostrar el contenido del vídeo inmersivo.
 
 ## <a name="see-also"></a>Consulte también
 

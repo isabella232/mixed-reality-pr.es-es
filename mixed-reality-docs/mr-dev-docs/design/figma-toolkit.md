@@ -1,26 +1,26 @@
 ---
-title: Kit de herramientas de Figma
+title: Kit de herramientas de Figma de MRTK
 description: Descargue el archivo Figma que contiene recursos para bloques de creación de interfaz de usuario comunes.
 author: dongpark
 ms.author: dongpark
 ms.date: 03/29/2021
 ms.topic: article
 keywords: Figma, Sketch, Adobe XD, design, designer, design file, UX design, HoloLens, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: ef36e68e7340bc0a1500a9468db35d1e0b417ed6
-ms.sourcegitcommit: 114c304a416bfe9d9b294c4adbb4c23cbe60ea4e
+ms.openlocfilehash: e72dfece3252a35a8da2b1dc72a1476bbf174b36bf01b731b4f0be5af21f2a33
+ms.sourcegitcommit: 5977109661a1db4ee2be8ed532479342093303d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2021
-ms.locfileid: "114224335"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "116862630"
 ---
-# <a name="figma-toolkit"></a>Kit de herramientas de Figma
+# <a name="mrtk-figma-toolkit"></a>Kit de herramientas de Figma de MRTK
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWGqke]
 
 MRTK Figma Toolkit proporciona versiones 2D de los controles de interfaz de usuario de estilo HoloLens 2 que puede encontrar en MRTK para Unity o MRTK para Unreal. Puede usarlo en el proceso de diseño para crear diseños de interfaz de usuario y guiones gráficos.
 
 > [!div class="nextstepaction"]
-> [Ver figma Toolkit](https://www.figma.com/file/ltLag9SxjUIyLQFsp7NNE7/Figma-Toolkit-for-MRTK-%2F-HoloLens%2C-Windows-Mixed-Reality?node-id=116%3A4)
+> [Ver mrtk figma Toolkit](https://www.figma.com/file/zeGez3Phuzel9JrU1o20nn/Figma-Toolkit-for-MRTK-HoloLens-Windows-Mixed-Reality?node-id=116%3A4)
 
 ## <a name="how-to-use-figma-toolkit"></a>Uso de Figma Toolkit
 Use **Duplicar en el menú borradores** para realizar una copia.
@@ -44,7 +44,7 @@ Puede usar los **menús Páginas** de la izquierda para abrir las distintas pág
 Abra **la página** Introducción para obtener información sobre cómo usar componentes y estados.
 
 ## <a name="ui-gallery--components"></a>UI Gallery & Components
-La galería de interfaz de usuario y la página Componentes muestran todos los componentes disponibles para su diseño.
+La página Galería y componentes de la interfaz de usuario muestra todos los componentes disponibles para su diseño.
 
 ![Ejemplo de Toolkit Figma: interfaz de usuario de menú 1](images/UX_FigmaToolkit_Components_Menu1.png)<br>
 
@@ -53,7 +53,7 @@ La galería de interfaz de usuario y la página Componentes muestran todos los c
 
 ![Ejemplo de Toolkit Figma: interfaz de usuario de menú 4](images/UX_FigmaToolkit_Components_Menu3a.png)<br>
 
-Con **la pestaña** Activos, puede examinar estos componentes y arrastrar a la página.
+Con **la pestaña** Activos, puede examinar estos componentes y arrastrarlos a la página.
 
 <img src="images/UX_FigmaToolkit_Components_Menu3.png" width="200px" alt="Assets tab"><br>
 

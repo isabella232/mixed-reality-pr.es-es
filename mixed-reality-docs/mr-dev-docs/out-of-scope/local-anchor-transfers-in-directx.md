@@ -1,39 +1,39 @@
 ---
-title: Transferencias de delimitadores locales en DirectX
-description: Obtenga información sobre cómo sincronizar dos dispositivos HoloLens mediante la transferencia, exportación y serialización de delimitadores espaciales.
+title: Transferencias de anclaje local en DirectX
+description: Aprenda a sincronizar dos dispositivos HoloLens mediante la transferencia, exportación y serialización de anclajes espaciales.
 author: mikeriches
 ms.author: mriches
 ms.date: 03/21/2018
 ms.topic: article
-keywords: HoloLens, sincronizar, delimitador espacial, transferencia, multijugador, vista, escenario, tutorial, código de ejemplo, transferencia, transferencia de delimitador local, exportación de delimitadores, importación de delimitadores
-ms.openlocfilehash: 5d539338a25657441ee07acac38a4edd6cd86e58
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: HoloLens, synchronize, spatial anchor, transfer, multiplayer, view, scenario, walkthrough, sample code, transfer, local anchor transfer, anchor export, anchor import
+ms.openlocfilehash: df00e323267aa398ba45cfd7a7234c04ce8eca85f2ff3be9b6c9ddee67264085
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582804"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115195672"
 ---
-# <a name="local-anchor-transfers-in-directx"></a>Transferencias de delimitadores locales en DirectX
+# <a name="local-anchor-transfers-in-directx"></a>Transferencias de anclaje local en DirectX
 
-En situaciones en las que no se pueden usar <a href="/azure/spatial-anchors" target="_blank">delimitadores espaciales de Azure</a>, las transferencias de delimitadores locales permiten que un dispositivo hololens exporte un delimitador para que lo importe un segundo dispositivo hololens.
-
->[!NOTE]
->Las transferencias de delimitadores locales proporcionan una recuperación de delimitador menos sólida que los delimitadores <a href="/azure/spatial-anchors" target="_blank">espaciales de Azure</a>y los dispositivos iOS y Android no se admiten en este enfoque.
+En situaciones en las que no se puede usar <a href="/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>, las transferencias de anclaje local permiten que un dispositivo HoloLens exporte un delimitador para que lo importe un segundo HoloLens dispositivo.
 
 >[!NOTE]
->Los fragmentos de código de este artículo muestran actualmente el uso de C++/CX en lugar de C + +17 compatible con C++/WinRT tal y como se usa en la [plantilla de proyecto de C++ Holographic](../develop/native/creating-a-holographic-directx-project.md).  Los conceptos son equivalentes para un proyecto/WinRT de C++, aunque tendrá que traducir el código.
+>Las transferencias de anclaje local proporcionan una recuperación de anclaje menos sólida que <a href="/azure/spatial-anchors" target="_blank">Azure Spatial Anchors</a>y este enfoque no admite dispositivos iOS y Android.
 
-## <a name="transferring-spatial-anchors"></a>Transferir delimitadores espaciales
+>[!NOTE]
+>Los fragmentos de código de este artículo muestran actualmente el uso de C++/CX en lugar de C++17 compatible con C++17, como se usa en la plantilla de proyecto holográfico de [C++.](../develop/native/creating-a-holographic-directx-project.md)  Los conceptos son equivalentes para un proyecto de C++/WinRT, aunque deberás traducir el código.
 
-Puede transferir delimitadores espaciales entre dispositivos de Windows Mixed Reality mediante [SpatialAnchorTransferManager](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager). Esta API le permite agrupar un delimitador con todos los datos de sensor necesarios para encontrar ese lugar exacto en el mundo y, a continuación, importar ese lote en otro dispositivo. Una vez que la aplicación en el segundo dispositivo ha importado ese delimitador, cada aplicación puede representar hologramas usando el sistema de coordenadas del delimitador espacial compartido, que aparecerá en el mismo lugar del mundo real.
+## <a name="transferring-spatial-anchors"></a>Transferencia de anclajes espaciales
 
-Tenga en cuenta que los anclajes espaciales no pueden transferirse entre diferentes tipos de dispositivos, por ejemplo, es posible que no se pueda localizar un anclaje espacial de HoloLens mediante un casco envolvente.  Los delimitadores transferidos tampoco son compatibles con dispositivos iOS o Android.
+Puede transferir delimitadores espaciales entre Windows Mixed Reality dispositivos mediante [SpatialAnchorTransferManager](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager). Esta API le permite agrupar un anclaje con todos los datos del sensor de soporte necesarios para encontrar ese lugar exacto en el mundo y, a continuación, importar ese paquete en otro dispositivo. Una vez que la aplicación del segundo dispositivo ha importado ese delimitador, cada aplicación puede representar hologramas mediante el sistema de coordenadas de ese delimitador espacial compartido, que aparecerá en el mismo lugar del mundo real.
+
+Tenga en cuenta que los anclajes espaciales no pueden transferirse entre diferentes tipos de dispositivos, por ejemplo, un delimitador espacial HoloLens no se puede localizar mediante un casco envolvente.  Los anclajes transferidos tampoco son compatibles con dispositivos iOS o Android.
 
 ## <a name="set-up-your-app-to-use-the-spatialperception-capability"></a>Configuración de la aplicación para usar la funcionalidad spatialPerception
 
-Se debe conceder permiso a la aplicación para usar la funcionalidad SpatialPerception antes de poder usar [SpatialAnchorTransferManager](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager). Esto es necesario porque la transferencia de un delimitador espacial implica compartir imágenes de sensor recopiladas a lo largo del tiempo en proximidad de ese delimitador, lo que puede incluir información confidencial.
+La aplicación debe tener permiso para usar la funcionalidad SpatialPerception para poder usar [SpatialAnchorTransferManager.](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) Esto es necesario porque la transferencia de un delimitador espacial implica compartir imágenes de sensor recopiladas a lo largo del tiempo en proximidad de ese anclaje, lo que podría incluir información confidencial.
 
-Declare esta funcionalidad en el archivo package. appxmanifest de la aplicación. Este es un ejemplo:
+Declare esta funcionalidad en el archivo package.appxmanifest de la aplicación. Este es un ejemplo:
 
 ```
 <Capabilities>
@@ -41,7 +41,7 @@ Declare esta funcionalidad en el archivo package. appxmanifest de la aplicación
 </Capabilities>
 ```
 
-La funcionalidad proviene del espacio de nombres **uap2** . Para obtener acceso a este espacio de nombres en el manifiesto, inclúyalo como un atributo *xlmns* en el &lt; elemento> del paquete. Este es un ejemplo:
+La funcionalidad procede del espacio de **nombres uap2.** Para obtener acceso a este espacio de nombres en el manifiesto, inscluyéndolo como atributo *xlmns* en el elemento &lt; Package>. Este es un ejemplo:
 
 ```
 <Package
@@ -53,11 +53,11 @@ La funcionalidad proviene del espacio de nombres **uap2** . Para obtener acceso 
     >
 ```
 
-**Nota:** La aplicación tendrá que solicitar la funcionalidad en tiempo de ejecución para poder acceder a las API de exportación e importación de SpatialAnchor. Vea [RequestAccessAsync](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) en los ejemplos siguientes.
+**NOTA:** La aplicación tendrá que solicitar la funcionalidad en tiempo de ejecución para poder acceder a las API de exportación e importación de SpatialAnchor. Consulte [RequestAccessAsync en](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) los ejemplos siguientes.
 
-## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Serializar los datos del delimitador exportándolos con el SpatialAnchorTransferManager
+## <a name="serialize-anchor-data-by-exporting-it-with-the-spatialanchortransfermanager"></a>Serializar los datos de delimitador exportandolos con SpatialAnchorTransferManager
 
-En el ejemplo de código se incluye una función auxiliar para exportar (serializar) los datos [SpatialAnchor](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) . Esta API de exportación serializa todos los delimitadores de una colección de pares clave-valor que asocian cadenas con delimitadores.
+En el ejemplo de código se incluye una función auxiliar para exportar (serializar) [datos spatialAnchor.](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) Esta API de exportación serializa todos los delimitadores de una colección de pares clave-valor que asocian cadenas a delimitadores.
 
 ```
 // ExportAnchorDataAsync: Exports a byte buffer containing all of the anchors in the given collection.
@@ -72,7 +72,7 @@ task<bool> SpatialAnchorImportExportHelper::ExportAnchorDataAsync(
 {
 ```
 
-En primer lugar, es necesario configurar el flujo de datos. Esto nos permitirá 1). Use TryExportAnchorsAsync para colocar los datos en un búfer que pertenezca a la aplicación y 2). leer datos del flujo de búfer de bytes exportado, que es un flujo de datos de WinRT, en nuestro propio búfer de memoria, que es un byte STD:: Vector &lt;>.
+En primer lugar, es necesario configurar el flujo de datos. Esto nos permitirá 1). use TryExportAnchorsAsync para colocar los datos en un búfer propiedad de la aplicación, y 2). lee datos del flujo de búfer de bytes exportado , que es un flujo de datos winRT, en nuestro propio búfer de memoria, que es un byte std::vector &lt;>.
 
 ```
 // Create a random access stream to process the anchor byte data.
@@ -81,7 +81,7 @@ InMemoryRandomAccessStream^ stream = ref new InMemoryRandomAccessStream();
 IOutputStream^ outputStream = stream->GetOutputStreamAt(0);
 ```
 
-Necesitamos solicitar permiso para tener acceso a los datos espaciales, incluidos los delimitadores que exporta el sistema.
+Es necesario solicitar permiso para acceder a los datos espaciales, incluidos los delimitadores exportados por el sistema.
 
 ```
 // Request access to spatial data.
@@ -104,7 +104,7 @@ auto accessRequestedTask = create_taskSpatialAnchorTransferManager::RequestAcces
 });
 ```
 
-Si obtenemos el permiso y se exportan los delimitadores, podemos leer el flujo de datos. En este caso, también se muestra cómo crear DataReader y InputStream usaremos para leer los datos.
+Si se obtiene el permiso y se exportan los delimitadores, se puede leer el flujo de datos. Aquí también se muestra cómo crear DataReader y InputStream que usaremos para leer los datos.
 
 ```
 // Get the input stream for the anchor byte stream.
@@ -129,7 +129,7 @@ return accessRequestedTask.then([anchorByteDataOut, stream, reader](bool nchorsE
     }
 ```
 
-Después de leer los bytes de la secuencia, podemos guardarlos en nuestro propio búfer de datos, como sucede.
+Después de leer bytes de la secuencia, podemos guardarlos en nuestro propio búfer de datos de este modo.
 
 ```
 }).then([anchorByteDataOut, reader](size_t bytesRead)
@@ -148,9 +148,9 @@ Después de leer los bytes de la secuencia, podemos guardarlos en nuestro propio
 };
 ```
 
-## <a name="deserialize-anchor-data-by-importing-it-into-the-system-using-the-spatialanchortransfermanager"></a>Deserialización de datos de anclaje importándolos en el sistema mediante SpatialAnchorTransferManager
+## <a name="deserialize-anchor-data-by-importing-it-into-the-system-using-the-spatialanchortransfermanager"></a>Deserializar los datos de delimitador importing it into the system using the SpatialAnchorTransferManager
 
-En el ejemplo de código se incluye una función auxiliar para cargar los datos exportados previamente. Esta función de deserialización proporciona una colección de pares clave-valor, similar a lo que proporciona el SpatialAnchorStore, excepto que se obtuvieron estos datos de otro origen, como un socket de red. Puede procesar y motivar estos datos antes de almacenarlos sin conexión, mediante la memoria de la aplicación o, si procede, el SpatialAnchorStore de la aplicación.
+En el ejemplo de código se incluye una función auxiliar para cargar los datos exportados previamente. Esta función de deserialización proporciona una colección de pares clave-valor, similar a lo que proporciona SpatialAnchorStore, salvo que hemos recibido estos datos de otro origen, como un socket de red. Puede procesar y razonar sobre estos datos antes de almacenarlos sin conexión, mediante la memoria en la aplicación o (si procede) spatialAnchorStore de la aplicación.
 
 ```
 // ImportAnchorDataAsync: Imports anchors from a byte buffer that was previously exported.
@@ -166,7 +166,7 @@ task<bool> SpatialAnchorImportExportHelper::ImportAnchorDataAsync(
 {
 ```
 
-En primer lugar, es necesario crear objetos Stream para tener acceso a los datos de delimitador. Vamos a escribir los datos de nuestro búfer en un búfer del sistema, por lo que crearemos un objeto de escritura que escriba en un flujo de datos en memoria para lograr el objetivo de obtener los delimitadores de un búfer de bytes en el sistema como SpatialAnchors.
+En primer lugar, es necesario crear objetos de flujo para acceder a los datos delimitadores. Escribiremos los datos del búfer en un búfer del sistema, por lo que crearemos un objeto DataWriter que escriba en un flujo de datos en memoria para lograr nuestro objetivo de obtener anclajes de un búfer de bytes en el sistema como SpatialAnchors.
 
 ```
 // Create a random access stream for the anchor data.
@@ -189,7 +189,7 @@ return create_task(SpatialAnchorTransferManager::RequestAccessAsync()).then(
         // Access is allowed.
 ```
 
-Si se permite el acceso, se pueden escribir bytes del búfer en un flujo de datos del sistema.
+Si se permite el acceso, podemos escribir bytes desde el búfer en un flujo de datos del sistema.
 
 ```
 // Write the bytes to the stream.
@@ -206,7 +206,7 @@ Si se permite el acceso, se pueden escribir bytes del búfer en un flujo de dato
     }
 ```
 
-Si se almacenaran correctamente bytes en el flujo de datos, podemos intentar importar esos datos mediante SpatialAnchorTransferManager.
+Si almacenamos correctamente bytes en el flujo de datos, podemos intentar importarlos mediante SpatialAnchorTransferManager.
 
 ```
 }).then([writer, stream](unsigned int bytesWritten)
@@ -235,7 +235,7 @@ Si se almacenaran correctamente bytes en el flujo de datos, podemos intentar imp
     }
 ```
 
-Si se pueden importar los datos, obtenemos una vista de mapa de pares clave-valor que asocian cadenas con delimitadores. Podemos cargarlo en nuestra propia recopilación de datos en memoria y usar esa colección para buscar los delimitadores que estamos interesados en usar.
+Si los datos se pueden importar, se obtiene una vista de mapa de pares clave-valor que asocian cadenas con delimitadores. Podemos cargarlo en nuestra propia recopilación de datos en memoria y usar esa colección para buscar delimitadores que nos interesen usar.
 
 ```
 }).then([anchorMapOut](task<Windows::Foundation::Collections::IMapView<String^, SpatialAnchor^>^>  previousTask)
@@ -270,33 +270,33 @@ Si se pueden importar los datos, obtenemos una vista de mapa de pares clave-valo
 }
 ```
 
-**Nota:** Solo porque puede importar un delimitador, no significa necesariamente que se pueda usar de inmediato. El delimitador puede estar en un salón diferente u otra ubicación física completamente; no se puede localizar el delimitador hasta que el dispositivo que lo recibe tenga suficiente información visual sobre el entorno en el que se creó el delimitador, para restaurar la posición del delimitador en relación con el entorno actual conocido. La implementación del cliente debe intentar localizar el delimitador en relación con el sistema de coordenadas local o el marco de referencia antes de continuar para intentar usarlo para el contenido en directo. Por ejemplo, intente buscar el delimitador en relación con un sistema de coordenadas actual periódicamente hasta que el delimitador empiece a ser localizable.
+**NOTA:** El hecho de que pueda importar un delimitador no significa necesariamente que pueda usarlo de inmediato. El delimitador puede estar en una sala diferente o en otra ubicación física por completo; el delimitador no se podrá localizar hasta que el dispositivo que lo recibió tenga suficiente información visual sobre el entorno en el que se creó el delimitador para restaurar la posición del delimitador con respecto al entorno actual conocido. La implementación del cliente debe intentar localizar el delimitador en relación con el sistema de coordenadas local o el marco de referencia antes de continuar intentando usarlo para el contenido en directo. Por ejemplo, intente localizar el delimitador con respecto a un sistema de coordenadas actual periódicamente hasta que el delimitador empiece a ser localizable.
 
 ## <a name="special-considerations"></a>Consideraciones especiales
 
-La API de [TryExportAnchorsAsync](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) permite exportar varios [SpatialAnchors](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) en el mismo BLOB binario opaco. Sin embargo, hay una diferencia sutil en cuanto a los datos que incluirá el BLOB, en función de si se exportan un único SpatialAnchor o varios SpatialAnchors en una sola llamada.
+La API [TryExportAnchorsAsync](/uwp/api/Windows.Perception.Spatial.SpatialAnchorTransferManager) permite exportar varios [SpatialAnchors](/uwp/api/Windows.Perception.Spatial.SpatialAnchor) al mismo blob binario opaco. Sin embargo, hay una diferencia sutil en los datos que incluirá el blob, en función de si un único SpatialAnchor o varios SpatialAnchors se exportan en una sola llamada.
 
 ### <a name="export-of-a-single-spatialanchor"></a>Exportación de un único SpatialAnchor
 
-El BLOB contiene una representación del entorno en las proximidades de SpatialAnchor para que el entorno pueda reconocerse en el dispositivo que importa el SpatialAnchor. Una vez finalizada la importación, el nuevo SpatialAnchor estará disponible para el dispositivo. Suponiendo que el usuario ha estado cerca del delimitador, se puede localizar y los hologramas adjuntos al SpatialAnchor se pueden representar. Estos hologramas se mostrarán en la misma ubicación física que tenían en el dispositivo original que exportó el SpatialAnchor.
+El blob contiene una representación del entorno en las proximidades de SpatialAnchor para que el entorno se pueda reconocer en el dispositivo que importa SpatialAnchor. Una vez completada la importación, el nuevo SpatialAnchor estará disponible para el dispositivo. Suponiendo que el usuario haya estado recientemente cerca del delimitador, será localizable y se podrán representar los hologramas conectados a SpatialAnchor. Estos hologramas se mostrarán en la misma ubicación física que en el dispositivo original que exportó SpatialAnchor.
 
 ![Exportación de un único SpatialAnchor](images/singleanchor.png)
 
-### <a name="export-of-multiple-spatialanchors"></a>Exportación de varios SpatialAnchors
+### <a name="export-of-multiple-spatialanchors"></a>Exportación de varios spatialanchors
 
-Al igual que la exportación de un único SpatialAnchor, el BLOB contiene una representación del entorno en las proximidades de todo el SpatialAnchors especificado. Además, el BLOB contiene información sobre las conexiones entre el SpatialAnchors incluido, si se encuentran en el mismo espacio físico. Esto significa que, si se importan dos SpatialAnchors cercanos, se puede localizar un holograma asociado al *segundo* SpatialAnchor aunque el dispositivo solo reconozca el entorno en torno a la *primera* SpatialAnchor, ya que los datos necesarios para calcular la transformación entre los dos SpatialAnchors se incluyeron en el BLOB. Si los dos SpatialAnchors se exportaron individualmente (dos llamadas independientes a TryExportSpatialAnchors), es posible que no haya suficientes datos incluidos en el BLOB para los hologramas adjuntos al segundo SpatialAnchor que se puedan localizar cuando se encuentre el primero.
+Al igual que la exportación de un único SpatialAnchor, el blob contiene una representación del entorno en la proximidad de todos los SpatialAnchors especificados. Además, el blob contiene información sobre las conexiones entre los SpatialAnchors incluidos, si se encuentran en el mismo espacio físico. Esto significa que si se importan dos spatialanchors cercanos, un holograma asociado al segundo  SpatialAnchor sería localizable incluso si el dispositivo solo reconoce el entorno alrededor del primer  SpatialAnchor, porque se incluyeron suficientes datos para calcular la transformación entre los dos SpatialAnchors en el blob. Si los dos SpatialAnchors se exportaron individualmente (dos llamadas independientes a TryExportSpatialAnchors), es posible que no haya suficientes datos incluidos en el blob para los hologramas asociados al segundo SpatialAnchor que se puedan localizar cuando se encuentra el primero.
 
-![Varios delimitadores exportados mediante una única llamada a TryExportAnchorsAsync](images/multipleanchors.png) ![Varios delimitadores exportados mediante una llamada TryExportAnchorsAsync independiente para cada delimitador](images/separateanchors.png)
+![Varios anclajes exportados mediante una única llamada TryExportAnchorsAsync](images/multipleanchors.png) ![Varios anclajes exportados mediante una llamada TryExportAnchorsAsync independiente para cada delimitador](images/separateanchors.png)
 
-## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Ejemplo: enviar datos de delimitador mediante Windows:: Networking:: StreamSocket
+## <a name="example-send-anchor-data-using-a-windowsnetworkingstreamsocket"></a>Ejemplo: Envío de datos delimitadores mediante un Windows::Networking::StreamSocket
 
-Aquí se proporciona un ejemplo de cómo usar los datos de delimitador exportados enviándolos a través de una red TCP. Este es el HolographicSpatialAnchorTransferSample.
+Aquí se proporciona un ejemplo de cómo usar los datos delimitadores exportados mediante el envío a través de una red TCP. Esto es de HolographicSpatialAnchorTransferSample.
 
-La clase WinRT StreamSocket usa la biblioteca de tareas de PPL. En el caso de los errores de red, el error se devuelve a la siguiente tarea de la cadena mediante una excepción que se vuelve a iniciar. La excepción contiene un valor HRESULT que indica el estado de error.
+La clase StreamSocket de WinRT usa la biblioteca de tareas de PPL. En el caso de errores de red, el error se devuelve a la siguiente tarea de la cadena mediante una excepción que se vuelve a lanzar. La excepción contiene un HRESULT que indica el estado del error.
 
-### <a name="use-a-windowsnetworkingstreamsocketlistener-with-tcp-to-send-exported-anchor-data"></a>Usar un Windows:: Networking:: StreamSocketListener con TCP para enviar datos de delimitador exportados
+### <a name="use-a-windowsnetworkingstreamsocketlistener-with-tcp-to-send-exported-anchor-data"></a>Usar un Windows::Networking::StreamSocketListener con TCP para enviar datos delimitadores exportados
 
-Cree una instancia de servidor que escucha una conexión.
+Cree una instancia de servidor que escuche una conexión.
 
 ```
 void SampleAnchorTcpServer::ListenForConnection()
@@ -326,7 +326,7 @@ void SampleAnchorTcpServer::ListenForConnection()
 }
 ```
 
-Cuando se recibe una conexión, use la conexión de socket de cliente para enviar datos de delimitador.
+Cuando se recibe una conexión, use la conexión de socket de cliente para enviar datos delimitadores.
 
 ```
 void SampleAnchorTcpServer::OnConnectionReceived(StreamSocketListener^ listener, StreamSocketListenerConnectionReceivedEventArgs^ args)
@@ -340,7 +340,7 @@ void SampleAnchorTcpServer::OnConnectionReceived(StreamSocketListener^ listener,
 }
 ```
 
-Ahora, podemos empezar a enviar un flujo de datos que contiene los datos del delimitador exportados.
+Ahora, podemos empezar a enviar un flujo de datos que contenga los datos delimitadores exportados.
 
 ```
 void SampleAnchorTcpServer::OutputToClientSocket(IMap<String^, SpatialAnchor^>^ anchorsToSend)
@@ -370,7 +370,7 @@ void SampleAnchorTcpServer::OutputToClientSocket(IMap<String^, SpatialAnchor^>^ 
 }
 ```
 
-Antes de poder enviar el flujo, primero debemos enviar un paquete de encabezado. Este paquete de encabezado debe ser de longitud fija, y también debe indicar la longitud de la matriz variable de bytes que es el flujo de datos de delimitador; en el caso de este ejemplo, no hay ningún otro dato de encabezado para enviar, por lo que nuestro encabezado tiene una longitud de 4 bytes y contiene un entero de 32 bits sin signo.
+Para poder enviar la propia secuencia, primero debemos enviar un paquete de encabezado. Este paquete de encabezado debe ser de longitud fija y también debe indicar la longitud de la matriz variable de bytes que es el flujo de datos delimitadores; En el caso de este ejemplo no tenemos ningún otro dato de encabezado para enviar, por lo que nuestro encabezado tiene 4 bytes de longitud y contiene un entero de 32 bits sin signo.
 
 ```
 Concurrency::task<bool> SampleAnchorTcpServer::SendAnchorDataLengthMessage(size_t dataStreamLength)
@@ -413,7 +413,7 @@ Concurrency::task<bool> SampleAnchorTcpServer::SendAnchorDataStreamIMap<String^,
         return task_from_result<bool>(false);
 ```
 
-Una vez que se ha enviado la longitud del flujo, en bytes, al cliente, podemos continuar escribiendo el flujo de datos en el flujo de socket. Esto hará que los bytes de almacenamiento delimitados se envíen al cliente.
+Una vez que la longitud del flujo, en bytes, se ha enviado al cliente, podemos continuar para escribir el propio flujo de datos en el flujo de socket. Esto hará que los bytes del almacén delimitador se envíen al cliente.
 
 ```
 }).then([this](bool dataLengthSent)
@@ -447,7 +447,7 @@ Una vez que se ha enviado la longitud del flujo, en bytes, al cliente, podemos c
 }
 ```
 
-Como se indicó anteriormente en este tema, debemos estar preparados para controlar las excepciones que contienen mensajes de estado de error de red. En el caso de los errores que no se esperan, podemos escribir la información de la excepción en la consola de depuración como tal. Esto nos dará una pista sobre lo que ha sucedido si nuestro ejemplo de código no puede completar la conexión, o si no puede terminar de enviar los datos del delimitador.
+Como se indicó anteriormente en este tema, debemos estar preparados para controlar las excepciones que contienen mensajes de estado de error de red. Para los errores que no se esperan, podemos escribir la información de excepción en la consola de depuración de este modo. Esto nos dará una pista sobre lo que ha ocurrido si el ejemplo de código no puede completar la conexión o si no puede terminar de enviar los datos delimitadores.
 
 ```
 void SampleAnchorTcpServer::HandleException(Exception^ exception)
@@ -460,11 +460,11 @@ void SampleAnchorTcpServer::HandleException(Exception^ exception)
 }
 ```
 
-### <a name="use-a-windowsnetworkingstreamsocket-with-tcp-to-receive-exported-anchor-data"></a>Usar un Windows:: Networking:: StreamSocket con TCP para recibir datos de delimitador exportados
+### <a name="use-a-windowsnetworkingstreamsocket-with-tcp-to-receive-exported-anchor-data"></a>Use un Windows::Networking::StreamSocket con TCP para recibir datos delimitadores exportados
 
-En primer lugar, tenemos que conectarnos al servidor. En este ejemplo de código se muestra cómo crear y configurar un StreamSocket, y cómo crear un DataReader que puede usar para adquirir datos de red mediante la conexión de socket.
+En primer lugar, tenemos que conectarnos al servidor. En este ejemplo de código se muestra cómo crear y configurar streamSocket y cómo crear un objeto DataReader que puede usar para adquirir datos de red mediante la conexión de socket.
 
-**Nota:** Si ejecuta este código de ejemplo, asegúrese de configurar e iniciar el servidor antes de iniciar el cliente.
+**NOTA:** Si ejecuta este código de ejemplo, asegúrese de configurar e iniciar el servidor antes de iniciar el cliente.
 
 ```
 task<bool> SampleAnchorTcpClient::ConnectToServer()
@@ -530,9 +530,9 @@ task<bool> SampleAnchorTcpClient::ConnectToServer()
 }
 ```
 
-Una vez que tenemos una conexión, podemos esperar a que el servidor envíe datos. Para ello, se llama a LoadAsync en el lector de datos de la secuencia.
+Una vez que tenemos una conexión, podemos esperar a que el servidor envíe datos. Para ello, llamamos a LoadAsync en el lector de datos de flujo.
 
-El primer conjunto de bytes que recibirá siempre debe ser el paquete de encabezado, que indica la longitud de bytes del flujo de datos de delimitador tal y como se describe en la sección anterior.
+El primer conjunto de bytes que recibimos siempre debe ser el paquete de encabezado, que indica la longitud de bytes del flujo de datos delimitador tal y como se describe en la sección anterior.
 
 ```
 void SampleAnchorTcpClient::WaitForAnchorDataStream()
@@ -581,7 +581,7 @@ task<size_t> SampleAnchorTcpClient::ReceiveAnchorDataLengthMessage()
 }
 ```
 
-Después de haber recibido el paquete de encabezado, sabemos cuántos bytes de datos de delimitador deberíamos esperar. Podemos continuar leyendo los bytes de la secuencia.
+Una vez que hemos recibido el paquete de encabezado, sabemos cuántos bytes de datos delimitadores debemos esperar. Podemos continuar con la lectura de esos bytes de la secuencia.
 
 ```
 }).then([this](size_t dataStreamLength)
@@ -608,9 +608,9 @@ Después de haber recibido el paquete de encabezado, sabemos cuántos bytes de d
 }
 ```
 
-Este es el código para recibir el flujo de datos de delimitador. De nuevo, cargaremos primero los bytes de la secuencia. Esta operación puede tardar algún tiempo en completarse, ya que el StreamSocket espera a recibir esa cantidad de bytes de la red.
+Este es nuestro código para recibir el flujo de datos delimitadores. De nuevo, primero cargaremos los bytes de la secuencia; Esta operación puede tardar algún tiempo en completarse, ya que StreamSocket espera recibir esa cantidad de bytes de la red.
 
-Una vez completada la operación de carga, podemos leer ese número de bytes. Si se ha recibido el número de bytes que se esperan para el flujo de datos de delimitador, se pueden importar los datos de delimitador. en caso contrario, debe haber habido algún tipo de error. Por ejemplo, esto puede ocurrir cuando la instancia de servidor termina antes de que pueda finalizar el envío del flujo de datos o la red deja de funcionar antes de que el cliente pueda recibir el flujo de datos completo.
+Una vez completada la operación de carga, podemos leer ese número de bytes. Si recibimos el número de bytes que esperamos para el flujo de datos de anclaje, podemos continuar e importar los datos del delimitador. Si no es así, debe haber algún tipo de error. Por ejemplo, esto puede ocurrir cuando la instancia del servidor finaliza antes de que pueda terminar de enviar el flujo de datos o la red se queda sin servicio antes de que el cliente pueda recibir todo el flujo de datos.
 
 ```
 task<bool> SampleAnchorTcpClient::ReceiveAnchorDataStream()
@@ -672,9 +672,9 @@ void SampleAnchorTcpClient::HandleException(Exception^ exception)
 }
 ```
 
-Ya está. Ahora, debe tener suficiente información para intentar localizar los delimitadores recibidos a través de la red. De nuevo, tenga en cuenta que el cliente debe tener suficientes datos de seguimiento visual para que el espacio Localice correctamente el delimitador. Si no funciona de inmediato, intente recorrer un rato. Si sigue sin funcionar, haga que el servidor envíe más delimitadores y use las comunicaciones de red para aceptar una que funcione para el cliente. Para probar esto, descargue HolographicSpatialAnchorTransferSample, configure las direcciones IP del cliente y del servidor y impleméntela en los dispositivos cliente y servidor HoloLens.
+Eso es todo. Ahora, debería tener suficiente información para intentar localizar los anclajes recibidos a través de la red. De nuevo, tenga en cuenta que el cliente debe tener suficientes datos de seguimiento visual para que el espacio localice correctamente el delimitador. Si no funciona de inmediato, pruebe a recorrerlo durante un tiempo. Si sigue sin funcionar, haga que el servidor envíe más anclajes y use las comunicaciones de red para ponerse de acuerdo en una que funcione para el cliente. Para probar esto, descargue HolographicSpatialAnchorTransferSample, configure las IP de cliente y de servidor, e implemente en dispositivos cliente HoloLens servidor.
 
 ## <a name="see-also"></a>Consulte también
 * [Biblioteca de modelos de procesamiento paralelo (PPL)](/cpp/parallel/concrt/parallel-patterns-library-ppl)
-* [Windows. networking. StreamSocket](/uwp/api/Windows.Networking.Sockets.StreamSocket)
-* [Windows. networking. StreamSocketListener](/uwp/api/Windows.Networking.Sockets.StreamSocketListener)
+* [Windows. Networking.StreamSocket](/uwp/api/Windows.Networking.Sockets.StreamSocket)
+* [Windows. Networking.StreamSocketListener](/uwp/api/Windows.Networking.Sockets.StreamSocketListener)

@@ -1,18 +1,18 @@
 ---
-title: Introducción al sistema de escena
+title: Introducción al sistema de escenas
 description: Página de aterrizaje del sistema de escena con MRTK
 author: polar-kev
 ms.author: kesemple
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 16adf431498f8146ca2cc60565e59dc8ae03fd92
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 5b4f1c3b0f069d320feca8ccecacc6c66576b50339ea7b7733f34525005dd842
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177572"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115191565"
 ---
-# <a name="scene-system-getting-started"></a>Introducción al sistema de escena
+# <a name="scene-system-getting-started"></a>Introducción al sistema de escenas
 
 ## <a name="when-to-use-the-scene-system"></a>Cuándo usar el sistema de escena
 
@@ -73,7 +73,7 @@ De forma predeterminada, scene system aplica varios comportamientos en el editor
 
 - `Editor Manage Build Settings:` Si es true, el servicio actualizará la configuración de compilación automáticamente, lo que garantiza que se agregan todas las escenas de contenido, iluminación y administrador. Deshabilite esta opción si desea un control total sobre la configuración de compilación.
 
-- `Editor Enforce Scene Order:` Si es true, el servicio se asegurará de que la escena del administrador se muestra primero en la jerarquía de la escena, seguida de la iluminación y, a continuación, del contenido. Deshabilite esta opción si desea un control total sobre la jerarquía de escena.
+- `Editor Enforce Scene Order:` Si es true, el servicio se asegurará de que la escena del administrador se muestra primero en la jerarquía de la escena, seguido de iluminación y, a continuación, contenido. Deshabilite esta opción si desea un control total sobre la jerarquía de escena.
 
 - `Editor Manage Loaded Scenes:` Si es true, el servicio garantizará que siempre se carguen el administrador, el contenido y las escenas de iluminación. Deshabilite si desea un control total sobre las escenas que se cargan en el editor.
 

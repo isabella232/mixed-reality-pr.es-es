@@ -1,76 +1,76 @@
 ---
-title: 'Caso práctico: 3 aprendizajes del diseño de la interfaz de usuario e interacción de HoloStudio'
+title: 'Caso práctico: 3 aprendizajes de diseño HoloStudio interfaz de usuario e interacción'
 description: Conocimientos acerca del diseño de interacción yd e la interfaz de usuario de HoloStudio
 author: rwinj
 ms.author: marcghal
 ms.date: 03/21/2018
 ms.topic: article
 keywords: HoloLens, HoloStudio, Windows Mixed Reality
-ms.openlocfilehash: 55fc9cea93582612abb5e0f8955deb5629da3093
-ms.sourcegitcommit: 09599b4034be825e4536eeb9566968afd021d5f3
+ms.openlocfilehash: 1b384a10d3fe53cf7e69c2e8437904040322dc213d9473d9ae9abf272c08ec5e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "91693354"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115195908"
 ---
-# <a name="case-study---3-holostudio-ui-and-interaction-design-learnings"></a>Caso práctico: 3 aprendizajes del diseño de la interfaz de usuario e interacción de HoloStudio
+# <a name="case-study---3-holostudio-ui-and-interaction-design-learnings"></a>Caso práctico: 3 aprendizajes de diseño HoloStudio interfaz de usuario e interacción
 
-[HoloStudio](https://www.youtube.com/watch?v=BRIJG0x_We8) era una de las primeras aplicaciones de Microsoft para HoloLens. Por este motivo, teníamos que crear nuevas prácticas recomendadas para la interfaz de usuario y el diseño de interacción 3D. Hicimos esto a través de una gran cantidad de pruebas de usuario, prototipos y errores.
+[HoloStudio](https://www.youtube.com/watch?v=BRIJG0x_We8) fue una de las primeras aplicaciones de Microsoft para HoloLens. Debido a esto, hemos tenido que crear nuevos procedimientos recomendados para la interfaz de usuario 3D y el diseño de interacción. Lo hicimos a través de una gran cantidad de pruebas de usuario, creación de prototipos y pruebas y errores.
 
-Sabemos que no todos los usuarios tienen los recursos a su disposición para realizar este tipo de investigación, por lo que teníamos nuestro diseñador Sr. Holographic, Marcus Ghaly, compartimos tres cosas que hemos aprendido durante el desarrollo de HoloStudio sobre la interfaz de usuario y el diseño de interacción para aplicaciones de HoloLens.
+Sabemos que no todo el mundo tiene los recursos a su disposición para realizar este tipo de investigación, por lo que nuestro diseñador holográfico sr., Senior Holographic Designer, Senior Threely, compartimos tres cosas que aprendimos durante el desarrollo de HoloStudio sobre la interfaz de usuario y el diseño de interacción para aplicaciones de HoloLens.
 
 ## <a name="watch-the-video"></a>Visualización del vídeo
 
 >[!VIDEO https://www.youtube.com/embed/sX6yKHmN1qM]
 
-## <a name="problem-1-people-didnt-want-to-move-around-their-creations"></a>Problema #1: los usuarios no quieren desplazarse por sus creaciones
+## <a name="problem-1-people-didnt-want-to-move-around-their-creations"></a>Problema #1: las personas no deseaban moverse por sus creaciones
 
-Originalmente diseñamos el Workbench en HoloStudio como un rectángulo, de forma muy similar a lo que encontraría en el mundo real. El problema es que las personas tienen una duración de experiencia que les indica que permanezcan cuando se encuentren en un escritorio o trabajen frente a un equipo, por lo que no se mueven por Workbench y exploran su creación en 3D desde todos los lados.
+Originalmente diseñamos el área de trabajo en HoloStudio como un rectángulo, de forma muy parecido a como lo encontraría en el mundo real. El problema es que las personas tienen una experiencia de duración que les indica que permanezcan quietos cuando están sentados en un escritorio o trabajando delante de un equipo, por lo que no se desplazaban por el área de trabajo y exploraban su creación en 3D desde todos los lados.
 
-![El diseño rectangular de Workbench en HoloStudio dissuaded que los usuarios desplazan y vean sus creaciones desde todos los lados.](images/rectangular-workbench-500px.jpg)
+![El diseño rectangular del área de trabajo en HoloStudio disuadir a los usuarios de moverse y ver sus creaciones desde todos los lados.](images/rectangular-workbench-500px.jpg)
 
-Teníamos la información para que el área de trabajo se redondee, de modo que no haya ningún "anverso" o claro que se supone que se debe. Cuando lo probamos, las personas empezaron a desplazarse y explorar sus creaciones por su cuenta.
+Hemos tenido la información para que el área de trabajo se redondee, de modo que no haya ningún lugar "frontal" o claro en el que se supone que debía ponerse de pie. Cuando lo probamos, de repente, los usuarios empezaron a moverse y explorar sus creaciones por sí solas.
 
-![El diseño circular de Workbench anima a los usuarios a recorrer todo el proceso en torno a su creación.](images/circular-workbench-500px.jpg)
-
-**¿Qué hemos aprendido?**
-
-Siempre debe pensar en lo que se siente cómodo para el usuario. Sacar partido de su espacio físico es una característica interesante de HoloLens y algo que no se puede hacer con otros dispositivos.
-
-## <a name="problem-2-modal-dialogs-are-sometimes-out-of-the-holographic-frame"></a>Problema #2: los cuadros de diálogo modales a veces están fuera del marco holográfica
-
-En ocasiones, es posible que el usuario esté buscando en una dirección diferente de algo que necesite su atención en la aplicación. En un equipo, puede simplemente mostrar un cuadro de diálogo, pero si lo hace en la superficie de alguien en un entorno 3D, puede parecer que el cuadro de diálogo se está obteniendo. Los necesita para leer el mensaje, pero su instinto es intentar salir de él. Esta reacción es excelente si juega un juego, pero en una herramienta diseñada para el trabajo, es menos que lo ideal.
-
-Una vez que se han intentado algunas cosas diferentes, finalmente se ha liquidado el uso de un sistema de "burbuja de pensamiento" para nuestros cuadros de diálogo y se ha agregado tendrils que los usuarios pueden seguir a donde se requiere su atención en nuestra aplicación. También hemos realizado el pulso de tendrils, que implícitamente es una sensación de direccionalidad para que los usuarios supieran adónde ir.
-
-![El sistema de "pensamiento de pensamiento" incluía tendrils que ofrecían una sensación de dirección, los usuarios a los que se necesitaba su atención en la aplicación.](images/thought-bubble-500px.jpg)
+![El diseño circular del área de trabajo animaba a los usuarios a recorrer sus creaciones.](images/circular-workbench-500px.jpg)
 
 **¿Qué hemos aprendido?**
 
-Es mucho más difícil en 3D avisar a los usuarios de las cosas que necesitan prestar atención. El uso de directores de atención, como [sonido espacial](../design/spatial-sound.md), rayos claros o burbujas de pensamiento, puede conducir a los usuarios a dónde deben ser.
+Piense siempre en lo que es cómodo para el usuario. Aprovechar su espacio físico es una característica interesante de HoloLens y algo que no se puede hacer con otros dispositivos.
 
-## <a name="problem-3-sometimes-ui-can-get-blocked-by-other-holograms"></a>Problema #3: a veces, otros hologramas pueden bloquear la interfaz de usuario
+## <a name="problem-2-modal-dialogs-are-sometimes-out-of-the-holographic-frame"></a>Problema #2: los diálogos modales a veces están fuera del marco holográfico
 
-Hay veces en las que un usuario desea interactuar con un holograma y sus controles de interfaz de usuario asociados, pero se bloquea en la vista porque otro holograma está delante de ellos. Durante el desarrollo de HoloStudio, hemos usado la prueba y el error para obtener una solución.
+A veces, es posible que el usuario esté mirando en una dirección diferente a la de algo que necesita su atención en la aplicación. En un equipo, solo puede mostrar un cuadro de diálogo, pero si lo hace en la cara de alguien en un entorno 3D, puede parecerse a que el diálogo se está metiendo en su camino. Los necesita para leer el mensaje, pero su instintiva es intentar salir de él. Esta reacción es excelente si está haciendo un juego, pero en una herramienta diseñada para el trabajo, es menor que ideal.
 
-![Un control de interfaz de usuario asociado a un holograma puede quedar bloqueado si hay otro holograma entre él y el usuario que contenga HoloLens.](images/ui-blocked-500px.jpg)
+Después de probar algunas cosas diferentes, finalmente nos hemos decidido a usar un sistema de "burbuja de reflexión" para nuestros diálogos y se han agregado las tendenciaes que los usuarios pueden seguir hasta donde se necesita su atención en nuestra aplicación. También hemos realizado el pulso de tendrils, lo que implicaba una sensación de direccionalidad para que los usuarios sabían a dónde ir.
 
-Se intentó desplazar el control de la interfaz de usuario para que no se pudiera bloquear, pero se encontró que no estaba familiarizado con el usuario de ver un control que estaba cerca de usted mientras examinaba simultáneamente un holograma que estaba lejos. Sin embargo, si se mueve el control delante del holograma más cercano al usuario, parecía que se separó del holograma que debería estar afectando.
-
-Finalmente, terminamos con fantasma el control de IU y lo colocamos a la misma distancia del usuario que el holograma al que está asociado, por lo que ambos se sienten conectados. Esto permite al usuario interactuar con el control aunque esté oculto.
-
-![La solución: hemos convertido en fantasma el control de interfaz de usuario, que permitía la interacción con el control y lo hicieron conectados al holograma al que estaba afectando.](images/ghosting-ui-500px.jpg)
+![El sistema de "burbuja de reflexión" incluía tendres de pulsación que proporcionaban una sensación de dirección, lo que conduce a los usuarios a dónde se necesitaba su atención en la aplicación.](images/thought-bubble-500px.jpg)
 
 **¿Qué hemos aprendido?**
 
-Los usuarios deben poder acceder fácilmente a los controles de interfaz de usuario incluso si se han bloqueado, por lo que debe averiguar los métodos para asegurarse de que los usuarios puedan completar sus tareas independientemente de dónde se encuentren sus hologramas en el mundo real.
+Es mucho más difícil en 3D alertar a los usuarios sobre las cosas a las que deben prestar atención. El uso de directores de atención, como [el sonido espacial,](../design/spatial-sound.md)los rayos de luz o las burbujas de reflexión, puede llevar a los usuarios a donde deben estar.
+
+## <a name="problem-3-sometimes-ui-can-get-blocked-by-other-holograms"></a>Problema #3: A veces, otros hologramas pueden bloquear la interfaz de usuario
+
+Hay ocasiones en las que un usuario desea interactuar con un holograma y sus controles de interfaz de usuario asociados, pero se les bloquea la vista porque hay otro holograma delante de ellos. Mientras desarrollamos el HoloStudio, hemos usado la prueba y el error para llegar a una solución para esto.
+
+![Un control de interfaz de usuario asociado a un holograma se puede bloquear si hay otro holograma entre él y el usuario HoloLens.](images/ui-blocked-500px.jpg)
+
+Intentamos acercar el control de interfaz de usuario al usuario para que no se bloqueara, pero descubrimos que no era cómodo para el usuario ver un control que estaba cerca de usted mientras miraba simultáneamente un holograma que estaba lejos. Sin embargo, si hemos movido el control delante del holograma más cercano al usuario, parece que se ha desasociado del holograma que debería estar afectando.
+
+Por último, terminamos fantasmaando el control de interfaz de usuario y lo colocamos a la misma distancia del usuario que el holograma al que está asociado, por lo que ambos se sienten conectados. Esto permite al usuario interactuar con el control aunque se haya ocultado.
+
+![La solución: hemos fantasmaado el control de la interfaz de usuario, que permitió la interacción con el control y hizo que se sincronizó conectado al holograma que estaba afectando.](images/ghosting-ui-500px.jpg)
+
+**¿Qué hemos aprendido?**
+
+Los usuarios deben poder acceder fácilmente a los controles de interfaz de usuario incluso si se han bloqueado, por lo que deben averiguar los métodos para asegurarse de que los usuarios puedan completar sus tareas independientemente de dónde estén sus hologramas en el mundo real.
 
 ## <a name="about-the-author"></a>Acerca del autor
 
 <table style="border-collapse:collapse">
 <tr>
 <td style="border-style: none" width="60"><img alt="Picture of Marcus Ghaly" width="60" height="60" src="images/marcus-ghaly-200px.jpg"></td>
-<td style="border-style: none"><b>Marcus Ghaly</b><br>Diseñador de Sr. Holographic @Microsoft</td>
+<td style="border-style: none"><b>No hay más que una</b><br>Diseñador holográfico sr. @Microsoft</td>
 </tr>
 </table>
 

@@ -1,22 +1,22 @@
 ---
-title: Visualización de dedo
+title: Visualización del dedo
 description: Información general sobre la visualización de información sobre dedos en MRTK
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, dedo
-ms.openlocfilehash: af23fdb9b618e276b7442405e54b7dccd141e4ee
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 1df1740692a2c24213f34ffa6e52c135c7e7d14f96e7d99668feab82f879f756
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177535"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115193304"
 ---
-# <a name="fingertip-visualization"></a>Visualización de dedo
+# <a name="fingertip-visualization"></a>Visualización del dedo
 
 ![Visualización de dedo principal](../images/fingertip/MRTK_FingertipVisualization_Main.png)
 
-La asequibilidad de dedo ayuda al usuario a reconocer la distancia desde el objeto de destino. El objeto visual de forma de anillo ajusta su tamaño en función de la distancia entre el dedo y el objeto. La visualización de dedo se controla principalmente mediante `FingerCursor` (Assets/MRTK/SDK/Features/UX/Prefabs/Cursors/FingerCursor.prefab) (y script) que se genera como el prefab del cursor de *la herramienta Delepointer.* Otros componentes de la visualización incluyen el script *ProximityLight* y *el sombreador MixedRealityStandard.*
+La asequibilidad de dedo ayuda al usuario a reconocer la distancia desde el objeto de destino. El objeto visual de forma de anillo ajusta su tamaño en función de la distancia entre el dedo y el objeto. La visualización de dedo se controla principalmente mediante `FingerCursor` (Assets/MRTK/SDK/Features/UX/Prefabs/Cursors/FingerCursor.prefab) (y script) que se genera como el prefab del cursor de *Ladepointer*. Otros componentes de la visualización incluyen el script *ProximityLight* y *el sombreador MixedRealityStandard.*
 
 ## <a name="how-to-use-the-fingertip-visualization"></a>Uso de la visualización de dedo
 

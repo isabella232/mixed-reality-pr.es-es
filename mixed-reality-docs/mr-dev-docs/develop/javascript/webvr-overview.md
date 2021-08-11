@@ -1,41 +1,41 @@
 ---
-title: Información general de WebVR
-description: Conozca los aspectos básicos del uso y desarrollo de aplicaciones de WebVR que se ejecutan en auriculares Windows Mixed Reality.
+title: Introducción a WebVR
+description: Conozca los conceptos básicos del uso y el desarrollo de aplicaciones WebVR que se ejecutan Windows Mixed Reality cascos envolventes.
 author: yonet
 ms.author: ayyonet
 ms.date: 04/10/2020
 ms.topic: article
-keywords: WebVR, WebXR, WinMR, WebAR, Web VR, webxr, Web Mr, WebAr, 360, 360 vídeo, 360 vídeos, 360 Photo, 360 photos, 360 Content, Web inmersivo, immersiveweb, IW
+keywords: WebVR, WebXR, WinMR, WebAR, web vr, web xr, web mr, web ar, 360, 360 vídeo, 360 vídeos, 360 fotos, 360 fotos, 360 contenido, web inmersiva, immersiveweb, IW
 ROBOTS: NOINDEX
-ms.openlocfilehash: dba3ca6b0cb9404f488db0b69a5bd89d6093a3ef
-ms.sourcegitcommit: cbfd1c37612aa6904fa41642ede6281d491e478d
+ms.openlocfilehash: 546108f1093f1437daca37d6be35cccb6dcd62820984b0e52fd45979d4af6e55
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2021
-ms.locfileid: "104909125"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115192019"
 ---
-# <a name="webvr-overview"></a>Información general de WebVR
+# <a name="webvr-overview"></a>Introducción a WebVR
 
 > [!IMPORTANT]
-> Las **API de WebVR 1,1** están en desuso y se reemplazan por las **API de dispositivo WebXR**.
+> **Las API de WebVR 1.1** están en desuso y se reemplazan por API de **dispositivos WebXR.**
 
-Las API de WebVR 1,1 están desusadas y se han quitado de Chrome y el nuevo Microsoft Edge. Las API de WebVR se sustituyen por las API de dispositivo WebXR. Puede comprobar la lista de exploradores que admiten actualmente las API de WebVR en [Caniuse.com](https://caniuse.com/#search=webvr).
+Las API de WebVR 1.1 están en desuso y se han quitado de Chrome y las nuevas Microsoft Edge. Las API de WebVR se sustituyen por las API de dispositivos WebXR. Puede comprobar la lista de exploradores que actualmente admiten las API de WebVR [en caniuse.com](https://caniuse.com/#search=webvr).
 
-## <a name="viewing-webvr-content-in-windows-mixed-reality-immersive-headsets"></a>Visualización del contenido de WebVR en auriculares Windows Mixed Reality
+## <a name="viewing-webvr-content-in-windows-mixed-reality-immersive-headsets"></a>Visualización del contenido de WebVR Windows Mixed Reality cascos envolventes
 
-Las instrucciones para acceder al contenido de WebVR en los auriculares que se incluyen con **versiones anteriores de Microsoft Edge (15-18)** se pueden encontrar en la [Guía del entusiasta](/windows/mixed-reality/enthusiast-guide/webvr). Puede comprobar la versión de Edge escribiendo "edge://version/" en la barra de búsqueda de los exploradores perimetrales.
+Puede encontrar instrucciones para acceder al contenido de WebVR en los cascos envolventes con versiones anteriores de **Microsoft Edge(15-18)** en la Guía [del entusiasta.](/windows/mixed-reality/enthusiast-guide/webvr) Para comprobar la versión perimetral, escriba "edge://version/" en la barra de búsqueda de exploradores de Edge.
 
 ## <a name="see-also"></a>Consulte también
 
-* [Información general de WebXR](webxr-overview.md)
-* [Especificación de la API de dispositivo WebXR](https://immersive-web.github.io/webxr/)
+* [Información general sobre WebXR](webxr-overview.md)
+* [Especificación de Api de dispositivo WebXR](https://immersive-web.github.io/webxr/)
 * [Windows Mixed Reality y el nuevo Microsoft Edge](/windows/mixed-reality/new-microsoft-edge)
 * [Información de WebVR](https://webvr.info)
 * [Especificación de WebVR](https://w3c.github.io/webvr/)
-* [API de WebVR](/previous-versions//mt806281(v=vs.85))
-* [API de WebGL](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/bg182648(v=vs.85))
-* [API](https://msdn.microsoft.com/library/dn743630(v=vs.85).aspx) y [extensiones de controlador](https://w3c.github.io/gamepad/extensions.html) para juegos
-* [Controlar el contexto perdido en WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost)
+* [WebVR API](/previous-versions//mt806281(v=vs.85))
+* [WebGL API](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/bg182648(v=vs.85))
+* [Extensiones de Gamepad API](https://msdn.microsoft.com/library/dn743630(v=vs.85).aspx) [y Gamepad](https://w3c.github.io/gamepad/extensions.html)
+* [Control del contexto perdido en WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost)
 * [Pointerlock](https://www.w3.org/TR/pointerlock/)
 * [glTF](https://www.khronos.org/gltf)
-* [Usar Babylon.js para habilitar WebVR](/windows/uwp/get-started/adding-webvr-to-a-babylonjs-game)
+* [Uso Babylon.js para habilitar WebVR](/windows/uwp/get-started/adding-webvr-to-a-babylonjs-game)

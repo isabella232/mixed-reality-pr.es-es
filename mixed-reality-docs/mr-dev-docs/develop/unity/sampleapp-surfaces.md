@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 06/18/2020
 ms.topic: article
 keywords: Windows Mixed Reality, diseño, aplicación de ejemplo, controles, MRTK, Mixed Reality Toolkit, Unity, aplicaciones de ejemplo, aplicaciones de ejemplo, código abierto, Microsoft Store, HoloLens, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual
-ms.openlocfilehash: a4259148926ec20bca53a23074a6d1ea285f0aa2
-ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
+ms.openlocfilehash: a2bf33c12a817b6c823b572c51e7a5efd815ba2f4bbd0663bd076d33ef1f5dee
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "114757012"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115196178"
 ---
 # <a name="surfaces"></a>Superficies
 
@@ -20,7 +20,7 @@ ms.locfileid: "114757012"
 >[!NOTE]
 >En este artículo se describe un ejemplo exploratorio que hemos creado en [Mixed Reality Design Labs,](https://github.com/Microsoft/MRDesignLabs_Unity)un lugar donde compartimos nuestros aprendizajes y sugerencias para el desarrollo de aplicaciones de realidad mixta. Nuestros artículos y código relacionados con el diseño evolucionarán a medida que realicemos nuevas des descubrimientos.
 
-[Surfaces es](https://github.com/microsoft/MRDL_Unity_Surfaces)  una aplicación de ejemplo de código abierto de Microsoft Mixed Reality Design Labs. En él se explora cómo podemos crear una sensibilidad táctil con seguimiento visual, de audio y de manos totalmente articulado.
+[Surfaces](https://github.com/microsoft/MRDL_Unity_Surfaces)  es una aplicación de ejemplo de código abierto de Microsoft Mixed Reality Design Labs. En él se explora cómo podemos crear una sensibilidad táctil con seguimiento visual, de audio y de manos totalmente articulado.
 
 ## <a name="download-app-from-microsoft-store-in-hololens-2"></a>Descarga de la aplicación Microsoft Store en HoloLens 2
 Si tiene HoloLens 2 dispositivo, puede descargar e instalar directamente la aplicación en el dispositivo.
@@ -31,18 +31,18 @@ Si tiene HoloLens 2 dispositivo, puede descargar e instalar directamente la apli
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4IhWQ]
 
-Se registra con HoloLens 2 mediante Captura de realidad mixta
+Registrado con HoloLens 2 mediante Captura de realidad mixta
 
 ## <a name="about-the-app"></a>Acerca de la aplicación
 
 Surfaces muestra cómo usar el sistema de entrada de Mixed Reality Toolkit (MRTK) y los bloques de creación para crear una experiencia de aplicación para HoloLens 2. En este proyecto, puede encontrar los ejemplos de:
 
-- Use el sistema de entrada [de](/windows/mixed-reality/mrtk-unity/features/input/overview)MRTK, en concreto el seguimiento manual o conjunto.
+- Use el sistema de entrada [de](/windows/mixed-reality/mrtk-unity/features/input/overview)MRTK, en concreto, el seguimiento de manos y uniones.
 - Use el sombreador estándar de MRTK [para](/windows/mixed-reality/mrtk-unity/features/rendering/mrtk-standard-shader) gráficos de rendimiento.
 
 Puede usar los componentes de este proyecto para crear sus propias experiencias de aplicación de realidad mixta.
 
-## <a name="mr-dev-days-2020---learnings-from-the-mr-surfaces-app"></a>Mr Dev Days 2020- Learnings from the MR Surfaces App (Mr Dev Days 2020: aprendizajes de la aplicación Mr Surfaces)
+## <a name="mr-dev-days-2020---learnings-from-the-mr-surfaces-app"></a>Mr Dev Days 2020: aprendizajes de la aplicación Mr Surfaces
 
 [Aprendizajes de la aplicación Mr Surfaces](https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Learnings-from-the-MR-Surfaces-App)
 

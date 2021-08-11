@@ -5,12 +5,12 @@ author: thalbern
 ms.author: bethalha
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, manipulación de objetos,
-ms.openlocfilehash: f9b644c1447d6776389e227bfe49c27f82a3cf31
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 4c43a35e164d3e66e662afc927d28f84463e1586250e9847a2d88c219ba27f23
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176652"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115191617"
 ---
 # <a name="object-manipulator"></a>Manipulador de objetos
 
@@ -18,7 +18,7 @@ ms.locfileid: "113176652"
 
 *ObjectManipulator es el* nuevo componente para el comportamiento de manipulación, que se encontró anteriormente en *ManipulationHandler*. El manipulador de objetos realiza una serie de mejoras y simplificaciones. Este componente es un reemplazo del controlador de manipulación, que estará en desuso.
 
-El script *ObjectManipulator* hace que un objeto sea móvil, escalable y rotable con una o dos manos. El manipulador de objetos se puede configurar para controlar cómo responderá el objeto a varias entradas. El script debe funcionar con la mayoría de las formas de interacción HoloLens 2, como una mano articulada, un HoloLens 2 de mano, una mirada y gestos de HoloLens y una entrada de controlador de movimiento de casco envolvente.
+El script *ObjectManipulator* hace que un objeto sea móvil, escalable y rotable con una o dos manos. El manipulador de objetos se puede configurar para controlar cómo responderá el objeto a varias entradas. El script debe funcionar con la mayoría de las formas de interacción HoloLens 2, como una mano articulada, HoloLens 2 rayos de la mano, una mirada y gestos de HoloLens y una entrada de controlador de movimiento de casco envolvente.
 
 > [!VIDEO https://channel9.msdn.com/Shows/Docs-Mixed-Reality/Using-Object-Manipulator-in-Mixed-Reality-Toolkit/player]
 
@@ -148,7 +148,7 @@ El controlador de manipulación proporciona los siguientes eventos:
 - *OnHoverStarted:* se activa cuando una mano o un controlador mantiene el puntero sobre el manipulable, cerca o lejos.
 - *OnHoverEnded:* se activa cuando una mano o un controlador mantiene el puntero sobre el manipulable, cerca o lejos.
 
-El orden de la manipulación de la manipulación del evento es:
+El orden de manipulación de la manipulación del evento es:
 
 *OnHoverStarted*  ->  *OnManipulationStarted*  ->  *OnManipulationEnded*  ->  *OnHoverEnded*
 
@@ -181,7 +181,7 @@ Los elásticos se pueden usar al manipular objetos a través del manipulador de 
 
 ## <a name="see-also"></a>Consulte también
 
-- [Control Bounds](bounds-control.md)
+- [Control de límites](bounds-control.md)
 - [Administrador de restricciones](constraint-manager.md)
 - [El plazo de migración](../tools/migration-window.md)
 - [Sistema elástico (experimental)](../experimental/elastic-system.md)
