@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 04/22/2021
 ms.topic: article
-keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, mixed reality headset, windows mixed reality headset, virtual reality headset, unity
-ms.openlocfilehash: c91a4df9db8ef71778421750bca48d81d4b4a02e
-ms.sourcegitcommit: 6ade7e8ebab7003fc24f9e0b5fa81d091369622c
+keywords: mixedrealitytoolkit, mixedrealitytoolkit-unity, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, unity
+ms.openlocfilehash: 14235852f8c90e7ccc4f105f2938ce514ae2933973469db9a0e01bd03d2c1b6d
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2021
-ms.locfileid: "112394529"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115227561"
 ---
 # <a name="choosing-your-engine"></a>Elección del motor
 
@@ -31,7 +31,7 @@ Hay varias rutas de desarrollo que puede seguir a través de nuestra documentaci
 * **Los desarrolladores** web que crean atractivas experiencias web ar/VR entre exploradores pueden **usar WebXR.**
 
     > [!NOTE]
-    > **Babylon.js** desarrollo de HoloLens está actualmente en curso. Consulte las noticias [más recientes e interactúe con la comunidad.](https://doc.babylonjs.com/divingDeeper/webXR/introToWebXR)
+    > **Babylon.js** para HoloLens desarrollo está actualmente en curso. Consulte las noticias [más recientes e interactúe con la comunidad.](https://doc.babylonjs.com/divingDeeper/webXR/introToWebXR)
 
 <!-- Babylon is a Javascript-based, open source, 3D graphics engine capable of powering 3D scenes in a web browser. Babylon.js 4.2+ includes support for WebXR. With Babylon React Native, you can even build cross-platform native     applications for PC, mobile, and mixed reality devices. -->
 
@@ -66,7 +66,7 @@ Hay varias rutas de desarrollo que puede seguir a través de nuestra documentaci
 | HoloLens (1.ª generación) | ✔️ | ✔️ | ❌ | Solo WinRT (heredado) |
 | [Cascos de Windows Mixed Reality](../discover/immersive-headset-hardware-details.md) | ✔️ | ✔️ | ✔️ | ✔️ |
 | Cascos de SteamVR | ✔️ | ✔️ | ✔️ | ✔️ |
-| Oculus:/Descuenta | ✔️ | ✔️ | ✔️ | ✔️ |
+| Oculus:/Desastroso | ✔️ | ✔️ | ✔️ | ✔️ |
 | Mobile (ARCore/ARKit) | ✔️ | ✔️ | ✔️ | ❌ |
 
 <br>
@@ -86,7 +86,7 @@ Hay varias rutas de desarrollo que puede seguir a través de nuestra documentaci
 | Azure Remote Rendering | ✔️ * | ❌ | ❌ | ✔️ * |
 
 > [!NOTE]
-> * Azure Remote Rendering se admite actualmente en aplicaciones que usan las API heredadas de WinRT (complemento XR de Windows en Unity). La compatibilidad de ARR con aplicaciones OpenXR estará disponible próximamente.
+> * Azure Remote Rendering se admite actualmente en aplicaciones que usan las API heredadas de WinRT (Windows complemento XR en Unity). La compatibilidad de ARR con aplicaciones OpenXR estará disponible próximamente.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

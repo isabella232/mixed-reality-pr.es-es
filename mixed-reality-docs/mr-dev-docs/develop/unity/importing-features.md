@@ -7,12 +7,12 @@ ms.date: 03/04/2021
 ms.topic: article
 ms.localizationpriority: high
 keywords: up-to-date, tools, get started, basics, unity, visual studio, toolkit, mixed reality headset, windows mixed reality headset, virtual reality headset, installation, Windows, HoloLens, emulator, unreal, openxr
-ms.openlocfilehash: 0d9139835b9eb4e3e5ce3d1f378c56a4724bfa55
-ms.sourcegitcommit: 59c91f8c70d1ad30995fba6cf862615e25e78d10
+ms.openlocfilehash: 6cf3712ce8029695076ceaec4191df53eb72789c62568206c056f1afc6c04c3b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2021
-ms.locfileid: "102230835"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115225793"
 ---
 # <a name="importing-features"></a>Importación de características
 

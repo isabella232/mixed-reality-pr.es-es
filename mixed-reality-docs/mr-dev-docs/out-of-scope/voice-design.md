@@ -6,16 +6,16 @@ ms.author: shentan
 ms.date: 04/21/2019
 ms.topic: article
 keywords: Windows Mixed Reality, design, interaction, voice
-ms.openlocfilehash: d027dd32e1d7ea0391d2d9262e164a671a57bd29
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 2a988ad50a8b20a256b0d7208187785778447cc08109fbf55d4ae83e820a76ba
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582834"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115225378"
 ---
 # <a name="voice-commanding"></a>Comandos de voz
 
-Cuando se usan comandos de voz, miramos normalmente como el mecanismo de destino, ya sea como un puntero ("Select") o para dirigir el comando a una aplicación ("verlo, decirlo"). Por supuesto, algunos comandos de voz no requieren un destino, como "Ir al comienzo" o "Hola, Cortana".
+Cuando se usan comandos de voz, la mirada se usa normalmente como mecanismo de destino, ya sea como puntero ("seleccionar") o para dirigir el comando a una aplicación ("véalo, digalo"). Por supuesto, algunos comandos de voz no requieren un destino, como "Ir al comienzo" o "Hola, Cortana".
 
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
@@ -45,15 +45,15 @@ Cuando se usan comandos de voz, miramos normalmente como el mecanismo de destino
 
 ## <a name="how-to-use-voice"></a>Cómo se usa la voz
 
-Considera la posibilidad de agregar comandos de voz a cualquier experiencia que compiles. Voice es una manera eficaz y cómoda de controlar el sistema y las aplicaciones. Dado que los usuarios hablan con variantes regionales y acentos diversos, la opción adecuada de palabras clave de voz asegurará que los comandos de los usuarios se interpretan de forma inequívoca.
+Considera la posibilidad de agregar comandos de voz a cualquier experiencia que compiles. La voz es una manera eficaz y cómoda de controlar el sistema y las aplicaciones. Dado que los usuarios hablan con variantes regionales y acentos diversos, la opción adecuada de palabras clave de voz asegurará que los comandos de los usuarios se interpretan de forma inequívoca.
 
 ### <a name="best-practices"></a>Procedimientos recomendados
 
 A continuación se muestran algunas prácticas que te ayudarán a realizar sin problemas las tareas de reconocimiento de voz.
-* **Usa comandos concisos**: cuando sea posible, elige palabras clave de dos o más sílabas. Las palabras de una sílaba tienden a tener diferentes pronunciaciones de las vocales dependiendo del acento de la persona. Ejemplo: "reproducir vídeo" es mejor que "reproducir el vídeo seleccionado actualmente"
-* **Usar vocabulario simple** : por ejemplo, "show Note" es mejor que "show letrero"
+* **Usa comandos concisos**: cuando sea posible, elige palabras clave de dos o más sílabas. Las palabras de una sílaba tienden a tener diferentes pronunciaciones de las vocales dependiendo del acento de la persona. Ejemplo: "Reproducir vídeo" es mejor que "Reproducir el vídeo seleccionado actualmente"
+* **Uso de vocabulario simple:** ejemplo: "Mostrar nota" es mejor que "Mostrar placa"
 * **Asegúrate de que los comandos no sean destructivos**: haz que cualquier acción que se puede realizar mediante un comando de voz no sea destructiva, y se pueda deshacer fácilmente, en caso de que otra persona que esté hablando cerca del usuario pueda desencadenar accidentalmente un comando.
-* **Evita los comandos que tengan un sonido similar**: evita registrar varios comandos de voz que suenen de forma parecida. Ejemplo: "Mostrar más" y "Mostrar tienda" puede ser un sonido muy similar.
+* **Evita los comandos que tengan un sonido similar**: evita registrar varios comandos de voz que suenen de forma parecida. Ejemplo: "Mostrar más" y "Mostrar tienda" pueden ser muy similares.
 * **Anula el registro de la aplicación cuando no esté en uso**: cuando la aplicación no está en un estado en el que un comando de voz determinado es válido, considera la posibilidad de anular el registro de modo que otros comandos no se confundan con ese.
 * **Prueba con diferentes acentos**: prueba la aplicación con usuarios con diferentes acentos.
 * **Mantén la coherencia en los comandos de voz**: si "Volver" va a la página anterior, mantén este comportamiento en tus aplicaciones.
@@ -65,7 +65,7 @@ A continuación se muestran algunas prácticas que te ayudarán a realizar sin p
 
 Decir "seleccionar" en cualquier momento activará aquello a lo que está apuntando el cursor de mirada. 
 
->Nota: en HoloLens 2, el cursor de miración debe invocarse primero indicando la palabra "Select". Vuelva a decir "seleccionar" para activarlo. Para ocultar el cursor de miración, basta con usar las manos para airtap o tocar un objeto. 
+>Nota: En HoloLens 2, el cursor de mirada debe invocarse primero con la palabra "select". Vuelva a decir "seleccionar" para activar. Para ocultar el cursor de mirada, basta con usar las manos para tocar o tocar un objeto. 
 
 ### <a name="see-it-say-it"></a>Verlo, decirlo
 
@@ -79,7 +79,7 @@ Windows Mixed Reality emplea un modelo de voz "verlo, decirlo" en el que **las e
 
 ### <a name="voices-strengths"></a>Puntos fuertes de los comandos de voz
 
-Las entradas de voz son una manera natural de comunicar nuestras intenciones. La voz es especialmente útil en los **recorridos** de la interfaz, ya que puede ayudar a los usuarios a recorrer varios pasos de una interfaz (un usuario podría decir "volver atrás" mientras mira una página web, en lugar de tener que subir y hacer clic en el botón atrás en la aplicación). Este pequeño ahorro de tiempo tiene un **efecto emocional** eficaz en la percepción de un usuario de la experiencia y les da una pequeña cantidad de mejorar enormemente. El uso de la voz es también un método práctico de entrada cuando tenemos las manos ocupadas o estamos **realizando varias tareas a la vez**. En los dispositivos en los que es difícil escribir en un teclado, el **dictado de voz** puede ser una manera eficaz y alternativa de escribir. Por último, en algunos casos en los que el **intervalo de precisión** de la mirada y el gesto es limitado, la voz puede ser el único método de entrada de confianza del usuario.
+Las entradas de voz son una manera natural de comunicar nuestras intenciones. La voz es especialmente buena en los **recorridos** de interfaz porque puede ayudar a los usuarios a recorrer varios pasos de una interfaz (un usuario podría decir "volver" mientras mira una página web, en lugar de tener que subir y hacer clic en el botón Atrás en la aplicación). Este pequeño ahorro de tiempo tiene **un** efecto emocional eficaz en la percepción del usuario de la experiencia y le proporciona una pequeña cantidad de superpoderes. El uso de la voz es también un método práctico de entrada cuando tenemos las manos ocupadas o estamos **realizando varias tareas a la vez**. En los dispositivos en los que escribir en un teclado es difícil, el **dictado** de voz puede ser una manera eficaz y alternativa de entrada. Por último, en algunos  casos, cuando el intervalo de precisión de la mirada y el gesto son limitados, la voz podría ser el único método de entrada de confianza del usuario.
 
 **Cómo puede beneficiar al usuario la utilización de la voz**
 * Reduce el tiempo: debe hacer que el objetivo final sea más eficaz.
@@ -90,7 +90,7 @@ Las entradas de voz son una manera natural de comunicar nuestras intenciones. La
 
 ### <a name="voices-weaknesses"></a>Desventajas de los comandos de voz
 
-La voz también tiene algunas desventajas. Uno de ellos es la falta de precisión en el control. (por ejemplo, un usuario podría decir "más alto", pero no puede indicar cuánto. "Un poco" es algo difícil de cuantificar. El movimiento o el escalado de las cosas con la voz también es también difícil (la voz no ofrece granularidad en el control). Los comandos de voz también pueden ser imperfectos. A veces, un sistema de voz escucha de forma incorrectamente un comando o no lo escucha. Recuperarse de estos errores es un desafío en cualquier interfaz. Por último, el uso de la voz puede no ser socialmente aceptable en lugares públicos. Hay algunas cosas que los usuarios no pueden o no deben decir. Por estos motivos, el habla debe utilizarse para aquello para lo que mejor sirve.
+La voz también tiene algunas desventajas. Uno de ellos es la falta de precisión en el control. (por ejemplo, un usuario podría decir "más alto", pero no puede decir cuánto. "Un poco" es algo difícil de cuantificar. El movimiento o el escalado de las cosas con la voz también es también difícil (la voz no ofrece granularidad en el control). Los comandos de voz también pueden ser imperfectos. A veces, un sistema de voz escucha de forma incorrectamente un comando o no lo escucha. Recuperarse de estos errores es un desafío en cualquier interfaz. Por último, el uso de la voz puede no ser socialmente aceptable en lugares públicos. Hay algunas cosas que los usuarios no pueden o no deben decir. Por estos motivos, el habla debe utilizarse para aquello para lo que mejor sirve.
 
 ### <a name="voice-feedback-states"></a>Estados de la respuesta a la voz
 
@@ -102,7 +102,7 @@ Cuando la voz se aplica correctamente, el usuario entiende **lo que puede decir 
 ## <a name="top-things-users-should-know-about-speech-in-mixed-reality"></a>Cosas principales que los usuarios deben saber sobre los comandos de voz en la realidad mixta
 * Di **"Seleccionar"** mientras seleccionas como destino un botón (puedes usar esto en cualquier lugar para hacer clic en un botón).
 * Puedes decir el **nombre de etiqueta de un botón de la barra de la aplicación** en algunas aplicaciones para realizar una acción. Por ejemplo, al examinar una aplicación, un usuario puede decir el comando "Quitar" para quitar la aplicación (esto te ahorra el tiempo de hacer clic con la mano).
-* Puedes iniciar la escucha de Cortana diciendo **"Hola Cortana".** Puede formular sus preguntas ("Hola Cortana, ¿cuánto es la Torre Eiffel?"), decirle que abra una aplicación ("Hola Cortana, abra Netflix") o dígale que muestre el menú Inicio ("Hola Cortana, tomarme en casa") y mucho más.
+* Puedes iniciar la escucha de Cortana diciendo **"Hola Cortana".** Puede hacer sus preguntas ("Hola Cortana, ¿qué alto es la torre de Tower?", pedirle que abra una aplicación ("Hola Cortana, abra Netflix") o pedirle que abra el menú Inicio ("Hola Cortana, lléveme a casa") y mucho más.
 
 ## <a name="common-questions-and-concerns-users-have-about-voice"></a>Preguntas y dudas comunes que tienen los usuarios acerca del uso de la voz
 * What can I say? (¿Qué puedo decir?)

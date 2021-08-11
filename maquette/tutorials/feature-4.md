@@ -5,13 +5,13 @@ author: hferrone
 ms.author: v-hferrone
 ms.date: 10/26/2020
 ms.topic: article
-keywords: Windows Mixed Reality, Maquette, prototipo, realidad mixta, realidad virtual, VR, MR, comentarios, centro de comentarios, errores
-ms.openlocfilehash: aa384bfcb825d192bea2cd39f82b1f1d666c565f
-ms.sourcegitcommit: fae413a2b0420e787671af90f14ee39cde51640f
+keywords: Windows Mixed Reality, Maquette, creación de prototipos, Mixed Reality, Virtual Reality, VR, MR, Feedback, Centro de opiniones, bugs
+ms.openlocfilehash: 4301ef39cbd704c3844f831ffda909b45cfd01c1c61845f6a2aa54fa50f30cd4
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "94935595"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115200103"
 ---
 # <a name="feature-4-tutorial"></a>Tutorial de la característica 4
 

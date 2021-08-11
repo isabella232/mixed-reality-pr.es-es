@@ -1,197 +1,197 @@
 ---
-title: Habilitación de la seguridad de conexión para Holographic Remoting
+title: Habilitación de la seguridad de conexión para la comunicación remota holográfica
 description: En esta página se explica cómo configurar la comunicación remota holográfica para usar conexiones cifradas y autenticadas entre el reproductor y las aplicaciones remotas.
 author: florianbagarmicrosoft
 ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
-keywords: HoloLens, comunicación remota, comunicación remota holográfica, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, seguridad, autenticación, servidor a cliente
-ms.openlocfilehash: ea00565580fdbc850a11d103520351be53cb37b5
-ms.sourcegitcommit: 63b7f6d5237327adc51486afcd92424b79e6118b
+keywords: HoloLens, comunicación remota, comunicación remota holográfica, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, seguridad, autenticación, servidor a cliente
+ms.openlocfilehash: fa23994ff4ab49d313fe24a67974bf4d90454e511658e0663c61d7b129b10f9e
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98810115"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223585"
 ---
-# <a name="enabling-connection-security-for-holographic-remoting"></a>Habilitación de la seguridad de conexión para Holographic Remoting
+# <a name="enabling-connection-security-for-holographic-remoting"></a>Habilitación de la seguridad de conexión para la comunicación remota holográfica
 
 >[!IMPORTANT]
->Esta guía es específica de Holographic Remoting en HoloLens 2.
+>Esta guía es específica de la comunicación remota holográfica en HoloLens 2.
 
-Esta página proporciona información general sobre la seguridad de red para Holographic Remoting. Encontrará información sobre
+En esta página se proporciona información general sobre la seguridad de red para la comunicación remota holográfica. Encontrará información sobre
 
-* seguridad en el contexto de Holographic Remoting y por qué podría necesitarlo
-* medidas recomendadas basadas en diferentes casos de uso
-* implementación de la seguridad en la solución de Holographic Remoting
+* seguridad en el contexto de la comunicación remota holográfica y por qué podría necesitarla
+* medidas recomendadas basadas en distintos casos de uso
+* implementar la seguridad en la solución de comunicación remota holográfica
 
-## <a name="holographic-remoting-security"></a>Seguridad de Holographic Remoting
+## <a name="holographic-remoting-security"></a>Seguridad de comunicación remota holográfica
 
-Holographic Remoting intercambia información a través de una red. Si no se aplica ninguna medida de seguridad, los adversarios en la misma red puede poner en peligro la integridad de la comunicación o acceder a la información confidencial.
+Holographic Remoting intercambia información a través de una red. Si no hay medidas de seguridad, los adversarios de la misma red pueden poner en peligro la integridad de la comunicación o acceder a información confidencial.
 
-Las aplicaciones de ejemplo y el reproductor de comunicación remota holográfica en la tienda Windows tienen la seguridad deshabilitada. Esto hace que los ejemplos sean más fáciles de entender. También le ayuda a empezar a trabajar más rápidamente con el desarrollo.
+Las aplicaciones de ejemplo y holographic Remoting Player de Windows Store incluyen seguridad deshabilitada. Si lo hace, los ejemplos son más fáciles de entender. También le ayuda a empezar a trabajar más rápidamente con el desarrollo.
 
-En el caso de las pruebas de campo o de producción, se recomienda encarecidamente habilitar la seguridad en la solución de Holographic Remoting.
+Para pruebas de campo o producción, se recomienda encarecidamente habilitar la seguridad en la solución de comunicación remota holográfica.
 
-La seguridad de Holographic Remoting, cuando se configura correctamente para su caso de uso, ofrece las siguientes garantías:
+La seguridad en la comunicación remota holográfica, cuando se configura correctamente para su caso de uso, le ofrece las siguientes garantías:
 
-* **Autenticidad:** tanto el reproductor como la aplicación remota pueden estar seguros de que el otro lado es quien dice ser
+* **Autenticidad: tanto** el reproductor como la aplicación remota pueden estar seguros de que el otro lado es quien dice ser.
 * **Confidencialidad:** ningún tercero puede leer la información intercambiada entre el reproductor y la aplicación remota
-* **Integridad:** el reproductor y el remoto pueden detectar cualquier cambio en tránsito a su comunicación
+* **Integridad: el** reproductor y el equipo remoto pueden detectar cualquier cambio en tránsito en su comunicación
 
 >[!IMPORTANT]
->Para poder usar las características de seguridad, debe implementar un [reproductor personalizado](holographic-remoting-create-player.md) y una aplicación remota personalizada mediante [Windows Mixed Reality](holographic-remoting-create-remote-wmr.md) o las API de [OpenXR](holographic-remoting-create-remote-openxr.md) .
+>Para poder usar características de seguridad, deberá [](holographic-remoting-create-player.md) implementar un reproductor personalizado y una aplicación remota personalizada mediante Windows Mixed Reality [o](holographic-remoting-create-remote-wmr.md) las API de [OpenXR.](holographic-remoting-create-remote-openxr.md)
 
 >[!NOTE]
-> A partir de la versión [2.4.0](holographic-remoting-version-history.md#v2.4.0) , se pueden crear aplicaciones remotas con la [API de OpenXR](../native/openxr.md) . [A continuación](#secure-connection-using-the-openxr-api)encontrará información general sobre cómo establecer una conexión segura en un entorno de OpenXR.
+> A partir de la [versión 2.4.0,](holographic-remoting-version-history.md#v2.4.0) se pueden crear aplicaciones remotas mediante [la API de OpenXR.](../native/openxr.md) A continuación se puede encontrar información general sobre cómo [](#secure-connection-using-the-openxr-api)establecer una conexión segura en un entorno de OpenXR.
 
-## <a name="planning-the-security-implementation"></a>Planeación de la implementación de seguridad
+## <a name="planning-the-security-implementation"></a>Planeamiento de la implementación de seguridad
 
-Cuando se habilita la seguridad en Holographic Remoting, la biblioteca remota habilitará automáticamente el cifrado y las comprobaciones de integridad de todos los datos intercambiados a través de la red.
+Al habilitar la seguridad en la comunicación remota holográfica, la biblioteca de comunicación remota habilitará automáticamente las comprobaciones de cifrado e integridad de todos los datos intercambiados a través de la red.
 
-Sin embargo, garantizar la correcta autenticación requiere algún trabajo adicional. Lo que debe hacer exactamente depende de su caso de uso y el resto de esta sección trata de determinar los pasos necesarios.
+No obstante, garantizar la autenticación adecuada requiere cierto trabajo adicional. Lo que debe hacer exactamente depende de su caso de uso y el resto de esta sección trata de averiguar los pasos necesarios.
 
 >[!IMPORTANT]
-> Este artículo solo puede proporcionar instrucciones generales. Si no está seguro, considere la posibilidad de consultar a un experto en seguridad que pueda proporcionarle orientación específica para su caso de uso.
+> Este artículo solo puede proporcionar instrucciones generales. Si no está seguro, considere la posibilidad de consultar a un experto en seguridad que pueda proporcionar instrucciones específicas para su caso de uso.
 
-En primer lugar, se usa la terminología siguiente: al describir las conexiones de red, se utilizarán los términos _cliente_ y _servidor_ . El servidor es el lado que escucha las conexiones entrantes en una dirección de extremo conocida y el cliente es el que se conecta al punto de conexión del servidor.
+En primer lugar, algunos términos:  al  describir las conexiones de red, se usarán los términos cliente y servidor. El servidor es el lado que escucha las conexiones entrantes en una dirección de punto de conexión conocida y el cliente es el que se conecta al punto de conexión del servidor.
 
 >[!NOTE]
-> Los roles de servidor y cliente no están asociados a si una aplicación actúa como un reproductor o como remota. Aunque los ejemplos tienen el reproductor en el rol de servidor, es fácil invertir los roles si se adapta mejor a su caso de uso.
+> Los roles de cliente y servidor no están vinculados a si una aplicación actúa como reproductor o como remota. Aunque los ejemplos tienen el reproductor en el rol de servidor, es fácil invertir los roles si se ajusta mejor a su caso de uso.
 
-### <a name="planning-the-server-to-client-authentication"></a>Planeación de la autenticación de servidor a cliente
+### <a name="planning-the-server-to-client-authentication"></a>Planeamiento de la autenticación de servidor a cliente
 
-El servidor utiliza certificados digitales para demostrar su identidad al cliente. El cliente valida el certificado del servidor durante la fase de protocolo de enlace de la conexión. Si el cliente no confía en el servidor, finalizará la conexión en este momento.
+El servidor usa certificados digitales para demostrar su identidad al cliente. El cliente valida el certificado del servidor durante la fase de protocolo de enlace de conexión. Si el cliente no confía en el servidor, finalizará la conexión en este momento.
 
-El modo en que el cliente valida el certificado de servidor y los tipos de certificados de servidor que se pueden usar dependen del caso de uso.
+La forma en que el cliente valida el certificado de servidor y qué tipos de certificados de servidor se pueden usar depende de su caso de uso.
 
-**Caso de uso 1:** El nombre de host del servidor no es fijo, o bien el servidor no se dirige en absoluto.
+**Caso de uso 1:** El nombre de host del servidor no es fijo o el nombre de host no se dirige al servidor.
 
-En este caso de uso, no es práctico (ni siquiera posible) emitir un certificado para el nombre de host del servidor. En su lugar, se recomienda validar la huella digital del certificado. Al igual que una huella digital humana, la huella digital identifica de forma única un certificado.
+En este caso de uso, no es práctico (ni incluso posible) emitir un certificado para el nombre de host del servidor. En su lugar, se recomienda validar la huella digital del certificado. Al igual que una huella digital humana, la huella digital identifica de forma única un certificado.
 
-Es importante comunicar la huella digital al cliente fuera de banda. Esto significa que no se puede enviar a través de la misma conexión de red que se usa para la comunicación remota. En su lugar, puede escribirlo manualmente en la configuración del cliente o para que el cliente examine un código QR.
+Es importante comunicar la huella digital al cliente fuera de banda. Esto significa que no se puede enviar a través de la misma conexión de red que se usa para la comunicación remota. En su lugar, podría escribirlo manualmente en la configuración del cliente o hacer que el cliente digitalizara un código QR.
 
-**Caso de uso 2:** Se puede tener acceso al servidor a través de un nombre de host estable.
+**Caso de uso 2:** Se puede acceder al servidor a través de un nombre de host estable.
 
-En este caso de uso, el servidor tiene un nombre de host específico y sabe que este nombre no es probable que cambie. Después, puede usar un certificado emitido para el nombre de host del servidor. La confianza se establecerá en función del nombre de host y la cadena de confianza del certificado.
+En este caso de uso, el servidor tiene un nombre de host específico y sabe que es probable que este nombre no cambie. A continuación, puede usar un certificado emitido para el nombre de host del servidor. La confianza se establecerá en función del nombre de host y la cadena de confianza del certificado.
 
-Si elige esta opción, el cliente necesita conocer el nombre de host del servidor y el certificado raíz de antemano.
+Si elige esta opción, el cliente debe conocer el nombre de host del servidor y el certificado raíz de antemano.
 
 ### <a name="planning-the-client-to-server-authentication"></a>Planeación de la autenticación de cliente a servidor
 
-Los clientes se autentican en el servidor mediante un token de forma libre. Lo que debe contener este token dependerá de nuevo en el caso de uso:
+Los clientes se autentican en el servidor mediante un token de forma libre. Lo que este token debe contener dependerá de nuevo del caso de uso:
 
 **Caso de uso 1:** Solo tiene que comprobar la identidad de la aplicación cliente.
 
 En este caso de uso, un secreto compartido puede ser suficiente. Este secreto debe ser lo suficientemente complejo como para que no se pueda adivinar.
 
-Un secreto compartido bueno es un GUID aleatorio, que se especifica manualmente tanto en la configuración del cliente como del servidor. Para crear uno, por ejemplo, puede usar el `New-Guid` comando en PowerShell.
+Un buen secreto compartido es un GUID aleatorio, que se introduce manualmente en la configuración del servidor y del cliente. Para crear una, puede, por ejemplo, usar el `New-Guid` comando en PowerShell.
 
-Asegúrese de que este secreto compartido nunca se comunica a través de canales no seguros. La biblioteca remota garantiza que el secreto compartido siempre se envíe cifrado y solo a los elementos del mismo nivel de confianza.
+Asegúrese de que este secreto compartido nunca se comunica a través de canales no seguros. La biblioteca de comunicación remota garantiza que el secreto compartido siempre se envía cifrado y solo a pares de confianza.
 
 **Caso de uso 2:** También debe comprobar la identidad del usuario de la aplicación cliente.
 
-Un secreto compartido no será suficiente para cubrir este caso de uso. En su lugar, puede usar tokens creados por un proveedor de identidades. Un flujo de trabajo de autenticación mediante un proveedor de identidades sería similar al siguiente:
+Un secreto compartido no será suficiente para cubrir este caso de uso. En su lugar, puede usar tokens creados por un proveedor de identidades. Un flujo de trabajo de autenticación mediante un proveedor de identidades tendría el siguiente aspecto:
 
-* El cliente autoriza al proveedor de identidades y solicita un token
+* El cliente autoriza al proveedor de identidades y solicita un token.
 * El proveedor de identidades genera un token y lo envía al cliente.
-* El cliente envía este token al servidor mediante la comunicación remota holográfica
-* El servidor valida el token del cliente con el proveedor de identidades
+* El cliente envía este token al servidor a través de Holographic Remoting
+* El servidor valida el token del cliente con el proveedor de identidades.
 
-Un ejemplo de un proveedor de identidades es la [plataforma de Microsoft Identity](/azure/active-directory/develop/).
+Un ejemplo de un proveedor de identidades es [el Plataforma de identidad de Microsoft](/azure/active-directory/develop/).
 
-Al igual que en el caso de uso anterior, asegúrese de que estos tokens no se envían a través de canales no seguros o expuestos de otro modo.
+Al igual que en el caso de uso anterior, asegúrese de que estos tokens no se envían a través de canales no seguros ni se exponen de otro modo.
 
-## <a name="implementing-holographic-remoting-security"></a>Implementación de la seguridad de Holographic Remoting
+## <a name="implementing-holographic-remoting-security"></a>Implementación de la seguridad de comunicación remota holográfica
 
-Recuerde que debe implementar aplicaciones de reproductor y remotas personalizadas si desea habilitar la seguridad de la conexión. Puede usar los ejemplos proporcionados como puntos de partida para sus propias aplicaciones.
+Recuerde que debe implementar aplicaciones remotas y de reproductor personalizadas si desea habilitar la seguridad de conexión. Puede usar los ejemplos proporcionados como puntos de partida para sus propias aplicaciones.
 
-Para habilitar la seguridad, llame a `ListenSecure()` en lugar de `Listen()` y en `ConnectSecure()` lugar de `Connect()` para establecer la conexión remota.
+Para habilitar la seguridad, llame `ListenSecure()` a en lugar de a y en lugar de a para establecer la conexión `Listen()` `ConnectSecure()` `Connect()` remota.
 
-Estas llamadas requieren que proporcione implementaciones de ciertas interfaces para proporcionar y validar información relacionada con la seguridad:
+Estas llamadas requieren que proporcione implementaciones de determinadas interfaces para proporcionar y validar información relacionada con la seguridad:
 
-* El servidor debe implementar un proveedor de certificados y un validador de autenticación
-* El cliente debe implementar un proveedor de autenticación y un validador de certificado.
+* El servidor debe implementar un proveedor de certificados y un validador de autenticación.
+* El cliente debe implementar un proveedor de autenticación y un validador de certificados.
 
-Todas las interfaces tienen una función que le solicita que realice una acción, que recibe un objeto de devolución de llamada como parámetro. Con este objeto, puede implementar fácilmente el control asincrónico de la solicitud. Mantenga una referencia a este objeto y llame a la función de finalización cuando se complete la acción asincrónica. Se puede llamar a la función de finalización desde cualquier subproceso.
+Todas las interfaces tienen una función que le solicita que tome medidas, que recibe un objeto de devolución de llamada como parámetro. Con este objeto, puede implementar fácilmente el control asincrónico de la solicitud. Mantenga una referencia a este objeto y llame a la función de finalización cuando se complete la acción asincrónica. Se puede llamar a la función de finalización desde cualquier subproceso.
 
 >[!TIP]
->La implementación de interfaces de WinRT se puede realizar fácilmente con C++/WinRT. En el capítulo [API de autor con C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis) se describe con más detalle.
+>La implementación de interfaces de WinRT se puede realizar fácilmente mediante C++/WinRT. En [el capítulo Author APIs with C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis) (Creación de API con C++/WinRT) se describe esto en detalle.
 
 >[!IMPORTANT]
->`build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl`En el paquete de NuGet se incluye documentación detallada sobre la API relacionada con las conexiones seguras.
+>Dentro del paquete NuGet contiene documentación detallada `build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl` de la API relacionada con las conexiones seguras.
 
 ### <a name="implementing-a-certificate-provider"></a>Implementación de un proveedor de certificados
 
-Los proveedores de certificados proporcionan a la aplicación de servidor el certificado que se va a usar. La implementación consta de dos partes:
+Los proveedores de certificados suministran a la aplicación de servidor el certificado que se usará. La implementación consta de dos partes:
 
-1) Un objeto de certificado, que implementa la `ICertificate` interfaz:
+1) Objeto de certificado, que implementa la `ICertificate` interfaz :
 
-    * `GetCertificatePfx()` debe devolver el contenido binario de un `PKCS#12` almacén de certificados. Un `.pfx` archivo contiene `PKCS#12` datos, por lo que su contenido se puede usar directamente aquí.
-    * `GetSubjectName()` debe devolver el nombre descriptivo que identifica el certificado que se va a usar. Si no se ha asignado ningún nombre descriptivo al certificado, esta función debe devolver el nombre de sujeto del certificado.
+    * `GetCertificatePfx()` debe devolver el contenido binario de un `PKCS#12` almacén de certificados. Un archivo contiene datos, por lo que su contenido `.pfx` se puede usar directamente `PKCS#12` aquí.
+    * `GetSubjectName()` debe devolver el nombre descriptivo que identifica el certificado que se usará. Si no se asigna ningún nombre descriptivo al certificado, esta función debe devolver el nombre de sujeto del certificado.
     * `GetPfxPassword()` debe devolver la contraseña necesaria para abrir el almacén de certificados (o una cadena vacía si no se requiere ninguna contraseña).
 
-2) Un proveedor de certificados que implementa la `ICertificateProvider` interfaz:
+2) Un proveedor de certificados que implementa la `ICertificateProvider` interfaz :
     * `GetCertificate()` debe construir un objeto de certificado y devolverlo llamando a `CertificateReceived()` en el objeto de devolución de llamada.
 
-### <a name="implementing-an-authentication-validator"></a>Implementar un validador de autenticación
+### <a name="implementing-an-authentication-validator"></a>Implementación de un validador de autenticación
 
 Los validadores de autenticación reciben el token de autenticación enviado por el cliente y responden con el resultado de la validación.
 
-Implemente la `IAuthenticationReceiver` interfaz de la siguiente manera:
+Implemente `IAuthenticationReceiver` la interfaz como se muestra a continuación:
 
-* `GetRealm()` debe devolver el nombre del dominio Kerberos de autenticación (un dominio HTTP usado durante el protocolo de enlace de la conexión remota).
-* `ValidateToken()` debe validar el token de autenticación del cliente y llamar a `ValidationCompleted()` en el objeto de devolución de llamada con el resultado de la validación.
+* `GetRealm()` debe devolver el nombre del dominio de autenticación (un dominio http usado durante el protocolo de enlace de conexión remota).
+* `ValidateToken()` debe validar el token de autenticación de cliente y llamar `ValidationCompleted()` a en el objeto de devolución de llamada con el resultado de validación.
 
 ### <a name="implementing-an-authentication-provider"></a>Implementación de un proveedor de autenticación
 
 Los proveedores de autenticación generan o recuperan el token de autenticación que se va a enviar al servidor.
 
-Implemente la `IAuthenticationProvider` interfaz de la siguiente manera:
+Implemente `IAuthenticationProvider` la interfaz como se muestra a continuación:
 
 * `GetToken()` debe generar o recuperar el token de autenticación que se va a enviar. Una vez que el token esté listo, llame al `TokenReceived()` método en el objeto de devolución de llamada.
 
-### <a name="implementing-a-certificate-validator"></a>Implementar un validador de certificado
+### <a name="implementing-a-certificate-validator"></a>Implementación de un validador de certificado
 
-Los validadores de certificado reciben la cadena de certificados enviada por el servidor y determinan si se puede confiar en el servidor.
+Los validadores de certificados reciben la cadena de certificados enviada por el servidor y determinan si el servidor puede ser de confianza.
 
-Para validar los certificados, puede utilizar la lógica de validación del sistema subyacente. Esta validación del sistema puede admitir su propia lógica de validación o reemplazarla por completo. Si no pasa su propio validador de certificado al solicitar una conexión segura, se usará automáticamente la validación del sistema.
+Para validar certificados, puede usar la lógica de validación del sistema subyacente. Esta validación del sistema puede admitir su propia lógica de validación o reemplazarla por completo. Si no pasa su propio validador de certificado al solicitar una conexión segura, la validación del sistema se usará automáticamente.
 
-En Windows, la validación del sistema comprobará:
+En Windows, la validación del sistema comprobará lo siguiente:
 
-* Integridad de la cadena de certificados: los certificados forman una cadena coherente que termina en un certificado raíz de confianza
-* Validez del certificado: el certificado del servidor se encuentra dentro del intervalo de tiempo de validez y se emite para la autenticación del servidor.
-* Revocación: no se ha revocado el certificado
+* Integridad de la cadena de certificados: los certificados forman una cadena coherente que termina en un certificado raíz de confianza.
+* Validez del certificado: el certificado del servidor está dentro de su intervalo de tiempo de validez y se emite para la autenticación del servidor.
+* Revocación: el certificado no se ha revocado
 * Coincidencia de nombre: el nombre de host del servidor coincide con uno de los nombres de host para los que se emitió el certificado.
 
-Implemente la `ICertificateValidator` interfaz de la siguiente manera:
+Implemente `ICertificateValidator` la interfaz como se muestra a continuación:
 
- * `PerformSystemValidation()` debe devolver `true` si se debe realizar una validación del sistema tal y como se ha descrito anteriormente. En este caso, el resultado de la validación del sistema se pasa como entrada al `ValidateCertificate()` método.
-* `ValidateCertificate()` debe validar la cadena de certificados y, a continuación, llamar a `CertificateValidated()` en la devolución de llamada pasada con el resultado de la validación final. Este método acepta la cadena de certificados, el nombre del servidor con el que se establece la conexión y si se debe forzar una comprobación de revocación. Si la cadena de certificados contiene varios certificados, el primero es el certificado del firmante.
+ * `PerformSystemValidation()` debe devolver si se debe realizar una validación del sistema `true` como se describió anteriormente. En este caso, el resultado de la validación del sistema se pasa como una entrada al `ValidateCertificate()` método .
+* `ValidateCertificate()` debe validar la cadena de certificados y, a continuación, llamar `CertificateValidated()` a en la devolución de llamada pasada con el resultado final de la validación. Este método acepta la cadena de certificados, el nombre del servidor con el que se establece la conexión y si se debe forzar una comprobación de revocación. Si la cadena de certificados contiene varios certificados, el primero es el certificado del firmantes.
 
 >[!NOTE]
->Si el caso de uso requiere una forma de validación diferente (consulte el caso de uso de certificados #1 anterior), omita completamente la validación del sistema. En su lugar, use cualquier API o biblioteca que pueda controlar los certificados X. 509 con codificación DER para descodificar la cadena de certificados y realizar las comprobaciones necesarias para su caso de uso.
+>Si su caso de uso requiere una forma diferente de validación (consulte el caso de uso del certificado #1 anterior), omita completamente la validación del sistema. En su lugar, use cualquier API o biblioteca que pueda controlar certificados X.509 codificados con DER para descodificar la cadena de certificados y realizar las comprobaciones necesarias para su caso de uso.
 
 ## <a name="secure-connection-using-the-openxr-api"></a>Conexión segura mediante la API de OpenXR
 
-Cuando se usa la [API de OpenXR](../native/openxr.md) , todas las API relacionadas con la conexión segura están disponibles como parte de la `XR_MSFT_holographic_remoting` extensión OpenXR.
+Cuando se usa [la API de OpenXR,](../native/openxr.md) todas las API relacionadas con la conexión segura están disponibles como parte de la `XR_MSFT_holographic_remoting` extensión OpenXR.
 
 >[!IMPORTANT]
->Para obtener información acerca de la API de extensión OpenXR de Holographic Remoting, consulte la [especificación](https://htmlpreview.github.io/?https://github.com/microsoft/MixedReality-HolographicRemoting-Samples/blob/master/remote_openxr/specification.html) que se encuentra en el repositorio de github de ejemplos de la [comunicación remota de Holographic](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
+>Para obtener información sobre la API de extensión OpenXR de Holographic Remoting, consulte la especificación que se puede encontrar en el repositorio de github de ejemplos de [Holographic Remoting](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples). [](https://htmlpreview.github.io/?https://github.com/microsoft/MixedReality-HolographicRemoting-Samples/blob/master/remote_openxr/specification.html)
 
-Los elementos clave para la conexión segura mediante la `XR_MSFT_holographic_remoting` extensión OpenXR son las siguientes devoluciones de llamada.
+Los elementos clave para una conexión segura mediante `XR_MSFT_holographic_remoting` la extensión OpenXR son las siguientes devoluciones de llamada.
 - `xrRemotingRequestAuthenticationTokenCallbackMSFT`, genera o recupera el token de autenticación que se va a enviar.
 - `xrRemotingValidateServerCertificateCallbackMSFT`, valida la cadena de certificados.
-- `xrRemotingValidateAuthenticationTokenCallbackMSFT`, valida el token de autenticación del cliente.
-- `xrRemotingRequestServerCertificateCallbackMSFT`, proporcione la aplicación de servidor con el certificado que se va a usar.
+- `xrRemotingValidateAuthenticationTokenCallbackMSFT`, valida el token de autenticación de cliente.
+- `xrRemotingRequestServerCertificateCallbackMSFT`, proporcione a la aplicación de servidor el certificado que se usará.
 
-Estas devoluciones de llamada se pueden proporcionar al tiempo de ejecución de OpenXR remoto a través `xrRemotingSetSecureConnectionClientCallbacksMSFT` de y `xrRemotingSetSecureConnectionServerCallbacksMSFT` . Además, la conexión segura debe habilitarse mediante el parámetro secureConnection en la `XrRemotingConnectInfoMSFT` estructura o la `XrRemotingListenInfoMSFT` estructura, dependiendo de si usa `xrRemotingConnectMSFT` o `xrRemotingListenMSFT` .
+Estas devoluciones de llamada se pueden proporcionar al entorno de ejecución de OpenXR de comunicación remota a través `xrRemotingSetSecureConnectionClientCallbacksMSFT` de y `xrRemotingSetSecureConnectionServerCallbacksMSFT` . Además, la conexión segura debe habilitarse a través del parámetro secureConnection en la estructura o en la estructura en función de si usa `XrRemotingConnectInfoMSFT` `XrRemotingListenInfoMSFT` o `xrRemotingConnectMSFT` `xrRemotingListenMSFT` .
 
-Esta API es similar a la API basada en IDL que se describe en implementación de la seguridad de la [comunicación remota holográfica](#implementing-holographic-remoting-security). Sin embargo, en lugar de implementar interfaces, se supone que proporciona implementaciones de devolución de llamada. Puede encontrar un ejemplo detallado en la [aplicación de ejemplo OpenXR](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
+Esta API es similar a la API basada en IDL que se describe en Implementación de la seguridad [de comunicación remota holográfica.](#implementing-holographic-remoting-security) Sin embargo, en lugar de implementar interfaces, se supone que debe proporcionar implementaciones de devolución de llamada. Puede encontrar un ejemplo detallado en la aplicación [de ejemplo OpenXR](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
 
 ## <a name="see-also"></a>Consulte también
-* [Escritura de una aplicación remota Holographic Remoting con las API de Windows Mixed Reality](holographic-remoting-create-remote-wmr.md)
-* [Escritura de una aplicación remota de Holographic Remoting con las API de OpenXR](holographic-remoting-create-remote-openxr.md)
+* [Escritura de una aplicación remota de Holographic Remoting Windows Mixed Reality API](holographic-remoting-create-remote-wmr.md)
+* [Escritura de una aplicación remota de Holographic Remoting mediante las API de OpenXR](holographic-remoting-create-remote-openxr.md)
 * [Escritura de una aplicación de reproductor de control remoto de holografías personalizada](holographic-remoting-create-player.md)
-* [Solución de problemas y limitaciones de la comunicación remota holográfica](holographic-remoting-troubleshooting.md)
+* [Solución de problemas y limitaciones de Holographic Remoting](holographic-remoting-troubleshooting.md)
 * [Términos de licencia del software de control remoto de holografías](/legal/mixed-reality/microsoft-holographic-remoting-software-license-terms)
 * [Declaración de privacidad de Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839)

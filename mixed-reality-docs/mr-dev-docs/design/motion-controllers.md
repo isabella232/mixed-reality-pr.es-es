@@ -1,28 +1,28 @@
 ---
 title: Controladores de movimiento
-description: Obtenga información sobre cómo configurar, emparejar y asociar interacciones de entrada mediante controladores de movimiento de realidad mixta en sus aplicaciones.
+description: Aprenda a configurar, emparejar y administrador las interacciones de entrada mediante Mixed Reality de movimiento en las aplicaciones.
 author: wguyman
 ms.author: wguyman
 ms.date: 03/21/2018
 ms.topic: article
-keywords: Controladores de 6DOF, controladores de movimiento, emparejamiento, auriculares de realidad mixta, auriculares de realidad mixta de Windows, auriculares de realidad virtual, HoloLens, desplazamiento, control, estado
-ms.openlocfilehash: 367c9d9e0179c82af05af3fded9341ff7960d19e
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: Controladores de 6dof, controladores de movimiento, emparejamiento, casco de realidad mixta, casco de windows de realidad mixta, casco de realidad virtual, HoloLens, desplazamiento, control, estado
+ms.openlocfilehash: bced0115eee5e753ef01d129ae10910acdca2b7b91020117f53b2ebf8833a130
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98583664"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115224923"
 ---
 # <a name="motion-controllers"></a>Controladores de movimiento
 
 :::row:::
     :::column:::
-        Los controladores de movimiento son [accesorios de hardware](../discover/hardware-accessories.md) que permiten a los usuarios tomar medidas en realidad mixta. Una ventaja de los controladores de movimiento a través de [gestos](gaze-and-commit.md#composite-gestures) es que los controladores tienen una posición precisa en el espacio, lo que permite una interacción detallada con los objetos digitales. En el caso de los auriculares de la realidad mixta de Windows, los controladores de movimiento son la manera principal en que los usuarios realizarán acciones en su mundo.<br>
+        Los controladores de movimiento [son accesorios de hardware](../discover/hardware-accessories.md) que permiten a los usuarios tomar medidas en realidad mixta. Una ventaja de los controladores de movimiento sobre los [gestos](gaze-and-commit.md#composite-gestures) es que los controladores tienen una posición precisa en el espacio, lo que permite una interacción más precisa con objetos digitales. Para Windows Mixed Reality cascos envolventes, los controladores de movimiento son la forma principal de que los usuarios tomen medidas en su mundo.<br>
         <br>
-        *Imagen: controlador de movimiento de Windows Mixed Reality*
+        *Imagen: un controlador Windows Mixed Reality movimiento*
     :::column-end:::
         :::column:::
-       ![Controladores de movimiento de Windows Mixed Reality](images/winmr-ck-1080x1080-350px.jpg)<br> 
+       ![Windows Mixed Reality controladores de movimiento](images/winmr-ck-1080x1080-350px.jpg)<br> 
     :::column-end:::
 :::row-end:::
 
@@ -53,20 +53,20 @@ ms.locfileid: "98583664"
 </tr>
 </table>
 
-## <a name="hardware-details"></a>Detalles de hardware
+## <a name="hardware-details"></a>Detalles del hardware
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/1nlcdDNOdm8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Los controladores de movimiento de Windows Mixed Reality ofrecen un seguimiento de movimiento preciso y con capacidad de respuesta en el campo de la vista con los sensores en el casco envolvente. No es necesario instalar hardware en las paredes del espacio. Estos controladores de movimiento ofrecen la misma facilidad de configuración y portabilidad que los auriculares de la realidad mixta de Windows. Nuestros asociados de dispositivos tienen previsto comercializar y vender estos controladores en las estanterías minoristas de este festivo.
+Windows Mixed Reality de movimiento ofrecen un seguimiento preciso y dinámico del movimiento en el campo de visión mediante los sensores del casco envolvente. No es necesario instalar hardware en las paredes del espacio. Estos controladores de movimiento ofrecen la misma facilidad de configuración y portabilidad que Windows Mixed Reality cascos envolventes. Nuestros asociados de dispositivos planean comercializar y vender estos controladores en tiendas minoristas esta semana.
 
-![Conozca el controlador](images/controllerimage-750px.png)<br>
-*Conozca el controlador*
+![Conocer el controlador](images/controllerimage-750px.png)<br>
+*Conocer el controlador*
 
 **Características**
 * Seguimiento óptico
 * Desencadenador
-* Botón de arrastre
-* Palanca
+* Botón Desgarr
+* Stick
 * Panel táctil
 
 ## <a name="setup"></a>Configurar
@@ -76,43 +76,43 @@ Los controladores de movimiento de Windows Mixed Reality ofrecen un seguimiento 
 **Necesitará:**
 * Un conjunto de dos controladores de movimiento.
 * Cuatro baterías AA.
-* Un equipo con compatibilidad con Bluetooth 4,0.
+* Un equipo con compatibilidad Bluetooth 4.0.
 
-**Comprobar las actualizaciones de Windows, Unity y driver**
-* Visite [instalar las herramientas](../develop/install-the-tools.md) para las versiones preferidas de Windows, Unity, etc., para el desarrollo de realidad mixta.
-* Asegúrese de que tiene los [controladores de dispositivo de movimiento y auriculares](/windows/mixed-reality/enthusiast-guide/mixed-reality-software)más actualizados.
+**Comprobación de Windows, Unity y actualizaciones de controladores**
+* Visite [Instalación de las herramientas](../develop/install-the-tools.md) para las versiones preferidas de Windows, Unity, entre otras, para el desarrollo de realidad mixta.
+* Asegúrese de que tiene los controladores de controladores de movimiento y casco más [actualizados.](/windows/mixed-reality/enthusiast-guide/mixed-reality-software)
 
-### <a name="pairing-controllers"></a>Controladores de emparejamiento
+### <a name="pairing-controllers"></a>Emparejamiento de controladores
 
-Los controladores de movimiento pueden estar enlazados con el equipo host mediante la configuración de Windows como cualquier otro dispositivo Bluetooth.
+Los controladores de movimiento se pueden unir con el equipo host mediante Windows configuración como cualquier otro Bluetooth dispositivo.
 
-1. Inserte dos baterías AA en la parte posterior del controlador. Deje la tapa de la batería desactivada por ahora.
-2. Si utiliza un adaptador Bluetooth USB externo en lugar de un radio Bluetooth integrado, revise los [procedimientos recomendados de Bluetooth](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) antes de continuar. Para la configuración de escritorio con radio integrada, asegúrese de que la antena esté conectada.
-3. Abra **configuración de Windows**  ->  **dispositivos**  ->  **Agregar Bluetooth u otro dispositivo**  ->  **Bluetooth** y quite todas las instancias anteriores de "Motion Controller-Right" y "Motion Controller-left". Compruebe también la categoría otros dispositivos en la parte inferior de la lista.
-4. Seleccione **Agregar Bluetooth u otro dispositivo** y vea que empieza a detectar dispositivos Bluetooth.
-5. Presione y mantenga presionado el botón de Windows del controlador para encender el controlador y liberarlo una vez que lo haga.
-6. Mantenga presionado el botón de emparejamiento (pestaña en el compartimiento de la batería) hasta que los LED empiecen a parpadear.
+1. Inserte dos baterías AA en la parte posterior del controlador. Deje la cubierta de la batería apagada por ahora.
+2. Si usa un adaptador de Bluetooth USB externo en lugar de una radio Bluetooth [](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) integrada, revise los procedimientos recomendados de Bluetooth antes de continuar. Para la configuración de escritorio con radio integrada, asegúrese de que la antena está conectada.
+3. Abra **Windows Configuración** dispositivos agregar Bluetooth u otros dispositivos Bluetooth y quite las instancias anteriores de "Controlador de movimiento – Derecha" y "Controlador de movimiento  ->    ->    ->   – Izquierda". Compruebe también la categoría Otros dispositivos en la parte inferior de la lista.
+4. Seleccione **Agregar Bluetooth u otro dispositivo y** vea que empieza a detectar Bluetooth dispositivos.
+5. Mantenga presionado el botón de Windows del controlador para activar el controlador y suéltelo cuando suba el timbre.
+6. Mantenga presionado el botón de emparejamiento (tabulación en el compartimiento de la batería) hasta que los LED empiecen a pulsar.
 
 :::row:::
     :::column:::
-7. Espere "controlador de movimiento-izquierda" o "controlador de movimiento-derecha" para que aparezca en la parte inferior de la lista. Seleccione para emparejar. El controlador vibrará una vez cuando se conecte.<br>
+7. Espere "Controlador de movimiento - Izquierda" o "Controlador de movimiento - Derecha" para aparecer en la parte inferior de la lista. Seleccione esta opción para emparejar. El controlador se vibración una vez cuando se conecta.<br>
         <br>
-        *Imagen: seleccione "controlador de movimiento" para emparejar; Si hay varias instancias, seleccione una en la parte inferior de la lista.*
+        *Imagen: seleccione "Controlador de movimiento" para emparejar; si hay varias instancias, seleccione una en la parte inferior de la lista.*
     :::column-end:::
         :::column:::
-       ![Seleccione controlador de movimiento para emparejar si varias instancias seleccionan una de las que aparecen en la parte inferior de la lista](images/450px-bluetooth-add-a-device-300px.png)<br> 
+       ![Seleccione Controlador de movimiento para emparejar, si varias instancias seleccionan una de las que aparecen en la parte inferior de la lista.](images/450px-bluetooth-add-a-device-300px.png)<br> 
     :::column-end:::
 :::row-end:::
    
-8. Verá que el controlador aparece en la configuración de Bluetooth en la **categoría "Mouse, teclado, & lápiz"** como **conectado**. Llegados a este punto, puede obtener una actualización de firmware (consulte la [sección siguiente](motion-controllers.md#updating-controller-firmware)).
-9. Vuelva a adjuntar la cubierta de batería.
-10. Repita los pasos 1-9 para el segundo controlador.
+8. Verá que el controlador aparece en la configuración de Bluetooth en la categoría **"Mouse, teclado, & lápiz"** como **Conectado.** En este momento, puede obtener una actualización de firmware; consulte [la sección siguiente.](motion-controllers.md#updating-controller-firmware)
+9. Vuelva a conectar la cubierta de la batería.
+10. Repita los pasos del 1 al 9 para el segundo controlador.
 
 <br>
 
 :::row:::
     :::column:::
-        Después de emparejar ambos controladores correctamente, la configuración debería ser similar a la siguiente, en la **categoría "Mouse, teclado, & lápiz"** <br>
+        Después de emparejar correctamente ambos controladores, la configuración debe ser como la siguiente, en la categoría **"Mouse, teclado, & lápiz".** <br>
         <br>
         *Imagen: Controladores de movimiento conectados*
     :::column-end:::
@@ -121,18 +121,18 @@ Los controladores de movimiento pueden estar enlazados con el equipo host median
     :::column-end:::
 :::row-end:::
 
-Si los controladores están desactivados después del emparejamiento, su estado se mostrará como emparejado. En el caso de los controladores permanentemente en la categoría "otros dispositivos", es posible que el emparejamiento solo se haya completado parcialmente. En este caso, vuelva a ejecutar los pasos de emparejamiento para obtener la funcionalidad del controlador.
+Si los controladores se apagan después del emparejamiento, su estado se mostrará como Emparejado. En el caso de los controladores de forma permanente en la categoría "Otros dispositivos", es posible que el emparejamiento solo se haya completado parcialmente. En este caso, vuelva a ejecutar los pasos de emparejamiento para que el controlador funcione.
 
-### <a name="updating-controller-firmware"></a>Actualizando el firmware del controlador
+### <a name="updating-controller-firmware"></a>Actualización del firmware del controlador
 
-* Si hay disponible un auricular envolvente en el equipo con el nuevo firmware de controlador, el firmware se insertará automáticamente en los controladores de movimiento la próxima vez que los encienda. Las actualizaciones de firmware del controlador se indican mediante un patrón de cuadrantes LED de iluminación en un movimiento circular y tardan 1-2 minutos.
+* Si hay disponible un casco envolvente conectado al equipo con el nuevo firmware del controlador, el firmware se insertará automáticamente en los controladores de movimiento la próxima vez que los active. Las actualizaciones de firmware del controlador se indican mediante un patrón de iluminación de cuadrantes LED en un movimiento circular y pueden tardar entre 1 y 2 minutos.
 
 
 :::row:::
     :::column:::
-* Una vez finalizada la actualización del firmware, los controladores se reinician y se vuelven a conectar. Ambos controladores deben estar conectados ahora. <br>
+* Una vez completada la actualización del firmware, los controladores se reiniciarán y se volverán a conectar. Ambos controladores deben estar conectados ahora. <br>
         <br>
-        *Imagen: Controladores conectados en la configuración de Bluetooth*
+        *Imagen: Controladores conectados en Bluetooth configuración*
     :::column-end:::
         :::column:::
        ![Controladores conectados](images/cyk-connected-300px.jpg)<br>
@@ -141,145 +141,145 @@ Si los controladores están desactivados después del emparejamiento, su estado 
 
 
 * Compruebe que los controladores funcionan correctamente:
-    1. Inicie el **portal de realidad mixta** y escriba su hogar de realidad mixta.
-    2. Mueva los controladores y compruebe el seguimiento, los botones de prueba y la comprobación de la [teleportabilidad](../discover/navigating-the-windows-mixed-reality-home.md#getting-around-your-home) . Si no es así, consulte [solución de problemas del controlador de movimiento](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers).
+    1. Inicie **Portal de realidad mixta** y escriba su Mixed Reality Inicio.
+    2. Mueva los controladores y compruebe que el seguimiento, los botones de prueba y comprueben que [la teleportación](../discover/navigating-the-windows-mixed-reality-home.md#getting-around-your-home) funciona. Si no lo hacen, consulte la solución de problemas [del controlador de movimiento.](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers)
 
-## <a name="gazing-and-pointing"></a>Gazing y apuntando
+## <a name="gazing-and-pointing"></a>Gazing and pointing
 
-Windows Mixed Reality admite dos modelos clave para la interacción; **mira y confirma** y **apunta y confirma**:
-* Con la **mirada y la confirmación**, los usuarios destinan un objeto con su [mirada](gaze-and-commit.md)y, a continuación, seleccionan objetos con pulsaciones aéreas, un controlador para juegos, un clic o la voz.
-* Con **Point y commit**, un usuario puede dirigirse a un controlador de movimiento compatible con el puntero en el objeto de destino y, a continuación, seleccionar objetos con el desencadenador del controlador.
+Windows Mixed Reality admite dos modelos clave para la interacción; **mirar y confirmar y** **apuntar y confirmar**:
+* Con la mirada y **la confirmación,** los usuarios tienen como destino un objeto con su mirada y, a continuación, seleccionan objetos con pulsaciones de aire a mano, un mando de juegos, un clicker o su voz. [](gaze-and-commit.md)
+* Con **el punto y la confirmación,** un usuario puede apuntar a un controlador de movimiento con capacidad de apuntar al objeto de destino y, a continuación, seleccionar objetos con el desencadenador del controlador.
 
-Las aplicaciones que admiten apuntar a controladores de movimiento también deben habilitar las interacciones basadas en la mirada siempre que sea posible, para ofrecer a los usuarios la opción de qué dispositivos de entrada usan.
+Las aplicaciones que admiten apuntar con controladores de movimiento también deben habilitar interacciones controladas por mirada siempre que sea posible, para ofrecer a los usuarios la opción de qué dispositivos de entrada usan.
 
-### <a name="managing-recoil-when-pointing"></a>Administrar la rebobinado al apuntar
+### <a name="managing-recoil-when-pointing"></a>Administración del retroceso al apuntar
 
-Al usar los controladores de movimiento para apuntar y confirmar, los usuarios usarán el controlador como destino e interactuarán mediante la extracción de su desencadenador. Los usuarios que extraen el desencadenador pueden acabar con el controlador más alto al final de la extracción del desencadenador del que querían.
+Al usar controladores de movimiento para apuntar y confirmar, los usuarios usarán el controlador para dirigirse e interactuar mediante la extracción de su desencadenador. Los usuarios que extraigan el desencadenador de forma productiva pueden acabar apuntando al controlador más arriba al final de su extracción del desencadenador de lo previsto.
 
-Para administrar este tipo de rebobinado que se puede producir cuando los usuarios extraen el desencadenador, la aplicación puede ajustar su rayo de destino cuando el valor del eje analógico del desencadenador aumente por encima de 0,0. A continuación, puede realizar una acción mediante la destinación de un rayo a algunos fotogramas más adelante, una vez que el valor del desencadenador alcance 1,0, siempre que la última acción se realice en un período de tiempo corto. Cuando se usa el gesto de [punteo compuesto](gaze-and-commit.md#composite-gestures)de nivel superior, Windows administrará esta captura de rayo y el tiempo de espera de destino.
+Para administrar cualquier retroceso que pueda producirse cuando los usuarios extraigan el desencadenador, la aplicación puede ajustar su rayo de destino cuando el valor del eje análogo del desencadenador suba por encima de 0,0. A continuación, puede tomar medidas con ese rayo de destino unos fotogramas más adelante una vez que el valor del desencadenador alcance 1,0, siempre que la última pulsación se produzca en un breve período de tiempo. Al usar el gesto de pulsar compuesto de nivel [superior,](gaze-and-commit.md#composite-gestures)Windows administrará esta captura de rayos de destino y el tiempo de espera.
 
-## <a name="grip-pose-vs-pointing-pose"></a>Replanteamiento de control frente a pose de puntero
+## <a name="grip-pose-vs-pointing-pose"></a>Posición de control frente a posición de apuntar
 
-Windows Mixed Reality admite controladores de movimiento de diferentes factores de forma, con el diseño de cada controlador diferente en su relación entre la posición del usuario y la dirección de "avance" natural que deben usar las aplicaciones para apuntar al representar el controlador.
+Windows Mixed Reality admite controladores de movimiento en diferentes factores de forma, y el diseño de cada controlador difiere en su relación entre la posición de la mano del usuario y la dirección "hacia delante" natural que las aplicaciones deben usar para señalar al representar el controlador.
 
-Para representar mejor estos controladores, hay dos tipos de supuestos que puede investigar para cada origen de interacción. la **pose de control** y el **puntero representan**.
+Para representar mejor estos controladores, hay dos tipos de poses que puede investigar para cada origen de interacción. la **posición del control** y la posición del **puntero.**
 
-### <a name="grip-pose"></a>Replanteamiento de control
+### <a name="grip-pose"></a>Posición de control
 
-El **puño** representa la ubicación de la palma de una mano detectada por una HoloLens o la palma que contiene un controlador de movimiento.
+La **posición del control** representa la ubicación de la mano detectada por un HoloLens o la mano que mantiene un controlador de movimiento.
 
-En los auriculares envolventes, la representación del puño es la que mejor se usa para representar **la mano del usuario** o **un objeto que se mantiene en la mano del usuario**, como un arma o un cañón. La representación de control también se usa al visualizar un controlador de movimiento, ya que el **modelo representable** proporcionado por Windows para un controlador de movimiento utiliza la representación del puño como su origen y el centro de rotación.
+En los cascos envolventes, la  posición del control se usa mejor para representar la mano del usuario o un objeto que se mantiene en la mano del **usuario,** como un revólver o un revólver. La posición de control también se usa al  visualizar un controlador de movimiento, ya que el modelo procesable proporcionado por Windows para un controlador de movimiento usa la posición del control como su origen y centro de rotación.
 
-La pose de control se define específicamente de la siguiente manera:
-* La **posición del puño**: Palm centroide cuando mantiene el controlador de forma natural, se ajusta hacia la izquierda o derecha para centrar la posición dentro del control. En el controlador de movimiento de Windows Mixed Reality, esta posición generalmente se alinea con el botón de agarre.
-* **Eje derecho de la orientación del puño**: cuando se abre por completo la mano para formar una postura plana de cinco dedos, el rayo perpendicular a la palma (hacia delante de la mano izquierda o hacia atrás desde la mano derecha)
-* El **eje hacia delante de la orientación del puño**: al cerrar la mano (como si contiene el controlador), el rayo que señala "reenviar" a través del tubo formado por los dedos no Thumb.
-* **Eje hacia arriba de la orientación del puño**: el eje hacia arriba implícito por las definiciones derecha y hacia delante.
+La posición de control se define específicamente de la siguiente manera:
+* Posición **del control:** centroide de mano al mantener el controlador de forma natural, ajustado a la izquierda o derecha para centrar la posición dentro del control. En el Windows Mixed Reality de movimiento, esta posición se alinea generalmente con el botón Desajegar.
+* Eje **derecho** de la orientación del control: cuando se abre completamente la mano para formar una posición plana de cinco dedos, el rayo que es normal para la mano (hacia delante desde la mano izquierda, hacia atrás desde la mano derecha).
+* Eje **hacia** delante de la orientación del control: cuando cierra la mano parcialmente (como si sostendía el controlador), el rayo que señala "hacia delante" a través del metro formado por los dedos no thumb.
+* Eje **Up de la orientación del control:** eje Up implícito en las definiciones Right y Forward.
 
-### <a name="pointer-pose"></a>Representar puntero
+### <a name="pointer-pose"></a>Posición de puntero
 
-La **pose de puntero** representa la punta del controlador que señala hacia delante.
+La **posición del puntero** representa la punta del controlador que apunta hacia delante.
 
-La representación de puntero proporcionada por el sistema se usa mejor para Raycast cuando se **representa el propio modelo de controlador**. Si está representando algún otro objeto virtual en lugar del controlador, como un cañón virtual, debe apuntar con un rayo más natural para ese objeto virtual, como un rayo que viaja a lo largo del barril del modelo de pistola definido por la aplicación. Dado que los usuarios pueden ver el objeto virtual y no el controlador físico, es probable que apunte con el objeto virtual sea más natural para los que usan su aplicación.
+La posición de puntero proporcionada por el sistema se usa mejor para la difusión por rayos cuando se representa **el propio modelo de controlador.** Si va a representar algún otro objeto virtual en lugar del controlador, como un revólver virtual, debe apuntar con un rayo que sea más natural para ese objeto virtual, como un rayo que viaja a lo largo del vuelo del modelo de revólver definido por la aplicación. Dado que los usuarios pueden ver el objeto virtual y no el controlador físico, es probable que apuntar con el objeto virtual sea más natural para aquellos que usan la aplicación.
 
 ## <a name="controller-tracking-state"></a>Estado de seguimiento del controlador
 
-Al igual que los auriculares, el controlador de movimiento de Windows Mixed Reality no requiere la configuración de sensores de seguimiento externos. En su lugar, el seguimiento de los controladores se realiza mediante sensores en el propio casco.
+Al igual que los cascos, el Windows Mixed Reality de movimiento no requiere ninguna configuración de sensores de seguimiento externos. En su lugar, los sensores del casco son los que realiza el seguimiento de los controladores.
 
-Si el usuario mueve los controladores fuera del campo de vista del casco, en la mayoría de los casos Windows seguirá inferencia de las posiciones del controlador y las proporcionará a la aplicación. Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se quitarán de las posiciones de precisión aproximada.
+Si el usuario mueve los controladores fuera del campo de visión del casco, en la mayoría de los casos Windows seguirá inferiendo las posiciones del controlador y las proporcionará a la aplicación. Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se colocarán en posiciones de precisión aproximada.
 
-En este punto, el sistema bloqueará el controlador al usuario, realizará un seguimiento de la posición del usuario a medida que se mueven, mientras se expone la verdadera orientación del controlador mediante sus sensores de orientación internos. Muchas aplicaciones que usan Controladores para apuntar a los elementos de la interfaz de usuario y activarlos pueden funcionar con normalidad mientras tienen una precisión aproximada sin que el usuario lo note.
+En este punto, el sistema bloqueará el controlador con el cuerpo del usuario, haciendo un seguimiento de la posición del usuario a medida que se mueve, a la vez que expone la verdadera orientación del controlador mediante sus sensores de orientación internos. Muchas aplicaciones que usan controladores para apuntar y activar elementos de la interfaz de usuario pueden funcionar con normalidad con una precisión aproximada sin que el usuario lo haga.
 
 <br>
 
 <iframe width="940" height="530" src="https://www.youtube.com/embed/rkDpRllbLII" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-### <a name="reasoning-about-tracking-state-explicitly"></a>Razonamiento sobre el estado de seguimiento explícitamente
+### <a name="reasoning-about-tracking-state-explicitly"></a>Razonamiento sobre el seguimiento del estado explícitamente
 
-Las aplicaciones que quieren tratar las posiciones de manera diferente según el estado de seguimiento pueden ir más allá e inspeccionar las propiedades en el estado del controlador, como SourceLossRisk y PositionAccuracy:
+Las aplicaciones que desean tratar las posiciones de forma diferente en función del estado de seguimiento pueden ir más allá e inspeccionar las propiedades en el estado del controlador, como SourceLossRisk y PositionAccuracy:
 
 <table>
 <tr>
 <th> Estado de seguimiento </th><th> SourceLossRisk </th><th> PositionAccuracy </th><th> TryGetPosition</th>
 </tr><tr>
-<td> <b>Alta precisión</b> </td><td style="background-color: green; color: white"> &lt; 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Alta precisión</b> </td><td style="background-color: green; color: white"> &lt; 1.0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Alta precisión (riesgo de pérdida)</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Alta precisión (en riesgo de pérdida)</b> </td><td style="background-color: orange"> == 1,0 </td><td style="background-color: green; color: white"> Alto </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Precisión aproximada</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: green; color: white"> true</td>
+<td> <b>Precisión aproximada</b> </td><td style="background-color: orange"> == 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: green; color: white"> true</td>
 </tr><tr>
-<td> <b>Ninguna posición</b> </td><td style="background-color: orange"> = = 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: orange"> false</td>
+<td> <b>Sin posición</b> </td><td style="background-color: orange"> == 1,0 </td><td style="background-color: orange"> Aproximado </td><td style="background-color: orange"> false</td>
 </tr>
 </table>
 
-Estos Estados de seguimiento del controlador de movimiento se definen de la siguiente manera:
-* **Alta precisión:** Aunque el controlador de movimiento está en el campo de vista del casco, normalmente proporcionará posiciones de alta precisión en función del seguimiento visual. Un controlador de movimiento que deja momentáneamente el campo de vista o que se oculta momentáneamente de los sensores de auriculares (por ejemplo, por la otra mano del usuario) seguirá devolviendo las supuestos de alta precisión durante un breve período de tiempo, en función del seguimiento inercial del propio controlador.
-* **Alta precisión (riesgo de pérdida):** Cuando el usuario mueve el controlador de movimiento más allá del borde del campo de vista del casco, el casco pronto no podrá realizar un seguimiento visual de la posición del controlador. La aplicación sabe cuándo el controlador ha alcanzado este límite de hiperapartados; para ello, vea el **SourceLossRisk** Reach 1,0. En ese momento, la aplicación puede optar por pausar los gestos del controlador que requieren un flujo estable de planteamientos de alta calidad.
-* **Precisión aproximada:** Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se quitarán de las posiciones de precisión aproximada. En este punto, el sistema bloqueará el controlador al usuario, realizará un seguimiento de la posición del usuario a medida que se mueven, mientras se expone la verdadera orientación del controlador mediante sus sensores de orientación internos. Muchas aplicaciones que usan Controladores para apuntar a los elementos de la interfaz de usuario y activarlos pueden funcionar de la manera normal, pero con una precisión aproximada sin que los usuarios lo noten. Las aplicaciones con requisitos de entrada más pesados pueden optar por detectar este descenso de **alta** precisión a una precisión **aproximada** mediante la inspección de la propiedad **PositionAccuracy** , por ejemplo, para proporcionar al usuario una hitbox más amplia en los destinos de la pantalla durante este tiempo.
-* **Ninguna posición:** Aunque el controlador puede funcionar con una precisión aproximada durante mucho tiempo, a veces el sistema sabe que incluso una posición bloqueada por el cuerpo no es significativa en este momento. Por ejemplo, un controlador que se ha activado puede que nunca se haya observado visualmente, o que un usuario pueda poner un controlador que recoja otro usuario. En ese momento, el sistema no proporcionará ninguna posición a la aplicación y **TryGetPosition** devolverá FALSE.
+Estos estados de seguimiento del controlador de movimiento se definen de la siguiente manera:
+* **Alta precisión:** Aunque el controlador de movimiento está dentro del campo de visión del casco, generalmente proporcionará posiciones de alta precisión, en función del seguimiento visual. Un controlador en movimiento que abandona momentáneamente el campo de vista o se oculta momentáneamente de los sensores de casco (por ejemplo, por la otra mano del usuario) seguirá devolviendo poses de alta precisión durante un breve período de tiempo, en función del seguimiento inerte del propio controlador.
+* **Alta precisión (en riesgo de perder):** Cuando el usuario mueve el controlador de movimiento más allá del borde del campo de vista del casco, el casco pronto no podrá realizar un seguimiento visual de la posición del controlador. La aplicación sabe cuándo el controlador ha alcanzado este límite de FOV al ver que **SourceLossRisk** alcanza la versión 1.0. En ese momento, la aplicación puede optar por pausar los gestos del controlador que requieren un flujo estable de poses de alta calidad.
+* **Precisión aproximada:** Cuando el controlador ha perdido el seguimiento visual durante el tiempo suficiente, las posiciones del controlador se colocarán en posiciones de precisión aproximada. En este punto, el sistema bloqueará el controlador con el cuerpo del usuario, haciendo un seguimiento de la posición del usuario a medida que se mueve, a la vez que expone la verdadera orientación del controlador mediante sus sensores de orientación internos. Muchas aplicaciones que usan controladores para apuntar y activar elementos de la interfaz de usuario pueden funcionar con normalidad con una precisión aproximada sin que el usuario se de cuenta. Las aplicaciones con requisitos de entrada  más elevados pueden optar por entender esta caída de Alta precisión a Precisión aproximada inspeccionando la propiedad **PositionAccuracy,** por ejemplo, para proporcionar al usuario un cuadro de acceso más práctico en los destinos fuera de la pantalla durante este tiempo. 
+* **Sin posición:** Aunque el controlador puede funcionar con precisión aproximada durante mucho tiempo, a veces el sistema sabe que incluso una posición bloqueada por el cuerpo no es significativa en este momento. Por ejemplo, es posible que un controlador que se ha activado nunca se haya observado visualmente, o bien que un usuario pueda colocar un controlador que otra persona haya seleccionado a continuación. En ese momento, el sistema no proporcionará ninguna posición a la aplicación y **TryGetPosition** devolverá false.
 
 ## <a name="interactions-low-level-spatial-input"></a>Interacciones: entrada espacial de bajo nivel
 
-Las interacciones principales entre los controladores de manos y de movimiento son **Select**, **Menu**, **agarre**, **touchpad**, **Stick** y **Home**.
-* **Select** es la interacción principal para activar un holograma, que consta de una prensa seguida de una versión. En el caso de los controladores de movimiento, se realiza una presión Select mediante el desencadenador del controlador. Otras maneras de realizar una selección consisten en hablar del [comando de voz](voice-input.md) "Select". Se puede usar la misma interacción SELECT en cualquier aplicación. Piense en seleccionar como equivalente a un clic del mouse; una acción universal que aprenderá una vez y luego se aplicará a todas las aplicaciones.
-* El **menú** es la interacción secundaria para actuar en un objeto, que se usa para extraer un menú contextual o realizar alguna otra acción secundaria. Con los controladores de movimiento, puede realizar una acción de menú mediante el botón de *menú* del controlador. (es decir, el botón con el icono "menú" de la hamburguesa)
-* El **agarre** es el modo en que los usuarios pueden realizar acciones directamente en los objetos para manipularlos. Con los controladores de movimiento, puede llevar a cabo una acción de agarre al apretar el puño. Un controlador de movimiento puede detectar un agarre con un botón de agarre, un desencadenador de Palm u otro sensor.
-* **Touchpad** permite al usuario ajustar una acción en dos dimensiones en la superficie del panel táctil de un controlador de movimiento, con lo que se confirma la acción haciendo clic en la parte inferior del panel táctil. Los Touchpads proporcionan un estado presionado, un estado modificado y coordenadas XY normalizadas. X e y oscilan entre-1 y 1 en el intervalo del Touchpad circular, con un centro en (0,0). Para X,-1 está a la izquierda y 1 está a la derecha. En el caso de Y,-1 está en la parte inferior y 1 en la parte superior.
-* El **Stick** le permite al usuario ajustar una acción en dos dimensiones moviendo el stick de un controlador de movimiento dentro de su intervalo circular y confirmando la acción haciendo clic en abajo en el stick. Thumbsticks también proporcionan un estado presionado y coordenadas XY normalizadas. X e y oscilan entre-1 y 1 en el intervalo del Touchpad circular, con un centro en (0,0). Para X,-1 está a la izquierda y 1 está a la derecha. En el caso de Y,-1 está en la parte inferior y 1 en la parte superior.
-* **Inicio** es una acción especial del sistema que se usa para volver al menú Inicio. Es similar a presionar la tecla Windows en un teclado o el botón Xbox en un controlador Xbox. Para ir a la Página principal, presione el botón Windows en un controlador de movimiento. Tenga en cuenta que siempre puede volver a empezar diciendo "Hola Cortana, ir a Inicio". Las aplicaciones no pueden reaccionar específicamente a las acciones de inicio, ya que las administra el sistema.
+Las interacciones principales entre las manos y los controladores de movimiento son **Select**, **Menu**, **Hands**, **Touchpad,** **Thumbstick** y **Home.**
+* **Select** es la interacción principal para activar un holograma, que consta de una pulsación seguida de una versión. En el caso de los controladores de movimiento, se realiza una pulsación Seleccionar mediante el desencadenador del controlador. Otras maneras de realizar una selección son mediante el uso del comando [de voz](voice-input.md) "Seleccionar". La misma interacción de selección se puede usar dentro de cualquier aplicación. Piense en Seleccionar como el equivalente de un clic del mouse; una acción universal que se aprende una vez y, a continuación, se aplica en todas las aplicaciones.
+* **Menu** es la interacción secundaria para actuar en un objeto, que se usa para extraer un menú contextual o realizar alguna otra acción secundaria. Con los controladores de movimiento, puede realizar una acción de menú mediante el botón de *menú del* controlador. (es decir, el botón con el icono de "menú" de hamburguesa)
+* **Comprender** es cómo los usuarios pueden tomar medidas directamente en los objetos que tienen a su mano para manipularlos. Con los controladores de movimiento, puede realizar una acción de comprensión apreando fuertemente la malla. Un controlador de movimiento puede detectar una comprensión con un botón de agarrar, un desencadenador de mano u otro sensor.
+* **Touchpad permite** al usuario ajustar una acción en dos dimensiones a lo largo de la superficie del panel táctil de un controlador de movimiento, confirmando la acción haciendo clic hacia abajo en el panel táctil. Los touchpad proporcionan un estado presionado, un estado tocado y coordenadas XY normalizadas. X e Y van de -1 a 1 en el intervalo del panel táctil circular, con un centro en (0, 0). Para X, -1 está a la izquierda y 1 a la derecha. Para Y, -1 está en la parte inferior y 1 en la parte superior.
+* **Thumbstick** permite al usuario ajustar una acción en dos dimensiones moviendo el control de posición de un controlador de movimiento dentro de su intervalo circular, confirmando la acción haciendo clic hacia abajo en el control de posición. Las huellas digitales también proporcionan un estado presionado y coordenadas XY normalizadas. X e Y van de -1 a 1 en el intervalo del panel táctil circular, con un centro en (0, 0). Para X, -1 está a la izquierda y 1 a la derecha. Para Y, -1 está en la parte inferior y 1 en la parte superior.
+* **Inicio** es una acción especial del sistema que se usa para volver al menú Inicio. Es similar a presionar la tecla Windows en un teclado o el botón Xbox en un controlador de Xbox. Puede ir a Inicio presionando el botón Windows en un controlador de movimiento. Tenga en cuenta que siempre puede volver a Empezar si dice "Hey Cortana, Go Home". Las aplicaciones no pueden reaccionar específicamente a las acciones de Inicio, ya que las controla el sistema.
 
 ## <a name="composite-gestures-high-level-spatial-input"></a>Gestos compuestos: entrada espacial de alto nivel
 
-Se puede realizar un seguimiento de los [gestos de mano](gaze-and-commit.md#composite-gestures) y los controladores de movimiento a lo largo del tiempo para detectar un conjunto común de **[gestos compuestos](gaze-and-commit.md#composite-gestures)** de alto nivel. Esto permite que la aplicación detecte gestos **de pulsación de alto nivel,** de **suspensión**, de **manipulación** y **navegación** , tanto si los usuarios acaban usando manos o controladores.
+Tanto [los gestos con las](gaze-and-commit.md#composite-gestures) manos como los controladores de movimiento se pueden realizar con el tiempo para detectar un conjunto común de **[gestos compuestos de alto nivel.](gaze-and-commit.md#composite-gestures)** Esto permite que la aplicación detecte  gestos  de pulsación,  **retención,** manipulación y navegación de alto nivel, tanto si los usuarios terminan usando las manos como los controladores.
 
 ## <a name="rendering-the-motion-controller-model"></a>Representación del modelo de controlador de movimiento
 
-**modelos de controlador 3D** Windows pone a disposición de las aplicaciones un modelo representable de cada controlador de movimiento activo actualmente en el sistema. Al hacer que la aplicación cargue dinámicamente y articular estos modelos de controlador proporcionados por el sistema en tiempo de ejecución, puede asegurarse de que la aplicación sea compatible con versiones posteriores a cualquier diseño de controlador futuro.
+**Los modelos de controlador 3D** Windows pone a disposición de las aplicaciones un modelo que se puede representar de cada controlador de movimiento actualmente activo en el sistema. Al hacer que la aplicación cargue y articule dinámicamente estos modelos de controlador proporcionados por el sistema en tiempo de ejecución, puede asegurarse de que la aplicación sea compatible con el futuro para cualquier diseño de controlador futuro.
 
-Se recomienda representar todos los modelos que se representen **en la representación** del controlador, ya que el origen del modelo se alinea con este punto del mundo físico. Si está representando modelos de controlador, puede que quiera Raycast en su escena desde el **replanteamiento de puntero**, que representa el rayo a lo largo del que los usuarios esperarán de forma natural, dado el diseño físico del controlador.
+Se recomienda representar todos los modelos que se pueden representar en la **posición** de control del controlador, ya que el origen del modelo está alineado con este punto del mundo físico. Si va a representar modelos de controlador, es posible que desee pasar a la escena desde la posición del puntero **,** que representa el rayo a lo largo del cual los usuarios esperarán apuntar de forma natural, dado el diseño físico del controlador.
 
-Para más información sobre cómo cargar modelos de controlador de forma dinámica en Unity, consulte la sección [representación del modelo de controlador de movimiento en Unity](../develop/unity/gestures-in-unity.md#rendering-the-motion-controller-model-in-unity) .
+Para obtener más información sobre cómo cargar modelos de controlador dinámicamente en Unity, consulte la sección Representación del [modelo de controlador de movimiento en Unity.](../develop/unity/gestures-in-unity.md#rendering-the-motion-controller-model-in-unity)
 
-**arte de línea del controlador 2D** Aunque se recomienda asociar los comandos y las sugerencias de la controladora en la aplicación a los propios modelos de App Controller, es posible que algunos desarrolladores quieran usar representaciones de arte de línea 2D de los controladores de movimiento en la interfaz de usuario "Tutorial" o "cómo". Para esos desarrolladores, hemos hecho que los archivos de imagen del controlador de movimiento. png estén disponibles tanto en blanco como en blanco a continuación (haga clic con el botón derecho para guardarlos).
+**Arte de línea del controlador 2D** Aunque se recomienda adjuntar sugerencias y comandos del controlador en la aplicación a los propios modelos de controlador en la aplicación, es posible que algunos desarrolladores quieran usar representaciones de arte de línea 2D de los controladores de movimiento en la interfaz de usuario plana de "tutorial" o "cómo hacerlo". Para esos desarrolladores, hemos hecho que los archivos .png de línea del controlador de movimiento estén disponibles en blanco y negro a continuación (haga clic con el botón derecho para guardar).
 
-![Vista previa de los gráficos de líneas de los controladores de movimiento](images/motioncontrollers-black-preview-300px.png)
+![Vista previa de la técnica de línea de controladores de movimiento](images/motioncontrollers-black-preview-300px.png)
 
-[Arte de línea de los controladores de movimiento de resolución completa en ' ' ' blanco ' ' '](images/motioncontrollers-white.png)
+[Arte de línea de controladores de movimiento de resolución completa en "''white'''](images/motioncontrollers-white.png)
  
-[Imagen de los controladores de movimiento de resolución completa en ' ' ' negro ' ' '](images/motioncontrollers-black.png)
+[Diseño de línea de controladores de movimiento de resolución completa en "''black''"](images/motioncontrollers-black.png)
 
 ## <a name="faq"></a>Preguntas más frecuentes
 
-### <a name="can-i-pair-motion-controllers-to-multiple-pcs"></a>¿Puedo emparejar controladores de movimiento a varios equipos?
+### <a name="can-i-pair-motion-controllers-to-multiple-pcs"></a>¿Puedo emparejar controladores de movimiento con varios equipos?
 
-Los controladores de movimiento admiten el emparejamiento con un solo equipo. Siga las instrucciones de la [configuración del controlador de movimiento](motion-controllers.md#setup) para emparejar los controladores.
+Los controladores de movimiento admiten el emparejamiento con un solo equipo. Siga las instrucciones sobre [la configuración del controlador de movimiento](motion-controllers.md#setup) para emparejar los controladores.
 
-### <a name="how-do-i-update-motion-controller-firmware"></a>Cómo actualizar el firmware del controlador de movimiento
+### <a name="how-do-i-update-motion-controller-firmware"></a>Cómo actualizar el firmware del controlador de movimiento?
 
-El firmware del controlador de movimiento forma parte del controlador de casco y se actualizará automáticamente al establecer la conexión, si es necesario. Las actualizaciones de firmware suelen tardar 1-2 minutos según la radio Bluetooth y la calidad de los vínculos. En raras ocasiones, las actualizaciones de firmware del controlador pueden tardar hasta 10 minutos, lo que puede indicar una mala conectividad Bluetooth o interferencias de radio. Consulte [prácticas recomendadas de Bluetooth en la guía de entusiastas](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) para solucionar problemas de conectividad. Después de una actualización de firmware, los controladores se reiniciarán y se volverá a conectar al equipo host (es posible que observe que los LED van brillantes para el seguimiento). Si se interrumpe una actualización de firmware (por ejemplo, los controladores pierden energía), se volverá a intentar la próxima vez que se enciendan los controladores.
+El firmware del controlador de movimiento forma parte del controlador del casco y se actualizará automáticamente en la conexión, si es necesario. Las actualizaciones de firmware suelen tardar entre 1 y 2 minutos, dependiendo Bluetooth de radio y de vínculo. En raras ocasiones, las actualizaciones de firmware del controlador pueden tardar hasta 10 minutos, lo que puede indicar una conectividad Bluetooth o interferencias de radio. Consulte [Bluetooth recomendados en la Guía para aficionados para](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#bluetooth-best-practices) solucionar problemas de conectividad. Después de una actualización de firmware, los controladores se reiniciarán y volverán a conectarse al equipo host (es posible que observe que los LED son brillantes para el seguimiento). Si se interrumpe una actualización de firmware (por ejemplo, los controladores pierden energía), se volverá a intentar la próxima vez que se enciendan los controladores.
 
 ### <a name="how-i-can-check-battery-level"></a>¿Cómo puedo comprobar el nivel de batería?
 
-En la [Página principal de Windows Mixed Reality](../discover/navigating-the-windows-mixed-reality-home.md), puede activar el controlador para ver el nivel de batería en el lado inverso del modelo virtual. No hay ningún indicador de nivel de batería físico.
+En la [Windows Mixed Reality inicio,](../discover/navigating-the-windows-mixed-reality-home.md)puede girar el controlador para ver su nivel de batería en el lado inverso del modelo virtual. No hay ningún indicador físico de nivel de batería.
 
-### <a name="can-you-use-these-controllers-without-a-headset-just-for-the-joysticktriggeretc-input"></a>¿Puede usar estos controladores sin un casco? Solo para la entrada joystick/Trigger/etc?
+### <a name="can-you-use-these-controllers-without-a-headset-just-for-the-joysticktriggeretc-input"></a>¿Puede usar estos controladores sin casco? ¿Solo para la entrada de desencadenador/etc?.
 
-No para aplicaciones universales de Windows.
+No para aplicaciones de Windows universales.
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-Consulte [solución de problemas del controlador de movimiento](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) en la guía de entusiastas.
+Consulte [solución de problemas del controlador de movimiento](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality#motion-controllers) en la Guía para aficionados.
 
-## <a name="filing-motion-controller-feedbackbugs"></a>Archivado de comentarios y errores del controlador de movimiento
+## <a name="filing-motion-controller-feedbackbugs"></a>Presentación de comentarios o errores del controlador de movimiento
 
-Envíenos [sus comentarios](/hololens/hololens-feedback) en la central de comentarios, usando la categoría de entrada de > de realidad mixta.
+[Enviarnos comentarios](/hololens/hololens-feedback) en Centro de opiniones, mediante la categoría "Mixed Reality -> Entrada".
 
 ## <a name="see-also"></a>Consulte también
 
 * [Controladores de movimiento en Unity](../develop/unity/motion-controllers-in-unity.md)
 * [Manos y controladores de movimiento en DirectX](../develop/native/hands-and-motion-controllers-in-directx.md)
 * [Gestos](gaze-and-commit.md#composite-gestures)
-* [Guía del entusiasta: su página principal de Windows Mixed Reality](/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
-* [Guía del entusiasta: uso de juegos & aplicaciones en Windows Mixed Reality](/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
+* [Guía del entusiasta: Su Windows Mixed Reality hogar](/windows/mixed-reality/enthusiast-guide/your-mixed-reality-home)
+* [Guía del entusiasta: Uso de juegos & aplicaciones en Windows Mixed Reality](/windows/mixed-reality/enthusiast-guide/using-games-and-apps-in-windows-mixed-reality)
 * [Funcionamiento del seguimiento de la interacción directa](/windows/mixed-reality/enthusiast-guide/tracking-system)

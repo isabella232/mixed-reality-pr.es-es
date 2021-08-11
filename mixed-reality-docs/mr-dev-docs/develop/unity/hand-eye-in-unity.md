@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: gestos, controladores de movimiento, unity, mirada, entrada, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, MRTK, kit de herramientas Mixed Reality
-ms.openlocfilehash: 2daa02a0681fe4f3da24fa32379e10877750af7e
-ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
+keywords: gestos, controladores de movimiento, unity, mirada, entrada, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: 005b817574e6d3600b9c43e443432203418b58a2258e2938614cc549ab7539c2
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112110229"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223916"
 ---
 # <a name="articulated-hand-and-eye-tracking-in-unity"></a>Seguimiento de manos y ojos articulados en Unity
 
@@ -36,19 +36,19 @@ MRTK v2 proporciona un conjunto de controles de interfaz de usuario y bloques de
 |  [![Barra de aplicaciones](images/MRTK_AppBar_Main.png)](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/app-bar) [Barra de aplicaciones](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/app-bar) | [![Punteros](images/MRTK_Pointer_Main.png)](/windows/mixed-reality/mrtk-unity/features/input/pointers) [Punteros](/windows/mixed-reality/mrtk-unity/features/input/pointers) | [![Visualización de la punta del dedo](images/MRTK_FingertipVisualization_Main.png)](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/fingertip-visualization) [Visualización de la punta del dedo](/windows/mixed-reality/mrtk-unity/features/ux-building-blocks/fingertip-visualization) |
 | Interfaz de usuario para la activación manual de Bounding Box | Información sobre los distintos tipos de punteros. | Asequibilidad visual en el dedo, lo que mejora la confianza para la interacción directa |
 |  [![Seguimiento ocular: selección de destino](images/mrtk_et_targetselect.png)](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-target-selection) [Seguimiento ocular: selección de destino](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-target-selection) | [![Seguimiento ocular: navegación](images/mrtk_et_navigation.png)](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-navigation) [Seguimiento ocular: navegación](/windows/mixed-reality/mrtk-unity/features/input/eye-tracking/eye-tracking-navigation) |
-| Combine los ojos, la voz y la entrada de la mano para seleccionar hologramas de forma rápida y sencilla en toda la escena. | Obtenga información sobre cómo desplazar texto automáticamente o acercar el contenido centrado en función de lo que está viendo.| Ejemplos de registro, carga y visualización de lo que los usuarios han visto en la aplicación |
+| Combine los ojos, la voz y la entrada de mano para seleccionar hologramas en la escena de forma rápida y sencilla. | Obtenga información sobre cómo desplazar texto automáticamente o acercar el contenido centrado en función de lo que está viendo.| Ejemplos de registro, carga y visualización de lo que los usuarios han visto en la aplicación |
 
 ## <a name="example-scenes"></a>Escenas de ejemplo
 
 Explore los distintos tipos de interacciones y controles de interfaz de usuario de MRTK en [esta escena de ejemplo](/windows/mixed-reality/mrtk-unity/features/example-scenes/hand-interaction-examples).
 
-Puede encontrar otras escenas de ejemplo [en Mixed Reality Toolkit GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity) en la carpeta **Assets/MixedRealityToolkit.Examples/Demos.**
+Puede encontrar otras escenas de ejemplo [en Mixed Reality Toolkit GitHub](https://github.com/Microsoft/MixedRealityToolkit-Unity) la **carpeta Assets/MixedRealityToolkit.Examples/Demos.**
 
 [![Escena de ejemplo](images/MRTK_Examples.png)](/windows/mixed-reality/mrtk-unity/features/example-scenes/hand-interaction-examples)
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si va a seguir el recorrido de desarrollo de Unity que hemos diseñado, se encuentra a la mitad de la exploración de los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
+Si sigue el recorrido de desarrollo de Unity que hemos diseñado, se encuentra a la mitad de la exploración de los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Asignación espacial](spatial-mapping-in-unity.md)

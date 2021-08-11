@@ -1,17 +1,17 @@
 ---
 title: Mirada con la cabeza y permanencia
-description: Introducción a la información general sobre el modelo de entrada de la vista principal y la vivienda, incluidos escenarios comunes y principios de diseño.
+description: Introducción al modelo de entrada de mirada con la cabeza y permanencia, incluidos los escenarios comunes y los principios de diseño.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 05/13/2019
 ms.topic: article
-keywords: Realidad mixta, miradas, viviendas, interacción, diseño, auriculares de realidad mixta, auriculares Windows Mixed Reality, auriculares de realidad virtual, HoloLens, MRTK, kit de herramientas de realidad mixta, experiencia de usuario, directrices, vista de lista
-ms.openlocfilehash: e70536b7247153979b8650ba1f5bcbe1a7cd08af
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: Mixed Reality, mirada, permanencia, interacción, diseño, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, casco de realidad virtual, HoloLens, MRTK, Mixed Reality Toolkit, experiencia de usuario, directrices, vista de lista
+ms.openlocfilehash: e069b0815f69848b7632cb7b1b85d85f328441b7156ae22ffe097fedc3ed6fc1
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582208"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223630"
 ---
 # <a name="head-gaze-and-dwell"></a>Mirada con la cabeza y permanencia
 
@@ -19,7 +19,7 @@ Si tienes las manos ocupadas con herramientas y piezas, hacer gestos puede ser e
 
 ## <a name="scenarios"></a>Escenarios
 
-La mirada y la vivienda son excelentes en escenarios en los que las manos de una persona están ocupadas por otras tareas. La característica también es útil cuando la voz no es 100% confiable o disponible debido a restricciones ambientales o sociales. Un buen ejemplo sería el de una persona que lleva un dispositivo HoloLens para ver superpuesta información de referencia mientras repara el motor de un automóvil. Puede tener ocupadas las manos con herramientas o usarlas para sostenerse al reclinarse sobre el compartimento del motor. En la zona del garaje hay mucho ruido, con los constantes golpes y zumbidos de las herramientas, lo que dificulta el uso de comandos de voz. El encabezado y la vivienda permiten a la persona que usa HoloLens navegar por confianza su material de referencia sin interrumpir su flujo de trabajo. 
+La mirada con la cabeza y la permanencia son excelentes en escenarios en los que las manos de una persona están ocupadas con otras tareas. La característica también es útil cuando la voz no es 100 % confiable o disponible debido a restricciones ambientales o sociales. Un buen ejemplo sería el de una persona que lleva un dispositivo HoloLens para ver superpuesta información de referencia mientras repara el motor de un automóvil. Puede tener ocupadas las manos con herramientas o usarlas para sostenerse al reclinarse sobre el compartimento del motor. En la zona del garaje hay mucho ruido, con los constantes golpes y zumbidos de las herramientas, lo que dificulta el uso de comandos de voz. La mirada con la cabeza y la permanencia permiten a la persona que usa HoloLens navegar con confianza por su material de referencia sin interrumpir su flujo de trabajo. 
 
 ## <a name="device-support"></a>Compatibilidad con dispositivos
 
@@ -49,7 +49,7 @@ La mirada y la vivienda son excelentes en escenarios en los que las manos de una
 
 **Evitar miradas a discreción**
 
-El modelo de mirada con la cabeza y permanencia requiere información visual para ser intuitivo, pero demasiada información puede resultar estresante. Los comentarios deben ayudar a un usuario a saber lo que tienen como destino, pero no seleccionarlo para su intención. Al leer texto, iconos y etiquetas, debe proporcionar tiempo a los usuarios para absorber la información antes de seleccionarla.
+El modelo de mirada con la cabeza y permanencia requiere información visual para ser intuitivo, pero demasiada información puede resultar estresante. Los comentarios deben ayudar a un usuario a saber a qué se dirigirá, pero no seleccionarlo automáticamente con su intención. Al leer texto, iconos y etiquetas, debe proporcionar a los usuarios tiempo para que absorban la información antes de seleccionarla.
     
 **Buscar una velocidad adecuada**
     
@@ -57,7 +57,7 @@ Las interacciones de permanencia pueden tener distintos temporizadores, en funci
     
 **Evitar el efecto yo-yo**
 
-El efecto yo-yo es un patrón incómodo de movimiento de cabeza que se produce cuando la colocación del contenido y los controles de cabeza y vista del cabezal y la vivienda obligan a las personas a buscarse y reducirse repetidamente. Por ejemplo, una lista de navegación con el botón de AvPág y el botón de permanencia en la parte inferior induce un bucle de-mirar a la vivienda, buscar en los resultados, buscar en la vivienda, etc. El patrón resultante es inestable, por lo que se recomienda colocar los controles de navegación en una ubicación centralizada que requiera menos. La colocación de los botones de permanencia en función de sus efectos es importante para la comodidad.
+El efecto yo-yo es un patrón de movimiento de la cabeza no deseado que se produce cuando la colocación del contenido y los controles de mirada con la cabeza o permanencia obligan a los usuarios a buscar y bajar repetidamente. Por ejemplo, una navegación de lista con el botón de mirada con la cabeza y permanencia en la parte inferior induce un bucle de : mirar hacia abajo para permanencia, buscar los resultados, mirar hacia abajo para permanencia, y así sucesivamente. El patrón resultante no es fácil de controlar, por lo que se recomienda colocar controles de navegación en una ubicación centralizada que requiera menos ida y vuelta. La colocación de botones de permanencia en función de sus efectos es importante para la comodidad.
 s
 <br>
 
@@ -67,18 +67,18 @@ s
 
 ### <a name="target-sizes"></a>Tamaños de los destinos
 
-Para que se pueda acceder fácilmente, los objetivos de la vista de cabeza y de la vivienda deben ser lo suficientemente grandes como para examinarlos de forma cómoda y mantener una ventaja estable en el destino durante el tiempo previsto. Se recomienda un tamaño mínimo de destino de 2 grados para lograr la experiencia más cómoda. 
+Para ser fácilmente accesibles, los objetivos de mirada con la cabeza y permanencia deben ser lo suficientemente grandes como para mirar cómodamente y mantener la cabeza estable en el destino durante el tiempo prescrito. Se recomienda un tamaño objetivo mínimo de 2 grados para lograr la experiencia más cómoda. 
 
 ### <a name="visual-feedback"></a>Información visual
 
 Al utilizar un relleno radial para representar el temporizador de permanencia, empieza desde el centro del botón. Una respuesta coherente es menos confusa que si cada botón tiene una dirección distinta. 
 
-  * Esta regla se puede romper a pesar de las interacciones direccionales (por ejemplo, NAV arriba/abajo/izquierda/derecha, etc.). Por ejemplo, Microsoft Dynamics 365 Guides hace una excepción para los botones SIGUIENTE/ATRÁS, que son rellenos de izquierda y derecha.
-  * Considere la posibilidad de invertir el relleno radial desde fuera, en escenarios como la alternancia de un botón. La sensación inversa a pulsar un botón es un patrón visual que resulta útil mantener. 
+  * Sin embargo, esta regla se puede dividir para las interacciones direccionales (por ejemplo, navegación hacia arriba, abajo, izquierda o derecha, y así sucesivamente). Por ejemplo, Microsoft Dynamics 365 Guides hace una excepción para los botones SIGUIENTE/ATRÁS, que son rellenos de izquierda y derecha.
+  * Considere la posibilidad de invertir el relleno radial desde fuera, en escenarios como desactivar un botón. La sensación inversa a pulsar un botón es un patrón visual que resulta útil mantener. 
 
 ### <a name="progressive-disclosure"></a>Muestra progresiva
 
-La muestra progresiva significa que solo se muestran los detalles pertinentes en cada etapa de una interacción. En el caso de la vivienda, esto significa que el destino de la vivienda se revela en el resaltado (por ejemplo, en un control de lista).
+La muestra progresiva significa que solo se muestran los detalles pertinentes en cada etapa de una interacción. Para permanencia, esto significa que el objetivo de permanencia se revela al resaltar (por ejemplo, en un control de lista).
 
  ### <a name="oversized-targets"></a>Objetivos demasiado grandes
 
@@ -87,8 +87,8 @@ La región de permanencia puede ser mayor que el icono inactivo para que resulte
 ### <a name="prevent-flickering-with-delayed-feedback"></a>Evitar el parpadeo con información retrasada
 
 Utiliza un breve retraso antes de iniciar la información visual para evitar el parpadeo cuando un usuario pase sobre un objetivo de permanencia.
-* En el caso de los botones interactivos con frecuencia, mantenga el retraso corto para que la aplicación se sienta reactiva.
-* En el caso de los botones que se interactúan con poca frecuencia, un retraso más largo puede ser adecuado para evitar la sensación de interfaz twitchy.
+* En el caso de los botones que interactúan con con frecuencia, mantenga el retraso corto para que la aplicación se sienta reactiva.
+* En el caso de los botones que interactúan con con poca frecuencia, un retraso más largo puede ser adecuado para evitar que la interfaz se sienta mal.
 
 <br>
 
@@ -100,16 +100,16 @@ Utiliza un breve retraso antes de iniciar la información visual para evitar el 
 
 :::row:::
     :::column:::
-        Los botones de alta frecuencia son botones que se usan habitualmente en una aplicación. Un buen ejemplo son los botones Siguiente y Atrás de Microsoft Dynamics 365 Guides.<br>
+        Los botones de alta frecuencia son botones que se usan normalmente en toda una aplicación. Un buen ejemplo son los botones Siguiente y Atrás de Microsoft Dynamics 365 Guides.<br>
         <br>
         **Recomendaciones**<br>
-  * Los botones de alta frecuencia deben ser grandes y más fáciles de visitar
-  * Manténgase cerca de la altura para evitar una presión ergonómica.<br>
+  * Los botones de alta frecuencia deben ser grandes, más fáciles de alcanzar con la mirada con la cabeza
+  * Permanezca cerca de la altura de los ojos para evitar la tensión de los ojos.<br>
         <br>
-*Imagen: botón siguiente de las guías de Microsoft Dynamics 365*
+*Imagen: Botón siguiente Dynamics 365 Guides Microsoft*
     :::column-end:::
         :::column:::
-       ![Botón siguiente de las guías de Microsoft Dynamics 365](images/GuideNextButton.png)<br>
+       ![Botón Dynamics 365 Guides siguiente de Microsoft](images/GuideNextButton.png)<br>
     :::column-end:::
 :::row-end:::
 
@@ -120,7 +120,7 @@ Utiliza un breve retraso antes de iniciar la información visual para evitar el 
 
 ### <a name="low-frequency-buttons"></a>Botones de baja frecuencia
 
-Los botones de baja frecuencia son botones que no interactúan con tan solo en la aplicación. Un buen ejemplo podría ser un botón para acceder al menú de configuración o un botón para borrar todo el trabajo.
+Los botones de baja frecuencia son botones que no interactúan con tan regularmente en toda la aplicación. Un buen ejemplo podría ser un botón para acceder al menú de configuración o un botón para borrar todo el trabajo.
 
 * Intenta mantener estos botones apartados de las rutas frecuentes de la mirada con la cabeza para evitar activarlos accidentalmente. 
 
@@ -132,17 +132,17 @@ Los botones de baja frecuencia son botones que no interactúan con tan solo en l
 
 :::row:::
     :::column:::
-        Cuando una acción tiene un impacto significativo, como la carga de dinero, la eliminación de trabajo o el inicio de un proceso largo, es útil confirmar que una persona está pensada para seleccionar un botón.<br>
+        Cuando una acción tiene un impacto significativo, como cobrar dinero, eliminar trabajo o iniciar un proceso largo, resulta útil confirmar que una persona ha pensado seleccionar un botón.<br>
         <br>
         **Recomendaciones**<br>
   * Muestra el resaltado de la selección en el botón principal.
   * Muestra el objetivo de permanencia al mismo tiempo que el resaltado de selección.
   * Para el botón secundario, muestra el objetivo de permanencia al mirar con la cabeza.<br>
         <br>
-*Imagen: cuadro de diálogo de confirmación de las guías de Microsoft Dynamics 365*
+*Imagen: Cuadro de diálogo de confirmación Dynamics 365 Guides Microsoft*
     :::column-end:::
         :::column:::
-       ![Cuadro de diálogo de confirmación de las guías de Microsoft Dynamics 365](images/GuidesConfirmation.png)<br>
+       ![Cuadro de diálogo Dynamics 365 Guides confirmación de Microsoft](images/GuidesConfirmation.png)<br>
     :::column-end:::
 :::row-end:::
         
@@ -152,7 +152,7 @@ Los botones de baja frecuencia son botones que no interactúan con tan solo en l
 
 ### <a name="toggle-buttons"></a>Botones de alternancia
 
-Los botones de alternancia requieren una lógica matizada para que funcionen correctamente. Cuando una persona se aloja en un botón de alternancia y lo activa, debe salir del botón y volver a iniciar la lógica de permanencia. Es importante que los botones que se van a alternar tengan un estado activo e inactivo. 
+Los botones de alternancia requieren una lógica matizada para que funcionen correctamente. Cuando una persona se detiene en un botón de alternancia y lo activa, debe salir del botón y volver a reiniciar la lógica de permanencia. Es importante que los botones que se pueden alternar tengan un estado activo o inactivo claro. 
 
 <br>
 
@@ -162,19 +162,19 @@ Los botones de alternancia requieren una lógica matizada para que funcionen cor
 
 :::row:::
     :::column:::
-        Las vistas de lista presentan un desafío determinado para la entrada de encabezado y de continuación. Los usuarios pueden examinar el contenido sin tener que tiptoe en torno a los objetivos de la vivienda.<br>
+        Las vistas de lista presentan un desafío concreto para la mirada con la cabeza y la entrada de permanencia. Las personas pueden examinar el contenido sin tener la sensación de que tienen que propinar en torno a los objetivos de permanencia.<br>
         <br>
 **Recomendaciones**<br>
-  * Hacer que la fila completa se resalte cuando se mira por la cabeza, pero no comienza la permanencia, a menos que la punta de la mirada esté en el destino de vivienda específico.
-  * Muestre solo el destino de permanencia cuando la fila esté resaltada para reducir el ruido visual.
-  * Ser claros y coherentes con la posición de los objetivos de la vivienda.
-  * No muestre todos los destinos de permanencia a la vez para evitar la interfaz de usuario repetida.
-  * Reutilice el mismo patrón tantas veces como sea posible para establecer la familiaridad de la experiencia del usuario.<br>
+  * Haga que toda la fila se resalte con la cabeza, pero no comience a permanencia a menos que la mirada con la cabeza esté en el objetivo de permanencia específico.
+  * Solo se muestra el destino de permanencia cuando la fila está resaltada para reducir el ruido visual.
+  * Sea claro y coherente con la posición de los destinos de permanencia.
+  * No muestre todos los destinos de permanencia a la vez para evitar una interfaz de usuario repetitiva.
+  * Vuelva a usar el mismo patrón tantas veces como sea posible para establecer la familiaridad de la experiencia de usuario.<br>
         <br>
-*Imagen: lista de guías de Microsoft Dynamics 365*
+*Imagen: Lista de Dynamics 365 Guides Microsoft*
     :::column-end:::
         :::column:::
-       ![Lista de guías de Microsoft Dynamics 365](images/GuidesListView.png)<br>
+       ![Lista de Dynamics 365 Guides Microsoft](images/GuidesListView.png)<br>
     :::column-end:::
 :::row-end:::
 

@@ -5,18 +5,18 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, barra de aplicaciones,
-ms.openlocfilehash: 3c8633d91b2c26f8bdc774a98b2cb48ffb276720
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 1ecb43d25a4353ff4c3bd8350efaab877900a5b979cd42d2c8d1cb91ce32ae0c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175698"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115198282"
 ---
 # <a name="app-bar"></a>Barra de la aplicación
 
 ![Barra de la aplicación](../images/app-bar/MRTK_AppBar_Main.png)
 
-La barra de aplicaciones es un componente de interfaz de usuario que se usa junto con el script [de control de límites.](bounds-control.md) Agrega controles de botón a un objeto con la intención de manipularlo. Con el botón "Ajustar", la interfaz de control de límites de un objeto se puede desajuste o activar. El botón "Quitar" debe quitar el objeto de la escena.
+La barra de aplicación es un componente de interfaz de usuario que se usa junto con el script [de control de límites.](bounds-control.md) Agrega controles de botón a un objeto con la intención de manipularlo. Con el botón "Ajustar", la interfaz de control de límites de un objeto se puede des-/ activar. El botón "Quitar" debe quitar el objeto de la escena.
 
 ## <a name="how-to-use-app-bar"></a>Uso de la barra de aplicaciones
 

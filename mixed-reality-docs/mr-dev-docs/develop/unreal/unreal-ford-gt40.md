@@ -1,6 +1,6 @@
 ---
 title: Experiencia Ford GT40
-description: Siga a medida que exploramos la realización de la aplicación de realidad mixta Ford GT40 con MRTK para HoloLens 2 en Unreal.
+description: Siga estos pasos mientras exploramos la realización de la aplicación de realidad mixta Ford GT40 con MRTK para HoloLens 2 en Unreal.
 author: hferrone
 ms.author: v-hferrone
 ms.date: 3/23/2021
@@ -8,12 +8,12 @@ ms.topic: article
 keywords: Unreal, Unreal Engine 4, UE4, HoloLens, HoloLens 2, mixed reality, deploy to device, PC, documentation, mixed reality headset, windows mixed reality headset, virtual reality headset
 appliesto:
 - HoloLens 2
-ms.openlocfilehash: e634d75af92509372209d8e7c0cde2833127c128
-ms.sourcegitcommit: 9831b89a1641ba1b5df14419ee2a4f29d3fa2d64
+ms.openlocfilehash: 17314cca69148e73ee11fcd4cdc5359a5dbae4cf84b609bafb6cc75d477ec26f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/29/2021
-ms.locfileid: "114757206"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115200621"
 ---
 # <a name="the-making-of-the-ford-gt40-experience"></a>La realización de la experiencia de Ford GT40
 ![Imagen principal de Ford GT40](images/ford-gt40-hero_1920.jpg)
@@ -34,11 +34,11 @@ Si tiene HoloLens 2 dispositivo, puede descargar e instalar directamente la apli
 
 ## <a name="the-ask"></a>La pregunta
 
-Happy Finish es una de las empresas de producción creadoras más importantes del mundo, con una base de clientes que incluye, Ford, Microsoft, Wcf, Netflix, Vodafone y otros nombres de hogar. La empresa llegó a empezar como una agencia de foto-retouch de gama alta, bifurcando en el cine y CGI antes de extender su compromiso a la excelencia en la narración envolvente con el diseño espacial 3D y la interacción.
+Happy Finish es una de las empresas de producción creadoras más importantes del mundo, con una base de clientes que incluye, Ford, Microsoft, Wcf, Netflix, Vodafone y otros nombres domésticos. La empresa llegó a empezar como una agencia de foto-retouch de gama alta, bifurcando en el cine y CGI antes de extender su compromiso a la excelencia en la narración envolvente con el diseño espacial 3D y la interacción.
 
 A mediados de 2020, Microsoft se abordó en Happy Finish para generar una aplicación de demostración que podría ayudar a mostrar las posibilidades habilitadas por el nuevo Mixed Reality Toolkit (MRTK) para Unreal, que se basa en la compatibilidad con HoloLens 2 en Unreal Engine. En este momento, la empresa ya tenía dos proyectos de Unreal on-HoloLens 2 correctos en su haber. Ambos eran para una marca de consumidor reconocida globalmente, que eligió Unreal en HoloLens 2 para una herramienta de ventas interna de R&D/B2B por su alta fidelidad visual, según sea necesario para presentar mejor los propios productos de gama alta de ese cliente.
 
-Aunque la propia solución se dejara en Happy Finish, tenía que cumplir algunas directrices clave. En primer lugar, tuvo que centrarse en un escenario empresarial para ilustrar la utilidad de Unreal HoloLens 2 fuera del sector de los juegos. En segundo lugar, tenía que ser solo dispositivo, lo que significa que podía servir como demostración independiente, sin necesidad de una conexión de red y una potencia de procesamiento externa para obtener las velocidades de fotogramas de destino y la calidad visual. En tercer lugar, debe combinar la gama de interacciones intuitivas admitidas por MRTK en una experiencia sin problemas y natural. Por último, la solución propuesta debe mostrar la fidelidad visual inherente y otras ventajas del propio motor de Unreal, como las eficiencias del sombreador. 
+Aunque la propia solución se dejara en Happy Finish, tenía que cumplir algunas directrices clave. En primer lugar, tuvo que centrarse en un escenario empresarial para ilustrar la utilidad de Unreal HoloLens 2 fuera del sector de los juegos. En segundo lugar, tenía que ser solo dispositivo, lo que significa que podía servir como demostración independiente, sin necesidad de una conexión de red y una potencia de procesamiento externa para obtener las velocidades de fotogramas de destino y la calidad visual. En tercer lugar, debe combinar la gama de interacciones intuitivas admitidas por MRTK en una experiencia perfecta y natural. Por último, la solución propuesta debe mostrar la fidelidad visual inherente y otras ventajas del propio motor de Unreal, como las eficiencias del sombreador. 
 
 Dadas estas directrices, Happy Finish comenzó a pensar en las posibilidades, con la idea de una experiencia de realidad mixta que usaba la interacción espacial para comunicar el valor de un producto de alto valor y nombre de marca. Después de considerar una variedad de objetos que incluían relojes, cámaras, automóviles y jets privados, Happy Finish decidió en última instancia ford GT40, una leyenda de automoción que alcanzó la notoriedad en 1966 cuando Ford superó a Led en las 24 horas de Le Mans, como se muestra en la película de bloques de 2019 Ford frente a Rand. 
 
@@ -46,33 +46,33 @@ Tras obtener la compra de Ford, un cliente de Happy Finish existente, la empresa
 
 ## <a name="the-solution"></a>La solución
 
-El trabajo comenzó el 7 de mayo de 2020. Después de obtener los archivos de modelo GT40, un intérprete en 3D pasó tres semanas optimizando modelos de polígono, asignación de UV, repintado de mapas de textura y condensando esos mapas en el menor número posible de texturas. Un intérprete técnico ha trabajado en paralelo para realizar pruebas comparativas de la salida del intérprete en 3D, determinar los tamaños óptimos de textura según las velocidades de fotograma objetivo y averiguar la mejor manera de aplicar sombreadores personalizados en Unreal. Todo este trabajo de preproducción se ha realizado para optimizar la experiencia en el dispositivo.
+El trabajo comenzó el 7 de mayo de 2020. Después de obtener los archivos de modelo GT40, un intérprete en 3D pasó tres semanas optimizando modelos de polígono, asignación de UV, repintado de mapas de textura y condensando esos mapas en el menor número posible de texturas. Un intérprete técnico ha trabajado en paralelo para realizar pruebas comparativas de la salida del intérprete en 3D, determinar tamaños de textura óptimos según las velocidades de fotograma objetivo y averiguar la mejor manera de aplicar sombreadores personalizados en Unreal. Todo este trabajo de preproducción se ha realizado para optimizar la experiencia en el dispositivo.
 
 El director creativo Alex Lambert escribió la imagen una vez finalizado el trabajo de preproducción. Comenzó viendo Ford frente aAndo, pensando en cómo tejer una narrativa en torno a los escenarios y las interacciones. También recopiló referencias visuales para el intérprete de la interfaz de usuario, como imágenes del panel GT40 y objetos visuales del circuito de Le Mans, y recopilaba grabaciones de audio del GT40 en acción para el diseñador de sonidos.
 
 Con los recursos de preproducción definidos y optimizados en la mano, el desarrollador de software de software de software Desconocedió a Jose Conexión para reunirlo todo. Había sido el desarrollador en los dos proyectos anteriores de Unreal-on-HoloLens 2 que Happy Finish había realizado, antes de que se publicara MRTK para Unreal.
 
-El valor proporcionado por MRTK para Unreal se hizo evidente al principio, lo que ayuda a Proto a entregar un prototipo inicial en una semana. Implementó tres escenarios únicos, uno para cada uno de los aspectos clave del GT40 que Lambert había identificado: su iluminación, su rendimiento y su ingeniería. Para cada escenario, Matriz usó MRTK para integrar los recursos 3D optimizados de la fase de preproducción en una variedad de interacciones espaciales. 
+El valor proporcionado por MRTK para Unreal se hizo evidente al principio, lo que ayuda a Proto a entregar un prototipo inicial en una semana. Implementó tres escenarios únicos, uno para cada uno de los aspectos clave del GT40 que Lambert había identificado: su dicha, su rendimiento y su ingeniería. Para cada escenario, Matriz usó MRTK para integrar los recursos 3D optimizados de la fase de preproducción en una variedad de interacciones espaciales. 
 
-Con MRTK para Unreal, Having ha creado cada escenario mediante el Diseñador de interfaz de usuario de gráficos de movimiento de Unreal (UMG) visual en lugar de tener que implementar todo en C++. Herramientas de UX para [Unreal,](https://www.unrealengine.com/marketplace/product/mixed-reality-ux-tools)el complemento que contiene componentes y bloques de creación de UX dentro de MRTK, le ha dado planos planos de [Unreal](https://docs.unrealengine.com/ProgrammingAndScripting/Blueprints/index.html) para la simulación de entrada, interacciones de la mano de scripting visual, botones presionables, manipulación de imágenes 3D, magnetismo de superficie, etc., todo ello dentro de un entorno de diseño sin código, arrastrar y colocar.
+Con MRTK para Unreal, Having ha creado cada escenario mediante el Diseñador de interfaz de usuario de gráficos de movimiento de Unreal (UMG) visual en lugar de tener que implementar todo en C++. Herramientas de UX para [Unreal,](https://www.unrealengine.com/marketplace/product/mixed-reality-ux-tools)el complemento que contiene componentes y bloques de creación de UX dentro de MRTK, le ha dado planos técnico de [Unreal](https://docs.unrealengine.com/ProgrammingAndScripting/Blueprints/index.html) para la simulación de entrada, interacciones de la mano de scripting visual, botones presionables, manipulación de imágenes 3D, magnetismo de superficie, etc., todo ello dentro de un entorno de diseño sin código, arrastrar y colocar.
 
 "Antes de MRTK, desarrollar para HoloLens 2 con Unreal era un poco tedioso porque todas las interacciones espaciales tenían que codificarse a mano, en C++", afirma Matriz. "MrTK para Unreal hizo que muchas de esas mismas tareas fuera trivial. Calculo que se ha recortado el tiempo necesario para el prototipo inicial a la mitad".
 
-Con un prototipo en la mano, el equipo comenzó iteraciones semanales para refinar la experiencia. "Aquí es cuando la característica Captura de realidad mixta y la Windows Portal de dispositivos resultaron realmente útiles", recuerda Lambert. "Las usé para capturar mis revisiones de diseño, difundir mis comentarios a otros usuarios y colaborar en los cambios. Trabajar de forma aislada de este modo habría sido imposible de hacer sin estas herramientas".
+Con un prototipo en la mano, el equipo comenzó iteraciones semanales para refinar la experiencia. "Aquí es cuando la característica Captura de realidad mixta y la Windows Portal de dispositivos resultaron realmente útiles", recuerda Lambert. "Las usé para capturar mis reseñas de diseño, difundir mis comentarios a otros usuarios y colaborar en los cambios. Trabajar de forma aislada de este modo habría sido imposible de hacer sin estas herramientas".
 
 ![Aplicación Ford GT40 del editor de Unreal que se ejecuta con componentes de rueda dispuestos en secuencia](images/ford-gt40-img-04.JPG)
 
-A medida que Lambert solicitaba cambios, como cambiar la posición de los elementos de la interfaz de usuario o cambiar el comportamiento de un botón, Composición los implementaba. Aunque algunos de los cambios requerían pequeños ajustes de código, la mayoría de ellos se controló en el diseñador visual de Unreal. "Me he quedón con la rapidez con la que podía iterar", afirma How. "No se ha desperdiciado tiempo; Realizaría un cambio en el diseñador y, a continuación, presionaría Reproducir para verlo inmediatamente en el dispositivo. MrTK realmente ha simplificado mi trabajo".
+A medida que Lambert solicitaba cambios, como cambiar la posición de los elementos de la interfaz de usuario o cambiar el comportamiento de un botón, Composición los implementaba. Aunque algunos de los cambios requerían pequeños ajustes de código, la mayoría de ellos se controló en el diseñador visual de Unreal. "Me sorprendí por la rapidez con la que podía iterar", afirma How. "No se ha desperdiciado tiempo; Realizaría un cambio en el diseñador y, a continuación, presionaría Reproducir para verlo inmediatamente en el dispositivo. MrTK realmente ha simplificado mi trabajo".
 
-También recuerda que se ha quedado impactado por la forma en que todas las herramientas de desarrollo estaban listas para producción. "Progresamos sin problemas desde el prototipo inicial hasta la producción final, sin tener que volver atrás y volver a implementar u optimizar las cosas en el código", afirma.  
+También recuerda que se ha quedado impactado por la forma en que estaban listas para producción todas las herramientas de desarrollo. "Progresamos sin problemas desde el prototipo inicial hasta la producción final, sin tener que volver atrás y volver a implementar u optimizar las cosas en el código", afirma.  
 
 ## <a name="the-final-build"></a>La compilación final
 
-Happy Finish completó la producción de ford GT40 Experience for HoloLens 2 el 28 de julio de 2020, proporcionando una perspectiva nueva sobre el coche de carreras más famoso. La experiencia comienza con una pantalla de bienvenida y, a continuación, guía al usuario para que configure un anclaje; para ello, toma el logotipo de Ford y lo coloca en una superficie plana como una tabla o un escritorio. 
+Happy Finish completó la producción de ford GT40 Experience for HoloLens 2 el 28 de julio de 2020, proporcionando una perspectiva nueva sobre el coche de carreras más famoso. La experiencia comienza con una pantalla de bienvenida y, a continuación, guía al usuario para configurar un anclaje; para ello, toma el logotipo de Ford y lo coloca en una superficie plana como una tabla o un escritorio. 
 
 ### <a name="beauty"></a>Belleza
 
-El **segmento de** la comodidad lleva al usuario a un configurador GT40, que muestra el GT40 en un automóvil de rotación, de forma similar a cómo se podría mostrar un automóvil físico en un automóvil. El usuario puede aplicar diferentes opciones de rueda, elegir entre diferentes esquemas de color y abrir y cerrar las puertas y el tronco (o el arranque, como lo llaman en el Reino Unido). A lo largo de la experiencia de la naturaleza, el usuario puede recoger el automóvil y manipularlo libremente para un aspecto más cercano.
+El **segmento de** la comodidad lleva al usuario a un configurador GT40, que muestra el GT40 en un automóvil de rotación, de forma similar a cómo se podría mostrar un automóvil físico en un automóvil. El usuario puede aplicar diferentes opciones de rueda, elegir entre diferentes esquemas de color y abrir y cerrar las puertas y el tronco (o el arranque, como lo llaman en el Reino Unido). A lo largo de la experiencia de la peluquería, el usuario puede recoger el automóvil y manipularlo libremente para un aspecto más cercano.
 
 ![GIF animado del configurador GT40 que se ejecuta en un dispositivo](images/ford-gt40-img-05.gif)
 
@@ -86,7 +86,7 @@ La segunda parte del segmento de rendimiento muestra el GT40 bajo el intervalo d
 
 ### <a name="engineering"></a>Engineering
 
-El  segmento de ingeniería de la experiencia de Ford GT40 muestra una de las innovaciones de ingeniería que ayudaron a Ford a ganar la carrera: la capacidad de cambiar las ruedas y las almohadillas en menos de un minuto, en comparación con los 20-30 minutos necesarios para los demás equipos. Mediante gestos intuitivos, el usuario puede manipular un modelo 3D detallado de la rueda GT40 y el ensamblado de ruedas. Para expandir el ensamblado, el usuario toma una llave inglesa, la alinea con el bloqueo central de la rueda, lo gira en sentido contrario a las agujas del reloj y, a continuación, lo extrae de la rueda. Otros gestos se usan para quitar las ruedas y las almohadillas de los resaltes, reemplazarlas por otras nuevas, contraer el ensamblado y volver a asegurar el bloqueo central. En segundo plano, un temporizador muestra el tiempo transcurrido, lo que permite al usuario ver si puede completar el proceso tan rápidamente como la cuadrilla de boxes de Le Mans.
+El  segmento de ingeniería de la experiencia ford GT40 muestra una de las innovaciones de ingeniería que ayudaron a Ford a ganar la carrera: la capacidad de cambiar los ruedas y las almohadillas en menos de un minuto, en comparación con los 20-30 minutos necesarios para los demás equipos. Mediante gestos intuitivos, el usuario puede manipular un modelo 3D detallado de la rueda GT40 y el ensamblado de ruedas. Para expandir el ensamblado, el usuario toma una llave inglesa, la alinea con el bloqueo central de la rueda, lo gira en sentido contrario a las agujas del reloj y, a continuación, lo extrae de la rueda. Otros gestos se usan para quitar las ruedas y las almohadillas de los resaltes, reemplazarlas por otras nuevas, contraer el ensamblado y volver a asegurar el bloqueo central. En segundo plano, un temporizador muestra el tiempo transcurrido, lo que permite al usuario ver si puede completar el proceso tan rápidamente como la cuadrilla de boxes de Le Mans.
 
 ![GIF animado de la experiencia de ingeniería GT40 que se ejecuta en un dispositivo](images/ford-gt40-img-07.gif)
 
@@ -94,13 +94,13 @@ La experiencia de Ford GT40 se puede descargar de [Microsoft Store,](https://www
 
 ### <a name="getting-impressive-visual-fidelity"></a>Obtención de una fidelidad visual impresionante
 
-Aunque la gama de interacciones espaciales admitidas por la experiencia ford GT40 es impresionante por sí sola, la creatividad y la fidelidad visual que ofrece la experiencia es lo que realmente hace que resalte. A través de su optimización de modelos 3D y el uso de sombreadores personalizados de Unreal, Happy Finish alcanzó su objetivo de 60 fotogramas por segundo, incluso con el segmento de rendimiento de la aplicación que se aproxima a 315 000 polígonos de tamaño. 
+Aunque la gama de interacciones espaciales admitidas por la experiencia GT40 de Ford es impresionante por sí sola, la creatividad y la fidelidad visual que ofrece la experiencia es lo que realmente hace que resalte. A través de su optimización de modelos 3D y el uso de sombreadores personalizados de Unreal, Happy Finish alcanzó su objetivo de 60 fotogramas por segundo, incluso con el segmento de rendimiento de la aplicación que se aproxima a 315 000 polígonos de tamaño. 
 
-"Estoy muy satisfecho con cómo pudimos reunir un conjunto de interacciones fluidas e intuitivas en una narración coherente y atractiva", afirma Lambert. "Claramente, la potencia de Unreal Engine en HoloLens 2 abre un nuevo mundo de oportunidades para experiencias de realidad mixta más sorprendentes y emocionantes. La fidelidad visual sin compromiso no siempre es el objetivo final de las aplicaciones empresariales en HoloLens 2, pero cuando es así, la compatibilidad con Unreal en HoloLens 2 resulta muy valiosa".
+"Estoy muy satisfecho con cómo pudimos reunir un conjunto de interacciones fluidas e intuitivas en una narrativa coherente y atractiva", afirma Lambert. "Claramente, la potencia de Unreal Engine en HoloLens 2 abre un nuevo mundo de oportunidades para experiencias de realidad mixta más sorprendentes y emocionantes. La fidelidad visual sin compromiso no siempre es el objetivo final de las aplicaciones empresariales en HoloLens 2, pero cuando es así, la compatibilidad con Unreal en HoloLens 2 resulta muy valiosa".
 
 ### <a name="rapid-solution-delivery"></a>Entrega rápida de soluciones
 
-Tan impresionante como la experiencia de Ford GT40 del usuario final es la rapidez con la que happy finish la entregó, con todo el proyecto (desde la preproducción hasta la entrega final) completado en poco menos de 12 semanas. En resumen, el proyecto consumió 1088 horas de esfuerzo, desglosadas de la siguiente manera: director creativo (80 horas), diseñador de UX (56 horas), diseñador de IU (40 horas), diseñador de sonido (40 horas), 3D/intérprete técnico (328 horas), desarrollador de software (408 horas), director técnico (40 horas), productor (56 horas) y control de calidad (40 horas).
+Tan impresionante como la experiencia de Ford GT40 del usuario final es la rapidez con la que Happy Finish la entregó, con todo el proyecto(desde la preproducción hasta la entrega final) completada en poco menos de 12 semanas. En resumen, el proyecto consumió 1088 horas de esfuerzo, desglosadas de la siguiente manera: director creativo (80 horas), diseñador de experiencia de usuario (56 horas), diseñador de IU (40 horas), diseñador de sonido (40 horas), 3D/intérprete técnico (328 horas), desarrollador de software (408 horas), director técnico (40 horas), productor (56 horas) y control de calidad (40 horas).
 
 "En general, nos acercamos bastante a nuestras estimaciones originales del proyecto", afirma Daniel Cháetham, director de innovación de Happy Finish, que dirige la división interactiva de la empresa. "La experiencia de Ford GT40 es una prueba de que una aplicación de HoloLens 2 de alta fidelidad se puede completar en tan solo unos meses, con un presupuesto moderado, pero todavía ofrece resultados muy impactantes". 
 
@@ -118,7 +118,7 @@ Lambert también prevé cómo se puede usar Azure Remote Rendering o streaming d
 
 "Siempre hemos mantenido un enfoque independiente de la tecnología para cada nuevo proyecto, proponiendo el conjunto de herramientas más adecuado para ayudar al cliente a lograr los resultados deseados", afirma Cheetham. "Dicho esto, HoloLens 2 ha surgido como el estándar de oro de facto para la realidad mixta, especialmente en la empresa, con la cabeza y la altura sobre todas las demás opciones en términos de funcionalidades de dispositivo y la generalización del ecosistema de apoyo".
 
-Según Cheetham, la pandemia global ha impulsado un gran interés en la realidad mixta inmersiva entre los clientes potenciales. "Estamos más ocupados que nunca, con aproximadamente el 50 por ciento de los clientes potenciales abiertos a analizar una opción de realidad mixta", afirma. "La clave es que los usuarios lo prueben. Puede contarles sobre la realidad mixta todo el día, pero cuando les entrega un HoloLens 2 para experimentar por sí mismos, obtienen inmediatamente cómo puede ser un cambio de juego. La compatibilidad con Unreal Engine en HoloLens 2 solo aumenta el valor que podemos ofrecer, lo que nos permite ofrecer experiencias visualmente sorprendentes que están seguras de satisfacer incluso a los clientes más exigentes".
+Según Cheetham, la pandemia global ha impulsado un gran interés en la realidad mixta inmersiva entre los clientes potenciales. "Estamos más ocupados que nunca, con aproximadamente el 50 por ciento de los clientes potenciales abiertos a analizar una opción de realidad mixta", afirma. "La clave es conseguir que los usuarios lo prueben. Puede contarles sobre la realidad mixta todo el día, pero cuando les entrega un HoloLens 2 que experimentar por sí mismos, obtienen inmediatamente cómo puede ser un cambio de juego. La compatibilidad con Unreal Engine en HoloLens 2 solo aumenta el valor que podemos ofrecer, lo que nos permite ofrecer experiencias visualmente sorprendentes que están seguras de satisfacer incluso a los clientes más exigentes".
 
 ## <a name="try-it-out"></a>Haga la prueba
 

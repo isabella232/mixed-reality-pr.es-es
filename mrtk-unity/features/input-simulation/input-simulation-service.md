@@ -5,18 +5,18 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 66b79c14bbd0ea8c188aba684b9bd1034de31bf9
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: f329cceded5e510d3d4fc1a1c13b5a504f1f3669ad408b733267595e77dd15a6
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176962"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115227624"
 ---
 # <a name="input-simulation-service"></a>Servicio de simulación de entrada
 
 ![Simulación de entrada de MRTK](../images/input-simulation/MRTK_InputSimulation_Hero.jpg)
 
-Con la simulación de entrada de MRTK, puede probar varios tipos de interacciones en el editor de Unity sin necesidad de compilar e implementar en un dispositivo. Esto le permite iterar rápidamente sus ideas en el proceso de diseño y desarrollo. Use combinaciones de teclado y mouse para controlar entradas simuladas.
+Con la simulación de entrada de MRTK, puede probar varios tipos de interacción en el editor de Unity sin necesidad de compilar ni implementar en un dispositivo. Esto le permite iterar rápidamente las ideas en el proceso de diseño y desarrollo. Use combinaciones de teclado y mouse para controlar las entradas simuladas.
 
 El servicio de simulación de entrada emula el comportamiento de los dispositivos y plataformas que pueden no estar disponibles en el editor de Unity. Algunos ejemplos son:
 
@@ -33,17 +33,17 @@ El servicio de simulación de entrada emula el comportamiento de los dispositivo
 
 La simulación de entrada está habilitada de forma predeterminada en los perfiles que se envían con MRTK. Simplemente puede hacer clic en **el botón Reproducir** para ejecutar la escena con compatibilidad con la simulación de entrada.
 
-* Presione **las teclas W, A, S, D, Q, E** para mover la cámara.
-* Mantenga presionado **el botón derecho del mouse** y mueva el mouse para mirar alrededor.
-* Para abrir las manos simuladas, presione **Barra espaciador (mano derecha)** o Tecla **Mayús izquierda (mano izquierda)**
-* Para mantener las manos simuladas en la vista, presione **la tecla T** o **Y.**
+* Presiona las teclas **W, A, S, D, Q, E** para mover la cámara.
+* Mantenga presionado el **botón derecho del mouse** y muévalo para mirar alrededor.
+* Para abrir las manos simuladas, presione la **barra espaciadora (mano derecha)** o la **tecla Mayús izquierda (mano izquierda)** .
+* Para mantener las manos simuladas en la vista, presione las teclas **T** o **Y**.
 * Para girar las manos simuladas, mantenga presionada la **tecla Ctrl y** mueva el mouse.
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OYrm]
 
 ## <a name="in-editor-input-simulation-cheat-sheet"></a>En la hoja de datos de simulación de entrada del editor
 
-Presione **Ctrl+ H a** la izquierda en la escena HandInteractionExamples para abrir una hoja de trucos con controles de simulación de entrada.
+Presione **Ctrl+ H** a la izquierda en la escena HandInteractionExamples para abrir una hoja de trucos con controles de simulación de entrada.
 
 > ![Hoja de datos de simulación de entrada de MRTK](../images/input-simulation/MRTK_InputSimulation_CheatSheet.png)
 
@@ -67,7 +67,7 @@ El servicio de simulación de entrada puede emular el movimiento de la cabeza.
 
 1. Mantenga el puntero sobre la ventana del editor de ventanilla.
     *Es posible que tenga que hacer clic en la ventana para darle el foco de entrada si las pulsaciones de botón no funcionan.*
-1. Mantenga presionado el Botón **de vista del mouse (valor** predeterminado: botón derecho del mouse).
+1. Mantenga presionado el botón **de vista del mouse (valor** predeterminado: botón derecho del mouse).
 1. Mueva el mouse en la ventana de la ventanilla para girar la cámara.
 1. Use la rueda de desplazamiento para enrollar la cámara alrededor de la dirección de la vista.
 
@@ -107,7 +107,7 @@ En la ventana [de herramientas de simulación de entrada,](#input-simulation-too
 
    Emula el casco vr con el modelo de interacción de controladores.
 
-   Las teclas de desencadenador, toma y menú se simulan mediante la entrada del teclado y del mouse.
+   Las teclas de desencadenador, de toma y de menú se simulan mediante la entrada del teclado y del mouse.
 
 ### <a name="simulating-controller-movement"></a>Simulación del movimiento del controlador
 
@@ -119,7 +119,7 @@ El movimiento del mouse moverá el controlador en el plano de vista. Los control
 
 Para girar los controladores con el mouse, mantenga presionada la  tecla de manipulación del controlador izquierdo/derecho **(mayús** a la izquierda o *espacio)* y el botón de rotación del controlador **(valor** predeterminado: botón *Ctrl* izquierdo) y, a continuación, mueva el mouse para girar el controlador. La velocidad de rotación del controlador se puede configurar cambiando el valor de Velocidad de rotación del controlador del **mouse** en el perfil de simulación de entrada.
 
-Toda la colocación de las manos también puede cambiar en la ventana de herramientas de [simulación de entrada,](#input-simulation-tools-window)incluido el restablecimiento de las manos al valor predeterminado.
+Toda la colocación de las manos también puede cambiar en la ventana de herramientas [de simulación de entrada,](#input-simulation-tools-window)incluido el restablecimiento de las manos al valor predeterminado.
 
 ### <a name="additional-profile-settings"></a>Configuración de perfil adicional
 
@@ -133,11 +133,11 @@ Toda la colocación de las manos también puede cambiar en la ventana de herrami
 
 También se pueden simular gestos con la mano, como el gesto de acercamiento, la captura, el movimiento de los dedos, etc.
 
-1. Habilitar el control de mano mediante la **tecla de manipulación del controlador izquierdo/derecho** *(desplazamiento a la* izquierda o *espacio)*
+1. Habilitar el control de mano mediante **la tecla de manipulación del controlador izquierdo/derecho** *(desplazamiento a la izquierda* o *espacio)*
 
 2. Durante la manipulación, mantenga presionado un botón del mouse para realizar un gesto con la mano.
 
-Cada uno de los botones del mouse se puede asignar para transformar la forma de la mano en un gesto diferente mediante la configuración gesto de la mano *izquierda, media/derecha.* El *gesto de mano predeterminado* es la forma de la mano cuando no se presiona ningún botón.
+Cada uno de los botones del mouse se puede asignar para transformar la forma de la mano en un gesto diferente mediante la configuración de Gesto de la mano *izquierda, media/derecha* del mouse. El *gesto de mano predeterminado* es la forma de la mano cuando no se presiona ningún botón.
 
 > [!NOTE]
 > El *gesto* Desenlazador es el único gesto que realiza la acción "Seleccionar" en este momento.
@@ -158,12 +158,12 @@ Para manipular objetos con dos manos al mismo tiempo, se recomienda el modo de m
 
 1. Para alternar en ambas manos, presione las teclas de alternancia *(T/Y).*
 1. Manipular una mano a la vez:
-    1. Mantener **presionado el** espacio para controlar la mano derecha
-    1. Mover la mano a donde desea agarrar el objeto
-    1. Presione el **botón izquierdo del mouse** para activar el gesto *Desenlazador.*
+    1. Mantener **presionada** la barra espaciadoa para controlar la mano derecha
+    1. Mueva la mano a donde desea agarrar el objeto.
+    1. Presione el **botón izquierdo del mouse** para activar el gesto *Desenfocar.*
     1. Espacio **de liberación** para detener el control de la mano derecha. La mano se inmovilizará en su  lugar y se bloqueará en el gesto Desenlazador, ya que ya no se está manipulando.
-1. Repita el proceso con la otra mano, agarrándose el mismo objeto en un segundo lugar.
-1. Ahora que ambas manos están tomando el mismo objeto, puede mover cualquiera de ellos para realizar la manipulación con dos manos.
+1. Repita el proceso con la otra mano, tomando el mismo objeto en un segundo lugar.
+1. Ahora que ambas manos están capturando el mismo objeto, puede mover cualquiera de ellas para realizar la manipulación con dos manos.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Qol5OFNfN14" class="center" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -175,13 +175,13 @@ De forma predeterminada, la interacción de GGV está habilitada en el editor, m
 1. Haga clic y mantenga presionado **el botón izquierdo del mouse** para interactuar.
 1. Girar la cámara de nuevo para manipular el objeto
 
-Puede desactivar esta opción si desactiva la opción *Is Hand Free Input Enabled* (Está habilitada la entrada disponible a mano) dentro del perfil de simulación de entrada.
+Puede desactivar esta opción si activa la opción *Is Hand Free Input Enabled* (Está habilitada la entrada disponible con la mano) dentro del perfil de simulación de entrada.
 
 Además, puede usar manos simuladas para la interacción con GGV.
 
-1. Para habilitar la simulación de GGV, cambie **el modo de simulación de mano** a *Gestos* en el perfil [de simulación de entrada.](#enabling-the-input-simulation-service)
+1. Para habilitar la simulación de GGV, cambie **el modo de simulación de mano** a *gestos* en el perfil [de simulación de entrada.](#enabling-the-input-simulation-service)
 1. Girar la cámara para apuntar el cursor de mirada al objeto interactuable (botón derecho del mouse)
-1. Mantener **presionado el** espacio para controlar la mano derecha
+1. Mantener **presionada** la barra espaciadoa para controlar la mano derecha
 1. Haga clic y mantenga presionado **el botón izquierdo del mouse** para interactuar.
 1. Uso del mouse para mover el objeto
 1. Suelte el botón del mouse para detener la interacción.
@@ -190,35 +190,35 @@ Además, puede usar manos simuladas para la interacción con GGV.
 
 ### <a name="raising-teleport-events"></a>Generar eventos de teleport
 
-Para generar el evento de teleport en la simulación de entrada, configure el  gesto de mano Configuración en  el perfil de simulación de entrada para que uno realice el gesto de inicio de teleportar mientras que el otro realiza el gesto de fin de teleportar. El **gesto Teleport Start** (Inicio de Teleport) mostrará el puntero **teleport,** mientras que la gesure Teleport End completará la acción de teleportar y moverá al usuario.
+Para generar el evento de teleport en la simulación de entrada, configure el  gesto de mano Configuración en el perfil de simulación de entrada para que uno realice el gesto de inicio de teleportar mientras que el otro realiza el gesto de finalización de teleportar.  El **gesto Teleport Start** (Inicio de Teleport) mostrará el puntero de **Teleport,** mientras que la gesura de Teleport End completará la acción de teleportar y moverá al usuario.
 
 La posición y del teleportador resultante depende del desplazamiento de la cámara a lo largo del eje Y. En el editor, es 0 de forma predeterminada, así que use las teclas **Q** y **E** para ajustarlo al alto adecuado.
 
-![Teleportador de simulación de entrada Configuración](../images/input-simulation/InputSimulationTeleport.gif)
+![Input Simulation Teleport Configuración](../images/input-simulation/InputSimulationTeleport.gif)
 
 ### <a name="motion-controller-interaction"></a>Interacción del controlador de movimiento
 
-Los controladores de movimiento simulados se pueden manipular de la misma manera que las manos articuladas. El modelo de interacción es similar a la interacción lejana de la mano articulada, mientras que el desencadenador, las teclas de agarre y de menú se asignan al botón izquierdo del *mouse,* las teclas *G* y *M,* respectivamente.
+Los controladores de movimiento simulados se pueden manipular de la misma manera que las manos articuladas. El modelo de interacción es similar a la interacción lejana de la mano articulada, mientras que el desencadenador, las teclas de toma y menú se asignan al botón izquierdo del *mouse,* a las teclas *G* y *M,* respectivamente.
 
 ### <a name="eye-tracking"></a>Seguimiento de los ojos
 
-[La simulación de seguimiento](../input/eye-tracking/eye-tracking-basic-setup.md#simulating-eye-tracking-in-the-unity-editor) de los ojos se puede habilitar activando la **opción Simular posición** de los ojos en el perfil de [simulación de entrada](#enabling-the-input-simulation-service). Esto no debe usarse con interacciones de estilo GGV o de controlador de movimiento (así que asegúrese de que el modo de simulación de controlador predeterminado está establecido en *Mano articulada).* 
+[La simulación de seguimiento](../input/eye-tracking/eye-tracking-basic-setup.md#simulating-eye-tracking-in-the-unity-editor) de los ojos se puede habilitar activando la **opción Simular posición** de los ojos en el perfil de [simulación de entrada](#enabling-the-input-simulation-service). Esto no debe usarse con interacciones de estilo GGV o controlador de movimiento (así que asegúrese de que el modo de simulación de controlador predeterminado está establecido en *Mano articulada).* 
 
-## <a name="input-simulation-tools-window"></a>Ventana Herramientas de simulación de entrada
+## <a name="input-simulation-tools-window"></a>Ventana herramientas de simulación de entrada
 
-Habilite la ventana de herramientas de simulación de entrada **desde el Mixed Reality** Toolkit Simulación de entrada  >    >    >  **de** utilidades. Esta ventana proporciona acceso al estado de la simulación de entrada durante el modo de reproducción.
+Habilite la ventana de herramientas de simulación de entrada **desde el Mixed Reality** Toolkit de simulación de entrada  >    >    >  **de** utilidades. Esta ventana proporciona acceso al estado de la simulación de entrada durante el modo de reproducción.
 
 ## <a name="viewport-buttons-optional"></a>Botones de ventanilla (opcional)
 
 Se puede especificar un elemento prefab para los botones en el editor para controlar la colocación de la mano básica en el perfil de simulación de entrada en **Indicadores prefab**. Se trata de una utilidad opcional, se puede acceder a las mismas características en la ventana de herramientas [de simulación de entrada](#input-simulation-tools-window).
 
 > [!NOTE]
-> Los indicadores de ventanilla están deshabilitados de forma predeterminada, ya que actualmente pueden interferir con las interacciones de la interfaz de usuario de Unity. Vea el problema [#6106](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/6106). Para habilitarlo, agregue el prefab InputSimulationIndicators a **Indicators Prefab**.
+> Los indicadores de ventanilla están deshabilitados de forma predeterminada, ya que actualmente pueden interferir con las interacciones de la interfaz de usuario de Unity. Vea el [problema #6106](https://github.com/microsoft/MixedRealityToolkit-Unity/issues/6106). Para habilitarlo, agregue el prefab InputSimulationIndicators a **Indicators Prefab**.
 
 Los iconos de mano muestran el estado de las manos simuladas:
 
-* ![Icono de mano sin seguimiento](../images/input-simulation/MRTK_InputSimulation_HandIndicator_Untracked.png) La mano no está en el seguimiento. Haga clic para habilitar la mano.
-* ![Icono de mano con seguimiento](../images/input-simulation/MRTK_InputSimulation_HandIndicator_Tracked.png "Icono de mano con seguimiento") El usuario realiza el seguimiento de la mano, pero no la controla. Haga clic para ocultar la mano.
+* ![Icono de la mano sin seguimiento](../images/input-simulation/MRTK_InputSimulation_HandIndicator_Untracked.png) La mano no está en seguimiento. Haga clic para habilitar la mano.
+* ![Icono de la mano con seguimiento](../images/input-simulation/MRTK_InputSimulation_HandIndicator_Tracked.png "Icono de la mano con seguimiento") Se realiza un seguimiento de la mano, pero el usuario no la controla. Haga clic para ocultar la mano.
 * ![Icono de la mano controlada](../images/input-simulation/MRTK_InputSimulation_HandIndicator_Controlled.png "Icono de la mano controlada") El usuario realiza el seguimiento y el control de la mano. Haga clic para ocultar la mano.
 * ![Icono de restablecimiento de la mano](../images/input-simulation/MRTK_InputSimulation_HandIndicator_Reset.png "Icono de restablecimiento de la mano") Haga clic para restablecer la mano a la posición predeterminada.
 

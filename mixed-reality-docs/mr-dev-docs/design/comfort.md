@@ -7,12 +7,12 @@ ms.date: 06/25/2020
 ms.topic: article
 ms.localizationpriority: high
 keywords: Mixed Reality, design, comfort, HoloLens 2, HoloLens (1st gen), mixed reality headset, windows mixed reality headset, virtual reality headset, HoloLens, MRTK, Mixed Reality Toolkit, locomotion
-ms.openlocfilehash: 9f366b2eb3ef33d3f63d3227d14aec642e8203b7
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+ms.openlocfilehash: 87cf45628a530da65d9feb29556afb7c4a8ee1d3f13385cbf521d2621ac0c2ae
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582493"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115226440"
 ---
 # <a name="comfort"></a>Comodidad
 
@@ -166,7 +166,7 @@ Para evitar la fatiga ocular y en el cuello, el contenido debe diseñarse de mod
 * **Evita** ángulos de mirada superiores a 60 grados por debajo del horizonte (movimiento vertical).
 * **Evite** rotaciones del cuello superiores a 45 grados desde el centro (movimiento horizontal).
 
-Se considera que el ángulo de mirada óptimo (en reposo) está entre 10-20 grados por debajo del horizonte, ya que la cabeza tiende a inclinarse ligeramente hacia abajo, especialmente durante las actividades.
+Se considera que el ángulo de mirada óptimo (en reposo) está entre 10 y 20 grados por debajo del horizonte, ya que la cabeza tiende a inclinarse ligeramente hacia abajo, especialmente durante las actividades.
 
 ## <a name="arm-positions"></a>Posiciones de los brazos
 

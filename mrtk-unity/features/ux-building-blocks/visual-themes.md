@@ -5,12 +5,12 @@ author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, temas de MRTK,
-ms.openlocfilehash: d97c470bf1d77299c6848990cdc69d886d432ecb
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: f7e0b10f51947884c4d23191fd147315084c5295e9b48953bb5de10b7cbc0d22
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177177"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223978"
 ---
 # <a name="visual-themes"></a>Temas visuales
 
@@ -103,7 +103,7 @@ Un [motor de](#theme-engines) temas es una clase que se extiende desde la clase 
 
 ### <a name="default-theme-engines"></a>Motores de temas predeterminados
 
-MRTK se distribuye con un conjunto predeterminado de motores de temas que se enumeran a continuación:
+MRTK se incluye con un conjunto predeterminado de motores de temas que se enumeran a continuación:
 
 - [`InteractableActivateTheme`](xref:Microsoft.MixedReality.Toolkit.UI.InteractableActivateTheme)
 - [`InteractableAnimatorTheme`](xref:Microsoft.MixedReality.Toolkit.UI.InteractableAnimatorTheme)
@@ -148,7 +148,7 @@ Variante protegida de la definición pública, excepto el valor ThemePropertyVal
 
 [`InteractableThemeBase.Init(GameObject host, ThemeDefinition settings)`](xref:Microsoft.MixedReality.Toolkit.UI.InteractableThemeBase)
 
-Realice los pasos de inicialización aquí dirigidos al parámetro *GameObject* proporcionado y use las propiedades y configuraciones definidas en el *parámetro ThemeDefinition.* Se recomienda llamar a `base.Init(host, settings)` al principio de una invalidación.
+Realice los pasos de inicialización aquí dirigidos al parámetro *GameObject* proporcionado y use las propiedades y configuraciones definidas en el *parámetro ThemeDefinition.* Se recomienda llamar al `base.Init(host, settings)` principio de una invalidación.
 
 [`InteractableThemeBase.IsEasingSupported`](xref:Microsoft.MixedReality.Toolkit.UI.InteractableThemeBase.IsEasingSupported)
 

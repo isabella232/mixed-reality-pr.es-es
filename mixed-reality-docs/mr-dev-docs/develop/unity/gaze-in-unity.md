@@ -5,13 +5,13 @@ author: thetuvix
 ms.author: alexturn
 ms.date: 03/21/2018
 ms.topic: article
-keywords: mirada con los ojos, mirada con la cabeza, unity, holograma, realidad mixta, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: f10079d36f737e5d8a2ee74a88ca0f8b2b3d791c
-ms.sourcegitcommit: 9ae76b339968f035c703d9c1fe57ddecb33198e3
+keywords: mirada con los ojos, mirada con la cabeza, unity, holograma, realidad mixta, casco de realidad mixta, casco de windows de realidad mixta, casco de realidad virtual, MRTK, Mixed Reality Toolkit
+ms.openlocfilehash: c6a435e958a92adeed6cd965bebd0b8829e00da735bd193ca72a68acb9e0d6aa
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/27/2021
-ms.locfileid: "110600154"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115200123"
 ---
 # <a name="head-gaze-in-unity"></a>Mirada con la cabeza en Unity
 
@@ -51,7 +51,7 @@ Aunque en el ejemplo anterior se muestra un único raycast desde el bucle de act
 
 Al igual que con un puntero del mouse en un equipo, debe implementar un [cursor](../../design/cursors.md) que represente la mirada con la cabeza del usuario. Saber qué contenido tiene como destino un usuario aumenta la confianza en lo que está a punto de interactuar.
 
-## <a name="head-gaze-in-the-mixed-reality-toolkit"></a>Mirada con la cabeza en el kit de herramientas Mixed Reality
+## <a name="head-gaze-in-the-mixed-reality-toolkit"></a>Mirada con la cabeza en el Mixed Reality Toolkit
 
 Puede acceder a la mirada con la cabeza desde [el Administrador de entrada](/windows/mixed-reality/mrtk-unity/features/input/overview) en MRTK.
 

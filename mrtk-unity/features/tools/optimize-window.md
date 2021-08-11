@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 8b8928e9c723ffa9fd08d22866b8ee5748e38ace
-ms.sourcegitcommit: 78746bef0e1ffe1480e89fed8cd30f6f8b389e8d
+ms.openlocfilehash: f87b0742afcf2c270d1060742ad0945132b4998cc055b1908b8a1ef17c9a0fe4
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/27/2021
-ms.locfileid: "114713581"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115199733"
 ---
 # <a name="optimize-window"></a>Optimización de la ventana
 
@@ -83,7 +83,7 @@ Las operaciones de difusión de gráficos se realizan por puntero en MRTK para d
 
 El [sombreador Estándar](https://docs.unity3d.com/Manual/shader-StandardShader.html) de Unity puede producir resultados visuales de muy alta calidad para juegos, pero generalmente no es más adecuado para las necesidades de rendimiento de las aplicaciones de realidad mixta, especialmente porque estas aplicaciones suelen estar limitadas por GPU. Por lo tanto, se recomienda a los desarrolladores usar el sombreador [ESTÁNDAR DE MRTK](../rendering/mrtk-standard-shader.md) para equilibrar la & características gráficas con el rendimiento.
 
-La *pestaña Análisis de* sombreador examina la carpeta Recurso del proyecto actual en busca de materiales mediante el sombreador Estándar de Unity o, si lo desea, todos los materiales que no usan Mixed Reality Toolkit sombreadores proporcionados. Una vez detectados, los desarrolladores pueden convertir todos los materiales o convertir individualmente con los botones adecuados.
+La *pestaña Análisis de* sombreador examina la carpeta Asset del proyecto actual en busca de materiales mediante el sombreador Estándar de Unity o, si lo desea, todos los materiales que no usan Mixed Reality Toolkit sombreadores proporcionados. Una vez detectados, los desarrolladores pueden convertir todos los materiales o convertir individualmente con los botones adecuados.
 
 ![Optimización de la ventana de MRTK Configuración del sombreador](../images/performance/OptimizeWindow_ShaderAnalysis.png)
 

@@ -5,26 +5,26 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 0fbde863185a9f51b53192a338e9403dc79248db
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: a0d8e695e23ed2b58a62511e8b061bede2c68d92fb0089c8dada1d336c2a09e5
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176642"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115224852"
 ---
 # <a name="holographic-remoting"></a>Control remoto de holografías
 
-La comunicación remota holográfica transmite contenido holográfico desde un equipo a la Microsoft HoloLens en tiempo real, mediante una conexión de Wi-Fi o USB. Esta característica puede aumentar significativamente la productividad del desarrollador al desarrollar aplicaciones de realidad mixta.
+La comunicación remota holográfica transmite contenido holográfico desde un equipo a la Microsoft HoloLens en tiempo real, mediante una conexión de Wi-Fi o USB. Esta característica puede aumentar significativamente la productividad de los desarrolladores al desarrollar aplicaciones de realidad mixta.
 
 El SDK de XR, como se mencionó a continuación, hace referencia a la nueva canalización de XR de [Unity en Unity 2019.3](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/)y más allá de . Consulte [aquí](../../configuration/getting-started-with-mrtk-and-xrsdk.md) para obtener más información sobre el uso del SDK de XR con MRTK. XR heredado hace referencia a la canalización XR existente que se incluye en Unity 2018, está en desuso en Unity 2019.3 y se ha quitado en Unity 2020.
 
-## <a name="initial-setup"></a>Instalación inicial
+## <a name="initial-setup"></a>Configuración inicial
 
 Para habilitar la comunicación remota a HoloLens, es importante asegurarse de que el proyecto usa los componentes de comunicación remota más recientes.
 
 1. Abrir **ventana > Administrador de paquetes**
-    - Si usa XR heredado: compruebe que está instalada la versión más reciente Windows Mixed Reality **paquete.**
-    - Si usa el SDK de XR: compruebe que está instalada la versión más Windows del paquete del complemento **XR.**
+    - Si usa XR heredado: compruebe que está instalada la versión más reciente **Windows Mixed Reality** paquete.
+    - Si usa el SDK de XR: compruebe que está instalada la versión más reciente Windows paquete del complemento **XR.**
 1. Asegúrese de que la aplicación holographic remoting más reciente está instalada, en la HoloLens, a través del Microsoft Store.
 
 Continúe con las [instrucciones de instalación de XR heredadas](#legacy-xr-setup-instructions) o las instrucciones de configuración del SDK de [XR](#xr-sdk-setup-instructions) en función de la canalización que se utilice en el proyecto.
@@ -33,7 +33,7 @@ Continúe con las [instrucciones de instalación de XR heredadas](#legacy-xr-set
 
 Las instrucciones siguientes solo se aplican a la comunicación remota con HoloLens 2. Si solo realiza comunicación remota con HoloLens (1.ª generación), vaya directamente a Conexión al HoloLens [con Wi-Fi.](#connecting-to-the-hololens-with-wi-fi)
 
-Al usar una HoloLens 2, se ha agregado compatibilidad con la comunicación remota de datos de seguimiento de la mano y los ojos articulados a MRTK. Para habilitar estas características, siga los pasos documentados en [Importación de DotNetWinRT en el proyecto](#import-dotnetwinrt-into-the-project).
+Al usar una HoloLens 2, se ha agregado compatibilidad con la comunicación remota con datos de seguimiento de la mano y los ojos articulados a MRTK. Para habilitar estas características, siga los pasos documentados en [Importación de DotNetWinRT en el proyecto](#import-dotnetwinrt-into-the-project).
 
 Una vez importado, el paso siguiente consiste en seleccionar **Mixed Reality**  >  **Toolkit**  >  **Utilities**  >  **Windows Mixed Reality**  >  **Check Configuration (Comprobar configuración).** Este paso agrega una definición de scripting que habilita la dependencia DotNetWinRT.
 
@@ -42,7 +42,7 @@ Una vez importado, el paso siguiente consiste en seleccionar **Mixed Reality**  
 
 Para habilitar el seguimiento de las uniones de manos y el seguimiento de los ojos, siga los pasos descritos en las secciones Depuración HoloLens 2 comunicación remota a través de la importación de paquetes de **Unity** y las secciones relacionadas.
 
-### <a name="debugging-hololens-2-remoting-via-unity-package-import"></a>Depuración de HoloLens 2 comunicación remota mediante la importación de paquetes de Unity
+### <a name="debugging-hololens-2-remoting-via-unity-package-import"></a>Depuración de HoloLens 2 comunicación remota a través de la importación de paquetes de Unity
 
 Si HoloLens 2 y el seguimiento de los ojos no funcionan con la comunicación remota, hay algunos puntos comunes de posibles problemas. Se enumeran a continuación en el orden en que se deben comprobar.
 
@@ -61,7 +61,7 @@ Estos problemas son especialmente relevantes cuando se ejecutan **en Unity 2019.
 #### <a name="dotnetwinrt_present-define-written-into-player-settings"></a>DOTNETWINRT_PRESENT en la configuración del reproductor
 
 > [!NOTE]
-> Cuando se usa Unity 2019.4 y versiones posteriores, el DOTNETWINRT_PRESENT define se encuentra dentro de los archivos .asmdef adecuados y no en el reproductor de Unity Configuración. El paso Comprobar configuración no es necesario.
+> Cuando se usa Unity 2019.4 y versiones posteriores, la definición DOTNETWINRT_PRESENT se incluye en los archivos .asmdef adecuados y no en el reproductor de Unity Configuración. El paso Comprobar configuración no es necesario.
 
 A partir de la versión 2.5.0 de MRTK, por motivos de rendimiento, este #define ya no se establece automáticamente. Para habilitar esta marca, use el elemento de menú Mixed Reality Toolkit  >  **Utilities**  >  **Windows Mixed Reality**  >  **Check Configuration** (Comprobar configuración).
 
@@ -90,9 +90,9 @@ Una vez configurado el proyecto, se puede establecer una conexión con el HoloLe
 
 1. Establezca **Modo de emulación** **en Remoto en Dispositivo.**
 
-    ![Establecer modo de emulación](../images/tools/remoting/SelectEmulationMode.png)
+    ![Establecer el modo de emulación](../images/tools/remoting/SelectEmulationMode.png)
 
-1. (**_Solo se aplica a XR heredado)_** Seleccione la versión **del dispositivo.**
+1. (**_Solo se aplica a XR heredado)_** Seleccione la **versión del dispositivo.**
 
     ![Selección de la versión del dispositivo](../images/tools/remoting/SelectDeviceVersion.png)
 

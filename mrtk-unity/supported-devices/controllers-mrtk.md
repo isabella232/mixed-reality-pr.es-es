@@ -5,12 +5,12 @@ author: RogPodge
 ms.author: roliu
 ms.date: 05/13/2021
 keywords: Unity,HoloLens, HoloLens 2, Mixed Reality, development, MRTK, Controllers, HP Reverb, Oculus, WIRELESS Vive, Hands
-ms.openlocfilehash: 2bb749f4e2f6294c4feb74f97af55ecb857d5f76
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 04afcf75fc11c1c3b4c6fb9f244172c0960e8943bd469bc6424465b376ceaf53
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175595"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115226416"
 ---
 # <a name="detecting-controllers-in-mrtk"></a>Detección de controladores en MRTK
 
@@ -26,6 +26,6 @@ Para mostrar los controladores en el editor, debe asegurarse de que usa el media
 
 ## <a name="oculus-controllers"></a>Controladores de Oculus 
 
-Para visualizar los modelos de controlador de Oculus, siga las instrucciones de implementación de Oculus Raid. Si desea mostrar las manos virtuales al usar los controladores, asegúrese de que la opción Representar las manos **de Avatar** en lugar de controladores está activada en el sdk de XR Oculus Administrador de dispositivos. De lo contrario, desactive esta opción.
+Para visualizar los modelos de controlador de Oculus, siga las instrucciones de implementación de Oculus Raid. Si desea mostrar las manos virtuales al usar los controladores, asegúrese de que la opción Representar las manos **de avatar** en lugar de controladores está activada en la pestaña Oculus del SDK de XR Administrador de dispositivos. De lo contrario, desactive esta opción.
 
 ![OculusDeviceManagerVisualizationSettings](../images/cross-platform/oculus-quest/OculusDeviceManager.png)

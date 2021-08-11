@@ -5,13 +5,13 @@ author: grbury
 ms.author: grbury
 ms.date: 10/21/2019
 ms.topic: article
-keywords: Mixed Reality, desarrollo, diseño, HoloLens, servicios de Azure, noticias, HoloLens 2
-ms.openlocfilehash: 8fc2f7c54cdc941150558aac59dd240ee293d1f8
-ms.sourcegitcommit: c65759b8d6465b6b13925cacab5af74443f7e6bd
+keywords: Mixed Reality, desarrollo, desarrollo, diseño, HoloLens, servicios de Azure, noticias, HoloLens 2
+ms.openlocfilehash: 0144a4ed804dacf2f6120b1e93ee054a71dbadf3efe6689d19ded3f14233c31f
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2021
-ms.locfileid: "112110080"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115226226"
 ---
 # <a name="mixed-reality-news-and-notes"></a>Notas y noticias de realidad mixta
 
@@ -50,6 +50,6 @@ Como prometimos, nos complace poner a su disposición más ventajas de realidad 
   <td>Nueva información sobre Unreal</td><td>Octubre de 2019</td><td> <ul><li><a href=https://docs.microsoft.com/windows/mixed-reality/unreal-development-overview>Introducción al desarrollo de Unreal</a></td>
 </tr>
 <tr>
-  <td>Diseño de Microsoft Fluent</td><td>Octubre de 2019</td><td> <ul><li><a href=https://www.microsoft.com/design/fluent/>Página de diseño de realidad mixta</a></td>
+  <td>Diseño de Fluent Microsoft</td><td>Octubre de 2019</td><td> <ul><li><a href=https://www.microsoft.com/design/fluent/>Página de diseño de realidad mixta</a></td>
 </tr>
 </table>

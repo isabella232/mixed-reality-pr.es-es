@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 0b6012871a4d4988fdb70336a3c33455f479bcac
-ms.sourcegitcommit: 912fa204ef79e9b973eab9b862846ba5ed5cd69f
+ms.openlocfilehash: 391aa477bb09fa2dec2b3bcb26bad813c715ee03eeb0dc03dcbc9048ae318295
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "114281920"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223998"
 ---
 # <a name="creating-an-input-system-data-provider"></a>Creación de un proveedor de datos del sistema de entrada
 
@@ -22,7 +22,7 @@ En este artículo se describe cómo crear proveedores de datos personalizados, t
 
 ## <a name="namespace-and-folder-structure"></a>Espacio de nombres y estructura de carpetas
 
-Los proveedores de datos se pueden distribuir como complemento de terceros o como parte de microsoft Mixed Reality Toolkit. El proceso de aprobación de envíos de nuevos proveedores de datos a MRTK variará caso por caso y se comunicará en el momento de la propuesta inicial.
+Los proveedores de datos se pueden distribuir como un complemento de terceros o como parte de microsoft Mixed Reality Toolkit. El proceso de aprobación para los envíos de nuevos proveedores de datos a MRTK variará caso por caso y se comunicará en el momento de la propuesta inicial.
 
 > [!Important]
 > Si se envía un proveedor de datos del sistema de entrada [al](https://github.com/Microsoft/MixedRealityToolkit-Unity)repositorio Mixed Reality Toolkit , el espacio de nombres debe **comenzar** por Microsoft.MixedReality. Toolkit (por ejemplo: Microsoft.MixedReality.Toolkit. WindowsMixedReality) y el código deben estar ubicados en una carpeta debajo de MRTK/Providers (por ejemplo, MRTK/Providers/WindowsMixedReality).
@@ -38,20 +38,20 @@ Por ejemplo, un proveedor de datos de entrada creado por la empresa Contoso pued
 
 ### <a name="recommended-folder-structure"></a>Estructura de carpetas recomendada
 
-Se recomienda retrasar el código fuente de los proveedores de datos en una jerarquía de carpetas, como se muestra en la imagen siguiente.
+Se recomienda retrasar el código fuente de los proveedores de datos en una jerarquía de carpetas, como se muestra en la siguiente imagen.
 
 ![Ejemplo de estructura de carpetas](../images/input/ExampleProviderFolderStructure.png)
 
-Donde ContosoInput contiene la implementación del proveedor de datos, la carpeta Editor contiene el inspector (y cualquier otro código específico del editor de Unity), la carpeta Textures contiene imágenes de los controladores admitidos y Profiles contiene uno o varios perfiles pre-made.
+Donde ContosoInput contiene la implementación del proveedor de datos, la carpeta Editor contiene el inspector (y cualquier otro código específico del editor de Unity), la carpeta Texturas contiene imágenes de los controladores admitidos y Profiles contiene uno o varios perfiles predefinidos.
 
 > [!Note]
-> Puede encontrar algunas imágenes de controlador comunes en la carpeta MixedRealityToolkit\StandardAssets\Textures.
+> Algunas imágenes de controlador comunes se pueden encontrar en la carpeta MixedRealityToolkit\StandardAssets\Textures.
 
 ## <a name="implement-the-data-provider"></a>Implementación del proveedor de datos
 
 ### <a name="specify-interface-andor-base-class-inheritance"></a>Especificación de la herencia de interfaz o clase base
 
-Todos los proveedores de datos del sistema de entrada deben [`IMixedRealityInputDeviceManager`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputDeviceManager) implementar la interfaz , que especifica la funcionalidad mínima requerida por el sistema de entrada. La base de MRTK incluye la [`BaseInputDeviceManager`](xref:Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager) clase que proporciona una implementación predeterminada de esta funcionalidad necesaria. En el caso de los dispositivos que se basan en la clase UInput de Unity, la [`UnityJoystickManager`](xref:Microsoft.MixedReality.Toolkit.Input.UnityInput.UnityJoystickManager) clase se puede usar como clase base.
+Todos los proveedores de datos del sistema de entrada deben [`IMixedRealityInputDeviceManager`](xref:Microsoft.MixedReality.Toolkit.Input.IMixedRealityInputDeviceManager) implementar la interfaz , que especifica la funcionalidad mínima requerida por el sistema de entrada. La base de MRTK incluye la [`BaseInputDeviceManager`](xref:Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager) clase que proporciona una implementación predeterminada de esta funcionalidad necesaria. En el caso de los dispositivos que se basan en la clase UInput de Unity, la [`UnityJoystickManager`](xref:Microsoft.MixedReality.Toolkit.Input.UnityInput.UnityJoystickManager) clase se puede usar como una clase base.
 
 > [!Note]
 > Las `BaseInputDeviceManager` clases y proporcionan la implementación `UnityJoystickManager` `IMixedRealityInputDeviceManager` necesaria.
@@ -63,7 +63,7 @@ public class WindowsMixedRealityDeviceManager :
 { }
 ```
 
-> `IMixedRealityCapabilityCheck` lo usa para indicar que proporciona compatibilidad con un conjunto de funcionalidades de entrada, en concreto, manos articuladas, manos con gesto de mirada y controladores `WindowsMixedRealityDeviceManager` de movimiento.
+> `IMixedRealityCapabilityCheck` lo usa para indicar que proporciona compatibilidad con un conjunto de funcionalidades de entrada, en concreto, manos articuladas, manos de voz con gesto de mirada y controladores `WindowsMixedRealityDeviceManager` de movimiento.
 
 #### <a name="apply-the-mixedrealitydataprovider-attribute"></a>Aplicación del atributo MixedRealityDataProvider
 
@@ -85,7 +85,7 @@ public class WindowsMixedRealityDeviceManager :
 Una vez definida la clase , el siguiente paso es proporcionar la implementación de la [`IMixedRealityDataProvider`](xref:Microsoft.MixedReality.Toolkit.IMixedRealityDataProvider) interfaz .
 
 > [!Note]
-> La `BaseInputDeviceManager` clase, a través de `BaseService` la clase , solo proporciona implementaciones vacías para los `IMixedRealityDataProvider` métodos. Los detalles de estos métodos suelen ser específicos del proveedor de datos.
+> La `BaseInputDeviceManager` clase, a través de `BaseService` la clase , proporciona solo implementaciones vacías para los `IMixedRealityDataProvider` métodos. Los detalles de estos métodos suelen ser específicos del proveedor de datos.
 
 Los métodos que debe implementar el proveedor de datos son:
 
@@ -127,9 +127,9 @@ A continuación, [`MixedRealityController`](xref:Microsoft.MixedReality.Toolkit.
 
 #### <a name="configure-the-interaction-mappings"></a>Configuración de las asignaciones de interacción
 
-El siguiente paso consiste en definir el conjunto de asignaciones de interacción compatibles con el controlador. Para los dispositivos que reciben sus datos [](../tools/controller-mapping-tool.md) a través de la clase Input de Unity, la herramienta de asignación de controladores es un recurso útil para confirmar las asignaciones de eje y botón correctas que se asignarán a las interacciones.
+El siguiente paso consiste en definir el conjunto de asignaciones de interacción compatibles con el controlador. En el caso de los dispositivos que [](../tools/controller-mapping-tool.md) reciben sus datos a través de la clase Input de Unity, la herramienta de asignación de controladores es un recurso útil para confirmar las asignaciones de eje y botón correctas para asignar a interacciones.
 
-El ejemplo siguiente se abrevia desde la `GenericOpenVRController` clase , ubicada en la carpeta MRTK/Providers/OpenVR.
+El ejemplo siguiente se abrevia de la clase , que se encuentra en `GenericOpenVRController` la carpeta MRTK/Providers/OpenVR.
 
 ```c#
 public override MixedRealityInteractionMapping[] DefaultLeftHandedInteractions => new[]
@@ -172,7 +172,7 @@ InputSystem?.RaisePositionInputChanged(InputSource, ControllerHandedness, intera
 
 ### <a name="add-unity-profiler-instrumentation"></a>Adición de instrumentación de Unity Profiler
 
-El rendimiento es fundamental en las aplicaciones de realidad mixta. Cada componente agrega cierta sobrecarga para la que las aplicaciones deben tener en cuenta. Para ello, es importante que todos los proveedores de datos de entrada contengan instrumentación de Unity Profiler en bucle interno y rutas de acceso de código que se usan con frecuencia.
+El rendimiento es fundamental en las aplicaciones de realidad mixta. Cada componente agrega cierta cantidad de sobrecarga para la que las aplicaciones deben tener en cuenta. Para ello, es importante que todos los proveedores de datos de entrada contengan instrumentación de Unity Profiler en bucle interno y rutas de acceso de código que se usan con frecuencia.
 
 Se recomienda implementar el patrón utilizado por MRTK al instrumentar proveedores personalizados.
 
@@ -189,7 +189,7 @@ Se recomienda implementar el patrón utilizado por MRTK al instrumentar proveedo
 ```
 
 > [!Note]
-> El nombre utilizado para identificar el marcador del profiler es arbitrario. MrTK usa el siguiente patrón.
+> El nombre usado para identificar el marcador del profiler es arbitrario. MRTK usa el siguiente patrón.
 >
 > "[product] className.methodName - optional note"
 >
@@ -199,7 +199,7 @@ Se recomienda implementar el patrón utilizado por MRTK al instrumentar proveedo
 
 En la Mixed Reality Toolkit, los proveedores de datos se configuran mediante [perfiles](../profiles/profiles.md).
 
-Los proveedores de datos con opciones de configuración adicionales (por ejemplo, [InputSimulationService)](../input-simulation/input-simulation-service.md)deben crear un perfil e inspector para permitir a los clientes modificar el comportamiento para que se adapte mejor a las necesidades de la aplicación.
+Los proveedores de datos con opciones de configuración adicionales (por ejemplo, [InputSimulationService)](../input-simulation/input-simulation-service.md)deben crear un perfil y un inspector para permitir que los clientes modifiquen el comportamiento para que se adapte mejor a las necesidades de la aplicación.
 
 > El código completo del ejemplo de esta sección se puede encontrar en MRTK. Carpeta Services/InputSimulation.
 
@@ -216,7 +216,7 @@ public class MixedRealityInputSimulationProfile : BaseMixedRealityProfile
 { }
 ```
 
-El atributo se puede aplicar a la clase de perfil para permitir que los clientes creen una instancia de perfil mediante el menú `CreateAssetMenu` Crear > recursos > Mixed Reality Toolkit > **perfiles.**
+El atributo se puede aplicar a la clase de perfil para permitir que los clientes creen una instancia de perfil mediante el `CreateAssetMenu` menú Crear > recursos > Mixed Reality Toolkit > **perfiles.**
 
 ### <a name="implement-the-inspector"></a>Implementación del inspector
 
@@ -232,14 +232,14 @@ El `CustomEditor` atributo informa a Unity del tipo de recurso al que se aplica 
 
 ## <a name="create-assembly-definitions"></a>Creación de definiciones de ensamblado
 
-El Mixed Reality Toolkit archivos de definición de ensamblado ([.asmdef](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html)) para especificar dependencias entre componentes, así como para ayudar a Unity a reducir el tiempo de compilación.
+El Mixed Reality Toolkit usa archivos de definición de ensamblado[(.asmdef)](https://docs.unity3d.com/Manual/ScriptCompilationAssemblyDefinitionFiles.html)para especificar dependencias entre componentes, así como para ayudar a Unity a reducir el tiempo de compilación.
 
 Se recomienda crear archivos de definición de ensamblado para todos los proveedores de datos y sus componentes del editor.
 
 Con la [estructura de carpetas](#recommended-folder-structure) del ejemplo anterior, habría dos archivos .asmdef para el proveedor de datos ContosoInput.
 
 La primera definición de ensamblado es para el proveedor de datos. En este ejemplo, se llamará ContosoInput y se ubicará en la carpeta ContosoInput del ejemplo.
-Esta definición de ensamblado debe especificar una dependencia en Microsoft.MixedReality. Toolkit y cualquier otro ensamblado del que dependa.
+Esta definición de ensamblado debe especificar una dependencia de Microsoft.MixedReality. Toolkit y cualquier otro ensamblado del que dependa.
 
 La definición del ensamblado ContosoInputEditor especificará el inspector de perfil y cualquier código específico del editor. Este archivo debe encontrarse en la carpeta raíz del código del editor. En este ejemplo, el archivo se ubicará en la carpeta ContosoInput\Editor. Esta definición de ensamblado contendrá una referencia al ensamblado ContosoInput, así como:
 
@@ -255,11 +255,11 @@ Una vez creado, el proveedor de datos se puede registrar con el sistema de entra
 
 ## <a name="packaging-and-distribution"></a>Empaquetado y distribución
 
-Los proveedores de datos que se distribuyen como componentes de terceros tienen los detalles específicos del empaquetado y la distribución de acuerdo con las preferencias del desarrollador. Probablemente, la solución más común será generar un paquete .unitypackage y distribuirlo a través del almacén de recursos de Unity.
+Los proveedores de datos que se distribuyen como componentes de terceros tienen los detalles específicos de empaquetado y distribución a la izquierda según las preferencias del desarrollador. Probablemente, la solución más común será generar un .unitypackage y distribuirlo a través del Almacén de recursos de Unity.
 
 Si se envía y acepta un proveedor de datos como parte del paquete microsoft Mixed Reality Toolkit, el equipo de Microsoft MRTK lo empaquetará y distribuirá como parte de las ofertas de MRTK.
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - [Sistema de entrada](overview.md)
 - [Clase `BaseInputDeviceManager`](xref:Microsoft.MixedReality.Toolkit.Input.BaseInputDeviceManager)
