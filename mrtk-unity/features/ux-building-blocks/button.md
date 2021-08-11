@@ -5,12 +5,12 @@ author: cre8ivepark
 ms.author: dongpark
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, botones de MRTK
-ms.openlocfilehash: 16baeede2c63437e933eb1367f01af7f372cd62f
-ms.sourcegitcommit: 912fa204ef79e9b973eab9b862846ba5ed5cd69f
+ms.openlocfilehash: 7d1c141981ec402d85e1e2004739e9ab9f0ebe9da5361e4e3100b43a2b5b4129
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2021
-ms.locfileid: "114281852"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115229163"
 ---
 # <a name="buttons"></a>Botones
 
@@ -110,7 +110,7 @@ Ejemplos de los requisitos previos del botón en la ``MRTK/SDK/Features/UX/Inter
 :::row-end:::
 :::row:::
     :::column:::  
-    HoloLens 2 de la casilla de estilo shell de 32 x 96 mm
+    HoloLens 2 casilla de estilo shell de HoloLens 2 32 x 96 mm
     :::column-end:::
     :::column:::
     HoloLens 2 de estilo shell de 32 x 96 mm
@@ -168,11 +168,11 @@ Ejemplos de los requisitos previos del botón en la ``MRTK/SDK/Features/UX/Inter
 
 `PressableButtonHoloLens2`(Assets/MRTK/SDK/Features/UX/Interactable/Prefabs/PressableButtonHoloLens2.prefab) es el botón de estilo de shell de HoloLens 2 que admite el movimiento preciso del botón para la entrada de seguimiento directo de la mano. Combina el `Interactable` script con el `PressableButton` script.
 
-Por HoloLens 2, se recomienda usar botones con una placa trasera opaca. Los botones transparentes no se recomiendan debido a estos problemas de facilidad de uso y estabilidad:
+Por HoloLens 2, se recomienda usar botones con una placa trasera opaca. No se recomiendan botones transparentes debido a estos problemas de facilidad de uso y estabilidad:
 
 * El icono y el texto son difíciles de leer con el entorno físico
 * Es difícil entender cuándo se desencadena el evento
-* Hologramas que se muestran a través de un plano transparente puede ser inestable con la estabilización LSR de profundidad de HoloLens 2 de datos
+* Hologramas que se muestran a través de un plano transparente puede ser inestable con la estabilización LSR de profundidad de HoloLens 2 de la aplicación
 
 ![Botón adosado](../images/button/MRTK_Button_UsePlated.png)
 
@@ -206,15 +206,15 @@ Para aprovechar la información específica del estado de entrada de la mano art
 
 ## <a name="interaction-states"></a>Estados de interacción
 
-En el estado de inactividad, la placa frontal del botón no está visible. A medida que un dedo se acerca o un cursor de la entrada de mirada apunta a la superficie, el borde brillante de la placa frontal se vuelve visible. Hay un resaltado adicional de la posición del dedo en la superficie de la placa frontal. Cuando se inserta con un dedo, la placa frontal se mueve con el dedo. Cuando el dedo toca la superficie de la placa frontal, muestra un efecto de pulso sutil para proporcionar comentarios visuales del punto táctil.
+En estado de inactividad, la placa frontal del botón no está visible. A medida que un dedo se acerca o un cursor de la entrada de mirada apunta a la superficie, el borde brillante de la placa frontal se vuelve visible. Hay un resaltado adicional de la posición del dedo en la superficie de la placa frontal. Cuando se inserta con un dedo, la placa frontal se mueve con el dedo. Cuando el dedo toca la superficie de la placa frontal, muestra un efecto de pulso sutil para proporcionar comentarios visuales del punto táctil.
 
-En HoloLens 2 de estilo shell, hay muchas indicaciones visuales y asequiciones para aumentar la confianza del usuario en la interacción.
+En HoloLens 2 de estilo shell, hay muchas indicaciones visuales y asequibilidades para aumentar la confianza del usuario en la interacción.
 
-|  ![Luz de proximidad](../images/button/ux_button_affordance_proximitylight.jpg) | ![Resaltado del foco](../images/button/ux_button_affordance_focushighlight.jpg)  | ![Compresión de la caja de seguridad](../images/button/ux_button_affordance_compression.jpg) | ![Pulse on trigger (Pulse on trigger)](../images/button/ux_button_affordance_pulse.jpg) |
+|  ![Luz de proximidad](../images/button/ux_button_affordance_proximitylight.jpg) | ![Resaltado de foco](../images/button/ux_button_affordance_focushighlight.jpg)  | ![Compresión de la caja de seguridad](../images/button/ux_button_affordance_compression.jpg) | ![Pulse on trigger (Pulse on trigger)](../images/button/ux_button_affordance_pulse.jpg) |
 |:--- | :--- | :--- | :--- |
-| Luz de proximidad | Resaltado del foco | Compresión de la caja de seguridad | Pulse on trigger (Pulse on trigger) |
+| Luz de proximidad | Resaltado de foco | Compresión de la caja de seguridad | Pulse on trigger (Pulse on trigger) |
 
-El efecto de pulso sutil se desencadena mediante el botón que se puede presionar, que busca *proximityLight(s)* que se encuentran en el puntero que interactúa actualmente. Si se encuentra alguna luz de proximidad, se llama al método , que anima automáticamente los parámetros del `ProximityLight.Pulse` sombreador para mostrar un pulso.
+El efecto de pulsación sutil se desencadena mediante el botón que se puede presionar, que busca *proximityLight(s)* que se encuentran en el puntero que interactúa actualmente. Si se encuentra alguna luz de proximidad, se llama al método , que anima automáticamente los parámetros del `ProximityLight.Pulse` sombreador para mostrar un pulso.
 
 ## <a name="inspector-properties"></a>Propiedades del inspector
 
@@ -223,7 +223,7 @@ El efecto de pulso sutil se desencadena mediante el botón que se puede presiona
 **Box Collider** 
  `Box Collider` para la placa frontal del botón.
 
-**Botón que se puede presionar** Lógica para el movimiento del botón con la interacción de la pulsación con la mano.
+**Botón que se puede presionar** Lógica para el movimiento del botón con la interacción de presionar con la mano.
 
 **Enrutador de eventos de presión física** Este script envía eventos desde la interacción de la pulsación a mano [a Interactable.](interactable.md)
 
@@ -248,11 +248,11 @@ Los botones de MRTK usan un componente para ayudarle a cambiar el icono, el `But
 
 ### <a name="creating-and-modifying-icon-sets"></a>Crear y modificar conjuntos de iconos
 
-Un **conjunto de iconos** es un conjunto compartido de recursos de icono usados por el `ButtonConfigHelper` componente. Se admiten *estilos de* tres iconos.
+Un **conjunto de iconos** es un conjunto compartido de recursos de icono utilizados por el `ButtonConfigHelper` componente. Se admiten *estilos de* tres iconos.
 
 * **Los** iconos de cuatro se representan en un cuadrándido mediante `MeshRenderer` . Este es el estilo de icono predeterminado.
 * **Los** iconos de sprite se representan mediante `SpriteRenderer` . Esto resulta útil si prefiere importar los iconos como una hoja de sprites, o si quiere que los recursos de icono se compartan con los componentes de la interfaz de usuario de Unity. Para usar este estilo, deberá instalar el paquete Sprite Editor **(Windows -> Administrador de paquetes -> sprite 2D)**
-* **Los** iconos char se representan mediante un `TextMeshPro` componente. Esto resulta útil si prefiere usar una fuente de icono. Para usar la HoloLens de icono de fuente, deberá crear un recurso `TextMeshPro` de fuente.
+* **Los** iconos char se representan mediante un `TextMeshPro` componente. Esto resulta útil si prefiere usar una fuente de icono. Para usar la HoloLens icono de fuente, deberá crear un recurso `TextMeshPro` de fuente.
 
 Para cambiar el estilo que usa el botón, expanda la lista desplegable *Iconos* de ButtonConfigHelper y seleccione en la lista desplegable *Estilo de* icono.
 
@@ -272,7 +272,7 @@ Si no se encuentra un icono en el conjunto de iconos predeterminado durante la m
 
 ### <a name="creating-a-hololens-icon-font-asset"></a>Crear un recurso de fuente HoloLens icono de archivo
 
-En primer lugar, importe la fuente del icono en Unity. En Windows máquinas virtuales, puede encontrar la fuente HoloLens predeterminada *en Windows/Fonts/holomdl2.ttf.* Copie y pegue este archivo en la carpeta Recursos.
+En primer lugar, importe la fuente del icono en Unity. En Windows máquinas virtuales, puede encontrar la fuente HoloLens predeterminada *en Windows/Fonts/holomdl2.ttf.* Copie y pegue este archivo en la carpeta Assets.
 
 A continuación, abra TextMeshPro Font Asset Creator a través de **Window > TextMeshPro > Font Asset Creator.** Esta es la configuración recomendada para generar un atlas HoloLens fuente. Para incluir todos los iconos, pegue el siguiente intervalo Unicode en el *campo Secuencia de* caracteres:
 
@@ -282,7 +282,7 @@ E700-E702,E706,E70D-E70E,E710-E714,E718,E71A,E71D-E71E,E720,E722,E728,E72A-E72E,
 
 ![Creación de botones 1](../images/button/MRTK_Font_Asset_Creation_1.png)
 
-Una vez generado el recurso de fuente, guárdelo en el proyecto y asígnelo al campo Fuente de *icono de char* del conjunto de iconos. Ahora *se rellenará la* lista desplegable Iconos disponibles. Para que un icono esté disponible para que lo use un botón, haga clic en él. Se agregará a la lista desplegable *Iconos* seleccionados y ahora se mostrará en La opción Puede dar al `ButtonConfigHelper.` icono una etiqueta. Esto permite establecer el icono en tiempo de ejecución.
+Una vez generado el recurso de fuente, guárdelo en el proyecto y asígnelo al campo Fuente de *icono de char* del conjunto de iconos. Ahora *se rellenará la* lista desplegable Iconos disponibles. Para que un icono esté disponible para que lo use un botón, haga clic en él. Se agregará a la lista desplegable *Iconos* seleccionados y ahora se mostrará en El puede opcionalmente dar `ButtonConfigHelper.` una etiqueta al icono. Esto permite establecer el icono en tiempo de ejecución.
 
 ![Creación de botones 3](../images/button/MRTK_Font_Asset_Creation_3.png)
 
@@ -314,9 +314,9 @@ Actualización del tamaño de la personalización de tamaño de botón FrontPlat
 
 Actualización del tamaño de la personalización de ![ tamaño de botón cuadránitrido 2](../images/button/MRTK_Button_SizeCustomization2.png)
 
-Actualizar el tamaño de la personalización del tamaño del botón ![ colisionador de cuadro 3](../images/button/MRTK_Button_SizeCustomization3.png)
+Actualización del tamaño de la personalización de tamaño del botón ![ colisionador de cuadro 3](../images/button/MRTK_Button_SizeCustomization3.png)
 
-Haga clic en la personalización del tamaño del botón "Corregir ![ límites" 4.](../images/button/MRTK_Button_SizeCustomization4.png)
+Haga clic en la personalización del tamaño del botón "Corregir ![ límites" 4](../images/button/MRTK_Button_SizeCustomization4.png)
 
 ## <a name="voice-command-see-it-say-it"></a>Comando de voz ('see-it, say-it')
 
@@ -328,7 +328,7 @@ Haga clic en la personalización del tamaño del botón "Corregir ![ límites" 4
 
 <img src="../images/button/MRTK_Button_Speech2.png" width="450" alt="Button speech 2">
 
-**See-it, Say-it label** El botón prefab presionable tiene un marcador de posición TextMesh Pro etiqueta en el *objeto SeeItSayItLabel.* Puede usar esta etiqueta para comunicar al usuario la palabra clave del comando de voz para el botón.
+**See-it, Say-it label** El botón prefab presionable tiene un marcador de posición TextMesh Pro etiqueta bajo el *objeto SeeItSayItLabel.* Puede usar esta etiqueta para comunicar al usuario la palabra clave del comando de voz para el botón.
 
 <img src="../images/button/MRTK_Button_Speech3.png" width="450" alt="Button Speech 3">
 
@@ -360,7 +360,7 @@ Al presionar el botón, se moverá y generará los eventos adecuados expuestos e
 
 #### <a name="troubleshooting"></a>Solución de problemas
 
-Si el botón está ejecutando una doble  pulsación, asegúrese de  que la propiedad Aplicar inserción frontal está activa y de que el plano Iniciar distancia de inserción se coloca delante del plano táctil Interacción **cercana.** El **plano táctil Interacción** cercana se indica mediante el plano azul situado delante del origen de la flecha blanca en el gif siguiente:
+Si el botón está ejecutando una doble  pulsación, asegúrese de  que la propiedad Aplicar inserción frontal está activa y de que el plano Iniciar distancia de inserción se coloca delante del plano táctil **Interacción** cercana. El **plano táctil Interacción** cercana se indica mediante el plano azul situado delante del origen de la flecha blanca en el gif siguiente:
 
 ![Componente de script de botón presionable con la propiedad Aplicar inserción front-push resaltada](../images/button/MRTK_Button_Enforce_Push.png)
 
@@ -372,7 +372,7 @@ MrTK Standard Shader proporciona varias características que facilita la adició
 
 <img src="../images/button/MRTK_PressableButtonCube4.png" width="450" alt="Pressable button cube 4">
 
-Active `Hover Light` y en Fluent `Proximity Light` **opciones**. Esto habilita los comentarios visuales para las interacciones de mano cercana (luz de proximidad) y puntero lejano (mantener el puntero sobre la luz).
+Active `Hover Light` y en Fluent `Proximity Light` **opciones**. Esto permite comentarios visuales para las interacciones de mano cercana (luz de proximidad) y puntero lejano (mantener el puntero sobre la luz).
 
 <img src="../images/button/MRTK_PressableButtonCube5.png" width="450" alt="pressable button cube 5">
 
@@ -388,7 +388,7 @@ Dado que el script expone eventos como `PressableButton.cs` TouchBegin(), TouchE
 
 ### <a name="4-adding-visual-states-and-handle-far-interaction-events"></a>4. Adición de estados visuales y control de eventos de interacción lejana
 
-[Interactable](interactable.md) es un script que facilita la creación de un estado visual para los distintos tipos de interacciones de entrada. También controla eventos de interacción lejana. Agregue `Interactable.cs` y arrastre y coloque el objeto de cubo en el campo **Destino** en **Perfiles**. A continuación, cree un tema con un tipo **ScaleOffsetColorTheme**. En este tema, puede especificar el color del objeto para los estados de interacción específicos, como **Foco** **y Presionado.** También puede controlar la escala y el desplazamiento. Compruebe **Easing (Aceleración)** y establezca la duración para que la transición visual sea fluida.
+[Interactable](interactable.md) es un script que facilita la creación de un estado visual para los distintos tipos de interacciones de entrada. También controla eventos de interacción lejana. Agregue `Interactable.cs` y arrastre y coloque el objeto de cubo en el campo **Destino** en **Perfiles**. A continuación, cree un nuevo tema con un tipo **ScaleOffsetColorTheme**. En este tema, puede especificar el color del objeto para los estados de interacción específicos, como **Foco** **y Presionado.** También puede controlar la escala y el desplazamiento. Compruebe **Easing (Aceleración)** y establezca la duración para que la transición visual sea fluida.
 
 ![Selección del tema del perfil](../images/button/mrtk_button_profiles.gif)
 
@@ -399,7 +399,7 @@ Verá que el objeto responde a interacciones lejanas (de rayo de mano o de mirad
 
 ## <a name="custom-button-examples"></a>Ejemplos de botones personalizados
 
-En la [escena HandInteractionExample,](../example-scenes/hand-interaction-examples.md)vea los ejemplos de botones de redondeo y de teclado que usan `PressableButton` .
+En la [escena HandInteractionExample,](../example-scenes/hand-interaction-examples.md)vea los ejemplos de botones de redondeo y de mano que usan `PressableButton` .
 
 <img src="../images/button/MRTK_Button_Custom1.png" width="450" alt="Pressable Custom1">
 
@@ -409,7 +409,7 @@ Cada clave tiene un `PressableButton` y un `NearInteractionTouchable` script asi
 
 <img src="../images/button/MRTK_Button_Custom3.png" width="450" alt="Pressable Custom3">
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 * [Interactuable](interactable.md)
 * [Temas visuales](visual-themes.md)

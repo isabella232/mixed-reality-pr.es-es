@@ -1,24 +1,24 @@
 ---
 title: Notas de la versión
-description: Notas de la versión Windows Mixed Reality para la actualización 2020 de Windows 10 (también conocida como 2004).
+description: Windows Mixed Reality notas de la versión de la Windows 10 de mayo de 2020 (también conocida como 2004).
 author: tmlyon
 ms.author: toddly
 ms.date: 05/27/2020
 ms.topic: article
-keywords: Notas de la versión, versión, Windows 10, compilación, 20H1, so, 2020 de mayo de 2004
-ms.openlocfilehash: e69bc4d67d37ef7615443d417a151ee32a285f0e
-ms.sourcegitcommit: d3a3b4f13b3728cfdd4d43035c806c0791d3f2fe
+keywords: notas de la versión, versión, windows 10, compilación, 20H1, os, mayo de 2020, 2004
+ms.openlocfilehash: a77ef68c464c158e6d3a48a2fb6e3debb0ffb7b404d4d2ba0e2b566168be36cc
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98582846"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223317"
 ---
 # <a name="release-notes"></a>Notas de la versión
 
-Puede encontrar las notas de la versión más reciente de los auriculares y controladores de controlador de movimiento de la realidad mixta de Windows en nuestra documentación de la [guía más entusiasta](/windows/mixed-reality/enthusiast-guide/mixed-reality-software). Si está buscando información de HoloLens, puede encontrarlas en las notas de la versión de [hololens (1ª generación)](/hololens/hololens1-release-notes) o de [hololens 2](/hololens/hololens-release-notes) .
+Puede encontrar las notas de la versión más recientes de los Windows Mixed Reality cascos y controladores de movimiento en nuestra documentación [de la Guía para aficionados.](/windows/mixed-reality/enthusiast-guide/mixed-reality-software) Si busca información HoloLens, puede encontrarla en las notas de HoloLens [(1.ª generación)](/hololens/hololens1-release-notes) [o HoloLens 2](/hololens/hololens-release-notes) versión.
 
 ## <a name="see-also"></a>Consulte también
-* [Compatibilidad con auriculares envolvente (vínculo externo)](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
-* [Compatibilidad con HoloLens (vínculo externo)](https://support.microsoft.com/products/hololens)
+* [Compatibilidad con cascos envolventes (vínculo externo)](/windows/mixed-reality/enthusiast-guide/troubleshooting-windows-mixed-reality)
+* [HoloLens (vínculo externo)](https://support.microsoft.com/products/hololens)
 * [Instalación de las herramientas](../develop/install-the-tools.md)
 * [Envíenos sus comentarios.](/hololens/hololens-feedback)

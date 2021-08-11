@@ -1,25 +1,25 @@
 ---
-title: MRTK y la extracción de código administrado
+title: MRTK y eliminación de código administrado
 description: Quitar código en MRTK y Unity
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 8b8e0f4488a6e955e599084c0b59d8c80f553a78
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 4348adf1d9cb2e7fc74cf5258e3272baaac96a5fc34565873cf35ae93225bdbe
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176297"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115221875"
 ---
-# <a name="mrtk-and-managed-code-stripping"></a>MRTK y la extracción de código administrado
+# <a name="mrtk-and-managed-code-stripping"></a>MRTK y eliminación de código administrado
 
 Cuando se usa el back-end de scripting IL2CPP de Unity (opcional en Unity 2018.4, obligatorio en 2019 y versiones [posteriores),](https://docs.unity3d.com/Manual/ManagedCodeStripping.html) se produce la extracción de código administrado.
 El vinculador de Unity realiza este proceso para reducir el tamaño binario, así como para reducir los tiempos de compilación.
 
 El Mixed Reality Toolkit usa un archivo, , para influir en cómo el vinculador de `link.xml` Unity procesa ensamblados MRTK. Este archivo, descrito en su totalidad en la documentación de [Unity,](https://docs.unity3d.com/Manual/ManagedCodeStripping.html#LinkXML)proporciona al vinculador instrucciones sobre cómo conservar el código cuando no se puede inferir su uso (por ejemplo, se usa a través de la reflexión).
 
-Como plataforma flexible y personalizable, MRTK crea el archivo en durante la importación, si se encuentra `link.xml` `Assets/MixedRealityToolkit.Generated` que no existe. Los archivos de link.xml existentes no se sobrescriben. Se recomienda que y `link.xml` se agregan al control de `link.xml.meta` versiones. Los desarrolladores deben tener la libertad de `Assets/MixedRealityToolkit.Generated/link.xml` personalizar para satisfacer las necesidades del proyecto.
+Como plataforma flexible y personalizable, MRTK crea el archivo en durante la importación, si se encuentra `link.xml` `Assets/MixedRealityToolkit.Generated` que no existe. Los archivos de link.xml existentes no se sobrescriben. Se recomienda que y `link.xml` `link.xml.meta` se agregó al control de versiones. Los desarrolladores no duden en `Assets/MixedRealityToolkit.Generated/link.xml` personalizarlo para satisfacer las necesidades del proyecto.
 
 De forma predeterminada, link.xml archivo creado por MRTK conserva la totalidad de los ensamblados que se muestran en los datos siguientes.
 

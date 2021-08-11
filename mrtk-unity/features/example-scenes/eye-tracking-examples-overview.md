@@ -1,18 +1,18 @@
 ---
-title: Introducción a los ejemplos de seguimiento de los ojos
-description: Ejemplo para crear un seguimiento de los ojos en MRTK
+title: Información general sobre ejemplos del seguimiento ocular
+description: Ejemplo para compilar el seguimiento de los ojos en MRTK
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, EyeTracking,
-ms.openlocfilehash: 4cdeaa10725e00ac1a041c3692d64c1bd6488854
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 32ae64a470572dda71578948d5091887bea9e0e084d97ede7f2f14af596b5a6b
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113175542"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223223"
 ---
-# <a name="eye-tracking-examples-overview"></a>Introducción a los ejemplos de seguimiento de los ojos
+# <a name="eye-tracking-examples-overview"></a>Información general sobre ejemplos del seguimiento ocular
 
 En este tema se describe cómo empezar a trabajar rápidamente con el seguimiento de los ojos en MRTK mediante la creación de ejemplos de seguimiento ocular de MRTK (Assets/MRTK/Examples/Demos/EyeTracking).
 Estos ejemplos le permiten experimentar una de nuestras nuevas funcionalidades mágicas de entrada: **Seguimiento de los ojos.**
@@ -50,7 +50,7 @@ Además, hay un ejemplo para la rotación de manos libres de hologramas 3D, ya q
 
 En este tutorial se muestra un escenario de entrada denominado [Put-That-There](https://youtu.be/CbIn8p4_4CQ) que se reentraba a la investigación del laboratorio multimedia mit a principios de la década de 1980 con entrada de ojo, mano y voz.
 La idea es sencilla: benefíciese de sus ojos para una selección y un posicionamiento de destino rápidos.
-Basta con mirar un holograma y decir _"put this",_ mire dónde desea colocarlo y diga _"ahí!"._
+Basta con mirar un holograma y decir _"put this",_ mire dónde quiere colocarlo y diga _"there!"._
 Para colocar el holograma de forma más precisa, puede usar entradas adicionales de las manos, la voz o los controladores.
 
 **Resumen:** colocación de hologramas con los ojos, la voz y la entrada de la mano *(arrastrar y colocar).* Controles deslizantes compatibles con los ojos con los ojos y las manos.
@@ -96,7 +96,7 @@ Es importante que la escena raíz se muestra como la primera escena de la lista:
 
 Después de agregar las escenas de seguimiento de los ojos al Configuración de compilación y cargar _EyeTrackingDemo-00-RootScene,_ hay una última cosa que puede que quiera comprobar: ¿Está habilitado el script _"OnLoadStartScene"_ asociado a _MixedRealityBasicSceneSetup_ GameObject? Esto es para que la escena raíz sepa qué escena de demostración se va a cargar primero.
 
-![Ejemplo del script de OnLoad_StartScene](../images/eye-tracking/mrtk_et_onloadstartscene.jpg)
+![Ejemplo del script OnLoad_StartScene script](../images/eye-tracking/mrtk_et_onloadstartscene.jpg)
 
 ¡Vamos a deshacer! Presione _"Reproducir"._
 Debería ver que aparecen varias gemas y el menú de la escena en la parte superior.
@@ -131,11 +131,11 @@ No se preocupe. Esto es lo que puede hacer:
 2. En la _escena raíz,_ deshabilite el script _"OnLoadStartScene"._
 3. _Arrastre y coloque una de_ las escenas de prueba de seguimiento  de los ojos que se describen a continuación (o cualquier otra escena) en la vista Jerarquía, como se muestra en la captura de pantalla siguiente.
 
-    ![Ejemplo de escena de suma](../images/eye-tracking/mrtk_et_additivescene.jpg)
+    ![Ejemplo de escena de adiciones](../images/eye-tracking/mrtk_et_additivescene.jpg)
 
 4. Presione _Reproducir._
 
-Tenga en cuenta que la carga de la sub escena como esta no es persistente: esto significa que si implementa la aplicación en el dispositivo HoloLens 2, solo cargará la escena raíz (suponiendo que aparezca en la parte superior de la compilación Configuración).
+Tenga en cuenta que la carga de la sub escena como esta no es persistente: esto significa que, si implementa la aplicación en el dispositivo HoloLens 2, solo cargará la escena raíz (suponiendo que aparezca en la parte superior de la compilación Configuración).
 Además, al compartir el proyecto con otros usuarios, las sub escenas no se cargan automáticamente.
 
 ---

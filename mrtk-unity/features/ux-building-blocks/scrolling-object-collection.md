@@ -1,20 +1,20 @@
 ---
-title: Colección de objetos de desplazamiento
+title: Desplazamiento por la colección de objetos
 description: Tipos de menú información general MRTK
 author: vaoliva
 ms.author: vaolivaa
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, objeto de desplazamiento
-ms.openlocfilehash: a724b9fb4a0f72910e16353a6c76b9e31005a76e
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: a97ea9919cf484cf5240dde027f38baca37ba9570588bca032bee9c116aed873
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176599"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115221757"
 ---
-# <a name="scrolling-object-collection"></a>Colección de objetos de desplazamiento
+# <a name="scrolling-object-collection"></a>Desplazamiento por la colección de objetos
 
-![Colección de objetos de desplazamiento](../images/scrolling-collection/ScrollingCollection_Main.jpg)
+![Desplazamiento por la colección de objetos](../images/scrolling-collection/ScrollingCollection_Main.jpg)
 
 La colección de objetos de desplazamiento de MRTK es un componente de la experiencia de usuario que permite el desplazamiento de contenido 3D a través de un área de visualización independiente. El movimiento de desplazamiento se puede desencadenar mediante la interacción de entrada cercana o lejana y mediante la paginación discreta. Admite objetos interactivos y no interactivos.
 
@@ -58,7 +58,7 @@ La colección de objetos de [](xref:Microsoft.MixedReality.Toolkit.Utilities.Gri
 > Cualquier material de objeto de contenido de desplazamiento debe usar el sombreador estándar [MRTK](../rendering/MRTK-standard-shader.md) para que el efecto de recorte en el área visualizable funcione correctamente.
 
 > [!NOTE]
-> Si está habilitado el enmascaramiento de contenido de desplazamiento, la colección de objetos de desplazamiento agregará un componente de instancia de [material](../rendering/material-instance.md) a los objetos de contenido que tengan asociado un representador. Este componente se usa para administrar la duración de los materiales de instancia y mejorar el rendimiento de la memoria.
+> Si está habilitado el enmascaramiento de contenido de desplazamiento, la colección de objetos de desplazamiento agregará un componente de instancia de [material](../rendering/material-instance.md) a cualquier objeto de contenido que tenga asociado un representador. Este componente se usa para administrar la duración de los materiales de instancia y mejorar el rendimiento de la memoria.
 
 ### <a name="configuring-the-scrolling-viewable-area"></a>Configuración del área de desplazamiento que se puede ver
 
@@ -67,13 +67,13 @@ La colección de objetos de [](xref:Microsoft.MixedReality.Toolkit.Utilities.Gri
     * Elija el número de **niveles por página** según el número deseado de filas visibles.
 1. Cambie el **ancho, el** **alto** y la profundidad de la celda **de** página según las dimensiones de los objetos de contenido.
 
-Observe que los objetos de contenido que se encuentran fuera del área desplazable ahora están deshabilitados, mientras que los objetos que intersecan con el wireframe de desplazamiento podrían enmascararse parcialmente mediante la primitiva de recorte.
+Observe que los objetos de contenido que se encuentran fuera del área de desplazamiento visualizable ahora están deshabilitados, mientras que los objetos que intersecan con el wireframe de desplazamiento podrían enmascararse parcialmente mediante la primitiva de recorte.
 
 ![Área que se puede ver](../images/scrolling-collection/ScrollingObjectCollection_ViewableArea.png)
 
 ### <a name="testing-the-scrolling-object-collection-in-the-editor"></a>Prueba de la colección de objetos de desplazamiento en el editor
 
-1. Presione Reproducir y mantenga presionada la barra espaciadoa para mostrar una mano de simulación de entrada.
+1. Presione el botón de reproducción y mantenga presionada la barra espaciador para mostrar una mano de simulación de entrada.
 1. Mueva la mano hasta que el colisionador de desplazamiento o cualquier contenido interactivo de desplazamiento esté en el foco y desencadene el movimiento de desplazamiento haciendo clic y arrastrando hacia arriba y hacia abajo con el mouse izquierdo.
 
 ## <a name="controlling-the-scrolling-object-from-code"></a>Controlar el objeto de desplazamiento desde el código
@@ -97,19 +97,19 @@ public class ScrollablePagination : MonoBehaviour
 
 ## <a name="scrolling-object-collection-properties"></a>Desplazamiento de las propiedades de la colección de objetos
 
-| General          | Descripción                                   |
+| General          | Description                                   |
 | :--------------- | :-------------------------------------------- |
 | Desplazarse en un sentido | Dirección en la que se debe desplazar el contenido. |
 
-| Paginación     | Descripción                                                                                               |
+| Paginación     | Description                                                                                               |
 | :------------- | :-------------------------------------------------------------------------------------------------------- |
-| Celdas por nivel | Número de celdas de una fila en la vista de desplazamiento hacia abajo o número de celdas de una columna en la vista de desplazamiento de la izquierda a la derecha. |
+| Celdas por nivel | Número de celdas de una fila en la vista de desplazamiento hacia abajo o número de celdas de una columna en la vista de desplazamiento izquierda-derecha. |
 | Niveles por página | Número de niveles visibles en el área de desplazamiento.                                                            |
 | Celda de página      | Dimensiones de la celda de paginación.                                                                        |
 
-| Configuración avanzada           | Descripción                                                                                                                                                                |
+| Configuración avanzada           | Description                                                                                                                                                                |
 | :-------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Modo de edición de máscara              | Modos de edición para definir el cuadro de recorte que enmascara los límites. 'Auto' usa automáticamente valores de paginación. 'Manual' permite la manipulación directa del objeto del cuadro de recorte. |
+| Modo de edición de máscara              | Modos de edición para definir los límites del enmascaramiento del cuadro de recorte. 'Auto' usa automáticamente valores de paginación. 'Manual' permite la manipulación directa del objeto del cuadro de recorte. |
 | Modo de edición de colisionador          | Modos de edición para definir los límites del colisionador de interacción de desplazamiento. 'Auto' usa automáticamente valores de paginación. 'Manual' permite la manipulación directa del colisionador.     |
 | Se puede desplazar                  | Habilita o deshabilita el desplazamiento con una interacción cercana o lejana.                                                                                                                      |
 | Usar en la representación previa           | Alterna si scrollingObjectCollection usará el evento Camera OnPreRender para administrar la visibilidad del contenido.                                                          |
@@ -119,38 +119,38 @@ public class ScrollablePagination : MonoBehaviour
 | Distancia táctil frontal        | Distancia, en metros, para colocar un plano xy local usado para comprobar si se inició una interacción táctil en la parte frontal de la vista de desplazamiento.                                           |
 | Umbral de versión           | Retirar la cantidad, en metros, de los límites de desplazamiento necesarios para pasar de la entrada táctil a la liberada.                                                                |
 
-| Velocidad            | Descripción                                                                                                 |
+| Velocidad            | Description                                                                                                 |
 | ------------------- | ----------------------------------------------------------------------------------------------------------- |
 | Tipo de velocidad    | Tipo deseado de caída de velocidad para el scroller.                                                      |
 | Multiplicador de velocidad | Cantidad de velocidad (adicional) que se va a aplicar al desplazamiento.                                                       |
-| Velocidad de aceleración     | Cantidad de reserva aplicada a la velocidad.                                                                  |
+| Velocidad de la aceleración     | Cantidad de reserva aplicada a la velocidad.                                                                  |
 | Multiplicador de saltos   | Multiplicador para agregar más saltos al sobrescroll de una lista cuando se usa la reserva por fotograma o la reserva por elemento. |
 
-| Opciones de depuración         | Descripción                                                                                                 |
+| Opciones de depuración         | Description                                                                                                 |
 | --------------------- | ----------------------------------------------------------------------------------------------------------- |
-| Máscara habilitada          | Modo de visibilidad del contenido de desplazamiento. El valor predeterminado enmascarará todos los objetos fuera del área de desplazamiento que se puede ver. |
+| Máscara habilitada          | Modo de visibilidad del contenido de desplazamiento. El valor predeterminado enmascarará todos los objetos fuera del área visualizable de desplazamiento. |
 | Mostrar planos de umbral | Si es true, el editor representará los planos de umbral de lanzamiento táctil alrededor de los límites de desplazamiento.            |
 | Paginación de depuración      | Use esta sección para depurar la paginación de desplazamiento durante el tiempo de ejecución.                                             |
 
 | Eventos              | Descripción                                                                                                                   |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Al hacer clic en            | Se desencadena cuando el colisionador de fondo de desplazamiento o cualquiera de sus contenidos interactivos recibe un clic.                             |
-| On touch started    | Se desencadena cuando el colisionador de fondo de desplazamiento o cualquiera de sus contenidos interactivos recibe un toque de interacción cercana.            |
-| Al finalizar la función táctil      | Se desencadena cuando finaliza una interacción táctil activa cuando el puntero de interacción cercana cruza un plano de umbral de liberación. |
+| Al hacer clic en            | Se desencadena cuando el colisionador de fondo de desplazamiento o cualquiera de su contenido interactivo recibe un clic.                             |
+| On touch started    | Se desencadena cuando el colisionador de fondo de desplazamiento o cualquiera de su contenido interactivo recibe un toque de interacción cercano.            |
+| Al tocar finalizado      | Se desencadena cuando finaliza una interacción táctil activa cuando el puntero de interacción cercana cruza un plano de umbral de versión. |
 | En el momento en que se inició | Se desencadena cuando el contenedor de desplazamiento comienza a moverse por interacción, caída de velocidad o paginación.                            |
 | Al finalizar el impulso   | Se desencadena cuando el contenedor de desplazamiento deja de moverse por interacción, caída de velocidad o paginación.                             |
 
 ## <a name="scrolling-example-scene"></a>Escena de ejemplo de desplazamiento
 
-**La escena de ejemplo ScrollingObjectCollection.unity** consta de tres ejemplos desplazables, cada uno con una configuración de reserva de velocidad diferente. La escena de ejemplo contiene paredes para mostrar el comportamiento de colocación de la superficie que está deshabilitado de forma predeterminada en la jerarquía. La escena de ejemplo se puede encontrar en la ``MRTK/Examples/Demos/ScrollingObjectCollection/Scenes`` carpeta .
+**La escena de ejemplo ScrollingObjectCollection.unity** consta de tres ejemplos desplazables, cada uno con una configuración de reserva de velocidad diferente. La escena de ejemplo contiene paredes para mostrar los comportamientos de colocación en la superficie, que están deshabilitados de manera predeterminada en la jerarquía. La escena de ejemplo se puede encontrar en la ``MRTK/Examples/Demos/ScrollingObjectCollection/Scenes`` carpeta .
 
 ![Escena de ejemplo de colección de objetos de desplazamiento](../images/scrolling-collection/ScrollingObjectCollection_ExampleScene.png)
 
 ## <a name="scrolling-example-prefabs"></a>Prefabs de ejemplo de desplazamiento
 
-Para mayor comodidad, hay dos objetos prefabs de colección de objetos de desplazamiento disponibles para su uso. Los requisitos previos de ejemplo se pueden encontrar en la ``MRTK/Examples/Demos/ScrollingObjectCollection/Prefabs`` carpeta .
+Para mayor comodidad, hay dos elementos prefabs de colección de objetos de desplazamiento disponibles para su uso. Los requisitos previos de ejemplo se pueden encontrar en la ``MRTK/Examples/Demos/ScrollingObjectCollection/Prefabs`` carpeta .
 
-![Objetos prefabs de la colección de objetos de desplazamiento](../images/scrolling-collection/ScrollingObjectCollection_Prefabs.png)
+![Elementos prefabs de la colección de objetos de desplazamiento](../images/scrolling-collection/ScrollingObjectCollection_Prefabs.png)
 
 ## <a name="see-also"></a>Consulte también
 

@@ -5,19 +5,19 @@ author: cadia
 ms.author: cadia
 ms.date: 05/27/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, C#, Colaboradores, Community
-ms.openlocfilehash: ae8cc8b1ab26a12188622a2c846dddd381491dc2
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: b80b61549d4780dcbc2dace411beba2d268caf94fc38939bbce39eadffc8077c
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177297"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115228725"
 ---
 # <a name="authors"></a>Authors
 
 Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contribuciones de personas de todo el mundo. Gracias a todos los que tienen y siguen contribuyendo.
 
 - achaperon
-- Adam Adam (AdamMitcca-ms)
+- Adam Adam (AdamMitmit-ms)
 - Addison Linville (radicalad)
 - ADP-JoNeff
 - afarquía
@@ -32,7 +32,7 @@ Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contrib
 - Sedette Dúplex (zolbern)
 - Bertrand Oustrirev (BertrandOustriere)
 - Gross (blgrossMS)
-- Brandon Furtler (brandf)
+- Brandon Furtgulaler (brandf)
 - Osd Truong (truong93)
 - C. M. Barth (chrisfromwork)
 - Ría (Ría-Ría)
@@ -52,8 +52,8 @@ Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contrib
 - deibu
 - Perorón (fredo)
 - Dino Fejzagitivos (FejZa)
-- Dirk Songür (DirkSonchan)
-- DominicAílloro
+- Dirk Songür (DirkSonrada)
+- RíaAílloro
 - Eric Eric (Ecnassianer)
 - Eric Fiscus (MRW-Eric)
 - Eric O'Omisión (ericob)
@@ -70,7 +70,7 @@ Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contrib
 - ybdev (se desvíabdev)
 - Grace Lee (grayclee)
 - Indeste (grbury)
-- AsínstroNe (hferrone)
+- QueríaDatos (hferrone)
 - Yu Yu (yuyu)
 - hybridherbst
 - Yung-il Kim (yungilkim)
@@ -89,8 +89,8 @@ Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contrib
 - Julia Julia (julioenka)
 - élloehr-kg
 - JimJik Lee (fnwinter)
-- Ken Cububzak (KenUbzak)
-- Peronía1 (Gmail1LG)
+- Ken Kovubzak (KenUbzak)
+- Perorón1 (Gmail1LG)
 - Kevin Kevin (KevinKennedy)
 - Kevin Semple (polar-kev)
 - porracher1
@@ -109,7 +109,7 @@ Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contrib
 - Runo Valoriani (mvaloriani)
 - John Johnson (matthejo)
 - Max Wang-MS
-- agagley-MS
+- ageagley-MS
 - michael (insominx)
 - Michael House (michael-house)
 - Michael Mikelsky (mpkoz)
@@ -121,7 +121,7 @@ Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contrib
 - Salandin (ossala)
 - PatientEz
 - Patrick Cook (darax)
-- Contrabando (AllBecomesGood)
+- Adiós (AllBecomesGood)
 - ritijain
 - Robert Onulak (Ziugy)
 - Roberto Sonnino (robertos)
@@ -138,12 +138,12 @@ Microsoft Mixed Reality Toolkit es un proyecto colaborativo que contiene contrib
 - Srinjoy Majumdar (srinjoym)
 - Stefan Wasserbauer (wassx)
 - Stephen Hodgson (StephenHodgson)
-- Steve Igh (xwipeoutx)
+- Steve Hle (xwipeoutx)
 - Sue Loh [MS] (sloh-ms)
 - taruksu (taruksu)
-- Tim TimKen (timGerken)
+- TimKen (timGerken)
 - SerialÍa (antz)
-- Tanto Ferrell (Troy-Ferrell)
+- Utía Ferrell (Troyano-Ferrell)
 - Tux (NoTuxNoBux)
 - Vaoliva (Vaoliva)
 - Weasy (Weasy666)

@@ -1,18 +1,18 @@
 ---
-title: Grabación de animación de entrada
+title: Grabación de animaciones de entrada
 description: Documentación sobre el sistema de grabación de animaciones de entrada en MRTK
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 6bdb764c5905352b9aec7c1512a73e727b60573a
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 1a900b7b419a0aca45c3601ed583ef6c2e326574cb9e732edd0474afe117b895
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176939"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223076"
 ---
-# <a name="input-animation-recording"></a>Grabación de animación de entrada
+# <a name="input-animation-recording"></a>Grabación de animaciones de entrada
 
 MRTK cuenta con un sistema de grabación por el que los datos de movimiento de la cabeza y de seguimiento de las manos se pueden almacenar en archivos de animación. A continuación, los datos registrados se pueden reproducir mediante el sistema [de simulación de entrada](input-simulation-service.md).
 
@@ -64,10 +64,10 @@ El tiempo de animación actual también se puede controlar directamente con la [
 
 ### <a name="editor-tools-for-recording-and-playing-input-animation"></a>Herramientas del editor para grabar y reproducir animaciones de entrada
 
-Existen varias herramientas en el editor de Unity para grabar y examinar la animación de entrada. Se puede acceder a estas herramientas en la ventana herramientas de simulación de entrada [,](input-simulation-service.md#input-simulation-tools-window)que se puede abrir desde el menú Mixed Reality Toolkit > Utilities > Input Simulation (Simulación _de_ entrada).
+Existen varias herramientas en el editor de Unity para grabar y examinar la animación de entrada. Se puede acceder a estas herramientas en la ventana herramientas de [simulación](input-simulation-service.md#input-simulation-tools-window)de entrada , que se puede abrir desde el menú Mixed Reality Toolkit > Utilidades > _simulación de_ entrada.
 
 > [!NOTE]
-> La grabación y reproducción de entrada solo funcionan durante el modo de reproducción.
+> La grabación y reproducción de entrada solo funciona durante el modo de reproducción.
 
 La ventana de grabación de entrada tiene dos modos:
 
@@ -78,7 +78,7 @@ La ventana de grabación de entrada tiene dos modos:
 
   El límite de tiempo del búfer también se puede cambiar en este modo.
 
-* _Reproducción para_ cargar archivos de animación y volver a crear la entrada a través del sistema de simulación de entrada.
+* _Reproducción para_ cargar archivos de animación y, a continuación, volver a crear la entrada a través del sistema de simulación de entrada.
 
   Primero se debe cargar una animación en este modo. Después de grabar la entrada en modo de grabación, la animación resultante se carga automáticamente. También puede hacer clic en el botón "Cargar" para seleccionar un archivo de animación existente.
 

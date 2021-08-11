@@ -5,12 +5,12 @@ author: keveleigh
 ms.author: kurtie
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 9d960d01e738736edd452a124db5c306b5d752ce
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 9e657e0b90f8087670b72c993ab1dcf78ae9e6680873139c6867d7c551a41895
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176129"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115220053"
 ---
 # <a name="migration-window"></a>El plazo de migración
 
@@ -27,7 +27,7 @@ Para abrir la ventana, seleccione **Mixed Reality**  >  **Toolkit**  >  **migrac
 
 ### <a name="object-mode"></a>Modo de objeto
 
-Al seleccionar la pestaña objects (Objetos), se habilita el campo de objeto al que el usuario puede arrastrar y colocar cualquier objeto Game de la escena o los objetos prefabs actualmente abiertos de la carpeta del proyecto que se va a migrar.
+Al seleccionar la pestaña objetos, se habilita el campo de objeto al que el usuario puede arrastrar y colocar cualquier objeto Game de la escena o los objetos prefabs actualmente abiertos de la carpeta del proyecto que se va a migrar.
 Al presionar el *botón quitar (-)* que se muestra en el lado derecho del objeto enumerado, se quita el objeto de la lista de selección.
 
 Una vez que todos los objetos  deseados están en la lista, al presionar el botón Migrar se aplicarán los cambios necesarios para la implementación del controlador de migración elegido a todos los componentes de la selección que coincidan con la implementación.
@@ -48,6 +48,6 @@ Al presionar *el botón* Migrar, se actualizará el componente de destino de la 
 
 ## <a name="see-also"></a>Consulte también
 
-- [Actualización desde versiones anteriores](../../updates-deployment/updating.md)
+- [Actualización de versiones anteriores](../../updates-deployment/updating.md)
 - [Versiones Mixed Reality Toolkit Microsoft](../../release-notes/mrtk-26-release-notes.md)
 - [Mapa de ruta de MRTK](../../roadmap.md)

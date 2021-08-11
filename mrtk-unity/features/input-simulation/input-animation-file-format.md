@@ -1,22 +1,22 @@
 ---
-title: Formato de archivo de animación de entrada
-description: Documentación sobre la especificación de formato de archivo binario de animación de entrada en MRTK
+title: Formato del archivo de animación de entrada
+description: Documentación sobre la especificación del formato de archivo binario de animación de entrada en MRTK
 author: CDiaz-MS
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: 400212d80833f5d8dfbb3c5265c755ed2e127131
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: bf77d976c9c894e6cf455a3a6b0e0c538912af2a9e8f8e2c7e847ba6e4657140
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177002"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115222767"
 ---
-# <a name="input-animation-file-format"></a>Formato de archivo de animación de entrada
+# <a name="input-animation-file-format"></a>Formato del archivo de animación de entrada
 
 ## <a name="overall-structure"></a>Estructura general
 
-El archivo binario de animación de entrada comienza con un número mágico entero de 64 bits. El valor de este número en notación hexadecimal es y se puede usar para identificar archivos `0x6a8faf6e0f9e42c6` de animación de entrada válidos.
+El archivo binario de animación de entrada comienza con un número mágico entero de 64 bits. El valor de este número en notación hexadecimal es `0x6a8faf6e0f9e42c6` y se puede usar para identificar archivos de animación de entrada válidos.
 
 Los ocho bytes siguientes son dos valores Int32 que declaran el número de versión principal y secundaria del archivo.
 
@@ -27,23 +27,23 @@ El resto del archivo lo toman los datos de animación, que pueden cambiar entre 
 | Número mágico | Int64 |
 | Número de versión principal | Int32 |
 | Número de versión secundaria | Int32 |
-| Datos de animación | _consulte la sección de versión._ |
+| Datos de animación | _ver sección de versión_ |
 
 ## <a name="version-11"></a>Versión 1.1
 
-Los datos de animación de entrada constan de tres valores booleanos que indican si la animación contiene datos de cámara, mano y mirada con los ojos, seguidos de una secuencia de curvas de animación. Las curvas presentes dependen de los valores de estos booleanos. Cada curva puede tener un número diferente de fotogramas clave.
+Los datos de animación de entrada constan de tres valores booleanos que indican si la animación contiene datos de camera, hand y eye gaze, seguidos de una secuencia de curvas de animación. Las curvas presentes dependen de los valores de estos valores booleanos. Cada curva puede tener un número diferente de fotogramas clave.
 
 | Sección | Tipo | Notas |
 |---------|------|------|
 | Tiene posición de cámara | Boolean | |
 | Tiene datos de mano | Boolean | |
-| Tiene la mirada con los ojos| Boolean | |
+| Tiene mirada con los ojos| Boolean | |
 | Cámara | [Curvas de posición](#pose-curves) | Solo si tiene la posición de la cámara es true |
 | Izquierda con seguimiento a mano | [Curva booleana](#boolean-curve) | Solo si tiene datos de mano es true |
 | Derecha con seguimiento a mano | [Curva booleana](#boolean-curve) | Solo si tiene datos de mano es true |
 | Acercamiento de la mano a la izquierda | [Curva booleana](#boolean-curve) | Solo si tiene datos de mano es true |
-| Acercamiento de la mano a la derecha | [Curva booleana](#boolean-curve) | Solo si tiene datos de mano es true |
-| Uniones de mano a la izquierda | [Curvas de posición conjuntas](#joint-pose-curves) | Solo si tiene datos de mano es true |
+| Apreción de la mano a la derecha | [Curva booleana](#boolean-curve) | Solo si tiene datos de mano es true |
+| Uniones de mano izquierda | [Curvas de posición conjuntas](#joint-pose-curves) | Solo si tiene datos de mano es true |
 | Derecha de las uniones de mano | [Curvas de posición conjuntas](#joint-pose-curves) | Solo si tiene datos de mano es true |
 | Mirada con los ojos | [Curvas de rayo](#ray-curves)] | Solo si la mirada con los ojos es verdadera |
 
@@ -57,13 +57,13 @@ Los datos de animación de entrada constan de una secuencia de curvas de animaci
 | Izquierda con seguimiento a mano | [Curva booleana](#boolean-curve) |
 | Derecha con seguimiento a mano | [Curva booleana](#boolean-curve) |
 | Acercamiento de la mano a la izquierda | [Curva booleana](#boolean-curve) |
-| Acercamiento de la mano a la derecha | [Curva booleana](#boolean-curve) |
-| Uniones de mano a la izquierda | [Curvas de posición conjuntas](#joint-pose-curves) |
+| Apreción de la mano a la derecha | [Curva booleana](#boolean-curve) |
+| Uniones de mano izquierda | [Curvas de posición conjuntas](#joint-pose-curves) |
 | Derecha de las uniones de mano | [Curvas de posición conjuntas](#joint-pose-curves) |
 
 ### <a name="joint-pose-curves"></a>Curvas de posición conjuntas
 
-Para cada mano se almacena una secuencia de curvas de animación conjuntas. El número de uniones es fijo y se almacena un conjunto de curvas de posición para cada unión.
+Por cada mano se almacena una secuencia de curvas de animación conjuntas. El número de uniones es fijo y se almacena un conjunto de curvas de posición para cada unión.
 
 | Sección | Tipo |
 |---------|------|
@@ -124,7 +124,7 @@ Las curvas de rayo son una secuencia de 3 curvas de animación para el vector de
 
 ### <a name="float-curve"></a>Curva float
 
-Las curvas de punto flotante son curvas bézier completamente inquentes con un número variable de fotogramas clave. Cada fotograma clave almacena un tiempo y un valor de curva, así como tangentes y pesos en el lado izquierdo y derecho de cada fotograma clave.
+Las curvas de punto flotante son curvas bézier totalmente inquentes con un número variable de fotogramas clave. Cada fotograma clave almacena un tiempo y un valor de curva, así como tangentes y pesos en el lado izquierdo y derecho de cada fotograma clave.
 
 | Sección | Tipo |
 |---------|------|
@@ -139,7 +139,7 @@ Un fotograma clave flotante almacena valores tangentes y de peso junto con el ti
 
 | Sección | Tipo |
 |---------|------|
-| Time | Float32 |
+| Tiempo | Float32 |
 | Valor | Float32 |
 | InTangent | Float32 |
 | OutTangent | Float32 |
@@ -154,7 +154,7 @@ Las curvas booleanas son secuencias simples de valores de encendido y apagado. E
 | Sección | Tipo |
 |---------|------|
 | Modo de encapsulado previo | Int32, [modo de encapsulado](#wrap-mode) |
-| Modo posterior al ajuste | Int32, [modo de encapsulado](#wrap-mode) |
+| Modo posterior al encapsulado | Int32, [modo de encapsulado](#wrap-mode) |
 | Número de fotogramas clave | Int32 |
 | Fotogramas clave | [Fotograma clave booleano](#boolean-keyframe) |
 
@@ -164,7 +164,7 @@ Un fotograma clave booleano solo almacena una hora y un valor.
 
 | Sección | Tipo |
 |---------|------|
-| Time | Float32 |
+| Tiempo | Float32 |
 | Valor | Float32 |
 
 ### <a name="wrap-mode"></a>Modo de encapsulado
@@ -174,8 +174,8 @@ La semántica de los modos Pre y Post-Wrap sigue la definición [wrapMode de Uni
 | Valor | Significado |
 |-------|---------|
 | 0 | Valor predeterminado: lee el modo de repetición predeterminado configurado más arriba. |
-| 1 | Una vez: cuando el tiempo llegue al final del clip de animación, el clip dejará de reproducirse automáticamente y la hora se restablecerá al principio del clip. |
-| 2 | Bucle: cuando el tiempo llega al final del clip de animación, la hora continuará al principio. |
+| 1 | Una vez: cuando el tiempo llega al final del clip de animación, el clip dejará de reproducirse automáticamente y la hora se restablecerá al principio del clip. |
+| 2 | Bucle: cuando la hora llega al final del clip de animación, la hora continuará al principio. |
 | 4 | PingPong: cuando el tiempo llega al final del clip de animación, el tiempo volverá a hacer ping a ping entre el principio y el final. |
 | 8 | ClampForever: reproduce la animación. Cuando llegue al final, seguirá reproduciendo el último fotograma y nunca dejará de reproducirse. |
 

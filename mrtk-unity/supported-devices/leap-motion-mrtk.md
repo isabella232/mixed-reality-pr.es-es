@@ -5,12 +5,12 @@ author: CDiaz-ms
 ms.author: cadia
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, Leap Motion,
-ms.openlocfilehash: 3ddf039f8409022d8aa2e425c46cd4d47ede16a0
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: e675521a3a688bc0f9f8afdf1bdc01e583d0b47808d0aaff8b2eff263fce35bb
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113176512"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115222946"
 ---
 # <a name="using-leap-motion"></a>Uso de Leap Motion
 
@@ -20,7 +20,7 @@ El proveedor de datos Leap Motion permite el seguimiento de manos articulado par
 
 ![LeapMotionIntroGif](../images/cross-platform/leap-motion/LeapHandsGif3.gif)
 
-Este proveedor se puede usar en el editor y en el dispositivo en la plataforma independiente.  También se puede usar en el editor mientras está en la plataforma UWP, pero NO en una compilación de UWP.
+Este proveedor se puede usar en el editor y en el dispositivo en la plataforma independiente.  También se puede usar en el editor en la plataforma UWP, pero NO en una compilación de UWP.
 
 | Versión de MRTK | Versiones admitidas de los módulos de Unity de Leap Motion |
 | --- | --- |
@@ -37,7 +37,7 @@ Este proveedor se puede usar en el editor y en el dispositivo en la plataforma i
         - Importar solo el **paquete Principal** dentro de los módulos de Unity
 
 1. Integración de los módulos de Unity leap motion con MRTK
-    - Una vez que los módulos de Unity estén en el proyecto, vaya a **Mixed Reality Toolkit**  >  Leap Motion Integrate Leap Motion Unity Modules **(Integración** de  >  **Leap Motion Unity Modules).**
+    - Una vez que los módulos de Unity estén en el proyecto, vaya a **Mixed Reality Toolkit**  >  **Leap Motion** Integrate Leap Motion Unity Modules (Integración de los módulos  >  **leap motion de Unity).**
     > [!NOTE]
     > La integración de los módulos de Unity en MRTK agrega 10 definiciones de ensamblado al proyecto y agrega referencias a **Microsoft.MixedReality.Toolkit. Definición del ensamblado Providers.LeapMotion.** Asegúrese de que Visual Studio esté cerrado.
 
@@ -72,13 +72,13 @@ Este proveedor se puede usar en el editor y en el dispositivo en la plataforma i
       - La **orientación desk** contiene la propiedad que define la posición `LeapControllerOffset` delimitadora de las manos bisiesta del escritorio.  El desplazamiento se calcula en relación con la posición de la cámara principal y el valor predeterminado es (0,-0,2, 0,35) para asegurarse de que las manos aparecen delante y a la vista de la cámara.
 
         > [!NOTE]
-        > Las propiedades de desplazamiento del perfil se aplican una vez cuando se inicia la aplicación.  Para modificar los valores durante el tiempo de ejecución, obtenga el proveedor del servicio Leap Motion desde la página Leap Motion Administrador de dispositivos:
+        > Las propiedades de desplazamiento del perfil se aplican una vez cuando se inicia la aplicación.  Para modificar los valores durante el tiempo de ejecución, obtenga el proveedor del servicio Leap Motion en la página Leap Motion Administrador de dispositivos:
         >```
         >LeapMotionDeviceManager leapMotionDeviceManager = CoreServices.GetInputSystemDataProvider<LeapMotionDeviceManager>();
         >LeapXRServiceProvider leapXRServiceProvider = leapMotionDeviceManager.LeapMotionServiceProvider as LeapXRServiceProvider; 
         >```
 
-    - `EnterPinchDistance` y `ExitPinchDistance` son los umbrales de distancia para la detección de gestos de pulsar en el aire o desenlazador.  El gesto de acercar se calcula midiendo la distancia entre la punta del dedo índice y la punta del dedo.  Para generar un evento de entrada hacia abajo, el valor `EnterPinchDistance` predeterminado se establece en 0,02.  Para generar un evento de entrada arriba (salir de la acción de acercar), la distancia predeterminada entre la punta del dedo índice y la punta del dedo es 0,05.
+    - `EnterPinchDistance` y son `ExitPinchDistance` los umbrales de distancia para la detección de gestos de pulsar en el aire o desenlazador.  El gesto de acercar se calcula midiendo la distancia entre la punta del dedo índice y la punta del dedo.  Para generar un evento de entrada hacia abajo, el valor `EnterPinchDistance` predeterminado se establece en 0,02.  Para generar un evento de entrada arriba (salir de la acción de acercar), la distancia predeterminada entre la punta del dedo índice y la punta del control es 0,05.
 
     `LeapControllerOrientation`: casco (valor predeterminado) |  `LeapControllerOrientation`: Desk
     :-------------------------:|:-------------------------:
@@ -145,12 +145,12 @@ public class LeapHandJoints : MonoBehaviour, IMixedRealityHandJointHandler
 
 ## <a name="unity-editor-workflow-tip"></a>Sugerencia de flujo de trabajo del editor de Unity
 
-El uso del proveedor de datos Leap Motion no requiere un casco de realidad virtual.  Los cambios en una aplicación MRTK se pueden probar en el editor con las manos Leap sin casco.
+El uso del proveedor de datos Leap Motion no requiere un casco de realidad virtual.  Los cambios en una aplicación MRTK se pueden probar en el editor con las manos leap sin casco.
 
 Las manos leap motion se mostrarán en el editor, sin un casco de realidad virtual conectado.  Si se establece en Casco, el controlador Leap Motion tendrá que mantener el control Leap Motion con una mano con la `LeapControllerOrientation` cámara orientada hacia delante. 
 
 > [!NOTE]
-> Si la cámara se mueve mediante teclas WASD en el editor y es Casco, las manos `LeapControllerOrientation` no seguirán la cámara.  Las manos solo seguirán el movimiento de la cámara si un casco de realidad virtual está conectado mientras `LeapControllerOrientation` está establecido el **casco**.  Las manos bisiesta seguirán el movimiento de la cámara en el editor si `LeapControllerOrientation` está establecido en **Desk**.
+> Si la cámara se mueve mediante teclas WASD en el editor y es Casco , las manos `LeapControllerOrientation` no seguirán a la cámara.  Las manos solo seguirán el movimiento de la cámara si un casco de realidad virtual está conectado mientras `LeapControllerOrientation` está establecido el **casco**.  Las manos bisiesta seguirán el movimiento de la cámara en el editor si `LeapControllerOrientation` está establecido en **Desk**.
 
 ## <a name="removing-leap-motion-from-the-project"></a>Quitar Leap Motion del Project
 
@@ -182,7 +182,7 @@ Para probar si los módulos leap motion de Unity se han integrado con MRTK:
 
 ### <a name="copying-assembly-multiplayer-hlapi-failed"></a>Error al copiar el ensamblado HLAPI multijugador
 
-Al importar los recursos principales de Unity De Leap Motion, este error podría registrarse:
+Al importar los recursos principales de Unity de Leap Motion, este error podría registrarse:
 
 ```
 Copying assembly from 'Temp/com.unity.multiplayer-hlapi.Runtime.dll' to 'Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll' failed

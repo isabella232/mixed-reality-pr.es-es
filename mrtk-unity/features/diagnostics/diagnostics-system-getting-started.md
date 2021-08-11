@@ -1,18 +1,18 @@
 ---
-title: Introducción al sistema de diagnósticos
+title: Introducción al sistema de diagnóstico
 description: Documentación para habilitar y deshabilitar diagnósticos en MRTK
 author: davidkline-ms
 ms.author: davidkl
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK
-ms.openlocfilehash: a31b88f661c141941cae2d0b01668b26c0bed7d7
-ms.sourcegitcommit: f338b1f121a10577bcce08a174e462cdc86d5874
+ms.openlocfilehash: 536a35a0af0c0d0190f2f423f4a39e0d89e92c1acaa105ab37e8cf7fdc37cbf5
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2021
-ms.locfileid: "113177243"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115221822"
 ---
-# <a name="diagnostics-system-overview"></a>Introducción al sistema de diagnósticos
+# <a name="diagnostics-system-overview"></a>Introducción al sistema de diagnóstico
 
 El Mixed Reality Toolkit diagnostics proporciona herramientas de diagnóstico que se ejecutan dentro de la aplicación para habilitar el análisis de problemas de la aplicación.
 
@@ -30,7 +30,7 @@ Hay dos pasos clave para empezar a usar el sistema de diagnóstico.
 
 ### <a name="enable-diagnostics"></a>Habilitación de diagnósticos
 
-El sistema de diagnóstico se administra mediante el objeto MixedRealityToolkit (u otro componente [de registrador de](xref:Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar) servicios).
+El sistema de diagnóstico se administra mediante el objeto MixedRealityToolkit (u otro componente [del registrador de](xref:Microsoft.MixedReality.Toolkit.IMixedRealityServiceRegistrar) servicios).
 
 En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los pasos necesarios para otros registradores de servicios pueden ser diferentes.
 
@@ -44,7 +44,7 @@ En los pasos siguientes se supone que se usa el objeto MixedRealityToolkit. Los 
     ![Selección de la implementación del sistema de diagnósticos](../images/diagnostics/DiagnosticsSelectSystemType.png)
 
 > [!NOTE]
-> Los usuarios del perfil predeterminado `DefaultMixedRealityToolkitConfigurationProfile` (Assets/MRTK/SDK/Profiles) tendrán el sistema de diagnóstico preconfigurado para usar el [`MixedRealityDiagnosticsSystem`](xref:Microsoft.MixedReality.Toolkit.Diagnostics.MixedRealityDiagnosticsSystem) objeto .
+> Los usuarios del perfil predeterminado `DefaultMixedRealityToolkitConfigurationProfile` (Assets/MRTK/SDK/Profiles) tendrán preconfigurado el sistema de diagnóstico para usar el [`MixedRealityDiagnosticsSystem`](xref:Microsoft.MixedReality.Toolkit.Diagnostics.MixedRealityDiagnosticsSystem) objeto .
 
 ### <a name="configure-diagnostic-options"></a>Configuración de opciones de diagnóstico
 

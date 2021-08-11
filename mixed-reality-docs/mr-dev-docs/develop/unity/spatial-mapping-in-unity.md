@@ -6,16 +6,16 @@ ms.author: davidkl
 ms.date: 03/21/2018
 ms.topic: article
 keywords: Unity, asignación espacial, representador, colisionador, malla, examen, componente, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: fa571a13ce192b29b2a35033b55061f3ffb707da
-ms.sourcegitcommit: ec80ef1e496bf0b17a161735535517e87ffdd364
+ms.openlocfilehash: 4c8d0598898b4717a624562340918f968bd26f1fcde72258907e4fce73bd8489
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "110351783"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115223144"
 ---
 # <a name="spatial-mapping-in-unity"></a>Asignación espacial en Unity
 
-[La asignación](../../design/spatial-mapping.md) espacial permite recuperar mallas de triángulo que representan las superficies del mundo alrededor de un dispositivo HoloLens. Puede usar los datos de la superficie para la selección de ubicación, oclusión y análisis de sala para proporcionar a los proyectos de Unity una mayor cantidad de inmersiones.
+[La asignación](../../design/spatial-mapping.md) espacial le permite recuperar mallas de triángulo que representan las superficies del mundo alrededor de un HoloLens dispositivo. Puede usar los datos de la superficie para la selección de ubicación, oclusión y análisis de sala para proporcionar a los proyectos de Unity una mayor cantidad de inmersiones.
 
 Unity incluye compatibilidad completa con la asignación espacial, que se expone a los desarrolladores de las maneras siguientes:
 
@@ -36,9 +36,9 @@ Para que una aplicación consuma datos de asignación espacial, se debe habilita
 
 Habilitación de la funcionalidad SpatialPerception:
 
-1. En el Editor de Unity, abra el **panel "Configuración** del reproductor" (Editar > project settings > Player)
-2. Seleccione en la **pestaña "Tienda Windows".**
-3. Expanda **"Configuración de publicación"** y compruebe la **funcionalidad "SpatialPerception"** en la **lista "Funcionalidades".**
+1. En el Editor de Unity, abra **el panel "Player Configuración"** (Editar > Project Configuración > Player)
+2. Seleccione en la **pestaña "Windows Store" (Tienda de aplicaciones).**
+3. Expanda **"Publicación Configuración"** y compruebe la **funcionalidad "SpatialPerception"** en la **lista "Funcionalidades".**
 
 > [!NOTE]
 > Si ya ha exportado el proyecto de Unity a una solución de Visual Studio, deberá exportar a una nueva carpeta o establecer manualmente esta funcionalidad en [AppxManifest](../native/spatial-mapping-in-directx.md#set-up-your-app-to-use-the-spatialperception-capability)en Visual Studio .
@@ -123,7 +123,7 @@ private void OnSurfaceChanged(SurfaceId surfaceId, SurfaceChange changeType, Bou
 }
 ```
 
-### <a name="handling-surface-changes"></a>Control de cambios de superficie
+### <a name="handling-surface-changes"></a>Control de cambios en la superficie
 
 Hay varios casos principales para controlar: agregados y actualizados, que pueden usar la misma ruta de acceso de código y quitarse.
 
@@ -214,7 +214,7 @@ IEnumerator UpdateLoop()
 
 Al colocar hologramas en el mundo físico, a menudo es deseable ir más allá de los planos de malla y superficie de la asignación espacial. Cuando la selección de ubicación se realiza por procedimientos, es deseable un mayor nivel de comprensión del entorno. Esto normalmente requiere tomar decisiones sobre lo que es el suelo, el límite superior y las paredes. También tiene la capacidad de optimizar frente a un conjunto de restricciones de selección de ubicación para determinar las mejores ubicaciones físicas para los objetos holográficos.
 
-Durante el desarrollo de Young Conker y Fragments, Asobo Studios se enfrentaba a este problema de frente mediante el desarrollo de un solucionador de sala. Cada uno de estos juegos tenía necesidades específicas del juego, pero compartían la tecnología de comprensión espacial básica. La biblioteca HoloToolkit.SpatialUnderstanding encapsula esta tecnología, lo que le permite encontrar rápidamente espacios vacíos en las paredes, colocar objetos en el límite, identificar colocados para que el carácter se sitúe y una gran cantidad de otras consultas de comprensión espacial.
+Durante el desarrollo de Young Conker y Fragments, Asobo Studios se enfrentaba a este problema de frente mediante el desarrollo de un solucionador de sala. Cada uno de estos juegos tenía necesidades específicas del juego, pero compartían la tecnología de comprensión espacial básica. La biblioteca HoloToolkit.SpatialUnderstanding encapsula esta tecnología, lo que le permite encontrar rápidamente espacios vacíos en las paredes, colocar objetos en el límite, identificar los colocados para que se sitúen los caracteres y una gran cantidad de otras consultas de comprensión espacial.
 
 Se incluye todo el código fuente, lo que le permite personalizarlo según sus necesidades y compartir sus mejoras con la comunidad. El código del solucionador de C++ se ha encapsulado en un archivo DLL de UWP y se ha expuesto a Unity con una colocación de prefab incluida en MixedRealityToolkit.
 
@@ -252,16 +252,16 @@ struct RaycastResult
 };
 ```
 
-Internamente, la transmisión por rayos se calcula en la representación de vóxel en cubo de 8 cm calculada del espacio de reproducción. Cada vóxel contiene un conjunto de elementos de superficie con datos de topología procesados (también conocido como tablas). Se comparan las tablas contenidas en la celda de vóxel intersección y la mejor coincidencia que se usa para buscar la información de la topología. Estos datos de topología contienen el etiquetado devuelto en forma de enumeración "SurfaceTypes", así como el área de superficie de la superficie intersectada.
+Internamente, la difusión por rayos se calcula en la representación de vóxel en cubo de 8 cm calculada del espacio de reproducción. Cada vóxel contiene un conjunto de elementos de superficie con datos de topología procesados (también conocido como tablas). Se comparan las tablas contenidas en la celda de vóxel intersección y la mejor coincidencia que se usa para buscar la información de la topología. Estos datos de topología contienen el etiquetado devuelto en forma de enumeración "SurfaceTypes", así como el área de superficie de la superficie intersectada.
 
 En el ejemplo de Unity, el cursor convierte un rayo en cada fotograma. En primer lugar, contra los colisiondores de Unity. En segundo lugar, frente a la representación mundial del módulo de comprensión. Y, por último, de nuevo elementos de la interfaz de usuario. En esta aplicación, la interfaz de usuario obtiene prioridad, después el resultado de la comprensión y, por último, los colisiondores de Unity. SurfaceType se notifica como texto junto al cursor.
 
 ![El tipo de superficie se etiqueta junto al cursor](images/su-raycastresults-300px.jpg)<br>
-*El tipo de superficie se etiqueta junto al cursor*
+*El tipo de superficie está etiquetado junto al cursor.*
 
 ### <a name="topology-queries"></a>Consultas de topología
 
-Dentro del archivo DLL, el administrador de topologías controla el etiquetado del entorno. Como se mencionó anteriormente, gran parte de los datos se almacenan en tablas, contenidas dentro de un volumen de vóxel. Además, la estructura "PlaySpaceInfos" se usa para almacenar información sobre el espacio de juego, incluida la alineación del mundo (más detalles sobre esto a continuación), el suelo y la altura del límite superior. La heurística se usa para determinar el suelo, el techo y las paredes. Por ejemplo, la superficie horizontal más grande y más baja con un área de superficie superior a 1 m2 se considera el suelo.
+Dentro del archivo DLL, el administrador de topologías controla el etiquetado del entorno. Como se mencionó anteriormente, gran parte de los datos se almacenan en tablas, contenidas dentro de un volumen de vóxel. Además, la estructura "PlaySpaceInfos" se usa para almacenar información sobre el espacio de juego, incluida la alineación mundial (más detalles sobre esto a continuación), la altura del suelo y el límite superior. La heurística se usa para determinar el suelo, el límite superior y las paredes. Por ejemplo, la superficie horizontal más grande y más baja con un área de superficie superior a 1 m2 se considera la planta.
 
 > [!NOTE]
 > La ruta de acceso de la cámara durante el proceso de examen también se usa en este proceso.
@@ -277,7 +277,7 @@ QueryTopology_FindLargestPositionsOnFloor
 QueryTopology_FindPositionsSittable
 ```
 
-Cada una de las consultas tiene un conjunto de parámetros, específicos del tipo de consulta. En el ejemplo siguiente, el usuario especifica el alto mínimo & ancho del volumen deseado, la altura de colocación mínima por encima del suelo y la cantidad mínima de autorización delante del volumen. Todas las medidas están en metros.
+Cada una de las consultas tiene un conjunto de parámetros, específicos del tipo de consulta. En el ejemplo siguiente, el usuario especifica el alto mínimo & ancho del volumen deseado, la altura de colocación mínima por encima del suelo y la cantidad mínima de margen delante del volumen. Todas las medidas están en metros.
 
 ```cpp
 EXTERN_C __declspec(dllexport) int QueryTopology_FindPositionsOnWalls(
@@ -289,7 +289,7 @@ EXTERN_C __declspec(dllexport) int QueryTopology_FindPositionsOnWalls(
     _Inout_ Dll_Interface::TopologyResult* locationData)
 ```
 
-Cada una de estas consultas toma una matriz preasignada de estructuras "TopologyResult". El parámetro "locationCount" especifica la longitud de la matriz pasada. El valor devuelto informa del número de ubicaciones devueltas. Este número nunca es mayor que el parámetro "locationCount" pasado.
+Cada una de estas consultas toma una matriz asignada previamente de estructuras "TopologyResult". El parámetro "locationCount" especifica la longitud de la matriz pasada. El valor devuelto indica el número de ubicaciones devueltas. Este número nunca es mayor que el parámetro "locationCount" pasado.
 
 "TopologyResult" contiene la posición central del volumen devuelto, la dirección orientada (es decir, normal) y las dimensiones del espacio encontrado.
 
@@ -304,13 +304,13 @@ struct TopologyResult
 ```
 
 > [!NOTE]
-> En el ejemplo de Unity, cada una de estas consultas está vinculada a un botón en el panel de interfaz de usuario virtual. El ejemplo codifica los parámetros de cada una de estas consultas a valores razonables. Vea SpaceVisualizer.cs en el código de ejemplo para obtener más ejemplos.
+> En el ejemplo de Unity, cada una de estas consultas se vincula a un botón en el panel de interfaz de usuario virtual. El ejemplo codifica los parámetros de cada una de estas consultas en valores razonables. Vea SpaceVisualizer.cs en el código de ejemplo para obtener más ejemplos.
 
 ### <a name="shape-queries"></a>Dar forma a las consultas
 
-En el archivo dll, el analizador de formas ("ShapeAnalyzer_W") usa el analizador de topología para coincidir con las formas personalizadas definidas por el usuario. El ejemplo de Unity define un conjunto de formas y expone los resultados a través del menú de consulta en la aplicación, dentro de la pestaña forma. La intención es que el usuario pueda definir sus propias consultas de forma de objeto y usarlas, según sea necesario para su aplicación.
+En el archivo dll, el analizador de formas ("ShapeAnalyzer_W") usa el analizador de topología para coincidir con las formas personalizadas definidas por el usuario. El ejemplo de Unity define un conjunto de formas y expone los resultados a través del menú de consulta en la aplicación, dentro de la pestaña forma. La intención es que el usuario pueda definir sus propias consultas de forma de objeto y hacer uso de ellas, según sea necesario para su aplicación.
 
-El análisis de formas solo funciona en superficies horizontales. Un diván, por ejemplo, se define mediante la superficie del puesto plano y la parte superior plana del respaldo del diván. La consulta de formas busca dos superficies de un tamaño, un alto y un intervalo de aspecto específicos, con las dos superficies alineadas y conectadas. Con la terminología de las API, el puesto del diván y la parte posterior son componentes de forma y los requisitos de alineación son restricciones de componentes de forma.
+El análisis de formas solo funciona en superficies horizontales. Un diván, por ejemplo, se define mediante la superficie del puesto plano y la parte superior plana del respaldo del diván. La consulta de formas busca dos superficies de un tamaño, un alto y un intervalo de aspecto específicos, con las dos superficies alineadas y conectadas. Con la terminología de las API, la parte superior del cómodo y la parte posterior son componentes de forma y los requisitos de alineación son restricciones de componentes de forma.
 
 A continuación se muestra una consulta de ejemplo definida en el ejemplo de Unity (ShapeDefinition.cs) para objetos "sittable".
 
@@ -329,9 +329,9 @@ shapeComponents = new List<ShapeComponent>()
 AddShape("Sittable", shapeComponents);
 ```
 
-Cada consulta de forma se define mediante un conjunto de componentes de forma, cada uno con un conjunto de restricciones de componentes y un conjunto de restricciones de forma que enumeran las dependencias entre los componentes. Este ejemplo incluye tres restricciones en una única definición de componente y ninguna restricción de forma entre componentes (ya que solo hay un componente).
+Cada consulta de forma se define mediante un conjunto de componentes de forma, cada uno con un conjunto de restricciones de componentes y un conjunto de restricciones de forma que enumeran las dependencias entre los componentes. En este ejemplo se incluyen tres restricciones en una definición de componente única y ninguna restricción de forma entre componentes (ya que solo hay un componente).
 
-Por el contrario, la forma del diván tiene dos componentes de forma y cuatro restricciones de forma. Los componentes se identifican por su índice en la lista de componentes del usuario (0 y 1 en este ejemplo).
+En cambio, la forma del cómodo tiene dos componentes de forma y cuatro restricciones de forma. Los componentes se identifican por su índice en la lista de componentes del usuario (0 y 1 en este ejemplo).
 
 ```cs
 shapeConstraints = new List<ShapeConstraint>()
@@ -343,14 +343,14 @@ shapeConstraints = new List<ShapeConstraint>()
 };
 ```
 
-Las funciones contenedoras se proporcionan en el módulo de Unity para facilitar la creación de definiciones de formas personalizadas. La lista completa de restricciones de componentes y formas se puede encontrar en "SpatialUnderstandingDll.cs" dentro de las estructuras "ShapeComponentConstraint" y "ShapeConstraint".
+Las funciones contenedoras se proporcionan en el módulo de Unity para facilitar la creación de definiciones de formas personalizadas. La lista completa de restricciones de componente y forma se puede encontrar en "SpatialUnderstandingDll.cs" dentro de las estructuras "ShapeComponentConstraint" y "ShapeConstraint".
 
-![La forma del rectángulo se encuentra en esta superficie](images/su-shapequery-300px.jpg)<br>
-*La forma del rectángulo se encuentra en esta superficie*
+![La forma rectángulo se encuentra en esta superficie](images/su-shapequery-300px.jpg)<br>
+*La forma rectángulo se encuentra en esta superficie*
 
 ### <a name="object-placement-solver"></a>Solucionador de colocación de objetos
 
-El solucionador de colocación de objetos se puede usar para identificar ubicaciones ideales en la sala física para colocar los objetos. El solucionador encontrará la mejor ubicación de ajuste dadas las restricciones y las reglas de objeto. Además, las consultas de objetos se conservan hasta que se quita el objeto con llamadas "Solver_RemoveObject" o "Solver_RemoveAllObjects", lo que permite la colocación restringida de varios objetos. Las consultas de selección de ubicación de objetos constan de tres partes: tipo de selección de ubicación con parámetros, una lista de reglas y una lista de restricciones. Para ejecutar una consulta, use la API siguiente.
+El solucionador de colocación de objetos se puede usar para identificar ubicaciones ideales en la sala física para colocar los objetos. El solucionador encontrará la mejor ubicación de ajuste dadas las restricciones y las reglas de objeto. Además, las consultas de objetos se conservan hasta que se quita el objeto con llamadas "Solver_RemoveObject" o "Solver_RemoveAllObjects", lo que permite la selección de ubicación restringida de varios objetos. Las consultas de selección de ubicación de objetos constan de tres partes: tipo de selección de ubicación con parámetros, una lista de reglas y una lista de restricciones. Para ejecutar una consulta, use la SIGUIENTE API.
 
 ```cpp
 public static int Solver_PlaceObject(
@@ -380,7 +380,7 @@ public enum PlacementType
 };
 ```
 
-Cada uno de los tipos de selección de ubicación tiene un conjunto de parámetros únicos para el tipo. La estructura "ObjectPlacementDefinition" contiene un conjunto de funciones auxiliares estáticas para crear estas definiciones. Por ejemplo, para buscar un lugar donde colocar un objeto en el suelo, puede usar la siguiente función. public static ObjectPlacementDefinition Create_OnFloor(Vector3 halfDims) Además del tipo placement, puede proporcionar un conjunto de reglas y restricciones. No se pueden infringir las reglas. Las posibles ubicaciones de selección de ubicación que cumplen el tipo y las reglas se optimizan con el conjunto de restricciones para seleccionar la ubicación de ubicación óptima. Las funciones de creación estática proporcionadas pueden crear cada una de las reglas y restricciones. A continuación se proporciona una regla de ejemplo y una función de construcción de restricciones.
+Cada uno de los tipos de selección de ubicación tiene un conjunto de parámetros únicos para el tipo. La estructura "ObjectPlacementDefinition" contiene un conjunto de funciones auxiliares estáticas para crear estas definiciones. Por ejemplo, para buscar un lugar donde colocar un objeto en el suelo, puede usar la siguiente función. public static ObjectPlacementDefinition Create_OnFloor(Vector3 halfDims) Además del tipo de selección de ubicación, puede proporcionar un conjunto de reglas y restricciones. No se pueden infringir las reglas. Las posibles ubicaciones de selección de ubicación que cumplen el tipo y las reglas se optimizan con el conjunto de restricciones para seleccionar la ubicación de ubicación óptima. Las funciones de creación estática proporcionadas pueden crear cada una de las reglas y restricciones. A continuación se proporciona una regla de ejemplo y una función de construcción de restricciones.
 
 ```cs
 public static ObjectPlacementRule Create_AwayFromPosition(
@@ -389,7 +389,7 @@ public static ObjectPlacementConstraint Create_NearPoint(
     Vector3 position, float minDistance = 0.0f, float maxDistance = 0.0f)
 ```
 
-La siguiente consulta de selección de ubicación de objetos busca un lugar donde colocar un cubo de medio metro en el borde de una superficie, lejos de otros objetos situados anteriormente y cerca del centro de la sala.
+La siguiente consulta de selección de ubicación de objetos busca un lugar donde colocar un cubo de medio metro en el borde de una superficie, lejos de otros objetos anteriormente situados y cerca del centro de la sala.
 
 ```cs
 List<ObjectPlacementRule> rules =
@@ -414,16 +414,16 @@ Solver_PlaceObject(
     UnderstandingDLL.GetStaticObjectPlacementResultPtr());
 ```
 
-Si se realiza correctamente, se devuelve una estructura "ObjectPlacementResult" que contiene la posición de colocación, las dimensiones y la orientación. Además, la colocación se agrega a la lista interna del archivo DLL de objetos colocados. Las consultas de selección de ubicación posteriores tendrán en cuenta este objeto. El archivo "LevelSolver.cs" del ejemplo de Unity contiene más consultas de ejemplo.
+Si se realiza correctamente, se devuelve una estructura "ObjectPlacementResult" que contiene la posición de colocación, las dimensiones y la orientación. Además, la selección de ubicación se agrega a la lista interna de objetos colocados del archivo DLL. Las consultas de selección de ubicación posteriores tendrán en cuenta este objeto. El archivo "LevelSolver.cs" del ejemplo de Unity contiene más consultas de ejemplo.
 
 ![Resultados de la selección de ubicación de objetos](images/su-objectplacement-1000px.jpg)<br>
-*Figura 3: Cuadros azules en los que el resultado de las consultas de tres posiciones en el suelo se encuentra fuera de las reglas de posición de la cámara*
+*Figura 3: Cuadros azules en los que el resultado de las consultas de tres posiciones en el suelo se aleja de las reglas de posición de la cámara*
 
-Al resolver la ubicación de colocación de varios objetos necesarios para un escenario de nivel o aplicación, primero debe resolver objetos imprescindibles y grandes para maximizar la probabilidad de que se pueda encontrar un espacio. El orden de selección de ubicación es importante. Si no se pueden encontrar colocaciones de objetos, pruebe con configuraciones menos restringidas. Tener un conjunto de configuraciones de reserva es fundamental para admitir la funcionalidad en muchas configuraciones de sala.
+Al resolver la ubicación de colocación de varios objetos necesarios para un escenario de nivel o aplicación, primero debe resolver objetos imprescindibles y grandes para maximizar la probabilidad de que se pueda encontrar un espacio. El orden de selección de ubicación es importante. Si no se pueden encontrar las ubicaciones de objetos, pruebe con configuraciones menos restringidas. Tener un conjunto de configuraciones de reserva es fundamental para admitir la funcionalidad en muchas configuraciones de sala.
 
 ### <a name="room-scanning-process"></a>Proceso de examen de sala
 
-Aunque la solución de asignación espacial proporcionada por HoloLens está diseñada para ser lo suficientemente genérica como para satisfacer las necesidades de toda la gama de espacios con problemas, el módulo de comprensión espacial se creó para admitir las necesidades de dos juegos específicos. Su solución se estructura en torno a un proceso específico y un conjunto de suposiciones, que se resumen a continuación.
+Aunque la solución de asignación espacial proporcionada por HoloLens está diseñada para ser lo suficientemente genérica como para satisfacer las necesidades de toda la gama de espacios con problemas, el módulo de comprensión espacial se ha creado para satisfacer las necesidades de dos juegos específicos. Su solución se estructura en torno a un proceso específico y un conjunto de suposiciones, resumidos a continuación.
 
 ```txt
 Fixed size playspace – The user specifies the maximum playspace size in the init call.
@@ -434,7 +434,7 @@ One-time scan process –
     Query functions will not function until after the scan has been finalized.
 ```
 
-"dibujo" del espacio de juego controlado por el usuario: durante la fase de examen, el usuario se mueve y busca alrededor del ritmo de reproducción, pintando eficazmente las áreas, que deben incluirse. La malla generada es importante para proporcionar comentarios de los usuarios durante esta fase. Configuración del hogar u oficina interior: las funciones de consulta están diseñadas en torno a superficies planas y paredes en ángulos derecho. Se trata de una limitación temporal. Sin embargo, durante la fase de análisis, se completa un análisis del eje principal para optimizar la teselación de malla a lo largo de los ejes principal y secundario. El archivo SpatialUnderstanding.cs incluido administra el proceso de fase de examen. Llama a las siguientes funciones.
+"pintar" del espacio de juego controlado por el usuario: durante la fase de examen, el usuario se mueve y examina el ritmo de las reproducción, pintando de forma eficaz las áreas, que deben incluirse. La malla generada es importante para proporcionar comentarios de los usuarios durante esta fase. Configuración de la oficina o el hogar en interiores: las funciones de consulta están diseñadas en torno a superficies planas y paredes en ángulos derecho. Se trata de una limitación temporal. Sin embargo, durante la fase de análisis, se completa un análisis del eje principal para optimizar la teselación de malla a lo largo de los ejes principal y secundario. El archivo SpatialUnderstanding.cs incluido administra el proceso de fase de examen. Llama a las siguientes funciones.
 
 ```txt
 SpatialUnderstanding_Init – Called once at the start.
@@ -459,11 +459,11 @@ Import_UnderstandingMesh –
     after scanning has been finalized.
 ```
 
-El flujo de examen, controlado por el comportamiento "SpatialUnderstanding", llama a InitScan y, a continuación, UpdateScan a cada fotograma. Cuando la consulta de estadísticas informa de una cobertura razonable, el usuario puede usar airtap para llamar a RequestFinish para indicar el final de la fase de examen. Se sigue llamando a UpdateScan hasta que su valor devuelto indica que el archivo DLL ha completado el procesamiento.
+El flujo de examen, controlado por el comportamiento "SpatialUnderstanding", llama a InitScan y, a continuación, UpdateScan a cada fotograma. Cuando la consulta de estadísticas informa de una cobertura razonable, el usuario puede llamar a RequestFinish para indicar el final de la fase de examen. Se sigue llamando a UpdateScan hasta que su valor devuelto indica que el archivo DLL ha completado el procesamiento.
 
 ### <a name="understanding-mesh"></a>Descripción de Mesh
 
-La dll de comprensión almacena internamente el espacio de reproducción como una cuadrícula de cubos de vóxel de 8 cm de tamaño. Durante la parte inicial del análisis, se completa un análisis de componentes principales para determinar los ejes de la sala. Internamente, almacena su espacio de vóxel alineado con estos ejes. Una malla se genera aproximadamente cada segundo mediante la extracción del isosurface del volumen de vóxel.
+El archivo DLL de comprensión almacena internamente el espacio de reproducción como una cuadrícula de cubos de vóxel de tamaño de 8 cm. Durante la parte inicial del examen, se completa un análisis de componentes principales para determinar los ejes de la sala. Internamente, almacena su espacio de vóxel alineado con estos ejes. Una malla se genera aproximadamente cada segundo mediante la extracción del isosurface del volumen de vóxel.
 
 ![Malla generada a partir del volumen de vóxel](images/su-custommesh.jpg)<br>
 *Malla generada a partir del volumen de vóxel*
@@ -475,11 +475,11 @@ La dll de comprensión almacena internamente el espacio de reproducción como un
 
 ## <a name="spatial-mapping-in-mixed-reality-toolkit"></a>Asignación espacial en Mixed Reality Toolkit
 
-Para más información sobre el uso de la asignación espacial con Mixed Reality Toolkit, consulte la sección de reconocimiento [espacial](/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started) de los documentos de MRTK.
+Para obtener más información sobre el uso de la asignación espacial Mixed Reality Toolkit, consulte la sección [de](/windows/mixed-reality/mrtk-unity/features/spatial-awareness/spatial-awareness-getting-started) reconocimiento espacial de los documentos de MRTK.
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido de desarrollo de Unity que hemos diseñado, está en medio de la exploración de los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
+Si va a seguir el recorrido de desarrollo de Unity que hemos diseñado, se encuentra a la mitad de la exploración de los bloques de creación principales de MRTK. Desde aquí, puede continuar con el siguiente bloque de compilación:
 
 > [!div class="nextstepaction"]
 > [Texto](text-in-unity.md)

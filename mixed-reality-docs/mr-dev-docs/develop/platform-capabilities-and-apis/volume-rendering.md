@@ -1,36 +1,36 @@
 ---
 title: Representación de volúmenes
-description: Aprenda a representar eficazmente imágenes volumétricas enriquecidas con opacidad y color en Windows Mixed Reality.
+description: Obtenga información sobre cómo representar eficazmente imágenes volumétricas enriquecciones con opacidad y color en Windows Mixed Reality.
 author: kevinkennedy
 ms.author: kkennedy
 ms.date: 03/21/2018
 ms.topic: article
-keywords: imagen volumétrica, representación por volumen, rendimiento, realidad mixta
-ms.openlocfilehash: 2a76be80d786aea0c8bc1bd364155fa37d37e151
-ms.sourcegitcommit: 2329db5a76dfe1b844e21291dbc8ee3888ed1b81
+keywords: imagen volumétrica, representación de volúmenes, rendimiento, realidad mixta
+ms.openlocfilehash: 3843f0f4e49a0564b41d834231630d281aa9e874df8d35c4feaa4fe5bba0ed68
+ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "98008785"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "115220940"
 ---
 # <a name="volume-rendering"></a>Representación de volúmenes
 
-En el caso de los volúmenes de resonancia médica o de ingeniería, consulte [representación de volumen en Wikipedia](https://en.wikipedia.org/wiki/Volume_rendering). Estas ' imágenes volumétricas ' contienen información enriquecida con opacidad y color en todo el volumen que no se puede expresar fácilmente como superficies como [mallas poligonales](https://en.wikipedia.org/wiki/Polygon_mesh).
+Para obtener una MRI médica o volúmenes de ingeniería, vea [Representación de volúmenes en Wikipedia.](https://en.wikipedia.org/wiki/Volume_rendering) Estas "imágenes volumétricas" contienen información enriquez con opacidad y color en todo el volumen que no se puede expresar fácilmente como superficies como mallas [poligonales.](https://en.wikipedia.org/wiki/Polygon_mesh)
 
 Soluciones clave para mejorar el rendimiento
-1. BAD: Naive enfoque: Mostrar todo el volumen; por lo general, se ejecuta demasiado lentamente.
-2. BUENA: plano de corte: mostrar solo un segmento del volumen
-3. BUENO: recortar el Subvolumen: mostrar solo algunas capas del volumen
-4. BUENA: reducir la resolución de la representación de volumen (consulte "representación de escenas de resolución mixta")
+1. BAD: Naïve Approach: Show Whole Volume(Bad: enfoque naïve: Mostrar volumen entero) generalmente se ejecuta demasiado lentamente
+2. BUENO: Plano de corte: mostrar solo un solo segmento del volumen
+3. BUENO: Cortar sub volúmenes: mostrar solo algunas capas del volumen
+4. GOOD: Reduzca la resolución de la representación del volumen (vea "Mixed Resolution Scene Rendering")
 
-Solo hay una cierta cantidad de información que se puede transferir desde la aplicación a la pantalla en cualquier fotograma determinado, que es el ancho de banda total de la memoria. Además, cualquier procesamiento (o ' sombreado ') necesario para transformar los datos para la presentación requiere tiempo. Las principales consideraciones a la hora de realizar la representación de volúmenes son las siguientes:
-* Screen-Width * Screen-Height * Screen-Count * Volume-Layers-on-pixel = total-Volume-samples-per-Frame
-* 1028 * 720 * 2 * 256 = 378961920 (100%) (volumen de res completo: demasiados ejemplos)
-* 1028 * 720 * 2 * 1 = 1480320 (0,3% de Full) (segmento fino: 1 muestra por píxel, se ejecuta sin problemas)
-* 1028 * 720 * 2 * 10 = 14803200 (3,9% de Full) (segmento de Subvolumen: 10 muestras por píxel, se ejecuta con bastante suavidad, parece 3D)
-* 200 * 200 * 2 * 256 = 20480000 (5% de Full) (volumen de res inferior: menos píxeles, volumen completo, apariencia 3D pero un poco borroso)
+Solo hay una cierta cantidad de información que se puede transferir desde la aplicación a la pantalla en un fotograma determinado, que es el ancho de banda total de memoria. Además, cualquier procesamiento (o "sombreado") necesario para transformar los datos para la presentación requiere tiempo. Las consideraciones principales al realizar la representación del volumen son las siguientes:
+* Screen-Width * Screen-Height * Screen-Count * Volume-Layers-On-That-Pixel = Total-Volume-Samples-Per-Frame
+* 1028 * 720 * 2 * 256 = 378961920 (100 %) (volumen res completo: demasiadas muestras)
+* 1028 * 720 * 2 * 1 = 1480320 (0,3 % de completo) (segmento fino: 1 muestra por píxel, se ejecuta sin problemas)
+* 1028 * 720 * 2 * 10 = 14803200 (3,9 % de completo) (segmento de subvolume: 10 muestras por píxel, se ejecuta de forma bastante fluida, parece 3d)
+* 200 * 200 * 2 * 256 = 20480000 (5 % de volumen completo) (volumen res inferior: menos píxeles, volumen completo, parece 3d pero un poco desenfoque)
 
-## <a name="representing-3d-textures"></a>Representar texturas 3D
+## <a name="representing-3d-textures"></a>Representación de texturas 3D
 
 En la CPU:
 
@@ -87,7 +87,7 @@ float3 _VolBufferSize;
 
 ## <a name="shading-and-gradients"></a>Sombreado y degradados
 
-Cómo sombrear un volumen, como resonancia magnética, para una visualización útil. El método principal consiste en tener una ' ventana de intensidad ' (un mínimo y un máximo) en el que desea ver las intensidades y, simplemente, escalar en ese espacio para ver la intensidad de blanco y negro. A continuación, se puede aplicar una "rampa de color" a los valores dentro de ese intervalo y almacenarse como una textura, de modo que las distintas partes del espectro de intensidad pueden sombrear diferentes colores:
+Cómo sombrear un volumen, como MRI, para una visualización útil. El método principal consiste en tener una "ventana de intensidad" (un mínimo y un máximo) en la que quiera ver las intensidades y simplemente escalar a ese espacio para ver la intensidad en blanco y negro. A continuación, se puede aplicar una "rampa de color" a los valores dentro de ese intervalo y almacenarse como una textura, de modo que se puedan sombrear diferentes partes del espectro de intensidad de diferentes colores:
 
 ```
 float4 ShadeVol( float intensity ) {
@@ -98,16 +98,16 @@ float4 ShadeVol( float intensity ) {
    color.rgba = tex2d( ColorRampTexture, float2( unitIntensity, 0 ) );
 ```
 
-En muchas de nuestras aplicaciones, almacenamos en nuestro volumen un valor de intensidad sin procesar y un "índice de segmentación" (para segmentar partes diferentes como la piel y el hueso; estos segmentos los crean expertos en herramientas dedicadas). Se puede combinar con el enfoque anterior para colocar un color diferente o incluso una rampa de color diferente para cada índice de segmento:
+En muchas de nuestras aplicaciones, almacenamos en nuestro volumen un valor de intensidad sin procesar y un "índice de segmentación" (para segmentar diferentes partes, como la máscara y el tejido; estos segmentos los crean expertos en herramientas dedicadas). Esto se puede combinar con el enfoque anterior para colocar un color diferente o incluso una rampa de color diferente para cada índice de segmento:
 
 ```
 // Change color to match segment index (fade each segment towards black):
  color.rgb = SegmentColors[ segment_index ] * color.a; // brighter alpha gives brighter color
 ```
 
-## <a name="volume-slicing-in-a-shader"></a>Segmentación de volumen en un sombreador
+## <a name="volume-slicing-in-a-shader"></a>Licación de volumen en un sombreador
 
-Un primer paso es crear un "plano de segmentación" que pueda desplazarse por el volumen, ' segmentarlo ' y cómo examinar los valores en cada punto. Se supone que hay un cubo "VolumeSpace", que representa el lugar en el que el volumen está en el espacio universal, que se puede usar como referencia para colocar los puntos:
+Un primer paso excelente consiste en crear un "plano de corte" que pueda moverse por el volumen, "cortarlo" y cómo se analizan los valores en cada punto. Esto supone que hay un cubo "VolumeSpace", que representa dónde se encuentra el volumen en el espacio mundial, que se puede usar como referencia para colocar los puntos:
 
 ```
 // In the vertex shader:
@@ -120,9 +120,9 @@ Un primer paso es crear un "plano de segmentación" que pueda desplazarse por el
  float4 color = ShadeVol( SampleVol( volSpace ) );
 ```
 
-## <a name="volume-tracing-in-shaders"></a>Seguimiento de volumen en sombreadores
+## <a name="volume-tracing-in-shaders"></a>Seguimiento de volúmenes en sombreadores
 
-Cómo usar la GPU para realizar el seguimiento de subvolumens (recorra unos pocos voxels de profundidad y, a continuación, capas en los datos de vuelta al frente):
+Cómo usar la GPU para realizar el seguimiento de subvolúmenes (recorre algunos vóxeles en profundidad y, a continuación, capas en los datos de atrás a delante):
 
 ```
 float4 AlphaBlend(float4 dst, float4 src) {
@@ -164,9 +164,9 @@ float4 AlphaBlend(float4 dst, float4 src) {
  float4 color = volTraceSubVolume( volSpace, cameraInVolSpace );
 ```
 
-## <a name="whole-volume-rendering"></a>Representación de todo el volumen
+## <a name="whole-volume-rendering"></a>Representación de volúmenes completos
 
-Al modificar el código de Subvolumen anterior, obtenemos lo siguiente:
+Al modificar el código de subvolume anterior, se obtiene lo siguiente:
 
 ```
 float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
@@ -177,15 +177,15 @@ float4 volTraceSubVolume(float3 objPosStart, float3 cameraPosVolSpace) {
    int numLoops = min( distanceInVoxels, maxSamples ); // put a min on the voxels to sample
 ```
 
-## <a name="mixed-resolution-scene-rendering"></a>Representación de escenas de resolución mixta
+## <a name="mixed-resolution-scene-rendering"></a>Representación de escena de resolución mixta
 
 Cómo representar una parte de la escena con una resolución baja y volver a colocarla en su lugar:
-1. Configuración de dos cámaras fuera de pantalla, una para cada ojo que actualice cada fotograma
-2. Configuración de dos destinos de representación de baja resolución (es decir, 200 x 200 cada uno) que las cámaras representan en
-3. Configurar un cuádruple que se mueva delante del usuario
+1. Configuración de dos cámaras fuera de pantalla, una para seguir cada ojo que actualiza cada fotograma
+2. Configuración de dos destinos de representación de baja resolución (es decir, 200 x 200 cada uno) en los que se representan las cámaras
+3. Configuración de un quad que se mueve delante del usuario
 
 Cada fotograma:
-1. Dibuje los objetivos de representación de cada ojo a baja resolución (datos de volumen, sombreadores costosos, etc.)
-2. Dibuje la escena normalmente como resolución completa (mallas, interfaz de usuario, etc.)
-3. Dibuje un cuádruple delante del usuario, a través de la escena, y el proyecto de las representaciones de baja res en ese
-4. Resultado: combinación visual de elementos de resolución completa con datos de volumen de baja resolución pero de alta densidad
+1. Dibuje los destinos de representación de cada ojo a baja resolución (datos de volumen, sombreadores caros, entre otros)
+2. Dibuje la escena normalmente como resolución completa (mallas, interfaz de usuario, entre otras)
+3. Dibuje un cuatro delante del usuario, sobre la escena y proyecte las representaciones de baja velocidad en esa
+4. Resultado: combinación visual de elementos de resolución completa con datos de volumen de baja resolución pero alta densidad
