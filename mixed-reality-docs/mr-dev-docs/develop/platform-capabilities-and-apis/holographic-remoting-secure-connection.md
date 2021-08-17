@@ -6,14 +6,14 @@ ms.author: flbagar
 ms.date: 12/01/2020
 ms.topic: article
 keywords: HoloLens, comunicación remota, comunicación remota holográfica, casco de realidad mixta, casco de realidad mixta de Windows, casco de realidad virtual, seguridad, autenticación, servidor a cliente
-ms.openlocfilehash: fa23994ff4ab49d313fe24a67974bf4d90454e511658e0663c61d7b129b10f9e
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 6ac5284bdf9e5984fcf091b6502fb62a494e4fe8
+ms.sourcegitcommit: 820f2dfe98065298f6978a651f838de12620dd45
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115223585"
+ms.lasthandoff: 08/14/2021
+ms.locfileid: "122184656"
 ---
-# <a name="enabling-connection-security-for-holographic-remoting"></a>Habilitación de la seguridad de conexión para la comunicación remota holográfica
+# <a name="enabling-connection-security-for-holographic-remoting-c"></a>Habilitación de la seguridad de conexión para la comunicación remota holográfica (C++)
 
 >[!IMPORTANT]
 >Esta guía es específica de la comunicación remota holográfica en HoloLens 2.
@@ -36,10 +36,10 @@ La seguridad en la comunicación remota holográfica, cuando se configura correc
 
 * **Autenticidad: tanto** el reproductor como la aplicación remota pueden estar seguros de que el otro lado es quien dice ser.
 * **Confidencialidad:** ningún tercero puede leer la información intercambiada entre el reproductor y la aplicación remota
-* **Integridad: el** reproductor y el equipo remoto pueden detectar cualquier cambio en tránsito en su comunicación
+* **Integridad: el** reproductor y el equipo remoto pueden detectar cualquier cambio en tránsito en su comunicación.
 
 >[!IMPORTANT]
->Para poder usar características de seguridad, deberá [](holographic-remoting-create-player.md) implementar un reproductor personalizado y una aplicación remota personalizada mediante Windows Mixed Reality [o](holographic-remoting-create-remote-wmr.md) las API de [OpenXR.](holographic-remoting-create-remote-openxr.md)
+>Para poder usar características de seguridad, deberá [](holographic-remoting-create-player.md) implementar un reproductor personalizado y una aplicación remota personalizada mediante Windows Mixed Reality [API](holographic-remoting-create-remote-wmr.md) de [OpenXR.](holographic-remoting-create-remote-openxr.md)
 
 >[!NOTE]
 > A partir de la [versión 2.4.0,](holographic-remoting-version-history.md#v2.4.0) se pueden crear aplicaciones remotas mediante [la API de OpenXR.](../native/openxr.md) A continuación se puede encontrar información general sobre cómo [](#secure-connection-using-the-openxr-api)establecer una conexión segura en un entorno de OpenXR.
@@ -48,12 +48,12 @@ La seguridad en la comunicación remota holográfica, cuando se configura correc
 
 Al habilitar la seguridad en la comunicación remota holográfica, la biblioteca de comunicación remota habilitará automáticamente las comprobaciones de cifrado e integridad de todos los datos intercambiados a través de la red.
 
-No obstante, garantizar la autenticación adecuada requiere cierto trabajo adicional. Lo que debe hacer exactamente depende de su caso de uso y el resto de esta sección trata de averiguar los pasos necesarios.
+Sin embargo, garantizar la autenticación adecuada requiere algún trabajo adicional. Lo que debe hacer exactamente depende de su caso de uso y el resto de esta sección trata de averiguar los pasos necesarios.
 
 >[!IMPORTANT]
 > Este artículo solo puede proporcionar instrucciones generales. Si no está seguro, considere la posibilidad de consultar a un experto en seguridad que pueda proporcionar instrucciones específicas para su caso de uso.
 
-En primer lugar, algunos términos:  al  describir las conexiones de red, se usarán los términos cliente y servidor. El servidor es el lado que escucha las conexiones entrantes en una dirección de punto de conexión conocida y el cliente es el que se conecta al punto de conexión del servidor.
+En primer lugar, una terminología: al describir  las conexiones de red, se _usarán_ los términos cliente y servidor. El servidor es el lado que escucha las conexiones entrantes en una dirección de punto de conexión conocida y el cliente es el que se conecta al punto de conexión del servidor.
 
 >[!NOTE]
 > Los roles de cliente y servidor no están vinculados a si una aplicación actúa como reproductor o como remota. Aunque los ejemplos tienen el reproductor en el rol de servidor, es fácil invertir los roles si se ajusta mejor a su caso de uso.
@@ -94,7 +94,7 @@ Un secreto compartido no será suficiente para cubrir este caso de uso. En su lu
 
 * El cliente autoriza al proveedor de identidades y solicita un token.
 * El proveedor de identidades genera un token y lo envía al cliente.
-* El cliente envía este token al servidor a través de Holographic Remoting
+* El cliente envía este token al servidor a través de La comunicación remota holográfica
 * El servidor valida el token del cliente con el proveedor de identidades.
 
 Un ejemplo de un proveedor de identidades es [el Plataforma de identidad de Microsoft](/azure/active-directory/develop/).
@@ -103,13 +103,13 @@ Al igual que en el caso de uso anterior, asegúrese de que estos tokens no se en
 
 ## <a name="implementing-holographic-remoting-security"></a>Implementación de la seguridad de comunicación remota holográfica
 
-Recuerde que debe implementar aplicaciones remotas y de reproductor personalizadas si desea habilitar la seguridad de conexión. Puede usar los ejemplos proporcionados como puntos de partida para sus propias aplicaciones.
+Recuerde que debe implementar aplicaciones personalizadas remotas y de reproductor si desea habilitar la seguridad de conexión. Puede usar los ejemplos proporcionados como puntos de partida para sus propias aplicaciones.
 
 Para habilitar la seguridad, llame `ListenSecure()` a en lugar de a y en lugar de a para establecer la conexión `Listen()` `ConnectSecure()` `Connect()` remota.
 
 Estas llamadas requieren que proporcione implementaciones de determinadas interfaces para proporcionar y validar información relacionada con la seguridad:
 
-* El servidor debe implementar un proveedor de certificados y un validador de autenticación.
+* El servidor debe implementar un proveedor de certificados y un validador de autenticación
 * El cliente debe implementar un proveedor de autenticación y un validador de certificados.
 
 Todas las interfaces tienen una función que le solicita que tome medidas, que recibe un objeto de devolución de llamada como parámetro. Con este objeto, puede implementar fácilmente el control asincrónico de la solicitud. Mantenga una referencia a este objeto y llame a la función de finalización cuando se complete la acción asincrónica. Se puede llamar a la función de finalización desde cualquier subproceso.
@@ -118,7 +118,7 @@ Todas las interfaces tienen una función que le solicita que tome medidas, que r
 >La implementación de interfaces de WinRT se puede realizar fácilmente mediante C++/WinRT. En [el capítulo Author APIs with C++/WinRT](/windows/uwp/cpp-and-winrt-apis/author-apis) (Creación de API con C++/WinRT) se describe esto en detalle.
 
 >[!IMPORTANT]
->Dentro del paquete NuGet contiene documentación detallada `build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl` de la API relacionada con las conexiones seguras.
+>Dentro del paquete NuGet contiene documentación detallada de `build\native\include\HolographicAppRemoting\Microsoft.Holographic.AppRemoting.idl` la API relacionada con conexiones seguras.
 
 ### <a name="implementing-a-certificate-provider"></a>Implementación de un proveedor de certificados
 
@@ -139,8 +139,8 @@ Los validadores de autenticación reciben el token de autenticación enviado por
 
 Implemente `IAuthenticationReceiver` la interfaz como se muestra a continuación:
 
-* `GetRealm()` debe devolver el nombre del dominio de autenticación (un dominio http usado durante el protocolo de enlace de conexión remota).
-* `ValidateToken()` debe validar el token de autenticación de cliente y llamar `ValidationCompleted()` a en el objeto de devolución de llamada con el resultado de validación.
+* `GetRealm()` debe devolver el nombre del dominio de autenticación (un dominio HTTP usado durante el protocolo de enlace de conexión remota).
+* `ValidateToken()` debe validar el token de autenticación de cliente y llamar `ValidationCompleted()` a en el objeto de devolución de llamada con el resultado de la validación.
 
 ### <a name="implementing-an-authentication-provider"></a>Implementación de un proveedor de autenticación
 
@@ -184,11 +184,12 @@ Los elementos clave para una conexión segura mediante `XR_MSFT_holographic_remo
 - `xrRemotingValidateAuthenticationTokenCallbackMSFT`, valida el token de autenticación de cliente.
 - `xrRemotingRequestServerCertificateCallbackMSFT`, proporcione a la aplicación de servidor el certificado que se usará.
 
-Estas devoluciones de llamada se pueden proporcionar al entorno de ejecución de OpenXR de comunicación remota a través `xrRemotingSetSecureConnectionClientCallbacksMSFT` de y `xrRemotingSetSecureConnectionServerCallbacksMSFT` . Además, la conexión segura debe habilitarse a través del parámetro secureConnection en la estructura o en la estructura en función de si usa `XrRemotingConnectInfoMSFT` `XrRemotingListenInfoMSFT` o `xrRemotingConnectMSFT` `xrRemotingListenMSFT` .
+Estas devoluciones de llamada se pueden proporcionar al entorno de ejecución de OpenXR de comunicación remota a través `xrRemotingSetSecureConnectionClientCallbacksMSFT` de y `xrRemotingSetSecureConnectionServerCallbacksMSFT` . Además, la conexión segura debe habilitarse a través del parámetro secureConnection en la estructura o la estructura en función de si usa `XrRemotingConnectInfoMSFT` `XrRemotingListenInfoMSFT` o `xrRemotingConnectMSFT` `xrRemotingListenMSFT` .
 
 Esta API es similar a la API basada en IDL que se describe en Implementación de la seguridad [de comunicación remota holográfica.](#implementing-holographic-remoting-security) Sin embargo, en lugar de implementar interfaces, se supone que debe proporcionar implementaciones de devolución de llamada. Puede encontrar un ejemplo detallado en la aplicación [de ejemplo OpenXR](https://github.com/microsoft/MixedReality-HolographicRemoting-Samples).
 
 ## <a name="see-also"></a>Consulte también
+* [Información general sobre la comunicación remota holográfica](holographic-remoting-overview.md)
 * [Escritura de una aplicación remota de Holographic Remoting Windows Mixed Reality API](holographic-remoting-create-remote-wmr.md)
 * [Escritura de una aplicación remota de Holographic Remoting mediante las API de OpenXR](holographic-remoting-create-remote-openxr.md)
 * [Escritura de una aplicación de reproductor de control remoto de holografías personalizada](holographic-remoting-create-player.md)

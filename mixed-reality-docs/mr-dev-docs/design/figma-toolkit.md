@@ -6,12 +6,12 @@ ms.author: dongpark
 ms.date: 03/29/2021
 ms.topic: article
 keywords: Figma, Sketch, Adobe XD, design, designer, design file, UX design, HoloLens, MRTK, Mixed Reality Toolkit
-ms.openlocfilehash: e72dfece3252a35a8da2b1dc72a1476bbf174b36bf01b731b4f0be5af21f2a33
-ms.sourcegitcommit: 5977109661a1db4ee2be8ed532479342093303d5
+ms.openlocfilehash: e911f7b2c1675a8113592d13c01abc3b71238733
+ms.sourcegitcommit: 191c3d89c034714377d09fa91c07cbaa81301bae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2021
-ms.locfileid: "116862630"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121905640"
 ---
 # <a name="mrtk-figma-toolkit"></a>Kit de herramientas de Figma de MRTK
 
@@ -33,18 +33,18 @@ Haga **clic en Volver a los** archivos para ver la copia duplicada. Puede usar e
 
 <img src="images/UX_Figma_Use3.png" width="300px" alt="Menu duplicate 3"><br>
 
-Para descargar y trabajar localmente, use File **> guardar el menú de copia local.** Importe el archivo descargado (.fig) en Figma con el **botón Importar** de la esquina superior derecha.
+Para descargar y trabajar localmente, use el menú Archivo **> guardar copia local.** Importe el archivo descargado (.fig) en Figma con **el botón Importar** de la esquina superior derecha.
 
 <img src="images/UX_FigmaToolkit_Import.png" width="200px" alt="Import menu"><br>
 
-Puede usar los **menús Páginas** de la izquierda para abrir las distintas páginas incluidas en el archivo.
+Puede usar los menús **Páginas** de la izquierda para abrir las distintas páginas incluidas en el archivo.
 
 <img src="images/UX_FigmaToolkit_PageMenu.png" width="200px" alt="Page menu"><br>
 
 Abra **la página** Introducción para obtener información sobre cómo usar componentes y estados.
 
-## <a name="ui-gallery--components"></a>UI Gallery & Components
-La página Galería y componentes de la interfaz de usuario muestra todos los componentes disponibles para su diseño.
+## <a name="ui-gallery--components"></a>Componentes de la galería de & interfaz de usuario
+La galería de interfaz de usuario y la página Componentes muestran todos los componentes disponibles para su diseño.
 
 ![Ejemplo de Toolkit Figma: interfaz de usuario de menú 1](images/UX_FigmaToolkit_Components_Menu1.png)<br>
 
@@ -60,12 +60,12 @@ Con **la pestaña** Activos, puede examinar estos componentes y arrastrarlos a l
 
 ## <a name="examples"></a>Ejemplos
 
-Figma Toolkit puede ser útil para dibujar la interfaz de usuario del menú. 
+Figma Toolkit puede ser útil para esbozar la interfaz de usuario del menú. 
 
-![Ejemplo de Toolkit figma: interfaz de usuario de menú 5](images/UX_FigmaToolkit_Examples_Menu.png)<br>
+![Ejemplo de Toolkit Figma: interfaz de usuario de menú 5](images/UX_FigmaToolkit_Examples_Menu.png)<br>
 
 
-Los recursos se pueden usar para el guión gráfico.
+Los recursos se pueden usar para el guion gráfico.
 
 ![Ejemplo de Toolkit Figma: guión gráfico](images/UX_FigmaToolkit_Examples_Storyboarding.png)<br>
 
