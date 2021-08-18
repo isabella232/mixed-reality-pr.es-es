@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 78296dd4e6667c34926c954774547b21a223c5f4b6635476c51046c7ca22cdc3
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: c3775dc73f41b822c233d8fc4ec62459e789b89f
+ms.sourcegitcommit: 191c3d89c034714377d09fa91c07cbaa81301bae
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115208410"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "122264169"
 ---
 # <a name="mrtk"></a>[MRTK](#tab/mrtk)
 
@@ -13,7 +13,7 @@ ms.locfileid: "115208410"
 **Espacio de nombres:** *Microsoft.MixedReality.Toolkit. WindowsMixedReality*<br>
 **Tipo:** *WindowsMixedRealityUtilities*
 
-MRTK proporciona tipos ya clasificados en el SDK de WSA y XR heredados a través de la **clase WindowsMixedRealityUtilities.**
+MRTK proporciona tipos ya clasificados en el SDK de WSA y XR heredados a través de **la clase WindowsMixedRealityUtilities.**
 
 ```cs
 public static HolographicFrame CurrentHolographicFrame { get; }
@@ -21,7 +21,7 @@ public static SpatialCoordinateSystem SpatialCoordinateSystem { get; }
 public static SpatialInteractionManager SpatialInteractionManager { get; }
 ```
 
-# <a name="xr-sdk"></a>[XR SDK](#tab/xr)
+# <a name="windows-xr-plugin"></a>[Windows Complemento XR](#tab/xr)
 
 ## <a name="windowsmrenvironment"></a>WindowsMREnvironment
 
@@ -67,4 +67,4 @@ IntPtr nativePtr = UnityEngine.XR.XRDevice.GetNativePtr();
 HolographicFrameNativeData hfd = Marshal.PtrToStructure<HolographicFrameNativeData>(nativePtr);
 ```
 
-***IHolographicCameraPtr es** una matriz de IntPtr serializada como UnmanagedType.ByValArray con una longitud igual a MaxNumberOfCamera*
+***IHolographicCameraPtr es** una matriz de IntPtr serializada como UnmanagedType.ByValArray con una longitud igual a MaxNumberOfCammatriz*

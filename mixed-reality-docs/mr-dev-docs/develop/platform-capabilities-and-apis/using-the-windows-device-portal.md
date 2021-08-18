@@ -7,12 +7,12 @@ ms.date: 08/03/2020
 ms.topic: article
 keywords: Portal de dispositivos Windows, HoloLens
 ms.localizationpriority: high
-ms.openlocfilehash: edcd1796598b558f42232bf54ae3d40d3c509bb9515d8dcbe7f3cf9f2b7dfd62
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 92f8c67297a33c4c8e72de802ceb8a3080d904d9
+ms.sourcegitcommit: 191c3d89c034714377d09fa91c07cbaa81301bae
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115221595"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "121905724"
 ---
 # <a name="using-the-windows-device-portal"></a>Uso de Portal de dispositivos Windows
 
@@ -395,7 +395,7 @@ Haga clic o pulse **Activar** para iniciar el seguimiento. El proveedor se agreg
    1. En el caso de los criterios que se aplican a la misma propiedad, se muestran los eventos que pueden cumplir cualquiera de ellos.
    2. En el caso de los criterios que se aplican a una propiedad diferente, los eventos deben cumplir todos los criterios.
 
-Por ejemplo, puedes especificar los criterios *(el nombre de tarea contiene "Foo&quot; o &quot;Bar") y (el texto contiene "error" o "advertencia")*
+Por ejemplo, puedes especificar los criterios *(el nombre de tarea contiene "Foo" o "Bar") y (el texto contiene "error" o "advertencia")*
 
 ### <a name="simulation"></a>Simulation
 
