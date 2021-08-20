@@ -220,7 +220,7 @@
           href: unity/spatial-sound-in-unity.md
     - name: Características avanzadas
       items:
-        - name: Cámara de fotos y vídeo en Unity
+        - name: Cámara de fotos y vídeo
           href: unity/locatable-camera-in-unity.md
         - name: Punto de enfoque
           href: unity/focus-point-in-unity.md
@@ -234,6 +234,8 @@
           href: unity/using-the-windows-namespace-with-unity-apps-for-hololens.md
         - name: Interoperabilidad nativa de Mixed Reality en Unity
           href: unity/unity-xrdevice-advanced.md
+        - name: Uso de recursos de PC para alimentar la aplicación
+          href: unity/use-pc-resources.md
         - name: Uso de Vuforia
           href: unity/vuforia-development-overview.md
     - name: VR envolvente
@@ -266,8 +268,8 @@
           href: unity/managed-debugging-with-unity-il2cpp.md
         - name: Configuración recomendada para Unity
           href: unity/recommended-settings-for-unity.md
-        - name: Vista previa de un trabajo con el control remoto de holografías
-          href: unity/holographic-remoting-in-unity.md
+        - name: Vista previa y depuración de una aplicación con Control remoto de holografías
+          href: unity/preview-and-debug-your-app.md
     - name: "Soluciones de Visual\_Studio"
       items:
         - name: Exportación y creación de una solución de Visual Studio para Unity
@@ -452,21 +454,21 @@
           href: platform-capabilities-and-apis/installing-pix-hololens.md
     - name: Control remoto de holografías
       items:
-        - name: Información general
+        - name: Introducción al control remoto de holografías
           href: platform-capabilities-and-apis/holographic-remoting-overview.md
-        - name: Reproductor de control remoto de holografías
+        - name: El reproductor de control remoto de holografías
           href: platform-capabilities-and-apis/holographic-remoting-player.md
-        - name: Escritura de una aplicación remota de control remoto de holografías
+        - name: Escritura de una aplicación remota de control remoto de holografías (C++)
           items:
             - name: API de HolographicSpace
               href: platform-capabilities-and-apis/holographic-remoting-create-remote-wmr.md
             - name: API de OpenXR
               href: platform-capabilities-and-apis/holographic-remoting-create-remote-openxr.md
-        - name: Escritura de una aplicación de reproductor de control remoto de holografías personalizada
+        - name: Escritura de una aplicación personalizada del reproductor de control remoto de holografías (C++)
           href: platform-capabilities-and-apis/holographic-remoting-create-player.md
-        - name: Canales de datos personalizados de control remoto de holografías
+        - name: Canales de datos personalizados de control remoto de holografías (C++)
           href: platform-capabilities-and-apis/holographic-remoting-custom-data-channels.md
-        - name: Conexión segura con el control remoto de holografías
+        - name: Conexión segura con el control remoto de holografías (C++)
           href: platform-capabilities-and-apis/holographic-remoting-secure-connection.md
         - name: Solución de problemas y limitaciones
           href: platform-capabilities-and-apis/holographic-remoting-troubleshooting.md
