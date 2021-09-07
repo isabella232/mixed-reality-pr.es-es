@@ -6,12 +6,12 @@ ms.author: alexturn
 ms.date: 02/24/2019
 ms.topic: article
 keywords: Sharing, Anchor, WorldAnchor, MR Sharing 250, WorldAnchorTransferBatch, SpatialPerception, Azure, Azure Spatial Anchors, ASA, mixed reality headset, windows mixed reality headset, virtual reality headset
-ms.openlocfilehash: b9fdd09740dc6197c46a2d017f61e97898f213cd44bb504cbbf306f6a7ae21ec
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: f7725c8282d1b5a93d555ac0f55ee936b910ff6c
+ms.sourcegitcommit: 6f3b3aa31cc3acefba5fa3ac3ba579d9868a4fe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115195927"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "123244183"
 ---
 # <a name="shared-experiences-in-unity"></a>Experiencias compartidas en Unity
 
@@ -19,9 +19,17 @@ Una experiencia compartida permite que varios usuarios, cada uno con su propio d
 
 ## <a name="azure-spatial-anchors"></a>Azure Spatial Anchors
 
-<a href="/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> anclajes espaciales duraderos con respaldo en la nube, que la aplicación puede localizar en varios dispositivos HoloLens, iOS y Android.  Al compartir un delimitador espacial común entre varios dispositivos, cada usuario puede ver el contenido representado en relación con ese delimitador en la misma ubicación física. 
+### <a name="automated-with-world-locking-tools"></a>Automatizado con World Locking Tools
 
-También puede usar <a href="/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> para la persistencia asincrónica de hologramas en HoloLens, iOS y Android.  Al compartir un anclaje espacial en la nube duradero, varios dispositivos pueden observar el mismo holograma persistente con el tiempo, incluso si esos dispositivos no están presentes juntos al mismo tiempo.
+Al igual que con los delimitadores locales, World Locking Tools puede usar un grupo de Azure Spatial Anchors para bloquear espacios de coordenadas completos en relación con el mundo físico, en lugar de usar delimitadores individuales para bloquear objetos individuales. El bloqueo de todo el espacio no solo proporciona un entorno más propicio para un diseño preciso, sino que también es más eficaz tanto en tiempo de desarrollo como en recursos en tiempo de ejecución.
+
+Para obtener más información y ejemplos que aprovechan Azure Spatial Anchors para compartir sistemas de coordenadas entre dispositivos HoloLens, Android e iOS, así como conservar espacios entre sesiones, consulte la documentación de [World Locking Tools](https://microsoft.github.io/MixedReality-WorldLockingTools-Unity/DocGen/Documentation/HowTos/WLT_ASA.html).
+
+### <a name="manual-configuration-of-azure-spatial-anchors"></a>Configuración manual de Azure Spatial Anchors
+
+<a href="/azure/spatial-anchors/overview" target="_blank">Azure Spatial Anchors</a> anclajes espaciales duraderos con respaldo en la nube que la aplicación puede encontrar en varios dispositivos HoloLens, iOS y Android.  Al compartir un delimitador espacial común entre varios dispositivos, cada usuario puede ver el contenido representado en relación con ese delimitador en la misma ubicación física.
+
+También puede usar Azure Spatial Anchors para <a href="/azure/spatial-anchors/overview" target="_blank">la</a> persistencia asincrónica de hologramas en HoloLens, iOS y Android.  Al compartir un anclaje espacial en la nube duradero, varios dispositivos pueden observar el mismo holograma persistente con el tiempo, incluso si esos dispositivos no están presentes juntos al mismo tiempo.
 
 Para empezar a crear experiencias compartidas en Unity, pruebe los inicios rápidos de 5 minutos <a href="/azure/spatial-anchors/unity-overview" target="_blank">de Azure Spatial Anchors Unity.</a>
 
@@ -33,7 +41,7 @@ En situaciones en las que no se puede usar Azure Spatial Anchors, las transferen
 
 ## <a name="next-development-checkpoint"></a>Siguiente punto de control de desarrollo
 
-Si sigue el recorrido de desarrollo de Unity que hemos diseñado, se encuentra en medio de la exploración de las API y las funcionalidades de Mixed Reality plataforma. Desde aquí, puede continuar con la sección siguiente:
+Si sigue el recorrido de desarrollo de Unity que hemos diseñado, está en la antes de explorar las API y las funcionalidades de Mixed Reality plataforma. Desde aquí, puede continuar con la sección siguiente:
 
 > [!div class="nextstepaction"]
 > [Cámara localizable](locatable-camera-in-unity.md)

@@ -1,21 +1,21 @@
 ---
 title: Descripción del rendimiento de Mixed Reality
-description: Obtenga información y detalles avanzados para analizar y optimizar Windows Mixed Reality rendimiento de la aplicación.
+description: Obtenga información avanzada y detalles para analizar y optimizar Windows Mixed Reality rendimiento de la aplicación.
 author: hferrone
-ms.author: v-hferrone
-ms.date: 3/26/2019
+ms.author: v-vtieto
+ms.date: 08/16/2021
 ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Performance, Optimization, CPU, GPU
-ms.openlocfilehash: 394198011c40f0b90e2c5579f7e0ad8c4019b2a8cefcb1859c544afcbce47df6
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 9304e4cd80f0929b87a29873ad07329700ec463f
+ms.sourcegitcommit: 6f3b3aa31cc3acefba5fa3ac3ba579d9868a4fe4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115193568"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "123244207"
 ---
 # <a name="understanding-performance-for-mixed-reality"></a>Descripción del rendimiento de la realidad mixta
 
-Este artículo es una introducción para comprender la importancia del rendimiento para la Mixed Reality aplicación.  La experiencia del usuario se puede degradar enormemente si la aplicación no se ejecuta a una velocidad de fotogramas óptima. Hologramas parecerá inestable y el seguimiento de la cabeza del entorno será inexacto, lo que dará lugar a una mala experiencia para el usuario. El rendimiento debe considerarse una característica de primera clase para el desarrollo de realidad mixta y no una tarea pulida.
+Este artículo es una introducción para comprender la importancia del rendimiento para la Mixed Reality aplicación.  La experiencia del usuario puede degradarse enormemente si la aplicación no se ejecuta a una velocidad de fotogramas óptima. Hologramas parecerá inestable y el seguimiento de la cabeza del entorno será inexacto, lo que dará lugar a una mala experiencia para el usuario. El rendimiento debe considerarse una característica de primera clase para el desarrollo de realidad mixta y no una tarea pulida.
 
 Recientemente hemos publicado una aplicación denominada Fundamentos de calidad que cubre problemas comunes de rendimiento, diseño y entorno y soluciones para HoloLens 2 aplicaciones. Esta aplicación es una excelente demostración visual para el contenido que se muestra a continuación.
 
@@ -30,7 +30,7 @@ A continuación se enumeran los valores de velocidad de fotogramas de rendimient
 | [Windows Mixed Reality Ultra Pc](../../discover/immersive-headset-hardware-details.md) | 90 FPS |
 | [Windows Mixed Reality Pc](../../discover/immersive-headset-hardware-details.md) | 60 FPS |
 
-En el marco siguiente se describen los procedimientos recomendados para alcanzar las velocidades de fotogramas objetivo. Se recomienda leer el [artículo recomendaciones de rendimiento para Unity](../unity/performance-recommendations-for-unity.md) para obtener sugerencias sobre cómo medir y mejorar la velocidad de fotogramas en el entorno de Unity.
+En el marco siguiente se describen los procedimientos recomendados para alcanzar las velocidades de fotogramas objetivo. Para obtener sugerencias sobre cómo medir y mejorar la velocidad de fotogramas en el entorno de Unity, se recomienda leer las recomendaciones [de rendimiento para Unity.](../unity/performance-recommendations-for-unity.md) 
 
 ## <a name="understanding-performance-bottlenecks"></a>Descripción de los cuellos de botella de rendimiento
 
@@ -49,13 +49,13 @@ Por lo general, HoloLens aplicaciones estarán enlazadas a GPU, pero no siempre.
 
 Hay muchas herramientas que le permiten comprender el perfil de rendimiento y los posibles cuellos de botella en la aplicación de realidad mixta. 
 
-A continuación se muestran algunas herramientas comunes que le ayudarán a recopilar información de generación de perfiles profunda para la aplicación:
+A continuación se muestran algunas herramientas comunes que le ayudarán a recopilar información de generación de perfiles detallada para la aplicación:
 - [Analizadores de rendimiento de gráficos Intel](https://software.intel.com/gpa)
 - [Visual Studio Depuradores de gráficos](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)
 - [Unity Profiler](https://docs.unity3d.com/Manual/Profiler.html)
 - [Depurador de fotogramas de Unity](https://docs.unity3d.com/Manual/FrameDebugger.html)
 - [Unreal Ideas](../unreal/unreal-insights.md)
-- [Pix](https://devblogs.microsoft.com/pix/)
+- [PIX](https://devblogs.microsoft.com/pix/)
 - [Pofiling de GPU en Unreal](https://docs.unrealengine.com/en-US/TestingAndOptimization/PerformanceAndProfiling/GPU/index.html)
 
 ### <a name="how-to-profile-in-any-environment"></a>Cómo crear perfiles en cualquier entorno
@@ -108,11 +108,11 @@ La tasa de relleno se centra en reducir el número de operaciones que deben calc
 
 #### <a name="reduce-polygon-count"></a>Reducción del recuento de polígonos
 
-Los recuentos de polígonos más altos tienen como resultado más operaciones para la GPU, por lo que reducir el número de [polígonos](/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) de la escena reduce el tiempo de representación. Hay otros factores que hacen que el sombreado de la geometría sea costoso, pero el recuento de polígonos es la métrica más sencilla para determinar cuánto trabajo se va a realizar para representar una escena.
+Los recuentos de polígonos más altos tienen como resultado más operaciones para la GPU, por lo que reducir el número de [polígonos](/dynamics365/mixed-reality/import-tool/optimize-models#performance-targets) de la escena reduce el tiempo de representación. Hay otros factores que hacen que el sombreado de la geometría sea costoso, pero el recuento de polígonos es la métrica más sencilla para determinar cuánto trabajo se necesita para representar una escena.
 
 #### <a name="limit-overdraw"></a>Sobredibujo del límite
 
-El sobredes dibujo alto se produce cuando se representan varios objetos, pero no se muestran en la pantalla, ya que están ocultos por un objeto ocluido. Imagine una pared que tiene objetos detrás. Toda la geometría se procesaría para su representación, pero solo se debe representar la pared opaca, lo que da lugar a operaciones innecesarias.
+El sobredes dibujo alto se produce cuando se representan varios objetos, pero no se muestran en la pantalla, ya que están ocultos por un objeto ocluido. Imagine una pared que tiene objetos detrás. Toda la geometría se procesaría para su representación, pero solo es necesario representar la pared opaca, lo que da lugar a operaciones innecesarias.
 
 #### <a name="shaders"></a>Sombreadores
 
@@ -128,17 +128,17 @@ Normalmente, los sombreadores hacen muchas transformaciones y cálculos de ilumi
 
 - Uso del filtrado bilineal, siempre que sea posible
 - Reorganizar expresiones para usar intrínsecos DE RIESGO para realizar una multiplicación y una adición al mismo tiempo
-- Precalcule lo máximo posible en la CPU y pase como constantes al material.
+- Precalcular tanto como sea posible en la CPU y pasar como constantes al material
 - **Favor de mover las operaciones del sombreador de píxeles al sombreador de vértices**
     - Por lo general, el número de vértices es mucho menor que el número de píxeles (720p es 921 600 píxeles, 1080p es 2 073 600 píxeles, y así sucesivamente)
 
 #### <a name="remove-gpu-stages"></a>Eliminación de fases de GPU
 
-Los efectos posteriores al procesamiento pueden ser costosos y aumentar la tasa de relleno de la aplicación, incluidas técnicas de suavizado de alias como MSAA. En HoloLens, se recomienda evitar estas técnicas y fases adicionales del sombreador, como los sombreadores de geometría, casco y proceso.
+Los efectos posteriores al procesamiento pueden ser costosos y aumentar la tasa de relleno de la aplicación, incluidas técnicas de suavizado de alias como MSAA. En HoloLens, se recomienda evitar estas técnicas y fases adicionales del sombreador, como la geometría, el casco y los sombreadores de proceso.
 
 ## <a name="memory-recommendations"></a>Recomendaciones de memoria
 
-Las operaciones excesivas de asignación y desasignación de memoria pueden dar lugar a un rendimiento incoherente, fotogramas inmovilizados y otro comportamiento perjudicial. Es especialmente importante comprender las consideraciones de memoria al desarrollar en Unity, ya que la administración de memoria se controla mediante el recolector de elementos no utilizados.
+Las operaciones excesivas de asignación y desasignación de memoria pueden dar lugar a un rendimiento incoherente, fotogramas inmovilizados y otro comportamiento perjudicial. Es especialmente importante comprender las consideraciones de memoria al desarrollar en Unity, ya que el recolector de elementos no utilizados controla la administración de memoria.
 
 #### <a name="object-pooling"></a>Agrupación de objetos
 
