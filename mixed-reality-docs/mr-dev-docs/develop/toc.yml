@@ -372,7 +372,7 @@
           href: unreal/unreal-publishing-to-store.md
 - name: JavaScript
   items:
-    - name: Introducción al desarrollo con JavaScript
+    - name: Desarrollo de JavaScript con WebXR
       href: javascript/webxr-overview.md
     - name: Tutoriales
       items:
@@ -384,6 +384,14 @@
               href: javascript/tutorials/babylonjs-webxr-helloworld/prepare-scene-02.md
             - name: 3. Interactuar con un objeto 3D
               href: javascript/tutorials/babylonjs-webxr-helloworld/interact-03.md
+        - name: Crear un piano en WebXR mediante babylon.js
+          items:
+            - name: 1. Introducción
+              href: javascript/tutorials/babylonjs-webxr-piano/introduction-01.md
+            - name: 2. Crear un modelo de piano en 3D
+              href: javascript/tutorials/babylonjs-webxr-piano/keyboard-model-02.md
+            - name: 3. Tocar el piano en 3D
+              href: javascript/tutorials/babylonjs-webxr-piano/keyboard-interaction-03.md
 - name: Motor personalizado
   items:
     - name: Introducción al desarrollo del motor personalizado
