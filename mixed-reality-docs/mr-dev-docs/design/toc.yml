@@ -150,5 +150,7 @@
       href: asset-creation-process.md
     - name: Diseñar entornos envolventes propios
       href: add-custom-home-environments.md
-    - name: Kit de herramientas de Figma
+    - name: Kit de herramientas de Figma de MRTK
       href: figma-toolkit.md
+    - name: Figma Bridge para Unity
+      href: figma-unity-bridge.md
