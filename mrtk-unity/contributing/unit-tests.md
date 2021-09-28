@@ -5,12 +5,12 @@ author: RogPodge
 ms.author: roliu
 ms.date: 01/12/2021
 keywords: Unity, HoloLens, HoloLens 2, Mixed Reality, desarrollo, MRTK, UnitTest,
-ms.openlocfilehash: d528b5c16ab39271f9984bdd9e23ebca091efd53ed563149f3933ed31ed656dd
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 85c8a330d9af5b0d91c2b1b838ead7d10d97f981
+ms.sourcegitcommit: 3176df29fb0c9508751bd370f1211031d50d2c14
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115216261"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "129148670"
 ---
 # <a name="writing-and-running-tests"></a>Escritura y ejecución de pruebas
 
@@ -20,9 +20,9 @@ MRTK usa el [Test Runner Unity,](https://docs.unity3d.com/Manual/testing-editort
 
 Antes de enviar una solicitud de extracción, asegúrese de:
 
-1. Ejecute las pruebas localmente para que los cambios no vuelvan al comportamiento existente (no se permitirá completar las pruebas de rendimiento si se producirá un error en las pruebas).
+1. Ejecute las pruebas localmente para que los cambios no vuelvan al comportamiento existente (no se permitirá completar las PR si se producirá un error en las pruebas).
 
-1. Si corrige un error, escriba una prueba para probar la corrección y asegurarse de que las modificaciones futuras del código no vuelvan a interrumpirla.
+1. Si corrige un error, escriba una prueba para probar la corrección y asegúrese de que las modificaciones futuras del código no la vuelvan a interrumpir.
 
 1. Si escribe una característica, escriba nuevas pruebas para evitar que los próximos cambios en el código rompa esta característica.
 
@@ -32,7 +32,7 @@ Actualmente, las pruebas de modo de reproducción están pensadas para ejecutars
 
 ### <a name="unity-editor"></a>Editor de Unity
 
-La [ventana Test Runner Unity](https://docs.unity3d.com/Manual/testing-editortestsrunner.html) se puede encontrar en Window General Test Runner (Ventana general) y mostrará todas las pruebas de reproducción y modo de edición de  >    >   MRTK disponibles.
+La [página Test Runner Unity](https://docs.unity3d.com/Manual/testing-editortestsrunner.html) se puede encontrar en Window General Test Runner (Ventana general) y mostrará todas las pruebas de reproducción y modo de edición de  >    >   MRTK disponibles.
 
 ### <a name="command-line"></a>Línea de comandos
 
@@ -41,13 +41,13 @@ Las pruebas también se pueden ejecutar mediante un script [de PowerShell](/powe
 Ejecute las pruebas en el proyecto ubicado en H:\mrtk.dev, con Unity 2018.4 (por ejemplo, Unity 2018.4.26f1).
 
 ```ps
-.\run_playmode_tests.ps1 H:\mrtk.dev -unityExePath = "C:\Program Files\Unity\Hub\Editor\2018.4.26f1\Editor\Unity.exe"
+.\run_playmode_tests.ps1 H:\mrtk.dev -unityExePath "C:\Program Files\Unity\Hub\Editor\2018.4.26f1\Editor\Unity.exe"
 ```
 
 Ejecute las pruebas en el proyecto ubicado en H:\mrtk.dev, con Unity 2018.4, para generar resultados en C:\playmode_test_out
 
 ```ps
-.\run_playmode_tests.ps1 H:\mrtk.dev -unityExePath = "C:\Program Files\Unity\Hub\Editor\2018.4.26f1\Editor\Unity.exe" -outFolder "C:\playmode_test_out\"
+.\run_playmode_tests.ps1 H:\mrtk.dev -unityExePath "C:\Program Files\Unity\Hub\Editor\2018.4.26f1\Editor\Unity.exe" -outFolder "C:\playmode_test_out\"
 ```
 
 También es posible ejecutar las pruebas de modo de reproducción varias veces a través del `run_repeat_tests.ps1` script. Se pueden usar todos `run_playmode_tests.ps1` los parámetros usados en .
@@ -221,7 +221,7 @@ namespace Microsoft.MixedReality.Toolkit.Tests
 
 ### <a name="edit-mode-tests"></a>Pruebas de modo de edición
 
-Las pruebas de modo de edición se ejecutan en el modo de edición de Unity y se pueden agregar en la **carpeta**  >    >  **EditModeTests** de las pruebas de MRTK en el repositorio Mixed Reality Toolkit cambios.
+Las pruebas de modo de edición se ejecutan en el modo de edición de Unity y se pueden agregar en la **carpeta**  >    >  **EditModeTests** de pruebas de MRTK en el repositorio Mixed Reality Toolkit cambios.
 Para crear una nueva prueba, se puede usar la siguiente plantilla:
 
 ```c#
@@ -246,7 +246,7 @@ namespace Microsoft.MixedReality.Toolkit.Tests
 
 ### <a name="test-naming-conventions"></a>Probar convenciones de nomenclatura
 
-Normalmente, las pruebas se deben denominar en función de la clase que están probando o del escenario que están probando.
+Por lo general, las pruebas se deben denominar en función de la clase que están probando o del escenario que están probando.
 Por ejemplo, dada una clase que se va a probar:
 
 ```c#
