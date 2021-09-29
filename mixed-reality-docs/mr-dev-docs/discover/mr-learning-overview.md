@@ -2,17 +2,17 @@
 title: Introducción al módulo de Learn de Mixed Reality
 description: Manténgase al día con todos los módulos de Mixed Reality disponibles hospedados en la plataforma Microsoft Learn.
 author: hferrone
-ms.author: jemccull
-ms.date: 11/30/2020
+ms.author: v-vtieto
+ms.date: 9/27/2021
 ms.topic: article
 keywords: mixed reality, unity, tutorial, hololens, learn, casco de realidad mixta, casco de windows mixed reality, casco de realidad virtual, qué es la realidad virtual, qué es la realidad aumentada, MRTK, kit de herramientas de mixed reality, traducción de idiomas, Azure, Azure cognitive services, Microsoft Learn
 ms.localizationpriority: high
-ms.openlocfilehash: 24584532fca0872a1ec62f6f2381e0aa076da5bb79eea765cb3a0a0f5736f36f
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: 595aad668e2ff2a1a91fc801981be1d004bc012f
+ms.sourcegitcommit: 3176df29fb0c9508751bd370f1211031d50d2c14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115204401"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "129148688"
 ---
 # <a name="mixed-reality-learn-overview"></a>Introducción a Learn de Mixed Reality
 
@@ -23,7 +23,7 @@ Cuantas más herramientas tenga al desarrollar para Mixed Reality, mejor. Aunque
 Nuestros módulos de Learn le ayudan a convertirse en experto en desarrollo para Mixed Reality, ya que ofrecen una estructura basada en módulos que le permite empezar a trabajar con herramientas clave, como Mixed Reality Toolkit, Unity y los servicios de realidad mixta de Azure. Llegar al paso Hola mundo nunca ha sido más fácil, ya que presentamos los objetivos de aprendizaje, los requisitos previos y el tiempo definido para cumplir las expectativas en la misma interfaz. 
 
 > [!div class="nextstepaction"]
-> [Introducción a nuestra ruta de aprendizaje de Mixed Reality](/learn/browse/?terms=mixed+reality)
+> [Exploración de los módulos de aprendizaje de Mixed Reality](/learn/browse/?terms=mixed+reality)
 
 ## <a name="general-modules"></a>Módulos generales
 
