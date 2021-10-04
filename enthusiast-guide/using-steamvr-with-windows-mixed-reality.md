@@ -1,22 +1,25 @@
 ---
 title: Uso de SteamVR con Windows Mixed Reality
-description: Obtenga información sobre cómo configurar y reproducir juegos de SteamVR Windows Mixed Reality cascos y controladores con equipos compatibles.
+description: Aprenda a configurar y reproducir juegos de SteamVR en Windows Mixed Reality cascos y controladores con equipos compatibles.
+author: qianw211
+ms.author: v-qianwen
+ms.date: 9/23/2021
 ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, juegos, SteamVR, Steam, requisitos del sistema
-ms.openlocfilehash: 42459f9b8d661bd01ce489460c5293333034612bc59becccf3d35e0ce506fddb
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: b06c5e0b9918a5277a2c31e391dbdbc1ef740110
+ms.sourcegitcommit: c159bdcf2ada1f45606b10d41ea3adf95109c979
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115221387"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129436722"
 ---
 # <a name="using-steamvr-with-windows-mixed-reality"></a>Uso de SteamVR con Windows Mixed Reality
 
-Windows Mixed Reality para SteamVR permite a los usuarios ejecutar experiencias de SteamVR Windows Mixed Reality cascos envolventes. Después de instalar Windows Mixed Reality para SteamVR, los usuarios pueden iniciar sus aplicaciones favoritas de SteamVR desde su escritorio o biblioteca de Steam y reproducirlas directamente en su casco Windows escritorio.
+Windows Mixed Reality para SteamVR permite a los usuarios ejecutar experiencias de SteamVR Windows Mixed Reality cascos envolventes. Después de instalar el Windows Mixed Reality para SteamVR, los usuarios pueden iniciar sus aplicaciones de SteamVR favoritas desde su biblioteca de escritorio o de Steam y reproducirlas directamente en su casco Windows de escritorio.
 
 ## <a name="get-your-pc-ready"></a>Preparar el equipo
 
-* Asegúrese de que no tiene actualizaciones pendientes: seleccione Iniciar > Configuración > **actualizar & seguridad > Windows actualizar**. Si hay actualizaciones disponibles, seleccione **Instalar ahora.** Si no hay actualizaciones disponibles, seleccione **Buscar actualizaciones** y, a continuación, instale las nuevas.
+* Asegúrese de que no tiene actualizaciones pendientes: seleccione Start > Configuración > Update & Security > Windows Update (Iniciar > Configuración > actualización de **& seguridad > Windows update).** Si hay actualizaciones disponibles, seleccione **Instalar ahora.** Si no hay actualizaciones disponibles, seleccione **Buscar actualizaciones** y, a continuación, instale las nuevas.
 * Los requisitos de pc varían para las aplicaciones y el contenido de Steam. Consulte los requisitos mínimos por título. Un equipo con una tarjeta gráfica GTX 1070 (o equivalente) y un procesador Intel® Core™ i7 debe ofrecer una buena experiencia para una amplia gama de títulos.
 * Configure [Windows Mixed Reality](set-up-windows-mixed-reality.md) si aún no lo ha hecho. 
 
@@ -27,7 +30,7 @@ Windows Mixed Reality para SteamVR permite a los usuarios ejecutar experiencias 
 
 > **Nota:** Para solucionar problemas avanzados de la instalación de SteamVR, asegúrese de que tiene instalados los siguientes componentes de software:
 > 1. Instale [Steam e](http://store.steampowered.com/about/) inicie **sesión** o cree una **nueva cuenta.**
-> 2. Instale [SteamVR.](https://store.steampowered.com/app/250820/SteamVR/) Con el casco conectado, inicie Steam y debería ver un cuadro de diálogo en el que se le pide que instale SteamVR. Siga las indicaciones del cuadro de diálogo para instalarlo.
+> 2. Instale [SteamVR.](https://store.steampowered.com/app/250820/SteamVR/) Con el casco conectado, inicie Steam y verá un cuadro de diálogo en el que se le pedirá que instale SteamVR. Siga las indicaciones del cuadro de diálogo para instalarlo.
     * Si no ve el elemento emergente, instale SteamVR; para ello, vaya a la *sección Herramientas* de la *biblioteca*. Busque SteamVR en la lista y, a continuación, haga clic con el botón derecho y seleccione *Instalar juego.*
 > 3. Instale [Windows Mixed Reality para SteamVR.](https://store.steampowered.com/app/719950/Windows_Mixed_Reality_for_SteamVR/)
 
@@ -42,27 +45,27 @@ Windows Mixed Reality para SteamVR permite a los usuarios ejecutar experiencias 
 6. Haga lo mismo con Windows Mixed Reality para SteamVR y las aplicaciones compatibles con SteamVR que quiera instalar en el equipo de destino.
 
 **Ejecución de SteamVR en el equipo de destino**
-1. Después de conectar el dispositivo de almacenamiento portátil al equipo de destino, mueva las carpetas SteamVR, MixedRealityVRDriver y otras carpetas a un lugar cómodo en el equipo de destino.
+1. Después de conectar el dispositivo de almacenamiento portátil en el equipo de destino, mueva las carpetas SteamVR, MixedRealityVRDriver y otras carpetas a un lugar cómodo en el equipo de destino.
 ![SteamVR y Windows Mixed Reality para SteamVR instalados en el equipo de destino](images/steamvr-install-files.png)
 
-2. Para asegurarse de que SteamVR y MixedRealityVRDriver están en la misma carpeta, abra un símbolo del sistema. Para este ejemplo, se supone que la carpeta que contiene está en *C:\SteamVRInstall*. En ese caso, en el símbolo del sistema debe ejecutar:
+2. Para asegurarse de que SteamVR y MixedRealityVRDriver están en la misma carpeta, abra un símbolo del sistema. Para este ejemplo, se supone que la carpeta que lo contiene se encuentra en *C:\SteamVRInstall.* En ese caso, en el símbolo del sistema debe ejecutar:
 ```powershell
 chdir "C:\SteamVRInstall"
 .\SteamVR\bin\win64\vrpathreg.exe adddriver "C:\SteamVRInstall\MixedRealityVRDriver"
 ```
 (Tenga en cuenta que si ejecuta una versión de 32 bits de Windows, la parte de la ruta de acceso anterior `win64` debe ser en su `win32` lugar).
 
-Esto permitirá que el tiempo de ejecución encuentre el Windows Mixed Reality controlador de SteamVR en la instalación personalizada.
+Esto permitirá que el tiempo de ejecución encuentre el Windows Mixed Reality para el controlador de SteamVR en la instalación personalizada.
 
 4. Para ejecutar SteamVR, debe hacer doble clic en el archivo "vrstartup.exe" ubicado  en *SteamVR\bin\win64\vrstartup.exe* oSteamVR\bin\win32\vrstartup.exesi el equipo de destino ejecuta una versión de 32 bits de Windows.
 
-Consulte la página [de documentación de Steamworks para obtener más información y solucionar problemas.](https://partner.steamgames.com/doc/features/steamvr/enterprise#2)
+Consulte la [página de documentación de Steamworks para obtener más información y solucionar problemas.](https://partner.steamgames.com/doc/features/steamvr/enterprise#2)
 
-## <a name="play-steamvr-games"></a>Reproducción de juegos de SteamVR
+## <a name="play-steamvr-games"></a>Reproducir juegos de SteamVR
 
-1. Conectar el casco al equipo y encienda los controladores de movimiento.
+1. Conectar el casco al equipo y active los controladores de movimiento.
 2. Una vez Windows Mixed Reality se haya cargado el dispositivo principal y los controladores estén visibles, abra la aplicación Dete en el escritorio.
-3. Use la aplicación Steam para iniciar un juego de SteamVR desde la biblioteca de Steam.
+3. Use la aplicación Dete para iniciar un juego de SteamVR desde la biblioteca de Steam.
 
 **Sugerencia:** Para iniciar juegos de SteamVR sin quitarse el casco, use la aplicación de escritorio (Iniciar **> Desktop)** para ver e interactuar con el escritorio del equipo dentro de Windows Mixed Reality.
 
@@ -75,7 +78,7 @@ Usará los controladores de movimiento de forma diferente en distintos juegos. E
 
 ## <a name="changing-the-resolution"></a>Cambio de la resolución
 
-Puede ajustar el control deslizante Resolución de aplicaciones en la ventana Aplicaciones de SteamVR -> Configuración -> en cualquier momento si quiere jugar a juegos con una resolución superior. **Cuando se usa un multiplicador de mayor resolución, puede esperar que el juego ponga más presión en el equipo. Si aumenta el multiplicador y ve un rendimiento degradado, vuelva a ajustar el control deslizante al nivel predeterminado y reinicie el juego para asegurarse de que el cambio suba efecto.![Ajustar la resolución de la aplicación](images/SteamVR_Settings_Applications.png)
+Puede ajustar el control deslizante Resolución de aplicaciones en la ventana Aplicaciones de SteamVR -> Configuración -> en cualquier momento si quiere jugar a juegos con una resolución más alta. **Cuando se usa un multiplicador de resolución más alto, puede esperar que el juego ponga más presión en el equipo. Si aumenta el multiplicador y ve un rendimiento degradado, vuelva a ajustar el control deslizante al nivel predeterminado y reinicie el juego para asegurarse de que el cambio suba.![Ajuste de la resolución de la aplicación](images/SteamVR_Settings_Applications.png)
 
 ## <a name="using-multiple-headsets"></a>Uso de varios cascos
 
@@ -89,18 +92,18 @@ Publicamos actualizaciones periódicas para mejorar el rendimiento, la confiabil
 
 Windows Mixed Reality para SteamVR es el componente que se instala desde la tienda de Steam que permite a SteamVR trabajar con el casco Windows Mixed Reality dispositivo.  Publicamos actualizaciones de este "puente" periódicamente y Steam las instala automáticamente.
 
-Si desea obtener actualizaciones con más frecuencia, le recomendamos que se una a nuestra versión beta pública.  Las actualizaciones van primero a nuestra audiencia beta y usamos sus comentarios para asegurarnos de que las actualizaciones son de alta calidad antes de publicarlas para todos los usuarios.  Si no está en nuestro programa Beta, finalmente tendrá todas las mismas correcciones y características, pero después de que los usuarios de la versión beta las hayan probado.
+Si desea obtener actualizaciones con más frecuencia, le recomendamos que se una a nuestra versión beta pública.  Las actualizaciones van primero a nuestra audiencia beta y usamos sus comentarios para asegurarnos de que las actualizaciones son de alta calidad antes de publicarlas para todos los usuarios.  Si no está en nuestro programa Beta, al final tendrá todas las mismas correcciones y características, pero después de que nuestros usuarios beta las hayan probado.
 
 Para unirse:
 
-  1. En Steam, use la lista desplegable del menú **Biblioteca** para filtrar por **Software**.
-  2. En la lista, haga clic con el **botón derecho en Windows Mixed Reality para SteamVR** y seleccione **Propiedades.**
+  1. En Steam, use la lista desplegable del menú **Biblioteca** para filtrar por **Software.**
+  2. En la lista, haga clic con el **botón derecho Windows Mixed Reality en SteamVR** y seleccione **Propiedades.**
   3. Seleccione la **pestaña Betas (Betas).**
-  4. Opte por **"beta - public beta"** y seleccione **Cerrar** para confirmar. El campo de código de acceso beta se debe dejar en blanco.
+  4. Opte por **"beta - public beta"** y seleccione **Cerrar** para confirmar. El campo beta access code (Código de acceso beta) se debe dejar en blanco.
   
 ### <a name="steamvr-beta"></a>SteamVR Beta
 
-SteamVR está creado y publicado por Valve y es común en todos los cascos de SteamVR.  Sigue un modelo similar de publicación de actualizaciones para los miembros beta antes de publicar para todos los usuarios.
+SteamVR está creado y publicado por Valve y es común en todos los cascos de SteamVR.  Sigue un modelo similar de publicación de actualizaciones para los miembros beta antes de publicar en todos los usuarios.
 
 Para unirse:
 
@@ -111,19 +114,19 @@ Para unirse:
 
 ### <a name="windows-insider-program"></a>Programa Windows Insider
 
-Windows Mixed Reality forma parte de Windows 10.  Muchas correcciones y características que afectan a los usuarios de SteamVR incluyen Windows sistema operativo.  Si desea probar las últimas compilaciones Windows 10 versión preliminar, le recomendamos que se una al [Windows Programa Insider](https://insider.windows.com).
+Windows Mixed Reality forma parte de Windows 10 y Windows 11.  Muchas correcciones y características que afectan a los usuarios de SteamVR incluyen Windows sistema operativo.  Si desea probar las últimas compilaciones Windows 10 y Windows versión preliminar 11, le recomendamos que se una al [Windows Programa Insider](https://insider.windows.com).
 
 ## <a name="enabling-motion-reprojection-for-steamvr-apps"></a>Habilitación de la reproducción de movimiento para aplicaciones de SteamVR
 
-Windows Mixed Reality para SteamVR tiene una característica experimental de reproducción de movimiento para que la reproducción a 90 FPS sea más fluida.
+Windows Mixed Reality para SteamVR tiene una característica experimental de reproducción de movimiento para que la reproducción de 90 FPS sea más fluida.
 
-Cuando se habilita la reproducción de movimiento, todos los juegos de VR de Steam se representarán nominalmente a una velocidad de fotogramas de 1/2 (45 fps en lugar de 90 FPS), mientras que Windows Mixed Reality para SteamVR usa vectores de movimiento generados por la GPU para extrapolar el fotograma siguiente. En el caso de los juegos de SteamVR que alcanzaron de forma confiable 60 FPS+ en un equipo determinado, esto debería dar lugar a una experiencia sólida de 90 FPS con artefactos ocasionales mientras se mantiene una experiencia cómoda.
+Cuando se habilita la reproducción de movimiento, todos los juegos de Vr de Steam se representarán nominalmente a una velocidad de fotogramas de 1/2 (45 fps en lugar de 90 FPS), mientras que Windows Mixed Reality para SteamVR usa vectores de movimiento generados por la GPU para extrapolar el fotograma siguiente. En el caso de los juegos de SteamVR que alcanzaron de forma confiable 60 FPS+ en un equipo determinado, esto debería dar lugar a una experiencia sólida de 90 FPS con artefactos ocasionales mientras se mantiene una experiencia cómoda.
 
-Los modos de reproyecto de movimiento disponibles son los siguientes:
+Los modos de reproducción de movimiento disponibles son los siguientes:
 
-* **Configuración de SteamVR** por aplicación: permite controlar la reproducción de movimiento a través de la interfaz de usuario de Configuración de SteamVR. A continuación, puede abrir el Configuración Desenlaz, ir a Video > Per-Application Video Configuración y seleccionar una opción para "Suavizado de movimiento".
+* **Configuración de SteamVR** por aplicación: permite controlar la reproducción de movimiento a través de la interfaz de usuario de Configuración Desaprotección de Movimiento. A continuación, puede abrir la Configuración Desenlaz, ir a Video > Per-Application Video Configuración y seleccionar una opción para "Suavizado de movimiento".
 * **Automático:** permite que la reproducción de movimiento se active automáticamente cuando un juego se representa demasiado lentamente para mantener 90 FPS. Cuando un juego comienza a mantener 90 FPS o empieza a representarse a menos de 45 FPS, se desactivará la reproducción del movimiento. La reproducción de rotación asincrónica siempre está habilitada.
-* **Vector de movimiento:** fuerza a la aplicación a ejecutarse siempre a una velocidad de fotogramas media con la reproducción del vector de movimiento.
+* **Vector de movimiento:** fuerza a la aplicación a ejecutarse siempre a una velocidad de fotogramas media con reproducción de vector de movimiento.
 * **Ninguno:** deshabilita la reproducción de movimiento.
 
 **Se esperaba visual Artifacts** 
@@ -135,13 +138,13 @@ Los modos de reproyecto de movimiento disponibles son los siguientes:
 
 Inicialmente, tenemos compatibilidad experimental con GPU NVidia de generación reciente. Seguimos iterando y mejorando la compatibilidad con la reproducción de movimiento en más GPU, y estamos dispuestos a escuchar sus comentarios.
 
-**GPU admitidas:** Nvidia GeForce GTX1060, AMD RX470 o una versión más alta, Windows Mixed Reality controladores de gráficos compatibles instalados.
+**GPU admitidas:** Nvidia GeForce GTX1060, AMD RX470 o una versión más alta, con Windows Mixed Reality controladores de gráficos compatibles instalados.
 
 Para habilitar la reproducción de movimiento:
 
 1. Asegúrese de que ha optado por la versión **Windows Mixed Reality de SteamVR Beta** con las instrucciones anteriores.
 2. Abra el panel de SteamVR.
-3. Seleccione el botón del lado izquierdo con el logotipo Windows Mixed Reality para abrir **Windows Mixed Reality para SteamVR** Configuración.
+3. Seleccione el botón del lado izquierdo con el logotipo de Windows Mixed Reality para abrir **Windows Mixed Reality para SteamVR** Configuración.
 4. En la interfaz de usuario que aparece, seleccione la pestaña Gráficos.
 5. Seleccione "Auto" (Automático) en "Default SteamVR app motion reprojection mode" (Modo predeterminado de reproducción de movimiento de la aplicación SteamVR) para habilitar la reproducción automática del movimiento.
 
@@ -153,9 +156,9 @@ El indicador de reproyecto de movimiento ayuda a diagnosticar problemas con la c
 
 ![mvLSR Indicator](images/mvLSRIndicator.png)
 
-Verde = la reproducción de movimiento está desactivada porque la aplicación puede representarse a velocidad de fotogramas completa.
+Verde = la reproducción de movimiento está desactivada porque la aplicación se puede representar a velocidad de fotogramas completa.
 
-Aguazcua = La reproducción de movimiento está en porque la aplicación está enlazada a la CPU.
+La reproducción de movimiento de agua = está en porque la aplicación está enlazada a la CPU.
 
 Azul = la reproducción de movimiento está en porque la aplicación está enlazada a gpu.
 
@@ -165,7 +168,7 @@ Verde + azul + azul = la reproducción de movimiento está en modo de velocidad 
 
 ## <a name="sharing-feedback-on-steamvr"></a>Compartir comentarios sobre SteamVR
 
-Sus comentarios son muy valiosos cuando se trata de mejorar la Windows Mixed Reality de SteamVR. Envíe todos los comentarios y errores a través [del Centro de opiniones sobre Windows](filing-feedback.md). Siga estas sugerencias para ayudarnos a sacar el máximo partido de sus comentarios:
+Sus comentarios son muy valiosos a la hora de mejorar la Windows Mixed Reality de SteamVR. Envíe todos los comentarios y errores a través [del Centro de opiniones sobre Windows](filing-feedback.md). Siga estas sugerencias para ayudarnos a sacar el máximo partido de sus comentarios:
 
 1. En Centro de opiniones, indique que está informando de un nuevo problema en "¿Qué tipo de comentarios es?" sección de la parte superior.
 2. Seleccione la **Mixed Reality** categoría y la **subcategoría** Aplicaciones.
@@ -176,7 +179,7 @@ Sus comentarios son muy valiosos cuando se trata de mejorar la Windows Mixed Rea
     2. Seleccione "Crear informe del sistema".
     3. Guardar en archivo.
     4. Adjunte el archivo generado a la Centro de opiniones entrada directamente.
-6. Si sus comentarios son sobre el rendimiento de SteamVR, recopile un seguimiento Mixed Reality rendimiento: 
+6. Si sus comentarios son sobre el rendimiento de SteamVR, recopile un Mixed Reality de rendimiento: 
     1. Seleccione el **botón Volver a crear mi** problema.
     2. En la lista desplegable situada junto a "Incluir datos sobre", **seleccione Mixed Reality Rendimiento.**
     3. Asegúrese de que el juego se está ejecutando y seleccione **Iniciar captura.**

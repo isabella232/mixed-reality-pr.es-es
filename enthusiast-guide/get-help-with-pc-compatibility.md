@@ -1,23 +1,23 @@
 ---
 title: Obtención de ayuda con la compatibilidad de equipos
 description: Manténgase al día con los recursos para resolver problemas de compatibilidad de equipos al trabajar con Windows Mixed Reality aplicaciones y dispositivos.
-author: hferrone
-ms.author: v-hferrone
-ms.date: 01/07/2021
+author: qianw211
+ms.author: v-qianwen
+ms.date: 9/24/2021
 ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Feedback, Centro de opiniones, bugs
 appliesto:
-- Windows 10
-ms.openlocfilehash: cd5598147823670d1aa00eddda844bea21d7da262339624613f3724cbc5157fa
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+- Windows 10 and Windows 11
+ms.openlocfilehash: 1a07326da871eead6b13fe8350f37a22f8d27c23
+ms.sourcegitcommit: c159bdcf2ada1f45606b10d41ea3adf95109c979
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115189217"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129436569"
 ---
 # <a name="get-help-with-pc-compatibility-in-windows-mixed-reality"></a>Obtenga ayuda con la compatibilidad de PC en Windows Mixed Reality
 
-Al configurar el Windows Mixed Reality o usar el Portal de realidad mixta [,](install-windows-mixed-reality.md)se obtiene un informe sobre si el equipo está a la altura de la tarea. Hemos desglosado detalles específicos sobre lo que puede ver en las secciones siguientes.
+Al configurar la Windows Mixed Reality o usar el Portal de realidad mixta [,](install-windows-mixed-reality.md)se obtiene un informe sobre si el equipo está a la altura de la tarea. Hemos desglosado detalles específicos sobre lo que puede ver en las secciones siguientes.
 
 Antes de continuar, pruebe las correcciones más comunes siguientes: 
 
@@ -27,15 +27,15 @@ Antes de continuar, pruebe las correcciones más comunes siguientes:
 > * Comprobación de la [lista de adaptadores recomendados](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
 > * Actualice el controlador de gráficos seleccionando Iniciar **> Configuración > actualizar & seguridad > Buscar actualizaciones** 
 
-Si desea ponerse en contacto con , puede preguntar a la [comunidad,](https://answers.microsoft.com)ponerse en contacto con el soporte técnico [o](https://support.microsoft.com/contactus/)refiérle la información de [solución de](troubleshooting-windows-mixed-reality.md) problemas.
+Si desea ponerse en contacto [](https://answers.microsoft.com)con la [](https://support.microsoft.com/contactus/)comunidad, póngase en contacto con el soporte técnico o consulte la información [de solución de](troubleshooting-windows-mixed-reality.md) problemas.
 
-## <a name="youre-good-to-go"></a>Está bien para ir
+## <a name="youre-good-to-go"></a>Ya puede ir.
 
-Buenas noticias: si ve el mensaje **You're good to go** (Está bien para ir), el equipo puede ejecutar Windows Mixed Reality. Todavía hay variación entre el hardware y la configuración del equipo, por lo Mixed Reality experiencia podría no ser la misma en todos los equipos.
+Buenas noticias: si ve el mensaje **You're good to go** (Está bien para ir), el equipo puede ejecutar Windows Mixed Reality. Todavía hay variación entre el hardware del equipo y la configuración, por lo que Mixed Reality experiencia podría no ser la misma en todos los equipos.
 
 ## <a name="supports-some-features"></a>Admite algunas características
 
-Si ve el  mensaje Admite algunas características, el equipo puede ejecutar algunas experiencias Windows Mixed Reality, pero es posible que no proporcione la mejor experiencia posible. Las posibles desventajas incluyen gráficos de retraso, aciertos de rendimiento y algunas aplicaciones y juegos que no se pueden ejecutar en absoluto. A continuación se muestran los mensajes que puede ver y qué hacer al respecto:
+Si ve el  mensaje Admite algunas características, el equipo puede ejecutar algunas experiencias Windows Mixed Reality, pero es posible que no proporcione la mejor experiencia posible. Entre las posibles desventajas se incluyen los gráficos de retraso, los aciertos de rendimiento y algunas aplicaciones y juegos que no se pueden ejecutar en absoluto. A continuación se muestran los mensajes que puede ver y qué hacer al respecto:
 
 * [Este equipo tiene una tarjeta gráfica integrada con RAM de un solo canal](#this-pc-has-an-integrated-graphics-card-with-single-channel-ram)
 * [Este equipo tiene una configuración de gráficos híbrida con un vínculo PCIe incompatible](#this-pc-has-a-hybrid-graphics-configuration-with-an-incompatible-pcie-link)
@@ -51,6 +51,7 @@ Si ve el  mensaje Admite algunas características, el equipo puede ejecutar algu
 * [Este equipo no tiene suficiente espacio libre en disco para ejecutar Windows Mixed Reality](#this-pc-doesnt-have-enough-free-disk-space-to-run-windows-mixed-reality)
 * [Este equipo ejecuta una edición de Windows que no admite Windows Mixed Reality](#this-pc-is-running-an-edition-of-windows-that-doesnt-support-windows-mixed-reality)
 * [Este equipo no ejecuta la versión más reciente de Windows 10](#this-pc-isnt-running-the-latest-version-of-windows-10)
+* [Este equipo no ejecuta la versión más reciente de Windows 11](#this-pc-isnt-running-the-latest-version-of-windows-11)
 * [Este equipo no tiene puerto USB 3.0](#this-pc-has-no-usb-30-port)
 * [No se puede ejecutar esta aplicación a través de Escritorio remoto](#you-cant-run-this-app-via-remote-desktop)
 
@@ -73,7 +74,7 @@ Pruebe a descargar un nuevo controlador de gráficos Windows Actualizar mediante
 
 > [!div class="checklist"]
 > * Al seleccionar **Iniciar > Configuración > actualizar & seguridad > buscar** actualizaciones o ir al sitio web del fabricante de su PC o tarjeta gráfica
-> * [Buscar actualizaciones](ms-settings:windowsupdate?activationSource=SMC-Article-4045777)
+> * [Comprobación de actualizaciones](ms-settings:windowsupdate?activationSource=SMC-Article-4045777)
 
 Si eso no funciona, deberá:
 
@@ -91,7 +92,7 @@ Es posible que el procesador del equipo no funcione bien Windows Mixed Reality p
 
 ### <a name="this-pc-might-not-have-a-compatible-usb-configuration"></a>Es posible que este equipo no tenga una configuración USB compatible
 
-Para problemas al ejecutar Windows Mixed Reality:
+Para problemas de ejecución Windows Mixed Reality:
 
 > [!div class="checklist"]
 > * Consulte la documentación [de los adaptadores recomendados](recommended-adapters-for-windows-mixed-reality-capable-pcs.md) para ver soluciones a problemas de compatibilidad comunes.
@@ -106,7 +107,7 @@ Si los problemas persisten:
 1. Seleccione **Iniciar** y, a continuación, escriba "Administrador de dispositivos" en el **cuadro** De búsqueda.
 2. Seleccione **Administrador de dispositivos** en los resultados.
 3. Expanda la categoría controladores de bus serie universal, mire los dispositivos enumerados y desinstale los controladores incompatibles.
-    * Si la lista incluye un elemento "Controlador de host eXtensible" que no tiene "Microsoft" al final del nombre del dispositivo, ese controlador no es compatible con Windows Mixed Reality. Tendrá que desinstalarlo. Para desinstalar un controlador, haga clic con el botón derecho en el dispositivo de la lista y seleccione **Desinstalar dispositivo.** Active la **casilla Eliminar el software del controlador para este dispositivo** y, a continuación, seleccione **Desinstalar**.
+    * Si la lista incluye un elemento "Controlador de host eXtensible" que no tiene "Microsoft" al final del nombre del dispositivo, ese controlador no es compatible con Windows Mixed Reality. Deberá desinstalarlo. Para desinstalar un controlador, haga clic con el botón derecho en el dispositivo de la lista y seleccione **Desinstalar dispositivo.** Active la **casilla Eliminar el software del controlador para este dispositivo** y, a continuación, seleccione **Desinstalar**.
     * Si la lista incluye un elemento "Controlador de host eXtensible" que incluye "Etrón" en el nombre, ese controlador USB no es compatible con Windows Mixed Reality. Deberá usar un puerto USB diferente en el equipo o adquirir un controlador host USB 3.0 diferente.
 4. Reinicia tu equipo.
 5. Vuelva a Administrador de dispositivos y busque de nuevo el elemento Controlador de host eXtensible. Si ahora ve "Microsoft" al final del nombre del dispositivo, puede ir. Si no es así, repita los pasos de desinstalación para quitar las versiones adicionales que no son de Microsoft del controlador.
@@ -116,11 +117,11 @@ Si los problemas persisten:
 
 ### <a name="this-pc-doesnt-have-bluetooth-40-for-controllers"></a>Este equipo no tiene Bluetooth 4.0 para controladores
 
-Los cascos de Windows Mixed Reality 2018 y versiones más recientes ya tienen el Bluetooth integrado, pero si tiene cascos antiguos, se requiere bluetooth 4.0 para los controladores de movimiento de realidad mixta. Todavía puedes usar Windows Mixed Reality un controlador [de Xbox,](motion-controller-problems.md#can-i-pair-my-xbox-controller-to-my-pc-so-i-can-use-it-in-headset)un [mouse](/windows/mixed-reality/discover/navigating-the-windows-mixed-reality-home#keyboard-and-mouse)y un teclado, o un adaptador [Bluetooth USB](motion-controller-problems.md#how-can-i-tell-if-im-using-bluetooth-technology) para conectar controladores de movimiento al equipo. [Consulte los adaptadores recomendados.](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
+Los cascos de Windows Mixed Reality 2018 y versiones más recientes ya tienen el Bluetooth integrado, pero si tiene cascos antiguos, se requiere bluetooth 4.0 para los controladores de movimiento de realidad mixta. Todavía puedes usar Windows Mixed Reality un controlador [de Xbox,](motion-controller-problems.md#can-i-pair-my-xbox-controller-to-my-pc-so-i-can-use-it-in-headset)un [mouse](/windows/mixed-reality/discover/navigating-the-windows-mixed-reality-home#keyboard-and-mouse)y un teclado, o un adaptador Bluetooth USB para conectar controladores de [movimiento](motion-controller-problems.md#how-can-i-tell-if-im-using-bluetooth-technology) al equipo. [Consulte los adaptadores recomendados.](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
 
 ### <a name="depending-on-your-headset-you-may-need-a-bluetooth-adapter-to-use-motion-controllers"></a>Dependiendo del casco, es posible que necesite un adaptador Bluetooth para usar controladores de movimiento.
 
-Algunos cascos tienen Bluetooth integrados para que los controladores puedan emparejarse directamente con los cascos. Otras requieren Bluetooth radio en el equipo (o un llavete independiente) para usar controladores de movimiento. Para obtener más información, consulte la [página de adaptadores](recommended-adapters-for-windows-mixed-reality-capable-pcs.md#windows-mixed-reality-compatible-usb-bluetooth-adapters) recomendados.
+Algunos cascos tienen Bluetooth integrados para que los controladores puedan emparejarse directamente con los cascos. Otros requieren una Bluetooth radio en el equipo (o un llavete independiente) para usar controladores de movimiento. Para obtener más información, vea la [página adaptadores recomendados.](recommended-adapters-for-windows-mixed-reality-capable-pcs.md#windows-mixed-reality-compatible-usb-bluetooth-adapters)
 
 ### <a name="this-pc-doesnt-have-a-self-powered-usb-port"></a>Este equipo no tiene un puerto USB auto-powered
 
@@ -140,7 +141,7 @@ El controlador de gráficos de este equipo no funcionará con Windows Mixed Real
 
 > [!div class="checklist"]
 > * Al seleccionar **Iniciar > Configuración > actualizar & seguridad > buscar** actualizaciones o ir al sitio web del fabricante de su PC o tarjeta gráfica
-> * [Buscar actualizaciones](ms-settings:windowsupdate?activationSource=SMC-Article-4045777)
+> * [Comprobación de actualizaciones](ms-settings:windowsupdate?activationSource=SMC-Article-4045777)
 
 Si eso no funciona, deberá:
 
@@ -162,11 +163,15 @@ Windows Mixed Reality requiere 10 GB de espacio libre en disco para la instalaci
 
 ### <a name="this-pc-is-running-an-edition-of-windows-that-doesnt-support-windows-mixed-reality"></a>Este equipo ejecuta una edición de Windows que no admite Windows Mixed Reality
 
-Windows Mixed Reality funciona en [Windows 10 Home](https://www.microsoft.com/p/windows-10-home/d76qx4bznwk4?activetab=pivot:overviewtab) y [Windows 10 Pro](https://www.microsoft.com/p/windows-10-pro/DF77X4D43RKT?icid=W10Pro_upsell_071817&activetab=pivot:overviewtab). Deberá instalar una de esas ediciones para usar Windows Mixed Reality.
+Windows Mixed Reality funciona en [Windows 10 Home](https://www.microsoft.com/p/windows-10-home/d76qx4bznwk4?activetab=pivot:overviewtab), [Windows 10 Pro](https://www.microsoft.com/p/windows-10-pro/DF77X4D43RKT?icid=W10Pro_upsell_071817&activetab=pivot:overviewtab)y Windows [11](https://www.microsoft.com/software-download/windows11). Deberá instalar una de esas ediciones para usar Windows Mixed Reality.
 
 ### <a name="this-pc-isnt-running-the-latest-version-of-windows-10"></a>Este equipo no ejecuta la versión más reciente de Windows 10
 
 Windows Mixed Reality requiere el Windows 10 Fall Creators Update. [Actualice el equipo e](https://support.microsoft.com/help/4028685) inténtelo de nuevo.
+
+### <a name="this-pc-isnt-running-the-latest-version-of-windows-11"></a>Este equipo no ejecuta la versión más reciente de Windows 11
+
+Windows Mixed Reality requiere la versión Windows 11 más reciente. [Actualice el equipo e](https://www.microsoft.com/software-download/windows11) inténtelo de nuevo.
 
 ### <a name="this-pc-has-no-usb-30-port"></a>Este equipo no tiene puerto USB 3.0
 
@@ -186,7 +191,7 @@ Algunas configuraciones de hardware pueden causar problemas de rendimiento con W
 * Pruebe a descargar algunas aplicaciones de realidad mixta diferentes desde Windows Store; algunas pueden funcionar mejor con la configuración del equipo.
 * Consulte nuestra documentación [de preguntas de rendimiento.](performance-questions.md)
 
-Si sigue teniendo problemas de rendimiento, actualice las siguientes opciones [Windows Mixed Reality](set-up-windows-mixed-reality.md) configuración para una experiencia de usuario óptima:
+Si sigue teniendo problemas de rendimiento, actualice la siguiente configuración [Windows Mixed Reality](set-up-windows-mixed-reality.md) configuración para una experiencia de usuario óptima:
 
 * Experiencia
 * Solución

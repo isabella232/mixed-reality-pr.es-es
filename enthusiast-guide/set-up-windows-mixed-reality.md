@@ -1,14 +1,17 @@
 ---
 title: Configuración de Windows Mixed Reality
 description: Cómo configurar los controladores de Windows Mixed Reality, voz y audio, y definir el límite de la sala para un espacio de juego seguro.
+author: qianw211
+ms.author: v-qianwen
+ms.date: 9/24/2021
 ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, get started, setup, motion controller, controller, speech, audio, seated, standing, boundary, graphics drivers, Microsoft Edge, chromium
-ms.openlocfilehash: 436818ee662f9beb1c445ea5b22c5d168bb4142a7b49a116a4f5fa138e3a5595
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+ms.openlocfilehash: e30fe5919bbd1345f413902f8f7acd36eed76bb5
+ms.sourcegitcommit: c159bdcf2ada1f45606b10d41ea3adf95109c979
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115221093"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129436841"
 ---
 # <a name="set-up-windows-mixed-reality"></a>Configuración de Windows Mixed Reality
 
@@ -17,34 +20,34 @@ ms.locfileid: "115221093"
 Para ejecutar Windows Mixed Reality, necesitará:
 
 * Casco envolvente de realidad mixta compatible. [Más información](https://www.microsoft.com/mixed-reality/windows-mixed-reality?rtc=1)
-* Un [Windows Mixed Reality equipo listo para usar](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) con los puertos correctos para el casco
+* Un [Windows Mixed Reality listo para usar con](windows-mixed-reality-minimum-pc-hardware-compatibility-guidelines.md) los puertos correctos para el casco
 * Controladores [de movimiento,](controllers-in-wmr.md)un controlador de Xbox o un mouse y teclado
 * Cascos con micrófono (si el casco no los tiene integrados)
 * Un espacio grande y abierto
 
 ## <a name="get-set"></a>Obtener conjunto
 
-Prepare el espacio (incluido el espacio de sobrecarga). Asegúrese de que no haya obstáculos, peligro ni elementos frágiles en el área que va a usar. No se configure en la parte superior de una escalera o debajo de un ventilador de límite superior muy bajo. Quite los obstáculos o los obstáculos que puedan interrumpirse del área y asegúrese de que todos los usuarios de cascos lean y comprendan las directrices de seguridad.
+Prepare el espacio (incluido el espacio de sobrecarga). Asegúrese de que no haya obstáculos, riesgos ni elementos frágiles en el área que va a usar. No se configure en la parte superior de una cocina o en un ventilador de límite superior muy bajo. Quite los obstáculos o los puntos de interrupción del área y asegúrese de que todos los usuarios del casco lean y comprendan las directrices de seguridad.
 
-Una vez que el espacio esté listo, conecte los cascos, pero no lo ponga aún; primero, es necesario realizar alguna configuración en el equipo. Ejecutaremos una comprobación de PC, descargaremos software, conectaremos [los](boundary-questions.md) controladores y crearemos un límite para evitar obstáculos.
+Una vez que el espacio esté listo, conecte el casco, pero no lo ponga aún; primero deberá realizar alguna configuración en el equipo. Ejecutaremos una comprobación de PC, descargaremos algún software, [](boundary-questions.md) conectaremos los controladores y crearemos un límite para evitar obstáculos.
 
-Luego viene la parte divertida: ponerse el casco y entrar en el mundo mixto. Cortana esperará para darle un paseo. ¡Que te diviertas!
+Luego viene la parte divertida: ponerse el casco y entrar en el mundo mixto. Cortana estará esperando para darle un paseo. ¡Que te diviertas!
 
 ## <a name="go"></a>Venga,
 
-Una vez que el espacio esté listo, conecte los cascos, pero no lo ponga aún; primero, es necesario realizar alguna configuración en el equipo. Ejecutaremos una comprobación de PC, descargaremos software, conectaremos [los](boundary-questions.md) controladores y crearemos un límite para evitar obstáculos.
+Una vez que el espacio esté listo, conecte el casco, pero no lo ponga aún; primero deberá realizar alguna configuración en el equipo. Ejecutaremos una comprobación de PC, descargaremos algún software, [](boundary-questions.md) conectaremos los controladores y crearemos un límite para evitar obstáculos.
 
-Luego viene la parte divertida: ponerse el casco y entrar en el mundo mixto. Cortana esperará para darle un paseo. ¡Que te diviertas!
+Luego viene la parte divertida: ponerse el casco y entrar en el mundo mixto. Cortana estará esperando para darle un paseo. ¡Que te diviertas!
 
 ## <a name="get-familiar-with-your-motion-controllers"></a>Familiarícese con los controladores de movimiento.
 
-Si el casco tiene una radio integrada, los controladores que vienen con el casco se emparejan con él en la fábrica. La primera vez que active los nuevos controladores y cascos, ya estarán emparejados.
+Si el casco tiene una radio integrada, los controladores que vienen con el casco se emparejan en la fábrica. La primera vez que encienda los nuevos controladores y cascos, ya estarán emparejados.
 
-Si tiene un casco sin radio integrado, tendrá que configurar los controladores de movimiento mediante el emparejamiento con el equipo. La mayoría de los cascos que se fabricaban después de 2018 tienen radio integrada.
+Si tiene un casco sin radio integrado, tendrá que configurar los controladores de movimiento mediante su emparejamiento con el equipo. La mayoría de los cascos fabricados después de 2018 tienen radio integrado.
 
-No es necesario emparejar los controladores si solo está planeando usar un controlador para juegos de Xbox o un teclado y un mouse.  Si alguna vez planea usar controladores, debe emparejarlos.
+No es necesario emparejar los controladores si solo tienes previsto usar un controlador para juegos de Xbox o un teclado y un mouse.  Si alguna vez planea usar controladores, debe emparejarlos.
 
-**Nota:** Windows Mixed Reality controladores de movimiento requieren Bluetooth 4.0. Si el equipo no tiene Bluetooth integrado, deberá conectar un adaptador usb Bluetooth compatible con Bluetooth 4.0 para habilitar los controladores de movimiento. No necesita un adaptador de Bluetooth para usar la radio integrada en el casco.
+**Nota:** Windows Mixed Reality controladores de movimiento requieren Bluetooth 4.0. Si el equipo no tiene Bluetooth integrado, deberá conectar un adaptador Bluetooth USB que admita Bluetooth 4.0 para habilitar los controladores de movimiento. No necesita un adaptador de Bluetooth para usar la radio integrada en el casco.
 
 ![Familiarícese con los controladores de movimiento.](images/get_to_know_controllers.png)
 
@@ -52,31 +55,31 @@ Si necesita emparejar los controladores de movimiento, revise [los controladores
 
 ## <a name="set-up-your-room-boundary"></a>Configuración del límite de la sala
 
-Elija una experiencia de escalado de sala o de escritorio:
+Elija una experiencia de escala de sala o de escritorio:
 
-**Opción 1: Configurarme** para todas las experiencias (también conocidas como escala de habitación) le permitirá recorrer la sala y es la experiencia de realidad mixta más envolvente. Se recomienda borrar al menos cinco pies x siete pies (1,5 metros x 2 metros) de espacio para la realidad mixta.
+**Opción 1:** Configurarme para todas las experiencias (también conocidas como escala de sala) le permitirá recorrer la sala y es la experiencia de realidad mixta más envolvente. Se recomienda borrar al menos cinco pies x siete pies (1,5 metros x 2 metros) de espacio para la realidad mixta.
 
-**Opción 2: Configurarme para** la experiencia de sitio y de pie (también conocida como escala de escritorio) funcionará en su escritorio. Es una buena opción si el espacio no es grande. También significa que va a usar el casco sin límite. Tendrá que permanecer en un solo lugar, ya que no tendrá límites que le ayuden a evitar obstáculos físicos. Algunas aplicaciones y juegos no están diseñados para ser una experiencia límite, por lo que es posible que no funcionen según lo previsto.
+**Opción 2: Configurarme** para la experiencia de puesto y de pie (también conocida como escala de escritorio) funcionará en su escritorio. Es una buena opción si el espacio no es grande. También significa que va a usar el casco sin límite. Tendrá que permanecer en un solo lugar, ya que no tendrá ningún límite que le ayude a evitar obstáculos físicos. Algunas aplicaciones y juegos no están diseñados para ser una experiencia límite, por lo que es posible que no funcionen según lo previsto.
 
-![Elección de una configuración](images/1050px-chooseasetup.png)
+![Elegir una configuración](images/1050px-chooseasetup.png)
 
 ### <a name="if-you-choose-set-me-up-for-all-experiences"></a>Si elige "Configurarme para todas las experiencias".
 
-Pronto, su habitación se convertirá en un mundo virtual donde podrá recorrer e interactuar. De pie y despeja algo de espacio en su sala para ejecutar la realidad mixta. Se recomienda borrar al menos cinco pies x siete pies, o 1,5 metros x 2 metros, de espacio para la realidad mixta.
+Pronto, su habitación se convertirá en un mundo virtual en el que puede recorrer e interactuar. De pie y despeja algo de espacio en la sala para ejecutar la realidad mixta. Se recomienda borrar al menos cinco pies x siete pies, o 1,5 metros x 2 metros, de espacio para la realidad mixta.
 
-![Asegúrese de que el espacio está despejado.](images/1050px-createaboundary.png)
+![Asegúrese de que el espacio está claro.](images/1050px-createaboundary.png)
 
-Asegúrese de que el espacio está claro.
+Asegúrese de que el espacio está despejado.
 
-![Centrar el casco](images/1050px-createaboundary-2.png)
+![Centrar los cascos](images/1050px-createaboundary-2.png)
 
-Centrar los cascos.
+Centrar el casco.
 
-![Seguimiento del límite](images/1050px-createaboundary-3.png)
+![Seguimiento de los límites](images/1050px-createaboundary-3.png)
 
 Seguimiento del límite.
 
-![Permanecer apuntado hacia pc](images/1050px-createaboundary-4.png)
+![Permanezca apuntado hacia el equipo](images/1050px-createaboundary-4.png)
 
 Mantenga el casco apuntado hacia el equipo.
 
@@ -90,21 +93,21 @@ No se requieren pasos adicionales si elige esta opción.
 
 ## <a name="what-is-the-maximum-size-of-the-boundary"></a>¿Cuál es el tamaño máximo del límite?
 
-El tamaño máximo de límite admitido en Windows Mixed Reality es un radio de 18 x 18 pies (5,7 x 5,7 m) o 13 pies (4 m) desde el centro. El tamaño del límite depende del punto de anclaje y del punto de anclaje que se puede mover antes de que se arriesga a la estabilidad del límite.  Windows Mixed Reality se basa en una abstracción de fase, que es el espacio en el que se mueve. Esa fase depende de un único anclaje, que casi todas las aplicaciones también asumen: es la forma en que Vive y Oculus funcionan también con su sistema de coordenadas único.  Esto es importante porque, con el seguimiento interno, a medida que se aleja más de un punto de anclaje, el seguimiento de cascos es confiable para mantener el límite estable.  Cuando el límite está pensado para ayudar a evitar obstáculos físicos, se convierte en un problema más allá del centro al que va.  Dos factores tomaron la decisión sobre el tamaño máximo de los límites. La distancia máxima a la que los cascos Windows Mixed Reality podrían proporcionar la mejor experiencia de escalado de sala con un límite y la longitud del cable del casco, que para la mayoría de los cascos Windows Mixed Reality son de 10 pies (3 m).
+El tamaño máximo de límite admitido en Windows Mixed Reality es un radio de 18 x 18 pies (5,7 x 5,7 m) o 13 pies (4 m) desde el centro. El tamaño del límite depende del punto de anclaje y del punto de anclaje que se puede mover antes de que se arriesga a la estabilidad del límite.  Windows Mixed Reality se basa en una abstracción de fase, que es el espacio en el que se mueve. Esa fase depende de un único delimitador, que casi todas las aplicaciones también asumen: así es como Vive y Oculus también funcionan con su sistema de coordenadas único.  Esto es importante porque, con el seguimiento interno, a medida que se aleja de un punto de anclaje, el seguimiento de cascos es confiable para mantener el límite estable.  Cuando el límite está pensado para ayudar a evitar obstáculos físicos, se convierte en un problema más allá del centro al que va.  Se han tomado dos factores para decidir el tamaño máximo de los límites. La distancia máxima a la que los cascos Windows Mixed Reality pueden proporcionar la mejor experiencia de escala de sala con un límite y la longitud del cable del casco, que para la mayoría de los cascos Windows Mixed Reality son de 10 pies (3 m).
 
 ## <a name="set-up-speech"></a>Configuración de voz
 
-Puede habilitar Cortana comandos en realidad mixta, lo que le permite usar comandos de voz para teleportar y abrir aplicaciones. Encontrará más información sobre estas acciones en el [Descubrir la realidad mixta](learn-mixed-reality.md) anterior.
+Puede habilitar los Cortana en realidad mixta, lo que le permite usar comandos de voz para teleportar y abrir aplicaciones. Aprenderá más sobre estas acciones en el capítulo [de](learn-mixed-reality.md) Descubrir la realidad mixta.
 
 ![La realidad mixta es mejor con la voz](images/1050px-betterwithspeech.png)
 
-## <a name="set-up-your-audio-headset"></a>Configuración de los cascos de audio
+## <a name="set-up-your-audio-headset"></a>Configuración del casco de audio
 
-A menos que haya adquirido un Samsung HMDDimension con cascos ACORE integrados y una matriz de micrófonos duales, debe obtener un casco de audio con micrófono y micrófono, y conectarlo al conector de audio de 3,5 mm del casco. El conector de audio de 3,5 mm para el casco se encuentra en la parte inferior del visor del casco o al final de un cable de audio corto conectado a la visor del casco, según el modelo de casco.
+A menos que haya adquirido un Samsung HMD Oceanía con auriculares ACORE integrados y una matriz de micrófonos duales, debe obtener un casco de audio con micrófono y auriculares y conectarlo al conector de audio de 3,5 mm del casco. El conector de audio de 3,5 mm para el casco se encuentra en la parte inferior del visor del casco o al final de un cable de audio corto conectado al visor del casco, según el modelo de casco.
 
 ## <a name="adjusting-your-headsets-display-settings"></a>Ajuste de la configuración de pantalla del casco
 
-Windows Mixed Reality automáticamente la configuración de visualización que equilibra la calidad y el rendimiento, en función de la configuración de hardware del equipo. Para ajustar esta configuración, vaya a la **Configuración > Mixed Reality > casco .**
+Windows Mixed Reality automáticamente la configuración de presentación que equilibra la calidad y el rendimiento, en función de la configuración de hardware del equipo. Para ajustar esta configuración, vaya a la **Configuración > Mixed Reality > casco.**
 
 ### <a name="visuals"></a>Objetos visuales
 
@@ -116,13 +119,13 @@ La resolución nativa del casco se muestra aquí.
 
 Si conecta un casco con pantallas de mayor resolución al equipo, por ejemplo, cascos con pantallas de 4320 x 2160, verá una configuración para ajustar la resolución de pantalla de realidad mixta.
 
-* Esta configuración proporciona la opción para que la pila de composición de Windows Mixed Reality se represente de forma nativa (por ejemplo, en 4320 x 2160) o para que la pila de composición se represente en una resolución y una escala inferiores (por ejemplo, se represente a 2880 x 1440 y se ajuste a 4320 x 2160).
-* El valor predeterminado es representar de forma nativa (por ejemplo, la opción **4320 x 2160 (mejor calidad)** para proporcionar la mejor calidad visual posible desde el casco.
+* Esta configuración proporciona la opción para que la pila de composición de Windows Mixed Reality se represente de forma nativa (por ejemplo, en 4320 x 2160) o que la pila de composición se represente en una resolución y una escala inferiores (por ejemplo, se represente a 2880 x 1440 y se ajuste a 4320 x 2160).
+* La configuración predeterminada es representar de forma nativa (por ejemplo, la opción **4320 x 2160 (mejor calidad)** para proporcionar la mejor calidad visual posible desde el casco.
 * Use la **opción Escalado automático (mejor rendimiento)** si:
     * El equipo no cumple los requisitos mínimos de hardware gráfico para los cascos con pantallas de mayor resolución
     * Ve problemas de rendimiento de gráficos.
 
-Esta configuración está disponible en Windows 10, versión 1903 o posterior.
+Esta configuración está disponible en Windows 10 versión 1903 o posterior y en Windows 11.
 
 ### <a name="calibration"></a>Calibración
 
@@ -132,50 +135,50 @@ Esta configuración es para ajustar la calibración de IPD para cascos con compa
 
 Esta configuración avanzada invalida la experiencia predeterminada de frecuencia de actualización de la pantalla del casco.
 
-* **Automático (valor predeterminado):** seleccione automáticamente la experiencia de 60 Hz o 90 Hz en función de la configuración de hardware del equipo.
+* **Automático (valor predeterminado):** seleccione automáticamente la experiencia de 60 Hz o 90 Hz según la configuración de hardware del equipo.
 * **60 Hz**
 * **90 Hz**
 
 >[!Note]
->La primera vez que se configura el casco HP Reverb G2, la experiencia se cambia a 90Hz para garantizar la mejor experiencia.  Si es necesario, puede volver a cambiarlo a Automático.
+>Al configurar por primera vez el casco HP Reverb G2, la experiencia se cambiará a 90Hz para garantizar la mejor experiencia.  Si es necesario, puede volver a cambiarlo a Automático.
 
 ### <a name="input-switching"></a>Conmutación de entrada
 
 Esta configuración controla el comportamiento de Windows Mixed Reality en respuesta al sensor de presencia del casco:
 
-* **Cambiar automáticamente mediante** el sensor de presencia de cascos (valor predeterminado): Windows dirigirá automáticamente la entrada (teclado, mouse...) a Windows Mixed Reality cada vez que lleve el casco. Puede invalidar esto en cualquier momento con Win + Y.
-* **Cambiar manualmente con Windows** de logotipo + Y: Windows no usará el sensor de presencia del casco para detectar cuándo lleva el casco. Deberá usar Win + Y para cambiar la entrada entre el escritorio del equipo y Windows Mixed Reality.
+* **Cambiar automáticamente mediante el sensor** de presencia de cascos (valor predeterminado): Windows dirigirá automáticamente la entrada (teclado, mouse...) a Windows Mixed Reality cada vez que lleve el casco. Puede invalidarlo en cualquier momento con Win + Y.
+* **Cambiar manualmente con Windows** tecla del logotipo + Y: Windows no usará el sensor de presencia del casco para detectar cuándo lleva el casco. Deberás usar Win + Y para cambiar la entrada entre el escritorio del equipo y Windows Mixed Reality.
 
-Esta configuración está disponible en Windows 10, versión 1903 o posterior.
+Esta configuración está disponible en Windows 10 versión 1903 o posterior, y en Windows 11.
 
 ## <a name="installing-microsoft-edge"></a>Instalación de Microsoft Edge 
 
-Para usar el nuevo Microsoft Edge basado en Chromium en la página principal de Windows Mixed Reality, actualice Windows 10 Windows 10 versión 1903 o posterior para obtener compatibilidad nativa con aplicaciones Win32 (como la nueva Microsoft Edge) en Windows Mixed Reality home. Compruebe Windows actualizar o [instale manualmente la versión más reciente de Windows 10](https://www.microsoft.com/software-download/windows10).
+Para usar el nuevo Microsoft Edge basado en Chromium en la página principal de Windows Mixed Reality, actualice Windows 10 la versión 1903 o posterior o Windows 11 para obtener compatibilidad nativa con aplicaciones Win32 (como la nueva Microsoft Edge) en Windows Mixed Reality inicio. Compruebe Windows actualización, [instale manualmente](https://www.microsoft.com/software-download/windows10)la versión más reciente de Windows 10 o instale la versión más reciente [de Windows 11](https://www.microsoft.com/software-download/windows11).
 
 >[!IMPORTANT]
->La nueva Microsoft Edge se inicia con compatibilidad con WebXR, el nuevo estándar para crear experiencias web envolventes para cascos vr. Ya no podrá reproducir experiencias de WebVR en Microsoft Edge si instala el nuevo Microsoft Edge.
+>La nueva Microsoft Edge se inicia con compatibilidad con WebXR, el nuevo estándar para crear experiencias web envolventes para cascos vr. Ya no podrá reproducir experiencias webVR en Microsoft Edge si instala el nuevo Microsoft Edge.
 
 ### <a name="issues-with-the-new-microsoft-edge-in-windows-mixed-reality"></a>Problemas con el nuevo Microsoft Edge en Windows Mixed Reality
 
 **Problemas conocidos resueltos por la actualización acumulativa 2020-01 para Windows 10 versión 1903 (o posterior)**
 
-- El inicio de cualquier aplicación Win32, incluido el nuevo Microsoft Edge, hace que la pantalla del casco se congele brevemente.
-- El Microsoft Edge desaparece de la Windows Mixed Reality menú Inicio (puede encontrarlo en la carpeta "Aplicaciones clásicas").
-- Windows del anterior Microsoft Edge se siguen colocando alrededor del ambiente principal, pero no se pueden usar. Al intentar activar esas ventanas, edge se inicia en la aplicación de escritorio.
+- El inicio de cualquier aplicación Win32, incluida la nueva Microsoft Edge, hace que la pantalla del casco se congele brevemente.
+- El Microsoft Edge de datos desaparece del Windows Mixed Reality menú Inicio (puede encontrarlo en la carpeta "Aplicaciones clásicas").
+- Windows de la versión Microsoft Edge se siguen colocando alrededor del ambiente principal, pero no se pueden usar. Al intentar activar esas ventanas, se inicia Edge en la aplicación de escritorio.
 - Al seleccionar un hipervínculo en el ambiente principal se inicia un explorador web en el escritorio en lugar del ambiente principal.
 - La aplicación Presentación de WebVR está presente en el ambiente principal, a pesar de que ya no se admite WebVR.
-- Mejoras generales en el inicio del teclado y los objetos visuales.
+- Mejoras generales en el inicio de teclado y los objetos visuales.
 
 **Otros problemas conocidos**
 
-- Los sitios web abiertos en Windows Mixed Reality se perderán cuando Portal de realidad mixta cierre, aunque las ventanas Microsoft Edge permanecerán donde se colocaron en el ambiente principal.
+- Los sitios web abiertos Windows Mixed Reality se perderán cuando Portal de realidad mixta cierre, aunque las ventanas de Microsoft Edge permanecerán donde se colocaron en el ambiente principal.
 - El audio Microsoft Edge ventanas no está espacializado.
-- Se ha corregido en la versión 2.3.8 de la extensión 360 Viewer: abrir un vídeo 360 desde YouTube en Windows Mixed Reality puede provocar que el vídeo se desvirtue en el casco. Reiniciar Edge debe actualizar invisiblemente la extensión visor 360 para resolver este problema. Para confirmar qué versión de la extensión tiene, escriba en la barra de direcciones y seleccione el botón `edge://system/` "Expandir" junto a "extensiones".
-- Durante Windows Mixed Reality sesión, los monitores virtuales aparecerán como monitores físicos genéricos **en Configuración > System > Display**.
+- Se corrigió en la versión 2.3.8 de la extensión 360 Viewer: la apertura de un vídeo 360 desde YouTube en Windows Mixed Reality puede provocar que el vídeo se desvirtuale en el casco. Reiniciar Edge debe actualizar invisiblemente la extensión 360 Viewer para resolver este problema. Para confirmar qué versión de la extensión tiene, escriba en la barra de direcciones y seleccione el botón `edge://system/` "Expandir" junto a "Extensiones".
+- Durante Windows Mixed Reality, los monitores virtuales aparecerán como monitores físicos genéricos **en Configuración > System > Display**.
 
 ## <a name="launching-mixed-reality-after-the-first-time"></a>Inicio de la realidad mixta después de la primera vez
 
-Escribir la realidad mixta una segunda vez es tan fácil como volver a poner el casco mientras está conectado al equipo. También puede iniciar la aplicación Portal de realidad mixta manualmente si la abre desde el menú Inicio. La entrada y el audio se enrutarán automáticamente al casco cuando lo coloque, o bien puede desencadenarlo manualmente presionando Windows **+ Y** en el teclado.
+Escribir la realidad mixta una segunda vez es tan fácil como volver a poner el casco mientras está conectado al equipo. También puede iniciar la aplicación Portal de realidad mixta manualmente si la abre desde el menú Inicio. La entrada y el audio se enrutarán automáticamente al casco cuando se ponga, o bien puede desencadenarlo manualmente presionando Windows **+ Y** en el teclado.
 
 ## <a name="see-also"></a>Consulte también
 

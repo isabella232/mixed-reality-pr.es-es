@@ -1,19 +1,19 @@
 ---
 title: Preguntas más frecuentes sobre la visualización de cascos
-description: Mostrar Windows Mixed Reality solución de problemas de visualización de cascos que van más allá de la documentación de soporte técnico al consumidor estándar.
-author: hferrone
-ms.author: v-hferrone
-ms.date: 09/15/2020
+description: Mostrar Windows Mixed Reality solución de problemas de visualización de cascos que van más allá de nuestra documentación estándar de soporte al consumidor.
+author: qianw211
+ms.author: v-qianwen
+ms.date: 09/30/2020
 ms.topic: article
 keywords: Windows Mixed Reality, Mixed Reality, Virtual Reality, VR, MR, Troubleshoot, Errors, Help, Support
 appliesto:
-- Windows 10
-ms.openlocfilehash: 811b5160c739c8b19fde737e7a61bcef84e0cf60a87927adbe21241e229f3f22
-ms.sourcegitcommit: a1c086aa83d381129e62f9d8942f0fc889ffcab0
+- Windows 10 and Windows 11
+ms.openlocfilehash: 5a7c7979c9d93d917633cbfed23dc82597368a43
+ms.sourcegitcommit: c159bdcf2ada1f45606b10d41ea3adf95109c979
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "115189397"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "129436688"
 ---
 # <a name="headset-display-faqs"></a>Preguntas más frecuentes sobre la pantalla del casco
 
@@ -41,7 +41,7 @@ ms.locfileid: "115189397"
     * Si ha establecido una frecuencia de actualización personalizada para el monitor de pc, intente revertir temporalmente a una frecuencia de actualización estándar, como 60 Hz.
     * Si ha cambiado recientemente la tarjeta gráfica sin volver a Windows, compruebe que el monitor de cascos sigue teniendo instalado el controlador correcto. Con el casco conectado, confirme que "Mixed Reality casco" aparece en el nodo Monitores de Administrador de dispositivos.
     * Si el equipo tiene una tarjeta gráfica Nvidia, asegúrese de que el software 3D Vision de Nvidia está deshabilitado.
-    * En algunas tarjetas gráficas (especialmente las tarjetas anteriores), es posible que el puerto HDMI no admita HDMI 2.0 o que no sea totalmente compatible con Windows Mixed Reality. Pruebe a usar displayport de la tarjeta gráfica con un [adaptador De DisplayPort 1.2 a HDMI 2.0.](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
+    * En algunas tarjetas gráficas (especialmente tarjetas antiguas), es posible que el puerto HDMI no admita HDMI 2.0 o que no sea totalmente compatible con Windows Mixed Reality. Pruebe a usar displayPort de la tarjeta gráfica con un adaptador [De DisplayPort 1.2 a HDMI 2.0.](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
     * Los equipos de HP Omen con el número de producto HP 1RJ99EA#SVC tienen puertos HDMI incompatibles con Windows Mixed Reality (abra el "Asistente de soporte técnico de HP" y el número aparecerá en la parte inferior de la aplicación).
     * Si el equipo tiene una tarjeta gráfica de la serie AMD R9 y usa un casco Samsung Mixed Reality, actualice el firmware del casco a la versión 1.0.8 o posterior para usar el puerto HDMI de la tarjeta gráfica con el casco.
     * Si usa un Surface Book 2, asegúrese de que usa el adaptador [de Surface USB-C a HDMI.](recommended-adapters-for-windows-mixed-reality-capable-pcs.md)
@@ -50,9 +50,9 @@ ms.locfileid: "115189397"
     * Compruebe primero si hay problemas de compatibilidad y configuración del equipo, ya que los síntomas son similares.
 * Asegúrese de que el cable USB está conectado a un puerto USB 3.0 o más rápido. Los puertos USB 3.0 tienen SS (Super Speed) junto a ellos y a menudo tienen color azul.
 
-## <a name="my-headset-display-occasionally-turns-black-after-some-use"></a>En ocasiones, la pantalla del casco se vuelve negra después de algún uso
+## <a name="my-headset-display-occasionally-turns-black-after-some-use"></a>La pantalla del casco ocasionalmente se vuelve negra después de algún uso
 
-* Pruebe a deshabilitar las características de suspensión o ahorro de energía USB en el equipo. Por ejemplo, en Configuración > **System > Power & Sleep > USB selective [suspend](/windows-hardware/drivers/usbcon/usb-selective-suspend)**, la opción "Permitir que el equipo apague este dispositivo para ahorrar energía" en Administrador de dispositivos y cualquier configuración de ahorro de energía USB en el firmware del equipo.
+* Intente deshabilitar las características de suspensión o ahorro de energía USB en el equipo. Por ejemplo, en Configuración > **System > Power & Sleep > USB [selective suspend](/windows-hardware/drivers/usbcon/usb-selective-suspend)**, la opción "Permitir que el equipo apague este dispositivo para ahorrar energía" en Administrador de dispositivos y cualquier configuración de ahorro de energía USB en el firmware del equipo.
 * Desconecte temporalmente cualquier otro dispositivo USB y periférico conectado al equipo.
 * Compruebe que la versión del controlador de GPU es reciente y compruebe si hay nuevos problemas de rendimiento y compatibilidad y regresiones en los nuevos controladores.
 
@@ -63,7 +63,7 @@ ms.locfileid: "115189397"
 * Asegúrese de que el controlador de gráficos está actual.
 * Pruebe el casco Mixed Reality en otro equipo.
 
-## <a name="my-headset-displays-turn-blue-and-then-mixed-reality-portal-reinitializes"></a>Mi casco se muestra en azul y, a continuación, Portal de realidad mixta reinicializa
+## <a name="my-headset-displays-turn-blue-and-then-mixed-reality-portal-reinitializes"></a>Los cascos se muestran en azul y Portal de realidad mixta reinicializa
 
 Esto suele indicar un problema ocasional de confiabilidad del controlador USB en el equipo:
 
@@ -73,11 +73,11 @@ Esto suele indicar un problema ocasional de confiabilidad del controlador USB en
 * Conectar un concentrador USB 3.0 con tecnología externa al equipo y conecte el casco al centro.
 * Si usa un equipo de escritorio, considere la posibilidad de comprar una tarjeta PCIe USB 3.0 para agregar otro controlador USB al equipo.
 
-## <a name="my-headset-causes-my-pc-to-hang-or-show-a-black-screen-while-starting-up"></a>El casco hace que mi PC se queme o muestre una pantalla negra durante el inicio
+## <a name="my-headset-causes-my-pc-to-hang-or-show-a-black-screen-while-starting-up"></a>El casco hace que mi PC se queme o muestre una pantalla negra mientras se inicia
 
 En algunos equipos, dejar el casco conectado antes de encender o al reiniciar el equipo puede interferir con su proceso de inicio. El equipo podría seleccionar las pantallas de casco como el "monitor principal" para mostrar el progreso de inicio del equipo, no iniciarse correctamente, o "parar" o generar un código de error de pitido. El comportamiento depende de la realización y el modelo del equipo o de la imagen y el modelo de la tarjeta gráfica. Para solucionar este error:
 
-* Conectar el casco a otro puerto de la tarjeta gráfica (es posible que tenga que usar un adaptador para usar los demás puertos).
+* Conectar el casco a otro puerto de la tarjeta gráfica (es posible que tenga que usar un adaptador para usar los otros puertos).
 * Asegúrese de que el firmware DE BIOS o UEFI del equipo esté actualizado (pero solo actualice el firmware DE BIOS o UEFI del equipo si se siente cómodo al hacerlo).
 
 ## <a name="my-pc-or-headset-displays-flicker-flash-or-remain-black-when-using-a-surface-pc"></a>Mi PC o casco muestra parpadeo, flash o permanece negro cuando se usa un equipo Surface
@@ -90,44 +90,44 @@ En algunos equipos, dejar el casco conectado antes de encender o al reiniciar el
 
 Desconecte el cable HDMI y el cable USB del casco y vuelva a conectarlos.
 
-## <a name="my-headset-displays-are-choppy-but-mixed-reality-portals-preview-window-appears-fine"></a>Las pantallas de los cascos están abolladas, Portal de realidad mixta la ventana de vista previa parece estar bien.
+## <a name="my-headset-displays-are-choppy-but-mixed-reality-portals-preview-window-appears-fine"></a>Las pantallas de los cascos están desmejorado, Portal de realidad mixta la ventana de vista previa aparece bien.
 
 * Asegúrese de que los recursos del sistema del equipo (CPU, memoria y unidad de disco duro) están disponibles y no los consume otra aplicación o proceso.
 * Actualice el controlador de gráficos.
 
 ## <a name="im-getting-a-the-install-class-is-not-present-or-is-invalid-error-in-device-manager"></a>Aparece el error "La clase de instalación no está presente o no es válida" en Administrador de dispositivos
 
-Si ve "sensores de HoloLens" con un signo de exclamación amarillo en Administrador de dispositivos, seleccione el dispositivo para obtener más detalles. Si ve un mensaje que dice "Los controladores de este dispositivo no están instalados. (Código 28): la clase de instalación no está presente o no es válida", normalmente porque el equipo se [ejecuta Windows 10 N](https://support.microsoft.com/en-us/help/4039813/media-feature-pack-for-windows-10-n-october-2017). N ediciones de Windows 10 no admiten Windows Mixed Reality y deberá instalar una versión que no sea N de Windows 10.
+Si ve "sensores de HoloLens" con un signo de exclamación amarillo en Administrador de dispositivos, seleccione el dispositivo para obtener más detalles. Si ve un mensaje que dice "Los controladores de este dispositivo no están instalados. (Código 28): la clase de instalación no está presente o no es válida", normalmente porque el equipo se [ejecuta Windows 10 N](https://support.microsoft.com/en-us/help/4039813/media-feature-pack-for-windows-10-n-october-2017). Las ediciones N de Windows 10 y Windows 11 no admiten Windows Mixed Reality y deberá instalar una versión que no sea N de Windows 10 o Windows 11.
 
-## <a name="my-wmr-environment-is-jittery-or-stutters-when-i-move-my-head-and-displays-double-vision"></a>Mi entorno WMR está vibración o atascada cuando mudo la cabeza y muestra doble visión.
+## <a name="my-wmr-environment-is-jittery-or-stutters-when-i-move-my-head-and-displays-double-vision"></a>Mi entorno WMR está con vibración o atascadas al mover la cabeza y mostrar doble visión
 
-En un portátil con gráficos integrados y una GPU nvidia, se produce un error después de un período de tiempo que parece hacer que un fotograma anterior se muestre después del fotograma siguiente, lo que da lugar a una visión doble cuanto más rápido mueva la cabeza en un movimiento de guión, inclinación o desplazamiento. El problema parece estar en los controladores después de Nvidia Graphics Driver 436.48.  La instalación de este controlador corregirá el problema hasta que Nvidia resuelva el problema en los controladores actualizados. Para una instalación directa de Nvidia Graphics Driver 436.48, visite [NVIDIA](https://www.nvidia.com/Download/driverResults.aspx/152007/en-us).
+En un portátil con gráficos integrados y una GPU nvidia, se produce un error después de un período de tiempo que parece hacer que un fotograma anterior se muestre después del fotograma siguiente, lo que da lugar a doble visión cuanto más rápido mueva la cabeza en un movimiento de guión, inclinación o movimiento de desplazamiento. El problema parece estar en los controladores después de Nvidia Graphics Driver 436.48.  La instalación de este controlador corregirá el problema hasta que Nvidia resuelva el problema en los controladores actualizados. Para una instalación directa de Nvidia Graphics Driver 436.48, visite [NVIDIA](https://www.nvidia.com/Download/driverResults.aspx/152007/en-us).
 
-## <a name="im-uncomfortable-in-my-headset"></a>No tengo incomodidad en los cascos
+## <a name="im-uncomfortable-in-my-headset"></a>No tengo incomodidad en el casco
 
-Para obtener información general sobre la comodidad Windows Mixed Reality, consulte Windows Mixed Reality de casco [envolvente, seguridad y confort.](wmr-health-safety-comfort.md) Para más información sobre el casco específico, consulte con el fabricante del casco.
+Para obtener información general sobre la comodidad Windows Mixed Reality, consulte Windows Mixed Reality mantenimiento, seguridad y confort de los cascos [envolventes.](wmr-health-safety-comfort.md) Para más información sobre el casco específico, consulte con el fabricante del casco.
 
 ## <a name="how-can-i-get-a-clearer-view-in-my-headset"></a>¿Cómo puedo obtener una vista más clara en el casco?
 
-Intente ajustar el ajuste del casco. Muévelo hacia arriba y hacia abajo, o a la izquierda y derecha, en la cara y ajusta las cintas para que se sienta ajustado.
+Intente ajustar el ajuste del casco. Muévelo hacia arriba y hacia abajo, o a la izquierda y derecha, en la cara y ajusta las cintas para que se sienta cómodo.
 
-Si el casco tiene un mando para ajustar la calibración, ajuste su configuración de calibración. Si no es así, vaya a Configuración > **Mixed reality > Visual quality** (Calidad visual) y ajuste la calibración allí. Para obtener más información sobre la calibración del dispositivo específico, consulte con el fabricante del casco.
+Si el casco tiene un mando para ajustar la calibración, ajuste su configuración de calibración. Si no es así, vaya a Configuración > **Mixed reality > Visual quality** (Calidad visual) y ajuste la calibración allí. Para más información sobre la calibración del dispositivo específico, consulte con el fabricante del casco.
 
-## <a name="i-frequently-see-a-black-border-around-the-view-in-the-headset-sometimes-its-like-im-looking-down-a-tunnel"></a>Con frecuencia veo un borde negro alrededor de la vista en el casco. A veces es como si mirara un túnel.
+## <a name="i-frequently-see-a-black-border-around-the-view-in-the-headset-sometimes-its-like-im-looking-down-a-tunnel"></a>Con frecuencia veo un borde negro alrededor de la vista en el casco. A veces es como si mirara hacia abajo un túnel.
 
-Esto significa que la aplicación no puede alcanzar la velocidad de fotogramas en el equipo y el sistema usa marcos antiguos para representar la vista en el casco. Dado que las aplicaciones solo representan la parte del mundo que está viendo, si no se alcanzaron sistemáticamente sus velocidades de fotogramas, el sistema intentará representar el mundo desde un punto de vista anterior y rellenará los detalles que faltan con negro. Si esto sucede con frecuencia:
+Esto significa que la aplicación no puede alcanzar la velocidad de fotogramas en el equipo y que el sistema usa fotogramas antiguos para representar la vista en el casco. Dado que las aplicaciones solo representan la parte del mundo que está viendo, si no se han alcanzado sistemáticamente sus velocidades de fotogramas, el sistema intentará representar el mundo desde un punto de vista anterior y rellenará los detalles que faltan con negro. Si esto sucede con frecuencia:
 
 1. Cierre o detenga todos los programas innecesarios para liberar memoria y CPU.
-2. Reduzca la configuración de detalles en la aplicación.
-3. Vaya a **Configuración > Mixed Reality > Headset Display** para reducir la cantidad de detalles que se muestra en Windows Mixed Reality inicio.
+2. Reduzca la configuración de detalles de la aplicación.
+3. Vaya a **Configuración > Mixed Reality > headset display** para reducir la cantidad de detalles que se muestra en Windows Mixed Reality inicio.
 
-## <a name="the-view-in-the-headset-is-jittering-and-stuttering-a-lot"></a>La vista en el casco se está quemándose y ateando mucho.
+## <a name="the-view-in-the-headset-is-jittering-and-stuttering-a-lot"></a>La vista en el casco se está vibraciónndo y atascándose mucho
 
 Es posible que el sistema no pueda representar contenido en el casco o que el sistema de seguimiento esté experimentando problemas:
 
-1. Abra Administrador de tareas asegurarse de que el equipo tiene suficientes recursos de proceso. Debe tener un 80 % de CPU libre, 400 MB de RAM y la E/S de disco debe estar por debajo del 80 %.
+1. Abra Administrador de tareas para asegurarse de que el equipo tiene suficientes recursos de proceso. Debe tener el 80 % de la CPU libre, 400 MB de RAM y la E/S de disco debe estar por debajo del 80 %.
 2. Asegúrese de que tiene los controladores de gráficos más recientes para el hardware. Consulte la sección [controlador de gráficos](before-you-start.md#make-sure-you-have-a-compatible-graphics-driver).
-3. Asegúrese de que la sala tiene suficiente luz.
+3. Asegúrese de que la habitación tiene suficiente luz.
 4. Desconecte el dispositivo, cierre Windows Mixed Reality y vuelva a conectarlo.
 5. Reinicia tu equipo.
 6. Si el problema persiste, póngase en contacto con el [servicio de soporte al cliente.](https://support.microsoft.com/)
